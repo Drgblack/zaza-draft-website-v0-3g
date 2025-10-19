@@ -2839,7 +2839,7 @@ Next term, the goal is <strong>to remain in seat during mini-lesson</strong> and
     <h2>Abschließender Gedanke</h2>
     <p>Eltern wollen Klarheit und Fürsorge. Sie wollen Ruhe und Fortschritt. Diese fünf Einstiege geben Ihnen beides. Beginnen Sie mit einem, der zu Ihrer Stimme passt, fügen Sie eine einzige Tatsache hinzu, setzen Sie einen kleinen nächsten Schritt und planen Sie ein Check-in. Der Ton, den Sie in der ersten Zeile setzen, ist der Ton, der normalerweise das gesamte Gespräch trägt.</p>
   `
-}
+},
 {
   id: 20,
   title: "Clear But Kind: A Teacher's Field Guide to Emails, Reports, Comments, Recs, and Docs",
