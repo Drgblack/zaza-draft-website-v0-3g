@@ -224,10 +224,6 @@ export const blogPosts: BlogPost[] = [
       <h2>5. Automatisierung administrativer Aufgaben</h2>
       <p>Automatisieren Sie Routineaufgaben wie Anwesenheitsverfolgung und Fortschrittsberichte.</p>
     `,
-    contentDe: `
-      <h2>Anruf oder E-Mail? Den richtigen Kanal bei Verhaltensfragen wählen</h2>
-      <p>Wenn ein Verhaltensproblem auftritt, prägt die erste Entscheidung alles Weitere: rufe ich an oder schreibe ich eine E-Mail? Triffst du die Wahl gut, deeskalierst du, hältst Familien informiert und erzeugst Momentum. Triffst du sie schlecht, entstehen Abwehr, Zeitverlust oder fehlende Dokumentation.</p>
-    `,
     publishedAt: "2025-01-15",
     category: "Productivity",
     tags: ["AI Tools", "Time Management", "Productivity", "Teaching Strategies"],
@@ -391,7 +387,6 @@ export const blogPosts: BlogPost[] = [
       <li>Use differentiated versions to support inclusive classrooms.</li>
       <li>Pair AI structure with your own creative activities.</li>
     </ul>
-    <!-- /CALLOUT:CLASSROOM -->
 
     <h2>Extended checklist – AI lesson planning workflow</h2>
     <ul>
