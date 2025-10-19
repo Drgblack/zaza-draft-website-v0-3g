@@ -37,7 +37,15 @@ export const blogPosts: BlogPost[] = [
       <p>KI kann helfen, Unterrichtspläne und differenzierte Materialien in Minuten zu erstellen.</p>
       
       <h2>3. Elternkommunikations-Vorlagen</h2>
-      <p>Erstellen Sie professionelle, personalisierte Eltern-E-Mails mit KI-Unterstützung.</p>
+
+      // --- Added BlogPost objects F–M ---
+      blogPosts.push(
+        {
+          id: "F",
+          title: "How to Use AI for Differentiated Instruction",
+          slug: "ai-differentiated-instruction",
+          excerpt: "Practical strategies for using AI to support differentiated instruction in mixed-ability classrooms.",
+          content: String.raw`
       
       <h2>4. Bewertungserstellung</h2>
       <p>Erstellen Sie automatisch Tests und Bewertungsraster, die auf Ihre Lernziele abgestimmt sind.</p>
@@ -52,6 +60,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "18",
     title: "Call or Email? Choosing the Right Channel for Behavior Concerns",
+          contentDe: String.raw`
     slug: "call-or-email-behavior-concerns",
     excerpt:
       "Learn when to call versus email parents about behavior issues. This practical guide includes decision trees, scripts, and templates to de-escalate tense situations effectively.",
@@ -66,6 +75,16 @@ export const blogPosts: BlogPost[] = [
 
     <h2>The 60-second decision tree</h2>
     <!-- EXAMPLE -->
+          publishedAt: "2025-02-01",
+          category: "Differentiation",
+          tags: ["AI Tools", "Differentiation", "Scaffolding", "Personalized Learning"],
+        },
+        {
+          id: "G",
+          title: "AI for Grading: Speed and Consistency",
+          slug: "ai-grading-speed-consistency",
+          excerpt: "How AI-powered grading tools help teachers save time and provide fair, consistent feedback.",
+          content: String.raw`
     <p><strong>Start here:</strong> What is your goal in the next 24 hours?</p>
     <ul>
       <li><strong>Safety or urgent disruption today?</strong> - <strong>CALL</strong> now. Then send a 2-line recap email for the record.</li>
@@ -80,6 +99,7 @@ export const blogPosts: BlogPost[] = [
     <h2>Pros and cons at a glance</h2>
     <h3>Phone call</h3>
     <ul>
+          contentDe: String.raw`
       <li><strong>Pros:</strong> Human tone reduces misread intent; real-time questions for faster alignment; builds rapport for complex or emotional situations.</li>
       <li><strong>Cons:</strong> Harder to document if not recapped; timing constraints; can feel high stakes without prep.</li>
     </ul>
@@ -94,6 +114,16 @@ export const blogPosts: BlogPost[] = [
 
     <h2>The anatomy of a productive call</h2>
     <h3>Prep in 2 minutes</h3>
+          publishedAt: "2025-02-05",
+          category: "Assessment",
+          tags: ["AI Tools", "Grading", "Rubrics", "Feedback"],
+        },
+        {
+          id: "H",
+          title: "Using AI to Support English Language Learners",
+          slug: "ai-support-ell",
+          excerpt: "Explore how AI can help ELL students with translation, vocabulary, and personalized practice.",
+          content: String.raw`
     <ul>
       <li>Write one sentence of evidence: period or time and what happened.</li>
       <li>Decide one school step and one home step you will propose.</li>
@@ -108,6 +138,7 @@ export const blogPosts: BlogPost[] = [
     <h3>If emotions rise</h3>
     <ul>
       <li><strong>Acknowledge:</strong> I hear your concern.</li>
+          contentDe: String.raw`
       <li><strong>Return to facts:</strong> Here is what I observed today, exactly.</li>
       <li><strong>Offer choice:</strong> We can try A or B - what feels workable?</li>
       <li><strong>Close:</strong> I will send a quick summary so we are aligned.</li>
@@ -122,6 +153,16 @@ export const blogPosts: BlogPost[] = [
       <li>Keeping you in the loop about [topic]</li>
     </ul>
     <!-- CALLOUT:TEMPLATE -->
+          publishedAt: "2025-02-10",
+          category: "ELL",
+          tags: ["AI Tools", "ELL", "Translation", "Vocabulary"],
+        },
+        {
+          id: "I",
+          title: "AI for Classroom Management: Routines and Reminders",
+          slug: "ai-classroom-management-routines",
+          excerpt: "Discover how AI can help automate classroom routines, reminders, and behavior tracking.",
+          content: String.raw`
     <h3>Four-sentence body</h3>
     <p><strong>Opener:</strong> Hi [Parent Name], I am reaching out to partner with you about [Student]'s [behavior] in [class].</p>
     <p><strong>One observable fact:</strong> Today during [period], [Student] [specific behavior], which affected [learning or peers or task].</p>
@@ -136,6 +177,7 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Document in 60 seconds:</strong> date and time, contact method, evidence, school step, home step, next check-in.</li>
       <li><strong>Schedule</strong> the check-in as a calendar reminder.</li>
       <li><strong>Reinforce in class:</strong> reteach the expectation and provide a scaffold.</li>
+          contentDe: String.raw`
       <li><strong>Close the loop</strong> on the promised date - one line is enough.</li>
     </ul>
     <p>This consistent loop builds trust and protects you if questions arise later.</p>
@@ -150,6 +192,16 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Escalation:</strong> if harm, harassment, or ongoing disruption occurs, follow policy and send a neutral recap.</li>
     </ul>
 
+          publishedAt: "2025-02-15",
+          category: "Classroom Management",
+          tags: ["AI Tools", "Classroom Management", "Routines", "Behavior Tracking"],
+        },
+        {
+          id: "J",
+          title: "AI for Special Education: Personalization at Scale",
+          slug: "ai-special-education-personalization",
+          excerpt: "Learn how AI can help personalize learning plans and accommodations for students with special needs.",
+          content: String.raw`
     <h2>Examples you can use</h2>
     <!-- CALLOUT:TEMPLATE -->
     <h3>1) Call first, then recap email</h3>
@@ -164,6 +216,7 @@ export const blogPosts: BlogPost[] = [
     <blockquote>
       <p>Hi [Parent], I am reaching out to partner with you about [Student]'s focus in science. Today during lab setup, [Student] left their group and missed the directions. At school I will pair them with a lab checklist tomorrow. At home, a quick reminder to bring the planner would help. I will send a brief update on Friday. Thank you.</p>
     </blockquote>
+          contentDe: String.raw`
 
     <h3>3) Grading friction</h3>
     <p><em>Subject:</em> Quick check-in on [Assignment]</p>
@@ -178,6 +231,16 @@ export const blogPosts: BlogPost[] = [
     </blockquote>
     <!-- /CALLOUT:TEMPLATE -->
 
+          publishedAt: "2025-02-20",
+          category: "Special Education",
+          tags: ["AI Tools", "Special Education", "IEP", "Accommodations"],
+        },
+        {
+          id: "K",
+          title: "AI for Parent Engagement: Building Trust",
+          slug: "ai-parent-engagement-trust",
+          excerpt: "How AI-powered tools can help teachers build trust and maintain strong parent partnerships.",
+          content: String.raw`
     <h2>Documentation: the five-field note</h2>
     <!-- CALLOUT:TEMPLATE -->
     <ul>
@@ -192,6 +255,7 @@ export const blogPosts: BlogPost[] = [
 
     <h2>Boundary language that protects evenings and weekends</h2>
     <!-- CALLOUT:CLASSROOM -->
+          contentDe: String.raw`
     <ul>
       <li><strong>Email signature:</strong> I respond during school hours and aim to respond within one business day.</li>
       <li><strong>Auto-reply (after hours):</strong> Thanks for your message. I will reply during school hours. For time-sensitive matters, please contact the school office.</li>
@@ -206,6 +270,16 @@ export const blogPosts: BlogPost[] = [
       <li>One school step + one home step.</li>
       <li>Check-in date set before you contact.</li>
       <li>Call for urgent, sensitive, pattern, or tone issues.</li>
+          publishedAt: "2025-02-25",
+          category: "Parent Engagement",
+          tags: ["AI Tools", "Parent Engagement", "Trust", "Communication"],
+        },
+        {
+          id: "L",
+          title: "AI for Teacher Wellbeing: Reducing Stress",
+          slug: "ai-teacher-wellbeing-stress",
+          excerpt: "Explore how AI can help teachers reduce stress, manage workload, and maintain work-life balance.",
+          content: String.raw`
       <li>Email for recordkeeping and simple first incidents.</li>
       <li>Recap email after any call.</li>
       <li>Five-field note logged.</li>
@@ -220,6 +294,7 @@ export const blogPosts: BlogPost[] = [
     `,
     contentDe: `
     <h2>Anruf oder E-Mail? Den richtigen Kanal bei Verhaltensfragen wählen</h2>
+          contentDe: String.raw`
     <p>Wenn ein Verhaltensproblem auftritt, prägt die erste Entscheidung alles Weitere: rufe ich an oder schreibe ich eine E-Mail? Triffst du die Wahl gut, deeskalierst du, hältst Familien informiert und erzeugst Momentum. Triffst du sie schlecht, entstehen Abwehr, Zeitverlust oder fehlende Dokumentation.</p>
     <p>Dieser praxisnahe Leitfaden bietet einen klaren Entscheidungsbaum, schnelle Pro-und-Contra-Übersichten, Formulierungshilfen und eine einfache Follow-up-Routine, damit jede Kontaktaufnahme ruhig, fair und effizient bleibt.</p>
 
@@ -234,6 +309,16 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Sicherheit oder akute Störung heute?</strong> - <strong>ANRUF</strong> jetzt. Danach eine 2-zeilige Zusammenfassung per E-Mail für die Akte.</li>
       <li><strong>Sich bildendes Muster</strong> (2-3 Wiederholungen) oder <strong>sensibler Ton</strong> mit Risiko für Missverständnisse? - Zuerst <strong>ANRUF</strong> zur Klärung von Fakten und Ton. Danach kurze Zusammenfassung per E-Mail.</li>
       <li><strong>Kleiner Erstvorfall</strong>, klare Tatsache, einfacher nächster Schritt, keine Dringlichkeit? - <strong>E-MAIL</strong> mit einer Tatsache + einem Schritt + einem Kontrolltermin.</li>
+          publishedAt: "2025-03-01",
+          category: "Wellbeing",
+          tags: ["AI Tools", "Teacher Wellbeing", "Stress Reduction", "Work-Life Balance"],
+        },
+        {
+          id: "M",
+          title: "AI for Professional Development: Learning on Demand",
+          slug: "ai-professional-development-learning",
+          excerpt: "How teachers can use AI to access just-in-time professional development and personalized learning resources.",
+          content: String.raw`
       <li><strong>Du brauchst eine dokumentierte Spur</strong> (Pläne, Nachteilsausgleiche, frühere Kontakte)? - <strong>E-MAIL</strong> (auch wenn du zusätzlich anrufst), denn durchsuchbare Dokumentation zählt.</li>
       <li><strong>Sprache oder Zugang</strong> (Eltern bevorzugen Telefon oder Dolmetschung nötig)? - <strong>ANRUF</strong> mit Dolmetscher, dann kurze zweisprachige Zusammenfassung senden.</li>
     </ul>
@@ -248,6 +333,7 @@ export const blogPosts: BlogPost[] = [
     </ul>
     <p><strong>Am besten geeignet für:</strong> Dringendes, wiederkehrende Muster, sensible Themen, Mehrsprachigkeit mit Dolmetscher, wenn Ton leicht missverstanden wird.</p>
 
+          contentDe: String.raw`
     <h3>E-Mail</h3>
     <ul>
       <li><strong>Vorteile:</strong> Erzeugt eine Akte mit Datum, Fakten, nächsten Schritten; Sprache lässt sich präzise formulieren; Eltern antworten zeitlich flexibel.</li>
@@ -262,6 +348,13 @@ export const blogPosts: BlogPost[] = [
       <li>Einen Schul-Schritt und einen Zuhause-Schritt festlegen.</li>
       <li>Notenbuch oder Notizen öffnen für Rückfragen.</li>
     </ul>
+          publishedAt: "2025-03-05",
+          category: "Professional Development",
+          tags: ["AI Tools", "Professional Development", "Learning", "Teacher Growth"],
+        }
+      )
+
+      export default blogPosts
     <!-- CALLOUT:TEMPLATE -->
     <p><strong>Telefon-Skript:</strong></p>
     <blockquote>
