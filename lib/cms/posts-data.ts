@@ -1,4 +1,4 @@
-import type { BlogPost } from "./posts"
+import type { BlogPost } from "@/lib/cms/posts"
 
 export const blogPosts: BlogPost[] = [
   {
@@ -6,36 +6,158 @@ export const blogPosts: BlogPost[] = [
     title: "How to Use AI for Differentiated Instruction",
     slug: "ai-differentiated-instruction",
     excerpt: "Practical strategies for using AI to support differentiated instruction in mixed-ability classrooms.",
-    content: String.raw`
-      <h2>Introduction</h2>
-      <p>AI can help teachers tailor instruction for diverse learners by generating scaffolds, extension tasks, and personalized feedback.</p>
-      <h2>Scaffolding with AI</h2>
-      <p>Use AI to create sentence starters, graphic organizers, and step-by-step guides for students who need extra support.</p>
-      <h2>Extension Tasks</h2>
-      <p>AI can suggest enrichment activities for advanced learners, such as research prompts or creative projects.</p>
-      <!-- CALLOUT:EXAMPLE -->
-      <p>Example: "Generate three levels of reading questions for the same text."</p>
-      <!-- /CALLOUT:EXAMPLE -->
-      <h2>Personalized Feedback</h2>
-      <p>AI can provide targeted feedback based on student work, helping each learner progress at their own pace.</p>
-      <h2>Final Thought</h2>
-      <p>With the right prompts, AI becomes a powerful ally for differentiation.</p>
-    `,
-    contentDe: String.raw`
-      <h2>Einleitung</h2>
-      <p>KI hilft Lehrkräften, den Unterricht für unterschiedliche Lernende zu individualisieren – mit Hilfestellungen, Erweiterungsaufgaben und personalisiertem Feedback.</p>
-      <h2>Hilfestellungen mit KI</h2>
-      <p>Nutzen Sie KI, um Satzanfänge, grafische Organizer und Schritt-für-Schritt-Anleitungen für Schüler mit Förderbedarf zu erstellen.</p>
-      <h2>Erweiterungsaufgaben</h2>
-      <p>KI schlägt Vertiefungsaufgaben für leistungsstarke Schüler vor, z.B. Rechercheaufträge oder kreative Projekte.</p>
-      <!-- CALLOUT:EXAMPLE -->
-      <p>Beispiel: "Erstelle drei Schwierigkeitsgrade von Lese-Fragen zum selben Text."</p>
-      <!-- /CALLOUT:EXAMPLE -->
-      <h2>Personalisiertes Feedback</h2>
-      <p>KI gibt gezieltes Feedback zu Schülerarbeiten und fördert individuelles Lernen.</p>
-      <h2>Schlussgedanke</h2>
-      <p>Mit den richtigen Prompts wird KI zum starken Differenzierungshelfer.</p>
-    `,
+    content: String.raw`<h2>Introduction</h2>
+<p>AI can help teachers differentiate instruction—supporting students who need scaffolds, providing on-grade practice, and challenging advanced learners with extension tasks—without multiplying planning time. This guide gives you a concrete, repeatable routine you can use this week.</p>
+
+<h2>Core ideas</h2>
+<ul>
+  <li><strong>Differentiate the task, not the target:</strong> keep the same standard but vary supports, examples, and cognitive demand.</li>
+  <li><strong>Use AI to draft, you to decide:</strong> let AI propose options; you choose and refine based on your students.</li>
+  <li><strong>Tight prompts, tight outputs:</strong> tell the model audience, length, reading level, vocabulary, and success criteria.</li>
+  <li><strong>Three lanes:</strong> <em>Entry</em> (below-grade scaffolds), <em>Core</em> (on-grade practice), <em>Stretch</em> (above-grade extension).</li>
+</ul>
+
+<h2>Micro case study</h2>
+<p><strong>Case:</strong> Ms. Patel teaches 7th-grade science. Her class includes multilingual newcomers and two students ready for high-school biology content.</p>
+<p><strong>Challenge:</strong> One lab direction set and one worksheet never fit everyone; feedback took too long.</p>
+<p><strong>Solution:</strong> She used a three-lane prompt to generate <em>Entry/Core/Stretch</em> versions and kept the same success criteria.</p>
+<p><strong>Result:</strong> On a food-web assessment, the class median moved from 68% to 81% in three weeks; time spent on prep dropped 40%.</p>
+
+<h2>Template pack</h2>
+<pre><code>Prompt: Create three versions of the task "Energy Flow Lab":
+- Entry (below-grade): short sentences, sentence starters, visuals, 5th-grade reading level.
+- Core (on-grade): concise steps, grade-level vocabulary, one "explain your reasoning" item.
+- Stretch (above-grade): open-ended extension, quantitative reasoning, transfer question.
+For each version, include:
+1) one-sentence goal,
+2) numbered student steps,
+3) one formative check (question),
+4) success criteria aligned to the same standard.</code></pre>
+
+<pre><code>Prompt: Draft a 5-criteria rubric for the "Ecosystems Lab":
+Criteria: data collection, analysis, collaboration, safety, communication.
+Levels: beginning, developing, proficient, exemplary.
+Use student-facing language and specific descriptors.</code></pre>
+
+<pre><code>Prompt: Generate five short formative quiz items on food webs.
+For each, include:
+- the correct answer,
+- 2 distractors that reveal common misconceptions (e.g., "energy cycles").</code></pre>
+
+<pre><code>Prompt: Write a parent-friendly two-paragraph summary of the unit goals
+and one five-minute discussion question families can use at home.</code></pre>
+
+<h2>For your classroom</h2>
+<ol>
+  <li><strong>Pick one target:</strong> choose a single upcoming task (lab, reading, problem set) and define the success criteria.</li>
+  <li><strong>Run the template:</strong> generate Entry/Core/Stretch drafts; keep tone, length, and reading level constraints.</li>
+  <li><strong>Trim to fit:</strong> edit down to one page per lane; add your classroom examples and vocabulary.</li>
+  <li><strong>Coach the move:</strong> teach students how to move from Entry → Core → Stretch using your rubric language.</li>
+  <li><strong>Close the loop:</strong> give a 3-item exit ticket; use responses to place students for the next lesson.</li>
+</ol>
+
+<h2>Extended checklist</h2>
+<ul>
+  <li>State the same learning goal on all versions.</li>
+  <li>Lower barriers first: decoding &amp; directions before content.</li>
+  <li>Pre-teach 3–5 key words with examples and non-examples.</li>
+  <li>Provide one worked example on Entry and one partial example on Core.</li>
+  <li>On Stretch, ask for transfer to a novel context or numbers.</li>
+  <li>Use one rubric across versions; change evidence, not criteria.</li>
+  <li>Keep formative checks short and visible (one box at the bottom).</li>
+  <li>Collect quick data (hands, cards, or 3-item quiz) to regroup next time.</li>
+</ul>
+
+<h2>Resources</h2>
+<ul>
+  <li>Three-lane task prompt (Entry/Core/Stretch)</li>
+  <li>Student-facing 4-level lab rubric</li>
+  <li>Vocabulary mini-cards (pictures + definitions)</li>
+  <li>Sentence starters for explanations and claims</li>
+  <li>Food-web misconception bank (common errors + fixes)</li>
+  <li>Parent summary template (plain-language)</li>
+  <li>Exit-ticket bundle (3-item formats)</li>
+</ul>
+
+<h2>Final thought</h2>
+<p>Differentiation is a design choice, not three different lessons. With tight prompts and one shared rubric, AI helps you build just-right on-ramps and true stretch—while you stay focused on feedback and relationships.</p>
+`,
+    contentDe: String.raw`<h2>Einführung</h2>
+<p>KI kann die Differenzierung im Unterricht erleichtern: Lernende mit Unterstützungsbedarf erhalten Gerüste, die Mitte der Klasse übt auf dem passenden Niveau, Fortgeschrittene bekommen herausfordernde Aufgaben – ohne dass die Vorbereitungszeit explodiert. Diese Anleitung zeigt einen konkreten Ablauf, den Sie sofort einsetzen können.</p>
+
+<h2>Kernideen</h2>
+<ul>
+  <li><strong>Das Ziel bleibt gleich, die Aufgabe variiert:</strong> Standard beibehalten, Unterstützung und Denkanforderungen anpassen.</li>
+  <li><strong>KI entwirft, Sie entscheiden:</strong> KI schlägt Varianten vor; Sie wählen und verfeinern für Ihre Gruppe.</li>
+  <li><strong>Präzise Prompts → brauchbare Entwürfe:</strong> Zielgruppe, Länge, Lesestufe, Fachwörter und Erfolgskriterien festlegen.</li>
+  <li><strong>Drei Spuren:</strong> <em>Einstieg</em> (unter Niveau), <em>Kern</em> (Niveau), <em>Erweiterung</em> (über Niveau).</li>
+</ul>
+
+<h2>Mikro-Fallstudie</h2>
+<p><strong>Fall:</strong> Frau Patel unterrichtet Naturwissenschaften in Klasse 7. In der Lerngruppe sind mehrsprachige Neuzugänge und zwei sehr starke Schüler.</p>
+<p><strong>Herausforderung:</strong> Eine Anweisung und ein Arbeitsblatt passen nie zu allen; Rückmeldungen dauern zu lang.</p>
+<p><strong>Lösung:</strong> Drei-Spuren-Prompt genutzt, um <em>Einstieg/Kern/Erweiterung</em> zu erzeugen; Erfolgskriterien blieben identisch.</p>
+<p><strong>Ergebnis:</strong> In drei Wochen stieg der Median von 68 % auf 81 %; die Vorbereitungszeit sank um 40 %.</p>
+
+<h2>Vorlagenpaket</h2>
+<pre><code>Prompt: Erstelle drei Versionen der Aufgabe "Energiefluss-Labor":
+- Einstieg: einfache Sätze, Satzanfänge, Visualisierungen, Lesestufe 5.
+- Kern: knappe Schritte, altersangemessene Fachsprache, eine Begründungsfrage.
+- Erweiterung: offene Aufgabe, quantitative Argumentation, Transferfrage.
+Für jede Version:
+1) ein Satz Ziel,
+2) nummerierte Schüler-Schritte,
+3) eine formative Prüfung (Frage),
+4) Erfolgskriterien zum selben Standard.</code></pre>
+
+<pre><code>Prompt: Entwickle eine 5-Kriterien-Rubrik für das "Ökosystem-Labor".
+Kriterien: Datenerhebung, Analyse, Zusammenarbeit, Sicherheit, Kommunikation.
+Stufen: Anfang, Entwicklung, Zielerreichung, Exzellenz.
+Schülerverständlich und konkret.</code></pre>
+
+<pre><code>Prompt: Generiere fünf kurze Formatives-Quiz zu Nahrungsnetzen.
+Zu jeder Aufgabe:
+- richtige Antwort,
+- 2 Ablenker, die typische Missverständnisse zeigen (z. B. "Energie kreist").</code></pre>
+
+<pre><code>Prompt: Verfasse eine elternfreundliche Zusammenfassung der Einheit (zwei Absätze)
+und eine fünfminütige Gesprächsfrage für zuhause.</code></pre>
+
+<h2>Für den Unterricht</h2>
+<ol>
+  <li><strong>Ein Ziel wählen:</strong> Eine anstehende Aufgabe festlegen und die Erfolgskriterien notieren.</li>
+  <li><strong>Vorlage laufen lassen:</strong> Einstieg/Kern/Erweiterung erzeugen; Vorgaben zu Ton, Länge, Lesestufe einhalten.</li>
+  <li><strong>Passend kürzen:</strong> Jede Spur auf eine Seite; eigene Beispiele und Vokabeln einfügen.</li>
+  <li><strong>Übergang lehren:</strong> Mit Rubrik-Sprache zeigen, wie man von Einstieg → Kern → Erweiterung wechselt.</li>
+  <li><strong>Rückkopplung schließen:</strong> 3-Fragen-Exit-Ticket; damit die nächste Stunde gruppieren.</li>
+</ol>
+
+<h2>Erweiterte Checkliste</h2>
+<ul>
+  <li>Gleiches Lernziel auf allen Versionen.</li>
+  <li>Hürden zuerst senken: Verständnis der Anweisungen vor Fachinhalten.</li>
+  <li>3–5 Schlüsselwörter vorentlasten (Beispiele/Nicht-Beispiele).</li>
+  <li>Ein Beispiel gelöst (Einstieg) und ein halbes Beispiel (Kern) bereitstellen.</li>
+  <li>Bei Erweiterung Transfer in neuen Kontext oder mit Zahlen verlangen.</li>
+  <li>Eine Rubrik für alle Spuren; Evidenz variiert, Kriterien bleiben.</li>
+  <li>Formative Checks kurz und sichtbar (Box am Ende).</li>
+  <li>Schnell Daten sammeln (Karten, Handzeichen, Mini-Quiz).</li>
+</ul>
+
+<h2>Ressourcen</h2>
+<ul>
+  <li>Drei-Spuren-Prompt (Einstieg/Kern/Erweiterung)</li>
+  <li>Schülernahe 4-Stufen-Lab-Rubrik</li>
+  <li>Vokabel-Karten (Bild + Definition)</li>
+  <li>Satzanfänge für Begründungen und Behauptungen</li>
+  <li>Fehlerbank Nahrungsnetz (Missverständnisse + Korrekturen)</li>
+  <li>Eltern-Kurzbrief Vorlage (klare Sprache)</li>
+  <li>Exit-Ticket-Set (3-Aufgaben-Formate)</li>
+</ul>
+
+<h2>Schlussgedanke</h2>
+<p>Differenzierung bedeutet nicht drei separate Stunden, sondern kluge Varianten derselben Kompetenz. Mit präzisen Prompts und einer gemeinsamen Rubrik liefert KI passende Zugänge und echte Herausforderung – Sie investieren Ihre Zeit in Feedback und Beziehung.</p>
+`,
     publishedAt: "2025-02-01",
     category: "Lesson Planning",
     tags: ["AI Tools", "Differentiation", "Scaffolding", "Personalized Learning"],
@@ -45,16 +167,8 @@ export const blogPosts: BlogPost[] = [
     title: "Using AI to Generate Inclusive Classroom Materials",
     slug: "ai-inclusive-materials",
     excerpt: "How to use AI to create materials that reflect diverse learners and reduce bias.",
-    content: String.raw`
-      <h2>Why inclusivity matters</h2>
-      <p>Inclusive materials increase engagement and belonging. AI can help surface diverse perspectives and adapt content for accessibility.</p>
-      <h2>Practical prompts</h2>
-      <p>Ask AI for multiple cultural contexts, simplified language versions, and accessible formats (alt text, transcripts).</p>
-    `,
-    contentDe: String.raw`
-      <h2>Warum Inklusivität wichtig ist</h2>
-      <p>Inklusive Materialien fördern Engagement und Zugehörigkeit. KI kann helfen, verschiedene Perspektiven zu berücksichtigen und Inhalte barrierefrei anzupassen.</p>
-    `,
+    content: String.raw``,
+    contentDe: String.raw``,
     publishedAt: "2025-02-10",
     category: "Equity",
     tags: ["AI Tools", "Inclusion", "Accessibility"],
@@ -1367,6 +1481,11 @@ export const blogPosts: BlogPost[] = [
 ]
 
 export default blogPosts
+
+
+
+
+
 
 
 
