@@ -1,0 +1,25 @@
+{
+  "category": "Template",
+  "files": {
+    "en": {
+      "docx": "/resources/assessment-rubrics/build/en.docx",
+      "author": "Zaza Draft",
+      "pdf": "/resources/assessment-rubrics/build/en.pdf",
+      "md": "/resources/assessment-rubrics/en.md"
+    },
+    "de": {
+      "docx": "/resources/assessment-rubrics/build/de.docx",
+      "author": "Zaza Draft",
+      "pdf": "/resources/assessment-rubrics/build/de.pdf",
+      "md": "/resources/assessment-rubrics/de.md"
+    }
+  },
+  "blurb": "Editable rubrics for essays, presentations, and collaboration with differentiation.",
+  "title": "Differentiated Rubric Kit for Common Assignments",
+  "slug": "assessment-rubrics",
+  "published": "2025-10-19",
+  "tags": [
+    "assessment",
+    "rubrics"
+  ]
+}

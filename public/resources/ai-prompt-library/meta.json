@@ -1,0 +1,25 @@
+{
+  "category": "Template",
+  "files": {
+    "en": {
+      "docx": "/resources/ai-prompt-library/build/en.docx",
+      "author": "Zaza Draft",
+      "pdf": "/resources/ai-prompt-library/build/en.pdf",
+      "md": "/resources/ai-prompt-library/en.md"
+    },
+    "de": {
+      "docx": "/resources/ai-prompt-library/build/de.docx",
+      "author": "Zaza Draft",
+      "pdf": "/resources/ai-prompt-library/build/de.pdf",
+      "md": "/resources/ai-prompt-library/de.md"
+    }
+  },
+  "blurb": "Reusable prompt templates and a mini-lesson on crafting effective prompts.",
+  "title": "The Teacher’s AI Prompt Library",
+  "slug": "ai-prompt-library",
+  "published": "2025-10-19",
+  "tags": [
+    "ai",
+    "prompts"
+  ]
+}

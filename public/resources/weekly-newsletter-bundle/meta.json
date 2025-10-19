@@ -1,0 +1,25 @@
+{
+  "category": "Template",
+  "files": {
+    "en": {
+      "docx": "/resources/weekly-newsletter-bundle/build/en.docx",
+      "author": "Zaza Draft",
+      "pdf": "/resources/weekly-newsletter-bundle/build/en.pdf",
+      "md": "/resources/weekly-newsletter-bundle/en.md"
+    },
+    "de": {
+      "docx": "/resources/weekly-newsletter-bundle/build/de.docx",
+      "author": "Zaza Draft",
+      "pdf": "/resources/weekly-newsletter-bundle/build/de.pdf",
+      "md": "/resources/weekly-newsletter-bundle/de.md"
+    }
+  },
+  "blurb": "Three editable newsletter templates (primary, middle, high) + idea bank.",
+  "title": "‘This Week In Our Class’ Newsletter Starter Kit",
+  "slug": "weekly-newsletter-bundle",
+  "published": "2025-10-19",
+  "tags": [
+    "parent-comms",
+    "newsletter"
+  ]
+}
