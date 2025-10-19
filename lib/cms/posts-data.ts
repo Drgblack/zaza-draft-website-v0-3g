@@ -2,7 +2,7 @@ import type { BlogPost } from "./posts"
 
 export const blogPosts: BlogPost[] = [
   {
-    id: "F",
+    id: 2,
     title: "How to Use AI for Differentiated Instruction",
     slug: "ai-differentiated-instruction",
     excerpt: "Practical strategies for using AI to support differentiated instruction in mixed-ability classrooms.",
@@ -37,11 +37,11 @@ export const blogPosts: BlogPost[] = [
       <p>Mit den richtigen Prompts wird KI zum starken Differenzierungshelfer.</p>
     `,
     publishedAt: "2025-02-01",
-    category: "Differentiation",
+    category: "Lesson Planning",
     tags: ["AI Tools", "Differentiation", "Scaffolding", "Personalized Learning"],
   },
   {
-    id: "G",
+    id: 3,
     title: "Using AI to Generate Inclusive Classroom Materials",
     slug: "ai-inclusive-materials",
     excerpt: "How to use AI to create materials that reflect diverse learners and reduce bias.",
@@ -56,11 +56,11 @@ export const blogPosts: BlogPost[] = [
       <p>Inklusive Materialien fördern Engagement und Zugehörigkeit. KI kann helfen, verschiedene Perspektiven zu berücksichtigen und Inhalte barrierefrei anzupassen.</p>
     `,
     publishedAt: "2025-02-10",
-    category: "Inclusion",
+    category: "Equity",
     tags: ["AI Tools", "Inclusion", "Accessibility"],
   },
   {
-    id: "H",
+    id: 4,
     title: "Quick Student Reports with AI: A Teacher's Workflow",
     slug: "ai-student-reports-workflow",
     excerpt: "A step-by-step workflow for generating concise student reports using AI while preserving teacher voice.",
@@ -75,11 +75,11 @@ export const blogPosts: BlogPost[] = [
       <p>Bereiten Sie eine kurze Vorlage vor mit Abschnitten wie Stärken, Entwicklungsbereiche und nächste Schritte. Geben Sie Beispiele an die KI, damit der Ton erhalten bleibt.</p>
     `,
     publishedAt: "2025-02-20",
-    category: "Reports",
+    category: "Workflow",
     tags: ["AI Tools", "Reporting", "Teacher Workflow"],
   },
   {
-    id: "I",
+    id: 5,
     title: "Parent-Friendly Summaries: Using AI to Translate Jargon",
     slug: "ai-parent-summaries",
     excerpt: "Techniques to convert academic language into clear, parent-friendly summaries using AI.",
@@ -94,11 +94,11 @@ export const blogPosts: BlogPost[] = [
       <p>Eltern schätzen prägnante Zusammenfassungen. Verwenden Sie KI, um lange Beschreibungen in 2-3 Sätze zu kürzen, die sich auf Maßnahmen und Ergebnisse konzentrieren.</p>
     `,
     publishedAt: "2025-03-01",
-    category: "Communication",
+    category: "Parent Communication",
     tags: ["AI Tools", "Parent Communication", "Plain Language"],
   },
   {
-    id: "J",
+    id: 6,
     title: "Safeguarding Student Data When Using AI Tools",
     slug: "ai-student-data-safeguards",
     excerpt: "Best practices for protecting student privacy when using third-party AI services.",
@@ -113,11 +113,11 @@ export const blogPosts: BlogPost[] = [
       <p>Wissen Sie, was Sie an den KI-Anbieter senden und ob es gespeichert oder zum Training verwendet wird. Bevorzugen Sie nach Möglichkeit datenschutzfreundliche Services.</p>
     `,
     publishedAt: "2025-03-10",
-    category: "Privacy",
+    category: "Boundaries",
     tags: ["AI Tools", "Privacy", "Student Data"],
   },
   {
-    id: "K",
+    id: 7,
     title: "5 Quick Prompts for Generating Exit Tickets",
     slug: "ai-exit-tickets-prompts",
     excerpt: "Short, classroom-ready prompts that produce varied exit tickets aligned to objectives.",
@@ -137,11 +137,11 @@ export const blogPosts: BlogPost[] = [
       </ul>
     `,
     publishedAt: "2025-03-20",
-    category: "Assessment",
+    category: "Lesson Planning",
     tags: ["AI Tools", "Formative Assessment", "Prompts"],
   },
   {
-    id: "L",
+    id: 8,
     title: "Teacher Prompts for Creating Better Rubrics",
     slug: "ai-rubric-prompts",
     excerpt: "Concrete prompts teachers can use to have AI draft rubrics that match learning targets.",
@@ -156,11 +156,11 @@ export const blogPosts: BlogPost[] = [
       <p>Geben Sie das Lernziel an und bitten Sie die KI, 3-4 Leistungsniveaus mit kurzen Beschreibungen zu erstellen.</p>
     `,
     publishedAt: "2025-03-30",
-    category: "Assessment",
+    category: "Lesson Planning",
     tags: ["AI Tools", "Rubrics", "Standards"],
   },
   {
-    id: "M",
+    id: 9,
     title: "Using AI to Identify Literacy Gaps Quickly",
     slug: "ai-literacy-gaps",
     excerpt: "How to use quick AI-driven analyses to spot gaps in literacy and target instruction.",
@@ -175,18 +175,18 @@ export const blogPosts: BlogPost[] = [
       <p>Sammele kurze Schreib- oder Leseproben und nutze KI, um häufige Fehler und Muster zu erkennen.</p>
     `,
     publishedAt: "2025-04-10",
-    category: "Literacy",
+    category: "Lesson Planning",
     tags: ["AI Tools", "Literacy", "Assessment"],
   },
 
   // --- existing posts from backup ---
   {
-    id: "1",
+    id: 1,
     title: "5 Ways AI Can Save Teachers 10+ Hours Per Week",
     slug: "5-ai-time-saving-strategies",
     excerpt:
       "Discover practical AI strategies that help teachers reclaim their time without sacrificing quality. From automated feedback to smart lesson planning.",
-    content: `
+    content: String.raw`
       <h2>Introduction</h2>
       <p>Teachers spend countless hours on administrative tasks, grading, and communication. AI tools can help reclaim that time while maintaining quality.</p>
       
@@ -205,7 +205,7 @@ export const blogPosts: BlogPost[] = [
       <h2>5. Administrative Task Automation</h2>
       <p>Automate routine tasks like attendance tracking, progress reports, and documentation.</p>
     `,
-    contentDe: `
+    contentDe: String.raw`
       <h2>Einführung</h2>
       <p>Lehrkräfte verbringen unzählige Stunden mit Verwaltungsaufgaben, Bewertungen und Kommunikation. KI-Tools können helfen, diese Zeit zurückzugewinnen.</p>
       
@@ -225,16 +225,16 @@ export const blogPosts: BlogPost[] = [
       <p>Automatisieren Sie Routineaufgaben wie Anwesenheitsverfolgung und Fortschrittsberichte.</p>
     `,
     publishedAt: "2025-01-15",
-    category: "Productivity",
+    category: "Workflow",
     tags: ["AI Tools", "Time Management", "Productivity", "Teaching Strategies"],
   },
   {
-    id: "18",
+    id: 18,
     title: "Call or Email? Choosing the Right Channel for Behavior Concerns",
     slug: "call-or-email-behavior-concerns",
     excerpt:
       "Learn when to call versus email parents about behavior issues. This practical guide includes decision trees, scripts, and templates to de-escalate tense situations effectively.",
-    content: `
+    content: String.raw`
     <h2>Call or Email? Choosing the Right Channel for Behavior Concerns</h2>
     <p>When a behavior issue pops up, the first decision shapes everything that follows: do I call, or do I email? Pick well and you de-escalate, keep families informed, and create momentum. Pick poorly and you can spark defensiveness, lose time, or miss documentation.</p>
     <p>This teacher-friendly guide gives you a clear decision tree, quick pros and cons, scripts, and a simple follow-up routine so each contact is calm, fair, and efficient.</p>
@@ -292,7 +292,7 @@ export const blogPosts: BlogPost[] = [
     </ul>
     <p><strong>Immediately after:</strong> send a 2-line recap email and log the contact.</p>
   `,
-    contentDe: `
+    contentDe: String.raw`
     <h2>Anruf oder E-Mail? Den richtigen Kanal bei Verhaltensfragen wählen</h2>
     <p>Wenn ein Verhaltensproblem auftritt, prägt die erste Entscheidung alles Weitere: rufe ich an oder schreibe ich eine E-Mail? Triffst du die Wahl gut, deeskalierst du, hältst Familien informiert und erzeugst Momentum. Triffst du sie schlecht, entstehen Abwehr, Zeitverlust oder fehlende Dokumentation.</p>
     
@@ -323,12 +323,12 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    id: "12",
+    id: 12,
     title: "Best AI Tool for Creating Lesson Plans",
     slug: "best-ai-lesson-planning-tool",
     excerpt:
       "Lesson planning is time-heavy and repetitive. Learn how AI-powered lesson planning tools help teachers design structured, creative, and standards-aligned lessons in minutes instead of hours.",
-    content: `
+    content: String.raw`
     <h2>Best AI Tool for Creating Lesson Plans</h2>
     <p>Lesson planning is one of the most time-heavy and repetitive tasks teachers face. Every lesson must align with curriculum standards, engage diverse learners, and include assessments—all while fitting into tight schedules. AI-powered lesson planning tools are now helping teachers design structured, creative, and standards-aligned lessons in minutes instead of hours.</p>
 
@@ -405,7 +405,7 @@ export const blogPosts: BlogPost[] = [
     <p><strong>Final thought:</strong> With AI, lesson planning becomes less about paperwork and more about creativity. Teachers can reclaim time, reduce stress, and focus on what matters most: their students.</p>
     <!-- /PULL_QUOTE -->
   `,
-    contentDe: `
+    contentDe: String.raw`
     <h2>Bestes KI-Tool zum Erstellen von Unterrichtsplänen</h2>
     <p>Unterrichtsplanung ist zeitaufwendig und repetitiv. Jede Stunde muss Standards erfüllen, verschiedene Lernende ansprechen und Bewertungen enthalten. KI-gestützte Tools helfen Lehrkräften, strukturierte, kreative und standardgerechte Stunden in Minuten statt Stunden zu erstellen.</p>
 
@@ -457,12 +457,12 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    id: "12",
+    id: 12,
     title: "Best AI Tool for Creating Lesson Plans",
     slug: "best-ai-lesson-planning-tool",
     excerpt:
       "Lesson planning is time-heavy and repetitive. Learn how AI-powered lesson planning tools help teachers design structured, creative, and standards-aligned lessons in minutes instead of hours.",
-    content: `
+    content: String.raw`
     <h2>Best AI Tool for Creating Lesson Plans</h2>
     <p>Lesson planning is one of the most time-heavy and repetitive tasks teachers face. Every lesson must align with curriculum standards, engage diverse learners, and include assessments—all while fitting into tight schedules. AI-powered lesson planning tools are now helping teachers design structured, creative, and standards-aligned lessons in minutes instead of hours.</p>
 
@@ -540,7 +540,7 @@ export const blogPosts: BlogPost[] = [
     <p><strong>Final thought:</strong> With AI, lesson planning becomes less about paperwork and more about creativity. Teachers can reclaim time, reduce stress, and focus on what matters most: their students.</p>
     <!-- /PULL_QUOTE -->
   `,
-    contentDe: `
+    contentDe: String.raw`
     <h2>Bestes KI-Tool zum Erstellen von Unterrichtsplänen</h2>
     <p>Unterrichtsplanung ist zeitaufwendig und repetitiv. Jede Stunde muss Standards erfüllen, verschiedene Lernende ansprechen und Bewertungen enthalten. KI-gestützte Tools helfen Lehrkräften, strukturierte, kreative und standardgerechte Stunden in Minuten statt Stunden zu erstellen.</p>
 
@@ -623,12 +623,12 @@ export const blogPosts: BlogPost[] = [
     tags: ["AI Tools", "Lesson Planning", "Time Management", "Curriculum"],
   },
   {
-    id: "13",
+    id: 13,
     title: "What AI Apps Give Feedback on Student Writing?",
     slug: "ai-apps-feedback-student-writing",
     excerpt:
       "Providing feedback on student writing is valuable but time-consuming. Learn how AI-powered writing feedback tools help teachers support student growth faster with consistent, actionable guidance.",
-    content: `
+    content: String.raw`
     <h2>What AI Apps Give Feedback on Student Writing?</h2>
     <p>Providing feedback on student writing is one of the most valuable—but also most time-consuming—tasks teachers face. Effective feedback requires a balance of encouragement and constructive criticism, with suggestions tailored to each student's level. Doing this for dozens of essays, projects, or creative pieces can quickly overwhelm even the most experienced teacher. AI-powered writing feedback tools are changing this by giving teachers a faster, more consistent way to support student growth.</p>
 
@@ -705,7 +705,7 @@ export const blogPosts: BlogPost[] = [
     <p><strong>Final thought:</strong> AI writing feedback tools don't replace the teacher's voice. They free teachers from repetitive tasks and help ensure every student receives meaningful, actionable guidance.</p>
     <!-- /PULL_QUOTE -->
   `,
-    contentDe: `
+    contentDe: String.raw`
     <h2>Welche KI-Apps geben Feedback zu Schülertexten?</h2>
     <p>Feedback zu Schülertexten ist wertvoll, aber extrem zeitaufwendig. Es muss ermutigen, aber auch konstruktiv sein. Bei Dutzenden Aufsätzen oder Projekten kommen Lehrkräfte schnell an ihre Grenzen. KI-gestützte Feedback-Tools verändern diesen Prozess grundlegend.</p>
 
@@ -783,16 +783,16 @@ export const blogPosts: BlogPost[] = [
     <!-- /PULL_QUOTE -->
   `,
     publishedAt: "2025-01-25",
-    category: "Writing Feedback",
+    category: "Guides",
     tags: ["AI Tools", "Writing Feedback", "Student Writing", "Assessment", "Time Management"],
   },
   {
-    id: "15",
+    id: 15,
     title: "How Can I Save Time Planning Lessons with AI",
     slug: "save-time-lesson-planning-ai",
     excerpt:
       "Lesson planning is rewarding but time-consuming. AI-powered tools offer a way to cut this workload dramatically while maintaining quality. Learn how to reclaim hours each week.",
-    content: `
+    content: String.raw`
     <h2>How Can I Save Time Planning Lessons with AI?</h2>
     <p>Lesson planning is one of the most rewarding parts of teaching — but it's also one of the most time-consuming. Teachers want lessons that are engaging, standards-aligned, and adaptable for different learners. Yet the process of pulling resources, structuring objectives, designing activities, and writing assessments can consume hours each week. AI-powered tools offer a way to cut this workload dramatically while maintaining — and even enhancing — lesson quality.</p>
 
@@ -870,7 +870,7 @@ export const blogPosts: BlogPost[] = [
     <p><strong>Final thought:</strong> With AI, lesson planning becomes less about paperwork and more about creativity. Teachers can reclaim time, reduce stress, and focus on what matters most: their students.</p>
     <!-- /PULL_QUOTE -->
   `,
-    contentDe: `
+    contentDe: String.raw`
     <h2>Wie kann ich mit KI Zeit bei der Unterrichtsplanung sparen?</h2>
     <p>Unterrichtsplanung ist lohnend – aber zeitintensiv. Lehrkräfte wollen spannende, standardgerechte und differenzierte Stunden. Doch Ressourcen zu sichten, Ziele zu formulieren, Aktivitäten zu entwerfen und Prüfungen vorzubereiten, kostet Stunden. KI-Tools verringern diese Last erheblich, ohne die Qualität zu beeinträchtigen.</p>
 
@@ -953,12 +953,12 @@ export const blogPosts: BlogPost[] = [
     tags: ["AI", "Lesson Planning", "Time Management", "Productivity"],
   },
   {
-    id: "11",
+    id: 11,
     title: "Five Parent Email Openers That De-Escalate Tense Situations",
     slug: "five-email-openers-deescalate-tense-situations",
     excerpt:
       "Parent emails can feel like walking a tightrope. Learn five proven email openers that lower tension, set a cooperative frame, and create space for solutions—with copy-paste templates for behavior, progress, attendance, and grading disputes.",
-    content: `
+    content: String.raw`
     <h2>Five Parent Email Openers That De-Escalate Tense Situations</h2>
     <p>Parent emails can feel like walking a tightrope. The facts matter, but tone decides how the message lands. A strong opener does most of the emotional work for you: it lowers the temperature, sets a cooperative frame, and creates space for solutions.</p>
     <p>Below are five openers that consistently de-escalate. Each comes with why it works, copy-paste versions, and quick variations for behavior, progress, attendance, and grading disputes. Use them as your first lines, then follow with one or two specific facts, a simple next step, and an invite to partner.</p>
@@ -1159,7 +1159,7 @@ export const blogPosts: BlogPost[] = [
     <h2>Final thought</h2>
     <p>Parents want clarity and care. You want calm and progress. These five openers give you both. Start with one that fits your voice, add a single fact, set a small next step, and schedule a check-in. The tone you set in the first line is the tone that usually carries the whole conversation.</p>
   `,
-    contentDe: `
+    contentDe: String.raw`
     <h2>Fünf E-Mail-Opener an Eltern, die angespannte Situationen entschärfen</h2>
     <p>Elternmails sind oft ein Balanceakt. Fakten sind wichtig - aber der Ton entscheidet, wie eine Nachricht ankommt. Ein starker Opener leistet die meiste emotionale Arbeit: Er senkt die Temperatur, stellt Zusammenarbeit in den Mittelpunkt und schafft Raum für Lösungen.</p>
     <p>Hier sind fünf Opener, die verlässlich deeskalieren. Zu jedem gibt es den Grund, warum er wirkt, eine Copy-Paste-Version und schnelle Varianten zu Verhalten, Leistungsstand, Anwesenheit und Notenfragen. Nutze sie als ersten Satz, dann folgen ein bis zwei konkrete Fakten, ein einfacher nächster Schritt und eine Einladung zur Zusammenarbeit.</p>
@@ -1361,9 +1361,14 @@ export const blogPosts: BlogPost[] = [
     <p>Eltern wollen Klarheit und Fürsorge. Sie wollen Ruhe und Fortschritt. Diese fünf Opener geben Ihnen beides. Beginnen Sie mit einem, der zu Ihrer Stimme passt, fügen Sie einen einzelnen Fakt hinzu, setzen Sie einen kleinen nächsten Schritt und planen Sie einen Check-in. Der Ton, den Sie in der ersten Zeile setzen, ist der Ton, der normalerweise das gesamte Gespräch trägt.</p>
     `,
     publishedAt: "2025-01-20",
-    category: "Communication",
+    category: "Parent Communication",
     tags: ["Parent Communication", "Email Templates", "Conflict Resolution", "Time Management"],
   },
 ]
 
 export default blogPosts
+
+
+
+
+
