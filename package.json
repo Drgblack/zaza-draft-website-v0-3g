@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
+    "dev": "next dev", "typecheck": "tsc --noEmit", "lint": "next lint", "validate-posts": "tsx src/data/validate-posts.ts",
     "lint": "next lint",
     "start": "next start"
   },
