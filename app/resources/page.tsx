@@ -58,7 +58,7 @@ export default function ResourcesPage() {
         )}
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {filteredResources.map((resource) => {
+          {filteredResources.map((resource) => { const href = (resource?.files?.en?.pdf ?? resource?.files?.en?.docx ?? resource?.files?.de?.pdf ?? resource?.files?.de?.docx);
             const isCurrentLanguage = resource.language.toLowerCase() === language.toLowerCase()
 
             return (
@@ -86,7 +86,7 @@ export default function ResourcesPage() {
                     </p>
                   )}
 
-                  {((resource.files?.en?.pdf ?? resource.files?.en?.docx ?? resource.files?.de?.pdf ?? resource.files?.de?.docx)) ? (
+                  {(resource.files?.en?.pdf ?? resource.files?.en?.docx ?? resource.files?.de?.pdf ?? resource.files?.de?.docx) ? (
                     <Button
                       asChild
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 transition-all"
@@ -110,4 +110,5 @@ export default function ResourcesPage() {
     </div>
   )
 }
+
 
