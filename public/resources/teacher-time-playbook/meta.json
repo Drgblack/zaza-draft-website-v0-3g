@@ -1,25 +1,13 @@
-{
-  "category": "Guide",
-  "files": {
-    "en": {
-      "docx": "/resources/teacher-time-playbook/build/en.docx",
-      "author": "Zaza Draft",
-      "pdf": "/resources/teacher-time-playbook/build/en.pdf",
-      "md": "/resources/teacher-time-playbook/en.md"
-    },
-    "de": {
-      "docx": "/resources/teacher-time-playbook/build/de.docx",
-      "author": "Zaza Draft",
-      "pdf": "/resources/teacher-time-playbook/build/de.pdf",
-      "md": "/resources/teacher-time-playbook/de.md"
-    }
-  },
-  "blurb": "Batching, automation, and AI delegation to reclaim 5+ hours/week.",
-  "title": "The Batch & Automate Playbook for Teachers",
-  "slug": "teacher-time-playbook",
-  "published": "2025-10-19",
-  "tags": [
-    "productivity",
-    "time"
-  ]
+﻿{
+    "slug":  "teacher-time-playbook",
+    "files":  {
+                  "en":  {
+                             "docx":  "/resources/teacher-time-playbook/build/en.docx",
+                             "pdf":  "/resources/teacher-time-playbook/build/en.pdf"
+                         },
+                  "de":  {
+                             "docx":  "/resources/teacher-time-playbook/build/de.docx",
+                             "pdf":  "/resources/teacher-time-playbook/build/de.pdf"
+                         }
+              }
 }

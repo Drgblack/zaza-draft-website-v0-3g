@@ -1,25 +1,13 @@
-{
-  "category": "Guide",
-  "files": {
-    "en": {
-      "docx": "/resources/classroom-management/build/en.docx",
-      "author": "Zaza Draft",
-      "pdf": "/resources/classroom-management/build/en.pdf",
-      "md": "/resources/classroom-management/en.md"
-    },
-    "de": {
-      "docx": "/resources/classroom-management/build/de.docx",
-      "author": "Zaza Draft",
-      "pdf": "/resources/classroom-management/build/de.pdf",
-      "md": "/resources/classroom-management/de.md"
-    }
-  },
-  "blurb": "Practical routines, expectations, and low-effort, high-impact interventions.",
-  "title": "The Reset Routine: A Proactive Classroom Management Guide",
-  "slug": "classroom-management",
-  "published": "2025-10-19",
-  "tags": [
-    "behavior",
-    "routines"
-  ]
+﻿{
+    "slug":  "classroom-management",
+    "files":  {
+                  "en":  {
+                             "docx":  "/resources/classroom-management/build/en.docx",
+                             "pdf":  "/resources/classroom-management/build/en.pdf"
+                         },
+                  "de":  {
+                             "docx":  "/resources/classroom-management/build/de.docx",
+                             "pdf":  "/resources/classroom-management/build/de.pdf"
+                         }
+              }
 }

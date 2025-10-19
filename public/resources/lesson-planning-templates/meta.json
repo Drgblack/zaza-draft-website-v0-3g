@@ -1,25 +1,13 @@
-{
-  "category": "Template",
-  "files": {
-    "en": {
-      "docx": "/resources/lesson-planning-templates/build/en.docx",
-      "author": "Zaza Draft",
-      "pdf": "/resources/lesson-planning-templates/build/en.pdf",
-      "md": "/resources/lesson-planning-templates/en.md"
-    },
-    "de": {
-      "docx": "/resources/lesson-planning-templates/build/de.docx",
-      "author": "Zaza Draft",
-      "pdf": "/resources/lesson-planning-templates/build/de.pdf",
-      "md": "/resources/lesson-planning-templates/de.md"
-    }
-  },
-  "blurb": "Modern lesson plan templates with differentiation and assessment sections.",
-  "title": "The Flexible Lesson Plan Designer (DOCX)",
-  "slug": "lesson-planning-templates",
-  "published": "2025-10-19",
-  "tags": [
-    "planning",
-    "templates"
-  ]
+﻿{
+    "slug":  "lesson-planning-templates",
+    "files":  {
+                  "en":  {
+                             "docx":  "/resources/lesson-planning-templates/build/en.docx",
+                             "pdf":  "/resources/lesson-planning-templates/build/en.pdf"
+                         },
+                  "de":  {
+                             "docx":  "/resources/lesson-planning-templates/build/de.docx",
+                             "pdf":  "/resources/lesson-planning-templates/build/de.pdf"
+                         }
+              }
 }

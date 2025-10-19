@@ -1,25 +1,13 @@
-{
-  "category": "Template",
-  "files": {
-    "en": {
-      "docx": "/resources/parent-message-templates/build/en.docx",
-      "author": "Zaza Draft",
-      "pdf": "/resources/parent-message-templates/build/en.pdf",
-      "md": "/resources/parent-message-templates/en.md"
-    },
-    "de": {
-      "docx": "/resources/parent-message-templates/build/de.docx",
-      "author": "Zaza Draft",
-      "pdf": "/resources/parent-message-templates/build/de.pdf",
-      "md": "/resources/parent-message-templates/de.md"
-    }
-  },
-  "blurb": "Professionally crafted, easily adaptable templates for common communication moments.",
-  "title": "Parent Communication Toolkit: Templates for Every Scenario",
-  "slug": "parent-message-templates",
-  "published": "2025-10-19",
-  "tags": [
-    "parent-comms",
-    "templates"
-  ]
+﻿{
+    "slug":  "parent-message-templates",
+    "files":  {
+                  "en":  {
+                             "docx":  "/resources/parent-message-templates/build/en.docx",
+                             "pdf":  "/resources/parent-message-templates/build/en.pdf"
+                         },
+                  "de":  {
+                             "docx":  "/resources/parent-message-templates/build/de.docx",
+                             "pdf":  "/resources/parent-message-templates/build/de.pdf"
+                         }
+              }
 }

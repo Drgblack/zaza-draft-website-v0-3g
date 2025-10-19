@@ -1,22 +1,13 @@
 ﻿{
     "slug":  "ai-rubric-prompts",
-    "tags":  null,
     "files":  {
-                  "de":  {
-                             "md":  "/resources/ai-rubric-prompts/de.md",
-                             "docx":  "/resources/ai-rubric-prompts/build/de.docx",
-                             "pdf":  "/resources/ai-rubric-prompts/build/de.pdf",
-                             "author":  null
-                         },
                   "en":  {
-                             "md":  "/resources/ai-rubric-prompts/en.md",
                              "docx":  "/resources/ai-rubric-prompts/build/en.docx",
-                             "pdf":  "/resources/ai-rubric-prompts/build/en.pdf",
-                             "author":  null
+                             "pdf":  "/resources/ai-rubric-prompts/build/en.pdf"
+                         },
+                  "de":  {
+                             "docx":  "/resources/ai-rubric-prompts/build/de.docx",
+                             "pdf":  "/resources/ai-rubric-prompts/build/de.pdf"
                          }
-              },
-    "blurb":  null,
-    "category":  null,
-    "title":  null,
-    "published":  null
+              }
 }

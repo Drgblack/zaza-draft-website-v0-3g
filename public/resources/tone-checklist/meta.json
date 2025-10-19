@@ -1,25 +1,13 @@
-{
-  "category": "Checklist",
-  "files": {
-    "en": {
-      "docx": "/resources/tone-checklist/build/en.docx",
-      "author": "Zaza Draft",
-      "pdf": "/resources/tone-checklist/build/en.pdf",
-      "md": "/resources/tone-checklist/en.md"
-    },
-    "de": {
-      "docx": "/resources/tone-checklist/build/de.docx",
-      "author": "Zaza Draft",
-      "pdf": "/resources/tone-checklist/build/de.pdf",
-      "md": "/resources/tone-checklist/de.md"
-    }
-  },
-  "blurb": "Your pre-send audit to keep messages clear, calm, and professional.",
-  "title": "The 5-Minute Professional Tone Checklist",
-  "slug": "tone-checklist",
-  "published": "2025-10-19",
-  "tags": [
-    "parent-comms",
-    "tone"
-  ]
+﻿{
+    "slug":  "tone-checklist",
+    "files":  {
+                  "en":  {
+                             "docx":  "/resources/tone-checklist/build/en.docx",
+                             "pdf":  "/resources/tone-checklist/build/en.pdf"
+                         },
+                  "de":  {
+                             "docx":  "/resources/tone-checklist/build/de.docx",
+                             "pdf":  "/resources/tone-checklist/build/de.pdf"
+                         }
+              }
 }
