@@ -4,7 +4,15 @@ export type { BlogPost } from "./inbox-transform";
 // Canonical posts array for the blog
 export const posts: BlogPost[] = blogPosts as unknown as BlogPost[];
 
-// Helpers used by blog pages
+// Minimal API expected by blog pages
+export function getAllPosts(): BlogPost[] {
+  return posts;
+}
+
+export function getAllSlugs(): string[] {
+  return posts.map((p) => p.slug);
+}
+
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return posts.find((p) => p.slug === slug);
 }
