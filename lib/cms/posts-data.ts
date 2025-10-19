@@ -2,6 +2,45 @@ import type { BlogPost } from "./posts"
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "F",
+    title: "How to Use AI for Differentiated Instruction",
+    slug: "ai-differentiated-instruction",
+    excerpt: "Practical strategies for using AI to support differentiated instruction in mixed-ability classrooms.",
+    content: String.raw`
+      <h2>Introduction</h2>
+      <p>AI can help teachers tailor instruction for diverse learners by generating scaffolds, extension tasks, and personalized feedback.</p>
+      <h2>Scaffolding with AI</h2>
+      <p>Use AI to create sentence starters, graphic organizers, and step-by-step guides for students who need extra support.</p>
+      <h2>Extension Tasks</h2>
+      <p>AI can suggest enrichment activities for advanced learners, such as research prompts or creative projects.</p>
+      <!-- CALLOUT:EXAMPLE -->
+      <p>Example: "Generate three levels of reading questions for the same text."</p>
+      <!-- /CALLOUT:EXAMPLE -->
+      <h2>Personalized Feedback</h2>
+      <p>AI can provide targeted feedback based on student work, helping each learner progress at their own pace.</p>
+      <h2>Final Thought</h2>
+      <p>With the right prompts, AI becomes a powerful ally for differentiation.</p>
+    `,
+    contentDe: String.raw`
+      <h2>Einleitung</h2>
+      <p>KI hilft Lehrkräften, den Unterricht für unterschiedliche Lernende zu individualisieren – mit Hilfestellungen, Erweiterungsaufgaben und personalisiertem Feedback.</p>
+      <h2>Hilfestellungen mit KI</h2>
+      <p>Nutzen Sie KI, um Satzanfänge, grafische Organizer und Schritt-für-Schritt-Anleitungen für Schüler mit Förderbedarf zu erstellen.</p>
+      <h2>Erweiterungsaufgaben</h2>
+      <p>KI schlägt Vertiefungsaufgaben für leistungsstarke Schüler vor, z.B. Rechercheaufträge oder kreative Projekte.</p>
+      <!-- CALLOUT:EXAMPLE -->
+      <p>Beispiel: "Erstelle drei Schwierigkeitsgrade von Lese-Fragen zum selben Text."</p>
+      <!-- /CALLOUT:EXAMPLE -->
+      <h2>Personalisiertes Feedback</h2>
+      <p>KI gibt gezieltes Feedback zu Schülerarbeiten und fördert individuelles Lernen.</p>
+      <h2>Schlussgedanke</h2>
+      <p>Mit den richtigen Prompts wird KI zum starken Differenzierungshelfer.</p>
+    `,
+    publishedAt: "2025-02-01",
+    category: "Differentiation",
+    tags: ["AI Tools", "Differentiation", "Scaffolding", "Personalized Learning"],
+  },
+  {
     id: "1",
     title: "5 Ways AI Can Save Teachers 10+ Hours Per Week",
     slug: "5-ai-time-saving-strategies",
@@ -46,12 +85,19 @@ export const blogPosts: BlogPost[] = [
           slug: "ai-differentiated-instruction",
           excerpt: "Practical strategies for using AI to support differentiated instruction in mixed-ability classrooms.",
           content: String.raw`
-      
-      <h2>4. Bewertungserstellung</h2>
-      <p>Erstellen Sie automatisch Tests und Bewertungsraster, die auf Ihre Lernziele abgestimmt sind.</p>
-      
-      <h2>5. Automatisierung administrativer Aufgaben</h2>
-      <p>Automatisieren Sie Routineaufgaben wie Anwesenheitsverfolgung und Fortschrittsberichte.</p>
+      <h2>Introduction</h2>
+      <p>AI can help teachers tailor instruction for diverse learners by generating scaffolds, extension tasks, and personalized feedback.</p>
+      <h2>Scaffolding with AI</h2>
+      <p>Use AI to create sentence starters, graphic organizers, and step-by-step guides for students who need extra support.</p>
+      <h2>Extension Tasks</h2>
+      <p>AI can suggest enrichment activities for advanced learners, such as research prompts or creative projects.</p>
+      <!-- CALLOUT:EXAMPLE -->
+      <p>Example: "Generate three levels of reading questions for the same text."</p>
+      <!-- /CALLOUT:EXAMPLE -->
+      <h2>Personalized Feedback</h2>
+      <p>AI can provide targeted feedback based on student work, helping each learner progress at their own pace.</p>
+      <h2>Final Thought</h2>
+      <p>With the right prompts, AI becomes a powerful ally for differentiation.</p>
     `,
     publishedAt: "2025-01-15",
     category: "Productivity",
