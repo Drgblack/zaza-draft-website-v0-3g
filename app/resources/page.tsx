@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useState } from "react"
 import { Card } from "@/components/ui/card"
@@ -86,12 +86,12 @@ export default function ResourcesPage() {
                     </p>
                   )}
 
-                  {resource.downloadUrl ? (
+                  {(resource.files?.en?.pdf ?? resource.files?.en?.docx ?? resource.files?.de?.pdf ?? resource.files?.de?.docx) ? (
                     <Button
                       asChild
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 transition-all"
                     >
-                      <a href={resource.downloadUrl} download className="flex items-center justify-center gap-2">
+                      <a href=(resource.files?.en?.pdf ?? resource.files?.en?.docx ?? resource.files?.de?.pdf ?? resource.files?.de?.docx) download className="flex items-center justify-center gap-2">
                         <Download className="h-4 w-4" />
                         Download
                       </a>
@@ -110,3 +110,4 @@ export default function ResourcesPage() {
     </div>
   )
 }
+
