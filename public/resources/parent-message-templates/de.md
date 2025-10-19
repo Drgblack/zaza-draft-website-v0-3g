@@ -1,4 +1,4 @@
-# Elternkommunikations-Toolkit: Vorlagen für jede Situation
+﻿# Elternkommunikations-Toolkit: Vorlagen für jede Situation
 
 > Klar, wertschätzend und schnell – anpassbare Vorlagen für die häufigsten Situationen im Schulalltag.
 
@@ -107,4 +107,4 @@
 - „Lassen Sie [Vorname] erzählen, was er/sie im Unterricht gelernt hat.“  
 - „Planen Sie 15 Minuten Lesezeit oder Wiederholung mit Ihnen ein.“  
 - „Schaffen Sie einen ruhigen Arbeitsplatz ohne Ablenkung.“  
-- „Feiern Sie kleine Fortschritte – Einsatz ist genauso wichtig wie Ergebnisse.“  
+- „Feiern Sie kleine Fortschritte – Einsatz ist genauso wichtig wie Ergebnisse.“

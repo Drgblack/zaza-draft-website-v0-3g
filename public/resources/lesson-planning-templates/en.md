@@ -1,17 +1,29 @@
-# The Flexible Lesson Plan Designer (DOCX)
+﻿# The Flexible Lesson Plan Designer (DOCX)
+
+> Modern templates with differentiation, tech integration, and clear objectives.
+
+---
 
 ## 5E Model
 | Phase | Objective | Activities | Differentiation | Assessment |
 |---|---|---|---|---|
+| Engage | | | | |
+| Explore | | | | |
+| Explain | | | | |
+| Elaborate | | | | |
+| Evaluate | | | | |
 
-## Workshop Model
+## Workshop Model (ELA)
 | Part | Min | Mini-lesson | Work time | Share |
 |---|---|---|---|---|
+| | | | | |
 
 ## Direct Instruction
 | Step | Input | Guided practice | Independent | Check |
 |---|---|---|---|---|
+| | | | | |
 
-## Quick Plan (one-pager)
-| Obj | Do Now | Main | Exit Ticket |
+## Quick Plan (One-Pager)
+| Objective | Do Now | Main | Exit Ticket |
 |---|---|---|---|
+| | | | |

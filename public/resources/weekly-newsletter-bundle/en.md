@@ -1,13 +1,24 @@
-# ‘This Week In Our Class’ Newsletter Starter Kit
+﻿# ‘This Week In Our Class’ Newsletter Starter Kit
 
-## Primary template
-- Sections: What we’re learning, Reminders, Celebrations
+> Three editable newsletter templates (primary, middle, high) + idea bank.
 
-## Middle school template
-- Sections: Deadlines, Projects, Upcoming
+---
 
-## High school template
-- Sections: Key dates, Unit updates, Support hours
+## Primary
+**Sections:** What we're learning; Reminders; Celebrations!  
+**Copy tips:** Short sentences; icons/emojis sparingly; 1–2 photos.
 
-## Content idea bank
-- 30 prompts to keep it fresh
+## Middle School
+**Sections:** Deadlines; Projects; Upcoming; Support  
+**Copy tips:** Bullet lists; highlight dates; link to resources.
+
+## High School
+**Sections:** Key dates; Unit updates; Assessment windows; Office hours  
+**Copy tips:** Concise; clear next steps; study guides linked.
+
+## Content Idea Bank (30)
+- Student quote of the week
+- Vocabulary spotlight
+- “Ask me about…” prompts
+- Parent volunteer shout-outs
+- Upcoming milestones

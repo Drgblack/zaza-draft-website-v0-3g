@@ -1,13 +1,28 @@
-# The Comment Bank Builder: End-of-Term Reports
+﻿# The Comment Bank Builder: End-of-Term Reports
 
-## Framework
-- **Strength → Growth → Next step** (the “sandwich”)
+> A structured system and ready-to-use phrases to keep reports personal and efficient.
 
-## Comment banks
-### Strengths (by domain)
-### Areas for Growth (by domain)
+---
+
+## Framework (Sandwich)
+**Strength → Growth → Encouragement/Next step**.
+
+## Comment Banks
+### Strengths
+- “Shows genuine curiosity in [topic].”
+- “Supports peers and collaborates effectively.”
+- “Perseveres with challenging tasks.”
+
+### Areas for Growth
+- “Would benefit from stronger organisation.”
+- “Next step: apply strategies independently.”
+- “Extend skills to more complex texts/problems.”
+
 ### Closers
+- “I look forward to their continued progress in [subject].”
+- “It’s been a pleasure to see their confidence grow.”
 
 ## Worksheet: Praise & Polish
-| Student | Specific praise | Specific polish | Next step |
+| Student | Specific Praise | Specific Growth Area | Next Step |
 |---|---|---|---|
+| | | | |

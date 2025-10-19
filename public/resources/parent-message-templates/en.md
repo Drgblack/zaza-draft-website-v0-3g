@@ -1,4 +1,4 @@
-# Parent Communication Toolkit: Templates for Every Scenario
+﻿# Parent Communication Toolkit: Templates for Every Scenario
 
 > Send clear, compassionate messages in minutes. Adaptable templates for the most common situations teachers face.
 
@@ -107,4 +107,4 @@
 - “Encourage [Student] to explain what they learned in class today—teaching back helps retention.”  
 - “Set aside 15 minutes for [Student] to read aloud or review notes with you.”  
 - “Provide a quiet, distraction-free space for homework.”  
-- “Celebrate small wins—acknowledge effort, not just results.”  
+- “Celebrate small wins—acknowledge effort, not just results.”
