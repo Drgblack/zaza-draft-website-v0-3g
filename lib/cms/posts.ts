@@ -1,64 +1,16 @@
-import type { BlogPost } from "./inbox-transform"
-export type { BlogPost } from "./inbox-transform"
-import fallbackPosts from "./fallback-posts"
+import { blogPosts } from "./posts-data";
+export type { BlogPost } from "./inbox-transform";
 
-let postsData: BlogPost[] = []
-try {
-  // Dynamic import to handle potential errors gracefully
-  async function loadPostsModule(){ return import("./posts-data") }postsData = postsModule.default || (await loadPostsModule()).blogPosts || []
+// Canonical posts array for the blog
+export const posts: BlogPost[] = blogPosts as unknown as BlogPost[];
 
-  if (!Array.isArray(postsData) || postsData.length === 0) {
-    console.log("[v0] posts-data is empty, using fallback")
-    postsData = fallbackPosts
-  }
-} catch (error) {
-  console.error("[v0] Failed to load posts-data, using fallback:", error)
-  postsData = fallbackPosts
-}
-
-let inboxPosts: BlogPost[] = []
-try {
-  async function loadTransform(){ return import("./inbox-transform") }
-  inboxPosts = (await loadTransform()).transformInboxToPosts?.() || []
-} catch {
-  // Inbox is optional, no error needed
-  inboxPosts = []
-}
-
-// Merge posts-data with inbox posts
-export const posts: BlogPost[] = [...postsData, ...inboxPosts]
-
-export default posts
-
-export function getAllPosts(): BlogPost[] {
-  return posts.sort((a, b) => {
-    const dateA = new Date(a.publishedAt || "2025-01-01")
-    const dateB = new Date(b.publishedAt || "2025-01-01")
-    return dateB.getTime() - dateA.getTime()
-  })
-}
-
+// Helpers used by blog pages
 export function getPostBySlug(slug: string): BlogPost | undefined {
-  return posts.find((post) => post.slug === slug)
+  return posts.find((p) => p.slug === slug);
 }
 
-export function getRelatedPosts(postId: string, limit = 3): BlogPost[] {
-  const currentPost = posts.find((post) => post.id === postId)
-  if (!currentPost) return []
-
-  const related = posts
-    .filter((post) => post.id !== postId)
-    .filter((post) => {
-      // Match by category
-      if (post.category === currentPost.category) return true
-      // Match by tags
-      if (post.tags && currentPost.tags) {
-        return post.tags.some((tag) => currentPost.tags?.includes(tag))
-      }
-      return false
-    })
-    .slice(0, limit)
-
-  return related
+export function getRelatedPosts(postId: number, limit = 3): BlogPost[] {
+  const current = posts.find((p) => p.id === postId);
+  if (!current) return posts.slice(0, limit);
+  return posts.filter((p) => p.id !== postId).slice(0, limit);
 }
-

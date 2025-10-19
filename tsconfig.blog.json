@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [
+    "lib/cms/**/*.ts",
+    "app/blog/**/*.ts",
+    "app/blog/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    ".next/**"
+  ]
+}
