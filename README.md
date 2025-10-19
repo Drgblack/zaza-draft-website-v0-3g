@@ -72,6 +72,7 @@ If environment variables are not set, the app will use mock endpoints and displa
 
 Example files for ES/FR/IT are already created in `lib/i18n/` with TODO comments.
 
+
 ### Translation Keys
 
 All translation keys are centralized in `lib/i18n/language-context.tsx`. Key categories:
