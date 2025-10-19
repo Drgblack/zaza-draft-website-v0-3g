@@ -7,10 +7,13 @@ on:
       - "public/resources/**/meta.json"
       - "data/resources/resources.index.json"
       - "design/reference.docx"
+  workflow_dispatch: {}   # allow manual runs from the Actions tab
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # allow committing the built files
     steps:
       - uses: actions/checkout@v4
 
