@@ -56,3 +56,42 @@ When generating code or copy, protect teacher time and student privacy. Tone: cl
 - Type/lint: pnpm typecheck and pnpm lint
 - Commit to a feature branch and open PR; Vercel previews on PR branches.
 
+
+### Critical Blog Content Rules (Updated)
+
+**Data shape**
+- Each post is stored as a `BlogPost` object in `src/data/posts-data.tsx`.
+- Fields: `{ id, title, slug, excerpt, content, contentDe, publishedAt, tags }`.
+- Use `String.raw` for content fields to prevent template literal breaks.
+- Return only the object literal — no wrappers, no exports, no fences.
+
+**Content standards**
+- Semantic HTML only (`<h2>`, `<h3>`, `<p>`, `<ul>`, `<ol>`, `<strong>`).
+- No inline styles or classes. All tags closed. Hyphens instead of em dashes.
+- Use HTML markers:
+  - `<!-- PULL_QUOTE -->`
+  - `<!-- CALLOUT:... -->`
+  - `<!-- EXAMPLE -->`
+  - `<!-- TEMPLATE -->` (when giving copy-paste prompts)
+- Images: only `/images/...` paths, never blob: or external vusercontent links.
+
+**Length & depth**
+- Target ~1500 words per language.
+- EN and DE must be structurally aligned (section headings, callouts, examples, closing thought).
+
+**Mandatory structure for every blog post**
+Each post must include:
+- Expanded introduction with clear framing for teachers.
+- Subsections with practical takeaways.
+- At least **one micro-case study** (short narrative showing the method in action).
+- At least **one template pack** (copy-paste snippets, scaffolds, or ready-to-use prompts).
+- At least **one extended checklist** or step-by-step flow teachers can follow.
+- At least **one pull quote** and multiple **callouts** for quick scanning.
+- A **final wellbeing thought** or positive close that restores teacher confidence.
+
+**Voice & tone**
+- Audience: busy teachers.
+- Style: clear-but-kind, professional, no corporate jargon.
+- Protect teacher time and student privacy.
+- Avoid clichés, fluff, or academic padding.
+
