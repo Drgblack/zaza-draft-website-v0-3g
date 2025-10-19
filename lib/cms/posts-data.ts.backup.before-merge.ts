@@ -2,12 +2,305 @@ import type { BlogPost } from "@/lib/cms/posts"
 
 export const blogPosts: BlogPost[] = [
   {
-    id: "1",
+    id: 2,
+    title: "How to Use AI for Differentiated Instruction",
+    slug: "ai-differentiated-instruction",
+    excerpt: "Practical strategies for using AI to support differentiated instruction in mixed-ability classrooms.",
+    content: String.raw`<h2>Introduction</h2>
+<p>AI can help teachers differentiate instruction—supporting students who need scaffolds, providing on-grade practice, and challenging advanced learners with extension tasks—without multiplying planning time. This guide gives you a concrete, repeatable routine you can use this week.</p>
+
+<h2>Core ideas</h2>
+<ul>
+  <li><strong>Differentiate the task, not the target:</strong> keep the same standard but vary supports, examples, and cognitive demand.</li>
+  <li><strong>Use AI to draft, you to decide:</strong> let AI propose options; you choose and refine based on your students.</li>
+  <li><strong>Tight prompts, tight outputs:</strong> tell the model audience, length, reading level, vocabulary, and success criteria.</li>
+  <li><strong>Three lanes:</strong> <em>Entry</em> (below-grade scaffolds), <em>Core</em> (on-grade practice), <em>Stretch</em> (above-grade extension).</li>
+</ul>
+
+<h2>Micro case study</h2>
+<p><strong>Case:</strong> Ms. Patel teaches 7th-grade science. Her class includes multilingual newcomers and two students ready for high-school biology content.</p>
+<p><strong>Challenge:</strong> One lab direction set and one worksheet never fit everyone; feedback took too long.</p>
+<p><strong>Solution:</strong> She used a three-lane prompt to generate <em>Entry/Core/Stretch</em> versions and kept the same success criteria.</p>
+<p><strong>Result:</strong> On a food-web assessment, the class median moved from 68% to 81% in three weeks; time spent on prep dropped 40%.</p>
+
+<h2>Template pack</h2>
+<pre><code>Prompt: Create three versions of the task "Energy Flow Lab":
+- Entry (below-grade): short sentences, sentence starters, visuals, 5th-grade reading level.
+- Core (on-grade): concise steps, grade-level vocabulary, one "explain your reasoning" item.
+- Stretch (above-grade): open-ended extension, quantitative reasoning, transfer question.
+For each version, include:
+1) one-sentence goal,
+2) numbered student steps,
+3) one formative check (question),
+4) success criteria aligned to the same standard.</code></pre>
+
+<pre><code>Prompt: Draft a 5-criteria rubric for the "Ecosystems Lab":
+Criteria: data collection, analysis, collaboration, safety, communication.
+Levels: beginning, developing, proficient, exemplary.
+Use student-facing language and specific descriptors.</code></pre>
+
+<pre><code>Prompt: Generate five short formative quiz items on food webs.
+For each, include:
+- the correct answer,
+- 2 distractors that reveal common misconceptions (e.g., "energy cycles").</code></pre>
+
+<pre><code>Prompt: Write a parent-friendly two-paragraph summary of the unit goals
+and one five-minute discussion question families can use at home.</code></pre>
+
+<h2>For your classroom</h2>
+<ol>
+  <li><strong>Pick one target:</strong> choose a single upcoming task (lab, reading, problem set) and define the success criteria.</li>
+  <li><strong>Run the template:</strong> generate Entry/Core/Stretch drafts; keep tone, length, and reading level constraints.</li>
+  <li><strong>Trim to fit:</strong> edit down to one page per lane; add your classroom examples and vocabulary.</li>
+  <li><strong>Coach the move:</strong> teach students how to move from Entry → Core → Stretch using your rubric language.</li>
+  <li><strong>Close the loop:</strong> give a 3-item exit ticket; use responses to place students for the next lesson.</li>
+</ol>
+
+<h2>Extended checklist</h2>
+<ul>
+  <li>State the same learning goal on all versions.</li>
+  <li>Lower barriers first: decoding &amp; directions before content.</li>
+  <li>Pre-teach 3–5 key words with examples and non-examples.</li>
+  <li>Provide one worked example on Entry and one partial example on Core.</li>
+  <li>On Stretch, ask for transfer to a novel context or numbers.</li>
+  <li>Use one rubric across versions; change evidence, not criteria.</li>
+  <li>Keep formative checks short and visible (one box at the bottom).</li>
+  <li>Collect quick data (hands, cards, or 3-item quiz) to regroup next time.</li>
+</ul>
+
+<h2>Resources</h2>
+<ul>
+  <li>Three-lane task prompt (Entry/Core/Stretch)</li>
+  <li>Student-facing 4-level lab rubric</li>
+  <li>Vocabulary mini-cards (pictures + definitions)</li>
+  <li>Sentence starters for explanations and claims</li>
+  <li>Food-web misconception bank (common errors + fixes)</li>
+  <li>Parent summary template (plain-language)</li>
+  <li>Exit-ticket bundle (3-item formats)</li>
+</ul>
+
+<h2>Final thought</h2>
+<p>Differentiation is a design choice, not three different lessons. With tight prompts and one shared rubric, AI helps you build just-right on-ramps and true stretch—while you stay focused on feedback and relationships.</p>
+`,
+    contentDe: String.raw`<h2>Einführung</h2>
+<p>KI kann die Differenzierung im Unterricht erleichtern: Lernende mit Unterstützungsbedarf erhalten Gerüste, die Mitte der Klasse übt auf dem passenden Niveau, Fortgeschrittene bekommen herausfordernde Aufgaben – ohne dass die Vorbereitungszeit explodiert. Diese Anleitung zeigt einen konkreten Ablauf, den Sie sofort einsetzen können.</p>
+
+<h2>Kernideen</h2>
+<ul>
+  <li><strong>Das Ziel bleibt gleich, die Aufgabe variiert:</strong> Standard beibehalten, Unterstützung und Denkanforderungen anpassen.</li>
+  <li><strong>KI entwirft, Sie entscheiden:</strong> KI schlägt Varianten vor; Sie wählen und verfeinern für Ihre Gruppe.</li>
+  <li><strong>Präzise Prompts → brauchbare Entwürfe:</strong> Zielgruppe, Länge, Lesestufe, Fachwörter und Erfolgskriterien festlegen.</li>
+  <li><strong>Drei Spuren:</strong> <em>Einstieg</em> (unter Niveau), <em>Kern</em> (Niveau), <em>Erweiterung</em> (über Niveau).</li>
+</ul>
+
+<h2>Mikro-Fallstudie</h2>
+<p><strong>Fall:</strong> Frau Patel unterrichtet Naturwissenschaften in Klasse 7. In der Lerngruppe sind mehrsprachige Neuzugänge und zwei sehr starke Schüler.</p>
+<p><strong>Herausforderung:</strong> Eine Anweisung und ein Arbeitsblatt passen nie zu allen; Rückmeldungen dauern zu lang.</p>
+<p><strong>Lösung:</strong> Drei-Spuren-Prompt genutzt, um <em>Einstieg/Kern/Erweiterung</em> zu erzeugen; Erfolgskriterien blieben identisch.</p>
+<p><strong>Ergebnis:</strong> In drei Wochen stieg der Median von 68 % auf 81 %; die Vorbereitungszeit sank um 40 %.</p>
+
+<h2>Vorlagenpaket</h2>
+<pre><code>Prompt: Erstelle drei Versionen der Aufgabe "Energiefluss-Labor":
+- Einstieg: einfache Sätze, Satzanfänge, Visualisierungen, Lesestufe 5.
+- Kern: knappe Schritte, altersangemessene Fachsprache, eine Begründungsfrage.
+- Erweiterung: offene Aufgabe, quantitative Argumentation, Transferfrage.
+Für jede Version:
+1) ein Satz Ziel,
+2) nummerierte Schüler-Schritte,
+3) eine formative Prüfung (Frage),
+4) Erfolgskriterien zum selben Standard.</code></pre>
+
+<pre><code>Prompt: Entwickle eine 5-Kriterien-Rubrik für das "Ökosystem-Labor".
+Kriterien: Datenerhebung, Analyse, Zusammenarbeit, Sicherheit, Kommunikation.
+Stufen: Anfang, Entwicklung, Zielerreichung, Exzellenz.
+Schülerverständlich und konkret.</code></pre>
+
+<pre><code>Prompt: Generiere fünf kurze Formatives-Quiz zu Nahrungsnetzen.
+Zu jeder Aufgabe:
+- richtige Antwort,
+- 2 Ablenker, die typische Missverständnisse zeigen (z. B. "Energie kreist").</code></pre>
+
+<pre><code>Prompt: Verfasse eine elternfreundliche Zusammenfassung der Einheit (zwei Absätze)
+und eine fünfminütige Gesprächsfrage für zuhause.</code></pre>
+
+<h2>Für den Unterricht</h2>
+<ol>
+  <li><strong>Ein Ziel wählen:</strong> Eine anstehende Aufgabe festlegen und die Erfolgskriterien notieren.</li>
+  <li><strong>Vorlage laufen lassen:</strong> Einstieg/Kern/Erweiterung erzeugen; Vorgaben zu Ton, Länge, Lesestufe einhalten.</li>
+  <li><strong>Passend kürzen:</strong> Jede Spur auf eine Seite; eigene Beispiele und Vokabeln einfügen.</li>
+  <li><strong>Übergang lehren:</strong> Mit Rubrik-Sprache zeigen, wie man von Einstieg → Kern → Erweiterung wechselt.</li>
+  <li><strong>Rückkopplung schließen:</strong> 3-Fragen-Exit-Ticket; damit die nächste Stunde gruppieren.</li>
+</ol>
+
+<h2>Erweiterte Checkliste</h2>
+<ul>
+  <li>Gleiches Lernziel auf allen Versionen.</li>
+  <li>Hürden zuerst senken: Verständnis der Anweisungen vor Fachinhalten.</li>
+  <li>3–5 Schlüsselwörter vorentlasten (Beispiele/Nicht-Beispiele).</li>
+  <li>Ein Beispiel gelöst (Einstieg) und ein halbes Beispiel (Kern) bereitstellen.</li>
+  <li>Bei Erweiterung Transfer in neuen Kontext oder mit Zahlen verlangen.</li>
+  <li>Eine Rubrik für alle Spuren; Evidenz variiert, Kriterien bleiben.</li>
+  <li>Formative Checks kurz und sichtbar (Box am Ende).</li>
+  <li>Schnell Daten sammeln (Karten, Handzeichen, Mini-Quiz).</li>
+</ul>
+
+<h2>Ressourcen</h2>
+<ul>
+  <li>Drei-Spuren-Prompt (Einstieg/Kern/Erweiterung)</li>
+  <li>Schülernahe 4-Stufen-Lab-Rubrik</li>
+  <li>Vokabel-Karten (Bild + Definition)</li>
+  <li>Satzanfänge für Begründungen und Behauptungen</li>
+  <li>Fehlerbank Nahrungsnetz (Missverständnisse + Korrekturen)</li>
+  <li>Eltern-Kurzbrief Vorlage (klare Sprache)</li>
+  <li>Exit-Ticket-Set (3-Aufgaben-Formate)</li>
+</ul>
+
+<h2>Schlussgedanke</h2>
+<p>Differenzierung bedeutet nicht drei separate Stunden, sondern kluge Varianten derselben Kompetenz. Mit präzisen Prompts und einer gemeinsamen Rubrik liefert KI passende Zugänge und echte Herausforderung – Sie investieren Ihre Zeit in Feedback und Beziehung.</p>
+`,
+    publishedAt: "2025-02-01",
+    category: "Lesson Planning",
+    tags: ["AI Tools", "Differentiation", "Scaffolding", "Personalized Learning"],
+  },
+  {
+    id: 3,
+    title: "Using AI to Generate Inclusive Classroom Materials",
+    slug: "ai-inclusive-materials",
+    excerpt: "How to use AI to create materials that reflect diverse learners and reduce bias.",
+    content: String.raw``,
+    contentDe: String.raw``,
+    publishedAt: "2025-02-10",
+    category: "Equity",
+    tags: ["AI Tools", "Inclusion", "Accessibility"],
+  },
+  {
+    id: 4,
+    title: "Quick Student Reports with AI: A Teacher's Workflow",
+    slug: "ai-student-reports-workflow",
+    excerpt: "A step-by-step workflow for generating concise student reports using AI while preserving teacher voice.",
+    content: String.raw`
+      <h2>Start with a template</h2>
+      <p>Prepare a short template with sections like strengths, areas to grow, and next steps. Feed examples to the AI to preserve tone.</p>
+      <h2>Review and personalize</h2>
+      <p>Use AI output as a first draft; edit to add specific examples and your professional judgment.</p>
+    `,
+    contentDe: String.raw`
+      <h2>Beginnen Sie mit einer Vorlage</h2>
+      <p>Bereiten Sie eine kurze Vorlage vor mit Abschnitten wie Stärken, Entwicklungsbereiche und nächste Schritte. Geben Sie Beispiele an die KI, damit der Ton erhalten bleibt.</p>
+    `,
+    publishedAt: "2025-02-20",
+    category: "Workflow",
+    tags: ["AI Tools", "Reporting", "Teacher Workflow"],
+  },
+  {
+    id: 5,
+    title: "Parent-Friendly Summaries: Using AI to Translate Jargon",
+    slug: "ai-parent-summaries",
+    excerpt: "Techniques to convert academic language into clear, parent-friendly summaries using AI.",
+    content: String.raw`
+      <h2>Keep it brief</h2>
+      <p>Parents appreciate succinct summaries. Use AI to shorten long descriptions into 2-3 sentences focused on actions and outcomes.</p>
+      <h2>Check for bias</h2>
+      <p>Review AI-generated phrasing to ensure it's respectful and culturally sensitive.</p>
+    `,
+    contentDe: String.raw`
+      <h2>Halten Sie es kurz</h2>
+      <p>Eltern schätzen prägnante Zusammenfassungen. Verwenden Sie KI, um lange Beschreibungen in 2-3 Sätze zu kürzen, die sich auf Maßnahmen und Ergebnisse konzentrieren.</p>
+    `,
+    publishedAt: "2025-03-01",
+    category: "Parent Communication",
+    tags: ["AI Tools", "Parent Communication", "Plain Language"],
+  },
+  {
+    id: 6,
+    title: "Safeguarding Student Data When Using AI Tools",
+    slug: "ai-student-data-safeguards",
+    excerpt: "Best practices for protecting student privacy when using third-party AI services.",
+    content: String.raw`
+      <h2>Understand the data flow</h2>
+      <p>Know what you send to the AI provider and whether it is stored or used to train models. Prefer on-device or privacy-first services when possible.</p>
+      <h2>Minimize identifiable data</h2>
+      <p>Remove names and exact identifiers from prompts; use pseudonyms or anonymized samples.</p>
+    `,
+    contentDe: String.raw`
+      <h2>Verstehen Sie den Datenfluss</h2>
+      <p>Wissen Sie, was Sie an den KI-Anbieter senden und ob es gespeichert oder zum Training verwendet wird. Bevorzugen Sie nach Möglichkeit datenschutzfreundliche Services.</p>
+    `,
+    publishedAt: "2025-03-10",
+    category: "Boundaries",
+    tags: ["AI Tools", "Privacy", "Student Data"],
+  },
+  {
+    id: 7,
+    title: "5 Quick Prompts for Generating Exit Tickets",
+    slug: "ai-exit-tickets-prompts",
+    excerpt: "Short, classroom-ready prompts that produce varied exit tickets aligned to objectives.",
+    content: String.raw`
+      <h2>Prompt examples</h2>
+      <ul>
+        <li>Summarize today's lesson in one sentence.</li>
+        <li>List one thing you understand and one question you still have.</li>
+        <li>Write a multiple-choice question about the main idea.</li>
+      </ul>
+    `,
+    contentDe: String.raw`
+      <h2>Beispiel-Prompts</h2>
+      <ul>
+        <li>Fasse die heutige Lektion in einem Satz zusammen.</li>
+        <li>Nenne eine Sache, die du verstanden hast, und eine Frage, die du noch hast.</li>
+      </ul>
+    `,
+    publishedAt: "2025-03-20",
+    category: "Lesson Planning",
+    tags: ["AI Tools", "Formative Assessment", "Prompts"],
+  },
+  {
+    id: 8,
+    title: "Teacher Prompts for Creating Better Rubrics",
+    slug: "ai-rubric-prompts",
+    excerpt: "Concrete prompts teachers can use to have AI draft rubrics that match learning targets.",
+    content: String.raw`
+      <h2>Align to standards</h2>
+      <p>Provide the learning objective and ask the AI to suggest 3-4 levels of performance with brief descriptors.</p>
+      <h2>Keep language actionable</h2>
+      <p>Ask for observable behaviors and avoid vague adjectives.</p>
+    `,
+    contentDe: String.raw`
+      <h2>An Standards ausrichten</h2>
+      <p>Geben Sie das Lernziel an und bitten Sie die KI, 3-4 Leistungsniveaus mit kurzen Beschreibungen zu erstellen.</p>
+    `,
+    publishedAt: "2025-03-30",
+    category: "Lesson Planning",
+    tags: ["AI Tools", "Rubrics", "Standards"],
+  },
+  {
+    id: 9,
+    title: "Using AI to Identify Literacy Gaps Quickly",
+    slug: "ai-literacy-gaps",
+    excerpt: "How to use quick AI-driven analyses to spot gaps in literacy and target instruction.",
+    content: String.raw`
+      <h2>Analyze samples</h2>
+      <p>Collect short writing or reading samples and use AI to identify common errors and patterns at scale.</p>
+      <h2>Prioritize instruction</h2>
+      <p>Use the analysis to plan targeted small-group lessons for the most common gaps.</p>
+    `,
+    contentDe: String.raw`
+      <h2>Proben analysieren</h2>
+      <p>Sammele kurze Schreib- oder Leseproben und nutze KI, um häufige Fehler und Muster zu erkennen.</p>
+    `,
+    publishedAt: "2025-04-10",
+    category: "Lesson Planning",
+    tags: ["AI Tools", "Literacy", "Assessment"],
+  },
+
+  // --- existing posts from backup ---
+  {
+    id: 1,
     title: "5 Ways AI Can Save Teachers 10+ Hours Per Week",
     slug: "5-ai-time-saving-strategies",
     excerpt:
       "Discover practical AI strategies that help teachers reclaim their time without sacrificing quality. From automated feedback to smart lesson planning.",
-    content: `
+    content: String.raw`
       <h2>Introduction</h2>
       <p>Teachers spend countless hours on administrative tasks, grading, and communication. AI tools can help reclaim that time while maintaining quality.</p>
       
@@ -26,7 +319,7 @@ export const blogPosts: BlogPost[] = [
       <h2>5. Administrative Task Automation</h2>
       <p>Automate routine tasks like attendance tracking, progress reports, and documentation.</p>
     `,
-    contentDe: `
+    contentDe: String.raw`
       <h2>Einführung</h2>
       <p>Lehrkräfte verbringen unzählige Stunden mit Verwaltungsaufgaben, Bewertungen und Kommunikation. KI-Tools können helfen, diese Zeit zurückzugewinnen.</p>
       
@@ -46,16 +339,16 @@ export const blogPosts: BlogPost[] = [
       <p>Automatisieren Sie Routineaufgaben wie Anwesenheitsverfolgung und Fortschrittsberichte.</p>
     `,
     publishedAt: "2025-01-15",
-    category: "Productivity",
+    category: "Workflow",
     tags: ["AI Tools", "Time Management", "Productivity", "Teaching Strategies"],
   },
   {
-    id: "18",
+    id: 18,
     title: "Call or Email? Choosing the Right Channel for Behavior Concerns",
     slug: "call-or-email-behavior-concerns",
     excerpt:
       "Learn when to call versus email parents about behavior issues. This practical guide includes decision trees, scripts, and templates to de-escalate tense situations effectively.",
-    content: `
+    content: String.raw`
     <h2>Call or Email? Choosing the Right Channel for Behavior Concerns</h2>
     <p>When a behavior issue pops up, the first decision shapes everything that follows: do I call, or do I email? Pick well and you de-escalate, keep families informed, and create momentum. Pick poorly and you can spark defensiveness, lose time, or miss documentation.</p>
     <p>This teacher-friendly guide gives you a clear decision tree, quick pros and cons, scripts, and a simple follow-up routine so each contact is calm, fair, and efficient.</p>
@@ -75,7 +368,6 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Language or access considerations</strong> (parent prefers phone or interpreter needed)? - <strong>CALL</strong> (via interpreter if needed), then send a brief bilingual recap.</li>
     </ul>
     <p><em>Rule of thumb:</em> When in doubt, call to align and email to memorialize.</p>
-    <!-- /EXAMPLE -->
 
     <h2>Pros and cons at a glance</h2>
     <h3>Phone call</h3>
@@ -113,116 +405,11 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Close:</strong> I will send a quick summary so we are aligned.</li>
     </ul>
     <p><strong>Immediately after:</strong> send a 2-line recap email and log the contact.</p>
-
-    <h2>The anatomy of a clear, low-drama email</h2>
-    <h3>Subject lines that are calm and specific</h3>
-    <ul>
-      <li>Partnering on [Student]'s focus in [Class] - next steps</li>
-      <li>Quick check-in about [Student] - plan for this week</li>
-      <li>Keeping you in the loop about [topic]</li>
-    </ul>
-    <!-- CALLOUT:TEMPLATE -->
-    <h3>Four-sentence body</h3>
-    <p><strong>Opener:</strong> Hi [Parent Name], I am reaching out to partner with you about [Student]'s [behavior] in [class].</p>
-    <p><strong>One observable fact:</strong> Today during [period], [Student] [specific behavior], which affected [learning or peers or task].</p>
-    <p><strong>School step + home step:</strong> At school I will [one action]. At home, a helpful step is [one action].</p>
-    <p><strong>Check-in + boundary:</strong> I will send a quick update by [date]. I respond during school hours within one business day.</p>
-    <p><strong>Optional final line:</strong> My goal is to work together and keep you in the loop. If a quick call is easier, I am available [windows].</p>
-    <!-- /CALLOUT:TEMPLATE -->
-
-    <h2>What to do after each contact</h2>
-    <!-- CALLOUT:CLASSROOM -->
-    <ul>
-      <li><strong>Document in 60 seconds:</strong> date and time, contact method, evidence, school step, home step, next check-in.</li>
-      <li><strong>Schedule</strong> the check-in as a calendar reminder.</li>
-      <li><strong>Reinforce in class:</strong> reteach the expectation and provide a scaffold.</li>
-      <li><strong>Close the loop</strong> on the promised date - one line is enough.</li>
-    </ul>
-    <p>This consistent loop builds trust and protects you if questions arise later.</p>
-    <!-- /CALLOUT:CLASSROOM -->
-
-    <h2>Special cases and equity considerations</h2>
-    <ul>
-      <li><strong>Language access:</strong> use the district interpreter line for calls, then send a bilingual or plain-language recap.</li>
-      <li><strong>Attendance-linked behavior:</strong> pair the behavior plan with a make-up-work plan.</li>
-      <li><strong>IEP or 504:</strong> cross-check supports and reference accommodations used today when relevant.</li>
-      <li><strong>Sensitive home contexts:</strong> prefer a call first; keep email minimal and fact-based.</li>
-      <li><strong>Escalation:</strong> if harm, harassment, or ongoing disruption occurs, follow policy and send a neutral recap.</li>
-    </ul>
-
-    <h2>Examples you can use</h2>
-    <!-- CALLOUT:TEMPLATE -->
-    <h3>1) Call first, then recap email</h3>
-    <p><strong>Recap email (2-4 lines):</strong></p>
-    <p><em>Subject:</em> Quick recap - next steps for [Student]</p>
-    <blockquote>
-      <p>Hi [Parent], thanks for speaking today. We aligned on [one sentence of facts]. School step: [one]. Home step: [one]. I will check back by [date]. Appreciate your partnership.</p>
-    </blockquote>
-
-    <h3>2) Email only (minor first incident)</h3>
-    <p><em>Subject:</em> Keeping you in the loop about [Student]</p>
-    <blockquote>
-      <p>Hi [Parent], I am reaching out to partner with you about [Student]'s focus in science. Today during lab setup, [Student] left their group and missed the directions. At school I will pair them with a lab checklist tomorrow. At home, a quick reminder to bring the planner would help. I will send a brief update on Friday. Thank you.</p>
-    </blockquote>
-
-    <h3>3) Grading friction</h3>
-    <p><em>Subject:</em> Quick check-in on [Assignment]</p>
-    <blockquote>
-      <p>Hi [Parent], thank you for your message. Here is what I observed: on the rubric, [Student] earned 12/16; the missing points are in Analysis. I am offering a 10-minute rubric review after school Wednesday and a chance to revise the analysis paragraph by Friday. If a call is easier, happy to set one up.</p>
-    </blockquote>
-
-    <h3>4) Attendance + behavior</h3>
-    <p><em>Subject:</em> Plan for this week - [Student]</p>
-    <blockquote>
-      <p>Hi [Parent], I want to keep you in the loop about participation and absences. [Student] missed two labs and has struggled to settle during group work. At school I will host a make-up lab Tuesday lunch and use a group role card. At home, please sign the planner for Tuesday and Thursday. I will confirm progress on Thursday afternoon.</p>
-    </blockquote>
-    <!-- /CALLOUT:TEMPLATE -->
-
-    <h2>Documentation: the five-field note</h2>
-    <!-- CALLOUT:TEMPLATE -->
-    <ul>
-      <li><strong>When:</strong> 10/14, P3</li>
-      <li><strong>What:</strong> redirection during independent practice</li>
-      <li><strong>Context:</strong> argumentative writing organizer</li>
-      <li><strong>Impact:</strong> missed directions; organizer not started</li>
-      <li><strong>Next step:</strong> timer + two boxes completed; parent contacted (email)</li>
-    </ul>
-    <p>Keep these notes for IEP or 504 alignment and any future questions.</p>
-    <!-- /CALLOUT:TEMPLATE -->
-
-    <h2>Boundary language that protects evenings and weekends</h2>
-    <!-- CALLOUT:CLASSROOM -->
-    <ul>
-      <li><strong>Email signature:</strong> I respond during school hours and aim to respond within one business day.</li>
-      <li><strong>Auto-reply (after hours):</strong> Thanks for your message. I will reply during school hours. For time-sensitive matters, please contact the school office.</li>
-    </ul>
-    <p>This is professional, not cold - and parents appreciate clear expectations.</p>
-    <!-- /CALLOUT:CLASSROOM -->
-
-    <h2>Quick checklist</h2>
-    <ul>
-      <li>Decide channel with the 60-second tree.</li>
-      <li>One sentence of evidence ready.</li>
-      <li>One school step + one home step.</li>
-      <li>Check-in date set before you contact.</li>
-      <li>Call for urgent, sensitive, pattern, or tone issues.</li>
-      <li>Email for recordkeeping and simple first incidents.</li>
-      <li>Recap email after any call.</li>
-      <li>Five-field note logged.</li>
-    </ul>
-
-    <!-- CALLOUT:TIME_SAVER -->
-    <p><strong>Time-saver:</strong> Pre-save your call script and email skeleton as snippets. Most contacts can be completed in under 5 minutes.</p>
-    <!-- /CALLOUT:TIME_SAVER -->
-
-    <h2>Final thought</h2>
-    <p>You do not have to choose between speed and sensitivity. Call to align. Email to memorialize. Keep it to one fact, one step, one date. Over time, families learn your rhythm: clear, kind, and consistent - exactly what de-escalates tense situations and helps students get back on track.</p>
-    `,
-    contentDe: `
+  `,
+    contentDe: String.raw`
     <h2>Anruf oder E-Mail? Den richtigen Kanal bei Verhaltensfragen wählen</h2>
     <p>Wenn ein Verhaltensproblem auftritt, prägt die erste Entscheidung alles Weitere: rufe ich an oder schreibe ich eine E-Mail? Triffst du die Wahl gut, deeskalierst du, hältst Familien informiert und erzeugst Momentum. Triffst du sie schlecht, entstehen Abwehr, Zeitverlust oder fehlende Dokumentation.</p>
-    <p>Dieser praxisnahe Leitfaden bietet einen klaren Entscheidungsbaum, schnelle Pro-und-Contra-Übersichten, Formulierungshilfen und eine einfache Follow-up-Routine, damit jede Kontaktaufnahme ruhig, fair und effizient bleibt.</p>
-
+    
     <!-- PULL_QUOTE -->
     <p><strong>Leitgedanke:</strong> Im Zweifel gilt: telefonisch abstimmen, per E-Mail dokumentieren.</p>
     <!-- /PULL_QUOTE -->
@@ -238,128 +425,120 @@ export const blogPosts: BlogPost[] = [
       <li><strong>Sprache oder Zugang</strong> (Eltern bevorzugen Telefon oder Dolmetschung nötig)? - <strong>ANRUF</strong> mit Dolmetscher, dann kurze zweisprachige Zusammenfassung senden.</li>
     </ul>
     <p><em>Faustregel:</em> Im Zweifel telefonisch abstimmen und per E-Mail dokumentieren.</p>
-    <!-- /EXAMPLE -->
+  `,
+    publishedAt: "2025-01-10",
+    category: "Parent Communication",
+    tags: [
+      "Parent Communication",
+      "Behavior Management",
+      "De-escalation",
+      "Communication Strategies",
+      "Best Practices",
+    ],
+  },
+  {
+    id: 12,
+    title: "Best AI Tool for Creating Lesson Plans",
+    slug: "best-ai-lesson-planning-tool",
+    excerpt:
+      "Lesson planning is time-heavy and repetitive. Learn how AI-powered lesson planning tools help teachers design structured, creative, and standards-aligned lessons in minutes instead of hours.",
+    content: String.raw`
+    <h2>Best AI Tool for Creating Lesson Plans</h2>
+    <p>Lesson planning is one of the most time-heavy and repetitive tasks teachers face. Every lesson must align with curriculum standards, engage diverse learners, and include assessments—all while fitting into tight schedules. AI-powered lesson planning tools are now helping teachers design structured, creative, and standards-aligned lessons in minutes instead of hours.</p>
 
-    <h2>Pro und Contra im Überblick</h2>
-    <h3>Telefonanruf</h3>
-    <ul>
-      <li><strong>Vorteile:</strong> Menschlicher Ton reduziert Fehlinterpretationen; Rückfragen in Echtzeit; stärkt Beziehung bei komplexen oder emotionalen Themen.</li>
-      <li><strong>Nachteile:</strong> Ohne Nachfassung schwerer zu dokumentieren; Terminfindung; kann ohne Vorbereitung stressig wirken.</li>
-    </ul>
-    <p><strong>Am besten geeignet für:</strong> Dringendes, wiederkehrende Muster, sensible Themen, Mehrsprachigkeit mit Dolmetscher, wenn Ton leicht missverstanden wird.</p>
+    <!-- PULL_QUOTE -->
+    <p><strong>Key idea:</strong> The best AI lesson planning tools don't replace teacher creativity—they provide the scaffolding that makes high-quality planning faster and more sustainable.</p>
+    <!-- /PULL_QUOTE -->
 
-    <h3>E-Mail</h3>
+    <h2>Why lesson planning is time-heavy</h2>
     <ul>
-      <li><strong>Vorteile:</strong> Erzeugt eine Akte mit Datum, Fakten, nächsten Schritten; Sprache lässt sich präzise formulieren; Eltern antworten zeitlich flexibel.</li>
-      <li><strong>Nachteile:</strong> Ton kann fehlgedeutet werden; Ping-Pong-Gespräche möglich; ungeeignet für erhitzte Situationen.</li>
+      <li><strong>Curriculum alignment:</strong> Every lesson must meet specific standards.</li>
+      <li><strong>Differentiation:</strong> Activities must suit multiple learning levels.</li>
+      <li><strong>Assessment:</strong> Teachers need to build in checks for understanding.</li>
+      <li><strong>Engagement:</strong> Lessons must be interesting and interactive.</li>
+      <li><strong>Repetition:</strong> Similar lessons are planned year after year.</li>
     </ul>
-    <p><strong>Am besten geeignet für:</strong> kleine Erstvorfälle, Routinemeldungen, Dokumentation von Strategien und Absprachen, Teilen von Links oder Anlagen.</p>
 
-    <h2>Die Anatomie eines produktiven Telefonats</h2>
-    <h3>Vorbereitung in 2 Minuten</h3>
+    <h2>What AI brings to lesson planning</h2>
     <ul>
-      <li>Eine Beweissatz formulieren: Stunde oder Uhrzeit und was passiert ist.</li>
-      <li>Einen Schul-Schritt und einen Zuhause-Schritt festlegen.</li>
-      <li>Notenbuch oder Notizen öffnen für Rückfragen.</li>
+      <li><strong>Instant structure:</strong> Generate lesson outlines with objectives, activities, and timing.</li>
+      <li><strong>Curriculum links:</strong> Automatically align lessons to standards.</li>
+      <li><strong>Differentiation:</strong> Create versions for different ability levels.</li>
+      <li><strong>Activity generation:</strong> Suggest group work, discussions, and hands-on tasks.</li>
+      <li><strong>Template reuse:</strong> Save successful plans for future adaptation.</li>
     </ul>
+
+    <!-- CALLOUT:QUICK_WIN -->
+    <h3>Quick win</h3>
+    <p>Prompt: "Create a 45-minute lesson on photosynthesis for 7th grade. Include objectives, warm-up, guided practice, group activity, and exit ticket." Result: a complete draft in under a minute.</p>
+    <!-- /CALLOUT:QUICK_WIN -->
+
+    <h2>Micro-case study</h2>
+    <p><strong>Case:</strong> Ms. Adams, high school biology teacher.</p>
+    <ul>
+      <li><strong>Challenge:</strong> Spent 10+ hours weekly planning lessons across multiple classes.</li>
+      <li><strong>Solution:</strong> Adopted an AI lesson planning tool for draft generation and differentiation.</li>
+      <li><strong>Result:</strong> Cut planning time in half. Used freed time to design lab activities and enrichment projects.</li>
+    </ul>
+    <p>Her reflection: "AI gave me the structure I needed so I could focus on creativity. It's like having a planning assistant."</p>
+
+    <h2>Bonus template pack – lesson planning prompts</h2>
     <!-- CALLOUT:TEMPLATE -->
-    <p><strong>Telefon-Skript:</strong></p>
-    <blockquote>
-      <p>Hallo [Name], hier ist [Ihr Name] von [Schule]. Ich rufe an, um mit Ihnen zu [Schüler] in [Fach] partnerschaftlich zusammenzuarbeiten. Heute in [Stunde] habe ich [konkretes Verhalten] beobachtet, was [Lernen oder Mitschüler oder Aufgabe] beeinflusst hat. In der Schule werde ich [ein Schritt] umsetzen. Könnten wir zu Hause [ein einfacher Schritt] ausprobieren? Ich melde mich bis [Datum] zurück. Vielen Dank.</p>
-    </blockquote>
-    <!-- /CALLOUT:TEMPLATE -->
-    <h3>Wenn Emotionen steigen</h3>
     <ul>
-      <li><strong>Anerkennen:</strong> Ich verstehe Ihre Sorge.</li>
-      <li><strong>Zu Fakten zurückkehren:</strong> Das habe ich heute genau beobachtet.</li>
-      <li><strong>Wahl anbieten:</strong> Wir können A oder B versuchen - was wirkt machbar?</li>
-      <li><strong>Abschluss:</strong> Ich sende eine kurze Zusammenfassung zur gemeinsamen Grundlage.</li>
+      <li>"Create a 50-minute lesson on [topic] for [grade level] with objectives, activities, and assessments."</li>
+      <li>"Differentiate this lesson for advanced, on-level, and struggling learners."</li>
+      <li>"Suggest 3 interactive group activities for [topic]."</li>
+      <li>"Write 5 exit ticket questions aligned to lesson objectives."</li>
+      <li>"Generate a unit plan with 5 lessons on [topic]."</li>
     </ul>
-    <p><strong>Direkt danach:</strong> 2-zeilige Zusammenfassung per E-Mail senden und den Kontakt dokumentieren.</p>
-
-    <h2>Die Anatomie einer klaren, stressarmen E-Mail</h2>
-    <h3>Ruhige und konkrete Betreffzeilen</h3>
-    <ul>
-      <li>Gemeinsam an [Schüler]s Fokus in [Fach] arbeiten - nächste Schritte</li>
-      <li>Kurzes Check-in zu [Schüler] - Plan für diese Woche</li>
-      <li>Ich halte Sie zu [Thema] auf dem Laufenden</li>
-    </ul>
-    <!-- CALLOUT:TEMPLATE -->
-    <h3>Vier Sätze im Text</h3>
-    <p><strong>Opener:</strong> Hallo [Name], ich melde mich, um mit Ihnen zu [Schüler]s [Verhalten] in [Fach] partnerschaftlich zu arbeiten.</p>
-    <p><strong>Beobachtbare Tatsache:</strong> Heute in [Stunde] zeigte [Schüler] [konkretes Verhalten], was [Lernen oder Mitschüler oder Aufgabe] beeinträchtigte.</p>
-    <p><strong>Schul-Schritt + Zuhause-Schritt:</strong> In der Schule werde ich [ein Schritt] umsetzen. Zu Hause wäre [ein Schritt] hilfreich.</p>
-    <p><strong>Check-in + Grenze:</strong> Ich sende bis [Datum] ein kurzes Update. Ich antworte während der Schulzeit innerhalb eines Werktages.</p>
-    <p><strong>Optional:</strong> Mein Ziel ist es, gemeinsam zu arbeiten und Sie auf dem Laufenden zu halten. Wenn ein kurzer Anruf leichter ist, bin ich [Zeitfenster] erreichbar.</p>
     <!-- /CALLOUT:TEMPLATE -->
 
-    <h2>Was nach jedem Kontakt zu tun ist</h2>
+    <h2>For your classroom</h2>
     <!-- CALLOUT:CLASSROOM -->
     <ul>
-      <li><strong>In 60 Sekunden dokumentieren:</strong> Datum und Uhrzeit, Kanal, Beobachtung, Schul-Schritt, Zuhause-Schritt, nächstes Check-in.</li>
-      <li><strong>Check-in einplanen</strong> als Kalendereintrag.</li>
-      <li><strong>Im Unterricht verstärken:</strong> Erwartung erneut lehren, Unterstützung bereitstellen.</li>
-      <li><strong>Rückmeldung geben</strong> zum vereinbarten Termin - eine Zeile genügt.</li>
+      <li>Start with AI drafts, then refine with your expertise.</li>
+      <li>Save successful plans to build a reusable library.</li>
+      <li>Use differentiated versions to support inclusive classrooms.</li>
+      <li>Pair AI structure with your own creative activities.</li>
     </ul>
-    <p>Diese Konstanz schafft Vertrauen und schützt dich bei späteren Nachfragen.</p>
-    <!-- /CALLOUT:CLASSROOM -->
 
-    <h2>Sonderfälle und Gerechtigkeit</h2>
+    <h2>Extended checklist – AI lesson planning workflow</h2>
     <ul>
-      <li><strong>Sprachzugang:</strong> Telefon mit Dolmetschdienst, danach zweisprachige oder leicht verständliche Zusammenfassung senden.</li>
-      <li><strong>Anwesenheit und Verhalten:</strong> Verhaltensplan mit Nachholplan koppeln.</li>
-      <li><strong>IEP oder Nachteilsausgleich:</strong> Unterstützungen prüfen und genutzte Maßnahmen sachlich benennen.</li>
-      <li><strong>Sensible Häuslichkeit:</strong> zuerst anrufen; E-Mail kurz und faktenbasiert halten.</li>
-      <li><strong>Eskalation:</strong> bei Schaden, Belästigung oder anhaltender Störung gemäß Schulvorgaben handeln und neutral zusammenfassen.</li>
+      <li>✔ Choose one subject and week to trial AI lesson planning.</li>
+      <li>✔ Generate 3 draft lessons with objectives and timing.</li>
+      <li>✔ Check drafts against curriculum standards.</li>
+      <li>✔ Adapt drafts for different student groups.</li>
+      <li>✔ Track time saved and student outcomes over a term.</li>
     </ul>
 
-    <h2>Beispiele zum direkten Einsatz</h2>
-    <!-- CALLOUT:TEMPLATE -->
-    <h3>1) Erst anrufen, dann per E-Mail zusammenfassen</h3>
-    <p><strong>Recap-E-Mail (2-4 Zeilen):</strong></p>
-    <p><em>Betreff:</em> Kurze Zusammenfassung - nächste Schritte für [Schüler]</p>
-    <blockquote>
-      <p>Hallo [Name], danke für das Gespräch heute. Wir haben uns auf Folgendes geeinigt: [ein Satz Fakten]. Schritt in der Schule: [eins]. Schritt zu Hause: [eins]. Ich melde mich bis [Datum] zurück. Danke für die Zusammenarbeit.</p>
-    </blockquote>
+    <!-- CALLOUT:TIME_SAVER -->
+    <p>Pro tip: If AI saves 5 hours a week on planning, that's 180+ hours per year—the equivalent of nearly a month of extra time.</p>
+    <!-- /CALLOUT:TIME_SAVER -->
 
-    <h3>2) Nur E-Mail (kleiner Erstvorfall)</h3>
-    <p><em>Betreff:</em> Ich halte Sie zu [Schüler] auf dem Laufenden</p>
-    <blockquote>
-      <p>Hallo [Name], ich melde mich, um mit Ihnen zu [Schüler]s Fokus in Naturwissenschaften partnerschaftlich zu arbeiten. Heute während des Laboraufbaus verließ [Schüler] die Gruppe und verpasste die Anweisungen. In der Schule nutze ich morgen eine Labor-Checkliste. Zu Hause hilft eine kurze Erinnerung an den Planer. Ich sende am Freitag ein kurzes Update. Vielen Dank.</p>
-    </blockquote>
+    <!-- PULL_QUOTE -->
+    <p><strong>Final thought:</strong> With AI, lesson planning becomes less about paperwork and more about creativity. Teachers can reclaim time, reduce stress, and focus on what matters most: their students.</p>
+    <!-- /PULL_QUOTE -->
+  `,
+    contentDe: String.raw`
+    <h2>Bestes KI-Tool zum Erstellen von Unterrichtsplänen</h2>
+    <p>Unterrichtsplanung ist zeitaufwendig und repetitiv. Jede Stunde muss Standards erfüllen, verschiedene Lernende ansprechen und Bewertungen enthalten. KI-gestützte Tools helfen Lehrkräften, strukturierte, kreative und standardgerechte Stunden in Minuten statt Stunden zu erstellen.</p>
 
-    <h3>3) Notenfrage</h3>
-    <p><em>Betreff:</em> Kurzes Check-in zu [Aufgabe]</p>
-    <blockquote>
-      <p>Hallo [Name], danke für Ihre Nachricht. In der Rubrik erreichte [Schüler] 12 von 16 Punkten; die fehlenden Punkte liegen im Bereich Analyse. Ich biete am Mittwoch nach der Schule eine 10-minütige Rubrikdurchsicht an und die Möglichkeit, den Analyseabschnitt bis Freitag zu überarbeiten. Gern auch per kurzer Telefonabstimmung.</p>
-    </blockquote>
+    <!-- PULL_QUOTE -->
+    <p><strong>Kernaussage:</strong> Die besten KI-Tools ersetzen nicht die Kreativität—sie liefern das Gerüst für schnelle, hochwertige Planung.</p>
+    <!-- /PULL_QUOTE -->
 
-    <h3>4) Anwesenheit + Verhalten</h3>
-    <p><em>Betreff:</em> Plan für diese Woche - [Schüler]</p>
-    <blockquote>
-      <p>Hallo [Name], ich möchte Sie zu Beteiligung und Fehlzeiten auf dem Laufenden halten. [Schüler] hat zwei Labore verpasst und hatte Schwierigkeiten, sich in Gruppenarbeit zu sammeln. In der Schule biete ich am Dienstag in der Mittagspause ein Nachhol-Labor an und nutze eine Rollenkarte. Zu Hause bitte den Planer für Dienstag und Donnerstag unterschreiben. Ich bestätige den Fortschritt am Donnerstag Nachmittag.</p>
-    </blockquote>
-    <!-- /CALLOUT:TEMPLATE -->
-
-    <h2>Dokumentation: die Fünf-Felder-Notiz</h2>
-    <!-- CALLOUT:TEMPLATE -->
+    <h2>Warum Planung zeitaufwendig ist</h2>
     <ul>
-      <li><strong>Wann:</strong> 14.10., 3. Stunde</li>
-      <li><strong>Was:</strong> Umleitung während Einzelarbeit</li>
-      <li><strong>Kontext:</strong> Argumentations-Schreiborganizer</li>
-      <li><strong>Wirkung:</strong> Anweisungen verpasst; Organizer nicht begonnen</li>
-      <li><strong>Nächster Schritt:</strong> Timer + zwei Felder ausfüllen; Eltern kontaktiert (E-Mail)</li>
+      <li><strong>Lehrplanabgleich:</strong> Jede Stunde muss Standards erfüllen.</li>
+      <li><strong>Differenzierung:</strong> Aktivitäten für verschiedene Niveaus.</li>
+      <li><strong>Bewertung:</strong> Verständnischecks einbauen.</li>
+      <li><strong>Engagement:</strong> Stunden müssen interessant sein.</li>
+      <li><strong>Wiederholung:</strong> Ähnliche Stunden jedes Jahr.</li>
     </ul>
-    <p>Diese Notizen helfen bei Nachteilsausgleichen und späteren Rückfragen.</p>
-    <!-- /CALLOUT:TEMPLATE -->
 
-    <h2>Grenzformulierungen, die Abende und Wochenenden schützen</h2>
-    <!-- CALLOUT:CLASSROOM -->
+    <h2>Was KI zur Planung beiträgt</h2>
     <ul>
-      <li><strong>E-Mail-Signatur:</strong> Ich antworte während der Schulzeit und in der Regel innerhalb eines Werktages.</li>
-      <li><strong>Abwesenheitsnotiz:</strong> Vielen Dank für Ihre Nachricht. Ich antworte während der Schulzeit. Bei dringenden Anliegen bitte das Sekretariat kontaktieren.</li>
-    </ul>
-    <p>Das ist professionell, nicht kalt - und wird von Eltern geschätzt.</p>
+      <li><strong>So
     <!-- /CALLOUT:CLASSROOM -->
 
     <h2>Kurze Checkliste</h2>
@@ -392,12 +571,12 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    id: "12",
+    id: 12,
     title: "Best AI Tool for Creating Lesson Plans",
     slug: "best-ai-lesson-planning-tool",
     excerpt:
       "Lesson planning is time-heavy and repetitive. Learn how AI-powered lesson planning tools help teachers design structured, creative, and standards-aligned lessons in minutes instead of hours.",
-    content: `
+    content: String.raw`
     <h2>Best AI Tool for Creating Lesson Plans</h2>
     <p>Lesson planning is one of the most time-heavy and repetitive tasks teachers face. Every lesson must align with curriculum standards, engage diverse learners, and include assessments—all while fitting into tight schedules. AI-powered lesson planning tools are now helping teachers design structured, creative, and standards-aligned lessons in minutes instead of hours.</p>
 
@@ -475,7 +654,7 @@ export const blogPosts: BlogPost[] = [
     <p><strong>Final thought:</strong> With AI, lesson planning becomes less about paperwork and more about creativity. Teachers can reclaim time, reduce stress, and focus on what matters most: their students.</p>
     <!-- /PULL_QUOTE -->
   `,
-    contentDe: `
+    contentDe: String.raw`
     <h2>Bestes KI-Tool zum Erstellen von Unterrichtsplänen</h2>
     <p>Unterrichtsplanung ist zeitaufwendig und repetitiv. Jede Stunde muss Standards erfüllen, verschiedene Lernende ansprechen und Bewertungen enthalten. KI-gestützte Tools helfen Lehrkräften, strukturierte, kreative und standardgerechte Stunden in Minuten statt Stunden zu erstellen.</p>
 
@@ -558,12 +737,12 @@ export const blogPosts: BlogPost[] = [
     tags: ["AI Tools", "Lesson Planning", "Time Management", "Curriculum"],
   },
   {
-    id: "13",
+    id: 13,
     title: "What AI Apps Give Feedback on Student Writing?",
     slug: "ai-apps-feedback-student-writing",
     excerpt:
       "Providing feedback on student writing is valuable but time-consuming. Learn how AI-powered writing feedback tools help teachers support student growth faster with consistent, actionable guidance.",
-    content: `
+    content: String.raw`
     <h2>What AI Apps Give Feedback on Student Writing?</h2>
     <p>Providing feedback on student writing is one of the most valuable—but also most time-consuming—tasks teachers face. Effective feedback requires a balance of encouragement and constructive criticism, with suggestions tailored to each student's level. Doing this for dozens of essays, projects, or creative pieces can quickly overwhelm even the most experienced teacher. AI-powered writing feedback tools are changing this by giving teachers a faster, more consistent way to support student growth.</p>
 
@@ -640,7 +819,7 @@ export const blogPosts: BlogPost[] = [
     <p><strong>Final thought:</strong> AI writing feedback tools don't replace the teacher's voice. They free teachers from repetitive tasks and help ensure every student receives meaningful, actionable guidance.</p>
     <!-- /PULL_QUOTE -->
   `,
-    contentDe: `
+    contentDe: String.raw`
     <h2>Welche KI-Apps geben Feedback zu Schülertexten?</h2>
     <p>Feedback zu Schülertexten ist wertvoll, aber extrem zeitaufwendig. Es muss ermutigen, aber auch konstruktiv sein. Bei Dutzenden Aufsätzen oder Projekten kommen Lehrkräfte schnell an ihre Grenzen. KI-gestützte Feedback-Tools verändern diesen Prozess grundlegend.</p>
 
@@ -718,16 +897,16 @@ export const blogPosts: BlogPost[] = [
     <!-- /PULL_QUOTE -->
   `,
     publishedAt: "2025-01-25",
-    category: "Writing Feedback",
+    category: "Guides",
     tags: ["AI Tools", "Writing Feedback", "Student Writing", "Assessment", "Time Management"],
   },
   {
-    id: "15",
+    id: 15,
     title: "How Can I Save Time Planning Lessons with AI",
     slug: "save-time-lesson-planning-ai",
     excerpt:
       "Lesson planning is rewarding but time-consuming. AI-powered tools offer a way to cut this workload dramatically while maintaining quality. Learn how to reclaim hours each week.",
-    content: `
+    content: String.raw`
     <h2>How Can I Save Time Planning Lessons with AI?</h2>
     <p>Lesson planning is one of the most rewarding parts of teaching — but it's also one of the most time-consuming. Teachers want lessons that are engaging, standards-aligned, and adaptable for different learners. Yet the process of pulling resources, structuring objectives, designing activities, and writing assessments can consume hours each week. AI-powered tools offer a way to cut this workload dramatically while maintaining — and even enhancing — lesson quality.</p>
 
@@ -805,7 +984,7 @@ export const blogPosts: BlogPost[] = [
     <p><strong>Final thought:</strong> With AI, lesson planning becomes less about paperwork and more about creativity. Teachers can reclaim time, reduce stress, and focus on what matters most: their students.</p>
     <!-- /PULL_QUOTE -->
   `,
-    contentDe: `
+    contentDe: String.raw`
     <h2>Wie kann ich mit KI Zeit bei der Unterrichtsplanung sparen?</h2>
     <p>Unterrichtsplanung ist lohnend – aber zeitintensiv. Lehrkräfte wollen spannende, standardgerechte und differenzierte Stunden. Doch Ressourcen zu sichten, Ziele zu formulieren, Aktivitäten zu entwerfen und Prüfungen vorzubereiten, kostet Stunden. KI-Tools verringern diese Last erheblich, ohne die Qualität zu beeinträchtigen.</p>
 
@@ -888,12 +1067,12 @@ export const blogPosts: BlogPost[] = [
     tags: ["AI", "Lesson Planning", "Time Management", "Productivity"],
   },
   {
-    id: "11",
+    id: 11,
     title: "Five Parent Email Openers That De-Escalate Tense Situations",
     slug: "five-email-openers-deescalate-tense-situations",
     excerpt:
       "Parent emails can feel like walking a tightrope. Learn five proven email openers that lower tension, set a cooperative frame, and create space for solutions—with copy-paste templates for behavior, progress, attendance, and grading disputes.",
-    content: `
+    content: String.raw`
     <h2>Five Parent Email Openers That De-Escalate Tense Situations</h2>
     <p>Parent emails can feel like walking a tightrope. The facts matter, but tone decides how the message lands. A strong opener does most of the emotional work for you: it lowers the temperature, sets a cooperative frame, and creates space for solutions.</p>
     <p>Below are five openers that consistently de-escalate. Each comes with why it works, copy-paste versions, and quick variations for behavior, progress, attendance, and grading disputes. Use them as your first lines, then follow with one or two specific facts, a simple next step, and an invite to partner.</p>
@@ -1094,7 +1273,7 @@ export const blogPosts: BlogPost[] = [
     <h2>Final thought</h2>
     <p>Parents want clarity and care. You want calm and progress. These five openers give you both. Start with one that fits your voice, add a single fact, set a small next step, and schedule a check-in. The tone you set in the first line is the tone that usually carries the whole conversation.</p>
   `,
-    contentDe: `
+    contentDe: String.raw`
     <h2>Fünf E-Mail-Opener an Eltern, die angespannte Situationen entschärfen</h2>
     <p>Elternmails sind oft ein Balanceakt. Fakten sind wichtig - aber der Ton entscheidet, wie eine Nachricht ankommt. Ein starker Opener leistet die meiste emotionale Arbeit: Er senkt die Temperatur, stellt Zusammenarbeit in den Mittelpunkt und schafft Raum für Lösungen.</p>
     <p>Hier sind fünf Opener, die verlässlich deeskalieren. Zu jedem gibt es den Grund, warum er wirkt, eine Copy-Paste-Version und schnelle Varianten zu Verhalten, Leistungsstand, Anwesenheit und Notenfragen. Nutze sie als ersten Satz, dann folgen ein bis zwei konkrete Fakten, ein einfacher nächster Schritt und eine Einladung zur Zusammenarbeit.</p>
@@ -1296,10 +1475,20 @@ export const blogPosts: BlogPost[] = [
     <p>Eltern wollen Klarheit und Fürsorge. Sie wollen Ruhe und Fortschritt. Diese fünf Opener geben Ihnen beides. Beginnen Sie mit einem, der zu Ihrer Stimme passt, fügen Sie einen einzelnen Fakt hinzu, setzen Sie einen kleinen nächsten Schritt und planen Sie einen Check-in. Der Ton, den Sie in der ersten Zeile setzen, ist der Ton, der normalerweise das gesamte Gespräch trägt.</p>
     `,
     publishedAt: "2025-01-20",
-    category: "Communication",
+    category: "Parent Communication",
     tags: ["Parent Communication", "Email Templates", "Conflict Resolution", "Time Management"],
   },
 ]
 
 export default blogPosts
+
+
+
+
+
+
+
+
+
+
 

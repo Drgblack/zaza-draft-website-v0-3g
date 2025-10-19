@@ -1,4 +1,4 @@
-import type { BlogPost } from "./posts"
+import type { BlogPost } from "@/lib/cms/posts"
 
 const fallback: BlogPost[] = [
   {
@@ -13,3 +13,4 @@ const fallback: BlogPost[] = [
 ]
 
 export default fallback
+
