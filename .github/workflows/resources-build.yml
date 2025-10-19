@@ -1,0 +1,53 @@
+﻿name: Build Resource Downloads
+
+on:
+  push:
+    paths:
+      - "public/resources/**.md"
+      - "public/resources/**/meta.json"
+      - "data/resources/resources.index.json"
+      - "design/reference.docx"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pandoc + LaTeX for PDFs
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
+
+      - name: Convert MD -> DOCX/PDF (with optional reference.docx)
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          REF_FLAG=""
+          if [ -f design/reference.docx ]; then
+            echo "Using reference.docx for Word styling"
+            REF_FLAG="--reference-doc=design/reference.docx"
+          else
+            echo "No design/reference.docx found; using Pandoc defaults"
+          fi
+
+          for meta in public/resources/*/meta.json; do
+            dir=$(dirname "$meta")
+            for lang in en de; do
+              md="$dir/$lang.md"
+              [ -f "$md" ] || continue
+              mkdir -p "$dir/build"
+              echo "Building $md → DOCX/PDF"
+              pandoc "$md" --from=gfm --to=docx $REF_FLAG -o "$dir/build/$lang.docx"
+              pandoc "$md" --from=gfm -o "$dir/build/$lang.pdf"
+            done
+          done
+
+      - name: Commit artifacts
+        run: |
+          git config user.name "zaza-bot"
+          git config user.email "bot@zazatechnologies.com"
+          git add public/resources/*/build/*.docx public/resources/*/build/*.pdf || true
+          git commit -m "Build resources (docx/pdf)" || echo "Nothing to commit"
+          git push || true
