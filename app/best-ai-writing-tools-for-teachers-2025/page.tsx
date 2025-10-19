@@ -1417,7 +1417,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2024-02-22",
     category: "Teaching Strategies",
     tags: ["classroom-management", "differentiation", "quick-wins", "teaching-moves"]
-  }
+  },
 {
   id: 14,
   title: "How to Write a Strong, Specific Recommendation in 12 Minutes",
