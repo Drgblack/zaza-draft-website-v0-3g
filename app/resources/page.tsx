@@ -86,7 +86,7 @@ export default function ResourcesPage() {
                     </p>
                   )}
 
-                  {(resource.files?.en?.pdf ?? resource.files?.en?.docx ?? resource.files?.de?.pdf ?? resource.files?.de?.docx) ? (
+                  {((resource.files?.en?.pdf ?? resource.files?.en?.docx ?? resource.files?.de?.pdf ?? resource.files?.de?.docx)) ? (
                     <Button
                       asChild
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 transition-all"
