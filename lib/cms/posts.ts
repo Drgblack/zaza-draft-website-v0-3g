@@ -1,11 +1,11 @@
-import type { BlogPost } from "./fallback-posts"
+import type { BlogPost } from "./inbox-transform"
+export type { BlogPost } from "./inbox-transform"
 import fallbackPosts from "./fallback-posts"
 
 let postsData: BlogPost[] = []
 try {
   // Dynamic import to handle potential errors gracefully
-  const postsModule = await import("./posts-data")
-  postsData = postsModule.default || postsModule.blogPosts || []
+  async function loadPostsModule(){ return import("./posts-data") }postsData = postsModule.default || (await loadPostsModule()).blogPosts || []
 
   if (!Array.isArray(postsData) || postsData.length === 0) {
     console.log("[v0] posts-data is empty, using fallback")
@@ -18,8 +18,8 @@ try {
 
 let inboxPosts: BlogPost[] = []
 try {
-  const { transformInboxToPosts } = await import("./inbox-transform")
-  inboxPosts = transformInboxToPosts?.() || []
+  async function loadTransform(){ return import("./inbox-transform") }
+  inboxPosts = (await loadTransform()).transformInboxToPosts?.() || []
 } catch {
   // Inbox is optional, no error needed
   inboxPosts = []
@@ -61,3 +61,4 @@ export function getRelatedPosts(postId: string, limit = 3): BlogPost[] {
 
   return related
 }
+

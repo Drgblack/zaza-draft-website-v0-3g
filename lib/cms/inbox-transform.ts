@@ -3,7 +3,7 @@
 export type InboxBlock = { en: string; de?: string }
 
 export type BlogPost = {
-  id: string
+  id: number
   title: string
   slug: string
   excerpt: string
@@ -11,7 +11,7 @@ export type BlogPost = {
   contentDe?: string
   publishedAt: string
   category?: string
-  tags?: string[]
+  tags: string[]
 }
 
 export function toBlogPosts(drafts: any[], meta: Array<Partial<BlogPost>>): BlogPost[] {
@@ -29,7 +29,7 @@ export function toBlogPosts(drafts: any[], meta: Array<Partial<BlogPost>>): Blog
     }
 
     return {
-      id: String(m.id ?? `draft-${i + 1}`),
+  id: number(m.id ?? `draft-${i + 1}`),
       title: String(m.title ?? `Draft ${i + 1}`),
       slug: String(m.slug ?? `draft-${i + 1}`),
       excerpt: String(m.excerpt ?? "Draft post (inbox)."),
@@ -41,3 +41,4 @@ export function toBlogPosts(drafts: any[], meta: Array<Partial<BlogPost>>): Blog
     }
   })
 }
+

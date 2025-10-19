@@ -1,4 +1,4 @@
-import type { BlogPost } from "./posts";
+import type { BlogPost } from "@/lib/cms/posts";
 
 export const blogPosts: BlogPost[] = [
   {
@@ -3117,3 +3117,4 @@ Next term, the goal is <strong>to remain in seat during mini-lesson</strong> and
 
 ];
 export default blogPosts;
+

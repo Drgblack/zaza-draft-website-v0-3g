@@ -8,7 +8,7 @@ import { Twitter, Facebook, Linkedin, Mail, LinkIcon, MessageCircle } from "luci
 
 interface ShareBarProps {
   title: string
-  lang: "en" | "de"
+  lang: "en" | "de" | string
   currentUrl?: string
 }
 
@@ -219,3 +219,4 @@ export function ShareBar({ title, lang, currentUrl }: ShareBarProps) {
     </TooltipProvider>
   )
 }
+
