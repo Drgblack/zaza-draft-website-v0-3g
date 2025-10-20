@@ -1,33 +1,46 @@
-﻿# Differenziertes Bewertungsraster-Kit
+﻿# Differenziertes Rubrik-Kit für typische Aufgaben
+*Editierbare, faire und schülerfreundliche Rubriken – schnell anpassbar.*
 
-> Anpassbar, fair und schülerverständlich.
+## So nutzen Sie das Kit
+- Rubrik wählen, Kriterien an Ihre Standards anpassen, Beispiele einfügen und **vor** Beginn mit Lernenden teilen.
+- Verwenden Sie **lernerverständliche Niveaustufen** und ergänzen Sie bei der Rückmeldung eine kurze „Next Step“-Zeile.
 
----
+## Differenzierung integriert
+- Vier Stufen: **Übertrifft / Erreicht / Auf dem Weg / Beginnend**
+- Unterstützungen: Satzanfänge, Beispiele, Wortlisten.
+- Für I-Kinder/DaZ: Belege auch **mündlich / visuell / grafisch** zulassen.
 
-## Anpassung
-- Kriterien an Standards ausrichten.
-- Leistungsstufen klar und verständlich formulieren.
-- Fachspezifische Beispiele ergänzen.
+## Analytische Essay-Rubrik
 
-## Analytischer Aufsatz – Raster
-| Kriterium | Übertrifft | Entspricht | Annähernd | Anfang |
+| Kriterium | Übertrifft | Erreicht | Auf dem Weg | Beginnend |
 |---|---|---|---|---|
-| These | Treffend, argumentativ, präzise | Klar und argumentativ | Teilweise klar | Unklar/fehlend |
-| Belege | Vielfältig, gut eingebunden | Ausreichend, relevant | Begrenzt/locker verknüpft | Minimal/irrelevant |
-| Begründung | Differenzierte Analyse | Nachvollziehbare Erklärungen | Verallgemeinerungen | Kaum Analyse |
-| Aufbau | Stringent, logisch | Klar strukturiert | Teilweise Brüche | Ungeordnet |
-| Sprache | Nahezu fehlerfrei | Kleine Fehler | Häufigere Fehler | Viele Fehler |
+| **These** | Präzise, gut begründet | Klar, begründet | Teilweise klar | Unklar/fehlend |
+| **Belege** | Vielfältig, gut eingebunden | Ausreichend, passend | Begrenzt/locker verknüpft | Minimal/unpassend |
+| **Begründung** | Differenzierte Analyse | Schlüssige Erklärungen | Teilweise pauschal | Kaum Analyse |
+| **Aufbau** | Stringent, stimmig | Klar strukturiert | Brüche vorhanden | Ungeordnet |
+| **Sprache/Normen** | Nahezu fehlerfrei | Kleine Fehler | Wiederholte Fehler | Häufige Fehler |
 
-## Mündliches Referat – Raster
-| Kriterium | Übertrifft | Entspricht | Annähernd | Anfang |
+## Mündliche Präsentation
+
+| Kriterium | Übertrifft | Erreicht | Auf dem Weg | Beginnend |
 |---|---|---|---|---|
-| Vortrag | Sicher, mitreißend | Klar, gut hörbar | Uneinheitlich | Schwer zu folgen |
-| Inhalt | Präzise, gut ausgewählt | Präzise, ausreichend | Lücken | Größere Lücken |
-| Aufbau | Starker Einstieg/Schluss | Klare Abfolge | Sprünge | Unklar |
+| **Vortrag** | Sicher, mitreißend | Klar, gut hörbar | Uneinheitlich | Schwer zu folgen |
+| **Inhalt** | Treffend ausgewählt | Genau, ausreichend | Lücken vorhanden | Größere Lücken |
+| **Aufbau** | Starkes Intro/Schluss | Klare Abfolge | Sprünge | Unklar |
 
-## Gruppenarbeit – Zusammenarbeit (Lehrer/in + Selbst)
-| Kriterium | Lehrkraft | Selbst | Peers |
+## Gruppenarbeit (Lehrkraft + Selbst)
+
+| Kriterium | Lehrkraft | Selbst | Peer |
 |---|---|---|---|
 | Beitrag |  |  |  |
 | Teamarbeit |  |  |  |
 | Zeitmanagement |  |  |  |
+
+## Rubriken schnell anpassen
+- Kriterien austauschen (z. B. **Quellennutzung**, **Gestaltungsqualität**).
+- Niveaubeschreibungen **schülerverständlich** halten.
+- **Beispiele** ergänzen: 1 starkes, 1 entwickelndes Beispiel.
+
+## Feedback-Abkürzung
+Unter jedem Kriterium eine Zeile „**Next Step**“ mit 1 Prompt ankreuzen.  
+Beispiele: *„Füge ein direktes Zitat ein und erläutere seine Aussagekraft.“*, *„Gruppe: Rollen vor Start klären.“*
