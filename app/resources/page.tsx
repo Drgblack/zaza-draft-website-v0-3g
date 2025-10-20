@@ -117,7 +117,7 @@ export default function ResourcesPage() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center mb-12">
           <h1 className="text-4xl font-bold text-[#F9FAFB] sm:text-5xl mb-4">Free Resources for Teachers</h1>
-          <p className="text-[#9CA3AF]">Time-savers you can use today. Download as PDF or DOCX.</p>
+          <p className="text-[#9CA3AF]">Time-savers you can use today (live). Download as PDF or DOCX.</p>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -166,6 +166,7 @@ export default function ResourcesPage() {
     </div>
   );
 }
+
 
 
 
