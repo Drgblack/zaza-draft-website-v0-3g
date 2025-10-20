@@ -1,27 +1,21 @@
 ﻿# The Batch & Automate Playbook for Teachers
+*Reclaim 5+ hours per week with small systems.*
 
-> Reclaim 5+ hours/week with simple systems.
+## Weekly batching
+- **Mon – Planning:** outline next week; generate hooks/resources.
+- **Tue – Grading:** 25-min sprints; use 3 comment stems + “Next Step”.
+- **Wed – Parent comms:** 30-min window; use templates.
+- **Thu – Prep/Photocopy:** build bins by lesson.
+- **Fri – Reflection:** 10-min note → wins & carry-overs.
 
----
+## Inbox zero (teacher edition)
+- Rules for auto-labels (parents / admin / students).
+- Process in 2 passes: scan → action (reply ≤2 min, archive, task).
 
-## Weekly Batching Schedule (example)
-| Day | Focus | Tasks |
-|---|---|---|
-| Mon | Planning | Scope week, materials, copies |
-| Tue | Grading | Quick-sort, rubrics, samples |
-| Wed | Communication | Parent emails, updates |
-| Thu | Intervention | Small-group plans |
-| Fri | Reflection | What worked, next week tweaks |
+## Automation ideas
+- Google Form for late work; sheet auto-tallies.
+- Canned responses for top 5 parent questions.
+- Calendar blocks for batch slots.
 
-## Inbox Zero (teachers)
-1. Triage 2×/day (AM/PM).
-2. 4 folders: Action, Waiting, Reference, Archive.
-3. Canned responses for common replies.
-
-## Simple Automations
-- Google Forms for submissions; auto-acknowledgement.
-- Reusable comment banks.
-- AI: generate quiz items, hooks, outlines.
-
-## AI Tasks to Delegate
-- Draft parent updates, rubric descriptors, exit tickets.
+## AI tasks to delegate
+- Draft newsletter blurbs, retrieval questions, comment banks.

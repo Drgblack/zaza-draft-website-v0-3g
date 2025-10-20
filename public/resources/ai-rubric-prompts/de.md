@@ -1,13 +1,11 @@
-﻿#  (DE)
+﻿# KI-Rubrik-Prompts (sofort nutzbar)
+*Prompts für klare, schülernahe Rubriken in Minuten.*
 
-> Einzeiliger Nutzen: Was Lehrkräfte in 30 Sekunden davon haben.
+## Grundrahmen
+> Handle als erfahrene*r **[Fach/Klasse]**-Lehrkraft. Erstelle eine Rubrik zu **[Aufgabe]**, passend zu **[Standards]**.  
+> Vier Stufen (**Übertrifft/Erreicht/Auf dem Weg/Beginnend**), schülerfreundlich.  
+> Ausgabe als Markdown-Tabelle mit **[Kriterien]** + je 1 „Next Step“.
 
-## Anwendung
-- …
-
-## Inhalt
-- …
-
-## Vorlagen / Checklisten
-<!-- Klar, prägnant, kurze Sätze. -->
-
+## Schnell anpassen
+- **Gewichtungen** (%), **Beispiele**, **Barrierearmut** (Audio/Video Belege möglich).
+- **Selbsteinschätzung**: 6 Zeilen mit Satzanfängen.

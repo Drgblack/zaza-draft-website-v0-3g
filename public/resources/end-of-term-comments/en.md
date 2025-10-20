@@ -1,28 +1,27 @@
-﻿# The Comment Bank Builder: End-of-Term Reports
+﻿# Comment Bank Builder: End-of-Term Reports
+*Personalised, balanced comments in minutes.*
 
-> A structured system and ready-to-use phrases to keep reports personal and efficient.
+## Structure (Sandwich)
+1. **Strength** specific to evidence  
+2. **Area for growth** (one skill)  
+3. **Next step** + optimistic close
 
----
+## Comment bank (mix & match)
+**Strengths**
+- Demonstrates curiosity in **[topic]** and asks thoughtful questions.
+- Collaborates positively, often elevating group outcomes.
 
-## Framework (Sandwich)
-**Strength → Growth → Encouragement/Next step**.
+**Growth**
+- Would benefit from strategies to organise multi-step tasks.
+- Next step is to cite evidence consistently when making claims.
 
-## Comment Banks
-### Strengths
-- “Shows genuine curiosity in [topic].”
-- “Supports peers and collaborates effectively.”
-- “Perseveres with challenging tasks.”
+**Closers**
+- I’m excited to see how **[student]** applies these skills next term.
+- It’s been a pleasure to see their growing confidence.
 
-### Areas for Growth
-- “Would benefit from stronger organisation.”
-- “Next step: apply strategies independently.”
-- “Extend skills to more complex texts/problems.”
+## Quick worksheet (per student)
+- One praise (evidence) →  
+- One polish (skill) →  
+- One next step (actionable) →
 
-### Closers
-- “I look forward to their continued progress in [subject].”
-- “It’s been a pleasure to see their confidence grow.”
-
-## Worksheet: Praise & Polish
-| Student | Specific Praise | Specific Growth Area | Next Step |
-|---|---|---|---|
-| | | | |
+> **Copy/paste:** “Strength: … Growth: … Next step: …”

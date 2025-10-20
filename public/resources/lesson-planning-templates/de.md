@@ -1,29 +1,13 @@
-﻿# Der flexible Unterrichtsplan-Designer (DOCX)
+﻿# Flexible Unterrichtsplan-Vorlagen
+*Vier anpassbare Word-Templates mit Differenzierung & Überprüfung.*
 
-> Moderne Vorlagen mit Differenzierung, Technik-Einsatz und klaren Lernzielen.
+## Enthalten
+- **5E-Modell** (Engage … Evaluate)
+- **Workshop-Modell** (Mini-Input, Arbeitsphase, Coaching, Präsentation)
+- **Direkte Instruktion** (Vormachen/Anleiten/Selbstständig + Lernstandscheck)
+- **Quick-Plan (Tagesüberblick)**
 
----
-
-## 5E-Modell
-| Phase | Ziel | Aktivitäten | Differenzierung | Bewertung |
-|---|---|---|---|---|
-| Engage | | | | |
-| Explore | | | | |
-| Explain | | | | |
-| Elaborate | | | | |
-| Evaluate | | | | |
-
-## Workshop-Modell (Deutsch/ELA)
-| Teil | Min | Mini-Lesson | Arbeitszeit | Sharing |
-|---|---|---|---|---|
-| | | | | |
-
-## Direkte Instruktion
-| Schritt | Input | Angeleitet | Eigenständig | Check |
-|---|---|---|---|---|
-| | | | | |
-
-## Schnellplan (Einseiter)
-| Ziel | Einstieg | Hauptteil | Exit-Ticket |
-|---|---|---|---|
-| | | | |
+## Hinweise
+- **Lernziel** als Können-Satz: „Ich kann … erklären.“
+- Alle 8–10 Min **Überprüfung** einplanen.
+- **Unterstützung** und **Erweiterung** vorab notieren.

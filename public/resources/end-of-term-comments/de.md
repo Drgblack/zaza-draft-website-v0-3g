@@ -1,28 +1,20 @@
-﻿# Kommentarbank-Baukasten: Zeugnisberichte
+﻿# Kommentar-Baukasten: Zeugnisberichte
+*Individuell, ausgewogen, schnell.*
 
-> Ein klares System mit fertigen Formulierungen – persönlich und zeitsparend.
+## Aufbau (Sandwich)
+1. **Stärke** mit Beleg  
+2. **Entwicklungspunkt** (eine Fähigkeit)  
+3. **Nächster Schritt** + zuversichtlicher Abschluss
 
----
+## Formulierungen
+**Stärken**
+- Zeigt Neugier in **[Thema]** und stellt kluge Fragen.
+- Arbeitet konstruktiv im Team und stärkt Ergebnisse.
 
-## Rahmen (Sandwich)
-**Stärke → Entwicklungsfeld → Ermutigung/Nächster Schritt**.
+**Entwicklung**
+- Benötigt Strategien, um mehrschrittige Aufgaben zu strukturieren.
+- Nächster Schritt: Belege konsequent anführen.
 
-## Formulierungsbausteine
-### Stärken
-- „Zeigt echtes Interesse an [Thema].“
-- „Unterstützt andere und arbeitet kooperativ.“
-- „Hält bei anspruchsvollen Aufgaben durch.“
-
-### Entwicklungsfelder
-- „Benötigt mehr Struktur/Organisation.“
-- „Nächster Schritt: Strategien selbstständig anwenden.“
-- „Fähigkeiten auf komplexere Aufgaben übertragen.“
-
-### Abschlüsse
-- „Ich freue mich auf weitere Fortschritte in [Fach].“
-- „Es war schön, das wachsende Selbstvertrauen zu sehen.“
-
-## Arbeitsblatt: Lob & Feinschliff
-| Schüler/in | Konkretes Lob | Entwicklungsfeld | Nächster Schritt |
-|---|---|---|---|
-| | | | |
+**Abschluss**
+- Ich freue mich darauf, wie **[Name]** dies nächstes Halbjahr nutzt.
+- Es war schön, das wachsende Selbstvertrauen zu sehen.

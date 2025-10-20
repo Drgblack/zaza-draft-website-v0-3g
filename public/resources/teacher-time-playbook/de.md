@@ -1,27 +1,16 @@
-﻿# Batch & Automate – Zeitspielbuch für Lehrkräfte
+﻿# Batch & Automate: Zeit-Playbook für Lehrkräfte
+*Mit kleinen Systemen 5+ Stunden zurückholen.*
 
-> Mit einfachen Systemen 5+ Stunden pro Woche zurückgewinnen.
+## Wochen-Batching
+- **Mo – Planung**, **Di – Bewertung**, **Mi – Elternmails**, **Do – Material**, **Fr – Reflexion** (10 Min).
 
----
+## Postfach-Zero
+- Automatische Labels, 2-Pass-Verfahren (Sichten → Handeln).
 
-## Wöchentlicher Batch-Plan (Beispiel)
-| Tag | Fokus | Aufgaben |
-|---|---|---|
-| Mo | Planung | Woche skizzieren, Material, Kopien |
-| Di | Bewertung | Schnell-Sortierung, Raster, Beispiele |
-| Mi | Kommunikation | Elternmails, Updates |
-| Do | Förderung | Kleingruppen-Planung |
-| Fr | Reflexion | Was lief gut? Nächste Woche anpassen |
+## Automatisierung
+- Google-Formular für Nachreichungen; Tabelle zählt.
+- Textbausteine für Top-5-Fragen.
+- Kalenderblöcke für Batch-Zeiten.
 
-## Inbox Zero (für Lehrkräfte)
-1. 2×/Tag sichten (morgens/abends).
-2. 4 Ordner: Aktion, Warten, Referenz, Archiv.
-3. Textbausteine für Standardantworten.
-
-## Einfache Automatisierungen
-- Google Forms für Abgaben; Auto-Bestätigung.
-- Wiederverwendbare Kommentarbanken.
-- KI: Quizfragen, Einstiege, Gliederungen.
-
-## KI-Aufgaben zum Delegieren
-- Eltern-Updates, Rubrik-Texte, Exit-Tickets.
+## KI abgeben
+- Newsletter-Texte, Abruffragen, Kommentar-Bausteine.
