@@ -1,4 +1,15 @@
-﻿import fs from "node:fs";
+﻿function humanizeSlug(s?: string) {
+  if (!s) return "Resource";
+  return s.split("-").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+}
+function getDownloadName(title?: string, href?: string) {
+  const kind = (href?.toLowerCase().endsWith(".pdf") ? "PDF" : "DOCX");
+  const lang = href?.match(/\/build\/([a-z]{2})\./i)?.[1]?.toUpperCase() || "EN";
+  const base = (title && title.trim()) || "Resource";
+  const safe = base.replace(/[^A-Za-z0-9 ]/g,"").replace(/\s+/g,"-");
+  return `${safe}_${lang}_Zaza-Draft.${kind.toLowerCase()}`;
+}
+import fs from "node:fs";
 import path from "node:path";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -115,9 +126,7 @@ export default function ResourcesPage() {
             return (
               <Card key={resource.slug} className="bg-[#0B1220] border-[#1F2937]">
                 <CardContent className="p-6">
-                  <h2 className="text-xl font-semibold text-[#F9FAFB] mb-2">
-                    {resource.title ?? resource.slug}
-                  </h2>
+                  <h2 className="text-xl font-semibold text-[#F9FAFB] mb-2">{ (resource.title ?? humanizeSlug(resource.slug)) }</h2>
                   {resource.blurb ? (
                     <p className="text-[#9CA3AF] mb-4">{resource.blurb}</p>
                   ) : null}
@@ -157,4 +166,5 @@ export default function ResourcesPage() {
     </div>
   );
 }
+
 
