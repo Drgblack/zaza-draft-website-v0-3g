@@ -127,8 +127,8 @@ export default function ResourcesPage() {
               <Card key={resource.slug} className="bg-[#0B1220] border-[#1F2937]">
                 <CardContent className="p-6">
                   <h2 className="text-xl font-semibold text-[#F9FAFB] mb-2">{ (resource.title ?? humanizeSlug(resource.slug)) }</h2>
-                  {resource.blurb ? (
-                    <p className="text-[#9CA3AF] mb-4">{resource.blurb}</p>
+                  {(resource.blurb ?? DEFAULTS[resource.slug]?.blurb) ? (
+                    <p className="text-[#9CA3AF] mb-4">{(resource.blurb ?? DEFAULTS[resource.slug]?.blurb)}</p>
                   ) : null}
 
                   {resource.tags && resource.tags.length ? (
@@ -166,5 +166,6 @@ export default function ResourcesPage() {
     </div>
   );
 }
+
 
 
