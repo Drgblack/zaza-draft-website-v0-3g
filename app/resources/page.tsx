@@ -1,4 +1,5 @@
-﻿import { Card, CardContent } from "@/components/ui/card";
+﻿import { usePathname } from 'next/navigation';
+import { Card, CardContent } from "@/components/ui/card";
 
 const DEFAULTS_EN: Record<string,{title:string;description:string}> = { } as const;
 const DEFAULTS_DE: Record<string,{title:string;description:string}> = { } as const;
@@ -1566,13 +1567,21 @@ export default blogPosts
 
  (\).docx\;
 };
+const getDownloadName = (r: any, locale: 'en'|'de') => {
+  const t = String(r?.title ?? r?.name ?? 'Resource').replace(/[^\w\s-]/g, '').trim();
+  return `${t} (${locale.toUpperCase()}).docx`;
+};
+/* // BEGIN Resources Helpers */
 const getLocale = (p?: string) => (p && p.startsWith('/de')) ? 'de' : 'en';
 const docHref = (slug: string, locale: 'en'|'de') => `/resources/${slug}/build/${locale}.docx`;
 const getDownloadName = (r: any, locale: 'en'|'de') => {
   const t = String(r?.title ?? r?.name ?? 'Resource').replace(/[^\w\s-]/g, '').trim();
   return `${t} (${locale.toUpperCase()}).docx`;
 };
+/* // END Resources Helpers */
 export default function ResourcesPage() {
+  const pathname = usePathname();
+  const locale = (pathname && pathname.startsWith('/de')) ? 'de' : 'en';
   const resources = normalizeIndex(rawIndex).filter(Boolean);
 
   return (
@@ -1641,6 +1650,7 @@ export default function ResourcesPage() {
     </div>
   );
 }
+
 
 
 
