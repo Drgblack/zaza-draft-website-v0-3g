@@ -1,9 +1,34 @@
 ﻿import { Card, CardContent } from "@/components/ui/card";
+
+const DEFAULTS_EN = { 
+  'ai-rubric-prompts': { title: 'AI Rubric Prompts', description: 'Ready-to-use AI prompts to generate detailed, consistent rubrics.' },} as const;
+const DEFAULTS_DE = { 
+  'ai-rubric-prompts': { title: 'AI-Rubrik-Prompts', description: 'Fertige AI-Prompts für detaillierte, konsistente Bewertungsraster.' },} as const;
 import { Button } from "@/components/ui/button";
+
+const DEFAULTS_EN = { 
+  'ai-rubric-prompts': { title: 'AI Rubric Prompts', description: 'Ready-to-use AI prompts to generate detailed, consistent rubrics.' },} as const;
+const DEFAULTS_DE = { 
+  'ai-rubric-prompts': { title: 'AI-Rubrik-Prompts', description: 'Fertige AI-Prompts für detaillierte, konsistente Bewertungsraster.' },} as const;
 import { Download } from "lucide-react";
 
+const DEFAULTS_EN = { 
+  'ai-rubric-prompts': { title: 'AI Rubric Prompts', description: 'Ready-to-use AI prompts to generate detailed, consistent rubrics.' },} as const;
+const DEFAULTS_DE = { 
+  'ai-rubric-prompts': { title: 'AI-Rubrik-Prompts', description: 'Fertige AI-Prompts für detaillierte, konsistente Bewertungsraster.' },} as const;
+
 // Import resources index (array, { value: [...] }, or single object)
+
+const DEFAULTS_EN = { 
+  'ai-rubric-prompts': { title: 'AI Rubric Prompts', description: 'Ready-to-use AI prompts to generate detailed, consistent rubrics.' },} as const;
+const DEFAULTS_DE = { 
+  'ai-rubric-prompts': { title: 'AI-Rubrik-Prompts', description: 'Fertige AI-Prompts für detaillierte, konsistente Bewertungsraster.' },} as const;
 import rawIndex from "../../data/resources/resources.index.json";
+
+const DEFAULTS_EN = { 
+  'ai-rubric-prompts': { title: 'AI Rubric Prompts', description: 'Ready-to-use AI prompts to generate detailed, consistent rubrics.' },} as const;
+const DEFAULTS_DE = { 
+  'ai-rubric-prompts': { title: 'AI-Rubrik-Prompts', description: 'Fertige AI-Prompts für detaillierte, konsistente Bewertungsraster.' },} as const;
 
 type FileEntry = { docx?: string; pdf?: string };
 type Resource = {
@@ -33,6 +58,8 @@ function pickHref(r: Resource): string | null {
   return (en as FileEntry).pdf ?? (en as FileEntry).docx ?? (de as FileEntry).pdf ?? (de as FileEntry).docx ?? null;
 }
 
+const getLocale=(p?:string)=>p -and (p.StartsWith('/de'))?'de':'en';
+const docHref=(slug:string,locale:'en'|'de')=>"/resources/"+slug+"/build/"+locale+.docx";
 export default function ResourcesPage() {
   const resources = normalizeIndex(rawIndex).filter(Boolean);
 
@@ -102,6 +129,7 @@ export default function ResourcesPage() {
     </div>
   );
 }
+
 
 
 
