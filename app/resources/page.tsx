@@ -1,9 +1,24 @@
 ﻿import { Card, CardContent } from "@/components/ui/card";
+
+const DEFAULTS_EN: Record<string,{title:string;description:string}> = { } as const;
+const DEFAULTS_DE: Record<string,{title:string;description:string}> = { } as const;
 import { Button } from "@/components/ui/button";
+
+const DEFAULTS_EN: Record<string,{title:string;description:string}> = { } as const;
+const DEFAULTS_DE: Record<string,{title:string;description:string}> = { } as const;
 import { Download } from "lucide-react";
 
+const DEFAULTS_EN: Record<string,{title:string;description:string}> = { } as const;
+const DEFAULTS_DE: Record<string,{title:string;description:string}> = { } as const;
+
 // Import resources index (array, { value: [...] }, or single object)
+
+const DEFAULTS_EN: Record<string,{title:string;description:string}> = { } as const;
+const DEFAULTS_DE: Record<string,{title:string;description:string}> = { } as const;
 import rawIndex from "../../data/resources/resources.index.json";
+
+const DEFAULTS_EN: Record<string,{title:string;description:string}> = { } as const;
+const DEFAULTS_DE: Record<string,{title:string;description:string}> = { } as const;
 
 type FileEntry = { docx?: string; pdf?: string };
 type Resource = {
@@ -38,6 +53,9 @@ const docHref = (slug: string, locale: 'en'|'de') => \/resources/\weekly-newslet
 const getDownloadName = (r: any, locale: 'en'|'de') => {
   const t = String(r?.title ?? r?.name ?? 'Resource').replace(/[^\w\s-]/g, '').trim();
   return \\import type { BlogPost } from "@/lib/cms/posts"
+
+const DEFAULTS_EN: Record<string,{title:string;description:string}> = { } as const;
+const DEFAULTS_DE: Record<string,{title:string;description:string}> = { } as const;
 
 export const blogPosts: BlogPost[] = [
   {
@@ -1601,5 +1619,6 @@ export default function ResourcesPage() {
     </div>
   );
 }
+
 
 
