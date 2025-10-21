@@ -1,5 +1,5 @@
-# Time Management Guide
-
-This is a placeholder download file for the time management guide.
-
-Full content coming soon.
+﻿export declare const maxWithOptions: import("./types.js").FPFn2<
+  Date,
+  import("../max.js").MaxOptions<Date> | undefined,
+  import("../fp.js").DateArg<Date>[]
+>;

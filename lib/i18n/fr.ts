@@ -1,3 +1,5 @@
-// TODO: Add French translations
-// Copy structure from language-context.tsx translationsEn
-export const translationsFr: Record<string, string> = {}
+﻿export declare const maxWithOptions: import("./types.js").FPFn2<
+  Date,
+  import("../max.js").MaxOptions<Date> | undefined,
+  import("../fp.js").DateArg<Date>[]
+>;

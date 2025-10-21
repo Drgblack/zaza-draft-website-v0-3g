@@ -1,13 +1,5 @@
-﻿{
-    "slug":  "weekly-newsletter-bundle",
-    "files":  {
-                  "en":  {
-                             "docx":  "/resources/weekly-newsletter-bundle/build/en.docx",
-                             "pdf":  "/resources/weekly-newsletter-bundle/build/en.pdf"
-                         },
-                  "de":  {
-                             "docx":  "/resources/weekly-newsletter-bundle/build/de.docx",
-                             "pdf":  "/resources/weekly-newsletter-bundle/build/de.pdf"
-                         }
-              }
-}
+﻿export declare const maxWithOptions: import("./types.js").FPFn2<
+  Date,
+  import("../max.js").MaxOptions<Date> | undefined,
+  import("../fp.js").DateArg<Date>[]
+>;

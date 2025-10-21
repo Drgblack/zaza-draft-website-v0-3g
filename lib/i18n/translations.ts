@@ -1,53 +1,5 @@
-export const translations = {
-  en: {
-    footer: {
-      product: "Product",
-      ecosystem: "Zaza Ecosystem",
-      resourcesCompany: "Resources & Company",
-      features: "Features",
-      pricing: "Pricing",
-      teacherStories: "Teacher Stories",
-      roiCalculator: "ROI Calculator",
-      zazaTeach: "Zaza Teach",
-      zazaDraft: "Zaza Draft",
-      gradeflow: "GradeFlow",
-      zazaShield: "Zaza Shield",
-      zazaTech: "Zaza Technologies",
-      blog: "Blog",
-      compare: "Compare Tools",
-      teacherResources: "Teacher Resources",
-      support: "Support",
-      faq: "FAQ",
-      about: "About",
-      privacy: "Privacy Policy",
-      terms: "Terms of Service",
-      contact: "Contact",
-    },
-  },
-  de: {
-    footer: {
-      product: "Produkt",
-      ecosystem: "Zaza Ökosystem",
-      resourcesCompany: "Ressourcen & Unternehmen",
-      features: "Funktionen",
-      pricing: "Preise",
-      teacherStories: "Lehrergeschichten",
-      roiCalculator: "ROI-Rechner",
-      zazaTeach: "Zaza Teach",
-      zazaDraft: "Zaza Draft",
-      gradeflow: "GradeFlow",
-      zazaShield: "Zaza Shield",
-      zazaTech: "Zaza Technologies",
-      blog: "Blog",
-      compare: "Tools vergleichen",
-      teacherResources: "Lehrerressourcen",
-      support: "Support",
-      faq: "FAQ",
-      about: "Über uns",
-      privacy: "Datenschutz",
-      terms: "Nutzungsbedingungen",
-      contact: "Kontakt",
-    },
-  },
-}
-
+﻿export declare const maxWithOptions: import("./types.js").FPFn2<
+  Date,
+  import("../max.js").MaxOptions<Date> | undefined,
+  import("../fp.js").DateArg<Date>[]
+>;

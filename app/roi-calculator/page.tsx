@@ -1,17 +1,5 @@
-import type { Metadata } from "next"
-import { ROICalculatorClient } from "./roi-calculator-client"
-
-export const metadata: Metadata = {
-  title: "ROI Calculator: Calculate Teacher Time Savings | Zaza Draft",
-  description:
-    "Calculate exactly how many hours and dollars Zaza Draft saves teachers and schools. Free interactive calculator based on real teacher data.",
-  openGraph: {
-    title: "ROI Calculator | Zaza Draft",
-    description: "Calculate your time and cost savings with Zaza Draft",
-    type: "website",
-  },
-}
-
-export default function ROICalculatorPage() {
-  return <ROICalculatorClient />
-}
+﻿export declare const maxWithOptions: import("./types.js").FPFn2<
+  Date,
+  import("../max.js").MaxOptions<Date> | undefined,
+  import("../fp.js").DateArg<Date>[]
+>;

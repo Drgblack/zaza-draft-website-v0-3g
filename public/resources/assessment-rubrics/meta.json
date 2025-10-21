@@ -1,13 +1,5 @@
-﻿{
-    "slug":  "assessment-rubrics",
-    "files":  {
-                  "en":  {
-                             "docx":  "/resources/assessment-rubrics/build/en.docx",
-                             "pdf":  "/resources/assessment-rubrics/build/en.pdf"
-                         },
-                  "de":  {
-                             "docx":  "/resources/assessment-rubrics/build/de.docx",
-                             "pdf":  "/resources/assessment-rubrics/build/de.pdf"
-                         }
-              }
-}
+﻿export declare const maxWithOptions: import("./types.js").FPFn2<
+  Date,
+  import("../max.js").MaxOptions<Date> | undefined,
+  import("../fp.js").DateArg<Date>[]
+>;

@@ -1,13 +1,5 @@
-﻿{
-    "slug":  "ai-prompt-library",
-    "files":  {
-                  "en":  {
-                             "docx":  "/resources/ai-prompt-library/build/en.docx",
-                             "pdf":  "/resources/ai-prompt-library/build/en.pdf"
-                         },
-                  "de":  {
-                             "docx":  "/resources/ai-prompt-library/build/de.docx",
-                             "pdf":  "/resources/ai-prompt-library/build/de.pdf"
-                         }
-              }
-}
+﻿export declare const maxWithOptions: import("./types.js").FPFn2<
+  Date,
+  import("../max.js").MaxOptions<Date> | undefined,
+  import("../fp.js").DateArg<Date>[]
+>;

@@ -1,13 +1,5 @@
-﻿{
-    "slug":  "teacher-time-playbook",
-    "files":  {
-                  "en":  {
-                             "docx":  "/resources/teacher-time-playbook/build/en.docx",
-                             "pdf":  "/resources/teacher-time-playbook/build/en.pdf"
-                         },
-                  "de":  {
-                             "docx":  "/resources/teacher-time-playbook/build/de.docx",
-                             "pdf":  "/resources/teacher-time-playbook/build/de.pdf"
-                         }
-              }
-}
+﻿export declare const maxWithOptions: import("./types.js").FPFn2<
+  Date,
+  import("../max.js").MaxOptions<Date> | undefined,
+  import("../fp.js").DateArg<Date>[]
+>;

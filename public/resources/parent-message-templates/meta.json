@@ -1,13 +1,5 @@
-﻿{
-    "slug":  "parent-message-templates",
-    "files":  {
-                  "en":  {
-                             "docx":  "/resources/parent-message-templates/build/en.docx",
-                             "pdf":  "/resources/parent-message-templates/build/en.pdf"
-                         },
-                  "de":  {
-                             "docx":  "/resources/parent-message-templates/build/de.docx",
-                             "pdf":  "/resources/parent-message-templates/build/de.pdf"
-                         }
-              }
-}
+﻿export declare const maxWithOptions: import("./types.js").FPFn2<
+  Date,
+  import("../max.js").MaxOptions<Date> | undefined,
+  import("../fp.js").DateArg<Date>[]
+>;

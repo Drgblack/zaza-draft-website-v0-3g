@@ -1,13 +1,5 @@
-﻿{
-    "slug":  "tone-checklist",
-    "files":  {
-                  "en":  {
-                             "docx":  "/resources/tone-checklist/build/en.docx",
-                             "pdf":  "/resources/tone-checklist/build/en.pdf"
-                         },
-                  "de":  {
-                             "docx":  "/resources/tone-checklist/build/de.docx",
-                             "pdf":  "/resources/tone-checklist/build/de.pdf"
-                         }
-              }
-}
+﻿export declare const maxWithOptions: import("./types.js").FPFn2<
+  Date,
+  import("../max.js").MaxOptions<Date> | undefined,
+  import("../fp.js").DateArg<Date>[]
+>;

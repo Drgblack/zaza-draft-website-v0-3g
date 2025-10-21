@@ -1,11 +1,5 @@
-import type { Metadata } from "next"
-import DiscussionThreadClient from "./discussion-thread-client"
-
-export const metadata: Metadata = {
-  title: "Discussion Thread | Zaza Draft Community",
-  description: "Join the conversation with thousands of teachers using AI in their classrooms.",
-}
-
-export default function DiscussionThreadPage() {
-  return <DiscussionThreadClient />
-}
+﻿export declare const maxWithOptions: import("./types.js").FPFn2<
+  Date,
+  import("../max.js").MaxOptions<Date> | undefined,
+  import("../fp.js").DateArg<Date>[]
+>;

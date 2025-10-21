@@ -1,18 +1,5 @@
-export const pricingConfig = {
-  draft: {
-    free: {
-      monthly: "Free",
-      yearly: "Free",
-    },
-    teacher: {
-      monthly: 9,
-      yearly: 90,
-    },
-    schools: {
-      monthly: "Custom",
-      yearly: "Custom",
-    },
-  },
-}
-
-export const yearlyDiscount = "2 months free"
+﻿export declare const maxWithOptions: import("./types.js").FPFn2<
+  Date,
+  import("../max.js").MaxOptions<Date> | undefined,
+  import("../fp.js").DateArg<Date>[]
+>;
