@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -509,8 +510,6 @@ body {
 }
 
 /* Adding handwritten signature font and scroll animations */
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
-
 .font-signature {
   font-family: "Dancing Script", cursive;
 }
