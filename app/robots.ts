@@ -1,5 +1,8 @@
-﻿export declare const maxWithOptions: import("./types.js").FPFn2<
-  Date,
-  import("../max.js").MaxOptions<Date> | undefined,
-  import("../fp.js").DateArg<Date>[]
->;
+import type { MetadataRoute } from 'next';
+
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: [{ userAgent: '*', allow: '/' }],
+    sitemap: process.env.NEXT_PUBLIC_SITE_URL ? ${process.env.NEXT_PUBLIC_SITE_URL}/sitemap.xml : undefined,
+  };
+}
