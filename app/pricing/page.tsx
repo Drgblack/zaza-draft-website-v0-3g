@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Check, ChevronDown, Star } from "lucide-react"
+import { Check, ChevronDown, Star, ShieldCheck } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/lib/i18n/language-context"
 import { SignupModal } from "@/components/signup-modal"
@@ -195,7 +195,7 @@ export default function PricingPage() {
               <p className="text-center text-sm text-[#94A3B8] mb-4">{t("pricing.premium.trial")}</p>
 
               <div className="flex items-center justify-center gap-2 bg-[rgba(16,185,129,0.1)] border border-[rgba(16,185,129,0.3)] rounded-lg px-5 py-3 mb-4">
-                <span className="text-xl">🛡️</span>
+                <ShieldCheck className="w-5 h-5 text-[#10B981]" aria-hidden="true" />
                 <span className="text-sm text-[#10B981] font-semibold">{t("pricing.premium.guarantee")}</span>
               </div>
 
@@ -476,3 +476,5 @@ export default function PricingPage() {
     </>
   )
 }
+
+
