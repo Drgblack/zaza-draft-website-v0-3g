@@ -48,8 +48,6 @@ function pickHref(r: Resource): string | null {
   return (en as FileEntry).pdf ?? (en as FileEntry).docx ?? (de as FileEntry).pdf ?? (de as FileEntry).docx ?? null;
 }
 
-const getLocale = (p?: string) => (p && p.startsWith('/de')) ? 'de' : 'en';
-const docHref = (slug: string, locale: 'en'|'de') => \/resources/\weekly-newsletter-bundle/build/\.docx\;
 const getDownloadName = (r: any, locale: 'en'|'de') => {
   const t = String(r?.title ?? r?.name ?? 'Resource').replace(/[^\w\s-]/g, '').trim();
   return \\import type { BlogPost } from "@/lib/cms/posts"
@@ -1550,6 +1548,12 @@ export default blogPosts
 
  (\).docx\;
 };
+const getLocale = (p?: string) => (p && p.startsWith('/de')) ? 'de' : 'en';
+const docHref = (slug: string, locale: 'en'|'de') => `/resources/${slug}/build/${locale}.docx`;
+const getDownloadName = (r: any, locale: 'en'|'de') => {
+  const t = String(r?.title ?? r?.name ?? 'Resource').replace(/[^\w\s-]/g, '').trim();
+  return `${t} (${locale.toUpperCase()}).docx`;
+};
 export default function ResourcesPage() {
   const resources = normalizeIndex(rawIndex).filter(Boolean);
 
@@ -1619,6 +1623,7 @@ export default function ResourcesPage() {
     </div>
   );
 }
+
 
 
 
