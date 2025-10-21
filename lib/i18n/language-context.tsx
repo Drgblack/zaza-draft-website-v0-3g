@@ -12,6 +12,17 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 const translationsEn: Record<string, string> = {
+  // Pricing Page (EN)
+  "pricing.hero.preheadline": "PRICING",
+  "pricing.hero.headline": "Simple plans built for teachers",
+  "pricing.hero.subheadline": "Start free, upgrade anytime. Cancel anytime.",
+  "pricing.trust.teachers": "Trusted by 500+ teachers",
+  "pricing.trust.ferpa": "FERPA-compliant",
+  "pricing.trust.cancel": "Cancel anytime",
+  "pricing.trust.noCard": "No credit card required",
+  "pricing.toggle.monthly": "Monthly",
+  "pricing.toggle.annual": "Annual",
+  "pricing.toggle.save": "Save 2 months",
   // Navigation
   "nav.home": "Home",
   "nav.pricing": "Pricing",
@@ -711,6 +722,17 @@ const translationsEn: Record<string, string> = {
 }
 
 const translationsDe: Record<string, string> = {
+  // Pricing Page (DE)
+  "pricing.hero.preheadline": "PREISE",
+  "pricing.hero.headline": "Einfache Pläne für Lehrkräfte",
+  "pricing.hero.subheadline": "Kostenlos starten, jederzeit upgraden. Jederzeit kündbar.",
+  "pricing.trust.teachers": "Vertrauen von 500+ Lehrkräften",
+  "pricing.trust.ferpa": "FERPA-konform",
+  "pricing.trust.cancel": "Jederzeit kündbar",
+  "pricing.trust.noCard": "Keine Kreditkarte erforderlich",
+  "pricing.toggle.monthly": "Monatlich",
+  "pricing.toggle.annual": "Jährlich",
+  "pricing.toggle.save": "2 Monate sparen",
   // Navigation
   "nav.home": "Startseite",
   "nav.pricing": "Preise",
