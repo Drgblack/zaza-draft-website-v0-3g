@@ -367,8 +367,8 @@ export default function PricingPage() {
         <section className="py-20 px-6 bg-gradient-to-b from-[#0F172A] to-[#1E293B]">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Not Sure Which Plan to Choose?</h2>
-              <p className="text-xl text-gray-400">Take our quick quiz to get a personalized recommendation</p>
+              <h2 className="text-4xl font-bold text-white mb-4">{t("pricing.decision.title")}</h2>
+              <p className="text-xl text-gray-400">{t("pricing.decision.subtitle")}</p>
             </div>
             <PricingDecisionTool />
           </div>

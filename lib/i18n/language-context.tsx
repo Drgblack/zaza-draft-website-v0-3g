@@ -169,6 +169,10 @@ const translationsEn: Record<string, string> = {
   "pricing.finalCta.primary": "Start Free",
   "pricing.finalCta.secondary": "Book a Demo",
   "pricing.finalCta.trust": "Hallucination‑safe • FERPA‑compliant • Built for teachers",
+
+  // Pricing - Decision Tool section
+  "pricing.decision.title": "Not Sure Which Plan to Choose?",
+  "pricing.decision.subtitle": "Take our quick quiz to get a personalized recommendation",
   // Navigation
   "nav.home": "Home",
   "nav.pricing": "Pricing",
@@ -1025,6 +1029,10 @@ const translationsDe: Record<string, string> = {
   "pricing.finalCta.primary": "Kostenlos starten",
   "pricing.finalCta.secondary": "Demo buchen",
   "pricing.finalCta.trust": "Halluzinationssicher • FERPA‑konform • Für Lehrkräfte gebaut",
+
+  // Preise – Entscheidungs‑Tool
+  "pricing.decision.title": "Unsicher, welcher Plan passt?",
+  "pricing.decision.subtitle": "Machen Sie unser kurzes Quiz für eine persönliche Empfehlung",
   // Navigation
   "nav.home": "Startseite",
   "nav.pricing": "Preise",
