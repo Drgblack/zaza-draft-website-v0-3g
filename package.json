@@ -1,5 +1,29 @@
-﻿export declare const maxWithOptions: import("./types.js").FPFn2<
-  Date,
-  import("../max.js").MaxOptions<Date> | undefined,
-  import("../fp.js").DateArg<Date>[]
->;
+{
+    "name":  "zaza-draft-website",
+    "version":  "0.1.0",
+    "private":  true,
+    "packageManager":  "pnpm@10",
+    "engines":  {
+                    "node":  "\u003e=20 \u003c23"
+                },
+    "scripts":  {
+                    "validate-content":  "tsx scripts/validate-content.ts",
+                    "lint":  "next lint",
+                    "build":  "next build",
+                    "dev":  "next dev",
+                    "start":  "next start"
+                },
+    "dependencies":  {
+                         "react":  "18.3.1",
+                         "react-dom":  "18.3.1",
+                         "next":  "15.2.4"
+                     },
+    "devDependencies":  {
+                            "tsx":  "4.19.0",
+                            "eslint":  "8.57.0",
+                            "typescript":  "5.6.2",
+                            "@types/react-dom":  "18.3.0",
+                            "@types/react":  "18.3.3",
+                            "@types/node":  "22.7.4"
+                        }
+}
