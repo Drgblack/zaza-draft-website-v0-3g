@@ -1,5 +1,4 @@
 ﻿"use client"
-
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
@@ -7,7 +6,6 @@ import { Menu, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/lib/i18n/language-context"
 import { SignupModal } from "@/components/signup-modal"
-
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [signupOpen, setSignupOpen] = useState(false)
@@ -16,13 +14,11 @@ export function Header() {
   const [learningCentreDropdownOpen, setLearningCentreDropdownOpen] = useState(false)
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false)
   const { language, setLanguage, t } = useLanguage()
-
   const navigation = [{ name: t("nav.pricing"), href: "/pricing" }]
-
   const productsMenuItems = [
-  { name: "Zaza Suite", href: "/suite" },
     {
       name: t("nav.products.teach") || "Zaza Teach",
+      <Link href="/suite" className="block rounded-lg px-3 py-2 text-sm hover:bg-muted">Zaza Suite</Link>
       href: "/products/teach",
     },
     {
@@ -38,7 +34,6 @@ export function Header() {
       href: "/products/shield",
     },
   ]
-
   const learningCentreMenuItems = [
     {
       name: "AI Literacy Resource Center",
@@ -73,7 +68,6 @@ export function Header() {
       href: "/ai-for-student-reports",
     },
   ]
-
   const resourcesMenuItems = [
     { name: "Blog", href: "/blog" },
     { name: "Compare Tools", href: "/compare" },
@@ -84,7 +78,6 @@ export function Header() {
     { name: t("nav.faq"), href: "/faq" },
     { name: t("nav.resources"), href: "/resources" },
   ]
-
   const aboutMenuItems = [
     { name: t("about.nav.company"), href: "/about/company" },
     { name: t("about.nav.founder"), href: "/about/founder" },
@@ -92,13 +85,11 @@ export function Header() {
     { name: "Ambassador Program", href: "/ambassadors" },
     { name: "State of AI Report", href: "/state-of-ai-education" },
   ]
-
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 bg-[#0B1220]/80 backdrop-blur-md shadow-lg shadow-black/5">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8 h-20">
           <div className="flex lg:flex-1">
-            <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3 group hover:opacity-90 transition-opacity">
               <Image
                 src="/z-logo.png"
                 alt="Zaza"
@@ -108,9 +99,7 @@ export function Header() {
                 priority
               />
               <span className="text-xl font-bold text-white">Zaza Draft</span>
-            </Link>
           </div>
-
           {/* Mobile menu button */}
           <div className="flex lg:hidden">
             <button
@@ -126,18 +115,14 @@ export function Header() {
               )}
             </button>
           </div>
-
           <div className="hidden lg:flex lg:gap-x-8 lg:items-center">
             {navigation.map((item) => (
-              <Link
                 key={item.name}
                 href={item.href}
                 className="text-[15px] font-medium text-gray-300 hover:text-white transition-colors duration-200"
               >
                 {item.name}
-              </Link>
             ))}
-
             <div
               className="relative"
               onMouseEnter={() => setProductsDropdownOpen(true)}
@@ -147,24 +132,20 @@ export function Header() {
                 {t("nav.products")}
                 <ChevronDown className="h-4 w-4" />
               </button>
-
               {productsDropdownOpen && (
                 <div className="absolute top-full left-0 pt-2 pb-2">
                   <div className="w-48 rounded-xl bg-[#111827] border border-white/10 shadow-xl shadow-black/20 py-2">
                     {productsMenuItems.map((item) => (
-                      <Link
                         key={item.name}
                         href={item.href}
                         className="block px-3 py-2 text-base text-gray-300 hover:bg-white/5 hover:text-white transition-colors rounded-md mx-1"
                       >
                         {item.name}
-                      </Link>
                     ))}
                   </div>
                 </div>
               )}
             </div>
-
             <div
               className="relative"
               onMouseEnter={() => setLearningCentreDropdownOpen(true)}
@@ -174,24 +155,20 @@ export function Header() {
                 Learning Centre
                 <ChevronDown className="h-4 w-4" />
               </button>
-
               {learningCentreDropdownOpen && (
                 <div className="absolute top-full left-0 pt-2 pb-2">
                   <div className="w-72 rounded-xl bg-[#111827] border border-white/10 shadow-xl shadow-black/20 py-2">
                     {learningCentreMenuItems.map((item) => (
-                      <Link
                         key={item.name}
                         href={item.href}
                         className="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
                       >
                         {item.name}
-                      </Link>
                     ))}
                   </div>
                 </div>
               )}
             </div>
-
             <div
               className="relative"
               onMouseEnter={() => setResourcesDropdownOpen(true)}
@@ -201,24 +178,20 @@ export function Header() {
                 Resources
                 <ChevronDown className="h-4 w-4" />
               </button>
-
               {resourcesDropdownOpen && (
                 <div className="absolute top-full left-0 pt-2 pb-2">
                   <div className="w-56 rounded-xl bg-[#111827] border border-white/10 shadow-xl shadow-black/20 py-2">
                     {resourcesMenuItems.map((item) => (
-                      <Link
                         key={item.name}
                         href={item.href}
                         className="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
                       >
                         {item.name}
-                      </Link>
                     ))}
                   </div>
                 </div>
               )}
             </div>
-
             <div
               className="relative"
               onMouseEnter={() => setAboutDropdownOpen(true)}
@@ -228,25 +201,21 @@ export function Header() {
                 {t("nav.about")}
                 <ChevronDown className="h-4 w-4" />
               </button>
-
               {aboutDropdownOpen && (
                 <div className="absolute top-full left-0 pt-2 pb-2">
                   <div className="w-56 rounded-xl bg-[#111827] border border-white/10 shadow-xl shadow-black/20 py-2">
                     {aboutMenuItems.map((item) => (
-                      <Link
                         key={item.name}
                         href={item.href}
                         className="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
                       >
                         {item.name}
-                      </Link>
                     ))}
                   </div>
                 </div>
               )}
             </div>
           </div>
-
           <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-6 items-center">
             <div className="flex items-center gap-2 rounded-lg bg-white/5 p-1">
               <button
@@ -274,77 +243,61 @@ export function Header() {
             </Button>
           </div>
         </nav>
-
         {mobileMenuOpen && (
           <div className="lg:hidden border-t border-white/10 bg-[#0B1220]/98 backdrop-blur-xl">
             <div className="space-y-1 px-6 pb-6 pt-4">
               {navigation.map((item) => (
-                <Link
                   key={item.name}
                   href={item.href}
                   className="block rounded-xl px-4 py-3 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
-                </Link>
               ))}
-
               <div className="pt-2">
                 <div className="px-4 py-2 text-sm font-semibold text-gray-400">{t("nav.products")}</div>
                 {productsMenuItems.map((item) => (
-                  <Link
                     key={item.name}
                     href={item.href}
                     className="block rounded-xl px-6 py-2.5 text-base text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
-                  </Link>
                 ))}
               </div>
-
               <div className="pt-2">
                 <div className="px-4 py-2 text-sm font-semibold text-gray-400">Learning Centre</div>
                 {learningCentreMenuItems.map((item) => (
-                  <Link
                     key={item.name}
                     href={item.href}
                     className="block rounded-xl px-6 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
-                  </Link>
                 ))}
               </div>
-
               <div className="pt-2">
                 <div className="px-4 py-2 text-sm font-semibold text-gray-400">Resources</div>
                 {resourcesMenuItems.map((item) => (
-                  <Link
                     key={item.name}
                     href={item.href}
                     className="block rounded-xl px-6 py-2.5 text-base text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
-                  </Link>
                 ))}
               </div>
-
               <div className="pt-2">
                 <div className="px-4 py-2 text-sm font-semibold text-gray-400">{t("nav.about")}</div>
                 {aboutMenuItems.map((item) => (
-                  <Link
                     key={item.name}
                     href={item.href}
                     className="block rounded-xl px-6 py-2.5 text-base text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
-                  </Link>
                 ))}
               </div>
-
               <div className="pt-4 pb-2">
                 <div className="flex items-center gap-2 rounded-full bg-white/5 p-1 border border-white/10">
                   <button
@@ -365,7 +318,6 @@ export function Header() {
                   </button>
                 </div>
               </div>
-
               <div className="pt-2">
                 <Button
                   onClick={() => {
@@ -381,7 +333,6 @@ export function Header() {
           </div>
         )}
       </header>
-
       <SignupModal open={signupOpen} onOpenChange={setSignupOpen} />
     </>
   )
