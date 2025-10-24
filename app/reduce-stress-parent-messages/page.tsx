@@ -35,3 +35,14 @@ export const metadata: Metadata = {
 export default function ReduceStressPage() {
   return <ReduceStressClient />
 }
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://zazadraft.com/reduce-stress-parent-messages",
+    languages: {
+      en: "https://zazadraft.com/reduce-stress-parent-messages",
+      de: "https://zazadraft.com/de/reduce-stress-parent-messages",
+    },
+  },
+}

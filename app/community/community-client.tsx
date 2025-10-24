@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"`nimport { useLanguage } from "@/lib/i18n/language-context"
 import { Input } from "@/components/ui/input"
 import {
   MessageSquare,
@@ -101,7 +101,7 @@ const categories = [
   },
   {
     id: "success-stories",
-    name: "Success Stories",
+    nameKey: "community.categories.success-stories.name",
     description: "Celebrate wins and share what's working in your classroom.",
     icon: Flame,
     threads: 789,
@@ -257,8 +257,12 @@ const badges = [
 ]
 
 export default function CommunityClient() {
+  const { t } = useLanguage()
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+
+  const nameKeyFor = (category: (typeof categories)[0]) => `community.categories.${category.id}.name`
+  const descKeyFor = (category: (typeof categories)[0]) => `community.categories.${category.id}.desc`
 
   useEffect(() => {
     analytics.community.viewHub()
@@ -266,19 +270,21 @@ export default function CommunityClient() {
 
   const handleCategoryClick = (category: (typeof categories)[0]) => {
     setSelectedCategory(category.id)
-    analytics.community.viewCategory(category.name)
+    analytics.community.viewCategory(t(nameKeyFor(category)))
   }
 
   const handleDiscussionClick = (discussion: (typeof trendingDiscussions)[0]) => {
     analytics.community.viewDiscussion(discussion.id, discussion.title)
   }
 
-  const filteredCategories = categories.filter(
-    (category) =>
-      searchQuery === "" ||
-      category.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      category.description.toLowerCase().includes(searchQuery.toLowerCase()),
-  )
+  const filteredCategories = categories.filter((category) => {
+    const q = searchQuery.toLowerCase()
+    return (
+      q === "" ||
+      t(nameKeyFor(category)).toLowerCase().includes(q) ||
+      t(descKeyFor(category)).toLowerCase().includes(q)
+    )
+  })
 
   return (
     <div className="min-h-screen bg-[#0F172A]">
@@ -289,15 +295,12 @@ export default function CommunityClient() {
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 rounded-full px-4 py-2 mb-6">
               <Users className="w-5 h-5 text-[#A78BFA]" />
-              <span className="text-[#A78BFA] font-medium text-sm">25,000+ Active Teachers</span>
+              <span className="text-[#A78BFA] font-medium text-sm">{t("community.hero.badge")}</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Join the <span className="gradient-text">Teacher Community</span>
+              {t("community.hero.titlePrefix")} <span className="gradient-text">{t("community.hero.titleHighlight")}</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Connect with educators worldwide. Share strategies, ask questions, and learn from teachers successfully
-              using AI in their classrooms.
-            </p>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">{t("community.hero.subtitle")}</p>
 
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">
@@ -305,7 +308,7 @@ export default function CommunityClient() {
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <Input
                   type="text"
-                  placeholder="Search discussions..."
+                  placeholder={t("community.search.placeholder")}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-12 pr-4 py-6 bg-[#1E293B] border-white/10 text-white placeholder:text-gray-400 focus:border-[#8B5CF6] text-lg"
@@ -317,19 +320,19 @@ export default function CommunityClient() {
             <div className="grid grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">25K+</div>
-                <div className="text-gray-400 text-sm">Members</div>
+                <div className="text-gray-400 text-sm">{t("community.stats.members")}</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">15K+</div>
-                <div className="text-gray-400 text-sm">Discussions</div>
+                <div className="text-gray-400 text-sm">{t("community.stats.discussions")}</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">98K+</div>
-                <div className="text-gray-400 text-sm">Posts</div>
+                <div className="text-gray-400 text-sm">{t("community.stats.posts")}</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">24/7</div>
-                <div className="text-gray-400 text-sm">Active</div>
+                <div className="text-gray-400 text-sm">{t("community.stats.active")}</div>
               </div>
             </div>
           </div>
@@ -434,9 +437,9 @@ export default function CommunityClient() {
                           </div>
                           <div className="flex-1 min-w-0">
                             <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#A78BFA] transition-colors">
-                              {category.name}
+                              {t(nameKeyFor(category))}
                             </h3>
-                            <p className="text-sm text-gray-300 mb-3 leading-relaxed">{category.description}</p>
+                            <p className="text-sm text-gray-300 mb-3 leading-relaxed">{t(descKeyFor(category))}</p>
                             <div className="flex items-center gap-4 text-xs text-gray-400">
                               <span>{category.threads.toLocaleString()} threads</span>
                               <span>•</span>
@@ -514,28 +517,28 @@ export default function CommunityClient() {
               <div className="bg-[#1E293B] border border-white/10 rounded-xl p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Shield className="w-6 h-6 text-[#A78BFA]" />
-                  <h3 className="text-xl font-bold text-white">Community Guidelines</h3>
+                  <h3 className="text-xl font-bold text-white">{t("community.guidelines.title")}</h3>
                 </div>
                 <ul className="space-y-3 text-sm text-gray-300">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-[#A78BFA] flex-shrink-0 mt-0.5" />
-                    <span>Be respectful and supportive</span>
+                    <span>{t("community.guidelines.li1")}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-[#A78BFA] flex-shrink-0 mt-0.5" />
-                    <span>Share practical, actionable advice</span>
+                    <span>{t("community.guidelines.li2")}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-[#A78BFA] flex-shrink-0 mt-0.5" />
-                    <span>Protect student privacy</span>
+                    <span>{t("community.guidelines.li3")}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-[#A78BFA] flex-shrink-0 mt-0.5" />
-                    <span>Give credit where due</span>
+                    <span>{t("community.guidelines.li4")}</span>
                   </li>
                 </ul>
                 <Button variant="link" className="text-[#A78BFA] p-0 h-auto mt-4">
-                  Read full guidelines →
+                  {t("community.guidelines.read")}
                 </Button>
               </div>
             </div>
@@ -545,26 +548,26 @@ export default function CommunityClient() {
 
       {/* Related Resources Section */}
       <RelatedResources
-        title="Expand Your Knowledge"
+        title={t("community.related.title")}
         description="Enhance your community experience with these learning resources"
         resources={[
           {
-            title: "AI Literacy Courses",
-            description: "Learn the fundamentals discussed in the community",
+            title: t("community.related.aiLiteracy.title"),
+            description: t("community.related.aiLiteracy.desc"),
             href: "/ai-literacy",
             icon: GraduationCap,
             color: "#8B5CF6",
           },
           {
-            title: "Expert Webinars",
-            description: "Live sessions on trending community topics",
+            title: t("community.related.webinars.title"),
+            description: t("community.related.webinars.desc"),
             href: "/webinars",
             icon: Video,
             color: "#A78BFA",
           },
           {
-            title: "AI Glossary",
-            description: "Understand the terminology used in discussions",
+            title: t("community.related.glossary.title"),
+            description: t("community.related.glossary.desc"),
             href: "/glossary",
             icon: BookOpen,
             color: "#8B5CF6",
@@ -576,25 +579,24 @@ export default function CommunityClient() {
       <section className="py-20 bg-[#0B1220]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to <span className="gradient-text">Join the Conversation?</span>
+            {t("community.cta.titlePrefix")} <span className="gradient-text">{t("community.cta.titleHighlight")}</span>
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Create your free account and start connecting with thousands of teachers using AI in their classrooms.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white text-lg px-8 py-6">
-              Create Free Account
-            </Button>
+            <Button size="lg" className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white text-lg px-8 py-6">{t("community.cta.primary")}</Button>
             <Button
               size="lg"
               variant="outline"
               className="border-[#8B5CF6] text-[#A78BFA] hover:bg-[#8B5CF6]/10 bg-transparent text-lg px-8 py-6"
-            >
-              Browse as Guest
-            </Button>
+            >{t("community.cta.secondary")}</Button>
           </div>
         </div>
       </section>
     </div>
   )
 }
+
+
+

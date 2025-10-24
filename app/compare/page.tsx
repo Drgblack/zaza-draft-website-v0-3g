@@ -78,3 +78,14 @@ export default function ComparePage() {
     </div>
   )
 }
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://zazadraft.com/compare",
+    languages: {
+      en: "https://zazadraft.com/compare",
+      de: "https://zazadraft.com/de/compare",
+    },
+  },
+}

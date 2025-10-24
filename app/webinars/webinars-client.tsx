@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useLanguage } from "@/lib/i18n/language-context"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -204,6 +205,7 @@ const onDemandWebinars = [
 ]
 
 export default function WebinarsClient() {
+  const { t } = useLanguage()
   const [selectedCategory, setSelectedCategory] = useState("all")
   const [searchQuery, setSearchQuery] = useState("")
 
@@ -253,9 +255,7 @@ export default function WebinarsClient() {
               <Video className="w-5 h-5 text-[#A78BFA]" />
               <span className="text-[#A78BFA] font-medium text-sm">50+ Professional Development Sessions</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Expert-Led <span className="gradient-text">Webinar Series</span>
-            </h1>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">{t("webinars.hero.title")}</h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Join live sessions or watch on-demand. Earn professional development certificates and learn from
               experienced educators.
@@ -267,7 +267,7 @@ export default function WebinarsClient() {
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <Input
                   type="text"
-                  placeholder="Search webinars..."
+                  placeholder={t("webinars.search.placeholder")}
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
                   className="pl-12 pr-4 py-6 bg-[#1E293B] border-white/10 text-white placeholder:text-gray-400 focus:border-[#8B5CF6] text-lg"
@@ -279,7 +279,7 @@ export default function WebinarsClient() {
             <div className="grid grid-cols-3 gap-8 mt-16 max-w-3xl mx-auto">
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">52</div>
-                <div className="text-gray-400 text-sm">Total Webinars</div>
+                <div className="text-gray-400 text-sm">{t("webinars.categories.all")}</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">15K+</div>
@@ -297,10 +297,10 @@ export default function WebinarsClient() {
       {/* Upcoming Webinars */}
       <section className="py-20 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3 mb-12">
-            <Calendar className="w-8 h-8 text-[#A78BFA]" />
-            <h2 className="text-4xl font-bold text-white">Upcoming Live Webinars</h2>
-          </div>
+            <div className="flex items-center gap-3 mb-12">
+              <Calendar className="w-8 h-8 text-[#A78BFA]" />
+              <h2 className="text-4xl font-bold text-white">{t("webinars.sections.upcoming")}</h2>
+            </div>
 
           <div className="space-y-6">
             {upcomingWebinars.map((webinar) => (
@@ -344,8 +344,8 @@ export default function WebinarsClient() {
                       <div className="flex items-center gap-3 text-gray-300">
                         <Users className="w-5 h-5 text-[#A78BFA]" />
                         <span>
-                          {webinar.attendees}/{webinar.maxAttendees} registered
-                        </span>
+                          {webinar.attendees}/{webinar.maxAttendees}
+            </span>
                       </div>
                       {webinar.certificateOffered && (
                         <div className="flex items-center gap-3 text-gray-300">
@@ -386,7 +386,7 @@ export default function WebinarsClient() {
                       disabled={webinar.attendees >= webinar.maxAttendees}
                       onClick={() => handleRegister(webinar)}
                     >
-                      {webinar.attendees >= webinar.maxAttendees ? "Waitlist Full" : "Register Now"}
+                      {webinar.attendees >= webinar.maxAttendees ? t("webinars.buttons.waitlistFull") : t("webinars.buttons.registerNow")}
                     </Button>
                   </div>
                 </div>
@@ -401,7 +401,7 @@ export default function WebinarsClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-8">
             <Play className="w-8 h-8 text-[#A78BFA]" />
-            <h2 className="text-4xl font-bold text-white">On-Demand Library</h2>
+            <h2 className="text-4xl font-bold text-white">{t("webinars.sections.ondemand")}</h2>
           </div>
 
           {/* Category Tabs */}

@@ -20,7 +20,7 @@ export function Header() {
   const navigation = [{ name: t("nav.pricing"), href: "/pricing" }]
 
   const productsMenuItems = [
-  { name: "Zaza Suite", href: "/suite" },
+  { name: t("nav.products.suite") || "Zaza Suite", href: "/suite" },
     {
       name: t("nav.products.teach") || "Zaza Teach",
       href: "/products/teach",

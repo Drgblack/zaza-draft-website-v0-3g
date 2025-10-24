@@ -14,3 +14,14 @@ export default function BlogPage() {
 
   return <BlogClient posts={posts} language="en" />
 }
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://zazadraft.com/blog",
+    languages: {
+      en: "https://zazadraft.com/blog",
+      de: "https://zazadraft.com/de/blog",
+    },
+  },
+}

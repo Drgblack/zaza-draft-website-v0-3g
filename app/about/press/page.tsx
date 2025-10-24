@@ -204,3 +204,14 @@ export default function PressKitPage() {
     </div>
   )
 }
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://zazadraft.com/about/press",
+    languages: {
+      en: "https://zazadraft.com/about/press",
+      de: "https://zazadraft.com/de/about/press",
+    },
+  },
+}

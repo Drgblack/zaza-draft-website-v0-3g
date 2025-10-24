@@ -16,3 +16,14 @@ export const metadata: Metadata = {
 export default function AmbassadorPage() {
   return <AmbassadorClient />
 }
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://zazadraft.com/ambassadors",
+    languages: {
+      en: "https://zazadraft.com/ambassadors",
+      de: "https://zazadraft.com/de/ambassadors",
+    },
+  },
+}

@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { useLanguage } from "@/lib/i18n/language-context"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -232,6 +233,7 @@ const videos = [
 ]
 
 export function VideoHubClient() {
+  const { t } = useLanguage()
   const [selectedCategory, setSelectedCategory] = useState("all")
   const [searchQuery, setSearchQuery] = useState("")
 
@@ -271,7 +273,7 @@ export function VideoHubClient() {
       <section className="relative py-20 px-4 bg-gradient-to-b from-[#0A1628] to-[#0F1F3A]">
         <div className="max-w-7xl mx-auto text-center">
           <Badge className="mb-4 bg-purple-500/10 text-purple-400 border-purple-500/20">24 Video Tutorials</Badge>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Video Tutorials & Demos</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">{t("videos.hero.title")}</h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Watch step-by-step tutorials and product demos to master AI-powered parent communication. Learn at your own
             pace with our comprehensive video library.
@@ -282,7 +284,7 @@ export function VideoHubClient() {
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
             <Input
               type="text"
-              placeholder="Search videos..."
+              placeholder={t("videos.search.placeholder")}
               value={searchQuery}
               onChange={(e) => handleSearch(e.target.value)}
               className="pl-12 h-14 bg-white/5 border-white/10 text-white placeholder:text-gray-400"
@@ -309,7 +311,7 @@ export function VideoHubClient() {
                   }`}
                 >
                   <Icon className="h-4 w-4" />
-                  {category.name}
+                  {t(`videos.categories.${category.id}`)}
                   <Badge variant="secondary" className="ml-1">
                     {category.count}
                   </Badge>
@@ -409,7 +411,7 @@ export function VideoHubClient() {
         {/* All Videos Grid */}
         <section>
           <h2 className="text-2xl font-bold text-white mb-6">
-            {selectedCategory === "all" ? "All Videos" : categories.find((c) => c.id === selectedCategory)?.name}
+            {selectedCategory === "all" ? t("videos.section.all") : t(`videos.categories.${selectedCategory}`)}
             <span className="text-gray-400 text-lg ml-2">({filteredVideos.length})</span>
           </h2>
           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">

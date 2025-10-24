@@ -46,3 +46,14 @@ export default function CommunityPage() {
     </>
   )
 }
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://zazadraft.com/community",
+    languages: {
+      en: "https://zazadraft.com/community",
+      de: "https://zazadraft.com/de/community",
+    },
+  },
+}
