@@ -5,14 +5,16 @@ import { Download } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/language-context";
 import rawIndex from "../../data/resources/resources.index.json";
 
-type FileEntry = { docx?: string; pdf?: string };
+type Lang = 'en' | 'de';
+type LangFiles = { docx?: string; pdf?: string };
+type FilesByLang = { en?: LangFiles; de?: LangFiles };
 type Resource = {
   slug: string;
   title?: string | null;
   blurb?: string | null;
   published?: string | null;
   tags?: string[] | null;
-  files?: { en?: FileEntry; de?: FileEntry } | null;
+  files?: FilesByLang | null;
 };
 
 function normalizeIndex(input: any): Resource[] {
@@ -27,15 +29,25 @@ function normalizeIndex(input: any): Resource[] {
   return [];
 }
 
-function pickHref(r: Resource): string | null {
-  const en = r.files?.en ?? {};
-  const de = r.files?.de ?? {};
-  return (en as FileEntry).pdf ?? (en as FileEntry).docx ?? (de as FileEntry).pdf ?? (de as FileEntry).docx ?? null;
+function pickHref(files: FilesByLang | undefined | null, lang: Lang): string | undefined {
+  const pref = files?.[lang];
+  const other = files?.[lang === 'en' ? 'de' : 'en'];
+  // Prefer DOCX; fall back to PDF, then other language
+  return pref?.docx || pref?.pdf || other?.docx || other?.pdf || undefined;
+}
+
+function safeTitleForFile(title: string | null | undefined, lang: Lang, href: string | undefined): string | undefined {
+  if (!title || !href) return undefined;
+  const clean = title.replace(/[^\w\s-]/g, '').trim();
+  const isPdf = href.toLowerCase().endsWith('.pdf');
+  const suffix = lang === 'de' ? '(DE)' : '(EN)';
+  return `${clean} ${suffix}.${isPdf ? 'pdf' : 'docx'}`;
 }
 
 export default function ResourcesPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const resources = normalizeIndex(rawIndex).filter(Boolean);
+  const activeLang: Lang = language === 'de' ? 'de' : 'en';
 
   return (
     <div className="py-20 lg:py-32">
@@ -47,24 +59,48 @@ export default function ResourcesPage() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {resources.map((resource) => {
-            const href = pickHref(resource);
+            const href = pickHref(resource.files ?? undefined, activeLang);
+
+            const hasEnDocx = !!resource.files?.en?.docx;
+            const hasEnPdf = !!resource.files?.en?.pdf;
+            const hasDeDocx = !!resource.files?.de?.docx;
+            const hasDePdf = !!resource.files?.de?.pdf;
+
+            const downloadName = safeTitleForFile(resource.title ?? null, activeLang, href);
+
             return (
-              <Card key={resource.slug ?? `${resource.title}-${Math.random()}`} className="bg-[#0B1220] border-[#1F2937]">
+              <Card key={resource.slug || Math.random().toString(36)} className="bg-[#0B1220] border-[#1F2937]">
                 <CardContent className="p-6">
                   <h2 className="text-xl font-semibold text-[#F9FAFB] mb-2">
-                    {resource.title ?? resource.slug}
+                    {resource.title || ''}
                   </h2>
                   {resource.blurb ? (
-                    <p className="text-[#9CA3AF] mb-4">{resource.blurb}</p>
+                    <p className="text-[#9CA3AF] mb-3">{resource.blurb}</p>
                   ) : null}
+
+                  <div className="mt-2 mb-4 flex flex-wrap gap-2 text-xs">
+                    {(hasEnDocx || hasEnPdf) && (
+                      <span className="rounded-full bg-[#111827] text-[#9CA3AF] px-2 py-1">EN</span>
+                    )}
+                    {(hasDeDocx || hasDePdf) && (
+                      <span className="rounded-full bg-[#111827] text-[#9CA3AF] px-2 py-1">DE</span>
+                    )}
+                    {(hasEnDocx || hasDeDocx) && (
+                      <span className="rounded-full bg-[#111827] text-[#9CA3AF] px-2 py-1">DOCX</span>
+                    )}
+                    {(hasEnPdf || hasDePdf) && (
+                      <span className="rounded-full bg-[#111827] text-[#9CA3AF] px-2 py-1">PDF</span>
+                    )}
+                  </div>
+
                   {resource.tags && resource.tags.length ? (
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {resource.tags.map((t) => (
+                      {resource.tags.map((tg) => (
                         <span
-                          key={t}
+                          key={tg}
                           className="text-xs bg-[#111827] text-[#9CA3AF] px-2 py-1 rounded-full"
                         >
-                          {t}
+                          {tg}
                         </span>
                       ))}
                     </div>
@@ -80,7 +116,7 @@ export default function ResourcesPage() {
                       asChild
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 transition-all"
                     >
-                      <a href={href} download className="flex items-center justify-center gap-2">
+                      <a href={href} download={downloadName} className="flex items-center justify-center gap-2">
                         <Download className="h-4 w-4" />
                         {t("resources.download")}
                       </a>
