@@ -37,7 +37,7 @@ export default function ReduceStressPage() {
 }
 import type { Metadata } from "next"
 
-export const metadata: Metadata = {
+export const metadata_disabled_1: Metadata = {
   alternates: {
     canonical: "https://zazadraft.com/reduce-stress-parent-messages",
     languages: {

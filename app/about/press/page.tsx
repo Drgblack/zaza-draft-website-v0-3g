@@ -206,7 +206,7 @@ export default function PressKitPage() {
 }
 import type { Metadata } from "next"
 
-export const metadata: Metadata = {
+export const metadata_disabled_1: Metadata = {
   alternates: {
     canonical: "https://zazadraft.com/about/press",
     languages: {
