@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import ResourcesClient from "./ResourcesClient";
+import dynamic from "next/dynamic";
+
+const ResourcesClient = dynamic(() => import("./ResourcesClient"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "Resources | Zaza Draft",
