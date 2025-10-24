@@ -1,6 +1,5 @@
 import ResourcesClient from "./ResourcesClient";
 import type { Metadata } from "next";
-import ResourcesClient from "./ResourcesClient";
 
 export const metadata: Metadata = {
   alternates: {
