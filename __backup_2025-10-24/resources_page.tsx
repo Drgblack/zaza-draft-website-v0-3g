@@ -1,3 +1,4 @@
+import ResourcesClient from "./ResourcesClient";
 import type { Metadata } from "next";
 import ResourcesClient from "./ResourcesClient";
 
