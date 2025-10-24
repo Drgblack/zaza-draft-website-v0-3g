@@ -73,13 +73,7 @@ export default function WebinarsPage() {
 }
 import type { Metadata } from "next"
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "https://zazadraft.com/webinars",
-    languages: {
-      en: "https://zazadraft.com/webinars",
-      de: "https://zazadraft.com/de/webinars",
-    },
+,
   },
 }
 

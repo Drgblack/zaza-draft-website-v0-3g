@@ -46,12 +46,6 @@ export default function VideoHubPage() {
 }
 import type { Metadata } from "next"
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "https://zazadraft.com/videos",
-    languages: {
-      en: "https://zazadraft.com/videos",
-      de: "https://zazadraft.com/de/videos",
-    },
+,
   },
 }
