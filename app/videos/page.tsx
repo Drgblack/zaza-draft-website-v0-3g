@@ -11,12 +11,12 @@ export async function generateMetadata(): Promise<Metadata> {
 
   const titles = {
     en: "Video Tutorials and Demos | Zaza Draft",
-    de: "Video-Tutorials und Demos | Zaza Draft",
-  }
+    de: "Video-Tutorials und Demos | Zaza Draft"
+}
   const descriptions = {
     en: "Watch step-by-step tutorials and product demos to master AI-powered parent communication.",
-    de: "Sehen Sie Schritt-für-Schritt-Tutorials und Produktdemos für KI-gestützte Elternkommunikation.",
-  }
+    de: "Sehen Sie Schritt-für-Schritt-Tutorials und Produktdemos für KI-gestützte Elternkommunikation."
+}
 
   return {
     title: titles[locale],
@@ -25,20 +25,20 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: "https://zazadraft.com/videos",
       languages: {
         en: "https://zazadraft.com/videos",
-        de: "https://zazadraft.com/de/videos",
-      },
-    },
+        de: "https://zazadraft.com/de/videos"
+}
+},
     openGraph: {
       title: titles[locale],
       description: descriptions[locale],
-      type: "website",
-    },
+      type: "website"
+},
     twitter: {
       card: "summary_large_image",
       title: titles[locale],
-      description: descriptions[locale],
-    },
-  }
+      description: descriptions[locale]
+}
+}
 }
 
 export default function VideoHubPage() {
@@ -46,6 +46,6 @@ export default function VideoHubPage() {
 }
 import type { Metadata } from "next"
 
-,
-  },
+
+}
 }

@@ -13,12 +13,12 @@ export async function generateMetadata(): Promise<Metadata> {
 
   const titles = {
     en: "Professional Development Webinars | Zaza Draft",
-    de: "Fortbildungs-Webinare | Zaza Draft",
-  }
+    de: "Fortbildungs-Webinare | Zaza Draft"
+}
   const descriptions = {
     en: "Join live webinars and watch on-demand professional development sessions on AI in education.",
-    de: "Nehmen Sie an Live-Webinaren teil und sehen Sie Fortbildungssitzungen zu KI in der Bildung auf Abruf.",
-  }
+    de: "Nehmen Sie an Live-Webinaren teil und sehen Sie Fortbildungssitzungen zu KI in der Bildung auf Abruf."
+}
 
   return {
     title: titles[locale],
@@ -27,20 +27,20 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: "https://zazadraft.com/webinars",
       languages: {
         en: "https://zazadraft.com/webinars",
-        de: "https://zazadraft.com/de/webinars",
-      },
-    },
+        de: "https://zazadraft.com/de/webinars"
+}
+},
     openGraph: {
       title: titles[locale],
       description: descriptions[locale],
-      type: "website",
-    },
+      type: "website"
+},
     twitter: {
       card: "summary_large_image",
       title: titles[locale],
-      description: descriptions[locale],
-    },
-  }
+      description: descriptions[locale]
+}
+}
 }
 
 export default function WebinarsPage() {
@@ -57,9 +57,9 @@ export default function WebinarsPage() {
             "@type": "Offer",
             price: "0",
             priceCurrency: "USD",
-            availability: "https://schema.org/InStock",
-          },
-        })}
+            availability: "https://schema.org/InStock"
+}
+})}
       </Script>
       <BreadcrumbSchema
         items={[
@@ -73,7 +73,7 @@ export default function WebinarsPage() {
 }
 import type { Metadata } from "next"
 
-,
-  },
+
+}
 }
 

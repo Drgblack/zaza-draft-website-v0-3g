@@ -1,7 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"`nimport { useLanguage } from "@/lib/i18n/language-context"
+import { Button } from "@/components/ui/button"
+import { useLanguage } from "@/lib/i18n/language-context"
 import { Input } from "@/components/ui/input"
 import {
   MessageSquare,
