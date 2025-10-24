@@ -116,7 +116,7 @@ export default function ResourcesPage() {
                       asChild
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 transition-all"
                     >
-                      <a href={href} download={`${resource.title?.replace(/[^a-zA-Z0-9 ]/g,"").trim()} ${language === "de" ? "(DE)" : "(EN)"}.${isPdf ? "pdf" : "docx"}`} className="flex items-center justify-center gap-2">
+                      <a href={href} download={`${(resource.title ?? "Resource").replace(/[^a-zA-Z0-9 ]/g,"").trim()} ${language === "de" ? "(DE)" : "(EN)"}.${isPdf ? "pdf" : "docx"}`} ${language === "de" ? "(DE)" : "(EN)"}.${isPdf ? "pdf" : "docx"}`} className="flex items-center justify-center gap-2">
                         <Download className="h-4 w-4" />
                         {t("resources.download")}
                       </a>
@@ -135,6 +135,7 @@ export default function ResourcesPage() {
     </div>
   );
 }
+
 
 
 
