@@ -12,6 +12,13 @@ export const metadata: Metadata = {
     description: "150+ AI terms explained for educators with practical examples",
     type: "website",
   },
+  alternates: {
+    canonical: "https://zazadraft.com/glossary",
+    languages: {
+      en: "https://zazadraft.com/glossary",
+      de: "https://zazadraft.com/de/glossary",
+    },
+  },
 }
 
 export default function GlossaryPage() {
