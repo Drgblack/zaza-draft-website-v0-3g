@@ -1,5 +1,4 @@
 "use client"
-
 import { useEffect } from "react"
 import Link from "next/link"
 import { BookOpen, ArrowLeft, ExternalLink, GraduationCap, Video, Users } from "lucide-react"
@@ -219,8 +218,6 @@ export default function GlossaryTermClient({ term, allTerms }: GlossaryTermClien
     </div>
   )
 }
-"use client"
-
 import { useEffect } from "react"
 import Link from "next/link"
 import { BookOpen, ArrowLeft, ExternalLink, GraduationCap, Video, Users } from "lucide-react"
