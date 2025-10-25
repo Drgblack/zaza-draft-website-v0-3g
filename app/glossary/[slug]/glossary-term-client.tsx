@@ -19,7 +19,7 @@ interface GlossaryTermClientProps {
   allTerms: GlossaryTerm[]
 }
 
-export function GlossaryTermClient({ term, allTerms }: GlossaryTermClientProps) {
+export export default function GlossaryTermClient({ term, allTerms }: GlossaryTermClientProps) {
   useEffect(() => {
     analytics.glossary.viewTerm(term.id, term.term)
   }, [term.id, term.term])
@@ -479,3 +479,4 @@ export default function GlossaryTermClient(props: any) {
     </div>
   )
 }
+export default GlossaryTermClient
