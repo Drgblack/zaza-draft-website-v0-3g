@@ -1,5 +1,4 @@
 "use client"
-
 import { useState, useMemo, useEffect } from "react"
 import { Search, BookOpen, Filter, ChevronDown, ChevronUp, GraduationCap, Video, MessageSquare } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -698,8 +697,6 @@ export default function GlossaryClient() {
     </div>
   )
 }
-"use client"
-
 import { useState, useMemo, useEffect } from "react"
 import { Search, BookOpen, Filter, ChevronDown, ChevronUp, GraduationCap, Video, MessageSquare } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -982,7 +979,7 @@ const glossaryTerms: GlossaryTerm[] = [
   },
 ]
 
-export default function GlossaryClient() {
+export function GlossaryClient() {
   const { language } = useLanguage()
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedCategoryKey, setSelectedCategoryKey] = useState<string | null>(null)
