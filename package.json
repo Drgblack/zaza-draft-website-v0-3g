@@ -2,14 +2,18 @@
     "name":  "my-v0-project",
     "version":  "0.1.0",
     "private":  true,
-    "scripts":  {
+  "scripts":  {
                     "build":  "next build",
                     "dev":  "next dev",
                     "typecheck":  "tsc --noEmit",
                     "lint":  "next lint",
                     "validate-posts":  "tsx src/data/validate-posts.ts",
                     "start":  "next start",
-                    "validate-content":  "tsx scripts/validate-content.ts"
+                    "validate-content":  "tsx scripts/validate-content.ts",
+                    "audit:i18n": "tsx scripts/audit-i18n.ts",
+                    "audit:links": "SITE_ORIGIN=http://localhost:3000 LINK_DEPTH=3 tsx scripts/audit-links.ts",
+                    "audit:content": "tsx scripts/audit-content.ts",
+                    "audit:all": "pnpm audit:i18n && pnpm audit:links && pnpm audit:content"
                 },
     "dependencies":  {
                          "@emotion/is-prop-valid":  "latest",
@@ -78,7 +82,8 @@
                             "tailwindcss":  "^4.1.9",
                             "tsx":  "^4.20.6",
                             "tw-animate-css":  "1.3.3",
-                            "typescript":  "^5"
+                            "typescript":  "^5",
+                            "@playwright/test": "^1.48.2"
                         },
     "trustedDependencies":  [
                                 "esbuild",
