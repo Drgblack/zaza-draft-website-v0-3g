@@ -233,7 +233,9 @@ interface GlossaryTermClientProps {
   allTerms: GlossaryTerm[]
 }
 
-export function GlossaryTermClient({ term, allTerms }: GlossaryTermClientProps) {
+
+/* removed duplicate GlossaryTermClient */
+: GlossaryTermClientProps) {
   const { language } = useLanguage()
   useEffect(() => {
     analytics.glossary.viewTerm(term.id, term.term)
