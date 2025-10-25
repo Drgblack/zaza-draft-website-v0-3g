@@ -1,4 +1,4 @@
-name: Audit i18n and Links
+﻿name: Audit i18n and Links
 
 on:
   pull_request:
@@ -23,13 +23,13 @@ jobs:
       - name: Start server
         run: pnpm start &
       - name: Wait for server
-        run: npx wait-on http://localhost:3000 || true
+        run: npx wait-on http://localhost:3000
       - name: Audit i18n
-        run: pnpm audit:i18n --strict || true
+        run: pnpm audit:i18n --strict
       - name: Audit links
-        run: pnpm audit:links --strict || true
+        run: pnpm audit:links --strict
       - name: Audit content
-        run: pnpm audit:content || true
+        run: pnpm audit:content
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -38,4 +38,5 @@ jobs:
             docs/audits/i18n-issues.csv
             docs/audits/link-issues.csv
             docs/audits/content-gaps.csv
+
 
