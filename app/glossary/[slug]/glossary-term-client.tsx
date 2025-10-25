@@ -235,7 +235,6 @@ interface GlossaryTermClientProps {
 
 
 
-/* removed duplicate GlossaryTermClient */
 
 /* removed duplicate GlossaryTermClient */
 : GlossaryTermClientProps) {
