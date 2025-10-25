@@ -1,5 +1,5 @@
 "use client"
-import { useState, useMemo, useEffect } from "react"
+import { useState, useMemo, useEffect } from "react";
 import { Search, BookOpen, Filter, ChevronDown, ChevronUp, GraduationCap, Video, MessageSquare } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -366,7 +366,7 @@ const glossaryTerms: GlossaryTerm[] = [
   },
 ]
 
-export default function GlossaryClient() {
+export function GlossaryClientLegacy() {
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("All Categories")
   const [selectedLetter, setSelectedLetter] = useState<string | null>(null)
@@ -697,13 +697,6 @@ export default function GlossaryClient() {
     </div>
   )
 }
-import { useState, useMemo, useEffect } from "react"
-import { Search, BookOpen, Filter, ChevronDown, ChevronUp, GraduationCap, Video, MessageSquare } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { analytics } from "@/lib/analytics"
-import { RelatedResources } from "@/components/related-resources"
-import { useLanguage } from "@/lib/i18n/language-context"
 
 interface GlossaryTerm {
   id: string
@@ -979,7 +972,30 @@ const glossaryTerms: GlossaryTerm[] = [
   },
 ]
 
-export function GlossaryClient() {
+// Minimal German translations used to override canonical term fields when language = 'de'
+const termTranslationsDe: Record<string, Partial<GlossaryTerm>> = {
+  "artificial-intelligence": {
+    term: "Künstliche Intelligenz (KI)",
+    definition:
+      "Computersysteme, die Aufgaben ausführen, die normalerweise menschliche Intelligenz erfordern – z. B. Lernen, Problemlösen, Mustererkennung und Entscheidungen.",
+    example:
+      "Wenn Zaza Draft Verbesserungen für deine Eltern‑E-Mail vorschlägt, nutzt es KI, um Kontext zu verstehen und hilfreiche Empfehlungen zu erstellen.",
+  },
+  "machine-learning": {
+    term: "Maschinelles Lernen",
+    definition:
+      "Ein Teilgebiet der KI, bei dem Computer aus Daten lernen und ihre Leistung über die Zeit verbessern, ohne für jeden Fall explizit programmiert zu sein.",
+    example:
+      "Mit der Zeit lernt Zaza Draft deinen Schreibstil kennen und gibt zunehmend personalisierte Vorschläge.",
+  },
+  "deep-learning": {
+    term: "Deep Learning",
+    definition:
+      "Eine fortgeschrittene Form des maschinellen Lernens mit mehrschichtigen neuronalen Netzen zur Verarbeitung komplexer Muster in großen Datenmengen.",
+  },
+}
+
+export default function GlossaryClient() {
   const { language } = useLanguage()
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedCategoryKey, setSelectedCategoryKey] = useState<string | null>(null)
@@ -992,8 +1008,13 @@ export function GlossaryClient() {
     analytics.glossary.viewHub()
   }, [])
 
+  const terms = useMemo(() => {
+    if (language !== "de") return glossaryTerms
+    return glossaryTerms.map((t) => ({ ...t, ...(termTranslationsDe[t.id] || {}) }))
+  }, [language])
+
   const filteredTerms = useMemo(() => {
-    let filtered = glossaryTerms
+    let filtered = terms
 
     if (selectedCategoryKey) {
       filtered = filtered.filter((term) => term.category === selectedCategoryKey)
@@ -1014,7 +1035,7 @@ export function GlossaryClient() {
     }
 
     return filtered.sort((a, b) => a.term.localeCompare(b.term))
-  }, [searchQuery, selectedCategoryKey, selectedLetter])
+  }, [searchQuery, selectedCategoryKey, selectedLetter, terms])
 
   const toggleTerm = (termId: string) => {
     const newExpanded = new Set(expandedTerms)
@@ -1022,7 +1043,7 @@ export function GlossaryClient() {
       newExpanded.delete(termId)
     } else {
       newExpanded.add(termId)
-      const term = glossaryTerms.find((t) => t.id === termId)
+      const term = terms.find((t) => t.id === termId)
       if (term) {
         analytics.glossary.viewTerm(term.id, term.term)
       }
@@ -1032,11 +1053,11 @@ export function GlossaryClient() {
 
   const categoryStats = useMemo(() => {
     const stats: Record<string, number> = {}
-    glossaryTerms.forEach((term) => {
+    terms.forEach((term) => {
       stats[term.category] = (stats[term.category] || 0) + 1
     })
     return stats
-  }, [])
+  }, [terms])
 
   const handleSearch = (query: string) => {
     setSearchQuery(query)
