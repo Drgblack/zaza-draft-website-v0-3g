@@ -1,5 +1,5 @@
 "use client"
-import { useEffect } from "react"
+import { useEffect } from "react";
 import Link from "next/link"
 import { BookOpen, ArrowLeft, ExternalLink, GraduationCap, Video, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -218,12 +218,6 @@ export default function GlossaryTermClient({ term, allTerms }: GlossaryTermClien
     </div>
   )
 }
-import { useEffect } from "react"
-import Link from "next/link"
-import { BookOpen, ArrowLeft, ExternalLink, GraduationCap, Video, Users } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { analytics } from "@/lib/analytics"
-import { useLanguage } from "@/lib/i18n/language-context"
 
 interface GlossaryTerm {
   id: string
@@ -239,7 +233,7 @@ interface GlossaryTermClientProps {
   allTerms: GlossaryTerm[]
 }
 
-export default function GlossaryTermClient({ term, allTerms }: GlossaryTermClientProps) {
+export function GlossaryTermClient({ term, allTerms }: GlossaryTermClientProps) {
   const { language } = useLanguage()
   useEffect(() => {
     analytics.glossary.viewTerm(term.id, term.term)
