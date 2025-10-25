@@ -57,3 +57,14 @@ export default function IntegrationsPage() {
     </>
   )
 }
+import type { Metadata } from "next"
+
+export const metadata_disabled_1: Metadata = {
+  alternates: {
+    canonical: "https://zazadraft.com/integrations",
+    languages: {
+      en: "https://zazadraft.com/integrations",
+      de: "https://zazadraft.com/de/integrations",
+    },
+  },
+}

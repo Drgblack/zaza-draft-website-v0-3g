@@ -88,3 +88,14 @@ export default function BestAIToolParentEmailsPage() {
     </>
   )
 }
+import type { Metadata } from "next"
+
+export const metadata_disabled_1: Metadata = {
+  alternates: {
+    canonical: "https://zazadraft.com/best-ai-tool-parent-emails",
+    languages: {
+      en: "https://zazadraft.com/best-ai-tool-parent-emails",
+      de: "https://zazadraft.com/de/best-ai-tool-parent-emails",
+    },
+  },
+}

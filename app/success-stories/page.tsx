@@ -15,3 +15,14 @@ export const metadata: Metadata = {
 export default function SuccessStoriesPage() {
   return <SuccessStoriesClient />
 }
+import type { Metadata } from "next"
+
+export const metadata_disabled_1: Metadata = {
+  alternates: {
+    canonical: "https://zazadraft.com/success-stories",
+    languages: {
+      en: "https://zazadraft.com/success-stories",
+      de: "https://zazadraft.com/de/success-stories",
+    },
+  },
+}

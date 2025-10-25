@@ -3118,3 +3118,14 @@ Next term, the goal is <strong>to remain in seat during mini-lesson</strong> and
 ];
 export default blogPosts;
 
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://zazadraft.com/best-ai-writing-tools-for-teachers-2025",
+    languages: {
+      en: "https://zazadraft.com/best-ai-writing-tools-for-teachers-2025",
+      de: "https://zazadraft.com/de/best-ai-writing-tools-for-teachers-2025",
+    },
+  },
+}

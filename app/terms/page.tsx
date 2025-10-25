@@ -15,3 +15,14 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return <TermsClient />
 }
+import type { Metadata } from "next"
+
+export const metadata_disabled_1: Metadata = {
+  alternates: {
+    canonical: "https://zazadraft.com/terms",
+    languages: {
+      en: "https://zazadraft.com/terms",
+      de: "https://zazadraft.com/de/terms",
+    },
+  },
+}

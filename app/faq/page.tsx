@@ -10,3 +10,14 @@ export const metadata: Metadata = {
 export default function FAQPage() {
   return <FAQPageClient />
 }
+import type { Metadata } from "next"
+
+export const metadata_disabled_1: Metadata = {
+  alternates: {
+    canonical: "https://zazadraft.com/faq",
+    languages: {
+      en: "https://zazadraft.com/faq",
+      de: "https://zazadraft.com/de/faq",
+    },
+  },
+}

@@ -15,3 +15,15 @@ export const metadata: Metadata = {
 export default function StateOfAIPage() {
   return <StateOfAIClient />
 }
+import type { Metadata } from "next"
+
+export const metadata_disabled_1: Metadata = {
+  alternates: {
+    canonical: "https://zazadraft.com/state-of-ai-education",
+    languages: {
+      en: "https://zazadraft.com/state-of-ai-education",
+      de: "https://zazadraft.com/de/state-of-ai-education",
+    },
+  },
+}
+

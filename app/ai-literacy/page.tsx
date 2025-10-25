@@ -35,3 +35,14 @@ export default function AILiteracyPage() {
     </>
   )
 }
+import type { Metadata } from "next"
+
+export const metadata_disabled_1: Metadata = {
+  alternates: {
+    canonical: "https://zazadraft.com/ai-literacy",
+    languages: {
+      en: "https://zazadraft.com/ai-literacy",
+      de: "https://zazadraft.com/de/ai-literacy",
+    },
+  },
+}

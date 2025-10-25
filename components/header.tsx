@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import Link from "next/link"
 import Image from "next/image"
@@ -20,6 +20,7 @@ export function Header() {
   const navigation = [{ name: t("nav.pricing"), href: "/pricing" }]
 
   const productsMenuItems = [
+  { name: t("nav.products.suite") || "Zaza Suite", href: "/suite" },
     {
       name: t("nav.products.teach") || "Zaza Teach",
       href: "/products/teach",
