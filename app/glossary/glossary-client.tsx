@@ -738,7 +738,7 @@ const categoryLabelsDe: Record<string, string> = {
   "Future of AI": "Zukunft der KI",
 }
 
-const glossaryTerms: GlossaryTerm[] = [
+const glossaryTerms_DUP2: GlossaryTerm[] = [
   // AI Fundamentals
   {
     id: "artificial-intelligence",
