@@ -1,5 +1,4 @@
 "use client"
-
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -230,7 +229,10 @@ const certificationLevels = [
   },
 ]
 
-export default function AILiteracyClient() {
+export default function AILiteracyClient({ 
+  const { language: ctxLang } = useLanguage();
+  const language = serverLang ?? ctxLang;
+serverLang }: { serverLang?: "en" | "de" }) {
   const [selectedPath, setSelectedPath] = useState<string | null>(null)
 
   useEffect(() => {
