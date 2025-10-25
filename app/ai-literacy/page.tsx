@@ -1,3 +1,4 @@
+"use client"
 import type { Metadata } from "next"
 import AILiteracyClient from "./ai-literacy-client"
 import { CourseSchema, BreadcrumbSchema } from "@/lib/seo/schema"
