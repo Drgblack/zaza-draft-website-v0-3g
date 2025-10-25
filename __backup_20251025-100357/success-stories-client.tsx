@@ -226,7 +226,7 @@ export function SuccessStoriesClient() {
               variant="outline"
               className="border-white/20 text-white hover:bg-white/10 px-8 py-6 rounded-full bg-transparent"
             >
-              <Link href="/contact?topic=success-stories">Book a demo for your school</Link>
+              <Link href="/contact?topic=success-stories">Talk to Our Team</Link>
             </Button>
           </div>
         </div>
