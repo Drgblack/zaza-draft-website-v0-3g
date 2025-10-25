@@ -995,7 +995,7 @@ const termTranslationsDe: Record<string, Partial<GlossaryTerm>> = {
   },
 }
 
-export default function GlossaryClient() {
+export default function GlossaryClient({ serverLang }: { serverLang?: "en" | "de" }) {
   const { language } = useLanguage()
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedCategoryKey, setSelectedCategoryKey] = useState<string | null>(null)
