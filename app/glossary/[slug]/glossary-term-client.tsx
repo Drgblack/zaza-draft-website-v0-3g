@@ -239,6 +239,8 @@ interface GlossaryTermClientProps {
 /* removed duplicate GlossaryTermClient */
 
 /* removed duplicate */
+
+/* removed duplicate */
 : GlossaryTermClientProps) {
   const { language } = useLanguage()
   useEffect(() => {
