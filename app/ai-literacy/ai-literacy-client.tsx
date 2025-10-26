@@ -125,19 +125,28 @@ export default function AILiteracyClient() {
               <div key={cat.category} className="p-6 rounded-xl bg-[#0F172A] border border-white/10">
                 <div className="text-white font-semibold mb-4">{cat.category}</div>
                 <div className="space-y-3">
-                  {cat.items.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={`/ai-literacy/resources`}
-                      className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/10 hover:border-[#A78BFA]/30 hover:bg-white/10"
-                    >
-                      <span className="text-gray-200">{item.name}</span>
-                      <span className="text-xs text-gray-500 flex items-center gap-1">
-                        <Download className="w-4 h-4" />
-                        {item.downloads}
-                      </span>
-                    </Link>
-                  ))}
+                  {cat.items.map((item) => {
+                    const slugMap: Record<string, string> = {
+                      'Parent Email Templates': 'parent-email-templates',
+                      'Lesson Plan Templates': 'lesson-plan-templates',
+                      'Getting Started with AI Guide': 'prompt-engineering-guide'
+                    }
+                    const slug = slugMap[item.name] || ''
+                    const href = slug ? `/ai-literacy/resources/${slug}` : `/ai-literacy/resources`
+                    return (
+                      <Link
+                        key={item.name}
+                        href={href}
+                        className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/10 hover:border-[#A78BFA]/30 hover:bg-white/10"
+                      >
+                        <span className="text-gray-200">{item.name}</span>
+                        <span className="text-xs text-gray-500 flex items-center gap-1">
+                          <Download className="w-4 h-4" />
+                          {item.downloads}
+                        </span>
+                      </Link>
+                    )
+                  })}
                 </div>
               </div>
             ))}

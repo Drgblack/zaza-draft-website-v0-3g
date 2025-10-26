@@ -1,282 +1,136 @@
-"use client"
-
-import { useEffect, useRef, useState } from "react"
-import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { useLanguage } from "@/lib/i18n/language-context"
-import { ArrowRight, Heart, Mountain, Sparkles } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
+﻿import Image from "next/image";
 
 export default function FounderPage() {
-  const { t } = useLanguage()
-  const heroRef = useRef<HTMLDivElement>(null)
-  const [showScrollTop, setShowScrollTop] = useState(false)
-
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -100px 0px",
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-fade-in")
-        }
-      })
-    }, observerOptions)
-
-    const sections = document.querySelectorAll(".fade-on-scroll")
-    sections.forEach((section) => observer.observe(section))
-
-    const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 500)
-    }
-
-    window.addEventListener("scroll", handleScroll)
-
-    return () => {
-      observer.disconnect()
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }
-
   return (
-    <div className="bg-[#0F172A] min-h-screen overflow-x-hidden">
-      {/* SECTION 1: HERO */}
-      <section
-        ref={heroRef}
-        className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-24 relative overflow-hidden"
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-[#8B5CF6]/10 via-transparent to-[#A78BFA]/5 animate-pulse-slow" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.1),transparent_50%)]" />
-
-        <div className="relative z-10 max-w-5xl mx-auto text-center space-y-12 w-full">
-          <div className="flex justify-center mb-8">
-            <div className="relative">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#A78BFA] blur-2xl opacity-60 animate-pulse-slow" />
-              <div className="relative rounded-full overflow-hidden w-48 h-48 md:w-64 md:h-64 ring-4 ring-[#8B5CF6] shadow-2xl shadow-[#8B5CF6]/50">
-                <Image
-                  src="/founder-headshot.jpg"
-                  alt="Dr. Greg Blackburn, Founder of Zaza Draft"
-                  width={256}
-                  height={256}
-                  className="object-cover w-full h-full"
-                  priority
-                />
-              </div>
-            </div>
+    <main className="min-h-screen bg-background text-foreground">
+      {/* Hero */}
+      <section className="container mx-auto px-4 py-16 sm:py-24">
+        <div className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto mb-6 h-28 w-28 overflow-hidden rounded-full ring-4 ring-purple-500/30">
+            <Image
+              src="/images/founder-greg.jpg"
+              alt="Dr. Greg Blackburn"
+              width={256}
+              height={256}
+              className="h-full w-full object-cover"
+              priority
+            />
           </div>
 
-          {/* Headline */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight text-balance px-4 break-words">
-            {t("founder.hero.headline")}
+          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+            Meet the Founder Building AI that Serves Teachers
           </h1>
-
-          {/* Subheading */}
-          <p className="text-base sm:text-lg md:text-xl text-[#A78BFA] max-w-3xl mx-auto leading-relaxed text-balance px-4 break-words">
-            {t("founder.hero.subheading")}
+          <p className="mt-3 text-muted-foreground">
+            Zaza helps teachers thrive. Dr. Greg Blackburn spent two decades in Learning and Development before founding Zaza in 2025 to build teacher-first AI. Not a former teacher - a learning scientist and operator focused on giving teachers their time back.
           </p>
+          <p className="mt-2 text-muted-foreground">Twenty years in L and D - taught thousands of adults in real classrooms - now building AI so teachers can thrive.</p>
 
-          {/* Callout Card */}
-          <div className="inline-block">
-            <Card className="bg-[rgba(139,92,246,0.1)] border border-[rgba(139,92,246,0.3)] backdrop-blur-sm p-8 rounded-2xl shadow-2xl shadow-[#8B5CF6]/20 hover:shadow-[#8B5CF6]/30 transition-all duration-300">
-              <div className="space-y-3">
-                <div className="text-xs uppercase tracking-wider text-[#8B5CF6] font-semibold">
-                  {t("founder.hero.label")}
-                </div>
-                <div className="text-2xl font-semibold text-white">{t("founder.hero.name")}</div>
-                <div className="text-base text-[#A78BFA]">{t("founder.hero.tagline")}</div>
-              </div>
-            </Card>
+          <div className="mt-6 inline-flex flex-col items-center rounded-xl border border-border/60 bg-card px-5 py-4 text-sm">
+            <p className="font-medium">Dr. Greg Blackburn</p>
+            <p className="text-muted-foreground">
+              Founder and CEO - PhD in Professional Education - EdTech Builder
+            </p>
           </div>
         </div>
       </section>
 
-      {/* SECTION 2: THE JOURNEY */}
-      <section className="py-24 px-4 sm:px-6 fade-on-scroll opacity-0">
-        <div className="max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-12">
-            {/* Left Column - Sticky Sidebar */}
-            <div className="lg:sticky lg:top-24 lg:self-start space-y-8 w-full">
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#8B5CF6] break-words">
-                {t("founder.journey.title")}
-              </h2>
-              <div className="h-1 w-24 bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] rounded-full" />
-              <blockquote className="text-sm sm:text-base italic text-[rgba(255,255,255,0.7)] border-l-4 border-[#8B5CF6] pl-6 break-words">
-                {t("founder.journey.quote")}
-              </blockquote>
+      {/* Journey */}
+      <section className="border-t border-border/60 bg-muted/20">
+        <div className="container mx-auto grid gap-10 px-4 py-14 sm:grid-cols-12 sm:gap-12">
+          <div className="sm:col-span-4">
+            <h2 className="text-xl font-semibold">The Journey</h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              From paint brushes in Tasmania to AI founder.
+            </p>
+          </div>
+
+          <div className="sm:col-span-8 space-y-5 leading-relaxed text-muted-foreground">
+            <p>
+  I began my working life in Hobart as a painter and decorator while I figured out what came next. My dad owned a local paint factory - Tas Paints - so brushes, colour charts and hard work were part of daily life. Given his contacts in the industry, I moved into TAFE to undertake an apprenticeship.
+</p>
+<p>
+  I soon realised I did not enjoy it. But my dad told me, "Son, just get your papers and you can then do anything you want." So I slugged through and completed my apprenticeship. That experience taught me resilience, the value of hard work, and also the clarity that I did not want to do this all my life.
+</p>
+<p>
+  After finishing, I set off on round-the-world travel. For me this was a journey of discovery - meeting people, seeing countries, learning cultures. I was searching for something else. Somewhere along the way I realised that education was my ticket to a greater purpose. That realisation changed everything - go to university and rebuild my future from first principles.
+</p>
+            <p>
+  I was never a K-12 classroom teacher. In the professional learning and development world, though, I have taught thousands of adults in real classrooms - introducing new technologies at work, building new skills and navigating change. That experience showed me what helps people learn - and what gets in the way - and it keeps me close to the daily realities teachers face.
+</p>
+            <p>
+              I studied Administration, Information Systems and German at the University of Tasmania, earned First Class Honours in Information Systems, worked at Telstra, and completed an MBA at the University of Queensland. My research pulled me deeper into learning science - critical thinking and problem-solving in student-centred e-learning - and I later earned a PhD by publication from City, University of London.
+            </p>
+            <p>
+              I was never a classroom teacher. But much of my family and many close friends are - my sister, cousins, an aunty and uncle, and colleagues who teach every day. I have listened to their stories and seen the workload first-hand: parent emails, report writing, grading, and admin that never ends. The gap was obvious - tools often created more work than they removed.
+            </p>
+            <p>
+              In <strong>2025</strong> I founded <strong>Zaza Technologies</strong> with a simple mission: build AI that respects teacher expertise, is safe and explainable, and gives time back. Zaza is hallucination-aware, privacy-first, and designed with educators, not around them.
+            </p>
+            <p>
+              Today our tools help teachers reduce repetitive admin and focus on the moments that matter with students. We are just getting started.
+            </p>
+            <blockquote className="mt-6 border-l-4 border-purple-400/60 pl-4 italic text-foreground">
+              Every teacher deserves tools that respect their craft and give them time to do what they do best - teach.
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      {/* Why I Built Zaza */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-2xl font-semibold">Why I Built Zaza</h2>
+          <p className="mt-2 text-muted-foreground">Three principles that guide everything we do.</p>
+        </div>
+
+        <div className="mx-auto mt-8 grid max-w-5xl gap-5 sm:grid-cols-3">
+          <div className="rounded-2xl border border-border/60 bg-card p-5">
+            <h3 className="font-medium">For Teachers - With Teachers</h3>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Co-designed with educators, validated in real workflows, refined by real feedback.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-border/60 bg-card p-5">
+            <h3 className="font-medium">Boutique - Not Big Tech</h3>
+            <p className="mt-2 text-sm text-muted-foreground">
+              We serve one audience with care - teachers. Quality over scale, usefulness over hype.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-border/60 bg-card p-5">
+            <h3 className="font-medium">Safety and Trust</h3>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Privacy-first, school-ready safeguards, and explainable AI so teachers can trust the output.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Personal Note */}
+      <section className="border-t border-border/60 bg-muted/20">
+        <div className="container mx-auto px-4 py-14">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="text-2xl font-semibold">A Personal Note</h2>
+            <p className="mt-3 leading-relaxed text-muted-foreground">
+              If you are a teacher, you have probably tried tools that promised hours back and delivered another chore. I understand the scepticism. Zaza is built to be different. We will keep listening, keep improving, and keep choosing clarity and usefulness over noise.
+            </p>
+            <p className="mt-4 leading-relaxed text-muted-foreground">
+              My door is open. If you have feedback or want to help shape what teachers need next, please reach out.
+            </p>
+
+            <div className="mt-8 rounded-xl border border-border/60 bg-card p-5">
+              <p className="font-medium">Greg</p>
+              <p className="text-sm text-muted-foreground">
+                Dr. Greg Blackburn - Founder and CEO - Zaza Technologies
+              </p>
             </div>
-
-            {/* Right Column - Narrative Content */}
-            <div className="space-y-12 w-full">
-              {/* Paragraph 1 */}
-              <div className="space-y-4">
-                <p className="text-sm sm:text-base md:text-lg text-[rgba(255,255,255,0.9)] leading-[1.8] break-words">
-                  {t("founder.journey.p1")}
-                </p>
-              </div>
-
-              <div className="h-px bg-gradient-to-r from-transparent via-[#8B5CF6]/30 to-transparent" />
-
-              {/* Paragraph 2 */}
-              <div className="space-y-4">
-                <p className="text-sm sm:text-base md:text-lg text-[rgba(255,255,255,0.9)] leading-[1.8] break-words">
-                  {t("founder.journey.p2")}
-                </p>
-              </div>
-
-              <div className="h-px bg-gradient-to-r from-transparent via-[#8B5CF6]/30 to-transparent" />
-
-              {/* Paragraph 3 */}
-              <div className="space-y-4">
-                <p className="text-sm sm:text-base md:text-lg text-[rgba(255,255,255,0.9)] leading-[1.8] break-words">
-                  {t("founder.journey.p3")}
-                </p>
-              </div>
-
-              <div className="h-px bg-gradient-to-r from-transparent via-[#8B5CF6]/30 to-transparent" />
-
-              {/* Paragraph 4 */}
-              <div className="space-y-4">
-                <p className="text-sm sm:text-base md:text-lg text-[rgba(255,255,255,0.9)] leading-[1.8] break-words">
-                  {t("founder.journey.p4")}
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
-
-      {/* SECTION 3: MISSION CALLOUT */}
-      <section className="py-20 px-4 sm:px-6 border-t border-b border-[rgba(139,92,246,0.3)] bg-gradient-to-r from-[rgba(139,92,246,0.15)] to-transparent fade-on-scroll opacity-0">
-        <div className="max-w-4xl mx-auto text-center space-y-8 w-full">
-          <blockquote className="text-lg sm:text-xl md:text-2xl italic text-white leading-relaxed text-balance px-4 break-words">
-            {t("founder.mission.quote")}
-          </blockquote>
-          <p className="text-base sm:text-lg md:text-xl text-[#A78BFA] break-words">
-            {t("founder.mission.attribution")}
-          </p>
-        </div>
-      </section>
-
-      {/* SECTION 4: THE MISSION */}
-      <section className="py-24 px-4 sm:px-6 fade-on-scroll opacity-0">
-        <div className="max-w-6xl mx-auto w-full">
-          {/* Heading */}
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#8B5CF6] break-words">
-              {t("founder.whyZaza.title")}
-            </h2>
-            <p className="text-lg sm:text-xl text-[#A78BFA] max-w-3xl mx-auto break-words px-4">
-              {t("founder.whyZaza.subtitle")}
-            </p>
-          </div>
-
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Card 1 - For Teachers */}
-            <Card className="bg-[rgba(139,92,246,0.08)] border border-[rgba(139,92,246,0.2)] p-8 rounded-xl hover:scale-105 hover:shadow-2xl hover:shadow-[#8B5CF6]/20 transition-all duration-300 group">
-              <div className="space-y-6">
-                <div className="w-16 h-16 rounded-full bg-[rgba(139,92,246,0.2)] flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Heart className="w-8 h-8 text-[#8B5CF6]" />
-                </div>
-                <h3 className="text-2xl font-bold text-white">{t("founder.whyZaza.card1.title")}</h3>
-                <p className="text-base text-[rgba(255,255,255,0.7)] leading-relaxed">
-                  {t("founder.whyZaza.card1.body")}
-                </p>
-              </div>
-            </Card>
-
-            {/* Card 2 - Boutique Approach */}
-            <Card className="bg-[rgba(139,92,246,0.08)] border border-[rgba(139,92,246,0.2)] p-8 rounded-xl hover:scale-105 hover:shadow-2xl hover:shadow-[#8B5CF6]/20 transition-all duration-300 group">
-              <div className="space-y-6">
-                <div className="w-16 h-16 rounded-full bg-[rgba(139,92,246,0.2)] flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Sparkles className="w-8 h-8 text-[#8B5CF6]" />
-                </div>
-                <h3 className="text-2xl font-bold text-white">{t("founder.whyZaza.card2.title")}</h3>
-                <p className="text-base text-[rgba(255,255,255,0.7)] leading-relaxed">
-                  {t("founder.whyZaza.card2.body")}
-                </p>
-              </div>
-            </Card>
-
-            {/* Card 3 - Legacy Vision */}
-            <Card className="bg-[rgba(139,92,246,0.08)] border border-[rgba(139,92,246,0.2)] p-8 rounded-xl hover:scale-105 hover:shadow-2xl hover:shadow-[#8B5CF6]/20 transition-all duration-300 group">
-              <div className="space-y-6">
-                <div className="w-16 h-16 rounded-full bg-[rgba(139,92,246,0.2)] flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Mountain className="w-8 h-8 text-[#8B5CF6]" />
-                </div>
-                <h3 className="text-2xl font-bold text-white">{t("founder.whyZaza.card3.title")}</h3>
-                <p className="text-base text-[rgba(255,255,255,0.7)] leading-relaxed">
-                  {t("founder.whyZaza.card3.body")}
-                </p>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 5: PERSONAL MESSAGE */}
-      <section className="py-24 px-4 sm:px-6 bg-gradient-to-b from-transparent to-[rgba(139,92,246,0.05)] fade-on-scroll opacity-0">
-        <div className="max-w-3xl mx-auto w-full">
-          {/* Heading */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#8B5CF6] break-words">
-              {t("founder.personal.title")}
-            </h2>
-          </div>
-
-          {/* Message */}
-          <div className="space-y-8 mb-16">
-            <p className="text-sm sm:text-base md:text-lg text-[rgba(255,255,255,0.9)] leading-[1.9] break-words">
-              {t("founder.personal.message1")}
-            </p>
-            <p className="text-sm sm:text-base md:text-lg text-[rgba(255,255,255,0.9)] leading-[1.9] break-words">
-              {t("founder.personal.message2")}
-            </p>
-            <p className="text-sm sm:text-base md:text-lg text-[rgba(255,255,255,0.9)] leading-[1.9] break-words">
-              {t("founder.personal.message3")}
-            </p>
-          </div>
-
-          {/* Signature Block */}
-          <div className="text-center space-y-4 pt-12 border-t border-[rgba(139,92,246,0.2)]">
-            <div className="text-4xl font-signature text-[#8B5CF6] mb-2">Greg</div>
-            <div className="text-lg text-white font-semibold">{t("founder.personal.name")}</div>
-            <div className="text-base text-[#A78BFA]">{t("founder.personal.title2")}</div>
-            <div className="text-sm text-[rgba(255,255,255,0.5)]">{t("founder.personal.company")}</div>
-          </div>
-
-          {/* CTA */}
-          <div className="mt-16 text-center">
-            <Button
-              asChild
-              size="lg"
-              className="bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] hover:from-[#7C3AED] hover:to-[#8B5CF6] text-white font-medium px-8 py-6 rounded-full shadow-lg shadow-[#8B5CF6]/25 transition-all duration-200 hover:shadow-[#8B5CF6]/40 hover:scale-105"
-            >
-              <Link href="/contact">
-                {t("founder.personal.cta")}
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <button
-        onClick={scrollToTop}
-        className={`scroll-to-top ${showScrollTop ? "visible" : ""} bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white p-4 rounded-full shadow-lg shadow-[#8B5CF6]/25 hover:shadow-[#8B5CF6]/40 hover:scale-110 transition-all duration-200 fixed bottom-4 right-4 z-50`}
-        aria-label="Scroll to top"
-      >
-        <ArrowRight className="h-6 w-6 rotate-[-90deg]" />
-      </button>
-    </div>
-  )
+    </main>
+  );
 }
- 
+
+
+
