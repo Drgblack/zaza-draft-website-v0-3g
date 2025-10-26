@@ -2,21 +2,22 @@
 import type { NextRequest } from "next/server";
 
 export function middleware(req: NextRequest) {
-  const { pathname, searchParams } = req.nextUrl;
-  if (pathname === "/about/founder") {
-    // Check NEXT_LOCALE=de cookie or ?lang=de query
+  const url = req.nextUrl;
+  if (url.pathname === "/about/founder") {
     const cookieLocale = req.cookies.get("NEXT_LOCALE")?.value;
-    const queryLocale = req.nextUrl.searchParams.get("lang");
-    const wantsDE = cookieLocale === "de" || queryLocale === "de";
+    const queryLocale = url.searchParams.get("lang");
+    const acceptLang = req.headers.get("accept-language") || "";
+    const wantsDE =
+      cookieLocale === "de" ||
+      queryLocale === "de" ||
+      acceptLang.toLowerCase().startsWith("de");
     if (wantsDE) {
-      const url = req.nextUrl.clone();
-      url.pathname = "/de/about/founder";
-      return NextResponse.rewrite(url);
+      const rewrite = url.clone();
+      rewrite.pathname = "/de/about/founder";
+      return NextResponse.rewrite(rewrite);
     }
   }
   return NextResponse.next();
 }
 
-export const config = {
-  matcher: ["/about/founder"],
-};
+export const config = { matcher: ["/about/founder"] };

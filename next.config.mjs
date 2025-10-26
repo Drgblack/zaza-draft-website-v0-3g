@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+﻿/** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
@@ -19,6 +19,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      { source: '/signup', destination: '/pricing', permanent: false },
+      { source: '/signup/', destination: '/pricing', permanent: false },
+      { source: '/state-of-ai-report', destination: '/state-of-ai-education', permanent: false },
+      { source: '/state-of-ai-report/', destination: '/state-of-ai-education', permanent: false },
+    ]
+  },
 }
 
 export default nextConfig
+
