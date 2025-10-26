@@ -48,25 +48,26 @@ export default function FounderPage() {
           <div className="sm:col-span-8 space-y-5 leading-relaxed text-muted-foreground">
             <p>
               I began my working life in Hobart as a painter and decorator while figuring out what came next.
-              That path taught me work ethic, care for detail, and what it feels like when people expect little of you.
+              My dad owned a local paint factory - Tas Paints - so brushes, colour charts and hard work were part of daily life.
+              That start taught me care for detail, resilience and what it feels like when expectations are set low.
               I moved into TAFE, completed an apprenticeship, then made a decision that changed everything -
               go to university and rebuild my future from first principles.
             </p>
             <p>
-              I studied Administration, Information Systems, and German at the University of Tasmania,
+              I studied Administration, Information Systems and German at the University of Tasmania,
               earned First Class Honours in Information Systems, worked at Telstra, and completed an MBA at the University of Queensland.
-              My research took me deeper into learning science - critical thinking and problem solving in student-centred e-learning.
-              I later earned a PhD by publication from City, University of London.
+              My research pulled me deeper into learning science - critical thinking and problem solving in student-centred e-learning -
+              and I later earned a PhD by publication from City, University of London.
             </p>
             <p>
-              Across those years I worked alongside teachers and schools and kept seeing the same problem:
-              technology too often created more work than it removed. Dashboards, data, and busywork increased,
-              while time for planning, feedback, and human connection shrank.
+              I was never a classroom teacher. But much of my family and many close friends are - my sister, cousins, an aunty and uncle,
+              plus colleagues who teach every day. I have listened to their stories and seen the workload first-hand:
+              parent emails, report writing, grading and admin that never ends. The gap was obvious - tools often created more work than they removed.
             </p>
             <p>
               In <strong>2025</strong> I founded <strong>Zaza Technologies</strong> with a simple mission:
               build AI that respects teacher expertise, is safe and explainable, and gives time back.
-              Zaza is hallucination-aware, privacy-first, and designed with educators, not around them.
+              Zaza is hallucination-aware, privacy-first and designed with educators, not around them.
             </p>
             <p>
               Today our tools help teachers reduce repetitive admin and focus on the moments that matter with students.
@@ -88,14 +89,14 @@ export default function FounderPage() {
 
         <div className="mx-auto mt-8 grid max-w-5xl gap-5 sm:grid-cols-3">
           <div className="rounded-2xl border border-border/60 bg-card p-5">
-            <h3 className="font-medium">For Teachers, With Teachers</h3>
+            <h3 className="font-medium">For Teachers - With Teachers</h3>
             <p className="mt-2 text-sm text-muted-foreground">
               Co-designed with educators, validated in real workflows, refined by real feedback.
             </p>
           </div>
 
           <div className="rounded-2xl border border-border/60 bg-card p-5">
-            <h3 className="font-medium">Boutique, Not Big Tech</h3>
+            <h3 className="font-medium">Boutique - Not Big Tech</h3>
             <p className="mt-2 text-sm text-muted-foreground">
               We serve one audience with care - teachers. Quality over scale, usefulness over hype.
             </p>

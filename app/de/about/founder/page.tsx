@@ -22,13 +22,13 @@ export default function FounderPageDE() {
           </h1>
           <p className="mt-3 text-muted-foreground">
             Dr. Greg Blackburn arbeitete zwei Jahrzehnte im Learning & Development und gründete 2025 Zaza,
-            um KI-Tools konsequent lehrkraftzentriert zu entwickeln. Er war kein Lehrer - sondern
+            um konsequent lehrkraftzentrierte KI-Tools zu entwickeln. Er war kein Lehrer - sondern
             Lernwissenschaftler und Macher mit dem Ziel, Lehrkräften Zeit zurückzugeben.
           </p>
 
           <div className="mt-6 inline-flex flex-col items-center rounded-xl border border-border/60 bg-card px-5 py-4 text-sm">
             <p className="font-medium">Dr. Greg Blackburn</p>
-            <p className="text-muted-foreground">Gründer und CEO • PhD Educational Technology • EdTech-Builder</p>
+            <p className="text-muted-foreground">Gründer und CEO • PhD Professional Education • EdTech-Builder</p>
           </div>
         </div>
       </section>
@@ -43,9 +43,9 @@ export default function FounderPageDE() {
 
           <div className="sm:col-span-8 space-y-5 leading-relaxed text-muted-foreground">
             <p>
-              Meine Laufbahn begann in Hobart als Maler und Lackierer, während ich nach dem nächsten Schritt suchte.
-              Dort lernte ich Arbeitsethik, Detailtreue und wie es sich anfühlt, wenn andere wenig von einem erwarten.
-              Über TAFE und eine Ausbildung ging es weiter an die Universität - eine Entscheidung, die alles änderte.
+              Mein Berufsleben begann in Hobart als Maler und Lackierer. Mein Vater führte eine lokale Farbenfabrik - Tas Paints -,
+              daher waren Pinsel, Farbkarten und hartes Anpacken Alltag. Diese Zeit lehrte mich Detailtreue und Durchhaltevermögen.
+              Über TAFE und eine Ausbildung ging es weiter an die Universität - eine Entscheidung, die alles veränderte.
             </p>
             <p>
               Ich studierte Administration, Wirtschaftsinformatik und Deutsch an der University of Tasmania,
@@ -54,9 +54,9 @@ export default function FounderPageDE() {
               und promovierte später per Veröffentlichung an der City, University of London.
             </p>
             <p>
-              In der Zusammenarbeit mit Schulen sah ich immer wieder dasselbe Problem:
-              Technologie schuf oft mehr Arbeit, statt sie zu reduzieren. Mehr Dashboards und Daten - weniger Zeit
-              für Planung, Feedback und Beziehung.
+              Ich war nie Lehrer. Aber viele in meiner Familie und in meinem Freundeskreis sind es - meine Schwester, Cousins, Tante und Onkel
+              sowie Kolleginnen und Kollegen. Ihre Geschichten und die reale Arbeitslast kenne ich gut:
+              Elternkommunikation, Berichte, Bewertung, Administration ohne Ende. Zu oft erzeugten Tools mehr Arbeit als sie sparten.
             </p>
             <p>
               <strong>2025</strong> gründete ich <strong>Zaza Technologies</strong> mit einer klaren Mission:
@@ -78,7 +78,7 @@ export default function FounderPageDE() {
       <section className="container mx-auto px-4 py-16">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-2xl font-semibold">Warum ich Zaza gegründet habe</h2>
-          <p className="mt-2 text-muted-foreground">Drei Prinzipien leiten unsere Arbeit.</p>
+        <p className="mt-2 text-muted-foreground">Drei Prinzipien leiten unsere Arbeit.</p>
         </div>
 
         <div className="mx-auto mt-8 grid max-w-5xl gap-5 sm:grid-cols-3">
@@ -96,7 +96,7 @@ export default function FounderPageDE() {
             </p>
           </div>
 
-        <div className="rounded-2xl border border-border/60 bg-card p-5">
+          <div className="rounded-2xl border border-border/60 bg-card p-5">
             <h3 className="font-medium">Sicherheit und Vertrauen</h3>
             <p className="mt-2 text-sm text-muted-foreground">
               Datenschutz zuerst, schulreife Schutzmechanismen und erklärbare KI - damit Ergebnisse vertrauenswürdig sind.
