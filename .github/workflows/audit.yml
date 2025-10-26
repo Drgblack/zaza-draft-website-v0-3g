@@ -1,4 +1,4 @@
-﻿name: Audit i18n and Links
+name: Audit i18n and Links
 
 on:
   pull_request:
@@ -19,7 +19,7 @@ jobs:
       - name: Install deps
         run: pnpm install --frozen-lockfile=false
       - name: Build
-        run: pnpm build
+        run: pnpm validate:json && pnpm build
       - name: Start server
         run: pnpm start &
       - name: Wait for server
@@ -44,6 +44,7 @@ jobs:
             docs/audits/i18n-issues.csv
             docs/audits/link-issues.csv
             docs/audits/content-gaps.csv
+
 
 
 
