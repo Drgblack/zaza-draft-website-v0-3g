@@ -21,14 +21,12 @@ export default function FounderPageDE() {
             Der Gründer, der KI für Lehrkräfte baut
           </h1>
           <p className="mt-3 text-muted-foreground">
-            Dr. Greg Blackburn arbeitete zwei Jahrzehnte im Learning & Development und gründete 2025 Zaza,
-            um konsequent lehrkraftzentrierte KI-Tools zu entwickeln. Er war kein Lehrer - sondern
-            Lernwissenschaftler und Macher mit dem Ziel, Lehrkräften Zeit zurückzugeben.
+            Zaza hilft Lehrkräften zu gedeihen. Dr. Greg Blackburn arbeitete zwei Jahrzehnte im Learning and Development und gründete 2025 Zaza, um konsequent lehrkraftzentrierte KI zu bauen. Er war kein Lehrer - sondern Lernwissenschaftler und Macher mit dem Ziel, Lehrkräften Zeit zurückzugeben.
           </p>
 
           <div className="mt-6 inline-flex flex-col items-center rounded-xl border border-border/60 bg-card px-5 py-4 text-sm">
             <p className="font-medium">Dr. Greg Blackburn</p>
-            <p className="text-muted-foreground">Gründer und CEO • PhD Professional Education • EdTech-Builder</p>
+            <p className="text-muted-foreground">Gründer und CEO - PhD Professional Education - EdTech-Builder</p>
           </div>
         </div>
       </section>
@@ -43,29 +41,19 @@ export default function FounderPageDE() {
 
           <div className="sm:col-span-8 space-y-5 leading-relaxed text-muted-foreground">
             <p>
-              Mein Berufsleben begann in Hobart als Maler und Lackierer. Mein Vater führte eine lokale Farbenfabrik - Tas Paints -,
-              daher waren Pinsel, Farbkarten und hartes Anpacken Alltag. Diese Zeit lehrte mich Detailtreue und Durchhaltevermögen.
-              Über TAFE und eine Ausbildung ging es weiter an die Universität - eine Entscheidung, die alles veränderte.
+              Mein Berufsleben begann in Hobart als Maler und Lackierer. Mein Vater führte eine lokale Farbenfabrik - Tas Paints - daher waren Pinsel, Farbkarten und Anpacken Alltag. Diese Zeit lehrte mich Detailtreue und Durchhaltevermögen. Über TAFE und eine Ausbildung ging es weiter an die Universität - eine Entscheidung, die alles veränderte.
             </p>
             <p>
-              Ich studierte Administration, Wirtschaftsinformatik und Deutsch an der University of Tasmania,
-              erhielt First Class Honours in Information Systems, arbeitete bei Telstra und schloss einen MBA an der University of Queensland ab.
-              In der Forschung konzentrierte ich mich auf kritisches Denken und Problemlösen im studierendenzentrierten E-Learning
-              und promovierte später per Veröffentlichung an der City, University of London.
+              Ich studierte Administration, Wirtschaftsinformatik und Deutsch an der University of Tasmania, erhielt First Class Honours in Information Systems, arbeitete bei Telstra und schloss einen MBA an der University of Queensland ab. In der Forschung konzentrierte ich mich auf kritisches Denken und Problemlösen im studierendenzentrierten E-Learning und promovierte später per Veröffentlichung an der City, University of London.
             </p>
             <p>
-              Ich war nie Lehrer. Aber viele in meiner Familie und in meinem Freundeskreis sind es - meine Schwester, Cousins, Tante und Onkel
-              sowie Kolleginnen und Kollegen. Ihre Geschichten und die reale Arbeitslast kenne ich gut:
-              Elternkommunikation, Berichte, Bewertung, Administration ohne Ende. Zu oft erzeugten Tools mehr Arbeit als sie sparten.
+              Ich war nie Lehrer. Aber viele in meiner Familie und in meinem Freundeskreis sind es - meine Schwester, Cousins, Tante und Onkel sowie Kolleginnen und Kollegen. Ihre Geschichten und die reale Arbeitslast kenne ich gut: Elternkommunikation, Berichte, Bewertung, Administration ohne Ende. Zu oft erzeugten Tools mehr Arbeit, als sie sparten.
             </p>
             <p>
-              <strong>2025</strong> gründete ich <strong>Zaza Technologies</strong> mit einer klaren Mission:
-              KI bauen, die die Expertise von Lehrkräften respektiert, sicher und erklärbar ist und Zeit zurückgibt.
-              Zaza ist halluzinationsbewusst, datenschutzorientiert und gemeinsam mit Pädagoginnen und Pädagogen entwickelt.
+              <strong>2025</strong> gründete ich <strong>Zaza Technologies</strong> mit einer klaren Mission: KI bauen, die die Expertise von Lehrkräften respektiert, sicher und erklärbar ist und Zeit zurückgibt. Zaza ist halluzinationsbewusst, datenschutzorientiert und gemeinsam mit Pädagoginnen und Pädagogen entwickelt.
             </p>
             <p>
-              Heute helfen unsere Tools, wiederkehrende Administration zu reduzieren und den Fokus auf die Momente mit
-              Schülerinnen und Schülern zu legen, die wirklich zählen. Wir stehen erst am Anfang.
+              Heute helfen unsere Tools, wiederkehrende Administration zu reduzieren und den Fokus auf die Momente mit Schülerinnen und Schülern zu legen, die wirklich zählen. Wir stehen erst am Anfang.
             </p>
             <blockquote className="mt-6 border-l-4 border-purple-400/60 pl-4 italic text-foreground">
               Jede Lehrkraft verdient Werkzeuge, die das Handwerk respektieren und Zeit für das Wesentliche schaffen - das Unterrichten.
@@ -78,7 +66,7 @@ export default function FounderPageDE() {
       <section className="container mx-auto px-4 py-16">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-2xl font-semibold">Warum ich Zaza gegründet habe</h2>
-        <p className="mt-2 text-muted-foreground">Drei Prinzipien leiten unsere Arbeit.</p>
+          <p className="mt-2 text-muted-foreground">Drei Prinzipien leiten unsere Arbeit.</p>
         </div>
 
         <div className="mx-auto mt-8 grid max-w-5xl gap-5 sm:grid-cols-3">
@@ -111,8 +99,7 @@ export default function FounderPageDE() {
           <div className="mx-auto max-w-3xl">
             <h2 className="text-2xl font-semibold">Ein persönliches Wort</h2>
             <p className="mt-3 leading-relaxed text-muted-foreground">
-              Viele Tools versprechen Zeitgewinn und schaffen neue Aufgaben. Skepsis ist verständlich.
-              Zaza will anders sein - wir hören zu, verbessern kontinuierlich und stellen Klarheit und Nutzen in den Vordergrund.
+              Viele Tools versprechen Zeitgewinn und schaffen neue Aufgaben. Skepsis ist verständlich. Zaza will anders sein - wir hören zu, verbessern kontinuierlich und stellen Klarheit und Nutzen in den Vordergrund.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
               Mein Postfach ist offen. Wenn Sie Feedback haben oder mitgestalten möchten, melden Sie sich gern.
@@ -121,7 +108,7 @@ export default function FounderPageDE() {
             <div className="mt-8 rounded-xl border border-border/60 bg-card p-5">
               <p className="font-medium">Greg</p>
               <p className="text-sm text-muted-foreground">
-                Dr. Greg Blackburn • Gründer und CEO • Zaza Technologies
+                Dr. Greg Blackburn - Gründer und CEO - Zaza Technologies
               </p>
             </div>
           </div>
