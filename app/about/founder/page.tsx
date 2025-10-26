@@ -1,6 +1,11 @@
-﻿import Image from "next/image";
+﻿import Image from "next/image";\nimport { cookies, headers } from "next/headers";\nimport { redirect } from "next/navigation";
 
-export default function FounderPage() {
+export default function FounderPage({ searchParams }:{ searchParams: Record<string, string | string[] | undefined> }) {
+  const cookieLocale = cookies().get('NEXT_LOCALE')?.value;
+  const acceptLang = (headers().get('accept-language') || '').toLowerCase();
+  const wantsDE = cookieLocale === 'de' || acceptLang.startsWith('de') || (typeof searchParams?.lang === 'string' && searchParams.lang === 'de');
+  if (wantsDE) { redirect('/de/about/founder'); }
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* Hero */}
@@ -129,6 +134,7 @@ export default function FounderPage() {
     </main>
   );
 }
+
 
 
 
