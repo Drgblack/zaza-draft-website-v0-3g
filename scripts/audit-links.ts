@@ -1,10 +1,10 @@
-﻿const BASE_URL = process.env.AUDIT_BASE_URL ?? BASE_URL;
 #!/usr/bin/env tsx
+const DEFAULT_BASE = process.env.SITE_ORIGIN || process.env.AUDIT_BASE_URL || 'http://localhost:3000'
 import { writeCSV, type IssueRow } from './audit-utils'
 import * as path from 'path'
 
 async function main() {
-  const base = process.env.SITE_ORIGIN || BASE_URL
+  const base = process.env.SITE_ORIGIN || DEFAULT_BASE
   const maxDepth = Number(process.env.LINK_DEPTH || 3)
   const start = new URL('/', base).toString()
   const seen = new Set<string>()
@@ -66,5 +66,6 @@ main().catch((e) => {
   console.error(e)
   process.exit(1)
 })
+
 
 
