@@ -23,6 +23,7 @@ export default function FounderPage() {
           <p className="mt-3 text-muted-foreground">
             Zaza helps teachers thrive. Dr. Greg Blackburn spent two decades in Learning and Development before founding Zaza in 2025 to build teacher-first AI. Not a former teacher - a learning scientist and operator focused on giving teachers their time back.
           </p>
+          <p className="mt-2 text-muted-foreground">Twenty years in L and D - taught thousands of adults in real classrooms - now building AI so teachers can thrive.</p>
 
           <div className="mt-6 inline-flex flex-col items-center rounded-xl border border-border/60 bg-card px-5 py-4 text-sm">
             <p className="font-medium">Dr. Greg Blackburn</p>
@@ -52,6 +53,9 @@ export default function FounderPage() {
 </p>
 <p>
   After finishing, I set off on round-the-world travel. For me this was a journey of discovery - meeting people, seeing countries, learning cultures. I was searching for something else. Somewhere along the way I realised that education was my ticket to a greater purpose. That realisation changed everything - go to university and rebuild my future from first principles.
+</p>
+            <p>
+  I was never a K-12 classroom teacher. In the professional learning and development world, though, I have taught thousands of adults in real classrooms - introducing new technologies at work, building new skills and navigating change. That experience showed me what helps people learn - and what gets in the way - and it keeps me close to the daily realities teachers face.
 </p>
             <p>
               I studied Administration, Information Systems and German at the University of Tasmania, earned First Class Honours in Information Systems, worked at Telstra, and completed an MBA at the University of Queensland. My research pulled me deeper into learning science - critical thinking and problem-solving in student-centred e-learning - and I later earned a PhD by publication from City, University of London.
@@ -127,4 +131,6 @@ export default function FounderPage() {
     </main>
   );
 }
+
+
 
