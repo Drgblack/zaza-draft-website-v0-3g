@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { useLanguage } from "@/lib/i18n/language-context"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { BookOpen, Award, Download, GraduationCap, Clock, Users, Star, Target, TrendingUp, Video, MessageSquare, Puzzle, ArrowRight } from "lucide-react"
@@ -33,6 +34,7 @@ const certificationLevels = [
 ]
 
 export default function AILiteracyClient() {
+  const { t } = useLanguage()
   const [selectedPath, setSelectedPath] = useState<string | null>(null)
 
   useEffect(() => {
@@ -49,16 +51,16 @@ export default function AILiteracyClient() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#A78BFA]/10 border border-[#A78BFA]/20 mb-6">
             <GraduationCap className="w-4 h-4 text-[#A78BFA]" />
-            <span className="text-sm font-medium text-[#A78BFA]">AI Literacy Center</span>
+            <span className="text-sm font-medium text-[#A78BFA]">{t("aiLiteracy.hero.badge")}</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">AI Literacy for Teachers</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">Free courses, certification, and resources to help teachers use AI confidently and safely.</p>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">{t("aiLiteracy.hero.title")}</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">{t("aiLiteracy.hero.subtitle")}</p>
         </div>
       </section>
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-b border-white/10">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8">Choose Your Path</h2>
+          <h2 className="text-3xl font-bold text-white mb-8">{t("aiLiteracy.paths.title")}</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {learningPaths.map((p) => (
               <button
@@ -90,10 +92,12 @@ export default function AILiteracyClient() {
       <section id="courses" className="py-16 px-4 sm:px-6 lg:px-8 border-b border-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-3xl font-bold text-white">Featured Courses</h2>
+            <h2 className="text-3xl font-bold text-white">{t("aiLiteracy.courses.title")}</h2>
             <div className="flex gap-2">
-              {['all','beginner','intermediate','advanced'].map((k) => (
-                <Button key={k} variant={selectedPath===k? 'default':'outline'} className={selectedPath===k? 'bg-[#8B5CF6] text-white':'bg-white/5 text-white border-white/10'} onClick={() => setSelectedPath(k)}>{k}</Button>
+              {["all","beginner","intermediate","advanced"].map((k) => (
+                <Button key={k} variant={selectedPath===k? 'default':'outline'} className={selectedPath===k? 'bg-[#8B5CF6] text-white':'bg-white/5 text-white border-white/10'} onClick={() => setSelectedPath(k)}>
+                  {t(`aiLiteracy.filters.${k}`)}
+                </Button>
               ))}
             </div>
           </div>
@@ -115,7 +119,7 @@ export default function AILiteracyClient() {
 
       <section className="py-16 px-4 sm:px-6 lg:px-8 border-b border-white/10">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8">Downloadable Resource Library</h2>
+          <h2 className="text-3xl font-bold text-white mb-8">{t("aiLiteracy.resources.title")}</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {resources.map((cat) => (
               <div key={cat.category} className="p-6 rounded-xl bg-[#0F172A] border border-white/10">
@@ -143,7 +147,7 @@ export default function AILiteracyClient() {
 
       <section id="certification" className="py-16 px-4 sm:px-6 lg:px-8 border-b border-white/10">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8">AI Education Certification</h2>
+          <h2 className="text-3xl font-bold text-white mb-8">{t("aiLiteracy.cert.title")}</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {certificationLevels.map((cert) => (
               <div key={cert.level} className="p-6 rounded-xl border bg-white/5 border-white/10 hover:border-[#A78BFA]/30">
@@ -151,12 +155,11 @@ export default function AILiteracyClient() {
                 <p className="text-sm text-gray-300 mb-4">{cert.description}</p>
                 <div className="text-xs text-gray-400 mb-4 flex items-center gap-2">
                   <Users className="w-4 h-4" />
-                  {cert.holders} certified teachers
+                  {cert.holders} {t("aiLiteracy.cert.certifiedTeachers")}
                 </div>
                 <Button asChild className="w-full">
                   <Link href="#certification">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    {t("common.learnMore")}<ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </Button>
               </div>
@@ -171,22 +174,22 @@ export default function AILiteracyClient() {
         </div>
       </section>
       <RelatedResources
-        title="Continue Your AI Journey"
-        description="Explore more resources to enhance your AI teaching skills"
+        title={t("aiLiteracy.related.title")}
+        description={t("aiLiteracy.related.description")}
         resources={[
-          { title: "Live Webinars", description: "Join expert-led sessions and earn PD certificates", href: "/webinars", icon: Video, color: "#8B5CF6" },
-          { title: "Teacher Community", description: "Connect with educators using AI", href: "/community", icon: MessageSquare, color: "#A78BFA" },
-          { title: "Tool Integrations", description: "Connect Zaza Draft with your favorite tools", href: "/integrations", icon: Puzzle, color: "#8B5CF6" },
+          { title: t("aiLiteracy.related.webinars.title"), description: t("aiLiteracy.related.webinars.desc"), href: "/webinars", icon: Video, color: "#8B5CF6" },
+          { title: t("aiLiteracy.related.community.title"), description: t("aiLiteracy.related.community.desc"), href: "/community", icon: MessageSquare, color: "#A78BFA" },
+          { title: t("aiLiteracy.related.integrations.title"), description: t("aiLiteracy.related.integrations.desc"), href: "/integrations", icon: Puzzle, color: "#8B5CF6" },
         ]}
       />
 
       <section className="py-20 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <InlineCTA
-            title="Start Your AI Learning Journey"
-            description="Join teachers who are confidently using AI to enhance their teaching"
-            primaryCTA={{ text: "Browse Courses", href: "#courses" }}
-            secondaryCTA={{ text: "Try Zaza Draft Free", href: "/signup" }}
+            title={t("aiLiteracy.cta.title")}
+            description={t("aiLiteracy.cta.body")}
+            primaryCTA={{ text: t("aiLiteracy.cta.browseCourses"), href: "#courses" }}
+            secondaryCTA={{ text: t("aiLiteracy.cta.tryDraft"), href: "/signup" }}
             variant="gradient"
           />
         </div>

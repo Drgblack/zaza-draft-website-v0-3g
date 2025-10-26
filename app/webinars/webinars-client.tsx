@@ -253,13 +253,10 @@ export default function WebinarsClient() {
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 rounded-full px-4 py-2 mb-6">
               <Video className="w-5 h-5 text-[#A78BFA]" />
-              <span className="text-[#A78BFA] font-medium text-sm">50+ Professional Development Sessions</span>
+              <span className="text-[#A78BFA] font-medium text-sm">{t("webinars.hero.badge")}</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">{t("webinars.hero.title")}</h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join live sessions or watch on-demand. Earn professional development certificates and learn from
-              experienced educators.
-            </p>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">{t("webinars.hero.subtitle")}</p>
 
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">
@@ -283,11 +280,11 @@ export default function WebinarsClient() {
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">15K+</div>
-                <div className="text-gray-400 text-sm">Teachers Trained</div>
+                <div className="text-gray-400 text-sm">{t("webinars.stats.teachers")}</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">4.8</div>
-                <div className="text-gray-400 text-sm">Avg Rating</div>
+                <div className="text-gray-400 text-sm">{t("webinars.stats.rating")}</div>
               </div>
             </div>
           </div>
@@ -316,7 +313,7 @@ export default function WebinarsClient() {
                       <div>
                         {webinar.featured && (
                           <span className="inline-block text-xs font-semibold text-[#A78BFA] bg-[#8B5CF6]/10 px-3 py-1 rounded-full mb-3">
-                            Featured
+                            {t("webinars.labels.featured")}
                           </span>
                         )}
                         <h3 className="text-2xl font-bold text-white mb-2">{webinar.title}</h3>
@@ -350,13 +347,13 @@ export default function WebinarsClient() {
                       {webinar.certificateOffered && (
                         <div className="flex items-center gap-3 text-gray-300">
                           <Award className="w-5 h-5 text-[#A78BFA]" />
-                          <span>Certificate included</span>
+                          <span>{t("webinars.labels.certificateIncluded")}</span>
                         </div>
                       )}
                     </div>
 
                     <div className="mb-6">
-                      <h4 className="text-white font-semibold mb-3">What You'll Learn:</h4>
+                      <h4 className="text-white font-semibold mb-3">{t("webinars.labels.whatYouWillLearn")}</h4>
                       <div className="grid sm:grid-cols-2 gap-2">
                         {webinar.topics.map((topic) => (
                           <div key={topic} className="flex items-center gap-2 text-sm text-gray-300">
@@ -483,7 +480,7 @@ export default function WebinarsClient() {
 
           {filteredOnDemand.length === 0 && (
             <div className="text-center py-16">
-              <p className="text-gray-400 text-lg">No webinars found matching your search.</p>
+              <p className="text-gray-400 text-lg">{t("webinars.empty")}</p>
             </div>
           )}
         </div>
@@ -491,26 +488,26 @@ export default function WebinarsClient() {
 
       {/* Related Resources Section */}
       <RelatedResources
-        title="Deepen Your Learning"
-        description="Complement your webinar learning with these resources"
+        title={t("webinars.related.title")}
+        description={t("webinars.related.desc")}
         resources={[
           {
-            title: "AI Literacy Courses",
-            description: "Self-paced courses with certification programs",
+            title: t("webinars.related.courses.title"),
+            description: t("webinars.related.courses.desc"),
             href: "/ai-literacy",
             icon: GraduationCap,
             color: "#8B5CF6",
           },
           {
-            title: "AI Glossary",
-            description: "150+ AI terms explained for teachers",
+            title: t("webinars.related.glossary.title"),
+            description: t("webinars.related.glossary.desc"),
             href: "/glossary",
             icon: BookOpen,
             color: "#A78BFA",
           },
           {
-            title: "Community Forum",
-            description: "Discuss webinar topics with fellow teachers",
+            title: t("webinars.related.community.title"),
+            description: t("webinars.related.community.desc"),
             href: "/community",
             icon: MessageSquare,
             color: "#8B5CF6",
@@ -521,43 +518,35 @@ export default function WebinarsClient() {
       {/* Benefits Section */}
       <section className="py-20 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white text-center mb-12">Why Attend Our Webinars?</h2>
+          <h2 className="text-4xl font-bold text-white text-center mb-12">{t("webinars.benefits.title")}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-[#1E293B] border border-white/10 rounded-xl p-6 text-center">
               <div className="w-16 h-16 bg-[#8B5CF6]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="w-8 h-8 text-[#A78BFA]" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">PD Certificates</h3>
-              <p className="text-gray-300 text-sm">
-                Earn professional development certificates for every webinar you complete.
-              </p>
+              <h3 className="text-xl font-bold text-white mb-3">{t("webinars.benefits.pd.title")}</h3>
+              <p className="text-gray-300 text-sm">{t("webinars.benefits.pd.body")}</p>
             </div>
             <div className="bg-[#1E293B] border border-white/10 rounded-xl p-6 text-center">
               <div className="w-16 h-16 bg-[#8B5CF6]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-[#A78BFA]" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">Expert Presenters</h3>
-              <p className="text-gray-300 text-sm">
-                Learn from experienced educators and AI specialists who understand your challenges.
-              </p>
+              <h3 className="text-xl font-bold text-white mb-3">{t("webinars.benefits.experts.title")}</h3>
+              <p className="text-gray-300 text-sm">{t("webinars.benefits.experts.body")}</p>
             </div>
             <div className="bg-[#1E293B] border border-white/10 rounded-xl p-6 text-center">
               <div className="w-16 h-16 bg-[#8B5CF6]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Download className="w-8 h-8 text-[#A78BFA]" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">Downloadable Resources</h3>
-              <p className="text-gray-300 text-sm">
-                Get templates, guides, and materials you can use immediately in your classroom.
-              </p>
+              <h3 className="text-xl font-bold text-white mb-3">{t("webinars.benefits.resources.title")}</h3>
+              <p className="text-gray-300 text-sm">{t("webinars.benefits.resources.body")}</p>
             </div>
             <div className="bg-[#1E293B] border border-white/10 rounded-xl p-6 text-center">
               <div className="w-16 h-16 bg-[#8B5CF6]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Video className="w-8 h-8 text-[#A78BFA]" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">Lifetime Access</h3>
-              <p className="text-gray-300 text-sm">
-                Watch recordings anytime, anywhere. Revisit content whenever you need a refresher.
-              </p>
+              <h3 className="text-xl font-bold text-white mb-3">{t("webinars.benefits.access.title")}</h3>
+              <p className="text-gray-300 text-sm">{t("webinars.benefits.access.body")}</p>
             </div>
           </div>
         </div>
@@ -566,15 +555,11 @@ export default function WebinarsClient() {
       {/* Final CTA */}
       <section className="py-20 bg-[#0B1220]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to <span className="gradient-text">Level Up?</span>
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of teachers transforming their practice with AI. Register for your first webinar today.
-          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{t("webinars.cta.title")}</h2>
+          <p className="text-xl text-gray-300 mb-8">{t("webinars.cta.body")}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white text-lg px-8 py-6">
-              <Link href="#upcoming">Browse Upcoming Webinars</Link>
+              <Link href="#upcoming">{t("webinars.cta.browseUpcoming")}</Link>
             </Button>
             <Button
               asChild
@@ -582,7 +567,7 @@ export default function WebinarsClient() {
               variant="outline"
               className="border-[#8B5CF6] text-[#A78BFA] hover:bg-[#8B5CF6]/10 bg-transparent text-lg px-8 py-6"
             >
-              <Link href="/ai-literacy">Explore Courses</Link>
+              <Link href="/ai-literacy">{t("webinars.cta.exploreCourses")}</Link>
             </Button>
           </div>
         </div>
