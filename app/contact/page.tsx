@@ -10,7 +10,54 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 
 export default function ContactPage() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
+  const fallback: Record<string, Record<string, string>> = {
+    en: {
+      "contact.title": "Contact Us",
+      "contact.subtitle": "Have a question about Zaza? We’re here to help.",
+      "contact.form.name": "Name",
+      "contact.form.email": "Email",
+      "contact.form.message": "Message",
+      "contact.form.placeholder": "How can we help? Please share details so we can respond quickly.",
+      "contact.form.submit": "Send Message",
+      "contact.form.sending": "Sending…",
+      "contact.form.success": "Thanks! Your message has been sent.",
+      "contact.form.error": "Something went wrong. Please try again.",
+      "contact.form.dataNote": "We’ll only use your email to reply to your request.",
+      "contact.direct.title": "Contact the Team",
+      "contact.direct.email": "Email",
+      "contact.direct.response": "We typically respond within 1 business day.",
+      "contact.help.title": "Need quick help?",
+      "contact.help.description": "You might find answers in our FAQ or support resources.",
+      "contact.help.faq": "Read the FAQ",
+      "contact.help.support": "Visit Support",
+    },
+    de: {
+      "contact.title": "Kontakt",
+      "contact.subtitle": "Fragen zu Zaza? Wir helfen gerne weiter.",
+      "contact.form.name": "Name",
+      "contact.form.email": "E‑Mail",
+      "contact.form.message": "Nachricht",
+      "contact.form.placeholder": "Wobei können wir helfen? Bitte teilen Sie Details für eine schnelle Antwort.",
+      "contact.form.submit": "Nachricht senden",
+      "contact.form.sending": "Wird gesendet…",
+      "contact.form.success": "Danke! Ihre Nachricht wurde gesendet.",
+      "contact.form.error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+      "contact.form.dataNote": "Wir verwenden Ihre E‑Mail nur, um auf Ihre Anfrage zu antworten.",
+      "contact.direct.title": "Team kontaktieren",
+      "contact.direct.email": "E‑Mail",
+      "contact.direct.response": "Wir antworten in der Regel innerhalb von 1 Werktag.",
+      "contact.help.title": "Schnelle Hilfe",
+      "contact.help.description": "Antworten finden Sie oft in unserem FAQ oder Support‑Bereich.",
+      "contact.help.faq": "FAQ lesen",
+      "contact.help.support": "Zum Support",
+    },
+  }
+  const ct = (key: string) => {
+    const v = t(key)
+    return v === key ? (fallback[language]?.[key] ?? fallback.en[key] ?? key) : v
+  }
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -51,7 +98,7 @@ export default function ContactPage() {
               {t("nav.home")}
             </Link>
             <ChevronRight className="h-4 w-4 text-gray-600" />
-            <span className="text-white">{t("contact.title")}</span>
+            <span className="text-white">{ct("contact.title")}</span>
           </nav>
         </div>
       </div>
@@ -61,8 +108,8 @@ export default function ContactPage() {
         <div className="mx-auto max-w-5xl px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">{t("contact.title")}</h1>
-            <p className="text-xl text-gray-300">{t("contact.subtitle")}</p>
+            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">{ct("contact.title")}</h1>
+            <p className="text-xl text-gray-300">{ct("contact.subtitle")}</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
@@ -73,13 +120,13 @@ export default function ContactPage() {
                   <div className="mx-auto w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mb-4">
                     <Send className="h-8 w-8 text-green-500" />
                   </div>
-                  <p className="text-lg text-white">{t("contact.form.success")}</p>
+                  <p className="text-lg text-white">{ct("contact.form.success")}</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                      {t("contact.form.name")}
+                      {ct("contact.form.name")}
                     </label>
                     <input
                       type="text"
@@ -93,7 +140,7 @@ export default function ContactPage() {
 
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      {t("contact.form.email")}
+                      {ct("contact.form.email")}
                     </label>
                     <input
                       type="email"
@@ -107,7 +154,7 @@ export default function ContactPage() {
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      {t("contact.form.message")}
+                      {ct("contact.form.message")}
                     </label>
                     <textarea
                       id="message"
@@ -116,21 +163,21 @@ export default function ContactPage() {
                       required
                       rows={6}
                       className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none"
-                      placeholder={t("contact.form.placeholder")}
+                      placeholder={ct("contact.form.placeholder")}
                     />
                   </div>
 
-                  {error && <p className="text-sm text-red-400">{t("contact.form.error")}</p>}
+                  {error && <p className="text-sm text-red-400">{ct("contact.form.error")}</p>}
 
                   <Button
                     type="submit"
                     disabled={loading}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium"
                   >
-                    {loading ? t("contact.form.sending") : t("contact.form.submit")}
+                    {loading ? ct("contact.form.sending") : ct("contact.form.submit")}
                   </Button>
 
-                  <p className="text-sm text-gray-400 text-center">{t("contact.form.dataNote")}</p>
+                  <p className="text-sm text-gray-400 text-center">{ct("contact.form.dataNote")}</p>
                 </form>
               )}
             </Card>
@@ -138,35 +185,35 @@ export default function ContactPage() {
             {/* Contact Info */}
             <div className="space-y-6">
               <div>
-                <h2 className="text-2xl font-bold text-white mb-6">{t("contact.direct.title")}</h2>
+                <h2 className="text-2xl font-bold text-white mb-6">{ct("contact.direct.title")}</h2>
                 <Card className="bg-white/5 border-white/10 p-6">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
                       <Mail className="h-8 w-8 text-purple-400" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-white mb-2">{t("contact.direct.email")}</h3>
+                      <h3 className="font-semibold text-white mb-2">{ct("contact.direct.email")}</h3>
                       <a
                         href="mailto:help@zazatechnologies.com"
                         className="text-lg text-purple-400 hover:text-purple-300 transition-colors"
                       >
                         help@zazatechnologies.com
                       </a>
-                      <p className="text-sm text-gray-400 mt-3">{t("contact.direct.response")}</p>
+                      <p className="text-sm text-gray-400 mt-3">{ct("contact.direct.response")}</p>
                     </div>
                   </div>
                 </Card>
               </div>
 
               <div className="bg-gradient-to-br from-purple-600/10 to-blue-600/10 border border-purple-500/20 rounded-xl p-6">
-                <h3 className="font-semibold text-white mb-2">{t("contact.help.title")}</h3>
-                <p className="text-gray-300 mb-4">{t("contact.help.description")}</p>
+                <h3 className="font-semibold text-white mb-2">{ct("contact.help.title")}</h3>
+                <p className="text-gray-300 mb-4">{ct("contact.help.description")}</p>
                 <div className="space-y-2">
                   <Link href="/faq" className="block text-purple-400 hover:text-purple-300 transition-colors">
-                    → {t("contact.help.faq")}
+                    → {ct("contact.help.faq")}
                   </Link>
                   <Link href="/support" className="block text-purple-400 hover:text-purple-300 transition-colors">
-                    → {t("contact.help.support")}
+                    → {ct("contact.help.support")}
                   </Link>
                 </div>
               </div>
@@ -178,3 +225,8 @@ export default function ContactPage() {
   )
 }
  
+
+
+
+
+

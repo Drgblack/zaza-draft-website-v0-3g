@@ -1,5 +1,6 @@
 "use client"
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect } from "react";import { useLanguage } from '../../lib/i18n/language-context';
+
 import { Search, BookOpen, Filter, ChevronDown, ChevronUp, GraduationCap, Video, MessageSquare } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -995,8 +996,10 @@ const termTranslationsDe: Record<string, Partial<GlossaryTerm>> = {
   },
 }
 
-export default function GlossaryClient() {
-  const { language } = useLanguage()
+export default function GlossaryClient({ serverLang }: { serverLang?: "en" | "de" }) {
+  const { language: ctxLang } = useLanguage();
+  const language = serverLang ?? ctxLang;
+
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedCategoryKey, setSelectedCategoryKey] = useState<string | null>(null)
   const [selectedLetter, setSelectedLetter] = useState<string | null>(null)
