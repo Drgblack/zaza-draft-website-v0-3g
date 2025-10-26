@@ -23,6 +23,7 @@ export default function FounderPage() {
           <p className="mt-3 text-muted-foreground">
             Zaza helps teachers thrive. Dr. Greg Blackburn spent two decades in Learning and Development before founding Zaza in 2025 to build teacher-first AI. Not a former teacher - a learning scientist and operator focused on giving teachers their time back.
           </p>
+          <p className="mt-2 text-muted-foreground">Twenty years in L&D - taught thousands of adults in real classrooms - now building AI so teachers can thrive.</p>
 
           <div className="mt-6 inline-flex flex-col items-center rounded-xl border border-border/60 bg-card px-5 py-4 text-sm">
             <p className="font-medium">Dr. Greg Blackburn</p>
@@ -121,3 +122,4 @@ export default function FounderPage() {
     </main>
   );
 }
+

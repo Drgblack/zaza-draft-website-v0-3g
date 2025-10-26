@@ -23,6 +23,7 @@ export default function FounderPageDE() {
           <p className="mt-3 text-muted-foreground">
             Zaza hilft Lehrkräften zu gedeihen. Dr. Greg Blackburn arbeitete zwei Jahrzehnte im Learning and Development und gründete 2025 Zaza, um konsequent lehrkraftzentrierte KI zu bauen. Er war kein Lehrer - sondern Lernwissenschaftler und Macher mit dem Ziel, Lehrkräften Zeit zurückzugeben.
           </p>
+          <p className="mt-2 text-muted-foreground">Zwanzig Jahre im L&D - Tausende Erwachsene in Präsenztrainings unterrichtet - jetzt KI bauen, damit Lehrkräfte gedeihen.</p>
 
           <div className="mt-6 inline-flex flex-col items-center rounded-xl border border-border/60 bg-card px-5 py-4 text-sm">
             <p className="font-medium">Dr. Greg Blackburn</p>
@@ -117,3 +118,4 @@ export default function FounderPageDE() {
     </main>
   );
 }
+
