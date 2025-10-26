@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import AILiteracyClient from "./ai-literacy-client"
 import { CourseSchema, BreadcrumbSchema } from "@/lib/seo/schema"
 
-export const metadata: Metadata = {
+export const metadata: Metadata = {\n  alternates: { languages: { en: "https://zazadraft.com/ai-literacy", de: "https://zazadraft.com/de/ai-literacy" } },
   title: "AI Literacy for Teachers | Free Courses & Certification | Zaza Draft",
   description:
     "Master AI tools for education with free courses, certification programs, and downloadable resources. Learn prompt engineering, ethical AI use, and practical classroom applications.",
