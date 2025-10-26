@@ -52,7 +52,7 @@ export default function FounderPage() {
               I studied Administration, Information Systems and German at the University of Tasmania, earned First Class Honours in Information Systems, worked at Telstra, and completed an MBA at the University of Queensland. My research pulled me deeper into learning science - critical thinking and problem-solving in student-centred e-learning - and I later earned a PhD by publication from City, University of London.
             </p>
             <p>
-              I was never a classroom teacher. But much of my family and many close friends are - my sister, cousins, an aunty and uncle, and colleagues who teach every day. I have listened to their stories and seen the workload first-hand: parent emails, report writing, grading, and admin that never ends. The gap was obvious - tools often created more work than they removed.
+              I\ was\ never\ a\ classroom\ teacher\.\ In\ the\ professional\ learning\ and\ development\ world,\ though,\ I\ have\ taught\ thousands\ of\ adults\ in\ classroom\ settings\ -\ introducing\ new\ technologies\ at\ work,\ building\ new\ skills\ and\ navigating\ change\.\ That\ gave\ me\ a\ front\ row\ seat\ to\ what\ helps\ people\ learn\ -\ and\ what\ gets\ in\ the\ way\.\ Much\ of\ my\ family\ and\ many\ close\ friends\ are\ teachers\ -\ my\ sister,\ cousins,\ an\ aunty\ and\ uncle,\ and\ colleagues\ who\ teach\ every\ day\.\ I\ have\ listened\ to\ their\ stories\ and\ seen\ the\ workload\ first\ hand:\ parent\ emails,\ report\ writing,\ grading,\ and\ admin\ that\ never\ ends\.\ The\ gap\ was\ obvious\ -\ tools\ often\ created\ more\ work\ than\ they\ removed\.
             </p>
             <p>
               In <strong>2025</strong> I founded <strong>Zaza Technologies</strong> with a simple mission: build AI that respects teacher expertise, is safe and explainable, and gives time back. Zaza is hallucination-aware, privacy-first, and designed with educators, not around them.
@@ -122,4 +122,5 @@ export default function FounderPage() {
     </main>
   );
 }
+
 

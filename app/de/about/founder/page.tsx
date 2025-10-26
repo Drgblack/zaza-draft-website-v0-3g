@@ -48,7 +48,7 @@ export default function FounderPageDE() {
               Ich studierte Administration, Wirtschaftsinformatik und Deutsch an der University of Tasmania, erhielt First Class Honours in Information Systems, arbeitete bei Telstra und schloss einen MBA an der University of Queensland ab. In der Forschung konzentrierte ich mich auf kritisches Denken und Problemlösen im studierendenzentrierten E-Learning und promovierte später per Veröffentlichung an der City, University of London.
             </p>
             <p>
-              Ich war nie Lehrer. Aber viele in meiner Familie und in meinem Freundeskreis sind es - meine Schwester, Cousins, Tante und Onkel sowie Kolleginnen und Kollegen. Ihre Geschichten und die reale Arbeitslast kenne ich gut: Elternkommunikation, Berichte, Bewertung, Administration ohne Ende. Zu oft erzeugten Tools mehr Arbeit, als sie sparten.
+              Ich\ war\ nie\ Lehrer\.\ In\ der\ beruflichen\ Weiterbildung\ habe\ ich\ jedoch\ Tausende\ Erwachsene\ in\ Präsenztrainings\ unterrichtet\ -\ neue\ Technologien\ eingeführt,\ neue\ Kompetenzen\ aufgebaut\ und\ Change\ Management\ begleitet\.\ Dadurch\ habe\ ich\ aus\ nächster\ Nähe\ gesehen,\ was\ Lernen\ erleichtert\ und\ was\ es\ behindert\.\ Viele\ in\ meiner\ Familie\ und\ in\ meinem\ Freundeskreis\ sind\ Lehrkräfte\ -\ meine\ Schwester,\ Cousins,\ Tante\ und\ Onkel\ sowie\ Kolleginnen\ und\ Kollegen\.\ Ihre\ Geschichten\ und\ die\ reale\ Arbeitslast\ kenne\ ich\ gut:\ Elternkommunikation,\ Berichte,\ Bewertung,\ Administration\ ohne\ Ende\.\ Zu\ oft\ erzeugten\ Tools\ mehr\ Arbeit,\ als\ sie\ sparten\.
             </p>
             <p>
               <strong>2025</strong> gründete ich <strong>Zaza Technologies</strong> mit einer klaren Mission: KI bauen, die die Expertise von Lehrkräften respektiert, sicher und erklärbar ist und Zeit zurückgibt. Zaza ist halluzinationsbewusst, datenschutzorientiert und gemeinsam mit Pädagoginnen und Pädagogen entwickelt.
@@ -118,4 +118,5 @@ export default function FounderPageDE() {
     </main>
   );
 }
+
 
