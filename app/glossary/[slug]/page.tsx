@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import GlossaryTermClient from "./glossary-term-client"
+import GlossaryTermClient from "./glossary-term-client";
 
 // This would normally come from a database or CMS
 const glossaryTerms = [

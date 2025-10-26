@@ -13,8 +13,7 @@
                     "audit:i18n":  "tsx scripts/audit-i18n.ts",
                     "audit:links":  "SITE_ORIGIN=http://localhost:3000 LINK_DEPTH=3 tsx scripts/audit-links.ts",
                     "audit:content":  "tsx scripts/audit-content.ts",
-                    "audit:all":  "pnpm audit:i18n \u0026\u0026 pnpm audit:links \u0026\u0026 pnpm audit:content",
-                    "test":  "playwright test"
+                    "audit:all":  "pnpm audit:i18n \u0026\u0026 pnpm audit:links \u0026\u0026 pnpm audit:content"
                 },
     "dependencies":  {
                          "@emotion/is-prop-valid":  "latest",
@@ -62,9 +61,9 @@
                          "next":  "15.2.4",
                          "next-themes":  "^0.4.6",
                          "path":  "latest",
-                         "react":  "^18.3.1",
+                         "react":  "^19",
                          "react-day-picker":  "9.8.0",
-                         "react-dom":  "^18.3.1",
+                         "react-dom":  "^19",
                          "react-hook-form":  "^7.60.0",
                          "react-resizable-panels":  "^2.1.7",
                          "recharts":  "2.15.4",
@@ -89,11 +88,5 @@
     "trustedDependencies":  [
                                 "esbuild",
                                 "@tailwindcss/oxide"
-                            ],
-    "pnpm":  {
-
-             },
-    "engines":  {
-                    "node":  "22.x"
-                }
+                            ]
 }
