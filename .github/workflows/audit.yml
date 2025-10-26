@@ -1,4 +1,4 @@
-﻿name: Audit i18n and Links
+name: Audit i18n and Links
 
 on:
   pull_request:
