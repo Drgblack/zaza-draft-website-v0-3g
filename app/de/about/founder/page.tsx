@@ -20,12 +20,8 @@ export default function FounderPageDE() {
           <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
             Lernen Sie den Gründer kennen, der KI für Lehrkräfte entwickelt
           </h1>
-          <p className="mt-3 text-muted-foreground">
-            Zaza hilft Lehrkräften, zu gedeihen. Dr Greg Blackburn arbeitete über 20 Jahre in Learning and Development, bevor er 2025 Zaza gründete, um KI zu entwickeln, die von Anfang an für Lehrkräfte gedacht ist. Kein ehemaliger Lehrer - sondern Lernforscher und Praktiker mit dem Ziel, Lehrkräften ihre Zeit zurückzugeben.
-          </p>
-          <p className="mt-2 text-muted-foreground">
-            Zwanzig Jahre im L and D - Tausende Erwachsene in Präsenztrainings unterrichtet - jetzt KI bauen, damit Lehrkräfte gedeihen.
-          </p>
+          <p className="mt-3 text-muted-foreground">Zaza hilft Lehrkräften zu gedeihen. Dr Greg Blackburn verfügt über mehr als 20 Jahre Erfahrung in L&D und einen PhD in Professional Education. Er hat Tausende Erwachsene in Präsenztrainings unterrichtet, große Lerninitiativen geleitet und 2025 Zaza gegründet, um KI-Werkzeuge zu bauen, die Lehrkräften Zeit zurückgeben.</p>
+          <p className="mt-2 text-muted-foreground">Zwanzig Jahre in L&D - wissenschaftlich fundiert und praxiserprobt - jetzt KI bauen, damit Lehrkräfte gedeihen.</p>
 
           <div className="mt-6 inline-flex flex-col items-center rounded-xl border border-border/60 bg-card px-5 py-4 text-sm">
             <p className="font-medium">Dr Greg Blackburn</p>
@@ -121,3 +117,5 @@ export default function FounderPageDE() {
     </main>
   );
 }
+
+
