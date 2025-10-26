@@ -61,13 +61,25 @@ export default function AILiteracyClient() {
           <h2 className="text-3xl font-bold text-white mb-8">Choose Your Path</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {learningPaths.map((p) => (
-              <button key={p.id} onClick={() => setSelectedPath(p.id)} className="text-left p-6 rounded-xl border bg-white/5 border-white/10 hover:border-[#A78BFA]/30">
-                <div className={w-10 h-10 rounded-lg bg-gradient-to-br  flex items-center justify-center mb-3}><p.icon className="w-5 h-5 text-white" /></div>
+              <button
+                key={p.id}
+                onClick={() => setSelectedPath(p.id)}
+                className="text-left p-6 rounded-xl border bg-white/5 border-white/10 hover:border-[#A78BFA]/30"
+              >
+                <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${p.color} flex items-center justify-center mb-3`}>
+                  <p.icon className="w-5 h-5 text-white" />
+                </div>
                 <div className="text-white font-semibold mb-1">{p.title}</div>
                 <div className="text-sm text-gray-400">{p.description}</div>
                 <div className="mt-3 text-xs text-gray-500 flex items-center gap-3">
-                  <span className="flex items-center gap-1"><Clock className="w-4 h-4" />{p.duration}</span>
-                  <span className="flex items-center gap-1"><BookOpen className="w-4 h-4" />{p.courses} courses</span>
+                  <span className="flex items-center gap-1">
+                    <Clock className="w-4 h-4" />
+                    {p.duration}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <BookOpen className="w-4 h-4" />
+                    {p.courses} courses
+                  </span>
                 </div>
               </button>
             ))}
@@ -110,9 +122,16 @@ export default function AILiteracyClient() {
                 <div className="text-white font-semibold mb-4">{cat.category}</div>
                 <div className="space-y-3">
                   {cat.items.map((item) => (
-                    <Link key={item.name} href={/ai-literacy/resources/} className="flex items-center justify-between p-3 rounded-lg bg:white/5 border border-white/10 hover:border-[#A78BFA]/30 hover:bg-white/10">
+                    <Link
+                      key={item.name}
+                      href={`/ai-literacy/resources`}
+                      className="flex items-center justify-between p-3 rounded-lg bg-white/5 border border-white/10 hover:border-[#A78BFA]/30 hover:bg-white/10"
+                    >
                       <span className="text-gray-200">{item.name}</span>
-                      <span className="text-xs text-gray-500 flex items-center gap-1"><Download className="w-4 h-4" />{item.downloads}</span>
+                      <span className="text-xs text-gray-500 flex items-center gap-1">
+                        <Download className="w-4 h-4" />
+                        {item.downloads}
+                      </span>
                     </Link>
                   ))}
                 </div>
@@ -126,13 +145,19 @@ export default function AILiteracyClient() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8">AI Education Certification</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {certificationLevels.map((cert, index) => (
-              <div key={cert.level} className={p-6 rounded-xl border }>
-                <div className="text-xl font-semibold mb-2">{cert.level}</div>
-                <p className="text-sm opacity-90 mb-4">{cert.description}</p>
-                <div className="text-xs opacity-75 mb-4 flex items-center gap-2"><Users className="w-4 h-4" />{cert.holders} certified teachers</div>
-                <Button asChild className={w-full }>
-                  <Link href={/ai-literacy/certification/}>Learn More<ArrowRight className="w-4 h-4 ml-2" /></Link>
+            {certificationLevels.map((cert) => (
+              <div key={cert.level} className="p-6 rounded-xl border bg-white/5 border-white/10 hover:border-[#A78BFA]/30">
+                <div className="text-xl font-semibold text-white mb-2">{cert.level}</div>
+                <p className="text-sm text-gray-300 mb-4">{cert.description}</p>
+                <div className="text-xs text-gray-400 mb-4 flex items-center gap-2">
+                  <Users className="w-4 h-4" />
+                  {cert.holders} certified teachers
+                </div>
+                <Button asChild className="w-full">
+                  <Link href="#certification">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
                 </Button>
               </div>
             ))}
