@@ -45,8 +45,14 @@ export default function FounderPage() {
 
           <div className="sm:col-span-8 space-y-5 leading-relaxed text-muted-foreground">
             <p>
-              I began my working life in Hobart as a painter and decorator while figuring out what came next. My dad owned a local paint factory - Tas Paints - so brushes, colour charts and hard work were part of daily life. That start taught me care for detail, resilience, and what it feels like when expectations are set low. I moved into TAFE, completed an apprenticeship, then made a decision that changed everything - go to university and rebuild my future from first principles.
-            </p>
+  I began my working life in Hobart as a painter and decorator while I figured out what came next. My dad owned a local paint factory - Tas Paints - so brushes, colour charts and hard work were part of daily life. Given his contacts in the industry, I moved into TAFE to undertake an apprenticeship.
+</p>
+<p>
+  I soon realised I did not enjoy it. But my dad told me, "Son, just get your papers and you can then do anything you want." So I slugged through and completed my apprenticeship. That experience taught me resilience, the value of hard work, and also the clarity that I did not want to do this all my life.
+</p>
+<p>
+  After finishing, I set off on round-the-world travel. For me this was a journey of discovery - meeting people, seeing countries, learning cultures. I was searching for something else. Somewhere along the way I realised that education was my ticket to a greater purpose. That realisation changed everything - go to university and rebuild my future from first principles.
+</p>
             <p>
               I studied Administration, Information Systems and German at the University of Tasmania, earned First Class Honours in Information Systems, worked at Telstra, and completed an MBA at the University of Queensland. My research pulled me deeper into learning science - critical thinking and problem-solving in student-centred e-learning - and I later earned a PhD by publication from City, University of London.
             </p>
@@ -121,3 +127,4 @@ export default function FounderPage() {
     </main>
   );
 }
+
