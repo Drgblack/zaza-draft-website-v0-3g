@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import WebinarsClient from "../../webinars/webinars-client"
+import { BreadcrumbSchema } from "@/lib/seo/schema"
 
 export const dynamic = "force-static"
 
@@ -15,6 +16,16 @@ export const metadata: Metadata = {
 }
 
 export default function WebinarsPageDE() {
-  return <WebinarsClient />
+  return (
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Startseite", url: "https://zazadraft.com/de" },
+          { name: "Webinare", url: "https://zazadraft.com/de/webinars" },
+        ]}
+      />
+      <WebinarsClient />
+    </>
+  )
 }
 
