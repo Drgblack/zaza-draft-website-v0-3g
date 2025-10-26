@@ -16,6 +16,8 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: 9
+      - name: Install Playwright browsers
+        uses: microsoft/playwright-github-action@v1
       - name: Install deps
         run: pnpm install --frozen-lockfile=false
       - name: Build
@@ -30,6 +32,10 @@ jobs:
         run: pnpm audit:links --strict
       - name: Audit content
         run: pnpm audit:content
+      - name: Playwright tests (runtime + i18n toggles)
+        env:
+          SITE_ORIGIN: http://localhost:3000
+        run: npx playwright test --reporter=line
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:

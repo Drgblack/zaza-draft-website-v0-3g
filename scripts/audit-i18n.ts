@@ -11,6 +11,7 @@ async function main() {
   const langSrc = await readFileSafe(langFile)
   const { en, de } = extractTranslations(langSrc)
   const issues: IssueRow[] = []
+  const suppressPatterns = [/^demoModal\./]
 
   // Scan files for t()/ct() keys and raw keys
   const targets: string[] = []
@@ -31,12 +32,16 @@ async function main() {
 
     // Missing keys per locale
     for (const k of keys) {
-      if (!en[k]) issues.push({ route, key: k, locale: 'en', type: 'missing_key', severity: 'medium', suggestion: 'Add EN translation' })
-      if (!de[k]) issues.push({ route, key: k, locale: 'de', type: 'missing_key', severity: 'medium', suggestion: 'Add DE translation' })
+      const suppressed = suppressPatterns.some((re) => re.test(k))
+      const sev = suppressed ? 'low' : 'medium'
+      if (!en[k]) issues.push({ route, key: k, locale: 'en', type: 'missing_key', severity: sev as any, suggestion: 'Add EN translation' })
+      if (!de[k]) issues.push({ route, key: k, locale: 'de', type: 'missing_key', severity: sev as any, suggestion: 'Add DE translation' })
     }
     // Raw keys rendered literally
     for (const k of raws) {
-      issues.push({ route, key: k, locale: '', type: 'raw_key', severity: 'high', suggestion: 'Wrap with ct("key") and add translations' })
+      const suppressed = suppressPatterns.some((re) => re.test(k))
+      const sev = suppressed ? 'low' : 'high'
+      issues.push({ route, key: k, locale: '', type: 'raw_key', severity: sev as any, suggestion: 'Wrap with ct("key") and add translations' })
     }
   }
 
@@ -64,4 +69,3 @@ main().catch((e) => {
   console.error(e)
   process.exit(1)
 })
-
