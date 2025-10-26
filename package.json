@@ -13,7 +13,8 @@
                     "audit:i18n":  "tsx scripts/audit-i18n.ts",
                     "audit:links":  "SITE_ORIGIN=http://localhost:3000 LINK_DEPTH=3 tsx scripts/audit-links.ts",
                     "audit:content":  "tsx scripts/audit-content.ts",
-                    "audit:all":  "pnpm audit:i18n \u0026\u0026 pnpm audit:links \u0026\u0026 pnpm audit:content"
+    "audit:all":  "pnpm audit:i18n \u0026\u0026 pnpm audit:links \u0026\u0026 pnpm audit:content",
+    "test": "playwright test"
                 },
     "dependencies":  {
                          "@emotion/is-prop-valid":  "latest",
