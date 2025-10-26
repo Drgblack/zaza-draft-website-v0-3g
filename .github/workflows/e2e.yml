@@ -1,0 +1,31 @@
+﻿name: e2e
+on:
+  pull_request:
+    branches: [ "**" ]
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          cache: "pnpm"
+      - run: corepack enable
+      - run: pnpm install --no-frozen-lockfile
+      - run: pnpm build
+      - name: Start server
+        run: nohup pnpm start:ci >/dev/null 2>&1 &
+      - name: Wait for server
+        run: |
+          for i in {1..60}; do
+            if curl -sf http://localhost:3000 >/dev/null; then
+              echo "Server is up"; exit 0
+            fi
+            sleep 1
+          done
+          echo "Server did not start in time"; exit 1
+      - name: Run Playwright tests
+        env:
+          AUDIT_BASE_URL: http://localhost:3000
+        run: pnpm test:e2e
