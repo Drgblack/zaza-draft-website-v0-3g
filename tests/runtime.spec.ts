@@ -1,16 +1,19 @@
-﻿import { test, expect } from "@playwright/test";
+import { test, expect } from '@playwright/test'
 
-test("webinars page renders without client exception", async ({ page }) => {
-  const base = process.env.AUDIT_BASE_URL ?? "http://localhost:3000";
-  const url = `${base}/webinars`;
-  const consoleErrors: string[] = [];
-  page.on("console", msg => { if (msg.type() === "error") consoleErrors.push(msg.text()); });
+const routes = ['/webinars', '/ai-literacy']
 
-  await page.goto(url, { waitUntil: "domcontentloaded" });
-  // Basic sanity: page has some visible content (header or main)
-  const bodyText = await page.locator("body").innerText();
-  expect(bodyText.length).toBeGreaterThan(50);
+for (const route of routes) {
+  test(`renders without console errors: ${route}`, async ({ page }) => {
+    const errors: string[] = []
+    page.on('pageerror', (err) => errors.push(String(err)))
+    page.on('console', (msg) => {
+      if (msg.type() === 'error') errors.push(msg.text())
+    })
+    const base = process.env.SITE_ORIGIN || 'http://localhost:3000'
+    await page.goto(base + route)
+    // basic content presence
+    await expect(page.locator('body')).toBeVisible()
+    expect(errors, `Console/page errors for ${route}`).toEqual([])
+  })
+}
 
-  // Fail if console errors indicate a client exception
-  expect(consoleErrors, `Console errors on ${url}: ${consoleErrors.join("\n")}`).toEqual([]);
-});
