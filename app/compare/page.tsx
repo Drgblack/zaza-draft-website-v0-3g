@@ -1,4 +1,4 @@
-﻿export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic';
 export const metadata = {
   title: "Compare Zaza Draft with Other AI Tools | Feature Comparison",
   description:
@@ -74,7 +74,7 @@ export default function ComparePage() {
     </div>
   )
 }
-$&export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic';
 
 export const metadata_disabled_1: Metadata = {
   alternates: {
@@ -85,6 +85,7 @@ export const metadata_disabled_1: Metadata = {
     },
   },
 }
+
 
 
 
