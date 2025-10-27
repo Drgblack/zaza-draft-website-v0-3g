@@ -1,5 +1,4 @@
-﻿ param($m) $m.Value + "export const dynamic = 'force-dynamic';`r`n" 
-const comparisons = {
+﻿const comparisons = {
   "zaza-draft-vs-magicschool": {
     title: "Zaza Draft vs MagicSchool",
     metaTitle: "Zaza Draft vs MagicSchool: Which AI Tool for Teachers? (2025 Comparison)",
@@ -66,4 +65,5 @@ export default function ComparisonPage({ params }: { params: { slug: string } })
     </div>
   )
 }
+
 

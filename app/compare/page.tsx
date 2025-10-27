@@ -1,5 +1,4 @@
-﻿ param($m) $m.Value + "export const dynamic = 'force-dynamic';`r`n" 
-export const metadata = {
+﻿export const metadata = {
   title: "Compare Zaza Draft with Other AI Tools | Feature Comparison",
   description:
     "Compare Zaza Draft with other AI tools for teachers. See detailed feature-by-feature comparisons to find the best tool for your needs.",
@@ -74,7 +73,7 @@ export default function ComparePage() {
     </div>
   )
 }
-import type { Metadata } from "next"
+$&export const dynamic = 'force-dynamic';
 
 export const metadata_disabled_1: Metadata = {
   alternates: {
@@ -85,4 +84,5 @@ export const metadata_disabled_1: Metadata = {
     },
   },
 }
+
 
