@@ -90,6 +90,12 @@
     "esbuild",
     "@tailwindcss/oxide"
   ],
-  "pnpm": {}
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@tailwindcss/oxide",
+      "esbuild",
+      "sharp"
+    ]
+  }
 }
 
