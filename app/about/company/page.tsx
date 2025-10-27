@@ -1,6 +1,15 @@
 ﻿import Image from "next/image";
 
-export default function AboutCompanyPage() {
+export default function AboutCompanyPage({ searchParams }:{ searchParams?: Record<string,string> }) {
+  try {
+    const { cookies, headers } = require("next/headers");
+    const { redirect } = require("next/navigation");
+    const cookieLocale = cookies().get("NEXT_LOCALE")?.value;
+    const acceptLang = (headers().get("accept-language") || "").toLowerCase();
+    const wantsDE = cookieLocale === "de" || acceptLang.startsWith("de") || (searchParams?.lang === "de");
+    if (wantsDE) { redirect("/de/about/company"); }
+  } catch {}
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* Hero */}
@@ -65,3 +74,4 @@ export default function AboutCompanyPage() {
     </main>
   );
 }
+

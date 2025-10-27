@@ -1,20 +1,16 @@
 ﻿export default function AboutCompanyPageDE() {
   return (
     <main className="min-h-screen bg-background text-foreground">
-      {/* Hero */}
       <section className="container mx-auto px-4 py-16 sm:py-24">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Über Zaza Technologies</h1>
-          <p className="mt-4 text-muted-foreground">
-            Lehrerinnen und Lehrer haben sich nicht für diesen Verwaltungsaufwand entschieden.
-          </p>
+          <p className="mt-4 text-muted-foreground">Lehrerinnen und Lehrer haben sich nicht für diesen Verwaltungsaufwand entschieden.</p>
           <p className="mt-2 text-muted-foreground">
             Sie sind Lehrkraft geworden, um Köpfe zu inspirieren - nicht, um in Korrekturen, Dokumentation und voller Inbox unterzugehen. Doch hier sind wir - mit steigenden Burnout-Raten und engagierten Pädagoginnen und Pädagogen, die den Beruf verlassen, weil die Bürokratie untragbar geworden ist.
           </p>
         </div>
       </section>
 
-      {/* Problem -> Solution */}
       <section className="border-t border-border/60 bg-muted/20">
         <div className="container mx-auto px-4 py-12">
           <div className="mx-auto max-w-3xl">
@@ -26,7 +22,6 @@
         </div>
       </section>
 
-      {/* What makes us different */}
       <section className="container mx-auto px-4 py-12">
         <div className="mx-auto max-w-3xl">
           <h2 className="text-2xl font-semibold">Was uns unterscheidet</h2>
@@ -39,7 +34,6 @@
         </div>
       </section>
 
-      {/* Products */}
       <section className="border-t border-border/60 bg-muted/20">
         <div className="container mx-auto px-4 py-12">
           <div className="mx-auto max-w-3xl">
@@ -51,7 +45,6 @@
         </div>
       </section>
 
-      {/* Promise */}
       <section className="container mx-auto px-4 py-12">
         <div className="mx-auto max-w-3xl">
           <h2 className="text-2xl font-semibold">Unser Versprechen</h2>
