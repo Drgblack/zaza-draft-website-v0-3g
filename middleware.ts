@@ -20,4 +20,5 @@ export function middleware(req: NextRequest) {
   return NextResponse.next();
 }
 
-export const config = { matcher: ["/about/founder"] };
+export const config = { matcher: [/about/founder, /about/company] };
+
