@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import WebinarsClient from "../../webinars/webinars-client"
 
 export const dynamic = "force-static"
@@ -17,4 +17,5 @@ export const metadata: Metadata = {
 export default function WebinarsPageDE() {
   return <WebinarsClient />
 }
+
 

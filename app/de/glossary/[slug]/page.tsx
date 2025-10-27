@@ -1,9 +1,9 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import GlossaryTermClient from "@/app/glossary/[slug]/glossary-term-client"
 import { SetLanguage } from "@/components/set-language"
 
-// Minimal placeholder dataset (same as EN stub) — IDs must match
+// Minimal placeholder dataset (same as EN stub) â€” IDs must match
 const glossaryTerms = [
   {
     id: "artificial-intelligence",
@@ -31,10 +31,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 
   return {
-    title: `${term.term} – KI‑Glossar | Zaza Draft`,
+    title: `${term.term} â€“ KIâ€‘Glossar | Zaza Draft`,
     description: term.definition,
     openGraph: {
-      title: `${term.term} – KI‑Glossar für Lehrkräfte`,
+      title: `${term.term} â€“ KIâ€‘Glossar fÃ¼r LehrkrÃ¤fte`,
       description: term.definition,
       type: "article",
     },
@@ -58,4 +58,5 @@ export default function GlossaryTermPageDe({ params }: { params: { slug: string 
     </>
   )
 }
+
 
