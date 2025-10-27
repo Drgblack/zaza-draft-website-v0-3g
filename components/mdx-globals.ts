@@ -17,7 +17,7 @@ const SAFE_GLOBALS = [
   // "NewsletterProvider",
   // "ScriptGate",
   // "MarketingProvider",
-];
+, "Analytics"];
 
 for (const key of SAFE_GLOBALS) {
   if (!g[key]) {
@@ -28,3 +28,4 @@ for (const key of SAFE_GLOBALS) {
 }
 
 export {};
+
