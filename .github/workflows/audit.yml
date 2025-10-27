@@ -16,33 +16,83 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: 9
+feat/ai-lit-resource-slugs
       - name: Install Playwright browsers
         uses: microsoft/playwright-github-action@v1
+
+      - name: Corepack fallback for pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@9 --activate
+          node -v
+          corepack -v
+          pnpm -v
+      - name: Resolve PNPM store path
+        id: pnpm_store
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_ENV
+          echo "store=$STORE_PATH" >> $GITHUB_OUTPUT
+      - name: Cache PNPM store
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+      - name: Install Playwright browsers
+        uses: microsoft/playwright-github-action@v1
+      - name: Ensure Playwright browsers
+        run: npx playwright install --with-deps
+ main
       - name: Install deps
         run: pnpm install --frozen-lockfile=false
+      - name: Validate JSON (guard BOM/parse)
+        run: pnpm validate:json
       - name: Build
         run: pnpm build
       - name: Start server
         run: pnpm start &
       - name: Wait for server
-        run: npx wait-on http://localhost:3000
+        run: npx wait-on -t 90000 -i 1000 http://localhost:3000
+      - name: Print crawler BASE URL
+        run: |
+          echo "SITE_ORIGIN=${SITE_ORIGIN:-http://localhost:3000}"
       - name: Audit i18n
-        run: pnpm audit:i18n --strict
+        run: pnpm audit:i18n --strict | tee audit-i18n.log
       - name: Audit links
-        run: pnpm audit:links --strict
+        run: pnpm audit:links --strict | tee audit-links.log
       - name: Audit content
+ feat/ai-lit-resource-slugs
         run: pnpm audit:content
       - name: Playwright tests (runtime + i18n toggles)
         env:
           SITE_ORIGIN: http://localhost:3000
         run: npx playwright test --reporter=line
       - name: Upload artifacts
+
+        run: pnpm audit:content | tee audit-content.log
+      - name: Playwright tests (runtime + i18n toggles)
+        env:
+          SITE_ORIGIN: http://localhost:3000
+        run: npx playwright test --reporter=line --trace on --timeout=60000
+      - name: Upload audit artifacts (logs + CSVs)
+        if: always()
+ main
         uses: actions/upload-artifact@v4
         with:
           name: audit-artifacts
           path: |
+            audit-i18n.log
+            audit-links.log
+            audit-content.log
             docs/audits/i18n-issues.csv
             docs/audits/link-issues.csv
             docs/audits/content-gaps.csv
-
-
+      - name: Upload Playwright report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            playwright-report
+            test-results
