@@ -1,3 +1,4 @@
+﻿"use client";
 "use client"
 
 import Link from "next/link"
@@ -141,13 +142,13 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm">
-          <p className="text-gray-400">© 2025 Zaza Technologies. All rights reserved.</p>
+          <p className="text-gray-400">Â© 2025 Zaza Technologies. All rights reserved.</p>
 
           {/* Language links */}
           <div className="flex items-center gap-2">
             {languages.map((lang, index) => (
               <span key={lang.code} className="flex items-center">
-                {index > 0 && <span className="text-gray-600 mx-2">·</span>}
+                {index > 0 && <span className="text-gray-600 mx-2">Â·</span>}
                 {lang.enabled ? (
                   <button
                     onClick={() => setLanguage(lang.code)}
@@ -177,3 +178,4 @@ export function Footer() {
     </footer>
   )
 }
+

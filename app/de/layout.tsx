@@ -1,5 +1,7 @@
 ﻿import type { Metadata } from "next";
 import Providers from "../providers";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Zaza Draft",
@@ -9,7 +11,13 @@ export const metadata: Metadata = {
 export default function DeLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de">
-      <body><Providers>{children}</Providers></body>
+      <body>
+        <Providers>
+          <Header />
+          <main className="min-h-[70vh]">{children}</main>
+          <Footer />
+        </Providers>
+      </body>
     </html>
   );
 }
