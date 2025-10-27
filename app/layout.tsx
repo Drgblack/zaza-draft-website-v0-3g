@@ -1,4 +1,5 @@
-﻿import { Inter } from 'next/font/google';
+﻿import { Suspense } from 'react';
+import { Inter } from 'next/font/google';
 import FixedLocaleToggle from "@/components/FixedLocaleToggle";
 const inter = Inter({
   subsets: ["latin"],
@@ -40,6 +41,7 @@ export default function RootLayout({
     </html>
   )
 }
+
 
 
 
