@@ -1,8 +1,6 @@
 ﻿import { Suspense } from 'react';
-import Header from "@/components/Header";
 import LanguageProvider from "@/components/LanguageProvider";
 import { Inter } from 'next/font/google';
-import Header from "@/components/Header";
 import FixedLocaleToggle from "@/components/FixedLocaleToggle";
 
 const inter = Inter({
@@ -45,6 +43,7 @@ export default function RootLayout({
     </html>
   )
 }
+
 
 
 
