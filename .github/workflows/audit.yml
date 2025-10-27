@@ -15,14 +15,12 @@ jobs:
           cache: 'pnpm'
       - uses: pnpm/action-setup@v4
         with:
-          version: 9
+          version: 10.18.2
       - name: Corepack fallback for pnpm
         run: |
           corepack enable
-          corepack prepare pnpm@9 --activate
-          node -v
-          corepack -v
-          pnpm -v
+          corepack prepare pnpm@10.18.2 --activate
+          node -v && corepack -v && pnpm -v
       - name: Resolve PNPM store path
         id: pnpm_store
         run: |
@@ -35,12 +33,16 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
+      - name: Clean workspace and prune store
+        run: |
+          pnpm store prune || true
+          rm -rf node_modules .next || true
       - name: Install Playwright browsers
         uses: microsoft/playwright-github-action@v1
       - name: Ensure Playwright browsers
         run: npx playwright install --with-deps
       - name: Install deps
-        run: pnpm install --frozen-lockfile=false
+        run: pnpm install --frozen-lockfile
       - name: Validate JSON (guard BOM/parse)
         run: pnpm validate:json
       - name: Guard against literal \nimport
