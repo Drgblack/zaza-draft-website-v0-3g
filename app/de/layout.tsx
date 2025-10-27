@@ -1,4 +1,15 @@
-﻿export const metadata = { title: "Zaza Draft", description: "Lehrerfreundliche KI-Schreibassistenz" };
+﻿import type { Metadata } from "next";
+import Providers from "../providers";
+
+export const metadata: Metadata = {
+  title: "Zaza Draft",
+  description: "Lehrerfreundliche KI-Schreibassistenz",
+};
+
 export default function DeLayout({ children }: { children: React.ReactNode }) {
-  return (<html lang="de"><body>{children}</body></html>);
+  return (
+    <html lang="de">
+      <body><Providers>{children}</Providers></body>
+    </html>
+  );
 }

@@ -1,5 +1,5 @@
 ﻿"use client";
-import * as React from "react";
+import React from "react";
 import { LanguageProvider } from "@/lib/i18n/language-context";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
