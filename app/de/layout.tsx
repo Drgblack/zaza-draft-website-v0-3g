@@ -14,11 +14,10 @@ export default function DeLayout({ children }: { children: React.ReactNode }) {
       <body>
         <Providers>
           <Header />
-          <main className="min-h-[70vh]">{children}</main>
+          {children}
           <Footer />
         </Providers>
       </body>
     </html>
   );
 }
-
