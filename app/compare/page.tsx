@@ -1,4 +1,4 @@
-export const dynamic = 'force-dynamic';
+﻿export const dynamic = 'force-dynamic';
 export const metadata = {
   title: "Compare Zaza Draft with Other AI Tools | Feature Comparison",
   description:
