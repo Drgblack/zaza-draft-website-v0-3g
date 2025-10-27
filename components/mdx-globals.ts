@@ -15,7 +15,7 @@ const SAFE_GLOBALS = [
   "SignupModalProvider",
   "Analytics",
   // add more if needed, e.g. "ConsentManager", "ScriptGate"
-];
+, "ImageErrorHandler"];
 
 function defineSafeComponent(name: string) {
   try {
@@ -41,3 +41,4 @@ function defineSafeComponent(name: string) {
 for (const key of SAFE_GLOBALS) defineSafeComponent(key);
 
 export {};
+
