@@ -1,27 +1,27 @@
-﻿import type React from "react"
-import LocaleSwitchClient from "components/LocaleSwitchClient";
-import type { Metadata } from "next"
-import LocaleSwitchClient from "components/LocaleSwitchClient";
-import { Inter } from "next/font/google"
-import LocaleSwitchClient from "components/LocaleSwitchClient";
-import "./globals.css"
-import LocaleSwitchClient from "components/LocaleSwitchClient";
-import { Header } from "@/components/header"
-import LocaleSwitchClient from "components/LocaleSwitchClient";
-import { Footer } from "@/components/footer"
-import LocaleSwitchClient from "components/LocaleSwitchClient";
-import { LanguageProvider } from "@/lib/i18n/language-context"
-import LocaleSwitchClient from "components/LocaleSwitchClient";
-import { Analytics } from "@/components/analytics"
-import LocaleSwitchClient from "components/LocaleSwitchClient";
-import { Suspense } from "react"
-import LocaleSwitchClient from "components/LocaleSwitchClient";
-import { ExitIntentProvider } from "@/components/exit-intent-provider"
-import LocaleSwitchClient from "components/LocaleSwitchClient";
-import { SignupModalProvider } from "@/components/signup-modal-provider"
-import LocaleSwitchClient from "components/LocaleSwitchClient";
-import { ImageErrorHandler } from "@/components/image-error-handler"
-import LocaleSwitchClient from "components/LocaleSwitchClient";
+﻿ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
+ FixedLocaleToggle from "components/FixedLocaleToggle";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -63,4 +63,5 @@ export default function RootLayout({
     </html>
   )
 }
+
 
