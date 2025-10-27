@@ -1,9 +1,6 @@
-﻿import { notFound } from "next/navigation"
-import { getPostBySlug, getRelatedPosts, getAllPosts } from "@/lib/cms/posts"
-import type { Metadata } from "next"
-import { BlogPostClient } from "./blog-post-client"
-import { useMDXComponents } from "@/app/mdx-components";
-export async function generateStaticParams() {
+﻿ param($m)
+    $m.Value + 'import LanguageProvider from "@/components/LanguageProvider";' + "`r`n"
+  export async function generateStaticParams() {
   const posts = getAllPosts()
   return posts.map((post) => ({
     slug: post.slug,
@@ -74,5 +71,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     </>
   )
 }
+
 
 
