@@ -1,4 +1,5 @@
-﻿import { Fragment } from "react";
+﻿import Header from "@/components/Header";
+import { Fragment } from "react";
 
 /**
  * Next.js will call this when rendering MDX.
@@ -20,3 +21,4 @@ export function useMDXComponents(components: Record<string, any>) {
     ...components,
   };
 }
+
