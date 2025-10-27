@@ -10,10 +10,10 @@ export default function AboutCompanyPage() {
     <main className="min-h-screen">
       {/* Hero */}
       <section className="bg-slate-900 text-white">
-        <div className="mx-auto max-w-5xl px-4 py-16 sm:py-20">
+        <div className="mx-auto max-w-5xl px-4 py-16 sm:py-24 text-center">
           <p className="uppercase tracking-wider text-xs text-violet-300/90">About</p>
-          <h1 className="mt-2 text-3xl sm:text-4xl font-bold">About Zaza Technologies</h1>
-          <p className="mt-4 text-lg text-slate-200 max-w-3xl">
+          <h1 className="mt-2 text-4xl sm:text-5xl font-bold">About Zaza Technologies</h1>
+          <p className="mt-4 text-lg sm:text-xl text-slate-200 max-w-3xl mx-auto">
             Teachers didn&apos;t sign up for this much admin.
           </p>
         </div>
