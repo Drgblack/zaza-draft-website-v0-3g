@@ -142,3 +142,4 @@ export default function FounderPage({ searchParams }:{ searchParams: Record<stri
 
 
 
+
