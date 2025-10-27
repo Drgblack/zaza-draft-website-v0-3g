@@ -1,12 +1,16 @@
-"use client"
+﻿"use client"
 
 import { useEffect } from "react"
+import Header from "@/components/Header";
 import { useLanguage } from "@/lib/i18n/language-context"
 import { Breadcrumbs } from "@/components/breadcrumbs"
+import Header from "@/components/Header";
 import { QuickAnswerBox } from "@/components/quick-answer-box"
 import { TableOfContents } from "@/components/table-of-contents"
+import Header from "@/components/Header";
 import { FAQSection } from "@/components/faq-section"
 import { Check, AlertTriangle, Shield, Clock, Star, Zap, FileText, Calendar } from "lucide-react"
+import Header from "@/components/Header";
 
 export default function AIStudentReportsClient() {
   const { t } = useLanguage()
@@ -346,10 +350,10 @@ export default function AIStudentReportsClient() {
                   <div className="rounded-lg bg-muted p-4 text-sm text-gray-300">
                     <p className="font-medium mb-1">Example notes:</p>
                     <ul className="space-y-1">
-                      <li>• Strong in reading comprehension (scored 85% on last assessment)</li>
-                      <li>• Struggles with math fact fluency (still counting on fingers)</li>
-                      <li>• Excellent class participation and peer collaboration</li>
-                      <li>• Needs reminders to stay on task during independent work</li>
+                      <li>â€¢ Strong in reading comprehension (scored 85% on last assessment)</li>
+                      <li>â€¢ Struggles with math fact fluency (still counting on fingers)</li>
+                      <li>â€¢ Excellent class participation and peer collaboration</li>
+                      <li>â€¢ Needs reminders to stay on task during independent work</li>
                     </ul>
                   </div>
                 </div>
@@ -531,3 +535,4 @@ export default function AIStudentReportsClient() {
     </div>
   )
 }
+

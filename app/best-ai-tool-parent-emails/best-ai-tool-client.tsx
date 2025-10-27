@@ -1,12 +1,16 @@
-"use client"
+﻿"use client"
 
 import { useEffect } from "react"
+import Header from "@/components/Header";
 import Link from "next/link"
 import { Breadcrumbs } from "@/components/breadcrumbs"
+import Header from "@/components/Header";
 import { QuickAnswerBox } from "@/components/quick-answer-box"
 import { TableOfContents } from "@/components/table-of-contents"
+import Header from "@/components/Header";
 import { FAQSection, type FAQItem } from "@/components/faq-section"
 import { Button } from "@/components/ui/button"
+import Header from "@/components/Header";
 import { Clock, Calendar, MessageSquare, AlertTriangle, FileText, Shield, Check, X } from "lucide-react"
 
 const tocItems = [
@@ -66,7 +70,7 @@ export default function BestAIToolClient() {
         />
 
         {/* Quick Answer Box */}
-        <QuickAnswerBox answer="Zaza Draft is purpose-built for teachers to write professional parent emails 10× faster. It offers AI-powered tone guidance, translation into 40+ languages, teacher-specific templates, and confidence-building features that help you communicate clearly and empathetically — even in difficult situations." />
+        <QuickAnswerBox answer="Zaza Draft is purpose-built for teachers to write professional parent emails 10Ã— faster. It offers AI-powered tone guidance, translation into 40+ languages, teacher-specific templates, and confidence-building features that help you communicate clearly and empathetically â€” even in difficult situations." />
 
         {/* Header */}
         <header className="mb-12">
@@ -171,7 +175,7 @@ export default function BestAIToolClient() {
                 <div className="bg-[#1E293B] border border-white/10 rounded-lg p-6">
                   <h3 className="text-xl font-semibold text-white mb-3">Time Savings</h3>
                   <p className="text-gray-300">
-                    Reduce email writing time by 80% — what took 20-30 minutes now takes 3-5 minutes.
+                    Reduce email writing time by 80% â€” what took 20-30 minutes now takes 3-5 minutes.
                   </p>
                 </div>
               </div>
@@ -323,7 +327,7 @@ export default function BestAIToolClient() {
             </h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                Zaza Draft doesn't just help you write faster — it ensures every message meets professional standards
+                Zaza Draft doesn't just help you write faster â€” it ensures every message meets professional standards
                 and protects student privacy.
               </p>
 
@@ -359,7 +363,7 @@ export default function BestAIToolClient() {
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Trust Badge</h4>
                     <p className="text-gray-300 text-sm">
-                      FERPA-aware • No student data stored • Teacher-owned content
+                      FERPA-aware â€¢ No student data stored â€¢ Teacher-owned content
                     </p>
                   </div>
                 </div>
@@ -535,3 +539,4 @@ export default function BestAIToolClient() {
     </div>
   )
 }
+

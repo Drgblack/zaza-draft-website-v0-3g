@@ -1,16 +1,22 @@
-"use client"
+﻿"use client"
 
 import { useState, useEffect } from "react"
+import Header from "@/components/Header";
 import Link from "next/link"
 import { Card } from "@/components/ui/card"
+import Header from "@/components/Header";
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import Header from "@/components/Header";
 import { Calendar, Clock, ArrowLeft, ArrowUp, Lightbulb, Apple, Timer, Copy, Check, Quote } from "lucide-react"
 import type { BlogPost } from "@/lib/cms/posts"
+import Header from "@/components/Header";
 import { useLanguage } from "@/lib/i18n/language-context"
 import { ShareBar } from "@/components/share-bar"
+import Header from "@/components/Header";
 import { sanitizeHtmlContent } from "@/lib/cms/sanitize"
 import type { JSX } from "react"
+import Header from "@/components/Header";
 
 interface BlogPostClientProps {
   post: BlogPost
@@ -218,7 +224,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
       },
       CLASSROOM: {
         icon: <Apple className="h-5 w-5" />,
-        title: language === "de" ? "Für Ihr Klassenzimmer" : "For Your Classroom",
+        title: language === "de" ? "FÃ¼r Ihr Klassenzimmer" : "For Your Classroom",
         className: "callout-classroom",
       },
       TEMPLATE: {
@@ -313,7 +319,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
         <Link href="/blog" className="inline-block mb-8">
           <Button variant="ghost" className="text-[#5A6C7D] hover:text-[#2D5B8F] hover:bg-white">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            {language === "de" ? "Zurück zum Blog" : "Back to Blog"}
+            {language === "de" ? "ZurÃ¼ck zum Blog" : "Back to Blog"}
           </Button>
         </Link>
 
@@ -395,3 +401,4 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
     </div>
   )
 }
+
