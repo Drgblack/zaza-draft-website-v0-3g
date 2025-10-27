@@ -1,8 +1,4 @@
-import Link from "next/link"
-import { Card } from "@/components/ui/card"
-import { ArrowRight } from "lucide-react"
-import { Breadcrumbs } from "@/components/breadcrumbs"
-
+﻿ param($m) $m.Value + "export const dynamic = 'force-dynamic';`r`n" 
 export const metadata = {
   title: "Compare Zaza Draft with Other AI Tools | Feature Comparison",
   description:
@@ -89,3 +85,4 @@ export const metadata_disabled_1: Metadata = {
     },
   },
 }
+

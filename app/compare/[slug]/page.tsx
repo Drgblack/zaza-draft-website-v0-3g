@@ -1,7 +1,4 @@
-import { notFound } from "next/navigation"
-import { ComparisonClient } from "./comparison-client"
-import { Breadcrumbs } from "@/components/breadcrumbs"
-
+﻿ param($m) $m.Value + "export const dynamic = 'force-dynamic';`r`n" 
 const comparisons = {
   "zaza-draft-vs-magicschool": {
     title: "Zaza Draft vs MagicSchool",
@@ -69,3 +66,4 @@ export default function ComparisonPage({ params }: { params: { slug: string } })
     </div>
   )
 }
+
