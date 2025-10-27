@@ -1,28 +1,4 @@
-﻿ FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
- FixedLocaleToggle from "components/FixedLocaleToggle";
-
+﻿import FixedLocaleToggle from "@/components/FixedLocaleToggle";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -63,5 +39,6 @@ export default function RootLayout({
     </html>
   )
 }
+
 
 
