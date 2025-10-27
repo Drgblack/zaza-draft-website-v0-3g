@@ -1,3 +1,4 @@
+﻿import Header from "@/components/Header";
 "use client"
 
 import type React from "react"
@@ -14,16 +15,16 @@ export default function ContactPage() {
   const fallback: Record<string, Record<string, string>> = {
     en: {
       "contact.title": "Contact Us",
-      "contact.subtitle": "Have a question about Zaza? We’re here to help.",
+      "contact.subtitle": "Have a question about Zaza? Weâ€™re here to help.",
       "contact.form.name": "Name",
       "contact.form.email": "Email",
       "contact.form.message": "Message",
       "contact.form.placeholder": "How can we help? Please share details so we can respond quickly.",
       "contact.form.submit": "Send Message",
-      "contact.form.sending": "Sending…",
+      "contact.form.sending": "Sendingâ€¦",
       "contact.form.success": "Thanks! Your message has been sent.",
       "contact.form.error": "Something went wrong. Please try again.",
-      "contact.form.dataNote": "We’ll only use your email to reply to your request.",
+      "contact.form.dataNote": "Weâ€™ll only use your email to reply to your request.",
       "contact.direct.title": "Contact the Team",
       "contact.direct.email": "Email",
       "contact.direct.response": "We typically respond within 1 business day.",
@@ -36,19 +37,19 @@ export default function ContactPage() {
       "contact.title": "Kontakt",
       "contact.subtitle": "Fragen zu Zaza? Wir helfen gerne weiter.",
       "contact.form.name": "Name",
-      "contact.form.email": "E‑Mail",
+      "contact.form.email": "Eâ€‘Mail",
       "contact.form.message": "Nachricht",
-      "contact.form.placeholder": "Wobei können wir helfen? Bitte teilen Sie Details für eine schnelle Antwort.",
+      "contact.form.placeholder": "Wobei kÃ¶nnen wir helfen? Bitte teilen Sie Details fÃ¼r eine schnelle Antwort.",
       "contact.form.submit": "Nachricht senden",
-      "contact.form.sending": "Wird gesendet…",
+      "contact.form.sending": "Wird gesendetâ€¦",
       "contact.form.success": "Danke! Ihre Nachricht wurde gesendet.",
       "contact.form.error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
-      "contact.form.dataNote": "Wir verwenden Ihre E‑Mail nur, um auf Ihre Anfrage zu antworten.",
+      "contact.form.dataNote": "Wir verwenden Ihre Eâ€‘Mail nur, um auf Ihre Anfrage zu antworten.",
       "contact.direct.title": "Team kontaktieren",
-      "contact.direct.email": "E‑Mail",
+      "contact.direct.email": "Eâ€‘Mail",
       "contact.direct.response": "Wir antworten in der Regel innerhalb von 1 Werktag.",
       "contact.help.title": "Schnelle Hilfe",
-      "contact.help.description": "Antworten finden Sie oft in unserem FAQ oder Support‑Bereich.",
+      "contact.help.description": "Antworten finden Sie oft in unserem FAQ oder Supportâ€‘Bereich.",
       "contact.help.faq": "FAQ lesen",
       "contact.help.support": "Zum Support",
     },
@@ -210,10 +211,10 @@ export default function ContactPage() {
                 <p className="text-gray-300 mb-4">{ct("contact.help.description")}</p>
                 <div className="space-y-2">
                   <Link href="/faq" className="block text-purple-400 hover:text-purple-300 transition-colors">
-                    → {ct("contact.help.faq")}
+                    â†’ {ct("contact.help.faq")}
                   </Link>
                   <Link href="/support" className="block text-purple-400 hover:text-purple-300 transition-colors">
-                    → {ct("contact.help.support")}
+                    â†’ {ct("contact.help.support")}
                   </Link>
                 </div>
               </div>
@@ -225,6 +226,7 @@ export default function ContactPage() {
   )
 }
  
+
 
 
 

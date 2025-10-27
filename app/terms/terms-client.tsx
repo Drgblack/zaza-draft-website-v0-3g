@@ -1,3 +1,4 @@
+﻿import Header from "@/components/Header";
 "use client"
 
 import { ArrowLeft } from "lucide-react"
@@ -66,3 +67,4 @@ export function TermsClient() {
     </div>
   )
 }
+

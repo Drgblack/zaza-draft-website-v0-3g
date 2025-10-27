@@ -1,3 +1,4 @@
+﻿import Header from "@/components/Header";
 "use client"
 
 import { useState } from "react"
@@ -476,6 +477,7 @@ export default function PricingClient() {
     </>
   )
 }
+
 
 
 

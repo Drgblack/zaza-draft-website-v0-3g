@@ -1,3 +1,4 @@
+﻿import Header from "@/components/Header";
 "use client"
 
 import { useState, useEffect } from "react"
@@ -216,9 +217,9 @@ export default function DiscussionThreadClient() {
                   <Star className="w-4 h-4" />
                   {discussion.author.reputation.toLocaleString()} reputation
                 </span>
-                <span>•</span>
+                <span>â€¢</span>
                 <span>{discussion.author.posts.toLocaleString()} posts</span>
-                <span>•</span>
+                <span>â€¢</span>
                 <span className="flex items-center gap-1">
                   <Clock className="w-4 h-4" />
                   {discussion.createdAt}
@@ -315,7 +316,7 @@ export default function DiscussionThreadClient() {
                           {reply.author.badge}
                         </span>
                       )}
-                      <span className="text-sm text-gray-400">• {reply.createdAt}</span>
+                      <span className="text-sm text-gray-400">â€¢ {reply.createdAt}</span>
                     </div>
                     <div className="text-gray-300 leading-relaxed mb-4 whitespace-pre-line">{reply.content}</div>
                     <div className="flex items-center gap-4">
@@ -369,3 +370,4 @@ export default function DiscussionThreadClient() {
     </div>
   )
 }
+
