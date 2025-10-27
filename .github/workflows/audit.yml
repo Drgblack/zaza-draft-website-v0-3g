@@ -16,6 +16,10 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: 9
+feat/ai-lit-resource-slugs
+      - name: Install Playwright browsers
+        uses: microsoft/playwright-github-action@v1
+
       - name: Corepack fallback for pnpm
         run: |
           corepack enable
@@ -39,6 +43,7 @@ jobs:
         uses: microsoft/playwright-github-action@v1
       - name: Ensure Playwright browsers
         run: npx playwright install --with-deps
+ main
       - name: Install deps
         run: pnpm install --frozen-lockfile=false
       - name: Validate JSON (guard BOM/parse)
@@ -57,6 +62,14 @@ jobs:
       - name: Audit links
         run: pnpm audit:links --strict | tee audit-links.log
       - name: Audit content
+ feat/ai-lit-resource-slugs
+        run: pnpm audit:content
+      - name: Playwright tests (runtime + i18n toggles)
+        env:
+          SITE_ORIGIN: http://localhost:3000
+        run: npx playwright test --reporter=line
+      - name: Upload artifacts
+
         run: pnpm audit:content | tee audit-content.log
       - name: Playwright tests (runtime + i18n toggles)
         env:
@@ -64,6 +77,7 @@ jobs:
         run: npx playwright test --reporter=line --trace on --timeout=60000
       - name: Upload audit artifacts (logs + CSVs)
         if: always()
+ main
         uses: actions/upload-artifact@v4
         with:
           name: audit-artifacts
