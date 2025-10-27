@@ -43,6 +43,12 @@ jobs:
         run: pnpm install --frozen-lockfile=false
       - name: Validate JSON (guard BOM/parse)
         run: pnpm validate:json
+      - name: Guard against literal \nimport
+        run: |
+          if grep -R "\\nimport" --include='*.ts' --include='*.tsx' --include='*.js' --include='*.jsx' .; then
+            echo "Found literal \\nimport in source files. Please replace with real newlines." >&2
+            exit 1
+          fi
       - name: Build
         run: pnpm build
       - name: Start server
