@@ -1,4 +1,5 @@
-﻿import FixedLocaleToggle from "@/components/FixedLocaleToggle";
+﻿import { Inter } from 'next/font/google';
+import FixedLocaleToggle from "@/components/FixedLocaleToggle";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -39,6 +40,7 @@ export default function RootLayout({
     </html>
   )
 }
+
 
 
 
