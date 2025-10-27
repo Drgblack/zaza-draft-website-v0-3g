@@ -20,4 +20,5 @@ if (!g.LanguageProvider) {
     React.createElement(React.Fragment, rest, children);
 }
 
+if (!(globalThis as any).ExitIntentProvider) (globalThis as any).ExitIntentProvider = ({ children, ...rest }: any) => React.createElement(React.Fragment, rest, children);
 export {};
