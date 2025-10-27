@@ -1,4 +1,5 @@
-﻿import { Suspense } from 'react';
+﻿import "@/components/mdx-globals";
+import { Suspense } from 'react';
 import LanguageProvider from "@/components/LanguageProvider";
 import { Inter } from 'next/font/google';
 import FixedLocaleToggle from "@/components/FixedLocaleToggle";
@@ -43,6 +44,7 @@ export default function RootLayout({
     </html>
   )
 }
+
 
 
 
