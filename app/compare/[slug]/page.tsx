@@ -1,4 +1,4 @@
-﻿export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic';
 const comparisons = {
   "zaza-draft-vs-magicschool": {
     title: "Zaza Draft vs MagicSchool",
