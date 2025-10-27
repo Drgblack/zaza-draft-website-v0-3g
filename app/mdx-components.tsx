@@ -12,6 +12,7 @@ export function useMDXComponents(components: Record<string, any>) {
     Header: (props: any) => <div {...props} />,
     Footer: (props: any) => <div {...props} />,
     LanguageProvider: ({ children, ...rest }: any) => <Fragment {...rest}>{children}</Fragment>,
+    ExitIntentProvider: ({ children, ...rest }: any) => <Fragment {...rest}>{children}</Fragment>,
 
     // You can add more shims here if needed:
     // Hero: (props: any) => <div {...props} />,
@@ -21,4 +22,5 @@ export function useMDXComponents(components: Record<string, any>) {
     ...components,
   };
 }
+
 
