@@ -1,5 +1,5 @@
 #!/usr/bin/env tsx
-const DEFAULT_BASE = process.env.SITE_ORIGIN || process.env.AUDIT_BASE_URL || 'http://localhost:3000'
+const DEFAULT_BASE = process.env.SITE_ORIGIN || process.env.AUDIT_BASE_URL || 'http://localhost:4311'
 import { writeCSV, type IssueRow } from './audit-utils'
 import * as path from 'path'
 
@@ -17,9 +17,9 @@ async function fetchWithTimeout(url: string, ms: number, init?: RequestInit): Pr
 
 async function main() {
   const base = process.env.SITE_ORIGIN || DEFAULT_BASE
-  const maxDepth = Number(process.env.LINK_DEPTH || 3)
-  const concurrency = Math.min(Number(process.env.LINK_CONCURRENCY || 6), 6)
-  const timeoutMs = Number(process.env.LINK_TIMEOUT_MS || 10000)
+  const maxDepth = Number(process.env.LINK_DEPTH || 2)
+  const concurrency = Math.min(Number(process.env.LINK_CONCURRENCY || 4), 4)
+  const timeoutMs = Number(process.env.LINK_TIMEOUT_MS || 8000)
   const retries = Number(process.env.LINK_RETRIES || 2)
   const start = new URL('/', base).toString()
   const seen = new Set<string>()
@@ -116,4 +116,3 @@ main().catch((e) => {
   console.error(e)
   process.exit(1)
 })
-
