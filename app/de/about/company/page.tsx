@@ -1,68 +1,71 @@
-﻿import Link from "next/link";
+﻿import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Über Zaza Technologies",
-  description: "Warum es Zaza gibt, was uns unterscheidet und unser Versprechen an Lehrkräfte.",
+  description: "Lehrerfreundliche KI, gemeinsam mit Lehrkräften entwickelt.",
 };
 
-export default function CompanyPageDe() {
+export default function AboutCompanyPageDE() {
   return (
-    <main className="max-w-4xl mx-auto px-4 py-10 space-y-10">
-      <header>
-        <h1 className="text-3xl font-semibold tracking-tight">Über Zaza Technologies</h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Lehrkräfte haben nicht für so viel Verwaltung unterschrieben.
-        </p>
-        <p className="text-sm text-muted-foreground">
-          Sie wurden Lehrkraft, um Köpfe zu inspirieren, nicht um in Korrekturen, Dokumentation und Posteingängen
-          zu ertrinken. Doch hier sind wir - mit steigenden Burnout-Raten und leidenschaftlichen Pädagoginnen
-          und Pädagogen, die den Beruf verlassen, weil die bürokratische Last untragbar geworden ist.
-        </p>
-      </header>
-
-      <section>
-        <h2 className="text-xl font-semibold">Zaza existiert, um das zu ändern</h2>
-        <p className="text-sm text-muted-foreground">
-          Gegründet 2025 von einem Lernwissenschaftler mit 20 Jahren Erfahrung in der Bildung, bauen wir eine
-          Familie von KI-Apps, die speziell für Lehrkräfte entwickelt wurden - nicht für die Schulleitung, nicht
-          von der IT ausgewählt, sondern gemeinsam mit Lehrkräften entwickelt, um die Probleme zu lösen, die
-          ihnen tatsächlich Zeit und Energie rauben.
-        </p>
+    <main className="min-h-screen">
+      {/* Hero */}
+      <section className="bg-slate-900 text-white">
+        <div className="mx-auto max-w-5xl px-4 py-16 sm:py-20">
+          <p className="uppercase tracking-wider text-xs text-violet-300/90">Über uns</p>
+          <h1 className="mt-2 text-3xl sm:text-4xl font-bold">Über Zaza Technologies</h1>
+          <p className="mt-4 text-lg text-slate-200 max-w-3xl">
+            Lehrkräfte haben nicht für so viel Verwaltung unterschrieben.
+          </p>
+        </div>
       </section>
 
-      <section>
-        <h2 className="text-xl font-semibold">Was macht uns anders?</h2>
-        <p className="text-sm text-muted-foreground">
-          Wir sind nicht ein weiteres Tech-Unternehmen, das "Bildung entdeckt". Zaza basiert auf zwei Jahrzehnten
-          Lernforschung und Weiterbildung, mit Tausenden von Lehrkräften, die unsere Werkzeuge durch Feedback aus
-          der Praxis mitgestalten. Jedes Produkt ist co-designed mit Lehrkräften und in Forschung verankert - denn
-          Abkürzungen, die die Pädagogik untergraben, sind keine echten Abkürzungen.
-        </p>
-        <p className="text-sm text-muted-foreground">
-          Deshalb haben wir den <strong>KnowledgeCore</strong> gebaut - eine vertrauenswürdige Intelligenzschicht,
-          die jede Zaza-App erklärbar, datenschutzfreundlich und klassenzimmertauglich hält. Keine Black Boxes.
-          Keine Halluzinationen, die Sie unprofessionell wirken lassen. Keine Untergrabung Ihres pädagogischen
-          Urteilsvermögens.
-        </p>
-      </section>
+      {/* Body */}
+      <section className="bg-white dark:bg-slate-950">
+        <div className="mx-auto max-w-3xl px-4 py-12 sm:py-16 prose prose-slate dark:prose-invert">
+          <p>
+            Sie sind Lehrerin oder Lehrer geworden, um junge Menschen zu inspirieren, nicht um in
+            Korrekturen, Dokumentation und E-Mail-Management zu versinken. Und doch steigen die
+            Burnout-Zahlen, während engagierte Pädagoginnen und Pädagogen den Beruf verlassen, weil die
+            Bürokratie kaum noch zu bewältigen ist.
+          </p>
 
-      <section>
-        <h2 className="text-xl font-semibold">Wie es funktioniert</h2>
-        <p className="text-sm text-muted-foreground">
-          Von <Link href="/products/draft" className="underline">Zaza Draft</Link> (intelligentes Kommentarschreiben)
-          bis <Link href="/products/teach" className="underline">Zaza Teach</Link> (KI-gestützte Unterrichtsplanung
-          mit AutoPlanner) und darüber hinaus - jedes Produkt verfolgt ein Ziel: Ihnen Ihre Zeit zurückzugeben,
-          damit Sie sich auf das konzentrieren können, was Sie am besten können - das Unterrichten.
-        </p>
-      </section>
+          <h2>Zaza ändert das</h2>
+          <p>
+            Gegründet 2025 von einer Learning-Scientist mit 20 Jahren Erfahrung in der beruflichen Bildung
+            entwickeln wir eine Familie von KI-Apps, die speziell für Lehrkräfte gedacht sind – nicht für die
+            Schulleitung verkauft, nicht von der IT ausgewählt, sondern gemeinsam mit Lehrkräften entwickelt,
+            um genau die Aufgaben zu lösen, die Ihnen Zeit und Energie rauben.
+          </p>
 
-      <section>
-        <h2 className="text-xl font-semibold">Unser Versprechen</h2>
-        <p className="text-sm text-muted-foreground">
-          Wir sind nicht hier mit großen Tech-Versprechen. Wir sind hier mit Klarheit, Nützlichkeit und Vertrauen.
-          Denn jede Lehrkraft verdient Werkzeuge, die ihr Handwerk respektieren, ihre Glaubwürdigkeit schützen
-          und ihr helfen, erfolgreich zu sein.
-        </p>
+          <h2>Was uns unterscheidet</h2>
+          <p>
+            Wir sind kein weiteres Tech-Unternehmen, das Bildung erst „entdeckt“. Zaza basiert auf zwei
+            Jahrzehnten Lernwissenschaft und betrieblicher Bildung; tausende Lehrkräfte geben uns
+            kontinuierlich Rückmeldungen aus der Praxis. Jedes Produkt entsteht im Co-Design mit
+            Lehrkräften und ist in Forschung verankert – denn Abkürzungen, die die Pädagogik schwächen,
+            sind keine Abkürzungen.
+          </p>
+          <p>
+            Darum gibt es den <strong>KnowledgeCore</strong> – eine vertrauenswürdige Intelligenz-Schicht,
+            die jede Zaza App erklärbar, datenschutzfreundlich und unterrichtstauglich macht.
+            Keine Black-Boxes. Keine Halluzinationen, die Sie unglaubwürdig aussehen lassen. Keine
+            Untergrabung Ihrer professionellen Urteilsfähigkeit.
+          </p>
+
+          <h2>So funktioniert es</h2>
+          <p>
+            Von Zaza Draft (intelligentes Kommentieren) bis Zaza Teach (KI-Unterrichtsplanung mit
+            AutoPlanner) verfolgen alle Produkte ein Ziel: Ihnen Zeit zurückzugeben, damit Sie sich auf das
+            konzentrieren können, was Sie am besten können – unterrichten.
+          </p>
+
+          <h2>Unser Versprechen</h2>
+          <p>
+            Wir machen keine großen Tech-Versprechen. Wir stehen für Klarheit, Nutzen und Vertrauen.
+            Denn jede Lehrkraft verdient Werkzeuge, die ihr Handwerk respektieren, ihre Glaubwürdigkeit
+            schützen und ihr helfen, zu gedeihen.
+          </p>
+        </div>
       </section>
     </main>
   );
