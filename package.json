@@ -12,7 +12,7 @@
     "start": "next start",
     "validate-content": "tsx scripts/validate-content.ts",
     "audit:i18n": "tsx scripts/audit-i18n.ts",
-    "audit:links": "SITE_ORIGIN=http://localhost:3000 LINK_DEPTH=3 tsx scripts/audit-links.ts",
+    "audit:links": "cross-env SITE_ORIGIN=$SITE_ORIGIN LINK_DEPTH=$LINK_DEPTH tsx scripts/audit-links.ts",
     "audit:content": "tsx scripts/audit-content.ts",
     "audit:all": "pnpm audit:i18n && pnpm audit:links && pnpm audit:content"
   },
