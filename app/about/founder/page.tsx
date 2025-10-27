@@ -1,4 +1,6 @@
-﻿import Image from "next/image";\nimport { cookies, headers } from "next/headers";\nimport { redirect } from "next/navigation";
+import Image from "next/image";
+import { cookies, headers } from "next/headers";
+import { redirect } from "next/navigation";
 
 export default function FounderPage({ searchParams }:{ searchParams: Record<string, string | string[] | undefined> }) {
   const cookieLocale = cookies().get('NEXT_LOCALE')?.value;
