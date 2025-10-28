@@ -86,7 +86,7 @@ export default function AboutCompanyPageDE() {
           {/* Vision */}
           <blockquote className="italic text-slate-800 dark:text-slate-100 border-l-4 pl-4 border-purple-400/60">
             <p>„{t("about.company.vision.quote")}“</p>
-            <cite className="not-italic text-sm text-slate-600 dark:text-slate-400 block mt-2">Zaza Technologies</cite>
+            <cite className="not-italic text-sm text-slate-600 dark:text-slate-400 block mt-2">{t("about.company.vision.cite")}</cite>
           </blockquote>
 
           <hr className="my-10 border-slate-200 dark:border-slate-800" />
@@ -198,3 +198,5 @@ export default function AboutCompanyPageDE() {
     </main>
   );
 }
+
+
