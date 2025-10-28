@@ -37,6 +37,11 @@
     "exclude":  [
                     "node_modules",
                     ".next",
-                    ".next/**"
+                    ".next/**",
+                    "**/__backup*/**",
+                    "**/*.backup.*",
+                    "**/*.bak",
+                    "**/*.broken*",
+                    "tmp/**"
                 ]
 }
