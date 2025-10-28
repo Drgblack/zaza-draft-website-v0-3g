@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
 
-export default function AboutCompanyPage() {
+export default function AboutCompanyPageDE() {
   const { t } = useLanguage();
 
   useEffect(() => {
@@ -56,7 +56,7 @@ export default function AboutCompanyPage() {
             {t("about.company.intro.changeBold")}
           </p>
 
-          {/* Why Teachers Need Zaza */}
+          {/* Warum Lehrer Zaza brauchen */}
           <section className="mt-10">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
               {t("about.company.whyNeed.title")}
@@ -70,22 +70,22 @@ export default function AboutCompanyPage() {
 
             <div className="mt-5">
               <Button asChild variant="outline" size="lg" className="rounded-full">
-                <Link href="/about/founder">{t("about.company.founder.link")}</Link>
+                <Link href="/de/about/founder">{t("about.company.founder.link")}</Link>
               </Button>
             </div>
           </section>
 
           <hr className="my-10 border-slate-200 dark:border-slate-800" />
 
-          {/* Vision quote */}
+          {/* Vision */}
           <blockquote className="italic text-slate-800 dark:text-slate-100 border-l-4 pl-4 border-purple-400/60">
-            <p>“{t("about.company.vision.quote")}”</p>
+            <p>„{t("about.company.vision.quote")}“</p>
             <cite className="not-italic text-sm text-slate-600 dark:text-slate-400 block mt-2">{t("about.company.vision.cite")}</cite>
           </blockquote>
 
           <hr className="my-10 border-slate-200 dark:border-slate-800" />
 
-          {/* Why Teachers Trust Zaza */}
+          {/* Vertrauen */}
           <section>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
               {t("about.company.whyTrust.title")}
@@ -108,7 +108,7 @@ export default function AboutCompanyPage() {
               data-fade
               className="mt-6 rounded-2xl bg-slate-50 dark:bg-slate-900/60 p-5 shadow-sm motion-safe:opacity-0 motion-safe:translate-y-3"
             >
-              <p className="text-slate-900 dark:text-white">“{t("about.company.whyTrust.testimonial1.text")}”</p>
+              <p className="text-slate-900 dark:text-white">„{t("about.company.whyTrust.testimonial1.text")}“</p>
               <figcaption className="mt-3 text-sm text-slate-600 dark:text-slate-400">– {t("about.company.whyTrust.testimonial1.author")}</figcaption>
             </figure>
           </section>
@@ -127,7 +127,7 @@ export default function AboutCompanyPage() {
 
           <hr className="my-10 border-slate-200 dark:border-slate-800" />
 
-          {/* A Day With Zaza */}
+          {/* Ein Tag mit Zaza */}
           <section>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
               {t("about.company.day.title")}
@@ -162,7 +162,7 @@ export default function AboutCompanyPage() {
               data-fade
               className="mt-6 rounded-2xl bg-slate-50 dark:bg-slate-900/60 p-5 shadow-sm motion-safe:opacity-0 motion-safe:translate-y-3"
             >
-              <p className="text-slate-900 dark:text-white">“{t("about.company.day.testimonial2.text")}”</p>
+              <p className="text-slate-900 dark:text-slate-400">„{t("about.company.day.testimonial2.text")}“</p>
               <figcaption className="mt-3 text-sm text-slate-600 dark:text-slate-400">– {t("about.company.day.testimonial2.author")}</figcaption>
             </figure>
 
@@ -175,7 +175,7 @@ export default function AboutCompanyPage() {
 
           <hr className="my-10 border-slate-200 dark:border-slate-800" />
 
-          {/* Our Promise */}
+          {/* Unser Versprechen */}
           <section>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
               {t("about.company.promise.title")}
