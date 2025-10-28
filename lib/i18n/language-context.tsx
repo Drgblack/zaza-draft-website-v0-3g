@@ -2483,7 +2483,10 @@ const translationsDe: Record<string, string> = {
   "about.founder.note.signature.name": "Greg",
   "about.founder.note.signature.role": "Gründer & Pädagoge · Zaza Technologies",
 }
-const translationsFr: Record<string, string> = {}
+
+const translationsEs: Record<string, string> = {}
+
+
 
 const translationsIt: Record<string, string> = {}
 
@@ -2512,6 +2515,7 @@ export function useLanguage() {
   }
   return context
 }
+
 
 
 
