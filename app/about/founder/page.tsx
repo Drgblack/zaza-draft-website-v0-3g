@@ -40,7 +40,7 @@ export default function FounderPage() {
                 />
               </div>
               
-              <p className="text-sm font-medium text-[#9CA3AF] mb-6 tracking-wide uppercase">Founder & CEO</p>
+              <p className="text-sm font-medium text-[#9CA3AF] mb-6 tracking-wide uppercase">Founder & Educator</p>
               
               <h1 className="text-4xl md:text-5xl font-bold text-[#F9FAFB] mb-8">
                 {t("about.founder.hero.title")}
@@ -48,21 +48,18 @@ export default function FounderPage() {
               
               <div className="max-w-3xl mx-auto space-y-4">
                 <p className="text-xl text-[#D1D5DB] leading-relaxed">
-                  Dr. Greg Blackburn spent two decades in Learning and Development before founding Zaza in 2025 
-                  to build teacher-first AI. Not a former teacher, but a learning scientist and operator focused 
-                  on giving teachers their time back.
+                  {t("about.founder.hero.intro1")}
                 </p>
                 
                 <p className="text-lg text-[#9CA3AF]">
-                  After teaching thousands of adults in real classrooms and leading major learning initiatives, 
-                  he's now building AI so teachers can thrive.
+                  {t("about.founder.hero.intro2")}
                 </p>
               </div>
               
               <Card className="inline-block bg-[#111827] border-[#1F2937] px-6 py-4 mt-8">
                 <p className="font-semibold text-[#F9FAFB]">{t("about.founder.hero.title.name")}</p>
                 <p className="text-sm text-[#9CA3AF] mt-1">
-                  PhD in Professional Education · EdTech Builder
+                  {t("about.founder.hero.title.role")}
                 </p>
               </Card>
             </div>
@@ -78,45 +75,20 @@ export default function FounderPage() {
                 <p>{t("about.founder.journey.p1")}</p>
                 <p>{t("about.founder.journey.p2")}</p>
                 <p>{t("about.founder.journey.p3")}</p>
-                
-                <Card className="bg-[#7C3AED]/10 border-[#7C3AED]/30 p-6 my-8">
-                  <p className="text-[#F9FAFB] font-semibold text-lg">
-                    "I was never a K-12 classroom teacher, but I have taught thousands of adults in real classrooms."
-                  </p>
-                </Card>
-                
                 <p>{t("about.founder.journey.p4")}</p>
                 <p>{t("about.founder.journey.p5")}</p>
-                
-                <Card className="bg-[#7C3AED]/10 border-[#7C3AED]/30 p-6 my-8">
-                  <p className="text-[#F9FAFB] font-semibold text-lg">
-                    "I listened to the stories of my sister, cousins, and colleagues who teach every day. 
-                    Their workload struggles shaped Zaza."
-                  </p>
-                </Card>
-                
-                <p>{t("about.founder.journey.p6")}</p>
-                <p>
-                  {t("about.founder.journey.p7").split("2025")[0]}
-                  <strong className="text-[#F9FAFB]">2025</strong>
-                  {t("about.founder.journey.p7").split("2025")[1].split("Zaza Technologies")[0]}
-                  <strong className="text-[#F9FAFB]">Zaza Technologies</strong>
-                  {t("about.founder.journey.p7").split("Zaza Technologies")[1]}
-                </p>
-                <p>{t("about.founder.journey.p8")}</p>
-                
-                <blockquote className="border-l-4 border-[#7C3AED] pl-6 py-4 my-8 bg-[#111827] italic text-[#D1D5DB]">
-                  {t("about.founder.journey.quote")}
-                </blockquote>
+                <p className="text-xl font-semibold text-[#F9FAFB] italic">{t("about.founder.journey.p6")}</p>
               </div>
             </section>
             
             {/* Why I Built Zaza */}
             <section className="mb-20">
-              <h2 className="text-3xl font-bold text-[#F9FAFB] mb-4">{t("about.founder.why.heading")}</h2>
-              <p className="text-lg text-[#D1D5DB] mb-10">
-                {t("about.founder.why.subtitle")}
-              </p>
+              <h2 className="text-3xl font-bold text-[#F9FAFB] mb-6">{t("about.founder.why.heading")}</h2>
+              
+              <div className="space-y-6 text-lg text-[#D1D5DB] leading-relaxed mb-10">
+                <p>{t("about.founder.journey.p7")}</p>
+                <p>{t("about.founder.journey.p8")}</p>
+              </div>
               
               <div className="grid md:grid-cols-3 gap-6 mb-10">
                 <Card className="bg-[#111827] border-[#1F2937] p-6">
@@ -144,9 +116,9 @@ export default function FounderPage() {
                 </Card>
               </div>
               
-              <Card className="bg-[#7C3AED]/5 border-[#7C3AED]/30 p-6 text-center">
-                <p className="text-[#9CA3AF] text-sm mb-2">Building with the community</p>
-                <p className="text-3xl font-bold text-[#F9FAFB]">2,400+ Teachers</p>
+              <Card className="bg-[#7C3AED]/5 border-[#7C3AED]/30 p-8 text-center">
+                <p className="text-[#9CA3AF] text-sm mb-2">{t("about.founder.why.subtitle")}</p>
+                <p className="text-3xl font-bold text-[#F9FAFB] mt-4">2,400+ Teachers</p>
                 <p className="text-[#D1D5DB] mt-2">already co-designing Zaza with us across 43 countries</p>
               </Card>
             </section>
