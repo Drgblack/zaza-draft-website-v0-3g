@@ -43,7 +43,7 @@ export default function FounderPage() {
               <p className="text-sm font-medium text-[#9CA3AF] mb-6 tracking-wide uppercase">Founder & Educator</p>
               
               <h1 className="text-4xl md:text-5xl font-bold text-[#F9FAFB] mb-8">
-                {t("about.founder.hero.title")}
+                Meet the Educator Building AI to Give Teachers Their Time Back
               </h1>
               
               <div className="max-w-3xl mx-auto space-y-4">
@@ -75,6 +75,7 @@ export default function FounderPage() {
                 <p>{t("about.founder.journey.p1")}</p>
                 <p>{t("about.founder.journey.p2")}</p>
                 <p>{t("about.founder.journey.p3")}</p>
+                <p>{t("about.founder.journey.p3b")}</p>
                 <p>{t("about.founder.journey.p4")}</p>
                 <p>{t("about.founder.journey.p5")}</p>
                 <p className="text-xl font-semibold text-[#F9FAFB] italic">{t("about.founder.journey.p6")}</p>
@@ -142,7 +143,10 @@ export default function FounderPage() {
               <h3 className="text-2xl font-bold text-[#F9FAFB] mb-4">
                 Join 2,400+ teachers shaping the future of Zaza
               </h3>
-              <p className="text-[#D1D5DB] mb-8">
+              <p className="text-[#D1D5DB] mb-2">
+                Built with teachers, for teachers.
+              </p>
+              <p className="text-[#9CA3AF] mb-8">
                 Start saving 10+ hours per week with AI that respects your craft.
               </p>
               <Link

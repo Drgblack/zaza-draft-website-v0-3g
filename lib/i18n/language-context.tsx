@@ -1245,8 +1245,9 @@ const translationsEn: Record<string, string> = {
   "about.founder.journey.heading": "The Journey",
   "about.founder.journey.subtitle": "From paint brushes in Tasmania to building AI for education.",
   "about.founder.journey.p1": "I began my working life in Hobart as a painter and decorator while I figured out what came next. My dad owned a local paint factory, so brushes, colour charts, and hard work were part of daily life.",
-  "about.founder.journey.p2": "That early experience taught me resilience, the value of hard work, and the clarity that I was desperate to study. After completing a trade, I set off on round-the-world travel. For me, this was a journey of discovery, meeting people, seeing countries, learning cultures. Somewhere along the way I realised that education was my ticket to a greater purpose.",
-  "about.founder.journey.p3": "I studied Administration, Information Systems, and German at the University of Tasmania, earning First Class Honours in Information Systems at City University of Queensland. My research pulled me deeper into learning science, critical thinking, and problem-solving in student-centred e-learning, and I later earned a PhD by publication from City, University of London.",
+  "about.founder.journey.p2": "I soon realised I wanted to study, but my careers adviser told me, \"Son, just get your papers and you can do anything you want.\" So I pushed through my apprenticeship. That experience taught me resilience, the value of hard work, and the clarity that I was searching for something more.",
+  "about.founder.journey.p3": "After completing it, I set off to travel the world. For me, this was a journey of discovery, meeting people, seeing countries, learning cultures. Somewhere along the way I realised that education was my key to a greater purpose. That realisation has guided me ever since.",
+  "about.founder.journey.p3b": "I studied Administration, Information Systems, and German at the University of Tasmania, earning First Class Honours in Information Systems at City University of Queensland. My research pulled me deeper into learning science, critical thinking, and problem-solving in student-centred e-learning, and I later earned a PhD by publication from City, University of London.",
   "about.founder.journey.p4": "Through two decades in Learning and Development, I have taught thousands of adults in real classrooms, from onboarding new hires to upskilling teams, to navigating change. That experience showed me what helps people learn, what gets in the way, and why educators need tools that respect their expertise.",
   "about.founder.journey.p5": "I also stayed close to teachers in my own family and community, my sister, cousins, and colleagues, listening to their stories about workload: parent emails, report writing, grading, documentation. All necessary, but so consuming that it steals the time and energy teachers need most.",
   "about.founder.journey.p6": "That is when the idea of Zaza took root.",
@@ -2455,8 +2456,9 @@ const translationsDe: Record<string, string> = {
   "about.founder.journey.heading": "Die Reise",
   "about.founder.journey.subtitle": "Von Pinselstrichen in Tasmanien zur Bildungs-KI.",
   "about.founder.journey.p1": "Meine berufliche Laufbahn begann in Hobart als Maler und Lackierer, während ich überlegte, was als Nächstes kommen sollte. Mein Vater besaß eine kleine Farbenfabrik, und so gehörten Pinsel, Farbkarten und harte Arbeit zu meinem Alltag.",
-  "about.founder.journey.p2": "Diese Erfahrung lehrte mich Durchhaltevermögen, den Wert harter Arbeit und die Klarheit, dass ich unbedingt studieren wollte. Nach meiner Ausbildung machte ich mich auf eine Weltreise, eine Reise voller Begegnungen mit Menschen, Kulturen und neuen Perspektiven. Unterwegs erkannte ich: Bildung ist mein Schlüssel zu einem größeren Zweck.",
-  "about.founder.journey.p3": "Ich studierte Administration, Wirtschaftsinformatik und Germanistik an der University of Tasmania und schloss mit First Class Honours in Information Systems an der City University of Queensland ab. Später vertiefte ich mich in Lernwissenschaft, kritisches Denken und Problemlösung im studentenzentrierten E-Learning und promovierte schließlich an der City, University of London.",
+  "about.founder.journey.p2": "Bald merkte ich, dass ich studieren wollte. Mein Berufsberater sagte jedoch zu mir: \"Junge, mach einfach deinen Abschluss, dann kannst du alles machen, was du willst.\" Also zog ich meine Lehre durch. Diese Erfahrung lehrte mich Durchhaltevermögen, den Wert harter Arbeit, und die Klarheit, dass ich eigentlich nach etwas Größerem suchte.",
+  "about.founder.journey.p3": "Nach dem Abschluss brach ich zu einer Weltreise auf. Für mich war das eine Reise der Entdeckung, Begegnungen mit Menschen, das Kennenlernen von Ländern und Kulturen. Unterwegs erkannte ich: Bildung ist mein Schlüssel zu einem größeren Zweck. Diese Erkenntnis begleitet mich bis heute.",
+  "about.founder.journey.p3b": "I studied Administration, Information Systems, and German at the University of Tasmania, earning First Class Honours in Information Systems at City University of Queensland. My research pulled me deeper into learning science, critical thinking, and problem-solving in student-centred e-learning, and I later earned a PhD by publication from City, University of London.",
   "about.founder.journey.p4": "Über zwei Jahrzehnte im Bereich Learning & Development habe ich Tausende von Erwachsenen in realen Klassenzimmern unterrichtet, von der Einarbeitung neuer Mitarbeiter:innen über die Weiterbildung von Teams bis hin zur Begleitung von Veränderungsprozessen. Diese Erfahrung hat mir gezeigt, was Lernen fördert, was es behindert und warum Lehrer:innen Werkzeuge brauchen, die ihre Expertise respektieren.",
   "about.founder.journey.p5": "Gleichzeitig bin ich eng mit Lehrer:innen in meiner Familie und meinem Umfeld verbunden, meine Schwester, Cousins und Kolleg:innen. Ihre Geschichten über die Belastung durch Elternkommunikation, Zeugnisberichte, Korrekturen und Dokumentation haben Zaza geprägt. All das ist notwendig, raubt aber genau die Zeit und Energie, die Lehrer:innen am dringendsten brauchen.",
   "about.founder.journey.p6": "That is when the idea of Zaza took root.",
@@ -2509,6 +2511,7 @@ export function useLanguage() {
   }
   return context
 }
+
 
 
 
