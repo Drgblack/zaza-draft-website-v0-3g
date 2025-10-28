@@ -1203,7 +1203,8 @@ const translationsEn: Record<string, string> = {
   "about.company.whyNeed.p4": "Founded in 2025 by Dr. Greg Blackburn, a learning scientist with 20 years in L&D and a PhD in Professional Education, who watched too many teacher friends burn out from administrative overload. After teaching thousands of adults and leading major learning initiatives, he built Zaza to solve the problems that steal teachers' time.",
   "about.company.founder.link": "Learn more about Greg's journey →",
   
-  "about.company.vision.cite": "Zaza Technologies",\n  "about.company.vision.quote": "We see a future where teaching is less about admin and stress, and more about creativity, connection, and impact.",
+  "about.company.vision.cite": "Zaza Technologies",
+  "about.company.vision.quote": "We see a future where teaching is less about admin and stress, and more about creativity, connection, and impact.",
   
   "about.company.whyTrust.title": "Why Teachers Trust Zaza",
   "about.company.whyTrust.p1Bold": "We're not another tech company \"discovering\" education.",
@@ -2391,7 +2392,8 @@ const translationsDe: Record<string, string> = {
   "about.company.whyNeed.p4": "Gegründet 2025 von Dr. Greg Blackburn, einem Lernwissenschaftler mit 20 Jahren Erfahrung in L&D und einem PhD in Pädagogik, der zu viele Lehrerfreunde am Verwaltungsaufwand scheitern sah. Nachdem er Tausende Erwachsene unterrichtet und große Lerninitiativen geleitet hatte, gründete er Zaza, um die Probleme zu lösen, die Lehrern die Zeit rauben.",
   "about.company.founder.link": "Erfahren Sie mehr über Gregs Weg →",
   
-  "about.company.vision.cite": "Zaza Technologies",\n  "about.company.vision.quote": "Wir sehen eine Zukunft, in der Lehren weniger von Verwaltung und Stress geprägt ist, sondern mehr von Kreativität, Verbindung und Wirkung.",
+  "about.company.vision.cite": "Zaza Technologies",
+  "about.company.vision.quote": "Wir sehen eine Zukunft, in der Lehren weniger von Verwaltung und Stress geprägt ist, sondern mehr von Kreativität, Verbindung und Wirkung.",
   
   "about.company.whyTrust.title": "Warum Lehrer Zaza vertrauen",
   "about.company.whyTrust.p1Bold": "Wir sind nicht ein weiteres Tech-Unternehmen, das \"Bildung entdeckt\".",
@@ -2465,6 +2467,7 @@ export function useLanguage() {
   }
   return context
 }
+
 
 
 
