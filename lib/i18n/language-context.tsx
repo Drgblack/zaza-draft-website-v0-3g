@@ -1209,7 +1209,7 @@ const translationsEn: Record<string, string> = {
   "about.company.whyTrust.p1Bold": "We're not another tech company \"discovering\" education.",
   "about.company.whyTrust.p2": "Zaza is grounded in two decades of learning science and workplace education, with over 2,400 teachers from 43 countries shaping our tools through real-world feedback.",
   "about.company.whyTrust.p3": "Every product is co-designed with educators and rooted in research, because shortcuts that compromise pedagogy are not shortcuts at all.",
-  "about.company.whyTrust.knowledgeCoreBold": "That's why we built the KnowledgeCore — a trust layer that makes every Zaza app explainable, privacy-first, and classroom-ready.",
+  "about.company.whyTrust.knowledgeCoreBold": "That's why we built the KnowledgeCore - a trust layer that makes every Zaza app explainable, privacy-first, and classroom-ready.",
   "about.company.whyTrust.noBlackBoxes": "No black boxes. No hallucinations. No undermining your professional judgment.",
   "about.company.whyTrust.useCase": "When Zaza Draft suggests a parent email or Zaza Teach builds a lesson plan, you can trust it reflects actual learning science, not generic AI fluff that damages your credibility.",
   "about.company.whyTrust.testimonial1.text": "I was skeptical about AI writing parent emails. But Zaza Draft doesn't just save me time, it makes me sound more professional and empathetic than when I'm rushing at 10 PM.",
@@ -2397,7 +2397,7 @@ const translationsDe: Record<string, string> = {
   "about.company.whyTrust.p1Bold": "Wir sind nicht ein weiteres Tech-Unternehmen, das \"Bildung entdeckt\".",
   "about.company.whyTrust.p2": "Zaza basiert auf zwei Jahrzehnten Lernforschung und Erwachsenenbildung, mit über 2.400 Lehrern aus 43 Ländern, die unsere Tools durch praktisches Feedback mitgestaltet haben.",
   "about.company.whyTrust.p3": "Jedes Produkt wird mit Pädagogen co-designt und ist in Forschung verankert, denn Abkürzungen, die die Pädagogik gefährden, sind keine Abkürzungen.",
-  "about.company.whyTrust.knowledgeCoreBold": "Darum haben wir das KnowledgeCore gebaut — eine Vertrauensebene, die jede Zaza-App erklärbar, datenschutzfreundlich und klassenraumtauglich macht.",
+  "about.company.whyTrust.knowledgeCoreBold": "Darum haben wir das KnowledgeCore gebaut - eine Vertrauensebene, die jede Zaza-App erklärbar, datenschutzfreundlich und klassenraumtauglich macht.",
   "about.company.whyTrust.noBlackBoxes": "Keine Black Boxes. Keine Halluzinationen. Kein Untergraben Ihres professionellen Urteils.",
   "about.company.whyTrust.useCase": "Wenn Zaza Draft eine Elternmail vorschlägt oder Zaza Teach einen Unterrichtsplan erstellt, können Sie darauf vertrauen, dass es echte Lernforschung widerspiegelt, nicht generisches KI-Geschwätz, das Ihre Glaubwürdigkeit untergräbt.",
   "about.company.whyTrust.testimonial1.text": "Ich war skeptisch gegenüber KI beim Schreiben von Elternmails. Aber Zaza Draft spart mir nicht nur Zeit, es lässt mich professioneller und empathischer klingen, als wenn ich abends um 22 Uhr hetze.",
@@ -2465,3 +2465,4 @@ export function useLanguage() {
   }
   return context
 }
+
