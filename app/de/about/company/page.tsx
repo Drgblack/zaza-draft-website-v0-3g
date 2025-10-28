@@ -11,7 +11,6 @@ export const metadata: Metadata = {
   description: "Lehrerfreundliche KI, gemeinsam mit Lehrkräften entwickelt.",
 };
 
-<<<<<<< HEAD
 export default function AboutCompanyPageDE() {
   const { t } = useLanguage();
 
@@ -57,36 +56,12 @@ export default function AboutCompanyPageDE() {
           </p>
           <p className="mt-4 text-slate-700 dark:text-slate-300 leading-relaxed">
             {t("about.company.intro.p2")}
-=======
-export default function Page() {
-  try {
-    return (
-      <main className="min-h-[70vh]">
-        <section className="bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-950 border-b border-slate-200/60 dark:border-slate-800">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 text-center">
-            <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
-              Über Zaza Technologies
-            </h1>
-            <p className="mt-4 text-slate-600 dark:text-slate-300">
-              Lehrkräfte haben nicht für so viel Verwaltung unterschrieben.
-            </p>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 space-y-10 leading-relaxed">
-          <p>
-            Sie wurden Lehrkraft, um Menschen zu inspirieren, nicht um in Korrekturen,
-            Dokumentation und E-Mail-Management zu versinken. Dennoch erleben wir steigende
-            Burnout-Zahlen und dass engagierte Pädagoginnen und Pädagogen den Beruf
-            verlassen, weil die bürokratische Last nicht mehr tragbar ist.
->>>>>>> d943045 (fix(about/company): make pages server components; remove client hooks; keep centered hero + DE fallback)
           </p>
 
           <p className="mt-6 font-semibold text-slate-900 dark:text-white">
             {t("about.company.intro.changeBold")}
           </p>
 
-<<<<<<< HEAD
           {/* Warum Lehrer Zaza brauchen */}
           <section className="mt-10">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
@@ -105,45 +80,13 @@ export default function Page() {
               </Button>
             </div>
           </section>
-=======
-          <div>
-            <h2 className="text-xl font-semibold">Was uns unterscheidet</h2>
-            <p className="mt-2">
-              Wir sind nicht noch ein Tech-Unternehmen, das „die Bildung entdeckt“. Zaza
-              basiert auf zwei Jahrzehnten Lernforschung und Weiterbildungspraxis, mit
-              Tausenden von Lehrkräften, die unsere Tools durch Feedback aus dem Alltag
-              mitgestalten. Jedes Produkt entsteht im Co-Design mit Lehrkräften und ist in
-              Forschung verankert - denn Abkürzungen, die die Pädagogik schwächen, sind
-              keine Abkürzungen.
-            </p>
-            <p className="mt-2">
-              Deshalb gibt es den <strong>KnowledgeCore</strong> - eine vertrauenswürdige
-              Intelligenzschicht, die jede Zaza App erklärbar, datenschutzfreundlich und
-              klassentauglich hält. Keine Black Boxes. Keine Halluzinationen, die Sie
-              schlecht aussehen lassen. Keine Untergrabung Ihrer professionellen
-              Urteilsfähigkeit.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-xl font-semibold">So funktioniert es</h2>
-            <p className="mt-2">
-              Von <Link href="/products/draft" className="underline">Zaza Draft</Link>
-              {" "} (intelligentes Verfassen von Kommentaren) bis
-              {" "} <Link href="/products/teach" className="underline">Zaza Teach</Link>
-              {" "} (KI-gestützte Unterrichtsplanung mit AutoPlanner) und darüber hinaus
-              verfolgen alle Produkte ein Ziel: Ihnen Ihre Zeit zurückzugeben, damit Sie
-              sich auf das konzentrieren können, was Sie am besten können - unterrichten.
-            </p>
-          </div>
->>>>>>> d943045 (fix(about/company): make pages server components; remove client hooks; keep centered hero + DE fallback)
 
           <hr className="my-10 border-slate-200 dark:border-slate-800" />
 
           {/* Vision */}
           <blockquote className="italic text-slate-800 dark:text-slate-100 border-l-4 pl-4 border-purple-400/60">
             <p>„{t("about.company.vision.quote")}“</p>
-            <cite className="not-italic text-sm text-slate-600 dark:text-slate-400 block mt-2">Zaza Technologies</cite>
+            <cite className="not-italic text-sm text-slate-600 dark:text-slate-400 block mt-2">{t("about.company.vision.cite")}</cite>
           </blockquote>
 
           <hr className="my-10 border-slate-200 dark:border-slate-800" />
@@ -156,7 +99,6 @@ export default function Page() {
             <p className="mt-4 font-semibold text-slate-900 dark:text-white">
               {t("about.company.whyTrust.p1Bold")}
             </p>
-<<<<<<< HEAD
             <div className="mt-3 space-y-4 text-slate-700 dark:text-slate-300 leading-relaxed">
               <p>{t("about.company.whyTrust.p2")}</p>
               <p>{t("about.company.whyTrust.p3")}</p>
@@ -231,7 +173,7 @@ export default function Page() {
             </figure>
 
             <div className="mt-8 text-center">
-              <Button asChild size="lg" className="rounded-full gradient-primary text-white">
+              <Button asChild size="lg" className="rounded-full gradient-primary text-white hover:opacity-95">
                 <Link href="/signup" data-cta="about-final">{t("about.company.cta.final.button")}</Link>
               </Button>
             </div>
@@ -255,13 +197,4 @@ export default function Page() {
       </section>
     </main>
   );
-=======
-          </div>
-        </section>
-      </main>
-    );
-  } catch {
-    redirect("/about/company");
-  }
->>>>>>> d943045 (fix(about/company): make pages server components; remove client hooks; keep centered hero + DE fallback)
 }
