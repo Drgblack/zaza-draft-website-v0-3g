@@ -2353,5 +2353,3 @@ export function useLanguage() {
   }
   return context
 }
-\n  // Demo modal (EN/DE placeholders)\n  "demoModal.title": "Request a demo (NEEDS NATIVE REVIEW)",\n  "demoModal.success": "Thanks â€” we will email you soon (NEEDS NATIVE REVIEW)",\n  "demoModal.error": "Something went wrong (NEEDS NATIVE REVIEW)",\n  "demoModal.consentRequired": "Please accept the consent (NEEDS NATIVE REVIEW)"\n
-
