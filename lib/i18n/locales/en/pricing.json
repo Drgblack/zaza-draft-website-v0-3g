@@ -1,1 +1,139 @@
-﻿<PUT-EN-JSON-HERE>
+﻿{
+  "hero": {
+    "title": "Simple plans built for teachers",
+    "subtitle": "Start free, upgrade anytime. Cancel anytime.",
+    "badges": ["Trusted by 2,400+ teachers", "EU-friendly billing", "Cancel anytime", "No credit card required to start"]
+  },
+  "toggle": { "monthly": "Monthly", "annual": "Annual" },
+  "plans": {
+    "starter": {
+      "label": "Free",
+      "name": "Starter",
+      "price": "€0",
+      "per": "/mo",
+      "cta": "Start Free",
+      "includesTitle": "What’s included",
+      "includes": [
+        "Try Zaza Draft",
+        "5 AI generations per month",
+        "Core tones and rewrites",
+        "Basic templates",
+        "Email copy export"
+      ],
+      "note": "No credit card needed"
+    },
+    "premium": {
+      "badge": "Most popular",
+      "name": "Premium",
+      "tagline": "Unlimited, hallucination-safe writing with pro tools for teachers.",
+      "price": "€14.99",
+      "per": "/mo",
+      "ctaPrimary": "Start 14-day Free Trial",
+      "ctaSecondary": "Switch to annual and save",
+      "saves": "Save 2 months on annual",
+      "includesTitle": "Everything in Free, plus",
+      "includes": [
+        "Unlimited AI generations",
+        "Advanced tone and rewrite controls",
+        "Comment banks and templates",
+        "Policy-safe email replies with Shield",
+        "Version history",
+        "Priority support"
+      ]
+    },
+    "team": {
+      "badge": "For schools",
+      "name": "Team & Schools",
+      "price": "Custom",
+      "per": "",
+      "cta": "Contact Sales",
+      "includesTitle": "Includes everything in Premium, plus",
+      "includes": [
+        "Shared comment banks and templates",
+        "Admin tools and usage reports",
+        "SLA and onboarding support",
+        "Invoice billing and procurement",
+        "Privacy, policy, and training options"
+      ],
+      "note": "We work with your policies"
+    }
+  },
+  "bundle": {
+    "label": "Draft + Teach bundle",
+    "subtitle": "Everything you need for writing and lesson planning",
+    "price": "€24.99",
+    "per": "/mo",
+    "cta": "Get the Bundle",
+    "saveFlag": "Best value"
+  },
+  "compare": {
+    "heading": "Compare plans",
+    "columns": ["Free", "Premium", "Team"],
+    "rows": [
+      ["Draft generations", "5 / month", "Unlimited", "Unlimited"],
+      ["Tone options", "Core", "Advanced", "Advanced"],
+      ["Templates", "Basic", "Pro", "Shared + Custom"],
+      ["Exports", "Copy", "PDF/DOCX", "PDF/DOCX"],
+      ["Comment banks", "—", "Personal", "Team-shared"],
+      ["Admin tools", "—", "—", "SLA, SSO, data"],
+      ["Support", "Community", "Priority email", "Priority + onboarding"],
+      ["Pricing", "€0", "€14.99/mo", "Custom"]
+    ],
+    "ctaFree": "Start Free",
+    "ctaPremium": "Start free trial",
+    "ctaTeam": "Contact Sales"
+  },
+  "quiz": {
+    "heading": "Not sure which plan to choose?",
+    "sub": "Take our quick quiz to get a personalised recommendation",
+    "cta": "Get my pick"
+  },
+  "faqs": {
+    "heading": "Pricing & billing FAQs",
+    "items": [
+      {
+        "q": "Is there a free plan?",
+        "a": "Yes. The Starter plan lets you try Zaza Draft with 5 AI generations each month and core tools. No credit card needed."
+      },
+      {
+        "q": "Can I cancel anytime?",
+        "a": "Yes. You can cancel in one click from your account settings. Your plan stays active until the end of the billing period."
+      },
+      {
+        "q": "Do you offer a school discount?",
+        "a": "Yes. Teams and schools get volume pricing, admin tools, onboarding, and invoice billing. Contact Sales for a quote."
+      },
+      {
+        "q": "Which apps are included in Premium?",
+        "a": "Premium is for Zaza Draft. If you also want Zaza Teach lesson planning, choose the Draft + Teach bundle for €24.99/month."
+      },
+      {
+        "q": "Which currency do you charge?",
+        "a": "Prices shown are in euros. Local tax may apply depending on your location."
+      }
+    ]
+  },
+  "testimonials": {
+    "heading": "What teachers say about pricing",
+    "cards": [
+      {
+        "quote": "Premium pays for itself in the first week I use it.",
+        "author": "Elena M., Primary Teacher"
+      },
+      {
+        "quote": "The free tier made the switch easy and risk-free.",
+        "author": "David H., High School"
+      },
+      {
+        "quote": "Our department chose the bundle for planning and grading.",
+        "author": "Julia K., Middle School"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Ready to save hours every week?",
+    "sub": "Start free today or talk to our team.",
+    "primary": "Start Free",
+    "secondary": "Book a Demo"
+  }
+}

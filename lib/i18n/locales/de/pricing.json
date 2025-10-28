@@ -1,1 +1,139 @@
-﻿<PUT-DE-JSON-HERE>
+﻿{
+  "hero": {
+    "title": "Einfache Pläne für Lehrkräfte",
+    "subtitle": "Gratis starten, jederzeit upgraden. Jederzeit kündbar.",
+    "badges": ["Vertrauen von 2.400+ Lehrkräften", "EU-freundliche Abrechnung", "Jederzeit kündbar", "Keine Kreditkarte zum Start"]
+  },
+  "toggle": { "monthly": "Monatlich", "annual": "Jährlich" },
+  "plans": {
+    "starter": {
+      "label": "Kostenlos",
+      "name": "Starter",
+      "price": "0 €",
+      "per": "/Monat",
+      "cta": "Gratis starten",
+      "includesTitle": "Enthalten",
+      "includes": [
+        "Zaza Draft testen",
+        "5 KI-Generierungen pro Monat",
+        "Kern-Töne und Umschreibungen",
+        "Basis-Vorlagen",
+        "E-Mail-Export"
+      ],
+      "note": "Keine Kreditkarte nötig"
+    },
+    "premium": {
+      "badge": "Am beliebtesten",
+      "name": "Premium",
+      "tagline": "Unbegrenztes, halluzinations-sicheres Schreiben mit Profi-Tools für Lehrkräfte.",
+      "price": "14,99 €",
+      "per": "/Monat",
+      "ctaPrimary": "14-Tage kostenlos testen",
+      "ctaSecondary": "Jährlich wechseln und sparen",
+      "saves": "2 Monate sparen bei jährlich",
+      "includesTitle": "Alles aus Gratis, plus",
+      "includes": [
+        "Unbegrenzte KI-Generierungen",
+        "Erweiterte Ton- und Rewrite-Steuerung",
+        "Kommentarbanken und Vorlagen",
+        "Richtlinien-sichere Antworten mit Shield",
+        "Versionsverlauf",
+        "Priorisierter Support"
+      ]
+    },
+    "team": {
+      "badge": "Für Schulen",
+      "name": "Team & Schulen",
+      "price": "Individuell",
+      "per": "",
+      "cta": "Vertrieb kontaktieren",
+      "includesTitle": "Beinhaltet alles aus Premium, plus",
+      "includes": [
+        "Geteilte Kommentarbanken und Vorlagen",
+        "Admin-Tools und Nutzungsberichte",
+        "SLA und Onboarding",
+        "Rechnungsstellung und Beschaffung",
+        "Optionen für Datenschutz, Richtlinien und Training"
+      ],
+      "note": "Wir arbeiten mit Ihren Richtlinien"
+    }
+  },
+  "bundle": {
+    "label": "Draft + Teach Bundle",
+    "subtitle": "Alles für Schreiben und Unterrichtsplanung",
+    "price": "24,99 €",
+    "per": "/Monat",
+    "cta": "Bundle wählen",
+    "saveFlag": "Bester Wert"
+  },
+  "compare": {
+    "heading": "Pläne vergleichen",
+    "columns": ["Gratis", "Premium", "Team"],
+    "rows": [
+      ["Draft-Generierungen", "5 / Monat", "Unbegrenzt", "Unbegrenzt"],
+      ["Ton-Optionen", "Kern", "Erweitert", "Erweitert"],
+      ["Vorlagen", "Basis", "Pro", "Gemeinsam + individuell"],
+      ["Exporte", "Kopieren", "PDF/DOCX", "PDF/DOCX"],
+      ["Kommentarbanken", "—", "Persönlich", "Team-geteilt"],
+      ["Admin-Tools", "—", "—", "SLA, SSO, Daten"],
+      ["Support", "Community", "Priorisierte E-Mail", "Priorisiert + Onboarding"],
+      ["Preis", "0 €", "14,99 €/Monat", "Individuell"]
+    ],
+    "ctaFree": "Gratis starten",
+    "ctaPremium": "Kostenlos testen",
+    "ctaTeam": "Vertrieb kontaktieren"
+  },
+  "quiz": {
+    "heading": "Unsicher, welcher Plan passt?",
+    "sub": "Kurzer Quiz für eine persönliche Empfehlung",
+    "cta": "Meine Auswahl erhalten"
+  },
+  "faqs": {
+    "heading": "Preise & Abrechnung – FAQ",
+    "items": [
+      {
+        "q": "Gibt es einen kostenlosen Plan?",
+        "a": "Ja. Der Starter-Plan ermöglicht 5 KI-Generierungen pro Monat und Kern-Funktionen. Keine Kreditkarte erforderlich."
+      },
+      {
+        "q": "Kann ich jederzeit kündigen?",
+        "a": "Ja. Sie können mit einem Klick in den Kontoeinstellungen kündigen. Ihr Plan bleibt bis zum Ende des Abrechnungszeitraums aktiv."
+      },
+      {
+        "q": "Gibt es Rabatte für Schulen?",
+        "a": "Ja. Teams und Schulen erhalten Mengenpreise, Admin-Tools, Onboarding und Rechnungsstellung. Kontaktieren Sie den Vertrieb."
+      },
+      {
+        "q": "Welche Apps sind in Premium enthalten?",
+        "a": "Premium gilt für Zaza Draft. Wenn Sie auch Zaza Teach zur Unterrichtsplanung möchten, wählen Sie das Draft + Teach Bundle für 24,99 €/Monat."
+      },
+      {
+        "q": "In welcher Währung wird abgerechnet?",
+        "a": "Die Preise sind in Euro. Je nach Standort kann lokale Steuer anfallen."
+      }
+    ]
+  },
+  "testimonials": {
+    "heading": "Was Lehrkräfte über die Preise sagen",
+    "cards": [
+      {
+        "quote": "Premium rechnet sich schon in der ersten Woche.",
+        "author": "Elena M., Grundschule"
+      },
+      {
+        "quote": "Die Gratis-Stufe machte den Umstieg leicht und risikofrei.",
+        "author": "David H., Sekundarstufe"
+      },
+      {
+        "quote": "Unser Fachbereich nutzt das Bundle für Planung und Bewertung.",
+        "author": "Julia K., Mittelschule"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Bereit, jede Woche Stunden zu sparen?",
+    "sub": "Starten Sie gratis oder sprechen Sie mit unserem Team.",
+    "primary": "Gratis starten",
+    "secondary": "Demo buchen"
+  }
+}
