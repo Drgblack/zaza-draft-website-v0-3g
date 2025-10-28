@@ -43,7 +43,7 @@ export default function FounderPage() {
               <p className="text-sm font-medium text-[#9CA3AF] mb-6 tracking-wide uppercase">Founder & Educator</p>
               
               <h1 className="text-4xl md:text-5xl font-bold text-[#F9FAFB] mb-8">
-                Meet the Educator Building AI to Give Teachers Their Time Back
+                {t("about.founder.hero.title")}
               </h1>
               
               <div className="max-w-3xl mx-auto space-y-4">
@@ -75,10 +75,17 @@ export default function FounderPage() {
                 <p>{t("about.founder.journey.p1")}</p>
                 <p>{t("about.founder.journey.p2")}</p>
                 <p>{t("about.founder.journey.p3")}</p>
-                <p>{t("about.founder.journey.p3b")}</p>
                 <p>{t("about.founder.journey.p4")}</p>
                 <p>{t("about.founder.journey.p5")}</p>
-                <p className="text-xl font-semibold text-[#F9FAFB] italic">{t("about.founder.journey.p6")}</p>
+                <p>{t("about.founder.journey.p6")}</p>
+                <p>{t("about.founder.journey.p7")}</p>
+                <p>{t("about.founder.journey.p8")}</p>
+                <p>{t("about.founder.journey.p9")}</p>
+                <p className="text-xl font-semibold text-[#F9FAFB] italic">{t("about.founder.journey.p10")}</p>
+                
+                <blockquote className="border-l-4 border-[#7C3AED] pl-6 py-4 my-8 bg-[#111827] italic text-[#D1D5DB]">
+                  {t("about.founder.journey.quote")}
+                </blockquote>
               </div>
             </section>
             
@@ -87,8 +94,8 @@ export default function FounderPage() {
               <h2 className="text-3xl font-bold text-[#F9FAFB] mb-6">{t("about.founder.why.heading")}</h2>
               
               <div className="space-y-6 text-lg text-[#D1D5DB] leading-relaxed mb-10">
-                <p>{t("about.founder.journey.p7")}</p>
-                <p>{t("about.founder.journey.p8")}</p>
+                <p>{t("about.founder.why.mission")}</p>
+                <p>{t("about.founder.why.principles")}</p>
               </div>
               
               <div className="grid md:grid-cols-3 gap-6 mb-10">
