@@ -11,7 +11,6 @@ export default function Page() {
   try {
     return (
       <main className="min-h-[70vh]">
-        {/* Hero */}
         <section className="bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-950 border-b border-slate-200/60 dark:border-slate-800">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 text-center">
             <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
@@ -23,7 +22,6 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Body */}
         <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 space-y-10 leading-relaxed">
           <p>
             Sie wurden Lehrkraft, um Menschen zu inspirieren, nicht um in Korrekturen,
@@ -50,11 +48,11 @@ export default function Page() {
               basiert auf zwei Jahrzehnten Lernforschung und Weiterbildungspraxis, mit
               Tausenden von Lehrkräften, die unsere Tools durch Feedback aus dem Alltag
               mitgestalten. Jedes Produkt entsteht im Co-Design mit Lehrkräften und ist in
-              Forschung verankert – denn Abkürzungen, die die Pädagogik schwächen, sind
+              Forschung verankert - denn Abkürzungen, die die Pädagogik schwächen, sind
               keine Abkürzungen.
             </p>
             <p className="mt-2">
-              Deshalb gibt es den <strong>KnowledgeCore</strong> – eine vertrauenswürdige
+              Deshalb gibt es den <strong>KnowledgeCore</strong> - eine vertrauenswürdige
               Intelligenzschicht, die jede Zaza App erklärbar, datenschutzfreundlich und
               klassentauglich hält. Keine Black Boxes. Keine Halluzinationen, die Sie
               schlecht aussehen lassen. Keine Untergrabung Ihrer professionellen
@@ -70,7 +68,7 @@ export default function Page() {
               {" "} <Link href="/products/teach" className="underline">Zaza Teach</Link>
               {" "} (KI-gestützte Unterrichtsplanung mit AutoPlanner) und darüber hinaus
               verfolgen alle Produkte ein Ziel: Ihnen Ihre Zeit zurückzugeben, damit Sie
-              sich auf das konzentrieren können, was Sie am besten können – unterrichten.
+              sich auf das konzentrieren können, was Sie am besten können - unterrichten.
             </p>
           </div>
 
@@ -87,7 +85,6 @@ export default function Page() {
       </main>
     );
   } catch {
-    // If anything goes wrong rendering the DE page, fall back to EN.
     redirect("/about/company");
   }
 }

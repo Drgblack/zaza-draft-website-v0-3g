@@ -9,19 +9,17 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main className="min-h-[70vh]">
-      {/* Hero */}
       <section className="bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-950 border-b border-slate-200/60 dark:border-slate-800">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
             About Zaza Technologies
           </h1>
           <p className="mt-4 text-slate-600 dark:text-slate-300">
-            Teachers didn’t sign up for this much admin.
+            Teachers didn&apos;t sign up for this much admin.
           </p>
         </div>
       </section>
 
-      {/* Body */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 space-y-10 leading-relaxed">
         <p>
           You became a teacher to inspire minds, not to drown in grading, documentation,
