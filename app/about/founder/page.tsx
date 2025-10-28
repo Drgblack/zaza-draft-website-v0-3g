@@ -59,9 +59,9 @@ export default function FounderPage() {
             )}
           </h1>
           
-          {/* Enhanced Bio Card */}
-          <Card className="inline-block bg-gradient-to-br from-[#8B5CF6]/10 to-[#EC4899]/5 border-[#8B5CF6]/30 backdrop-blur-sm px-8 py-5 mb-8 shadow-lg shadow-[#8B5CF6]/10">
-            <p className="text-[#D1D5DB] text-base leading-relaxed max-w-2xl">
+          {/* Dark Bio Card - FIXED */}
+          <Card className="inline-block bg-[#1E293B] border-[#8B5CF6]/30 backdrop-blur-sm px-8 py-5 mb-8 shadow-lg shadow-[#8B5CF6]/10">
+            <p className="text-[#F8FAFC] text-base leading-relaxed max-w-2xl font-medium">
               PhD in Professional Education. 20 years in Learning & Development. Founder of Zaza Technologies to help teachers thrive.
             </p>
           </Card>
@@ -92,27 +92,27 @@ export default function FounderPage() {
           
           {/* Timeline Milestones */}
           <div className="flex items-center justify-center gap-4 mb-12 flex-wrap">
-            <div className="flex items-center gap-2 px-4 py-2 bg-[#111827] border border-[#8B5CF6]/20 rounded-lg">
+            <div className="flex items-center gap-2 px-4 py-2 bg-[#1E293B] border border-[#8B5CF6]/20 rounded-lg">
               <span className="w-2 h-2 bg-[#8B5CF6] rounded-full"></span>
               <span className="text-sm text-[#9CA3AF]">Apprentice</span>
             </div>
             <div className="w-8 h-px bg-[#8B5CF6]/30 hidden sm:block"></div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-[#111827] border border-[#8B5CF6]/20 rounded-lg">
+            <div className="flex items-center gap-2 px-4 py-2 bg-[#1E293B] border border-[#8B5CF6]/20 rounded-lg">
               <span className="w-2 h-2 bg-[#8B5CF6] rounded-full"></span>
               <span className="text-sm text-[#9CA3AF]">World Travel</span>
             </div>
             <div className="w-8 h-px bg-[#8B5CF6]/30 hidden sm:block"></div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-[#111827] border border-[#8B5CF6]/20 rounded-lg">
+            <div className="flex items-center gap-2 px-4 py-2 bg-[#1E293B] border border-[#8B5CF6]/20 rounded-lg">
               <span className="w-2 h-2 bg-[#8B5CF6] rounded-full"></span>
               <span className="text-sm text-[#9CA3AF]">UTas</span>
             </div>
             <div className="w-8 h-px bg-[#8B5CF6]/30 hidden sm:block"></div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-[#111827] border border-[#8B5CF6]/20 rounded-lg">
+            <div className="flex items-center gap-2 px-4 py-2 bg-[#1E293B] border border-[#8B5CF6]/20 rounded-lg">
               <span className="w-2 h-2 bg-[#8B5CF6] rounded-full"></span>
               <span className="text-sm text-[#9CA3AF]">PhD</span>
             </div>
             <div className="w-8 h-px bg-[#8B5CF6]/30 hidden sm:block"></div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-[#111827] border border-[#EC4899]/30 rounded-lg">
+            <div className="flex items-center gap-2 px-4 py-2 bg-[#1E293B] border border-[#EC4899]/30 rounded-lg">
               <span className="w-2 h-2 bg-[#EC4899] rounded-full"></span>
               <span className="text-sm text-[#D1D5DB] font-medium">Zaza</span>
             </div>
@@ -123,40 +123,38 @@ export default function FounderPage() {
             <p>{t("about.founder.journey.p2")}</p>
             <p>{t("about.founder.journey.p3")}</p>
             
-            {/* Mid-story Pull Quote */}
-            <div className="my-10 py-8 text-center animate-fade-in">
-              <p className="text-2xl font-semibold italic">
-                <span className="gradient-text">
-                  {language === 'en' ? 
-                    '"Education is the key to my future."' : 
-                    '„Bildung ist der Schlüssel zu meiner Zukunft."'
-                  }
-                </span>
+            {/* Mid-story Pull Quote - FIXED */}
+            <div className="my-10 py-8 px-6 bg-[#1E293B] border-l-4 border-[#8B5CF6] rounded-r-xl">
+              <p className="text-2xl font-semibold italic text-[#F8FAFC]">
+                {language === 'en' ? 
+                  '"Education is the key to my future."' : 
+                  '„Bildung ist der Schlüssel zu meiner Zukunft."'
+                }
               </p>
             </div>
             
             <p>{t("about.founder.journey.p4")}</p>
             <p>{t("about.founder.journey.p5")}</p>
             
-            {/* Callout block */}
-            <div className="border-l-4 border-[#8B5CF6] pl-6 py-5 my-10 bg-gradient-to-r from-[#8B5CF6]/10 to-transparent rounded-r-xl shadow-lg shadow-[#8B5CF6]/10">
-              <p className="text-[#E5E7EB] leading-[1.8]">{t("about.founder.journey.p6")}</p>
+            {/* Callout block - FIXED */}
+            <div className="border-l-4 border-[#8B5CF6] pl-6 py-5 my-10 bg-[#1E293B] rounded-r-xl">
+              <p className="text-[#F8FAFC] leading-[1.8] font-medium">{t("about.founder.journey.p6")}</p>
             </div>
             
             <p>{t("about.founder.journey.p7")}</p>
-            <p><span className="font-semibold text-[#8B5CF6]">For two decades</span> {t("about.founder.journey.p8").replace('For two decades in Learning & Development, I', 'in Learning & Development, I')}</p>
+            <p><span className="font-semibold text-[#C084FC]">For two decades</span> {t("about.founder.journey.p8").replace('For two decades in Learning & Development, I', 'in Learning & Development, I')}</p>
             <p>{t("about.founder.journey.p9")}</p>
             
-            {/* Final callout */}
-            <div className="border-l-4 border-[#EC4899] pl-6 py-5 my-10 bg-gradient-to-r from-[#EC4899]/10 to-transparent rounded-r-xl shadow-lg shadow-[#EC4899]/10">
-              <p className="text-xl font-semibold text-[#F9FAFB] italic">{t("about.founder.journey.p10")}</p>
+            {/* Final callout - FIXED */}
+            <div className="border-l-4 border-[#EC4899] pl-6 py-5 my-10 bg-[#1E293B] rounded-r-xl">
+              <p className="text-xl font-semibold text-[#F8FAFC] italic">{t("about.founder.journey.p10")}</p>
             </div>
             
-            {/* Final Pull Quote */}
-            <blockquote className="text-center py-12 my-12">
+            {/* Final Pull Quote - FIXED */}
+            <blockquote className="text-center py-12 my-12 px-8 bg-[#1E293B] rounded-xl border border-[#8B5CF6]/20">
               <div className="relative">
-                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-7xl text-[#8B5CF6]/20 font-serif">"</div>
-                <p className="text-3xl font-medium gradient-text italic relative z-10 px-8">
+                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-7xl text-[#8B5CF6]/30 font-serif">"</div>
+                <p className="text-3xl font-medium text-[#F8FAFC] italic relative z-10">
                   {t("about.founder.journey.quote")}
                 </p>
               </div>
@@ -180,42 +178,42 @@ export default function FounderPage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="bg-[#111827] border-[#1F2937] p-8 hover:border-[#8B5CF6]/50 hover:shadow-xl hover:shadow-[#8B5CF6]/10 hover:-translate-y-1 transition-all duration-300 group">
+            <Card className="bg-[#1E293B] border-[#8B5CF6]/30 p-8 hover:border-[#8B5CF6]/60 hover:shadow-xl hover:shadow-[#8B5CF6]/10 hover:-translate-y-1 transition-all duration-300 group">
               <div className="w-16 h-16 bg-gradient-to-br from-[#8B5CF6]/20 to-[#8B5CF6]/5 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                 <span className="text-4xl">👥</span>
               </div>
-              <h3 className="text-xl font-semibold text-[#F9FAFB] mb-4">{t("about.founder.why.principle1.title")}</h3>
+              <h3 className="text-xl font-semibold text-[#F8FAFC] mb-4">{t("about.founder.why.principle1.title")}</h3>
               <p className="text-base text-[#D1D5DB] leading-relaxed">
                 {t("about.founder.why.principle1.description")}
               </p>
             </Card>
             
-            <Card className="bg-[#111827] border-[#1F2937] p-8 hover:border-[#EC4899]/50 hover:shadow-xl hover:shadow-[#EC4899]/10 hover:-translate-y-1 transition-all duration-300 group">
+            <Card className="bg-[#1E293B] border-[#EC4899]/30 p-8 hover:border-[#EC4899]/60 hover:shadow-xl hover:shadow-[#EC4899]/10 hover:-translate-y-1 transition-all duration-300 group">
               <div className="w-16 h-16 bg-gradient-to-br from-[#EC4899]/20 to-[#EC4899]/5 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                 <span className="text-4xl">🎯</span>
               </div>
-              <h3 className="text-xl font-semibold text-[#F9FAFB] mb-4">{t("about.founder.why.principle2.title")}</h3>
+              <h3 className="text-xl font-semibold text-[#F8FAFC] mb-4">{t("about.founder.why.principle2.title")}</h3>
               <p className="text-base text-[#D1D5DB] leading-relaxed">
                 {t("about.founder.why.principle2.description")}
               </p>
             </Card>
             
-            <Card className="bg-[#111827] border-[#1F2937] p-8 hover:border-[#8B5CF6]/50 hover:shadow-xl hover:shadow-[#8B5CF6]/10 hover:-translate-y-1 transition-all duration-300 group">
+            <Card className="bg-[#1E293B] border-[#8B5CF6]/30 p-8 hover:border-[#8B5CF6]/60 hover:shadow-xl hover:shadow-[#8B5CF6]/10 hover:-translate-y-1 transition-all duration-300 group">
               <div className="w-16 h-16 bg-gradient-to-br from-[#8B5CF6]/20 to-[#EC4899]/10 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                 <span className="text-4xl">🔒</span>
               </div>
-              <h3 className="text-xl font-semibold text-[#F9FAFB] mb-4">{t("about.founder.why.principle3.title")}</h3>
+              <h3 className="text-xl font-semibold text-[#F8FAFC] mb-4">{t("about.founder.why.principle3.title")}</h3>
               <p className="text-base text-[#D1D5DB] leading-relaxed">
                 {t("about.founder.why.principle3.description")}
               </p>
             </Card>
           </div>
           
-          {/* Enhanced Social Proof */}
-          <Card className="bg-gradient-to-br from-[#8B5CF6]/10 via-[#EC4899]/5 to-[#8B5CF6]/10 border-[#8B5CF6]/30 p-10 text-center rounded-2xl shadow-2xl shadow-[#8B5CF6]/20">
+          {/* Enhanced Social Proof - FIXED */}
+          <Card className="bg-[#1E293B] border-[#8B5CF6]/30 p-10 text-center rounded-2xl shadow-2xl shadow-[#8B5CF6]/20">
             <p className="text-[#9CA3AF] text-sm uppercase tracking-wide mb-3">{t("about.founder.why.subtitle")}</p>
             <p className="text-6xl font-bold bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent mt-4 mb-3">2,400+</p>
-            <p className="text-lg text-[#D1D5DB]">Teachers already co-designing Zaza across 43 countries</p>
+            <p className="text-lg text-[#F8FAFC] font-medium">Teachers already co-designing Zaza across 43 countries</p>
           </Card>
         </section>
         
@@ -253,7 +251,7 @@ export default function FounderPage() {
             <p>{t("about.founder.note.p2")}</p>
             
             <div className="mt-10 pt-8 border-t border-gradient-to-r from-transparent via-[#8B5CF6]/30 to-transparent">
-              <p className="font-semibold text-[#F9FAFB] text-2xl">{t("about.founder.note.signature.name")}</p>
+              <p className="font-semibold text-[#F8FAFC] text-2xl">{t("about.founder.note.signature.name")}</p>
               <p className="text-base text-[#9CA3AF] mt-2">{t("about.founder.note.signature.role")}</p>
             </div>
           </div>
