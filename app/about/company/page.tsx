@@ -1,4 +1,5 @@
-﻿"use client"
+﻿// Updated: 2025-10-28 20:34
+"use client"
 import { Card } from "@/components/ui/card"
 import { useLanguage } from "@/lib/i18n/language-context"
 import { AboutSidebar } from "@/components/about-sidebar"
