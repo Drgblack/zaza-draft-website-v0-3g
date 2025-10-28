@@ -1,10 +1,4 @@
-"use client";
-
-import type { Metadata } from "next";
-import Link from "next/link";
-import { useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { useLanguage } from "@/lib/i18n/language-context";
+﻿import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Über Zaza Technologies",
@@ -12,187 +6,61 @@ export const metadata: Metadata = {
 };
 
 export default function AboutCompanyPageDE() {
-  const { t } = useLanguage();
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      return;
-    }
-    const items = document.querySelectorAll<HTMLElement>("[data-fade]");
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            (e.target as HTMLElement).classList.add("animate-in");
-            obs.unobserve(e.target);
-          }
-        });
-      },
-      { rootMargin: "0px 0px -10% 0px", threshold: 0.1 }
-    );
-    items.forEach((el) => obs.observe(el));
-    return () => obs.disconnect();
-  }, []);
-
   return (
     <main className="min-h-screen">
       {/* Hero */}
       <section className="bg-slate-900 text-white">
         <div className="mx-auto max-w-5xl px-4 py-16 sm:py-24 text-center">
-          <h1 className="mt-2 text-4xl sm:text-5xl font-bold">{t("about.company.hero.title")}</h1>
-          <p className="mt-5 text-lg sm:text-xl text-slate-200 max-w-3xl mx-auto font-semibold">
-            {t("about.company.hero.introBold")}
+          <h1 className="mt-2 text-4xl sm:text-5xl font-bold">Über Zaza Technologies</h1>
+          <p className="mt-4 text-slate-300 max-w-3xl mx-auto">
+            Lehrerfreundliche KI, entwickelt mit Lehrkräften und fundiert in Lernwissenschaft.
           </p>
         </div>
       </section>
 
-      {/* Body */}
-      <section className="bg-white dark:bg-slate-950">
-        <div className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
-          <hr className="my-6 border-slate-200 dark:border-slate-800" />
-          <p className="text-slate-700 dark:text-slate-200 leading-relaxed">
-            {t("about.company.intro.p1")}
-          </p>
-          <p className="mt-4 text-slate-700 dark:text-slate-300 leading-relaxed">
-            {t("about.company.intro.p2")}
-          </p>
-
-          <p className="mt-6 font-semibold text-slate-900 dark:text-white">
-            {t("about.company.intro.changeBold")}
+      {/* Content */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-3xl px-4 py-12 sm:py-16 prose prose-slate">
+          <h2 className="!mb-2">Lehrkräfte haben nicht für so viel Verwaltung unterschrieben.</h2>
+          <p>
+            Sie sind Lehrer oder Lehrerin geworden, um Köpfe zu inspirieren, nicht um in Korrekturen, Dokumentation und
+            Posteingang zu versinken. Doch genau das passiert – mit steigenden Burnout-Raten und engagierten Pädagogen,
+            die den Beruf verlassen, weil die bürokratische Last nicht mehr tragbar ist.
           </p>
 
-          {/* Warum Lehrer Zaza brauchen */}
-          <section className="mt-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
-              {t("about.company.whyNeed.title")}
-            </h2>
-            <div className="mt-4 space-y-4 text-slate-700 dark:text-slate-300 leading-relaxed">
-              <p>{t("about.company.whyNeed.p1")}</p>
-              <p>{t("about.company.whyNeed.p2")}</p>
-              <p>{t("about.company.whyNeed.p3")}</p>
-              <p>{t("about.company.whyNeed.p4")}</p>
-            </div>
+          <h3 className="!mt-10 !mb-2">Dafür gibt es Zaza</h3>
+          <p>
+            Gegründet 2025 von einem Learning Scientist mit 20 Jahren Erfahrung in der beruflichen Bildung, entwickeln wir
+            eine Familie von KI-Apps speziell für Lehrkräfte – nicht für die Schulleitung verkauft, nicht von der IT
+            ausgewählt, sondern gemeinsam mit Pädagogen gebaut, um die Probleme zu lösen, die Ihnen wirklich Zeit und Energie rauben.
+          </p>
 
-            <div className="mt-5">
-              <Button asChild variant="outline" size="lg" className="rounded-full">
-                <Link href="/de/about/founder">{t("about.company.founder.link")}</Link>
-              </Button>
-            </div>
-          </section>
+          <h3 className="!mt-10 !mb-2">Was uns unterscheidet</h3>
+          <p>
+            Wir sind nicht noch ein Tech-Unternehmen, das Bildung neu "entdeckt". Zaza basiert auf zwei Jahrzehnten
+            Lernwissenschaft und Weiterbildungspraxis. Tausende Lehrkräfte gestalten unsere Tools mit echtem
+            Feedback aus dem Alltag. Jedes Produkt ist mit Lehrkräften co-designt und forschungsbasiert – denn Abkürzungen,
+            die die Pädagogik kompromittieren, sind keine Abkürzungen.
+          </p>
+          <p>
+            Deshalb haben wir die KnowledgeCore entwickelt – eine vertrauenswürdige Intelligenzschicht, die jede Zaza-App
+            erklärbar, datenschutzorientiert und klassenraumtauglich macht. Keine Black Boxes. Keine Halluzinationen, die
+            Sie bloßstellen. Keine Untergrabung Ihrer professionellen Urteilsfähigkeit.
+          </p>
 
-          <hr className="my-10 border-slate-200 dark:border-slate-800" />
+          <h3 className="!mt-10 !mb-2">So funktioniert es</h3>
+          <p>
+            Von Zaza Draft (intelligente Kommentarformulierung) bis Zaza Teach (KI-Unterrichtsplanung mit AutoPlanner) und
+            darüber hinaus verfolgen alle Produkte ein Ziel: Ihnen Zeit zurückzugeben, damit Sie sich auf das Wesentliche
+            konzentrieren können – das Unterrichten.
+          </p>
 
-          {/* Vision */}
-          <blockquote className="italic text-slate-800 dark:text-slate-100 border-l-4 pl-4 border-purple-400/60">
-            <p>„{t("about.company.vision.quote")}“</p>
-            <cite className="not-italic text-sm text-slate-600 dark:text-slate-400 block mt-2">{t("about.company.vision.cite")}</cite>
-          </blockquote>
-
-          <hr className="my-10 border-slate-200 dark:border-slate-800" />
-
-          {/* Vertrauen */}
-          <section>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
-              {t("about.company.whyTrust.title")}
-            </h2>
-            <p className="mt-4 font-semibold text-slate-900 dark:text-white">
-              {t("about.company.whyTrust.p1Bold")}
-            </p>
-            <div className="mt-3 space-y-4 text-slate-700 dark:text-slate-300 leading-relaxed">
-              <p>{t("about.company.whyTrust.p2")}</p>
-              <p>{t("about.company.whyTrust.p3")}</p>
-              <p className="font-semibold text-slate-900 dark:text-white">
-                {t("about.company.whyTrust.knowledgeCoreBold")}
-              </p>
-              <p className="font-medium">{t("about.company.whyTrust.noBlackBoxes")}</p>
-              <p>{t("about.company.whyTrust.useCase")}</p>
-            </div>
-
-            {/* Testimonial 1 */}
-            <figure
-              data-fade
-              className="mt-6 rounded-2xl bg-slate-50 dark:bg-slate-900/60 p-5 shadow-sm motion-safe:opacity-0 motion-safe:translate-y-3"
-            >
-              <p className="text-slate-900 dark:text-white">„{t("about.company.whyTrust.testimonial1.text")}“</p>
-              <figcaption className="mt-3 text-sm text-slate-600 dark:text-slate-400">– {t("about.company.whyTrust.testimonial1.author")}</figcaption>
-            </figure>
-          </section>
-
-          {/* Mid‑page CTA */}
-          <section className="mt-10">
-            <div className="rounded-2xl gradient-primary text-white p-6 sm:p-8 text-center">
-              <h3 className="text-2xl font-bold">{t("about.company.cta.mid.title")}</h3>
-              <div className="mt-4">
-                <Button asChild size="lg" className="rounded-full bg-white text-slate-900 hover:bg-white/90">
-                  <Link href="/signup" data-cta="about-mid">{t("about.company.cta.mid.button")}</Link>
-                </Button>
-              </div>
-            </div>
-          </section>
-
-          <hr className="my-10 border-slate-200 dark:border-slate-800" />
-
-          {/* Ein Tag mit Zaza */}
-          <section>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
-              {t("about.company.day.title")}
-            </h2>
-            <p className="mt-4 text-slate-700 dark:text-slate-300 leading-relaxed">{t("about.company.day.p1")}</p>
-            <p className="mt-4 font-semibold text-slate-900 dark:text-white">{t("about.company.day.changeBold")}</p>
-
-            <div className="mt-4 space-y-4 text-slate-700 dark:text-slate-300 leading-relaxed">
-              <p>
-                <span className="font-semibold">{t("about.company.day.parentUpdateBold")} </span>
-                {t("about.company.day.parentUpdateBody")}
-              </p>
-              <p>
-                <span className="font-semibold">{t("about.company.day.lessonPlanBold")} </span>
-                {t("about.company.day.lessonPlanBody")}
-              </p>
-              <p>
-                <span className="font-semibold">{t("about.company.day.gradingBold")} </span>
-                {t("about.company.day.gradingBody")}
-              </p>
-              <p>
-                <span className="font-semibold">{t("about.company.day.shieldBold")} </span>
-                {t("about.company.day.shieldBody")}
-              </p>
-              <p>{t("about.company.day.wrap")}</p>
-              <p className="font-semibold">{t("about.company.day.principlesBold")}</p>
-              <p>{t("about.company.day.zara")}</p>
-            </div>
-
-            {/* Testimonial 2 */}
-            <figure
-              data-fade
-              className="mt-6 rounded-2xl bg-slate-50 dark:bg-slate-900/60 p-5 shadow-sm motion-safe:opacity-0 motion-safe:translate-y-3"
-            >
-              <p className="text-slate-900 dark:text-white">„{t("about.company.day.testimonial2.text")}“</p>
-              <figcaption className="mt-3 text-sm text-slate-600 dark:text-slate-400">– {t("about.company.day.testimonial2.author")}</figcaption>
-            </figure>
-
-            <div className="mt-8 text-center">
-              <Button asChild size="lg" className="rounded-full gradient-primary text-white hover:opacity-95">
-                <Link href="/signup" data-cta="about-final">{t("about.company.cta.final.button")}</Link>
-              </Button>
-            </div>
-          </section>
-
-          <hr className="my-10 border-slate-200 dark:border-slate-800" />
-
-          {/* Unser Versprechen */}
-          <section>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
-              {t("about.company.promise.title")}
-            </h2>
-            <div className="mt-4 space-y-4 text-slate-700 dark:text-slate-300 leading-relaxed">
-              <p>{t("about.company.promise.p1")}</p>
-              <p className="font-semibold text-slate-900 dark:text-white">{t("about.company.promise.p2Bold")}</p>
-              <p>{t("about.company.promise.p3")}</p>
-            </div>
-            <p className="mt-8 italic text-slate-600 dark:text-slate-400">*{t("about.company.footer")}*</p>
-          </section>
+          <h3 className="!mt-10 !mb-2">Unser Versprechen</h3>
+          <p>
+            Wir kommen nicht mit großen Tech-Versprechen. Wir kommen mit Klarheit, Nützlichkeit und Vertrauen. Denn jede
+            Lehrkraft verdient Werkzeuge, die das eigene Handwerk respektieren, die Glaubwürdigkeit schützen und beim
+            Aufblühen helfen.
+          </p>
         </div>
       </section>
     </main>
