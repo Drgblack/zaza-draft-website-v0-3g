@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 import { createContext, useContext, useState, type ReactNode } from "react"
 
 type Language = "en" | "de" | "es" | "fr" | "it"
@@ -49,7 +49,7 @@ const translationsEn: Record<string, string> = {
   "pricing.premium.priceAnnual": "$120/yr",
   "pricing.premium.period": "Cancel anytime",
   "pricing.premium.annualTotal": "Billed annually",
-  "pricing.premium.savings": "Save 2 months",
+  "pricing.premium.savings": "Save $24/year",
   "pricing.premium.cta": "Start 7Ã”Ã‡Ã¦day Free Trial",
   "pricing.premium.trial": "No credit card required",
   "pricing.premium.guarantee": "30Ã”Ã‡Ã¦day moneyÃ”Ã‡Ã¦back guarantee",
@@ -87,9 +87,9 @@ const translationsEn: Record<string, string> = {
   "pricing.bundle.badge": "BEST VALUE",
   "pricing.bundle.title": "Draft + Teach + GradeFlow",
   "pricing.bundle.description": "Everything you need for writing, planning, and grading.",
-  "pricing.bundle.price": "$199/yr",
-  "pricing.bundle.originalPrice": "$276/yr",
-  "pricing.bundle.savings": "Save $77 when bundled",
+  "pricing.bundle.price": "$199/year",
+  "pricing.bundle.originalPrice": "$276/year",
+  "pricing.bundle.savings": "Save $77/year",
   "pricing.bundle.cta": "Get the Bundle",
 
   // Pricing - Comparison
@@ -1304,11 +1304,11 @@ const translationsDe: Record<string, string> = {
   "pricing.premium.badge": "AM BELIEBTESTEN",
   "pricing.premium.title": "Premium",
   "pricing.premium.description": "Unbegrenztes, halluzinationssicheres Schreiben mit ProÃ”Ã‡Ã¦Werkzeugen.",
-  "pricing.premium.priceMonthly": "12 Ã”Ã©Â¼/Monat",
-  "pricing.premium.priceAnnual": "120 Ã”Ã©Â¼/Jahr",
+  "pricing.premium.priceMonthly": "$12/mo",
+  "pricing.premium.priceAnnual": "$120/yr",
   "pricing.premium.period": "Jederzeit kâ”œâ•ndbar",
   "pricing.premium.annualTotal": "Jâ”œÃ±hrliche Abrechnung",
-  "pricing.premium.savings": "2 Monate sparen",
+  "pricing.premium.savings": "Save $24/year",
   "pricing.premium.cta": "7Ã”Ã‡Ã¦TageÃ”Ã‡Ã¦Test starten",
   "pricing.premium.trial": "Keine Kreditkarte erforderlich",
   "pricing.premium.guarantee": "30Ã”Ã‡Ã¦Tage GeldÃ”Ã‡Ã¦zurâ”œâ•ckÃ”Ã‡Ã¦Garantie",
@@ -1346,9 +1346,9 @@ const translationsDe: Record<string, string> = {
   "pricing.bundle.badge": "BESTER WERT",
   "pricing.bundle.title": "Draft + Teach + GradeFlow",
   "pricing.bundle.description": "Alles fâ”œâ•r Schreiben, Planung und Bewertung.",
-  "pricing.bundle.price": "199 Ã”Ã©Â¼/Jahr",
-  "pricing.bundle.originalPrice": "276 Ã”Ã©Â¼/Jahr",
-  "pricing.bundle.savings": "Sparen Sie 77 Ã”Ã©Â¼ im Bundle",
+  "pricing.bundle.price": "$199/year",
+  "pricing.bundle.originalPrice": "$276/year",
+  "pricing.bundle.savings": "Save $77/year",
   "pricing.bundle.cta": "Bundle wâ”œÃ±hlen",
 
   // Preise Ã”Ã‡Ã´ Vergleich
