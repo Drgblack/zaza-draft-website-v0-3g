@@ -1076,9 +1076,9 @@ const translationsEn: Record<string, string> = {
 
   "about.company.stats.teachers.label": "Teachers Using Zaza",
   "about.company.stats.teachers.value": "500+",
-  "about.company.stats.countries.label": "Countries",
+  "about.company.stats.countries.label": "Countries Represented",
   "about.company.stats.countries.value": "15",
-  "about.company.stats.timeSaved.label": "Hours Saved Weekly",
+  "about.company.stats.timeSaved.label": "Average Hours Saved Per Week",
   "about.company.stats.timeSaved.value": "10+",
 
   // Founder Hero Section
@@ -1223,18 +1223,18 @@ const translationsEn: Record<string, string> = {
   "about.company.body.dayZara": "And because every app includes Zara, your consistent in-app assistant—you'll always have support from a voice you already know and trust.",
   "about.company.body.testimonial2": "Zaza gave me back my evenings. I'm a better teacher now because I'm not exhausted.",
   "about.company.body.testimonial2Author": "Michael R., High School History Teacher",
-  "about.company.body.dayCTA": "Ready to reclaim your time?",
+  "about.company.body.dayCTA": "Join 2,400+ teachers saving 10+ hours per week",
   "about.company.body.dayCtaLink": "Start your free 14-day trial",
   "about.company.body.promiseHeading": "Our Promise",
   "about.company.body.promiseP1": "We're not here with big tech promises. We're here with clarity, usefulness, and trust.",
   "about.company.body.promiseP2": "Every teacher deserves tools that respect their craft, protect their credibility, and help them thrive.",
   "about.company.body.promiseP3": "Try Zaza Draft free for 14 days. If it doesn't save you at least 2 hours in your first week, we'll refund you immediately, no questions asked.",
   "about.company.body.footer": "Built by educators, for educators.",
-  "about.company.stats.teachers.label": "Teachers",
+  "about.company.stats.teachers.label": "Teachers Using Zaza",
   "about.company.stats.teachers.value": "2,400+",
-  "about.company.stats.countries.label": "Countries",
+  "about.company.stats.countries.label": "Countries Represented",
   "about.company.stats.countries.value": "43",
-  "about.company.stats.timeSaved.label": "Hours Saved Weekly",
+  "about.company.stats.timeSaved.label": "Average Hours Saved Per Week",
   "about.company.stats.timeSaved.value": "2+",
 }
 
@@ -2403,18 +2403,18 @@ const translationsDe: Record<string, string> = {
   "about.company.body.dayZara": "Und weil jede App Zara enthält—Ihre durchgängige In-App-Assistentin—haben Sie immer Unterstützung von einer Stimme, die Sie bereits kennen und der Sie vertrauen.",
   "about.company.body.testimonial2": "Zaza gab mir meine Abende zurück. Ich bin jetzt eine bessere Lehrerin, weil ich nicht erschöpft bin.",
   "about.company.body.testimonial2Author": "Michael R., Geschichtslehrer Gymnasium",
-  "about.company.body.dayCTA": "Bereit, Ihre Zeit zurückzugewinnen?",
+  "about.company.body.dayCTA": "Schließen Sie sich 2.400+ Lehrkräften an, die 10+ Stunden pro Woche sparen",
   "about.company.body.dayCtaLink": "Starten Sie Ihre kostenlose 14-Tage-Testversion",
   "about.company.body.promiseHeading": "Unser Versprechen",
   "about.company.body.promiseP1": "Wir sind nicht hier mit großen Tech-Versprechen. Wir sind hier mit Klarheit, Nützlichkeit und Vertrauen.",
   "about.company.body.promiseP2": "Jede Lehrkraft verdient Tools, die ihr Handwerk respektieren, ihre Glaubwürdigkeit schützen und ihr helfen zu gedeihen.",
   "about.company.body.promiseP3": "Testen Sie Zaza Draft 14 Tage kostenlos. Wenn es Ihnen in der ersten Woche nicht mindestens 2 Stunden spart, erstatten wir Ihnen sofort den Betrag zurück, ohne Fragen.",
   "about.company.body.footer": "Von Pädagogen entwickelt, für Pädagogen.",
-  "about.company.stats.teachers.label": "Lehrkräfte",
+  "about.company.stats.teachers.label": "Lehrkräfte nutzen Zaza",
   "about.company.stats.teachers.value": "2.400+",
-  "about.company.stats.countries.label": "Länder",
+  "about.company.stats.countries.label": "Länder vertreten",
   "about.company.stats.countries.value": "43",
-  "about.company.stats.timeSaved.label": "Wöchentlich gesparte Stunden",
+  "about.company.stats.timeSaved.label": "Durchschnittlich gesparte Stunden pro Woche",
   "about.company.stats.timeSaved.value": "2+",
 }
 
@@ -2449,6 +2449,7 @@ export function useLanguage() {
   }
   return context
 }
+
 
 
 
