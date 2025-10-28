@@ -173,7 +173,7 @@ export default function AboutCompanyPage() {
             </figure>
 
             <div className="mt-8 text-center">
-              <Button asChild size="lg" className="rounded-full gradient-primary text-white">
+              <Button asChild size="lg" className="rounded-full gradient-primary text-white hover:opacity-95">
                 <Link href="/signup" data-cta="about-final">{t("about.company.cta.final.button")}</Link>
               </Button>
             </div>
@@ -198,5 +198,6 @@ export default function AboutCompanyPage() {
     </main>
   );
 }
+
 
 
