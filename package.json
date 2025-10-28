@@ -7,6 +7,7 @@
     "dev": "next dev",
     "typecheck": "tsc --noEmit",
     "lint": "next lint",
+    "test:e2e": "playwright test",
     "validate-posts": "tsx src/data/validate-posts.ts",
     "validate:json": "tsx scripts/validate-json.ts",
     "start": "next start",

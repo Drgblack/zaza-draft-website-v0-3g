@@ -13,6 +13,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
+      url: `${baseUrl}/about/company`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/de/about/company`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/features`,
       lastModified: currentDate,
       changeFrequency: "weekly" as const,
@@ -89,4 +101,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   return [...corePages, ...hubPages, ...legalPages]
-}
+
