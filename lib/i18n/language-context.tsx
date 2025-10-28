@@ -2481,8 +2481,8 @@ const translationsDe: Record<string, string> = {
   "about.founder.note.p1": "Wenn Sie Lehrer:in sind, haben Sie wahrscheinlich schon Tools ausprobiert, die Stundenersparnis versprachen, aber nur zusätzliche Arbeit brachten. Ich verstehe diese Skepsis. Zaza ist anders. Wir bauen nicht an Ihnen vorbei, sondern mit Ihnen zusammen. Wir hören zu, wir verbessern uns kontinuierlich, und wir stellen Klarheit und Nützlichkeit über Lärm und Versprechungen.",
   "about.founder.note.p2": "Meine Tür steht offen. Wenn Sie Feedback haben oder dabei helfen möchten zu gestalten, was Lehrer:innen als nächstes brauchen, melden Sie sich gern.",
   "about.founder.note.signature.name": "Greg",
-  "about.founder.note.signature.role": "Gründer & Pädagoge · Zaza Technologies",const translationsEs: Record<string, string> = {}
-
+  "about.founder.note.signature.role": "Gründer & Pädagoge · Zaza Technologies",
+}
 const translationsFr: Record<string, string> = {}
 
 const translationsIt: Record<string, string> = {}
@@ -2512,6 +2512,7 @@ export function useLanguage() {
   }
   return context
 }
+
 
 
 
