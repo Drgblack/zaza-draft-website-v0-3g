@@ -2487,7 +2487,7 @@ const translationsDe: Record<string, string> = {
 const translationsEs: Record<string, string> = {}
 
 
-
+const translationsFr: Record<string, string> = {}
 const translationsIt: Record<string, string> = {}
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
@@ -2515,6 +2515,7 @@ export function useLanguage() {
   }
   return context
 }
+
 
 
 
