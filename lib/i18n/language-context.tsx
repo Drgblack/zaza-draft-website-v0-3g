@@ -1270,10 +1270,10 @@ const translationsEn: Record<string, string> = {
   "about.founder.note.p2": "My door is open. If you have feedback or want to help shape what teachers need next, please reach out.",
   "about.founder.note.signature.name": "Greg",
   "about.founder.note.signature.role": "Founder & Educator · Zaza Technologies",
+  "about.founder.note.signature.role": "Founder & Educator · Zaza Technologies",
 }
-  // Pricing Page (DE)
-  "pricing.hero.preheadline": "PREISE",
-  "pricing.hero.headline": "Einfache Plâ”œÃ±ne fâ”œâ•r Lehrkrâ”œÃ±fte",
+
+const translationsDe: Record<string, string> = {
   "pricing.hero.subheadline": "Kostenlos starten, jederzeit upgraden. Jederzeit kâ”œâ•ndbar.",
   "pricing.trust.teachers": "Vertrauen von 500+ Lehrkrâ”œÃ±ften",
   "pricing.trust.ferpa": "FERPA-konform",
@@ -2512,6 +2512,7 @@ export function useLanguage() {
   }
   return context
 }
+
 
 
 
