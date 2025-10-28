@@ -1251,7 +1251,7 @@ const translationsEn: Record<string, string> = {
   "about.founder.journey.p5": "So I returned to Tasmania, applied to the University of Tasmania, and was delighted to be accepted.",
   "about.founder.journey.p6": "That turning point at the University of Tasmania set me on a new course. I discovered not only the power of education to transform my own life, but also a lifelong passion for understanding how people learn.",
   "about.founder.journey.p7": "I went on to study Administration, Information Systems, and German, earning First Class Honours. My research pulled me deeper into learning science, critical thinking, problem-solving, and student-centred approaches. Later, I completed a PhD by publication in Professional Education at City, University of London.",
-  "about.founder.journey.p8": "For two decades in Learning & Development, I taught thousands of adults in real classrooms, designed learning programs, and led major initiatives. I saw what works in education, what gets in the way, and why educators need tools that respect their expertise.",
+  "about.founder.journey.p8": "For two decades in Learning & Development, I taught thousands of adults in real classrooms, designed learning programs, and led major initiatives. My PhD research focused on tech-supported, student-centered learning, exploring how to cultivate critical thinking and problem-solving skills. As Chief Learning Officer at Communardo, I now lead AI-powered learning design and LMS innovation across organizations. But through all of it, one truth held constant: I saw what works in education, what gets in the way, and why educators need tools that respect their expertise.",
   "about.founder.journey.p9": "I also stayed close to teachers in my own family and community. Listening to their struggles with parent emails, grading, and paperwork showed me the same patterns of overload. All necessary, but so consuming that it steals the time and energy teachers need most.",
   "about.founder.journey.p10": "That is when the idea of Zaza began to take root.",
   "about.founder.journey.quote": "Every teacher deserves tools that respect their craft and give them time to do what they do best: teach.",
@@ -2515,6 +2515,7 @@ export function useLanguage() {
   }
   return context
 }
+
 
 
 
