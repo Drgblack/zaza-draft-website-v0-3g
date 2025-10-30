@@ -1,0 +1,7 @@
+route,key,locale,type,severity,suggestion
+/pricing/,/#demo,,anchor_missing,low,"Add id=""demo"" or update link"
+/products/gradeflow/,/pricing/#gradeflow,,anchor_missing,low,"Add id=""gradeflow"" or update link"
+/products/gradeflow/,/pricing/#gradeflow,,anchor_missing,low,"Add id=""gradeflow"" or update link"
+/state-of-ai-report/,http://localhost:4311/state-of-ai-report/,,broken_link,low,Temporarily suppressed (allowlist)
+/pricing/,/#demo,,anchor_missing,low,"Add id=""demo"" or update link"
+/signup/,http://localhost:4311/signup/,,broken_link,low,Temporarily suppressed (allowlist)
