@@ -119,12 +119,12 @@ const translationsEn: Record<string, string> = {
   "pricing.comparison.row4.premium": "PDF/DOCX",
   "pricing.comparison.row4.team": "PDF/DOCX",
   "pricing.comparison.row5.feature": "Comment banks",
-  "pricing.comparison.row5.free": "–",
+  "pricing.comparison.row5.free": "â",
   "pricing.comparison.row5.premium": "Personal",
   "pricing.comparison.row5.team": "Team shared",
   "pricing.comparison.row6.feature": "Admin tools",
-  "pricing.comparison.row6.free": "–",
-  "pricing.comparison.row6.premium": "–",
+  "pricing.comparison.row6.free": "â",
+  "pricing.comparison.row6.premium": "â",
   "pricing.comparison.row6.team": "Seats, SSO, roles",
   "pricing.comparison.row7.feature": "Support",
   "pricing.comparison.row7.free": "Community",
@@ -145,12 +145,12 @@ const translationsEn: Record<string, string> = {
   "pricing.faq.q2": "Can I cancel anytime?",
   "pricing.faq.a2": "Absolutely. You can cancel from your account settings at any time.",
   "pricing.faq.q3": "Do you offer a trial?",
-  "pricing.faq.a3": "Premium includes a 7–day free trial with no credit card required.",
+  "pricing.faq.a3": "Premium includes a 7âday free trial with no credit card required.",
   "pricing.faq.q4": "What's included in Premium?",
   "pricing.faq.a4": "Unlimited drafting, advanced tone controls, templates, exports, and priority support.",
   "pricing.faq.q5": "Do you have team pricing?",
   "pricing.faq.a5": "Yes. Contact us for school and district pricing with admin tools.",
-  "pricing.faq.q6": "Is Zaza Draft FERPA–compliant?",
+  "pricing.faq.q6": "Is Zaza Draft FERPAâcompliant?",
   "pricing.faq.a6": "Yes. Zaza Draft is designed to protect student privacy and data.",
   "pricing.faq.q7": "Can I use Draft in other languages?",
   "pricing.faq.a7": "Yes. Translate to 20+ languages while keeping the right tone.",
@@ -162,7 +162,7 @@ const translationsEn: Record<string, string> = {
   "pricing.testimonials.author1": "Elena M., Primary Teacher",
   "pricing.testimonials.quote1": "Premium pays for itself in the first week I use it.",
   "pricing.testimonials.author2": "David R., High School",
-  "pricing.testimonials.quote2": "The time savings make the annual plan a no–brainer.",
+  "pricing.testimonials.quote2": "The time savings make the annual plan a noâbrainer.",
   "pricing.testimonials.author3": "Julia K., Middle School",
   "pricing.testimonials.quote3": "Our department bundle streamlined planning and grading.",
 
@@ -171,7 +171,7 @@ const translationsEn: Record<string, string> = {
   "pricing.finalCta.subtitle": "Start free today or talk to our team.",
   "pricing.finalCta.primary": "Start Free",
   "pricing.finalCta.secondary": "Book a Demo",
-  "pricing.finalCta.trust": "Hallucination–safe – FERPA–compliant – Built for teachers",
+  "pricing.finalCta.trust": "Hallucinationâsafe â FERPAâcompliant â Built for teachers",
 
   // Pricing - Decision Tool section
   "pricing.decision.title": "Not Sure Which Plan to Choose?",
@@ -1136,7 +1136,7 @@ const translationsEn: Record<string, string> = {
   "founder.personal.company": "Zaza Technologies",
   "founder.personal.cta": "Get in Touch",
 
-  // Webinars (EN) â€” additions
+  // Webinars (EN) — additions
   "webinars.hero.badge": "50+ Professional Development Sessions",
   "webinars.labels.featured": "Featured",
   "webinars.labels.certificateIncluded": "Certificate included",
@@ -1223,7 +1223,7 @@ const translationsEn: Record<string, string> = {
   "about.company.body.dayShieldA": "Shield helps you reply with professionalism and protects your boundaries by reminding you it can wait until morning.",
   "about.company.body.daySummary": "Whether you're using Draft for parent communications, Teach for lesson planning, GradeFlow for assessments, or Shield as your buffer for stressful messages, the principles are the same:",
   "about.company.body.dayPrinciples": "Respect for your craft. Protection of your credibility. Tools that actually reduce stress.",
-  "about.company.body.dayZara": "And because every app includes Zara, your consistent in-app assistant—you'll always have support from a voice you already know and trust.",
+  "about.company.body.dayZara": "And because every app includes Zara, your consistent in-app assistant-you'll always have support from a voice you already know and trust.",
   "about.company.body.testimonial2": "Zaza gave me back my evenings. I'm a better teacher now because I'm not exhausted.",
   "about.company.body.testimonial2Author": "Michael R., High School History Teacher",
   "about.company.body.dayCTA": "Join 2,400+ teachers saving 10+ hours per week",
@@ -1286,24 +1286,24 @@ const translationsDe: Record<string, string> = {
   "pricing.toggle.annual": "Jährlich",
   "pricing.toggle.save": "2 Monate sparen",
 
-  // Preise — Free
+  // Preise â Free
   "pricing.free.badge": "KOSTENLOS",
   "pricing.free.title": "Starter",
   "pricing.free.description": "Alles, um Draft auszuprobieren und heute Zeit zu sparen.",
-  "pricing.free.price": "0 €",
+  "pricing.free.price": "0 -¬",
   "pricing.free.period": "/ dauerhaft",
   "pricing.free.cta": "Kostenlos starten",
   "pricing.free.upgradeText": "Jederzeit für mehr Funktionen upgraden",
   "pricing.free.featuresTitle": "Enthalten",
-  "pricing.free.feature1": "KI–Schreiben für E–Mails, Zeugnisse, Feedback",
+  "pricing.free.feature1": "KI-Schreiben für E-Mails, Zeugnisse, Feedback",
   "pricing.free.feature2": "5 Verfeinerungen pro Tag",
   "pricing.free.feature3": "4 Tonoptionen (unterstützend, formal, kurz, neutral)",
-  "pricing.free.feature4": "â”œÜbersetzung in 20+ Sprachen",
+  "pricing.free.feature4": "Übersetzung in 20+ Sprachen",
   "pricing.free.feature5": "Kopieren, herunterladen und teilen",
-  "pricing.free.feature6": "Basis–Vorlagen",
+  "pricing.free.feature6": "Basis-Vorlagen",
   "pricing.free.limitation": "Ideal zum Testen und für leichte Nutzung",
 
-  // Preise — Premium
+  // Preise â Premium
   "pricing.premium.badge": "AM BELIEBTESTEN",
   "pricing.premium.title": "Draft Premium",
   "pricing.premium.description": "Unlimited, hallucination-safe writing for teachers. Save hours every week.",
@@ -1312,23 +1312,23 @@ const translationsDe: Record<string, string> = {
   "pricing.premium.period": "Jederzeit kündbar",
   "pricing.premium.annualTotal": "Jährliche Abrechnung",
   "pricing.premium.savings": "Save $24/year",
-  "pricing.premium.cta": "7–Tage–Test starten",
+  "pricing.premium.cta": "7-Tage-Test starten",
   "pricing.premium.trial": "Keine Kreditkarte erforderlich",
-  "pricing.premium.guarantee": "30–Tage Geld–zurück–Garantie",
+  "pricing.premium.guarantee": "30-Tage Geld-zurück-Garantie",
   "pricing.premium.timeSaving": "Spart 10+ Stunden pro Woche",
   "pricing.premium.featuresTitle": "Alles von Free, plus",
   "pricing.premium.feature1": "Unbegrenzte Entwürfe und Verfeinerungen",
-  "pricing.premium.feature2": "Erweiterte Ton– und Stilsteuerung",
+  "pricing.premium.feature2": "Erweiterte Ton- und Stilsteuerung",
   "pricing.premium.feature3": "Eigene Vorlagen und Kommentarbänke",
   "pricing.premium.feature4": "Wiederverwendbare Textbausteine und Favoriten",
   "pricing.premium.feature5": "Halluzinationssichere Ausgaben by Design",
-  "pricing.premium.feature6": "PDF/DOCX–Export und Versionsverlauf",
-  "pricing.premium.feature7": "Priorisierter E–Mail–Support",
+  "pricing.premium.feature6": "PDF/DOCX-Export und Versionsverlauf",
+  "pricing.premium.feature7": "Priorisierter E-Mail-Support",
   "pricing.premium.roiTitle": "Echte Zeitersparnis",
   "pricing.premium.roiText": "Lehrkräfte berichten von 10+ Stunden Ersparnis pro Woche.",
 
-  // Preise — Team
-  "pricing.team.badge": "Fâ”œÜR SCHULEN",
+  // Preise â Team
+  "pricing.team.badge": "FÜR SCHULEN",
   "pricing.team.title": "Team & Schulen",
   "pricing.team.description": "Zusammenarbeit, Verwaltung und Support für Fachbereiche und Bezirke.",
   "pricing.team.price": "Individuell",
@@ -1336,16 +1336,16 @@ const translationsDe: Record<string, string> = {
   "pricing.team.starting": "Mengenrabatte verfügbar",
   "pricing.team.cta": "Vertrieb kontaktieren",
   "pricing.team.featuresTitle": "Alles aus Premium, plus",
-  "pricing.team.feature1": "Admin–Konsole und Sitzplatzverwaltung",
+  "pricing.team.feature1": "Admin-Konsole und Sitzplatzverwaltung",
   "pricing.team.feature2": "Geteilte Vorlagen und Bibliotheken",
-  "pricing.team.feature3": "Team–Töne und Konsistenz",
+  "pricing.team.feature3": "Team-Töne und Konsistenz",
   "pricing.team.feature4": "Nutzungsanalysen und Berichte",
   "pricing.team.feature5": "SSO und Rollenrechte",
   "pricing.team.feature6": "Priorisierter Support & Onboarding",
   "pricing.team.feature7": "Mengenpreise",
   "pricing.team.roi": "Mehr Konsistenz und Zeitgewinn im Team",
 
-  // Preise — Bundle
+  // Preise â Bundle
   "pricing.bundle.badge": "BESTER WERT",
   "pricing.bundle.title": "Draft + Teach + GradeFlow",
   "pricing.bundle.description": "Alles für Schreiben, Planung und Bewertung.",
@@ -1354,7 +1354,7 @@ const translationsDe: Record<string, string> = {
   "pricing.bundle.savings": "Save $109.89/year",
   "pricing.bundle.cta": "Bundle wählen",
 
-  // Preise — Vergleich
+  // Preise â Vergleich
   "pricing.comparison.title": "Pläne vergleichen",
   "pricing.comparison.features": "Funktionen",
   "pricing.comparison.free": "Free",
@@ -1378,61 +1378,61 @@ const translationsDe: Record<string, string> = {
   "pricing.comparison.row4.premium": "PDF/DOCX",
   "pricing.comparison.row4.team": "PDF/DOCX",
   "pricing.comparison.row5.feature": "Kommentarbänke",
-  "pricing.comparison.row5.free": "–",
+  "pricing.comparison.row5.free": "-",
   "pricing.comparison.row5.premium": "Persönlich",
-  "pricing.comparison.row5.team": "Team–geteilt",
-  "pricing.comparison.row6.feature": "Admin–Tools",
-  "pricing.comparison.row6.free": "–",
-  "pricing.comparison.row6.premium": "–",
+  "pricing.comparison.row5.team": "Team-geteilt",
+  "pricing.comparison.row6.feature": "Admin-Tools",
+  "pricing.comparison.row6.free": "-",
+  "pricing.comparison.row6.premium": "-",
   "pricing.comparison.row6.team": "Sitze, SSO, Rollen",
   "pricing.comparison.row7.feature": "Support",
   "pricing.comparison.row7.free": "Community",
-  "pricing.comparison.row7.premium": "Priorisierter E–Mail",
+  "pricing.comparison.row7.premium": "Priorisierter E-Mail",
   "pricing.comparison.row7.team": "Priorisiert + Onboarding",
   "pricing.comparison.row8.feature": "Preis",
-  "pricing.comparison.row8.free": "0 €",
-  "pricing.comparison.row8.premium": "12 €/Monat",
+  "pricing.comparison.row8.free": "0 -¬",
+  "pricing.comparison.row8.premium": "12 -¬/Monat",
   "pricing.comparison.row8.team": "Individuell",
   "pricing.comparison.ctaFree": "Kostenlos starten",
   "pricing.comparison.ctaPremium": "Gratis testen",
   "pricing.comparison.ctaTeam": "Vertrieb kontaktieren",
 
-  // Preise — FAQ
+  // Preise â FAQ
   "pricing.faq.title": "FAQ zu Preisen & Abrechnung",
   "pricing.faq.q1": "Gibt es einen kostenlosen Plan?",
   "pricing.faq.a1": "Ja. Free ist ideal zum Testen und für leichte Nutzung.",
   "pricing.faq.q2": "Kann ich jederzeit kündigen?",
   "pricing.faq.a2": "Ja. Kündigung jederzeit in den Kontoeinstellungen möglich.",
   "pricing.faq.q3": "Gibt es eine Testphase?",
-  "pricing.faq.a3": "Premium enthält eine 7–Tage–Testphase ohne Kreditkarte.",
+  "pricing.faq.a3": "Premium enthält eine 7-Tage-Testphase ohne Kreditkarte.",
   "pricing.faq.q4": "Was umfasst Premium?",
-  "pricing.faq.a4": "Unbegrenzte Entwürfe, erweiterte Töne, Vorlagen, Exporte und Priority–Support.",
-  "pricing.faq.q5": "Gibt es Team–Preise?",
-  "pricing.faq.a5": "Ja. Kontaktieren Sie uns für Schul–/Bezirkslizenzen mit Admin–Tools.",
-  "pricing.faq.q6": "Ist Zaza Draft FERPA–konform?",
+  "pricing.faq.a4": "Unbegrenzte Entwürfe, erweiterte Töne, Vorlagen, Exporte und Priority-Support.",
+  "pricing.faq.q5": "Gibt es Team-Preise?",
+  "pricing.faq.a5": "Ja. Kontaktieren Sie uns für Schul-/Bezirkslizenzen mit Admin-Tools.",
+  "pricing.faq.q6": "Ist Zaza Draft FERPA-konform?",
   "pricing.faq.a6": "Ja. Zaza Draft schützt Schülerdaten und Privatsphäre.",
   "pricing.faq.q7": "Kann ich Draft in anderen Sprachen nutzen?",
-  "pricing.faq.a7": "Ja. â”œÜbersetzung in 20+ Sprachen mit passendem Ton.",
+  "pricing.faq.a7": "Übersetzung in 20+ Sprachen mit passendem Ton.",
   "pricing.faq.q8": "Gibt es Rückerstattungen?",
-  "pricing.faq.a8": "Wir bieten 30–Tage Geld–zurück für Premium.",
+  "pricing.faq.a8": "Wir bieten 30-Tage Geld-zurück für Premium.",
 
-  // Preise — Testimonials
+  // Preise â Testimonials
   "pricing.testimonials.title": "Was Lehrkräfte zu den Preisen sagen",
   "pricing.testimonials.author1": "Elena M., Grundschule",
   "pricing.testimonials.quote1": "Premium rechnet sich schon in der ersten Woche.",
   "pricing.testimonials.author2": "David R., Gymnasium",
   "pricing.testimonials.quote2": "Die Zeitersparnis macht das Jahresabo zur klaren Wahl.",
   "pricing.testimonials.author3": "Julia K., Sekundarstufe",
-  "pricing.testimonials.quote3": "Unser Abteilungs–Bundle vereinfacht Planung und Bewertung.",
+  "pricing.testimonials.quote3": "Unser Abteilungs-Bundle vereinfacht Planung und Bewertung.",
 
-  // Preise — Abschluss–CTA
+  // Preise â AbschlussâCTA
   "pricing.finalCta.title": "Bereit, jede Woche Stunden zu sparen?",
   "pricing.finalCta.subtitle": "Starten Sie kostenlos oder sprechen Sie mit unserem Team.",
   "pricing.finalCta.primary": "Kostenlos starten",
   "pricing.finalCta.secondary": "Demo buchen",
-  "pricing.finalCta.trust": "Halluzinationssicher – FERPA–konform – Für Lehrkräfte gebaut",
+  "pricing.finalCta.trust": "Halluzinationssicher - FERPA-konform - Für Lehrkräfte gebaut",
 
-  // Preise — Entscheidungs–Tool
+  // Preise â EntscheidungsâTool
   "pricing.decision.title": "Unsicher, welcher Plan passt?",
   "pricing.decision.subtitle": "Machen Sie unser kurzes Quiz für eine persönliche Empfehlung",
   // Navigation
@@ -1447,7 +1447,7 @@ const translationsDe: Record<string, string> = {
   "nav.learningCentre": "Lernzentrum",
   "nav.resources": "Ressourcen",
   "nav.faq": "FAQ",
-  "nav.about": "â”œÜber uns",
+  "nav.about": "Über uns",
   "nav.getStarted": "Jetzt starten",
 
   // Suite Page Hero (DE)
@@ -1488,7 +1488,7 @@ const translationsDe: Record<string, string> = {
   "suite.draft.body": "Kommentare und Berichte ohne Burnout - klare, wertschätzende Kommunikation, fundiert in Forschung zum Wohlbefinden von Lehrkräften.",
   "suite.draft.li1": "Vorlagen für Berichte und Kommentare, die Sie anpassen können",
   "suite.draft.li2": "Tonleitfäden und Bias-Prüfungen für faires, unterstützendes Feedback",
-  "suite.draft.li3": "Standardmäâ”œÆ’ig privat; für professionelle, elternreife Texte entwickelt",
+  "suite.draft.li3": "Standardmäßig privat; für professionelle, elternreife Texte entwickelt",
   "suite.draft.cta": "Mehr über Draft erfahren",
 
   "suite.gradeflow.body": "Ein erklärbarer Bewertungs-Copilot mit OCR, Rubriken und evidenzbasiertem Feedback - schneller korrigieren mit Fairness und Konsistenz.",
@@ -1514,7 +1514,7 @@ const translationsDe: Record<string, string> = {
   "suite.why.title": "Warum Schulen Zaza wählen",
   "suite.why.timeSaved": "Zeitersparnis: Lehrkräfte gewinnen jede Woche Stunden zurück.",
   "suite.why.retention": "Bindung unterstützt: Weniger Stress und gerechtere Arbeitslast.",
-  "suite.why.safety": "Sicher und konform: Datenschutz und Schutz standardmäâ”œÆ’ig.",
+  "suite.why.safety": "Sicher und konform: Datenschutz und Schutz standardmäßig.",
   "suite.why.evidence": "Evidenzbasiert: Pädagogik und Nachvollziehbarkeit, nicht nur Tempo.",
 
   // Suite - Roadmap (DE)
@@ -1537,7 +1537,7 @@ const translationsDe: Record<string, string> = {
   "suite.hiw.step1.title": "Passende App wählen",
   "suite.hiw.step1.desc": "Teach fürs Planen, Draft fürs Schreiben, GradeFlow fürs Bewerten, Shield für Grenzen.",
   "suite.hiw.step2.title": "Eigenen Kontext hinzufügen",
-  "suite.hiw.step2.desc": "Lehrplan, Klassendetails, Rubriken und Ton flieâ”œÆ’en einmal in KnowledgeCore ein und gelten überall.",
+  "suite.hiw.step2.desc": "Lehrplan, Klassendetails, Rubriken und Ton fließen einmal in KnowledgeCore ein und gelten überall.",
   "suite.hiw.step3.title": "Schulreife Ergebnisse erhalten",
   "suite.hiw.step3.desc": "Vertrauenswürdige, erklärbare Resultate mit konsistenten Schutzmechanismen in jedem Workflow.",
 
@@ -1549,7 +1549,7 @@ const translationsDe: Record<string, string> = {
   "suite.testimonials.2.quote": "Konsistente Bewertung mit klaren Nachweisen. GradeFlow hat die Qualität klassenübergreifend erhöht.",
   "suite.testimonials.2.author": "Michael Brown",
   "suite.testimonials.2.role": "Oberstufenlehrer, USA",
-  "suite.testimonials.3.quote": "Draft schützt Ton und Wohlbefinden. Ich kommuniziere mehr — mit weniger Stress.",
+  "suite.testimonials.3.quote": "Draft schützt Ton und Wohlbefinden. Ich kommuniziere mehr - mit weniger Stress.",
   "suite.testimonials.3.author": "Emma Rodriguez",
   "suite.testimonials.3.role": "Lehrerin Sek I, CA",
 
@@ -1588,7 +1588,7 @@ const translationsDe: Record<string, string> = {
   "webinars.buttons.registerNow": "Jetzt registrieren",
   "webinars.buttons.waitlistFull": "Warteliste voll",
   "webinars.empty": "Keine Webinare passend zu Ihrer Suche gefunden.",
-  "webinars.cta.body": "Schlieâ”œÆ’en Sie sich Tausenden Lehrkräften an, die ihre Praxis mit KI transformieren. Melden Sie sich noch heute für Ihr erstes Webinar an.",
+  "webinars.cta.body": "Schließen Sie sich Tausenden Lehrkräften an, die ihre Praxis mit KI transformieren. Melden Sie sich noch heute für Ihr erstes Webinar an.",
   "webinars.cta.browseUpcoming": "Bevorstehende Webinare ansehen",
 
   // Community (DE)
@@ -1609,7 +1609,7 @@ const translationsDe: Record<string, string> = {
   "community.categories.lesson-planning.name": "Unterrichtsplanung",
   "community.categories.lesson-planning.desc": "Gemeinsam KI-gestützte Unterrichts- und Einheitenplanung erarbeiten.",
   "community.categories.parent-communication.name": "Elternkommunikation",
-  "community.categories.parent-communication.desc": "Tipps für den KI–Einsatz zur Verbesserung der Eltern-Lehrer-Kommunikation.",
+  "community.categories.parent-communication.desc": "Tipps für den KI-Einsatz zur Verbesserung der Eltern-Lehrer-Kommunikation.",
   "community.categories.assessment-feedback.name": "Bewertung & Feedback",
   "community.categories.assessment-feedback.desc": "KI-Tools für Korrektur, Feedback und formative Beurteilung diskutieren.",
   "community.categories.differentiation.name": "Differenzierung & Förderpläne",
@@ -1625,16 +1625,16 @@ const translationsDe: Record<string, string> = {
   "community.categories.subject-specific.name": "Fachspezifisch",
   "community.categories.subject-specific.desc": "Diskussionen nach Fach (Mathematik, Deutsch, Naturwissenschaften usw.).",
   "community.categories.off-topic.name": "Off-Topic-Lounge",
-  "community.categories.off-topic.desc": "Austausch zu Themen auâ”œÆ’erhalb von KI.",
+  "community.categories.off-topic.desc": "Austausch zu Themen außerhalb von KI.",
   // Abzeichen
   "community.badges.firstPost.name": "Erster Beitrag",
   "community.badges.firstPost.desc": "Ihren ersten Beitrag verfasst",
   "community.badges.helpful.name": "Hilfreich",
-  "community.badges.helpful.desc": "â”œÜber 50 Likes erhalten",
+  "community.badges.helpful.desc": "Über 50 Likes erhalten",
   "community.badges.expert.name": "Experte",
   "community.badges.expert.desc": "Expertenlevel erreicht",
   "community.badges.ambassador.name": "Botschafter",
-  "community.badges.ambassador.desc": "Offizieller Zaza–Botschafter",
+  "community.badges.ambassador.desc": "Offizieller Zaza-Botschafter",
   // Richtlinien
   "community.guidelines.title": "Community-Richtlinien",
   "community.guidelines.li1": "Respektvoll und unterstützend sein",
@@ -1644,12 +1644,12 @@ const translationsDe: Record<string, string> = {
   "community.guidelines.read": "Vollständige Richtlinien lesen",
   // Verwandte Inhalte
   "community.related.title": "Wissen erweitern",
-  "community.related.desc": "Vertiefen Sie Ihr Community–Erlebnis mit diesen Lernressourcen",
-  "community.related.aiLiteracy.title": "KI–Kompetenzkurse",
+  "community.related.desc": "Vertiefen Sie Ihr Community-Erlebnis mit diesen Lernressourcen",
+  "community.related.aiLiteracy.title": "KI-Kompetenzkurse",
   "community.related.aiLiteracy.desc": "Grundlagen lernen, die in der Community diskutiert werden",
-  "community.related.webinars.title": "Experten–Webinare",
-  "community.related.webinars.desc": "Live–Sessions zu aktuellen Community–Themen",
-  "community.related.glossary.title": "KI–Glossar",
+  "community.related.webinars.title": "Experten-Webinare",
+  "community.related.webinars.desc": "Live-Sessions zu aktuellen Community-Themen",
+  "community.related.glossary.title": "KI-Glossar",
   "community.related.glossary.desc": "Begriffe aus den Diskussionen verstehen",
   // CTA
   "community.cta.titlePrefix": "Bereit,",
@@ -1658,14 +1658,14 @@ const translationsDe: Record<string, string> = {
   "community.cta.primary": "Kostenloses Konto erstellen",
   "community.cta.secondary": "Als Gast stöbern",
 
-  "about.nav.title": "â”œÜber uns",
+  "about.nav.title": "Über uns",
   "about.nav.company": "Unternehmen",
   "about.nav.founder": "Gründer",
   "about.nav.press": "Presse-Kit",
   "about.nav.careers": "Karriere",
 
   // Hero Section
-  "hero.eyebrow": "Fâ”œÜR LEHRKRäFTE",
+  "hero.eyebrow": "FÜR LEHRKRÄFTE",
   "hero.badge": "Halluzinationssichere KI für Lehrkräfte",
   "hero.headline": "Schreiben Sie wie Sie",
   "hero.headlineAccent": "nur schneller.",
@@ -1680,7 +1680,7 @@ const translationsDe: Record<string, string> = {
   // Hallucination-Safe Tooltip
   "hallucinationSafe.tooltip.heading": "Was bedeutet halluzinationssicher?",
   "hallucinationSafe.tooltip.body":
-    "Im Gegensatz zu generischen KI-Tools ist Zaza Draft speziell darauf trainiert, keine Schülerinformationen zu erfinden, keine Elterngespräche zu fabrizieren oder Details über Ihre Klasse zu konstruieren. Jede Ausgabe basiert ausschlieâ”œÆ’lich auf Ihren tatsächlichen Angaben - keine erfundenen Fakten, keine fiktiven Szenarien.",
+    "Im Gegensatz zu generischen KI-Tools ist Zaza Draft speziell darauf trainiert, keine Schülerinformationen zu erfinden, keine Elterngespräche zu fabrizieren oder Details über Ihre Klasse zu konstruieren. Jede Ausgabe basiert ausschließlich auf Ihren tatsächlichen Angaben - keine erfundenen Fakten, keine fiktiven Szenarien.",
 
   // Problem Section
   "problem.heading": "Lehrkräfte verbringen über 10 Stunden pro Woche mit Schreibaufgaben",
@@ -1822,14 +1822,14 @@ const translationsDe: Record<string, string> = {
 
   // Final CTA Section
   "finalCTA.heading": "Holen Sie sich Ihre Zeit zurück",
-  "finalCTA.subheading": "Schlieâ”œÆ’en Sie sich 500+ Lehrkräften an, die mit Zaza Draft jede Woche 10+ Stunden sparen.",
+  "finalCTA.subheading": "Schließen Sie sich 500+ Lehrkräften an, die mit Zaza Draft jede Woche 10+ Stunden sparen.",
   "finalCTA.button": "Kostenlos starten",
 
   // Footer
   "footer.social.tiktok": "Folgen Sie uns auf TikTok @zazatechnologies",
   "footer.social.twitter": "Folgen Sie uns auf X (Twitter) @zazateachapp",
   "footer.social.linkedin": "Verbinden Sie sich mit uns auf LinkedIn",
-  "footer.productEcosystem": "Produkt & â”œÃ»kosystem",
+  "footer.productEcosystem": "Produkt &Ökosystem",
   "footer.learningResources": "Lernen & Ressourcen",
   "footer.company": "Unternehmen",
   "footer.features": "Funktionen",
@@ -1844,7 +1844,7 @@ const translationsDe: Record<string, string> = {
   "footer.teacherResources": "Lehrerressourcen",
   "footer.support": "Support",
   "footer.faq": "FAQ",
-  "footer.about": "â”œÜber uns",
+  "footer.about": "Über uns",
   "footer.privacy": "Datenschutz",
   "footer.terms": "Nutzungsbedingungen",
   "footer.contact": "Kontakt",
@@ -1861,7 +1861,7 @@ const translationsDe: Record<string, string> = {
   "products.teach.turn.pain2": "Schwierigkeiten bei der Differenzierung für verschiedene Lernende",
   "products.teach.turn.pain3": "Zeit für administrative Aufgaben statt für das Unterrichten verlieren",
 
-  "products.teach.features.title": "Alles, was Sie für groâ”œÆ’artige Unterrichtsstunden brauchen",
+  "products.teach.features.title": "Alles, was Sie für großartige Unterrichtsstunden brauchen",
   "products.teach.features.autoplanner.title": "Auto-Planer",
   "products.teach.features.autoplanner.desc":
     "Erstellen Sie in Minuten vollständige, an Ihre Lehrplanstandards angepasste Unterrichtspläne",
@@ -1889,7 +1889,7 @@ const translationsDe: Record<string, string> = {
   "products.teach.change.title": "Transformieren Sie Ihren Planungsprozess",
   "products.teach.change.step1": "Reduzieren Sie die Planungszeit von Stunden auf Minuten",
   "products.teach.change.step2": "Erstellen Sie ansprechendere, differenzierte Unterrichtsstunden",
-  "products.teach.change.step3": "Stellen Sie die â”œÜbereinstimmung mit Lehrplanstandards sicher",
+  "products.teach.change.step3": "Stellen Sie die Übereinstimmung mit Lehrplanstandards sicher",
   "products.teach.change.step4": "Teilen und arbeiten Sie mit Ihrem Lehrerteam zusammen",
 
   "products.teach.social.title": "Was Lehrkräfte sagen",
@@ -1900,12 +1900,12 @@ const translationsDe: Record<string, string> = {
   "products.teach.social.author2": "Michael Chen, Fachbereichsleiter",
 
   "products.teach.cta.title": "Bereit, Ihre Planung zu transformieren?",
-  "products.teach.cta.subtitle": "Schlieâ”œÆ’en Sie sich Hunderten von Lehrkräften an, die 10+ Stunden pro Woche sparen",
+  "products.teach.cta.subtitle": "Schließen Sie sich Hunderten von Lehrkräften an, die 10+ Stunden pro Woche sparen",
   "products.teach.cta.primary": "Kostenlose Testversion starten",
   "products.teach.cta.secondary": "Demo planen",
 
   // Products - Draft (German)
-  "products.draft.hero.eyebrow": "KI-SCHREIBASSISTENT Fâ”œÜR LEHRKRäFTE",
+  "products.draft.hero.eyebrow": "KI-SCHREIBASSISTENT FÜR LEHRKRÄFTE",
   "products.draft.hero.title": "Besser, schneller schreiben",
   "products.draft.hero.subtitle":
     "Verwandeln Sie grobe Notizen in ausgefeilte Eltern-E-Mails, Zeugnisse und Feedback in Minuten. Bewahren Sie Ihre Stimme und sparen Sie jede Woche Stunden.",
@@ -1920,18 +1920,18 @@ const translationsDe: Record<string, string> = {
   "products.draft.features.toneGuardrails.title": "Ton-Leitplanken",
   "products.draft.features.toneGuardrails.desc":
     "Wählen Sie aus unterstützenden, formellen, prägnanten oder neutralen Tönen - immer professionell",
-  "products.draft.features.translationChecks.title": "â”œÜbersetzungsprüfungen",
+  "products.draft.features.translationChecks.title": "Übersetzungsprüfungen",
   "products.draft.features.translationChecks.desc": "Kommunizieren Sie selbstbewusst mit Familien in über 20 Sprachen",
-  "products.draft.features.reviewSteps.title": "â”œÜberprüfungsschritte",
+  "products.draft.features.reviewSteps.title": "Überprüfungsschritte",
   "products.draft.features.reviewSteps.desc":
-    "Integrierter â”œÜberprüfungsprozess gewährleistet Genauigkeit vor dem Senden",
+    "Integrierter Überprüfungsprozess gewährleistet Genauigkeit vor dem Senden",
 
   "products.draft.howItWorks.title": "So funktioniert es",
   "products.draft.howItWorks.step1.title": "Notizen einfügen",
   "products.draft.howItWorks.step1.desc": "Beginnen Sie mit Stichpunkten oder einem groben Entwurf",
   "products.draft.howItWorks.step2.title": "Ton wählen",
   "products.draft.howItWorks.step2.desc": "Wählen Sie die richtige Stimme für Ihre Nachricht",
-  "products.draft.howItWorks.step3.title": "â”œÜberprüfen & Senden",
+  "products.draft.howItWorks.step3.title": "Überprüfen & Senden",
   "products.draft.howItWorks.step3.desc": "Bei Bedarf bearbeiten, dann kopieren oder exportieren",
 
   "products.draft.whoItsFor.title": "Perfekt für",
@@ -1957,7 +1957,7 @@ const translationsDe: Record<string, string> = {
   "products.draft.social.author2": "James Rodriguez, Mittelschullehrer",
 
   "products.draft.cta.title": "Holen Sie sich Ihre Zeit zurück",
-  "products.draft.cta.subtitle": "Schlieâ”œÆ’en Sie sich 500+ Lehrkräften an, die jede Woche 10+ Stunden sparen",
+  "products.draft.cta.subtitle": "Schließen Sie sich 500+ Lehrkräften an, die jede Woche 10+ Stunden sparen",
   "products.draft.cta.primary": "Kostenlose Testversion starten",
   "products.draft.cta.secondary": "Beispiele ansehen",
 
@@ -1997,7 +1997,7 @@ const translationsDe: Record<string, string> = {
   "products.gradeflow.cta.button": "Kostenlose Testversion starten",
 
   // Products - Shield (German)
-  "shield.hero.eyebrow": "KI-GOVERNANCE Fâ”œÜR SCHULEN",
+  "shield.hero.eyebrow": "KI-GOVERNANCE FÜR SCHULEN",
   "shield.hero.title": "Sichere, konforme KI für Ihre Schule",
   "shield.hero.subtitle":
     "Enterprise-Grade KI-Governance-Plattform, die sichere, ethische und konforme KI-Nutzung in Ihrer gesamten Schule oder Ihrem Bezirk gewährleistet.",
@@ -2019,7 +2019,7 @@ const translationsDe: Record<string, string> = {
   "shield.problem.card3.description": "Keine Sichtbarkeit, wie KI in Klassenzimmern und Abteilungen verwendet wird",
 
   "shield.solution.title": "Vollständige KI-Governance in einer Plattform",
-  "shield.solution.subtitle": "â”œÜberwachen, kontrollieren und prüfen Sie die gesamte KI-Nutzung in Ihrer Schule",
+  "shield.solution.subtitle": "Überwachen, kontrollieren und prüfen Sie die gesamte KI-Nutzung in Ihrer Schule",
   "shield.solution.card1.title": "Zentralisierte Kontrolle",
   "shield.solution.card1.description":
     "Legen Sie schulweite Richtlinien für die KI-Nutzung mit granularen Berechtigungen fest",
@@ -2036,7 +2036,7 @@ const translationsDe: Record<string, string> = {
   "shield.howItWorks.step1.description": "Integrieren Sie Shield mit Ihren vorhandenen KI-Tools und Plattformen",
   "shield.howItWorks.step2.title": "Richtlinien festlegen",
   "shield.howItWorks.step2.description": "Definieren Sie Regeln für KI-Nutzung, Datenverarbeitung und Compliance",
-  "shield.howItWorks.step3.title": "â”œÜberwachen & Prüfen",
+  "shield.howItWorks.step3.title": "Überwachen & Prüfen",
   "shield.howItWorks.step3.description":
     "Verfolgen Sie die Nutzung, überprüfen Sie Protokolle und stellen Sie Compliance sicher",
   "shield.howItWorks.cta": "Loslegen",
@@ -2051,7 +2051,7 @@ const translationsDe: Record<string, string> = {
   "shield.useCases.card1.title": "Lehrer-KI-Tools",
   "shield.useCases.card1.description": "Verwalten Sie KI-Schreibassistenten, Unterrichtsplaner und Bewertungstools",
   "shield.useCases.card2.title": "Schüler-KI-Nutzung",
-  "shield.useCases.card2.description": "â”œÜberwachen und leiten Sie angemessene KI-Nutzung in Schülerarbeiten",
+  "shield.useCases.card2.description": "Überwachen und leiten Sie angemessene KI-Nutzung in Schülerarbeiten",
   "shield.useCases.card3.title": "Administrative KI",
   "shield.useCases.card3.description": "Sichere KI-Nutzung für Planung, Kommunikation und Betrieb",
 
@@ -2067,16 +2067,16 @@ const translationsDe: Record<string, string> = {
   "shield.comparison.row2.manual": "Unvollständige Aufzeichnungen",
   "shield.comparison.row3.feature": "PII-Schutz",
   "shield.comparison.row3.shield": "Automatisch",
-  "shield.comparison.row3.manual": "Manuelle â”œÜberprüfung",
+  "shield.comparison.row3.manual": "Manuelle Überprüfung",
 
   "shield.pricing.title": "Enterprise-Preise",
   "shield.pricing.description":
-    "Individuelle Preisgestaltung basierend auf Ihrer Schulgröâ”œÆ’e und Ihren Anforderungen. Kontaktieren Sie uns für ein Angebot.",
+    "Individuelle Preisgestaltung basierend auf Ihrer Schulgröße und Ihren Anforderungen. Kontaktieren Sie uns für ein Angebot.",
   "shield.pricing.cta": "Preise erhalten",
 
   "shield.finalCta.title": "Bereit, die KI Ihrer Schule zu sichern?",
   "shield.finalCta.subtitle":
-    "Schlieâ”œÆ’en Sie sich zukunftsorientierten Schulen an, die Shield nutzen, um KI sicher einzusetzen",
+    "Schließen Sie sich zukunftsorientierten Schulen an, die Shield nutzen, um KI sicher einzusetzen",
   "shield.finalCta.primary": "Demo planen",
   "shield.finalCta.secondary": "Vertrieb kontaktieren",
   "shield.finalCta.note": "Enterprise-Support und Onboarding inklusive",
@@ -2087,11 +2087,11 @@ const translationsDe: Record<string, string> = {
   "faq.hero.subtitle": "Finden Sie Antworten auf häufige Fragen zu Zaza Draft und unseren KI-Tools für Lehrkräfte.",
 
   // FAQ Categories (German)
-  "faq.category.about.title": "â”œÜber Zaza Draft",
+  "faq.category.about.title": "Über Zaza Draft",
   "faq.category.safety.title": "Sicherheit & Datenschutz",
   "faq.category.features.title": "Funktionen & Möglichkeiten",
   "faq.category.pricing.title": "Preise & Pläne",
-  "faq.category.languages.title": "Sprachen & â”œÜbersetzung",
+  "faq.category.languages.title": "Übersetzung",
   "faq.category.schools.title": "Für Schulen & Bezirke",
 
   // About Questions (German)
@@ -2129,7 +2129,7 @@ const translationsDe: Record<string, string> = {
 
   "faq.about.q9": "Funktioniert Zaza Draft in meinem Land?",
   "faq.about.a9":
-    "Ja! Zaza Draft ist weltweit verfügbar und unterstützt Kommunikation in über 20 Sprachen. Egal, ob Sie in den USA, Groâ”œÆ’britannien, Kanada, Australien oder anderswo sind, Draft kann Ihnen helfen, effektiv zu kommunizieren.",
+    "Ja! Zaza Draft ist weltweit verfügbar und unterstützt Kommunikation in über 20 Sprachen. Egal, ob Sie in den USA, Großbritannien, Kanada, Australien oder anderswo sind, Draft kann Ihnen helfen, effektiv zu kommunizieren.",
 
   "faq.about.q10": "Was ist das Zaza-Produktökosystem?",
   "faq.about.a10":
@@ -2142,7 +2142,7 @@ const translationsDe: Record<string, string> = {
   // Safety Questions (German)
   "faq.safety.q1": "Sind meine Daten bei Zaza Draft sicher?",
   "faq.safety.a1":
-    "Ja. Wir nehmen Datensicherheit ernst. Alle Daten sind während der â”œÜbertragung und im Ruhezustand verschlüsselt, wir sind FERPA-konform und wir verwenden Ihre Daten niemals zum Trainieren unserer Modelle oder teilen sie mit Dritten. Ihre Kommunikation bleibt privat und sicher.",
+    "Ja. Wir nehmen Datensicherheit ernst. Alle Daten sind während der Übertragung und im Ruhezustand verschlüsselt, wir sind FERPA-konform und wir verwenden Ihre Daten niemals zum Trainieren unserer Modelle oder teilen sie mit Dritten. Ihre Kommunikation bleibt privat und sicher.",
 
   "faq.safety.q2": "Was bedeutet 'halluzinationssicher'?",
   "faq.safety.a2":
@@ -2150,7 +2150,7 @@ const translationsDe: Record<string, string> = {
 
   "faq.safety.q3": "Ist Zaza Draft FERPA-konform?",
   "faq.safety.a3":
-    "Ja. Zaza Draft ist mit Blick auf FERPA-Konformität entwickelt. Wir implementieren angemessene Schutzmaâ”œÆ’nahmen zum Schutz der Privatsphäre von Schülern und Bildungsunterlagen, und wir teilen oder verkaufen niemals Schülerdaten.",
+    "Ja. Zaza Draft ist mit Blick auf FERPA-Konformität entwickelt. Wir implementieren angemessene Schutzmaßnahmen zum Schutz der Privatsphäre von Schülern und Bildungsunterlagen, und wir teilen oder verkaufen niemals Schülerdaten.",
 
   "faq.safety.q4": "Kann ich Schülernamen in meinen Entwürfen verwenden?",
   "faq.safety.a4":
@@ -2162,7 +2162,7 @@ const translationsDe: Record<string, string> = {
 
   "faq.safety.q6": "Ist Zaza Draft DSGVO-konform?",
   "faq.safety.a6":
-    "Ja. Wir erfüllen die DSGVO-Anforderungen für Datenschutz und Privatsphäre. Benutzer haben volle Kontrolle über ihre Daten, einschlieâ”œÆ’lich des Rechts auf Zugriff, Korrektur und Löschung ihrer Informationen.",
+    "Ja. Wir erfüllen die DSGVO-Anforderungen für Datenschutz und Privatsphäre. Benutzer haben volle Kontrolle über ihre Daten, einschließlich des Rechts auf Zugriff, Korrektur und Löschung ihrer Informationen.",
 
   // Features Questions (German)
   "faq.features.q1": "Welche Tonoptionen sind verfügbar?",
@@ -2171,7 +2171,7 @@ const translationsDe: Record<string, string> = {
 
   "faq.features.q2": "Kann Draft meine Nachrichten übersetzen?",
   "faq.features.a2":
-    "Ja! Draft kann Ihre Kommunikation in über 20 Sprachen übersetzen, was es einfach macht, mit Familien zu kommunizieren, die verschiedene Sprachen sprechen. â”œÜbersetzungen bewahren den angemessenen Ton und pädagogischen Kontext.",
+    "Übersetzungen bewahren den angemessenen Ton und pädagogischen Kontext.",
 
   "faq.features.q3": "Funktioniert Draft mit den Systemen meiner Schule?",
   "faq.features.a3":
@@ -2200,7 +2200,7 @@ const translationsDe: Record<string, string> = {
 
   "faq.pricing.q3": "Bieten Sie Schul- oder Bezirkspreise an?",
   "faq.pricing.a3":
-    "Ja! Wir bieten spezielle Preise für Schulen und Bezirke an, einschlieâ”œÆ’lich Mengenrabatten, zentralisierter Abrechnung und zusätzlicher Funktionen wie Teamzusammenarbeit und Admin-Kontrollen. Kontaktieren Sie unser Vertriebsteam für ein individuelles Angebot.",
+    "Ja! Wir bieten spezielle Preise für Schulen und Bezirke an, einschließlich Mengenrabatten, zentralisierter Abrechnung und zusätzlicher Funktionen wie Teamzusammenarbeit und Admin-Kontrollen. Kontaktieren Sie unser Vertriebsteam für ein individuelles Angebot.",
 
   "faq.pricing.q4": "Kann ich jederzeit kündigen?",
   "faq.pricing.a4":
@@ -2211,9 +2211,9 @@ const translationsDe: Record<string, string> = {
   "faq.languages.a1":
     "Draft unterstützt Kommunikation in über 20 Sprachen, darunter Spanisch, Französisch, Deutsch, Mandarin, Arabisch, Portugiesisch und viele mehr. Sie können auf Englisch schreiben und in jede unterstützte Sprache übersetzen oder direkt in Ihrer bevorzugten Sprache schreiben.",
 
-  "faq.languages.q2": "Wie genau sind die â”œÜbersetzungen?",
+  "faq.languages.q2": "Übersetzungen?",
   "faq.languages.a2":
-    "Unsere â”œÜbersetzungen sind speziell für pädagogische Kontexte kalibriert und bewahren angemessenen Ton und Formalität. Während wir empfehlen, â”œÜbersetzungen für kritische Kommunikation von Muttersprachlern überprüfen zu lassen, sind unsere â”œÜbersetzungen sehr genau und kontextuell angemessen.",
+    "Übersetzungen sehr genau und kontextuell angemessen.",
 
   "faq.languages.q3": "Kann Draft mir helfen, mit mehrsprachigen Familien zu kommunizieren?",
   "faq.languages.a3":
@@ -2235,7 +2235,7 @@ const translationsDe: Record<string, string> = {
   "faq.cta.button": "Support kontaktieren",
 
   // About Overview Page (German)
-  "about.overview.hero.eyebrow": "â”œÜBER ZAZA",
+  "about.overview.hero.eyebrow": "ÜBER ZAZA",
   "about.overview.hero.title": "Die Zukunft der Lehrertechnologie gestalten",
   "about.overview.hero.subtitle":
     "Unsere Mission ist es, Lehrkräften ihre Zeit zurückzugeben, indem wir KI-Tools entwickeln, die Bildung wirklich verstehen.",
@@ -2264,7 +2264,7 @@ const translationsDe: Record<string, string> = {
     "Begonnen mit einer einfachen Frage: Warum verbringen Lehrkräfte so viel Zeit mit Schreiben, wenn KI helfen könnte?",
   "about.overview.timeline.2024.title": "Start",
   "about.overview.timeline.2024.body":
-    "Veröffentlichung von Zaza Draft für über 100 Beta-Lehrkräfte. â”œÜber 50.000 Stunden Schreibzeit gespart.",
+    "Veröffentlichung von Zaza Draft für über 100 Beta-Lehrkräfte. Über 50.000 Stunden Schreibzeit gespart.",
   "about.overview.timeline.2025.title": "Wachstum",
   "about.overview.timeline.2025.body":
     "Expansion auf über 500 Lehrkräfte in 15 Ländern. Start von Teach, GradeFlow und Shield.",
@@ -2300,7 +2300,7 @@ const translationsDe: Record<string, string> = {
   "founder.hero.headline": "Lernen Sie den Gründer kennen, der KI für Lehrkräfte entwickelt",
   "founder.hero.subheading":
     "Dr. Greg Blackburn verbrachte 15 Jahre in Klassenzimmern, bevor er Zaza entwickelte - KI-Tools, die verstehen, was Lehrkräfte wirklich brauchen.",
-  "founder.hero.label": "GRâ”œÜNDER & CEO",
+  "founder.hero.label": "GRÜNDER & CEO",
   "founder.hero.name": "Dr. Greg Blackburn",
   "founder.hero.tagline": "Ehemaliger Lehrer, EdTech-Entwickler, KI-Befürworter",
 
@@ -2309,7 +2309,7 @@ const translationsDe: Record<string, string> = {
   "founder.journey.quote":
     "Ich habe Zaza entwickelt, weil ich es satt hatte, Lehrkräfte in administrativer Arbeit ertrinken zu sehen, wenn Technologie sie befreien sollte.",
   "founder.journey.p1":
-    "Ich begann meine Karriere 2008 als Gymnasiallehrer für Englisch. Wie die meisten Lehrkräfte liebte ich die Arbeit mit Schülern, kämpfte aber mit den endlosen administrativen Aufgaben - Eltern-E-Mails, Zeugnisse, Bewertungsfeedback. Ich verbrachte meine Abende und Wochenenden mit Schreiben, wenn ich groâ”œÆ’artige Unterrichtsstunden hätte planen oder Zeit mit meiner Familie verbringen sollen.",
+    "Ich begann meine Karriere 2008 als Gymnasiallehrer für Englisch. Wie die meisten Lehrkräfte liebte ich die Arbeit mit Schülern, kämpfte aber mit den endlosen administrativen Aufgaben - Eltern-E-Mails, Zeugnisse, Bewertungsfeedback. Ich verbrachte meine Abende und Wochenenden mit Schreiben, wenn ich großartige Unterrichtsstunden hätte planen oder Zeit mit meiner Familie verbringen sollen.",
   "founder.journey.p2":
     "Nach meiner Promotion in Bildungstechnologie arbeitete ich mit Schulen an der Implementierung von KI-Tools. Aber ich sah immer wieder dasselbe Problem: Generische KI-Tools waren nicht für Bildung entwickelt. Sie erfanden Schülerinformationen, produzierten Ausgaben, die überhaupt nicht wie eine Lehrkraft klangen, und schufen mehr Arbeit als sie sparten. Lehrkräfte brauchten etwas anderes.",
   "founder.journey.p3":
@@ -2338,7 +2338,7 @@ const translationsDe: Record<string, string> = {
   // Founder Personal Message Section (German)
   "founder.personal.title": "Eine persönliche Notiz",
   "founder.personal.message1":
-    "Wenn Sie dies lesen, sind Sie wahrscheinlich eine Lehrkraft, die neugierig auf KI ist, aber skeptisch, ob sie wirklich helfen kann. Ich verstehe das. Ich war auch skeptisch. Die meisten KI-Tools fühlen sich an, als wären sie von Menschen entwickelt worden, die nie einen Fuâ”œÆ’ in ein Klassenzimmer gesetzt haben.",
+    "Wenn Sie dies lesen, sind Sie wahrscheinlich eine Lehrkraft, die neugierig auf KI ist, aber skeptisch, ob sie wirklich helfen kann. Ich verstehe das. Ich war auch skeptisch. Die meisten KI-Tools fühlen sich an, als wären sie von Menschen entwickelt worden, die nie einen Fuß in ein Klassenzimmer gesetzt haben.",
   "founder.personal.message2":
     "Deshalb habe ich Zaza anders entwickelt. Jede Funktion wird mit echten Lehrkräften entwickelt, in echten Klassenzimmern getestet und basierend auf echtem Feedback verfeinert. Wir entwickeln nicht nur Software - wir bauen Partnerschaften mit Pädagogen auf, die uns helfen, Tools zu erstellen, die wirklich funktionieren.",
   "founder.personal.message3":
@@ -2348,7 +2348,7 @@ const translationsDe: Record<string, string> = {
   "founder.personal.company": "Zaza Technologies",
   "founder.personal.cta": "Kontakt aufnehmen",
 
-  // Webinars (DE) â€” additions
+  // Webinars (DE) — additions
   "webinars.hero.badge": "50+ Fortbildungssitzungen",
   "webinars.labels.featured": "Hervorgehoben",
   "webinars.labels.certificateIncluded": "Zertifikat inklusive",
@@ -2417,7 +2417,7 @@ const translationsDe: Record<string, string> = {
   "about.company.body.trustHeading": "Warum Lehrkräfte Zaza vertrauen",
   "about.company.body.trustP1": "Wir sind nicht einfach ein weiteres Tech-Unternehmen, das Bildung entdeckt. Zaza basiert auf zwei Jahrzehnten Lernwissenschaft und betrieblicher Bildung, wobei über 2.400 Lehrkräfte aus 43 Ländern unsere Tools durch praktisches Feedback mitgestalten.",
   "about.company.body.trustP2": "Jedes Produkt wird gemeinsam mit Pädagogen entwickelt und ist in der Forschung verankert, denn Abkürzungen, die die Pädagogik kompromittieren, sind überhaupt keine Abkürzungen.",
-  "about.company.body.trustP3": "Deshalb haben wir den KnowledgeCore entwickelt—eine Vertrauensebene, die jede Zaza-App erklärbar, datenschutzorientiert und klassenraumtauglich macht.",
+  "about.company.body.trustP3": "Deshalb haben wir den KnowledgeCore entwickelt-eine Vertrauensebene, die jede Zaza-App erklärbar, datenschutzorientiert und klassenraumtauglich macht.",
   "about.company.body.trustP4": "Keine Black Boxes. Keine Halluzinationen. Keine Untergrabung Ihres professionellen Urteils.",
   "about.company.body.trustP5": "Wenn Zaza Draft eine Eltern-E-Mail vorschlägt oder Zaza Teach einen Unterrichtsplan erstellt, können Sie darauf vertrauen, dass es echte Lernwissenschaft widerspiegelt, nicht generisches KI-Geschwätz, das Ihre Glaubwürdigkeit beschädigt.",
   "about.company.body.testimonial1": "Ich war skeptisch gegenüber KI, die Eltern-E-Mails schreibt. Aber Zaza Draft spart mir nicht nur Zeit. Es lässt mich professioneller und einfühlsamer klingen, als wenn ich um 22 Uhr hetze.",
@@ -2433,9 +2433,9 @@ const translationsDe: Record<string, string> = {
   "about.company.body.dayGradeA": "GradeFlow gibt jedem Schüler aussagekräftiges Feedback, ohne Ihr Wochenende zu stehlen.",
   "about.company.body.dayShieldQ": "Ängstlich wegen einer schwierigen Eltern-E-Mail um 23 Uhr?",
   "about.company.body.dayShieldA": "Shield hilft Ihnen, professionell zu antworten und schützt Ihre Grenzen, indem es Sie daran erinnert, dass es bis morgen warten kann.",
-  "about.company.body.daySummary": "Ob Sie Draft für Elternkommunikation, Teach für Unterrichtsplanung, GradeFlow für Bewertungen oder Shield als Puffer für stressige Nachrichten nutzen—die Prinzipien sind dieselben:",
+  "about.company.body.daySummary": "Ob Sie Draft für Elternkommunikation, Teach für Unterrichtsplanung, GradeFlow für Bewertungen oder Shield als Puffer für stressige Nachrichten nutzen-die Prinzipien sind dieselben:",
   "about.company.body.dayPrinciples": "Respekt für Ihr Handwerk. Schutz Ihrer Glaubwürdigkeit. Tools, die tatsächlich Stress reduzieren.",
-  "about.company.body.dayZara": "Und weil jede App Zara enthält—Ihre durchgängige In-App-Assistentin—haben Sie immer Unterstützung von einer Stimme, die Sie bereits kennen und der Sie vertrauen.",
+  "about.company.body.dayZara": "Und weil jede App Zara enthält-Ihre durchgängige In-App-Assistentin-haben Sie immer Unterstützung von einer Stimme, die Sie bereits kennen und der Sie vertrauen.",
   "about.company.body.testimonial2": "Zaza gab mir meine Abende zurück. Ich bin jetzt eine bessere Lehrerin, weil ich nicht erschöpft bin.",
   "about.company.body.testimonial2Author": "Michael R., Geschichtslehrer Gymnasium",
   "about.company.body.dayCTA": "Schließen Sie sich 2.400+ Lehrkräften an, die 10+ Stunden pro Woche sparen",
@@ -2505,7 +2505,7 @@ Object.assign(translationsEn, {
   "about.company.whyNeed.p2": "Every app in the Zaza family removes repetitive tasks like lesson planning, grading, and parent emails while embedding empathy, safety, and real pedagogy into every feature.",
   "about.company.whyNeed.p3": "We're not here to replace teachers. We're here to give you back what brought you to the classroom in the first place: the ability to actually teach.",
   "about.company.whyNeed.p4": "Founded in 2025 by Dr. Greg Blackburn, a learning scientist with 20 years in L&D and a PhD in Professional Education, who watched too many teacher friends burn out from administrative overload. After teaching thousands of adults and leading major learning initiatives, he built Zaza to solve the problems that steal teachers' time.",
-  "about.company.founder.link": "Learn more about Greg's journey →",
+  "about.company.founder.link": "Learn more about Greg's journey -",
   "about.company.vision.cite": "Zaza Technologies",
   "about.company.vision.quote": "We see a future where teaching is less about admin and stress, and more about creativity, connection, and impact.",
   "about.company.whyTrust.title": "Why Teachers Trust Zaza",
@@ -2534,7 +2534,7 @@ Object.assign(translationsEn, {
   "about.company.day.testimonial2.text": "Zaza gave me back my evenings. I'm a better teacher now because I'm not exhausted.",
   "about.company.day.testimonial2.author": "Michael R., High School History Teacher",
   "about.company.cta.final.title": "Ready to reclaim your time?",
-  "about.company.cta.final.button": "Start your free 14-day trial →",
+  "about.company.cta.final.button": "Start your free 14-day trial -",
   "about.company.cta.mid.title": "Take back your evenings and weekends",
   "about.company.cta.mid.button": "Start your free 14-day trial",
   "about.company.promise.title": "Our Promise",
@@ -2555,7 +2555,7 @@ Object.assign(translationsDe, {
   "about.company.whyNeed.p2": "Jede App in der Zaza-Familie entfernt wiederkehrende Aufgaben wie Unterrichtsplanung, Korrekturen und Elternkommunikation und bettet dabei Empathie, Sicherheit und echte Pädagogik in jede Funktion ein.",
   "about.company.whyNeed.p3": "Wir sind nicht hier, um Lehrer zu ersetzen. Wir sind hier, um Ihnen das zurückzugeben, was Sie ursprünglich in den Klassenraum gebracht hat: die Fähigkeit, wirklich zu unterrichten.",
   "about.company.whyNeed.p4": "Gegründet 2025 von Dr. Greg Blackburn, einem Lernwissenschaftler mit 20 Jahren Erfahrung in L&D und einem PhD in Pädagogik, der zu viele Lehrerfreunde am Verwaltungsaufwand scheitern sah. Nachdem er Tausende Erwachsene unterrichtet und große Lerninitiativen geleitet hatte, gründete er Zaza, um die Probleme zu lösen, die Lehrern die Zeit rauben.",
-  "about.company.founder.link": "Erfahren Sie mehr über Gregs Weg →",
+  "about.company.founder.link": "Erfahren Sie mehr über Gregs Weg -",
   "about.company.vision.cite": "Zaza Technologies",
   "about.company.vision.quote": "Wir sehen eine Zukunft, in der Lehren weniger von Verwaltung und Stress geprägt ist, sondern mehr von Kreativität, Verbindung und Wirkung.",
   "about.company.whyTrust.title": "Warum Lehrer Zaza vertrauen",
@@ -2593,6 +2593,63 @@ Object.assign(translationsDe, {
   "about.company.promise.p3": "Testen Sie Zaza Draft 14 Tage kostenlos. Wenn es Ihnen in der ersten Woche nicht mindestens 2 Stunden spart, erstatten wir Ihnen sofort den Betrag, ohne Fragen.",
   "about.company.footer": "Von Lehrern gebaut, für Lehrer."
 });
+// Resource page translations
+Object.assign(translationsEn, {
+  "resources.comingSoon": "Coming Soon",
+  "resources.download": "Download",
+  "resources.items.aiPromptLibrary.description": "50+ proven prompts for lesson planning, assessment, and classroom management. Save hours with ready-to-use AI templates.",
+  "resources.items.aiPromptLibrary.title": "AI Prompt Library for Teachers",
+  "resources.items.aiRubricPrompts.description": "Create clear, fair rubrics in minutes. Includes prompts for essays, projects, presentations, and more.",
+  "resources.items.aiRubricPrompts.title": "AI-Powered Rubric Templates",
+  "resources.items.assessmentRubrics.description": "Pre-built rubrics for common assignments across subjects. Customize for your classroom needs.",
+  "resources.items.assessmentRubrics.title": "Assessment Rubric Library",
+  "resources.items.classroomManagement.description": "Behavior tracking templates, seating charts, and communication logs to keep your classroom organized.",
+  "resources.items.classroomManagement.title": "Classroom Management Toolkit",
+  "resources.items.endOfTermComments.description": "200+ report card comments covering academic performance, behavior, and social-emotional growth.",
+  "resources.items.endOfTermComments.title": "End-of-Term Comment Bank",
+  "resources.items.lessonPlanningTemplates.description": "Structured templates for daily lessons, unit plans, and differentiated instruction.",
+  "resources.items.lessonPlanningTemplates.title": "Lesson Planning Templates",
+  "resources.items.parentMessageTemplates.description": "Professional email templates for parent-teacher conferences, progress updates, and difficult conversations.",
+  "resources.items.parentMessageTemplates.title": "Parent Communication Templates",
+  "resources.items.teacherTimePlaybook.description": "Strategies and workflows to reclaim 10+ hours per week through better organization and AI assistance.",
+  "resources.items.teacherTimePlaybook.title": "Teacher Time-Saving Playbook",
+  "resources.items.toneChecklist.description": "Quick reference guide for maintaining appropriate tone in emails, reports, and parent communications.",
+  "resources.items.toneChecklist.title": "Professional Tone Checklist",
+  "resources.items.weeklyNewsletterBundle.description": "Ready-to-customize newsletter templates for classroom updates, announcements, and parent engagement.",
+  "resources.items.weeklyNewsletterBundle.title": "Weekly Newsletter Bundle",
+  "resources.published": "Published",
+  "resources.subtitle": "Time-savers you can use today. Download as PDF or DOCX.",
+  "resources.title": "Free Resources for Teachers",
+});
+
+Object.assign(translationsDe, {
+  "resources.comingSoon": "Demnächst",
+  "resources.download": "Herunterladen",
+  "resources.items.aiPromptLibrary.description": "50+ bewaehrte Prompts für Unterrichtsplanung, Bewertung und Klassenmanagement. Sparen Sie Stunden mit gebrauchsfertigen KI-Vorlagen.",
+  "resources.items.aiPromptLibrary.title": "KI-Prompt-Bibliothek für Lehrkraefte",
+  "resources.items.aiRubricPrompts.description": "Erstellen Sie klare, faire Bewertungsraster in Minuten. Enthaelt Prompts für Aufsaetze, Projekte, Praesentationen und mehr.",
+  "resources.items.aiRubricPrompts.title": "KI-gestuetzte Bewertungsraster-Vorlagen",
+  "resources.items.assessmentRubrics.description": "Vorgefertigte Bewertungsraster für gaengige Aufgaben in allen Faechern. Anpassbar für Ihre Klassenzimmerbeduerfnisse.",
+  "resources.items.assessmentRubrics.title": "Bewertungsraster-Bibliothek",
+  "resources.items.classroomManagement.description": "Verhaltens-Tracking-Vorlagen, Sitzplaene und Kommunikationsprotokolle für ein organisiertes Klassenzimmer.",
+  "resources.items.classroomManagement.title": "Klassenmanagement-Toolkit",
+  "resources.items.endOfTermComments.description": "200+ Zeugniskommentare zu akademischer Leistung, Verhalten und sozial-emotionaler Entwicklung.",
+  "resources.items.endOfTermComments.title": "Zeugnisbemerkungen-Bank",
+  "resources.items.lessonPlanningTemplates.description": "Strukturierte Vorlagen für Tageslektionen, Unterrichtseinheiten und differenzierten Unterricht.",
+  "resources.items.lessonPlanningTemplates.title": "Unterrichtsplanungsvorlagen",
+  "resources.items.parentMessageTemplates.description": "Professionelle E-Mail-Vorlagen für Elterngespraeche, Fortschrittsberichte und schwierige Gespraeche.",
+  "resources.items.parentMessageTemplates.title": "Elternkommunikations-Vorlagen",
+  "resources.items.teacherTimePlaybook.description": "Strategien und Arbeitsablaeufe, um 10+ Stunden pro Woche durch bessere Organisation und KI-Unterstuetzung zurueckzugewinnen.",
+  "resources.items.teacherTimePlaybook.title": "Lehrer-Zeitspar-Handbuch",
+  "resources.items.toneChecklist.description": "Schnellreferenz für angemessenen Ton in E-Mails, Berichten und Elternkommunikation.",
+  "resources.items.toneChecklist.title": "Professioneller Ton-Checkliste",
+  "resources.items.weeklyNewsletterBundle.description": "Anpassbare Newsletter-Vorlagen für Klassenaktualisierungen, Ankuendigungen und Elternengagement.",
+  "resources.items.weeklyNewsletterBundle.title": "Woechentliches Newsletter-Paket",
+  "resources.published": "VerÅöffentlicht",
+  "resources.subtitle": "Zeitspartools für den sofortigen Einsatz. Als PDF oder DOCX herunterladen.",
+  "resources.title": "Kostenlose Ressourcen für Lehrkräfte",
+});
+
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>("en")

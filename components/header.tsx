@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
+import { useRouter, usePathname } from "next/navigation"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/lib/i18n/language-context"
@@ -16,6 +17,38 @@ export function Header() {
   const [learningCentreDropdownOpen, setLearningCentreDropdownOpen] = useState(false)
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false)
   const { language, setLanguage, t } = useLanguage()
+  const router = useRouter()
+  const pathname = usePathname()
+
+  // Function to switch language with URL navigation
+  const switchLanguage = (lang: "en" | "de") => {
+    setLanguage(lang)
+    
+    // Get current path without locale prefix
+    let path = pathname
+    
+    // Remove existing locale prefix if present
+    if (path.startsWith('/de/')) {
+      path = path.substring(3) // Remove '/de'
+    } else if (path.startsWith('/en/')) {
+      path = path.substring(3) // Remove '/en'
+    } else if (path === '/de' || path === '/en') {
+      path = '' // Root page
+    }
+    
+    // Ensure path starts with /
+    if (path && !path.startsWith('/')) {
+      path = '/' + path
+    }
+    
+    // Navigate to the new locale URL
+    if (lang === 'de') {
+      router.push(`/de${path}`)
+    } else {
+      // English can use root or /en
+      router.push(path || '/')
+    }
+  }
 
   const navigation = [{ name: t("nav.pricing"), href: "/pricing" }]
 
@@ -250,7 +283,7 @@ export function Header() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-6 items-center">
             <div className="flex items-center gap-2 rounded-lg bg-white/5 p-1">
               <button
-                onClick={() => setLanguage("en")}
+                onClick={() => switchLanguage("en")}
                 className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200 ${
                   language === "en" ? "bg-[#8B5CF6] text-white" : "text-gray-400 hover:text-white"
                 }`}
@@ -258,7 +291,7 @@ export function Header() {
                 EN
               </button>
               <button
-                onClick={() => setLanguage("de")}
+                onClick={() => switchLanguage("de")}
                 className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200 ${
                   language === "de" ? "bg-[#8B5CF6] text-white" : "text-gray-400 hover:text-white"
                 }`}
@@ -348,7 +381,7 @@ export function Header() {
               <div className="pt-4 pb-2">
                 <div className="flex items-center gap-2 rounded-full bg-white/5 p-1 border border-white/10">
                   <button
-                    onClick={() => setLanguage("en")}
+                    onClick={() => switchLanguage("en")}
                     className={`flex-1 px-4 py-2 text-sm font-medium rounded-full transition-all ${
                       language === "en" ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white" : "text-gray-400"
                     }`}
@@ -356,7 +389,7 @@ export function Header() {
                     English
                   </button>
                   <button
-                    onClick={() => setLanguage("de")}
+                    onClick={() => switchLanguage("de")}
                     className={`flex-1 px-4 py-2 text-sm font-medium rounded-full transition-all ${
                       language === "de" ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white" : "text-gray-400"
                     }`}
