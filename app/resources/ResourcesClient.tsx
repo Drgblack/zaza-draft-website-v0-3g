@@ -1,3 +1,5 @@
+'use client';
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
@@ -26,14 +28,34 @@ function normalizeIndex(input: any): Resource[] {
   return [];
 }
 
-function pickHref(r: Resource): string | null {
-  const en = r.files?.en ?? {};
-  const de = r.files?.de ?? {};
-  return (en as FileEntry).pdf ?? (en as FileEntry).docx ?? (de as FileEntry).pdf ?? (de as FileEntry).docx ?? null;
+function pickHref(r: Resource, locale: string): string | null {
+  // Get the files for the current locale
+  const localeFiles = locale === 'de' ? r.files?.de : r.files?.en;
+  
+  // Prioritize DOCX over PDF
+  if (localeFiles?.docx) {
+    return `/resources/${r.slug}/build/${locale}.docx`;
+  }
+  if (localeFiles?.pdf) {
+    return `/resources/${r.slug}/build/${locale}.pdf`;
+  }
+  
+  // Fallback to the other locale if current locale doesn't have files
+  const fallbackLocale = locale === 'de' ? 'en' : 'de';
+  const fallbackFiles = fallbackLocale === 'de' ? r.files?.de : r.files?.en;
+  
+  if (fallbackFiles?.docx) {
+    return `/resources/${r.slug}/build/${fallbackLocale}.docx`;
+  }
+  if (fallbackFiles?.pdf) {
+    return `/resources/${r.slug}/build/${fallbackLocale}.pdf`;
+  }
+  
+  return null;
 }
 
 export default function ResourcesPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const resources = normalizeIndex(rawIndex).filter(Boolean);
 
   return (
@@ -46,7 +68,11 @@ export default function ResourcesPage() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {resources.map((resource) => {
-            const href = pickHref(resource);
+            const href = pickHref(resource, language);
+            const fileName = resource.title 
+              ? `${resource.title.replace(/[^a-z0-9]/gi, '-').toLowerCase()}-${language}.docx`
+              : `${resource.slug}-${language}.docx`;
+            
             return (
               <Card key={resource.slug ?? `${resource.title}-${Math.random()}`} className="bg-[#0B1220] border-[#1F2937]">
                 <CardContent className="p-6">
@@ -79,7 +105,7 @@ export default function ResourcesPage() {
                       asChild
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 transition-all"
                     >
-                      <a href={href} download className="flex items-center justify-center gap-2">
+                      <a href={href} download={fileName} className="flex items-center justify-center gap-2">
                         <Download className="h-4 w-4" />
                         {t("resources.download")}
                       </a>
@@ -98,5 +124,3 @@ export default function ResourcesPage() {
     </div>
   );
 }
-
-

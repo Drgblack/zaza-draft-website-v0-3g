@@ -125,12 +125,4 @@ export default function HomePage() {
 }
 import type { Metadata } from "next"
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "https://zazadraft.com/",
-    languages: {
-      en: "https://zazadraft.com/",
-      de: "https://zazadraft.com/de",
-    },
-  },
-}
+
