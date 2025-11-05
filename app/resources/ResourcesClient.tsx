@@ -6,11 +6,12 @@ import { Download } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/language-context";
 import rawIndex from "../../data/resources/resources.index.json";
 
-type FileEntry = { docx?: string; pdf?: string };
+type FileEntry = { docx?: string; pdf?: string; md?: string };
 type Resource = {
   slug: string;
   title?: string | null;
-  blurb?: string | null;
+  blurb_en?: string | null;
+  blurb_de?: string | null;
   published?: string | null;
   tags?: string[] | null;
   files?: { en?: FileEntry; de?: FileEntry } | null;
@@ -23,6 +24,9 @@ function normalizeIndex(input: any): Resource[] {
     if (Array.isArray((input as any).value)) {
       return ((input as any).value ?? []) as Resource[];
     }
+    if (Array.isArray((input as any).resources)) {
+      return ((input as any).resources ?? []) as Resource[];
+    }
     return [input as Resource];
   }
   return [];
@@ -31,26 +35,32 @@ function normalizeIndex(input: any): Resource[] {
 function pickHref(r: Resource, locale: string): string | null {
   // Get the files for the current locale
   const localeFiles = locale === 'de' ? r.files?.de : r.files?.en;
-  
-  // Prioritize DOCX over PDF
+
+  // Use the file path directly from the JSON (prioritize DOCX, then PDF, then MD)
   if (localeFiles?.docx) {
-    return `/resources/${r.slug}/build/${locale}.docx`;
+    return localeFiles.docx;
   }
   if (localeFiles?.pdf) {
-    return `/resources/${r.slug}/build/${locale}.pdf`;
+    return localeFiles.pdf;
   }
-  
+  if (localeFiles?.md) {
+    return localeFiles.md;
+  }
+
   // Fallback to the other locale if current locale doesn't have files
   const fallbackLocale = locale === 'de' ? 'en' : 'de';
   const fallbackFiles = fallbackLocale === 'de' ? r.files?.de : r.files?.en;
-  
+
   if (fallbackFiles?.docx) {
-    return `/resources/${r.slug}/build/${fallbackLocale}.docx`;
+    return fallbackFiles.docx;
   }
   if (fallbackFiles?.pdf) {
-    return `/resources/${r.slug}/build/${fallbackLocale}.pdf`;
+    return fallbackFiles.pdf;
   }
-  
+  if (fallbackFiles?.md) {
+    return fallbackFiles.md;
+  }
+
   return null;
 }
 
@@ -69,18 +79,21 @@ export default function ResourcesPage() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {resources.map((resource) => {
             const href = pickHref(resource, language);
-            const fileName = resource.title 
+            const fileName = resource.title
               ? `${resource.title.replace(/[^a-z0-9]/gi, '-').toLowerCase()}-${language}.docx`
               : `${resource.slug}-${language}.docx`;
             
+            // Get the correct blurb based on language
+            const blurb = language === 'de' ? resource.blurb_de : resource.blurb_en;
+
             return (
               <Card key={resource.slug ?? `${resource.title}-${Math.random()}`} className="bg-[#0B1220] border-[#1F2937]">
                 <CardContent className="p-6">
                   <h2 className="text-xl font-semibold text-[#F9FAFB] mb-2">
                     {resource.title ?? resource.slug}
                   </h2>
-                  {resource.blurb ? (
-                    <p className="text-[#9CA3AF] mb-4">{resource.blurb}</p>
+                  {blurb ? (
+                    <p className="text-[#9CA3AF] mb-4">{blurb}</p>
                   ) : null}
                   {resource.tags && resource.tags.length ? (
                     <div className="flex flex-wrap gap-2 mb-4">

@@ -215,7 +215,7 @@ const translationsEn: Record<string, string> = {
 
   // Resources page (EN)
   "resources.title": "Free Resources for Teachers",
-  "resources.subtitle": "Time-savers you can use today. Download as PDF or DOCX.",
+  "resources.subtitle": "Time-savers you can use today. Download as DOCX.",
   "resources.download": "Download",
   "resources.comingSoon": "Coming Soon",
   "resources.published": "Published",
