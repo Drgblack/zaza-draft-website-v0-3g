@@ -44,14 +44,4 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function VideoHubPage() {
   return <VideoHubClient />
 }
-import type { Metadata } from "next"
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "https://zazadraft.com/videos",
-    languages: {
-      en: "https://zazadraft.com/videos",
-      de: "https://zazadraft.com/de/videos",
-    },
-  },
-}

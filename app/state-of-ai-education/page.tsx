@@ -17,13 +17,4 @@ export default function StateOfAIPage() {
 }
 import type { Metadata } from "next"
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "https://zazadraft.com/state-of-ai-education",
-    languages: {
-      en: "https://zazadraft.com/state-of-ai-education",
-      de: "https://zazadraft.com/de/state-of-ai-education",
-    },
-  },
-}
 

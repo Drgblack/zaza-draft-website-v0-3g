@@ -39,12 +39,3 @@ export default function GlossaryPage() {
 }
 import type { Metadata } from "next"
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "https://zazadraft.com/glossary",
-    languages: {
-      en: "https://zazadraft.com/glossary",
-      de: "https://zazadraft.com/de/glossary",
-    },
-  },
-}

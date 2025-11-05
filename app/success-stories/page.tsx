@@ -17,12 +17,3 @@ export default function SuccessStoriesPage() {
 }
 import type { Metadata } from "next"
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "https://zazadraft.com/success-stories",
-    languages: {
-      en: "https://zazadraft.com/success-stories",
-      de: "https://zazadraft.com/de/success-stories",
-    },
-  },
-}

@@ -35,12 +35,3 @@ export default function AIStudentReportsPage() {
 }
 import type { Metadata } from "next"
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "https://zazadraft.com/ai-for-student-reports",
-    languages: {
-      en: "https://zazadraft.com/ai-for-student-reports",
-      de: "https://zazadraft.com/de/ai-for-student-reports",
-    },
-  },
-}

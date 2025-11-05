@@ -12,12 +12,3 @@ export default function PrivacyPage() {
 }
 import type { Metadata } from "next"
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "https://zazadraft.com/privacy",
-    languages: {
-      en: "https://zazadraft.com/privacy",
-      de: "https://zazadraft.com/de/privacy",
-    },
-  },
-}

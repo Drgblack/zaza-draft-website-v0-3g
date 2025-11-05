@@ -17,12 +17,3 @@ export default function TermsPage() {
 }
 import type { Metadata } from "next"
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "https://zazadraft.com/terms",
-    languages: {
-      en: "https://zazadraft.com/terms",
-      de: "https://zazadraft.com/de/terms",
-    },
-  },
-}

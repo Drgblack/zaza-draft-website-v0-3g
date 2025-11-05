@@ -12,12 +12,3 @@ export default function FAQPage() {
 }
 import type { Metadata } from "next"
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "https://zazadraft.com/faq",
-    languages: {
-      en: "https://zazadraft.com/faq",
-      de: "https://zazadraft.com/de/faq",
-    },
-  },
-}

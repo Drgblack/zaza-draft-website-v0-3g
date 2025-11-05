@@ -17,12 +17,3 @@ export default function ResourceLibraryPage() {
 }
 import type { Metadata } from "next"
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "https://zazadraft.com/ai-literacy/resources",
-    languages: {
-      en: "https://zazadraft.com/ai-literacy/resources",
-      de: "https://zazadraft.com/de/ai-literacy/resources",
-    },
-  },
-}

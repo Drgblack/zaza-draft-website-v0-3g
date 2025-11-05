@@ -17,12 +17,3 @@ export default function ROICalculatorPage() {
 }
 import type { Metadata } from "next"
 
-export const metadata: Metadata = {
-  alternates: {
-    canonical: "https://zazadraft.com/roi-calculator",
-    languages: {
-      en: "https://zazadraft.com/roi-calculator",
-      de: "https://zazadraft.com/de/roi-calculator",
-    },
-  },
-}
