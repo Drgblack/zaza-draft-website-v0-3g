@@ -993,7 +993,7 @@ const translationsEn: Record<string, string> = {
 
     // Founder Hero Section
   "founder.hero.headline": "Meet the Founder Building AI That Helps Teachers Thrive",
-  "founder.hero.subheading": "I've spent over twenty years working in learning and professional education—across classrooms, universities, and corporate training. One thing has always been true: teaching is human work.",
+  "founder.hero.subheading": "I've spent over twenty years working in learning and professional education-across classrooms, universities, and corporate training. One thing has always been true: teaching is human work.",
   "founder.hero.label": "FOUNDER & CEO",
   "founder.hero.name": "Dr. Greg Blackburn",
   "founder.hero.tagline": "Former Teacher, EdTech Researcher, Learning Scientist",
@@ -1003,7 +1003,7 @@ const translationsEn: Record<string, string> = {
   "founder.journey.p1": "Throughout my PhD research in professional education, I focused on how learners develop critical thinking and problem-solving in real-world environments. I've seen how technology can support learning when it's used well. I've also seen how easily it can add stress, waste time, or work against what educators are trying to achieve.",
   "founder.journey.p2": "As Chief Learning Officer at Communardo, I lead work in AI-powered learning design, digital content development, LMS innovation, and teacher training. I've written and spoken widely on learning science, eLearning strategy, and the role of AI in education.",
   "founder.journey.p3": "But here's the truth: Most edtech tools aren't built for teachers. They're built for sales meetings.",
-  "founder.journey.p4": "I've watched technology sold as 'revolutionary' only to become another system teachers must manage. I've seen AI products that generate content that looks impressive at first glance—but collapses the moment a teacher tries to use it with real students.",
+  "founder.journey.p4": "I've watched technology sold as 'revolutionary' only to become another system teachers must manage. I've seen AI products that generate content that looks impressive at first glance-but collapses the moment a teacher tries to use it with real students.",
   "founder.journey.p5": "That's why I built Zaza.",
 
   // Founder Principle Section
@@ -1027,7 +1027,7 @@ const translationsEn: Record<string, string> = {
 
   // Founder Why Zaza Section
   "founder.whyZaza.title": "Why Zaza Exists",
-  "founder.whyZaza.p1": "Zaza isn't trying to 'disrupt education.' Teachers don't need disruption. They need support. They need time. They need tools that recognize the value of their experience—rather than trying to standardize or replace it.",
+  "founder.whyZaza.p1": "Zaza isn't trying to 'disrupt education.' Teachers don't need disruption. They need support. They need time. They need tools that recognize the value of their experience-rather than trying to standardize or replace it.",
   "founder.whyZaza.p2": "The work teachers do matters. And the best thing technology can do is help protect the time, energy, and care required to do that work well.",
   "founder.whyZaza.p3": "If that's the kind of future for education you believe in, you're in the right place.",
 
@@ -1036,6 +1036,18 @@ const translationsEn: Record<string, string> = {
   "founder.closing.title": "Dr. Greg Blackburn",
   "founder.closing.role": "Founder & CEO, Zaza Technologies",
   "founder.personal.cta": "Get in Touch",
+
+  // Additional Founder Keys (for page compatibility)
+  "founder.journey.quote": "I built Zaza because I was tired of watching teachers drown in administrative work when technology should be setting them free.",
+  "founder.mission.quote": "Every teacher deserves tools that respect their expertise, protect their students, and give them time to do what they do best: teach.",
+  "founder.mission.attribution": "Dr. Greg Blackburn, Founder & CEO",
+  "founder.whyZaza.subtitle": "Three principles that guide everything we do",
+  "founder.whyZaza.card1.title": "For Teachers, By Teachers",
+  "founder.whyZaza.card1.body": "I've lived the teacher experience - the late nights, the endless emails, the report card marathons. Zaza is built by someone who understands because I've been there.",
+  "founder.whyZaza.card2.title": "Boutique, Not Big Tech",
+  "founder.whyZaza.card2.body": "We're not a massive corporation trying to sell to everyone. We're a focused team building specialized tools for one audience: teachers. Your needs come first, always.",
+  "founder.whyZaza.card3.title": "Building a Legacy",
+  "founder.whyZaza.card3.body": "This isn't about quick profits. It's about building something that genuinely helps teachers thrive and transforms education for the better. That's the legacy I want to leave.",
 }
 
 const translationsDe: Record<string, string> = {
@@ -2062,6 +2074,18 @@ const translationsDe: Record<string, string> = {
   "founder.closing.title": "Dr. Greg Blackburn",
   "founder.closing.role": "Gründer & CEO, Zaza Technologies",
   "founder.personal.cta": "Kontakt aufnehmen",
+
+  // Additional Founder Keys (German - for page compatibility)
+  "founder.journey.quote": "Ich habe Zaza entwickelt, weil ich es satt hatte, Lehrkräfte in administrativer Arbeit ertrinken zu sehen, wenn Technologie sie befreien sollte.",
+  "founder.mission.quote": "Jede Lehrkraft verdient Tools, die ihre Expertise respektieren, ihre Schüler schützen und ihnen Zeit geben, das zu tun, was sie am besten können: unterrichten.",
+  "founder.mission.attribution": "Dr. Greg Blackburn, Gründer & CEO",
+  "founder.whyZaza.subtitle": "Drei Prinzipien, die alles leiten, was wir tun",
+  "founder.whyZaza.card1.title": "Für Lehrkräfte, von Lehrkräften",
+  "founder.whyZaza.card1.body": "Ich habe die Lehrererfahrung gelebt - die späten Nächte, die endlosen E-Mails, die Zeugnismarathons. Zaza wird von jemandem entwickelt, der es versteht, weil ich dort war.",
+  "founder.whyZaza.card2.title": "Boutique, nicht Big Tech",
+  "founder.whyZaza.card2.body": "Wir sind kein riesiges Unternehmen, das an jeden verkaufen will. Wir sind ein fokussiertes Team, das spezialisierte Tools für ein Publikum entwickelt: Lehrkräfte. Ihre Bedürfnisse stehen immer an erster Stelle.",
+  "founder.whyZaza.card3.title": "Ein Vermächtnis aufbauen",
+  "founder.whyZaza.card3.body": "Es geht nicht um schnelle Gewinne. Es geht darum, etwas zu schaffen, das Lehrkräften wirklich hilft zu gedeihen und Bildung zum Besseren verändert. Das ist das Vermächtnis, das ich hinterlassen möchte.",
 }
 
 const translationsEs: Record<string, string> = {}
