@@ -2086,6 +2086,15 @@ const translationsDe: Record<string, string> = {
   "founder.whyZaza.card2.body": "Wir sind kein riesiges Unternehmen, das an jeden verkaufen will. Wir sind ein fokussiertes Team, das spezialisierte Tools für ein Publikum entwickelt: Lehrkräfte. Ihre Bedürfnisse stehen immer an erster Stelle.",
   "founder.whyZaza.card3.title": "Ein Vermächtnis aufbauen",
   "founder.whyZaza.card3.body": "Es geht nicht um schnelle Gewinne. Es geht darum, etwas zu schaffen, das Lehrkräften wirklich hilft zu gedeihen und Bildung zum Besseren verändert. Das ist das Vermächtnis, das ich hinterlassen möchte.",
+  // Founder Personal Message Section (German)
+  "founder.personal.title": "Eine persönliche Notiz",
+  "founder.personal.message1": "Wenn Sie dies lesen, sind Sie wahrscheinlich eine Lehrkraft, die neugierig auf KI ist, aber skeptisch, ob sie wirklich helfen kann. Ich verstehe das. Ich war auch skeptisch. Die meisten KI-Tools fühlen sich an, als wären sie von Menschen entwickelt worden, die nie einen Fuß in ein Klassenzimmer gesetzt haben.",
+  "founder.personal.message2": "Deshalb habe ich Zaza anders entwickelt. Jede Funktion wird mit echten Lehrkräften entwickelt, in echten Klassenzimmern getestet und basierend auf echtem Feedback verfeinert. Wir entwickeln nicht nur Software - wir bauen Partnerschaften mit Pädagogen auf, die uns helfen, Tools zu erstellen, die wirklich funktionieren.",
+  "founder.personal.message3": "Ich würde gerne von Ihnen hören. Ob Sie Fragen, Feedback haben oder einfach nur über Bildung und Technologie sprechen möchten, meine Tür steht immer offen. Lassen Sie uns gemeinsam die Zukunft der Lehrertechnologie gestalten.",
+  "founder.personal.name": "Greg",
+  "founder.personal.title2": "Dr. Greg Blackburn",
+  "founder.personal.company": "Zaza Technologies",
+
 }
 
 const translationsEs: Record<string, string> = {}
