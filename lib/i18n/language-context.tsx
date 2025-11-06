@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 import { createContext, useContext, useState, type ReactNode } from "react"
 
 type Language = "en" | "de" | "es" | "fr" | "it"
@@ -2135,9 +2135,77 @@ const translationsDe: Record<string, string> = {
   "contact.help.description": "Schauen Sie sich unsere hilfreichen Ressourcen an",
   "contact.help.faq": "→ Häufig gestellte Fragen",
   "contact.help.support": "→ Support-Center",
+  // Company page
+  "company.hero.label": "UNSER UNTERNEHMEN",
+  "company.hero.headline": "Zaza Technologies",
+  "company.hero.subheading": "Wir sind ein kleines, spezialisiertes Team aus Lerndesignern, Ingenieuren und Bildungsforschern, die Technologie entwickeln, die Lehrkräften hilft, erfolgreich zu sein.",
+  "company.origin.p1": "Zaza Technologies wurde 2025 mit einer klaren Überzeugung gegründet: Bildung verdient KI-Tools, die mit echtem pädagogischem Verständnis entwickelt wurden, nicht umfunktionierte Unternehmens-KI-Modelle. Wir entwickeln Technologie, die das Wohlbefinden von Lehrkräften schützt.",
+  "company.origin.p2": "Deshalb haben wir einen anderen Ansatz gewählt.",
+  "company.origin.p3": "Wir entwickeln Tools, die auf echter Pädagogik trainiert, mit Pädagogen entwickelt und durch Klassenzimmereinsatz verfeinert werden. Tools, die die Nuancen des Lehrerurteils, das emotionale Gewicht der Elterninteraktion und die Bedeutung konstruktiven Feedbacks verstehen. Tools, die für Bildungsumgebungen präzise, zuverlässig und sicher sind.",
+  "company.origin.aiDifferentiator": "Unsere Modelle werden anhand echten Lehrer-Feedbacks und Klassenzimmer-Sprachmustern trainiert, durch iterative Tests mit Pädagogen verfeinert und so konzipiert, dass die Ausgabe wie eine Lehrkraft klingt - nicht wie eine Maschine.",
+  "company.origin.p4": "Unser Ziel ist einfach: Lehrkräften bedeutungsvolle Zeit zurückgeben.",
+  "company.philosophy.title": "Unsere Philosophie",
+  "company.philosophy.intro": "Wir glauben nicht an \"KI, die Lehrkräfte ersetzt\". Wir glauben an KI, die Lehrkräfte unterstützt.",
+  "company.philosophy.principle1": "Tools müssen die Expertise von Lehrkräften respektieren.",
+  "company.philosophy.principle2": "Tools müssen Arbeitsbelastung reduzieren, nicht verschieben.",
+  "company.philosophy.principle3": "Tools müssen Schüler und ihre Lernumgebung schützen.",
+  "company.philosophy.principle4": "Tools müssen vertrauenswürdig und transparent sein.",
+  "company.philosophy.closing": "Wenn Technologie Lehrkräften nicht dabei helfen kann, das zu tun, was sie am besten können - unterrichten - dann gehört sie nicht ins Klassenzimmer.",
+  "company.boutique.title": "Ein Boutique-Ansatz",
+  "company.boutique.intro": "Wir sind absichtlich kein großes Technologieunternehmen. Wir sind ein fokussiertes Team, das nur für ein Publikum entwickelt – Lehrkräfte.",
+  "company.boutique.means": "Das bedeutet:",
+  "company.boutique.point1": "Wir arbeiten eng mit Pädagogen aus mehreren Regionen und Kontexten zusammen.",
+  "company.boutique.point2": "Wir testen Funktionen direkt in echten Klassenzimmern.",
+  "company.boutique.point3": "Wir priorisieren Klarheit, Sicherheit und Benutzerfreundlichkeit über Neuheit.",
+  "company.boutique.closing": "Wir optimieren nicht für schnelles Wachstum. Wir optimieren für das, was funktioniert.",
+  "company.boutique.impact": "Wachstum ist nicht das Ziel. Wirkung ist es.",
+  "company.today.title": "Wo wir heute stehen",
+  "company.today.p1": "Zaza unterstützt jetzt über 500 Lehrkräfte in mehr als 15 Ländern. Im Durchschnitt sparen Lehrkräfte über 10 Stunden pro Woche bei Schreib- und Kommunikationsaufgaben durch die Nutzung der Tools von Zaza. Und wir fangen gerade erst an.",
+  "company.today.p2": "Unsere langfristige Vision ist es, eine vollständige Suite von KI-Tools zu entwickeln, die Lehrkräften helfen, ihre Zeit zurückzugewinnen, ihr Wohlbefinden zu schützen und mit dem Kern ihrer Arbeit verbunden zu bleiben – ihren Schülern.",
+  "company.today.close": "Denn wenn Lehrkräfte gedeihen, gedeihen Schüler.",
+  "company.stats.teachers.number": "150k+",
+  "company.stats.teachers.label": "Lehrkräfte nutzen Zaza",
+  "company.stats.countries.number": "15",
+  "company.stats.countries.label": "Länder",
+  "company.stats.hours.number": "10+",
+  "company.stats.hours.label": "Wöchentlich gesparte Stunden",
 
 
-}
+
+  // Company page
+  "company.hero.label": "UNSER UNTERNEHMEN",
+  "company.hero.headline": "Zaza Technologies",
+  "company.hero.subheading": "Wir sind ein kleines, spezialisiertes Team aus Lerndesignern, Ingenieuren und Bildungsforschern, die Technologie entwickeln, die Lehrkräften hilft, erfolgreich zu sein.",
+  "company.origin.p1": "Zaza Technologies wurde 2025 mit einer klaren Überzeugung gegründet: Bildung verdient KI-Tools, die mit echtem pädagogischem Verständnis entwickelt wurden, nicht umfunktionierte Unternehmens-KI-Modelle. Wir entwickeln Technologie, die das Wohlbefinden von Lehrkräften schützt.",
+  "company.origin.p2": "Deshalb haben wir einen anderen Ansatz gewählt.",
+  "company.origin.p3": "Wir entwickeln Tools, die auf echter Pädagogik trainiert, mit Pädagogen entwickelt und durch Klassenzimmereinsatz verfeinert werden. Tools, die die Nuancen des Lehrerurteils, das emotionale Gewicht der Elterninteraktion und die Bedeutung konstruktiven Feedbacks verstehen. Tools, die für Bildungsumgebungen präzise, zuverlässig und sicher sind.",
+  "company.origin.aiDifferentiator": "Unsere Modelle werden anhand echten Lehrer-Feedbacks und Klassenzimmer-Sprachmustern trainiert, durch iterative Tests mit Pädagogen verfeinert und so konzipiert, dass die Ausgabe wie eine Lehrkraft klingt - nicht wie eine Maschine.",
+  "company.origin.p4": "Unser Ziel ist einfach: Lehrkräften bedeutungsvolle Zeit zurückgeben.",
+  "company.philosophy.title": "Unsere Philosophie",
+  "company.philosophy.intro": 'Wir glauben nicht an "KI, die Lehrkräfte ersetzt". Wir glauben an KI, die Lehrkräfte unterstützt.',
+"company.philosophy.principle1": "Tools müssen die Expertise von Lehrkräften respektieren.",
+  "company.philosophy.principle2": "Tools müssen Arbeitsbelastung reduzieren, nicht verschieben.",
+  "company.philosophy.principle3": "Tools müssen Schüler und ihre Lernumgebung schützen.",
+  "company.philosophy.principle4": "Tools müssen vertrauenswürdig und transparent sein.",
+  "company.philosophy.closing": "Wenn Technologie Lehrkräften nicht dabei helfen kann, das zu tun, was sie am besten können - unterrichten - dann gehört sie nicht ins Klassenzimmer.",
+  "company.boutique.title": "Ein Boutique-Ansatz",
+  "company.boutique.intro": "Wir sind absichtlich kein großes Technologieunternehmen. Wir sind ein fokussiertes Team, das nur für ein Publikum entwickelt – Lehrkräfte.",
+  "company.boutique.means": "Das bedeutet:",
+  "company.boutique.point1": "Wir arbeiten eng mit Pädagogen aus mehreren Regionen und Kontexten zusammen.",
+  "company.boutique.point2": "Wir testen Funktionen direkt in echten Klassenzimmern.",
+  "company.boutique.point3": "Wir priorisieren Klarheit, Sicherheit und Benutzerfreundlichkeit über Neuheit.",
+  "company.boutique.closing": "Wir optimieren nicht für schnelles Wachstum. Wir optimieren für das, was funktioniert.",
+  "company.boutique.impact": "Wachstum ist nicht das Ziel. Wirkung ist es.",
+  "company.today.title": "Wo wir heute stehen",
+  "company.today.p1": "Zaza unterstützt jetzt über 500 Lehrkräfte in mehr als 15 Ländern. Im Durchschnitt sparen Lehrkräfte über 10 Stunden pro Woche bei Schreib- und Kommunikationsaufgaben durch die Nutzung der Tools von Zaza. Und wir fangen gerade erst an.",
+  "company.today.p2": "Unsere langfristige Vision ist es, eine vollständige Suite von KI-Tools zu entwickeln, die Lehrkräften helfen, ihre Zeit zurückzugewinnen, ihr Wohlbefinden zu schützen und mit dem Kern ihrer Arbeit verbunden zu bleiben – ihren Schülern.",
+  "company.today.close": "Denn wenn Lehrkräfte gedeihen, gedeihen Schüler.",
+  "company.stats.teachers.number": "150k+",
+  "company.stats.teachers.label": "Lehrkräfte nutzen Zaza",
+  "company.stats.countries.number": "15",
+  "company.stats.countries.label": "Länder",
+  "company.stats.hours.number": "10+",
+  "company.stats.hours.label": "Wöchentlich gesparte Stunden",}
 
 const translationsEs: Record<string, string> = {}
 
