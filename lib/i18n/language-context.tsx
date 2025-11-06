@@ -1056,6 +1056,23 @@ const translationsEn: Record<string, string> = {
   "founder.whyZaza.card2.body": "We're not a massive corporation trying to sell to everyone. We're a focused team building specialized tools for one audience: teachers. Your needs come first, always.",
   "founder.whyZaza.card3.title": "Building a Legacy",
   "founder.whyZaza.card3.body": "This isn't about quick profits. It's about building something that genuinely helps teachers thrive and transforms education for the better. That's the legacy I want to leave.",
+  // Contact Page
+  "contact.title": "Get in Touch",
+  "contact.subtitle": "Have questions? Want to learn more? We'd love to hear from you.",
+  "contact.form.name": "Your Name",
+  "contact.form.email": "Your Email",
+  "contact.form.message": "Your Message",
+  "contact.form.placeholder": "Tell us how we can help...",
+  "contact.form.submit": "Send Message",
+  "contact.form.dataNote": "We respect your privacy. Your information is never shared.",
+  "contact.direct.title": "Direct Contact",
+  "contact.direct.email": "Email Us",
+  "contact.direct.response": "We typically respond within 24 hours",
+  "contact.help.title": "Need Help?",
+  "contact.help.description": "Check out our helpful resources",
+  "contact.help.faq": "→ Frequently Asked Questions",
+  "contact.help.support": "→ Support Center",
+
 }
 
 const translationsDe: Record<string, string> = {
@@ -2102,6 +2119,23 @@ const translationsDe: Record<string, string> = {
   "founder.personal.name": "Greg",
   "founder.personal.title2": "Dr. Greg Blackburn",
   "founder.personal.company": "Zaza Technologies",
+  // Contact Page (German)
+  "contact.title": "Kontakt aufnehmen",
+  "contact.subtitle": "Haben Sie Fragen? Möchten Sie mehr erfahren? Wir freuen uns, von Ihnen zu hören.",
+  "contact.form.name": "Ihr Name",
+  "contact.form.email": "Ihre E-Mail",
+  "contact.form.message": "Ihre Nachricht",
+  "contact.form.placeholder": "Sagen Sie uns, wie wir helfen können...",
+  "contact.form.submit": "Nachricht senden",
+  "contact.form.dataNote": "Wir respektieren Ihre Privatsphäre. Ihre Informationen werden niemals weitergegeben.",
+  "contact.direct.title": "Direkter Kontakt",
+  "contact.direct.email": "E-Mail an uns",
+  "contact.direct.response": "Wir antworten normalerweise innerhalb von 24 Stunden",
+  "contact.help.title": "Brauchen Sie Hilfe?",
+  "contact.help.description": "Schauen Sie sich unsere hilfreichen Ressourcen an",
+  "contact.help.faq": "→ Häufig gestellte Fragen",
+  "contact.help.support": "→ Support-Center",
+
 
 }
 
