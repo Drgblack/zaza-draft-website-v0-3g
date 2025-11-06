@@ -10,7 +10,7 @@ import { Suspense } from "react"
 import { ExitIntentProvider } from "@/components/exit-intent-provider"
 import { SignupModalProvider } from "@/components/signup-modal-provider"
 import { ImageErrorHandler } from "@/components/image-error-handler"
-import Footer from "";
+import Footer from "../components/Footer";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
