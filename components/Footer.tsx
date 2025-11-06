@@ -107,3 +107,4 @@ export default function Footer() {
     </footer>
   );
 }
+// build: ensure footer rendered 2025-11-06T18:11:04
