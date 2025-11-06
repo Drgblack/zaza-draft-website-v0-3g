@@ -996,11 +996,11 @@ const translationsEn: Record<string, string> = {
   "founder.hero.subheading": "I've spent over twenty years working in learning and professional education-across classrooms, universities, and corporate training. One thing has always been true: teaching is human work.",
   "founder.hero.label": "FOUNDER & CEO",
   "founder.hero.name": "Dr. Greg Blackburn",
-  "founder.hero.tagline": "EdTech Researcher, Learning Scientist, AI Advocate",
+  "founder.hero.tagline": "Founder & CEO, Learning Scientist, Teacher Advocate",
 
   // Founder Journey Section
   "founder.journey.title": "My Journey in Education",
-  "founder.journey.p1": "Throughout my PhD research in professional education, I focused on how learners develop critical thinking and problem-solving in real-world environments. I've seen how technology can support learning when it's used well. I've also seen how easily it can add stress, waste time, or work against what educators are trying to achieve.",
+  "founder.journey.p1": "Throughout my PhD research in professional education, I focused on how learners develop critical thinking and problem solving in real-world environments. I have seen how technology can support learning when it is used well. I have also seen how easily it can add stress, waste time, or work against what educators are trying to achieve.",
   "founder.journey.p2": "As Chief Learning Officer at Communardo, I lead work in AI-powered learning design, digital content development, LMS innovation, and teacher training. I've written and spoken widely on learning science, eLearning strategy, and the role of AI in education.",
   "founder.journey.p3": "But here's the truth: Most edtech tools aren't built for teachers. They're built for sales meetings.",
   "founder.journey.p4": "I've watched technology sold as 'revolutionary' only to become another system teachers must manage. I've seen AI products that generate content that looks impressive at first glance-but collapses the moment a teacher tries to use it with real students.",
@@ -1050,8 +1050,8 @@ const translationsEn: Record<string, string> = {
   "founder.mission.quote": "Every teacher deserves tools that respect their expertise, protect their students, and give them time to do what they do best: teach.",
   "founder.mission.attribution": "Dr. Greg Blackburn, Founder & CEO",
   "founder.whyZaza.subtitle": "Three principles that guide everything we do",
-  "founder.whyZaza.card1.title": "For Teachers, By Teachers",
-  "founder.whyZaza.card1.body": "I've lived the teacher experience - the late nights, the endless emails, the report card marathons. Zaza is built by someone who understands because I've been there.",
+  "founder.whyZaza.card1.title": "For Teachers, With Teachers",
+  "founder.whyZaza.card1.body": "I have spent my career working alongside teachers and learning designers - refining tools directly with educators who understand the reality of classrooms. Every feature in Zaza is shaped through real feedback and real practice, not theory.",
   "founder.whyZaza.card2.title": "Boutique, Not Big Tech",
   "founder.whyZaza.card2.body": "We're not a massive corporation trying to sell to everyone. We're a focused team building specialized tools for one audience: teachers. Your needs come first, always.",
   "founder.whyZaza.card3.title": "Building a Legacy",
@@ -2056,10 +2056,10 @@ const translationsDe: Record<string, string> = {
 
     // Founder Hero Section (German)
   "founder.hero.headline": "Lernen Sie den Gründer kennen, der KI für Lehrkräfte entwickelt",
-  "founder.hero.subheading": "Ich habe über zwanzig Jahre in der Bildung und beruflichen Weiterbildung gearbeitet – in Klassenzimmern, Universitäten und Unternehmensschulungen. Eines war immer wahr: Unterrichten ist menschliche Arbeit.",
+  "founder.hero.subheading": "Ich habe über zwanzig Jahre im Bereich Lernen und Bildung gearbeitet - an Universitäten, in der Unternehmensbildung und im EdTech-Bereich. Eines war immer wahr: Unterrichten ist menschliche Arbeit.",
   "founder.hero.label": "GRÜNDER & CEO",
   "founder.hero.name": "Dr. Greg Blackburn",
-  "founder.hero.tagline": "EdTech-Forscher, Lernwissenschaftler, KI-Befürworter",
+  "founder.hero.tagline": "Gründer & CEO, Lernwissenschaftler, Lehrer-Befürworter",
 
   // Founder Journey Section (German)
   "founder.journey.title": "Meine Reise in der Bildung",
@@ -2105,8 +2105,8 @@ const translationsDe: Record<string, string> = {
   "founder.mission.quote": "Jede Lehrkraft verdient Tools, die ihre Expertise respektieren, ihre Schüler schützen und ihnen Zeit geben, das zu tun, was sie am besten können: unterrichten.",
   "founder.mission.attribution": "Dr. Greg Blackburn, Gründer & CEO",
   "founder.whyZaza.subtitle": "Drei Prinzipien, die alles leiten, was wir tun",
-  "founder.whyZaza.card1.title": "Für Lehrkräfte, von Lehrkräften",
-  "founder.whyZaza.card1.body": "Ich habe die Lehrererfahrung gelebt - die späten Nächte, die endlosen E-Mails, die Zeugnismarathons. Zaza wird von jemandem entwickelt, der es versteht, weil ich dort war.",
+  "founder.whyZaza.card1.title": "Für Lehrkräfte, mit Lehrkräften",
+  "founder.whyZaza.card1.body": "Ich habe meine Karriere damit verbracht, mit Lehrkräften und Lerndesignern zusammenzuarbeiten - Tools direkt mit Pädagogen zu verfeinern, die die Realität von Klassenzimmern verstehen. Jede Funktion in Zaza wird durch echtes Feedback und echte Praxis geformt, nicht durch Theorie.",
   "founder.whyZaza.card2.title": "Boutique, nicht Big Tech",
   "founder.whyZaza.card2.body": "Wir sind kein riesiges Unternehmen, das an jeden verkaufen will. Wir sind ein fokussiertes Team, das spezialisierte Tools für ein Publikum entwickelt: Lehrkräfte. Ihre Bedürfnisse stehen immer an erster Stelle.",
   "founder.whyZaza.card3.title": "Ein Vermächtnis aufbauen",
