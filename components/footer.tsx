@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import Link from "next/link"
 import Image from "next/image"
@@ -19,7 +19,7 @@ export function Footer() {
   return (
     <footer className="bg-[#0B1220] text-gray-300">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
+        <div className="py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-12">
           {/* Column 1 - Brand + Social */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4 group">
