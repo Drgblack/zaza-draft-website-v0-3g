@@ -10,7 +10,7 @@ import { Suspense } from "react"
 import { ExitIntentProvider } from "@/components/exit-intent-provider"
 import { SignupModalProvider } from "@/components/signup-modal-provider"
 import { ImageErrorHandler } from "@/components/image-error-handler"
-import Footer from "../components/Footer";
+import Footer from "@/components/Footer";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -46,11 +46,19 @@ export default function RootLayout({
         <Suspense fallback={<div>Loading...</div>}>
           <LanguageProvider>
             <Header />
-            <main className="min-h-screen">{children}</main>
+
+            <main className="min-h-screen">
+              {children}
+            </main>
+
+            {/* ✅ THIS IS THE IMPORTANT LINE */}
+            <Footer />
+
             <ExitIntentProvider />
             <SignupModalProvider />
           </LanguageProvider>
         </Suspense>
+
         <Analytics />
         <ImageErrorHandler />
       </body>
