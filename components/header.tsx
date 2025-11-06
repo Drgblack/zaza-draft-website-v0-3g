@@ -40,33 +40,57 @@ export function Header() {
   ]
 
   const learningCentreMenuItems = [
-    { name: t("nav.aiLiteracyResourceCenter"), href: "/ai-literacy" },
-    { name: t("nav.glossary"), href: "/glossary" },
-    { name: t("nav.webinars"), href: "/webinars" },
-    { name: t("nav.videoTutorials"), href: "/videos" },
-    { name: t("nav.bestAIToolParentEmails"), href: "/best-ai-tool-parent-emails" },
-    { name: t("nav.reduceStressParentMessages"), href: "/reduce-stress-parent-messages" },
-    { name: t("nav.bestAIWritingTools2025"), href: "/best-ai-writing-tools-for-teachers-2025" },
-    { name: t("nav.aiStudentReports"), href: "/ai-for-student-reports" },
+    {
+      name: "AI Literacy Resource Center",
+      href: "/ai-literacy",
+    },
+    {
+      name: "Glossary",
+      href: "/glossary",
+    },
+    {
+      name: "Webinars",
+      href: "/webinars",
+    },
+    {
+      name: "Video Tutorials",
+      href: "/videos",
+    },
+    {
+      name: "Best AI Tool for Parent Emails",
+      href: "/best-ai-tool-parent-emails",
+    },
+    {
+      name: "Reduce Stress Writing Parent Messages",
+      href: "/reduce-stress-parent-messages",
+    },
+    {
+      name: "Best AI Writing Tools for Teachers 2025",
+      href: "/best-ai-writing-tools-for-teachers-2025",
+    },
+    {
+      name: "AI for Student Reports",
+      href: "/ai-for-student-reports",
+    },
   ]
 
   const resourcesMenuItems = [
-    { name: t("nav.blog"), href: "/blog" },
-    { name: t("nav.compareTools"), href: "/compare" },
-    { name: t("nav.integrations"), href: "/integrations" },
-    { name: t("nav.community"), href: "/community" },
-    { name: t("nav.successStories"), href: "/success-stories" },
-    { name: t("nav.roiCalculator"), href: "/roi-calculator" },
+    { name: "Blog", href: "/blog" },
+    { name: "Compare Tools", href: "/compare" },
+    { name: "Integrations", href: "/integrations" },
+    { name: "Community", href: "/community" },
+    { name: "Success Stories", href: "/success-stories" },
+    { name: "ROI Calculator", href: "/roi-calculator" },
     { name: t("nav.faq"), href: "/faq" },
     { name: t("nav.resources"), href: "/resources" },
   ]
 
   const aboutMenuItems = [
-    { name: t("nav.company"), href: "/about/company" },
-    { name: t("nav.founder"), href: "/about/founder" },
-    { name: t("nav.press"), href: "/about/press" },
-    { name: t("nav.ambassadorProgram"), href: "/ambassadors" },
-    { name: t("nav.stateOfAI"), href: "/state-of-ai-education" },
+    { name: t("about.nav.company"), href: "/about/company" },
+    { name: t("about.nav.founder"), href: "/about/founder" },
+    { name: t("about.nav.press"), href: "/about/press" },
+    { name: "Ambassador Program", href: "/ambassadors" },
+    { name: "State of AI Report", href: "/state-of-ai-education" },
   ]
 
   return (
@@ -147,7 +171,7 @@ export function Header() {
               onMouseLeave={() => setLearningCentreDropdownOpen(false)}
             >
               <button className="text-[15px] font-medium text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-1">
-                Learning Centre
+                {t("nav.learningCentre")}
                 <ChevronDown className="h-4 w-4" />
               </button>
 
@@ -174,7 +198,7 @@ export function Header() {
               onMouseLeave={() => setResourcesDropdownOpen(false)}
             >
               <button className="text-[15px] font-medium text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-1">
-                Resources
+                {t("nav.resources")}
                 <ChevronDown className="h-4 w-4" />
               </button>
 
