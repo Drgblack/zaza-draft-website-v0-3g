@@ -1,3 +1,4 @@
+﻿import Footer from "../components/Footer";
 import type React from "react"
 import { cookies } from "next/headers";
 import type { Metadata } from "next"
@@ -10,7 +11,6 @@ import { Suspense } from "react"
 import { ExitIntentProvider } from "@/components/exit-intent-provider"
 import { SignupModalProvider } from "@/components/signup-modal-provider"
 import { ImageErrorHandler } from "@/components/image-error-handler"
-import Footer from "";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -47,7 +47,6 @@ export default function RootLayout({
           <LanguageProvider>
             <Header />
             <main className="min-h-screen">{children}</main>
-            <Footer />
             <ExitIntentProvider />
             <SignupModalProvider />
           </LanguageProvider>
