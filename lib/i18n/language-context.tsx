@@ -2170,6 +2170,30 @@ const translationsDe: Record<string, string> = {
   "contact.help.faq": "→ Häufig gestellte Fragen",
   "contact.help.support": "→ Support-Center",
 
+  // Navigation (German)
+  "nav.aboutUs": "Über uns",
+  "nav.company": "Unternehmen",
+  "nav.founder": "Gründer",
+  "nav.press": "Presse-Kit",
+  "nav.ambassadorProgram": "Botschafter-Programm",
+  "nav.stateOfAI": "State of AI Bericht",
+  "nav.blog": "Blog",
+  "nav.compareTools": "Tools vergleichen",
+  "nav.integrations": "Integrationen",
+  "nav.community": "Community",
+  "nav.successStories": "Erfolgsgeschichten",
+  "nav.roiCalculator": "ROI-Rechner",
+  "nav.faq": "FAQ",
+  "nav.resources": "Ressourcen",
+  "nav.aiLiteracyResourceCenter": "KI-Kompetenz Resource Center",
+  "nav.glossary": "Glossar",
+  "nav.webinars": "Webinare",
+  "nav.videoTutorials": "Video-Tutorials",
+  "nav.bestAIToolParentEmails": "Bestes KI-Tool für Eltern-E-Mails",
+  "nav.reduceStressParentMessages": "Stress bei Elternnachrichten reduzieren",
+  "nav.bestAIWritingTools2025": "Beste KI-Schreibtools 2025",
+  "nav.aiStudentReports": "KI für Schülerberichte",
+
 
   // Company Page (German) - CREDIBILITY-PROTECTED VERSION
   "company.hero.label": "UNSER UNTERNEHMEN",
