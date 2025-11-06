@@ -996,7 +996,7 @@ const translationsEn: Record<string, string> = {
   "founder.hero.subheading": "I've spent over twenty years working in learning and professional education-across classrooms, universities, and corporate training. One thing has always been true: teaching is human work.",
   "founder.hero.label": "FOUNDER & CEO",
   "founder.hero.name": "Dr. Greg Blackburn",
-  "founder.hero.tagline": "Former Teacher, EdTech Researcher, Learning Scientist",
+  "founder.hero.tagline": "EdTech Researcher, Learning Scientist, AI Advocate",
 
   // Founder Journey Section
   "founder.journey.title": "My Journey in Education",
@@ -1036,6 +1036,14 @@ const translationsEn: Record<string, string> = {
   "founder.closing.title": "Dr. Greg Blackburn",
   "founder.closing.role": "Founder & CEO, Zaza Technologies",
   "founder.personal.cta": "Get in Touch",
+  "founder.personal.title": "A Personal Note",
+  "founder.personal.message1": "If you're reading this, you're probably a teacher who's curious about AI but skeptical about whether it can really help. I get it. I was skeptical too. Most AI tools feel like they were built by people who've never set foot in a classroom.",
+  "founder.personal.message2": "That's why I built Zaza differently. Every feature is designed with real teachers, tested in real classrooms, and refined based on real feedback. We don't just build software - we build partnerships with educators who help us create tools that actually work.",
+  "founder.personal.message3": "I'd love to hear from you. Whether you have questions, feedback, or just want to chat about education and technology, my door is always open. Let's build the future of teacher technology together.",
+  "founder.personal.name": "Greg",
+  "founder.personal.title2": "Dr. Greg Blackburn",
+  "founder.personal.company": "Zaza Technologies",
+
 
   // Additional Founder Keys (for page compatibility)
   "founder.journey.quote": "I built Zaza because I was tired of watching teachers drown in administrative work when technology should be setting them free.",
@@ -2034,7 +2042,7 @@ const translationsDe: Record<string, string> = {
   "founder.hero.subheading": "Ich habe über zwanzig Jahre in der Bildung und beruflichen Weiterbildung gearbeitet – in Klassenzimmern, Universitäten und Unternehmensschulungen. Eines war immer wahr: Unterrichten ist menschliche Arbeit.",
   "founder.hero.label": "GRÜNDER & CEO",
   "founder.hero.name": "Dr. Greg Blackburn",
-  "founder.hero.tagline": "Ehemaliger Lehrer, EdTech-Forscher, Lernwissenschaftler",
+  "founder.hero.tagline": "EdTech-Forscher, Lernwissenschaftler, KI-Befürworter",
 
   // Founder Journey Section (German)
   "founder.journey.title": "Meine Reise in der Bildung",
