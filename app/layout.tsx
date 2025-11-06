@@ -1,5 +1,4 @@
-﻿import Footer from "../components/Footer";
-import type React from "react"
+﻿import type React from "react"
 import { cookies } from "next/headers";
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
@@ -11,6 +10,7 @@ import { Suspense } from "react"
 import { ExitIntentProvider } from "@/components/exit-intent-provider"
 import { SignupModalProvider } from "@/components/signup-modal-provider"
 import { ImageErrorHandler } from "@/components/image-error-handler"
+import Footer from "../components/Footer";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
