@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useEffect, useRef, useState } from "react"
 import { Card } from "@/components/ui/card"
@@ -248,8 +248,7 @@ export default function FounderPage() {
           {/* Signature Block */}
           <div className="text-center space-y-4 pt-12 border-t border-[rgba(139,92,246,0.2)]">
             <div className="text-4xl font-signature text-[#8B5CF6] mb-2">Greg</div>
-            <div className="text-lg text-white font-semibold">{t("founder.personal.name")}</div>
-            <div className="text-base text-[#A78BFA]">{t("founder.personal.title2")}</div>
+<div className="text-base text-[#A78BFA]">{t("founder.personal.title2")}</div>
             <div className="text-sm text-[rgba(255,255,255,0.5)]">{t("founder.personal.company")}</div>
           </div>
 
