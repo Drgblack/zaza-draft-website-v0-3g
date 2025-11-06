@@ -1040,7 +1040,7 @@ const translationsEn: Record<string, string> = {
   "founder.personal.message1": "If you're reading this, you're probably a teacher who's curious about AI but skeptical about whether it can really help. I get it. I was skeptical too. Most AI tools feel like they were built by people who've never set foot in a classroom.",
   "founder.personal.message2": "That's why I built Zaza differently. Every feature is designed with real teachers, tested in real classrooms, and refined based on real feedback. We don't just build software - we build partnerships with educators who help us create tools that actually work.",
   "founder.personal.message3": "I'd love to hear from you. Whether you have questions, feedback, or just want to chat about education and technology, my door is always open. Let's build the future of teacher technology together.",
-  "founder.personal.name": "",
+  "founder.personal.name": "Greg",
   "founder.personal.title2": "Dr. Greg Blackburn",
   "founder.personal.company": "Zaza Technologies",
 
@@ -2116,7 +2116,7 @@ const translationsDe: Record<string, string> = {
   "founder.personal.message1": "Wenn Sie dies lesen, sind Sie wahrscheinlich eine Lehrkraft, die neugierig auf KI ist, aber skeptisch, ob sie wirklich helfen kann. Ich verstehe das. Ich war auch skeptisch. Die meisten KI-Tools fühlen sich an, als wären sie von Menschen entwickelt worden, die nie einen Fuß in ein Klassenzimmer gesetzt haben.",
   "founder.personal.message2": "Deshalb habe ich Zaza anders entwickelt. Jede Funktion wird mit echten Lehrkräften entwickelt, in echten Klassenzimmern getestet und basierend auf echtem Feedback verfeinert. Wir entwickeln nicht nur Software - wir bauen Partnerschaften mit Pädagogen auf, die uns helfen, Tools zu erstellen, die wirklich funktionieren.",
   "founder.personal.message3": "Ich würde gerne von Ihnen hören. Ob Sie Fragen, Feedback haben oder einfach nur über Bildung und Technologie sprechen möchten, meine Tür steht immer offen. Lassen Sie uns gemeinsam die Zukunft der Lehrertechnologie gestalten.",
-  "founder.personal.name": "",
+  "founder.personal.name": "Greg",
   "founder.personal.title2": "Dr. Greg Blackburn",
   "founder.personal.company": "Zaza Technologies",
   // Contact Page (German)
