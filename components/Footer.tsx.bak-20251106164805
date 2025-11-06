@@ -19,24 +19,11 @@ function SocialIcon({ label, href, children }: { label: string; href: string; ch
 
 export default function Footer() {
   const pathname = usePathname() || "";
+  const isDE = /^\/de(\/|$)/i.test(pathname);
 
-  // Gather all possible locale signals (no errors server-side)
-  const search = typeof window !== "undefined" ? window.location.search : "";
-  const cookies = typeof document !== "undefined" ? document.cookie : "";
-  const htmlLang = typeof document !== "undefined" ? document.documentElement.lang : "";
-
-  const isDE =
-    // Cookie used by many i18n setups (next-intl / v0)
-    /(^|;\s*)NEXT_LOCALE=de(;|$)/i.test(cookies) ||
-    /(^|;\s*)locale=de(;|$)/i.test(cookies) ||
-    // Querystring fallback
-    /[?&](lang|locale)=de\b/i.test(search) ||
-    // Route prefix fallback
-    /^\/de(\/|$)/i.test(pathname) ||
-    // <html lang="de">
-    (htmlLang || "").toLowerCase().startsWith("de");
-
-  const tagline = "The writing partner for teachers. Save hours. Protect wellbeing. Bring joy back to teaching.";
+  const tagline = isDE
+    ? "Der Schreibpartner für Lehrkräfte. Sparen Sie Zeit, schützen Sie Ihr Wohlbefinden, bringen Sie Freude zurück in den Unterricht."
+    : "The writing partner for teachers. Save hours. Protect wellbeing. Bring joy back to teaching.";
 
   return (
     <footer className="border-t border-white/10 bg-slate-950 text-slate-300">
@@ -66,11 +53,11 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-slate-200">Products</h3>
             <ul className="mt-3 space-y-2 text-sm">
-              <li><a href="https://www.zazadraft.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" aria-label="Zaza Draft â€“ opens in new tab">Zaza Draft</a></li>
-              <li><a href="https://www.zazateach.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" aria-label="Zaza Teach â€“ opens in new tab">Zaza Teach</a></li>
-              <li><a href="https://www.zazashield.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" aria-label="Zaza Shield â€“ opens in new tab">Zaza Shield</a></li>
-              <li><a href="https://www.zazagradeflow.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" aria-label="GradeFlow â€“ opens in new tab">GradeFlow</a></li>
-              <li><a href="https://www.zazatechnologies.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" aria-label="Zaza Technologies â€“ opens in new tab">Zaza Technologies</a></li>
+              <li><a href="https://www.zazadraft.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" aria-label="Zaza Draft – opens in new tab">Zaza Draft</a></li>
+              <li><a href="https://www.zazateach.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" aria-label="Zaza Teach – opens in new tab">Zaza Teach</a></li>
+              <li><a href="https://www.zazashield.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" aria-label="Zaza Shield – opens in new tab">Zaza Shield</a></li>
+              <li><a href="https://www.zazagradeflow.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" aria-label="GradeFlow – opens in new tab">GradeFlow</a></li>
+              <li><a href="https://www.zazatechnologies.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" aria-label="Zaza Technologies – opens in new tab">Zaza Technologies</a></li>
             </ul>
           </div>
 
