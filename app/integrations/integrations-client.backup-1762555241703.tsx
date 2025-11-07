@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { useLanguage } from "@/lib/i18n/language-context"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -225,7 +224,6 @@ const integrations = [
 ]
 
 export default function IntegrationsClient() {
-  const { t } = useLanguage()
   const [selectedCategory, setSelectedCategory] = useState("all")
   const [searchQuery, setSearchQuery] = useState("")
 
@@ -254,7 +252,10 @@ export default function IntegrationsClient() {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Connect Your <span className="gradient-text">Favorite Tools</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">{t("integrations.subtitle")}</p>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Seamlessly integrate Zaza Draft with your existing education technology stack. Setup takes minutes, not
+              hours.
+            </p>
 
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">

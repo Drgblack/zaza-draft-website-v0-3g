@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useMemo, useEffect } from "react"
+import { useLanguage } from "@/lib/i18n/language-context"
 import { Search, BookOpen, Filter, ChevronDown, ChevronUp, GraduationCap, Video, MessageSquare } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -368,6 +369,7 @@ const glossaryTerms: GlossaryTerm[] = [
 ]
 
 export default function GlossaryClient() {
+  const { t } = useLanguage()
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("All Categories")
   const [selectedLetter, setSelectedLetter] = useState<string | null>(null)
@@ -452,11 +454,8 @@ export default function GlossaryClient() {
               <BookOpen className="w-4 h-4 text-[#A78BFA]" />
               <span className="text-sm font-medium text-[#A78BFA]">AI Knowledge Base</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">AI Glossary for Teachers</h1>
-            <p className="text-xl text-gray-300 leading-relaxed">
-              150+ AI terms explained in teacher-friendly language. Search by category or alphabetically to understand
-              AI concepts for education.
-            </p>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">{t("glossary.title")}</h1>
+            <p className="text-xl text-gray-300 leading-relaxed">{t("glossary.subtitle")}</p>
           </div>
 
           {/* Stats */}

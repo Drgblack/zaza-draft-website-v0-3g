@@ -1106,11 +1106,6 @@ const translationsEn: Record<string, string> = {
   "contact.help.description": "Check out our helpful resources",
   "contact.help.faq": "→ Frequently Asked Questions",
   "contact.help.support": "→ Support Center",
-  "glossary.title": "AI Glossary for Teachers",
-  "glossary.subtitle": "150+ AI terms explained in teacher-friendly language. Search by category or alphabetically to understand AI concepts for education.",
-  "integrations.title": "Connect Your Favorite Tools",
-  "integrations.subtitle": "Seamlessly integrate Zaza Draft with your existing stack.",
-
 
 }
 
@@ -2174,11 +2169,6 @@ const translationsDe: Record<string, string> = {
   "contact.help.description": "Schauen Sie sich unsere hilfreichen Ressourcen an",
   "contact.help.faq": "→ Häufig gestellte Fragen",
   "contact.help.support": "→ Support-Center",
-  "glossary.title": "KI-Glossar für Lehrkräfte",
-  "glossary.subtitle": "Über 150 KI-Begriffe in leicht verständlicher Sprache erklärt. Nach Kategorie oder alphabetisch suchen, um KI-Konzepte für den Bildungsbereich zu verstehen.",
-  "integrations.title": "Verbinden Sie Ihre Lieblingstools",
-  "integrations.subtitle": "Integrieren Sie Zaza Draft nahtlos in Ihren vorhandenen Stack.",
-
   // Company page
   "company.hero.label": "UNSER UNTERNEHMEN",
   "company.hero.headline": "Zaza Technologies",
