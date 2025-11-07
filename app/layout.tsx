@@ -1,4 +1,5 @@
-﻿import type React from "react"
+import type React from "react"
+import GermanOverlay from "@/components/GermanOverlay";
 import { cookies } from "next/headers";
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
