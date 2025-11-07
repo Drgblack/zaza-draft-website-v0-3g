@@ -16,6 +16,7 @@ export function Header() {
   const [learningCentreDropdownOpen, setLearningCentreDropdownOpen] = useState(false)
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false)
   const { language, setLanguage, t } = useLanguage()
+  const L = (de: string, en: string) => (language === "de" ? de : en);
 
   const navigation = [{ name: t("nav.pricing"), href: "/pricing" }]
 
@@ -41,46 +42,46 @@ export function Header() {
 
   const learningCentreMenuItems = [
     {
-      name: "AI Literacy Resource Center",
+      name: L("AI-Literacy-Ressourcencenter", "AI Literacy Resource Center"),
       href: "/ai-literacy",
     },
     {
-      name: "Glossary",
+      name: L("Glossar", "Glossary"),
       href: "/glossary",
     },
     {
-      name: "Webinars",
+      name: L("Webinare", "Webinars"),
       href: "/webinars",
     },
     {
-      name: "Video Tutorials",
+      name: L("Video-Tutorials", "Video Tutorials"),
       href: "/videos",
     },
     {
-      name: "Best AI Tool for Parent Emails",
+      name: L("Bestes KI-Tool für Eltern-E-Mails", "Best AI Tool for Parent Emails"),
       href: "/best-ai-tool-parent-emails",
     },
     {
-      name: "Reduce Stress Writing Parent Messages",
+      name: L("Weniger Stress beim Schreiben an Eltern", "Reduce Stress Writing Parent Messages"),
       href: "/reduce-stress-parent-messages",
     },
     {
-      name: "Best AI Writing Tools for Teachers 2025",
+      name: L("Beste KI-Schreibtools für Lehrkräfte 2025", "Best AI Writing Tools for Teachers 2025"),
       href: "/best-ai-writing-tools-for-teachers-2025",
     },
     {
-      name: "AI for Student Reports",
+      name: L("KI für Zeugnis-/Schülerberichte", "AI for Student Reports"),
       href: "/ai-for-student-reports",
     },
   ]
 
   const resourcesMenuItems = [
     { name: "Blog", href: "/blog" },
-    { name: "Compare Tools", href: "/compare" },
-    { name: "Integrations", href: "/integrations" },
-    { name: "Community", href: "/community" },
-    { name: "Success Stories", href: "/success-stories" },
-    { name: "ROI Calculator", href: "/roi-calculator" },
+    { name: L("Tools vergleichen", "Compare Tools"), href: "/compare" },
+    { name: L("Integrationen", "Integrations"), href: "/integrations" },
+    { name: L("Community", "Community"), href: "/community" },
+    { name: L("Erfolgsgeschichten", "Success Stories"), href: "/success-stories" },
+    { name: L("ROI-Rechner", "ROI Calculator"), href: "/roi-calculator" },
     { name: t("nav.faq"), href: "/faq" },
     { name: t("nav.resources"), href: "/resources" },
   ]
@@ -89,8 +90,8 @@ export function Header() {
     { name: t("about.nav.company"), href: "/about/company" },
     { name: t("about.nav.founder"), href: "/about/founder" },
     { name: t("about.nav.press"), href: "/about/press" },
-    { name: "Ambassador Program", href: "/ambassadors" },
-    { name: "State of AI Report", href: "/state-of-ai-education" },
+    { name: L("Ambassador-Programm", "Ambassador Program"), href: "/ambassadors" },
+    { name: L("State-of-AI-Report", "State of AI Report"), href: "/state-of-ai-education" },
   ]
 
   return (
