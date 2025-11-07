@@ -171,7 +171,7 @@ export function Header() {
               onMouseLeave={() => setLearningCentreDropdownOpen(false)}
             >
               <button className="text-[15px] font-medium text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-1">
-                Learning Centre
+                {t("nav.learningCentre")}
                 <ChevronDown className="h-4 w-4" />
               </button>
 
@@ -198,7 +198,7 @@ export function Header() {
               onMouseLeave={() => setResourcesDropdownOpen(false)}
             >
               <button className="text-[15px] font-medium text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-1">
-                Resources
+                {t("nav.resources")}
                 <ChevronDown className="h-4 w-4" />
               </button>
 
