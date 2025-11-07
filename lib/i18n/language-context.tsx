@@ -2258,7 +2258,15 @@ const translationsFr: Record<string, string> = {}
 const translationsIt: Record<string, string> = {}
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>("en")
+  const [language, setLanguage] = useState<Language>(() => {
+    // Check URL pathname first
+    if (typeof window !== 'undefined') {
+      const path = window.location.pathname
+      if (path.startsWith('/de')) return 'de'
+      if (path.startsWith('/en')) return 'en'
+    }
+    return 'en'
+  })
 
   const t = (key: string): string => {
     const translations = {
