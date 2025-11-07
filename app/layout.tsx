@@ -28,13 +28,8 @@ export const metadata: Metadata = {
     generator: 'v0.app'
 }
 
-const __zazaLocale = (() => {
-  try {
-    const c = cookies();
-    const v = c.get('NEXT_LOCALE')?.value || c.get('locale')?.value || 'en';
-    return (v || 'en').toLowerCase();
-  } catch { return 'en'; }
-})();
+const __zazaLocale = "en";
+
 export default function RootLayout({
   children,
 }: {
