@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { useState, useEffect } from "react"
 import { useLanguage } from "@/lib/i18n/language-context"
@@ -582,7 +582,7 @@ export default function WebinarsClient() {
               variant="outline"
               className="border-[#8B5CF6] text-[#A78BFA] hover:bg-[#8B5CF6]/10 bg-transparent text-lg px-8 py-6"
             >
-              <Link href="/ai-literacy">{t("aiLiteracy.ctaBrowse")}</Link>
+              <Link href="/ai-literacy">Explore Courses</Link>
             </Button>
           </div>
         </div>
@@ -590,5 +590,3 @@ export default function WebinarsClient() {
     </div>
   )
 }
-
-

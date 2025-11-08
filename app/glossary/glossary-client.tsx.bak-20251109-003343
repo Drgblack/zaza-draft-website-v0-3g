@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 import { useState, useMemo, useEffect } from "react";
 import { Search, BookOpen, Filter, ChevronDown, ChevronUp, GraduationCap, Video, MessageSquare } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -131,7 +131,7 @@ const glossaryTerms: GlossaryTerm[] = [
     definition:
       "AI's ability to detect emotions and attitudes in text, determining whether writing is positive, negative, or neutral.",
     example:
-      "Sentiment analysis helps ensure your parent emails strike the right toneâ€”supportive rather than critical.",
+      "Sentiment analysis helps ensure your parent emails strike the right tone—supportive rather than critical.",
     category: "Natural Language Processing",
     relatedTerms: ["Natural Language Processing (NLP)", "Tone"],
   },
@@ -141,7 +141,7 @@ const glossaryTerms: GlossaryTerm[] = [
     id: "generative-ai",
     term: "Generative AI",
     definition:
-      "AI systems that can create new contentâ€”text, images, code, or other mediaâ€”based on patterns learned from training data.",
+      "AI systems that can create new content—text, images, code, or other media—based on patterns learned from training data.",
     example:
       "When Zaza Draft helps you write a parent email from scratch, it's using generative AI to create original, contextually appropriate text.",
     category: "Generative AI",
@@ -350,7 +350,7 @@ const glossaryTerms: GlossaryTerm[] = [
     definition:
       "Hypothetical AI that can understand, learn, and apply knowledge across any domain, like human intelligence. This doesn't exist yet.",
     example:
-      "Current AI tools like Zaza Draft are 'narrow AI'â€”excellent at specific tasks but not capable of general human-like reasoning.",
+      "Current AI tools like Zaza Draft are 'narrow AI'—excellent at specific tasks but not capable of general human-like reasoning.",
     category: "Future of AI",
     relatedTerms: ["Artificial Intelligence (AI)", "Narrow AI"],
   },
@@ -358,7 +358,7 @@ const glossaryTerms: GlossaryTerm[] = [
     id: "multimodal-ai",
     term: "Multimodal AI",
     definition:
-      "AI systems that can process and generate multiple types of contentâ€”text, images, audio, and videoâ€”simultaneously.",
+      "AI systems that can process and generate multiple types of content—text, images, audio, and video—simultaneously.",
     example:
       "Future versions of AI writing tools might analyze student work samples, hear your voice notes, and generate comprehensive reports.",
     category: "Future of AI",
@@ -689,7 +689,7 @@ export function GlossaryClientLegacy() {
               variant="outline"
               className="bg-white/5 hover:bg-white/10 text-white border-white/10 text-lg px-8 py-6"
             >
-              {t("aiLiteracy.ctaBrowse")}
+              Explore AI Literacy Courses
             </Button>
           </div>
         </div>
@@ -724,17 +724,17 @@ const categoryKeys = [
 ]
 
 const categoryLabelsDe: Record<string, string> = {
-  "AI Fundamentals": "KIâ€‘Grundlagen",
+  "AI Fundamentals": "KI‑Grundlagen",
   "Machine Learning": "Maschinelles Lernen",
-  "Natural Language Processing": "Verarbeitung natÃ¼rlicher Sprache",
+  "Natural Language Processing": "Verarbeitung natürlicher Sprache",
   "Generative AI": "Generative KI",
-  "AI Models & Architectures": "KIâ€‘Modelle & Architekturen",
-  "Prompt Engineering": "Promptâ€‘Engineering",
-  "AI Ethics & Safety": "KIâ€‘Ethik & Sicherheit",
+  "AI Models & Architectures": "KI‑Modelle & Architekturen",
+  "Prompt Engineering": "Prompt‑Engineering",
+  "AI Ethics & Safety": "KI‑Ethik & Sicherheit",
   "Data & Privacy": "Daten & Datenschutz",
-  "AI Tools & Platforms": "KIâ€‘Werkzeuge & Plattformen",
-  "Educational AI Applications": "Bildungsbezogene KIâ€‘Anwendungen",
-  "AI Implementation": "KIâ€‘EinfÃ¼hrung",
+  "AI Tools & Platforms": "KI‑Werkzeuge & Plattformen",
+  "Educational AI Applications": "Bildungsbezogene KI‑Anwendungen",
+  "AI Implementation": "KI‑Einführung",
   "Future of AI": "Zukunft der KI",
 }
 
@@ -975,23 +975,23 @@ const glossaryTerms_DUP2: GlossaryTerm[] = [
 // Minimal German translations used to override canonical term fields when language = 'de'
 const termTranslationsDe: Record<string, Partial<GlossaryTerm>> = {
   "artificial-intelligence": {
-    term: "KÃ¼nstliche Intelligenz (KI)",
+    term: "Künstliche Intelligenz (KI)",
     definition:
-      "Computersysteme, die Aufgaben ausfÃ¼hren, die normalerweise menschliche Intelligenz erfordern â€“ z. B. Lernen, ProblemlÃ¶sen, Mustererkennung und Entscheidungen.",
+      "Computersysteme, die Aufgaben ausführen, die normalerweise menschliche Intelligenz erfordern – z. B. Lernen, Problemlösen, Mustererkennung und Entscheidungen.",
     example:
-      "Wenn Zaza Draft Verbesserungen fÃ¼r deine Elternâ€‘E-Mail vorschlÃ¤gt, nutzt es KI, um Kontext zu verstehen und hilfreiche Empfehlungen zu erstellen.",
+      "Wenn Zaza Draft Verbesserungen für deine Eltern‑E-Mail vorschlägt, nutzt es KI, um Kontext zu verstehen und hilfreiche Empfehlungen zu erstellen.",
   },
   "machine-learning": {
     term: "Maschinelles Lernen",
     definition:
-      "Ein Teilgebiet der KI, bei dem Computer aus Daten lernen und ihre Leistung Ã¼ber die Zeit verbessern, ohne fÃ¼r jeden Fall explizit programmiert zu sein.",
+      "Ein Teilgebiet der KI, bei dem Computer aus Daten lernen und ihre Leistung über die Zeit verbessern, ohne für jeden Fall explizit programmiert zu sein.",
     example:
-      "Mit der Zeit lernt Zaza Draft deinen Schreibstil kennen und gibt zunehmend personalisierte VorschlÃ¤ge.",
+      "Mit der Zeit lernt Zaza Draft deinen Schreibstil kennen und gibt zunehmend personalisierte Vorschläge.",
   },
   "deep-learning": {
     term: "Deep Learning",
     definition:
-      "Eine fortgeschrittene Form des maschinellen Lernens mit mehrschichtigen neuronalen Netzen zur Verarbeitung komplexer Muster in groÃŸen Datenmengen.",
+      "Eine fortgeschrittene Form des maschinellen Lernens mit mehrschichtigen neuronalen Netzen zur Verarbeitung komplexer Muster in großen Datenmengen.",
   },
 }
 
@@ -1099,34 +1099,34 @@ export default function GlossaryClient() {
       ctaBody:
         "Now that you understand the terminology, experience how Zaza Draft makes AI practical for your daily teaching tasks.",
       ctaPrimary: "Start Free Trial",
-      ctaSecondary: "{t("aiLiteracy.ctaBrowse")}",
+      ctaSecondary: "Explore AI Literacy Courses",
     },
     de: {
-      badge: "KIâ€‘Wissensdatenbank",
-      title: "KIâ€‘Glossar fÃ¼r LehrkrÃ¤fte",
+      badge: "KI‑Wissensdatenbank",
+      title: "KI‑Glossar für Lehrkräfte",
       subtitle:
-        "Ãœber 150 KIâ€‘Begriffe einfach erklÃ¤rt. Suche nach Kategorie oder alphabetisch, um KIâ€‘Konzepte fÃ¼r die Bildung zu verstehen.",
-      statTerms: "Definierte KIâ€‘Begriffe",
+        "Über 150 KI‑Begriffe einfach erklärt. Suche nach Kategorie oder alphabetisch, um KI‑Konzepte für die Bildung zu verstehen.",
+      statTerms: "Definierte KI‑Begriffe",
       statCategories: "Themenkategorien",
       statEdu: "Bildungsfokus",
-      searchPlaceholder: "Begriffe, Definitionen oder Kategorien suchenâ€¦",
+      searchPlaceholder: "Begriffe, Definitionen oder Kategorien suchen…",
       allCategories: "Alle Kategorien",
       definition: "Definition",
       example: "Beispiel aus der Bildung",
       related: "Verwandte Begriffe",
       relatedBlockTitle: "Wissen anwenden",
-      relatedBlockDesc: "Setze diese KIâ€‘Konzepte in praxisnahen Lerneinheiten um",
-      relCoursesTitle: "KIâ€‘Kurse zur Grundbildung",
+      relatedBlockDesc: "Setze diese KI‑Konzepte in praxisnahen Lerneinheiten um",
+      relCoursesTitle: "KI‑Kurse zur Grundbildung",
       relCoursesDesc: "Lerne, wie du die Konzepte im Unterricht anwendest",
-      relWebinarsTitle: "Liveâ€‘Webinare",
-      relWebinarsDesc: "Erlebe KIâ€‘Begriffe in Aktion mit Expertenâ€‘Demos",
-      relCommunityTitle: "Communityâ€‘Diskussionen",
+      relWebinarsTitle: "Live‑Webinare",
+      relWebinarsDesc: "Erlebe KI‑Begriffe in Aktion mit Experten‑Demos",
+      relCommunityTitle: "Community‑Diskussionen",
       relCommunityDesc: "Stelle Fragen zu unklaren Begriffen",
-      ctaTitle: "Bereit, KIâ€‘Wissen praktisch einzusetzen?",
+      ctaTitle: "Bereit, KI‑Wissen praktisch einzusetzen?",
       ctaBody:
-        "Setze das Glossar direkt um und erlebe, wie Zaza Draft KI fÃ¼r deinen Schulalltag nutzbar macht.",
+        "Setze das Glossar direkt um und erlebe, wie Zaza Draft KI für deinen Schulalltag nutzbar macht.",
       ctaPrimary: "Kostenlos starten",
-      ctaSecondary: "KIâ€‘Kurse entdecken",
+      ctaSecondary: "KI‑Kurse entdecken",
     },
   } as const
 
@@ -1355,4 +1355,3 @@ export default function GlossaryClient() {
     </div>
   )
 }
-

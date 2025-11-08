@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
@@ -346,11 +346,11 @@ export default function CommunityClient() {
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Main Column - Categories & Discussions */}
             <div className="lg:col-span-2 space-y-8">
-              {/* {t("community.trending")} */}
+              {/* Trending Discussions */}
               <div>
                 <div className="flex items-center gap-3 mb-6">
                   <Flame className="w-8 h-8 text-[#A78BFA]" />
-                  <h2 className="text-3xl font-bold text-white">{t("community.trending")}</h2>
+                  <h2 className="text-3xl font-bold text-white">Trending Discussions</h2>
                 </div>
                 <div className="space-y-4">
                   {trendingDiscussions.map((discussion) => (
@@ -389,7 +389,7 @@ export default function CommunityClient() {
                                 {discussion.authorBadge}
                               </span>
                             )}
-                            <span>â€¢</span>
+                            <span>•</span>
                             <span>{discussion.timeAgo}</span>
                           </div>
                           <p className="text-gray-300 mb-4 leading-relaxed">{discussion.excerpt}</p>
@@ -418,7 +418,7 @@ export default function CommunityClient() {
               <div>
                 <div className="flex items-center gap-3 mb-6">
                   <MessageSquare className="w-8 h-8 text-[#A78BFA]" />
-                  <h2 className="text-3xl font-bold text-white">{t("community.categories")}</h2>
+                  <h2 className="text-3xl font-bold text-white">Discussion Categories</h2>
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">
                   {filteredCategories.map((category) => {
@@ -443,7 +443,7 @@ export default function CommunityClient() {
                             <p className="text-sm text-gray-300 mb-3 leading-relaxed">{t(descKeyFor(category))}</p>
                             <div className="flex items-center gap-4 text-xs text-gray-400">
                               <span>{category.threads.toLocaleString()} threads</span>
-                              <span>â€¢</span>
+                              <span>•</span>
                               <span>{category.posts.toLocaleString()} posts</span>
                             </div>
                           </div>
@@ -476,7 +476,7 @@ export default function CommunityClient() {
                           <span>{contributor.reputation.toLocaleString()} rep</span>
                           {contributor.badge && (
                             <>
-                              <span>â€¢</span>
+                              <span>•</span>
                               <span className="text-[#A78BFA]">{contributor.badge}</span>
                             </>
                           )}
@@ -514,7 +514,7 @@ export default function CommunityClient() {
                 </div>
               </div>
 
-              {/* {t("community.rules.title")} */}
+              {/* Community Guidelines */}
               <div className="bg-[#1E293B] border border-white/10 rounded-xl p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Shield className="w-6 h-6 text-[#A78BFA]" />
@@ -598,8 +598,6 @@ export default function CommunityClient() {
     </div>
   )
 }
-
-
 
 
 

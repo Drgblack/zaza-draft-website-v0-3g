@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
@@ -87,7 +87,7 @@ const featuredCourses = [
   {
     id: "parent-communication",
     title: "AI for Parent Communication",
-    description: "Write professional parent emails 10× faster",
+    description: "Write professional parent emails 10Ã— faster",
     duration: "1 hour",
     level: "Intermediate",
     lessons: 7,
@@ -207,7 +207,7 @@ const certificationLevels = [
     level: "AI-Ready Teacher",
     description: "Foundational AI literacy certification",
     requirements: ["Complete Beginner Path", "Pass assessment (80%+)", "Submit 3 sample prompts"],
-    badge: "🥉",
+    badge: "ðŸ¥‰",
     holders: "8,450+",
   },
   {
@@ -218,14 +218,14 @@ const certificationLevels = [
       "Pass advanced assessment (85%+)",
       "Submit portfolio of AI-enhanced lessons",
     ],
-    badge: "🥈",
+    badge: "ðŸ¥ˆ",
     holders: "3,920+",
   },
   {
     level: "AI Education Leader",
     description: "Advanced AI leadership certification",
     requirements: ["Complete Advanced Path", "Pass leadership assessment (90%+)", "Lead PD session or create resource"],
-    badge: "🥇",
+    badge: "ðŸ¥‡",
     holders: "1,240+",
   },
 ]
@@ -258,7 +258,7 @@ export default function AILiteracyClient() {
               <span className="text-[#A78BFA] font-medium text-sm">Free AI Education for Teachers</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Master AI for <span className="gradient-text">Education</span>
+              {t("title").split(" ").slice(0, 2).join(" ")} <span className="gradient-text">{t("title").split(" ").slice(2).join(" ")}</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Free courses, certification programs, and downloadable resources to help you confidently use AI in your
@@ -266,7 +266,7 @@ export default function AILiteracyClient() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white text-lg px-8 py-6">
-                <Link href="#courses">Browse Courses</Link>
+                <Link href="#courses">{t("aiLiteracy.ctaBrowse")}</Link>
               </Button>
               <Button
                 asChild
@@ -274,7 +274,7 @@ export default function AILiteracyClient() {
                 variant="outline"
                 className="border-[#8B5CF6] text-[#A78BFA] hover:bg-[#8B5CF6]/10 bg-transparent text-lg px-8 py-6"
               >
-                <Link href="#certification">Get Certified</Link>
+                <Link href="#certification">{t("aiLiteracy.ctaCert")}</Link>
               </Button>
             </div>
 
@@ -454,7 +454,7 @@ export default function AILiteracyClient() {
       <section className="py-20 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">What Teachers Are Saying</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">{t("aiLiteracy.whatTeachersSay")}</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Real feedback from educators who've completed our AI literacy courses
             </p>
@@ -493,7 +493,7 @@ export default function AILiteracyClient() {
               <Download className="w-5 h-5 text-[#A78BFA]" />
               <span className="text-[#A78BFA] font-medium text-sm">50+ Free Resources</span>
             </div>
-            <h2 className="text-4xl font-bold text-white mb-4">Downloadable Resource Library</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">{t("aiLiteracy.resources.title")}</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Ready-to-use templates, checklists, and guides to accelerate your AI adoption
             </p>
@@ -621,7 +621,7 @@ export default function AILiteracyClient() {
           <div className="mt-16 bg-gradient-to-br from-[#8B5CF6]/10 to-[#A78BFA]/5 border border-[#8B5CF6]/30 rounded-2xl p-8 md:p-12">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-3xl font-bold text-white mb-4">Why Get Certified?</h3>
+                <h3 className="text-3xl font-bold text-white mb-4">Why {t("aiLiteracy.ctaCert")}?</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <Shield className="w-6 h-6 text-[#A78BFA] flex-shrink-0 mt-1" />
@@ -671,8 +671,8 @@ export default function AILiteracyClient() {
 
       {/* Related Resources Section */}
       <RelatedResources
-        title="Continue Your AI Journey"
-        description="Explore more resources to enhance your AI teaching skills"
+        title={t("aiLiteracy.continue.title")}
+        description={t("aiLiteracy.continue.description")}
         resources={[
           {
             title: "Live Webinars",
@@ -705,7 +705,7 @@ export default function AILiteracyClient() {
             title="Start Your AI Learning Journey"
             description="Join 50,000+ teachers who are confidently using AI to enhance their teaching"
             primaryCTA={{
-              text: "Browse Courses",
+              text: "{t("aiLiteracy.ctaBrowse")}",
               href: "#courses",
             }}
             secondaryCTA={{
@@ -719,3 +719,6 @@ export default function AILiteracyClient() {
     </div>
   )
 }
+
+
+

@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { useState } from "react"
 import { useLanguage } from "@/lib/i18n/language-context"
@@ -11,7 +11,7 @@ import { Play, Search, Clock, Eye, BookOpen, Zap, Users, GraduationCap, Settings
 import { trackEvent } from "@/lib/analytics"
 
 const categories = [
-  { id: "all", name: "{t("videos.allVideos")}", icon: Play, count: 24 },
+  { id: "all", name: "All Videos", icon: Play, count: 24 },
   { id: "getting-started", name: "Getting Started", icon: BookOpen, count: 6 },
   { id: "advanced", name: "Advanced Features", icon: Zap, count: 5 },
   { id: "use-cases", name: "Use Cases", icon: Users, count: 7 },
@@ -323,12 +323,12 @@ export function VideoHubClient() {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 py-12">
-        {/* {t("videos.featured")} */}
+        {/* Featured Videos */}
         {selectedCategory === "all" && !searchQuery && (
           <section className="mb-16">
             <div className="flex items-center gap-2 mb-6">
               <TrendingUp className="h-6 w-6 text-purple-400" />
-              <h2 className="text-2xl font-bold text-white">{t("videos.featured")}</h2>
+              <h2 className="text-2xl font-bold text-white">Featured Videos</h2>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {featuredVideos.map((video) => (
@@ -373,7 +373,7 @@ export function VideoHubClient() {
         {/* Playlists */}
         {selectedCategory === "all" && !searchQuery && (
           <section className="mb-16">
-            <h2 className="text-2xl font-bold text-white mb-6">{t("videos.playlists")}</h2>
+            <h2 className="text-2xl font-bold text-white mb-6">Curated Playlists</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {playlists.map((playlist) => (
                 <Link
@@ -391,7 +391,7 @@ export function VideoHubClient() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                       <div className="absolute bottom-3 left-3 right-3">
                         <Badge className="bg-purple-600 text-white border-0 mb-2">
-                          {playlist.videoCount} videos â€¢ {playlist.duration}
+                          {playlist.videoCount} videos • {playlist.duration}
                         </Badge>
                       </div>
                     </div>
@@ -408,7 +408,7 @@ export function VideoHubClient() {
           </section>
         )}
 
-        {/* {t("videos.allVideos")} Grid */}
+        {/* All Videos Grid */}
         <section>
           <h2 className="text-2xl font-bold text-white mb-6">
             {selectedCategory === "all" ? t("videos.section.all") : t(`videos.categories.${selectedCategory}`)}
@@ -453,5 +453,3 @@ export function VideoHubClient() {
     </div>
   )
 }
-
-
