@@ -1,0 +1,43 @@
+﻿{
+  "title": "Meistern Sie KI für die Bildung",
+  "subtitle": "Bauen Sie Ihre KI-Expertise mit umsetzbaren Kursen auf, die Ihnen Zeit sparen und Ihren Unterricht verbessern.",
+  "ctaBrowse": "Kurse durchsuchen",
+  "ctaCert": "Zertifizieren lassen",
+  "stat": {
+    "courses": "Kurse",
+    "teachers": "Lehrkräfte eingeschrieben",
+    "certificates": "Ausgestellte Zertifikate",
+    "hours": "Lernstunden"
+  },
+  "choosePath": "Wählen Sie Ihren Lernpfad",
+  "path": {
+    "beginner": {
+      "title": "Einsteigerpfad",
+      "cta": "Jetzt starten"
+    },
+    "intermediate": {
+      "title": "Fortgeschrittene Grundlagen",
+      "cta": "Kurs ansehen"
+    },
+    "advanced": {
+      "title": "Expertenpfad",
+      "cta": "Loslegen"
+    }
+  },
+  "whatTeachersSay": "Was Lehrkräfte sagen",
+  "resources": {
+    "title": "Herunterladbare Ressourcenbibliothek"
+  },
+  "cert": {
+    "title": "KI-Bildungszertifizierung",
+    "badge1": "AI-Ready Teacher",
+    "badge2": "AI-Confident Educator",
+    "badge3": "AI Education Leader"
+  },
+  "continue": {
+    "title": "Setzen Sie Ihre KI-Reise fort",
+    "webinars": "Live-Webinare",
+    "community": "Lehrercommunity",
+    "integrations": "Tool-Integrationen"
+  }
+}

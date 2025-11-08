@@ -28,6 +28,7 @@ import { SocialProofBar } from "@/components/conversion/social-proof-bar"
 import { TestimonialCard } from "@/components/conversion/testimonial-card"
 import { TrustBadges } from "@/components/conversion/trust-badges"
 import { LeadMagnet } from "@/components/conversion/lead-magnet"
+import { useTranslations } from '@/lib/i18n/useTranslations'
 
 const learningPaths = [
   {
@@ -232,7 +233,8 @@ const certificationLevels = [
 ]
 
 export default function AILiteracyClient() {
-  const { t } = useLanguage()
+  const { t } = useTranslations("aiLiteracy")
+  const { language } = useLanguage()
   const [selectedPath, setSelectedPath] = useState<string | null>(null)
 
   useEffect(() => {
@@ -265,7 +267,7 @@ export default function AILiteracyClient() {
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">{t("aiLiteracy.subtitle")}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white text-lg px-8 py-6">
-                <Link href="#courses">Browse Courses</Link>
+                <Link href="#courses">{t("ctaBrowse")}</Link>
               </Button>
               <Button
                 asChild
@@ -273,7 +275,7 @@ export default function AILiteracyClient() {
                 variant="outline"
                 className="border-[#8B5CF6] text-[#A78BFA] hover:bg-[#8B5CF6]/10 bg-transparent text-lg px-8 py-6"
               >
-                <Link href="#certification">Get Certified</Link>
+                <Link href="#certification">{t("ctaCert")}</Link>
               </Button>
             </div>
 

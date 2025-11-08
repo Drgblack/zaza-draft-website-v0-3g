@@ -1,0 +1,18 @@
+﻿{
+  "hero": {
+    "title": "Treten Sie der Lehrercommunity bei",
+    "subtitle": "Vernetzen Sie sich mit Lehrkräften weltweit. Teilen Sie Strategien, stellen Sie Fragen und lernen Sie aus Praxisbeispielen."
+  },
+  "search": {
+    "placeholder": "Diskussionen durchsuchen…"
+  },
+  "trending": "Top-Diskussionen",
+  "categories": "Diskussionskategorien",
+  "rules": {
+    "title": "Community-Richtlinien"
+  },
+  "cta": {
+    "join": "Kostenloses Konto erstellen",
+    "guest": "Als Gast stöbern"
+  }
+}

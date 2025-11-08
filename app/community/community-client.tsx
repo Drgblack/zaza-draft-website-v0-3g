@@ -26,6 +26,7 @@ import {
 } from "lucide-react"
 import { analytics } from "@/lib/analytics"
 import { RelatedResources } from "@/components/related-resources"
+import { useTranslations } from '@/lib/i18n/useTranslations'
 
 const categories = [
   {
@@ -258,7 +259,8 @@ const badges = [
 ]
 
 export default function CommunityClient() {
-  const { t } = useLanguage()
+  const { t } = useTranslations("community")
+  const { language } = useLanguage()
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
 
@@ -350,7 +352,7 @@ export default function CommunityClient() {
               <div>
                 <div className="flex items-center gap-3 mb-6">
                   <Flame className="w-8 h-8 text-[#A78BFA]" />
-                  <h2 className="text-3xl font-bold text-white">Trending Discussions</h2>
+                  <h2 className="text-3xl font-bold text-white">{t("trending")}</h2>
                 </div>
                 <div className="space-y-4">
                   {trendingDiscussions.map((discussion) => (
@@ -418,7 +420,7 @@ export default function CommunityClient() {
               <div>
                 <div className="flex items-center gap-3 mb-6">
                   <MessageSquare className="w-8 h-8 text-[#A78BFA]" />
-                  <h2 className="text-3xl font-bold text-white">Discussion Categories</h2>
+                  <h2 className="text-3xl font-bold text-white">{t("categories")}</h2>
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">
                   {filteredCategories.map((category) => {

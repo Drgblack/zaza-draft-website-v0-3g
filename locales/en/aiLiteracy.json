@@ -1,0 +1,43 @@
+﻿{
+  "title": "Master AI for Education",
+  "subtitle": "Build your AI expertise with actionable courses that save you time and improve your teaching.",
+  "ctaBrowse": "Browse Courses",
+  "ctaCert": "Get Certified",
+  "stat": {
+    "courses": "Courses",
+    "teachers": "Teachers Enrolled",
+    "certificates": "Certified Educators",
+    "hours": "Hours Saved"
+  },
+  "choosePath": "Choose Your Learning Path",
+  "path": {
+    "beginner": {
+      "title": "Beginner Path",
+      "cta": "Start Now"
+    },
+    "intermediate": {
+      "title": "Intermediate Path",
+      "cta": "View Courses"
+    },
+    "advanced": {
+      "title": "Advanced Path",
+      "cta": "Get Started"
+    }
+  },
+  "whatTeachersSay": "What Teachers Are Saying",
+  "resources": {
+    "title": "Downloadable Resource Library"
+  },
+  "cert": {
+    "title": "AI Education Certification",
+    "badge1": "AI-Ready Teacher",
+    "badge2": "AI-Confident Educator",
+    "badge3": "AI Education Leader"
+  },
+  "continue": {
+    "title": "Continue Your AI Journey",
+    "webinars": "Live Webinars",
+    "community": "Teacher Community",
+    "integrations": "Tool Integrations"
+  }
+}

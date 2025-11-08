@@ -1,0 +1,18 @@
+﻿{
+  "hero": {
+    "title": "Join the Teacher Community",
+    "subtitle": "Connect with teachers worldwide. Share strategies, ask questions, and learn from real classroom examples."
+  },
+  "search": {
+    "placeholder": "Search discussions..."
+  },
+  "trending": "Trending Discussions",
+  "categories": "Discussion Categories",
+  "rules": {
+    "title": "Community Guidelines"
+  },
+  "cta": {
+    "join": "Create Free Account",
+    "guest": "Browse as Guest"
+  }
+}
