@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { useLanguage } from "@/lib/i18n/language-context"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import {
@@ -231,6 +232,7 @@ const certificationLevels = [
 ]
 
 export default function AILiteracyClient() {
+  const { t } = useLanguage()
   const [selectedPath, setSelectedPath] = useState<string | null>(null)
 
   useEffect(() => {
@@ -260,10 +262,7 @@ export default function AILiteracyClient() {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Master AI for <span className="gradient-text">Education</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Free courses, certification programs, and downloadable resources to help you confidently use AI in your
-              classroom
-            </p>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">{t("aiLiteracy.subtitle")}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white text-lg px-8 py-6">
                 <Link href="#courses">Browse Courses</Link>

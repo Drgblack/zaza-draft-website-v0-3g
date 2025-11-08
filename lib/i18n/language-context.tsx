@@ -1,5 +1,5 @@
 "use client"
-import { createContext, useContext, useState, type ReactNode } from "react"
+import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
 
 type Language = "en" | "de" | "es" | "fr" | "it"
 
@@ -1110,6 +1110,20 @@ const translationsEn: Record<string, string> = {
   "glossary.subtitle": "150+ AI terms explained in teacher-friendly language. Search by category or alphabetically to understand AI concepts for education.",
   "integrations.title": "Connect Your Favorite Tools",
   "integrations.subtitle": "Seamlessly integrate Zaza Draft with your existing stack.",
+  "aiLiteracy.title": "Master AI for Education",
+  "aiLiteracy.subtitle": "Build your AI expertise with comprehensive courses that help you integrate AI into your classroom.",
+  "bestAiWriting.title": "10 Best AI Writing Tools for Teachers in 2025",
+  "bestAiWriting.subtitle": "Compare top AI tools for teacher writing, from parent communication to lesson planning.",
+  "reduceStress.title": "How to Reduce Stress from Parent Messages (Without Ignoring Them)",
+  "reduceStress.subtitle": "Professional strategies for managing parent communication while protecting your wellbeing.",
+  "bestAiTool.title": "Best AI Tool for Writing Parent Emails Professionally",
+  "bestAiTool.subtitle": "Discover why teachers choose Zaza Draft for professional parent communication.",
+  "aiStudentReports.title": "AI for Student Reports & Report Cards: Complete Teacher Guide",
+  "aiStudentReports.subtitle": "Save hours on report cards while maintaining personalization and quality.",
+  "successStories.title": "See how teachers and schools transform communication with Zaza Draft",
+  "successStories.subtitle": "Real results from educators who use AI-powered writing tools.",
+  "roiCalculator.title": "Calculate Your Time Savings with Zaza Draft",
+  "roiCalculator.subtitle": "See exactly how many hours per week you could save on parent communication.",
 
 
 }
@@ -2178,6 +2192,20 @@ const translationsDe: Record<string, string> = {
   "glossary.subtitle": "Über 150 KI-Begriffe in leicht verständlicher Sprache erklärt. Nach Kategorie oder alphabetisch suchen, um KI-Konzepte für den Bildungsbereich zu verstehen.",
   "integrations.title": "Verbinden Sie Ihre Lieblingstools",
   "integrations.subtitle": "Integrieren Sie Zaza Draft nahtlos in Ihren vorhandenen Stack.",
+  "aiLiteracy.title": "KI für Bildung meistern",
+  "aiLiteracy.subtitle": "Bauen Sie Ihre KI-Expertise mit umfassenden Kursen auf, die Ihnen helfen, KI in Ihren Unterricht zu integrieren.",
+  "bestAiWriting.title": "Die 10 besten KI-Schreibwerkzeuge für Lehrkräfte 2025",
+  "bestAiWriting.subtitle": "Vergleichen Sie die besten KI-Tools für Lehrkräfte – von Elternkommunikation bis Unterrichtsplanung.",
+  "reduceStress.title": "Wie Sie Stress durch Elternnachrichten reduzieren (ohne sie zu ignorieren)",
+  "reduceStress.subtitle": "Professionelle Strategien für den Umgang mit Elternkommunikation bei gleichzeitigem Schutz Ihres Wohlbefindens.",
+  "bestAiTool.title": "Das beste KI-Tool für professionelle Eltern-E-Mails",
+  "bestAiTool.subtitle": "Entdecken Sie, warum Lehrkräfte Zaza Draft für professionelle Elternkommunikation wählen.",
+  "aiStudentReports.title": "KI für Schülerberichte und Zeugnisse: Vollständiger Leitfaden für Lehrkräfte",
+  "aiStudentReports.subtitle": "Sparen Sie Stunden bei Zeugnissen und bewahren Sie gleichzeitig Personalisierung und Qualität.",
+  "successStories.title": "Sehen Sie, wie Lehrkräfte und Schulen die Kommunikation mit Zaza Draft transformieren",
+  "successStories.subtitle": "Echte Ergebnisse von Pädagogen, die KI-gestützte Schreibwerkzeuge verwenden.",
+  "roiCalculator.title": "Berechnen Sie Ihre Zeitersparnis mit Zaza Draft",
+  "roiCalculator.subtitle": "Sehen Sie genau, wie viele Stunden pro Woche Sie bei der Elternkommunikation sparen könnten.",
 
   // Company page
   "company.hero.label": "UNSER UNTERNEHMEN",
@@ -2259,14 +2287,39 @@ const translationsIt: Record<string, string> = {}
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>(() => {
-    // Check URL pathname first
-    if (typeof window !== 'undefined') {
-      const path = window.location.pathname
-      if (path.startsWith('/de')) return 'de'
-      if (path.startsWith('/en')) return 'en'
+    // Read from cookie set by middleware
+    if (typeof document !== 'undefined') {
+      const cookies = document.cookie.split(';')
+      const langCookie = cookies.find(c => c.trim().startsWith('lang='))
+      if (langCookie) {
+        const lang = langCookie.split('=')[1].trim()
+        if (lang === 'de' || lang === 'en') return lang as Language
+      }
     }
     return 'en'
   })
+  
+  // Update language when cookie changes (e.g., user navigates to /de/ page)
+  useEffect(() => {
+    const checkCookie = () => {
+      if (typeof document !== 'undefined') {
+        const cookies = document.cookie.split(';')
+        const langCookie = cookies.find(c => c.trim().startsWith('lang='))
+        if (langCookie) {
+          const lang = langCookie.split('=')[1].trim()
+          if ((lang === 'de' || lang === 'en') && lang !== language) {
+            setLanguage(lang as Language)
+          }
+        }
+      }
+    }
+    
+    // Check immediately and on navigation
+    checkCookie()
+    window.addEventListener('popstate', checkCookie)
+    
+    return () => window.removeEventListener('popstate', checkCookie)
+  }, [language])
 
   const t = (key: string): string => {
     const translations = {

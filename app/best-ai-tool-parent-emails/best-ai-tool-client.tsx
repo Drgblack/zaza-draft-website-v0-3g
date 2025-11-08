@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect } from "react"
+import { useLanguage } from "@/lib/i18n/language-context"
 import Link from "next/link"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { QuickAnswerBox } from "@/components/quick-answer-box"
@@ -46,6 +47,7 @@ const faqItems: FAQItem[] = [
 ]
 
 export default function BestAIToolClient() {
+  const { t } = useLanguage()
   useEffect(() => {
     // Track page view
     if (typeof window !== "undefined" && (window as any).analytics) {
@@ -70,9 +72,7 @@ export default function BestAIToolClient() {
 
         {/* Header */}
         <header className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-            Best AI Tool for Writing Parent Emails Professionally
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">{t("bestAiTool.title")}</h1>
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4" />

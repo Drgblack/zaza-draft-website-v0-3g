@@ -152,13 +152,8 @@ export default function BestAIWritingClient() {
               <TrendingUp className="h-4 w-4" />
               Updated January 2025
             </div>
-            <h1 className="mb-6 text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              10 Best AI Writing Tools for Teachers in 2025
-            </h1>
-            <p className="mb-8 text-balance text-lg text-gray-300 sm:text-xl leading-relaxed">
-              Tested by 10,000+ educators. Compare features, pricing, and real classroom results to find the perfect AI
-              writing assistant for your teaching workflow.
-            </p>
+            <h1 className="mb-6 text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">{t("bestAiWriting.title")}</h1>
+            <p className="mb-8 text-balance text-lg text-gray-300 sm:text-xl leading-relaxed">{t("bestAiWriting.subtitle")}</p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Button size="lg" asChild className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white">
                 <Link href="/products/draft">Try Zaza Draft Free</Link>

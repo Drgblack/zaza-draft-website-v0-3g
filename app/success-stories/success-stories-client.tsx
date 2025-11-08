@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { useLanguage } from "@/lib/i18n/language-context"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
@@ -96,6 +97,7 @@ const categories = [
 ]
 
 export function SuccessStoriesClient() {
+  const { t } = useLanguage()
   const [selectedCategory, setSelectedCategory] = useState<Category>("all")
 
   const filteredStudies =
@@ -109,12 +111,8 @@ export function SuccessStoriesClient() {
           <Badge className="mb-6 bg-purple-500/10 text-purple-300 border-purple-500/20 px-4 py-1.5">
             Proven Results
           </Badge>
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 text-balance">
-            See how teachers and schools transform communication with Zaza Draft
-          </h1>
-          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto text-pretty">
-            Real stories from educators who've saved hundreds of hours and built stronger relationships with families.
-          </p>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 text-balance">{t("successStories.title")}</h1>
+          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto text-pretty">{t("successStories.subtitle")}</p>
 
           {/* Trust Metrics */}
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">

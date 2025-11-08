@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useLanguage } from "@/lib/i18n/language-context"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Slider } from "@/components/ui/slider"
@@ -13,6 +14,7 @@ import Link from "next/link"
 type UserType = "teacher" | "admin" | "district"
 
 export function ROICalculatorClient() {
+  const { t } = useLanguage()
   const [userType, setUserType] = useState<UserType>("teacher")
   const [numTeachers, setNumTeachers] = useState(1)
   const [emailsPerWeek, setEmailsPerWeek] = useState(10)
@@ -99,12 +101,8 @@ export function ROICalculatorClient() {
           <Badge className="mb-6 bg-purple-500/10 text-purple-300 border-purple-500/20 px-4 py-1.5">
             Based on data from 10,000+ teachers
           </Badge>
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 text-balance">
-            Calculate Your Time Savings with Zaza Draft
-          </h1>
-          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            See exactly how many hours and dollars Zaza Draft saves your teachers or district.
-          </p>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 text-balance">{t("roiCalculator.title")}</h1>
+          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">{t("roiCalculator.subtitle")}</p>
         </div>
       </section>
 

@@ -7,8 +7,10 @@ import { FAQSection } from "@/components/faq-section"
 import { Button } from "@/components/ui/button"
 import { Shield, Clock, Heart, TrendingDown, CheckCircle2, AlertCircle, MessageSquare, Target } from "lucide-react"
 import Link from "next/link"
+import { useLanguage } from "@/lib/i18n/language-context"
 
 export default function ReduceStressClient() {
+  const { t } = useLanguage()
   const tocItems = [
     { id: "why-stressful", title: "Why Parent Messages Feel So Stressful", level: 1 },
     { id: "hidden-cost", title: "The Hidden Cost of Communication Stress", level: 1 },
@@ -71,14 +73,9 @@ export default function ReduceStressClient() {
               <span className="text-sm font-medium text-gray-400 uppercase tracking-wide">Teacher Wellness</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
-              How to Reduce Stress from Parent Messages (Without Ignoring Them)
-            </h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">{t("reduceStress.title")}</h1>
 
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              You check your email and see 12 new parent messages. Your stomach tightens. You know you should respond,
-              but you're already exhausted. Here's how to break the cycle without sacrificing relationships.
-            </p>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">{t("reduceStress.subtitle")}</p>
 
             <div className="flex flex-wrap gap-4 mb-12">
               <Link href="/products/shield">

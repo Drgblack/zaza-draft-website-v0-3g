@@ -207,9 +207,7 @@ export default function AIStudentReportsClient() {
         <QuickAnswerBox answer="Use AI to draft student reports by providing anonymous observations (no names), reviewing and personalizing the output, and adding specific examples. Use FERPA-compliant tools like Zaza Draft. Most teachers save 60-70% of report writing time while improving quality and consistency." />
 
         <header className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-            AI for Student Reports & Report Cards: Complete Teacher Guide
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">{t("aiStudentReports.title")}</h1>
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4" />
