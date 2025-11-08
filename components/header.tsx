@@ -255,8 +255,7 @@ export function Header() {
             <div className="flex items-center gap-2 rounded-lg bg-white/5 p-1">
               <button
                 onClick={() => {
-                  const newPath = pathname.startsWith('/de/') ? pathname.replace('/de/', '/') : pathname.startsWith('/de') ? pathname.replace('/de', '') : pathname
-                  router.push(newPath || '/')
+                  window.location.href = pathname.startsWith('/de/') ? pathname.replace('/de/', '/') : pathname.startsWith('/de') ? pathname.replace('/de', '') : pathname
                 }}
                 className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200 ${
                   language === "en" ? "bg-[#8B5CF6] text-white" : "text-gray-400 hover:text-white"
@@ -266,8 +265,7 @@ export function Header() {
               </button>
               <button
                 onClick={() => {
-                  const newPath = pathname.startsWith('/de') ? pathname : '/de' + pathname
-                  router.push(newPath)
+                  window.location.href = pathname.startsWith('/de') ? pathname : '/de' + pathname
                 }}
                 className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200 ${
                   language === "de" ? "bg-[#8B5CF6] text-white" : "text-gray-400 hover:text-white"
