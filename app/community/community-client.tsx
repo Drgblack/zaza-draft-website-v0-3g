@@ -420,7 +420,7 @@ export default function CommunityClient() {
               <div>
                 <div className="flex items-center gap-3 mb-6">
                   <MessageSquare className="w-8 h-8 text-[#A78BFA]" />
-                  <h2 className="text-3xl font-bold text-white">{t("categories")}</h2>
+                  <h2 className="text-3xl font-bold text-white">{t("categoriesTitle")}</h2>
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">
                   {filteredCategories.map((category) => {

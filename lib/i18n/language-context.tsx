@@ -2393,6 +2393,11 @@ const translationsFr: Record<string, string> = {}
 
 const translationsIt: Record<string, string> = {}
 
+interface LanguageProviderProps {
+  children: React.ReactNode
+  initialLanguage?: "en" | "de"
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>(() => {
     // Read from cookie set by middleware

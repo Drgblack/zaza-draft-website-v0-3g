@@ -1,30 +1,31 @@
-﻿export default {
-  "title": "Meistern Sie KI für die Bildung",
-  "subtitle": "Bauen Sie Ihre KI-Expertise mit umsetzbaren Kursen auf, die Ihnen Zeit sparen und Ihren Unterricht verbessern.",
-  "ctaBrowse": "Kurse durchsuchen",
-  "ctaCert": "Zertifizieren lassen",
-  "stat": {
-    "courses": "Kurse",
-    "teachers": "Lehrkräfte eingeschrieben",
-    "certificates": "Zertifizierte Pädagogen",
-    "hours": "Gesparte Stunden"
-  },
+export default {
+  "title": "KI für Bildung meistern",
+  "subtitle": "Bauen Sie Ihre KI-Expertise mit umfassenden Kursen auf, die Ihnen helfen, KI in Ihren Unterricht zu integrieren.",
+  "courses": "Kurse",
+  "educators": "Pädagogen",
+  "certified": "Zertifiziert",
+  "hoursSaved": "Gesparte Stunden",
   "pathsTitle": "Wählen Sie Ihren Lernpfad",
-  "path": {
-    "beginner": {
-      "title": "Einsteigerpfad",
-      "cta": "Jetzt starten"
-    },
-    "intermediate": {
-      "title": "Fortgeschrittene Grundlagen",
-      "cta": "Kurs ansehen"
-    },
-    "advanced": {
-      "title": "Expertenpfad",
-      "cta": "Loslegen"
-    }
-  },
-  "testimonialsTitle": "Was Lehrkräfte sagen",
+  "pathsSubtitle": "Strukturierte Lernpfade für Lehrkräfte in jeder Phase ihrer KI-Reise",
+  "beginnerTitle": "Einsteiger-Pfad",
+  "beginnerDesc": "Perfekt für Lehrkräfte, die neu in der KI sind",
+  "intermediateTitle": "Fortgeschrittenen-Pfad",
+  "intermediateDesc": "Für Lehrkräfte mit grundlegenden KI-Kenntnissen",
+  "advancedTitle": "Experten-Pfad",
+  "advancedDesc": "Tiefes Eintauchen in fortgeschrittene KI-Konzepte",
+  "coursesTitle": "Alle Kurse",
+  "coursesSubtitle": "Vom Grundverständnis bis zur Meisterschaft – strukturierte Lernpfade für jeden Lehrertyp",
+  "certificationTitle": "KI-Bildungszertifizierung",
+  "certificationSubtitle": "Erwerben Sie anerkannte Qualifikationen, die Ihre KI-Kompetenz und pädagogische Expertise nachweisen",
+  "benefit1": "Zeigen Sie Ihre Expertise Schulleitungen",
+  "benefit2": "Heben Sie sich bei Bewerbungen und Beförderungen ab",
+  "benefit3": "Vernetzen Sie sich mit über 13.000 zertifizierten KI-Pädagogen weltweit",
   "libraryTitle": "Herunterladbare Ressourcenbibliothek",
-  "certificationTitle": "KI-Bildungszertifizierung"
+  "librarySubtitle": "Sofort einsetzbare Vorlagen, Checklisten und Leitfäden zur Beschleunigung Ihrer KI-Einführung",
+  "testimonialsTitle": "Was Lehrkräfte sagen",
+  "testimonialsSubtitle": "Echtes Feedback von Pädagogen, die unsere KI-Kompetenzkurse abgeschlossen haben",
+  "ctaTitle": "Beginnen Sie Ihre KI-Reise",
+  "ctaSubtitle": "Beginnen Sie noch heute Ihre Zertifizierungsreise. Alle Kurse und Bewertungen sind völlig kostenlos",
+  "ctaButton": "Kostenlosen Kurs beginnen",
+  "ctaSecondary": "Geführte Tour"
 }
