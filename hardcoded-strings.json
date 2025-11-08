@@ -1,0 +1,326 @@
+[
+  {
+    "file": "app\\home-client.tsx",
+    "line": 226,
+    "text": "aria-label=\"Close\"",
+    "context": "aria-label=\"Close\""
+  },
+  {
+    "file": "app\\home-client.tsx",
+    "line": 281,
+    "text": "alt=\"Strikingly attractive professional female teacher in modern classroom\"",
+    "context": "alt=\"Strikingly attractive professional female teacher in modern classroom\""
+  },
+  {
+    "file": "app\\about\\founder\\page.tsx",
+    "line": 274,
+    "text": "aria-label=\"Scroll to top\"",
+    "context": "aria-label=\"Scroll to top\""
+  },
+  {
+    "file": "app\\about\\press\\page.tsx",
+    "line": 45,
+    "text": "title=\"Primary Logo (Light)\"",
+    "context": "title=\"Primary Logo (Light)\""
+  },
+  {
+    "file": "app\\about\\press\\page.tsx",
+    "line": 52,
+    "text": "title=\"Primary Logo (Dark)\"",
+    "context": "title=\"Primary Logo (Dark)\""
+  },
+  {
+    "file": "app\\about\\press\\page.tsx",
+    "line": 59,
+    "text": "title=\"App Icon\"",
+    "context": "title=\"App Icon\""
+  },
+  {
+    "file": "app\\about\\press\\page.tsx",
+    "line": 66,
+    "text": "title=\"Monochrome Logo\"",
+    "context": "title=\"Monochrome Logo\""
+  },
+  {
+    "file": "app\\about\\press\\page.tsx",
+    "line": 87,
+    "text": "title=\"Dashboard View\"",
+    "context": "title=\"Dashboard View\""
+  },
+  {
+    "file": "app\\about\\press\\page.tsx",
+    "line": 94,
+    "text": "title=\"Draft Editor\"",
+    "context": "title=\"Draft Editor\""
+  },
+  {
+    "file": "app\\about\\press\\page.tsx",
+    "line": 101,
+    "text": "title=\"Safety Guardrails\"",
+    "context": "title=\"Safety Guardrails\""
+  },
+  {
+    "file": "app\\about\\press\\page.tsx",
+    "line": 115,
+    "text": "title=\"Brand Guidelines PDF\"",
+    "context": "title=\"Brand Guidelines PDF\""
+  },
+  {
+    "file": "app\\ai-for-student-reports\\ai-student-reports-client.tsx",
+    "line": 522,
+    "text": "title=\"Frequently Asked Questions\"",
+    "context": "title=\"Frequently Asked Questions\""
+  },
+  {
+    "file": "app\\ai-literacy\\ai-literacy-client.tsx",
+    "line": 551,
+    "text": "title=\"Free AI Prompt Template Library\"",
+    "context": "title=\"Free AI Prompt Template Library\""
+  },
+  {
+    "file": "app\\ai-literacy\\ai-literacy-client.tsx",
+    "line": 675,
+    "text": "title=\"Continue Your AI Journey\"",
+    "context": "title=\"Continue Your AI Journey\""
+  },
+  {
+    "file": "app\\ai-literacy\\ai-literacy-client.tsx",
+    "line": 706,
+    "text": "title=\"Start Your AI Learning Journey\"",
+    "context": "title=\"Start Your AI Learning Journey\""
+  },
+  {
+    "file": "app\\ai-literacy\\resources\\resource-library-client.tsx",
+    "line": 162,
+    "text": "placeholder=\"Search resources...\"",
+    "context": "placeholder=\"Search resources...\""
+  },
+  {
+    "file": "app\\ai-literacy\\resources\\[slug]\\resource-detail-client.tsx",
+    "line": 243,
+    "text": "placeholder=\"your@email.com\"",
+    "context": "placeholder=\"your@email.com\""
+  },
+  {
+    "file": "app\\best-ai-writing-tools-for-teachers-2025\\best-ai-writing-client.tsx",
+    "line": 181,
+    "text": "title=\"Quick Answer: Best AI Writing Tool for Teachers\"",
+    "context": "title=\"Quick Answer: Best AI Writing Tool for Teachers\""
+  },
+  {
+    "file": "app\\best-ai-writing-tools-for-teachers-2025\\best-ai-writing-client.tsx",
+    "line": 281,
+    "text": "Learn More",
+    "context": "<Link href={tool.link}>Learn More</Link>"
+  },
+  {
+    "file": "app\\best-ai-writing-tools-for-teachers-2025\\best-ai-writing-client.tsx",
+    "line": 499,
+    "text": "title=\"Frequently Asked Questions\"",
+    "context": "title=\"Frequently Asked Questions\""
+  },
+  {
+    "file": "app\\blog\\blog-client.tsx",
+    "line": 143,
+    "text": "placeholder=\"Search articles...\"",
+    "context": "placeholder=\"Search articles...\""
+  },
+  {
+    "file": "app\\blog\\blog-client.tsx",
+    "line": 200,
+    "text": "placeholder=\"Your email\"",
+    "context": "placeholder=\"Your email\""
+  },
+  {
+    "file": "app\\community\\discussions\\[id]\\discussion-thread-client.tsx",
+    "line": 348,
+    "text": "placeholder=\"Share your thoughts, experiences, or questions...\"",
+    "context": "placeholder=\"Share your thoughts, experiences, or questions...\""
+  },
+  {
+    "file": "app\\compare\\[slug]\\comparison-client.tsx",
+    "line": 433,
+    "text": "Start Free Trial",
+    "context": "<Link href=\"/pricing\">Start Free Trial</Link>"
+  },
+  {
+    "file": "app\\glossary\\glossary-client.backup-1762555241695.tsx",
+    "line": 488,
+    "text": "placeholder=\"Search terms, definitions, or categories...\"",
+    "context": "placeholder=\"Search terms, definitions, or categories...\""
+  },
+  {
+    "file": "app\\glossary\\glossary-client.backup-1762555241695.tsx",
+    "line": 649,
+    "text": "title=\"Apply Your Knowledge\"",
+    "context": "title=\"Apply Your Knowledge\""
+  },
+  {
+    "file": "app\\glossary\\glossary-client.tsx",
+    "line": 487,
+    "text": "placeholder=\"Search terms, definitions, or categories...\"",
+    "context": "placeholder=\"Search terms, definitions, or categories...\""
+  },
+  {
+    "file": "app\\glossary\\glossary-client.tsx",
+    "line": 648,
+    "text": "title=\"Apply Your Knowledge\"",
+    "context": "title=\"Apply Your Knowledge\""
+  },
+  {
+    "file": "app\\glossary\\[slug]\\glossary-term-client.tsx",
+    "line": 152,
+    "text": "Learn More",
+    "context": "<h3 className=\"text-lg font-semibold text-white mb-4\">Learn More</h3>"
+  },
+  {
+    "file": "app\\integrations\\integrations-client.backup-1762555241703.tsx",
+    "line": 266,
+    "text": "placeholder=\"Search integrations...\"",
+    "context": "placeholder=\"Search integrations...\""
+  },
+  {
+    "file": "app\\integrations\\integrations-client.backup-1762555241703.tsx",
+    "line": 458,
+    "text": "title=\"Get the Most from Integrations\"",
+    "context": "title=\"Get the Most from Integrations\""
+  },
+  {
+    "file": "app\\integrations\\integrations-client.tsx",
+    "line": 265,
+    "text": "placeholder=\"Search integrations...\"",
+    "context": "placeholder=\"Search integrations...\""
+  },
+  {
+    "file": "app\\integrations\\integrations-client.tsx",
+    "line": 457,
+    "text": "title=\"Get the Most from Integrations\"",
+    "context": "title=\"Get the Most from Integrations\""
+  },
+  {
+    "file": "app\\products\\draft\\draft-client.tsx",
+    "line": 102,
+    "text": "alt=\"Teacher writing parent messages\"",
+    "context": "alt=\"Teacher writing parent messages\""
+  },
+  {
+    "file": "app\\products\\gradeflow\\gradeflow-client.tsx",
+    "line": 137,
+    "text": "alt=\"Teacher grading assignments with AI assistance\"",
+    "context": "alt=\"Teacher grading assignments with AI assistance\""
+  },
+  {
+    "file": "app\\products\\shield\\shield-client.tsx",
+    "line": 85,
+    "text": "alt=\"Zaza Shield\"",
+    "context": "alt=\"Zaza Shield\""
+  },
+  {
+    "file": "app\\products\\teach\\teach-client.tsx",
+    "line": 102,
+    "text": "alt=\"Teacher planning lessons with laptop\"",
+    "context": "alt=\"Teacher planning lessons with laptop\""
+  },
+  {
+    "file": "app\\reduce-stress-parent-messages\\reduce-stress-client.tsx",
+    "line": 679,
+    "text": "title=\"Frequently Asked Questions\"",
+    "context": "title=\"Frequently Asked Questions\""
+  },
+  {
+    "file": "app\\roi-calculator\\roi-calculator-client.tsx",
+    "line": 424,
+    "text": "Start Free Trial",
+    "context": "<Link href=\"/signup\">Start Free Trial</Link>"
+  },
+  {
+    "file": "app\\state-of-ai-education\\[year]\\year-report-client.tsx",
+    "line": 291,
+    "text": "placeholder=\"your.email@school.edu\"",
+    "context": "placeholder=\"your.email@school.edu\""
+  },
+  {
+    "file": "app\\suite\\SuiteClient.tsx",
+    "line": 71,
+    "text": "alt=\"Suite overview\"",
+    "context": "<img src=\"/welcome-introduction-video.jpg\" alt=\"Suite overview\" className=\"w-full h-60 object-cover\""
+  },
+  {
+    "file": "app\\suite\\SuiteClient.tsx",
+    "line": 74,
+    "text": "alt=\"Draft writing flow\"",
+    "context": "<img src=\"/writing-message-tutorial.jpg\" alt=\"Draft writing flow\" className=\"w-full h-60 object-cove"
+  },
+  {
+    "file": "app\\suite\\SuiteClient.tsx",
+    "line": 77,
+    "text": "alt=\"Planning and grading\"",
+    "context": "<img src=\"/young-happy-female-teacher-classroom.jpg\" alt=\"Planning and grading\" className=\"w-full h-"
+  },
+  {
+    "file": "app\\suite\\SuiteClient.tsx",
+    "line": 88,
+    "text": "title=\"Zaza Teach\"",
+    "context": "<Card title=\"Zaza Teach\">"
+  },
+  {
+    "file": "app\\suite\\SuiteClient.tsx",
+    "line": 116,
+    "text": "title=\"Zaza GradeFlow\"",
+    "context": "<Card title=\"Zaza GradeFlow\">"
+  },
+  {
+    "file": "app\\suite\\SuiteClient.tsx",
+    "line": 130,
+    "text": "title=\"Zaza Shield\"",
+    "context": "<Card title=\"Zaza Shield\">"
+  },
+  {
+    "file": "app\\suite\\SuiteClient.tsx",
+    "line": 178,
+    "text": "alt=\"Sarah Mitchell\"",
+    "context": "<img src=\"/images/testimonials/sarah-mitchell.jpg\" alt=\"Sarah Mitchell\" className=\"w-10 h-10 rounded"
+  },
+  {
+    "file": "app\\suite\\SuiteClient.tsx",
+    "line": 188,
+    "text": "alt=\"Michael Brown\"",
+    "context": "<img src=\"/images/testimonials/michael-brown.jpg\" alt=\"Michael Brown\" className=\"w-10 h-10 rounded-f"
+  },
+  {
+    "file": "app\\suite\\SuiteClient.tsx",
+    "line": 198,
+    "text": "alt=\"Emma Rodriguez\"",
+    "context": "<img src=\"/images/testimonials/emma-rodriguez.jpg\" alt=\"Emma Rodriguez\" className=\"w-10 h-10 rounded"
+  },
+  {
+    "file": "app\\videos\\[id]\\video-detail-client.tsx",
+    "line": 324,
+    "text": "Resources",
+    "context": "<TabsTrigger value=\"resources\">Resources</TabsTrigger>"
+  },
+  {
+    "file": "app\\webinars\\webinars-client.tsx",
+    "line": 494,
+    "text": "title=\"Deepen Your Learning\"",
+    "context": "title=\"Deepen Your Learning\""
+  },
+  {
+    "file": "app\\webinars\\[slug]\\webinar-detail-client.tsx",
+    "line": 191,
+    "text": "placeholder=\"Your name\"",
+    "context": "placeholder=\"Your name\""
+  },
+  {
+    "file": "app\\webinars\\[slug]\\webinar-detail-client.tsx",
+    "line": 205,
+    "text": "placeholder=\"your@email.com\"",
+    "context": "placeholder=\"your@email.com\""
+  },
+  {
+    "file": "app\\webinars\\[slug]\\webinar-detail-client.tsx",
+    "line": 378,
+    "text": "title=\"Continue Learning\"",
+    "context": "title=\"Continue Learning\""
+  }
+]
