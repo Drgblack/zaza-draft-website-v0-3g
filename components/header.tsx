@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
+import { useRouter, usePathname } from "next/navigation"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/lib/i18n/language-context"
@@ -15,6 +16,8 @@ export function Header() {
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false)
   const [learningCentreDropdownOpen, setLearningCentreDropdownOpen] = useState(false)
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false)
+  const router = useRouter()
+  const pathname = usePathname()
   const { language, setLanguage, t } = useLanguage()
   const L = (de: string, en: string) => (language === "de" ? de : en);
 
@@ -251,7 +254,10 @@ export function Header() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-6 items-center">
             <div className="flex items-center gap-2 rounded-lg bg-white/5 p-1">
               <button
-                onClick={() => setLanguage("en")}
+                onClick={() => {
+                  const newPath = pathname.startsWith('/de/') ? pathname.replace('/de/', '/') : pathname.startsWith('/de') ? pathname.replace('/de', '') : pathname
+                  router.push(newPath || '/')
+                }}
                 className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200 ${
                   language === "en" ? "bg-[#8B5CF6] text-white" : "text-gray-400 hover:text-white"
                 }`}
@@ -259,7 +265,10 @@ export function Header() {
                 EN
               </button>
               <button
-                onClick={() => setLanguage("de")}
+                onClick={() => {
+                  const newPath = pathname.startsWith('/de') ? pathname : '/de' + pathname
+                  router.push(newPath)
+                }}
                 className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200 ${
                   language === "de" ? "bg-[#8B5CF6] text-white" : "text-gray-400 hover:text-white"
                 }`}
@@ -349,7 +358,10 @@ export function Header() {
               <div className="pt-4 pb-2">
                 <div className="flex items-center gap-2 rounded-full bg-white/5 p-1 border border-white/10">
                   <button
-                    onClick={() => setLanguage("en")}
+                    onClick={() => {
+                  const newPath = pathname.startsWith('/de/') ? pathname.replace('/de/', '/') : pathname.startsWith('/de') ? pathname.replace('/de', '') : pathname
+                  router.push(newPath || '/')
+                }}
                     className={`flex-1 px-4 py-2 text-sm font-medium rounded-full transition-all ${
                       language === "en" ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white" : "text-gray-400"
                     }`}
@@ -357,7 +369,10 @@ export function Header() {
                     English
                   </button>
                   <button
-                    onClick={() => setLanguage("de")}
+                    onClick={() => {
+                  const newPath = pathname.startsWith('/de') ? pathname : '/de' + pathname
+                  router.push(newPath)
+                }}
                     className={`flex-1 px-4 py-2 text-sm font-medium rounded-full transition-all ${
                       language === "de" ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white" : "text-gray-400"
                     }`}
