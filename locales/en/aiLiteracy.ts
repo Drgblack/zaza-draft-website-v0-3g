@@ -9,8 +9,7 @@
     "certificates": "Certified Educators",
     "hours": "Hours Saved"
   },
-  "choosePath": "Choose Your Learning Path",
-  "pathTitle": "Choose Your Learning Path",
+  "pathsTitle": "Choose Your Learning Path",
   "path": {
     "beginner": {
       "title": "Beginner Path",
@@ -24,5 +23,8 @@
       "title": "Advanced Path",
       "cta": "Get Started"
     }
-  }
+  },
+  "testimonialsTitle": "What Teachers Are Saying",
+  "libraryTitle": "Downloadable Resource Library",
+  "certificationTitle": "AI Education Certification"
 }

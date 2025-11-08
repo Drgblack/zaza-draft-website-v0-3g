@@ -9,8 +9,7 @@
     "certificates": "Zertifizierte Pädagogen",
     "hours": "Gesparte Stunden"
   },
-  "choosePath": "Wählen Sie Ihren Lernpfad",
-  "pathTitle": "Wählen Sie Ihren Lernpfad",
+  "pathsTitle": "Wählen Sie Ihren Lernpfad",
   "path": {
     "beginner": {
       "title": "Einsteigerpfad",
@@ -24,5 +23,8 @@
       "title": "Expertenpfad",
       "cta": "Loslegen"
     }
-  }
+  },
+  "testimonialsTitle": "Was Lehrkräfte sagen",
+  "libraryTitle": "Herunterladbare Ressourcenbibliothek",
+  "certificationTitle": "KI-Bildungszertifizierung"
 }
