@@ -1,0 +1,73 @@
+﻿import json
+
+# Complete ai-literacy translations
+ai_literacy_translations = {
+  "en": {
+    "aiLiteracy.courses": "Courses",
+    "aiLiteracy.educators": "Educators",
+    "aiLiteracy.certified": "Certified",
+    "aiLiteracy.hoursSaved": "Hours Saved",
+    "aiLiteracy.pathsTitle": "Choose Your Learning Path",
+    "aiLiteracy.pathsSubtitle": "Structured learning paths designed for teachers at every stage of their AI journey",
+    "aiLiteracy.beginnerTitle": "Beginner Path",
+    "aiLiteracy.beginnerDesc": "Perfect for teachers new to AI",
+    "aiLiteracy.intermediateTitle": "Intermediate Path",
+    "aiLiteracy.intermediateDesc": "For teachers with basic AI knowledge",
+    "aiLiteracy.advancedTitle": "Advanced Path",
+    "aiLiteracy.advancedDesc": "Deep dive into advanced AI concepts",
+    "aiLiteracy.coursesTitle": "All Courses",
+    "aiLiteracy.coursesSubtitle": "From foundational understanding to mastery—structured learning paths for every type of teacher",
+    "aiLiteracy.certificationTitle": "AI Education Certification",
+    "aiLiteracy.certificationSubtitle": "Earn recognized credentials that demonstrate your AI literacy and teaching expertise",
+    "aiLiteracy.benefit1": "Demonstrate your expertise to administrators",
+    "aiLiteracy.benefit2": "Stand out in job applications and promotions",
+    "aiLiteracy.benefit3": "Connect with 13,000+ certified AI educators worldwide",
+    "aiLiteracy.libraryTitle": "Downloadable Resource Library",
+    "aiLiteracy.librarySubtitle": "Ready-to-use templates, checklists, and guides to accelerate your AI adoption",
+    "aiLiteracy.testimonialsTitle": "What Teachers Are Saying",
+    "aiLiteracy.testimonialsSubtitle": "Real feedback from educators who've completed our AI literacy courses",
+    "aiLiteracy.ctaTitle": "Start Your AI Journey",
+    "aiLiteracy.ctaSubtitle": "Begin your certification journey today. All courses and assessments are completely free",
+    "aiLiteracy.ctaButton": "Start Free Course",
+    "aiLiteracy.ctaSecondary": "Take Guided Tour"
+  },
+  "de": {
+    "aiLiteracy.courses": "Kurse",
+    "aiLiteracy.educators": "Pädagogen",
+    "aiLiteracy.certified": "Zertifiziert",
+    "aiLiteracy.hoursSaved": "Gesparte Stunden",
+    "aiLiteracy.pathsTitle": "Wählen Sie Ihren Lernpfad",
+    "aiLiteracy.pathsSubtitle": "Strukturierte Lernpfade für Lehrkräfte in jeder Phase ihrer KI-Reise",
+    "aiLiteracy.beginnerTitle": "Einsteiger-Pfad",
+    "aiLiteracy.beginnerDesc": "Perfekt für Lehrkräfte, die neu in der KI sind",
+    "aiLiteracy.intermediateTitle": "Fortgeschrittenen-Pfad",
+    "aiLiteracy.intermediateDesc": "Für Lehrkräfte mit grundlegenden KI-Kenntnissen",
+    "aiLiteracy.advancedTitle": "Experten-Pfad",
+    "aiLiteracy.advancedDesc": "Tiefes Eintauchen in fortgeschrittene KI-Konzepte",
+    "aiLiteracy.coursesTitle": "Alle Kurse",
+    "aiLiteracy.coursesSubtitle": "Vom Grundverständnis bis zur Meisterschaft – strukturierte Lernpfade für jeden Lehrertyp",
+    "aiLiteracy.certificationTitle": "KI-Bildungszertifizierung",
+    "aiLiteracy.certificationSubtitle": "Erwerben Sie anerkannte Qualifikationen, die Ihre KI-Kompetenz und pädagogische Expertise nachweisen",
+    "aiLiteracy.benefit1": "Zeigen Sie Ihre Expertise Schulleitungen",
+    "aiLiteracy.benefit2": "Heben Sie sich bei Bewerbungen und Beförderungen ab",
+    "aiLiteracy.benefit3": "Vernetzen Sie sich mit über 13.000 zertifizierten KI-Pädagogen weltweit",
+    "aiLiteracy.libraryTitle": "Herunterladbare Ressourcenbibliothek",
+    "aiLiteracy.librarySubtitle": "Sofort einsetzbare Vorlagen, Checklisten und Leitfäden zur Beschleunigung Ihrer KI-Einführung",
+    "aiLiteracy.testimonialsTitle": "Was Lehrkräfte sagen",
+    "aiLiteracy.testimonialsSubtitle": "Echtes Feedback von Pädagogen, die unsere KI-Kompetenzkurse abgeschlossen haben",
+    "aiLiteracy.ctaTitle": "Beginnen Sie Ihre KI-Reise",
+    "aiLiteracy.ctaSubtitle": "Beginnen Sie noch heute Ihre Zertifizierungsreise. Alle Kurse und Bewertungen sind völlig kostenlos",
+    "aiLiteracy.ctaButton": "Kostenlosen Kurs beginnen",
+    "aiLiteracy.ctaSecondary": "Geführte Tour"
+  }
+}
+
+# Save translations
+with open('ai-literacy-full-translations.json', 'w', encoding='utf-8') as f:
+    json.dump(ai_literacy_translations, f, indent=2, ensure_ascii=False)
+
+print("✅ Created complete ai-literacy translations!")
+print(f"📝 EN keys: {len(ai_literacy_translations['en'])}")
+print(f"📝 DE keys: {len(ai_literacy_translations['de'])}")
+print("\nSaved to: ai-literacy-full-translations.json")
+print("\nNext: Add these to language-context.tsx")

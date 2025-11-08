@@ -314,7 +314,7 @@ export default function AILiteracyClient() {
       <section className="py-20 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Choose Your Learning Path</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">{t("aiLiteracy.pathsTitle")}</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Structured learning paths designed for teachers at every stage of their AI journey
             </p>
@@ -453,7 +453,7 @@ export default function AILiteracyClient() {
       <section className="py-20 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">What Teachers Are Saying</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">{t("aiLiteracy.testimonialsTitle")}</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Real feedback from educators who've completed our AI literacy courses
             </p>
@@ -492,7 +492,7 @@ export default function AILiteracyClient() {
               <Download className="w-5 h-5 text-[#A78BFA]" />
               <span className="text-[#A78BFA] font-medium text-sm">50+ Free Resources</span>
             </div>
-            <h2 className="text-4xl font-bold text-white mb-4">Downloadable Resource Library</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">{t("aiLiteracy.libraryTitle")}</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Ready-to-use templates, checklists, and guides to accelerate your AI adoption
             </p>
@@ -570,7 +570,7 @@ export default function AILiteracyClient() {
               <Award className="w-5 h-5 text-[#A78BFA]" />
               <span className="text-[#A78BFA] font-medium text-sm">Professional Certification</span>
             </div>
-            <h2 className="text-4xl font-bold text-white mb-4">AI Education Certification</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">{t("aiLiteracy.certificationTitle")}</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Earn recognized credentials that demonstrate your AI literacy and teaching expertise
             </p>
