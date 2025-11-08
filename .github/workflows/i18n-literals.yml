@@ -1,0 +1,29 @@
+﻿name: i18n – Block English literals on DE pages
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+  push:
+    branches: [ main ]
+
+jobs:
+  check-literals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install deps
+        run: pnpm i --frozen-lockfile
+
+      - name: Check literals in /app/de/**
+        run: |
+          LITERAL_PATHS="app/de" \
+          LITERAL_ALLOW="Zaza(?:\\s+Draft|\\s+Teach|\\s+Technologies)?|AI(?:\\b|-)|LLM\\b|GPT\\b|FERPA\\b|PII\\b|AI-Ready Teacher|AI-Confident Educator|AI Education Leader" \
+          node scripts/check-literals.js
