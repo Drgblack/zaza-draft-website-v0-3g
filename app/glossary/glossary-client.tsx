@@ -1099,7 +1099,7 @@ export default function GlossaryClient() {
       ctaBody:
         "Now that you understand the terminology, experience how Zaza Draft makes AI practical for your daily teaching tasks.",
       ctaPrimary: "Start Free Trial",
-      ctaSecondary: "{t("aiLiteracy.ctaBrowse")}",
+      ctaSecondary: t("aiLiteracy.ctaBrowse"),
     },
     de: {
       badge: "KIâ€‘Wissensdatenbank",
@@ -1355,4 +1355,5 @@ export default function GlossaryClient() {
     </div>
   )
 }
+
 
