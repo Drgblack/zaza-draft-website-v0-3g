@@ -262,7 +262,7 @@ export default function AILiteracyClient() {
               <span className="text-[#A78BFA] font-medium text-sm">Free AI Education for Teachers</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Master AI for <span className="gradient-text">Education</span>
+              {t("aiLiteracy.title").split(" ").slice(0, -1).join(" ")} <span className="gradient-text">{t("aiLiteracy.title").split(" ").slice(-1)}</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">{t("aiLiteracy.subtitle")}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
