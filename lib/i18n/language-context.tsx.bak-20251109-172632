@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
 
@@ -39,25 +39,6 @@ function writeLangCookie(lang: Lang) {
 const translationsEn: Record<string, string> = {
   // Common
   "common.learnMore": "Learn more",
-  // ==== Homepage (minimal) ====
-  "hero.badge": "Teacher-first AI",
-  "hero.headline": "Master AI for",
-  "hero.headlineAccent": "Education",
-  "hero.subheadline": "Practical tools that save time, reduce stress, and improve communication.",
-  "hero.ctaPrimary": "Get Started",
-  "hero.ctaSecondary": "How it works",
-
-  "problem.heading": "A real teacher workload problem",
-  "solution.heading": "A simple, supportive solution",
-
-  "howItWorks.heading": "How Zaza Draft helps",
-  "demo.heading": "See it in action",
-  "useCases.heading": "Where teachers use it",
-  "comparison.heading": "Compare your options",
-  "whyChoose.heading": "Why teachers choose Zaza",
-  "testimonials.heading": "What teachers say",
-  "finalCTA.heading": "Ready to feel lighter?",
-  "finalCTA.cta": "Start free trial",
 
   // AI Literacy page
   "aiLiteracy.badge": "Free AI Education for Teachers",
@@ -98,39 +79,20 @@ const translationsEn: Record<string, string> = {
 const translationsDe: Record<string, string> = {
   // Common
   "common.learnMore": "Mehr erfahren",
-  // ==== Startseite (minimal) ====
-  "hero.badge": "Lehrer-first AI",
-  "hero.headline": "KI für Bildung",
-  "hero.headlineAccent": "meistern",
-  "hero.subheadline": "Praktische Tools, die Zeit sparen, Stress senken und die Kommunikation verbessern.",
-  "hero.ctaPrimary": "Jetzt starten",
-  "hero.ctaSecondary": "So funktioniert’s",
-
-  "problem.heading": "Das echte Arbeitslast-Problem von Lehrkräften",
-  "solution.heading": "Eine einfache, unterstützende Lösung",
-
-  "howItWorks.heading": "So hilft Zaza Draft",
-  "demo.heading": "So sieht es aus",
-  "useCases.heading": "Wo Lehrkräfte es nutzen",
-  "comparison.heading": "Optionen im Vergleich",
-  "whyChoose.heading": "Warum Lehrkräfte Zaza wählen",
-  "testimonials.heading": "Was Lehrkräfte sagen",
-  "finalCTA.heading": "Bereit für mehr Leichtigkeit?",
-  "finalCTA.cta": "Kostenlos testen",
 
   // AI Literacy page
-  "aiLiteracy.badge": "Kostenlose KI-Bildung fÃ¼r LehrkrÃ¤fte",
+  "aiLiteracy.badge": "Kostenlose KI-Bildung für Lehrkräfte",
   "aiLiteracy.allCourses": "Alle Kurse",
   "aiLiteracy.ctaBrowse": "Kurse durchsuchen",
   "aiLiteracy.ctaCert": "Zertifikat erwerben",
-  "aiLiteracy.whatTeachersSay": "Was LehrkrÃ¤fte sagen",
+  "aiLiteracy.whatTeachersSay": "Was Lehrkräfte sagen",
   "aiLiteracy.resources.title": "Herunterladbare Ressourcenbibliothek",
   "aiLiteracy.continue.title": "Setzen Sie Ihre KI-Reise fort",
   "aiLiteracy.continue.desc": "Entdecken Sie weitere Ressourcen, um Ihre KI-Lehrkompetenz zu vertiefen.",
   "aiLiteracy.centerExplore": "KI-Kompetenzzentrum erkunden",
 
   // Videos hub
-  "videos.featured": "AusgewÃ¤hlte Videos",
+  "videos.featured": "Ausgewählte Videos",
   "videos.playlists": "Kuratierten Playlists",
   "videos.all": "Alle Videos",
   "videos.allGrid": "Alle Videos",
@@ -144,7 +106,7 @@ const translationsDe: Record<string, string> = {
   "glossary.ctaExploreCourses": "KI-Kurse erkunden",
 
   // Webinars
-  "webinars.relatedExplore": "Verwandte Ressourcen erkunden, um Ihr VerstÃ¤ndnis zu vertiefen",
+  "webinars.relatedExplore": "Verwandte Ressourcen erkunden, um Ihr Verständnis zu vertiefen",
 
   // State of AI in Education
   "stateAI.archiveCta": "Archiv der Jahresberichte zur KI in der Bildung ansehen",
