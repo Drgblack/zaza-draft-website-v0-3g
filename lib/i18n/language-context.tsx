@@ -2422,7 +2422,24 @@ const translationsDe: Record<string, string> = {
 ,
   "ctaBrowse": "Kurse durchsuchen",
   "ctaCert": "Zertifizieren lassen",
-  "trending": "Aktuelle Diskussionen"}
+  "trending": "Aktuelle Diskussionen",
+  // AI Literacy page - missing keys
+  "aiLiteracy.badge": "Kostenlose KI-Bildung für Lehrkräfte",
+  "aiLiteracy.allCourses": "Alle Kurse",
+  "aiLiteracy.allCoursesSubtitle": "Von grundlegendem Verständnis bis zur Meisterschaft",
+  
+  // Videos
+  "videos.featured": "Empfohlene Videos",
+  "videos.playlists": "Kuratierte Playlists",
+  "videos.all": "Alle Videos",
+  
+  // Glossary
+  "glossary.ctaExploreCourses": "KI-Kurse erkunden",
+  
+  // Common CTAs
+  "common.learnMore": "Mehr erfahren",
+  "common.exploreMore": "Mehr erkunden",
+}
 
 const translationsEs: Record<string, string> = {}
 
