@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
 
 type Language = "en" | "de" | "es" | "fr" | "it"
@@ -2419,7 +2419,10 @@ const translationsDe: Record<string, string> = {
   "community.categoriesTitle": "Diskussionskategorien",
   "cta.learnMore": "Mehr erfahren",
   "cta.getStarted": "Jetzt starten"
-}
+,
+  "ctaBrowse": "Kurse durchsuchen",
+  "ctaCert": "Zertifizieren lassen",
+  "trending": "Aktuelle Diskussionen"}
 
 const translationsEs: Record<string, string> = {}
 
@@ -2490,3 +2493,4 @@ export function useLanguage() {
   }
   return context
 }
+
