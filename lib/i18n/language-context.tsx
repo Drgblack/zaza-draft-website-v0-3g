@@ -2385,7 +2385,41 @@ const translationsDe: Record<string, string> = {
   "company.stats.countries.number": "15",
   "company.stats.countries.label": "Länder",
   "company.stats.hours.number": "10+",
-  "company.stats.hours.label": "Wöchentlich gesparte Stunden",}
+  "company.stats.hours.label": "Wöchentlich gesparte Stunden",
+
+  // AI Literacy Page
+  "aiLiteracy.hero.badge": "25.000+ aktive Lernende",
+  "aiLiteracy.hero.title": "Meistern Sie KI für die Bildung",
+  "aiLiteracy.hero.subtitle": "Bauen Sie Ihre KI-Expertise mit umsetzbaren Kursen auf, die Ihnen Zeit sparen und Ihren Unterricht verbessern.",
+  "aiLiteracy.hero.ctaBrowse": "Kurse durchsuchen",
+  "aiLiteracy.hero.ctaCert": "Zertifizieren lassen",
+  "aiLiteracy.stats.courses": "Kostenlose Kurse",
+  "aiLiteracy.stats.teachers": "Lehrkräfte eingeschrieben",
+  "aiLiteracy.stats.certified": "Zertifizierte Pädagogen",
+  "aiLiteracy.stats.hours": "Gesparte Stunden",
+  "aiLiteracy.paths.title": "Wählen Sie Ihren Lernpfad",
+  "aiLiteracy.paths.subtitle": "Strukturierte Lernpfade für Lehrkräfte auf jeder Stufe ihrer KI-Reise",
+  "aiLiteracy.testimonials.title": "Was Lehrkräfte sagen",
+  "aiLiteracy.library.title": "Herunterladbare Ressourcenbibliothek",
+  "aiLiteracy.certification.title": "KI-Bildungszertifizierung",
+  "aiLiteracy.continue.title": "Setzen Sie Ihre KI-Reise fort",
+  "videos.hero.title": "Video-Tutorials und Demos",
+  "videos.hero.subtitle": "Sehen Sie sich Schritt-für-Schritt-Tutorials und Produktdemos an, um KI-gestützte Elternkommunikation zu meistern.",
+  "videos.search.placeholder": "Videos durchsuchen...",
+  "videos.featured.title": "Empfohlene Videos",
+  "videos.playlists.title": "Kuratierte Playlists",
+  "videos.all.title": "Alle Videos",
+  "glossary.hero.title": "KI-Glossar für Lehrkräfte",
+  "glossary.hero.subtitle": "Über 150+ KI-Begriffe in einfacher Sprache.",
+  "glossary.search.placeholder": "Begriffe durchsuchen...",
+  "community.hero.badge": "15.000+ aktive Mitglieder",
+  "community.hero.titlePrefix": "Treten Sie der",
+  "community.hero.titleHighlight": "Lehrkräfte-Community",
+  "community.hero.subtitle": "Vernetzen Sie sich mit Lehrkräften weltweit.",
+  "community.categoriesTitle": "Diskussionskategorien",
+  "cta.learnMore": "Mehr erfahren",
+  "cta.getStarted": "Jetzt starten"
+}
 
 const translationsEs: Record<string, string> = {}
 
