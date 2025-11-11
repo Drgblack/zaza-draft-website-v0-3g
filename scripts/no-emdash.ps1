@@ -1,16 +1,19 @@
-﻿$ErrorActionPreference = "Stop"
-$roots = @(".\app", ".\content", ".\lib", ".\src")
-$bad = New-Object System.Collections.Generic.List[string]
-$pattern = [char]0x2014
-foreach ($root in $roots) {
-  if (-not (Test-Path $root)) { continue }
-  Get-ChildItem -Path $root -Recurse -File -Include *.ts,*.tsx,*.md,*.mdx,*.css,*.json |
-    Where-Object { $_.FullName -notmatch '(\\|/)(node_modules|\.next|__backup.*|backups|\.github|public)(\\|/)?' } |
-    ForEach-Object {
-      $full = $_.FullName
-      $text = Get-Content -LiteralPath $full -Raw -ErrorAction SilentlyContinue
-      if ($null -ne $text -and $text.Contains($pattern)) { $bad.Add("Em dash found in: $full") | Out-Null }
-    }
+param(
+  [Parameter(ValueFromRemainingArguments = $true)]
+  [string[]] $Files
+)
+
+$bad = @()
+foreach ($f in $Files) {
+  if (-not (Test-Path -LiteralPath $f)) { continue }
+  $text = [IO.File]::ReadAllText($f)
+  if ($text.IndexOf([char]0x2014) -ge 0) { $bad += $f }
 }
-if ($bad.Count) { Write-Host "❌ No-em-dash check failed:" -ForegroundColor Red; $bad | % { Write-Host " - $_" }; exit 1 }
-else { Write-Host "✅ No-em-dash check passed." }
+
+if ($bad.Count -gt 0) {
+  Write-Error ("❌ Em dash (—) found in:`n" + ($bad -join "`n"))
+  Write-Host "Tip: replace with a hyphen (-)."
+  exit 1
+}
+
+exit 0
