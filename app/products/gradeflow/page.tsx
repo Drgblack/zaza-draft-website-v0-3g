@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "rubric alignment",
     "automated grading",
     "KI Bewertungstool",
-    "Lehrer Produktivität",
+    "Lehrer ProduktivitÃ¤t",
   ],
   openGraph: {
     title: "GradeFlow | AI Grading Assistant for Teachers",

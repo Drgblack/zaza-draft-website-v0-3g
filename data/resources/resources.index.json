@@ -4,7 +4,7 @@
       "slug": "ai-prompt-library-premium",
       "title": "AI Prompt Library Premium",
       "blurb_en": "50+ expertly crafted prompts for every classroom scenario - from personalized feedback to creative project ideas.",
-      "blurb_de": "50+ fachmännisch gestaltete Prompts für jedes Klassenzimmerszenario - von personalisiertem Feedback bis zu kreativen Projektideen.",
+      "blurb_de": "50+ fachmÃ¤nnisch gestaltete Prompts fÃ¼r jedes Klassenzimmerszenario - von personalisiertem Feedback bis zu kreativen Projektideen.",
       "tags": ["ai-tools", "prompts", "productivity"],
       "files": {
         "en": { "docx": "/downloads/docx/ai-prompt-library-premium-en.docx" },
@@ -26,7 +26,7 @@
       "slug": "ai-safety-ethics-guide",
       "title": "AI Safety & Ethics Guide",
       "blurb_en": "Navigate AI use with confidence - practical guidelines for data privacy, student safety, and ethical classroom integration.",
-      "blurb_de": "Navigieren Sie sicher durch den KI-Einsatz - praktische Richtlinien für Datenschutz, Schülersicherheit und ethische Klassenzimmerintegration.",
+      "blurb_de": "Navigieren Sie sicher durch den KI-Einsatz - praktische Richtlinien fÃ¼r Datenschutz, SchÃ¼lersicherheit und ethische Klassenzimmerintegration.",
       "tags": ["ai-tools", "ethics", "safety"],
       "files": {
         "en": { "docx": "/downloads/docx/ai-safety-ethics-guide-en.docx" },
@@ -37,7 +37,7 @@
       "slug": "assessment-rubrics",
       "title": "Assessment Rubrics",
       "blurb_en": "Ready-to-use rubrics that save grading time while providing clear, meaningful feedback to students.",
-      "blurb_de": "Sofort einsetzbare Bewertungsraster, die Bewertungszeit sparen und gleichzeitig klares, aussagekräftiges Feedback an Schüler geben.",
+      "blurb_de": "Sofort einsetzbare Bewertungsraster, die Bewertungszeit sparen und gleichzeitig klares, aussagekrÃ¤ftiges Feedback an SchÃ¼ler geben.",
       "tags": ["assessment", "grading", "feedback"],
       "files": {
         "en": { "docx": "/downloads/docx/assessment-rubrics-en.docx" },
@@ -48,7 +48,7 @@
       "slug": "classroom-management",
       "title": "Classroom Management Strategies",
       "blurb_en": "Proven strategies and scripts for creating a positive, productive classroom environment.",
-      "blurb_de": "Bewährte Strategien und Skripte für die Schaffung eines positiven, produktiven Klassenzimmerumfelds.",
+      "blurb_de": "BewÃ¤hrte Strategien und Skripte fÃ¼r die Schaffung eines positiven, produktiven Klassenzimmerumfelds.",
       "tags": ["classroom-management", "behavior", "routines"],
       "files": {
         "en": { "docx": "/downloads/docx/classroom-management-en.docx" },
@@ -59,7 +59,7 @@
       "slug": "differentiation-toolkit",
       "title": "Differentiation Toolkit",
       "blurb_en": "Practical strategies and templates for meeting diverse learning needs without multiplying your workload.",
-      "blurb_de": "Praktische Strategien und Vorlagen zur Erfüllung unterschiedlicher Lernbedürfnisse ohne Vervielfachung Ihrer Arbeitslast.",
+      "blurb_de": "Praktische Strategien und Vorlagen zur ErfÃ¼llung unterschiedlicher LernbedÃ¼rfnisse ohne Vervielfachung Ihrer Arbeitslast.",
       "tags": ["differentiation", "inclusion", "teaching-strategies"],
       "files": {
         "en": { "docx": "/downloads/docx/differentiation-toolkit-en.docx" },
@@ -81,7 +81,7 @@
       "slug": "grading-workflow-optimizer",
       "title": "Grading Workflow Optimizer",
       "blurb_en": "Streamline your grading process with batch techniques, time-saving shortcuts, and AI-assisted feedback strategies.",
-      "blurb_de": "Optimieren Sie Ihren Bewertungsprozess mit Batch-Techniken, zeitsparenden Abkürzungen und KI-unterstützten Feedback-Strategien.",
+      "blurb_de": "Optimieren Sie Ihren Bewertungsprozess mit Batch-Techniken, zeitsparenden AbkÃ¼rzungen und KI-unterstÃ¼tzten Feedback-Strategien.",
       "tags": ["grading", "productivity", "workflows"],
       "files": {
         "en": { "docx": "/downloads/docx/grading-workflow-optimizer-en.docx" },
@@ -92,7 +92,7 @@
       "slug": "homework-success-toolkit",
       "title": "Homework Success Toolkit",
       "blurb_en": "Design meaningful homework that students actually complete - with templates, parent guides, and engagement strategies.",
-      "blurb_de": "Gestalten Sie sinnvolle Hausaufgaben, die Schüler tatsächlich erledigen - mit Vorlagen, Elternratgebern und Engagement-Strategien.",
+      "blurb_de": "Gestalten Sie sinnvolle Hausaufgaben, die SchÃ¼ler tatsÃ¤chlich erledigen - mit Vorlagen, Elternratgebern und Engagement-Strategien.",
       "tags": ["homework", "engagement", "parent-communication"],
       "files": {
         "en": { "docx": "/downloads/docx/homework-success-toolkit-en.docx" },
@@ -114,7 +114,7 @@
       "slug": "parent-message-templates",
       "title": "Parent Message Templates",
       "blurb_en": "Professional, empathetic email templates for every parent communication scenario.",
-      "blurb_de": "Professionelle, einfühlsame E-Mail-Vorlagen für jedes Elternkommunikationsszenario.",
+      "blurb_de": "Professionelle, einfÃ¼hlsame E-Mail-Vorlagen fÃ¼r jedes Elternkommunikationsszenario.",
       "tags": ["communication", "parents", "templates"],
       "files": {
         "en": { "docx": "/downloads/docx/parent-message-templates-en.docx" },
@@ -125,7 +125,7 @@
       "slug": "student-feedback-framework",
       "title": "Student Feedback Framework",
       "blurb_en": "Give feedback that motivates and guides - proven frameworks for constructive, growth-oriented student communication.",
-      "blurb_de": "Geben Sie Feedback, das motiviert und leitet - bewährte Frameworks für konstruktive, wachstumsorientierte Schülerkommunikation.",
+      "blurb_de": "Geben Sie Feedback, das motiviert und leitet - bewÃ¤hrte Frameworks fÃ¼r konstruktive, wachstumsorientierte SchÃ¼lerkommunikation.",
       "tags": ["feedback", "communication", "growth-mindset"],
       "files": {
         "en": { "docx": "/downloads/docx/student-feedback-framework-en.docx" },
@@ -136,7 +136,7 @@
       "slug": "teacher-time-playbook",
       "title": "Teacher Time Playbook",
       "blurb_en": "Reclaim your time with proven strategies for efficient planning, grading, and work-life balance.",
-      "blurb_de": "Gewinnen Sie Ihre Zeit zurück mit bewährten Strategien für effiziente Planung, Bewertung und Work-Life-Balance.",
+      "blurb_de": "Gewinnen Sie Ihre Zeit zurÃ¼ck mit bewÃ¤hrten Strategien fÃ¼r effiziente Planung, Bewertung und Work-Life-Balance.",
       "tags": ["productivity", "time-management", "wellness"],
       "files": {
         "en": { "docx": "/downloads/docx/teacher-time-playbook-en.docx" },
@@ -147,7 +147,7 @@
       "slug": "teacher-wellness-guide",
       "title": "Teacher Wellness Guide",
       "blurb_en": "Sustainable strategies for managing stress, preventing burnout, and maintaining your passion for teaching.",
-      "blurb_de": "Nachhaltige Strategien zur Stressbewältigung, Burnout-Prävention und Erhaltung Ihrer Leidenschaft für das Unterrichten.",
+      "blurb_de": "Nachhaltige Strategien zur StressbewÃ¤ltigung, Burnout-PrÃ¤vention und Erhaltung Ihrer Leidenschaft fÃ¼r das Unterrichten.",
       "tags": ["wellness", "self-care", "burnout-prevention"],
       "files": {
         "en": { "docx": "/downloads/docx/teacher-wellness-guide-en.docx" },
@@ -158,7 +158,7 @@
       "slug": "tech-troubleshooting-guide",
       "title": "Tech Troubleshooting Guide",
       "blurb_en": "Quick solutions for common classroom technology issues - keep lessons flowing when tech doesn't cooperate.",
-      "blurb_de": "Schnelle Lösungen für häufige Technologieprobleme im Klassenzimmer - halten Sie den Unterricht am Laufen, wenn die Technik nicht mitspielt.",
+      "blurb_de": "Schnelle LÃ¶sungen fÃ¼r hÃ¤ufige Technologieprobleme im Klassenzimmer - halten Sie den Unterricht am Laufen, wenn die Technik nicht mitspielt.",
       "tags": ["technology", "troubleshooting", "classroom-tech"],
       "files": {
         "en": { "docx": "/downloads/docx/tech-troubleshooting-guide-en.docx" },
@@ -169,7 +169,7 @@
       "slug": "tone-checklist",
       "title": "Communication Tone Checklist",
       "blurb_en": "Strike the right tone in every message - guidelines for professional, empathetic communication with students and parents.",
-      "blurb_de": "Treffen Sie den richtigen Ton in jeder Nachricht - Richtlinien für professionelle, einfühlsame Kommunikation mit Schülern und Eltern.",
+      "blurb_de": "Treffen Sie den richtigen Ton in jeder Nachricht - Richtlinien fÃ¼r professionelle, einfÃ¼hlsame Kommunikation mit SchÃ¼lern und Eltern.",
       "tags": ["communication", "tone", "professionalism"],
       "files": {
         "en": { "docx": "/downloads/docx/tone-checklist-en.docx" },

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Mail, ExternalLink } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Press Kit – Zaza Draft",
+  title: "Press Kit - Zaza Draft",
   description:
     "Download logos, screenshots, brand guidelines, and founder bio for Zaza Draft. Media resources for journalists and partners.",
 }

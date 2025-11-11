@@ -1,4 +1,4 @@
-﻿# Founder Page Content
+# Founder Page Content
 
 ## Files:
 - **founder-en.md** - English version

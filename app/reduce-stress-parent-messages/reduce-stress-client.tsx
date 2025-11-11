@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { QuickAnswerBox } from "@/components/quick-answer-box"
@@ -305,12 +305,12 @@ export default function ReduceStressClient() {
                       <div className="bg-[#263238]/50 p-4 rounded-lg">
                         <p className="font-medium mb-2 text-white">Common template categories:</p>
                         <ul className="text-sm text-gray-300 space-y-1">
-                          <li>• Absence follow-up</li>
-                          <li>• Homework concerns</li>
-                          <li>• Behavior updates (positive and corrective)</li>
-                          <li>• Grade explanations</li>
-                          <li>• Conference scheduling</li>
-                          <li>• Weekly class updates</li>
+                          <li>â€¢ Absence follow-up</li>
+                          <li>â€¢ Homework concerns</li>
+                          <li>â€¢ Behavior updates (positive and corrective)</li>
+                          <li>â€¢ Grade explanations</li>
+                          <li>â€¢ Conference scheduling</li>
+                          <li>â€¢ Weekly class updates</li>
                         </ul>
                       </div>
                     </div>
@@ -366,10 +366,10 @@ export default function ReduceStressClient() {
                       <div className="bg-[#263238]/50 p-4 rounded-lg">
                         <p className="font-medium mb-2 text-white">Batching benefits:</p>
                         <ul className="text-sm text-gray-300 space-y-1">
-                          <li>• Reduces anxiety from constant notification checking</li>
-                          <li>• Allows you to see patterns across multiple messages</li>
-                          <li>• Creates uninterrupted time for teaching and planning</li>
-                          <li>• Makes it easier to use templates and AI efficiently</li>
+                          <li>â€¢ Reduces anxiety from constant notification checking</li>
+                          <li>â€¢ Allows you to see patterns across multiple messages</li>
+                          <li>â€¢ Creates uninterrupted time for teaching and planning</li>
+                          <li>â€¢ Makes it easier to use templates and AI efficiently</li>
                         </ul>
                       </div>
                     </div>
@@ -388,15 +388,15 @@ export default function ReduceStressClient() {
                         through class newsletters or policy updates. Prevention is easier than reaction.
                       </p>
                       <div className="bg-[#263238]/50 p-4 rounded-lg">
-                        <p className="font-medium mb-2 text-white">Example pattern → prevention:</p>
+                        <p className="font-medium mb-2 text-white">Example pattern â†’ prevention:</p>
                         <ul className="text-sm text-gray-300 space-y-2">
                           <li>
-                            • <strong>Pattern:</strong> Weekly questions about homework expectations
+                            â€¢ <strong>Pattern:</strong> Weekly questions about homework expectations
                             <br />
                             <strong>Prevention:</strong> Create a homework FAQ and reference it in weekly updates
                           </li>
                           <li>
-                            • <strong>Pattern:</strong> Confusion about grading policies
+                            â€¢ <strong>Pattern:</strong> Confusion about grading policies
                             <br />
                             <strong>Prevention:</strong> Send a grading guide at the start of each unit
                           </li>
@@ -420,22 +420,22 @@ export default function ReduceStressClient() {
                 <div className="p-6 border border-white/10 rounded-xl bg-[#1E293B]">
                   <h3 className="text-xl font-semibold mb-3 text-rose-400">Without AI</h3>
                   <ul className="space-y-2 text-gray-300 leading-relaxed">
-                    <li>• Stare at blank screen for 5 minutes</li>
-                    <li>• Draft, delete, redraft multiple times</li>
-                    <li>• Worry about tone and wording</li>
-                    <li>• Second-guess yourself after sending</li>
-                    <li>• Total time: 15-20 minutes per message</li>
+                    <li>â€¢ Stare at blank screen for 5 minutes</li>
+                    <li>â€¢ Draft, delete, redraft multiple times</li>
+                    <li>â€¢ Worry about tone and wording</li>
+                    <li>â€¢ Second-guess yourself after sending</li>
+                    <li>â€¢ Total time: 15-20 minutes per message</li>
                   </ul>
                 </div>
 
                 <div className="p-6 border border-[#8B5CF6]/20 rounded-xl bg-[#8B5CF6]/5">
                   <h3 className="text-xl font-semibold mb-3 text-[#A78BFA]">With AI (Zaza Shield)</h3>
                   <ul className="space-y-2 text-gray-300 leading-relaxed">
-                    <li>• Input context in 30 seconds</li>
-                    <li>• AI generates professional draft instantly</li>
-                    <li>• Review and personalize (1-2 minutes)</li>
-                    <li>• Send with confidence</li>
-                    <li>• Total time: 3-4 minutes per message</li>
+                    <li>â€¢ Input context in 30 seconds</li>
+                    <li>â€¢ AI generates professional draft instantly</li>
+                    <li>â€¢ Review and personalize (1-2 minutes)</li>
+                    <li>â€¢ Send with confidence</li>
+                    <li>â€¢ Total time: 3-4 minutes per message</li>
                   </ul>
                 </div>
               </div>
@@ -671,7 +671,7 @@ export default function ReduceStressClient() {
                   </Button>
                 </Link>
                 <p className="text-sm text-gray-400 mt-4">
-                  Free for 14 days • Cancel anytime • No credit card required
+                  Free for 14 days â€¢ Cancel anytime â€¢ No credit card required
                 </p>
               </div>
             </section>

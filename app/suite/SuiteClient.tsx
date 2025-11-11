@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Link from "next/link"
 import { useLanguage } from "@/lib/i18n/language-context"
@@ -181,7 +181,7 @@ export default function SuiteClient() {
                   <div className="text-xs text-[#94A3B8]">{t("suite.testimonials.1.role")}</div>
                 </div>
               </div>
-              <p className="text-[#CBD5E1] italic">“{t("suite.testimonials.1.quote")}”</p>
+              <p className="text-[#CBD5E1] italic">â€œ{t("suite.testimonials.1.quote")}â€</p>
             </div>
             <div className="rounded-2xl border border-[#334155] bg-[#0F172A] p-6">
               <div className="flex items-center gap-3 mb-4">
@@ -191,7 +191,7 @@ export default function SuiteClient() {
                   <div className="text-xs text-[#94A3B8]">{t("suite.testimonials.2.role")}</div>
                 </div>
               </div>
-              <p className="text-[#CBD5E1] italic">“{t("suite.testimonials.2.quote")}”</p>
+              <p className="text-[#CBD5E1] italic">â€œ{t("suite.testimonials.2.quote")}â€</p>
             </div>
             <div className="rounded-2xl border border-[#334155] bg-[#0F172A] p-6">
               <div className="flex items-center gap-3 mb-4">
@@ -201,7 +201,7 @@ export default function SuiteClient() {
                   <div className="text-xs text-[#94A3B8]">{t("suite.testimonials.3.role")}</div>
                 </div>
               </div>
-              <p className="text-[#CBD5E1] italic">“{t("suite.testimonials.3.quote")}”</p>
+              <p className="text-[#CBD5E1] italic">â€œ{t("suite.testimonials.3.quote")}â€</p>
             </div>
           </div>
         </div>

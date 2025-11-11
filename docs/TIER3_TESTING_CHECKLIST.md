@@ -58,11 +58,11 @@ This document provides a comprehensive testing checklist for all Tier 3 hub enha
 - [ ] Responsive layout works on mobile/tablet/desktop
 
 ### Hub-Specific Cross-Links
-- [ ] AI Literacy → Webinars, Community, Integrations
-- [ ] Webinars → AI Literacy, Glossary, Community
-- [ ] Community → AI Literacy, Webinars, Glossary
-- [ ] Glossary → AI Literacy, Webinars, Community
-- [ ] Integrations → Webinars, AI Literacy, Glossary
+- [ ] AI Literacy â†’ Webinars, Community, Integrations
+- [ ] Webinars â†’ AI Literacy, Glossary, Community
+- [ ] Community â†’ AI Literacy, Webinars, Glossary
+- [ ] Glossary â†’ AI Literacy, Webinars, Community
+- [ ] Integrations â†’ Webinars, AI Literacy, Glossary
 
 ### Verification Steps
 1. Visit each hub page

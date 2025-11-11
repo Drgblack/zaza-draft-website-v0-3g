@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { blogPosts } from "./page";   // NOT: import blogPosts from "./page"
 import { useLanguage } from "@/lib/i18n/language-context"
@@ -273,7 +273,7 @@ export default function BestAIWritingClient() {
                         <ul className="space-y-2">
                           {tool.cons.map((con, i) => (
                             <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
-                              <span className="text-orange-400">•</span>
+                              <span className="text-orange-400">â€¢</span>
                               {con}
                             </li>
                           ))}
@@ -541,19 +541,19 @@ export default function BestAIWritingClient() {
                   href="/best-ai-tool-parent-emails"
                   className="block text-sm text-[#A78BFA] hover:text-[#8B5CF6] transition-colors"
                 >
-                  → Best AI Tool for Parent Emails
+                  â†’ Best AI Tool for Parent Emails
                 </Link>
                 <Link
                   href="/reduce-stress-parent-messages"
                   className="block text-sm text-[#A78BFA] hover:text-[#8B5CF6] transition-colors"
                 >
-                  → Reduce Stress with AI Messages
+                  â†’ Reduce Stress with AI Messages
                 </Link>
                 <Link
                   href="/ai-for-student-reports"
                   className="block text-sm text-[#A78BFA] hover:text-[#8B5CF6] transition-colors"
                 >
-                  → AI for Student Reports
+                  â†’ AI for Student Reports
                 </Link>
               </div>
             </div>

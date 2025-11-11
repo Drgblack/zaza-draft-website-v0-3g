@@ -1,6 +1,6 @@
 # State of AI in Education 2025 Report - Complete Integration Guide
 
-## 📦 Package Contents
+## ðŸ“¦ Package Contents
 
 You now have everything needed to integrate the report generation into your website:
 
@@ -11,7 +11,7 @@ You now have everything needed to integrate the report generation into your webs
 4. **report_generator_package.md** - Full integration documentation
 5. **State_of_AI_Education_2025.pdf** - Sample generated report
 
-## 🚀 Quick Start for Claude Code
+## ðŸš€ Quick Start for Claude Code
 
 ### Step 1: Set Up Python Environment
 ```bash
@@ -47,7 +47,7 @@ python generate_report.py --format docx --output test_report.docx
 python generate_report.py --format html --output test_report.html
 ```
 
-## 🔌 Website Integration Options
+## ðŸ”Œ Website Integration Options
 
 ### Option 1: Simple Download Link (Easiest)
 Pre-generate the PDF and serve it statically:
@@ -254,9 +254,9 @@ export default function ReportDownloadForm() {
           onChange={(e) => setFormData({...formData, format: e.target.value})}
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
         >
-          <option value="pdf">📄 PDF (Recommended)</option>
-          <option value="docx">📝 Word Document (Editable)</option>
-          <option value="html">🌐 HTML (Web View)</option>
+          <option value="pdf">ðŸ“„ PDF (Recommended)</option>
+          <option value="docx">ðŸ“ Word Document (Editable)</option>
+          <option value="html">ðŸŒ HTML (Web View)</option>
         </select>
       </div>
 
@@ -301,7 +301,7 @@ async function sendReportEmail(email, filePath, filename) {
       name: 'Zaza Draft' 
     },
     to: [{ email: email }],
-    subject: '📊 Your State of AI in Education 2025 Report',
+    subject: 'ðŸ“Š Your State of AI in Education 2025 Report',
     htmlContent: `
       <!DOCTYPE html>
       <html>
@@ -325,13 +325,13 @@ async function sendReportEmail(email, filePath, filename) {
       <body>
         <div class="container">
           <div class="header">
-            <h1>🎓 State of AI in Education 2025</h1>
+            <h1>ðŸŽ“ State of AI in Education 2025</h1>
           </div>
           <div class="content">
             <h2>Thank you for downloading our report!</h2>
             <p>Your comprehensive 26-page report is attached to this email.</p>
             
-            <h3>📊 What's Inside:</h3>
+            <h3>ðŸ“Š What's Inside:</h3>
             <ul>
               <li>Key findings from 15,000+ teachers</li>
               <li>Adoption trends across grade levels and subjects</li>
@@ -365,7 +365,7 @@ if (email) {
 }
 ```
 
-## 🔒 Security & Performance
+## ðŸ”’ Security & Performance
 
 ### 1. Rate Limiting
 ```javascript
@@ -423,7 +423,7 @@ cron.schedule('0 * * * *', async () => {
 });
 ```
 
-## 📊 Analytics Integration
+## ðŸ“Š Analytics Integration
 
 Track report downloads:
 
@@ -440,7 +440,7 @@ await trackEvent({
 });
 ```
 
-## 🧪 Testing
+## ðŸ§ª Testing
 
 ### Test the Python script directly:
 ```bash
@@ -456,7 +456,7 @@ curl -X POST http://localhost:3000/api/generate-report \
   -d '{"format": "pdf", "email": "test@example.com"}'
 ```
 
-## 🐛 Troubleshooting
+## ðŸ› Troubleshooting
 
 ### Python not found
 ```bash
@@ -491,7 +491,7 @@ mkdir -p public/downloads
 chmod 755 public/downloads
 ```
 
-## 📝 Environment Variables
+## ðŸ“ Environment Variables
 
 Add to your `.env` file:
 
@@ -508,7 +508,7 @@ BREVO_API_KEY=your_brevo_api_key
 MAX_REPORT_AGE_HOURS=24
 ```
 
-## 🚀 Deployment
+## ðŸš€ Deployment
 
 ### Ensure these are in production:
 1. Python 3.8+ installed on server
@@ -534,14 +534,14 @@ crontab -e
 tail -f /var/log/app.log
 ```
 
-## 📖 Additional Resources
+## ðŸ“– Additional Resources
 
 - ReportLab docs: https://www.reportlab.com/docs/
 - Matplotlib docs: https://matplotlib.org/
 - Express.js docs: https://expressjs.com/
 - Node.js child_process: https://nodejs.org/api/child_process.html
 
-## 🤝 Support
+## ðŸ¤ Support
 
 For questions or issues:
 1. Check the troubleshooting section

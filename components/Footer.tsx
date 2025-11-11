@@ -66,11 +66,11 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-slate-200">Products</h3>
             <ul className="mt-3 space-y-2 text-sm">
-              <li><a href="https://www.zazadraft.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" aria-label="Zaza Draft â€“ opens in new tab">Zaza Draft</a></li>
-              <li><a href="https://www.zazateach.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" aria-label="Zaza Teach â€“ opens in new tab">Zaza Teach</a></li>
-              <li><a href="https://www.zazashield.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" aria-label="Zaza Shield â€“ opens in new tab">Zaza Shield</a></li>
-              <li><a href="https://www.zazagradeflow.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" aria-label="GradeFlow â€“ opens in new tab">GradeFlow</a></li>
-              <li><a href="https://www.zazatechnologies.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" aria-label="Zaza Technologies â€“ opens in new tab">Zaza Technologies</a></li>
+              <li><a href="https://www.zazadraft.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" aria-label="Zaza Draft Ã¢â‚¬â€œ opens in new tab">Zaza Draft</a></li>
+              <li><a href="https://www.zazateach.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" aria-label="Zaza Teach Ã¢â‚¬â€œ opens in new tab">Zaza Teach</a></li>
+              <li><a href="https://www.zazashield.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" aria-label="Zaza Shield Ã¢â‚¬â€œ opens in new tab">Zaza Shield</a></li>
+              <li><a href="https://www.zazagradeflow.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" aria-label="GradeFlow Ã¢â‚¬â€œ opens in new tab">GradeFlow</a></li>
+              <li><a href="https://www.zazatechnologies.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" aria-label="Zaza Technologies Ã¢â‚¬â€œ opens in new tab">Zaza Technologies</a></li>
             </ul>
           </div>
 

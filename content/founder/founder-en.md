@@ -1,6 +1,6 @@
-﻿# Meet the Founder Building AI That Helps Teachers Thrive
+# Meet the Founder Building AI That Helps Teachers Thrive
 
-I've spent over twenty years working in learning and professional education—across classrooms, universities, and corporate training. One thing has always been true: **teaching is human work.** It requires judgment, care, and emotional labour that cannot be automated.
+I've spent over twenty years working in learning and professional education-across classrooms, universities, and corporate training. One thing has always been true: **teaching is human work.** It requires judgment, care, and emotional labour that cannot be automated.
 
 Throughout my PhD research in professional education, I focused on how learners develop critical thinking and problem-solving in real-world environments. I've seen how technology can support learning when it's used well. I've also seen how easily it can add stress, waste time, or work against what educators are trying to achieve.
 
@@ -10,7 +10,7 @@ As Chief Learning Officer at Communardo, I lead work in AI-powered learning desi
 
 Most edtech tools aren't built for teachers. They're built for sales meetings.
 
-I've watched technology sold as "revolutionary" only to become another system teachers must manage. I've seen AI products that generate content that looks impressive at first glance—but collapses the moment a teacher tries to use it with real students.
+I've watched technology sold as "revolutionary" only to become another system teachers must manage. I've seen AI products that generate content that looks impressive at first glance-but collapses the moment a teacher tries to use it with real students.
 
 **That's why I built Zaza.**
 
@@ -49,7 +49,7 @@ Teaching is incredibly complex, intellectually demanding work. It's also emotion
 
 ## Why Zaza Exists
 
-Zaza isn't trying to "disrupt education." Teachers don't need disruption. They need **support**. They need **time**. They need tools that recognize the value of their experience—rather than trying to standardize or replace it.
+Zaza isn't trying to "disrupt education." Teachers don't need disruption. They need **support**. They need **time**. They need tools that recognize the value of their experience-rather than trying to standardize or replace it.
 
 The work teachers do matters. And the best thing technology can do is help protect the time, energy, and care required to do that work well.
 

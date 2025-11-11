@@ -1,0 +1,8 @@
+﻿# Text files normalized to LF in the repository
+* text=auto eol=lf
+
+# Common source/content as text (normalize)
+*.{ts,tsx,js,jsx,css,scss,md,mdx,json,yml,yaml,html,svg} text eol=lf
+
+# Binaries (never change line endings)
+*.{png,jpg,jpeg,webp,gif,ico,ttf,woff,woff2,zip,tar,7z,pdf} binary

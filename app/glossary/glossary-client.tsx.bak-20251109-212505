@@ -1,0 +1,347 @@
+﻿"use client"
+
+import { useState, useMemo, useEffect } from "react"
+import { useLanguage } from "@/lib/i18n/language-context"
+import { Search, BookOpen, Filter, ChevronDown, ChevronUp, GraduationCap, Video, MessageSquare } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { analytics } from "@/lib/analytics"
+import { RelatedResources } from "@/components/related-resources"
+import { useLanguage } from "@/lib/i18n/language-context";
+
+const TXT = {
+  en: {
+    title: "AI Glossary for Teachers",
+    subtitle:
+      "{t("subtitle")}<"en"|"de", Record<GlossaryKeys, string>> = {
+  en: {
+    title: "AI Glossary for Teachers",
+    subtitle:
+      "{t("subtitle")}<string | null>(null)
+  const [expandedTerms, setExpandedTerms] = useState<Set<string>>(new Set())
+  const t = useLocalT();  
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
+
+  useEffect(() => {
+    analytics.glossary.viewHub()
+  }, [])
+
+  const filteredTerms = useMemo(() => {
+    let filtered = glossaryTerms
+
+    // Filter by category
+    if (selectedCategory !== "Alle Kategorien") {
+      filtered = filtered.filter((term) => term.category === selectedCategory)
+    }
+
+    // Filter by search query
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase()
+      filtered = filtered.filter(
+        (term) =>
+          term.term.toLowerCase().includes(query) ||
+          term.definition.toLowerCase().includes(query) ||
+          term.category.toLowerCase().includes(query),
+      )
+    }
+
+    // Filter by letter
+    if (selectedLetter) {
+      filtered = filtered.filter((term) => term.term.toUpperCase().startsWith(selectedLetter))
+    }
+
+    return filtered.sort((a, b) => a.term.localeCompare(b.term))
+  }, [searchQuery, selectedCategory, selectedLetter])
+
+  const toggleTerm = (termId: string) => {
+    const newExpanded = new Set(expandedTerms)
+    if (newExpanded.has(termId)) {
+      newExpanded.delete(termId)
+    } else {
+      newExpanded.add(termId)
+      const term = glossaryTerms.find((t) => t.id === termId)
+      if (term) {
+        analytics.glossary.viewTerm(term.id, term.term)
+      }
+    }
+    setExpandedTerms(newExpanded)
+  }
+
+  const categoryStats = useMemo(() => {
+    const stats: Record<string, number> = {}
+    glossaryTerms.forEach((term) => {
+      stats[term.category] = (stats[term.category] || 0) + 1
+    })
+    return stats
+  }, [])
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query)
+    if (query.length > 2) {
+      analytics.glossary.searchTerm(query)
+    }
+  }
+
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category)
+    if (category !== "Alle Kategorien") {
+      analytics.glossary.filterByCategory(category)
+    }
+  }
+
+  return (
+    <div className="min-h-screen bg-[#0F172A]">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 border-b border-white/10">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#A78BFA]/10 border border-[#A78BFA]/20 mb-6">
+              <BookOpen className="w-4 h-4 text-[#A78BFA]" />
+              <span className="text-sm font-medium text-[#A78BFA]">AI Knowledge Base</span>
+            </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">{t("glossary.title")}</h1>
+            <p className="text-xl text-gray-300 leading-relaxed">{t("glossary.subtitle")}</p>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 max-w-3xl mx-auto">
+            <div className="text-center p-6 rounded-xl bg-white/5 border border-white/10">
+              <div className="text-3xl font-bold text-[#A78BFA] mb-2">150+</div>
+              <div className="text-sm text-gray-400">AI Begriffe definiert</div>
+            </div>
+            <div className="text-center p-6 rounded-xl bg-white/5 border border-white/10">
+              <div className="text-3xl font-bold text-[#A78BFA] mb-2">12</div>
+              <div className="text-sm text-gray-400">Themenkategorien</div>
+            </div>
+            <div className="text-center p-6 rounded-xl bg-white/5 border border-white/10">
+              <div className="text-3xl font-bold text-[#A78BFA] mb-2">100%</div>
+              <div className="text-sm text-gray-400">Education-Focused</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Search and Filter Section */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8 border-b border-white/10">
+        <div className="max-w-7xl mx-auto">
+          {/* Search Bar */}
+          <div className="relative max-w-2xl mx-auto mb-8">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <Input
+              type="text"
+              placeholder={t("searchPlaceholder")}
+              value={searchQuery}
+              onChange={(e) => handleSearch(e.target.value)}
+              className="pl-12 pr-4 py-6 text-lg bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-[#A78BFA] focus:ring-[#A78BFA]"
+            />
+          </div>
+
+          {/* Category Filter */}
+          <div className="flex items-center gap-3 mb-6 overflow-x-auto pb-2">
+            <Filter className="w-5 h-5 text-gray-400 flex-shrink-0" />
+            {categories.map((category) => (
+              <Button
+                key={category}
+                onClick={() => handleCategoryChange(category)}
+                variant={selectedCategory === category ? "default" : "outline"}
+                className={
+                  selectedCategory === category
+                    ? "bg-[#A78BFA] hover:bg-[#8B5CF6] text-white border-0 whitespace-nowrap"
+                    : "bg-white/5 hover:bg-white/10 text-gray-300 border-white/10 whitespace-nowrap"
+                }
+              >
+                {category}
+                {category !== "Alle Kategorien" && (
+                  <span className="ml-2 text-xs opacity-70">({categoryStats[category] || 0})</span>
+                )}
+              </Button>
+            ))}
+          </div>
+
+          {/* Alphabetical Navigation */}
+          <div className="flex flex-wrap gap-2 justify-center">
+            <Button
+              onClick={() => setSelectedLetter(null)}
+              variant={selectedLetter === null ? "default" : "outline"}
+              size="sm"
+              className={
+                selectedLetter === null
+                  ? "bg-[#A78BFA] hover:bg-[#8B5CF6] text-white border-0"
+                  : "bg-white/5 hover:bg-white/10 text-gray-300 border-white/10"
+              }
+            >
+              All
+            </Button>
+            {alphabet.map((letter) => {
+              const hasTerms = glossaryTerms.some((term) => term.term.toUpperCase().startsWith(letter))
+              return (
+                <Button
+                  key={letter}
+                  onClick={() => setSelectedLetter(letter)}
+                  variant={selectedLetter === letter ? "default" : "outline"}
+                  size="sm"
+                  disabled={!hasTerms}
+                  className={
+                    selectedLetter === letter
+                      ? "bg-[#A78BFA] hover:bg-[#8B5CF6] text-white border-0 w-10"
+                      : hasTerms
+                        ? "bg-white/5 hover:bg-white/10 text-gray-300 border-white/10 w-10"
+                        : "bg-white/5 text-gray-600 border-white/10 w-10 cursor-not-allowed"
+                  }
+                >
+                  {letter}
+                </Button>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Terms List */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto">
+          {filteredTerms.length === 0 ? (
+            <div className="text-center py-12">
+              <p className="text-xl text-gray-400">No terms found matching your search.</p>
+              <Button
+                onClick={() => {
+                  setSearchQuery("")
+                  setSelectedCategory("Alle Kategorien")
+                  setSelectedLetter(null)
+                }}
+                className="mt-4 bg-[#A78BFA] hover:bg-[#8B5CF6] text-white"
+              >
+                Clear Filters
+              </Button>
+            </div>
+          ) : (
+            <div className="space-y-4">
+              <p className="text-gray-400 mb-6">
+                Showing {filteredTerms.length} term
+                {filteredTerms.length !== 1 ? "s" : ""}
+              </p>
+              {filteredTerms.map((term) => {
+                const isExpanded = expandedTerms.has(term.id)
+                return (
+                  <div
+                    key={term.id}
+                    className="rounded-xl bg-white/5 border border-white/10 overflow-hidden hover:border-[#A78BFA]/30 transition-all"
+                  >
+                    <button
+                      onClick={() => toggleTerm(term.id)}
+                      className="w-full px-6 py-4 flex items-start justify-between gap-4 text-left hover:bg-white/5 transition-colors"
+                    >
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <h3 className="text-xl font-semibold text-white">{term.term}</h3>
+                          <span className="px-2 py-1 rounded-full bg-[#A78BFA]/10 border border-[#A78BFA]/20 text-xs text-[#A78BFA]">
+                            {term.category}
+                          </span>
+                        </div>
+                        {!isExpanded && <p className="text-gray-400 line-clamp-2">{term.definition}</p>}
+                      </div>
+                      {isExpanded ? (
+                        <ChevronUp className="w-5 h-5 text-gray-400 flex-shrink-0 mt-1" />
+                      ) : (
+                        <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0 mt-1" />
+                      )}
+                    </button>
+
+                    {isExpanded && (
+                      <div className="px-6 pb-6 space-y-4">
+                        <div>
+                          <h4 className="text-sm font-semibold text-gray-400 mb-2">Definition</h4>
+                          <p className="text-gray-300 leading-relaxed">{term.definition}</p>
+                        </div>
+
+                        <div className="p-4 rounded-lg bg-[#A78BFA]/5 border border-[#A78BFA]/20">
+                          <h4 className="text-sm font-semibold text-[#A78BFA] mb-2">Example in Education</h4>
+                          <p className="text-gray-300 leading-relaxed">{term.example}</p>
+                        </div>
+
+                        {term.relatedTerms && term.relatedTerms.length > 0 && (
+                          <div>
+                            <h4 className="text-sm font-semibold text-gray-400 mb-2">Related Terms</h4>
+                            <div className="flex flex-wrap gap-2">
+                              {term.relatedTerms.map((relatedTerm) => (
+                                <button
+                                  key={relatedTerm}
+                                  onClick={() => {
+                                    setSearchQuery(relatedTerm)
+                                    window.scrollTo({ top: 0, behavior: "smooth" })
+                                  }}
+                                  className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300 hover:bg-white/10 hover:border-[#A78BFA]/30 transition-colors"
+                                >
+                                  {relatedTerm}
+                                </button>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                )
+              })}
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Related Resources Section */}
+      <RelatedResources
+        title="Wenden Sie Ihr Wissen an"
+        description="Setzen Sie diese KI-Konzepte mit praxisnahem Lernen um"
+        resources={[
+          {
+            title: "KI-Kurse",
+            description: "Learn how to apply these concepts in your classroom",
+            href: "/ai-literacy",
+            icon: GraduationCap,
+            color: "#A78BFA",
+          },
+          {
+            title: "Live-Webinare",
+            description: "See AI terminology in action with expert demonstrations",
+            href: "/webinars",
+            icon: Video,
+            color: "#8B5CF6",
+          },
+          {
+            title: "Community-Diskussionen",
+            description: "Ask questions about terms you don't understand",
+            href: "/community",
+            icon: MessageSquare,
+            color: "#A78BFA",
+          },
+        ]}
+      />
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-white/10 bg-[#0B1220]">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">Bereit, KI-Wissen in die Praxis umzusetzen\?</h2>
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            Now that you understand the terminology, experience how Zaza Draft makes AI practical for your daily
+            teaching tasks.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-[#A78BFA] hover:bg-[#8B5CF6] text-white text-lg px-8 py-6">
+              Kostenlos starten
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-white/5 hover:bg-white/10 text-white border-white/10 text-lg px-8 py-6"
+            >
+              Explore KI-Kurse
+            </Button>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
+
+
+

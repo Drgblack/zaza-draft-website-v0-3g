@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import type React from "react"
 
@@ -252,7 +252,7 @@ export default function WebinarDetailClient({ webinar }: WebinarDetailClientProp
                       Watch Now
                     </Button>
                     <p className="text-sm text-gray-400 text-center">
-                      Lifetime access • Certificate included • Downloadable resources
+                      Lifetime access â€¢ Certificate included â€¢ Downloadable resources
                     </p>
                   </>
                 )}

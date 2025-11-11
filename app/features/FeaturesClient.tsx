@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Check, Shield, Languages, Download, Sparkles, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"

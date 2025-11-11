@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
@@ -389,7 +389,7 @@ export default function CommunityClient() {
                                 {discussion.authorBadge}
                               </span>
                             )}
-                            <span>•</span>
+                            <span>â€¢</span>
                             <span>{discussion.timeAgo}</span>
                           </div>
                           <p className="text-gray-300 mb-4 leading-relaxed">{discussion.excerpt}</p>
@@ -443,7 +443,7 @@ export default function CommunityClient() {
                             <p className="text-sm text-gray-300 mb-3 leading-relaxed">{t(descKeyFor(category))}</p>
                             <div className="flex items-center gap-4 text-xs text-gray-400">
                               <span>{category.threads.toLocaleString()} threads</span>
-                              <span>•</span>
+                              <span>â€¢</span>
                               <span>{category.posts.toLocaleString()} posts</span>
                             </div>
                           </div>
@@ -476,7 +476,7 @@ export default function CommunityClient() {
                           <span>{contributor.reputation.toLocaleString()} rep</span>
                           {contributor.badge && (
                             <>
-                              <span>•</span>
+                              <span>â€¢</span>
                               <span className="text-[#A78BFA]">{contributor.badge}</span>
                             </>
                           )}

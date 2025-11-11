@@ -1,6 +1,9 @@
+
+
+import { VideoHubClient } from "./video-hub-client";
+
 import type { Metadata } from "next"
 import { cookies, headers } from "next/headers"
-import { VideoHubClient } from "./video-hub-client"
 
 export async function generateMetadata(): Promise<Metadata> {
   const langCookie = cookies().get("language")?.value
@@ -15,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
   }
   const descriptions = {
     en: "Watch step-by-step tutorials and product demos to master AI-powered parent communication.",
-    de: "Sehen Sie Schritt-für-Schritt-Tutorials und Produktdemos für KI-gestützte Elternkommunikation.",
+    de: "Sehen Sie Schritt-fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼r-Schritt-Tutorials und Produktdemos fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼r KI-gestÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼tzte Elternkommunikation.",
   }
 
   return {

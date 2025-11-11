@@ -27,7 +27,7 @@ export const translations = {
   de: {
     footer: {
       product: "Produkt",
-      ecosystem: "Zaza Ökosystem",
+      ecosystem: "Zaza Ãƒ-kosystem",
       resourcesCompany: "Ressourcen & Unternehmen",
       features: "Funktionen",
       pricing: "Preise",
@@ -43,7 +43,7 @@ export const translations = {
       teacherResources: "Lehrerressourcen",
       support: "Support",
       faq: "FAQ",
-      about: "Über uns",
+      about: "ÃƒÅ“ber uns",
       privacy: "Datenschutz",
       terms: "Nutzungsbedingungen",
       contact: "Kontakt",

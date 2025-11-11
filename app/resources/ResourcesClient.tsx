@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -77,7 +77,7 @@ export default function ResourcesPage() {
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {resources.map((resource) => {
+          {resources.map((resource, idx) => {
             const href = pickHref(resource, language);
             const fileName = resource.title
               ? `${resource.title.replace(/[^a-z0-9]/gi, '-').toLowerCase()}-${language}.docx`
@@ -87,7 +87,7 @@ export default function ResourcesPage() {
             const blurb = language === 'de' ? resource.blurb_de : resource.blurb_en;
 
             return (
-              <Card key={resource.slug ?? `${resource.title}-${Math.random()}`} className="bg-[#0B1220] border-[#1F2937]">
+              <Card key={resource.slug ?? resource.title} className="bg-[#0B1220] border-[#1F2937]">
                 <CardContent className="p-6">
                   <h2 className="text-xl font-semibold text-[#F9FAFB] mb-2">
                     {resource.title ?? resource.slug}

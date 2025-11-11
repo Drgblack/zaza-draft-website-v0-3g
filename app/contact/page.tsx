@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import type React from "react"
 
@@ -163,10 +163,10 @@ export default function ContactPage() {
                 <p className="text-gray-300 mb-4">{t("contact.help.description")}</p>
                 <div className="space-y-2">
                   <Link href="/faq" className="block text-purple-400 hover:text-purple-300 transition-colors">
-                    → {t("contact.help.faq")}
+                    â†’ {t("contact.help.faq")}
                   </Link>
                   <Link href="/support" className="block text-purple-400 hover:text-purple-300 transition-colors">
-                    → {t("contact.help.support")}
+                    â†’ {t("contact.help.support")}
                   </Link>
                 </div>
               </div>

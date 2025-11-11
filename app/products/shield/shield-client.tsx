@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useLanguage } from "@/lib/i18n/language-context"
 import { Button } from "@/components/ui/button"
@@ -177,7 +177,7 @@ export default function ShieldClient() {
               rel="noopener noreferrer"
               className="text-purple-400 hover:text-purple-300 font-semibold inline-flex items-center gap-2 transition-colors"
             >
-              {t("shield.solution.cta")} →
+              {t("shield.solution.cta")} â†’
             </a>
           </div>
         </div>

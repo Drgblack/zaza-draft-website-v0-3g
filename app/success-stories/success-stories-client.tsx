@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react"
 import Link from "next/link"
@@ -186,7 +186,7 @@ export function SuccessStoriesClient() {
                   </h3>
 
                   <div className="text-sm text-gray-400 mb-4">
-                    {study.school} • {study.location} • {study.students}
+                    {study.school} â€¢ {study.location} â€¢ {study.students}
                   </div>
 
                   <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-4 mb-4">

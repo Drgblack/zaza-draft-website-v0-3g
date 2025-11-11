@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { HomePageClient } from "./home-client"
 
 export const metadata: Metadata = {
-  title: "Zaza Draft – AI Lesson Planning & Grading that Saves Teachers 10+ Hours Weekly",
+  title: "Zaza Draft - AI Lesson Planning & Grading that Saves Teachers 10+ Hours Weekly",
   description:
     "Trusted AI support for teachers. Save 10+ hours every week with hallucination-safe tools for lesson planning, grading, and parent communication.",
   keywords: [
@@ -24,16 +24,16 @@ export const metadata: Metadata = {
     // German target keywords
     "KI Unterrichtsplanung",
     "KI Bewertungstool",
-    "Lehrer Produktivität",
+    "Lehrer ProduktivitÃ¤t",
     "Zeit sparen Lehre",
-    "KI für Lehrer",
+    "KI fÃ¼r Lehrer",
     "Elternbriefe KI",
     "Zeugniskommentare KI",
     "halluzinationssichere KI",
     "10 Stunden pro Woche sparen",
   ],
   openGraph: {
-    title: "Zaza Draft – AI Lesson Planning & Grading that Saves Teachers 10+ Hours Weekly",
+    title: "Zaza Draft - AI Lesson Planning & Grading that Saves Teachers 10+ Hours Weekly",
     description:
       "Trusted AI support for teachers. Save 10+ hours every week with hallucination-safe tools for lesson planning, grading, and parent communication.",
     type: "website",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zaza Draft – Save Teachers 10+ Hours Weekly",
+    title: "Zaza Draft - Save Teachers 10+ Hours Weekly",
     description:
       "Trusted AI support for teachers. Save 10+ hours every week with hallucination-safe tools for lesson planning, grading, and parent communication.",
   },

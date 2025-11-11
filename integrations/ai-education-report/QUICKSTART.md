@@ -1,8 +1,8 @@
-# 🚀 QUICK START GUIDE FOR CLAUDE CODE
+# ðŸš€ QUICK START GUIDE FOR CLAUDE CODE
 
 ## What You Have
 
-✅ **Complete Report Generator System**
+âœ… **Complete Report Generator System**
 - PDF report generator (Python)
 - Multi-format support (PDF, DOCX, HTML)
 - API integration code (Node.js)
@@ -40,7 +40,7 @@ All files are in `/mnt/user-data/outputs/`:
    </a>
    ```
 
-3. **Done!** ✅
+3. **Done!** âœ…
 
 ### Option B: Dynamic Generation with Multiple Formats
 
@@ -179,18 +179,18 @@ chmod 755 public/downloads
 
 ## Next Steps
 
-1. ✅ Copy files to your project
-2. ✅ Test Python script works
-3. ✅ Choose Option A or B
-4. ✅ Implement (5 mins for A, 30 mins for B)
-5. ✅ Test end-to-end
-6. ✅ Deploy!
+1. âœ… Copy files to your project
+2. âœ… Test Python script works
+3. âœ… Choose Option A or B
+4. âœ… Implement (5 mins for A, 30 mins for B)
+5. âœ… Test end-to-end
+6. âœ… Deploy!
 
 ## Need Help?
 
-📖 **Full docs:** See README_INTEGRATION.md  
-📝 **API examples:** See report_generator_package.md  
-🔍 **Debug:** Run Python script directly first
+ðŸ“– **Full docs:** See README_INTEGRATION.md  
+ðŸ“ **API examples:** See report_generator_package.md  
+ðŸ” **Debug:** Run Python script directly first
 
 ---
 

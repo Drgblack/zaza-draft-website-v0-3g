@@ -1,4 +1,4 @@
-﻿name: Build Resource Downloads (PR)
+name: Build Resource Downloads (PR)
 
 on:
   push:

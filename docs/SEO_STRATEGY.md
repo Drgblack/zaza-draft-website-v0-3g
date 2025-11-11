@@ -143,13 +143,13 @@ This document outlines the comprehensive SEO optimization strategy for Zaza Draf
 ### Target Keywords (Primary)
 1. **KI Unterrichtsplanung** - High intent, teacher-focused
 2. **KI Bewertungstool** - Direct product match
-3. **Lehrer Produktivität** - Broad appeal, pain point
+3. **Lehrer ProduktivitÃ¤t** - Broad appeal, pain point
 4. **Zeit sparen Lehre** - Emotional hook, outcome-focused
 5. **Zaza Draft** - Brand awareness
 6. **Zaza GradeFlow** - Brand awareness
 
 ### Target Keywords (Secondary)
-- KI für Lehrer
+- KI fÃ¼r Lehrer
 - Unterrichtsplaner KI
 - Automatische Bewertung
 - Elternbriefe Generator
@@ -159,10 +159,10 @@ This document outlines the comprehensive SEO optimization strategy for Zaza Draf
 
 ### Long-Tail Keywords (AI SEO)
 - "Wie kann KI Lehrern Zeit sparen?"
-- "Was ist das beste KI-Tool für Unterrichtsplanung?"
-- "Wie nutzen Lehrer KI für Bewertung?"
-- "Ist KI-Bewertung genau für Lehrer?"
-- "Kann KI Elternbriefe für Lehrer schreiben?"
+- "Was ist das beste KI-Tool fÃ¼r Unterrichtsplanung?"
+- "Wie nutzen Lehrer KI fÃ¼r Bewertung?"
+- "Ist KI-Bewertung genau fÃ¼r Lehrer?"
+- "Kann KI Elternbriefe fÃ¼r Lehrer schreiben?"
 - "Welche KI-Tools reduzieren die Lehrerarbeitslast?"
 
 ---
@@ -170,24 +170,24 @@ This document outlines the comprehensive SEO optimization strategy for Zaza Draf
 ### Meta Titles & Descriptions (German)
 
 #### Homepage
-**Title (59 chars):** KI Unterrichtsplanung & Bewertung für Lehrer | Zaza  
+**Title (59 chars):** KI Unterrichtsplanung & Bewertung fÃ¼r Lehrer | Zaza  
 **Description (159 chars):** Sparen Sie 10+ Stunden pro Woche mit KI Unterrichtsplanung, Elternbriefe und KI-Bewertung. Von 500+ Lehrern vertraut. DSGVO-konform, halluzinationssicher.
 
 #### Draft Product Page
 **Title (58 chars):** KI Elternbriefe & Zeugniskommentare | Zaza Draft  
-**Description (158 chars):** Schreiben Sie Eltern-E-Mails und Zeugniskommentare in Minuten mit KI. Halluzinationssicher, DSGVO-konform, für Lehrer entwickelt. Jetzt kostenlos testen.
+**Description (158 chars):** Schreiben Sie Eltern-E-Mails und Zeugniskommentare in Minuten mit KI. Halluzinationssicher, DSGVO-konform, fÃ¼r Lehrer entwickelt. Jetzt kostenlos testen.
 
 #### GradeFlow Product Page
-**Title (54 chars):** KI Bewertungstool für Lehrer | Zaza GradeFlow  
-**Description (157 chars):** Bewerten Sie Aufgaben in Minuten, nicht Stunden. KI-gestütztes Feedback, das fair, konsistent und rubrik-ausgerichtet ist. Sparen Sie 8+ Stunden pro Woche.
+**Title (54 chars):** KI Bewertungstool fÃ¼r Lehrer | Zaza GradeFlow  
+**Description (157 chars):** Bewerten Sie Aufgaben in Minuten, nicht Stunden. KI-gestÃ¼tztes Feedback, das fair, konsistent und rubrik-ausgerichtet ist. Sparen Sie 8+ Stunden pro Woche.
 
 #### About Page
-**Title (59 chars):** Über Zaza Technologies | KI-Tools für Lehrer entwickelt  
-**Description (159 chars):** Gegründet von Dr. Greg Blackburn, PhD. Wir entwickeln sichere, empathische KI, die Lehrern Zeit, Selbstvertrauen und Kreativität zurückgibt. DSGVO-konform.
+**Title (59 chars):** Ãœber Zaza Technologies | KI-Tools fÃ¼r Lehrer entwickelt  
+**Description (159 chars):** GegrÃ¼ndet von Dr. Greg Blackburn, PhD. Wir entwickeln sichere, empathische KI, die Lehrern Zeit, Selbstvertrauen und KreativitÃ¤t zurÃ¼ckgibt. DSGVO-konform.
 
 #### Blog Index
-**Title (59 chars):** Lehrer Produktivität Blog | KI Tipps & Ressourcen  
-**Description (157 chars):** Praktische Tipps, KI-Anleitungen und Lehrerproduktivitäts-Ressourcen. Lernen Sie, wie Sie Zeit beim Unterrichten mit KI-Unterrichtsplanung und Bewertung sparen.
+**Title (59 chars):** Lehrer ProduktivitÃ¤t Blog | KI Tipps & Ressourcen  
+**Description (157 chars):** Praktische Tipps, KI-Anleitungen und LehrerproduktivitÃ¤ts-Ressourcen. Lernen Sie, wie Sie Zeit beim Unterrichten mit KI-Unterrichtsplanung und Bewertung sparen.
 
 ---
 
@@ -198,23 +198,23 @@ This document outlines the comprehensive SEO optimization strategy for Zaza Draf
 - **H2:** Wie Zaza Draft Lehrern Zeit spart
 - **H2:** KI Unterrichtsplanung mit Zaza Teach
 - **H2:** KI-Bewertung mit GradeFlow
-- **H2:** Von 500+ Lehrern in 50+ Ländern vertraut
-- **H3:** Halluzinationssichere KI für Lehrer
+- **H2:** Von 500+ Lehrern in 50+ LÃ¤ndern vertraut
+- **H3:** Halluzinationssichere KI fÃ¼r Lehrer
 - **H3:** DSGVO-konform und datenschutzorientiert
 
 #### Draft Product Page
 - **H1:** Eltern-E-Mails sollten nicht Stunden zum Schreiben brauchen
 - **H2:** Das Problem: Lehrer ertrinken in Elternkommunikation
-- **H2:** Die Lösung: Zaza Drafts halluzinationssichere KI
-- **H2:** Für Lehrersicherheit entwickelt
+- **H2:** Die LÃ¶sung: Zaza Drafts halluzinationssichere KI
+- **H2:** FÃ¼r Lehrersicherheit entwickelt
 - **H3:** Ton-Leitplanken
-- **H3:** Übersetzungsprüfungen
-- **H3:** Überprüfungsschritte
+- **H3:** ÃœbersetzungsprÃ¼fungen
+- **H3:** ÃœberprÃ¼fungsschritte
 
 #### GradeFlow Product Page
 - **H1:** Bewertung sollte Ihre Wochenenden nicht verschlingen
-- **H2:** Das Problem: Endloses Korrigieren, verzögertes Feedback
-- **H2:** Die Lösung: GradeFlows KI-Bewertungsassistent
+- **H2:** Das Problem: Endloses Korrigieren, verzÃ¶gertes Feedback
+- **H2:** Die LÃ¶sung: GradeFlows KI-Bewertungsassistent
 - **H2:** Hauptfunktionen
 - **H3:** Schnelleres Feedback
 - **H3:** Fair & konsistent
@@ -228,8 +228,8 @@ This document outlines the comprehensive SEO optimization strategy for Zaza Draf
 **Before:** "Bessere Elternnachrichten in Minuten - statt Stunden"  
 **After:** "KI Unterrichtsplanung und Bewertung, die Lehrern 10+ Stunden jede Woche spart"
 
-**Subtext Before:** "Die einzige halluzinationssichere KI entwickelt für Lehrkräfte - für Zeugnisse und Elternkommunikation."  
-**Subtext After:** "Die einzige halluzinationssichere KI für Lehrer entwickelt für Unterrichtsplanung, Elternnachrichten, Zeugniskommentare und KI-Bewertung. Von 500+ Lehrern in 50+ Ländern vertraut."
+**Subtext Before:** "Die einzige halluzinationssichere KI entwickelt fÃ¼r LehrkrÃ¤fte - fÃ¼r Zeugnisse und Elternkommunikation."  
+**Subtext After:** "Die einzige halluzinationssichere KI fÃ¼r Lehrer entwickelt fÃ¼r Unterrichtsplanung, Elternnachrichten, Zeugniskommentare und KI-Bewertung. Von 500+ Lehrern in 50+ LÃ¤ndern vertraut."
 
 **CTA Before:** "Jetzt gratis testen - 5 Kommentare in diesem Monat"  
 **CTA After:** "Kostenlos starten - Zeit sparen beim Unterrichten"
@@ -240,19 +240,19 @@ This document outlines the comprehensive SEO optimization strategy for Zaza Draf
 
 #### AI SEO Questions (Long-Tail, German)
 1. **Q:** Wie kann KI Lehrern Zeit bei der Unterrichtsplanung sparen?  
-   **A:** KI-Unterrichtsplanungstools wie Zaza Teach generieren vollständige, lehrplangerechte Unterrichtspläne in Sekunden. Lehrer geben Lernziele an, und die KI erstellt Aktivitäten, Bewertungen und Zeitpläne. Dies spart 10+ Stunden pro Woche bei der Planung.
+   **A:** KI-Unterrichtsplanungstools wie Zaza Teach generieren vollstÃ¤ndige, lehrplangerechte UnterrichtsplÃ¤ne in Sekunden. Lehrer geben Lernziele an, und die KI erstellt AktivitÃ¤ten, Bewertungen und ZeitplÃ¤ne. Dies spart 10+ Stunden pro Woche bei der Planung.
 
 2. **Q:** Was ist das beste KI-Tool zum Schreiben von Elternbriefen?  
-   **A:** Zaza Draft ist speziell für Lehrer entwickelt, um Eltern-E-Mails und Zeugniskommentare zu schreiben. Im Gegensatz zu allgemeinen KI-Tools enthält es Halluzinationsprävention, Ton-Leitplanken und DSGVO-Konformität für sichere, professionelle Kommunikation.
+   **A:** Zaza Draft ist speziell fÃ¼r Lehrer entwickelt, um Eltern-E-Mails und Zeugniskommentare zu schreiben. Im Gegensatz zu allgemeinen KI-Tools enthÃ¤lt es HalluzinationsprÃ¤vention, Ton-Leitplanken und DSGVO-KonformitÃ¤t fÃ¼r sichere, professionelle Kommunikation.
 
-3. **Q:** Ist KI-Bewertung genau für Lehrer?  
-   **A:** Ja, wenn richtig verwendet. GradeFlow verwendet rubrik-ausgerichtete KI-Bewertung mit Audit-Trails für Transparenz. Lehrer kalibrieren die KI einmal, dann liefert sie konsistentes, faires Feedback. Jede Ausgabe enthält einen Audit-Trail zur Überprüfung.
+3. **Q:** Ist KI-Bewertung genau fÃ¼r Lehrer?  
+   **A:** Ja, wenn richtig verwendet. GradeFlow verwendet rubrik-ausgerichtete KI-Bewertung mit Audit-Trails fÃ¼r Transparenz. Lehrer kalibrieren die KI einmal, dann liefert sie konsistentes, faires Feedback. Jede Ausgabe enthÃ¤lt einen Audit-Trail zur ÃœberprÃ¼fung.
 
-4. **Q:** Kann KI Zeugniskommentare für Lehrer schreiben?  
-   **A:** Ja. Zaza Draft generiert klare, einfühlsame Zeugniskommentare basierend auf Schülerkontext. Lehrer überprüfen und genehmigen jeden Kommentar vor dem Senden. Die KI enthält Sicherheitsfunktionen zur Verhinderung von Halluzinationen und zur Sicherstellung eines angemessenen Tons.
+4. **Q:** Kann KI Zeugniskommentare fÃ¼r Lehrer schreiben?  
+   **A:** Ja. Zaza Draft generiert klare, einfÃ¼hlsame Zeugniskommentare basierend auf SchÃ¼lerkontext. Lehrer Ã¼berprÃ¼fen und genehmigen jeden Kommentar vor dem Senden. Die KI enthÃ¤lt Sicherheitsfunktionen zur Verhinderung von Halluzinationen und zur Sicherstellung eines angemessenen Tons.
 
-5. **Q:** Wie nutzen Lehrer KI für die Bewertung von Aufgaben?  
-   **A:** Lehrer laden Aufgaben in GradeFlow hoch, das rubrik-ausgerichtetes Feedback in Minuten generiert. Die KI gewährleistet Konsistenz über alle Schüler hinweg und bietet einen Audit-Trail. Lehrer überprüfen und passen nach Bedarf an, bevor sie Noten finalisieren.
+5. **Q:** Wie nutzen Lehrer KI fÃ¼r die Bewertung von Aufgaben?  
+   **A:** Lehrer laden Aufgaben in GradeFlow hoch, das rubrik-ausgerichtetes Feedback in Minuten generiert. Die KI gewÃ¤hrleistet Konsistenz Ã¼ber alle SchÃ¼ler hinweg und bietet einen Audit-Trail. Lehrer Ã¼berprÃ¼fen und passen nach Bedarf an, bevor sie Noten finalisieren.
 
 6. **Q:** Welche KI-Tools reduzieren die Lehrerarbeitslast?  
    **A:** Zaza Technologies bietet drei KI-Tools: Zaza Teach (Unterrichtsplanung), Zaza Draft (Elternbriefe & Berichte) und GradeFlow (KI-Bewertung). Zusammen sparen sie Lehrern 10+ Stunden pro Woche bei Verwaltungsaufgaben.

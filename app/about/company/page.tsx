@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useLanguage } from "@/lib/i18n/language-context"
 
@@ -41,19 +41,19 @@ export default function CompanyPage() {
           
           <div className="space-y-4 mb-6">
             <div className="flex items-start gap-3">
-              <div className="text-[#8B5CF6] text-2xl">•</div>
+              <div className="text-[#8B5CF6] text-2xl">â€¢</div>
               <p className="text-gray-300">{t("company.philosophy.principle1")}</p>
             </div>
             <div className="flex items-start gap-3">
-              <div className="text-[#8B5CF6] text-2xl">•</div>
+              <div className="text-[#8B5CF6] text-2xl">â€¢</div>
               <p className="text-gray-300">{t("company.philosophy.principle2")}</p>
             </div>
             <div className="flex items-start gap-3">
-              <div className="text-[#8B5CF6] text-2xl">•</div>
+              <div className="text-[#8B5CF6] text-2xl">â€¢</div>
               <p className="text-gray-300">{t("company.philosophy.principle3")}</p>
             </div>
             <div className="flex items-start gap-3">
-              <div className="text-[#8B5CF6] text-2xl">•</div>
+              <div className="text-[#8B5CF6] text-2xl">â€¢</div>
               <p className="text-gray-300">{t("company.philosophy.principle4")}</p>
             </div>
           </div>
@@ -72,15 +72,15 @@ export default function CompanyPage() {
           
           <div className="space-y-4 mb-6">
             <div className="flex items-start gap-3">
-              <div className="text-[#8B5CF6] text-2xl">•</div>
+              <div className="text-[#8B5CF6] text-2xl">â€¢</div>
               <p className="text-gray-300">{t("company.boutique.point1")}</p>
             </div>
             <div className="flex items-start gap-3">
-              <div className="text-[#8B5CF6] text-2xl">•</div>
+              <div className="text-[#8B5CF6] text-2xl">â€¢</div>
               <p className="text-gray-300">{t("company.boutique.point2")}</p>
             </div>
             <div className="flex items-start gap-3">
-              <div className="text-[#8B5CF6] text-2xl">•</div>
+              <div className="text-[#8B5CF6] text-2xl">â€¢</div>
               <p className="text-gray-300">{t("company.boutique.point3")}</p>
             </div>
           </div>

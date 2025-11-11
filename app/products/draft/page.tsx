@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "parent emails",
     "teacher communication",
     "KI Elternkommunikation",
-    "Lehrer Produktivität",
+    "Lehrer ProduktivitÃ¤t",
   ],
   openGraph: {
     title: "Zaza Draft | AI Parent Communication Tool for Teachers",

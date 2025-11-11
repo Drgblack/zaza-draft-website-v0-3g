@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -253,7 +253,7 @@ export function ComparisonClient({ comparison, slug }: ComparisonProps) {
           <ul className="space-y-2">
             {data.quickSummary.map((item, index) => (
               <li key={index} className="text-gray-300 flex items-start gap-2">
-                <span className="text-[#A78BFA] mt-1">•</span>
+                <span className="text-[#A78BFA] mt-1">â€¢</span>
                 <span>{item}</span>
               </li>
             ))}
@@ -316,11 +316,11 @@ export function ComparisonClient({ comparison, slug }: ComparisonProps) {
             <span className="inline-flex items-center gap-1">
               <Check className="h-4 w-4 text-green-500" /> = Strong feature
             </span>
-            {" • "}
+            {" â€¢ "}
             <span className="inline-flex items-center gap-1">
               <AlertCircle className="h-4 w-4 text-yellow-500" /> = Limited or basic feature
             </span>
-            {" • "}
+            {" â€¢ "}
             <span className="inline-flex items-center gap-1">
               <X className="h-4 w-4 text-red-500" /> = Not available
             </span>
@@ -413,7 +413,7 @@ export function ComparisonClient({ comparison, slug }: ComparisonProps) {
           <h3 className="text-lg font-semibold text-white mb-3">Try Before You Buy</h3>
           <p className="text-gray-300">
             Both tools offer free trials. We recommend trying both to see which fits your workflow better. There's no
-            wrong choice—just different tools for different needs.
+            wrong choice-just different tools for different needs.
           </p>
         </Card>
       </div>

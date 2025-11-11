@@ -71,7 +71,7 @@ async function run() {
       process.exit(3)
     }
 
-    console.log('validate-posts: OK — no issues found')
+    console.log('validate-posts: OK - no issues found')
     process.exit(0)
   } catch (err: any) {
     console.error('Failed to import posts-data.ts:', err?.message || err)

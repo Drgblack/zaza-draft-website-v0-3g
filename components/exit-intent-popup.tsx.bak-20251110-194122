@@ -1,0 +1,98 @@
+"use client";
+
+import { useCallback, useEffect, useRef, useState } from "react";
+
+type ExitIntentPopupProps = {
+  children?: React.ReactNode;
+  onOpenChange?: (open: boolean) => void;
+};
+
+const STORAGE_KEY = "exitIntentShown";
+
+/**
+ * ExitIntentPopup
+ * - Shows a one-per-session popup when the user moves the cursor toward the tab bar
+ *   or when the page is about to be hidden (tab close / navigation on some browsers).
+ * - No synchronous setState inside effects — satisfies `react-hooks/set-state-in-effect`.
+ */
+export default function ExitIntentPopup({ children, onOpenChange }: ExitIntentPopupProps) {
+  // Initialize from sessionStorage during the first client render.
+  const [open, setOpen] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
+    return sessionStorage.getItem(STORAGE_KEY) === "1";
+  });
+
+  // Prevents multiple triggers and unnecessary listeners after the popup has shown once.
+  const hasFiredRef = useRef<boolean>(open);
+
+  const markShown = useCallback(() => {
+    if (hasFiredRef.current) return;
+    hasFiredRef.current = true;
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem(STORAGE_KEY, "1");
+    }
+    setOpen(true);
+    onOpenChange?.(true);
+  }, [onOpenChange]);
+
+  useEffect(() => {
+    if (hasFiredRef.current) return;
+
+    // Desktop: mouse leaves toward top (tab/URL bar)
+    const handleMouseOut = (e: MouseEvent) => {
+      if (e.relatedTarget === null && e.clientY <= 0) {
+        markShown();
+      }
+    };
+
+    // Fallback: page becoming hidden often correlates with exit/navigation
+    const handleVisibility = () => {
+      if (document.visibilityState === "hidden") {
+        markShown();
+      }
+    };
+
+    document.addEventListener("mouseout", handleMouseOut, { passive: true });
+    document.addEventListener("visibilitychange", handleVisibility);
+
+    return () => {
+      document.removeEventListener("mouseout", handleMouseOut);
+      document.removeEventListener("visibilitychange", handleVisibility);
+    };
+  }, [markShown]);
+
+  const close = useCallback(() => {
+    setOpen(false);
+    onOpenChange?.(false);
+  }, [onOpenChange]);
+
+  if (!open) return null;
+
+  return (
+    <div
+      role="dialog"
+      aria-modal="true"
+      className="fixed inset-0 z-50 grid place-items-center bg-black/40 p-4"
+    >
+      <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-lg">
+        {children ?? (
+          <>
+            <h2 className="text-xl font-semibold">Before you go</h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Grab our free guide and see how Zaza Draft saves teachers hours each week.
+            </p>
+            <div className="mt-4 flex gap-3">
+              {/* Replace these with your real CTAs */}
+              <button className="rounded-xl px-4 py-2 bg-primary text-primary-foreground" onClick={close}>
+                Get the guide
+              </button>
+              <button className="rounded-xl px-4 py-2 border" onClick={close}>
+                Maybe later
+              </button>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}

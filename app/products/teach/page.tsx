@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "curriculum planning",
     "lesson planner",
     "KI Unterrichtsplanung",
-    "Lehrer Produktivität",
+    "Lehrer ProduktivitÃ¤t",
   ],
   openGraph: {
     title: "Zaza Teach | AI Lesson Planning Tool for Teachers",

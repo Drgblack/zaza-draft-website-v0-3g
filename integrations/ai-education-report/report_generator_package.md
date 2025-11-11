@@ -6,12 +6,12 @@ This package includes everything needed to generate and serve the AI in Educatio
 ## File Structure
 ```
 /report-generator/
-├── python/
-│   ├── requirements.txt
-│   └── generate_report.py
-├── api/
-│   └── reportEndpoint.js
-└── README.md
+â”œâ”€â”€ python/
+â”‚   â”œâ”€â”€ requirements.txt
+â”‚   â””â”€â”€ generate_report.py
+â”œâ”€â”€ api/
+â”‚   â””â”€â”€ reportEndpoint.js
+â””â”€â”€ README.md
 ```
 
 ## 1. Python Report Generator
@@ -142,19 +142,19 @@ router.get('/report-formats', (req, res) => {
         value: 'pdf',
         label: 'PDF',
         description: 'Portable Document Format - Best for reading and printing',
-        icon: '📄'
+        icon: 'ðŸ“„'
       },
       {
         value: 'docx',
         label: 'Word Document',
         description: 'Microsoft Word - Editable format',
-        icon: '📝'
+        icon: 'ðŸ“'
       },
       {
         value: 'html',
         label: 'HTML',
         description: 'Web page - View in browser',
-        icon: '🌐'
+        icon: 'ðŸŒ'
       }
     ]
   });
@@ -300,7 +300,7 @@ export default function ReportDownloadForm() {
 
       {downloadUrl && (
         <div className="success-message" style={{marginTop: '1rem', color: 'green'}}>
-          ✓ Report generated! Your download should begin automatically.
+          âœ“ Report generated! Your download should begin automatically.
           <br />
           <a href={downloadUrl} download>Click here</a> if download doesn't start.
         </div>

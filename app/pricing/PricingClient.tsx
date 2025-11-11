@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react"
 import { Check, ChevronDown, Star, ShieldCheck, Globe } from "lucide-react"
@@ -10,9 +10,9 @@ import { motion, AnimatePresence } from "framer-motion"
 type Currency = "EUR" | "USD" | "GBP"
 
 const currencySymbols = {
-  EUR: "€",
+  EUR: "â‚¬",
   USD: "$",
-  GBP: "£",
+  GBP: "Â£",
 }
 
 const prices = {

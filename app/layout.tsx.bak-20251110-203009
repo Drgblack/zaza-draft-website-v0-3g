@@ -1,0 +1,131 @@
+"use client";
+
+import { useCallback, useEffect, useRef, useState } from "react";
+// app/layout.tsx (server component)
+import type { Metadata } from "next";
+import "./globals.css";
+import ExitIntentMount from "@/components/exit-intent-mount";
+
+export const metadata: Metadata = {
+  title: "Zaza Draft",
+  description: "Teacher-first writing and wellbeing assistant",
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        {children}
+        <ExitIntentMount />
+      </body>
+    </html>
+  );
+}
+
+type ExitIntentPopupProps = {
+  children?: React.ReactNode;
+  onOpenChange?: (open: boolean) => void;
+};
+
+const STORAGE_KEY = "exitIntentShown";
+
+/**
+ * ExitIntentPopup
+ * - Shows once per session on exit intent (mouse towards tab bar) or when page hides.
+ * - No synchronous setState inside effects.
+ */
+export default function ExitIntentPopup({ children, onOpenChange }: ExitIntentPopupProps) {
+  // Start closed; we'll decide in an effect whether it's already been shown.
+  const [open, setOpen] = useState(false);
+
+  // Tracks whether we've already shown it this session.
+  const hasFiredRef = useRef(false);
+
+  // On mount, read storage and prime the ref (do NOT open here).
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      hasFiredRef.current = sessionStorage.getItem(STORAGE_KEY) === "1";
+    }
+  }, []);
+
+  const markShown = useCallback(() => {
+    if (hasFiredRef.current) return;
+    hasFiredRef.current = true;
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem(STORAGE_KEY, "1");
+    }
+    setOpen(true);
+    onOpenChange?.(true);
+  }, [onOpenChange]);
+
+  useEffect(() => {
+    if (hasFiredRef.current) return;
+
+    // Desktop: cursor leaves toward top (tab/URL bar)
+    const handleMouseOut = (e: MouseEvent) => {
+      if (e.relatedTarget === null && e.clientY <= 0) {
+        markShown();
+      }
+    };
+
+    // Fallback: page becoming hidden often correlates with exit/navigation
+    const handleVisibility = () => {
+      if (document.visibilityState === "hidden") {
+        markShown();
+      }
+    };
+
+    // Allow ESC to close when open
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        close();
+      }
+    };
+
+    document.addEventListener("mouseout", handleMouseOut, { passive: true });
+    document.addEventListener("visibilitychange", handleVisibility);
+    document.addEventListener("keydown", handleKey);
+
+    return () => {
+      document.removeEventListener("mouseout", handleMouseOut);
+      document.removeEventListener("visibilitychange", handleVisibility);
+      document.removeEventListener("keydown", handleKey);
+    };
+  }, [markShown]);
+
+  const close = useCallback(() => {
+    setOpen(false);
+    onOpenChange?.(false);
+  }, [onOpenChange]);
+
+  if (!open) return null;
+
+  return (
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label="Exit intent offer"
+      className="fixed inset-0 z-50 grid place-items-center bg-black/40 p-4"
+    >
+      <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-lg">
+        {children ?? (
+          <>
+            <h2 className="text-xl font-semibold">Before you go</h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Grab our free guide and see how Zaza Draft saves teachers hours each week.
+            </p>
+            <div className="mt-4 flex gap-3">
+              {/* Replace these with your real CTAs */}
+              <button className="rounded-xl px-4 py-2 bg-primary text-primary-foreground" onClick={close}>
+                Get the guide
+              </button>
+              <button className="rounded-xl px-4 py-2 border" onClick={close}>
+                Maybe later
+              </button>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
