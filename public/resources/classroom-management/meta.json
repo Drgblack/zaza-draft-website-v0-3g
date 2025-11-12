@@ -1,13 +1,13 @@
-﻿{
-    "slug":  "classroom-management",
-    "files":  {
-                  "en":  {
-                             "docx":  "/resources/classroom-management/build/en.docx",
-                             "pdf":  "/resources/classroom-management/build/en.pdf"
-                         },
-                  "de":  {
-                             "docx":  "/resources/classroom-management/build/de.docx",
-                             "pdf":  "/resources/classroom-management/build/de.pdf"
-                         }
-              }
+{
+  "slug": "classroom-management",
+  "files": {
+    "en": {
+      "docx": "/resources/classroom-management/build/en.docx",
+      "pdf": "/resources/classroom-management/build/en.pdf"
+    },
+    "de": {
+      "docx": "/resources/classroom-management/build/de.docx",
+      "pdf": "/resources/classroom-management/build/de.pdf"
+    }
+  }
 }

@@ -1,13 +1,13 @@
-﻿{
-    "slug":  "tone-checklist",
-    "files":  {
-                  "en":  {
-                             "docx":  "/resources/tone-checklist/build/en.docx",
-                             "pdf":  "/resources/tone-checklist/build/en.pdf"
-                         },
-                  "de":  {
-                             "docx":  "/resources/tone-checklist/build/de.docx",
-                             "pdf":  "/resources/tone-checklist/build/de.pdf"
-                         }
-              }
+{
+  "slug": "tone-checklist",
+  "files": {
+    "en": {
+      "docx": "/resources/tone-checklist/build/en.docx",
+      "pdf": "/resources/tone-checklist/build/en.pdf"
+    },
+    "de": {
+      "docx": "/resources/tone-checklist/build/de.docx",
+      "pdf": "/resources/tone-checklist/build/de.pdf"
+    }
+  }
 }

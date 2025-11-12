@@ -1,8 +1,9 @@
 # AI Prompt Library for Teachers
+
 ## Copy-Paste Prompts That Save Hours Every Week
 
 **Part of the Zaza Teacher Resource Library**  
-*Making great teaching easier, every day*
+_Making great teaching easier, every day_
 
 ---
 
@@ -11,6 +12,7 @@
 This library gives you ready-to-use AI prompts for every common teaching task. Each prompt is tested, teacher-approved, and designed to give you ship-ready content in minutes.
 
 **You'll find:**
+
 - ✓ Parent communication prompts (behavior, progress, attendance)
 - ✓ Feedback & grading generators (rubric-aligned, individualized)
 - ✓ Planning & instruction builders (lessons, exit tickets, differentiation)
@@ -22,23 +24,28 @@ This library gives you ready-to-use AI prompts for every common teaching task. E
 ## 🎯 How to Use This Library
 
 ### New to AI?
+
 Start with **Section 1** (Parent Communication). Pick one prompt, customize the brackets, paste it into your AI tool, and watch the magic happen.
 
 ### Already using AI?
+
 Jump to the sections you need most. Each prompt includes:
+
 - ✅ The exact text to copy
 - ✅ What to customize (in [brackets])
 - ✅ Expected output format
 - ✅ Privacy reminders
 
 ### Want to save even more time?
-Check **Section 6** (Voice Profile Builder) to teach the AI your personal style once—then every output sounds like you.
+
+Check **Section 6** (Voice Profile Builder) to teach the AI your personal style once-then every output sounds like you.
 
 ---
 
 ## 🔒 Critical Privacy Rules
 
 > ⚠️ **NEVER put these in external AI tools:**
+>
 > - Student last names
 > - Medical diagnoses
 > - IEP/504 confidential details
@@ -46,6 +53,7 @@ Check **Section 6** (Voice Profile Builder) to teach the AI your personal style 
 > - Any data your district prohibits
 
 ✅ **Safe to use:**
+
 - First names only
 - Observable behaviors
 - Academic skills and progress
@@ -61,12 +69,14 @@ Check **Section 6** (Voice Profile Builder) to teach the AI your personal style 
 ## 📧 The 4-Sentence Behavior Email
 
 ### When to Use
+
 - First incidents (minor)
 - Pattern forming (2-3 occurrences)
 - Progress updates after intervention
 - Any behavior that needs home partnership
 
 ### Time Saved
+
 From 15 minutes → 2 minutes
 
 ---
@@ -93,6 +103,7 @@ Keep it under 120 words. Professional but warm.
 ### Example Output
 
 **Input:**
+
 - Parent Name: Ms. Rodriguez
 - Student: Alex
 - Class: Math
@@ -108,11 +119,13 @@ Keep it under 120 words. Professional but warm.
 ### Customization Tips
 
 **For different tones:**
+
 - More formal: Add "clear-but-professional" to the prompt
 - More empathetic: Add "empathetic and supportive" to the prompt
 - Urgent: Add "this requires immediate attention but stay calm"
 
 **For different scenarios:**
+
 - Attendance: Change [behavior] to "attendance and make-up work"
 - Academic: Change [behavior] to "assignment completion"
 - Progress: Change [behavior] to "growth in [skill]"
@@ -122,9 +135,11 @@ Keep it under 120 words. Professional but warm.
 ## 📞 Post-Call Recap Email
 
 ### When to Use
-After ANY phone call with parents—creates a paper trail and confirms alignment.
+
+After ANY phone call with parents-creates a paper trail and confirms alignment.
 
 ### Time Saved
+
 From 10 minutes → 90 seconds
 
 ---
@@ -151,11 +166,13 @@ Keep it factual, neutral, and under 100 words.
 ## 📬 Weekly Progress Update (One-Page Format)
 
 ### When to Use
+
 - Weekly class newsletters
 - Individual student progress notes
 - End-of-unit summaries
 
 ### Time Saved
+
 From 20 minutes → 3 minutes
 
 ---
@@ -169,11 +186,13 @@ Generate a one-page progress update in this format:
 Focus: [One sentence - what skill/topic we're building]
 
 **Key Dates & Actions:**
+
 - Mon: [Activity]. Action: [What to bring/do]
 - Wed: [Checkpoint]. Action: [What to review/prepare]
 - Fri: [Assessment/Due date]. Action: [What to submit/study]
 
 **How to Help at Home:**
+
 - [One simple conversation prompt or check]
 - [One planner/material reminder]
 
@@ -192,11 +211,13 @@ Keep the whole update under 220 words. Bold the dates and "Action" labels.
 ## 🎓 Report Card Progress Comment
 
 ### When to Use
+
 - Mid-term progress reports
 - Report cards (when you need individualized comments fast)
 - Parent conference prep
 
 ### Time Saved
+
 From 10 minutes per student → 2 minutes per student
 
 ---
@@ -209,6 +230,7 @@ Generate a report card comment (3-5 sentences) using this structure:
 Strength → Growth → Strategy → Next Step
 
 Requirements:
+
 - Use [Student First Name] twice in the comment
 - Keep it 3-5 sentences, professional tone
 - Include one specific piece of evidence (assignment, date, or skill)
@@ -228,6 +250,7 @@ Make it honest, constructive, and parent-friendly.
 ### Example Output
 
 **Input:**
+
 - Student: Jordan
 - Strengths: Participates in discussion, cites evidence
 - Growth area: Written analysis after quotes
@@ -243,11 +266,13 @@ Make it honest, constructive, and parent-friendly.
 ## 🚨 Escalation / Sensitive Situation Email
 
 ### When to Use
+
 - Repeated behavior after interventions
 - Safety concerns (after following school protocol)
 - Parent disputes about grades/placement
 
 ### Time Saved
+
 From 25 minutes (lots of editing for tone) → 5 minutes
 
 ---
@@ -273,6 +298,7 @@ Keep it under 200 words. End with: "I'm committed to [Student]'s success and wan
 ### Example Output
 
 **Input:**
+
 - Situation: Student repeatedly off-task during independent work; has left classroom twice without permission
 - Interventions: Seat change, visual timer, check-in conferences
 - Goal: Parent partnership + possible counselor support
@@ -288,11 +314,13 @@ Keep it under 200 words. End with: "I'm committed to [Student]'s success and wan
 ## ✍️ Glow-Grow-Go Comment Generator
 
 ### When to Use
+
 - Quick writes, exit tickets, problem sets
 - Rough drafts
 - Any formative assessment
 
 ### Time Saved
+
 From 5 minutes per comment → 60 seconds
 
 ---
@@ -318,6 +346,7 @@ Keep each line under 15 words. Student-friendly language.
 ### Example Output
 
 **Input:**
+
 - Rubric: Clear claim, relevant evidence, analysis after quotes, organization
 - Student work: Has a claim and 2 quotes, but no analysis sentences. Organized well.
 
@@ -332,11 +361,13 @@ Keep each line under 15 words. Student-friendly language.
 ## 📊 Rubric-Aligned Detailed Feedback
 
 ### When to Use
+
 - Major essays, projects, labs
 - When students need criterion-by-criterion breakdown
 - Portfolio pieces
 
 ### Time Saved
+
 From 12 minutes → 3 minutes
 
 ---
@@ -355,6 +386,7 @@ Student work summary:
 [Describe what the student submitted - 3-5 sentences]
 
 For each criterion, provide:
+
 - Score/level met
 - What worked (brief evidence)
 - What to improve (specific)
@@ -368,11 +400,13 @@ Keep it under 250 words total. End with one overall priority for revision.
 ## 🎯 Individualized Report Comment (with Name Usage)
 
 ### When to Use
+
 - Report cards requiring student name 2x
 - Progress reports
 - Parent conference prep documents
 
 ### Time Saved
+
 From 10 minutes → 2 minutes
 
 ---
@@ -402,11 +436,13 @@ Next step: [What would help them progress]
 ## 🔄 Feedback for Revision (Before/After Guidance)
 
 ### When to Use
+
 - Draft submissions
 - Revision cycles
 - Peer review preparation
 
 ### Time Saved
+
 From 8 minutes → 2 minutes
 
 ---
@@ -420,6 +456,7 @@ Student work issue: [What needs improvement - be specific]
 Rubric criterion: [What criterion from your rubric this affects]
 
 Provide:
+
 1. Brief diagnosis (1 sentence - what's not working yet)
 2. BEFORE example (using their actual work or similar)
 3. AFTER example (showing what success looks like)
@@ -433,6 +470,7 @@ Keep it under 150 words. Use "Try this" language, not "You should."
 ### Example Output
 
 **Input:**
+
 - Issue: Analysis sentences missing after quotes
 - Criterion: Explain how evidence proves claim
 
@@ -455,11 +493,13 @@ Keep it under 150 words. Use "Try this" language, not "You should."
 ## 📚 Lesson Plan Skeleton Generator
 
 ### When to Use
+
 - Daily planning
 - Unit planning
 - Sub plans (quick framework)
 
 ### Time Saved
+
 From 25 minutes → 6 minutes
 
 ---
@@ -475,6 +515,7 @@ Grade level: [Grade]
 Standard: [Paste standard or leave blank for general]
 
 Include:
+
 1. Learning objective (1 sentence - students will...)
 2. Three success criteria (student-friendly "I can" statements)
 3. Do-Now / Bell-ringer (3-5 min engaging starter)
@@ -492,6 +533,7 @@ Keep it practical and classroom-ready. Include one differentiation note.
 ### Example Output
 
 **Input:**
+
 - Subject: ELA
 - Topic: Adding analysis after textual evidence
 - Grade: 8
@@ -502,12 +544,14 @@ Keep it practical and classroom-ready. Include one differentiation note.
 Students will explain how textual evidence supports their claim by adding reasoning sentences after quotes.
 
 **Success Criteria:**
+
 - I can select a relevant quote that proves my claim
 - I can write one analysis sentence after each quote
 - I can use connecting words like "because," "this shows," or "therefore"
 
 **Do-Now (3 min):**  
 Display this sentence pair on the board:
+
 1. "The character was brave."
 2. "The character was brave because he faced the dragon despite his fear."
 
@@ -515,6 +559,7 @@ Ask: Which sentence is stronger? Why? Turn and talk.
 
 **Mini-Lesson (8 min):**  
 Model: "I'll show you my claim and evidence, then think aloud as I add analysis."
+
 - Claim: "The story's mood shifts to suspense."
 - Evidence: "The author writes, 'The door creaked open slowly.'"
 - Analysis: "This supports my claim **because** the slow, creaky door creates tension and makes readers wonder what will happen next."
@@ -522,6 +567,7 @@ Model: "I'll show you my claim and evidence, then think aloud as I add analysis.
 Frame: Evidence + "because" + explain how it proves the claim
 
 **Guided Practice (18 min):**
+
 - Pairs: Give students 3 claims + quotes
 - Task: Write one analysis sentence for each
 - Circulate: Check for "because/this shows/therefore" + connection to claim
@@ -533,6 +579,7 @@ Evidence: "He said, 'I was wrong to judge her.'"
 Your task: Write ONE analysis sentence using "because," "this shows," or "therefore."
 
 **Materials:**
+
 - Sentence pairs for Do-Now (projected)
 - Model paragraph (printed or projected)
 - Practice sheet with 3 claim/evidence sets
@@ -542,7 +589,8 @@ Your task: Write ONE analysis sentence using "because," "this shows," or "theref
 Do-Now: 3 min | Mini: 8 min | Practice: 18 min | Exit: 3 min | Transition/Closing: 3 min
 
 **Differentiation:**
-- Provide sentence frames for emerging writers: "This proves the claim because ___."
+
+- Provide sentence frames for emerging writers: "This proves the claim because \_\_\_."
 - Extension: Ask advanced students to add TWO reasoning sentences (cause + effect)
 
 ---
@@ -550,11 +598,13 @@ Do-Now: 3 min | Mini: 8 min | Practice: 18 min | Exit: 3 min | Transition/Closin
 ## 🎯 Exit Ticket Generator (Standards-Aligned)
 
 ### When to Use
+
 - End of every lesson
 - Quick formative checks
 - Data for next day's planning
 
 ### Time Saved
+
 From 8 minutes → 90 seconds
 
 ---
@@ -569,6 +619,7 @@ Success criteria: [What students should be able to do]
 Time limit: [1-3 minutes to complete]
 
 For each level:
+
 - One clear prompt or question
 - Expected correct response (for your reference)
 - What misconception this checks for
@@ -581,6 +632,7 @@ Keep prompts short enough to complete in [time limit].
 ### Example Output
 
 **Input:**
+
 - Objective: Identify the main idea in a paragraph
 - Success criteria: Can state the main idea in one sentence
 - Time: 2 minutes
@@ -607,11 +659,13 @@ Checks for: Can they distinguish main idea from support?
 ## 🔀 Differentiation Idea Generator
 
 ### When to Use
+
 - Planning for mixed-ability groups
 - IEP/504 accommodations
 - Extension for early finishers
 
 ### Time Saved
+
 From 15 minutes → 3 minutes
 
 ---
@@ -625,6 +679,7 @@ Lesson objective: [Your objective]
 Standard activity: [What most students will do]
 
 Provide:
+
 1. Two SUPPORT strategies (for students who struggle)
    - One scaffold (what tool/structure helps)
    - One modification (how to simplify)
@@ -641,12 +696,14 @@ Keep each strategy to 1-2 sentences. Practical and quick to implement.
 ## 📝 Discussion Question Generator
 
 ### When to Use
+
 - Socratic seminars
 - Think-pair-share
 - Journal prompts
 - Bell-ringers
 
 ### Time Saved
+
 From 10 minutes → 2 minutes
 
 ---
@@ -661,6 +718,7 @@ Grade level: [Grade]
 Context: [Text, concept, or situation students are analyzing]
 
 Provide questions at these levels:
+
 1. Recall (remembering facts)
 2. Comprehension (explaining in own words)
 3. Application (using knowledge in new situation)
@@ -677,12 +735,14 @@ Format each as an open-ended question. Keep student-friendly language.
 ## 📋 5-Field IEP/504 Note Generator
 
 ### When to Use
+
 - Daily service logs
 - Accommodation tracking
 - Progress monitoring
 - Parent communication prep
 
 ### Time Saved
+
 From 5 minutes → 45 seconds
 
 ---
@@ -697,6 +757,7 @@ When | What (accommodation/service) | Context | Impact | Next (date)
 My notes: [Paste your bullet points or quick observations here]
 
 Requirements:
+
 - Keep each field to one short clause
 - "What" should match exact IEP/504 language
 - "Impact" should be observable/measurable
@@ -711,6 +772,7 @@ No identifying details beyond first name. Keep under 50 words total.
 ### Example Output
 
 **Input:**
+
 - Extended time provided
 - Argument essay draft
 - Alex completed 3/4 organizer sections, stayed on task about 15 min
@@ -729,11 +791,13 @@ No identifying details beyond first name. Keep under 50 words total.
 ## 📞 Parent Contact Log Entry
 
 ### When to Use
+
 - After every parent contact (call, email, meeting)
 - Building documentation trail
 - Before parent conferences (review history)
 
 ### Time Saved
+
 From 4 minutes → 60 seconds
 
 ---
@@ -756,11 +820,13 @@ Keep it factual, neutral, under 60 words. Include specific dates for follow-up.
 ## 🤝 Conference Recap Generator
 
 ### When to Use
+
 - Within 24 hours of ANY parent meeting
 - IEP/504 meetings
 - Report card conferences
 
 ### Time Saved
+
 From 12 minutes → 3 minutes
 
 ---
@@ -773,10 +839,11 @@ Generate a parent conference recap email (150-200 words) with this structure:
 **Thanks + Purpose**: Thank them for meeting; state topic
 **What We Discussed**: 2-3 bullet points (factual)
 **Agreed Actions**:
-- School: [Action] — Owner: [Name] — By: [Date]
-- Home: [Action] — Owner: [Name] — By: [Date]
-- Student: [Action] — Owner: [Student name] — By: [Date]
-**Next Check-in**: [Date and method]
+
+- School: [Action] - Owner: [Name] - By: [Date]
+- Home: [Action] - Owner: [Name] - By: [Date]
+- Student: [Action] - Owner: [Student name] - By: [Date]
+  **Next Check-in**: [Date and method]
 
 My meeting notes: [Paste your notes here]
 
@@ -788,11 +855,13 @@ Keep it organized, factual, and action-oriented. Professional but warm tone.
 ## 📊 Accommodation Tracker Summary
 
 ### When to Use
+
 - Weekly IEP/504 reviews
 - Progress reports
 - Compliance documentation
 
 ### Time Saved
+
 From 10 minutes → 2 minutes
 
 ---
@@ -807,6 +876,7 @@ Week of: [Dates]
 Accommodations provided: [List with frequency]
 
 Generate:
+
 1. Summary statement (1 sentence - what was provided consistently)
 2. Any gaps/deviations (note with explanation and make-up plan)
 3. Impact observation (1 sentence - what you noticed)
@@ -822,11 +892,13 @@ Keep it under 100 words. Factual, compliance-ready tone.
 ## ✅ Quiz Question Generator (Standards-Aligned)
 
 ### When to Use
+
 - Formative quizzes
 - End-of-unit assessments
 - Practice problems
 
 ### Time Saved
+
 From 20 minutes → 4 minutes
 
 ---
@@ -842,6 +914,7 @@ Grade level: [Grade]
 Question types: [Multiple choice / Short answer / Problem-solving / etc.]
 
 For each question provide:
+
 - The question text
 - Correct answer
 - 2-3 plausible distractors (for MC)
@@ -856,11 +929,13 @@ Ensure questions check for understanding, not just recall. Student-friendly lang
 ## 📝 Rubric Creator from Learning Objectives
 
 ### When to Use
+
 - New assignments
 - Project-based learning
 - Performance tasks
 
 ### Time Saved
+
 From 30 minutes → 5 minutes
 
 ---
@@ -875,6 +950,7 @@ Learning objectives: [List 2-4 objectives]
 Grade level: [Grade]
 
 For each objective:
+
 - Target performance (what proficiency looks like)
 - Observable criteria (what you'll see/hear)
 - Student-friendly "I can" statement
@@ -889,11 +965,13 @@ Keep criteria measurable and specific. Avoid vague terms like "good" or "excelle
 ## 🎯 Self-Assessment Checklist Generator
 
 ### When to Use
+
 - Before students submit work
 - Peer review prep
 - Goal-setting conferences
 
 ### Time Saved
+
 From 15 minutes → 3 minutes
 
 ---
@@ -908,6 +986,7 @@ Success criteria: [List your 3-5 criteria]
 Grade level: [Grade]
 
 Format:
+
 - Checkbox list with "I checked for..." statements
 - Student-friendly language
 - Organized by: Content, Process, Presentation
@@ -925,7 +1004,7 @@ Keep it to one page, no more than 12 checkboxes total.
 ### Why This Matters
 
 > **Without a voice profile:** Every AI output sounds generic, robotic, or overly formal.  
-> **With a voice profile:** Outputs sound like YOU—your phrases, your tone, your boundaries.
+> **With a voice profile:** Outputs sound like YOU-your phrases, your tone, your boundaries.
 
 **Time investment:** 10 minutes once  
 **Time saved forever:** 5-10 minutes per task (no more "de-robotizing")
@@ -940,29 +1019,34 @@ Copy this template, fill it out once, and paste it at the top of any prompt:
 Use my voice profile:
 
 TONE:
+
 - [Warm / Professional / Clear-but-kind / Firm but fair / etc.]
 - [Conversational / Formal / Student-friendly / Parent-friendly]
 
 PHRASES I LIKE:
+
 - "[Your go-to opening]" (e.g., "I'm reaching out to partner with you")
 - "[Your signature closing]" (e.g., "Appreciate your support")
 - "[Your boundary line]" (e.g., "I respond during school hours within one business day")
 - "[Other phrases you use]"
 
 WORDS/PHRASES TO AVOID:
+
 - [Corporate jargon: "at this time," "pursuant to," "per our conversation"]
 - [Overly formal: "Dear Sir/Madam," "Kindly be advised"]
 - [Casual: emojis, "Hey guys," exclamation points]
 - [Any phrases you dislike]
 
 STRUCTURE PREFERENCES:
+
 - [Keep sentences short / Use bullet points / Limit to X paragraphs]
 - [Always include a next step / Always include a date / Always end with contact info]
 
 SPECIAL REQUESTS:
+
 - [Any district requirements: student name used 2x, word count limits, etc.]
 - [Grade level considerations: simpler language for younger students' parents]
-\`\`\`
+  \`\`\`
 
 ---
 
@@ -974,30 +1058,35 @@ SPECIAL REQUESTS:
 Use my voice profile:
 
 TONE:
+
 - Warm and encouraging
 - Parent-friendly (avoid education jargon)
 
 PHRASES I LIKE:
+
 - "I'm excited to share..."
 - "Your child is growing in..."
 - "One way to support at home is..."
 - "Please feel free to reach out"
 
 WORDS/PHRASES TO AVOID:
+
 - Corporate language ("at this time," "please be advised")
 - Deficit language ("struggling," "behind")
 - Education jargon without explanation
 
 STRUCTURE PREFERENCES:
+
 - Short sentences (max 15 words)
 - Always include one specific example
 - End with one actionable home support tip
 
 SPECIAL REQUESTS:
+
 - Use student's name twice
 - Keep under 150 words
 - Always sound hopeful
-\`\`\`
+  \`\`\`
 
 ---
 
@@ -1007,30 +1096,35 @@ SPECIAL REQUESTS:
 Use my voice profile:
 
 TONE:
+
 - Professional and direct
 - Clear but respectful
 
 PHRASES I LIKE:
+
 - "I'm reaching out regarding..."
 - "Here's what I observed:"
 - "Next steps:"
 - "I respond during school hours within one business day"
 
 WORDS/PHRASES TO AVOID:
+
 - Overly formal language
 - Exclamation points
 - Vague terms ("try harder," "needs improvement")
 
 STRUCTURE PREFERENCES:
+
 - Bullet points for actions
 - Always include specific dates
 - Start with facts before interpretation
 
 SPECIAL REQUESTS:
+
 - Include boundary line in every parent email
 - Use observable behaviors, not labels
 - Maximum 200 words
-\`\`\`
+  \`\`\`
 
 ---
 
@@ -1040,30 +1134,35 @@ SPECIAL REQUESTS:
 Use my voice profile:
 
 TONE:
+
 - Factual and supportive
 - Strength-based but honest
 
 PHRASES I LIKE:
+
 - "During [activity], I observed..."
 - "We're using [strategy] to support..."
 - "Next, we'll focus on..."
 - "This aligns with [goal/accommodation]"
 
 WORDS/PHRASES TO AVOID:
+
 - Diagnostic language (unless quoting IEP)
 - Negative framing
 - Anything that sounds like lowered expectations
 
 STRUCTURE PREFERENCES:
+
 - Evidence-based statements only
 - Always tie to IEP goals or accommodations
 - Include what's working AND next step
 
 SPECIAL REQUESTS:
+
 - Keep language IEP-compliant
 - No identifying medical info in emails
 - Always reference support strategy being used
-\`\`\`
+  \`\`\`
 
 ---
 
@@ -1096,6 +1195,7 @@ Many AI tools let you save custom instructions or system prompts. Put your voice
 **Prompt:** "Write a parent email about a student being off-task."
 
 **Output:**
+
 > Dear Mr. Smith,
 >
 > I am writing to inform you of a concerning behavioral pattern I have observed with regard to your son, Michael. On multiple occasions during the instructional period, Michael has demonstrated a lack of focus and engagement with the assigned tasks. This behavior is impacting his academic progress.
@@ -1114,6 +1214,7 @@ Many AI tools let you save custom instructions or system prompts. Put your voice
 **Prompt:** "[Voice Profile Pasted] Write a parent email about a student being off-task."
 
 **Output:**
+
 > Hi Mr. Smith,
 >
 > I'm reaching out to partner with you about Michael's focus during independent work in English. Today during 4th period, I observed Michael off-task during the writing activity, which meant he didn't finish the organizer. At school, I'll provide a checklist and set a timer tomorrow. At home, a helpful step would be checking that the planner has the daily goal written down. I'll check in by Friday. I respond during school hours within one business day.
@@ -1144,6 +1245,7 @@ Many AI tools let you save custom instructions or system prompts. Put your voice
 Run through this checklist EVERY time:
 
 ### ✅ Safe to Include:
+
 - [ ] Student first names only (no last names)
 - [ ] Observable behaviors (not diagnoses)
 - [ ] Academic skills and progress
@@ -1151,6 +1253,7 @@ Run through this checklist EVERY time:
 - [ ] Template structures
 
 ### ❌ NEVER Include:
+
 - [ ] Student last names or IDs
 - [ ] Medical diagnoses or health conditions
 - [ ] Sensitive family information (custody, income, immigration)
@@ -1158,6 +1261,7 @@ Run through this checklist EVERY time:
 - [ ] Any data your district explicitly prohibits
 
 ### 🤔 When in Doubt:
+
 - Generate the STRUCTURE only (leave details blank)
 - Add specific names/info manually in your secure system
 - Ask yourself: "Would I be comfortable if this data leaked?"
@@ -1167,18 +1271,22 @@ Run through this checklist EVERY time:
 ## 💡 Pro Tips for Safe AI Use
 
 **Tip 1:** Use generic placeholders in prompts
+
 - Instead of: "Write an email about Marcus's ADHD"
 - Use: "Write an email about a student's focus during independent work"
 
 **Tip 2:** Add details AFTER generation
+
 - Generate: "Hi [Parent Name], I'm reaching out about [Student]'s [topic]..."
 - Then manually: Replace [Parent Name] with actual name in your email client
 
 **Tip 3:** Use your district-approved tools first
+
 - If your district provides AI tools, use those for anything with student data
 - Use external AI only for generic structures and templates
 
 **Tip 4:** Never copy-paste directly from AI
+
 - Always read, edit, and customize
 - Add your specific evidence and observations
 - Verify tone and accuracy
@@ -1190,9 +1298,13 @@ Run through this checklist EVERY time:
 ## 🚀 Fastest Prompts by Task
 
 ### Need a parent email? → **Page 3** (4-sentence email)
+
 ### Need report comments? → **Page 11** (Individualized comment generator)
+
 ### Need a lesson plan? → **Page 15** (Lesson skeleton)
+
 ### Need feedback? → **Page 9** (Glow-Grow-Go)
+
 ### Need documentation? → **Page 19** (5-field note)
 
 ---
@@ -1211,13 +1323,13 @@ Run through this checklist EVERY time:
 
 Track your wins:
 
-| Task | Before AI | With AI | Saved |
-|------|-----------|---------|-------|
-| Parent email | 15 min | 2 min | **13 min** |
-| Report comment | 10 min | 2 min | **8 min** |
-| Lesson plan | 25 min | 6 min | **19 min** |
-| Feedback | 5 min | 60 sec | **4 min** |
-| Documentation | 5 min | 45 sec | **4 min** |
+| Task           | Before AI | With AI | Saved      |
+| -------------- | --------- | ------- | ---------- |
+| Parent email   | 15 min    | 2 min   | **13 min** |
+| Report comment | 10 min    | 2 min   | **8 min**  |
+| Lesson plan    | 25 min    | 6 min   | **19 min** |
+| Feedback       | 5 min     | 60 sec  | **4 min**  |
+| Documentation  | 5 min     | 45 sec  | **4 min**  |
 
 **Average time saved per week: 3-5 hours**
 
@@ -1226,18 +1338,21 @@ Track your wins:
 ## 🎓 Professional Development Ideas
 
 ### Staff Meeting (20 min)
+
 1. Everyone picks ONE prompt from Section 1
 2. Customize for a real scenario from this week
 3. Generate and compare outputs
 4. Discuss: What worked? What needed editing?
 
 ### PLC (45 min)
+
 1. Build your team voice profile together
 2. Test it on 3 different prompts
 3. Create a shared prompt bank for your department
 4. Set up a shared doc for team customizations
 
 ### Self-Study (1 week challenge)
+
 - **Day 1:** Create your voice profile
 - **Day 2:** Try one parent communication prompt
 - **Day 3:** Try one feedback prompt
@@ -1249,11 +1364,13 @@ Track your wins:
 ## 📞 Need More Support?
 
 ### From Your Zaza Dashboard:
+
 - **AI-powered generators** (paste rubric → get feedback)
 - **Voice profile storage** (save once, use everywhere)
 - **Prompt templates** (editable, downloadable)
 
 ### On zazadraft.com/resources:
+
 - Video tutorials on effective prompting
 - Weekly new prompt drops
 - Community-shared prompts
@@ -1262,12 +1379,13 @@ Track your wins:
 
 ## 🙏 A Note from the Zaza Team
 
-> AI should **remove the blank page**, not replace your judgment. These prompts give you the first 80%—you add the final 20% that makes it yours.
+> AI should **remove the blank page**, not replace your judgment. These prompts give you the first 80%-you add the final 20% that makes it yours.
 >
 > If these prompts saved you time or made your work better, we'd love to hear about it. Tag us **@zazatech** or email **hello@zazadraft.com**.
 >
-> **AI drafts. You craft. Keep teaching.**  
-> — The Zaza Team
+> **AI drafts. You craft. Keep teaching.**
+>
+> - The Zaza Team
 
 ---
 
@@ -1277,12 +1395,12 @@ Track your wins:
 ---
 
 **Part of the Zaza Teacher Resource Library**  
-*Building AI tools teachers actually want to use*
+_Building AI tools teachers actually want to use_
 
 🌐 zazadraft.com | 📧 hello@zazadraft.com | 🐦 @zazatech
 
 ---
 
-*© 2025 Zaza Technologies. Free for educational use.  
+_© 2025 Zaza Technologies. Free for educational use.  
 Share with colleagues. Adapt for your classroom.  
-All we ask: Keep this footer so others can find us.*
+All we ask: Keep this footer so others can find us._

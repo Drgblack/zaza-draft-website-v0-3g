@@ -1,4 +1,5 @@
-﻿# 5-Minuten-Checkliste: Professioneller Ton
+# 5-Minuten-Checkliste: Professioneller Ton
+
 Vor dem Senden kurz prüfen:
 
 - **Klarheit:** Zweck in den ersten 2 Sätzen? Betreff eindeutig?
@@ -8,6 +9,7 @@ Vor dem Senden kurz prüfen:
 - **Feinschliff:** Namen korrekt, Korrektur gelesen, < 180 Wörter.
 
 **Betreff-Ideen**
+
 - „Kurzes Update zu **[Name]**“
-- „Fehlende **[Aufgabe]** – nächste Schritte“
+- „Fehlende **[Aufgabe]** - nächste Schritte“
 - „Fortschritt in **[Thema]** feiern“

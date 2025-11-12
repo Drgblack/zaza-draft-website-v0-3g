@@ -1,4 +1,4 @@
-﻿{
+{
   "*.{ts,tsx,md,mdx,json,css,yml,yaml,html}": [
     "prettier --write",
     "pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/no-emdash.ps1"

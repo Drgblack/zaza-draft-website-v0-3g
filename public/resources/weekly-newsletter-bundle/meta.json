@@ -1,13 +1,13 @@
-﻿{
-    "slug":  "weekly-newsletter-bundle",
-    "files":  {
-                  "en":  {
-                             "docx":  "/resources/weekly-newsletter-bundle/build/en.docx",
-                             "pdf":  "/resources/weekly-newsletter-bundle/build/en.pdf"
-                         },
-                  "de":  {
-                             "docx":  "/resources/weekly-newsletter-bundle/build/de.docx",
-                             "pdf":  "/resources/weekly-newsletter-bundle/build/de.pdf"
-                         }
-              }
+{
+  "slug": "weekly-newsletter-bundle",
+  "files": {
+    "en": {
+      "docx": "/resources/weekly-newsletter-bundle/build/en.docx",
+      "pdf": "/resources/weekly-newsletter-bundle/build/en.pdf"
+    },
+    "de": {
+      "docx": "/resources/weekly-newsletter-bundle/build/de.docx",
+      "pdf": "/resources/weekly-newsletter-bundle/build/de.pdf"
+    }
+  }
 }

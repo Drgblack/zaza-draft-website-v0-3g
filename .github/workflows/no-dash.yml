@@ -1,0 +1,13 @@
+name: no-smart-dashes
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail if smart dashes exist
+        run: |
+          if git grep -n -I -E $'[\\u2014\\u2013\\u2011]' -- . ; then
+            echo "âŒ Disallowed dash found (- / - / -). Use '-'."
+            exit 1
+          fi

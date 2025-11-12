@@ -1,13 +1,13 @@
-﻿{
-    "slug":  "teacher-time-playbook",
-    "files":  {
-                  "en":  {
-                             "docx":  "/resources/teacher-time-playbook/build/en.docx",
-                             "pdf":  "/resources/teacher-time-playbook/build/en.pdf"
-                         },
-                  "de":  {
-                             "docx":  "/resources/teacher-time-playbook/build/de.docx",
-                             "pdf":  "/resources/teacher-time-playbook/build/de.pdf"
-                         }
-              }
+{
+  "slug": "teacher-time-playbook",
+  "files": {
+    "en": {
+      "docx": "/resources/teacher-time-playbook/build/en.docx",
+      "pdf": "/resources/teacher-time-playbook/build/en.pdf"
+    },
+    "de": {
+      "docx": "/resources/teacher-time-playbook/build/de.docx",
+      "pdf": "/resources/teacher-time-playbook/build/de.pdf"
+    }
+  }
 }

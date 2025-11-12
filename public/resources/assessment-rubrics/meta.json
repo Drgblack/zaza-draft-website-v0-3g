@@ -1,13 +1,13 @@
-﻿{
-    "slug":  "assessment-rubrics",
-    "files":  {
-                  "en":  {
-                             "docx":  "/resources/assessment-rubrics/build/en.docx",
-                             "pdf":  "/resources/assessment-rubrics/build/en.pdf"
-                         },
-                  "de":  {
-                             "docx":  "/resources/assessment-rubrics/build/de.docx",
-                             "pdf":  "/resources/assessment-rubrics/build/de.pdf"
-                         }
-              }
+{
+  "slug": "assessment-rubrics",
+  "files": {
+    "en": {
+      "docx": "/resources/assessment-rubrics/build/en.docx",
+      "pdf": "/resources/assessment-rubrics/build/en.pdf"
+    },
+    "de": {
+      "docx": "/resources/assessment-rubrics/build/de.docx",
+      "pdf": "/resources/assessment-rubrics/build/de.pdf"
+    }
+  }
 }

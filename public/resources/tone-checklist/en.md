@@ -1,4 +1,5 @@
-﻿# The 5-Minute Professional Tone Checklist
+# The 5-Minute Professional Tone Checklist
+
 Use before sending a parent message.
 
 - **Clarity:** Purpose in first 2 sentences? Subject line clear?
@@ -8,6 +9,7 @@ Use before sending a parent message.
 - **Polish:** Names correct, proofread, under 180 words.
 
 **Subject line bank**
+
 - “Quick update about **[Name]**”
-- “Missing **[assignment]** – next steps”
+- “Missing **[assignment]** - next steps”
 - “Celebrating progress in **[topic]**”

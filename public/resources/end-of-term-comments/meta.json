@@ -1,13 +1,13 @@
-﻿{
-    "slug":  "end-of-term-comments",
-    "files":  {
-                  "en":  {
-                             "docx":  "/resources/end-of-term-comments/build/en.docx",
-                             "pdf":  "/resources/end-of-term-comments/build/en.pdf"
-                         },
-                  "de":  {
-                             "docx":  "/resources/end-of-term-comments/build/de.docx",
-                             "pdf":  "/resources/end-of-term-comments/build/de.pdf"
-                         }
-              }
+{
+  "slug": "end-of-term-comments",
+  "files": {
+    "en": {
+      "docx": "/resources/end-of-term-comments/build/en.docx",
+      "pdf": "/resources/end-of-term-comments/build/en.pdf"
+    },
+    "de": {
+      "docx": "/resources/end-of-term-comments/build/de.docx",
+      "pdf": "/resources/end-of-term-comments/build/de.pdf"
+    }
+  }
 }

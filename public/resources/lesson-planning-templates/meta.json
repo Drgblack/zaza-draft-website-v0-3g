@@ -1,13 +1,13 @@
-﻿{
-    "slug":  "lesson-planning-templates",
-    "files":  {
-                  "en":  {
-                             "docx":  "/resources/lesson-planning-templates/build/en.docx",
-                             "pdf":  "/resources/lesson-planning-templates/build/en.pdf"
-                         },
-                  "de":  {
-                             "docx":  "/resources/lesson-planning-templates/build/de.docx",
-                             "pdf":  "/resources/lesson-planning-templates/build/de.pdf"
-                         }
-              }
+{
+  "slug": "lesson-planning-templates",
+  "files": {
+    "en": {
+      "docx": "/resources/lesson-planning-templates/build/en.docx",
+      "pdf": "/resources/lesson-planning-templates/build/en.pdf"
+    },
+    "de": {
+      "docx": "/resources/lesson-planning-templates/build/de.docx",
+      "pdf": "/resources/lesson-planning-templates/build/de.pdf"
+    }
+  }
 }

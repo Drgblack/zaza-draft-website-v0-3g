@@ -13,8 +13,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write         # needed for PR commits
-      pull-requests: write    # needed to open PR
+      contents: write # needed for PR commits
+      pull-requests: write # needed to open PR
     steps:
       - uses: actions/checkout@v4
 
@@ -40,7 +40,7 @@ jobs:
               md="$dir/$lang.md"
               [ -f "$md" ] || continue
               mkdir -p "$dir/build"
-              echo "Building $md → DOCX/PDF"
+              echo "Building $md â†’ DOCX/PDF"
               pandoc "$md" --from=gfm --to=docx $REF_FLAG -o "$dir/build/$lang.docx"
               pandoc "$md" --from=gfm --pdf-engine=tectonic -o "$dir/build/$lang.pdf"
             done

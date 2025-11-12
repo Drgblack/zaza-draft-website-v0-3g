@@ -3,6 +3,7 @@
 ## What You Have
 
 âœ… **Complete Report Generator System**
+
 - PDF report generator (Python)
 - Multi-format support (PDF, DOCX, HTML)
 - API integration code (Node.js)
@@ -25,14 +26,16 @@ All files are in `/mnt/user-data/outputs/`:
 ### Option A: Simple Static Download (Fastest)
 
 1. **Add the PDF to your public folder:**
+
    ```bash
    cp State_of_AI_Education_2025.pdf public/downloads/
    ```
 
 2. **Add download link in your React component:**
+
    ```jsx
-   <a 
-     href="/downloads/State_of_AI_Education_2025.pdf" 
+   <a
+     href="/downloads/State_of_AI_Education_2025.pdf"
      download
      className="btn-download"
    >
@@ -45,12 +48,14 @@ All files are in `/mnt/user-data/outputs/`:
 ### Option B: Dynamic Generation with Multiple Formats
 
 1. **Create Python directory:**
+
    ```bash
    mkdir -p report-generator/python
    cd report-generator/python
    ```
 
 2. **Copy Python files:**
+
    ```bash
    # Copy these 3 files from outputs:
    # - create_ai_education_report.py
@@ -59,11 +64,13 @@ All files are in `/mnt/user-data/outputs/`:
    ```
 
 3. **Install Python dependencies:**
+
    ```bash
    pip install -r requirements.txt
    ```
 
 4. **Test it works:**
+
    ```bash
    python generate_report.py --format pdf --output test.pdf
    ```
@@ -89,30 +96,32 @@ python generate_report.py --format html --output report.html
 
 ```javascript
 // api/reportEndpoint.js
-const express = require('express');
-const { spawn } = require('child_process');
-const path = require('path');
+const express = require("express");
+const { spawn } = require("child_process");
+const path = require("path");
 const router = express.Router();
 
-router.post('/generate-report', async (req, res) => {
-  const { format = 'pdf' } = req.body;
+router.post("/generate-report", async (req, res) => {
+  const { format = "pdf" } = req.body;
   const filename = `report_${Date.now()}.${format}`;
-  const outputPath = path.join(__dirname, '../public/downloads', filename);
+  const outputPath = path.join(__dirname, "../public/downloads", filename);
 
-  const pythonProcess = spawn('python3', [
-    path.join(__dirname, '../report-generator/python/generate_report.py'),
-    '--format', format,
-    '--output', outputPath
+  const pythonProcess = spawn("python3", [
+    path.join(__dirname, "../report-generator/python/generate_report.py"),
+    "--format",
+    format,
+    "--output",
+    outputPath,
   ]);
 
-  pythonProcess.on('close', (code) => {
+  pythonProcess.on("close", (code) => {
     if (code === 0) {
-      res.json({ 
-        success: true, 
-        downloadUrl: `/downloads/${filename}` 
+      res.json({
+        success: true,
+        downloadUrl: `/downloads/${filename}`,
       });
     } else {
-      res.status(500).json({ error: 'Generation failed' });
+      res.status(500).json({ error: "Generation failed" });
     }
   });
 });
@@ -124,20 +133,20 @@ module.exports = router;
 
 ```jsx
 // components/ReportDownload.jsx
-import { useState } from 'react';
-import axios from 'axios';
+import { useState } from "react";
+import axios from "axios";
 
 export default function ReportDownload() {
   const [loading, setLoading] = useState(false);
-  const [format, setFormat] = useState('pdf');
+  const [format, setFormat] = useState("pdf");
 
   const handleDownload = async () => {
     setLoading(true);
     try {
-      const { data } = await axios.post('/api/generate-report', { format });
+      const { data } = await axios.post("/api/generate-report", { format });
       window.location.href = data.downloadUrl;
     } catch (error) {
-      alert('Download failed');
+      alert("Download failed");
     } finally {
       setLoading(false);
     }
@@ -151,7 +160,7 @@ export default function ReportDownload() {
         <option value="html">HTML</option>
       </select>
       <button onClick={handleDownload} disabled={loading}>
-        {loading ? 'Generating...' : 'Download Report'}
+        {loading ? "Generating..." : "Download Report"}
       </button>
     </div>
   );
@@ -161,17 +170,20 @@ export default function ReportDownload() {
 ## Troubleshooting
 
 ### "Python not found"
+
 ```bash
 which python3  # Find Python path
 # Update spawn command: spawn('/usr/bin/python3', ...)
 ```
 
 ### "Module not found"
+
 ```bash
 pip install -r requirements.txt --user
 ```
 
 ### "Permission denied"
+
 ```bash
 chmod +x generate_report.py
 chmod 755 public/downloads
@@ -188,7 +200,7 @@ chmod 755 public/downloads
 
 ## Need Help?
 
-ðŸ“– **Full docs:** See README_INTEGRATION.md  
+ðŸ“- **Full docs:** See README_INTEGRATION.md  
 ðŸ“ **API examples:** See report_generator_package.md  
 ðŸ” **Debug:** Run Python script directly first
 

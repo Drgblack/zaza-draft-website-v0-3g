@@ -1,13 +1,13 @@
-﻿{
-    "slug":  "parent-message-templates",
-    "files":  {
-                  "en":  {
-                             "docx":  "/resources/parent-message-templates/build/en.docx",
-                             "pdf":  "/resources/parent-message-templates/build/en.pdf"
-                         },
-                  "de":  {
-                             "docx":  "/resources/parent-message-templates/build/de.docx",
-                             "pdf":  "/resources/parent-message-templates/build/de.pdf"
-                         }
-              }
+{
+  "slug": "parent-message-templates",
+  "files": {
+    "en": {
+      "docx": "/resources/parent-message-templates/build/en.docx",
+      "pdf": "/resources/parent-message-templates/build/en.pdf"
+    },
+    "de": {
+      "docx": "/resources/parent-message-templates/build/de.docx",
+      "pdf": "/resources/parent-message-templates/build/de.pdf"
+    }
+  }
 }

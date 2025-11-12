@@ -1,7 +1,8 @@
 # The Teacher's AI Prompt Library
+
 ## Your Complete Guide to Effective AI Prompts for Every Teaching Moment
 
-*Save 5+ hours weekly with prompts that actually work. Includes 25+ ready-to-use templates, real examples, and a step-by-step framework for writing your own.*
+_Save 5+ hours weekly with prompts that actually work. Includes 25+ ready-to-use templates, real examples, and a step-by-step framework for writing your own._
 
 ---
 
@@ -10,12 +11,13 @@
 You've heard AI can help teachers. But when you try it, you get generic responses that don't fit your students, your voice, or your situation. The difference between frustration and transformation? **How you ask.**
 
 This library gives you battle-tested prompts that:
+
 - Generate responses in **under 30 seconds** (not 30 minutes of trial-and-error)
 - Match **your teaching style and voice**
 - Are **ready to use right now** (just fill in the blanks)
 - Actually **save you time** instead of creating more work
 
-> **Who this is for:** K-12 teachers, teacher-leaders, instructional coaches, and anyone who writes parent emails, student feedback, or lesson plans—and wants to do it faster without sacrificing quality.
+> **Who this is for:** K-12 teachers, teacher-leaders, instructional coaches, and anyone who writes parent emails, student feedback, or lesson plans-and wants to do it faster without sacrificing quality.
 
 ---
 
@@ -25,19 +27,23 @@ Before we dive into templates, here's the framework that makes prompts work:
 
 ### The 4-Part Formula
 
-**1. ROLE** – Tell the AI who to act as
+**1. ROLE** - Tell the AI who to act as
+
 - ✅ "Act as a 7th-grade science teacher with 10 years of experience"
 - ❌ "You are a teacher"
 
-**2. TASK** – State exactly what you want
+**2. TASK** - State exactly what you want
+
 - ✅ "Draft a 150-word email to a parent about missing homework"
 - ❌ "Write something about homework"
 
-**3. CONSTRAINTS** – Set boundaries (tone, length, reading level)
+**3. CONSTRAINTS** - Set boundaries (tone, length, reading level)
+
 - ✅ "Keep it under 180 words, professional but warm, reading level: 8th grade"
 - ❌ "Make it good"
 
-**4. INPUTS** – Provide context (paste student work, rubric, or details)
+**4. INPUTS** - Provide context (paste student work, rubric, or details)
+
 - ✅ "Context: Student has missed 4/6 assignments, but participates well in class"
 - ❌ No context given
 
@@ -46,9 +52,11 @@ Before we dive into templates, here's the framework that makes prompts work:
 ### Quick Example
 
 **Bad prompt:**
+
 > "Write an email to a parent"
 
 **Good prompt:**
+
 > "Act as a 5th-grade teacher. Draft a calm, professional email (under 150 words) to a parent about their child missing 3 homework assignments this week. Include: 1) what was missed, 2) two specific next steps, and 3) one encouraging statement about the student's participation in class. Keep the tone collaborative, not accusatory."
 
 **Why it works:** The AI knows who you are, what you need, how long it should be, what to include, and what tone to use.
@@ -62,6 +70,7 @@ Before we dive into templates, here's the framework that makes prompts work:
 **Use when:** A student is struggling academically or missing work, and you want to partner with parents without sounding accusatory.
 
 **Prompt Template:**
+
 ```
 Act as a [grade level] [subject] teacher. Draft a calm, supportive email to a parent about [student name] [specific issue: missing assignments / struggling with concept / change in behavior].
 
@@ -76,6 +85,7 @@ Length: 120-180 words
 ```
 
 **Fill-in-the-blanks version:**
+
 ```
 Act as a [7th-grade math] teacher. Draft a calm, supportive email to a parent about [Alex] [missing 4 homework assignments in the past 2 weeks].
 
@@ -90,11 +100,13 @@ Length: 120-180 words
 ```
 
 **Sample Output:**
+
 > Dear Mr. and Mrs. Johnson,
 >
 > I'm reaching out about Alex's recent homework completion. Over the past two weeks, Alex has not submitted 4 of the 6 assigned practice problems, which makes it harder to master the concepts we're building toward.
 >
 > To support Alex, could we work together on these steps?
+>
 > 1. **At home:** Help Alex set aside 20 minutes after dinner for homework, even if it's just reviewing notes.
 > 2. **At school:** I'll check in with Alex at the start of each class to confirm they understand the assignment.
 >
@@ -112,6 +124,7 @@ Length: 120-180 words
 **Use when:** You need to document a classroom incident factually and invite parent partnership.
 
 **Prompt Template:**
+
 ```
 Act as a [grade level] teacher. Write an objective incident note for [date/time].
 
@@ -127,6 +140,7 @@ Length: 100-150 words
 ```
 
 **Example:**
+
 ```
 Act as a 4th-grade teacher. Write an objective incident note for October 15, 2:15 PM.
 
@@ -147,9 +161,10 @@ Length: 100-150 words
 
 ### 1.3 The Positive Update (Building Relationships)
 
-**Use when:** A student did something worth celebrating—share it with parents.
+**Use when:** A student did something worth celebrating-share it with parents.
 
 **Prompt Template:**
+
 ```
 Act as a [grade/subject] teacher. Write a brief positive email to a parent about [student name]'s [specific achievement/behavior/growth].
 
@@ -163,11 +178,12 @@ Length: 60-100 words
 ```
 
 **Sample Output:**
+
 > Hi Mrs. Chen,
 >
 > I wanted to share that today during our science lab, Mia took the lead in her group and explained the water cycle to her peers with such clarity that even I learned something new! Her confidence in presenting has grown tremendously this semester.
 >
-> Please congratulate her at home—she earned it!
+> Please congratulate her at home-she earned it!
 >
 > Best,  
 > Mr. Davis
@@ -181,6 +197,7 @@ Length: 60-100 words
 **Use when:** You need to give meaningful feedback on student writing quickly.
 
 **Prompt Template:**
+
 ```
 Provide feedback on this [grade level] [essay type: argumentative/narrative/informational] using the 3+1 method:
 
@@ -199,7 +216,9 @@ Length: 80-120 words total
 ```
 
 **Example Output:**
+
 > **Strengths:**
+>
 > 1. Your thesis in paragraph 1 is crystal clear: "Social media harms teen mental health." That's a strong start.
 > 2. You used the Pew Research stat effectively to back up your claim about screen time.
 > 3. Your conclusion circles back nicely to your opening question.
@@ -207,13 +226,14 @@ Length: 80-120 words total
 > **Next Step:**
 > Add one counterargument in paragraph 3. Try: "Some might say social media helps teens connect, but research shows..." This will make your argument even stronger.
 >
-> Grade: B+ (Great work—one more step to an A!)
+> Grade: B+ (Great work-one more step to an A!)
 
 ---
 
 ### 2.2 Math Problem Feedback
 
 **Prompt Template:**
+
 ```
 Review this [grade level] math problem solution.
 
@@ -234,6 +254,7 @@ Length: 60-80 words
 **Use when:** You need to give feedback on a multi-part project or presentation.
 
 **Prompt Template:**
+
 ```
 Provide feedback on this [grade level] [project type: poster/presentation/research project].
 
@@ -254,6 +275,7 @@ Length: 100-150 words
 ### 3.1 Engaging Lesson Hooks
 
 **Prompt Template:**
+
 ```
 Generate 3 engaging hooks for a [grade level] [subject] lesson on [topic].
 
@@ -269,6 +291,7 @@ Tone: Student-centered, engaging
 ```
 
 **Example:**
+
 ```
 Generate 3 engaging hooks for a 7th-grade science lesson on the water cycle.
 
@@ -286,6 +309,7 @@ At least one hook should be hands-on/kinesthetic.
 ### 3.2 Differentiation Support
 
 **Prompt Template:**
+
 ```
 For this lesson objective: [paste your objective]
 
@@ -312,6 +336,7 @@ Tone: Practical, teacher-ready
 ### 3.3 Exit Ticket Questions
 
 **Prompt Template:**
+
 ```
 Based on this lesson: [describe lesson or paste lesson plan]
 
@@ -330,6 +355,7 @@ Format: Multiple choice OR short answer (specify which you prefer)
 ### 4.1 Student-Friendly Rubric
 
 **Prompt Template:**
+
 ```
 Rewrite this rubric in student-friendly "I can..." statements.
 
@@ -350,6 +376,7 @@ Tone: Clear, empowering
 **Use when:** You need quick, varied comments for report cards or grading.
 
 **Prompt Template:**
+
 ```
 Create a comment bank for [subject/grade level] based on this rubric: [paste rubric]
 
@@ -375,6 +402,7 @@ Tone: Professional, constructive
 ### 5.1 Simplify Instructions
 
 **Prompt:**
+
 ```
 Turn these instructions into a 3-step student checklist:
 
@@ -388,6 +416,7 @@ Format: Numbered list, action verbs, under 30 words total
 ### 5.2 Retrieval Practice Questions
 
 **Prompt:**
+
 ```
 Based on yesterday's lesson on [topic], generate 6 retrieval practice questions:
 - 2 easy (recall)
@@ -402,6 +431,7 @@ Format: Short answer
 ### 5.3 Newsletter Blurb Generator
 
 **Prompt:**
+
 ```
 Write a 3-sentence blurb for our weekly class newsletter about this week's learning:
 
@@ -418,18 +448,22 @@ Include: One specific way parents can support at home
 ### How to Iterate and Improve Outputs
 
 **If the output is too generic:**
+
 - Add constraints: "Use specific examples from 5th-grade curriculum"
 - Provide context: "This class struggles with transitions"
 - Specify voice: "Write as if you're talking to a colleague, not a textbook"
 
 **If the output is too formal:**
+
 - Add: "Use contractions and conversational language"
 - Specify: "Tone: friendly, like talking to a neighbor"
 
 **If the output is too long:**
+
 - Add: "Maximum 150 words" or "3 sentences only"
 
 **If you want multiple options:**
+
 - Add: "Give me 3 versions: formal, neutral, and warm"
 
 ---
@@ -439,18 +473,21 @@ Include: One specific way parents can support at home
 If you're using Zaza Draft, you can supercharge these prompts:
 
 **For parent emails:**
+
 ```
 Paste your rough notes + student context into Draft. Use the "professional tone" setting. Review and send.
 ```
 
 **For student feedback:**
+
 ```
 Paste student work + your rubric. Ask for "2 strengths + 1 next step." Draft will avoid hallucinations and stick to what's actually in the student work.
 ```
 
 **For report card comments:**
+
 ```
-Upload your rubric and grades. Ask for varied comments. Draft ensures no AI "fluff"—just specific, evidence-based feedback.
+Upload your rubric and grades. Ask for varied comments. Draft ensures no AI "fluff"-just specific, evidence-based feedback.
 ```
 
 ---
@@ -458,6 +495,7 @@ Upload your rubric and grades. Ask for varied comments. Draft ensures no AI "flu
 ## Your Next Steps
 
 ### Start Here (5-Minute Quick Win):
+
 1. Pick ONE prompt from Part 1 (Parent Communication)
 2. Fill in the blanks with a real situation you're facing
 3. Run it through your AI tool (ChatGPT, Claude, or Zaza Draft)
@@ -465,12 +503,14 @@ Upload your rubric and grades. Ask for varied comments. Draft ensures no AI "flu
 5. Send the email and save 20 minutes
 
 ### Build Your Prompt Collection:
+
 - Bookmark this resource
 - Copy 3-5 prompts you use most often
 - Keep them in a doc you can access quickly
 - Customize them over time based on what works
 
 ### Level Up:
+
 - Experiment with adding your school's voice/values
 - Create subject-specific versions
 - Share your best prompts with your team
@@ -503,4 +543,4 @@ Start small. Test one prompt this week. Refine it. Then add another. Before you 
 
 ---
 
-*© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+_© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact._

@@ -1,18 +1,20 @@
-import type { Metadata } from "next";
 import "./globals.css";
-import ExitIntentMount from "@/components/exit-intent-mount";
+import Providers from "./providers";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Zaza Draft",
-  description: "Teacher-first AI writing assistant",
+  description: "Teacher-first, wellbeing-led, explainable AI",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body>
-        {children}
-        <ExitIntentMount />
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

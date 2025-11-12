@@ -1,26 +1,35 @@
 "use client";
 
-import { useEffect } from "react"
-import { useLanguage } from "@/lib/i18n/language-context"
-import { Breadcrumbs } from "@/components/breadcrumbs"
-import { QuickAnswerBox } from "@/components/quick-answer-box"
-import { TableOfContents } from "@/components/table-of-contents"
-import { FAQSection } from "@/components/faq-section"
-import { Check, AlertTriangle, Shield, Clock, Star, Zap, FileText, Calendar } from "lucide-react"
+import { useEffect } from "react";
+import { useLanguage } from "@/lib/i18n/language-context";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { QuickAnswerBox } from "@/components/quick-answer-box";
+import { TableOfContents } from "@/components/table-of-contents";
+import { FAQSection } from "@/components/faq-section";
+import {
+  Check,
+  AlertTriangle,
+  Shield,
+  Clock,
+  Star,
+  Zap,
+  FileText,
+  Calendar,
+} from "lucide-react";
 
 export default function AIStudentReportsClient() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   useEffect(() => {
     // Track page view
     if (typeof window !== "undefined" && (window as any).analytics) {
-      ;(window as any).analytics.track("cornerstone_page_viewed", {
+      (window as any).analytics.track("cornerstone_page_viewed", {
         page_slug: "ai-for-student-reports",
         locale: "en",
         referrer: document.referrer,
-      })
+      });
     }
-  }, [])
+  }, []);
 
   const tocItems = [
     { id: "stress", title: "Why report writing causes stress", level: 1 },
@@ -31,7 +40,7 @@ export default function AIStudentReportsClient() {
     { id: "examples", title: "Before & after examples", level: 1 },
     { id: "mistakes", title: "Common mistakes to avoid", level: 1 },
     { id: "testimonials", title: "Teacher results", level: 1 },
-  ]
+  ];
 
   const reportTypes = [
     {
@@ -66,7 +75,7 @@ export default function AIStudentReportsClient() {
       savings: "70%",
       bestTool: "Zaza Draft",
     },
-  ]
+  ];
 
   const privacyRules = [
     {
@@ -93,7 +102,7 @@ export default function AIStudentReportsClient() {
       instead: "Edit before sending to parents",
       icon: Check,
     },
-  ]
+  ];
 
   const templates = [
     {
@@ -124,11 +133,12 @@ export default function AIStudentReportsClient() {
       example:
         "Student has made measurable progress toward the goal of reading 80 words per minute. Current level: 65 wpm (up from 45 wpm baseline). Continues to benefit from small group instruction and visual supports.",
     },
-  ]
+  ];
 
   const beforeAfter = [
     {
-      before: "Student is doing okay in math. Sometimes struggles with word problems. Needs to work harder.",
+      before:
+        "Student is doing okay in math. Sometimes struggles with word problems. Needs to work harder.",
       after:
         "Student demonstrates solid computational skills and completes practice problems accurately. To build confidence with word problems, we're working on identifying key information and drawing visual representations. Practice at home with real-world math scenarios (cooking, shopping) would reinforce these strategies.",
       improvement: "More specific, actionable, and encouraging",
@@ -139,7 +149,7 @@ export default function AIStudentReportsClient() {
         "Student consistently contributes thoughtful ideas during class discussions and demonstrates strong critical thinking skills. Their recent project on ecosystems showed excellent research and presentation abilities. To continue growing, I encourage taking on more leadership roles in group work.",
       improvement: "Specific examples and clear next steps",
     },
-  ]
+  ];
 
   const mistakes = [
     {
@@ -167,7 +177,7 @@ export default function AIStudentReportsClient() {
       why: "Parents may not understand",
       fix: "Use plain language and explain technical terms",
     },
-  ]
+  ];
 
   const faqs = [
     {
@@ -195,13 +205,16 @@ export default function AIStudentReportsClient() {
       answer:
         "Most teachers save 60-70% of report writing time. For a class of 25 students, that's 4-6 hours saved per reporting period. The key is using templates and reviewing efficiently rather than writing from scratch.",
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-[#0F172A]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Breadcrumbs
-          items={[{ label: "Learning Centre", href: "/learning-centre" }, { label: "AI for Student Reports" }]}
+          items={[
+            { label: "Learning Centre", href: "/learning-centre" },
+            { label: "AI for Student Reports" },
+          ]}
         />
 
         <QuickAnswerBox answer="Use AI to draft student reports by providing anonymous observations (no names), reviewing and personalizing the output, and adding specific examples. Use FERPA-compliant tools like Zaza Draft. Most teachers save 60-70% of report writing time while improving quality and consistency." />
@@ -237,26 +250,33 @@ export default function AIStudentReportsClient() {
             </h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                Writing student reports is one of the most time-consuming tasks in teaching. For a class of 25 students,
-                report cards can take <strong className="text-white">8-12 hours</strong> of focused writing time.
-                Multiply that by 2-4 reporting periods per year, and you're spending{" "}
-                <strong className="text-white">30-50 hours annually</strong> on reports alone.
+                Writing student reports is one of the most time-consuming tasks
+                in teaching. For a class of 25 students, report cards can take{" "}
+                <strong className="text-white">8-12 hours</strong> of focused
+                writing time. Multiply that by 2-4 reporting periods per year,
+                and you're spending{" "}
+                <strong className="text-white">30-50 hours annually</strong> on
+                reports alone.
               </p>
               <p>The pressure comes from multiple sources:</p>
               <ul className="space-y-2 ml-6 text-gray-300">
                 <li>
-                  <strong className="text-white">Writer's block:</strong> Staring at a blank page for each student
+                  <strong className="text-white">Writer's block:</strong>{" "}
+                  Staring at a blank page for each student
                 </li>
                 <li>
-                  <strong className="text-white">Consistency challenges:</strong> Maintaining similar tone and structure
-                  across 25+ reports
+                  <strong className="text-white">
+                    Consistency challenges:
+                  </strong>{" "}
+                  Maintaining similar tone and structure across 25+ reports
                 </li>
                 <li>
-                  <strong className="text-white">Mental fatigue:</strong> By student #15, your brain is exhausted
+                  <strong className="text-white">Mental fatigue:</strong> By
+                  student #15, your brain is exhausted
                 </li>
                 <li>
-                  <strong className="text-white">Professional pressure:</strong> Every word will be read by parents and
-                  administrators
+                  <strong className="text-white">Professional pressure:</strong>{" "}
+                  Every word will be read by parents and administrators
                 </li>
               </ul>
             </div>
@@ -270,27 +290,34 @@ export default function AIStudentReportsClient() {
             </h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                AI can reduce the time spent writing reports by up to 60-70%. For instance, writing a progress report
-                for a student can take <strong className="text-white">5-7 minutes</strong> with AI, compared to{" "}
-                <strong className="text-white">15-20 minutes</strong> without AI.
+                AI can reduce the time spent writing reports by up to 60-70%.
+                For instance, writing a progress report for a student can take{" "}
+                <strong className="text-white">5-7 minutes</strong> with AI,
+                compared to{" "}
+                <strong className="text-white">15-20 minutes</strong> without
+                AI.
               </p>
               <p>Here's how AI can help:</p>
               <ul className="space-y-2 ml-6 text-gray-300">
                 <li>
-                  <strong className="text-white">Drafts Quickly:</strong> AI generates drafts in a fraction of the time
-                  it takes to write manually.
+                  <strong className="text-white">Drafts Quickly:</strong> AI
+                  generates drafts in a fraction of the time it takes to write
+                  manually.
                 </li>
                 <li>
-                  <strong className="text-white">Consistent Language:</strong> Ensures that all reports maintain a
-                  similar tone and structure.
+                  <strong className="text-white">Consistent Language:</strong>{" "}
+                  Ensures that all reports maintain a similar tone and
+                  structure.
                 </li>
                 <li>
-                  <strong className="text-white">Professional Phrasing:</strong> Provides more specific, actionable, and
-                  professional language.
+                  <strong className="text-white">Professional Phrasing:</strong>{" "}
+                  Provides more specific, actionable, and professional language.
                 </li>
                 <li>
-                  <strong className="text-white">Reduces Mental Fatigue:</strong> Lessens the mental strain during
-                  report writing season.
+                  <strong className="text-white">
+                    Reduces Mental Fatigue:
+                  </strong>{" "}
+                  Lessens the mental strain during report writing season.
                 </li>
               </ul>
             </div>
@@ -304,23 +331,31 @@ export default function AIStudentReportsClient() {
             </h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                Protecting student privacy is crucial when using AI for reports. Follow these guidelines to ensure
-                compliance with FERPA:
+                Protecting student privacy is crucial when using AI for reports.
+                Follow these guidelines to ensure compliance with FERPA:
               </p>
               <ul className="space-y-2 ml-6 text-gray-300">
                 <li>
-                  <strong className="text-white">Never Use Student Names:</strong> Use "the student" or initials only.
+                  <strong className="text-white">
+                    Never Use Student Names:
+                  </strong>{" "}
+                  Use "the student" or initials only.
                 </li>
                 <li>
-                  <strong className="text-white">Anonymize Specific Details:</strong> Avoid using unique identifiers.
+                  <strong className="text-white">
+                    Anonymize Specific Details:
+                  </strong>{" "}
+                  Avoid using unique identifiers.
                 </li>
                 <li>
-                  <strong className="text-white">Use Education-Specific Tools:</strong> Opt for tools like Zaza Draft
-                  that are FERPA-compliant.
+                  <strong className="text-white">
+                    Use Education-Specific Tools:
+                  </strong>{" "}
+                  Opt for tools like Zaza Draft that are FERPA-compliant.
                 </li>
                 <li>
-                  <strong className="text-white">Review All AI Output:</strong> Always edit and verify the content
-                  before finalizing it.
+                  <strong className="text-white">Review All AI Output:</strong>{" "}
+                  Always edit and verify the content before finalizing it.
                 </li>
               </ul>
             </div>
@@ -338,18 +373,33 @@ export default function AIStudentReportsClient() {
                   1
                 </div>
                 <div>
-                  <h3 className="mb-2 text-lg font-semibold text-white">Gather Your Observations</h3>
+                  <h3 className="mb-2 text-lg font-semibold text-white">
+                    Gather Your Observations
+                  </h3>
                   <p className="mb-2">
-                    Collect your notes on each student: strengths, growth areas, specific examples, and data points.
-                    This is your expertise - AI can't replace it.
+                    Collect your notes on each student: strengths, growth areas,
+                    specific examples, and data points. This is your expertise -
+                    AI can't replace it.
                   </p>
                   <div className="rounded-lg bg-muted p-4 text-sm text-gray-300">
                     <p className="font-medium mb-1">Example notes:</p>
                     <ul className="space-y-1">
-                      <li>â€¢ Strong in reading comprehension (scored 85% on last assessment)</li>
-                      <li>â€¢ Struggles with math fact fluency (still counting on fingers)</li>
-                      <li>â€¢ Excellent class participation and peer collaboration</li>
-                      <li>â€¢ Needs reminders to stay on task during independent work</li>
+                      <li>
+                        Ã¢â‚¬Â¢ Strong in reading comprehension (scored 85% on
+                        last assessment)
+                      </li>
+                      <li>
+                        Ã¢â‚¬Â¢ Struggles with math fact fluency (still counting
+                        on fingers)
+                      </li>
+                      <li>
+                        Ã¢â‚¬Â¢ Excellent class participation and peer
+                        collaboration
+                      </li>
+                      <li>
+                        Ã¢â‚¬Â¢ Needs reminders to stay on task during
+                        independent work
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -360,16 +410,20 @@ export default function AIStudentReportsClient() {
                   2
                 </div>
                 <div>
-                  <h3 className="mb-2 text-lg font-semibold text-white">Use a Template Prompt</h3>
+                  <h3 className="mb-2 text-lg font-semibold text-white">
+                    Use a Template Prompt
+                  </h3>
                   <p className="mb-2">
-                    Input your observations into a structured prompt. Never use student names - use "the student" or
-                    "this learner" instead.
+                    Input your observations into a structured prompt. Never use
+                    student names - use "the student" or "this learner" instead.
                   </p>
                   <div className="rounded-lg bg-muted p-4 text-sm text-gray-300">
                     <p className="font-medium mb-1">Template:</p>
                     <p>
-                      "Write a progress report for a 4th grade student. Strengths: [your observations]. Growth areas:
-                      [your observations]. Tone: encouraging and specific. Include next steps for parents."
+                      "Write a progress report for a 4th grade student.
+                      Strengths: [your observations]. Growth areas: [your
+                      observations]. Tone: encouraging and specific. Include
+                      next steps for parents."
                     </p>
                   </div>
                 </div>
@@ -380,10 +434,13 @@ export default function AIStudentReportsClient() {
                   3
                 </div>
                 <div>
-                  <h3 className="mb-2 text-lg font-semibold text-white">Review & Personalize</h3>
+                  <h3 className="mb-2 text-lg font-semibold text-white">
+                    Review & Personalize
+                  </h3>
                   <p>
-                    Read the AI draft carefully. Add specific examples, adjust tone, verify accuracy, and ensure it
-                    sounds like you. This step is crucial - never skip it.
+                    Read the AI draft carefully. Add specific examples, adjust
+                    tone, verify accuracy, and ensure it sounds like you. This
+                    step is crucial - never skip it.
                   </p>
                 </div>
               </div>
@@ -393,10 +450,13 @@ export default function AIStudentReportsClient() {
                   4
                 </div>
                 <div>
-                  <h3 className="mb-2 text-lg font-semibold text-white">Add Student Name & Send</h3>
+                  <h3 className="mb-2 text-lg font-semibold text-white">
+                    Add Student Name & Send
+                  </h3>
                   <p>
-                    Only after reviewing and editing, add the student's name to the final report. Copy into your
-                    school's reporting system and submit.
+                    Only after reviewing and editing, add the student's name to
+                    the final report. Copy into your school's reporting system
+                    and submit.
                   </p>
                 </div>
               </div>
@@ -411,11 +471,18 @@ export default function AIStudentReportsClient() {
             </h2>
             <div className="space-y-6 text-gray-300 leading-relaxed">
               {templates.map((template) => (
-                <div key={template.title} className="rounded-lg border bg-card p-6">
+                <div
+                  key={template.title}
+                  className="rounded-lg border bg-card p-6"
+                >
                   <div className="mb-4 flex items-start justify-between">
                     <div>
-                      <h3 className="text-xl font-bold text-white">{template.title}</h3>
-                      <p className="text-sm text-gray-400">Grade Level: {template.grade}</p>
+                      <h3 className="text-xl font-bold text-white">
+                        {template.title}
+                      </h3>
+                      <p className="text-sm text-gray-400">
+                        Grade Level: {template.grade}
+                      </p>
                     </div>
                   </div>
 
@@ -443,12 +510,20 @@ export default function AIStudentReportsClient() {
               {beforeAfter.map((example, index) => (
                 <div key={index} className="rounded-lg border bg-card p-6">
                   <div className="mb-4 rounded-lg bg-red-50 p-4 dark:bg-red-950/20">
-                    <p className="mb-1 text-sm font-medium text-red-900 dark:text-red-100">Before (Generic):</p>
-                    <p className="text-sm text-red-800 dark:text-red-200">{example.before}</p>
+                    <p className="mb-1 text-sm font-medium text-red-900 dark:text-red-100">
+                      Before (Generic):
+                    </p>
+                    <p className="text-sm text-red-800 dark:text-red-200">
+                      {example.before}
+                    </p>
                   </div>
                   <div className="mb-4 rounded-lg bg-green-50 p-4 dark:bg-green-950/20">
-                    <p className="mb-1 text-sm font-medium text-green-900 dark:text-green-100">After (AI-Enhanced):</p>
-                    <p className="text-sm text-green-800 dark:text-green-200">{example.after}</p>
+                    <p className="mb-1 text-sm font-medium text-green-900 dark:text-green-100">
+                      After (AI-Enhanced):
+                    </p>
+                    <p className="text-sm text-green-800 dark:text-green-200">
+                      {example.after}
+                    </p>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Check className="h-4 w-4 text-green-600" />
@@ -467,13 +542,19 @@ export default function AIStudentReportsClient() {
             </h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               {mistakes.map((mistake) => (
-                <div key={mistake.mistake} className="flex gap-4 rounded-lg border bg-card p-6">
+                <div
+                  key={mistake.mistake}
+                  className="flex gap-4 rounded-lg border bg-card p-6"
+                >
                   <AlertTriangle className="h-6 w-6 shrink-0 text-orange-600" />
                   <div>
-                    <h3 className="mb-1 font-semibold text-orange-900 dark:text-orange-100">{mistake.mistake}</h3>
+                    <h3 className="mb-1 font-semibold text-orange-900 dark:text-orange-100">
+                      {mistake.mistake}
+                    </h3>
                     <p className="mb-2">{mistake.why}</p>
                     <p>
-                      <span className="font-medium text-primary">Fix:</span> {mistake.fix}
+                      <span className="font-medium text-primary">Fix:</span>{" "}
+                      {mistake.fix}
                     </p>
                   </div>
                 </div>
@@ -491,13 +572,17 @@ export default function AIStudentReportsClient() {
               <div className="rounded-lg border bg-card p-6">
                 <div className="mb-4 flex gap-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                    <Star
+                      key={i}
+                      className="h-5 w-5 fill-yellow-400 text-yellow-400"
+                    />
                   ))}
                 </div>
                 <p className="mb-4">
-                  "Report card season used to be my most dreaded time of year. With Zaza Draft, I finished 25 report
-                  cards in 3 hours instead of 8. The quality actually improved because I had more energy to personalize
-                  each one."
+                  "Report card season used to be my most dreaded time of year.
+                  With Zaza Draft, I finished 25 report cards in 3 hours instead
+                  of 8. The quality actually improved because I had more energy
+                  to personalize each one."
                 </p>
                 <p className="font-semibold text-white">Jennifer L.</p>
                 <p className="text-sm text-gray-400">3rd Grade Teacher, Ohio</p>
@@ -505,15 +590,22 @@ export default function AIStudentReportsClient() {
               <div className="rounded-lg border bg-card p-6">
                 <div className="mb-4 flex gap-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                    <Star
+                      key={i}
+                      className="h-5 w-5 fill-yellow-400 text-yellow-400"
+                    />
                   ))}
                 </div>
                 <p className="mb-4">
-                  "As a special ed teacher, IEP progress reports were taking 30-45 minutes each. Now I can draft them in
-                  12-15 minutes while maintaining the data-driven language required. Game changer."
+                  "As a special ed teacher, IEP progress reports were taking
+                  30-45 minutes each. Now I can draft them in 12-15 minutes
+                  while maintaining the data-driven language required. Game
+                  changer."
                 </p>
                 <p className="font-semibold text-white">Marcus T.</p>
-                <p className="text-sm text-gray-400">Special Education Teacher, Florida</p>
+                <p className="text-sm text-gray-400">
+                  Special Education Teacher, Florida
+                </p>
               </div>
             </div>
           </section>
@@ -529,5 +621,5 @@ export default function AIStudentReportsClient() {
         </article>
       </div>
     </div>
-  )
+  );
 }
