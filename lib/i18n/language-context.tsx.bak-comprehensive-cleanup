@@ -1458,7 +1458,8 @@ const translationsDe: Record<string, string> = {
   "pricing.teacher.feature4": "Gespeicherter Verlauf & Export",
   "pricing.teacher.feature5": "Zaras sanfte Wohlbefinden-Hinweise",
   "pricing.teacher.feature6": "Priorisierter E-Mail-Support",
-  "pricing.teacher.timeSaved": "Typischerweise gespart: 4-7 Stunden pro Woche",
+  "pricing.teacher.timeSaved":
+    "Typischerweise gespart: 4-7 Stunden pro Woche",
 
   // Department Plan
   "pricing.department.badge": "TEAMS",
@@ -1800,14 +1801,14 @@ const translationsDe: Record<string, string> = {
   // Verwandte Inhalte
   "community.related.title": "Wissen erweitern",
   "community.related.desc":
-    "Vertiefen Sie Ihr Community-Erlebnis mit diesen Lernressourcen",
-  "community.related.aiLiteracy.title": "KI-Kompetenzkurse",
+    "Vertiefen Sie Ihr Community"'Erlebnis mit diesen Lernressourcen",
+  "community.related.aiLiteracy.title": "KI"'Kompetenzkurse",
   "community.related.aiLiteracy.desc":
     "Grundlagen lernen, die in der Community diskutiert werden",
-  "community.related.webinars.title": "Experten-Webinare",
+  "community.related.webinars.title": "Experten"'Webinare",
   "community.related.webinars.desc":
-    "Live-Sessions zu aktuellen Community-Themen",
-  "community.related.glossary.title": "KI-Glossar",
+    "Live"'Sessions zu aktuellen Community"'Themen",
+  "community.related.glossary.title": "KI"'Glossar",
   "community.related.glossary.desc": "Begriffe aus den Diskussionen verstehen",
   // CTA
   "community.cta.titlePrefix": "Bereit,",

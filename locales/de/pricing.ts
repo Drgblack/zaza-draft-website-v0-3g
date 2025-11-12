@@ -4,7 +4,7 @@ export default {
     headline:
       "Preise, die die Zeit und das Wohlbefinden von Lehrkräften respektieren",
     subheadline:
-      "Sparen Sie jede Woche Stunden, reduzieren Sie Stress nach Feierabend und schreiben Sie mit Zuversicht â€” mit Preisen, die einfach und fair sind.",
+      "Sparen Sie jede Woche Stunden, reduzieren Sie Stress nach Feierabend und schreiben Sie mit Zuversicht - mit Preisen, die einfach und fair sind.",
   },
   trust: {
     teachers: "Vertraut von fürsorglichen Lehrkräften",
@@ -25,7 +25,7 @@ export default {
     save: "2 Monate sparen",
   },
   outcome: {
-    text: "Die meisten Lehrkräfte verbringen 3â€“5 Stunden pro Woche mit Nachrichten und Kommentaren. Draft reduziert dies um 50â€“70 %, während Ihr Ton und Ihre Absicht erhalten bleiben.",
+    text: "Die meisten Lehrkräfte verbringen 3-5 Stunden pro Woche mit Nachrichten und Kommentaren. Draft reduziert dies um 50-70 %, während Ihr Ton und Ihre Absicht erhalten bleiben.",
   },
   free: {
     badge: "KOSTENLOS",
@@ -54,7 +54,7 @@ export default {
     feature4: "Gespeicherter Verlauf & Export",
     feature5: "Zaras sanfte Wohlbefinden-Hinweise",
     feature6: "Priorisierter E-Mail-Support",
-    timeSaved: "Typischerweise gespart: 4â€“7 Stunden pro Woche",
+    timeSaved: "Typischerweise gespart: 4-7 Stunden pro Woche",
   },
   department: {
     badge: "TEAMS",
@@ -62,7 +62,7 @@ export default {
     description:
       "Kollaboratives Schreiben mit gemeinsamer Qualität und Konsistenz.",
     perTeacher: "/Lehrkraft",
-    billing: "Jährliche Abrechnung â€¢ 5â€“50 Plätze",
+    billing: "Jährliche Abrechnung • 5-50 Plätze",
     cta: "Mit Vertrieb sprechen",
     includes: "Alles in Teacher, plus:",
     feature1: "Team-Bibliotheken, gemeinsame Vorlagen",
@@ -85,7 +85,7 @@ export default {
     badge: "BUNDLE & SPAREN",
     title: "Draft + Teach",
     description:
-      "Ein Ort zum Planen, Schreiben und Kommunizieren â€” mit lehrerorientierten Wohlbefinden im Mittelpunkt.",
+      "Ein Ort zum Planen, Schreiben und Kommunizieren - mit lehrerorientierten Wohlbefinden im Mittelpunkt.",
     perMonth: "/Monat",
     perYear: "/Jahr",
     savings: "Sparen Sie gegenüber dem separaten Kauf",
@@ -97,7 +97,7 @@ export default {
       name: "Sarah L.",
       role: "Mittelschullehrerin",
       quote:
-        "Draft gab mir meine Abende zurück. Ich verlasse jetzt die Schule pünktlich â€” und Eltern sagen, meine Nachrichten fühlen sich wärmer an.",
+        "Draft gab mir meine Abende zurück. Ich verlasse jetzt die Schule pünktlich - und Eltern sagen, meine Nachrichten fühlen sich wärmer an.",
     },
     "2": {
       name: "Mark R.",
@@ -118,22 +118,22 @@ export default {
   faq: {
     title: "Preis- und Abrechnungs-FAQs",
     q1: "Gibt es einen kostenlosen Plan?",
-    a1: "Ja â€” beginnen Sie mit 5 Entwürfen pro Monat, um den Unterschied zu spüren. Keine Kreditkarte erforderlich.",
+    a1: "Ja - beginnen Sie mit 5 Entwürfen pro Monat, um den Unterschied zu spüren. Keine Kreditkarte erforderlich.",
     q2: "Was passiert mit meiner Stimme?",
     a2: "Draft bewahrt Ihren Ton und Ihre Sprache; Sie haben immer die Kontrolle. Unser Ton-Tutor lernt Ihren Stil.",
     q3: "Sind meine Nachrichten privat?",
     a3: "Ja. Wir verwenden Ihre Inhalte nicht, um öffentliche Modelle zu trainieren. Weitere Details finden Sie auf unserer Datenschutzseite.",
     q4: "Kann ich jederzeit kündigen?",
-    a4: "Absolut â€” keine Lock-ins. Kündigen Sie mit einem Klick in Ihren Kontoeinstellungen.",
+    a4: "Absolut - keine Lock-ins. Kündigen Sie mit einem Klick in Ihren Kontoeinstellungen.",
     q5: "Unterstützen Sie Schulen?",
-    a5: "Ja â€” Mengenpreise, SSO, DPA/SCCs und SLAs für Bezirke. Kontakt: sales@zazadraft.com",
+    a5: "Ja - Mengenpreise, SSO, DPA/SCCs und SLAs für Bezirke. Kontakt: sales@zazadraft.com",
     q6: "Bieten Sie Rückerstattungen an?",
-    a6: "Ja â€” 30-Tage-Geld-zurück-Garantie auf alle kostenpflichtigen Pläne. Keine Fragen gestellt.",
+    a6: "Ja - 30-Tage-Geld-zurück-Garantie auf alle kostenpflichtigen Pläne. Keine Fragen gestellt.",
   },
   cta: {
     title: "Bereit, jede Woche Stunden zu sparen?",
     subtitle:
-      "Heute kostenlos starten â€¢ Keine Kreditkarte erforderlich â€¢ Jederzeit kündbar",
+      "Heute kostenlos starten • Keine Kreditkarte erforderlich • Jederzeit kündbar",
     primary: "Kostenlose Testversion starten",
     secondary: "Mit Vertrieb sprechen",
   },

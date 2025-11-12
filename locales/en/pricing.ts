@@ -3,7 +3,7 @@ export default {
     preheadline: "TRANSPARENT PRICING",
     headline: "Pricing that respects teachers' time and wellbeing",
     subheadline:
-      "Save hours every week, reduce after-hours stress, and write with confidence â€” with pricing that's simple and fair.",
+      "Save hours every week, reduce after-hours stress, and write with confidence - with pricing that's simple and fair.",
   },
   trust: {
     teachers: "Trusted by caring teachers",
@@ -22,7 +22,7 @@ export default {
     save: "Save 2 months",
   },
   outcome: {
-    text: "Most teachers spend 3â€“5 hours/week on messages and comments. Draft cuts that by 50â€“70% while preserving your tone and intent.",
+    text: "Most teachers spend 3-5 hours/week on messages and comments. Draft cuts that by 50-70% while preserving your tone and intent.",
   },
   free: {
     badge: "FREE",
@@ -49,14 +49,14 @@ export default {
     feature4: "Saved history & export",
     feature5: "Zara's gentle wellbeing nudges",
     feature6: "Priority email support",
-    timeSaved: "Typical time saved: 4â€“7 hours/week",
+    timeSaved: "Typical time saved: 4-7 hours/week",
   },
   department: {
     badge: "TEAMS",
     title: "Department",
     description: "Collaborative writing with shared quality and consistency.",
     perTeacher: "/teacher",
-    billing: "Billed annually â€¢ 5â€“50 seats",
+    billing: "Billed annually  - 5-50 seats",
     cta: "Talk to Sales",
     includes: "Everything in Teacher, plus:",
     feature1: "Team libraries, shared templates",
@@ -79,7 +79,7 @@ export default {
     badge: "BUNDLE & SAVE",
     title: "Draft + Teach",
     description:
-      "One place to plan, write, and communicate â€” with teacher-first wellbeing at the centre.",
+      "One place to plan, write, and communicate - with teacher-first wellbeing at the centre.",
     perMonth: "/month",
     perYear: "/year",
     savings: "Save vs buying separately",
@@ -91,7 +91,7 @@ export default {
       name: "Sarah L.",
       role: "Middle School Teacher",
       quote:
-        "Draft gave me back my evenings. I now leave school on time â€” and parents say my messages feel warmer.",
+        "Draft gave me back my evenings. I now leave school on time - and parents say my messages feel warmer.",
     },
     "2": {
       name: "Mark R.",
@@ -112,21 +112,21 @@ export default {
   faq: {
     title: "Pricing & Billing FAQs",
     q1: "Is there a free plan?",
-    a1: "Yes â€” start with 5 drafts/month to feel the difference. No credit card required.",
+    a1: "Yes - start with 5 drafts/month to feel the difference. No credit card required.",
     q2: "What happens to my voice?",
     a2: "Draft preserves your tone and language; you're always in control. Our Tone Tutor learns your style.",
     q3: "Are my messages private?",
     a3: "Yes. We don't use your content to train public models. See our Privacy page for details.",
     q4: "Can I cancel anytime?",
-    a4: "Absolutely â€” no lock-ins. Cancel from your account settings with one click.",
+    a4: "Absolutely - no lock-ins. Cancel from your account settings with one click.",
     q5: "Do you support schools?",
-    a5: "Yes â€” volume pricing, SSO, DPA/SCCs, and SLAs for districts. Contact sales@zazadraft.com",
+    a5: "Yes - volume pricing, SSO, DPA/SCCs, and SLAs for districts. Contact sales@zazadraft.com",
     q6: "Do you offer refunds?",
-    a6: "Yes â€” 30-day money-back guarantee on all paid plans. No questions asked.",
+    a6: "Yes - 30-day money-back guarantee on all paid plans. No questions asked.",
   },
   cta: {
     title: "Ready to save hours every week?",
-    subtitle: "Start free today â€¢ No credit card required â€¢ Cancel anytime",
+    subtitle: "Start free today  - No credit card required  - Cancel anytime",
     primary: "Start Free Trial",
     secondary: "Talk to Sales",
   },
