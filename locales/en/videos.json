@@ -1,0 +1,18 @@
+﻿{
+  "title": "Video Tutorials and Demos",
+  "subtitle": "Step-by-step tutorials and product demos for AI-powered parent communication.",
+  "search": {
+    "placeholder": "Search videos..."
+  },
+  "filter": {
+    "all": "All Videos",
+    "basics": "Getting Started",
+    "advanced": "Advanced Features",
+    "usecases": "Use Cases",
+    "bestpractices": "Best Practices",
+    "tips": "Tips & Tricks"
+  },
+  "featured": "Featured Videos",
+  "playlists": "Curated Playlists",
+  "allVideos": "All Videos"
+}

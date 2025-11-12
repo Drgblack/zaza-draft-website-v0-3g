@@ -1,0 +1,18 @@
+﻿{
+  "title": "Video-Tutorials und Demos",
+  "subtitle": "Schritt-für-Schritt-Tutorials und Produktdemos für KI-gestützte Elternkommunikation.",
+  "search": {
+    "placeholder": "Videos durchsuchen…"
+  },
+  "filter": {
+    "all": "Alle Videos",
+    "basics": "Erste Schritte",
+    "advanced": "Erweiterte Funktionen",
+    "usecases": "Anwendungsfälle",
+    "bestpractices": "Bewährte Methoden",
+    "tips": "Tipps & Tricks"
+  },
+  "featured": "Empfohlene Videos",
+  "playlists": "Kurierte Playlists",
+  "allVideos": "Alle Videos"
+}

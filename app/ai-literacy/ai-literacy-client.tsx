@@ -1,127 +1,35 @@
 "use client";
 
-import React, { useState, useEffect, useMemo, useRef, useCallback } from "react";
+import { useEffect, useState } from "react";
+import { useLanguage } from "@/lib/i18n/language-context";
 import Link from "next/link";
-
 import { Button } from "@/components/ui/button";
+import {
+  BookOpen,
+  Award,
+  Download,
+  GraduationCap,
+  Clock,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Shield,
+  Zap,
+  Target,
+  TrendingUp,
+  Video,
+  MessageSquare,
+  Puzzle,
+} from "lucide-react";
 import { RelatedResources } from "@/components/related-resources";
 import { InlineCTA } from "@/components/conversion/inline-cta";
 import { SocialProofBar } from "@/components/conversion/social-proof-bar";
 import { TestimonialCard } from "@/components/conversion/testimonial-card";
 import { TrustBadges } from "@/components/conversion/trust-badges";
 import { LeadMagnet } from "@/components/conversion/lead-magnet";
+import { useTranslations } from "@/lib/i18n/useTranslations";
 
-import {
-  BookOpen, Award, Download, GraduationCap, Clock, Users, CheckCircle,
-  ArrowRight, Star, Shield, Zap, Target, TrendingUp, Video, MessageSquare, Puzzle
-} from "lucide-react";
-// ==== Local i18n helper (scoped to this file only) ====
-const TXT: Record<"en"|"de", Record<string, string>> = {
-  en: {
-    // --- Glossary ---
-    title: "AI Glossary for Teachers",
-    subtitle: "Over 150 AI terms explained in plain language. Browse by category or alphabetically to understand key AI concepts for education.",
-    searchPlaceholder: "Search term, definition, or categoryÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¦",
-    allCategories: "All Categories",
-    applyYourKnowledge: "Apply Your Knowledge",
-    applyIntro: "Put these AI concepts into practice with hands-on learning.",
-    courses: "AI Courses",
-    webinars: "Live Webinars",
-    discussions: "Community Discussions",
-    readyBlockTitle: "Ready to Put AI Knowledge into Practice?",
-    startFree: "Start Free Trial",
-    exploreCourses: "Explore AI Courses",
-    browseConcepts: "Browse AI concepts",
-    explore: "Explore",
-
-    // --- Videos ---
-    videosTitle: "Video Tutorials & Demos",
-    videosSubtitle: "Watch step-by-step tutorials and product demos to master AI-powered parent communication. Learn at your own pace with our comprehensive video library.",
-    videosSearch: "Search videosÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¦",
-    filterAll: "All Videos",
-    filterStart: "Getting Started",
-    filterAdvanced: "Advanced Features",
-    filterUseCases: "Use Cases",
-    filterBest: "Best Practices",
-    filterTips: "Tips & Tricks",
-    secFeatured: "Featured Videos",
-    secPlaylists: "Curated Playlists",
-    secAllVideos: "All Videos",
-
-    // --- AI Literacy ---
-    aiLitHero: "Master AI for Education",
-    aiLitBrowseCourses: "Browse Courses",
-    aiLitGetCertified: "Get Certified",
-    choosePath: "Choose Your Learning Path",
-    allCourses: "All Courses",
-    whatTeachersSay: "What Teachers Are Saying",
-    resourceLibrary: "Downloadable Resource Library",
-    certification: "AI Education Certification",
-    whyGetCertified: "Why Get Certified?",
-    readyToGetStarted: "Ready to Get Started?",
-    continueJourney: "Continue Your AI Journey",
-    liveWebinars: "Live Webinars",
-    teacherCommunity: "Teacher Community",
-    toolIntegrations: "Tool Integrations",
-    startLearningHero: "Start Your AI Learning Journey",
-  },
-  de: {
-    // --- Glossary ---
-    title: "KI-Glossar fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼r LehrkrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤fte",
-    subtitle: "ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œber 150 KI-Begriffe in leicht verstÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤ndlicher Sprache erklÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤rt. Nach Kategorie oder alphabetisch suchen, um KI-Konzepte fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼r den Bildungsbereich zu verstehen.",
-    searchPlaceholder: "Begriff, Definition oder Kategorie suchenÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¦",
-    allCategories: "Alle Kategorien",
-    applyYourKnowledge: "Wenden Sie Ihr Wissen an",
-    applyIntro: "Setzen Sie diese KI-Konzepte mit praxisnahen Lernwegen um.",
-    courses: "KI-Kurse",
-    webinars: "Live-Webinare",
-    discussions: "Community-Diskussionen",
-    readyBlockTitle: "Bereit, KI-Wissen in die Praxis umzusetzen?",
-    startFree: "Kostenlos starten",
-    exploreCourses: "KI-Kurse erkunden",
-    browseConcepts: "KI-Konzepte durchsuchen",
-    explore: "Entdecken",
-
-    // --- Videos ---
-    videosTitle: "Video-Tutorials und Demos",
-    videosSubtitle: "Sehen Sie Schritt-fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼r-Schritt-Tutorials und Produktdemos, um KI-gestÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼tzte Kommunikation zu meistern. Lernen Sie im eigenen Tempo mit unserer umfangreichen Videobibliothek.",
-    videosSearch: "Videos durchsuchenÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¦",
-    filterAll: "Alle Videos",
-    filterStart: "Erste Schritte",
-    filterAdvanced: "Erweiterte Funktionen",
-    filterUseCases: "AnwendungsfÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤lle",
-    filterBest: "Beste Methoden",
-    filterTips: "Tipps & Tricks",
-    secFeatured: "AusgewÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤hlte Videos",
-    secPlaylists: "Kuratierten Playlists",
-    secAllVideos: "Alle Videos",
-
-    // --- AI Literacy ---
-    aiLitHero: "Master AI for Education",
-    aiLitBrowseCourses: "Kurse durchsuchen",
-    aiLitGetCertified: "Zertifikat erwerben",
-    choosePath: "WÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤hlen Sie Ihren Lernpfad",
-    allCourses: "Alle Kurse",
-    whatTeachersSay: "Was LehrkrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤fte sagen",
-    resourceLibrary: "Herunterladbare Ressourcenbibliothek",
-    certification: "KI-Bildungszertifizierung",
-    whyGetCertified: "Warum zertifizieren lassen?",
-    readyToGetStarted: "Bereit fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼r den Start?",
-    continueJourney: "Setzen Sie Ihre KI-Reise fort",
-    liveWebinars: "Live-Webinare",
-    teacherCommunity: "Lehrer-Community",
-    toolIntegrations: "Tool-Integrationen",
-    startLearningHero: "Starten Sie Ihre KI-Lernreise",
-  }
-};
-
-function useLocalT() {
-  const isDe = typeof window !== "undefined" && /^\/de\b/.test(window.location.pathname);
-  const lang = isDe ? "de" : "en";
-  const table = TXT[lang];
-  return (k: string) => table[k] ?? TXT.en[k] ?? k;
-}
-// ==== /Local i18n helper ====
 const learningPaths = [
   {
     id: "beginner",
@@ -131,7 +39,12 @@ const learningPaths = [
     courses: 5,
     icon: BookOpen,
     color: "from-blue-500 to-cyan-500",
-    skills: ["AI Basics", "Prompt Writing", "Tool Selection", "Privacy Awareness"],
+    skills: [
+      "AI Basics",
+      "Prompt Writing",
+      "Tool Selection",
+      "Privacy Awareness",
+    ],
   },
   {
     id: "intermediate",
@@ -141,7 +54,12 @@ const learningPaths = [
     courses: 7,
     icon: Target,
     color: "from-purple-500 to-pink-500",
-    skills: ["Advanced Prompts", "Workflow Integration", "Assessment Design", "Parent Communication"],
+    skills: [
+      "Advanced Prompts",
+      "Workflow Integration",
+      "Assessment Design",
+      "Parent Communication",
+    ],
   },
   {
     id: "advanced",
@@ -151,9 +69,14 @@ const learningPaths = [
     courses: 8,
     icon: TrendingUp,
     color: "from-orange-500 to-red-500",
-    skills: ["AI Strategy", "Professional Development", "Policy Development", "Change Management"],
+    skills: [
+      "AI Strategy",
+      "Professional Development",
+      "Policy Development",
+      "Change Management",
+    ],
   },
-]
+];
 
 const featuredCourses = [
   {
@@ -181,7 +104,7 @@ const featuredCourses = [
   {
     id: "parent-communication",
     title: "AI for Parent Communication",
-    description: "Write professional parent emails 10ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â faster",
+    description: "Write professional parent emails 10× faster",
     duration: "1 hour",
     level: "Intermediate",
     lessons: 7,
@@ -266,7 +189,7 @@ const featuredCourses = [
     rating: 4.8,
     path: "advanced",
   },
-]
+];
 
 const resources = [
   {
@@ -294,14 +217,18 @@ const resources = [
       { name: "AI Ethics Framework", downloads: "6,920" },
     ],
   },
-]
+];
 
 const certificationLevels = [
   {
     level: "AI-Ready Teacher",
     description: "Foundational AI literacy certification",
-    requirements: ["Complete Beginner Path", "Pass assessment (80%+)", "Submit 3 sample prompts"],
-    badge: "ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°",
+    requirements: [
+      "Complete Beginner Path",
+      "Pass assessment (80%+)",
+      "Submit 3 sample prompts",
+    ],
+    badge: "🥉",
     holders: "8,450+",
   },
   {
@@ -312,33 +239,41 @@ const certificationLevels = [
       "Pass advanced assessment (85%+)",
       "Submit portfolio of AI-enhanced lessons",
     ],
-    badge: "ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â ",
+    badge: "🥈",
     holders: "3,920+",
   },
   {
     level: "AI Education Leader",
     description: "Advanced AI leadership certification",
-    requirements: ["Complete Advanced Path", "Pass leadership assessment (90%+)", "Lead PD session or create resource"],
-    badge: "ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡",
+    requirements: [
+      "Complete Advanced Path",
+      "Pass leadership assessment (90%+)",
+      "Lead PD session or create resource",
+    ],
+    badge: "🥇",
     holders: "1,240+",
   },
-]
+];
 
 export default function AILiteracyClient() {
-  const [selectedPath, setSelectedPath] = useState<string | null>(null)
+  const { t } = useTranslations("aiLiteracy");
+  const { language } = useLanguage();
+  const [selectedPath, setSelectedPath] = useState<string | null>(null);
 
   useEffect(() => {
     if (typeof window !== "undefined" && (window as any).analytics) {
-      ;(window as any).analytics.track("ai_literacy_hub_viewed", {
+      (window as any).analytics.track("ai_literacy_hub_viewed", {
         referrer: document.referrer,
-      })
+      });
     }
-  }, [])
+  }, []);
 
   const filteredCourses =
     selectedPath && selectedPath !== "all"
-      ? featuredCourses.filter((course) => course.path === selectedPath || course.path === "all")
-      : featuredCourses
+      ? featuredCourses.filter(
+          (course) => course.path === selectedPath || course.path === "all",
+        )
+      : featuredCourses;
 
   return (
     <div className="min-h-screen bg-[#0F172A]">
@@ -349,18 +284,26 @@ export default function AILiteracyClient() {
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 rounded-full px-4 py-2 mb-6">
               <GraduationCap className="w-5 h-5 text-[#A78BFA]" />
-              <span className="text-[#A78BFA] font-medium text-sm">Free AI Education for Teachers</span>
+              <span className="text-[#A78BFA] font-medium text-sm">
+                Free AI Education for Teachers
+              </span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Master AI for <span className="gradient-text">Education</span>
+              {t("aiLiteracy.title").split(" ").slice(0, -1).join(" ")}{" "}
+              <span className="gradient-text">
+                {t("aiLiteracy.title").split(" ").slice(-1)}
+              </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Free courses, certification programs, and downloadable resources to help you confidently use AI in your
-              classroom
+              {t("aiLiteracy.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white text-lg px-8 py-6">
-                <Link href="#courses">Browse Courses</Link>
+              <Button
+                asChild
+                size="lg"
+                className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white text-lg px-8 py-6"
+              >
+                <Link href="#courses">{t("ctaBrowse")}</Link>
               </Button>
               <Button
                 asChild
@@ -368,7 +311,7 @@ export default function AILiteracyClient() {
                 variant="outline"
                 className="border-[#8B5CF6] text-[#A78BFA] hover:bg-[#8B5CF6]/10 bg-transparent text-lg px-8 py-6"
               >
-                <Link href="#certification">Get Certified</Link>
+                <Link href="#certification">{t("ctaCert")}</Link>
               </Button>
             </div>
 
@@ -409,22 +352,27 @@ export default function AILiteracyClient() {
       <section className="py-20 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Choose Your Learning Path</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              {t("aiLiteracy.pathsTitle")}
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Structured learning paths designed for teachers at every stage of their AI journey
+              Structured learning paths designed for teachers at every stage of
+              their AI journey
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {learningPaths.map((path) => {
-              const Icon = path.icon
+              const Icon = path.icon;
               return (
                 <div
                   key={path.id}
                   className="bg-[#1E293B] border border-white/10 rounded-2xl p-8 hover:border-[#8B5CF6] transition-all hover:shadow-xl hover:shadow-[#8B5CF6]/20 group cursor-pointer"
                   onClick={() => {
-                    setSelectedPath(path.id)
-                    document.getElementById("courses")?.scrollIntoView({ behavior: "smooth" })
+                    setSelectedPath(path.id);
+                    document
+                      .getElementById("courses")
+                      ?.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
                   <div
@@ -435,7 +383,9 @@ export default function AILiteracyClient() {
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#A78BFA] transition-colors">
                     {path.title}
                   </h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">{path.description}</p>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {path.description}
+                  </p>
                   <div className="flex items-center gap-4 text-sm text-gray-400 mb-6">
                     <div className="flex items-center gap-2">
                       <Clock className="w-4 h-4" />
@@ -447,9 +397,14 @@ export default function AILiteracyClient() {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <div className="text-sm font-semibold text-white mb-2">You'll learn:</div>
+                    <div className="text-sm font-semibold text-white mb-2">
+                      You'll learn:
+                    </div>
                     {path.skills.map((skill) => (
-                      <div key={skill} className="flex items-center gap-2 text-sm text-gray-300">
+                      <div
+                        key={skill}
+                        className="flex items-center gap-2 text-sm text-gray-300"
+                      >
                         <CheckCircle className="w-4 h-4 text-[#A78BFA]" />
                         <span>{skill}</span>
                       </div>
@@ -458,16 +413,18 @@ export default function AILiteracyClient() {
                   <Button
                     className="w-full mt-6 bg-[#8B5CF6]/10 hover:bg-[#8B5CF6] text-[#A78BFA] hover:text-white border border-[#8B5CF6]/30 group-hover:border-[#8B5CF6]"
                     onClick={(e) => {
-                      e.stopPropagation()
-                      setSelectedPath(path.id)
-                      document.getElementById("courses")?.scrollIntoView({ behavior: "smooth" })
+                      e.stopPropagation();
+                      setSelectedPath(path.id);
+                      document
+                        .getElementById("courses")
+                        ?.scrollIntoView({ behavior: "smooth" });
                     }}
                   >
                     Start Learning
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
@@ -479,7 +436,9 @@ export default function AILiteracyClient() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
             <div>
               <h2 className="text-4xl font-bold text-white mb-4">
-                {selectedPath ? `${learningPaths.find((p) => p.id === selectedPath)?.title} Courses` : "All Courses"}
+                {selectedPath
+                  ? `${learningPaths.find((p) => p.id === selectedPath)?.title} Courses`
+                  : "All Courses"}
               </h2>
               <p className="text-xl text-gray-300">
                 {selectedPath
@@ -512,13 +471,17 @@ export default function AILiteracyClient() {
                     </span>
                     <div className="flex items-center gap-1">
                       <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                      <span className="text-sm font-semibold text-white">{course.rating}</span>
+                      <span className="text-sm font-semibold text-white">
+                        {course.rating}
+                      </span>
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#A78BFA] transition-colors">
                     {course.title}
                   </h3>
-                  <p className="text-gray-300 text-sm mb-6 leading-relaxed">{course.description}</p>
+                  <p className="text-gray-300 text-sm mb-6 leading-relaxed">
+                    {course.description}
+                  </p>
                   <div className="flex items-center gap-4 text-xs text-gray-400 mb-4">
                     <div className="flex items-center gap-1">
                       <Clock className="w-3 h-3" />
@@ -548,9 +511,12 @@ export default function AILiteracyClient() {
       <section className="py-20 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">What Teachers Are Saying</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              {t("aiLiteracy.testimonialsTitle")}
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Real feedback from educators who've completed our AI literacy courses
+              Real feedback from educators who've completed our AI literacy
+              courses
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -585,18 +551,28 @@ export default function AILiteracyClient() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 rounded-full px-4 py-2 mb-6">
               <Download className="w-5 h-5 text-[#A78BFA]" />
-              <span className="text-[#A78BFA] font-medium text-sm">50+ Free Resources</span>
+              <span className="text-[#A78BFA] font-medium text-sm">
+                50+ Free Resources
+              </span>
             </div>
-            <h2 className="text-4xl font-bold text-white mb-4">Downloadable Resource Library</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              {t("aiLiteracy.libraryTitle")}
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ready-to-use templates, checklists, and guides to accelerate your AI adoption
+              Ready-to-use templates, checklists, and guides to accelerate your
+              AI adoption
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {resources.map((category) => (
-              <div key={category.category} className="bg-[#1E293B] border border-white/10 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">{category.category}</h3>
+              <div
+                key={category.category}
+                className="bg-[#1E293B] border border-white/10 rounded-xl p-8"
+              >
+                <h3 className="text-2xl font-bold text-white mb-6">
+                  {category.category}
+                </h3>
                 <div className="space-y-4">
                   {category.items.map((item) => (
                     <Link
@@ -610,7 +586,9 @@ export default function AILiteracyClient() {
                           <div className="text-white font-medium group-hover:text-[#A78BFA] transition-colors">
                             {item.name}
                           </div>
-                          <div className="text-xs text-gray-400">{item.downloads} downloads</div>
+                          <div className="text-xs text-gray-400">
+                            {item.downloads} downloads
+                          </div>
                         </div>
                       </div>
                       <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-[#A78BFA] transition-colors" />
@@ -646,11 +624,11 @@ export default function AILiteracyClient() {
             resourceName="the AI Prompt Template Library"
             onSubmit={(email) => {
               if (typeof window !== "undefined" && (window as any).analytics) {
-                ;(window as any).analytics.track("lead_magnet_submitted", {
+                (window as any).analytics.track("lead_magnet_submitted", {
                   email,
                   resource: "AI Prompt Template Library",
                   source: "ai_literacy_hub",
-                })
+                });
               }
             }}
           />
@@ -663,11 +641,16 @@ export default function AILiteracyClient() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 rounded-full px-4 py-2 mb-6">
               <Award className="w-5 h-5 text-[#A78BFA]" />
-              <span className="text-[#A78BFA] font-medium text-sm">Professional Certification</span>
+              <span className="text-[#A78BFA] font-medium text-sm">
+                Professional Certification
+              </span>
             </div>
-            <h2 className="text-4xl font-bold text-white mb-4">AI Education Certification</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              {t("aiLiteracy.certificationTitle")}
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Earn recognized credentials that demonstrate your AI literacy and teaching expertise
+              Earn recognized credentials that demonstrate your AI literacy and
+              teaching expertise
             </p>
           </div>
 
@@ -680,12 +663,19 @@ export default function AILiteracyClient() {
                 } rounded-xl p-8 ${index === 2 ? "ring-2 ring-[#8B5CF6]/50" : ""}`}
               >
                 <div className="text-6xl mb-4">{cert.badge}</div>
-                <h3 className="text-2xl font-bold text-white mb-3">{cert.level}</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  {cert.level}
+                </h3>
                 <p className="text-gray-300 mb-6">{cert.description}</p>
                 <div className="space-y-3 mb-6">
-                  <div className="text-sm font-semibold text-white">Requirements:</div>
+                  <div className="text-sm font-semibold text-white">
+                    Requirements:
+                  </div>
                   {cert.requirements.map((req) => (
-                    <div key={req} className="flex items-start gap-2 text-sm text-gray-300">
+                    <div
+                      key={req}
+                      className="flex items-start gap-2 text-sm text-gray-300"
+                    >
                       <CheckCircle className="w-4 h-4 text-[#A78BFA] flex-shrink-0 mt-0.5" />
                       <span>{req}</span>
                     </div>
@@ -703,7 +693,9 @@ export default function AILiteracyClient() {
                       : "bg-[#8B5CF6]/10 hover:bg-[#8B5CF6] text-[#A78BFA] hover:text-white border border-[#8B5CF6]/30"
                   }`}
                 >
-                  <Link href={`/ai-literacy/certification/${cert.level.toLowerCase().replace(/\s+/g, "-")}`}>
+                  <Link
+                    href={`/ai-literacy/certification/${cert.level.toLowerCase().replace(/\s+/g, "-")}`}
+                  >
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
@@ -715,40 +707,62 @@ export default function AILiteracyClient() {
           <div className="mt-16 bg-gradient-to-br from-[#8B5CF6]/10 to-[#A78BFA]/5 border border-[#8B5CF6]/30 rounded-2xl p-8 md:p-12">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-3xl font-bold text-white mb-4">Why Get Certified?</h3>
+                <h3 className="text-3xl font-bold text-white mb-4">
+                  Why Get Certified?
+                </h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <Shield className="w-6 h-6 text-[#A78BFA] flex-shrink-0 mt-1" />
                     <div>
-                      <div className="text-white font-semibold mb-1">Professional Recognition</div>
+                      <div className="text-white font-semibold mb-1">
+                        Professional Recognition
+                      </div>
                       <div className="text-gray-300 text-sm">
-                        Demonstrate your expertise to administrators and colleagues
+                        Demonstrate your expertise to administrators and
+                        colleagues
                       </div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <Zap className="w-6 h-6 text-[#A78BFA] flex-shrink-0 mt-1" />
                     <div>
-                      <div className="text-white font-semibold mb-1">Career Advancement</div>
-                      <div className="text-gray-300 text-sm">Stand out in job applications and promotions</div>
+                      <div className="text-white font-semibold mb-1">
+                        Career Advancement
+                      </div>
+                      <div className="text-gray-300 text-sm">
+                        Stand out in job applications and promotions
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <Users className="w-6 h-6 text-[#A78BFA] flex-shrink-0 mt-1" />
                     <div>
-                      <div className="text-white font-semibold mb-1">Join the Community</div>
-                      <div className="text-gray-300 text-sm">Connect with 13,000+ certified AI educators worldwide</div>
+                      <div className="text-white font-semibold mb-1">
+                        Join the Community
+                      </div>
+                      <div className="text-gray-300 text-sm">
+                        Connect with 13,000+ certified AI educators worldwide
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="bg-[#1E293B] border border-white/10 rounded-xl p-8">
-                <h4 className="text-xl font-bold text-white mb-4">Ready to Get Started?</h4>
+                <h4 className="text-xl font-bold text-white mb-4">
+                  Ready to Get Started?
+                </h4>
                 <p className="text-gray-300 mb-6">
-                  Begin your certification journey today. All courses and assessments are completely free.
+                  Begin your certification journey today. All courses and
+                  assessments are completely free.
                 </p>
-                <Button asChild size="lg" className="w-full bg-[#8B5CF6] hover:bg-[#7C3AED] text-white">
-                  <Link href="/ai-literacy/certification">Start Certification Path</Link>
+                <Button
+                  asChild
+                  size="lg"
+                  className="w-full bg-[#8B5CF6] hover:bg-[#7C3AED] text-white"
+                >
+                  <Link href="/ai-literacy/certification">
+                    Start Certification Path
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -811,5 +825,5 @@ export default function AILiteracyClient() {
         </div>
       </section>
     </div>
-  )
+  );
 }

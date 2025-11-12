@@ -1,11 +1,13 @@
-import "./globals.css";
+﻿import "./globals.css";
 import type { Metadata } from "next";
-import SiteHeader from "@/components/site-header";
-import SiteFooter from "@/components/site-footer";
+import React from "react";
+import { LanguageProvider } from "@/lib/i18n/language-context";
+import { Header } from "@/components/header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Zaza Draft",
-  description: "Teacher-first, explainable AI for parent messages & comments.",
+  description: "Teacher-first, explainable AI writing assistant",
 };
 
 export default function RootLayout({
@@ -15,10 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-[#0b1020] text-white">
-        <SiteHeader />
-        <main className="mx-auto max-w-7xl px-4">{children}</main>
-        <SiteFooter />
+      <body>
+        <LanguageProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

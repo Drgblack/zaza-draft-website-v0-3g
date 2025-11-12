@@ -49,25 +49,25 @@ export default function CompanyPage() {
 
           <div className="space-y-4 mb-6">
             <div className="flex items-start gap-3">
-              <div className="text-[#8B5CF6] text-2xl">Ã¢â‚¬Â¢</div>
+              <div className="text-[#8B5CF6] text-2xl">•</div>
               <p className="text-gray-300">
                 {t("company.philosophy.principle1")}
               </p>
             </div>
             <div className="flex items-start gap-3">
-              <div className="text-[#8B5CF6] text-2xl">Ã¢â‚¬Â¢</div>
+              <div className="text-[#8B5CF6] text-2xl">•</div>
               <p className="text-gray-300">
                 {t("company.philosophy.principle2")}
               </p>
             </div>
             <div className="flex items-start gap-3">
-              <div className="text-[#8B5CF6] text-2xl">Ã¢â‚¬Â¢</div>
+              <div className="text-[#8B5CF6] text-2xl">•</div>
               <p className="text-gray-300">
                 {t("company.philosophy.principle3")}
               </p>
             </div>
             <div className="flex items-start gap-3">
-              <div className="text-[#8B5CF6] text-2xl">Ã¢â‚¬Â¢</div>
+              <div className="text-[#8B5CF6] text-2xl">•</div>
               <p className="text-gray-300">
                 {t("company.philosophy.principle4")}
               </p>
@@ -96,15 +96,15 @@ export default function CompanyPage() {
 
           <div className="space-y-4 mb-6">
             <div className="flex items-start gap-3">
-              <div className="text-[#8B5CF6] text-2xl">Ã¢â‚¬Â¢</div>
+              <div className="text-[#8B5CF6] text-2xl">•</div>
               <p className="text-gray-300">{t("company.boutique.point1")}</p>
             </div>
             <div className="flex items-start gap-3">
-              <div className="text-[#8B5CF6] text-2xl">Ã¢â‚¬Â¢</div>
+              <div className="text-[#8B5CF6] text-2xl">•</div>
               <p className="text-gray-300">{t("company.boutique.point2")}</p>
             </div>
             <div className="flex items-start gap-3">
-              <div className="text-[#8B5CF6] text-2xl">Ã¢â‚¬Â¢</div>
+              <div className="text-[#8B5CF6] text-2xl">•</div>
               <p className="text-gray-300">{t("company.boutique.point3")}</p>
             </div>
           </div>

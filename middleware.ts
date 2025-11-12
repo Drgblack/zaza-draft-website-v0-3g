@@ -23,9 +23,9 @@ export function middleware(req: NextRequest) {
     return res;
   }
 
-  // Ensure we always have a cookie (default EN)
+  // For root path or paths without /de, set cookie to 'en'
   const res = NextResponse.next();
-  if (!req.cookies.get("lang")) {
+  if (!pathname.startsWith("/de")) {
     res.cookies.set("lang", "en", { path: "/", maxAge: 60 * 60 * 24 * 365 });
   }
   return res;

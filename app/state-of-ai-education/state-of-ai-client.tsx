@@ -1,13 +1,13 @@
 "use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { useLanguage } from "@/lib/i18n/language-context"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Card } from "@/components/ui/card"
+import { useState } from "react";
+import { useLanguage } from "@/lib/i18n/language-context";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Card } from "@/components/ui/card";
 import {
   Download,
   Users,
@@ -19,83 +19,95 @@ import {
   CheckCircle2,
   ArrowRight,
   Share2,
-} from "lucide-react"
-import Link from "next/link"
+} from "lucide-react";
+import Link from "next/link";
 
 export default function StateOfAIClient() {
-  const { language } = useLanguage()
-  const [email, setEmail] = useState("")
-  const [role, setRole] = useState("")
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const { language } = useLanguage();
+  const [email, setEmail] = useState("");
+  const [role, setRole] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
 
     // Track download request
     if (typeof window !== "undefined" && (window as any).gtag) {
-      ;(window as any).gtag("event", "report_download_request", {
+      (window as any).gtag("event", "report_download_request", {
         event_category: "Lead Generation",
         event_label: "State of AI Report 2025",
-      })
+      });
     }
 
     // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    await new Promise((resolve) => setTimeout(resolve, 1500));
 
-    setIsSubmitted(true)
-    setIsSubmitting(false)
+    setIsSubmitted(true);
+    setIsSubmitting(false);
 
     // In production, this would trigger email with download link
-    console.log("[v0] Report download requested:", { email, role })
-  }
+    console.log("[v0] Report download requested:", { email, role });
+  };
 
   const keyFindings = [
     {
       stat: "87%",
-      label: language === "de" ? "der LehrkrÃƒÂ¤fte nutzen KI wÃƒÂ¶chentlich" : "of teachers use AI weekly",
+      label:
+        language === "de"
+          ? "der Lehrkräfte nutzen KI wöchentlich"
+          : "of teachers use AI weekly",
       description:
         language === "de"
-          ? "Anstieg von 34% im Jahr 2024, zeigt schnelle Akzeptanz ÃƒÂ¼ber alle Klassenstufen"
+          ? "Anstieg von 34% im Jahr 2024, zeigt schnelle Akzeptanz über alle Klassenstufen"
           : "Up from 34% in 2024, showing rapid adoption across all grade levels",
       icon: TrendingUp,
     },
     {
       stat: "6.2 Std",
-      label: language === "de" ? "gespart pro Woche pro Lehrkraft" : "saved per week per teacher",
+      label:
+        language === "de"
+          ? "gespart pro Woche pro Lehrkraft"
+          : "saved per week per teacher",
       description:
         language === "de"
-          ? "Durchschnittliche Zeitersparnis von regelmÃƒÂ¤ÃƒÅ¸igen KI-Nutzern fÃƒÂ¼r administrative Aufgaben"
+          ? "Durchschnittliche Zeitersparnis von regelmäßigen KI-Nutzern für administrative Aufgaben"
           : "Average time savings reported by regular AI users for administrative tasks",
       icon: Users,
     },
     {
       stat: "92%",
-      label: language === "de" ? "berichten verbesserte Kommunikation" : "report improved communication",
+      label:
+        language === "de"
+          ? "berichten verbesserte Kommunikation"
+          : "report improved communication",
       description:
         language === "de"
-          ? "LehrkrÃƒÂ¤fte, die KI fÃƒÂ¼r Eltern-E-Mails nutzen, berichten von besserem Engagement und Klarheit"
+          ? "Lehrkräfte, die KI für Eltern-E-Mails nutzen, berichten von besserem Engagement und Klarheit"
           : "Teachers using AI for parent emails report better engagement and clarity",
       icon: Award,
     },
     {
       stat: "68%",
-      label: language === "de" ? "wÃƒÂ¼nschen mehr KI-Schulung" : "want more AI training",
+      label:
+        language === "de"
+          ? "wünschen mehr KI-Schulung"
+          : "want more AI training",
       description:
         language === "de"
-          ? "Mehrheit der PÃƒÂ¤dagogen sucht berufliche Weiterbildung in KI-Kompetenz"
+          ? "Mehrheit der Pädagogen sucht berufliche Weiterbildung in KI-Kompetenz"
           : "Majority of educators seek professional development in AI literacy",
       icon: BookOpen,
     },
-  ]
+  ];
 
   const reportSections = [
     {
       title: language === "de" ? "Zusammenfassung" : "Executive Summary",
       description:
         language === "de"
-          ? "ÃƒÅ“bergeordnete Erkenntnisse und wichtige Erkenntnisse fÃƒÂ¼r Administratoren und EntscheidungstrÃƒÂ¤ger"
+          ? "Übergeordnete Erkenntnisse und wichtige Erkenntnisse für Administratoren und Entscheidungsträger"
           : "High-level insights and key takeaways for administrators and policymakers",
       icon: FileText,
     },
@@ -103,23 +115,29 @@ export default function StateOfAIClient() {
       title: language === "de" ? "Akzeptanztrends" : "Adoption Trends",
       description:
         language === "de"
-          ? "Wie sich die KI-Nutzung ÃƒÂ¼ber Klassenstufen, FÃƒÂ¤cher und Schultypen entwickelt hat"
+          ? "Wie sich die KI-Nutzung über Klassenstufen, Fächer und Schultypen entwickelt hat"
           : "How AI usage has evolved across grade levels, subjects, and school types",
       icon: TrendingUp,
     },
     {
-      title: language === "de" ? "AnwendungsfÃƒÂ¤lle & Auswirkungen" : "Use Cases & Impact",
+      title:
+        language === "de"
+          ? "Anwendungsfälle & Auswirkungen"
+          : "Use Cases & Impact",
       description:
         language === "de"
-          ? "Reale Anwendungen und gemessene Ergebnisse von 15.000+ LehrkrÃƒÂ¤ften"
+          ? "Reale Anwendungen und gemessene Ergebnisse von 15.000+ Lehrkräften"
           : "Real-world applications and measured outcomes from 15,000+ teachers",
       icon: BarChart3,
     },
     {
-      title: language === "de" ? "Herausforderungen & Bedenken" : "Challenges & Concerns",
+      title:
+        language === "de"
+          ? "Herausforderungen & Bedenken"
+          : "Challenges & Concerns",
       description:
         language === "de"
-          ? "Datenschutz, Chancengleichheit, SchulungslÃƒÂ¼cken und ethische ÃƒÅ“berlegungen"
+          ? "Datenschutz, Chancengleichheit, Schulungslücken und ethische Überlegungen"
           : "Privacy, equity, training gaps, and ethical considerations",
       icon: Award,
     },
@@ -127,7 +145,7 @@ export default function StateOfAIClient() {
       title: language === "de" ? "Zukunftsausblick" : "Future Outlook",
       description:
         language === "de"
-          ? "Prognosen und Empfehlungen fÃƒÂ¼r die nÃƒÂ¤chsten 3-5 Jahre"
+          ? "Prognosen und Empfehlungen für die nächsten 3-5 Jahre"
           : "Predictions and recommendations for the next 3-5 years",
       icon: BookOpen,
     },
@@ -139,7 +157,7 @@ export default function StateOfAIClient() {
           : "Actionable frameworks from high-performing schools and districts",
       icon: CheckCircle2,
     },
-  ]
+  ];
 
   const mediaMentions = [
     {
@@ -153,30 +171,30 @@ export default function StateOfAIClient() {
       outlet: "The Chronicle",
       quote:
         language === "de"
-          ? "PflichtlektÃƒÂ¼re fÃƒÂ¼r jeden Schuladministrator und EntscheidungstrÃƒÂ¤ger"
+          ? "Pflichtlektüre für jeden Schuladministrator und Entscheidungsträger"
           : "Essential reading for every school administrator and policymaker",
     },
     {
       outlet: "EdSurge",
       quote:
         language === "de"
-          ? "DatengestÃƒÂ¼tzte Erkenntnisse, die konventionelle Weisheiten ÃƒÂ¼ber KI in Schulen in Frage stellen"
+          ? "Datengestützte Erkenntnisse, die konventionelle Weisheiten über KI in Schulen in Frage stellen"
           : "Data-driven insights that challenge conventional wisdom about AI in schools",
     },
     {
       outlet: "Education Dive",
       quote:
         language === "de"
-          ? "Eine wegweisende Studie, die die Bildungspolitik fÃƒÂ¼r Jahre prÃƒÂ¤gen wird"
+          ? "Eine wegweisende Studie, die die Bildungspolitik für Jahre prägen wird"
           : "A landmark study that will shape education policy for years to come",
     },
-  ]
+  ];
 
   const previousReports = [
     { year: "2024", downloads: "47.000+", url: "#" },
     { year: "2023", downloads: "32.000+", url: "#" },
     { year: "2022", downloads: "18.000+", url: "#" },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-[#0F172A]">
@@ -190,33 +208,47 @@ export default function StateOfAIClient() {
             <div>
               <div className="inline-block px-4 py-2 bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 rounded-full mb-6">
                 <span className="text-[#A78BFA] text-sm font-medium">
-                  {language === "de" ? "Jahresbericht 2025" : "2025 Annual Report"}
+                  {language === "de"
+                    ? "Jahresbericht 2025"
+                    : "2025 Annual Report"}
                 </span>
               </div>
 
               <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                {language === "de" ? "Stand der KI in der Bildung" : "State of AI in Education"}
-                <span className="block text-[#A78BFA] mt-2">{language === "de" ? "Bericht 2025" : "2025 Report"}</span>
+                {language === "de"
+                  ? "Stand der KI in der Bildung"
+                  : "State of AI in Education"}
+                <span className="block text-[#A78BFA] mt-2">
+                  {language === "de" ? "Bericht 2025" : "2025 Report"}
+                </span>
               </h1>
 
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 {language === "de"
-                  ? "Die umfassendste Analyse der KI-Akzeptanz in der K-12-Bildung. 120+ Seiten Erkenntnisse von 15.000+ LehrkrÃƒÂ¤ften aus 50 Bundesstaaten."
+                  ? "Die umfassendste Analyse der KI-Akzeptanz in der K-12-Bildung. 120+ Seiten Erkenntnisse von 15.000+ Lehrkräften aus 50 Bundesstaaten."
                   : "The most comprehensive analysis of AI adoption in K-12 education. 120+ pages of insights from 15,000+ teachers across 50 states."}
               </p>
 
               <div className="flex flex-wrap gap-6 mb-8">
                 <div className="flex items-center gap-2 text-gray-300">
                   <Users className="w-5 h-5 text-[#A78BFA]" />
-                  <span>{language === "de" ? "15.000+ befragte LehrkrÃƒÂ¤fte" : "15,000+ Teachers Surveyed"}</span>
+                  <span>
+                    {language === "de"
+                      ? "15.000+ befragte Lehrkräfte"
+                      : "15,000+ Teachers Surveyed"}
+                  </span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-300">
                   <FileText className="w-5 h-5 text-[#A78BFA]" />
-                  <span>{language === "de" ? "120+ Seiten" : "120+ Pages"}</span>
+                  <span>
+                    {language === "de" ? "120+ Seiten" : "120+ Pages"}
+                  </span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-300">
                   <BarChart3 className="w-5 h-5 text-[#A78BFA]" />
-                  <span>{language === "de" ? "50 Bundesstaaten" : "50 States"}</span>
+                  <span>
+                    {language === "de" ? "50 Bundesstaaten" : "50 States"}
+                  </span>
                 </div>
               </div>
 
@@ -225,21 +257,29 @@ export default function StateOfAIClient() {
                   size="lg"
                   className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white"
                   onClick={() => {
-                    document.getElementById("download-form")?.scrollIntoView({ behavior: "smooth" })
+                    document
+                      .getElementById("download-form")
+                      ?.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
                   <Download className="w-5 h-5 mr-2" />
-                  {language === "de" ? "Kostenlosen Bericht herunterladen" : "Download Free Report"}
+                  {language === "de"
+                    ? "Kostenlosen Bericht herunterladen"
+                    : "Download Free Report"}
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
                   className="border-[#8B5CF6]/30 text-white hover:bg-[#8B5CF6]/10 bg-transparent"
                   onClick={() => {
-                    document.getElementById("key-findings")?.scrollIntoView({ behavior: "smooth" })
+                    document
+                      .getElementById("key-findings")
+                      ?.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
-                  {language === "de" ? "Wichtigste Erkenntnisse ansehen" : "View Key Findings"}
+                  {language === "de"
+                    ? "Wichtigste Erkenntnisse ansehen"
+                    : "View Key Findings"}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </div>
@@ -252,14 +292,20 @@ export default function StateOfAIClient() {
                   <div className="text-center text-white p-8">
                     <FileText className="w-20 h-20 mx-auto mb-4 opacity-90" />
                     <h3 className="text-2xl font-bold mb-2">
-                      {language === "de" ? "Stand der KI in der Bildung" : "State of AI in Education"}
+                      {language === "de"
+                        ? "Stand der KI in der Bildung"
+                        : "State of AI in Education"}
                     </h3>
                     <p className="text-lg opacity-90">
-                      {language === "de" ? "Jahresbericht 2025" : "2025 Annual Report"}
+                      {language === "de"
+                        ? "Jahresbericht 2025"
+                        : "2025 Annual Report"}
                     </p>
                     <div className="mt-6 pt-6 border-t border-white/20">
                       <p className="text-sm opacity-75">
-                        {language === "de" ? "120+ Seiten | 15.000+ LehrkrÃƒÂ¤fte" : "120+ Pages | 15,000+ Teachers"}
+                        {language === "de"
+                          ? "120+ Seiten | 15.000+ Lehrkräfte"
+                          : "120+ Pages | 15,000+ Teachers"}
                       </p>
                     </div>
                   </div>
@@ -270,14 +316,20 @@ export default function StateOfAIClient() {
               <div className="absolute -bottom-6 -left-6 bg-[#1E293B] border border-[#8B5CF6]/20 rounded-xl p-4 shadow-xl">
                 <div className="text-3xl font-bold text-[#A78BFA]">87%</div>
                 <div className="text-sm text-gray-400">
-                  {language === "de" ? "WÃƒÂ¶chentliche KI-Nutzung" : "Weekly AI Usage"}
+                  {language === "de"
+                    ? "Wöchentliche KI-Nutzung"
+                    : "Weekly AI Usage"}
                 </div>
               </div>
 
               <div className="absolute -top-6 -right-6 bg-[#1E293B] border border-[#8B5CF6]/20 rounded-xl p-4 shadow-xl">
-                <div className="text-3xl font-bold text-[#A78BFA]">6.2{language === "de" ? "Std" : "hrs"}</div>
+                <div className="text-3xl font-bold text-[#A78BFA]">
+                  6.2{language === "de" ? "Std" : "hrs"}
+                </div>
                 <div className="text-sm text-gray-400">
-                  {language === "de" ? "Zeitersparnis/Woche" : "Time Saved/Week"}
+                  {language === "de"
+                    ? "Zeitersparnis/Woche"
+                    : "Time Saved/Week"}
                 </div>
               </div>
             </div>
@@ -294,25 +346,31 @@ export default function StateOfAIClient() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               {language === "de"
-                ? "DatengestÃƒÂ¼tzte Erkenntnisse, die zeigen, wie KI die Bildung im Jahr 2025 verÃƒÂ¤ndert"
+                ? "Datengestützte Erkenntnisse, die zeigen, wie KI die Bildung im Jahr 2025 verändert"
                 : "Data-driven insights that reveal how AI is transforming education in 2025"}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {keyFindings.map((finding, index) => {
-              const Icon = finding.icon
+              const Icon = finding.icon;
               return (
                 <Card
                   key={index}
                   className="bg-[#1E293B] border-[#8B5CF6]/20 p-6 hover:border-[#8B5CF6]/40 transition-all"
                 >
                   <Icon className="w-10 h-10 text-[#A78BFA] mb-4" />
-                  <div className="text-5xl font-bold text-white mb-2">{finding.stat}</div>
-                  <div className="text-lg font-semibold text-[#A78BFA] mb-3">{finding.label}</div>
-                  <p className="text-gray-400 text-sm leading-relaxed">{finding.description}</p>
+                  <div className="text-5xl font-bold text-white mb-2">
+                    {finding.stat}
+                  </div>
+                  <div className="text-lg font-semibold text-[#A78BFA] mb-3">
+                    {finding.label}
+                  </div>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {finding.description}
+                  </p>
                 </Card>
-              )
+              );
             })}
           </div>
         </div>
@@ -323,7 +381,9 @@ export default function StateOfAIClient() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              {language === "de" ? "Was ist im Bericht enthalten" : "What's Inside the Report"}
+              {language === "de"
+                ? "Was ist im Bericht enthalten"
+                : "What's Inside the Report"}
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               {language === "de"
@@ -334,7 +394,7 @@ export default function StateOfAIClient() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {reportSections.map((section, index) => {
-              const Icon = section.icon
+              const Icon = section.icon;
               return (
                 <Card
                   key={index}
@@ -345,12 +405,16 @@ export default function StateOfAIClient() {
                       <Icon className="w-6 h-6 text-[#A78BFA]" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-white mb-2">{section.title}</h3>
-                      <p className="text-gray-400 leading-relaxed">{section.description}</p>
+                      <h3 className="text-xl font-semibold text-white mb-2">
+                        {section.title}
+                      </h3>
+                      <p className="text-gray-400 leading-relaxed">
+                        {section.description}
+                      </p>
                     </div>
                   </div>
                 </Card>
-              )
+              );
             })}
           </div>
         </div>
@@ -361,11 +425,13 @@ export default function StateOfAIClient() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">
-              {language === "de" ? "Forschungsmethodik" : "Research Methodology"}
+              {language === "de"
+                ? "Forschungsmethodik"
+                : "Research Methodology"}
             </h2>
             <p className="text-xl text-gray-300">
               {language === "de"
-                ? "Rigorose, datengestÃƒÂ¼tzte Forschung, der Sie vertrauen kÃƒÂ¶nnen"
+                ? "Rigorose, datengestützte Forschung, der Sie vertrauen können"
                 : "Rigorous, data-driven research you can trust"}
             </p>
           </div>
@@ -378,14 +444,16 @@ export default function StateOfAIClient() {
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
                   {language === "de"
-                    ? "Unser Forschungsteam fÃƒÂ¼hrte eine umfassende Umfrage mit 45 Fragen durch, die zwischen September und November 2024 an K-12-PÃƒÂ¤dagogen in allen 50 Bundesstaaten verteilt wurde. Die Umfrage umfasste KI-Akzeptanzraten, AnwendungsfÃƒÂ¤lle, Herausforderungen, Schulungsbedarf und Zukunftsausblick."
+                    ? "Unser Forschungsteam führte eine umfassende Umfrage mit 45 Fragen durch, die zwischen September und November 2024 an K-12-Pädagogen in allen 50 Bundesstaaten verteilt wurde. Die Umfrage umfasste KI-Akzeptanzraten, Anwendungsfälle, Herausforderungen, Schulungsbedarf und Zukunftsausblick."
                     : "Our research team conducted a comprehensive 45-question survey distributed to K-12 educators across all 50 states between September and November 2024. The survey covered AI adoption rates, use cases, challenges, training needs, and future outlook."}
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  {language === "de" ? "Stichprobendemografie" : "Sample Demographics"}
+                  {language === "de"
+                    ? "Stichprobendemografie"
+                    : "Sample Demographics"}
                 </h3>
                 <div className="grid md:grid-cols-2 gap-4 text-gray-300">
                   <div>
@@ -393,9 +461,24 @@ export default function StateOfAIClient() {
                       {language === "de" ? "Klassenstufen:" : "Grade Levels:"}
                     </p>
                     <ul className="space-y-1 text-sm">
-                      <li>Ã¢â‚¬Â¢ {language === "de" ? "Grundschule (K-5): 38%" : "Elementary (K-5): 38%"}</li>
-                      <li>Ã¢â‚¬Â¢ {language === "de" ? "Mittelschule (6-8): 29%" : "Middle School (6-8): 29%"}</li>
-                      <li>Ã¢â‚¬Â¢ {language === "de" ? "Oberschule (9-12): 33%" : "High School (9-12): 33%"}</li>
+                      <li>
+                        •{" "}
+                        {language === "de"
+                          ? "Grundschule (K-5): 38%"
+                          : "Elementary (K-5): 38%"}
+                      </li>
+                      <li>
+                        •{" "}
+                        {language === "de"
+                          ? "Mittelschule (6-8): 29%"
+                          : "Middle School (6-8): 29%"}
+                      </li>
+                      <li>
+                        •{" "}
+                        {language === "de"
+                          ? "Oberschule (9-12): 33%"
+                          : "High School (9-12): 33%"}
+                      </li>
                     </ul>
                   </div>
                   <div>
@@ -403,9 +486,16 @@ export default function StateOfAIClient() {
                       {language === "de" ? "Schultypen:" : "School Types:"}
                     </p>
                     <ul className="space-y-1 text-sm">
-                      <li>Ã¢â‚¬Â¢ {language === "de" ? "Ãƒ-ffentlich: 76%" : "Public: 76%"}</li>
-                      <li>Ã¢â‚¬Â¢ {language === "de" ? "Privat: 18%" : "Private: 18%"}</li>
-                      <li>Ã¢â‚¬Â¢ {language === "de" ? "Charter: 6%" : "Charter: 6%"}</li>
+                      <li>
+                        •{" "}
+                        {language === "de" ? "Öffentlich: 76%" : "Public: 76%"}
+                      </li>
+                      <li>
+                        • {language === "de" ? "Privat: 18%" : "Private: 18%"}
+                      </li>
+                      <li>
+                        • {language === "de" ? "Charter: 6%" : "Charter: 6%"}
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -417,8 +507,8 @@ export default function StateOfAIClient() {
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
                   {language === "de"
-                    ? "Die Antworten wurden mit statistischen Methoden analysiert, um Trends, Korrelationen und signifikante Muster zu identifizieren. Alle Daten wurden anonymisiert und aggregiert, um die PrivatsphÃƒÂ¤re der Teilnehmer zu schÃƒÂ¼tzen. Fehlertoleranz: Ã‚Â±0,8% bei 95% Konfidenzniveau."
-                    : "Responses were analyzed using statistical methods to identify trends, correlations, and significant patterns. All data was anonymized and aggregated to protect participant privacy. Margin of error: Ã‚Â±0.8% at 95% confidence level."}
+                    ? "Die Antworten wurden mit statistischen Methoden analysiert, um Trends, Korrelationen und signifikante Muster zu identifizieren. Alle Daten wurden anonymisiert und aggregiert, um die Privatsphäre der Teilnehmer zu schützen. Fehlertoleranz: ±0,8% bei 95% Konfidenzniveau."
+                    : "Responses were analyzed using statistical methods to identify trends, correlations, and significant patterns. All data was anonymized and aggregated to protect participant privacy. Margin of error: ±0.8% at 95% confidence level."}
                 </p>
               </div>
             </div>
@@ -435,7 +525,9 @@ export default function StateOfAIClient() {
                 <div className="text-center mb-8">
                   <Download className="w-16 h-16 text-[#A78BFA] mx-auto mb-4" />
                   <h2 className="text-3xl font-bold text-white mb-3">
-                    {language === "de" ? "VollstÃƒÂ¤ndigen Bericht herunterladen" : "Download the Full Report"}
+                    {language === "de"
+                      ? "Vollständigen Bericht herunterladen"
+                      : "Download the Full Report"}
                   </h2>
                   <p className="text-gray-300">
                     {language === "de"
@@ -447,7 +539,9 @@ export default function StateOfAIClient() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <Label htmlFor="email" className="text-white mb-2 block">
-                      {language === "de" ? "E-Mail-Adresse *" : "Email Address *"}
+                      {language === "de"
+                        ? "E-Mail-Adresse *"
+                        : "Email Address *"}
                     </Label>
                     <Input
                       id="email"
@@ -455,7 +549,11 @@ export default function StateOfAIClient() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      placeholder={language === "de" ? "ihre.email@schule.de" : "your.email@school.edu"}
+                      placeholder={
+                        language === "de"
+                          ? "ihre.email@schule.de"
+                          : "your.email@school.edu"
+                      }
                       className="bg-[#0F172A] border-[#8B5CF6]/30 text-white"
                     />
                   </div>
@@ -471,19 +569,35 @@ export default function StateOfAIClient() {
                       required
                       className="w-full px-3 py-2 bg-[#0F172A] border border-[#8B5CF6]/30 rounded-md text-white"
                     >
-                      <option value="">{language === "de" ? "WÃƒÂ¤hlen Sie Ihre Rolle..." : "Select your role..."}</option>
-                      <option value="teacher">{language === "de" ? "Lehrkraft" : "Teacher"}</option>
-                      <option value="administrator">{language === "de" ? "Administrator" : "Administrator"}</option>
+                      <option value="">
+                        {language === "de"
+                          ? "Wählen Sie Ihre Rolle..."
+                          : "Select your role..."}
+                      </option>
+                      <option value="teacher">
+                        {language === "de" ? "Lehrkraft" : "Teacher"}
+                      </option>
+                      <option value="administrator">
+                        {language === "de" ? "Administrator" : "Administrator"}
+                      </option>
                       <option value="instructional-coach">
-                        {language === "de" ? "Unterrichtscoach" : "Instructional Coach"}
+                        {language === "de"
+                          ? "Unterrichtscoach"
+                          : "Instructional Coach"}
                       </option>
                       <option value="curriculum-director">
-                        {language === "de" ? "Lehrplandirektor" : "Curriculum Director"}
+                        {language === "de"
+                          ? "Lehrplandirektor"
+                          : "Curriculum Director"}
                       </option>
                       <option value="technology-coordinator">
-                        {language === "de" ? "Technologiekoordinator" : "Technology Coordinator"}
+                        {language === "de"
+                          ? "Technologiekoordinator"
+                          : "Technology Coordinator"}
                       </option>
-                      <option value="other">{language === "de" ? "Andere" : "Other"}</option>
+                      <option value="other">
+                        {language === "de" ? "Andere" : "Other"}
+                      </option>
                     </select>
                   </div>
 
@@ -502,7 +616,9 @@ export default function StateOfAIClient() {
                     ) : (
                       <>
                         <Download className="w-5 h-5 mr-2" />
-                        {language === "de" ? "Kostenlosen Bericht herunterladen" : "Download Free Report"}
+                        {language === "de"
+                          ? "Kostenlosen Bericht herunterladen"
+                          : "Download Free Report"}
                       </>
                     )}
                   </Button>
@@ -518,18 +634,25 @@ export default function StateOfAIClient() {
               <div className="text-center py-8">
                 <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-3">
-                  {language === "de" ? "ÃƒÅ“berprÃƒÂ¼fen Sie Ihre E-Mails!" : "Check Your Email!"}
+                  {language === "de"
+                    ? "Überprüfen Sie Ihre E-Mails!"
+                    : "Check Your Email!"}
                 </h3>
                 <p className="text-gray-300 mb-6">
-                  {language === "de" ? "Wir haben den Download-Link an " : "We've sent the download link to "}
+                  {language === "de"
+                    ? "Wir haben den Download-Link an "
+                    : "We've sent the download link to "}
                   <strong className="text-[#A78BFA]">{email}</strong>
                   {language === "de" ? " gesendet" : ""}
                 </p>
                 <p className="text-sm text-gray-400">
                   {language === "de"
-                    ? "Nicht gefunden? ÃƒÅ“berprÃƒÂ¼fen Sie Ihren Spam-Ordner oder "
+                    ? "Nicht gefunden? Überprüfen Sie Ihren Spam-Ordner oder "
                     : "Don't see it? Check your spam folder or "}
-                  <button onClick={() => setIsSubmitted(false)} className="text-[#A78BFA] hover:underline">
+                  <button
+                    onClick={() => setIsSubmitted(false)}
+                    className="text-[#A78BFA] hover:underline"
+                  >
                     {language === "de" ? "erneut versuchen" : "try again"}
                   </button>
                 </p>
@@ -544,23 +667,32 @@ export default function StateOfAIClient() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">
-              {language === "de" ? "Was die Leute sagen" : "What People Are Saying"}
+              {language === "de"
+                ? "Was die Leute sagen"
+                : "What People Are Saying"}
             </h2>
             <p className="text-xl text-gray-300">
               {language === "de"
-                ? "Berichterstattung von fÃƒÂ¼hrenden Bildungspublikationen"
+                ? "Berichterstattung von führenden Bildungspublikationen"
                 : "Coverage from leading education publications"}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {mediaMentions.map((mention, index) => (
-              <Card key={index} className="bg-[#1E293B] border-[#8B5CF6]/20 p-6">
+              <Card
+                key={index}
+                className="bg-[#1E293B] border-[#8B5CF6]/20 p-6"
+              >
                 <div className="flex items-start gap-4">
                   <div className="text-4xl text-[#A78BFA]">"</div>
                   <div>
-                    <p className="text-gray-300 text-lg mb-4 italic leading-relaxed">{mention.quote}</p>
-                    <p className="text-[#A78BFA] font-semibold">Ã¢â‚¬â€ {mention.outlet}</p>
+                    <p className="text-gray-300 text-lg mb-4 italic leading-relaxed">
+                      {mention.quote}
+                    </p>
+                    <p className="text-[#A78BFA] font-semibold">
+                      - {mention.outlet}
+                    </p>
                   </div>
                 </div>
               </Card>
@@ -574,11 +706,11 @@ export default function StateOfAIClient() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">
-              {language === "de" ? "FrÃƒÂ¼here Berichte" : "Previous Reports"}
+              {language === "de" ? "Frühere Berichte" : "Previous Reports"}
             </h2>
             <p className="text-xl text-gray-300">
               {language === "de"
-                ? "Erkunden Sie unser Archiv der jÃƒÂ¤hrlichen Berichte zum Stand der KI in der Bildung"
+                ? "Erkunden Sie unser Archiv der jährlichen Berichte zum Stand der KI in der Bildung"
                 : "Explore our archive of annual State of AI in Education reports"}
             </p>
           </div>
@@ -591,16 +723,21 @@ export default function StateOfAIClient() {
               >
                 <FileText className="w-12 h-12 text-[#A78BFA] mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">
-                  {language === "de" ? `Bericht ${report.year}` : `${report.year} Report`}
+                  {language === "de"
+                    ? `Bericht ${report.year}`
+                    : `${report.year} Report`}
                 </h3>
                 <p className="text-gray-400 mb-4">
-                  {report.downloads} {language === "de" ? "Downloads" : "downloads"}
+                  {report.downloads}{" "}
+                  {language === "de" ? "Downloads" : "downloads"}
                 </p>
                 <Link
                   href={report.url}
                   className="text-[#A78BFA] hover:text-[#8B5CF6] font-medium inline-flex items-center gap-2 group-hover:gap-3 transition-all"
                 >
-                  {language === "de" ? "Bericht herunterladen" : "Download Report"}
+                  {language === "de"
+                    ? "Bericht herunterladen"
+                    : "Download Report"}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </Card>
@@ -627,10 +764,10 @@ export default function StateOfAIClient() {
               className="border-[#8B5CF6]/30 text-white hover:bg-[#8B5CF6]/10 bg-transparent"
               onClick={() => {
                 if (typeof window !== "undefined" && (window as any).gtag) {
-                  ;(window as any).gtag("event", "share", {
+                  (window as any).gtag("event", "share", {
                     method: "Twitter",
                     content_type: "report",
-                  })
+                  });
                 }
               }}
             >
@@ -641,10 +778,10 @@ export default function StateOfAIClient() {
               className="border-[#8B5CF6]/30 text-white hover:bg-[#8B5CF6]/10 bg-transparent"
               onClick={() => {
                 if (typeof window !== "undefined" && (window as any).gtag) {
-                  ;(window as any).gtag("event", "share", {
+                  (window as any).gtag("event", "share", {
                     method: "LinkedIn",
                     content_type: "report",
-                  })
+                  });
                 }
               }}
             >
@@ -654,8 +791,12 @@ export default function StateOfAIClient() {
               variant="outline"
               className="border-[#8B5CF6]/30 text-white hover:bg-[#8B5CF6]/10 bg-transparent"
               onClick={() => {
-                navigator.clipboard.writeText(window.location.href)
-                alert(language === "de" ? "Link in Zwischenablage kopiert!" : "Link copied to clipboard!")
+                navigator.clipboard.writeText(window.location.href);
+                alert(
+                  language === "de"
+                    ? "Link in Zwischenablage kopiert!"
+                    : "Link copied to clipboard!",
+                );
               }}
             >
               {language === "de" ? "Link kopieren" : "Copy Link"}
@@ -675,7 +816,7 @@ export default function StateOfAIClient() {
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               {language === "de"
-                ? "SchlieÃƒÅ¸en Sie sich 50.000+ PÃƒÂ¤dagogen an, die Zaza Draft nutzen, um Zeit zu sparen und die Kommunikation zu verbessern"
+                ? "Schließen Sie sich 50.000+ Pädagogen an, die Zaza Draft nutzen, um Zeit zu sparen und die Kommunikation zu verbessern"
                 : "Join 50,000+ educators using Zaza Draft to save time and improve communication"}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -683,11 +824,13 @@ export default function StateOfAIClient() {
                 size="lg"
                 className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white"
                 onClick={() => {
-                  const event = new CustomEvent("openSignupModal")
-                  window.dispatchEvent(event)
+                  const event = new CustomEvent("openSignupModal");
+                  window.dispatchEvent(event);
                 }}
               >
-                {language === "de" ? "Kostenlose Testversion starten" : "Start Free Trial"}
+                {language === "de"
+                  ? "Kostenlose Testversion starten"
+                  : "Start Free Trial"}
               </Button>
               <Button
                 size="lg"
@@ -696,7 +839,9 @@ export default function StateOfAIClient() {
                 asChild
               >
                 <Link href="/ai-literacy">
-                  {language === "de" ? "KI-Kompetenzzentrum erkunden" : "Explore AI Literacy Center"}
+                  {language === "de"
+                    ? "KI-Kompetenzzentrum erkunden"
+                    : "Explore AI Literacy Center"}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </Button>
@@ -705,5 +850,5 @@ export default function StateOfAIClient() {
         </div>
       </section>
     </div>
-  )
+  );
 }

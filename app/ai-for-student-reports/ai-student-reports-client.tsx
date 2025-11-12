@@ -221,7 +221,7 @@ export default function AIStudentReportsClient() {
 
         <header className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-            AI for Student Reports & Report Cards: Complete Teacher Guide
+            {t("aiStudentReports.title")}
           </h1>
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
             <div className="flex items-center gap-2">
@@ -385,20 +385,19 @@ export default function AIStudentReportsClient() {
                     <p className="font-medium mb-1">Example notes:</p>
                     <ul className="space-y-1">
                       <li>
-                        Ã¢â‚¬Â¢ Strong in reading comprehension (scored 85% on
-                        last assessment)
+                        • Strong in reading comprehension (scored 85% on last
+                        assessment)
                       </li>
                       <li>
-                        Ã¢â‚¬Â¢ Struggles with math fact fluency (still counting
-                        on fingers)
+                        • Struggles with math fact fluency (still counting on
+                        fingers)
                       </li>
                       <li>
-                        Ã¢â‚¬Â¢ Excellent class participation and peer
-                        collaboration
+                        • Excellent class participation and peer collaboration
                       </li>
                       <li>
-                        Ã¢â‚¬Â¢ Needs reminders to stay on task during
-                        independent work
+                        • Needs reminders to stay on task during independent
+                        work
                       </li>
                     </ul>
                   </div>
