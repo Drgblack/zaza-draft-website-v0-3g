@@ -1,32 +1,65 @@
-"use client";
+﻿"use client";
 
-import { Button } from "@/components/ui/button"
-import { useLanguage } from "@/lib/i18n/language-context"
-import { SignupModal } from "@/components/signup-modal"
-import { useState, useEffect } from "react"
-import Image from "next/image"
-import { motion, useReducedMotion } from "framer-motion"
+import { Button } from "@/components/ui/button";
+import {
+  Mail,
+  FileText,
+  PencilLine,
+  Newspaper,
+  BriefcaseBusiness,
+  ClipboardList,
+} from "lucide-react";
+import { useLanguage } from "@/lib/i18n/language-context";
+import { SignupModal } from "@/components/signup-modal";
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import { motion, useReducedMotion } from "framer-motion";
 
 const Check = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+  <svg
+    className={className}
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M5 13l4 4L19 7"
+    />
   </svg>
-)
+);
 
 const Star = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
   </svg>
-)
+);
 
 const ArrowRight = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+  <svg
+    className={className}
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M13 7l5 5m0 0l-5 5m5-5H6"
+    />
   </svg>
-)
+);
 
 const InfoIcon = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <svg
+    className={className}
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -34,16 +67,31 @@ const InfoIcon = ({ className }: { className?: string }) => (
       d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
     />
   </svg>
-)
+);
 
 const XIcon = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+  <svg
+    className={className}
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M6 18L18 6M6 6l12 12"
+    />
   </svg>
-)
+);
 
 const DocumentIcon = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <svg
+    className={className}
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -51,10 +99,15 @@ const DocumentIcon = ({ className }: { className?: string }) => (
       d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
     />
   </svg>
-)
+);
 
 const SliderIcon = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <svg
+    className={className}
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -62,10 +115,15 @@ const SliderIcon = ({ className }: { className?: string }) => (
       d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110 4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
     />
   </svg>
-)
+);
 
 const CheckCircleIcon = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <svg
+    className={className}
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -73,40 +131,53 @@ const CheckCircleIcon = ({ className }: { className?: string }) => (
       d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
     />
   </svg>
-)
+);
 
 export function HomePageClient() {
-  const { t } = useLanguage()
-  const [signupOpen, setSignupOpen] = useState(false)
-  const [currentTestimonial, setCurrentTestimonial] = useState(0)
-  const [isPaused, setIsPaused] = useState(false)
-  const [activeTab, setActiveTab] = useState(0)
-  const [isRewriting, setIsRewriting] = useState(false)
-  const [showHallucinationTooltip, setShowHallucinationTooltip] = useState(false)
-  const prefersReducedMotion = useReducedMotion()
+  const { t } = useLanguage();
+  const [signupOpen, setSignupOpen] = useState(false);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [activeTab, setActiveTab] = useState(0);
+  const [isRewriting, setIsRewriting] = useState(false);
+  const [showHallucinationTooltip, setShowHallucinationTooltip] =
+    useState(false);
+  const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
-    if (isPaused || prefersReducedMotion) return
+    if (isPaused || prefersReducedMotion) return;
     const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % 3)
-    }, 6000)
-    return () => clearInterval(interval)
-  }, [isPaused, prefersReducedMotion])
+      setCurrentTestimonial((prev) => (prev + 1) % 3);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, [isPaused, prefersReducedMotion]);
 
   const scrollToDemo = () => {
-    document.getElementById("demo")?.scrollIntoView({ behavior: "smooth" })
-  }
+    document.getElementById("demo")?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const handleRewrite = () => {
-    setIsRewriting(true)
-    setTimeout(() => setIsRewriting(false), 2000)
-  }
+    setIsRewriting(true);
+    setTimeout(() => setIsRewriting(false), 2000);
+  };
 
   const demoTabs = [
-    { label: t("demo.tabs.parentEmail"), before: t("demo.email.before"), after: t("demo.email.after") },
-    { label: t("demo.tabs.reportCard"), before: t("demo.report.before"), after: t("demo.report.after") },
-    { label: t("demo.tabs.gradingComment"), before: t("demo.grading.before"), after: t("demo.grading.after") },
-  ]
+    {
+      label: t("demo.tabs.parentEmail"),
+      before: t("demo.email.before"),
+      after: t("demo.email.after"),
+    },
+    {
+      label: t("demo.tabs.reportCard"),
+      before: t("demo.report.before"),
+      after: t("demo.report.after"),
+    },
+    {
+      label: t("demo.tabs.gradingComment"),
+      before: t("demo.grading.before"),
+      after: t("demo.grading.after"),
+    },
+  ];
 
   const testimonials = [
     {
@@ -127,7 +198,7 @@ export function HomePageClient() {
       name: t("testimonials.quote3.name"),
       image: "/testimonials/teacher-3.jpg",
     },
-  ]
+  ];
 
   return (
     <>
@@ -151,7 +222,7 @@ export function HomePageClient() {
                 transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
                 className="inline-flex items-center gap-2 rounded-full bg-[#8B5CF6]/10 px-4 py-2 text-sm font-medium text-[#A78BFA] border border-[#8B5CF6]/30 backdrop-blur-sm"
               >
-                <span className="text-xl">âœ¨</span>
+                <span className="text-xl">Ã¢Å“Â¨</span>
                 <span>{t("hero.badge")}</span>
               </motion.div>
 
@@ -213,7 +284,9 @@ export function HomePageClient() {
                   <Check className="w-4 h-4 text-green-400" />
                   <span>{t("hero.trustIndicators.hallucinationSafe")}</span>
                   <button
-                    onClick={() => setShowHallucinationTooltip(!showHallucinationTooltip)}
+                    onClick={() =>
+                      setShowHallucinationTooltip(!showHallucinationTooltip)
+                    }
                     className="inline-flex items-center justify-center w-4 h-4 text-purple-400 hover:text-purple-300 transition-colors"
                     aria-label={t("hallucinationSafe.tooltip.heading")}
                   >
@@ -231,7 +304,9 @@ export function HomePageClient() {
                       <h3 className="text-base font-semibold text-gray-900 mb-2">
                         {t("hallucinationSafe.tooltip.heading")}
                       </h3>
-                      <p className="text-sm text-gray-700 leading-relaxed">{t("hallucinationSafe.tooltip.body")}</p>
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        {t("hallucinationSafe.tooltip.body")}
+                      </p>
                       <div className="absolute -top-2 left-4 w-4 h-4 bg-white border-l border-t border-gray-200 transform rotate-45"></div>
                     </div>
                   )}
@@ -320,9 +395,18 @@ export function HomePageClient() {
           {/* Optional Supporting Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {[
-              { value: t("problem.stats.parentEmails.value"), label: t("problem.stats.parentEmails.label") },
-              { value: t("problem.stats.reportCards.value"), label: t("problem.stats.reportCards.label") },
-              { value: t("problem.stats.gradingFeedback.value"), label: t("problem.stats.gradingFeedback.label") },
+              {
+                value: t("problem.stats.parentEmails.value"),
+                label: t("problem.stats.parentEmails.label"),
+              },
+              {
+                value: t("problem.stats.reportCards.value"),
+                label: t("problem.stats.reportCards.label"),
+              },
+              {
+                value: t("problem.stats.gradingFeedback.value"),
+                label: t("problem.stats.gradingFeedback.label"),
+              },
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -332,7 +416,9 @@ export function HomePageClient() {
                 transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl font-bold text-[#A855F7] mb-2">{stat.value}</div>
+                <div className="text-4xl font-bold text-[#A855F7] mb-2">
+                  {stat.value}
+                </div>
                 <div className="text-sm text-gray-400">{stat.label}</div>
               </motion.div>
             ))}
@@ -381,9 +467,18 @@ export function HomePageClient() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
             {[
-              { value: t("stats.documentsRefined.number"), label: t("stats.documentsRefined.label") },
-              { value: t("stats.teachers.number"), label: t("stats.teachers.label") },
-              { value: t("stats.timeSaved.number"), label: t("stats.timeSaved.label") },
+              {
+                value: t("stats.documentsRefined.number"),
+                label: t("stats.documentsRefined.label"),
+              },
+              {
+                value: t("stats.teachers.number"),
+                label: t("stats.teachers.label"),
+              },
+              {
+                value: t("stats.timeSaved.number"),
+                label: t("stats.timeSaved.label"),
+              },
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -396,7 +491,9 @@ export function HomePageClient() {
                 <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#A855F7] to-[#EC4899] bg-clip-text text-transparent mb-3">
                   {stat.value}
                 </div>
-                <div className="text-lg text-white font-medium">{stat.label}</div>
+                <div className="text-lg text-white font-medium">
+                  {stat.label}
+                </div>
               </motion.div>
             ))}
           </div>
@@ -441,7 +538,9 @@ export function HomePageClient() {
                   example: t("howItWorks.diagram.step2.example"),
                 },
                 {
-                  icon: <CheckCircleIcon className="w-12 h-12 text-[#A855F7]" />,
+                  icon: (
+                    <CheckCircleIcon className="w-12 h-12 text-[#A855F7]" />
+                  ),
                   title: t("howItWorks.diagram.step3.title"),
                   description: t("howItWorks.diagram.step3.description"),
                   example: t("howItWorks.diagram.step3.example"),
@@ -457,9 +556,15 @@ export function HomePageClient() {
                 >
                   <div className="bg-white rounded-xl p-8 shadow-lg h-full">
                     <div className="flex justify-center mb-4">{step.icon}</div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">{step.title}</h3>
-                    <p className="text-sm text-gray-600 mb-4 text-center">{step.description}</p>
-                    <p className="text-xs italic text-gray-500 text-center">{step.example}</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center">
+                      {step.title}
+                    </h3>
+                    <p className="text-sm text-gray-600 mb-4 text-center">
+                      {step.description}
+                    </p>
+                    <p className="text-xs italic text-gray-500 text-center">
+                      {step.example}
+                    </p>
                   </div>
                   {index < 2 && (
                     <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
@@ -512,8 +617,12 @@ export function HomePageClient() {
                 >
                   {step.num}
                 </motion.div>
-                <h3 className="text-xl font-semibold text-white mb-4">{step.title}</h3>
-                <p className="text-base text-[#94A3B8] leading-relaxed">{step.desc}</p>
+                <h3 className="text-xl font-semibold text-white mb-4">
+                  {step.title}
+                </h3>
+                <p className="text-base text-[#94A3B8] leading-relaxed">
+                  {step.desc}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -553,7 +662,9 @@ export function HomePageClient() {
 
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-6 items-center">
               <div>
-                <div className="text-xs uppercase tracking-wider text-[#94A3B8] mb-2">{t("demo.before.label")}</div>
+                <div className="text-xs uppercase tracking-wider text-[#94A3B8] mb-2">
+                  {t("demo.before.label")}
+                </div>
                 <div className="bg-[#0F172A] border border-[#334155] rounded-lg p-5 text-[#E2E8F0] text-sm leading-relaxed min-h-[150px]">
                   {demoTabs[activeTab].before}
                 </div>
@@ -569,15 +680,21 @@ export function HomePageClient() {
                   className="bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] hover:opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105"
                   style={{ minHeight: "44px" }}
                 >
-                  <span className="text-xl mr-2">âœ¨</span>
+                  <span className="text-xl mr-2">Ã¢Å“Â¨</span>
                   {isRewriting ? "..." : t("demo.ctaButton")}
                 </Button>
-                <div className="text-[#8B5CF6] text-3xl hidden lg:block">â†’</div>
-                <div className="text-[#8B5CF6] text-3xl lg:hidden rotate-90">â†’</div>
+                <div className="text-[#8B5CF6] text-3xl hidden lg:block">
+                  Ã¢â€ â€™
+                </div>
+                <div className="text-[#8B5CF6] text-3xl lg:hidden rotate-90">
+                  Ã¢â€ â€™
+                </div>
               </div>
 
               <div>
-                <div className="text-xs uppercase tracking-wider text-[#94A3B8] mb-2">{t("demo.after.label")}</div>
+                <div className="text-xs uppercase tracking-wider text-[#94A3B8] mb-2">
+                  {t("demo.after.label")}
+                </div>
                 <div className="bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 rounded-lg p-5 text-white text-sm leading-relaxed min-h-[150px]">
                   {demoTabs[activeTab].after}
                 </div>
@@ -619,9 +736,15 @@ export function HomePageClient() {
                 <Star key={i} className="w-5 h-5 text-[#FCD34D]" />
               ))}
             </div>
-            <p className="text-2xl text-gray-900 italic mb-6">{t("demo.testimonial.quote")}</p>
-            <p className="text-base font-bold text-gray-900 mb-1">{t("demo.testimonial.name")}</p>
-            <p className="text-sm font-semibold text-gray-600">{t("demo.testimonial.author")}</p>
+            <p className="text-2xl text-gray-900 italic mb-6">
+              {t("demo.testimonial.quote")}
+            </p>
+            <p className="text-base font-bold text-gray-900 mb-1">
+              {t("demo.testimonial.name")}
+            </p>
+            <p className="text-sm font-semibold text-gray-600">
+              {t("demo.testimonial.author")}
+            </p>
           </motion.div>
         </div>
       </section>
@@ -642,37 +765,37 @@ export function HomePageClient() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: "ðŸ“§",
+                icon: "Ã°Å¸â€œÂ§",
                 title: t("useCases.cards.parentMessages.title"),
                 desc: t("useCases.cards.parentMessages.description"),
                 examples: t("useCases.cards.parentMessages.examples"),
               },
               {
-                icon: "ðŸ“",
+                icon: "Ã°Å¸â€œÂ",
                 title: t("useCases.cards.reportCards.title"),
                 desc: t("useCases.cards.reportCards.description"),
                 examples: t("useCases.cards.reportCards.examples"),
               },
               {
-                icon: "âœï¸",
+                icon: "Ã¢Å“ÂÃ¯Â¸Â",
                 title: t("useCases.cards.gradingComments.title"),
                 desc: t("useCases.cards.gradingComments.description"),
                 examples: t("useCases.cards.gradingComments.examples"),
               },
               {
-                icon: "ðŸ“°",
+                icon: "Ã°Å¸â€œÂ°",
                 title: t("useCases.cards.schoolCommunications.title"),
                 desc: t("useCases.cards.schoolCommunications.description"),
                 examples: t("useCases.cards.schoolCommunications.examples"),
               },
               {
-                icon: "ðŸ’¼",
+                icon: "Ã°Å¸â€™Â¼",
                 title: t("useCases.cards.referenceLetters.title"),
                 desc: t("useCases.cards.referenceLetters.description"),
                 examples: t("useCases.cards.referenceLetters.examples"),
               },
               {
-                icon: "ðŸ“‹",
+                icon: "Ã°Å¸â€œâ€¹",
                 title: t("useCases.cards.documentation.title"),
                 desc: t("useCases.cards.documentation.description"),
                 examples: t("useCases.cards.documentation.examples"),
@@ -688,8 +811,12 @@ export function HomePageClient() {
                 className="bg-[#1E293B] border border-[#334155] rounded-xl p-8 transition-all duration-300 hover:border-[#8B5CF6] hover:shadow-[0_12px_30px_rgba(139,92,246,0.2)]"
               >
                 <div className="text-4xl mb-4">{card.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{card.title}</h3>
-                <p className="text-base text-[#CBD5E1] mb-4 leading-relaxed">{card.desc}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {card.title}
+                </h3>
+                <p className="text-base text-[#CBD5E1] mb-4 leading-relaxed">
+                  {card.desc}
+                </p>
                 <p className="text-sm text-[#94A3B8] italic">{card.examples}</p>
               </motion.div>
             ))}
@@ -707,8 +834,12 @@ export function HomePageClient() {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">{t("comparison.heading")}</h2>
-            <p className="text-lg text-[#CBD5E1]">{t("comparison.subheading")}</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+              {t("comparison.heading")}
+            </h2>
+            <p className="text-lg text-[#CBD5E1]">
+              {t("comparison.subheading")}
+            </p>
           </motion.div>
 
           <div className="max-w-5xl mx-auto">
@@ -772,13 +903,17 @@ export function HomePageClient() {
                   ].map((row, index) => (
                     <motion.tr
                       key={index}
-                      initial={prefersReducedMotion ? {} : { opacity: 0, y: 10 }}
+                      initial={
+                        prefersReducedMotion ? {} : { opacity: 0, y: 10 }
+                      }
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: index * 0.05 }}
                       className="border-b border-[#334155] hover:bg-white/5 transition-colors"
                     >
-                      <td className="py-5 px-6 text-white font-medium text-base">{row.feature}</td>
+                      <td className="py-5 px-6 text-white font-medium text-base">
+                        {row.feature}
+                      </td>
                       <td className="py-5 px-6 text-center">
                         <div className="flex items-center justify-center gap-2 text-[#94A3B8] text-sm">
                           <XIcon className="w-4 h-4 text-gray-500 flex-shrink-0" />
@@ -843,8 +978,12 @@ export function HomePageClient() {
                 <div className="w-12 h-12 rounded-full bg-[#8B5CF6]/20 flex items-center justify-center mb-5">
                   <Check className="w-6 h-6 text-[#8B5CF6]" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-base text-[#94A3B8] leading-relaxed">{benefit.desc}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {benefit.title}
+                </h3>
+                <p className="text-base text-[#94A3B8] leading-relaxed">
+                  {benefit.desc}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -884,8 +1023,12 @@ export function HomePageClient() {
                     />
                   </div>
                   <div className="text-left">
-                    <p className="text-base font-bold text-[#1E293B] mb-1">{testimonial.name}</p>
-                    <p className="text-sm font-semibold text-[#64748B]">{testimonial.author}</p>
+                    <p className="text-base font-bold text-[#1E293B] mb-1">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-sm font-semibold text-[#64748B]">
+                      {testimonial.author}
+                    </p>
                   </div>
                 </div>
                 <div className="flex gap-1 mb-5">
@@ -893,7 +1036,9 @@ export function HomePageClient() {
                     <Star key={i} className="w-4 h-4 text-[#FCD34D]" />
                   ))}
                 </div>
-                <p className="text-lg text-[#1E293B] italic leading-relaxed mb-6">{testimonial.quote}</p>
+                <p className="text-lg text-[#1E293B] italic leading-relaxed mb-6">
+                  {testimonial.quote}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -942,5 +1087,5 @@ export function HomePageClient() {
       {/* Signup Modal */}
       <SignupModal open={signupOpen} onOpenChange={setSignupOpen} />
     </>
-  )
+  );
 }
