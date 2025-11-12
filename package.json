@@ -1,9 +1,8 @@
-{
+﻿{
   "name": "my-v0-project",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-  //  "prebuild": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/fix-css-import.ps1 && pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/verify-use-client.ps1 && pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/verify-default-exports.ps1 && pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/fix-emdash.ps1",
     "build": "next build",
     "dev": "next dev",
     "typecheck": "tsc --noEmit",
