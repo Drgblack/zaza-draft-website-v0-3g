@@ -1,25 +1,28 @@
-"use client";
+﻿"use client";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+
 export default function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/70 backdrop-blur">
-      <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="font-semibold tracking-tight">
-          Zaza <span className="text-pink-500">Draft</span>
+    <header className="sticky top-0 z-50 backdrop-blur border-b border-white/10">
+      <div className="mx-auto max-w-7xl px-4 h-14 flex items-center justify-between">
+        <Link href="/" className="font-semibold">
+          Zaza <span className="text-pink-400">Draft</span>
         </Link>
         <nav className="hidden md:flex gap-6 text-sm">
-          <Link href="/#features">Our Solutions</Link>
-          <Link href="/learning-centre">Learning Centre</Link>
-          <Link href="/why-zaza-draft">Why Zaza Draft?</Link>
-          <Link href="/about">About Us</Link>
+          <Link href="/features">Features</Link>
+          <Link href="/pricing">Pricing</Link>
+          <Link href="/about/company">About</Link>
+          <Link href="/support">Support</Link>
         </nav>
-        <div className="flex gap-2">
-          <Link href="https://zazateach.com" className="hidden sm:block">
-            <Button variant="ghost">Try Zaza Teach</Button>
+        <div className="flex items-center gap-2">
+          <Link className="px-3 py-1 rounded-xl border" href="/products/teach">
+            Try Zaza Teach
           </Link>
-          <Link href="/join-waitlist">
-            <Button>Join Waitlist</Button>
+          <Link
+            className="px-3 py-1 rounded-xl bg-pink-500 text-white"
+            href="/waitlist"
+          >
+            Join Waitlist
           </Link>
         </div>
       </div>

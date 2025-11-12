@@ -1,10 +1,11 @@
-import "./globals.css";
+﻿import "./globals.css";
+import type { Metadata } from "next";
 import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Zaza Draft",
-  description: "Write like you, just faster.",
+  description: "Teacher-first, explainable AI for parent messages & comments.",
 };
 
 export default function RootLayout({
@@ -13,13 +14,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-      </head>
-      <body className="min-h-screen bg-background text-foreground antialiased">
+    <html lang="en" suppressHydrationWarning>
+      <body className="bg-[#0b1020] text-white">
         <SiteHeader />
-        <main className="mx-auto max-w-6xl px-4">{children}</main>
+        <main className="mx-auto max-w-7xl px-4">{children}</main>
         <SiteFooter />
       </body>
     </html>
