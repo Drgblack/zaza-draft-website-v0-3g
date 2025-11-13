@@ -85,7 +85,7 @@ const translationsEn: Record<string, string> = {
   "pricing.department.description":
     "Collaborative writing with shared quality and consistency.",
   "pricing.department.perTeacher": "/teacher",
-  "pricing.department.billing": "Billed annually â€¢ 5-50 seats",
+  "pricing.department.billing": "Billed annually Ã¢â‚¬Â¢ 5-50 seats",
   "pricing.department.cta": "Talk to Sales",
   "pricing.department.includes": "Everything in Teacher, plus:",
   "pricing.department.feature1": "Team libraries, shared templates",
@@ -157,7 +157,7 @@ const translationsEn: Record<string, string> = {
   // CTA Section
   "pricing.cta.title": "Ready to save hours every week?",
   "pricing.cta.subtitle":
-    "Start free today  â€¢ No credit card required  â€¢ Cancel anytime",
+    "Start free today  Ã¢â‚¬Â¢ No credit card required  Ã¢â‚¬Â¢ Cancel anytime",
   "pricing.cta.primary": "Start Free Trial",
   "pricing.cta.secondary": "Talk to Sales",
 
@@ -1301,8 +1301,8 @@ const translationsEn: Record<string, string> = {
   "contact.direct.response": "We typically respond within 24 hours",
   "contact.help.title": "Need Help?",
   "contact.help.description": "Check out our helpful resources",
-  "contact.help.faq": "â†’ Frequently Asked Questions",
-  "contact.help.support": "â†’ Support Center",
+  "contact.help.faq": "Ã¢â€ â€™ Frequently Asked Questions",
+  "contact.help.support": "Ã¢â€ â€™ Support Center",
   "glossary.title": "AI Glossary for Teachers",
   "glossary.subtitle":
     "150+ AI terms explained in teacher-friendly language. Search by category or alphabetically to understand AI concepts for education.",
@@ -1407,30 +1407,30 @@ const translationsEn: Record<string, string> = {
 const translationsDe: Record<string, string> = {
   "pricing.hero.preheadline": "TRANSPARENTE PREISE",
   "pricing.hero.headline":
-    "Preise, die die Zeit und das Wohlbefinden von LehrkrÃ¤ften respektieren",
+    "Preise, die die Zeit und das Wohlbefinden von Lehrkräften respektieren",
   "pricing.hero.subheadline":
     "Sparen Sie jede Woche Stunden, reduzieren Sie Stress nach Feierabend und schreiben Sie mit Zuversicht - mit Preisen, die einfach und fair sind.",
-  "pricing.trust.teachers": "Vertraut von fÃ¼rsorglichen LehrkrÃ¤ften",
+  "pricing.trust.teachers": "Vertraut von fürsorglichen Lehrkräften",
   "pricing.trust.ferpa": "FERPA-orientiert",
-  "pricing.trust.cancel": "Jederzeit kÃ¼ndbar",
+  "pricing.trust.cancel": "Jederzeit kÃƒÂ¼ndbar",
 
   // Identity Strip
-  "pricing.identity.title": "Dies ist fÃ¼r LehrkrÃ¤fte, die...",
+  "pricing.identity.title": "Dies ist für Lehrkräfte, die...",
   "pricing.identity.point1":
-    "weniger Zeit mit Schreiben und mehr Zeit mit Unterrichten verbringen mÃ¶chten",
+    "weniger Zeit mit Schreiben und mehr Zeit mit Unterrichten verbringen mÃƒÂ¶chten",
   "pricing.identity.point2":
-    "vertrauenswÃ¼rdige SprachunterstÃ¼tzung benÃ¶tigen, ohne ihre Stimme zu verlieren",
+    "vertrauenswÃƒÂ¼rdige SprachunterstÃƒÂ¼tzung benÃƒÂ¶tigen, ohne ihre Stimme zu verlieren",
   "pricing.identity.point3":
-    "sich um Grenzen, Zuversicht und Ruhe in ihrer Woche kÃ¼mmern",
+    "sich um Grenzen, Zuversicht und Ruhe in ihrer Woche kÃƒÂ¼mmern",
 
   // Currency & Billing Toggle
   "pricing.toggle.monthly": "Monatlich",
-  "pricing.toggle.annual": "JÃ¤hrlich",
+  "pricing.toggle.annual": "JÃƒÂ¤hrlich",
   "pricing.toggle.save": "2 Monate sparen",
 
   // Outcome Proof
   "pricing.outcome.text":
-    "Die meisten LehrkrÃ¤fte verbringen 3-5 Stunden pro Woche mit Nachrichten und Kommentaren. Draft reduziert dies um 50-70 %, wÃ¤hrend Ihr Ton und Ihre Absicht erhalten bleiben.",
+    "Die meisten Lehrkräfte verbringen 3-5 Stunden pro Woche mit Nachrichten und Kommentaren. Draft reduziert dies um 50-70 %, wÃƒÂ¤hrend Ihr Ton und Ihre Absicht erhalten bleiben.",
 
   // Free Plan
   "pricing.free.badge": "KOSTENLOS",
@@ -1438,7 +1438,7 @@ const translationsDe: Record<string, string> = {
   "pricing.free.description":
     "Alles, was Sie brauchen, um Draft auszuprobieren und Ihre ersten Stunden zu sparen.",
   "pricing.free.cta": "Kostenlos starten",
-  "pricing.free.feature1": "5 EntwÃ¼rfe pro Monat",
+  "pricing.free.feature1": "5 EntwÃƒÂ¼rfe pro Monat",
   "pricing.free.feature2": "Basisvorlagen",
   "pricing.free.feature3": "Speichern & Kopieren",
   "pricing.free.feature4": "Community-Support",
@@ -1448,13 +1448,13 @@ const translationsDe: Record<string, string> = {
   "pricing.teacher.title": "Teacher",
   "pricing.teacher.description":
     "Unbegrenztes, halluzinationssicheres Schreiben ohne Lock-ins.",
-  "pricing.teacher.period": "Jederzeit kÃ¼ndbar",
+  "pricing.teacher.period": "Jederzeit kÃƒÂ¼ndbar",
   "pricing.teacher.savingsAnnual": "2 Monate kostenlos sparen",
   "pricing.teacher.cta": "7-Tage-Testversion starten",
   "pricing.teacher.trial": "Keine Kreditkarte erforderlich",
-  "pricing.teacher.guarantee": "30-Tage-Geld-zurÃ¼ck-Garantie",
-  "pricing.teacher.feature1": "Unbegrenzte EntwÃ¼rfe & Ãœberarbeitungen",
-  "pricing.teacher.feature2": "Ton-Tutor, Ãœbersetzungen, Kontext-GedÃ¤chtnis",
+  "pricing.teacher.guarantee": "30-Tage-Geld-zurück-Garantie",
+  "pricing.teacher.feature1": "Unbegrenzte EntwÃƒÂ¼rfe & ÃƒÅ“berarbeitungen",
+  "pricing.teacher.feature2": "Ton-Tutor, ÃƒÅ“bersetzungen, Kontext-GedÃƒÂ¤chtnis",
   "pricing.teacher.feature3": "Eigene Vorlagen & Kommentarbanken",
   "pricing.teacher.feature4": "Gespeicherter Verlauf & Export",
   "pricing.teacher.feature5": "Zaras sanfte Wohlbefinden-Hinweise",
@@ -1465,20 +1465,20 @@ const translationsDe: Record<string, string> = {
   "pricing.department.badge": "TEAMS",
   "pricing.department.title": "Department",
   "pricing.department.description":
-    "Kollaboratives Schreiben mit gemeinsamer QualitÃ¤t und Konsistenz.",
+    "Kollaboratives Schreiben mit gemeinsamer QualitÃƒÂ¤t und Konsistenz.",
   "pricing.department.perTeacher": "/Lehrkraft",
-  "pricing.department.billing": "JÃ¤hrliche Abrechnung  â€¢ 5-50 PlÃ¤tze",
+  "pricing.department.billing": "JÃƒÂ¤hrliche Abrechnung  Ã¢â‚¬Â¢ 5-50 PlÃƒÂ¤tze",
   "pricing.department.cta": "Mit Vertrieb sprechen",
   "pricing.department.includes": "Alles in Teacher, plus:",
   "pricing.department.feature1": "Team-Bibliotheken, gemeinsame Vorlagen",
   "pricing.department.feature2": "Rollenbasierter Zugriff",
-  "pricing.department.feature3": "ÃœberprÃ¼fung & Freigabe",
+  "pricing.department.feature3": "ÃƒÅ“berprÃƒÂ¼fung & Freigabe",
   "pricing.department.feature4": "Priorisiertes Onboarding & Erfolg",
 
   // Schools & Districts
   "pricing.enterprise.badge": "ENTERPRISE",
   "pricing.enterprise.title": "Schulen & Bezirke",
-  "pricing.enterprise.description": "Alles fÃ¼r groÃŸflÃ¤chige Bereitstellungen.",
+  "pricing.enterprise.description": "Alles für groÃƒÅ¸flÃƒÂ¤chige Bereitstellungen.",
   "pricing.enterprise.price": "Individuell",
   "pricing.enterprise.cta": "Vertrieb kontaktieren",
   "pricing.enterprise.includes": "Alles in Department, plus:",
@@ -1493,15 +1493,15 @@ const translationsDe: Record<string, string> = {
     "Ein Ort zum Planen, Schreiben und Kommunizieren - mit lehrerorientierten Wohlbefinden im Mittelpunkt.",
   "pricing.bundle.perMonth": "/Monat",
   "pricing.bundle.perYear": "/Jahr",
-  "pricing.bundle.savings": "Sparen Sie gegenÃ¼ber dem separaten Kauf",
+  "pricing.bundle.savings": "Sparen Sie gegenÃƒÂ¼ber dem separaten Kauf",
   "pricing.bundle.cta": "Bundle holen",
 
   // Testimonials
-  "pricing.testimonials.title": "Was LehrkrÃ¤fte Ã¼ber Preise sagen",
+  "pricing.testimonials.title": "Was Lehrkräfte ÃƒÂ¼ber Preise sagen",
   "pricing.testimonials.1.name": "Sarah L.",
   "pricing.testimonials.1.role": "Mittelschullehrerin",
   "pricing.testimonials.1.quote":
-    "Draft gab mir meine Abende zurÃ¼ck. Ich verlasse jetzt die Schule pÃ¼nktlich - und Eltern sagen, meine Nachrichten fÃ¼hlen sich wÃ¤rmer an.",
+    "Draft gab mir meine Abende zurück. Ich verlasse jetzt die Schule pÃƒÂ¼nktlich - und Eltern sagen, meine Nachrichten fÃƒÂ¼hlen sich wÃƒÂ¤rmer an.",
   "pricing.testimonials.2.name": "Mark R.",
   "pricing.testimonials.2.role": "Abteilungsleiter",
   "pricing.testimonials.2.quote":
@@ -1509,37 +1509,37 @@ const translationsDe: Record<string, string> = {
   "pricing.testimonials.3.name": "Emma K.",
   "pricing.testimonials.3.role": "Grundschullehrerin",
   "pricing.testimonials.3.quote":
-    "Die Preisgestaltung ist transparent und fair. Keine versteckten GebÃ¼hren, keine Lock-ins. Funktioniert einfach.",
+    "Die Preisgestaltung ist transparent und fair. Keine versteckten GebÃƒÂ¼hren, keine Lock-ins. Funktioniert einfach.",
 
   // Wellbeing Metric
   "pricing.metric.text":
-    "Ãœber 90 Tage berichten LehrkrÃ¤fte von 38 % weniger Nachrichten nach Feierabend und +24 % Zuversicht in der Elternkommunikation.",
+    "ÃƒÅ“ber 90 Tage berichten Lehrkräfte von 38 % weniger Nachrichten nach Feierabend und +24 % Zuversicht in der Elternkommunikation.",
 
   // FAQs
   "pricing.faq.title": "Preis- und Abrechnungs-FAQs",
   "pricing.faq.q1": "Gibt es einen kostenlosen Plan?",
   "pricing.faq.a1":
-    "Ja - beginnen Sie mit 5 EntwÃ¼rfen pro Monat, um den Unterschied zu spÃ¼ren. Keine Kreditkarte erforderlich.",
+    "Ja - beginnen Sie mit 5 EntwÃƒÂ¼rfen pro Monat, um den Unterschied zu spÃƒÂ¼ren. Keine Kreditkarte erforderlich.",
   "pricing.faq.q2": "Was passiert mit meiner Stimme?",
   "pricing.faq.a2":
     "Draft bewahrt Ihren Ton und Ihre Sprache; Sie haben immer die Kontrolle. Unser Ton-Tutor lernt Ihren Stil.",
   "pricing.faq.q3": "Sind meine Nachrichten privat?",
   "pricing.faq.a3":
-    "Ja. Wir verwenden Ihre Inhalte nicht, um Ã¶ffentliche Modelle zu trainieren. Weitere Details finden Sie auf unserer Datenschutzseite.",
-  "pricing.faq.q4": "Kann ich jederzeit kÃ¼ndigen?",
+    "Ja. Wir verwenden Ihre Inhalte nicht, um ÃƒÂ¶ffentliche Modelle zu trainieren. Weitere Details finden Sie auf unserer Datenschutzseite.",
+  "pricing.faq.q4": "Kann ich jederzeit kÃƒÂ¼ndigen?",
   "pricing.faq.a4":
-    "Absolut - keine Lock-ins. KÃ¼ndigen Sie mit einem Klick in Ihren Kontoeinstellungen.",
-  "pricing.faq.q5": "UnterstÃ¼tzen Sie Schulen?",
+    "Absolut - keine Lock-ins. KÃƒÂ¼ndigen Sie mit einem Klick in Ihren Kontoeinstellungen.",
+  "pricing.faq.q5": "UnterstÃƒÂ¼tzen Sie Schulen?",
   "pricing.faq.a5":
-    "Ja - Mengenpreise, SSO, DPA/SCCs und SLAs fÃ¼r Bezirke. Kontakt: sales@zazadraft.com",
-  "pricing.faq.q6": "Bieten Sie RÃ¼ckerstattungen an?",
+    "Ja - Mengenpreise, SSO, DPA/SCCs und SLAs für Bezirke. Kontakt: sales@zazadraft.com",
+  "pricing.faq.q6": "Bieten Sie RÃƒÂ¼ckerstattungen an?",
   "pricing.faq.a6":
-    "Ja - 30-Tage-Geld-zurÃ¼ck-Garantie auf alle kostenpflichtigen PlÃ¤ne. Keine Fragen gestellt.",
+    "Ja - 30-Tage-Geld-zurück-Garantie auf alle kostenpflichtigen PlÃƒÂ¤ne. Keine Fragen gestellt.",
 
   // CTA Section
   "pricing.cta.title": "Bereit, jede Woche Stunden zu sparen?",
   "pricing.cta.subtitle":
-    "Heute kostenlos starten  â€¢ Keine Kreditkarte erforderlich  â€¢ Jederzeit kÃ¼ndbar",
+    "Heute kostenlos starten  Ã¢â‚¬Â¢ Keine Kreditkarte erforderlich  Ã¢â‚¬Â¢ Jederzeit kÃƒÂ¼ndbar",
   "pricing.cta.primary": "Kostenlose Testversion starten",
   "pricing.cta.secondary": "Mit Vertrieb sprechen",
 
@@ -1555,146 +1555,146 @@ const translationsDe: Record<string, string> = {
   "nav.learningCentre": "Lernzentrum",
   "nav.resources": "Ressourcen",
   "nav.faq": "FAQ",
-  "nav.about": "Ãœber uns",
+  "nav.about": "ÃƒÅ“ber uns",
   "nav.getStarted": "Jetzt starten",
 
   // Suite Page Hero (DE)
   "suite.hero.title":
-    "Zaza ist eine Familie sicherer, lehrerzentrierter KI-Apps, die zusammenarbeiten, um den Arbeitsaufwand zu reduzieren und die Effizienz sowie das Wohlbefinden von LehrkrÃ¤ften zu stÃ¤rken.",
+    "Zaza ist eine Familie sicherer, lehrerzentrierter KI-Apps, die zusammenarbeiten, um den Arbeitsaufwand zu reduzieren und die Effizienz sowie das Wohlbefinden von Lehrkräften zu stÃƒÂ¤rken.",
   "suite.hero.subhead":
-    "Jede App wird von der Zaza KnowledgeCore Plattform betrieben und bietet vertrauenswÃ¼rdige, erklÃ¤rbare KI sowie konsistente, schulbereite Schutzmechanismen.",
+    "Jede App wird von der Zaza KnowledgeCore Plattform betrieben und bietet vertrauenswÃƒÂ¼rdige, erklÃƒÂ¤rbare KI sowie konsistente, schulbereite Schutzmechanismen.",
 
   // Suite - Teacher First (DE)
-  "suite.teacherFirst.title": "FÃ¼r LehrkrÃ¤fte entwickelt",
+  "suite.teacherFirst.title": "für Lehrkräfte entwickelt",
   "suite.teacherFirst.body":
-    "Zaza gibt Zeit zurÃ¼ck und lÃ¤sst PÃ¤dagoginnen und PÃ¤dagogen sich aufs Unterrichten konzentrieren. Alles ist mit Datenschutz, Schutzkonzepten und PÃ¤dagogik im Kern gestaltet, sodass Schulen dem Einsatz vertrauen kÃ¶nnen.",
+    "Zaza gibt Zeit zurück und lÃƒÂ¤sst PÃƒÂ¤dagoginnen und PÃƒÂ¤dagogen sich aufs Unterrichten konzentrieren. Alles ist mit Datenschutz, Schutzkonzepten und PÃƒÂ¤dagogik im Kern gestaltet, sodass Schulen dem Einsatz vertrauen kÃƒÂ¶nnen.",
 
   // Suite - Core Apps (DE)
   "suite.coreApps.title": "Die vier Kern-Apps",
   "suite.teach.body":
-    "KI-gestÃ¼tzte Unterrichtsplanung, die sich an Ihren Lehrplan anpasst, Stunden Vorbereitungszeit spart und den Unterricht spannend sowie standardkonform hÃ¤lt.",
-  "suite.teach.li1": "Auto-Planer: vollstÃ¤ndige Unterrichtsstruktur in Minuten",
+    "KI-gestÃƒÂ¼tzte Unterrichtsplanung, die sich an Ihren Lehrplan anpasst, Stunden Vorbereitungszeit spart und den Unterricht spannend sowie standardkonform hÃƒÂ¤lt.",
+  "suite.teach.li1": "Auto-Planer: vollstÃƒÂ¤ndige Unterrichtsstruktur in Minuten",
   // Features page (DE) - How it works and CTA
   "features.how.title": "So funktioniert es",
   "features.how.subtitle":
     "Drei einfache Schritte zu besseren Elternnachrichten",
   "features.how.step1.title": "Nachricht eingeben",
   "features.how.step1.desc":
-    "Tippen oder fÃ¼gen Sie Ihren Entwurf zum SchÃ¼ler ein",
+    "Tippen oder fÃƒÂ¼gen Sie Ihren Entwurf zum SchÃƒÂ¼ler ein",
   "features.how.step2.title": "Sofortiges Feedback erhalten",
   "features.how.step2.desc":
     "Draft analysiert Ton, Klarheit und Angemessenheit",
   "features.how.step3.title": "Kopieren und senden",
   "features.how.step3.desc":
-    "Exportieren Sie Ihre Ã¼berarbeitete Nachricht in Sekunden",
+    "Exportieren Sie Ihre ÃƒÂ¼berarbeitete Nachricht in Sekunden",
   "features.cta.title": "Heute bessere Nachrichten schreiben",
   "features.cta.subtitle": "Testen Sie Draft kostenlos mit 5 Kommentaren",
   "features.cta.primary": "Jetzt starten",
 
   // Resources page (DE)
-  "resources.title": "Kostenlose Ressourcen fÃ¼r LehrkrÃ¤fte",
+  "resources.title": "Kostenlose Ressourcen für Lehrkräfte",
   "resources.subtitle":
-    "Zeitspartools fÃ¼r den sofortigen Einsatz. Als PDF oder DOCX herunterladen.",
+    "Zeitspartools für den sofortigen Einsatz. Als PDF oder DOCX herunterladen.",
   "resources.download": "Herunterladen",
-  "resources.comingSoon": "DemnÃ¤chst",
-  "resources.published": "VerÃ¶ffentlicht",
+  "resources.comingSoon": "DemnÃƒÂ¤chst",
+  "resources.published": "VerÃƒÂ¶ffentlicht",
   "suite.teach.li2":
-    "Lehrplanbewusst: Common Core + internationale RahmenplÃ¤ne",
-  "suite.teach.li3": "Hilfen zur Differenzierung und kreative AktivitÃ¤tsideen",
-  "suite.teach.cta": "Mehr Ã¼ber Teach erfahren",
+    "Lehrplanbewusst: Common Core + internationale RahmenplÃƒÂ¤ne",
+  "suite.teach.li3": "Hilfen zur Differenzierung und kreative AktivitÃƒÂ¤tsideen",
+  "suite.teach.cta": "Mehr ÃƒÂ¼ber Teach erfahren",
 
   "suite.draft.body":
-    "Kommentare und Berichte ohne Burnout - klare, wertschÃ¤tzende Kommunikation, fundiert in Forschung zum Wohlbefinden von LehrkrÃ¤ften.",
+    "Kommentare und Berichte ohne Burnout - klare, wertschÃƒÂ¤tzende Kommunikation, fundiert in Forschung zum Wohlbefinden von Lehrkräften.",
   "suite.draft.li1":
-    "Vorlagen fÃ¼r Berichte und Kommentare, die Sie anpassen kÃ¶nnen",
+    "Vorlagen für Berichte und Kommentare, die Sie anpassen kÃƒÂ¶nnen",
   "suite.draft.li2":
-    "TonleitfÃ¤den und Bias-PrÃ¼fungen fÃ¼r faires, unterstÃ¼tzendes Feedback",
+    "TonleitfÃƒÂ¤den und Bias-PrÃƒÂ¼fungen für faires, unterstÃƒÂ¼tzendes Feedback",
   "suite.draft.li3":
-    "StandardmÃ¤ÃŸig privat; fÃ¼r professionelle, elternreife Texte entwickelt",
-  "suite.draft.cta": "Mehr Ã¼ber Draft erfahren",
+    "StandardmÃƒÂ¤ÃƒÅ¸ig privat; für professionelle, elternreife Texte entwickelt",
+  "suite.draft.cta": "Mehr ÃƒÂ¼ber Draft erfahren",
 
   "suite.gradeflow.body":
-    "Ein erklÃ¤rbarer Bewertungs-Copilot mit OCR, Rubriken und evidenzbasiertem Feedback - schneller korrigieren mit Fairness und Konsistenz.",
+    "Ein erklÃƒÂ¤rbarer Bewertungs-Copilot mit OCR, Rubriken und evidenzbasiertem Feedback - schneller korrigieren mit Fairness und Konsistenz.",
   "suite.gradeflow.li1":
-    "Rubrik-konformes, prÃ¼ffÃ¤higes Feedback mit Nachweisen",
-  "suite.gradeflow.li2": "Konsistenz Ã¼ber Klassen und Beurteilende hinweg",
+    "Rubrik-konformes, prÃƒÂ¼ffÃƒÂ¤higes Feedback mit Nachweisen",
+  "suite.gradeflow.li2": "Konsistenz ÃƒÂ¼ber Klassen und Beurteilende hinweg",
   "suite.gradeflow.li3": "Exportierbare Notenlisten und Moderationshilfe",
-  "suite.gradeflow.cta": "Mehr Ã¼ber GradeFlow erfahren",
+  "suite.gradeflow.cta": "Mehr ÃƒÂ¼ber GradeFlow erfahren",
 
   "suite.shield.body":
-    "Kommunikationsmanagement, das das Wohlbefinden von LehrkrÃ¤ften schÃ¼tzt - entwirft schwierige E-Mails und hilft, gesunde Grenzen zu wahren.",
+    "Kommunikationsmanagement, das das Wohlbefinden von Lehrkräften schÃƒÂ¼tzt - entwirft schwierige E-Mails und hilft, gesunde Grenzen zu wahren.",
   "suite.shield.li1":
-    "Entwurfs-Assistent fÃ¼r sensible Eltern- und Verwaltungsnachrichten",
-  "suite.shield.li2": "Grenz-Hinweise und EskalationsleitfÃ¤den",
+    "Entwurfs-Assistent für sensible Eltern- und Verwaltungsnachrichten",
+  "suite.shield.li2": "Grenz-Hinweise und EskalationsleitfÃƒÂ¤den",
   "suite.shield.li3": "Professionelle, konsistente Kommunikationsmuster",
-  "suite.shield.cta": "Mehr Ã¼ber Shield erfahren",
+  "suite.shield.cta": "Mehr ÃƒÂ¼ber Shield erfahren",
 
   // Suite - Platform (DE)
   "suite.platform.title": "Zaza KnowledgeCore (Plattform)",
   "suite.platform.body":
-    "KnowledgeCore ist die sichere, intelligente Plattform hinter jeder Zaza-App. Sie organisiert Lehrkraft-Dokumente, erzwingt Datenschutz und Compliance und stellt erklÃ¤rbare, prÃ¼ffÃ¤hige KI in der gesamten Suite bereit. Es ist kein separates Produkt - so bleiben die Zaza-Apps konsistent, sicher und verbunden.",
+    "KnowledgeCore ist die sichere, intelligente Plattform hinter jeder Zaza-App. Sie organisiert Lehrkraft-Dokumente, erzwingt Datenschutz und Compliance und stellt erklÃƒÂ¤rbare, prÃƒÂ¼ffÃƒÂ¤hige KI in der gesamten Suite bereit. Es ist kein separates Produkt - so bleiben die Zaza-Apps konsistent, sicher und verbunden.",
   "suite.platform.li1": "Datenschutz und Schutzkonzepte von Anfang an",
   "suite.platform.li2":
-    "Geteilter Kontext Ã¼ber alle Apps (kein erneutes Hochladen)",
-  "suite.platform.li3": "ErklÃ¤rbare Ausgaben, Rubrik-Ausrichtung und PrÃ¼fpfade",
+    "Geteilter Kontext ÃƒÂ¼ber alle Apps (kein erneutes Hochladen)",
+  "suite.platform.li3": "ErklÃƒÂ¤rbare Ausgaben, Rubrik-Ausrichtung und PrÃƒÂ¼fpfade",
 
   // Suite - Why Schools (DE)
-  "suite.why.title": "Warum Schulen Zaza wÃ¤hlen",
+  "suite.why.title": "Warum Schulen Zaza wÃƒÂ¤hlen",
   "suite.why.timeSaved":
-    "Zeitersparnis: LehrkrÃ¤fte gewinnen jede Woche Stunden zurÃ¼ck.",
+    "Zeitersparnis: Lehrkräfte gewinnen jede Woche Stunden zurück.",
   "suite.why.retention":
-    "Bindung unterstÃ¼tzt: Weniger Stress und gerechtere Arbeitslast.",
+    "Bindung unterstÃƒÂ¼tzt: Weniger Stress und gerechtere Arbeitslast.",
   "suite.why.safety":
-    "Sicher und konform: Datenschutz und Schutz standardmÃ¤ÃŸig.",
+    "Sicher und konform: Datenschutz und Schutz standardmÃƒÂ¤ÃƒÅ¸ig.",
   "suite.why.evidence":
-    "Evidenzbasiert: PÃ¤dagogik und Nachvollziehbarkeit, nicht nur Tempo.",
+    "Evidenzbasiert: PÃƒÂ¤dagogik und Nachvollziehbarkeit, nicht nur Tempo.",
 
   // Suite - Roadmap (DE)
-  "suite.roadmap.title": "Bereit fÃ¼r die Roadmap",
+  "suite.roadmap.title": "Bereit für die Roadmap",
   "suite.roadmap.body":
-    "Geplante Erweiterungen umfassen intelligentere Elternkommunikation, Synthese formativer Bewertungen und UnterstÃ¼tzung bei Differenzierung - alles Ã¼ber KnowledgeCore bereitgestellt, damit der Nutzen Ã¼berall ankommt, nicht nur in einem einzelnen Tool.",
+    "Geplante Erweiterungen umfassen intelligentere Elternkommunikation, Synthese formativer Bewertungen und UnterstÃƒÂ¼tzung bei Differenzierung - alles ÃƒÂ¼ber KnowledgeCore bereitgestellt, damit der Nutzen ÃƒÂ¼berall ankommt, nicht nur in einem einzelnen Tool.",
 
   // Suite - CTA (DE)
   "suite.cta.title": "Jetzt entdecken",
   "suite.cta.body":
-    "Ob Sie als Lehrkraft Entlastung suchen oder als Schule skalierbare UnterstÃ¼tzung: Zaza hilft Ihrem Team zu gedeihen.",
-  "suite.cta.primary": "LÃ¶sungen ansehen",
+    "Ob Sie als Lehrkraft Entlastung suchen oder als Schule skalierbare UnterstÃƒÂ¼tzung: Zaza hilft Ihrem Team zu gedeihen.",
+  "suite.cta.primary": "LÃƒÂ¶sungen ansehen",
   "suite.cta.secondary": "Mit unserem Team sprechen",
 
   // Suite - Trust Bar (DE)
   "suite.trust.hallucinationSafe": "Halluzinationssicher",
   "suite.trust.ferpa": "FERPA-konform",
-  "suite.trust.teachers": "500+ LehrkrÃ¤fte",
+  "suite.trust.teachers": "500+ Lehrkräfte",
 
   // Suite - How It Works (DE)
   "suite.hiw.title": "So funktioniert die Suite",
-  "suite.hiw.step1.title": "Passende App wÃ¤hlen",
+  "suite.hiw.step1.title": "Passende App wÃƒÂ¤hlen",
   "suite.hiw.step1.desc":
-    "Teach fÃ¼rs Planen, Draft fÃ¼rs Schreiben, GradeFlow fÃ¼rs Bewerten, Shield fÃ¼r Grenzen.",
-  "suite.hiw.step2.title": "Eigenen Kontext hinzufÃ¼gen",
+    "Teach fürs Planen, Draft fürs Schreiben, GradeFlow fürs Bewerten, Shield für Grenzen.",
+  "suite.hiw.step2.title": "Eigenen Kontext hinzufÃƒÂ¼gen",
   "suite.hiw.step2.desc":
-    "Lehrplan, Klassendetails, Rubriken und Ton flieÃŸen einmal in KnowledgeCore ein und gelten Ã¼berall.",
+    "Lehrplan, Klassendetails, Rubriken und Ton flieÃƒÅ¸en einmal in KnowledgeCore ein und gelten ÃƒÂ¼berall.",
   "suite.hiw.step3.title": "Schulreife Ergebnisse erhalten",
   "suite.hiw.step3.desc":
-    "VertrauenswÃ¼rdige, erklÃ¤rbare Resultate mit konsistenten Schutzmechanismen in jedem Workflow.",
+    "VertrauenswÃƒÂ¼rdige, erklÃƒÂ¤rbare Resultate mit konsistenten Schutzmechanismen in jedem Workflow.",
 
   // Suite - Testimonials (DE)
   "suite.testimonials.title": "Stimmen aus der Praxis",
   "suite.testimonials.1.quote":
-    "Ich bekomme meinen Sonntag zurÃ¼ck. Planung und Elternkommunikation dauern jetzt Minuten statt Stunden.",
+    "Ich bekomme meinen Sonntag zurück. Planung und Elternkommunikation dauern jetzt Minuten statt Stunden.",
   "suite.testimonials.1.author": "Sarah Mitchell",
   "suite.testimonials.1.role": "Grundschullehrerin, UK",
   "suite.testimonials.2.quote":
-    "Konsistente Bewertung mit klaren Nachweisen. GradeFlow hat die QualitÃ¤t klassenÃ¼bergreifend erhÃ¶ht.",
+    "Konsistente Bewertung mit klaren Nachweisen. GradeFlow hat die QualitÃƒÂ¤t klassenÃƒÂ¼bergreifend erhÃƒÂ¶ht.",
   "suite.testimonials.2.author": "Michael Brown",
   "suite.testimonials.2.role": "Oberstufenlehrer, USA",
   "suite.testimonials.3.quote":
-    "Draft schÃ¼tzt Ton und Wohlbefinden. Ich kommuniziere mehr - mit weniger Stress.",
+    "Draft schÃƒÂ¼tzt Ton und Wohlbefinden. Ich kommuniziere mehr - mit weniger Stress.",
   "suite.testimonials.3.author": "Emma Rodriguez",
   "suite.testimonials.3.role": "Lehrerin Sek I, CA",
 
   // Suite - Logos (DE)
-  "suite.logos.title": "VertrauenswÃ¼rdig bei LehrkrÃ¤ften an",
+  "suite.logos.title": "VertrauenswÃƒÂ¼rdig bei Lehrkräften an",
   "suite.logos.item1": "Oakridge High",
   "suite.logos.item2": "Riverstone Grundschule",
   "suite.logos.item3": "Northfield Akademie",
@@ -1704,7 +1704,7 @@ const translationsDe: Record<string, string> = {
   // Suite - Screenshots (DE)
   "suite.screens.title": "Echte Produkt-Screenshots",
   "suite.screens.caption":
-    "Ein schneller Blick auf Planungs-, Schreib- und BewertungsablÃ¤ufe.",
+    "Ein schneller Blick auf Planungs-, Schreib- und BewertungsablÃƒÂ¤ufe.",
 
   // Videos (DE)
   "videos.hero.title": "Video-Tutorials und Demos",
@@ -1712,11 +1712,11 @@ const translationsDe: Record<string, string> = {
   "videos.categories.all": "Alle Videos",
   "videos.categories.getting-started": "Erste Schritte",
   "videos.categories.advanced": "Erweiterte Funktionen",
-  "videos.categories.use-cases": "AnwendungsfÃ¤lle",
-  "videos.categories.best-practices": "BewÃ¤hrte Methoden",
+  "videos.categories.use-cases": "AnwendungsfÃƒÂ¤lle",
+  "videos.categories.best-practices": "BewÃƒÂ¤hrte Methoden",
   "videos.categories.tips-tricks": "Tipps & Tricks",
   "videos.section.all": "Alle Videos",
-  "videos.featured": "Ausgewählte Videos",
+  "videos.featured": "AusgewÃ¤hlte Videos",
   "videos.curated": "Kuratierte Playlists",
 
   // Webinars (DE)
@@ -1733,19 +1733,19 @@ const translationsDe: Record<string, string> = {
   "webinars.buttons.waitlistFull": "Warteliste voll",
   "webinars.empty": "Keine Webinare passend zu Ihrer Suche gefunden.",
   "webinars.cta.body":
-    "SchlieÃŸen Sie sich Tausenden LehrkrÃ¤ften an, die ihre Praxis mit KI transformieren. Melden Sie sich noch heute fÃ¼r Ihr erstes Webinar an.",
+    "SchlieÃƒÅ¸en Sie sich Tausenden Lehrkräften an, die ihre Praxis mit KI transformieren. Melden Sie sich noch heute für Ihr erstes Webinar an.",
   "webinars.cta.browseUpcoming": "Bevorstehende Webinare ansehen",
 
   // Community (DE)
-  "community.hero.badge": "25.000+ aktive LehrkrÃ¤fte",
+  "community.hero.badge": "25.000+ aktive Lehrkräfte",
   "community.hero.titlePrefix": "Treten Sie der",
   "community.hero.titleHighlight": "Lehrercommunity bei",
   "community.hero.subtitle":
-    "Vernetzen Sie sich weltweit mit LehrkrÃ¤ften. Teilen Sie Strategien, stellen Sie Fragen und lernen Sie von erfolgreichen Praxisbeispielen zum Einsatz von KI im Unterricht.",
+    "Vernetzen Sie sich weltweit mit Lehrkräften. Teilen Sie Strategien, stellen Sie Fragen und lernen Sie von erfolgreichen Praxisbeispielen zum Einsatz von KI im Unterricht.",
   "community.search.placeholder": "Diskussionen durchsuchen...",
   "community.stats.members": "Mitglieder",
   "community.stats.discussions": "Diskussionen",
-  "community.stats.posts": "BeitrÃ¤ge",
+  "community.stats.posts": "BeitrÃƒÂ¤ge",
   "community.stats.active": "Aktiv",
   // Kategorien
   "community.categories.getting-started.name": "Erste Schritte mit KI",
@@ -1753,19 +1753,19 @@ const translationsDe: Record<string, string> = {
     "Neu bei KI? Starten Sie hier mit einsteigerfreundlichen Tipps und Diskussionen.",
   "community.categories.prompt-engineering.name": "Prompt-Engineering",
   "community.categories.prompt-engineering.desc":
-    "Teilen und diskutieren Sie wirksame Prompts fÃ¼r unterschiedliche Unterrichtsszenarien.",
+    "Teilen und diskutieren Sie wirksame Prompts für unterschiedliche Unterrichtsszenarien.",
   "community.categories.lesson-planning.name": "Unterrichtsplanung",
   "community.categories.lesson-planning.desc":
-    "Gemeinsam KI-gestÃ¼tzte Unterrichts- und Einheitenplanung erarbeiten.",
+    "Gemeinsam KI-gestÃƒÂ¼tzte Unterrichts- und Einheitenplanung erarbeiten.",
   "community.categories.parent-communication.name": "Elternkommunikation",
   "community.categories.parent-communication.desc":
-    "Tipps fÃ¼r den KI-Einsatz zur Verbesserung der Eltern-Lehrer-Kommunikation.",
+    "Tipps für den KI-Einsatz zur Verbesserung der Eltern-Lehrer-Kommunikation.",
   "community.categories.assessment-feedback.name": "Bewertung & Feedback",
   "community.categories.assessment-feedback.desc":
-    "KI-Tools fÃ¼r Korrektur, Feedback und formative Beurteilung diskutieren.",
-  "community.categories.differentiation.name": "Differenzierung & FÃ¶rderplÃ¤ne",
+    "KI-Tools für Korrektur, Feedback und formative Beurteilung diskutieren.",
+  "community.categories.differentiation.name": "Differenzierung & FÃƒÂ¶rderplÃƒÂ¤ne",
   "community.categories.differentiation.desc":
-    "Mit KI vielfÃ¤ltige Lernende unterstÃ¼tzen und Nachteilsausgleiche erstellen.",
+    "Mit KI vielfÃƒÂ¤ltige Lernende unterstÃƒÂ¼tzen und Nachteilsausgleiche erstellen.",
   "community.categories.ethics-policy.name": "Ethik & Richtlinien",
   "community.categories.ethics-policy.desc":
     "Ethische Aspekte, Policies und Best Practices diskutieren.",
@@ -1783,23 +1783,23 @@ const translationsDe: Record<string, string> = {
     "Diskussionen nach Fach (Mathematik, Deutsch, Naturwissenschaften usw.).",
   "community.categories.off-topic.name": "Off-Topic-Lounge",
   "community.categories.off-topic.desc":
-    "Austausch zu Themen auÃŸerhalb von KI.",
+    "Austausch zu Themen auÃƒÅ¸erhalb von KI.",
   // Abzeichen
   "community.badges.firstPost.name": "Erster Beitrag",
   "community.badges.firstPost.desc": "Ihren ersten Beitrag verfasst",
   "community.badges.helpful.name": "Hilfreich",
-  "community.badges.helpful.desc": "Ãœber 50 Likes erhalten",
+  "community.badges.helpful.desc": "ÃƒÅ“ber 50 Likes erhalten",
   "community.badges.expert.name": "Experte",
   "community.badges.expert.desc": "Expertenlevel erreicht",
   "community.badges.ambassador.name": "Botschafter",
   "community.badges.ambassador.desc": "Offizieller Zaza-Botschafter",
   // Richtlinien
   "community.guidelines.title": "Community-Richtlinien",
-  "community.guidelines.li1": "Respektvoll und unterstÃ¼tzend sein",
+  "community.guidelines.li1": "Respektvoll und unterstÃƒÂ¼tzend sein",
   "community.guidelines.li2": "Praktische, umsetzbare Tipps teilen",
-  "community.guidelines.li3": "SchÃ¼lerdatenschutz wahren",
+  "community.guidelines.li3": "SchÃƒÂ¼lerdatenschutz wahren",
   "community.guidelines.li4": "Urheberschaft anerkennen",
-  "community.guidelines.read": "VollstÃ¤ndige Richtlinien lesen",
+  "community.guidelines.read": "VollstÃƒÂ¤ndige Richtlinien lesen",
   // Verwandte Inhalte
   "community.related.title": "Wissen erweitern",
   "community.related.desc":
@@ -1816,37 +1816,37 @@ const translationsDe: Record<string, string> = {
   "community.cta.titlePrefix": "Bereit,",
   "community.cta.titleHighlight": "an der Diskussion teilzunehmen?",
   "community.cta.body":
-    "Erstellen Sie kostenlos ein Konto und vernetzen Sie sich mit Tausenden LehrkrÃ¤ften, die KI im Unterricht einsetzen.",
+    "Erstellen Sie kostenlos ein Konto und vernetzen Sie sich mit Tausenden Lehrkräften, die KI im Unterricht einsetzen.",
   "community.cta.primary": "Kostenloses Konto erstellen",
-  "community.cta.secondary": "Als Gast stÃ¶bern",
+  "community.cta.secondary": "Als Gast stÃƒÂ¶bern",
 
-  "about.nav.title": "Ãœber uns",
+  "about.nav.title": "ÃƒÅ“ber uns",
   "about.nav.company": "Unternehmen",
-  "about.nav.founder": "GrÃ¼nder",
+  "about.nav.founder": "GrÃƒÂ¼nder",
   "about.nav.press": "Presse-Kit",
   "about.nav.careers": "Karriere",
 
   // Hero Section
-  "hero.eyebrow": "FÃœR LEHRKRÃ„FTE",
-  "hero.badge": "Halluzinationssichere KI fÃ¼r LehrkrÃ¤fte",
+  "hero.eyebrow": "FÃƒÅ“R LEHRKRÃƒâ€žFTE",
+  "hero.badge": "Halluzinationssichere KI für Lehrkräfte",
   "hero.headline": "Schreiben Sie wie Sie",
   "hero.headlineAccent": "nur schneller.",
   "hero.subheading":
-    "KI-gestÃ¼tzter Schreibassistent, der LehrkrÃ¤ften hilft, Eltern-E-Mails, SchÃ¼lerberichte und Bewertungskommentare in Minuten statt Stunden zu erstellen.",
+    "KI-gestÃƒÂ¼tzter Schreibassistent, der Lehrkräften hilft, Eltern-E-Mails, SchÃƒÂ¼lerberichte und Bewertungskommentare in Minuten statt Stunden zu erstellen.",
   "hero.ctaPrimary": "Kostenlos starten",
   "hero.ctaSecondary": "Beispiele ansehen",
   "hero.trustIndicators.hallucinationSafe": "Halluzinationssicher",
   "hero.trustIndicators.ferpaCompliant": "FERPA-konform",
-  "hero.trustIndicators.teachers": "500+ LehrkrÃ¤fte",
+  "hero.trustIndicators.teachers": "500+ Lehrkräfte",
 
   // Hallucination-Safe Tooltip
   "hallucinationSafe.tooltip.heading": "Was bedeutet halluzinationssicher?",
   "hallucinationSafe.tooltip.body":
-    "Im Gegensatz zu generischen KI-Tools ist Zaza Draft speziell darauf trainiert, keine SchÃ¼lerinformationen zu erfinden, keine ElterngesprÃ¤che zu fabrizieren oder Details Ã¼ber Ihre Klasse zu konstruieren. Jede Ausgabe basiert ausschlieÃŸlich auf Ihren tatsÃ¤chlichen Angaben - keine erfundenen Fakten, keine fiktiven Szenarien.",
+    "Im Gegensatz zu generischen KI-Tools ist Zaza Draft speziell darauf trainiert, keine SchÃƒÂ¼lerinformationen zu erfinden, keine ElterngesprÃƒÂ¤che zu fabrizieren oder Details ÃƒÂ¼ber Ihre Klasse zu konstruieren. Jede Ausgabe basiert ausschlieÃƒÅ¸lich auf Ihren tatsÃƒÂ¤chlichen Angaben - keine erfundenen Fakten, keine fiktiven Szenarien.",
 
   // Problem Section
   "problem.heading":
-    "LehrkrÃ¤fte verbringen Ã¼ber 10 Stunden pro Woche mit Schreibaufgaben",
+    "Lehrkräfte verbringen ÃƒÂ¼ber 10 Stunden pro Woche mit Schreibaufgaben",
   "problem.body":
     "Die Herausforderung besteht nicht darin, was zu sagen ist - sondern die Zeit und die richtigen Worte zu finden, um es professionell zu formulieren und dabei Ihre authentische Stimme zu bewahren.",
   "problem.stats.parentEmails.value": "2-3 Std./Woche",
@@ -1857,21 +1857,21 @@ const translationsDe: Record<string, string> = {
   "problem.stats.gradingFeedback.label": "Bewertungsfeedback",
 
   // Solution Section
-  "solution.heading": "Die erste KI-Suite speziell fÃ¼r Lehrerkommunikation",
+  "solution.heading": "Die erste KI-Suite speziell für Lehrerkommunikation",
   "solution.bodyPrimary":
-    "Zaza ist die weltweit erste KI-Suite speziell fÃ¼r LehrkrÃ¤fte - basierend auf echter PÃ¤dagogik, gestÃ¼tzt auf einen vertrauenswÃ¼rdigen Assistenten und entwickelt, um nicht nur Zeit zu sparen, sondern LehrkrÃ¤ften zu helfen, aufzublÃ¼hen.",
+    "Zaza ist die weltweit erste KI-Suite speziell für Lehrkräfte - basierend auf echter PÃƒÂ¤dagogik, gestÃƒÂ¼tzt auf einen vertrauenswÃƒÂ¼rdigen Assistenten und entwickelt, um nicht nur Zeit zu sparen, sondern Lehrkräften zu helfen, aufzublÃƒÂ¼hen.",
   "solution.bodySecondary":
-    "Trainiert mit echter PÃ¤dagogik und Lehrersprache - nicht mit Business-Texten. Jede Ausgabe bewahrt Ihre authentische Stimme und spart gleichzeitig Stunden bei Eltern-E-Mails, Zeugnisberichten und Feedback-Kommentaren.",
+    "Trainiert mit echter PÃƒÂ¤dagogik und Lehrersprache - nicht mit Business-Texten. Jede Ausgabe bewahrt Ihre authentische Stimme und spart gleichzeitig Stunden bei Eltern-E-Mails, Zeugnisberichten und Feedback-Kommentaren.",
 
   // Stats Section
   "stats.documentsRefined.number": "150k+",
   "stats.documentsRefined.label": "Dokumente verfeinert",
   "stats.teachers.number": "500+",
-  "stats.teachers.label": "LehrkrÃ¤fte",
+  "stats.teachers.label": "Lehrkräfte",
   "stats.timeSaved.number": "10+ Std.",
-  "stats.timeSaved.label": "WÃ¶chentlich gespart",
+  "stats.timeSaved.label": "WÃƒÂ¶chentlich gespart",
   "stats.subtitle":
-    "Vertraut von 500+ LehrkrÃ¤ften, die mit Zaza Draft jede Woche 10+ Stunden sparen.",
+    "Vertraut von 500+ Lehrkräften, die mit Zaza Draft jede Woche 10+ Stunden sparen.",
 
   // How It Works Section
   "howItWorks.heading": "So funktioniert es",
@@ -1879,23 +1879,23 @@ const translationsDe: Record<string, string> = {
   "howItWorks.diagram.step1.description": "Grobe Notizen oder Stichpunkte",
   "howItWorks.diagram.step1.example": "Sam passt im Unterricht nicht auf.",
   "howItWorks.diagram.step2.title": "Tonauswahl",
-  "howItWorks.diagram.step2.description": "WÃ¤hlen Sie Ihren Ton",
+  "howItWorks.diagram.step2.description": "WÃƒÂ¤hlen Sie Ihren Ton",
   "howItWorks.diagram.step2.example":
-    "UnterstÃ¼tzend, Formal, PrÃ¤gnant oder Neutral",
+    "UnterstÃƒÂ¼tzend, Formal, PrÃƒÂ¤gnant oder Neutral",
   "howItWorks.diagram.step3.title": "Ausgefeilte Ausgabe",
   "howItWorks.diagram.step3.description": "Unterrichtsfertige Kommunikation",
   "howItWorks.diagram.step3.example":
-    "Ich mÃ¶chte Sie bezÃ¼glich Sams jÃ¼ngster Aufmerksamkeitsschwierigkeiten...",
+    "Ich mÃƒÂ¶chte Sie bezÃƒÂ¼glich Sams jÃƒÂ¼ngster Aufmerksamkeitsschwierigkeiten...",
   "howItWorks.steps.step1.number": "1",
   "howItWorks.steps.step1.title":
-    "FÃ¼gen Sie Ihren Entwurf ein oder beschreiben Sie, was Sie benÃ¶tigen",
+    "FÃƒÂ¼gen Sie Ihren Entwurf ein oder beschreiben Sie, was Sie benÃƒÂ¶tigen",
   "howItWorks.steps.step1.description":
-    "Beginnen Sie mit groben Notizen, Stichpunkten oder einem vollstÃ¤ndigen Entwurf",
+    "Beginnen Sie mit groben Notizen, Stichpunkten oder einem vollstÃƒÂ¤ndigen Entwurf",
   "howItWorks.steps.step2.number": "2",
   "howItWorks.steps.step2.title":
-    "WÃ¤hlen Sie Ihren Ton und beobachten Sie, wie Draft verfeinert",
+    "WÃƒÂ¤hlen Sie Ihren Ton und beobachten Sie, wie Draft verfeinert",
   "howItWorks.steps.step2.description":
-    "UnterstÃ¼tzend, formal, prÃ¤gnant oder neutral - immer bearbeitbar",
+    "UnterstÃƒÂ¼tzend, formal, prÃƒÂ¤gnant oder neutral - immer bearbeitbar",
   "howItWorks.steps.step3.number": "3",
   "howItWorks.steps.step3.title": "Exportieren & teilen",
   "howItWorks.steps.step3.description":
@@ -1907,17 +1907,17 @@ const translationsDe: Record<string, string> = {
   "demo.tabs.reportCard": "Zeugnis",
   "demo.tabs.gradingComment": "Bewertungskommentar",
   "demo.before.label": "VORHER (IHR ENTWURF)",
-  "demo.toneSelector": "Ton: UnterstÃ¼tzend",
+  "demo.toneSelector": "Ton: UnterstÃƒÂ¼tzend",
   "demo.ctaButton": "Umformulieren",
   "demo.after.label": "NACHHER (DRAFT'S VERSION)",
   "demo.tryItYourself": "Selbst ausprobieren",
   "demo.testimonial.quote":
-    "Ich habe meinen Sonntag zurÃ¼ckbekommen. Draft verwandelt Stunden in Minuten.",
+    "Ich habe meinen Sonntag zurückbekommen. Draft verwandelt Stunden in Minuten.",
   "demo.testimonial.name": "Sarah Mitchell",
   "demo.testimonial.author": "Grundschullehrerin, UK",
 
   // Use Cases Section
-  "useCases.heading": "FÃ¼r Ihre alltÃ¤glichen Schreibaufgaben entwickelt",
+  "useCases.heading": "für Ihre alltÃƒÂ¤glichen Schreibaufgaben entwickelt",
   "useCases.cards.parentMessages.title": "Eltern-Nachrichten",
   "useCases.cards.parentMessages.description":
     "Formulieren Sie sensible E-Mails im richtigen Ton um",
@@ -1925,9 +1925,9 @@ const translationsDe: Record<string, string> = {
     "Verhaltensbedenken, Fortschrittsaktualisierungen, Anwesenheitsprobleme",
   "useCases.cards.reportCards.title": "Zeugnisberichte",
   "useCases.cards.reportCards.description":
-    "Verwandeln Sie Stichpunkte in aussagekrÃ¤ftige ErzÃ¤hlungen",
+    "Verwandeln Sie Stichpunkte in aussagekrÃƒÂ¤ftige ErzÃƒÂ¤hlungen",
   "useCases.cards.reportCards.examples":
-    "Semesterberichte, Fortschrittszusammenfassungen, FÃ¶rderplÃ¤ne",
+    "Semesterberichte, Fortschrittszusammenfassungen, FÃƒÂ¶rderplÃƒÂ¤ne",
   "useCases.cards.gradingComments.title": "Bewertungskommentare",
   "useCases.cards.gradingComments.description":
     "Generieren Sie konstruktives Feedback schneller",
@@ -1935,76 +1935,76 @@ const translationsDe: Record<string, string> = {
     "Kriterienbasierte Kommentare, Rubrik-Feedback",
   "useCases.cards.schoolCommunications.title": "Schulkommunikation",
   "useCases.cards.schoolCommunications.description":
-    "Erstellen Sie Newsletter und AnkÃ¼ndigungen professionell",
+    "Erstellen Sie Newsletter und AnkÃƒÂ¼ndigungen professionell",
   "useCases.cards.schoolCommunications.examples":
     "Updates, Veranstaltungshinweise, Mitteilungen",
   "useCases.cards.referenceLetters.title": "Empfehlungsschreiben",
   "useCases.cards.referenceLetters.description":
-    "Verfassen Sie Ã¼berzeugende Empfehlungen selbstbewusst",
+    "Verfassen Sie ÃƒÂ¼berzeugende Empfehlungen selbstbewusst",
   "useCases.cards.referenceLetters.examples":
     "Hochschulempfehlungen, Jobempfehlungen",
   "useCases.cards.documentation.title": "Dokumentation",
   "useCases.cards.documentation.description":
     "Erstellen Sie klare Aufzeichnungen und Besprechungsnotizen",
   "useCases.cards.documentation.examples":
-    "FÃ¶rderplandokumentation, ElterngesprÃ¤che",
+    "FÃƒÂ¶rderplandokumentation, ElterngesprÃƒÂ¤che",
 
   // Comparison Section
   "comparison.heading":
-    "Warum LehrkrÃ¤fte Zaza gegenÃ¼ber generischen KI-Tools vertrauen",
+    "Warum Lehrkräfte Zaza gegenÃƒÂ¼ber generischen KI-Tools vertrauen",
   "comparison.subheading":
-    "Speziell fÃ¼r Bildung entwickelt, nicht von Business-Tools adaptiert",
+    "Speziell für Bildung entwickelt, nicht von Business-Tools adaptiert",
   "comparison.tableHeaders.feature": "Funktion",
   "comparison.tableHeaders.genericAI": "Generische KI-Tools (ChatGPT, etc.)",
   "comparison.tableHeaders.zazaDraft": "Zaza Draft",
   "comparison.rows.training.feature": "Training",
-  "comparison.rows.training.generic": "Allgemeines Wissen, geschÃ¤ftsorientiert",
+  "comparison.rows.training.generic": "Allgemeines Wissen, geschÃƒÂ¤ftsorientiert",
   "comparison.rows.training.zaza":
-    "Trainiert mit echter Lehrerkommunikation & PÃ¤dagogik",
+    "Trainiert mit echter Lehrerkommunikation & PÃƒÂ¤dagogik",
   "comparison.rows.safety.feature": "Sicherheit",
   "comparison.rows.safety.generic":
-    "Kann SchÃ¼lerdetails oder Szenarien erfinden",
+    "Kann SchÃƒÂ¼lerdetails oder Szenarien erfinden",
   "comparison.rows.safety.zaza":
     "Halluzinationssicher - erfindet niemals Informationen",
   "comparison.rows.toneControl.feature": "Tonkontrolle",
   "comparison.rows.toneControl.generic": "Begrenzt oder inkonsistent",
-  "comparison.rows.toneControl.zaza": "4+ bildungsspezifische TÃ¶ne",
+  "comparison.rows.toneControl.zaza": "4+ bildungsspezifische TÃƒÂ¶ne",
   "comparison.rows.compliance.feature": "Compliance",
   "comparison.rows.compliance.generic": "Nicht FERPA-konform entwickelt",
   "comparison.rows.compliance.zaza": "Von Grund auf FERPA-konform",
-  "comparison.rows.useCases.feature": "AnwendungsfÃ¤lle",
+  "comparison.rows.useCases.feature": "AnwendungsfÃƒÂ¤lle",
   "comparison.rows.useCases.generic": "Generische Schreibaufgaben",
   "comparison.rows.useCases.zaza": "6 spezialisierte Lehrer-Workflows",
-  "comparison.rows.outputQuality.feature": "AusgabequalitÃ¤t",
+  "comparison.rows.outputQuality.feature": "AusgabequalitÃƒÂ¤t",
   "comparison.rows.outputQuality.generic": "Erfordert starke Bearbeitung",
   "comparison.rows.outputQuality.zaza": "Unterrichtsfertig in Minuten",
   "comparison.rows.learningCurve.feature": "Lernkurve",
   "comparison.rows.learningCurve.generic": "Komplexe Prompts erforderlich",
-  "comparison.rows.learningCurve.zaza": "EinfÃ¼gen, Ton wÃ¤hlen, fertig",
+  "comparison.rows.learningCurve.zaza": "EinfÃƒÂ¼gen, Ton wÃƒÂ¤hlen, fertig",
   "comparison.rows.community.feature": "Community",
-  "comparison.rows.community.generic": "Keine Lehrer-UnterstÃ¼tzung",
-  "comparison.rows.community.zaza": "500+ PÃ¤dagogen teilen Best Practices",
+  "comparison.rows.community.generic": "Keine Lehrer-UnterstÃƒÂ¼tzung",
+  "comparison.rows.community.zaza": "500+ PÃƒÂ¤dagogen teilen Best Practices",
 
   // Why Choose Section
-  "whyChoose.heading": "Warum LehrkrÃ¤fte Zaza wÃ¤hlen",
-  "whyChoose.benefits.beatWritersBlock.title": "Schreibblockade Ã¼berwinden",
+  "whyChoose.heading": "Warum Lehrkräfte Zaza wÃƒÂ¤hlen",
+  "whyChoose.benefits.beatWritersBlock.title": "Schreibblockade ÃƒÂ¼berwinden",
   "whyChoose.benefits.beatWritersBlock.description":
     "Beginnen Sie mit KI, beenden Sie mit Ihrer authentischen Stimme",
   "whyChoose.benefits.writeWithConfidence.title":
     "Mit Selbstvertrauen schreiben",
   "whyChoose.benefits.writeWithConfidence.description":
-    "Professionelle QualitÃ¤t in allen Kommunikationen",
+    "Professionelle QualitÃƒÂ¤t in allen Kommunikationen",
   "whyChoose.benefits.saveTime.title": "Sparen Sie jede Woche Stunden",
   "whyChoose.benefits.saveTime.description":
     "2-Stunden-Aufgaben in 5 Minuten erledigt",
-  "whyChoose.benefits.breakBarriers.title": "Sprachbarrieren Ã¼berwinden",
+  "whyChoose.benefits.breakBarriers.title": "Sprachbarrieren ÃƒÂ¼berwinden",
   "whyChoose.benefits.breakBarriers.description":
-    "Sofort in Ã¼ber 20 Sprachen Ã¼bersetzen",
+    "Sofort in ÃƒÂ¼ber 20 Sprachen ÃƒÂ¼bersetzen",
 
   // Testimonials Section
-  "testimonials.heading": "Was LehrkrÃ¤fte sagen",
+  "testimonials.heading": "Was Lehrkräfte sagen",
   "testimonials.quote1.text":
-    "Ich habe meinen Sonntag zurÃ¼ckbekommen. Draft verwandelt Stunden in Minuten.",
+    "Ich habe meinen Sonntag zurückbekommen. Draft verwandelt Stunden in Minuten.",
   "testimonials.quote1.name": "Sarah Mitchell",
   "testimonials.quote1.author": "Grundschullehrerin, UK",
   "testimonials.quote2.text": "Kommentare sind konsistent und freundlich.",
@@ -2016,16 +2016,16 @@ const translationsDe: Record<string, string> = {
   "testimonials.quote3.author": "Fachbereichsleitung, DE",
 
   // Final CTA Section
-  "finalCTA.heading": "Holen Sie sich Ihre Zeit zurÃ¼ck",
+  "finalCTA.heading": "Holen Sie sich Ihre Zeit zurück",
   "finalCTA.subheading":
-    "SchlieÃŸen Sie sich 500+ LehrkrÃ¤ften an, die mit Zaza Draft jede Woche 10+ Stunden sparen.",
+    "SchlieÃƒÅ¸en Sie sich 500+ Lehrkräften an, die mit Zaza Draft jede Woche 10+ Stunden sparen.",
   "finalCTA.button": "Kostenlos starten",
 
   // Footer
   "footer.social.tiktok": "Folgen Sie uns auf TikTok @zazatechnologies",
   "footer.social.twitter": "Folgen Sie uns auf X (Twitter) @zazateachapp",
   "footer.social.linkedin": "Verbinden Sie sich mit uns auf LinkedIn",
-  "footer.productEcosystem": "Produkt & Ã–kosystem",
+  "footer.productEcosystem": "Produkt & Ãƒâ€“kosystem",
   "footer.learningResources": "Lernen & Ressourcen",
   "footer.company": "Unternehmen",
   "footer.features": "Funktionen",
@@ -2040,7 +2040,7 @@ const translationsDe: Record<string, string> = {
   "footer.teacherResources": "Lehrerressourcen",
   "footer.support": "Support",
   "footer.faq": "FAQ",
-  "footer.about": "Ãœber uns",
+  "footer.about": "ÃƒÅ“ber uns",
   "footer.privacy": "Datenschutz",
   "footer.terms": "Nutzungsbedingungen",
   "footer.contact": "Kontakt",
@@ -2048,30 +2048,30 @@ const translationsDe: Record<string, string> = {
   // Products - Teach (German)
   "products.teach.hero.eyebrow": "UNTERRICHTSPLANUNG LEICHT GEMACHT",
   "products.teach.hero.title":
-    "Bessere Unterrichtsstunden in kÃ¼rzerer Zeit planen",
+    "Bessere Unterrichtsstunden in kÃƒÂ¼rzerer Zeit planen",
   "products.teach.hero.subtitle":
-    "KI-gestÃ¼tzte Unterrichtsplanung, die sich an Ihren Lehrplan anpasst, Stunden an Vorbereitungszeit spart und Ihnen hilft, ansprechende, standardkonforme Unterrichtsstunden zu erstellen.",
+    "KI-gestÃƒÂ¼tzte Unterrichtsplanung, die sich an Ihren Lehrplan anpasst, Stunden an Vorbereitungszeit spart und Ihnen hilft, ansprechende, standardkonforme Unterrichtsstunden zu erstellen.",
   "products.teach.hero.cta.primary": "Kostenlos starten",
   "products.teach.hero.cta.secondary": "Demo ansehen",
 
   "products.teach.turn.pain1":
-    "Jede Woche Stunden damit verbringen, UnterrichtsplÃ¤ne von Grund auf zu erstellen",
+    "Jede Woche Stunden damit verbringen, UnterrichtsplÃƒÂ¤ne von Grund auf zu erstellen",
   "products.teach.turn.pain2":
-    "Schwierigkeiten bei der Differenzierung fÃ¼r verschiedene Lernende",
+    "Schwierigkeiten bei der Differenzierung für verschiedene Lernende",
   "products.teach.turn.pain3":
-    "Zeit fÃ¼r administrative Aufgaben statt fÃ¼r das Unterrichten verlieren",
+    "Zeit für administrative Aufgaben statt für das Unterrichten verlieren",
 
   "products.teach.features.title":
-    "Alles, was Sie fÃ¼r groÃŸartige Unterrichtsstunden brauchen",
+    "Alles, was Sie für groÃƒÅ¸artige Unterrichtsstunden brauchen",
   "products.teach.features.autoplanner.title": "Auto-Planer",
   "products.teach.features.autoplanner.desc":
-    "Erstellen Sie in Minuten vollstÃ¤ndige, an Ihre Lehrplanstandards angepasste UnterrichtsplÃ¤ne",
+    "Erstellen Sie in Minuten vollstÃƒÂ¤ndige, an Ihre Lehrplanstandards angepasste UnterrichtsplÃƒÂ¤ne",
   "products.teach.features.curriculum.title": "Lehrplankonform",
   "products.teach.features.curriculum.desc":
-    "Integrierte UnterstÃ¼tzung fÃ¼r Common Core, Landesstandards und internationale LehrplÃ¤ne",
-  "products.teach.features.gamified.title": "Spielerische AktivitÃ¤ten",
+    "Integrierte UnterstÃƒÂ¼tzung für Common Core, Landesstandards und internationale LehrplÃƒÂ¤ne",
+  "products.teach.features.gamified.title": "Spielerische AktivitÃƒÂ¤ten",
   "products.teach.features.gamified.desc":
-    "Erstellen Sie ansprechende, interaktive AktivitÃ¤ten, die SchÃ¼ler motiviert halten",
+    "Erstellen Sie ansprechende, interaktive AktivitÃƒÂ¤ten, die SchÃƒÂ¼ler motiviert halten",
 
   "products.teach.howItWorks.title": "So funktioniert es",
   "products.teach.howItWorks.step1.title": "Ziele festlegen",
@@ -2079,16 +2079,16 @@ const translationsDe: Record<string, string> = {
     "Teilen Sie uns Ihr Fach, Ihre Klassenstufe und Lernziele mit",
   "products.teach.howItWorks.step2.title": "KI erstellt Plan",
   "products.teach.howItWorks.step2.desc":
-    "Erhalten Sie in Sekunden einen vollstÃ¤ndigen, standardkonformen Unterrichtsplan",
+    "Erhalten Sie in Sekunden einen vollstÃƒÂ¤ndigen, standardkonformen Unterrichtsplan",
   "products.teach.howItWorks.step3.title": "Anpassen & Unterrichten",
   "products.teach.howItWorks.step3.desc":
     "Bearbeiten, speichern und teilen Sie Ihre Unterrichtsstunden mit Ihrem Team",
 
-  "products.teach.whoItsFor.title": "Perfekt fÃ¼r",
+  "products.teach.whoItsFor.title": "Perfekt für",
   "products.teach.whoItsFor.item1":
-    "LehrkrÃ¤fte, die Zeit bei der Unterrichtsplanung sparen mÃ¶chten",
+    "Lehrkräfte, die Zeit bei der Unterrichtsplanung sparen mÃƒÂ¶chten",
   "products.teach.whoItsFor.item2":
-    "PÃ¤dagogen, die den Unterricht effektiver differenzieren mÃ¶chten",
+    "PÃƒÂ¤dagogen, die den Unterricht effektiver differenzieren mÃƒÂ¶chten",
   "products.teach.whoItsFor.item3":
     "Schulen, die einen konsistenten, standardkonformen Lehrplan suchen",
 
@@ -2098,26 +2098,26 @@ const translationsDe: Record<string, string> = {
   "products.teach.change.step2":
     "Erstellen Sie ansprechendere, differenzierte Unterrichtsstunden",
   "products.teach.change.step3":
-    "Stellen Sie die Ãœbereinstimmung mit Lehrplanstandards sicher",
+    "Stellen Sie die ÃƒÅ“bereinstimmung mit Lehrplanstandards sicher",
   "products.teach.change.step4":
     "Teilen und arbeiten Sie mit Ihrem Lehrerteam zusammen",
 
-  "products.teach.social.title": "Was LehrkrÃ¤fte sagen",
+  "products.teach.social.title": "Was Lehrkräfte sagen",
   "products.teach.social.quote1":
-    "Teach hat meine Planungszeit halbiert. Ich kann mich auf das Wesentliche konzentrieren - meine SchÃ¼ler.",
+    "Teach hat meine Planungszeit halbiert. Ich kann mich auf das Wesentliche konzentrieren - meine SchÃƒÂ¼ler.",
   "products.teach.social.author1": "Emma Thompson, Grundschullehrerin",
   "products.teach.social.quote2":
-    "Die Lehrplan-Ausrichtungsfunktion ist ein Game-Changer fÃ¼r unsere Abteilung.",
+    "Die Lehrplan-Ausrichtungsfunktion ist ein Game-Changer für unsere Abteilung.",
   "products.teach.social.author2": "Michael Chen, Fachbereichsleiter",
 
   "products.teach.cta.title": "Bereit, Ihre Planung zu transformieren?",
   "products.teach.cta.subtitle":
-    "SchlieÃŸen Sie sich Hunderten von LehrkrÃ¤ften an, die 10+ Stunden pro Woche sparen",
+    "SchlieÃƒÅ¸en Sie sich Hunderten von Lehrkräften an, die 10+ Stunden pro Woche sparen",
   "products.teach.cta.primary": "Kostenlose Testversion starten",
   "products.teach.cta.secondary": "Demo planen",
 
   // Products - Draft (German)
-  "products.draft.hero.eyebrow": "KI-SCHREIBASSISTENT FÃœR LEHRKRÃ„FTE",
+  "products.draft.hero.eyebrow": "KI-SCHREIBASSISTENT FÃƒÅ“R LEHRKRÃƒâ€žFTE",
   "products.draft.hero.title": "Besser, schneller schreiben",
   "products.draft.hero.subtitle":
     "Verwandeln Sie grobe Notizen in ausgefeilte Eltern-E-Mails, Zeugnisse und Feedback in Minuten. Bewahren Sie Ihre Stimme und sparen Sie jede Woche Stunden.",
@@ -2127,76 +2127,76 @@ const translationsDe: Record<string, string> = {
   "products.draft.turn.pain1":
     "2-3 Stunden pro Woche mit dem Schreiben von Eltern-E-Mails verbringen",
   "products.draft.turn.pain2":
-    "Schwierigkeiten, den richtigen Ton fÃ¼r sensible Kommunikation zu finden",
+    "Schwierigkeiten, den richtigen Ton für sensible Kommunikation zu finden",
   "products.draft.turn.pain3":
     "Immer wieder die gleichen Feedback-Kommentare schreiben",
 
-  "products.draft.features.title": "FÃ¼r Lehrerkommunikation entwickelt",
+  "products.draft.features.title": "für Lehrerkommunikation entwickelt",
   "products.draft.features.toneGuardrails.title": "Ton-Leitplanken",
   "products.draft.features.toneGuardrails.desc":
-    "WÃ¤hlen Sie aus unterstÃ¼tzenden, formellen, prÃ¤gnanten oder neutralen TÃ¶nen - immer professionell",
-  "products.draft.features.translationChecks.title": "ÃœbersetzungsprÃ¼fungen",
+    "WÃƒÂ¤hlen Sie aus unterstÃƒÂ¼tzenden, formellen, prÃƒÂ¤gnanten oder neutralen TÃƒÂ¶nen - immer professionell",
+  "products.draft.features.translationChecks.title": "ÃƒÅ“bersetzungsprÃƒÂ¼fungen",
   "products.draft.features.translationChecks.desc":
-    "Kommunizieren Sie selbstbewusst mit Familien in Ã¼ber 20 Sprachen",
-  "products.draft.features.reviewSteps.title": "ÃœberprÃ¼fungsschritte",
+    "Kommunizieren Sie selbstbewusst mit Familien in ÃƒÂ¼ber 20 Sprachen",
+  "products.draft.features.reviewSteps.title": "ÃƒÅ“berprÃƒÂ¼fungsschritte",
   "products.draft.features.reviewSteps.desc":
-    "Integrierter ÃœberprÃ¼fungsprozess gewÃ¤hrleistet Genauigkeit vor dem Senden",
+    "Integrierter ÃƒÅ“berprÃƒÂ¼fungsprozess gewÃƒÂ¤hrleistet Genauigkeit vor dem Senden",
 
   "products.draft.howItWorks.title": "So funktioniert es",
-  "products.draft.howItWorks.step1.title": "Notizen einfÃ¼gen",
+  "products.draft.howItWorks.step1.title": "Notizen einfÃƒÂ¼gen",
   "products.draft.howItWorks.step1.desc":
     "Beginnen Sie mit Stichpunkten oder einem groben Entwurf",
-  "products.draft.howItWorks.step2.title": "Ton wÃ¤hlen",
+  "products.draft.howItWorks.step2.title": "Ton wÃƒÂ¤hlen",
   "products.draft.howItWorks.step2.desc":
-    "WÃ¤hlen Sie die richtige Stimme fÃ¼r Ihre Nachricht",
-  "products.draft.howItWorks.step3.title": "ÃœberprÃ¼fen & Senden",
+    "WÃƒÂ¤hlen Sie die richtige Stimme für Ihre Nachricht",
+  "products.draft.howItWorks.step3.title": "ÃƒÅ“berprÃƒÂ¼fen & Senden",
   "products.draft.howItWorks.step3.desc":
     "Bei Bedarf bearbeiten, dann kopieren oder exportieren",
 
-  "products.draft.whoItsFor.title": "Perfekt fÃ¼r",
+  "products.draft.whoItsFor.title": "Perfekt für",
   "products.draft.whoItsFor.item1":
-    "LehrkrÃ¤fte, die Elternkommunikation schreiben",
+    "Lehrkräfte, die Elternkommunikation schreiben",
   "products.draft.whoItsFor.item2":
-    "PÃ¤dagogen, die Zeugniskommentare erstellen",
+    "PÃƒÂ¤dagogen, die Zeugniskommentare erstellen",
   "products.draft.whoItsFor.item3":
-    "Schulen, die konsistente, professionelle Kommunikation benÃ¶tigen",
+    "Schulen, die konsistente, professionelle Kommunikation benÃƒÂ¶tigen",
 
-  "products.draft.change.title": "Was sich mit Draft Ã¤ndert",
+  "products.draft.change.title": "Was sich mit Draft ÃƒÂ¤ndert",
   "products.draft.change.step1": "2-Stunden-Aufgaben in 5 Minuten erledigt",
   "products.draft.change.step2":
     "Konsistenter, professioneller Ton in allen Kommunikationen",
-  "products.draft.change.step3": "Selbstvertrauen in sensiblen GesprÃ¤chen",
+  "products.draft.change.step3": "Selbstvertrauen in sensiblen GesprÃƒÂ¤chen",
   "products.draft.change.step4":
     "Mehr Zeit zum Unterrichten, weniger Zeit zum Schreiben",
 
   "products.draft.techNote.title": "Halluzinationssicher:",
   "products.draft.techNote.body":
-    "Im Gegensatz zu generischer KI erfindet Draft niemals SchÃ¼lerinformationen oder fabriziert Details. Jede Ausgabe basiert auf dem, was Sie bereitstellen.",
+    "Im Gegensatz zu generischer KI erfindet Draft niemals SchÃƒÂ¼lerinformationen oder fabriziert Details. Jede Ausgabe basiert auf dem, was Sie bereitstellen.",
 
-  "products.draft.social.title": "Was LehrkrÃ¤fte sagen",
+  "products.draft.social.title": "Was Lehrkräfte sagen",
   "products.draft.social.quote1":
-    "Ich habe meinen Sonntag zurÃ¼ckbekommen. Draft verwandelt Stunden in Minuten.",
+    "Ich habe meinen Sonntag zurückbekommen. Draft verwandelt Stunden in Minuten.",
   "products.draft.social.author1": "Sarah Mitchell, Grundschullehrerin",
   "products.draft.social.quote2":
     "Die Tonoptionen helfen mir, selbstbewusst zu kommunizieren, auch in schwierigen Situationen.",
   "products.draft.social.author2": "James Rodriguez, Mittelschullehrer",
 
-  "products.draft.cta.title": "Holen Sie sich Ihre Zeit zurÃ¼ck",
+  "products.draft.cta.title": "Holen Sie sich Ihre Zeit zurück",
   "products.draft.cta.subtitle":
-    "SchlieÃŸen Sie sich 500+ LehrkrÃ¤ften an, die jede Woche 10+ Stunden sparen",
+    "SchlieÃƒÅ¸en Sie sich 500+ Lehrkräften an, die jede Woche 10+ Stunden sparen",
   "products.draft.cta.primary": "Kostenlose Testversion starten",
   "products.draft.cta.secondary": "Beispiele ansehen",
 
   // Products - GradeFlow (German)
   "products.gradeflow.hero.title": "Schneller, fairer bewerten",
   "products.gradeflow.hero.subtitle":
-    "KI-gestÃ¼tzter Bewertungsassistent, der Ihnen hilft, in der HÃ¤lfte der Zeit konsistentes, konstruktives Feedback zu geben.",
+    "KI-gestÃƒÂ¼tzter Bewertungsassistent, der Ihnen hilft, in der HÃƒÂ¤lfte der Zeit konsistentes, konstruktives Feedback zu geben.",
   "products.gradeflow.hero.cta": "Kostenlos starten",
 
   "products.gradeflow.turn.pain1":
     "4-6 Stunden pro Woche mit der Bewertung von Aufgaben verbringen",
   "products.gradeflow.turn.pain2":
-    "Inkonsistentes Feedback bei Ã¤hnlichen SchÃ¼lerarbeiten",
+    "Inkonsistentes Feedback bei ÃƒÂ¤hnlichen SchÃƒÂ¼lerarbeiten",
   "products.gradeflow.turn.pain3":
     "Schwierigkeiten, detaillierte, konstruktive Kommentare zu geben",
 
@@ -2204,26 +2204,26 @@ const translationsDe: Record<string, string> = {
     "Transformieren Sie Ihren Bewertungsprozess",
   "products.gradeflow.change.step1": "Aufgabe und Bewertungsraster hochladen",
   "products.gradeflow.change.step2":
-    "KI analysiert SchÃ¼lerarbeit anhand von Kriterien",
+    "KI analysiert SchÃƒÂ¼lerarbeit anhand von Kriterien",
   "products.gradeflow.change.step3":
-    "Vorgeschlagene Noten und Feedback Ã¼berprÃ¼fen und anpassen",
+    "Vorgeschlagene Noten und Feedback ÃƒÂ¼berprÃƒÂ¼fen und anpassen",
   "products.gradeflow.change.step4":
     "Mit einem Klick in Ihr Notenbuch exportieren",
 
   "products.gradeflow.features.title": "Bewertung leicht gemacht",
   "products.gradeflow.features.faster.title": "3x schnellere Bewertung",
   "products.gradeflow.features.faster.desc":
-    "Reduzieren Sie die Bewertungszeit von Stunden auf Minuten bei gleichbleibender QualitÃ¤t",
+    "Reduzieren Sie die Bewertungszeit von Stunden auf Minuten bei gleichbleibender QualitÃƒÂ¤t",
   "products.gradeflow.features.fair.title": "Konsistentes Feedback",
   "products.gradeflow.features.fair.desc":
-    "Stellen Sie faire, standardkonforme Bewertung fÃ¼r alle SchÃ¼ler sicher",
-  "products.gradeflow.features.audit.title": "PrÃ¼fpfad",
+    "Stellen Sie faire, standardkonforme Bewertung für alle SchÃƒÂ¼ler sicher",
+  "products.gradeflow.features.audit.title": "PrÃƒÂ¼fpfad",
   "products.gradeflow.features.audit.desc":
-    "Verfolgen Sie alle Bewertungsentscheidungen mit vollstÃ¤ndiger Transparenz",
+    "Verfolgen Sie alle Bewertungsentscheidungen mit vollstÃƒÂ¤ndiger Transparenz",
 
-  "products.gradeflow.social.title": "Was LehrkrÃ¤fte sagen",
+  "products.gradeflow.social.title": "Was Lehrkräfte sagen",
   "products.gradeflow.social.quote1":
-    "GradeFlow hat meine Bewertungszeit halbiert, ohne die QualitÃ¤t zu beeintrÃ¤chtigen.",
+    "GradeFlow hat meine Bewertungszeit halbiert, ohne die QualitÃƒÂ¤t zu beeintrÃƒÂ¤chtigen.",
   "products.gradeflow.social.author1": "Lisa Park, Gymnasiallehrerin Englisch",
   "products.gradeflow.social.quote2":
     "Mein Feedback ist jetzt konsistenter und hilfreicher.",
@@ -2234,10 +2234,10 @@ const translationsDe: Record<string, string> = {
   "products.gradeflow.cta.button": "Kostenlose Testversion starten",
 
   // Products - Shield (German)
-  "shield.hero.eyebrow": "KI-GOVERNANCE FÃœR SCHULEN",
-  "shield.hero.title": "Sichere, konforme KI fÃ¼r Ihre Schule",
+  "shield.hero.eyebrow": "KI-GOVERNANCE FÃƒÅ“R SCHULEN",
+  "shield.hero.title": "Sichere, konforme KI für Ihre Schule",
   "shield.hero.subtitle":
-    "Enterprise-Grade KI-Governance-Plattform, die sichere, ethische und konforme KI-Nutzung in Ihrer gesamten Schule oder Ihrem Bezirk gewÃ¤hrleistet.",
+    "Enterprise-Grade KI-Governance-Plattform, die sichere, ethische und konforme KI-Nutzung in Ihrer gesamten Schule oder Ihrem Bezirk gewÃƒÂ¤hrleistet.",
   "shield.hero.cta.primary": "Mehr erfahren",
   "shield.hero.cta.secondary": "Vertrieb kontaktieren",
 
@@ -2248,29 +2248,29 @@ const translationsDe: Record<string, string> = {
   "shield.problem.title": "Die KI-Governance-Herausforderung",
   "shield.problem.card1.title": "Datenschutzrisiken",
   "shield.problem.card1.description":
-    "LehrkrÃ¤fte, die Verbraucher-KI-Tools verwenden, kÃ¶nnen versehentlich SchÃ¼lerdaten offenlegen",
+    "Lehrkräfte, die Verbraucher-KI-Tools verwenden, kÃƒÂ¶nnen versehentlich SchÃƒÂ¼lerdaten offenlegen",
   "shield.problem.card2.title": "Compliance-Bedenken",
   "shield.problem.card2.description":
-    "Schulen haben Schwierigkeiten sicherzustellen, dass die KI-Nutzung FERPA, DSGVO und lokale Vorschriften erfÃ¼llt",
+    "Schulen haben Schwierigkeiten sicherzustellen, dass die KI-Nutzung FERPA, DSGVO und lokale Vorschriften erfÃƒÂ¼llt",
   "shield.problem.card3.title": "Mangelnde Aufsicht",
   "shield.problem.card3.description":
     "Keine Sichtbarkeit, wie KI in Klassenzimmern und Abteilungen verwendet wird",
 
-  "shield.solution.title": "VollstÃ¤ndige KI-Governance in einer Plattform",
+  "shield.solution.title": "VollstÃƒÂ¤ndige KI-Governance in einer Plattform",
   "shield.solution.subtitle":
-    "Ãœberwachen, kontrollieren und prÃ¼fen Sie die gesamte KI-Nutzung in Ihrer Schule",
+    "ÃƒÅ“berwachen, kontrollieren und prÃƒÂ¼fen Sie die gesamte KI-Nutzung in Ihrer Schule",
   "shield.solution.card1.title": "Zentralisierte Kontrolle",
   "shield.solution.card1.description":
-    "Legen Sie schulweite Richtlinien fÃ¼r die KI-Nutzung mit granularen Berechtigungen fest",
-  "shield.solution.card2.title": "PrÃ¼fpfad",
+    "Legen Sie schulweite Richtlinien für die KI-Nutzung mit granularen Berechtigungen fest",
+  "shield.solution.card2.title": "PrÃƒÂ¼fpfad",
   "shield.solution.card2.description":
-    "VollstÃ¤ndige Sichtbarkeit aller KI-Interaktionen und DatenflÃ¼sse",
+    "VollstÃƒÂ¤ndige Sichtbarkeit aller KI-Interaktionen und DatenflÃƒÂ¼sse",
   "shield.solution.card3.title": "Datenschutz",
   "shield.solution.card3.description":
-    "Automatische PII-Erkennung und -SchwÃ¤rzung vor der KI-Verarbeitung",
+    "Automatische PII-Erkennung und -SchwÃƒÂ¤rzung vor der KI-Verarbeitung",
   "shield.solution.card4.title": "Richtliniendurchsetzung",
   "shield.solution.card4.description":
-    "Automatisierte Compliance-PrÃ¼fungen gegen die Richtlinien Ihrer Schule",
+    "Automatisierte Compliance-PrÃƒÂ¼fungen gegen die Richtlinien Ihrer Schule",
   "shield.solution.cta": "Alle Funktionen erkunden",
 
   "shield.howItWorks.title": "So funktioniert Shield",
@@ -2279,29 +2279,29 @@ const translationsDe: Record<string, string> = {
     "Integrieren Sie Shield mit Ihren vorhandenen KI-Tools und Plattformen",
   "shield.howItWorks.step2.title": "Richtlinien festlegen",
   "shield.howItWorks.step2.description":
-    "Definieren Sie Regeln fÃ¼r KI-Nutzung, Datenverarbeitung und Compliance",
-  "shield.howItWorks.step3.title": "Ãœberwachen & PrÃ¼fen",
+    "Definieren Sie Regeln für KI-Nutzung, Datenverarbeitung und Compliance",
+  "shield.howItWorks.step3.title": "ÃƒÅ“berwachen & PrÃƒÂ¼fen",
   "shield.howItWorks.step3.description":
-    "Verfolgen Sie die Nutzung, Ã¼berprÃ¼fen Sie Protokolle und stellen Sie Compliance sicher",
+    "Verfolgen Sie die Nutzung, ÃƒÂ¼berprÃƒÂ¼fen Sie Protokolle und stellen Sie Compliance sicher",
   "shield.howItWorks.cta": "Loslegen",
 
   "shield.socialProof.title": "Vertraut von Schulen weltweit",
   "shield.socialProof.quote":
-    "Shield gibt uns das Vertrauen, KI zu nutzen und gleichzeitig die PrivatsphÃ¤re unserer SchÃ¼ler zu schÃ¼tzen. Es ist wesentliche Infrastruktur fÃ¼r moderne Schulen.",
+    "Shield gibt uns das Vertrauen, KI zu nutzen und gleichzeitig die PrivatsphÃƒÂ¤re unserer SchÃƒÂ¼ler zu schÃƒÂ¼tzen. Es ist wesentliche Infrastruktur für moderne Schulen.",
   "shield.socialProof.attribution": "Dr. Jennifer Martinez",
   "shield.socialProof.role":
     "Technologiedirektorin, Springfield School District",
 
-  "shield.useCases.title": "FÃ¼r Bildung entwickelt",
+  "shield.useCases.title": "für Bildung entwickelt",
   "shield.useCases.card1.title": "Lehrer-KI-Tools",
   "shield.useCases.card1.description":
     "Verwalten Sie KI-Schreibassistenten, Unterrichtsplaner und Bewertungstools",
-  "shield.useCases.card2.title": "SchÃ¼ler-KI-Nutzung",
+  "shield.useCases.card2.title": "SchÃƒÂ¼ler-KI-Nutzung",
   "shield.useCases.card2.description":
-    "Ãœberwachen und leiten Sie angemessene KI-Nutzung in SchÃ¼lerarbeiten",
+    "ÃƒÅ“berwachen und leiten Sie angemessene KI-Nutzung in SchÃƒÂ¼lerarbeiten",
   "shield.useCases.card3.title": "Administrative KI",
   "shield.useCases.card3.description":
-    "Sichere KI-Nutzung fÃ¼r Planung, Kommunikation und Betrieb",
+    "Sichere KI-Nutzung für Planung, Kommunikation und Betrieb",
 
   "shield.comparison.title": "Shield vs. Manuelle Governance",
   "shield.comparison.feature": "Funktion",
@@ -2309,179 +2309,179 @@ const translationsDe: Record<string, string> = {
   "shield.comparison.manual": "Manueller Prozess",
   "shield.comparison.row1.feature": "Richtliniendurchsetzung",
   "shield.comparison.row1.shield": "Automatisiert",
-  "shield.comparison.row1.manual": "Manuelle PrÃ¼fungen",
-  "shield.comparison.row2.feature": "PrÃ¼fpfad",
-  "shield.comparison.row2.shield": "VollstÃ¤ndige Protokolle",
-  "shield.comparison.row2.manual": "UnvollstÃ¤ndige Aufzeichnungen",
+  "shield.comparison.row1.manual": "Manuelle PrÃƒÂ¼fungen",
+  "shield.comparison.row2.feature": "PrÃƒÂ¼fpfad",
+  "shield.comparison.row2.shield": "VollstÃƒÂ¤ndige Protokolle",
+  "shield.comparison.row2.manual": "UnvollstÃƒÂ¤ndige Aufzeichnungen",
   "shield.comparison.row3.feature": "PII-Schutz",
   "shield.comparison.row3.shield": "Automatisch",
-  "shield.comparison.row3.manual": "Manuelle ÃœberprÃ¼fung",
+  "shield.comparison.row3.manual": "Manuelle ÃƒÅ“berprÃƒÂ¼fung",
 
   "shield.pricing.title": "Enterprise-Preise",
   "shield.pricing.description":
-    "Individuelle Preisgestaltung basierend auf Ihrer SchulgrÃ¶ÃŸe und Ihren Anforderungen. Kontaktieren Sie uns fÃ¼r ein Angebot.",
+    "Individuelle Preisgestaltung basierend auf Ihrer SchulgrÃƒÂ¶ÃƒÅ¸e und Ihren Anforderungen. Kontaktieren Sie uns für ein Angebot.",
   "shield.pricing.cta": "Preise erhalten",
 
   "shield.finalCta.title": "Bereit, die KI Ihrer Schule zu sichern?",
   "shield.finalCta.subtitle":
-    "SchlieÃŸen Sie sich zukunftsorientierten Schulen an, die Shield nutzen, um KI sicher einzusetzen",
+    "SchlieÃƒÅ¸en Sie sich zukunftsorientierten Schulen an, die Shield nutzen, um KI sicher einzusetzen",
   "shield.finalCta.primary": "Demo planen",
   "shield.finalCta.secondary": "Vertrieb kontaktieren",
   "shield.finalCta.note": "Enterprise-Support und Onboarding inklusive",
 
   // FAQ Page (German)
-  "faq.hero.eyebrow": "HÃ„UFIG GESTELLTE FRAGEN",
-  "faq.hero.title": "Wie kÃ¶nnen wir Ihnen helfen?",
+  "faq.hero.eyebrow": "HÃƒâ€žUFIG GESTELLTE FRAGEN",
+  "faq.hero.title": "Wie kÃƒÂ¶nnen wir Ihnen helfen?",
   "faq.hero.subtitle":
-    "Finden Sie Antworten auf hÃ¤ufige Fragen zu Zaza Draft und unseren KI-Tools fÃ¼r LehrkrÃ¤fte.",
+    "Finden Sie Antworten auf hÃƒÂ¤ufige Fragen zu Zaza Draft und unseren KI-Tools für Lehrkräfte.",
 
   // FAQ Categories (German)
-  "faq.category.about.title": "Ãœber Zaza Draft",
+  "faq.category.about.title": "ÃƒÅ“ber Zaza Draft",
   "faq.category.safety.title": "Sicherheit & Datenschutz",
-  "faq.category.features.title": "Funktionen & MÃ¶glichkeiten",
-  "faq.category.pricing.title": "Preise & PlÃ¤ne",
-  "faq.category.languages.title": "Sprachen & Ãœbersetzung",
-  "faq.category.schools.title": "FÃ¼r Schulen & Bezirke",
+  "faq.category.features.title": "Funktionen & MÃƒÂ¶glichkeiten",
+  "faq.category.pricing.title": "Preise & PlÃƒÂ¤ne",
+  "faq.category.languages.title": "Sprachen & ÃƒÅ“bersetzung",
+  "faq.category.schools.title": "für Schulen & Bezirke",
 
   // About Questions (German)
   "faq.about.q1": "Was ist Zaza Draft?",
   "faq.about.a1":
-    "Zaza Draft ist ein KI-gestÃ¼tzter Schreibassistent, der speziell fÃ¼r LehrkrÃ¤fte entwickelt wurde. Er hilft Ihnen, grobe Notizen in ausgefeilte Eltern-E-Mails, Zeugnisse, Bewertungskommentare und andere pÃ¤dagogische Kommunikation in Minuten zu verwandeln, wÃ¤hrend Sie Ihre authentische Stimme bewahren.",
+    "Zaza Draft ist ein KI-gestÃƒÂ¼tzter Schreibassistent, der speziell für Lehrkräfte entwickelt wurde. Er hilft Ihnen, grobe Notizen in ausgefeilte Eltern-E-Mails, Zeugnisse, Bewertungskommentare und andere pÃƒÂ¤dagogische Kommunikation in Minuten zu verwandeln, wÃƒÂ¤hrend Sie Ihre authentische Stimme bewahren.",
 
   "faq.about.q2":
     "Wie unterscheidet sich Zaza Draft von ChatGPT oder anderen KI-Tools?",
   "faq.about.a2":
-    "Im Gegensatz zu generischen KI-Tools ist Zaza Draft speziell auf pÃ¤dagogische Kommunikation und PÃ¤dagogik trainiert. Es ist halluzinationssicher (erfindet niemals SchÃ¼lerinformationen), bietet bildungsspezifische Tonoptionen, ist von Grund auf FERPA-konform und bietet spezialisierte Workflows fÃ¼r gÃ¤ngige Schreibaufgaben von LehrkrÃ¤ften.",
+    "Im Gegensatz zu generischen KI-Tools ist Zaza Draft speziell auf pÃƒÂ¤dagogische Kommunikation und PÃƒÂ¤dagogik trainiert. Es ist halluzinationssicher (erfindet niemals SchÃƒÂ¼lerinformationen), bietet bildungsspezifische Tonoptionen, ist von Grund auf FERPA-konform und bietet spezialisierte Workflows für gÃƒÂ¤ngige Schreibaufgaben von Lehrkräften.",
 
-  "faq.about.q3": "FÃ¼r wen ist Zaza Draft gedacht?",
+  "faq.about.q3": "für wen ist Zaza Draft gedacht?",
   "faq.about.a3":
-    "Zaza Draft ist fÃ¼r K-12-LehrkrÃ¤fte, PÃ¤dagogen, Schuladministratoren und alle, die an pÃ¤dagogischer Kommunikation beteiligt sind, konzipiert. Egal, ob Sie Eltern-E-Mails, Zeugnisse, Feedback-Kommentare oder SchulankÃ¼ndigungen schreiben, Draft hilft Ihnen, Zeit zu sparen und gleichzeitig professionelle QualitÃ¤t zu wahren.",
+    "Zaza Draft ist für K-12-Lehrkräfte, PÃƒÂ¤dagogen, Schuladministratoren und alle, die an pÃƒÂ¤dagogischer Kommunikation beteiligt sind, konzipiert. Egal, ob Sie Eltern-E-Mails, Zeugnisse, Feedback-Kommentare oder SchulankÃƒÂ¼ndigungen schreiben, Draft hilft Ihnen, Zeit zu sparen und gleichzeitig professionelle QualitÃƒÂ¤t zu wahren.",
 
   "faq.about.q4":
-    "BenÃ¶tige ich technische Kenntnisse, um Zaza Draft zu verwenden?",
+    "BenÃƒÂ¶tige ich technische Kenntnisse, um Zaza Draft zu verwenden?",
   "faq.about.a4":
-    "Keine technischen Kenntnisse erforderlich! Zaza Draft ist unglaublich einfach zu bedienen: Notizen einfÃ¼gen, Ton wÃ¤hlen und ausgefeilte Ausgabe erhalten. Wenn Sie E-Mails verwenden kÃ¶nnen, kÃ¶nnen Sie Draft verwenden.",
+    "Keine technischen Kenntnisse erforderlich! Zaza Draft ist unglaublich einfach zu bedienen: Notizen einfÃƒÂ¼gen, Ton wÃƒÂ¤hlen und ausgefeilte Ausgabe erhalten. Wenn Sie E-Mails verwenden kÃƒÂ¶nnen, kÃƒÂ¶nnen Sie Draft verwenden.",
 
   "faq.about.q5": "Kann ich Zaza Draft vor einer Verpflichtung ausprobieren?",
   "faq.about.a5":
-    "Ja! Wir bieten eine kostenlose Testversion an, damit Sie erleben kÃ¶nnen, wie Draft Ihnen Zeit spart und Ihre Kommunikation verbessert. Keine Kreditkarte zum Starten erforderlich.",
+    "Ja! Wir bieten eine kostenlose Testversion an, damit Sie erleben kÃƒÂ¶nnen, wie Draft Ihnen Zeit spart und Ihre Kommunikation verbessert. Keine Kreditkarte zum Starten erforderlich.",
 
   "faq.about.q6": "Bei welchen Arten von Texten kann Zaza Draft helfen?",
   "faq.about.a6":
-    "Draft spezialisiert sich auf sechs SchlÃ¼sselbereiche: Elternnachrichten, Zeugnisse, Bewertungskommentare, Schulkommunikation, Empfehlungsschreiben und Dokumentation. Es ist fÃ¼r die alltÃ¤glichen Schreibaufgaben von LehrkrÃ¤ften entwickelt.",
+    "Draft spezialisiert sich auf sechs SchlÃƒÂ¼sselbereiche: Elternnachrichten, Zeugnisse, Bewertungskommentare, Schulkommunikation, Empfehlungsschreiben und Dokumentation. Es ist für die alltÃƒÂ¤glichen Schreibaufgaben von Lehrkräften entwickelt.",
 
   "faq.about.q7": "Wie viel Zeit kann ich mit Zaza Draft sparen?",
   "faq.about.a7":
-    "LehrkrÃ¤fte, die Draft verwenden, berichten, dass sie Ã¼ber 10 Stunden pro Woche bei Schreibaufgaben sparen. Aufgaben, die normalerweise 2 Stunden dauern, kÃ¶nnen mit Drafts Hilfe in 5 Minuten erledigt werden.",
+    "Lehrkräfte, die Draft verwenden, berichten, dass sie ÃƒÂ¼ber 10 Stunden pro Woche bei Schreibaufgaben sparen. Aufgaben, die normalerweise 2 Stunden dauern, kÃƒÂ¶nnen mit Drafts Hilfe in 5 Minuten erledigt werden.",
 
   "faq.about.q8": "Kann ich die Ausgabe anpassen?",
   "faq.about.a8":
-    "Absolut! Draft bietet einen Ausgangspunkt, den Sie bearbeiten und verfeinern kÃ¶nnen. Sie behalten die volle Kontrolle Ã¼ber die endgÃ¼ltige Nachricht - Draft hilft Ihnen nur, schneller dorthin zu gelangen.",
+    "Absolut! Draft bietet einen Ausgangspunkt, den Sie bearbeiten und verfeinern kÃƒÂ¶nnen. Sie behalten die volle Kontrolle ÃƒÂ¼ber die endgÃƒÂ¼ltige Nachricht - Draft hilft Ihnen nur, schneller dorthin zu gelangen.",
 
   "faq.about.q9": "Funktioniert Zaza Draft in meinem Land?",
   "faq.about.a9":
-    "Ja! Zaza Draft ist weltweit verfÃ¼gbar und unterstÃ¼tzt Kommunikation in Ã¼ber 20 Sprachen. Egal, ob Sie in den USA, GroÃŸbritannien, Kanada, Australien oder anderswo sind, Draft kann Ihnen helfen, effektiv zu kommunizieren.",
+    "Ja! Zaza Draft ist weltweit verfÃƒÂ¼gbar und unterstÃƒÂ¼tzt Kommunikation in ÃƒÂ¼ber 20 Sprachen. Egal, ob Sie in den USA, GroÃƒÅ¸britannien, Kanada, Australien oder anderswo sind, Draft kann Ihnen helfen, effektiv zu kommunizieren.",
 
-  "faq.about.q10": "Was ist das Zaza-ProduktÃ¶kosystem?",
+  "faq.about.q10": "Was ist das Zaza-ProduktÃƒÂ¶kosystem?",
   "faq.about.a10":
-    "Zaza bietet eine Suite von KI-Tools fÃ¼r Bildung: Draft (Schreibassistent), Teach (Unterrichtsplanung), GradeFlow (Bewertungsassistent) und Shield (KI-Governance). Jedes Tool ist darauf ausgelegt, spezifische Herausforderungen von LehrkrÃ¤ften zu lÃ¶sen.",
+    "Zaza bietet eine Suite von KI-Tools für Bildung: Draft (Schreibassistent), Teach (Unterrichtsplanung), GradeFlow (Bewertungsassistent) und Shield (KI-Governance). Jedes Tool ist darauf ausgelegt, spezifische Herausforderungen von Lehrkräften zu lÃƒÂ¶sen.",
 
   "faq.about.q11": "Wie fange ich an?",
   "faq.about.a11":
-    "Melden Sie sich einfach fÃ¼r ein kostenloses Konto an, fÃ¼gen Sie Ihren ersten Entwurf oder Notizen ein, wÃ¤hlen Sie Ihren gewÃ¼nschten Ton und beobachten Sie, wie Draft Ihr Schreiben transformiert. Sie werden innerhalb von Minuten nach dem Start Zeit sparen.",
+    "Melden Sie sich einfach für ein kostenloses Konto an, fÃƒÂ¼gen Sie Ihren ersten Entwurf oder Notizen ein, wÃƒÂ¤hlen Sie Ihren gewÃƒÂ¼nschten Ton und beobachten Sie, wie Draft Ihr Schreiben transformiert. Sie werden innerhalb von Minuten nach dem Start Zeit sparen.",
 
   // Safety Questions (German)
   "faq.safety.q1": "Sind meine Daten bei Zaza Draft sicher?",
   "faq.safety.a1":
-    "Ja. Wir nehmen Datensicherheit ernst. Alle Daten sind wÃ¤hrend der Ãœbertragung und im Ruhezustand verschlÃ¼sselt, wir sind FERPA-konform und wir verwenden Ihre Daten niemals zum Trainieren unserer Modelle oder teilen sie mit Dritten. Ihre Kommunikation bleibt privat und sicher.",
+    "Ja. Wir nehmen Datensicherheit ernst. Alle Daten sind wÃƒÂ¤hrend der ÃƒÅ“bertragung und im Ruhezustand verschlÃƒÂ¼sselt, wir sind FERPA-konform und wir verwenden Ihre Daten niemals zum Trainieren unserer Modelle oder teilen sie mit Dritten. Ihre Kommunikation bleibt privat und sicher.",
 
   "faq.safety.q2": "Was bedeutet 'halluzinationssicher'?",
   "faq.safety.a2":
-    "Halluzinationssicher bedeutet, dass Draft niemals SchÃ¼lerinformationen erfindet, ElterngesprÃ¤che fabriziert oder fiktive Details Ã¼ber Ihre Klasse erstellt. Jede Ausgabe basiert auf dem, was Sie tatsÃ¤chlich bereitstellen - keine erfundenen Fakten oder Szenarien.",
+    "Halluzinationssicher bedeutet, dass Draft niemals SchÃƒÂ¼lerinformationen erfindet, ElterngesprÃƒÂ¤che fabriziert oder fiktive Details ÃƒÂ¼ber Ihre Klasse erstellt. Jede Ausgabe basiert auf dem, was Sie tatsÃƒÂ¤chlich bereitstellen - keine erfundenen Fakten oder Szenarien.",
 
   "faq.safety.q3": "Ist Zaza Draft FERPA-konform?",
   "faq.safety.a3":
-    "Ja. Zaza Draft ist mit Blick auf FERPA-KonformitÃ¤t entwickelt. Wir implementieren angemessene SchutzmaÃŸnahmen zum Schutz der PrivatsphÃ¤re von SchÃ¼lern und Bildungsunterlagen, und wir teilen oder verkaufen niemals SchÃ¼lerdaten.",
+    "Ja. Zaza Draft ist mit Blick auf FERPA-KonformitÃƒÂ¤t entwickelt. Wir implementieren angemessene SchutzmaÃƒÅ¸nahmen zum Schutz der PrivatsphÃƒÂ¤re von SchÃƒÂ¼lern und Bildungsunterlagen, und wir teilen oder verkaufen niemals SchÃƒÂ¼lerdaten.",
 
-  "faq.safety.q4": "Kann ich SchÃ¼lernamen in meinen EntwÃ¼rfen verwenden?",
+  "faq.safety.q4": "Kann ich SchÃƒÂ¼lernamen in meinen EntwÃƒÂ¼rfen verwenden?",
   "faq.safety.a4":
-    "Ja, Sie kÃ¶nnen SchÃ¼lernamen und relevante Details einbeziehen. Draft verarbeitet diese Informationen sicher und speichert oder verwendet sie niemals Ã¼ber die Generierung Ihrer spezifischen Ausgabe hinaus. Alle SchÃ¼lerinformationen bleiben vertraulich.",
+    "Ja, Sie kÃƒÂ¶nnen SchÃƒÂ¼lernamen und relevante Details einbeziehen. Draft verarbeitet diese Informationen sicher und speichert oder verwendet sie niemals ÃƒÂ¼ber die Generierung Ihrer spezifischen Ausgabe hinaus. Alle SchÃƒÂ¼lerinformationen bleiben vertraulich.",
 
   "faq.safety.q5":
     "Was passiert mit meinen Daten, nachdem ich Draft verwendet habe?",
   "faq.safety.a5":
-    "Ihre EntwÃ¼rfe und Ausgaben werden sicher in Ihrem Konto gespeichert, aber wir verwenden sie niemals zum Trainieren unserer KI-Modelle. Sie kÃ¶nnen Ihre Daten jederzeit aus Ihren Kontoeinstellungen lÃ¶schen.",
+    "Ihre EntwÃƒÂ¼rfe und Ausgaben werden sicher in Ihrem Konto gespeichert, aber wir verwenden sie niemals zum Trainieren unserer KI-Modelle. Sie kÃƒÂ¶nnen Ihre Daten jederzeit aus Ihren Kontoeinstellungen lÃƒÂ¶schen.",
 
   "faq.safety.q6": "Ist Zaza Draft DSGVO-konform?",
   "faq.safety.a6":
-    "Ja. Wir erfÃ¼llen die DSGVO-Anforderungen fÃ¼r Datenschutz und PrivatsphÃ¤re. Benutzer haben volle Kontrolle Ã¼ber ihre Daten, einschlieÃŸlich des Rechts auf Zugriff, Korrektur und LÃ¶schung ihrer Informationen.",
+    "Ja. Wir erfÃƒÂ¼llen die DSGVO-Anforderungen für Datenschutz und PrivatsphÃƒÂ¤re. Benutzer haben volle Kontrolle ÃƒÂ¼ber ihre Daten, einschlieÃƒÅ¸lich des Rechts auf Zugriff, Korrektur und LÃƒÂ¶schung ihrer Informationen.",
 
   // Features Questions (German)
-  "faq.features.q1": "Welche Tonoptionen sind verfÃ¼gbar?",
+  "faq.features.q1": "Welche Tonoptionen sind verfÃƒÂ¼gbar?",
   "faq.features.a1":
-    "Draft bietet vier bildungsspezifische TÃ¶ne: UnterstÃ¼tzend (warm und ermutigend), Formal (professionell und strukturiert), PrÃ¤gnant (kurz und direkt) und Neutral (ausgewogen und objektiv). Jeder Ton ist fÃ¼r pÃ¤dagogische Kommunikation kalibriert.",
+    "Draft bietet vier bildungsspezifische TÃƒÂ¶ne: UnterstÃƒÂ¼tzend (warm und ermutigend), Formal (professionell und strukturiert), PrÃƒÂ¤gnant (kurz und direkt) und Neutral (ausgewogen und objektiv). Jeder Ton ist für pÃƒÂ¤dagogische Kommunikation kalibriert.",
 
-  "faq.features.q2": "Kann Draft meine Nachrichten Ã¼bersetzen?",
+  "faq.features.q2": "Kann Draft meine Nachrichten ÃƒÂ¼bersetzen?",
   "faq.features.a2":
-    "Ja! Draft kann Ihre Kommunikation in Ã¼ber 20 Sprachen Ã¼bersetzen, was es einfach macht, mit Familien zu kommunizieren, die verschiedene Sprachen sprechen. Ãœbersetzungen bewahren den angemessenen Ton und pÃ¤dagogischen Kontext.",
+    "Ja! Draft kann Ihre Kommunikation in ÃƒÂ¼ber 20 Sprachen ÃƒÂ¼bersetzen, was es einfach macht, mit Familien zu kommunizieren, die verschiedene Sprachen sprechen. ÃƒÅ“bersetzungen bewahren den angemessenen Ton und pÃƒÂ¤dagogischen Kontext.",
 
   "faq.features.q3": "Funktioniert Draft mit den Systemen meiner Schule?",
   "faq.features.a3":
-    "Draft generiert Text, den Sie einfach in jedes System kopieren und einfÃ¼gen kÃ¶nnen - E-Mail, Lernmanagementsysteme, NotenbÃ¼cher oder Textverarbeitungsprogramme. Keine speziellen Integrationen erforderlich.",
+    "Draft generiert Text, den Sie einfach in jedes System kopieren und einfÃƒÂ¼gen kÃƒÂ¶nnen - E-Mail, Lernmanagementsysteme, NotenbÃƒÂ¼cher oder Textverarbeitungsprogramme. Keine speziellen Integrationen erforderlich.",
 
   "faq.features.q4":
-    "Kann ich Vorlagen oder hÃ¤ufig verwendete Phrasen speichern?",
+    "Kann ich Vorlagen oder hÃƒÂ¤ufig verwendete Phrasen speichern?",
   "faq.features.a4":
-    "Ja! Sie kÃ¶nnen Ihre Lieblingsausgaben als Vorlagen fÃ¼r die zukÃ¼nftige Verwendung speichern, was es noch schneller macht, Ã¤hnliche Kommunikation in der Zukunft zu erstellen.",
+    "Ja! Sie kÃƒÂ¶nnen Ihre Lieblingsausgaben als Vorlagen für die zukÃƒÂ¼nftige Verwendung speichern, was es noch schneller macht, ÃƒÂ¤hnliche Kommunikation in der Zukunft zu erstellen.",
 
-  "faq.features.q5": "Funktioniert Draft auf mobilen GerÃ¤ten?",
+  "faq.features.q5": "Funktioniert Draft auf mobilen GerÃƒÂ¤ten?",
   "faq.features.a5":
-    "Ja! Zaza Draft ist vollstÃ¤ndig responsiv und funktioniert auf Smartphones, Tablets und Computern. Schreiben und verfeinern Sie Kommunikation, wo immer Sie sind.",
+    "Ja! Zaza Draft ist vollstÃƒÂ¤ndig responsiv und funktioniert auf Smartphones, Tablets und Computern. Schreiben und verfeinern Sie Kommunikation, wo immer Sie sind.",
 
-  "faq.features.q6": "KÃ¶nnen mehrere LehrkrÃ¤fte Vorlagen teilen?",
+  "faq.features.q6": "KÃƒÂ¶nnen mehrere Lehrkräfte Vorlagen teilen?",
   "faq.features.a6":
-    "Mit unseren SchulplÃ¤nen kÃ¶nnen Teams Vorlagen und Best Practices teilen und so eine konsistente Kommunikation in Ihrer Abteilung oder Schule gewÃ¤hrleisten.",
+    "Mit unseren SchulplÃƒÂ¤nen kÃƒÂ¶nnen Teams Vorlagen und Best Practices teilen und so eine konsistente Kommunikation in Ihrer Abteilung oder Schule gewÃƒÂ¤hrleisten.",
 
   // Pricing Questions (German)
   "faq.pricing.q1": "Wie viel kostet Zaza Draft?",
   "faq.pricing.a1":
-    "Wir bieten flexible PreisplÃ¤ne fÃ¼r einzelne LehrkrÃ¤fte und Schulen. Besuchen Sie unsere Preisseite fÃ¼r aktuelle Tarife und Plandetails. Wir bieten auch eine kostenlose Testversion an, damit Sie Draft vor einer Verpflichtung erleben kÃ¶nnen.",
+    "Wir bieten flexible PreisplÃƒÂ¤ne für einzelne Lehrkräfte und Schulen. Besuchen Sie unsere Preisseite für aktuelle Tarife und Plandetails. Wir bieten auch eine kostenlose Testversion an, damit Sie Draft vor einer Verpflichtung erleben kÃƒÂ¶nnen.",
 
   "faq.pricing.q2": "Gibt es eine kostenlose Version?",
   "faq.pricing.a2":
-    "Wir bieten eine kostenlose Testphase an, damit Sie die volle Leistung von Draft erleben kÃ¶nnen. Nach der Testphase kÃ¶nnen Sie einen Plan wÃ¤hlen, der Ihren BedÃ¼rfnissen und Ihrem Budget entspricht.",
+    "Wir bieten eine kostenlose Testphase an, damit Sie die volle Leistung von Draft erleben kÃƒÂ¶nnen. Nach der Testphase kÃƒÂ¶nnen Sie einen Plan wÃƒÂ¤hlen, der Ihren BedÃƒÂ¼rfnissen und Ihrem Budget entspricht.",
 
   "faq.pricing.q3": "Bieten Sie Schul- oder Bezirkspreise an?",
   "faq.pricing.a3":
-    "Ja! Wir bieten spezielle Preise fÃ¼r Schulen und Bezirke an, einschlieÃŸlich Mengenrabatten, zentralisierter Abrechnung und zusÃ¤tzlicher Funktionen wie Teamzusammenarbeit und Admin-Kontrollen. Kontaktieren Sie unser Vertriebsteam fÃ¼r ein individuelles Angebot.",
+    "Ja! Wir bieten spezielle Preise für Schulen und Bezirke an, einschlieÃƒÅ¸lich Mengenrabatten, zentralisierter Abrechnung und zusÃƒÂ¤tzlicher Funktionen wie Teamzusammenarbeit und Admin-Kontrollen. Kontaktieren Sie unser Vertriebsteam für ein individuelles Angebot.",
 
-  "faq.pricing.q4": "Kann ich jederzeit kÃ¼ndigen?",
+  "faq.pricing.q4": "Kann ich jederzeit kÃƒÂ¼ndigen?",
   "faq.pricing.a4":
-    "Ja. Es gibt keine langfristigen VertrÃ¤ge fÃ¼r individuelle PlÃ¤ne. Sie kÃ¶nnen Ihr Abonnement jederzeit kÃ¼ndigen und behalten den Zugriff bis zum Ende Ihres Abrechnungszeitraums.",
+    "Ja. Es gibt keine langfristigen VertrÃƒÂ¤ge für individuelle PlÃƒÂ¤ne. Sie kÃƒÂ¶nnen Ihr Abonnement jederzeit kÃƒÂ¼ndigen und behalten den Zugriff bis zum Ende Ihres Abrechnungszeitraums.",
 
   // Languages Questions (German)
-  "faq.languages.q1": "Welche Sprachen unterstÃ¼tzt Draft?",
+  "faq.languages.q1": "Welche Sprachen unterstÃƒÂ¼tzt Draft?",
   "faq.languages.a1":
-    "Draft unterstÃ¼tzt Kommunikation in Ã¼ber 20 Sprachen, darunter Spanisch, FranzÃ¶sisch, Deutsch, Mandarin, Arabisch, Portugiesisch und viele mehr. Sie kÃ¶nnen auf Englisch schreiben und in jede unterstÃ¼tzte Sprache Ã¼bersetzen oder direkt in Ihrer bevorzugten Sprache schreiben.",
+    "Draft unterstÃƒÂ¼tzt Kommunikation in ÃƒÂ¼ber 20 Sprachen, darunter Spanisch, FranzÃƒÂ¶sisch, Deutsch, Mandarin, Arabisch, Portugiesisch und viele mehr. Sie kÃƒÂ¶nnen auf Englisch schreiben und in jede unterstÃƒÂ¼tzte Sprache ÃƒÂ¼bersetzen oder direkt in Ihrer bevorzugten Sprache schreiben.",
 
-  "faq.languages.q2": "Wie genau sind die Ãœbersetzungen?",
+  "faq.languages.q2": "Wie genau sind die ÃƒÅ“bersetzungen?",
   "faq.languages.a2":
-    "Unsere Ãœbersetzungen sind speziell fÃ¼r pÃ¤dagogische Kontexte kalibriert und bewahren angemessenen Ton und FormalitÃ¤t. WÃ¤hrend wir empfehlen, Ãœbersetzungen fÃ¼r kritische Kommunikation von Muttersprachlern Ã¼berprÃ¼fen zu lassen, sind unsere Ãœbersetzungen sehr genau und kontextuell angemessen.",
+    "Unsere ÃƒÅ“bersetzungen sind speziell für pÃƒÂ¤dagogische Kontexte kalibriert und bewahren angemessenen Ton und FormalitÃƒÂ¤t. WÃƒÂ¤hrend wir empfehlen, ÃƒÅ“bersetzungen für kritische Kommunikation von Muttersprachlern ÃƒÂ¼berprÃƒÂ¼fen zu lassen, sind unsere ÃƒÅ“bersetzungen sehr genau und kontextuell angemessen.",
 
   "faq.languages.q3":
     "Kann Draft mir helfen, mit mehrsprachigen Familien zu kommunizieren?",
   "faq.languages.a3":
-    "Absolut! Draft macht es einfach, dieselbe Nachricht in mehreren Sprachen zu senden und sicherzustellen, dass alle Familien Kommunikation in ihrer bevorzugten Sprache erhalten. Dies hilft, stÃ¤rkere Schule-Heim-Verbindungen aufzubauen.",
+    "Absolut! Draft macht es einfach, dieselbe Nachricht in mehreren Sprachen zu senden und sicherzustellen, dass alle Familien Kommunikation in ihrer bevorzugten Sprache erhalten. Dies hilft, stÃƒÂ¤rkere Schule-Heim-Verbindungen aufzubauen.",
 
   // Schools Questions (German)
   "faq.schools.q1":
-    "Wie funktioniert Zaza Draft fÃ¼r ganze Schulen oder Bezirke?",
+    "Wie funktioniert Zaza Draft für ganze Schulen oder Bezirke?",
   "faq.schools.a1":
-    "Unsere Schul- und BezirksplÃ¤ne umfassen zentralisierte Verwaltung, Teamzusammenarbeitsfunktionen, gemeinsame Vorlagen, Nutzungsanalysen, vorrangigen Support und Mengenpreise. Administratoren kÃ¶nnen Lizenzen verwalten, die Nutzung Ã¼berwachen und konsistente Kommunikationsstandards in der gesamten Organisation sicherstellen.",
+    "Unsere Schul- und BezirksplÃƒÂ¤ne umfassen zentralisierte Verwaltung, Teamzusammenarbeitsfunktionen, gemeinsame Vorlagen, Nutzungsanalysen, vorrangigen Support und Mengenpreise. Administratoren kÃƒÂ¶nnen Lizenzen verwalten, die Nutzung ÃƒÂ¼berwachen und konsistente Kommunikationsstandards in der gesamten Organisation sicherstellen.",
 
-  "faq.schools.q2": "Bieten Sie Schulungen und Support fÃ¼r Schulen an?",
+  "faq.schools.q2": "Bieten Sie Schulungen und Support für Schulen an?",
   "faq.schools.a2":
-    "Ja! Schul- und BezirksplÃ¤ne umfassen Onboarding-Support, Schulungsmaterialien und fortlaufende Ressourcen fÃ¼r die berufliche Weiterentwicklung. Wir helfen sicherzustellen, dass Ihr gesamtes Team Draft effektiv nutzen kann, um Zeit zu sparen und die Kommunikation zu verbessern.",
+    "Ja! Schul- und BezirksplÃƒÂ¤ne umfassen Onboarding-Support, Schulungsmaterialien und fortlaufende Ressourcen für die berufliche Weiterentwicklung. Wir helfen sicherzustellen, dass Ihr gesamtes Team Draft effektiv nutzen kann, um Zeit zu sparen und die Kommunikation zu verbessern.",
 
   // FAQ CTA (German)
   "faq.cta.title": "Haben Sie noch Fragen?",
@@ -2490,41 +2490,41 @@ const translationsDe: Record<string, string> = {
   "faq.cta.button": "Support kontaktieren",
 
   // About Overview Page (German)
-  "about.overview.hero.eyebrow": "ÃœBER ZAZA",
+  "about.overview.hero.eyebrow": "ÃƒÅ“BER ZAZA",
   "about.overview.hero.title": "Die Zukunft der Lehrertechnologie gestalten",
   "about.overview.hero.subtitle":
-    "Unsere Mission ist es, LehrkrÃ¤ften ihre Zeit zurÃ¼ckzugeben, indem wir KI-Tools entwickeln, die Bildung wirklich verstehen.",
+    "Unsere Mission ist es, Lehrkräften ihre Zeit zurückzugeben, indem wir KI-Tools entwickeln, die Bildung wirklich verstehen.",
 
   "about.overview.mission.title": "Unsere Mission",
   "about.overview.mission.body":
-    "Jede Lehrkraft verdient Tools, die ihre Expertise respektieren, ihre SchÃ¼ler schÃ¼tzen und ihnen Zeit geben, das zu tun, was sie am besten kÃ¶nnen: unterrichten. Wir entwickeln KI, die LehrkrÃ¤ften dient, nicht umgekehrt.",
+    "Jede Lehrkraft verdient Tools, die ihre Expertise respektieren, ihre SchÃƒÂ¼ler schÃƒÂ¼tzen und ihnen Zeit geben, das zu tun, was sie am besten kÃƒÂ¶nnen: unterrichten. Wir entwickeln KI, die Lehrkräften dient, nicht umgekehrt.",
 
   "about.overview.values.title": "Unsere Werte",
   "about.overview.values.teacherFirst.title": "Lehrkraft-zentriertes Design",
   "about.overview.values.teacherFirst.body":
-    "Jede Funktion wird mit echten LehrkrÃ¤ften entwickelt, in echten Klassenzimmern getestet und basierend auf echtem Feedback verfeinert.",
+    "Jede Funktion wird mit echten Lehrkräften entwickelt, in echten Klassenzimmern getestet und basierend auf echtem Feedback verfeinert.",
   "about.overview.values.safety.title": "Sicherheit durch Design",
   "about.overview.values.safety.body":
-    "Wir entwickeln halluzinationssichere KI, die niemals SchÃ¼lerinformationen erfindet oder Details Ã¼ber Ihre Klasse fabriziert.",
+    "Wir entwickeln halluzinationssichere KI, die niemals SchÃƒÂ¼lerinformationen erfindet oder Details ÃƒÂ¼ber Ihre Klasse fabriziert.",
   "about.overview.values.privacy.title": "Datenschutz zuerst",
   "about.overview.values.privacy.body":
-    "Von Anfang an FERPA-konform. Ihre Daten gehÃ¶ren Ihnen, und wir verwenden sie niemals zum Trainieren unserer Modelle.",
+    "Von Anfang an FERPA-konform. Ihre Daten gehÃƒÂ¶ren Ihnen, und wir verwenden sie niemals zum Trainieren unserer Modelle.",
   "about.overview.values.evidence.title": "Evidenzbasiert",
   "about.overview.values.evidence.body":
-    "Basierend auf echter PÃ¤dagogik und Bildungsforschung, nicht auf generischen Business-Schreibmustern.",
+    "Basierend auf echter PÃƒÂ¤dagogik und Bildungsforschung, nicht auf generischen Business-Schreibmustern.",
 
   "about.overview.timeline.title": "Unsere Reise",
-  "about.overview.timeline.2023.title": "GrÃ¼ndung",
+  "about.overview.timeline.2023.title": "GrÃƒÂ¼ndung",
   "about.overview.timeline.2023.body":
-    "Begonnen mit einer einfachen Frage: Warum verbringen LehrkrÃ¤fte so viel Zeit mit Schreiben, wenn KI helfen kÃ¶nnte?",
+    "Begonnen mit einer einfachen Frage: Warum verbringen Lehrkräfte so viel Zeit mit Schreiben, wenn KI helfen kÃƒÂ¶nnte?",
   "about.overview.timeline.2024.title": "Start",
   "about.overview.timeline.2024.body":
-    "VerÃ¶ffentlichung von Zaza Draft fÃ¼r Ã¼ber 100 Beta-LehrkrÃ¤fte. Ãœber 50.000 Stunden Schreibzeit gespart.",
+    "VerÃƒÂ¶ffentlichung von Zaza Draft für ÃƒÂ¼ber 100 Beta-Lehrkräfte. ÃƒÅ“ber 50.000 Stunden Schreibzeit gespart.",
   "about.overview.timeline.2025.title": "Wachstum",
   "about.overview.timeline.2025.body":
-    "Expansion auf Ã¼ber 500 LehrkrÃ¤fte in 15 LÃ¤ndern. Start von Teach, GradeFlow und Shield.",
+    "Expansion auf ÃƒÂ¼ber 500 Lehrkräfte in 15 LÃƒÂ¤ndern. Start von Teach, GradeFlow und Shield.",
 
-  "about.overview.cta.title": "MÃ¶chten Sie mehr erfahren?",
+  "about.overview.cta.title": "MÃƒÂ¶chten Sie mehr erfahren?",
   "about.overview.cta.body":
     "Kontaktieren Sie unser Team, um zu besprechen, wie Zaza Ihrer Schule oder Ihrem Bezirk helfen kann.",
   "about.overview.cta.button": "Kontaktieren Sie uns",
@@ -2533,124 +2533,124 @@ const translationsDe: Record<string, string> = {
   "about.company.hero.eyebrow": "UNSER UNTERNEHMEN",
   "about.company.hero.title": "Zaza Technologies",
   "about.company.hero.subtitle":
-    "Wir sind ein Team aus PÃ¤dagogen, Ingenieuren und Designern, die die Zukunft der Lehrertechnologie gestalten.",
+    "Wir sind ein Team aus PÃƒÂ¤dagogen, Ingenieuren und Designern, die die Zukunft der Lehrertechnologie gestalten.",
 
   "about.company.body.p1":
-    "Zaza Technologies wurde 2023 von LehrkrÃ¤ften gegrÃ¼ndet, die von generischen KI-Tools frustriert waren, die Bildung nicht verstanden. Wir sahen LehrkrÃ¤fte, die Stunden mit administrativen Schreibaufgaben verbrachten, die automatisiert werden kÃ¶nnten, aber bestehende KI-Tools waren entweder unsicher fÃ¼r SchÃ¼lerdaten oder produzierten Ausgaben, die Ã¼berhaupt nicht wie eine Lehrkraft klangen.",
+    "Zaza Technologies wurde 2023 von Lehrkräften gegrÃƒÂ¼ndet, die von generischen KI-Tools frustriert waren, die Bildung nicht verstanden. Wir sahen Lehrkräfte, die Stunden mit administrativen Schreibaufgaben verbrachten, die automatisiert werden kÃƒÂ¶nnten, aber bestehende KI-Tools waren entweder unsicher für SchÃƒÂ¼lerdaten oder produzierten Ausgaben, die ÃƒÂ¼berhaupt nicht wie eine Lehrkraft klangen.",
 
   "about.company.body.p2":
-    "Also haben wir etwas anderes entwickelt: KI-Tools, die speziell auf pÃ¤dagogische Kommunikation und PÃ¤dagogik trainiert sind. Tools, die die Nuancen der Eltern-Lehrer-Kommunikation verstehen, die Bedeutung konstruktiven Feedbacks und die Notwendigkeit, Ihre authentische Stimme zu bewahren. Tools, die halluzinationssicher, FERPA-konform und von Grund auf fÃ¼r Bildung entwickelt sind.",
+    "Also haben wir etwas anderes entwickelt: KI-Tools, die speziell auf pÃƒÂ¤dagogische Kommunikation und PÃƒÂ¤dagogik trainiert sind. Tools, die die Nuancen der Eltern-Lehrer-Kommunikation verstehen, die Bedeutung konstruktiven Feedbacks und die Notwendigkeit, Ihre authentische Stimme zu bewahren. Tools, die halluzinationssicher, FERPA-konform und von Grund auf für Bildung entwickelt sind.",
 
   "about.company.body.p3":
-    "Heute dient Zaza Ã¼ber 500 LehrkrÃ¤ften in 15 LÃ¤ndern und spart ihnen Ã¼ber 10 Stunden pro Woche bei Schreibaufgaben. Aber wir fangen gerade erst an. Unsere Vision ist es, eine vollstÃ¤ndige Suite von KI-Tools zu entwickeln, die LehrkrÃ¤ften helfen, ihre Zeit zurÃ¼ckzugewinnen und sich auf das Wichtigste zu konzentrieren: ihre SchÃ¼ler.",
+    "Heute dient Zaza ÃƒÂ¼ber 500 Lehrkräften in 15 LÃƒÂ¤ndern und spart ihnen ÃƒÂ¼ber 10 Stunden pro Woche bei Schreibaufgaben. Aber wir fangen gerade erst an. Unsere Vision ist es, eine vollstÃƒÂ¤ndige Suite von KI-Tools zu entwickeln, die Lehrkräften helfen, ihre Zeit zurückzugewinnen und sich auf das Wichtigste zu konzentrieren: ihre SchÃƒÂ¼ler.",
 
-  "about.company.stats.teachers.label": "LehrkrÃ¤fte nutzen Zaza",
+  "about.company.stats.teachers.label": "Lehrkräfte nutzen Zaza",
   "about.company.stats.teachers.value": "500+",
-  "about.company.stats.countries.label": "LÃ¤nder",
+  "about.company.stats.countries.label": "LÃƒÂ¤nder",
   "about.company.stats.countries.value": "15",
-  "about.company.stats.timeSaved.label": "WÃ¶chentlich gesparte Stunden",
+  "about.company.stats.timeSaved.label": "WÃƒÂ¶chentlich gesparte Stunden",
   "about.company.stats.timeSaved.value": "10+",
 
   // Founder Hero Section (German)
   "founder.hero.headline":
-    "Lernen Sie den GrÃ¼nder kennen, der KI fÃ¼r LehrkrÃ¤fte entwickelt",
+    "Lernen Sie den GrÃƒÂ¼nder kennen, der KI für Lehrkräfte entwickelt",
   "founder.hero.subheading":
-    "Ich habe Ã¼ber zwanzig Jahre im Bereich Lernen und Bildung gearbeitet - an UniversitÃ¤ten, in der Unternehmensbildung und im EdTech-Bereich. Eines war immer wahr: Unterrichten ist menschliche Arbeit.",
-  "founder.hero.label": "GRÃœNDER & CEO",
+    "Ich habe ÃƒÂ¼ber zwanzig Jahre im Bereich Lernen und Bildung gearbeitet - an UniversitÃƒÂ¤ten, in der Unternehmensbildung und im EdTech-Bereich. Eines war immer wahr: Unterrichten ist menschliche Arbeit.",
+  "founder.hero.label": "GRÃƒÅ“NDER & CEO",
   "founder.hero.name": "Dr. Greg Blackburn",
   "founder.hero.tagline":
-    "GrÃ¼nder & CEO, Lernwissenschaftler, Lehrer-BefÃ¼rworter",
+    "GrÃƒÂ¼nder & CEO, Lernwissenschaftler, Lehrer-Befürworter",
 
   // Founder Journey Section (German)
   "founder.journey.title": "Meine Reise in der Bildung",
   "founder.journey.p1":
-    "WÃ¤hrend meiner Promotion in BerufspÃ¤dagogik habe ich mich darauf konzentriert, wie Lernende kritisches Denken und ProblemlÃ¶sung in realen Umgebungen entwickeln. Ich habe gesehen, wie Technologie das Lernen unterstÃ¼tzen kann, wenn sie richtig eingesetzt wird. Ich habe aber auch gesehen, wie leicht sie Stress verursachen, Zeit verschwenden oder gegen das arbeiten kann, was PÃ¤dagogen erreichen wollen.",
+    "WÃƒÂ¤hrend meiner Promotion in BerufspÃƒÂ¤dagogik habe ich mich darauf konzentriert, wie Lernende kritisches Denken und ProblemlÃƒÂ¶sung in realen Umgebungen entwickeln. Ich habe gesehen, wie Technologie das Lernen unterstÃƒÂ¼tzen kann, wenn sie richtig eingesetzt wird. Ich habe aber auch gesehen, wie leicht sie Stress verursachen, Zeit verschwenden oder gegen das arbeiten kann, was PÃƒÂ¤dagogen erreichen wollen.",
   "founder.journey.p2":
-    "Als Chief Learning Officer bei Communardo leite ich Arbeiten im Bereich KI-gestÃ¼tztes Lerndesign, digitale Inhaltsentwicklung, LMS-Innovation und Lehrerfortbildung. Ich habe viel Ã¼ber Lernwissenschaft, eLearning-Strategie und die Rolle von KI in der Bildung geschrieben und gesprochen.",
+    "Als Chief Learning Officer bei Communardo leite ich Arbeiten im Bereich KI-gestÃƒÂ¼tztes Lerndesign, digitale Inhaltsentwicklung, LMS-Innovation und Lehrerfortbildung. Ich habe viel ÃƒÂ¼ber Lernwissenschaft, eLearning-Strategie und die Rolle von KI in der Bildung geschrieben und gesprochen.",
   "founder.journey.p3":
-    "Aber hier ist die Wahrheit: Die meisten EdTech-Tools sind nicht fÃ¼r LehrkrÃ¤fte gebaut. Sie sind fÃ¼r VerkaufsgesprÃ¤che gebaut.",
+    "Aber hier ist die Wahrheit: Die meisten EdTech-Tools sind nicht für Lehrkräfte gebaut. Sie sind für VerkaufsgesprÃƒÂ¤che gebaut.",
   "founder.journey.p4":
-    "Ich habe beobachtet, wie Technologie als 'revolutionÃ¤r' verkauft wurde, nur um zu einem weiteren System zu werden, das LehrkrÃ¤fte verwalten mÃ¼ssen. Ich habe KI-Produkte gesehen, die Inhalte generieren, die auf den ersten Blick beeindruckend aussehen - aber zusammenbrechen, sobald eine Lehrkraft versucht, sie mit echten SchÃ¼lern zu verwenden.",
+    "Ich habe beobachtet, wie Technologie als 'revolutionÃƒÂ¤r' verkauft wurde, nur um zu einem weiteren System zu werden, das Lehrkräfte verwalten mÃƒÂ¼ssen. Ich habe KI-Produkte gesehen, die Inhalte generieren, die auf den ersten Blick beeindruckend aussehen - aber zusammenbrechen, sobald eine Lehrkraft versucht, sie mit echten SchÃƒÂ¼lern zu verwenden.",
   "founder.journey.p5": "Deshalb habe ich Zaza gebaut.",
 
   // Founder Principle Section (German)
   "founder.principle.title": "Das Prinzip hinter allem, was wir entwickeln",
-  "founder.principle.question": "Gibt dies LehrkrÃ¤ften wertvolle Zeit zurÃ¼ck?",
+  "founder.principle.question": "Gibt dies Lehrkräften wertvolle Zeit zurück?",
   "founder.principle.not1": "Nicht 'Ist das clever?'",
-  "founder.principle.not2": "Nicht 'LÃ¤sst sich das gut demonstrieren?'",
+  "founder.principle.not2": "Nicht 'LÃƒÂ¤sst sich das gut demonstrieren?'",
   "founder.principle.not3": "Nicht 'Sieht das gut in einer Roadmap aus?'",
   "founder.principle.answer": "Zeit.",
   "founder.principle.rule":
-    "Wenn ein Tool die Arbeitsbelastung in einer echten Schulumgebung nicht reduzieren kann, gehÃ¶rt es nicht in Zaza.",
+    "Wenn ein Tool die Arbeitsbelastung in einer echten Schulumgebung nicht reduzieren kann, gehÃƒÂ¶rt es nicht in Zaza.",
 
   // Founder Commitments Section (German)
-  "founder.commitments.title": "Meine Verpflichtungen gegenÃ¼ber LehrkrÃ¤ften",
+  "founder.commitments.title": "Meine Verpflichtungen gegenÃƒÂ¼ber Lehrkräften",
   "founder.commitments.item1.title": "Keine Halluzinationen.",
   "founder.commitments.item1.body":
-    "Wenn KI-Ausgaben nicht vertrauenswÃ¼rdig sind, leisten LehrkrÃ¤fte am Ende mehr Arbeit bei der ÃœberprÃ¼fung und Korrektur. Deshalb entwickeln wir fÃ¼r Genauigkeit, Klarheit und KlassenzimmerrealitÃ¤t.",
+    "Wenn KI-Ausgaben nicht vertrauenswÃƒÂ¼rdig sind, leisten Lehrkräfte am Ende mehr Arbeit bei der ÃƒÅ“berprÃƒÂ¼fung und Korrektur. Deshalb entwickeln wir für Genauigkeit, Klarheit und KlassenzimmerrealitÃƒÂ¤t.",
   "founder.commitments.item2.title":
     "Arbeitsbelastung reduzieren, nicht verlagern.",
   "founder.commitments.item2.body":
-    "Ein Tool, das Schulungen, HandbÃ¼cher und komplexe ArbeitsablÃ¤ufe erfordert, ist keine UnterstÃ¼tzung. Es ist umbenannte Arbeit.",
+    "Ein Tool, das Schulungen, HandbÃƒÂ¼cher und komplexe ArbeitsablÃƒÂ¤ufe erfordert, ist keine UnterstÃƒÂ¼tzung. Es ist umbenannte Arbeit.",
   "founder.commitments.item3.title": "Professionelle Expertise respektieren.",
   "founder.commitments.item3.body":
-    "Sie brauchen keine Technologie, die Ihr UrteilsvermÃ¶gen ersetzt. Sie brauchen Technologie, die es verstÃ¤rkt.",
+    "Sie brauchen keine Technologie, die Ihr UrteilsvermÃƒÂ¶gen ersetzt. Sie brauchen Technologie, die es verstÃƒÂ¤rkt.",
   "founder.commitments.closing":
     "Unterrichten ist unglaublich komplexe, intellektuell anspruchsvolle Arbeit. Es ist auch emotional belastende Arbeit. Gute Tools sollten diese Last erleichtern.",
 
   // Founder Why Zaza Section (German)
   "founder.whyZaza.title": "Warum es Zaza gibt",
   "founder.whyZaza.p1":
-    "Zaza versucht nicht, 'Bildung zu disruptieren.' LehrkrÃ¤fte brauchen keine Disruption. Sie brauchen UnterstÃ¼tzung. Sie brauchen Zeit. Sie brauchen Tools, die den Wert ihrer Erfahrung anerkennen - anstatt zu versuchen, sie zu standardisieren oder zu ersetzen.",
+    "Zaza versucht nicht, 'Bildung zu disruptieren.' Lehrkräfte brauchen keine Disruption. Sie brauchen UnterstÃƒÂ¼tzung. Sie brauchen Zeit. Sie brauchen Tools, die den Wert ihrer Erfahrung anerkennen - anstatt zu versuchen, sie zu standardisieren oder zu ersetzen.",
   "founder.whyZaza.p2":
-    "Die Arbeit, die LehrkrÃ¤fte leisten, ist wichtig. Und das Beste, was Technologie tun kann, ist zu helfen, die Zeit, Energie und FÃ¼rsorge zu schÃ¼tzen, die erforderlich sind, um diese Arbeit gut zu machen.",
+    "Die Arbeit, die Lehrkräfte leisten, ist wichtig. Und das Beste, was Technologie tun kann, ist zu helfen, die Zeit, Energie und fürsorge zu schÃƒÂ¼tzen, die erforderlich sind, um diese Arbeit gut zu machen.",
   "founder.whyZaza.p3":
-    "Wenn das die Art von Zukunft fÃ¼r Bildung ist, an die Sie glauben, sind Sie hier richtig.",
+    "Wenn das die Art von Zukunft für Bildung ist, an die Sie glauben, sind Sie hier richtig.",
 
   // Founder Closing (German)
   "founder.closing.name": "Greg",
   "founder.closing.title": "Dr. Greg Blackburn",
-  "founder.closing.role": "GrÃ¼nder & CEO, Zaza Technologies",
+  "founder.closing.role": "GrÃƒÂ¼nder & CEO, Zaza Technologies",
   "founder.personal.cta": "Kontakt aufnehmen",
 
   // Additional Founder Keys (German - for page compatibility)
   "founder.journey.quote":
-    "Ich habe Zaza entwickelt, weil ich es satt hatte, LehrkrÃ¤fte in administrativer Arbeit ertrinken zu sehen, wenn Technologie sie befreien sollte.",
+    "Ich habe Zaza entwickelt, weil ich es satt hatte, Lehrkräfte in administrativer Arbeit ertrinken zu sehen, wenn Technologie sie befreien sollte.",
   "founder.mission.quote":
-    "Jede Lehrkraft verdient Tools, die ihre Expertise respektieren, ihre SchÃ¼ler schÃ¼tzen und ihnen Zeit geben, das zu tun, was sie am besten kÃ¶nnen: unterrichten.",
-  "founder.mission.attribution": "Dr. Greg Blackburn, GrÃ¼nder & CEO",
+    "Jede Lehrkraft verdient Tools, die ihre Expertise respektieren, ihre SchÃƒÂ¼ler schÃƒÂ¼tzen und ihnen Zeit geben, das zu tun, was sie am besten kÃƒÂ¶nnen: unterrichten.",
+  "founder.mission.attribution": "Dr. Greg Blackburn, GrÃƒÂ¼nder & CEO",
   "founder.whyZaza.subtitle": "Drei Prinzipien, die alles leiten, was wir tun",
-  "founder.whyZaza.card1.title": "FÃ¼r LehrkrÃ¤fte, mit LehrkrÃ¤ften",
+  "founder.whyZaza.card1.title": "für Lehrkräfte, mit Lehrkräften",
   "founder.whyZaza.card1.body":
-    "Ich habe meine Karriere damit verbracht, mit LehrkrÃ¤ften und Lerndesignern zusammenzuarbeiten - Tools direkt mit PÃ¤dagogen zu verfeinern, die die RealitÃ¤t von Klassenzimmern verstehen. Jede Funktion in Zaza wird durch echtes Feedback und echte Praxis geformt, nicht durch Theorie.",
+    "Ich habe meine Karriere damit verbracht, mit Lehrkräften und Lerndesignern zusammenzuarbeiten - Tools direkt mit PÃƒÂ¤dagogen zu verfeinern, die die RealitÃƒÂ¤t von Klassenzimmern verstehen. Jede Funktion in Zaza wird durch echtes Feedback und echte Praxis geformt, nicht durch Theorie.",
   "founder.whyZaza.card2.title": "Boutique, nicht Big Tech",
   "founder.whyZaza.card2.body":
-    "Wir sind kein riesiges Unternehmen, das an jeden verkaufen will. Wir sind ein fokussiertes Team, das spezialisierte Tools fÃ¼r ein Publikum entwickelt: LehrkrÃ¤fte. Ihre BedÃ¼rfnisse stehen immer an erster Stelle.",
-  "founder.whyZaza.card3.title": "Ein VermÃ¤chtnis aufbauen",
+    "Wir sind kein riesiges Unternehmen, das an jeden verkaufen will. Wir sind ein fokussiertes Team, das spezialisierte Tools für ein Publikum entwickelt: Lehrkräfte. Ihre BedÃƒÂ¼rfnisse stehen immer an erster Stelle.",
+  "founder.whyZaza.card3.title": "Ein VermÃƒÂ¤chtnis aufbauen",
   "founder.whyZaza.card3.body":
-    "Es geht nicht um schnelle Gewinne. Es geht darum, etwas zu schaffen, das LehrkrÃ¤ften wirklich hilft zu gedeihen und Bildung zum Besseren verÃ¤ndert. Das ist das VermÃ¤chtnis, das ich hinterlassen mÃ¶chte.",
+    "Es geht nicht um schnelle Gewinne. Es geht darum, etwas zu schaffen, das Lehrkräften wirklich hilft zu gedeihen und Bildung zum Besseren verÃƒÂ¤ndert. Das ist das VermÃƒÂ¤chtnis, das ich hinterlassen mÃƒÂ¶chte.",
   // Founder Personal Message Section (German)
-  "founder.personal.title": "Eine persÃ¶nliche Notiz",
+  "founder.personal.title": "Eine persÃƒÂ¶nliche Notiz",
   "founder.personal.message1":
-    "Wenn Sie dies lesen, sind Sie wahrscheinlich eine Lehrkraft, die neugierig auf KI ist, aber skeptisch, ob sie wirklich helfen kann. Ich verstehe das. Ich war auch skeptisch. Die meisten KI-Tools fÃ¼hlen sich an, als wÃ¤ren sie von Menschen entwickelt worden, die nie einen FuÃŸ in ein Klassenzimmer gesetzt haben.",
+    "Wenn Sie dies lesen, sind Sie wahrscheinlich eine Lehrkraft, die neugierig auf KI ist, aber skeptisch, ob sie wirklich helfen kann. Ich verstehe das. Ich war auch skeptisch. Die meisten KI-Tools fÃƒÂ¼hlen sich an, als wÃƒÂ¤ren sie von Menschen entwickelt worden, die nie einen FuÃƒÅ¸ in ein Klassenzimmer gesetzt haben.",
   "founder.personal.message2":
-    "Deshalb habe ich Zaza anders entwickelt. Jede Funktion wird mit echten LehrkrÃ¤ften entwickelt, in echten Klassenzimmern getestet und basierend auf echtem Feedback verfeinert. Wir entwickeln nicht nur Software - wir bauen Partnerschaften mit PÃ¤dagogen auf, die uns helfen, Tools zu erstellen, die wirklich funktionieren.",
+    "Deshalb habe ich Zaza anders entwickelt. Jede Funktion wird mit echten Lehrkräften entwickelt, in echten Klassenzimmern getestet und basierend auf echtem Feedback verfeinert. Wir entwickeln nicht nur Software - wir bauen Partnerschaften mit PÃƒÂ¤dagogen auf, die uns helfen, Tools zu erstellen, die wirklich funktionieren.",
   "founder.personal.message3":
-    "Ich wÃ¼rde gerne von Ihnen hÃ¶ren. Ob Sie Fragen, Feedback haben oder einfach nur Ã¼ber Bildung und Technologie sprechen mÃ¶chten, meine TÃ¼r steht immer offen. Lassen Sie uns gemeinsam die Zukunft der Lehrertechnologie gestalten.",
+    "Ich wÃƒÂ¼rde gerne von Ihnen hÃƒÂ¶ren. Ob Sie Fragen, Feedback haben oder einfach nur ÃƒÂ¼ber Bildung und Technologie sprechen mÃƒÂ¶chten, meine TÃƒÂ¼r steht immer offen. Lassen Sie uns gemeinsam die Zukunft der Lehrertechnologie gestalten.",
   "founder.personal.name": "",
   "founder.personal.title2": "Dr. Greg Blackburn",
   "founder.personal.company": "Zaza Technologies",
   // Contact Page (German)
   "contact.title": "Kontakt aufnehmen",
   "contact.subtitle":
-    "Haben Sie Fragen? MÃ¶chten Sie mehr erfahren? Wir freuen uns, von Ihnen zu hÃ¶ren.",
+    "Haben Sie Fragen? MÃƒÂ¶chten Sie mehr erfahren? Wir freuen uns, von Ihnen zu hÃƒÂ¶ren.",
   "contact.form.name": "Ihr Name",
   "contact.form.email": "Ihre E-Mail",
   "contact.form.message": "Ihre Nachricht",
-  "contact.form.placeholder": "Sagen Sie uns, wie wir helfen kÃ¶nnen...",
+  "contact.form.placeholder": "Sagen Sie uns, wie wir helfen kÃƒÂ¶nnen...",
   "contact.form.submit": "Nachricht senden",
   "contact.form.dataNote":
-    "Wir respektieren Ihre PrivatsphÃ¤re. Ihre Informationen werden niemals weitergegeben.",
+    "Wir respektieren Ihre PrivatsphÃƒÂ¤re. Ihre Informationen werden niemals weitergegeben.",
   "contact.direct.title": "Direkter Kontakt",
   "contact.direct.email": "E-Mail an uns",
   "contact.direct.response":
@@ -2658,251 +2658,251 @@ const translationsDe: Record<string, string> = {
   "contact.help.title": "Brauchen Sie Hilfe?",
   "contact.help.description":
     "Schauen Sie sich unsere hilfreichen Ressourcen an",
-  "contact.help.faq": "â†’ HÃ¤ufig gestellte Fragen",
-  "contact.help.support": "â†’ Support-Center",
-  "glossary.title": "KI-Glossar fÃ¼r LehrkrÃ¤fte",
+  "contact.help.faq": "Ã¢â€ â€™ HÃƒÂ¤ufig gestellte Fragen",
+  "contact.help.support": "Ã¢â€ â€™ Support-Center",
+  "glossary.title": "KI-Glossar für Lehrkräfte",
   "glossary.subtitle":
-    "Ãœber 150 KI-Begriffe in leicht verstÃ¤ndlicher Sprache erklÃ¤rt. Nach Kategorie oder alphabetisch suchen, um KI-Konzepte fÃ¼r den Bildungsbereich zu verstehen.",
+    "ÃƒÅ“ber 150 KI-Begriffe in leicht verstÃƒÂ¤ndlicher Sprache erklÃƒÂ¤rt. Nach Kategorie oder alphabetisch suchen, um KI-Konzepte für den Bildungsbereich zu verstehen.",
   "integrations.title": "Verbinden Sie Ihre Lieblingstools",
   "integrations.subtitle":
     "Integrieren Sie Zaza Draft nahtlos in Ihren vorhandenen Stack.",
-  "aiLiteracy.title": "KI fÃ¼r Bildung meistern",
+  "aiLiteracy.title": "KI für Bildung meistern",
   "aiLiteracy.subtitle":
     "Bauen Sie Ihre KI-Expertise mit umfassenden Kursen auf, die Ihnen helfen, KI in Ihren Unterricht zu integrieren.",
 
   "aiLiteracy.courses": "Kurse",
-  "aiLiteracy.educators": "PÃ¤dagogen",
+  "aiLiteracy.educators": "PÃƒÂ¤dagogen",
   "aiLiteracy.certified": "Zertifiziert",
   "aiLiteracy.hoursSaved": "Gesparte Stunden",
-  "aiLiteracy.pathsTitle": "WÃ¤hlen Sie Ihren Lernpfad",
+  "aiLiteracy.pathsTitle": "WÃƒÂ¤hlen Sie Ihren Lernpfad",
   "aiLiteracy.pathsSubtitle":
-    "Strukturierte Lernpfade fÃ¼r LehrkrÃ¤fte in jeder Phase ihrer KI-Reise",
+    "Strukturierte Lernpfade für Lehrkräfte in jeder Phase ihrer KI-Reise",
   "aiLiteracy.beginnerTitle": "Einsteiger-Pfad",
-  "aiLiteracy.beginnerDesc": "Perfekt fÃ¼r LehrkrÃ¤fte, die neu in der KI sind",
+  "aiLiteracy.beginnerDesc": "Perfekt für Lehrkräfte, die neu in der KI sind",
   "aiLiteracy.intermediateTitle": "Fortgeschrittenen-Pfad",
   "aiLiteracy.intermediateDesc":
-    "FÃ¼r LehrkrÃ¤fte mit grundlegenden KI-Kenntnissen",
+    "für Lehrkräfte mit grundlegenden KI-Kenntnissen",
   "aiLiteracy.advancedTitle": "Experten-Pfad",
   "aiLiteracy.advancedDesc":
     "Tiefes Eintauchen in fortgeschrittene KI-Konzepte",
   "aiLiteracy.coursesTitle": "Alle Kurse",
   "aiLiteracy.coursesSubtitle":
-    "Vom GrundverstÃ¤ndnis bis zur Meisterschaft - strukturierte Lernpfade fÃ¼r jeden Lehrertyp",
+    "Vom GrundverstÃƒÂ¤ndnis bis zur Meisterschaft - strukturierte Lernpfade für jeden Lehrertyp",
   "aiLiteracy.certificationTitle": "KI-Bildungszertifizierung",
   "aiLiteracy.certificationSubtitle":
-    "Erwerben Sie anerkannte Qualifikationen, die Ihre KI-Kompetenz und pÃ¤dagogische Expertise nachweisen",
+    "Erwerben Sie anerkannte Qualifikationen, die Ihre KI-Kompetenz und pÃƒÂ¤dagogische Expertise nachweisen",
   "aiLiteracy.benefit1": "Zeigen Sie Ihre Expertise Schulleitungen",
-  "aiLiteracy.benefit2": "Heben Sie sich bei Bewerbungen und BefÃ¶rderungen ab",
+  "aiLiteracy.benefit2": "Heben Sie sich bei Bewerbungen und BefÃƒÂ¶rderungen ab",
   "aiLiteracy.benefit3":
-    "Vernetzen Sie sich mit Ã¼ber 13.000 zertifizierten KI-PÃ¤dagogen weltweit",
+    "Vernetzen Sie sich mit ÃƒÂ¼ber 13.000 zertifizierten KI-PÃƒÂ¤dagogen weltweit",
   "aiLiteracy.libraryTitle": "Herunterladbare Ressourcenbibliothek",
   "aiLiteracy.librarySubtitle":
-    "Sofort einsetzbare Vorlagen, Checklisten und LeitfÃ¤den zur Beschleunigung Ihrer KI-EinfÃ¼hrung",
-  "aiLiteracy.testimonialsTitle": "Was LehrkrÃ¤fte sagen",
+    "Sofort einsetzbare Vorlagen, Checklisten und LeitfÃƒÂ¤den zur Beschleunigung Ihrer KI-EinfÃƒÂ¼hrung",
+  "aiLiteracy.testimonialsTitle": "Was Lehrkräfte sagen",
   "aiLiteracy.testimonialsSubtitle":
-    "Echtes Feedback von PÃ¤dagogen, die unsere KI-Kompetenzkurse abgeschlossen haben",
+    "Echtes Feedback von PÃƒÂ¤dagogen, die unsere KI-Kompetenzkurse abgeschlossen haben",
   "aiLiteracy.ctaTitle": "Beginnen Sie Ihre KI-Reise",
   "aiLiteracy.ctaSubtitle":
-    "Beginnen Sie noch heute Ihre Zertifizierungsreise. Alle Kurse und Bewertungen sind vÃ¶llig kostenlos",
+    "Beginnen Sie noch heute Ihre Zertifizierungsreise. Alle Kurse und Bewertungen sind vÃƒÂ¶llig kostenlos",
   "aiLiteracy.ctaButton": "Kostenlosen Kurs beginnen",
-  "aiLiteracy.ctaSecondary": "GefÃ¼hrte Tour",
+  "aiLiteracy.ctaSecondary": "GefÃƒÂ¼hrte Tour",
   "aiLiteracy.courses": "Kurse",
-  "aiLiteracy.educators": "PÃ¤dagogen",
+  "aiLiteracy.educators": "PÃƒÂ¤dagogen",
   "aiLiteracy.certified": "Zertifiziert",
   "aiLiteracy.hoursSaved": "Gesparte Stunden",
-  "aiLiteracy.pathsTitle": "WÃ¤hlen Sie Ihren Lernpfad",
+  "aiLiteracy.pathsTitle": "WÃƒÂ¤hlen Sie Ihren Lernpfad",
   "aiLiteracy.pathsSubtitle":
-    "Strukturierte Lernpfade fÃ¼r LehrkrÃ¤fte in jeder Phase ihrer KI-Reise",
+    "Strukturierte Lernpfade für Lehrkräfte in jeder Phase ihrer KI-Reise",
   "aiLiteracy.beginnerTitle": "Einsteiger-Pfad",
-  "aiLiteracy.beginnerDesc": "Perfekt fÃ¼r LehrkrÃ¤fte, die neu in der KI sind",
+  "aiLiteracy.beginnerDesc": "Perfekt für Lehrkräfte, die neu in der KI sind",
   "aiLiteracy.intermediateTitle": "Fortgeschrittenen-Pfad",
   "aiLiteracy.intermediateDesc":
-    "FÃ¼r LehrkrÃ¤fte mit grundlegenden KI-Kenntnissen",
+    "für Lehrkräfte mit grundlegenden KI-Kenntnissen",
   "aiLiteracy.advancedTitle": "Experten-Pfad",
   "aiLiteracy.advancedDesc":
     "Tiefes Eintauchen in fortgeschrittene KI-Konzepte",
   "aiLiteracy.coursesTitle": "Alle Kurse",
   "aiLiteracy.coursesSubtitle":
-    "Vom GrundverstÃ¤ndnis bis zur Meisterschaft - strukturierte Lernpfade fÃ¼r jeden Lehrertyp",
+    "Vom GrundverstÃƒÂ¤ndnis bis zur Meisterschaft - strukturierte Lernpfade für jeden Lehrertyp",
   "aiLiteracy.certificationTitle": "KI-Bildungszertifizierung",
   "aiLiteracy.certificationSubtitle":
-    "Erwerben Sie anerkannte Qualifikationen, die Ihre KI-Kompetenz und pÃ¤dagogische Expertise nachweisen",
+    "Erwerben Sie anerkannte Qualifikationen, die Ihre KI-Kompetenz und pÃƒÂ¤dagogische Expertise nachweisen",
   "aiLiteracy.benefit1": "Zeigen Sie Ihre Expertise Schulleitungen",
-  "aiLiteracy.benefit2": "Heben Sie sich bei Bewerbungen und BefÃ¶rderungen ab",
+  "aiLiteracy.benefit2": "Heben Sie sich bei Bewerbungen und BefÃƒÂ¶rderungen ab",
   "aiLiteracy.benefit3":
-    "Vernetzen Sie sich mit Ã¼ber 13.000 zertifizierten KI-PÃ¤dagogen weltweit",
+    "Vernetzen Sie sich mit ÃƒÂ¼ber 13.000 zertifizierten KI-PÃƒÂ¤dagogen weltweit",
   "aiLiteracy.libraryTitle": "Herunterladbare Ressourcenbibliothek",
   "aiLiteracy.librarySubtitle":
-    "Sofort einsetzbare Vorlagen, Checklisten und LeitfÃ¤den zur Beschleunigung Ihrer KI-EinfÃ¼hrung",
-  "aiLiteracy.testimonialsTitle": "Was LehrkrÃ¤fte sagen",
+    "Sofort einsetzbare Vorlagen, Checklisten und LeitfÃƒÂ¤den zur Beschleunigung Ihrer KI-EinfÃƒÂ¼hrung",
+  "aiLiteracy.testimonialsTitle": "Was Lehrkräfte sagen",
   "aiLiteracy.testimonialsSubtitle":
-    "Echtes Feedback von PÃ¤dagogen, die unsere KI-Kompetenzkurse abgeschlossen haben",
+    "Echtes Feedback von PÃƒÂ¤dagogen, die unsere KI-Kompetenzkurse abgeschlossen haben",
   "aiLiteracy.ctaTitle": "Beginnen Sie Ihre KI-Reise",
   "aiLiteracy.ctaSubtitle":
-    "Beginnen Sie noch heute Ihre Zertifizierungsreise. Alle Kurse und Bewertungen sind vÃ¶llig kostenlos",
+    "Beginnen Sie noch heute Ihre Zertifizierungsreise. Alle Kurse und Bewertungen sind vÃƒÂ¶llig kostenlos",
   "aiLiteracy.ctaButton": "Kostenlosen Kurs beginnen",
-  "aiLiteracy.ctaSecondary": "GefÃ¼hrte Tour",
+  "aiLiteracy.ctaSecondary": "GefÃƒÂ¼hrte Tour",
   "bestAiWriting.title":
-    "Die 10 besten KI-Schreibwerkzeuge fÃ¼r LehrkrÃ¤fte 2025",
+    "Die 10 besten KI-Schreibwerkzeuge für Lehrkräfte 2025",
   "bestAiWriting.subtitle":
-    "Vergleichen Sie die besten KI-Tools fÃ¼r LehrkrÃ¤fte - von Elternkommunikation bis Unterrichtsplanung.",
+    "Vergleichen Sie die besten KI-Tools für Lehrkräfte - von Elternkommunikation bis Unterrichtsplanung.",
   "reduceStress.title":
     "Wie Sie Stress durch Elternnachrichten reduzieren (ohne sie zu ignorieren)",
   "reduceStress.subtitle":
-    "Professionelle Strategien fÃ¼r den Umgang mit Elternkommunikation bei gleichzeitigem Schutz Ihres Wohlbefindens.",
-  "bestAiTool.title": "Das beste KI-Tool fÃ¼r professionelle Eltern-E-Mails",
+    "Professionelle Strategien für den Umgang mit Elternkommunikation bei gleichzeitigem Schutz Ihres Wohlbefindens.",
+  "bestAiTool.title": "Das beste KI-Tool für professionelle Eltern-E-Mails",
   "bestAiTool.subtitle":
-    "Entdecken Sie, warum LehrkrÃ¤fte Zaza Draft fÃ¼r professionelle Elternkommunikation wÃ¤hlen.",
+    "Entdecken Sie, warum Lehrkräfte Zaza Draft für professionelle Elternkommunikation wÃƒÂ¤hlen.",
   "aiStudentReports.title":
-    "KI fÃ¼r SchÃ¼lerberichte und Zeugnisse: VollstÃ¤ndiger Leitfaden fÃ¼r LehrkrÃ¤fte",
+    "KI für SchÃƒÂ¼lerberichte und Zeugnisse: VollstÃƒÂ¤ndiger Leitfaden für Lehrkräfte",
   "aiStudentReports.subtitle":
-    "Sparen Sie Stunden bei Zeugnissen und bewahren Sie gleichzeitig Personalisierung und QualitÃ¤t.",
+    "Sparen Sie Stunden bei Zeugnissen und bewahren Sie gleichzeitig Personalisierung und QualitÃƒÂ¤t.",
   "successStories.title":
-    "Sehen Sie, wie LehrkrÃ¤fte und Schulen die Kommunikation mit Zaza Draft transformieren",
+    "Sehen Sie, wie Lehrkräfte und Schulen die Kommunikation mit Zaza Draft transformieren",
   "successStories.subtitle":
-    "Echte Ergebnisse von PÃ¤dagogen, die KI-gestÃ¼tzte Schreibwerkzeuge verwenden.",
+    "Echte Ergebnisse von PÃƒÂ¤dagogen, die KI-gestÃƒÂ¼tzte Schreibwerkzeuge verwenden.",
   "roiCalculator.title": "Berechnen Sie Ihre Zeitersparnis mit Zaza Draft",
   "roiCalculator.subtitle":
-    "Sehen Sie genau, wie viele Stunden pro Woche Sie bei der Elternkommunikation sparen kÃ¶nnten.",
+    "Sehen Sie genau, wie viele Stunden pro Woche Sie bei der Elternkommunikation sparen kÃƒÂ¶nnten.",
 
   // Company page
   "company.hero.label": "UNSER UNTERNEHMEN",
   "company.hero.headline": "Zaza Technologies",
   "company.hero.subheading":
-    "Wir sind ein kleines, spezialisiertes Team aus Lerndesignern, Ingenieuren und Bildungsforschern, die Technologie entwickeln, die LehrkrÃ¤ften hilft, erfolgreich zu sein.",
+    "Wir sind ein kleines, spezialisiertes Team aus Lerndesignern, Ingenieuren und Bildungsforschern, die Technologie entwickeln, die Lehrkräften hilft, erfolgreich zu sein.",
   "company.origin.p1":
-    "Zaza Technologies wurde 2025 mit einer klaren Ãœberzeugung gegrÃ¼ndet: Bildung verdient KI-Tools, die mit echtem pÃ¤dagogischem VerstÃ¤ndnis entwickelt wurden, nicht umfunktionierte Unternehmens-KI-Modelle. Wir entwickeln Technologie, die das Wohlbefinden von LehrkrÃ¤ften schÃ¼tzt.",
-  "company.origin.p2": "Deshalb haben wir einen anderen Ansatz gewÃ¤hlt.",
+    "Zaza Technologies wurde 2025 mit einer klaren ÃƒÅ“berzeugung gegrÃƒÂ¼ndet: Bildung verdient KI-Tools, die mit echtem pÃƒÂ¤dagogischem VerstÃƒÂ¤ndnis entwickelt wurden, nicht umfunktionierte Unternehmens-KI-Modelle. Wir entwickeln Technologie, die das Wohlbefinden von Lehrkräften schÃƒÂ¼tzt.",
+  "company.origin.p2": "Deshalb haben wir einen anderen Ansatz gewÃƒÂ¤hlt.",
   "company.origin.p3":
-    "Wir entwickeln Tools, die auf echter PÃ¤dagogik trainiert, mit PÃ¤dagogen entwickelt und durch Klassenzimmereinsatz verfeinert werden. Tools, die die Nuancen des Lehrerurteils, das emotionale Gewicht der Elterninteraktion und die Bedeutung konstruktiven Feedbacks verstehen. Tools, die fÃ¼r Bildungsumgebungen prÃ¤zise, zuverlÃ¤ssig und sicher sind.",
+    "Wir entwickeln Tools, die auf echter PÃƒÂ¤dagogik trainiert, mit PÃƒÂ¤dagogen entwickelt und durch Klassenzimmereinsatz verfeinert werden. Tools, die die Nuancen des Lehrerurteils, das emotionale Gewicht der Elterninteraktion und die Bedeutung konstruktiven Feedbacks verstehen. Tools, die für Bildungsumgebungen prÃƒÂ¤zise, zuverlÃƒÂ¤ssig und sicher sind.",
   "company.origin.aiDifferentiator":
-    "Unsere Modelle werden anhand echten Lehrer-Feedbacks und Klassenzimmer-Sprachmustern trainiert, durch iterative Tests mit PÃ¤dagogen verfeinert und so konzipiert, dass die Ausgabe wie eine Lehrkraft klingt - nicht wie eine Maschine.",
+    "Unsere Modelle werden anhand echten Lehrer-Feedbacks und Klassenzimmer-Sprachmustern trainiert, durch iterative Tests mit PÃƒÂ¤dagogen verfeinert und so konzipiert, dass die Ausgabe wie eine Lehrkraft klingt - nicht wie eine Maschine.",
   "company.origin.p4":
-    "Unser Ziel ist einfach: LehrkrÃ¤ften bedeutungsvolle Zeit zurÃ¼ckgeben.",
+    "Unser Ziel ist einfach: Lehrkräften bedeutungsvolle Zeit zurückgeben.",
   "company.philosophy.title": "Unsere Philosophie",
   "company.philosophy.intro":
-    'Wir glauben nicht an "KI, die LehrkrÃ¤fte ersetzt". Wir glauben an KI, die LehrkrÃ¤fte unterstÃ¼tzt.',
+    'Wir glauben nicht an "KI, die Lehrkräfte ersetzt". Wir glauben an KI, die Lehrkräfte unterstÃƒÂ¼tzt.',
   "company.philosophy.principle1":
-    "Tools mÃ¼ssen die Expertise von LehrkrÃ¤ften respektieren.",
+    "Tools mÃƒÂ¼ssen die Expertise von Lehrkräften respektieren.",
   "company.philosophy.principle2":
-    "Tools mÃ¼ssen Arbeitsbelastung reduzieren, nicht verschieben.",
+    "Tools mÃƒÂ¼ssen Arbeitsbelastung reduzieren, nicht verschieben.",
   "company.philosophy.principle3":
-    "Tools mÃ¼ssen SchÃ¼ler und ihre Lernumgebung schÃ¼tzen.",
+    "Tools mÃƒÂ¼ssen SchÃƒÂ¼ler und ihre Lernumgebung schÃƒÂ¼tzen.",
   "company.philosophy.principle4":
-    "Tools mÃ¼ssen vertrauenswÃ¼rdig und transparent sein.",
+    "Tools mÃƒÂ¼ssen vertrauenswÃƒÂ¼rdig und transparent sein.",
   "company.philosophy.closing":
-    "Wenn Technologie LehrkrÃ¤ften nicht dabei helfen kann, das zu tun, was sie am besten kÃ¶nnen - unterrichten - dann gehÃ¶rt sie nicht ins Klassenzimmer.",
+    "Wenn Technologie Lehrkräften nicht dabei helfen kann, das zu tun, was sie am besten kÃƒÂ¶nnen - unterrichten - dann gehÃƒÂ¶rt sie nicht ins Klassenzimmer.",
   "company.boutique.title": "Ein Boutique-Ansatz",
   "company.boutique.intro":
-    "Wir sind absichtlich kein groÃŸes Technologieunternehmen. Wir sind ein fokussiertes Team, das nur fÃ¼r ein Publikum entwickelt - LehrkrÃ¤fte.",
+    "Wir sind absichtlich kein groÃƒÅ¸es Technologieunternehmen. Wir sind ein fokussiertes Team, das nur für ein Publikum entwickelt - Lehrkräfte.",
   "company.boutique.means": "Das bedeutet:",
   "company.boutique.point1":
-    "Wir arbeiten eng mit PÃ¤dagogen aus mehreren Regionen und Kontexten zusammen.",
+    "Wir arbeiten eng mit PÃƒÂ¤dagogen aus mehreren Regionen und Kontexten zusammen.",
   "company.boutique.point2":
     "Wir testen Funktionen direkt in echten Klassenzimmern.",
   "company.boutique.point3":
-    "Wir priorisieren Klarheit, Sicherheit und Benutzerfreundlichkeit Ã¼ber Neuheit.",
+    "Wir priorisieren Klarheit, Sicherheit und Benutzerfreundlichkeit ÃƒÂ¼ber Neuheit.",
   "company.boutique.closing":
-    "Wir optimieren nicht fÃ¼r schnelles Wachstum. Wir optimieren fÃ¼r das, was funktioniert.",
+    "Wir optimieren nicht für schnelles Wachstum. Wir optimieren für das, was funktioniert.",
   "company.boutique.impact": "Wachstum ist nicht das Ziel. Wirkung ist es.",
   "company.today.title": "Wo wir heute stehen",
   "company.today.p1":
-    "Zaza unterstÃ¼tzt jetzt Ã¼ber 500 LehrkrÃ¤fte in mehr als 15 LÃ¤ndern. Im Durchschnitt sparen LehrkrÃ¤fte Ã¼ber 10 Stunden pro Woche bei Schreib- und Kommunikationsaufgaben durch die Nutzung der Tools von Zaza. Und wir fangen gerade erst an.",
+    "Zaza unterstÃƒÂ¼tzt jetzt ÃƒÂ¼ber 500 Lehrkräfte in mehr als 15 LÃƒÂ¤ndern. Im Durchschnitt sparen Lehrkräfte ÃƒÂ¼ber 10 Stunden pro Woche bei Schreib- und Kommunikationsaufgaben durch die Nutzung der Tools von Zaza. Und wir fangen gerade erst an.",
   "company.today.p2":
-    "Unsere langfristige Vision ist es, eine vollstÃ¤ndige Suite von KI-Tools zu entwickeln, die LehrkrÃ¤ften helfen, ihre Zeit zurÃ¼ckzugewinnen, ihr Wohlbefinden zu schÃ¼tzen und mit dem Kern ihrer Arbeit verbunden zu bleiben - ihren SchÃ¼lern.",
-  "company.today.close": "Denn wenn LehrkrÃ¤fte gedeihen, gedeihen SchÃ¼ler.",
+    "Unsere langfristige Vision ist es, eine vollstÃƒÂ¤ndige Suite von KI-Tools zu entwickeln, die Lehrkräften helfen, ihre Zeit zurückzugewinnen, ihr Wohlbefinden zu schÃƒÂ¼tzen und mit dem Kern ihrer Arbeit verbunden zu bleiben - ihren SchÃƒÂ¼lern.",
+  "company.today.close": "Denn wenn Lehrkräfte gedeihen, gedeihen SchÃƒÂ¼ler.",
   "company.stats.teachers.number": "150k+",
-  "company.stats.teachers.label": "LehrkrÃ¤fte nutzen Zaza",
+  "company.stats.teachers.label": "Lehrkräfte nutzen Zaza",
   "company.stats.countries.number": "15",
-  "company.stats.countries.label": "LÃ¤nder",
+  "company.stats.countries.label": "LÃƒÂ¤nder",
   "company.stats.hours.number": "10+",
-  "company.stats.hours.label": "WÃ¶chentlich gesparte Stunden",
+  "company.stats.hours.label": "WÃƒÂ¶chentlich gesparte Stunden",
 
   // Company page
   "company.hero.label": "UNSER UNTERNEHMEN",
   "company.hero.headline": "Zaza Technologies",
   "company.hero.subheading":
-    "Wir sind ein kleines, spezialisiertes Team aus Lerndesignern, Ingenieuren und Bildungsforschern, die Technologie entwickeln, die LehrkrÃ¤ften hilft, erfolgreich zu sein.",
+    "Wir sind ein kleines, spezialisiertes Team aus Lerndesignern, Ingenieuren und Bildungsforschern, die Technologie entwickeln, die Lehrkräften hilft, erfolgreich zu sein.",
   "company.origin.p1":
-    "Zaza Technologies wurde 2025 mit einer klaren Ãœberzeugung gegrÃ¼ndet: Bildung verdient KI-Tools, die mit echtem pÃ¤dagogischem VerstÃ¤ndnis entwickelt wurden, nicht umfunktionierte Unternehmens-KI-Modelle. Wir entwickeln Technologie, die das Wohlbefinden von LehrkrÃ¤ften schÃ¼tzt.",
-  "company.origin.p2": "Deshalb haben wir einen anderen Ansatz gewÃ¤hlt.",
+    "Zaza Technologies wurde 2025 mit einer klaren ÃƒÅ“berzeugung gegrÃƒÂ¼ndet: Bildung verdient KI-Tools, die mit echtem pÃƒÂ¤dagogischem VerstÃƒÂ¤ndnis entwickelt wurden, nicht umfunktionierte Unternehmens-KI-Modelle. Wir entwickeln Technologie, die das Wohlbefinden von Lehrkräften schÃƒÂ¼tzt.",
+  "company.origin.p2": "Deshalb haben wir einen anderen Ansatz gewÃƒÂ¤hlt.",
   "company.origin.p3":
-    "Wir entwickeln Tools, die auf echter PÃ¤dagogik trainiert, mit PÃ¤dagogen entwickelt und durch Klassenzimmereinsatz verfeinert werden. Tools, die die Nuancen des Lehrerurteils, das emotionale Gewicht der Elterninteraktion und die Bedeutung konstruktiven Feedbacks verstehen. Tools, die fÃ¼r Bildungsumgebungen prÃ¤zise, zuverlÃ¤ssig und sicher sind.",
+    "Wir entwickeln Tools, die auf echter PÃƒÂ¤dagogik trainiert, mit PÃƒÂ¤dagogen entwickelt und durch Klassenzimmereinsatz verfeinert werden. Tools, die die Nuancen des Lehrerurteils, das emotionale Gewicht der Elterninteraktion und die Bedeutung konstruktiven Feedbacks verstehen. Tools, die für Bildungsumgebungen prÃƒÂ¤zise, zuverlÃƒÂ¤ssig und sicher sind.",
   "company.origin.aiDifferentiator":
-    "Unsere Modelle werden anhand echten Lehrer-Feedbacks und Klassenzimmer-Sprachmustern trainiert, durch iterative Tests mit PÃ¤dagogen verfeinert und so konzipiert, dass die Ausgabe wie eine Lehrkraft klingt - nicht wie eine Maschine.",
+    "Unsere Modelle werden anhand echten Lehrer-Feedbacks und Klassenzimmer-Sprachmustern trainiert, durch iterative Tests mit PÃƒÂ¤dagogen verfeinert und so konzipiert, dass die Ausgabe wie eine Lehrkraft klingt - nicht wie eine Maschine.",
   "company.origin.p4":
-    "Unser Ziel ist einfach: LehrkrÃ¤ften bedeutungsvolle Zeit zurÃ¼ckgeben.",
+    "Unser Ziel ist einfach: Lehrkräften bedeutungsvolle Zeit zurückgeben.",
   "company.philosophy.title": "Unsere Philosophie",
   "company.philosophy.intro":
-    'Wir glauben nicht an "KI, die LehrkrÃ¤fte ersetzt". Wir glauben an KI, die LehrkrÃ¤fte unterstÃ¼tzt.',
+    'Wir glauben nicht an "KI, die Lehrkräfte ersetzt". Wir glauben an KI, die Lehrkräfte unterstÃƒÂ¼tzt.',
   "company.philosophy.principle1":
-    "Tools mÃ¼ssen die Expertise von LehrkrÃ¤ften respektieren.",
+    "Tools mÃƒÂ¼ssen die Expertise von Lehrkräften respektieren.",
   "company.philosophy.principle2":
-    "Tools mÃ¼ssen Arbeitsbelastung reduzieren, nicht verschieben.",
+    "Tools mÃƒÂ¼ssen Arbeitsbelastung reduzieren, nicht verschieben.",
   "company.philosophy.principle3":
-    "Tools mÃ¼ssen SchÃ¼ler und ihre Lernumgebung schÃ¼tzen.",
+    "Tools mÃƒÂ¼ssen SchÃƒÂ¼ler und ihre Lernumgebung schÃƒÂ¼tzen.",
   "company.philosophy.principle4":
-    "Tools mÃ¼ssen vertrauenswÃ¼rdig und transparent sein.",
+    "Tools mÃƒÂ¼ssen vertrauenswÃƒÂ¼rdig und transparent sein.",
   "company.philosophy.closing":
-    "Wenn Technologie LehrkrÃ¤ften nicht dabei helfen kann, das zu tun, was sie am besten kÃ¶nnen - unterrichten - dann gehÃ¶rt sie nicht ins Klassenzimmer.",
+    "Wenn Technologie Lehrkräften nicht dabei helfen kann, das zu tun, was sie am besten kÃƒÂ¶nnen - unterrichten - dann gehÃƒÂ¶rt sie nicht ins Klassenzimmer.",
   "company.boutique.title": "Ein Boutique-Ansatz",
   "company.boutique.intro":
-    "Wir sind absichtlich kein groÃŸes Technologieunternehmen. Wir sind ein fokussiertes Team, das nur fÃ¼r ein Publikum entwickelt - LehrkrÃ¤fte.",
+    "Wir sind absichtlich kein groÃƒÅ¸es Technologieunternehmen. Wir sind ein fokussiertes Team, das nur für ein Publikum entwickelt - Lehrkräfte.",
   "company.boutique.means": "Das bedeutet:",
   "company.boutique.point1":
-    "Wir arbeiten eng mit PÃ¤dagogen aus mehreren Regionen und Kontexten zusammen.",
+    "Wir arbeiten eng mit PÃƒÂ¤dagogen aus mehreren Regionen und Kontexten zusammen.",
   "company.boutique.point2":
     "Wir testen Funktionen direkt in echten Klassenzimmern.",
   "company.boutique.point3":
-    "Wir priorisieren Klarheit, Sicherheit und Benutzerfreundlichkeit Ã¼ber Neuheit.",
+    "Wir priorisieren Klarheit, Sicherheit und Benutzerfreundlichkeit ÃƒÂ¼ber Neuheit.",
   "company.boutique.closing":
-    "Wir optimieren nicht fÃ¼r schnelles Wachstum. Wir optimieren fÃ¼r das, was funktioniert.",
+    "Wir optimieren nicht für schnelles Wachstum. Wir optimieren für das, was funktioniert.",
   "company.boutique.impact": "Wachstum ist nicht das Ziel. Wirkung ist es.",
   "company.today.title": "Wo wir heute stehen",
   "company.today.p1":
-    "Zaza unterstÃ¼tzt jetzt Ã¼ber 500 LehrkrÃ¤fte in mehr als 15 LÃ¤ndern. Im Durchschnitt sparen LehrkrÃ¤fte Ã¼ber 10 Stunden pro Woche bei Schreib- und Kommunikationsaufgaben durch die Nutzung der Tools von Zaza. Und wir fangen gerade erst an.",
+    "Zaza unterstÃƒÂ¼tzt jetzt ÃƒÂ¼ber 500 Lehrkräfte in mehr als 15 LÃƒÂ¤ndern. Im Durchschnitt sparen Lehrkräfte ÃƒÂ¼ber 10 Stunden pro Woche bei Schreib- und Kommunikationsaufgaben durch die Nutzung der Tools von Zaza. Und wir fangen gerade erst an.",
   "company.today.p2":
-    "Unsere langfristige Vision ist es, eine vollstÃ¤ndige Suite von KI-Tools zu entwickeln, die LehrkrÃ¤ften helfen, ihre Zeit zurÃ¼ckzugewinnen, ihr Wohlbefinden zu schÃ¼tzen und mit dem Kern ihrer Arbeit verbunden zu bleiben - ihren SchÃ¼lern.",
-  "company.today.close": "Denn wenn LehrkrÃ¤fte gedeihen, gedeihen SchÃ¼ler.",
+    "Unsere langfristige Vision ist es, eine vollstÃƒÂ¤ndige Suite von KI-Tools zu entwickeln, die Lehrkräften helfen, ihre Zeit zurückzugewinnen, ihr Wohlbefinden zu schÃƒÂ¼tzen und mit dem Kern ihrer Arbeit verbunden zu bleiben - ihren SchÃƒÂ¼lern.",
+  "company.today.close": "Denn wenn Lehrkräfte gedeihen, gedeihen SchÃƒÂ¼ler.",
   "company.stats.teachers.number": "150k+",
-  "company.stats.teachers.label": "LehrkrÃ¤fte nutzen Zaza",
+  "company.stats.teachers.label": "Lehrkräfte nutzen Zaza",
   "company.stats.countries.number": "15",
-  "company.stats.countries.label": "LÃ¤nder",
+  "company.stats.countries.label": "LÃƒÂ¤nder",
   "company.stats.hours.number": "10+",
-  "company.stats.hours.label": "WÃ¶chentlich gesparte Stunden",
+  "company.stats.hours.label": "WÃƒÂ¶chentlich gesparte Stunden",
 
   // AI Literacy Page
   "aiLiteracy.hero.badge": "25.000+ aktive Lernende",
-  "aiLiteracy.hero.title": "Meistern Sie KI fÃ¼r die Bildung",
+  "aiLiteracy.hero.title": "Meistern Sie KI für die Bildung",
   "aiLiteracy.hero.subtitle":
     "Bauen Sie Ihre KI-Expertise mit umsetzbaren Kursen auf, die Ihnen Zeit sparen und Ihren Unterricht verbessern.",
   "aiLiteracy.hero.ctaBrowse": "Kurse durchsuchen",
   "aiLiteracy.hero.ctaCert": "Zertifizieren lassen",
   "aiLiteracy.stats.courses": "Kostenlose Kurse",
-  "aiLiteracy.stats.teachers": "LehrkrÃ¤fte eingeschrieben",
-  "aiLiteracy.stats.certified": "Zertifizierte PÃ¤dagogen",
+  "aiLiteracy.stats.teachers": "Lehrkräfte eingeschrieben",
+  "aiLiteracy.stats.certified": "Zertifizierte PÃƒÂ¤dagogen",
   "aiLiteracy.stats.hours": "Gesparte Stunden",
-  "aiLiteracy.paths.title": "WÃ¤hlen Sie Ihren Lernpfad",
+  "aiLiteracy.paths.title": "WÃƒÂ¤hlen Sie Ihren Lernpfad",
   "aiLiteracy.paths.subtitle":
-    "Strukturierte Lernpfade fÃ¼r LehrkrÃ¤fte auf jeder Stufe ihrer KI-Reise",
-  "aiLiteracy.testimonials.title": "Was LehrkrÃ¤fte sagen",
+    "Strukturierte Lernpfade für Lehrkräfte auf jeder Stufe ihrer KI-Reise",
+  "aiLiteracy.testimonials.title": "Was Lehrkräfte sagen",
   "aiLiteracy.library.title": "Herunterladbare Ressourcenbibliothek",
   "aiLiteracy.certification.title": "KI-Bildungszertifizierung",
   "aiLiteracy.continue.title": "Setzen Sie Ihre KI-Reise fort",
   "videos.hero.title": "Video-Tutorials und Demos",
   "videos.hero.subtitle":
-    "Sehen Sie sich Schritt-fÃ¼r-Schritt-Tutorials und Produktdemos an, um KI-gestÃ¼tzte Elternkommunikation zu meistern.",
+    "Sehen Sie sich Schritt-für-Schritt-Tutorials und Produktdemos an, um KI-gestÃƒÂ¼tzte Elternkommunikation zu meistern.",
   "videos.search.placeholder": "Videos durchsuchen...",
   "videos.featured.title": "Empfohlene Videos",
   "videos.playlists.title": "Kuratierte Playlists",
   "videos.all.title": "Alle Videos",
-  "glossary.hero.title": "KI-Glossar fÃ¼r LehrkrÃ¤fte",
-  "glossary.hero.subtitle": "Ãœber 150+ KI-Begriffe in einfacher Sprache.",
+  "glossary.hero.title": "KI-Glossar für Lehrkräfte",
+  "glossary.hero.subtitle": "ÃƒÅ“ber 150+ KI-Begriffe in einfacher Sprache.",
   "glossary.search.placeholder": "Begriffe durchsuchen...",
   "community.hero.badge": "15.000+ aktive Mitglieder",
   "community.hero.titlePrefix": "Treten Sie der",
-  "community.hero.titleHighlight": "LehrkrÃ¤fte-Community",
-  "community.hero.subtitle": "Vernetzen Sie sich mit LehrkrÃ¤ften weltweit.",
+  "community.hero.titleHighlight": "Lehrkräfte-Community",
+  "community.hero.subtitle": "Vernetzen Sie sich mit Lehrkräften weltweit.",
   "community.categoriesTitle": "Diskussionskategorien",
   "cta.learnMore": "Mehr erfahren",
   "cta.getStarted": "Jetzt starten",
@@ -2910,10 +2910,10 @@ const translationsDe: Record<string, string> = {
   ctaCert: "Zertifizieren lassen",
   trending: "Aktuelle Diskussionen",
   // AI Literacy page - missing keys
-  "aiLiteracy.badge": "Kostenlose KI-Bildung fÃ¼r LehrkrÃ¤fte",
+  "aiLiteracy.badge": "Kostenlose KI-Bildung für Lehrkräfte",
   "aiLiteracy.allCourses": "Alle Kurse",
   "aiLiteracy.allCoursesSubtitle":
-    "Von grundlegendem VerstÃ¤ndnis bis zur Meisterschaft",
+    "Von grundlegendem VerstÃƒÂ¤ndnis bis zur Meisterschaft",
 
   // Videos
   "videos.featured": "Empfohlene Videos",
