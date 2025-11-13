@@ -33,8 +33,8 @@ import { useTranslations } from "@/lib/i18n/useTranslations";
 const learningPaths = [
   {
     id: "beginner",
-    title: "Beginner Path",
-    description: "New to AI? Start here to build foundational knowledge",
+    title: t("aiLiteracy.beginner.title"),
+    description: t("aiLiteracy.beginner.description"),
     duration: "8-12 hours",
     courses: 5,
     icon: BookOpen,
@@ -48,8 +48,8 @@ const learningPaths = [
   },
   {
     id: "intermediate",
-    title: "Intermediate Path",
-    description: "Ready to apply AI to your daily teaching workflows",
+    title: t("aiLiteracy.intermediate.title"),
+    description: t("aiLiteracy.intermediate.description"),
     duration: "12-16 hours",
     courses: 7,
     icon: Target,
@@ -63,8 +63,8 @@ const learningPaths = [
   },
   {
     id: "advanced",
-    title: "Advanced Path",
-    description: "Become an AI leader in your school or district",
+    title: t("aiLiteracy.advanced.title"),
+    description: t("aiLiteracy.advanced.description"),
     duration: "16-20 hours",
     courses: 8,
     icon: TrendingUp,
@@ -104,7 +104,7 @@ const featuredCourses = [
   {
     id: "parent-communication",
     title: "AI for Parent Communication",
-    description: "Write professional parent emails 10× faster",
+    description: "Write professional parent emails 10Ã— faster",
     duration: "1 hour",
     level: "Intermediate",
     lessons: 7,
@@ -228,7 +228,7 @@ const certificationLevels = [
       "Pass assessment (80%+)",
       "Submit 3 sample prompts",
     ],
-    badge: "🥉",
+    badge: "ðŸ¥‰",
     holders: "8,450+",
   },
   {
@@ -239,7 +239,7 @@ const certificationLevels = [
       "Pass advanced assessment (85%+)",
       "Submit portfolio of AI-enhanced lessons",
     ],
-    badge: "🥈",
+    badge: "ðŸ¥ˆ",
     holders: "3,920+",
   },
   {
@@ -250,12 +250,13 @@ const certificationLevels = [
       "Pass leadership assessment (90%+)",
       "Lead PD session or create resource",
     ],
-    badge: "🥇",
+    badge: "ðŸ¥‡",
     holders: "1,240+",
   },
 ];
 
 export default function AILiteracyClient() {
+  const { t } = useLanguage();
   const { t } = useTranslations("aiLiteracy");
   const { language } = useLanguage();
   const [selectedPath, setSelectedPath] = useState<string | null>(null);
@@ -438,7 +439,7 @@ export default function AILiteracyClient() {
               <h2 className="text-4xl font-bold text-white mb-4">
                 {selectedPath
                   ? `${learningPaths.find((p) => p.id === selectedPath)?.title} Courses`
-                  : "All Courses"}
+                  : t("aiLiteracy.allCourses")}
               </h2>
               <p className="text-xl text-gray-300">
                 {selectedPath
