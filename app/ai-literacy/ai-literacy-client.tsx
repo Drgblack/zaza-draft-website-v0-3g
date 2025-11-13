@@ -28,8 +28,6 @@ import { SocialProofBar } from "@/components/conversion/social-proof-bar";
 import { TestimonialCard } from "@/components/conversion/testimonial-card";
 import { TrustBadges } from "@/components/conversion/trust-badges";
 import { LeadMagnet } from "@/components/conversion/lead-magnet";
-import { useTranslations } from "@/lib/i18n/useTranslations";
-
 const learningPaths = [
   {
     id: "beginner",
@@ -104,7 +102,7 @@ const featuredCourses = [
   {
     id: "parent-communication",
     title: "AI for Parent Communication",
-    description: "Write professional parent emails 10ÃƒÆ’Ã¢â‚¬â€ faster",
+    description: "Write professional parent emails 10ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â faster",
     duration: "1 hour",
     level: "Intermediate",
     lessons: 7,
@@ -228,7 +226,7 @@ const certificationLevels = [
       "Pass assessment (80%+)",
       "Submit 3 sample prompts",
     ],
-    badge: "ÃƒÂ°Ã…Â¸Ã‚Â¥Ã¢â‚¬Â°",
+    badge: "ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸Ãƒâ€šÃ‚Â¥ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â°",
     holders: "8,450+",
   },
   {
@@ -239,7 +237,7 @@ const certificationLevels = [
       "Pass advanced assessment (85%+)",
       "Submit portfolio of AI-enhanced lessons",
     ],
-    badge: "ÃƒÂ°Ã…Â¸Ã‚Â¥Ã‹â€ ",
+    badge: "ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸Ãƒâ€šÃ‚Â¥Ãƒâ€¹Ã¢â‚¬Â ",
     holders: "3,920+",
   },
   {
@@ -250,15 +248,13 @@ const certificationLevels = [
       "Pass leadership assessment (90%+)",
       "Lead PD session or create resource",
     ],
-    badge: "ÃƒÂ°Ã…Â¸Ã‚Â¥Ã¢â‚¬Â¡",
+    badge: "ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸Ãƒâ€šÃ‚Â¥ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¡",
     holders: "1,240+",
   },
 ];
 
 export default function AILiteracyClient() {
-  const { t } = useLanguage();
-  const { t } = useTranslations("aiLiteracy");
-  const { language } = useLanguage();
+  const { t } = useLanguage();  const { language } = useLanguage();
   const [selectedPath, setSelectedPath] = useState<string | null>(null);
 
   useEffect(() => {
