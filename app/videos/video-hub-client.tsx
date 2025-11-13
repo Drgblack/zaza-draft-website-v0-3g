@@ -22,23 +22,23 @@ import {
 import { trackEvent } from "@/lib/analytics";
 
 const categories = [
-  { id: "all", name: "All Videos", icon: Play, count: 24 },
-  { id: "getting-started", name: "Getting Started", icon: BookOpen, count: 6 },
-  { id: "advanced", name: "Advanced Features", icon: Zap, count: 5 },
-  { id: "use-cases", name: "Use Cases", icon: Users, count: 7 },
+  { id: "all", name: t("videos.category.allVideos"), icon: Play, count: 24 },
+  { id: "getting-started", name: t("videos.category.gettingStarted"), icon: BookOpen, count: 6 },
+  { id: "advanced", name: t("videos.category.advancedFeatures"), icon: Zap, count: 5 },
+  { id: "use-cases", name: t("videos.category.useCases"), icon: Users, count: 7 },
   {
     id: "best-practices",
-    name: "Best Practices",
+    name: t("videos.category.bestPractices"),
     icon: GraduationCap,
     count: 4,
   },
-  { id: "tips-tricks", name: "Tips & Tricks", icon: Settings, count: 2 },
+  { id: "tips-tricks", name: t("videos.category.tipsTricks"), icon: Settings, count: 2 },
 ];
 
 const playlists = [
   {
     id: "quick-start",
-    title: "Quick Start Guide",
+    title: t("videos.title.quickStartGuide"),
     description: "Get up and running with Zaza Draft in under 30 minutes",
     videoCount: 5,
     duration: "28 min",
@@ -46,7 +46,7 @@ const playlists = [
   },
   {
     id: "parent-communication",
-    title: "Mastering Parent Communication",
+    title: t("videos.title.masteringParentComm"),
     description: "Advanced techniques for effective parent engagement",
     videoCount: 8,
     duration: "1h 15min",
@@ -54,7 +54,7 @@ const playlists = [
   },
   {
     id: "time-saving",
-    title: "Time-Saving Workflows",
+    title: t("videos.title.timeSavingWorkflows"),
     description: "Automate repetitive tasks and reclaim your time",
     videoCount: 6,
     duration: "45 min",
@@ -65,7 +65,7 @@ const playlists = [
 const videos = [
   {
     id: "welcome-to-zaza-draft",
-    title: "Welcome to Zaza Draft",
+    title: t("videos.title.welcomeToZaza"),
     description:
       "A quick introduction to Zaza Draft and what you can accomplish",
     category: "getting-started",
@@ -76,7 +76,7 @@ const videos = [
   },
   {
     id: "first-parent-message",
-    title: "Creating Your First Parent Message",
+    title: t("videos.title.firstParentMessage"),
     description: "Step-by-step guide to writing your first AI-powered message",
     category: "getting-started",
     duration: "5:12",
@@ -96,7 +96,7 @@ const videos = [
   },
   {
     id: "multilingual-messages",
-    title: "Writing Multilingual Messages",
+    title: t("videos.title.multilingualMessages"),
     description: "Communicate with parents in their preferred language",
     category: "getting-started",
     duration: "6:18",
@@ -105,7 +105,7 @@ const videos = [
   },
   {
     id: "templates-library",
-    title: "Using the Templates Library",
+    title: t("videos.title.templatesLibrary"),
     description: "Save time with pre-built templates for common scenarios",
     category: "getting-started",
     duration: "4:30",
@@ -434,7 +434,7 @@ export function VideoHubClient() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                       <div className="absolute bottom-3 left-3 right-3">
                         <Badge className="bg-purple-600 text-white border-0 mb-2">
-                          {playlist.videoCount} videos Ã¢â‚¬Â¢ {playlist.duration}
+                          {playlist.videoCount} videos ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¢ {playlist.duration}
                         </Badge>
                       </div>
                     </div>
