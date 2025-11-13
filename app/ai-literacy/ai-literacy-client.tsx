@@ -104,7 +104,7 @@ const featuredCourses = [
   {
     id: "parent-communication",
     title: "AI for Parent Communication",
-    description: "Write professional parent emails 10Ã— faster",
+    description: "Write professional parent emails 10Ãƒâ€” faster",
     duration: "1 hour",
     level: "Intermediate",
     lessons: 7,
@@ -228,7 +228,7 @@ const certificationLevels = [
       "Pass assessment (80%+)",
       "Submit 3 sample prompts",
     ],
-    badge: "ðŸ¥‰",
+    badge: "Ã°Å¸Â¥â€°",
     holders: "8,450+",
   },
   {
@@ -239,7 +239,7 @@ const certificationLevels = [
       "Pass advanced assessment (85%+)",
       "Submit portfolio of AI-enhanced lessons",
     ],
-    badge: "ðŸ¥ˆ",
+    badge: "Ã°Å¸Â¥Ë†",
     holders: "3,920+",
   },
   {
@@ -250,7 +250,7 @@ const certificationLevels = [
       "Pass leadership assessment (90%+)",
       "Lead PD session or create resource",
     ],
-    badge: "ðŸ¥‡",
+    badge: "Ã°Å¸Â¥â€¡",
     holders: "1,240+",
   },
 ];
