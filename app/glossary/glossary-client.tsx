@@ -405,9 +405,14 @@ const glossaryTerms: GlossaryTerm[] = [
 export default function GlossaryClient() {
   const { t } = useLanguage()
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState(t("glossary.allCategories"));
+  const [selectedCategory, setSelectedCategory] = useState("All Categories");
   const [selectedLetter, setSelectedLetter] = useState<string | null>(null);
   const [expandedTerms, setExpandedTerms] = useState<Set<string>>(new Set());
+
+  // Update category label when language changes
+  useEffect(() => {
+    setSelectedCategory(t("glossary.allCategories"))
+  }, [t])
 
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
