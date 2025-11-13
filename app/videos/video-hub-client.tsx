@@ -305,9 +305,7 @@ export function VideoHubClient() {
             {t("videos.hero.title")}
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Watch step-by-step tutorials and product demos to master AI-powered
-            parent communication. Learn at your own pace with our comprehensive
-            video library.
+            {t("videos.hero.description")}
           </p>
 
           {/* Search Bar */}
@@ -436,7 +434,7 @@ export function VideoHubClient() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                       <div className="absolute bottom-3 left-3 right-3">
                         <Badge className="bg-purple-600 text-white border-0 mb-2">
-                          {playlist.videoCount} videos â€¢ {playlist.duration}
+                          {playlist.videoCount} videos Ã¢â‚¬Â¢ {playlist.duration}
                         </Badge>
                       </div>
                     </div>
