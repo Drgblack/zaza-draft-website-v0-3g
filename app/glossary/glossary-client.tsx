@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
+import { useLanguage } from "@/lib/i18n/language-context"
 import { useLanguage } from "@/lib/i18n/language-context";
 import {
   Search,
@@ -403,6 +404,7 @@ const glossaryTerms: GlossaryTerm[] = [
 ];
 
 export default function GlossaryClient() {
+  const { t } = useLanguage()
   const { t } = useLanguage();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(t("glossary.allCategories"));
