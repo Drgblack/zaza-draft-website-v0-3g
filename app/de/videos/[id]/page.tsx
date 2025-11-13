@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { VideoDetailClient } from "./video-detail-client"
+import { VideoDetailClient } from "@/app/videos/[id]/video-detail-client"
 
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const videoId = params.id
