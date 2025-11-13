@@ -31,8 +31,8 @@ import { LeadMagnet } from "@/components/conversion/lead-magnet";
 const learningPaths = [
   {
     id: "beginner",
-    title: t("aiLiteracy.beginner.title"),
-    description: t("aiLiteracy.beginner.description"),
+    title: "Beginner Path",
+    description: "New to AI? Start here to build foundational knowledge",
     duration: "8-12 hours",
     courses: 5,
     icon: BookOpen,
@@ -46,8 +46,8 @@ const learningPaths = [
   },
   {
     id: "intermediate",
-    title: t("aiLiteracy.intermediate.title"),
-    description: t("aiLiteracy.intermediate.description"),
+    title: "Intermediate Path",
+    description: "Ready to apply AI to your daily teaching workflows",
     duration: "12-16 hours",
     courses: 7,
     icon: Target,
@@ -61,8 +61,8 @@ const learningPaths = [
   },
   {
     id: "advanced",
-    title: t("aiLiteracy.advanced.title"),
-    description: t("aiLiteracy.advanced.description"),
+    title: "Advanced Path",
+    description: "Become an AI leader in your school or district",
     duration: "16-20 hours",
     courses: 8,
     icon: TrendingUp,
@@ -102,7 +102,7 @@ const featuredCourses = [
   {
     id: "parent-communication",
     title: "AI for Parent Communication",
-    description: "Write professional parent emails 10ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â faster",
+    description: "Write professional parent emails 10ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â faster",
     duration: "1 hour",
     level: "Intermediate",
     lessons: 7,
@@ -226,7 +226,7 @@ const certificationLevels = [
       "Pass assessment (80%+)",
       "Submit 3 sample prompts",
     ],
-    badge: "ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸Ãƒâ€šÃ‚Â¥ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â°",
+    badge: "ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â°",
     holders: "8,450+",
   },
   {
@@ -237,7 +237,7 @@ const certificationLevels = [
       "Pass advanced assessment (85%+)",
       "Submit portfolio of AI-enhanced lessons",
     ],
-    badge: "ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸Ãƒâ€šÃ‚Â¥Ãƒâ€¹Ã¢â‚¬Â ",
+    badge: "ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Â¹ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ",
     holders: "3,920+",
   },
   {
@@ -248,7 +248,7 @@ const certificationLevels = [
       "Pass leadership assessment (90%+)",
       "Lead PD session or create resource",
     ],
-    badge: "ÃƒÆ’Ã‚Â°Ãƒâ€¦Ã‚Â¸Ãƒâ€šÃ‚Â¥ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¡",
+    badge: "ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¡",
     holders: "1,240+",
   },
 ];
