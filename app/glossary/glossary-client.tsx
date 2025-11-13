@@ -414,6 +414,11 @@ export default function GlossaryClient() {
     setSelectedCategory(t("glossary.allCategories"))
   }, [t])
 
+  // Update category label when language changes
+  useEffect(() => {
+    setSelectedCategory(t("glossary.allCategories"))
+  }, [t])
+
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
   useEffect(() => {
