@@ -361,7 +361,9 @@ export function VideoHubClient() {
           <section className="mb-16">
             <div className="flex items-center gap-2 mb-6">
               <TrendingUp className="h-6 w-6 text-purple-400" />
-              <h2 className="text-2xl font-bold text-white">Featured Videos</h2>
+              <h2 className="text-2xl font-bold text-white">
+                {t("videos.featured")}
+              </h2>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {featuredVideos.map((video) => (
@@ -415,7 +417,7 @@ export function VideoHubClient() {
         {selectedCategory === "all" && !searchQuery && (
           <section className="mb-16">
             <h2 className="text-2xl font-bold text-white mb-6">
-              Curated Playlists
+              {t("videos.curated")}
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
               {playlists.map((playlist) => (
