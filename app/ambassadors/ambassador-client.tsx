@@ -725,7 +725,7 @@ const contentDE = {
     items: [
       {
         title: "Teilen Sie Ihre Geschichte",
-        description: "Posten Sie 2-3 Mal pro Monat ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼ber Zaza Draft in sozialen Medien",
+        description: "Posten Sie 2-3 Mal pro Monat ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ber Zaza Draft in sozialen Medien",
         commitment: "2-3 Std./Monat",
       },
       {
@@ -744,37 +744,37 @@ const contentDE = {
         commitment: "1 Std./Monat",
       },
       {
-        title: "Lehrkräfte unterstÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼tzen",
+        title: "Lehrkräfte unterstÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼tzen",
         description: "Beantworten Sie Fragen in Community-Foren und helfen Sie neuen Nutzern",
         commitment: "Optional",
       },
       {
-        title: "Zaza reprÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤sentieren",
-        description: "Sprechen Sie auf Konferenzen oder prÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤sentieren Sie an Ihrer Schule/Ihrem Bezirk",
+        title: "Zaza reprÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤sentieren",
+        description: "Sprechen Sie auf Konferenzen oder prÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤sentieren Sie an Ihrer Schule/Ihrem Bezirk",
         commitment: "Optional",
       },
     ],
     authenticity: {
-      title: "Wir schÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤tzen AuthentizitÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤t ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼ber Perfektion",
+      title: "Wir schÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤tzen AuthentizitÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤t ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ber Perfektion",
       description:
-        "Sie mÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼ssen kein Social-Media-Experte sein oder ausgefeilte Inhalte erstellen. Wir mÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¶chten Ihre ehrliche Stimme und echte Klassenraum-Erfahrungen. Teilen Sie, was funktioniert, was nicht, und helfen Sie uns, etwas zu bauen, das Lehrkräfte wirklich lieben.",
+        "Sie mÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ssen kein Social-Media-Experte sein oder ausgefeilte Inhalte erstellen. Wir mÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶chten Ihre ehrliche Stimme und echte Klassenraum-Erfahrungen. Teilen Sie, was funktioniert, was nicht, und helfen Sie uns, etwas zu bauen, das Lehrkräfte wirklich lieben.",
     },
   },
   ambassadors: {
     badge: "Das Team kennenlernen",
     title: "Aktuelle Botschafter",
-    description: "HÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¶ren Sie von Pädagogen, die bereits als Zaza Draft-Botschafter einen Unterschied machen",
+    description: "HÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶ren Sie von Pädagogen, die bereits als Zaza Draft-Botschafter einen Unterschied machen",
     joinedLabel: "Beigetreten",
-    contributionsLabel: "BeitrÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤ge",
+    contributionsLabel: "BeitrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤ge",
     people: [
       {
         name: "Sarah Martinez",
         role: "Grundschullehrerin 5. Klasse",
         location: "Austin, TX",
         quote:
-          "Als Zaza-Botschafterin hat sich meine Herangehensweise an die Elternkommunikation verÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤ndert. Ich liebe es, Teil der Gestaltung eines Tools zu sein, das Lehrkräfte wirklich versteht.",
+          "Als Zaza-Botschafterin hat sich meine Herangehensweise an die Elternkommunikation verÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤ndert. Ich liebe es, Teil der Gestaltung eines Tools zu sein, das Lehrkräfte wirklich versteht.",
         image: "/professional-teacher-headshot-woman.jpg",
-        joined: "MÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤rz 2025",
+        joined: "MÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤rz 2025",
         contributions: "12 Blogbeiträge, 45 Social-Media-Posts",
       },
       {
@@ -789,10 +789,10 @@ const contentDE = {
       },
       {
         name: "Maria Rodriguez",
-        role: "SonderpÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤dagogik",
+        role: "SonderpÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤dagogik",
         location: "Miami, FL",
         quote:
-          "Ich bin beigetreten, um KI-Tools fÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼r die SonderpÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤dagogik zugÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤nglicher zu machen. Das Team hÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¶rt zu und handelt nach unserem Feedback. Es ist wirklich kollaborativ.",
+          "Ich bin beigetreten, um KI-Tools fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼r die SonderpÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤dagogik zugÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤nglicher zu machen. Das Team hÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶rt zu und handelt nach unserem Feedback. Es ist wirklich kollaborativ.",
         image: "/professional-teacher-headshot-woman-latina.jpg",
         joined: "Februar 2025",
         contributions: "15 Tutorials, 38 Social-Media-Posts",
@@ -802,9 +802,9 @@ const contentDE = {
   application: {
     badge: "Dem Programm beitreten",
     title: "Bewerben Sie sich als Botschafter",
-    description: "Bewerbungen werden laufend geprÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼ft. Wir melden uns innerhalb von 2 Wochen bei Ihnen.",
+    description: "Bewerbungen werden laufend geprÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ft. Wir melden uns innerhalb von 2 Wochen bei Ihnen.",
     form: {
-      name: "VollstÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤ndiger Name",
+      name: "VollstÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤ndiger Name",
       namePlaceholder: "Anna Schmidt",
       email: "E-Mail-Adresse",
       emailPlaceholder: "anna@schule.de",
@@ -816,10 +816,10 @@ const contentDE = {
       experiencePlaceholder: "3 Monate",
       social: "Social-Media-Profile (Twitter, LinkedIn, Instagram, etc.)",
       socialPlaceholder: "@lehrerin_anna auf Twitter",
-      why: "Warum mÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¶chten Sie Zaza Draft-Botschafter werden?",
-      whyLength: "(200-300 WÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¶rter)",
+      why: "Warum mÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶chten Sie Zaza Draft-Botschafter werden?",
+      whyLength: "(200-300 WÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶rter)",
       whyPlaceholder:
-        "ErzÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤hlen Sie uns von Ihrer Leidenschaft fÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼r KI in der Bildung, was Sie an Zaza Draft lieben und wie Sie beitragen mÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¶chten...",
+        "ErzÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤hlen Sie uns von Ihrer Leidenschaft fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼r KI in der Bildung, was Sie an Zaza Draft lieben und wie Sie beitragen mÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶chten...",
       submit: "Bewerbung absenden",
       submitting: "Wird gesendet...",
       agreement: "Mit der Bewerbung stimmen Sie unseren",
@@ -830,45 +830,45 @@ const contentDE = {
     success: {
       title: "Bewerbung eingereicht!",
       message:
-        "Vielen Dank fÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼r Ihre Bewerbung zum Zaza Draft-Botschafter-Programm. Wir prÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼fen Ihre Bewerbung und melden uns innerhalb von 2 Wochen bei Ihnen. ÃƒÆ’Ã†â€™Ãƒâ€¦Ã¢â‚¬Å“berprÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼fen Sie Ihre E-Mails fÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼r eine BestÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤tigung.",
-      cta: "Zur Startseite zurÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼ckkehren",
+        "Vielen Dank fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼r Ihre Bewerbung zum Zaza Draft-Botschafter-Programm. Wir prÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼fen Ihre Bewerbung und melden uns innerhalb von 2 Wochen bei Ihnen. ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œberprÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼fen Sie Ihre E-Mails fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼r eine BestÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤tigung.",
+      cta: "Zur Startseite zurÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ckkehren",
     },
   },
   faq: {
-    title: "HÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤ufig gestellte Fragen",
-    description: "Alles, was Sie ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼ber das Botschafter-Programm wissen mÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼ssen",
+    title: "HÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤ufig gestellte Fragen",
+    description: "Alles, was Sie ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ber das Botschafter-Programm wissen mÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼ssen",
     contactPrompt: "Haben Sie noch Fragen?",
     contactCta: "Kontaktieren Sie uns",
     items: [
       {
         question: "Wer kann Botschafter werden?",
         answer:
-          "Wir suchen leidenschaftliche Pädagogen, die Zaza Draft aktiv nutzen, eine Social-Media-PrÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤senz haben (auch klein!) und die Zukunft der KI in der Bildung mitgestalten mÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¶chten. Alle Klassenstufen und FÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤cher sind willkommen.",
+          "Wir suchen leidenschaftliche Pädagogen, die Zaza Draft aktiv nutzen, eine Social-Media-PrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤senz haben (auch klein!) und die Zukunft der KI in der Bildung mitgestalten mÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶chten. Alle Klassenstufen und FÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤cher sind willkommen.",
       },
       {
         question: "Wie hoch ist der Zeitaufwand?",
         answer:
-          "Wir bitten um mindestens 3-5 Stunden pro Monat: 2-3 Social-Media-Posts, monatlicher Community-Call und gelegentliche Feedback-Sitzungen. ZusÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤tzliche Aktivitäten wie Content-Erstellung und VortrÃƒÂ¤ge sind optional, aber erwÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼nscht.",
+          "Wir bitten um mindestens 3-5 Stunden pro Monat: 2-3 Social-Media-Posts, monatlicher Community-Call und gelegentliche Feedback-Sitzungen. ZusÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤tzliche Aktivitäten wie Content-Erstellung und VortrÃƒÆ’Ã‚Â¤ge sind optional, aber erwÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼nscht.",
       },
       {
         question: "Muss ich ein Social-Media-Influencer sein?",
         answer:
-          "ÃƒÆ’Ã†â€™Ãƒâ€¦Ã¢â‚¬Å“berhaupt nicht! Wir schÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤tzen authentische Stimmen mehr als Follower-Zahlen. Ob Sie 100 oder 10.000 Follower haben - wenn Sie fÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼r KI in der Bildung brennen, mÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¶chten wir von Ihnen hÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¶ren.",
+          "ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œberhaupt nicht! Wir schÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤tzen authentische Stimmen mehr als Follower-Zahlen. Ob Sie 100 oder 10.000 Follower haben - wenn Sie fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼r KI in der Bildung brennen, mÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶chten wir von Ihnen hÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶ren.",
       },
       {
         question: "Wie lang ist die Botschafter-Laufzeit?",
         answer:
-          "Botschafter-Laufzeiten betragen 6 Monate mit der Option zur VerlÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤ngerung. Dies gibt Ihnen Zeit, einen Unterschied zu machen, wÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤hrend das Programm mit neuen Perspektiven frisch bleibt.",
+          "Botschafter-Laufzeiten betragen 6 Monate mit der Option zur VerlÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤ngerung. Dies gibt Ihnen Zeit, einen Unterschied zu machen, wÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤hrend das Programm mit neuen Perspektiven frisch bleibt.",
       },
       {
         question: "Was ist, wenn ich meine Aufgaben nicht Erfüllen kann?",
         answer:
-          "Das Leben passiert! Wir verstehen, dass Lehrkräfte beschÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤ftigt sind. Kommunizieren Sie einfach mit uns. Wir sind flexibel und kÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¶nnen Erwartungen anpassen oder Ihre Botschafterschaft bei Bedarf pausieren.",
+          "Das Leben passiert! Wir verstehen, dass Lehrkräfte beschÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤ftigt sind. Kommunizieren Sie einfach mit uns. Wir sind flexibel und kÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶nnen Erwartungen anpassen oder Ihre Botschafterschaft bei Bedarf pausieren.",
       },
       {
         question: "Kann ich mich bewerben, wenn ich Zaza Draft derzeit nicht nutze?",
         answer:
-          "Wir bevorzugen Botschafter, die bereits mit unserem Produkt vertraut sind, aber wenn Sie fÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼r KI in der Bildung begeistert sind und bereit sind, einzutauchen, wÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¼rden wir gerne von Ihnen hÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¶ren!",
+          "Wir bevorzugen Botschafter, die bereits mit unserem Produkt vertraut sind, aber wenn Sie fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼r KI in der Bildung begeistert sind und bereit sind, einzutauchen, wÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¼rden wir gerne von Ihnen hÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¶ren!",
       },
     ],
   },
