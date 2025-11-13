@@ -27,7 +27,7 @@ interface GlossaryTerm {
 }
 
 const categories = [
-  t("glossary.allCategories"),
+  "All Categories",
   "AI Fundamentals",
   "Machine Learning",
   "Natural Language Processing",
