@@ -1,22 +1,25 @@
-import type { Metadata } from "next"
-import { cookies, headers } from "next/headers"
-import { VideoHubClient } from "./video-hub-client"
+﻿import type { Metadata } from "next";
+import { cookies, headers } from "next/headers";
+import { VideoHubClient } from "@/app/videos/video-hub-client";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const langCookie = cookies().get("language")?.value
-  const referer = headers().get("referer") || ""
-  const hrefHint = headers().get("x-pathname") || ""
-  const path = hrefHint || referer
-  const locale = langCookie === "de" || path.includes("/de/") || path.endsWith("/de") ? "de" : "en"
+  const langCookie = cookies().get("language")?.value;
+  const referer = headers().get("referer") || "";
+  const hrefHint = headers().get("x-pathname") || "";
+  const path = hrefHint || referer;
+  const locale =
+    langCookie === "de" || path.includes("/de/") || path.endsWith("/de")
+      ? "de"
+      : "en";
 
   const titles = {
     en: "Video Tutorials and Demos | Zaza Draft",
     de: "Video-Tutorials und Demos | Zaza Draft",
-  }
+  };
   const descriptions = {
     en: "Watch step-by-step tutorials and product demos to master AI-powered parent communication.",
-    de: "Sehen Sie Schritt-fÃ¼r-Schritt-Tutorials und Produktdemos fÃ¼r KI-gestÃ¼tzte Elternkommunikation.",
-  }
+    de: "Sehen Sie Schritt-fÃƒÂ¼r-Schritt-Tutorials und Produktdemos fÃƒÂ¼r KI-gestÃƒÂ¼tzte Elternkommunikation.",
+  };
 
   return {
     title: titles[locale],
@@ -38,10 +41,9 @@ export async function generateMetadata(): Promise<Metadata> {
       title: titles[locale],
       description: descriptions[locale],
     },
-  }
+  };
 }
 
 export default function VideoHubPage() {
-  return <VideoHubClient />
+  return <VideoHubClient />;
 }
-

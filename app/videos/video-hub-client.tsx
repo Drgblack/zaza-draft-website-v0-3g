@@ -434,7 +434,7 @@ export function VideoHubClient() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                       <div className="absolute bottom-3 left-3 right-3">
                         <Badge className="bg-purple-600 text-white border-0 mb-2">
-                          {playlist.videoCount} videos • {playlist.duration}
+                          {playlist.videoCount} videos â€¢ {playlist.duration}
                         </Badge>
                       </div>
                     </div>

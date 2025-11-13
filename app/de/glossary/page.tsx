@@ -1,7 +1,7 @@
-import type { Metadata } from "next"
-import GlossaryClient from "./glossary-client"
-import { BreadcrumbSchema } from "@/lib/seo/schema"
-import Script from "next/script"
+﻿import type { Metadata } from "next";
+import { GlossaryClient } from "@/app/glossary/glossary-client";
+import { BreadcrumbSchema } from "@/lib/seo/schema";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "AI Glossary for Teachers | Zaza Draft",
@@ -9,10 +9,11 @@ export const metadata: Metadata = {
     "Comprehensive AI terminology glossary with 150+ terms explained in teacher-friendly language. Search by category or alphabetically to understand AI concepts for education.",
   openGraph: {
     title: "AI Glossary for Teachers | Zaza Draft",
-    description: "150+ AI terms explained for educators with practical examples",
+    description:
+      "150+ AI terms explained for educators with practical examples",
     type: "website",
   },
-}
+};
 
 export default function GlossaryPage() {
   return (
@@ -22,7 +23,8 @@ export default function GlossaryPage() {
           "@context": "https://schema.org",
           "@type": "DefinedTermSet",
           name: "AI Glossary for Teachers",
-          description: "150+ AI terms explained in teacher-friendly language with practical examples",
+          description:
+            "150+ AI terms explained in teacher-friendly language with practical examples",
           url: "https://zazadraft.com/glossary",
           inDefinedTermSet: "https://zazadraft.com/glossary",
         })}
@@ -35,7 +37,6 @@ export default function GlossaryPage() {
       />
       <GlossaryClient />
     </>
-  )
+  );
 }
-import type { Metadata } from "next"
-
+import type { Metadata } from "next";
