@@ -27,7 +27,7 @@ interface GlossaryTerm {
 }
 
 const categories = [
-  "All Categories",
+  t("glossary.allCategories"),
   "AI Fundamentals",
   "Machine Learning",
   "Natural Language Processing",
@@ -405,7 +405,7 @@ const glossaryTerms: GlossaryTerm[] = [
 export default function GlossaryClient() {
   const { t } = useLanguage();
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All Categories");
+  const [selectedCategory, setSelectedCategory] = useState(t("glossary.allCategories"));
   const [selectedLetter, setSelectedLetter] = useState<string | null>(null);
   const [expandedTerms, setExpandedTerms] = useState<Set<string>>(new Set());
 
@@ -419,7 +419,7 @@ export default function GlossaryClient() {
     let filtered = glossaryTerms;
 
     // Filter by category
-    if (selectedCategory !== "All Categories") {
+    if (selectedCategory !== t("glossary.allCategories")) {
       filtered = filtered.filter((term) => term.category === selectedCategory);
     }
 
@@ -475,7 +475,7 @@ export default function GlossaryClient() {
 
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
-    if (category !== "All Categories") {
+    if (category !== t("glossary.allCategories")) {
       analytics.glossary.filterByCategory(category);
     }
   };
@@ -548,7 +548,7 @@ export default function GlossaryClient() {
                 }
               >
                 {category}
-                {category !== "All Categories" && (
+                {category !== t("glossary.allCategories") && (
                   <span className="ml-2 text-xs opacity-70">
                     ({categoryStats[category] || 0})
                   </span>
@@ -609,7 +609,7 @@ export default function GlossaryClient() {
               <Button
                 onClick={() => {
                   setSearchQuery("");
-                  setSelectedCategory("All Categories");
+                  setSelectedCategory(t("glossary.allCategories"));
                   setSelectedLetter(null);
                 }}
                 className="mt-4 bg-[#A78BFA] hover:bg-[#8B5CF6] text-white"
