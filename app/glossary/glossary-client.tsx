@@ -404,7 +404,6 @@ const glossaryTerms: GlossaryTerm[] = [
 
 export default function GlossaryClient() {
   const { t } = useLanguage()
-  const { t } = useLanguage();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(t("glossary.allCategories"));
   const [selectedLetter, setSelectedLetter] = useState<string | null>(null);
