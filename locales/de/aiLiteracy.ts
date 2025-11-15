@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   title: "KI für Bildung meistern",
   subtitle:
     "Bauen Sie Ihre KI-Expertise mit umfassenden Kursen auf, die Ihnen helfen, KI in Ihren Unterricht zu integrieren.",
