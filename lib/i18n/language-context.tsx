@@ -2410,6 +2410,7 @@ const translationsFr: Record<string, string> = {};
 const translationsIt: Record<string, string> = {};
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
+  const [language, setLanguage] = useState<Language>("en");
   useEffect(() => {
     // Check URL path first
     if (typeof window !== "undefined") {
