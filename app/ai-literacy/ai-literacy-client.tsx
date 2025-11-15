@@ -33,8 +33,8 @@ import { LeadMagnet } from "@/components/conversion/lead-magnet";
 const featuredCourses = [
   {
     id: "ai-basics",
-    title: "AI Basics for Teachers",
-    description: "Understand how AI works and why it matters for education",
+    title: t("course1Title"),
+    description: t("course1Desc"),
     duration: "45 min",
     level: "Beginner",
     lessons: 6,
@@ -44,8 +44,8 @@ const featuredCourses = [
   },
   {
     id: "prompt-engineering",
-    title: "Prompt Engineering Fundamentals",
-    description: "Master the art of writing effective AI prompts",
+    title: t("course2Title"),
+    description: t("course2Desc"),
     duration: "1.5 hours",
     level: "Beginner",
     lessons: 8,
@@ -55,7 +55,7 @@ const featuredCourses = [
   },
   {
     id: "parent-communication",
-    title: "AI for Parent Communication",
+    title: t("course3Title"),
     description: "Write professional parent emails 10⭐⭐⭐⭐⭐",
     duration: "1 hour",
     level: "Intermediate",
@@ -66,8 +66,8 @@ const featuredCourses = [
   },
   {
     id: "lesson-planning",
-    title: "AI for Lesson Planning",
-    description: "Create engaging lessons with AI assistance",
+    title: t("course4Title"),
+    description: t("course4Desc"),
     duration: "1.5 hours",
     level: "Intermediate",
     lessons: 9,
@@ -77,7 +77,7 @@ const featuredCourses = [
   },
   {
     id: "assessment-feedback",
-    title: "AI for Assessment & Feedback",
+    title: t("course5Title"),
     description: "Provide meaningful feedback faster",
     duration: "1.5 hours",
     level: "Intermediate",

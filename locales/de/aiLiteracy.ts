@@ -59,4 +59,17 @@
   minuteRead: "Minuten Lesezeit",
   downloadResource: "Ressource herunterladen",
   exploreLibrary: "Bibliothek erkunden",
+  course1Title: "KI-Grundlagen für Lehrkräfte",
+  course1Desc:
+    "Verstehen Sie, wie KI funktioniert und warum sie für die Bildung wichtig ist",
+  course2Title: "Grundlagen der Prompt-Erstellung",
+  course2Desc: "Meistern Sie die Kunst, effektive KI-Prompts zu schreiben",
+  course3Title: "KI für Elternkommunikation",
+  course3Desc:
+    "Verbessern Sie die Kommunikation mit personalisierten KI-unterstützten Nachrichten",
+  course4Title: "KI für Unterrichtsplanung",
+  course4Desc: "Erstellen Sie ansprechende Lektionen mit KI-Unterstützung",
+  course5Title: "KI für Bewertung & Feedback",
+  course5Desc:
+    "Optimieren Sie Bewertungen und geben Sie konstruktives Feedback",
 };
