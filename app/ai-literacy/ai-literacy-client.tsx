@@ -210,12 +210,11 @@ const certificationLevels = [
 export default function AILiteracyClient() {
   // Learning paths data - now uses translations
   const [selectedPath, setSelectedPath] = useState<string | null>(null);
-  const { t } = useTranslations("aiLiteracy");        // ADD THIS LINE
-  const { language } = useLanguage();                 // ADD THIS LINE
-  
+  const { t } = useTranslations("aiLiteracy"); // ADD THIS LINE
+  const { language } = useLanguage(); // ADD THIS LINE
+
   // Learning paths data - now uses translations
   const learningPaths = [
-
     {
       id: "intermediate",
       title: t("intermediateTitle"),
@@ -801,7 +800,7 @@ export default function AILiteracyClient() {
             title="Start Your AI Learning Journey"
             description="Join 50,000+ teachers who are confidently using AI to enhance their teaching"
             primaryCTA={{
-              text: "Browse Courses",
+              text: t("browseCourses"),
               href: "#courses",
             }}
             secondaryCTA={{
