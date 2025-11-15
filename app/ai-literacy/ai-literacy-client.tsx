@@ -210,8 +210,14 @@ const certificationLevels = [
 export default function AILiteracyClient() {
   const [selectedPath, setSelectedPath] = useState<string | null>(null);
   // Learning paths data - now uses translations
-
+export default function AILiteracyClient() {
+  const [selectedPath, setSelectedPath] = useState<string | null>(null);
+  const { t } = useTranslations("aiLiteracy");        // ADD THIS LINE
+  const { language } = useLanguage();                 // ADD THIS LINE
+  
+  // Learning paths data - now uses translations
   const learningPaths = [
+
     {
       id: "intermediate",
       title: t("intermediateTitle"),
@@ -810,4 +816,5 @@ export default function AILiteracyClient() {
       </section>
     </div>
   );
+}
 }
