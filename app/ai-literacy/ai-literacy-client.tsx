@@ -255,9 +255,55 @@ const certificationLevels = [
 ];
 
 export default function AILiteracyClient() {
-  const { t } = useTranslations("aiLiteracy");
-  const { language } = useLanguage();
   const [selectedPath, setSelectedPath] = useState<string | null>(null);
+  // Learning paths data - now uses translations
+  const learningPaths = [
+    {
+      id: "beginner",
+      title: t("beginnerTitle"),
+      description: t("beginnerDesc"),
+      duration: "8-12 hours",
+      courses: 5,
+      icon: BookOpen,
+      color: "from-blue-500 to-cyan-500",
+      skills: [
+        t("skillAIBasics"),
+        t("skillPromptWriting"),
+        t("skillToolSelection"),
+        t("skillPrivacy"),
+      ],
+    },
+    {
+      id: "intermediate",
+      title: t("intermediateTitle"),
+      description: t("intermediateDesc"),
+      duration: "12-16 hours",
+      courses: 7,
+      icon: GraduationCap,
+      color: "from-purple-500 to-indigo-500",
+      skills: [
+        t("skillAdvancedPrompts"),
+        t("skillWorkflowIntegration"),
+        t("skillAssessmentDesign"),
+        t("skillParentCommunication"),
+      ],
+    },
+    {
+      id: "advanced",
+      title: t("advancedTitle"),
+      description: t("advancedDesc"),
+      duration: "16-20 hours",
+      courses: 10,
+      icon: Award,
+      color: "from-orange-500 to-red-500",
+      skills: [
+        t("skillCurriculumDesign"),
+        t("skillEthicalAI"),
+        t("skillLeadershipAI"),
+        t("skillPolicyDevelopment"),
+      ],
+    },
+  ];
 
   useEffect(() => {
     if (typeof window !== "undefined" && (window as any).analytics) {

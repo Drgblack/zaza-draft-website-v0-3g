@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   title: "Master AI for Education",
   subtitle:
     "Build your AI expertise with comprehensive courses that help you integrate AI into your classroom.",
@@ -35,4 +35,16 @@ export default {
     "Begin your certification journey today. All courses and assessments are completely free",
   ctaButton: "Start Free Course",
   ctaSecondary: "Take Guided Tour",
+  skillAIBasics: "AI Basics",
+  skillPromptWriting: "Prompt Writing",
+  skillToolSelection: "Tool Selection",
+  skillPrivacy: "Privacy Awareness",
+  skillAdvancedPrompts: "Advanced Prompts",
+  skillWorkflowIntegration: "Workflow Integration",
+  skillAssessmentDesign: "Assessment Design",
+  skillParentCommunication: "Parent Communication",
+  skillCurriculumDesign: "Curriculum Design",
+  skillEthicalAI: "Ethical AI",
+  skillLeadershipAI: "AI Leadership",
+  skillPolicyDevelopment: "Policy Development",
 };
