@@ -210,7 +210,6 @@ const certificationLevels = [
 export default function AILiteracyClient() {
   const [selectedPath, setSelectedPath] = useState<string | null>(null);
   // Learning paths data - now uses translations
-export default function AILiteracyClient() {
   const [selectedPath, setSelectedPath] = useState<string | null>(null);
   const { t } = useTranslations("aiLiteracy");        // ADD THIS LINE
   const { language } = useLanguage();                 // ADD THIS LINE
