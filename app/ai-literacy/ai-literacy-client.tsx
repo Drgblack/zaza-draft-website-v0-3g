@@ -29,53 +29,6 @@ import { SocialProofBar } from "@/components/conversion/social-proof-bar";
 import { TestimonialCard } from "@/components/conversion/testimonial-card";
 import { TrustBadges } from "@/components/conversion/trust-badges";
 import { LeadMagnet } from "@/components/conversion/lead-magnet";
-const learningPaths = [
-  {
-    id: "beginner",
-    title: "Beginner Path",
-    description: "New to AI? Start here to build foundational knowledge",
-    duration: "8-12 hours",
-    courses: 5,
-    icon: BookOpen,
-    color: "from-blue-500 to-cyan-500",
-    skills: [
-      "AI Basics",
-      "Prompt Writing",
-      "Tool Selection",
-      "Privacy Awareness",
-    ],
-  },
-  {
-    id: "intermediate",
-    title: "Intermediate Path",
-    description: "Ready to apply AI to your daily teaching workflows",
-    duration: "12-16 hours",
-    courses: 7,
-    icon: Target,
-    color: "from-purple-500 to-pink-500",
-    skills: [
-      "Advanced Prompts",
-      "Workflow Integration",
-      "Assessment Design",
-      "Parent Communication",
-    ],
-  },
-  {
-    id: "advanced",
-    title: "Advanced Path",
-    description: "Become an AI leader in your school or district",
-    duration: "16-20 hours",
-    courses: 8,
-    icon: TrendingUp,
-    color: "from-orange-500 to-red-500",
-    skills: [
-      "AI Strategy",
-      "Professional Development",
-      "Policy Development",
-      "Change Management",
-    ],
-  },
-];
 
 const featuredCourses = [
   {
