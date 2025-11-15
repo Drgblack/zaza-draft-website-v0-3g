@@ -257,22 +257,8 @@ const certificationLevels = [
 export default function AILiteracyClient() {
   const [selectedPath, setSelectedPath] = useState<string | null>(null);
   // Learning paths data - now uses translations
+
   const learningPaths = [
-    {
-      id: "beginner",
-      title: t("beginnerTitle"),
-      description: t("beginnerDesc"),
-      duration: "8-12 hours",
-      courses: 5,
-      icon: BookOpen,
-      color: "from-blue-500 to-cyan-500",
-      skills: [
-        t("skillAIBasics"),
-        t("skillPromptWriting"),
-        t("skillToolSelection"),
-        t("skillPrivacy"),
-      ],
-    },
     {
       id: "intermediate",
       title: t("intermediateTitle"),
