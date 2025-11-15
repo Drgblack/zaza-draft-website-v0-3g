@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import { useTranslations } from "@/lib/i18n/useTranslations";
@@ -103,8 +103,7 @@ const featuredCourses = [
   {
     id: "parent-communication",
     title: "AI for Parent Communication",
-    description:
-      "Write professional parent emails 10ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â faster",
+    description: "Write professional parent emails 10⭐⭐⭐⭐⭐",
     duration: "1 hour",
     level: "Intermediate",
     lessons: 7,
@@ -228,8 +227,7 @@ const certificationLevels = [
       "Pass assessment (80%+)",
       "Submit 3 sample prompts",
     ],
-    badge:
-      "ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â°",
+    badge: "⭐⭐⭐⭐⭐",
     holders: "8,450+",
   },
   {
@@ -240,8 +238,7 @@ const certificationLevels = [
       "Pass advanced assessment (85%+)",
       "Submit portfolio of AI-enhanced lessons",
     ],
-    badge:
-      "ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Â¹ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ",
+    badge: "⭐⭐⭐⭐⭐",
     holders: "3,920+",
   },
   {
@@ -252,8 +249,7 @@ const certificationLevels = [
       "Pass leadership assessment (90%+)",
       "Lead PD session or create resource",
     ],
-    badge:
-      "ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â°ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¡",
+    badge: "⭐⭐⭐⭐⭐",
     holders: "1,240+",
   },
 ];
