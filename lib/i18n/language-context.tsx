@@ -7,7 +7,7 @@ import {
   type ReactNode,
 } from "react";
 
-type Language = "en" | "de" | "es" | "fr" | "it";
+type Language = "en" | "de";
 
 interface LanguageContextType {
   language: Language;
