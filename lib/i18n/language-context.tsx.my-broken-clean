@@ -1,0 +1,492 @@
+"use client";
+
+import React, { createContext, useContext, useState, useEffect } from "react";
+
+type Language = "en" | "de";
+
+interface LanguageContextType {
+  language: Language;
+  setLanguage: (lang: Language) => void;
+  t: (key: string) => string;
+}
+
+const LanguageContext = createContext<LanguageContextType | undefined>(
+  undefined,
+);
+
+// CLEAN UTF-8 TRANSLATIONS - NO CORRUPTION
+const translations = {
+  en: {
+    // ===== NAVIGATION =====
+    "nav.home": "Home",
+    "nav.pricing": "Pricing",
+    "nav.products": "Products",
+    "nav.products.suite": "Zaza Suite",
+    "nav.products.teach": "Zaza Teach",
+    "nav.products.draft": "Zaza Draft",
+    "nav.products.gradeflow": "GradeFlow",
+    "nav.products.shield": "Zaza Shield",
+    "nav.learningCentre": "Learning Centre",
+    "nav.resources": "Resources",
+    "nav.faq": "FAQ",
+    "nav.about": "About",
+    "nav.getStarted": "Get Started",
+
+    // ===== HERO & CTA =====
+    "hero.eyebrow": "FOR TEACHERS",
+    "hero.badge": "Hallucination-safe AI for teachers",
+    "hero.headline": "Write like you",
+    "hero.headlineAccent": "just faster.",
+    "hero.subheading":
+      "AI-powered writing assistant that helps teachers write parent emails, student reports, and grade comments in minutes instead of hours.",
+    "hero.ctaPrimary": "Start Writing Free",
+    "hero.ctaSecondary": "See Examples",
+    "hero.trustIndicators.hallucinationSafe": "Hallucination-safe",
+    "hero.trustIndicators.ferpaCompliant": "FERPA compliant",
+    "hero.trustIndicators.teachers": "500+ teachers",
+
+    // ===== VIDEOS =====
+    "videos.hero.title": "Video Tutorials and Demos",
+    "videos.search.placeholder": "Search videos...",
+    "videos.categories.all": "All Videos",
+    "videos.categories.getting-started": "Getting Started",
+    "videos.categories.advanced": "Advanced Features",
+    "videos.categories.use-cases": "Use Cases",
+    "videos.categories.best-practices": "Best Practices",
+    "videos.categories.tips-tricks": "Tips & Tricks",
+    "videos.section.all": "All Videos",
+    "videos.curated": "Curated Playlists",
+    "videos.featured": "Featured Videos",
+
+    "videos.category.allVideos": "All Videos",
+    "videos.category.gettingStarted": "Getting Started",
+    "videos.category.advancedFeatures": "Advanced Features",
+    "videos.category.useCases": "Use Cases",
+    "videos.category.bestPractices": "Best Practices",
+    "videos.category.tipsTricks": "Tips & Tricks",
+
+    "videos.title.quickStartGuide": "Quick Start Guide",
+    "videos.title.masteringParentComm": "Mastering Parent Communication",
+    "videos.title.timeSavingWorkflows": "Time-Saving Workflows",
+    "videos.title.welcomeToZaza": "Welcome to Zaza Draft",
+    "videos.title.firstParentMessage": "Creating Your First Parent Message",
+    "videos.title.customizingTone": "Customizing Tone & Style",
+    "videos.title.multilingualMessages": "Multilingual Messages",
+    "videos.title.templatesLibrary": "Using the Templates Library",
+    "videos.title.keyboardShortcuts": "Keyboard Shortcuts & Power User Tips",
+    "videos.title.advancedPrompting": "Advanced Prompt Engineering",
+    "videos.title.batchProcessing": "Batch Processing Multiple Messages",
+    "videos.title.googleClassroom": "Google Classroom Integration",
+    "videos.title.difficultConversations": "Navigating Difficult Conversations",
+    "videos.title.progressReports": "Writing Progress Reports",
+    "videos.title.parentTeacherConf":
+      "Preparing for Parent-Teacher Conferences",
+    "videos.title.positiveBehavior": "Positive Behavior Updates",
+    "videos.title.homeworkReminders": "Homework Reminders",
+    "videos.title.weeklyNewsletters": "Creating Weekly Class Newsletters",
+    "videos.title.specialEducation": "Special Education Communication",
+    "videos.title.consistentTone": "Maintaining Consistent Tone",
+    "videos.title.privacyCompliance": "Privacy & FERPA Compliance",
+    "videos.title.ethicalAI": "Ethical AI Use in Education",
+    "videos.title.personalization": "Personalization Best Practices",
+
+    "videos.desc.quickStartGuide":
+      "Get started with Zaza Draft in under 30 minutes",
+    "videos.desc.masteringParentComm":
+      "Advanced techniques for effective parent engagement",
+    "videos.desc.timeSavingWorkflows":
+      "Automate repetitive tasks and reclaim your time",
+    "videos.desc.firstParentMessage":
+      "Step-by-step guide to writing your first AI-assisted message",
+    "videos.desc.multilingualMessages":
+      "Communicate with parents in their preferred language",
+    "videos.desc.templatesLibrary":
+      "Save time with pre-built templates for common scenarios",
+    "videos.desc.keyboardShortcuts":
+      "Work faster with keyboard shortcuts and hidden features",
+    "videos.desc.batchProcessing":
+      "Generate multiple personalized messages at once",
+    "videos.desc.parentTeacherConf":
+      "Use AI to prepare talking points and follow-up messages",
+    "videos.desc.homeworkReminders":
+      "Keep parents informed about assignments and due dates",
+    "videos.desc.weeklyNewsletters":
+      "Create engaging newsletters to keep parents in the loop",
+    "videos.desc.privacyCompliance":
+      "Protect student data while using AI tools",
+    "videos.desc.ethicalAI":
+      "Guidelines for responsible AI use in parent communication",
+    "videos.desc.personalization":
+      "Make every message feel personal and authentic",
+
+    // ===== AI LITERACY =====
+    "aiLiteracy.title": "Master AI for Education",
+    "aiLiteracy.subtitle":
+      "Build your AI expertise with comprehensive courses that help you integrate AI into your teaching.",
+    "aiLiteracy.courses": "Courses",
+    "aiLiteracy.educators": "Educators",
+    "aiLiteracy.certified": "Certified",
+    "aiLiteracy.hoursSaved": "Hours Saved",
+    "aiLiteracy.pathsTitle": "Choose Your Learning Path",
+    "aiLiteracy.pathsSubtitle": "Structured courses for every level",
+    "aiLiteracy.beginnerTitle": "Beginner Path",
+    "aiLiteracy.beginnerDesc": "Perfect for teachers new to AI",
+    "aiLiteracy.intermediateTitle": "Intermediate Path",
+    "aiLiteracy.intermediateDesc": "For teachers with basic AI knowledge",
+    "aiLiteracy.advancedTitle": "Advanced Path",
+    "aiLiteracy.advancedDesc": "Deep dive into advanced AI concepts",
+    "aiLiteracy.coursesTitle": "All Courses",
+    "aiLiteracy.coursesSubtitle": "Browse our complete course library",
+    "aiLiteracy.certificationTitle": "AI Education Certification",
+    "aiLiteracy.certificationSubtitle": "Earn recognized credentials",
+    "aiLiteracy.benefit1": "Demonstrate your expertise to administrators",
+    "aiLiteracy.benefit2": "Stand out in job applications and promotions",
+    "aiLiteracy.benefit3": "Become the go-to AI expert at your school",
+    "aiLiteracy.libraryTitle": "Downloadable Resource Library",
+    "aiLiteracy.librarySubtitle":
+      "Ready-to-use templates, checklists, and guides to accelerate your AI adoption",
+    "aiLiteracy.testimonialsTitle": "What Teachers Are Saying",
+    "aiLiteracy.testimonialsSubtitle":
+      "Real experiences from educators mastering AI",
+    "aiLiteracy.ctaTitle": "Start Your AI Journey",
+    "aiLiteracy.ctaSubtitle":
+      "Join thousands of teachers leveling up their AI skills",
+    "aiLiteracy.ctaButton": "Start Free Course",
+    "aiLiteracy.ctaSecondary": "Take Guided Tour",
+
+    // ===== PRICING =====
+    "pricing.hero.preheadline": "TRANSPARENT PRICING",
+    "pricing.hero.headline":
+      "Pricing that respects teachers' time and wellbeing",
+    "pricing.hero.subheadline":
+      "Save hours every week, reduce after-hours stress, and write with confidence - with pricing that's simple and fair.",
+    "pricing.trust.teachers": "Trusted by caring teachers",
+    "pricing.trust.ferpa": "FERPA-minded",
+    "pricing.trust.cancel": "Cancel anytime",
+    "pricing.identity.title": "This is for teachers who...",
+    "pricing.identity.point1":
+      "want to spend less time writing and more time teaching",
+    "pricing.identity.point2":
+      "need trusted language support without losing their voice",
+    "pricing.identity.point3":
+      "care about boundaries, confidence, and calm in their week",
+    "pricing.toggle.monthly": "Monthly",
+    "pricing.toggle.annual": "Annual",
+    "pricing.toggle.save": "Save 2 months",
+    "pricing.outcome.text": "Save your first 10 hours",
+    "pricing.tier.free.name": "Free",
+    "pricing.tier.free.price": "$0",
+    "pricing.tier.free.description": "For teachers trying out Zaza",
+    "pricing.tier.pro.name": "Pro",
+    "pricing.tier.pro.price": "$12",
+    "pricing.tier.pro.priceAnnual": "$10",
+    "pricing.tier.pro.description": "For dedicated teachers",
+    "pricing.tier.school.name": "School",
+    "pricing.tier.school.price": "Custom",
+    "pricing.tier.school.description": "For schools and districts",
+    "pricing.feature.unlimited": "Unlimited messages",
+    "pricing.feature.templates": "Template library",
+    "pricing.feature.multilingual": "Multilingual support",
+    "pricing.feature.priority": "Priority support",
+    "pricing.feature.training": "Training resources",
+    "pricing.feature.analytics": "Usage analytics",
+    "pricing.cta.start": "Start Free",
+    "pricing.cta.upgrade": "Upgrade to Pro",
+    "pricing.cta.contact": "Contact Us",
+    "pricing.faq.title": "Frequently Asked Questions",
+    "pricing.faq.cancel": "Can I cancel anytime?",
+    "pricing.faq.cancelAnswer":
+      "Yes, you can cancel your subscription at any time. No long-term commitments.",
+    "pricing.faq.data": "Is my data safe?",
+    "pricing.faq.dataAnswer":
+      "Absolutely. We are FERPA compliant and take data privacy very seriously.",
+
+    // ===== FOOTER =====
+    "footer.tagline": "AI-powered communication for teachers",
+    "footer.products.title": "Products",
+    "footer.products.suite": "Zaza Suite",
+    "footer.products.draft": "Draft",
+    "footer.products.teach": "Teach",
+    "footer.products.gradeflow": "GradeFlow",
+    "footer.products.shield": "Shield",
+    "footer.resources.title": "Resources",
+    "footer.resources.videos": "Videos",
+    "footer.resources.aiLiteracy": "AI Literacy",
+    "footer.resources.glossary": "Glossary",
+    "footer.resources.faq": "FAQ",
+    "footer.company.title": "Company",
+    "footer.company.about": "About",
+    "footer.company.contact": "Contact",
+    "footer.company.privacy": "Privacy",
+    "footer.company.terms": "Terms",
+    "footer.social.title": "Follow Us",
+    "footer.copyright": "© 2025 Zaza Technologies. All rights reserved.",
+    "footer.madeWith": "Made with",
+    "footer.forTeachers": "for teachers",
+
+    // ===== GLOSSARY =====
+    "glossary.title": "AI Terms Glossary",
+    "glossary.search": "Search terms...",
+    "glossary.categories.all": "All Terms",
+    "glossary.categories.basics": "Basics",
+    "glossary.categories.advanced": "Advanced",
+  },
+
+  de: {
+    // ===== NAVIGATION =====
+    "nav.home": "Startseite",
+    "nav.pricing": "Preise",
+    "nav.products": "Produkte",
+    "nav.products.suite": "Zaza Suite",
+    "nav.products.teach": "Zaza Teach",
+    "nav.products.draft": "Zaza Draft",
+    "nav.products.gradeflow": "GradeFlow",
+    "nav.products.shield": "Zaza Shield",
+    "nav.learningCentre": "Lernzentrum",
+    "nav.resources": "Ressourcen",
+    "nav.faq": "FAQ",
+    "nav.about": "Über uns",
+    "nav.getStarted": "Jetzt starten",
+
+    // ===== HERO & CTA =====
+    "hero.eyebrow": "FÜR LEHRKRÄFTE",
+    "hero.badge": "Halluzinationssichere KI für Lehrkräfte",
+    "hero.headline": "Schreiben Sie wie Sie",
+    "hero.headlineAccent": "nur schneller.",
+    "hero.subheading":
+      "KI-gestützter Schreibassistent, der Lehrkräften hilft, Eltern-E-Mails, Schülerberichte und Bewertungskommentare in Minuten statt Stunden zu erstellen.",
+    "hero.ctaPrimary": "Kostenlos starten",
+    "hero.ctaSecondary": "Beispiele ansehen",
+    "hero.trustIndicators.hallucinationSafe": "Halluzinationssicher",
+    "hero.trustIndicators.ferpaCompliant": "FERPA-konform",
+    "hero.trustIndicators.teachers": "500+ Lehrkräfte",
+
+    // ===== VIDEOS =====
+    "videos.hero.title": "Video-Tutorials und Demos",
+    "videos.search.placeholder": "Videos durchsuchen...",
+    "videos.categories.all": "Alle Videos",
+    "videos.categories.getting-started": "Erste Schritte",
+    "videos.categories.advanced": "Erweiterte Funktionen",
+    "videos.categories.use-cases": "Anwendungsfälle",
+    "videos.categories.best-practices": "Bewährte Methoden",
+    "videos.categories.tips-tricks": "Tipps & Tricks",
+    "videos.section.all": "Alle Videos",
+    "videos.curated": "Kuratierte Playlists",
+    "videos.featured": "Empfohlene Videos",
+
+    "videos.category.allVideos": "Alle Videos",
+    "videos.category.gettingStarted": "Erste Schritte",
+    "videos.category.advancedFeatures": "Erweiterte Funktionen",
+    "videos.category.useCases": "Anwendungsfälle",
+    "videos.category.bestPractices": "Best Practices",
+    "videos.category.tipsTricks": "Tipps & Tricks",
+
+    "videos.title.quickStartGuide": "Schnellstart-Leitfaden",
+    "videos.title.masteringParentComm": "Elternkommunikation meistern",
+    "videos.title.timeSavingWorkflows": "Zeitsparende Arbeitsabläufe",
+    "videos.title.welcomeToZaza": "Willkommen bei Zaza Draft",
+    "videos.title.firstParentMessage": "Ihre erste Eltern-Nachricht erstellen",
+    "videos.title.customizingTone": "Ton & Stil anpassen",
+    "videos.title.multilingualMessages": "Mehrsprachige Nachrichten",
+    "videos.title.templatesLibrary": "Vorlagen-Bibliothek nutzen",
+    "videos.title.keyboardShortcuts": "Tastaturkürzel & Power-User-Tipps",
+    "videos.title.advancedPrompting": "Fortgeschrittene Prompt-Entwicklung",
+    "videos.title.batchProcessing": "Stapelverarbeitung mehrerer Nachrichten",
+    "videos.title.googleClassroom": "Google Classroom Integration",
+    "videos.title.difficultConversations": "Schwierige Gespräche führen",
+    "videos.title.progressReports": "Fortschrittsberichte schreiben",
+    "videos.title.parentTeacherConf": "Eltern-Lehrer-Gespräche vorbereiten",
+    "videos.title.positiveBehavior": "Positive Verhaltens-Updates",
+    "videos.title.homeworkReminders": "Hausaufgaben-Erinnerungen",
+    "videos.title.weeklyNewsletters": "Wöchentliche Klassenbriefe erstellen",
+    "videos.title.specialEducation": "Sonderpädagogik-Kommunikation",
+    "videos.title.consistentTone": "Einheitlichen Ton beibehalten",
+    "videos.title.privacyCompliance": "Datenschutz & FERPA-Konformität",
+    "videos.title.ethicalAI": "Ethischer KI-Einsatz in der Bildung",
+    "videos.title.personalization": "Personalisierungs-Best-Practices",
+
+    "videos.desc.quickStartGuide":
+      "Starten Sie mit Zaza Draft in unter 30 Minuten",
+    "videos.desc.masteringParentComm":
+      "Fortgeschrittene Techniken für effektive Eltern-Einbindung",
+    "videos.desc.timeSavingWorkflows":
+      "Automatisieren Sie wiederkehrende Aufgaben und gewinnen Sie Zeit zurück",
+    "videos.desc.firstParentMessage":
+      "Schritt-für-Schritt-Anleitung zum Schreiben Ihrer ersten KI-gestützten Nachricht",
+    "videos.desc.multilingualMessages":
+      "Kommunizieren Sie mit Eltern in ihrer bevorzugten Sprache",
+    "videos.desc.templatesLibrary":
+      "Sparen Sie Zeit mit vorgefertigten Vorlagen für häufige Szenarien",
+    "videos.desc.keyboardShortcuts":
+      "Arbeiten Sie schneller mit Tastaturkürzeln und versteckten Funktionen",
+    "videos.desc.batchProcessing":
+      "Generieren Sie mehrere personalisierte Nachrichten auf einmal",
+    "videos.desc.parentTeacherConf":
+      "Nutzen Sie KI zur Vorbereitung von Gesprächspunkten und Folge-Nachrichten",
+    "videos.desc.homeworkReminders":
+      "Halten Sie Eltern über Aufgaben und Abgabetermine auf dem Laufenden",
+    "videos.desc.weeklyNewsletters":
+      "Erstellen Sie ansprechende Newsletter, um Eltern informiert zu halten",
+    "videos.desc.privacyCompliance":
+      "Schützen Sie Schülerdaten bei der Verwendung von KI-Tools",
+    "videos.desc.ethicalAI":
+      "Richtlinien für verantwortlichen KI-Einsatz in der Elternkommunikation",
+    "videos.desc.personalization":
+      "Lassen Sie jede Nachricht persönlich und authentisch wirken",
+
+    // ===== AI LITERACY =====
+    "aiLiteracy.title": "KI für Bildung meistern",
+    "aiLiteracy.subtitle":
+      "Bauen Sie Ihre KI-Expertise mit umfassenden Kursen auf, die Ihnen helfen, KI in Ihren Unterricht zu integrieren.",
+    "aiLiteracy.courses": "Kurse",
+    "aiLiteracy.educators": "Pädagogen",
+    "aiLiteracy.certified": "Zertifiziert",
+    "aiLiteracy.hoursSaved": "Gesparte Stunden",
+    "aiLiteracy.pathsTitle": "Wählen Sie Ihren Lernpfad",
+    "aiLiteracy.pathsSubtitle": "Strukturierte Kurse für jedes Niveau",
+    "aiLiteracy.beginnerTitle": "Einsteiger-Pfad",
+    "aiLiteracy.beginnerDesc": "Perfekt für Lehrkräfte, die neu in der KI sind",
+    "aiLiteracy.intermediateTitle": "Fortgeschrittenen-Pfad",
+    "aiLiteracy.intermediateDesc":
+      "Für Lehrkräfte mit grundlegenden KI-Kenntnissen",
+    "aiLiteracy.advancedTitle": "Experten-Pfad",
+    "aiLiteracy.advancedDesc":
+      "Tieferer Einblick in fortgeschrittene KI-Konzepte",
+    "aiLiteracy.coursesTitle": "Alle Kurse",
+    "aiLiteracy.coursesSubtitle":
+      "Durchsuchen Sie unsere gesamte Kursbibliothek",
+    "aiLiteracy.certificationTitle": "KI-Bildungszertifizierung",
+    "aiLiteracy.certificationSubtitle":
+      "Verdienen Sie anerkannte Qualifikationsnachweise",
+    "aiLiteracy.benefit1": "Zeigen Sie Ihre Expertise Schulleitungen",
+    "aiLiteracy.benefit2":
+      "Heben Sie sich bei Bewerbungen und Beförderungen ab",
+    "aiLiteracy.benefit3": "Werden Sie zum KI-Ansprechpartner in Ihrer Schule",
+    "aiLiteracy.libraryTitle": "Herunterladbare Ressourcenbibliothek",
+    "aiLiteracy.librarySubtitle":
+      "Sofort einsetzbare Vorlagen, Checklisten und Leitfäden zur Beschleunigung Ihrer KI-Einführung",
+    "aiLiteracy.testimonialsTitle": "Was Lehrkräfte sagen",
+    "aiLiteracy.testimonialsSubtitle":
+      "Echte Erfahrungen von Lehrern, die KI meistern",
+    "aiLiteracy.ctaTitle": "Beginnen Sie Ihre KI-Reise",
+    "aiLiteracy.ctaSubtitle":
+      "Schließen Sie sich Tausenden von Lehrkräften an, die ihre KI-Fähigkeiten verbessern",
+    "aiLiteracy.ctaButton": "Kostenlosen Kurs beginnen",
+    "aiLiteracy.ctaSecondary": "Geführte Tour",
+
+    // ===== PRICING =====
+    "pricing.hero.preheadline": "TRANSPARENTE PREISE",
+    "pricing.hero.headline":
+      "Preise, die die Zeit und das Wohlbefinden von Lehrkräften respektieren",
+    "pricing.hero.subheadline":
+      "Sparen Sie jede Woche Stunden, reduzieren Sie Stress nach Feierabend und schreiben Sie mit Zuversicht – mit Preisen, die einfach und fair sind.",
+    "pricing.trust.teachers": "Vertraut von fürsorglichen Lehrkräften",
+    "pricing.trust.ferpa": "FERPA-bewusst",
+    "pricing.trust.cancel": "Jederzeit kündbar",
+    "pricing.identity.title": "Dies ist für Lehrkräfte, die...",
+    "pricing.identity.point1":
+      "weniger Zeit mit Schreiben und mehr Zeit mit Unterrichten verbringen möchten",
+    "pricing.identity.point2":
+      "vertrauenswürdige Sprachunterstützung benötigen, ohne ihre Stimme zu verlieren",
+    "pricing.identity.point3":
+      "Wert auf Grenzen, Zuversicht und Ruhe in ihrer Woche legen",
+    "pricing.toggle.monthly": "Monatlich",
+    "pricing.toggle.annual": "Jährlich",
+    "pricing.toggle.save": "2 Monate sparen",
+    "pricing.outcome.text": "Sparen Sie Ihre ersten 10 Stunden",
+    "pricing.tier.free.name": "Kostenlos",
+    "pricing.tier.free.price": "€0",
+    "pricing.tier.free.description":
+      "Für Lehrkräfte, die Zaza ausprobieren möchten",
+    "pricing.tier.pro.name": "Pro",
+    "pricing.tier.pro.price": "€12",
+    "pricing.tier.pro.priceAnnual": "€10",
+    "pricing.tier.pro.description": "Für engagierte Lehrkräfte",
+    "pricing.tier.school.name": "Schule",
+    "pricing.tier.school.price": "Individuell",
+    "pricing.tier.school.description": "Für Schulen und Bezirke",
+    "pricing.feature.unlimited": "Unbegrenzte Nachrichten",
+    "pricing.feature.templates": "Vorlagen-Bibliothek",
+    "pricing.feature.multilingual": "Mehrsprachige Unterstützung",
+    "pricing.feature.priority": "Prioritäts-Support",
+    "pricing.feature.training": "Schulungs-Ressourcen",
+    "pricing.feature.analytics": "Nutzungsanalysen",
+    "pricing.cta.start": "Kostenlos starten",
+    "pricing.cta.upgrade": "Upgrade auf Pro",
+    "pricing.cta.contact": "Kontaktieren Sie uns",
+    "pricing.faq.title": "Häufig gestellte Fragen",
+    "pricing.faq.cancel": "Kann ich jederzeit kündigen?",
+    "pricing.faq.cancelAnswer":
+      "Ja, Sie können Ihr Abonnement jederzeit kündigen. Keine langfristigen Verpflichtungen.",
+    "pricing.faq.data": "Sind meine Daten sicher?",
+    "pricing.faq.dataAnswer":
+      "Absolut. Wir sind FERPA-konform und nehmen Datenschutz sehr ernst.",
+
+    // ===== FOOTER =====
+    "footer.tagline": "KI-gestützte Kommunikation für Lehrkräfte",
+    "footer.products.title": "Produkte",
+    "footer.products.suite": "Zaza Suite",
+    "footer.products.draft": "Draft",
+    "footer.products.teach": "Teach",
+    "footer.products.gradeflow": "GradeFlow",
+    "footer.products.shield": "Shield",
+    "footer.resources.title": "Ressourcen",
+    "footer.resources.videos": "Videos",
+    "footer.resources.aiLiteracy": "KI-Kompetenz",
+    "footer.resources.glossary": "Glossar",
+    "footer.resources.faq": "FAQ",
+    "footer.company.title": "Unternehmen",
+    "footer.company.about": "Über uns",
+    "footer.company.contact": "Kontakt",
+    "footer.company.privacy": "Datenschutz",
+    "footer.company.terms": "Nutzungsbedingungen",
+    "footer.social.title": "Folgen Sie uns",
+    "footer.copyright": "© 2025 Zaza Technologies. Alle Rechte vorbehalten.",
+    "footer.madeWith": "Hergestellt mit",
+    "footer.forTeachers": "für Lehrkräfte",
+
+    // ===== GLOSSARY =====
+    "glossary.title": "KI-Begriffe Glossar",
+    "glossary.search": "Begriffe suchen...",
+    "glossary.categories.all": "Alle Begriffe",
+    "glossary.categories.basics": "Grundlagen",
+    "glossary.categories.advanced": "Fortgeschritten",
+  },
+};
+
+export function LanguageProvider({ children }: { children: React.ReactNode }) {
+  const [language, setLanguage] = useState<Language>("en");
+
+  useEffect(() => {
+    // Load saved language preference
+    const saved = localStorage.getItem("language") as Language;
+    if (saved && (saved === "en" || saved === "de")) {
+      setLanguage(saved);
+    }
+  }, []);
+
+  const handleSetLanguage = (lang: Language) => {
+    setLanguage(lang);
+    localStorage.setItem("language", lang);
+  };
+
+  const t = (key: string): string => {
+    return translations[language][key] || translations.en[key] || key;
+  };
+
+  return (
+    <LanguageContext.Provider
+      value={{ language, setLanguage: handleSetLanguage, t }}
+    >
+      {children}
+    </LanguageContext.Provider>
+  );
+}
+
+export function useLanguage() {
+  const context = useContext(LanguageContext);
+  if (!context) {
+    throw new Error("useLanguage must be used within LanguageProvider");
+  }
+  return context;
+}
