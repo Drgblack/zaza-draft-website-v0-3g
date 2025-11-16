@@ -137,6 +137,49 @@ export default function AILiteracyClient() {
     [t],
   );
 
+  // Certification levels - uses translations with useMemo for SSR safety
+  const certificationLevels = useMemo(
+    () => [
+      {
+        level: t("aiReadyTeacher"),
+        description: t("foundationalDesc"),
+        requirements: [
+          t("completeBeginnerPath"),
+          "Pass assessment (80%+)",
+          "Submit 3 sample prompts",
+        ],
+        badge: <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>,
+        icon: Award,
+        color: "from-blue-500 to-purple-500",
+      },
+      {
+        level: t("aiConfidentEducator"),
+        description: t("intermediateDesc"),
+        requirements: [
+          t("completeIntermediatePath"),
+          "Pass advanced assessment (85%+)",
+          "Lead 2 teacher workshops",
+        ],
+        badge: <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>,
+        icon: Award,
+        color: "from-green-500 to-blue-500",
+      },
+      {
+        level: t("aiEducationLeader"),
+        description: t("advancedDesc"),
+        requirements: [
+          t("submitPortfolio"),
+          "Complete capstone project",
+          "Mentor 3 new teachers",
+        ],
+        badge: <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>,
+        icon: Award,
+        color: "from-orange-500 to-red-500",
+      },
+    ],
+    [t],
+  );
+
   return (
     <div className="min-h-screen bg-[#0F172A]">
       {/* Hero Section */}
@@ -257,6 +300,55 @@ export default function AILiteracyClient() {
                         downloads: "6,920",
                       },
                     ],
+                  },
+                ],
+                [t],
+              );
+
+              // Certification levels - uses translations with useMemo for SSR safety
+              const certificationLevels = useMemo(
+                () => [
+                  {
+                    level: t("aiReadyTeacher"),
+                    description: t("foundationalDesc"),
+                    requirements: [
+                      t("completeBeginnerPath"),
+                      "Pass assessment (80%+)",
+                      "Submit 3 sample prompts",
+                    ],
+                    badge: (
+                      <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>
+                    ),
+                    icon: Award,
+                    color: "from-blue-500 to-purple-500",
+                  },
+                  {
+                    level: t("aiConfidentEducator"),
+                    description: t("intermediateDesc"),
+                    requirements: [
+                      t("completeIntermediatePath"),
+                      "Pass advanced assessment (85%+)",
+                      "Lead 2 teacher workshops",
+                    ],
+                    badge: (
+                      <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>
+                    ),
+                    icon: Award,
+                    color: "from-green-500 to-blue-500",
+                  },
+                  {
+                    level: t("aiEducationLeader"),
+                    description: t("advancedDesc"),
+                    requirements: [
+                      t("submitPortfolio"),
+                      "Complete capstone project",
+                      "Mentor 3 new teachers",
+                    ],
+                    badge: (
+                      <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>
+                    ),
+                    icon: Award,
+                    color: "from-orange-500 to-red-500",
                   },
                 ],
                 [t],
