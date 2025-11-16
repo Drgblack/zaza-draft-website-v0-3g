@@ -72,4 +72,15 @@
   course5Title: "KI für Bewertung & Feedback",
   course5Desc:
     "Optimieren Sie Bewertungen und geben Sie konstruktives Feedback",
+  courseLevel: "Niveau",
+  lessons: "Lektionen",
+  enrolled: "Eingeschrieben",
+  minutes: "Minuten",
+  hours: "Stunden",
+  rating: "Bewertung",
+  beginner: "Anfänger",
+  intermediate: "Fortgeschritten",
+  advanced: "Experte",
+  viewCourse: "Kurs anzeigen",
+  startLearning: "Lernen beginnen",
 };
