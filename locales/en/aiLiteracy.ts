@@ -130,4 +130,10 @@
   completeBeginnerPath: "Complete Beginner Path",
   completeIntermediatePath: "Complete Intermediate Path",
   submitPortfolio: "Submit portfolio of AI-enhanced lessons",
+  passAssessment80: "Pass assessment (80%+)",
+  submitSamplePrompts: "Submit 3 sample prompts",
+  passAdvancedAssessment: "Pass advanced assessment (85%+)",
+  leadWorkshops: "Lead 2 teacher workshops",
+  completeCapstone: "Complete capstone project",
+  mentorTeachers: "Mentor 3 new teachers",
 };

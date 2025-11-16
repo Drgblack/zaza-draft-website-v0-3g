@@ -147,4 +147,10 @@
   completeBeginnerPath: "Anfängerpfad abschließen",
   completeIntermediatePath: "Fortgeschrittenen-Pfad abschließen",
   submitPortfolio: "Portfolio KI-unterstützter Lektionen einreichen",
+  passAssessment80: "Bewertung bestehen (80%+)",
+  submitSamplePrompts: "3 Beispiel-Prompts einreichen",
+  passAdvancedAssessment: "Erweiterte Bewertung bestehen (85%+)",
+  leadWorkshops: "2 Lehrerworkshops leiten",
+  completeCapstone: "Abschlussprojekt abschließen",
+  mentorTeachers: "3 neue Lehrer betreuen",
 };

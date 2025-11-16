@@ -145,8 +145,8 @@ export default function AILiteracyClient() {
         description: t("foundationalDesc"),
         requirements: [
           t("completeBeginnerPath"),
-          "Pass assessment (80%+)",
-          "Submit 3 sample prompts",
+          t("passAssessment80"),
+          t("submitSamplePrompts"),
         ],
         badge: <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>,
         icon: Award,
@@ -157,8 +157,8 @@ export default function AILiteracyClient() {
         description: t("intermediateDesc"),
         requirements: [
           t("completeIntermediatePath"),
-          "Pass advanced assessment (85%+)",
-          "Lead 2 teacher workshops",
+          t("passAdvancedAssessment"),
+          t("leadWorkshops"),
         ],
         badge: <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>,
         icon: Award,
@@ -169,8 +169,8 @@ export default function AILiteracyClient() {
         description: t("advancedDesc"),
         requirements: [
           t("submitPortfolio"),
-          "Complete capstone project",
-          "Mentor 3 new teachers",
+          t("completeCapstone"),
+          t("mentorTeachers"),
         ],
         badge: <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>,
         icon: Award,
@@ -313,8 +313,8 @@ export default function AILiteracyClient() {
                     description: t("foundationalDesc"),
                     requirements: [
                       t("completeBeginnerPath"),
-                      "Pass assessment (80%+)",
-                      "Submit 3 sample prompts",
+                      t("passAssessment80"),
+                      t("submitSamplePrompts"),
                     ],
                     badge: (
                       <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>
@@ -327,8 +327,8 @@ export default function AILiteracyClient() {
                     description: t("intermediateDesc"),
                     requirements: [
                       t("completeIntermediatePath"),
-                      "Pass advanced assessment (85%+)",
-                      "Lead 2 teacher workshops",
+                      t("passAdvancedAssessment"),
+                      t("leadWorkshops"),
                     ],
                     badge: (
                       <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>
@@ -341,8 +341,8 @@ export default function AILiteracyClient() {
                     description: t("advancedDesc"),
                     requirements: [
                       t("submitPortfolio"),
-                      "Complete capstone project",
-                      "Mentor 3 new teachers",
+                      t("completeCapstone"),
+                      t("mentorTeachers"),
                     ],
                     badge: (
                       <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>
