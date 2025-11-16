@@ -121,4 +121,13 @@
   liveWorkshops: "Live Workshops",
   teacherCommunity: "Teacher Community",
   toolIntegrations: "Tool Integrations",
+  aiReadyTeacher: "AI-Ready Teacher",
+  aiConfidentEducator: "AI-Confident Educator",
+  aiEducationLeader: "AI Education Leader",
+  foundationalDesc: "Foundational AI literacy certification",
+  intermediateDesc: "Intermediate AI application certification",
+  advancedDesc: "Advanced AI education leadership certification",
+  completeBeginnerPath: "Complete Beginner Path",
+  completeIntermediatePath: "Complete Intermediate Path",
+  submitPortfolio: "Submit portfolio of AI-enhanced lessons",
 };

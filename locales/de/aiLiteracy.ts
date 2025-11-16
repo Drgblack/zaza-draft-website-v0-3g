@@ -138,4 +138,13 @@
   liveWorkshops: "Live-Workshops",
   teacherCommunity: "Lehrergemeinschaft",
   toolIntegrations: "Tool-Integrationen",
+  aiReadyTeacher: "KI-bereite Lehrkraft",
+  aiConfidentEducator: "KI-versierte Pädagogin",
+  aiEducationLeader: "KI-Bildungsleitung",
+  foundationalDesc: "Grundlegende KI-Kompetenz-Zertifizierung",
+  intermediateDesc: "Fortgeschrittene KI-Anwendungs-Zertifizierung",
+  advancedDesc: "Fortgeschrittene KI-Bildungsführungs-Zertifizierung",
+  completeBeginnerPath: "Anfängerpfad abschließen",
+  completeIntermediatePath: "Fortgeschrittenen-Pfad abschließen",
+  submitPortfolio: "Portfolio KI-unterstützter Lektionen einreichen",
 };

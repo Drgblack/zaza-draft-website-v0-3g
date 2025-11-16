@@ -33,10 +33,10 @@ import { LeadMagnet } from "@/components/conversion/lead-magnet";
 
 const certificationLevels = [
   {
-    level: "AI-Ready Teacher",
-    description: "Foundational AI literacy certification",
+    level: t("aiReadyTeacher"),
+    description: t("foundationalDesc"),
     requirements: [
-      "Complete Beginner Path",
+      t("completeBeginnerPath"),
       "Pass assessment (80%+)",
       "Submit 3 sample prompts",
     ],
@@ -44,18 +44,18 @@ const certificationLevels = [
     holders: "8,450+",
   },
   {
-    level: "AI-Confident Educator",
-    description: "Intermediate AI application certification",
+    level: t("aiConfidentEducator"),
+    description: t("intermediateDesc"),
     requirements: [
-      "Complete Intermediate Path",
+      t("completeIntermediatePath"),
       "Pass advanced assessment (85%+)",
-      "Submit portfolio of AI-enhanced lessons",
+      t("submitPortfolio"),
     ],
     badge: <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>,
     holders: "3,920+",
   },
   {
-    level: "AI Education Leader",
+    level: t("aiEducationLeader"),
     description: "Advanced AI leadership certification",
     requirements: [
       "Complete Advanced Path",
