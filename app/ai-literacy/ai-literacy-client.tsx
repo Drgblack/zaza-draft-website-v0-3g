@@ -433,7 +433,7 @@ export default function AILiteracyClient() {
               <p className="text-xl text-gray-300">
                 {selectedPath
                   ? `${filteredCourses.length} courses in this path`
-                  : `${featuredCourses.length} t("coursesAvailableText")`}
+                  : `${featuredCourses.length} ${t("coursesAvailableText")}`}
               </p>
             </div>
             {selectedPath && (

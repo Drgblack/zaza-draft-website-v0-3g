@@ -197,4 +197,20 @@
     "Real feedback from educators who've completed our AI literacy courses",
   readyToUseTemplatesDesc:
     "Ready-to-use templates, checklists, and guides to accelerate your AI adoption",
+  structuredLearningPaths:
+    "Structured learning paths designed for teachers at every stage of their AI journey",
+  youLearnColon: "You'll learn:",
+  enterEmailPlaceholder: "Enter your email",
+  downloadResource: "Download Free Resource",
+  noSpamText: "No spam. Unsubscribe anytime",
+  professionalCert: "Professional Certification",
+  earnCredentialsDesc:
+    "Earn recognized credentials that demonstrate your AI literacy and teaching expertise",
+  demonstrateExpertiseDesc:
+    "Demonstrate your expertise to administrators and colleagues",
+  readyToStart: "Ready to Get Started?",
+  beginJourneyDesc:
+    "Begin your certification journey today. All courses and assessments are completely free.",
+  startCertPath: "Start Certification Path",
+  exploreText: "Explore",
 };

@@ -215,4 +215,20 @@
     "Echtes Feedback von Pädagogen, die unsere KI-Kompetenz-Kurse abgeschlossen haben",
   readyToUseTemplatesDesc:
     "Einsatzbereite Vorlagen, Checklisten und Leitfäden zur Beschleunigung Ihrer KI-Einführung",
+  structuredLearningPaths:
+    "Strukturierte Lernpfade, die für Lehrkräfte in jeder Phase ihrer KI-Reise entwickelt wurden",
+  youLearnColon: "Sie lernen:",
+  enterEmailPlaceholder: "Geben Sie Ihre E-Mail-Adresse ein",
+  downloadResource: "Ressource herunterladen",
+  noSpamText: "Kein Spam. Jederzeit abbestellbar",
+  professionalCert: "Professionelle Zertifizierung",
+  earnCredentialsDesc:
+    "Erwerben Sie anerkannte Qualifikationen, die Ihre KI-Kompetenz und Lehrerfahrung demonstrieren",
+  demonstrateExpertiseDesc:
+    "Zeigen Sie Ihre Expertise gegenüber Verwaltung und Kollegen",
+  readyToStart: "Bereit zum Start?",
+  beginJourneyDesc:
+    "Beginnen Sie noch heute Ihre Zertifizierungsreise. Alle Kurse und Bewertungen sind völlig kostenlos.",
+  startCertPath: "Zertifizierungspfad beginnen",
+  exploreText: "Erkunden",
 };
