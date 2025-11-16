@@ -31,42 +31,6 @@ import { TestimonialCard } from "@/components/conversion/testimonial-card";
 import { TrustBadges } from "@/components/conversion/trust-badges";
 import { LeadMagnet } from "@/components/conversion/lead-magnet";
 
-const certificationLevels = [
-  {
-    level: t("aiReadyTeacher"),
-    description: t("foundationalDesc"),
-    requirements: [
-      t("completeBeginnerPath"),
-      "Pass assessment (80%+)",
-      "Submit 3 sample prompts",
-    ],
-    badge: <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>,
-    holders: "8,450+",
-  },
-  {
-    level: t("aiConfidentEducator"),
-    description: t("intermediateDesc"),
-    requirements: [
-      t("completeIntermediatePath"),
-      "Pass advanced assessment (85%+)",
-      t("submitPortfolio"),
-    ],
-    badge: <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>,
-    holders: "3,920+",
-  },
-  {
-    level: t("aiEducationLeader"),
-    description: "Advanced AI leadership certification",
-    requirements: [
-      "Complete Advanced Path",
-      "Pass leadership assessment (90%+)",
-      "Lead PD session or create resource",
-    ],
-    badge: <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>,
-    holders: "1,240+",
-  },
-];
-
 export default function AILiteracyClient() {
   const [selectedPath, setSelectedPath] = useState<string | null>(null);
   const { t } = useTranslations("aiLiteracy");
