@@ -213,7 +213,7 @@ export default function AILiteracyClient() {
   const { language } = useLanguage();
 
   // Learning paths data - now uses translations
-  const learningPaths = [
+ 
   // Learning paths data - now uses translations
   const learningPaths = [
     {
