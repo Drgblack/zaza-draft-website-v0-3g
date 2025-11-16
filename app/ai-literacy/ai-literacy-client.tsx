@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { useEffect, useState, useMemo } from "react";
+
 import { useTranslations } from "@/lib/i18n/useTranslations";
 import { useLanguage } from "@/lib/i18n/language-context"; // ADD THIS LINE
 import Link from "next/link";
@@ -29,7 +30,6 @@ import { SocialProofBar } from "@/components/conversion/social-proof-bar";
 import { TestimonialCard } from "@/components/conversion/testimonial-card";
 import { TrustBadges } from "@/components/conversion/trust-badges";
 import { LeadMagnet } from "@/components/conversion/lead-magnet";
-import { useEffect, useState, useMemo } from "react"; // Add useMemo here
 
 const resources = [
   {
