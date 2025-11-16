@@ -393,7 +393,7 @@ export default function AILiteracyClient() {
                   </div>
                   <div className="space-y-2">
                     <div className="text-sm font-semibold text-white mb-2">
-                      You'll learn:
+                      {t("youllLearnLabel")}
                     </div>
                     {path.skills.map((skill) => (
                       <div
@@ -703,14 +703,14 @@ export default function AILiteracyClient() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-3xl font-bold text-white mb-4">
-                  Why Get Certified?
+                  {t("whyGetCertifiedHeader")}
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <Shield className="w-6 h-6 text-[#A78BFA] flex-shrink-0 mt-1" />
                     <div>
                       <div className="text-white font-semibold mb-1">
-                        Professional Recognition
+                        {t("professionalRecognitionLabel")}
                       </div>
                       <div className="text-gray-300 text-sm">
                         Demonstrate your expertise to administrators and
@@ -744,7 +744,7 @@ export default function AILiteracyClient() {
               </div>
               <div className="bg-[#1E293B] border border-white/10 rounded-xl p-8">
                 <h4 className="text-xl font-bold text-white mb-4">
-                  Ready to Get Started?
+                  {t("readyToGetStartedHeader")}
                 </h4>
                 <p className="text-gray-300 mb-6">
                   Begin your certification journey today. All courses and
