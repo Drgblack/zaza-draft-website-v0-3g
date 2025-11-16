@@ -807,7 +807,7 @@ export default function AILiteracyClient() {
               href: "#courses",
             }}
             secondaryCTA={{
-              text: "Try Zaza Draft Free",
+              text: t("tryZazaFree"),
               href: "/signup",
             }}
             variant="gradient"

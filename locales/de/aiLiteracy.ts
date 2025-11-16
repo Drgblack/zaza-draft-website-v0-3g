@@ -206,4 +206,6 @@
     "Heben Sie sich bei Bewerbungen und Beförderungen hervor",
   connectCertifiedEducators:
     "Verbinden Sie sich mit 13.000+ zertifizierten KI-Pädagogen weltweit",
+  ctaBrowse: "Kurse durchsuchen",
+  ctaCert: "Zertifizierung erhalten",
 };

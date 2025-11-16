@@ -188,4 +188,6 @@
   standOutApplications: "Stand out in job applications and promotions",
   connectCertifiedEducators:
     "Connect with 13,000+ certified AI educators worldwide",
+  ctaBrowse: "Browse Courses",
+  ctaCert: "Get Certified",
 };
