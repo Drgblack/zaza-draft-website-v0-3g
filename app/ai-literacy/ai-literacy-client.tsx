@@ -244,10 +244,10 @@ export default function AILiteracyClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SocialProofBar
             stats={[
-              { icon: "users", value: "50K+", label: "Teachers Enrolled" },
-              { icon: "star", value: "4.9", label: "Average Rating" },
-              { icon: "award", value: "13K+", label: "Certified Educators" },
-              { icon: "trending", value: "25+", label: "Free Courses" },
+              { icon: "users", value: "50K+", label: t("teachersEnrolled") },
+              { icon: "star", value: "4.9", label: t("averageRating") },
+              { icon: "award", value: "13K+", label: t("certifiedEducators") },
+              { icon: "trending", value: "25+", label: t("freeCourses") },
             ]}
           />
         </div>
