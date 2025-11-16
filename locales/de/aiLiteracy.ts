@@ -231,4 +231,10 @@
     "Beginnen Sie noch heute Ihre Zertifizierungsreise. Alle Kurse und Bewertungen sind völlig kostenlos.",
   startCertPath: "Zertifizierungspfad beginnen",
   exploreText: "Erkunden",
+  freeCoursesLabel: "Kostenlose Kurse",
+  teachersEnrolledLabel: "Teilnehmende Lehrkräfte",
+  certifiedEducatorsLabel: "Zertifizierte Pädagogen",
+  structuredLearningDesc:
+    "Strukturierte Lernpfade, die für Lehrkräfte in jeder Phase ihrer KI-Reise entwickelt wurden",
+  youllLearnLabel: "Sie lernen:",
 };

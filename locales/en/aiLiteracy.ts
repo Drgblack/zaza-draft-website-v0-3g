@@ -213,4 +213,10 @@
     "Begin your certification journey today. All courses and assessments are completely free.",
   startCertPath: "Start Certification Path",
   exploreText: "Explore",
+  freeCoursesLabel: "Free Courses",
+  teachersEnrolledLabel: "Teachers Enrolled",
+  certifiedEducatorsLabel: "Certified Educators",
+  structuredLearningDesc:
+    "Structured learning paths designed for teachers at every stage of their AI journey",
+  youllLearnLabel: "You'll learn:",
 };
