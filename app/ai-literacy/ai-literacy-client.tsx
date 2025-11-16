@@ -510,8 +510,7 @@ export default function AILiteracyClient() {
               {t("testimonialsTitle")}
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Real feedback from educators who've completed our AI literacy
-              courses
+              `{t("realFeedbackHeader")}`
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -554,8 +553,7 @@ export default function AILiteracyClient() {
               {t("libraryTitle")}
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ready-to-use templates, checklists, and guides to accelerate your
-              AI adoption
+              `{t("readyToUseDesc")}`
             </p>
           </div>
 
@@ -644,8 +642,7 @@ export default function AILiteracyClient() {
               {t("certificationTitle")}
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Earn recognized credentials that demonstrate your AI literacy and
-              teaching expertise
+              `{t("earnCredentialsText")}`
             </p>
           </div>
 
@@ -678,7 +675,9 @@ export default function AILiteracyClient() {
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-400 mb-6">
                   <Users className="w-4 h-4" />
-                  <span>{cert.holders} certified teachers</span>
+                  <span>
+                    {cert.holders} `{t("certifiedTeachers")}`
+                  </span>
                 </div>
                 <Button
                   asChild
@@ -713,8 +712,7 @@ export default function AILiteracyClient() {
                         {t("professionalRecognitionLabel")}
                       </div>
                       <div className="text-gray-300 text-sm">
-                        Demonstrate your expertise to administrators and
-                        colleagues
+                        `{t("demonstrateExpertiseText")}`
                       </div>
                     </div>
                   </div>
@@ -722,7 +720,7 @@ export default function AILiteracyClient() {
                     <Zap className="w-6 h-6 text-[#A78BFA] flex-shrink-0 mt-1" />
                     <div>
                       <div className="text-white font-semibold mb-1">
-                        Career Advancement
+                        `{t("careerAdvancementLabel")}`
                       </div>
                       <div className="text-gray-300 text-sm">
                         {t("standOutApplications")}
@@ -733,7 +731,7 @@ export default function AILiteracyClient() {
                     <Users className="w-6 h-6 text-[#A78BFA] flex-shrink-0 mt-1" />
                     <div>
                       <div className="text-white font-semibold mb-1">
-                        Join the Community
+                        `{t("joinCommunityLabel")}`
                       </div>
                       <div className="text-gray-300 text-sm">
                         {t("connectCertifiedEducators")}
@@ -746,17 +744,14 @@ export default function AILiteracyClient() {
                 <h4 className="text-xl font-bold text-white mb-4">
                   {t("readyToGetStartedHeader")}
                 </h4>
-                <p className="text-gray-300 mb-6">
-                  Begin your certification journey today. All courses and
-                  assessments are completely free.
-                </p>
+                <p className="text-gray-300 mb-6">`{t("beginJourneyText")}`</p>
                 <Button
                   asChild
                   size="lg"
                   className="w-full bg-[#8B5CF6] hover:bg-[#7C3AED] text-white"
                 >
                   <Link href="/ai-literacy/certification">
-                    Start Certification Path
+                    `{t("startCertificationPathBtn")}`
                   </Link>
                 </Button>
               </div>

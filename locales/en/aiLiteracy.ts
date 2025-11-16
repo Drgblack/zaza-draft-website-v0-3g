@@ -148,6 +148,7 @@
   freeCourses: "Free Courses",
   teachersEnrolled: "Teachers Enrolled",
   certifiedEducators: "Certified Educators",
+  certifiedTeachers: "certified teachers",
   averageRating: "Average Rating",
   youllLearn: "You'll learn:",
   startLearning: "Start Learning",

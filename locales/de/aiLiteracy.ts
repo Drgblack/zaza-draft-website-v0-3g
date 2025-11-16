@@ -165,6 +165,7 @@
   freeCourses: "Kostenlose Kurse",
   teachersEnrolled: "Teilnehmende Lehrkräfte",
   certifiedEducators: "Zertifizierte Pädagogen",
+  certifiedTeachers: "zertifizierte Lehrkräfte",
   averageRating: "Durchschnittliche Bewertung",
   youllLearn: "Sie lernen:",
   startLearning: "Lernen beginnen",
