@@ -104,4 +104,18 @@
   testimonial3Author: "Dr. Emily Rodriguez",
   testimonial3Role: "High School History Teacher",
   viewAllTestimonials: "View All Testimonials",
+  leadMagnetDesc:
+    "Get 50+ ready-to-use AI prompts for lesson planning, parent communication, and assessment. Instant download.",
+  continueJourneyTitle: "Continue Your AI Journey",
+  continueJourneyDesc:
+    "Explore more resources to enhance your AI teaching skills",
+  liveWorkshopsDesc: "Join expert-led sessions and earn PD certificates",
+  startJourneyTitle: "Start Your AI Learning Journey",
+  getStarted: "Get Started",
+  learnMore: "Learn More",
+  joinNow: "Join Now",
+  downloadNow: "Download Now",
+  certificationDesc: "Three-tier certification pathway",
+  whyGetCertified: "Why Get Certified?",
+  readyToStart: "Ready to Get Started?",
 };

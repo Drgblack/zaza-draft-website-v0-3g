@@ -40,7 +40,7 @@ const certificationLevels = [
       "Pass assessment (80%+)",
       "Submit 3 sample prompts",
     ],
-    badge: "★★★★★",
+    badge: "⭐⭐⭐⭐⭐",
     holders: "8,450+",
   },
   {
@@ -51,7 +51,7 @@ const certificationLevels = [
       "Pass advanced assessment (85%+)",
       "Submit portfolio of AI-enhanced lessons",
     ],
-    badge: "★★★★★",
+    badge: "⭐⭐⭐⭐⭐",
     holders: "3,920+",
   },
   {
@@ -62,7 +62,7 @@ const certificationLevels = [
       "Pass leadership assessment (90%+)",
       "Lead PD session or create resource",
     ],
-    badge: "★★★★★",
+    badge: "⭐⭐⭐⭐⭐",
     holders: "1,240+",
   },
 ];
@@ -554,7 +554,7 @@ export default function AILiteracyClient() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <LeadMagnet
             title="Free AI Prompt Template Library"
-            description="Get 50+ ready-to-use AI prompts for lesson planning, parent communication, and assessment. Instant download."
+            description={t("leadMagnetDesc")}
             resourceName="the AI Prompt Template Library"
             onSubmit={(email) => {
               if (typeof window !== "undefined" && (window as any).analytics) {
@@ -713,12 +713,12 @@ export default function AILiteracyClient() {
 
       {/* Related Resources Section */}
       <RelatedResources
-        title="Continue Your AI Journey"
-        description="Explore more resources to enhance your AI teaching skills"
+        title={t("continueJourneyTitle")}
+        description={t("continueJourneyDesc")}
         resources={[
           {
             title: "Live Webinars",
-            description: "Join expert-led sessions and earn PD certificates",
+            description: t("liveWorkshopsDesc"),
             href: "/webinars",
             icon: Video,
             color: "#8B5CF6",
@@ -744,7 +744,7 @@ export default function AILiteracyClient() {
       <section className="py-20 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <InlineCTA
-            title="Start Your AI Learning Journey"
+            title={t("startJourneyTitle")}
             description="Join 50,000+ teachers who are confidently using AI to enhance their teaching"
             primaryCTA={{
               text: t("browseCourses"),

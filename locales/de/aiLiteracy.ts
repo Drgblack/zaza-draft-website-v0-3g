@@ -108,4 +108,31 @@
   testimonial3Author: "Dr. Emily Rodriguez",
   testimonial3Role: "Geschichtslehrerin, Oberstufe",
   viewAllTestimonials: "Alle Erfahrungsberichte anzeigen",
+  leadMagnetDesc:
+    "Erhalten Sie 50+ einsatzbereite KI-Prompts für Unterrichtsplanung, Elternkommunikation und Bewertung. Sofort-Download.",
+  continueJourneyTitle: "Setzen Sie Ihre KI-Reise fort",
+  continueJourneyDesc:
+    "Entdecken Sie weitere Ressourcen zur Verbesserung Ihrer KI-Lehrkompetenz",
+  liveWorkshopsDesc:
+    "Nehmen Sie an expertengeleiteten Sitzungen teil und erhalten Sie PD-Zertifikate",
+  startJourneyTitle: "Beginnen Sie Ihre KI-Lernreise",
+  getStarted: "Jetzt starten",
+  learnMore: "Mehr erfahren",
+  joinNow: "Jetzt beitreten",
+  downloadNow: "Jetzt herunterladen",
+  leadMagnetDesc:
+    "Erhalten Sie 50+ einsatzbereite KI-Prompts für Unterrichtsplanung, Elternkommunikation und Bewertung. Sofort-Download.",
+  continueJourneyTitle: "Setzen Sie Ihre KI-Reise fort",
+  continueJourneyDesc:
+    "Entdecken Sie weitere Ressourcen zur Verbesserung Ihrer KI-Lehrkompetenz",
+  liveWorkshopsDesc:
+    "Nehmen Sie an expertengeleiteten Sitzungen teil und erhalten Sie PD-Zertifikate",
+  startJourneyTitle: "Beginnen Sie Ihre KI-Lernreise",
+  getStarted: "Jetzt starten",
+  learnMore: "Mehr erfahren",
+  joinNow: "Jetzt beitreten",
+  downloadNow: "Jetzt herunterladen",
+  certificationDesc: "Dreistufiger Zertifizierungspfad",
+  whyGetCertified: "Warum sich zertifizieren lassen?",
+  readyToStart: "Bereit zum Start?",
 };
