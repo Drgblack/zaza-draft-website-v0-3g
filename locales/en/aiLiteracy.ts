@@ -118,4 +118,7 @@
   certificationDesc: "Three-tier certification pathway",
   whyGetCertified: "Why Get Certified?",
   readyToStart: "Ready to Get Started?",
+  liveWorkshops: "Live Workshops",
+  teacherCommunity: "Teacher Community",
+  toolIntegrations: "Tool Integrations",
 };

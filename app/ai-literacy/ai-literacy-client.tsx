@@ -40,7 +40,7 @@ const certificationLevels = [
       "Pass assessment (80%+)",
       "Submit 3 sample prompts",
     ],
-    badge: "⭐⭐⭐⭐⭐",
+    badge: <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>,
     holders: "8,450+",
   },
   {
@@ -51,7 +51,7 @@ const certificationLevels = [
       "Pass advanced assessment (85%+)",
       "Submit portfolio of AI-enhanced lessons",
     ],
-    badge: "⭐⭐⭐⭐⭐",
+    badge: <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>,
     holders: "3,920+",
   },
   {
@@ -62,7 +62,7 @@ const certificationLevels = [
       "Pass leadership assessment (90%+)",
       "Lead PD session or create resource",
     ],
-    badge: "⭐⭐⭐⭐⭐",
+    badge: <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>,
     holders: "1,240+",
   },
 ];
@@ -724,14 +724,14 @@ export default function AILiteracyClient() {
             color: "#8B5CF6",
           },
           {
-            title: "Teacher Community",
+            title: t("teacherCommunity"),
             description: "Connect with 25,000+ educators using AI",
             href: "/community",
             icon: MessageSquare,
             color: "#A78BFA",
           },
           {
-            title: "Tool Integrations",
+            title: t("toolIntegrations"),
             description: "Connect Zaza Draft with your favorite tools",
             href: "/integrations",
             icon: Puzzle,

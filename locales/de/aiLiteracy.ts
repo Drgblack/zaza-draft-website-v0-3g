@@ -135,4 +135,7 @@
   certificationDesc: "Dreistufiger Zertifizierungspfad",
   whyGetCertified: "Warum sich zertifizieren lassen?",
   readyToStart: "Bereit zum Start?",
+  liveWorkshops: "Live-Workshops",
+  teacherCommunity: "Lehrergemeinschaft",
+  toolIntegrations: "Tool-Integrationen",
 };
