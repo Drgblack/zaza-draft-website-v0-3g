@@ -33,28 +33,28 @@ import { LeadMagnet } from "@/components/conversion/lead-magnet";
 
 const resources = [
   {
-    category: "Templates",
+    category: t("categoryTemplates"),
     items: [
-      { name: "Parent Email Templates", downloads: "15,230" },
-      { name: "Lesson Plan Templates", downloads: "12,450" },
-      { name: "Report Card Comment Bank", downloads: "18,920" },
-      { name: "IEP Goal Templates", downloads: "9,340" },
+      { name: t("resourceEmailTemplates"), downloads: "15,230" },
+      { name: t("resourceLessonTemplates"), downloads: "12,450" },
+      { name: t("resourceCommentBank"), downloads: "18,920" },
+      { name: t("resourceIEPTemplates"), downloads: "9,340" },
     ],
   },
   {
     category: "Checklists",
     items: [
-      { name: "AI Tool Evaluation Checklist", downloads: "8,760" },
+      { name: t("resourceAIChecklist"), downloads: "8,760" },
       { name: "FERPA Compliance Checklist", downloads: "11,230" },
       { name: "Prompt Quality Checklist", downloads: "7,890" },
     ],
   },
   {
-    category: "Guides",
+    category: t("categoryGuides"),
     items: [
-      { name: "Getting Started with AI Guide", downloads: "14,560" },
+      { name: t("resourceGettingStarted"), downloads: "14,560" },
       { name: "Prompt Engineering Handbook", downloads: "10,340" },
-      { name: "AI Ethics Framework", downloads: "6,920" },
+      { name: t("resourceEthicsFramework"), downloads: "6,920" },
     ],
   },
 ];
