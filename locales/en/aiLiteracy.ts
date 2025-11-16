@@ -219,4 +219,41 @@
   structuredLearningDesc:
     "Structured learning paths designed for teachers at every stage of their AI journey",
   youllLearnLabel: "You'll learn:",
+  realFeedbackHeader:
+    "Real feedback from educators who've completed our AI literacy courses",
+  readyToUseDesc:
+    "Ready-to-use templates, checklists, and guides to accelerate your AI adoption",
+  enterEmailText: "Enter your email",
+  downloadFreeResourceBtn: "Download Free Resource",
+  noSpamDisclaimer: "No spam. Unsubscribe anytime",
+  professionalCertHeader: "Professional Certification",
+  earnCredentialsText:
+    "Earn recognized credentials that demonstrate your AI literacy and teaching expertise",
+  enterEmailText: "Enter your email",
+  downloadFreeResourceBtn: "Download Free Resource",
+  noSpamDisclaimer: "No spam. Unsubscribe anytime",
+  professionalCertHeader: "Professional Certification",
+  earnCredentialsText:
+    "Earn recognized credentials that demonstrate your AI literacy and teaching expertise",
+  whyGetCertifiedHeader: "Why Get Certified?",
+  professionalRecognitionLabel: "Professional Recognition",
+  demonstrateExpertiseText:
+    "Demonstrate your expertise to administrators and colleagues",
+  careerAdvancementLabel: "Career Advancement",
+  joinCommunityLabel: "Join the Community",
+  connectCertifiedEducatorsText:
+    "Connect with 13,000+ certified AI educators worldwide",
+  readyToGetStartedHeader: "Ready to Get Started?",
+  beginJourneyText:
+    "Begin your certification journey today. All courses and assessments are completely free.",
+  startCertificationPathBtn: "Start Certification Path",
+  ferpaCompliantLabel: "FERPA Compliant",
+  studentDataProtectedText: "Student data protected",
+  enterpriseSecurityLabel: "Enterprise Security",
+  bankLevelEncryptionText: "Bank-level encryption",
+  teacherApprovedLabel: "Teacher Approved",
+  educatorsCountText: "50,000+ educators",
+  noCreditCardLabel: "No Credit Card",
+  freeToStartText: "Free to start",
+  exploreButtonText: "Explore",
 };

@@ -237,4 +237,41 @@
   structuredLearningDesc:
     "Strukturierte Lernpfade, die für Lehrkräfte in jeder Phase ihrer KI-Reise entwickelt wurden",
   youllLearnLabel: "Sie lernen:",
+  realFeedbackHeader:
+    "Echtes Feedback von Pädagogen, die unsere KI-Kompetenz-Kurse abgeschlossen haben",
+  readyToUseDesc:
+    "Einsatzbereite Vorlagen, Checklisten und Leitfäden zur Beschleunigung Ihrer KI-Einführung",
+  enterEmailText: "Geben Sie Ihre E-Mail-Adresse ein",
+  downloadFreeResourceBtn: "Kostenlose Ressource herunterladen",
+  noSpamDisclaimer: "Kein Spam. Jederzeit abbestellbar",
+  professionalCertHeader: "Professionelle Zertifizierung",
+  earnCredentialsText:
+    "Erwerben Sie anerkannte Qualifikationen, die Ihre KI-Kompetenz und Lehrerfahrung demonstrieren",
+  enterEmailText: "Geben Sie Ihre E-Mail-Adresse ein",
+  downloadFreeResourceBtn: "Kostenlose Ressource herunterladen",
+  noSpamDisclaimer: "Kein Spam. Jederzeit abbestellbar",
+  professionalCertHeader: "Professionelle Zertifizierung",
+  earnCredentialsText:
+    "Erwerben Sie anerkannte Qualifikationen, die Ihre KI-Kompetenz und Lehrerfahrung demonstrieren",
+  whyGetCertifiedHeader: "Warum sich zertifizieren lassen?",
+  professionalRecognitionLabel: "Professionelle Anerkennung",
+  demonstrateExpertiseText:
+    "Zeigen Sie Ihre Expertise gegenüber Verwaltung und Kollegen",
+  careerAdvancementLabel: "Karriereförderung",
+  joinCommunityLabel: "Der Gemeinschaft beitreten",
+  connectCertifiedEducatorsText:
+    "Verbinden Sie sich mit 13.000+ zertifizierten KI-Pädagogen weltweit",
+  readyToGetStartedHeader: "Bereit zum Start?",
+  beginJourneyText:
+    "Beginnen Sie noch heute Ihre Zertifizierungsreise. Alle Kurse und Bewertungen sind völlig kostenlos.",
+  startCertificationPathBtn: "Zertifizierungspfad beginnen",
+  ferpaCompliantLabel: "FERPA-konform",
+  studentDataProtectedText: "Schülerdaten geschützt",
+  enterpriseSecurityLabel: "Unternehmenssicherheit",
+  bankLevelEncryptionText: "Verschlüsselung auf Bankniveau",
+  teacherApprovedLabel: "Von Lehrern genehmigt",
+  educatorsCountText: "50.000+ Pädagogen",
+  noCreditCardLabel: "Keine Kreditkarte",
+  freeToStartText: "Kostenlos starten",
+  exploreButtonText: "Erkunden",
 };
