@@ -140,4 +140,9 @@
     "Real feedback from educators who've completed our AI literacy courses",
   joinTeachersSubheader:
     "Join 50,000+ teachers who are confidently using AI to enhance their teaching",
+  certificationSubheader:
+    "Earn recognized credentials that demonstrate your AI literacy and teaching expertise",
+  enterYourEmail: "Enter your email",
+  downloadFreeResource: "Download Free Resource",
+  noSpamUnsubscribe: "No spam. Unsubscribe anytime",
 };

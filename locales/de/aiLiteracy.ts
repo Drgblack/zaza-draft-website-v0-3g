@@ -157,4 +157,9 @@
     "Echtes Feedback von Pädagogen, die unsere KI-Kompetenz-Kurse abgeschlossen haben",
   joinTeachersSubheader:
     "Schließen Sie sich 50.000+ Lehrern an, die KI selbstbewusst zur Verbesserung ihres Unterrichts einsetzen",
+  certificationSubheader:
+    "Erwerben Sie anerkannte Qualifikationen, die Ihre KI-Kompetenz und Lehrerfahrung demonstrieren",
+  enterYourEmail: "Geben Sie Ihre E-Mail-Adresse ein",
+  downloadFreeResource: "Kostenlose Ressource herunterladen",
+  noSpamUnsubscribe: "Kein Spam. Jederzeit abbestellbar",
 };
