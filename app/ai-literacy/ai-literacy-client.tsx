@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useTranslations } from "@/lib/i18n/useTranslations";
 import { useLanguage } from "@/lib/i18n/language-context"; // ADD THIS LINE
 import Link from "next/link";
@@ -29,119 +29,7 @@ import { SocialProofBar } from "@/components/conversion/social-proof-bar";
 import { TestimonialCard } from "@/components/conversion/testimonial-card";
 import { TrustBadges } from "@/components/conversion/trust-badges";
 import { LeadMagnet } from "@/components/conversion/lead-magnet";
-
-const featuredCourses = [
-  {
-    id: "ai-basics",
-    title: t("course1Title"),
-    description: t("course1Desc"),
-    duration: "45 min",
-    level: "Beginner",
-    lessons: 6,
-    enrolled: "12,450+",
-    rating: 4.9,
-    path: "beginner",
-  },
-  {
-    id: "prompt-engineering",
-    title: t("course2Title"),
-    description: t("course2Desc"),
-    duration: "1.5 hours",
-    level: "Beginner",
-    lessons: 8,
-    enrolled: "10,230+",
-    rating: 4.8,
-    path: "beginner",
-  },
-  {
-    id: "parent-communication",
-    title: t("course3Title"),
-    description: "Write professional parent emails 10⭐⭐⭐⭐⭐",
-    duration: "1 hour",
-    level: "Intermediate",
-    lessons: 7,
-    enrolled: "8,920+",
-    rating: 4.9,
-    path: "intermediate",
-  },
-  {
-    id: "lesson-planning",
-    title: t("course4Title"),
-    description: t("course4Desc"),
-    duration: "1.5 hours",
-    level: "Intermediate",
-    lessons: 9,
-    enrolled: "7,650+",
-    rating: 4.7,
-    path: "intermediate",
-  },
-  {
-    id: "assessment-feedback",
-    title: t("course5Title"),
-    description: "Provide meaningful feedback faster",
-    duration: "1.5 hours",
-    level: "Intermediate",
-    lessons: 8,
-    enrolled: "6,840+",
-    rating: 4.8,
-    path: "intermediate",
-  },
-  {
-    id: "ethical-ai",
-    title: "Ethical AI Use in Education",
-    description: "Navigate the ethical considerations of AI in teaching",
-    duration: "1 hour",
-    level: "All Levels",
-    lessons: 6,
-    enrolled: "9,120+",
-    rating: 4.9,
-    path: "all",
-  },
-  {
-    id: "data-privacy",
-    title: "Data Privacy & FERPA Compliance",
-    description: "Protect student data while using AI tools",
-    duration: "45 min",
-    level: "All Levels",
-    lessons: 5,
-    enrolled: "8,340+",
-    rating: 4.8,
-    path: "all",
-  },
-  {
-    id: "tool-comparison",
-    title: "AI Tools Comparison & Selection",
-    description: "Choose the right AI tools for your needs",
-    duration: "1 hour",
-    level: "Intermediate",
-    lessons: 7,
-    enrolled: "5,920+",
-    rating: 4.7,
-    path: "intermediate",
-  },
-  {
-    id: "advanced-prompts",
-    title: "Advanced Prompt Techniques",
-    description: "Master complex prompting strategies",
-    duration: "2 hours",
-    level: "Advanced",
-    lessons: 10,
-    enrolled: "4,560+",
-    rating: 4.9,
-    path: "advanced",
-  },
-  {
-    id: "ai-workflows",
-    title: "Building AI Workflows",
-    description: "Create efficient AI-powered teaching workflows",
-    duration: "2 hours",
-    level: "Advanced",
-    lessons: 11,
-    enrolled: "3,890+",
-    rating: 4.8,
-    path: "advanced",
-  },
-];
+import { useEffect, useState, useMemo } from "react"; // Add useMemo here
 
 const resources = [
   {
@@ -211,9 +99,6 @@ export default function AILiteracyClient() {
   const [selectedPath, setSelectedPath] = useState<string | null>(null);
   const { t } = useTranslations("aiLiteracy");
   const { language } = useLanguage();
-
-  // Learning paths data - now uses translations
- 
   // Learning paths data - now uses translations
   const learningPaths = [
     {
