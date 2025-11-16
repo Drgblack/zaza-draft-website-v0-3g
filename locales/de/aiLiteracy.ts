@@ -208,4 +208,11 @@
     "Verbinden Sie sich mit 13.000+ zertifizierten KI-Pädagogen weltweit",
   ctaBrowse: "Kurse durchsuchen",
   ctaCert: "Zertifizierung erhalten",
+  freeAIEducation: "Kostenlose KI-Bildung für Lehrkräfte",
+  coursesAvailableText: "verfügbare Kurse",
+  youWillLearn: "Sie lernen:",
+  realFeedbackDesc:
+    "Echtes Feedback von Pädagogen, die unsere KI-Kompetenz-Kurse abgeschlossen haben",
+  readyToUseTemplatesDesc:
+    "Einsatzbereite Vorlagen, Checklisten und Leitfäden zur Beschleunigung Ihrer KI-Einführung",
 };

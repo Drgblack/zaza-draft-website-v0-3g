@@ -190,4 +190,11 @@
     "Connect with 13,000+ certified AI educators worldwide",
   ctaBrowse: "Browse Courses",
   ctaCert: "Get Certified",
+  freeAIEducation: "Free AI Education for Teachers",
+  coursesAvailableText: "courses available",
+  youWillLearn: "You'll learn:",
+  realFeedbackDesc:
+    "Real feedback from educators who've completed our AI literacy courses",
+  readyToUseTemplatesDesc:
+    "Ready-to-use templates, checklists, and guides to accelerate your AI adoption",
 };

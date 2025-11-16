@@ -190,7 +190,7 @@ export default function AILiteracyClient() {
             <div className="inline-flex items-center gap-2 bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 rounded-full px-4 py-2 mb-6">
               <GraduationCap className="w-5 h-5 text-[#A78BFA]" />
               <span className="text-[#A78BFA] font-medium text-sm">
-                Free AI Education for Teachers
+                {t("freeAIEducation")}
               </span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
@@ -433,7 +433,7 @@ export default function AILiteracyClient() {
               <p className="text-xl text-gray-300">
                 {selectedPath
                   ? `${filteredCourses.length} courses in this path`
-                  : `${featuredCourses.length} courses available`}
+                  : `${featuredCourses.length} t("coursesAvailableText")`}
               </p>
             </div>
             {selectedPath && (
