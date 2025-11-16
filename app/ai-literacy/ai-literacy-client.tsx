@@ -267,8 +267,7 @@ export default function AILiteracyClient() {
               {t("pathsTitle")}
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Structured learning paths designed for teachers at every stage of
-              their AI journey
+              {t("structuredLearningDesc")}
             </p>
           </div>
 
