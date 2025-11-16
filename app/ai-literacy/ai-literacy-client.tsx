@@ -31,34 +31,6 @@ import { TestimonialCard } from "@/components/conversion/testimonial-card";
 import { TrustBadges } from "@/components/conversion/trust-badges";
 import { LeadMagnet } from "@/components/conversion/lead-magnet";
 
-const resources = [
-  {
-    category: t("categoryTemplates"),
-    items: [
-      { name: t("resourceEmailTemplates"), downloads: "15,230" },
-      { name: t("resourceLessonTemplates"), downloads: "12,450" },
-      { name: t("resourceCommentBank"), downloads: "18,920" },
-      { name: t("resourceIEPTemplates"), downloads: "9,340" },
-    ],
-  },
-  {
-    category: "Checklists",
-    items: [
-      { name: t("resourceAIChecklist"), downloads: "8,760" },
-      { name: "FERPA Compliance Checklist", downloads: "11,230" },
-      { name: "Prompt Quality Checklist", downloads: "7,890" },
-    ],
-  },
-  {
-    category: t("categoryGuides"),
-    items: [
-      { name: t("resourceGettingStarted"), downloads: "14,560" },
-      { name: "Prompt Engineering Handbook", downloads: "10,340" },
-      { name: t("resourceEthicsFramework"), downloads: "6,920" },
-    ],
-  },
-];
-
 const certificationLevels = [
   {
     level: "AI-Ready Teacher",
