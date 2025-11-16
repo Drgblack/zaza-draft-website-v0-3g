@@ -91,4 +91,17 @@
   categoryGuides: "Guides",
   categoryStudies: "Studies",
   downloads: "downloads",
+  testimonial1:
+    "These AI resources have revolutionized my lesson planning. I save hours daily and my students love the personalized activities.",
+  testimonial1Author: "Sarah Martinez",
+  testimonial1Role: "Elementary Teacher, Grade 5",
+  testimonial2:
+    "As a principal, I appreciate how these tools help our teachers stay ahead of AI innovation while maintaining ethical standards.",
+  testimonial2Author: "Michael Chen",
+  testimonial2Role: "School Principal",
+  testimonial3:
+    "The step-by-step guides made it easy to integrate AI into my history lessons. My students are more engaged than ever.",
+  testimonial3Author: "Dr. Emily Rodriguez",
+  testimonial3Role: "High School History Teacher",
+  viewAllTestimonials: "View All Testimonials",
 };

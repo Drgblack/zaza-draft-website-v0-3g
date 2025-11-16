@@ -40,7 +40,7 @@ const certificationLevels = [
       "Pass assessment (80%+)",
       "Submit 3 sample prompts",
     ],
-    badge: "⭐⭐⭐⭐⭐",
+    badge: "★★★★★",
     holders: "8,450+",
   },
   {
@@ -51,7 +51,7 @@ const certificationLevels = [
       "Pass advanced assessment (85%+)",
       "Submit portfolio of AI-enhanced lessons",
     ],
-    badge: "⭐⭐⭐⭐⭐",
+    badge: "★★★★★",
     holders: "3,920+",
   },
   {
@@ -62,7 +62,7 @@ const certificationLevels = [
       "Pass leadership assessment (90%+)",
       "Lead PD session or create resource",
     ],
-    badge: "⭐⭐⭐⭐⭐",
+    badge: "★★★★★",
     holders: "1,240+",
   },
 ];
@@ -455,23 +455,23 @@ export default function AILiteracyClient() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <TestimonialCard
-              quote="The prompt engineering course completely changed how I use AI. I'm getting 10x better results now."
+              quote={t("testimonial1")}
               author="Sarah Martinez"
-              role="5th Grade Teacher, California"
+              role={t("testimonial1Role")}
               rating={5}
               image="SM"
             />
             <TestimonialCard
-              quote="Finally, AI training that's actually designed for teachers. No jargon, just practical strategies I can use tomorrow."
+              quote={t("testimonial2")}
               author="Michael Chen"
-              role="High School English, New York"
+              role={t("testimonial2Role")}
               rating={5}
               image="MC"
             />
             <TestimonialCard
-              quote="The certification gave me the confidence to lead AI professional development at my school. Highly recommend!"
-              author="Dr. Jennifer Wilson"
-              role="Instructional Coach, Texas"
+              quote={t("testimonial3")}
+              author={t("testimonial3Author")}
+              role={t("testimonial3Role")}
               rating={5}
               image="JW"
             />

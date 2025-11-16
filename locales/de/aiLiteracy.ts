@@ -95,4 +95,17 @@
   categoryGuides: "Leitfäden",
   categoryStudies: "Studien",
   downloads: "Downloads",
+  testimonial1:
+    "Diese KI-Ressourcen haben meine Unterrichtsplanung revolutioniert. Ich spare täglich Stunden und meine Schüler lieben die personalisierten Aktivitäten.",
+  testimonial1Author: "Sarah Martinez",
+  testimonial1Role: "Grundschullehrerin, 5. Klasse",
+  testimonial2:
+    "Als Schulleiter schätze ich, wie diese Tools unseren Lehrern helfen, bei der KI-Innovation führend zu bleiben und gleichzeitig ethische Standards einzuhalten.",
+  testimonial2Author: "Michael Chen",
+  testimonial2Role: "Schulleiter",
+  testimonial3:
+    "Die Schritt-für-Schritt-Anleitungen machten es einfach, KI in meinen Geschichtsunterricht zu integrieren. Meine Schüler sind engagierter denn je.",
+  testimonial3Author: "Dr. Emily Rodriguez",
+  testimonial3Role: "Geschichtslehrerin, Oberstufe",
+  viewAllTestimonials: "Alle Erfahrungsberichte anzeigen",
 };
