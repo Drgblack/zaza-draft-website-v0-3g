@@ -99,6 +99,35 @@ export default function AILiteracyClient() {
   const [selectedPath, setSelectedPath] = useState<string | null>(null);
   const { t } = useTranslations("aiLiteracy");
   const { language } = useLanguage();
+
+  // Featured courses data - uses translations with useMemo for SSR safety
+  const featuredCourses = useMemo(
+    () => [
+      {
+        id: "ai-basics",
+        title: t("course1Title"),
+        description: t("course1Desc"),
+        duration: "45 min",
+        level: "Beginner",
+        lessons: 6,
+        enrolled: "12,450+",
+        rating: 4.9,
+        path: "beginner",
+      },
+      {
+        id: "prompt-engineering",
+        title: t("course2Title"),
+        description: t("course2Desc"),
+        duration: "1.5 hours",
+        level: "Beginner",
+        lessons: 8,
+        enrolled: "9,380+",
+        rating: 4.8,
+        path: "beginner",
+      },
+    ],
+    [t],
+  );
   // Learning paths data - now uses translations
   const learningPaths = [
     {
