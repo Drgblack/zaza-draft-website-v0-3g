@@ -224,15 +224,21 @@ export default function AILiteracyClient() {
             <div className="grid grid-cols-3 gap-8 mt-16 max-w-3xl mx-auto">
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">25+</div>
-                <div className="text-gray-400 text-sm">Free Courses</div>
+                <div className="text-gray-400 text-sm">
+                  {t("freeCoursesLabel")}
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">50K+</div>
-                <div className="text-gray-400 text-sm">Teachers Enrolled</div>
+                <div className="text-gray-400 text-sm">
+                  {t("teachersEnrolledLabel")}
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">13K+</div>
-                <div className="text-gray-400 text-sm">Certified Educators</div>
+                <div className="text-gray-400 text-sm">
+                  {t("certifiedEducatorsLabel")}
+                </div>
               </div>
             </div>
           </div>
@@ -632,7 +638,7 @@ export default function AILiteracyClient() {
             <div className="inline-flex items-center gap-2 bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 rounded-full px-4 py-2 mb-6">
               <Award className="w-5 h-5 text-[#A78BFA]" />
               <span className="text-[#A78BFA] font-medium text-sm">
-                Professional Certification
+                {t("professionalCertHeader")}
               </span>
             </div>
             <h2 className="text-4xl font-bold text-white mb-4">
