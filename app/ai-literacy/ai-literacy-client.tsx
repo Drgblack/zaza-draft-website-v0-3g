@@ -801,7 +801,7 @@ export default function AILiteracyClient() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <InlineCTA
             title={t("startJourneyTitle")}
-            description="Join 50,000+ teachers who are confidently using AI to enhance their teaching"
+            description={t("joinTeachersSubheader")}
             primaryCTA={{
               text: t("browseCourses"),
               href: "#courses",

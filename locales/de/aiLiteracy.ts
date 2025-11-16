@@ -153,4 +153,8 @@
   leadWorkshops: "2 Lehrerworkshops leiten",
   completeCapstone: "Abschlussprojekt abschließen",
   mentorTeachers: "3 neue Lehrer betreuen",
+  testimonialsSubheader:
+    "Echtes Feedback von Pädagogen, die unsere KI-Kompetenz-Kurse abgeschlossen haben",
+  joinTeachersSubheader:
+    "Schließen Sie sich 50.000+ Lehrern an, die KI selbstbewusst zur Verbesserung ihres Unterrichts einsetzen",
 };

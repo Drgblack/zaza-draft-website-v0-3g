@@ -136,4 +136,8 @@
   leadWorkshops: "Lead 2 teacher workshops",
   completeCapstone: "Complete capstone project",
   mentorTeachers: "Mentor 3 new teachers",
+  testimonialsSubheader:
+    "Real feedback from educators who've completed our AI literacy courses",
+  joinTeachersSubheader:
+    "Join 50,000+ teachers who are confidently using AI to enhance their teaching",
 };
