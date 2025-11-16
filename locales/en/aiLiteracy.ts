@@ -176,4 +176,16 @@
   professionalCertification: "Professional Certification",
   structuredLearningDesc:
     "Structured learning paths designed for teachers at every stage of their AI journey",
+  freeAIEducationHeader: "Free AI Education for Teachers",
+  earnCredentials:
+    "Earn recognized credentials that demonstrate your AI literacy and teaching expertise",
+  connectEducatorsAI: "Connect with 25,000+ educators using AI",
+  connectZazaTools: "Connect Zaza Draft with your favorite tools",
+  beginCertificationJourney:
+    "Begin your certification journey today. All courses and assessments are completely free.",
+  demonstrateExpertise:
+    "Demonstrate your expertise to administrators and colleagues",
+  standOutApplications: "Stand out in job applications and promotions",
+  connectCertifiedEducators:
+    "Connect with 13,000+ certified AI educators worldwide",
 };

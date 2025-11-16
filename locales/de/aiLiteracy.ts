@@ -193,4 +193,17 @@
   professionalCertification: "Professionelle Zertifizierung",
   structuredLearningDesc:
     "Strukturierte Lernpfade, die für Lehrkräfte in jeder Phase ihrer KI-Reise entwickelt wurden",
+  freeAIEducationHeader: "Kostenlose KI-Bildung für Lehrkräfte",
+  earnCredentials:
+    "Erwerben Sie anerkannte Qualifikationen, die Ihre KI-Kompetenz und Lehrerfahrung demonstrieren",
+  connectEducatorsAI: "Verbinden Sie sich mit 25.000+ Pädagogen, die KI nutzen",
+  connectZazaTools: "Verbinden Sie Zaza Draft mit Ihren Lieblingstools",
+  beginCertificationJourney:
+    "Beginnen Sie noch heute Ihre Zertifizierungsreise. Alle Kurse und Bewertungen sind völlig kostenlos.",
+  demonstrateExpertise:
+    "Zeigen Sie Ihre Expertise gegenüber Verwaltung und Kollegen",
+  standOutApplications:
+    "Heben Sie sich bei Bewerbungen und Beförderungen hervor",
+  connectCertifiedEducators:
+    "Verbinden Sie sich mit 13.000+ zertifizierten KI-Pädagogen weltweit",
 };

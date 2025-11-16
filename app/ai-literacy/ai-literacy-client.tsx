@@ -720,7 +720,7 @@ export default function AILiteracyClient() {
                         Career Advancement
                       </div>
                       <div className="text-gray-300 text-sm">
-                        Stand out in job applications and promotions
+                        {t("standOutApplications")}
                       </div>
                     </div>
                   </div>
@@ -731,7 +731,7 @@ export default function AILiteracyClient() {
                         Join the Community
                       </div>
                       <div className="text-gray-300 text-sm">
-                        Connect with 13,000+ certified AI educators worldwide
+                        {t("connectCertifiedEducators")}
                       </div>
                     </div>
                   </div>
@@ -781,14 +781,14 @@ export default function AILiteracyClient() {
           },
           {
             title: t("teacherCommunity"),
-            description: "Connect with 25,000+ educators using AI",
+            description: t("connectEducatorsAI"),
             href: "/community",
             icon: MessageSquare,
             color: "#A78BFA",
           },
           {
             title: t("toolIntegrations"),
-            description: "Connect Zaza Draft with your favorite tools",
+            description: t("connectZazaTools"),
             href: "/integrations",
             icon: Puzzle,
             color: "#8B5CF6",
