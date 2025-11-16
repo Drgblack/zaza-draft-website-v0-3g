@@ -190,4 +190,7 @@
   exploreButton: "Erkunden",
   browseCourses: "Kurse durchsuchen",
   tryZazaFree: "Zaza kostenlos testen",
+  professionalCertification: "Professionelle Zertifizierung",
+  structuredLearningDesc:
+    "Strukturierte Lernpfade, die für Lehrkräfte in jeder Phase ihrer KI-Reise entwickelt wurden",
 };

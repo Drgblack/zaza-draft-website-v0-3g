@@ -173,4 +173,7 @@
   exploreButton: "Explore",
   browseCourses: "Browse Courses",
   tryZazaFree: "Try Zaza Draft Free",
+  professionalCertification: "Professional Certification",
+  structuredLearningDesc:
+    "Structured learning paths designed for teachers at every stage of their AI journey",
 };

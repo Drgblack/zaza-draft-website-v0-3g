@@ -410,7 +410,7 @@ export default function AILiteracyClient() {
                         ?.scrollIntoView({ behavior: "smooth" });
                     }}
                   >
-                    Start Learning
+                    {t("startLearning")}
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </div>
@@ -487,7 +487,7 @@ export default function AILiteracyClient() {
                     </div>
                   </div>
                   <Button className="w-full bg-[#8B5CF6]/10 hover:bg-[#8B5CF6] text-[#A78BFA] hover:text-white border border-[#8B5CF6]/30 group-hover:border-[#8B5CF6]">
-                    Start Course
+                    {t("startCourse")}
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </div>
@@ -597,7 +597,7 @@ export default function AILiteracyClient() {
               className="border-[#8B5CF6] text-[#A78BFA] hover:bg-[#8B5CF6]/10 bg-transparent"
             >
               <Link href="/ai-literacy/resources">
-                Browse All Resources
+                {t("browseAllResources")}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
@@ -686,7 +686,7 @@ export default function AILiteracyClient() {
                   <Link
                     href={`/ai-literacy/certification/${cert.level.toLowerCase().replace(/\s+/g, "-")}`}
                   >
-                    Learn More
+                    {t("learnMore")}
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </Button>
