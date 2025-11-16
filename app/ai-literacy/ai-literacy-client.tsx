@@ -149,6 +149,30 @@ export default function AILiteracyClient() {
         )
       : featuredCourses;
 
+  // Resources data - uses translations with useMemo for SSR safety
+  const resources = useMemo(
+    () => [
+      {
+        category: t("categoryTemplates"),
+        items: [
+          { name: t("resourceEmailTemplates"), downloads: "15,230" },
+          { name: t("resourceLessonTemplates"), downloads: "12,450" },
+          { name: t("resourceCommentBank"), downloads: "18,920" },
+          { name: t("resourceIEPTemplates"), downloads: "9,340" },
+        ],
+      },
+      {
+        category: t("categoryGuides"),
+        items: [
+          { name: t("resourceGettingStarted"), downloads: "14,560" },
+          { name: t("resourceAIChecklist"), downloads: "8,760" },
+          { name: t("resourceEthicsFramework"), downloads: "6,920" },
+        ],
+      },
+    ],
+    [t],
+  );
+
   return (
     <div className="min-h-screen bg-[#0F172A]">
       {/* Hero Section */}
@@ -238,6 +262,42 @@ export default function AILiteracyClient() {
           <div className="grid md:grid-cols-3 gap-8">
             {learningPaths.map((path) => {
               const Icon = path.icon;
+              // Resources data - uses translations with useMemo for SSR safety
+              const resources = useMemo(
+                () => [
+                  {
+                    category: t("categoryTemplates"),
+                    items: [
+                      {
+                        name: t("resourceEmailTemplates"),
+                        downloads: "15,230",
+                      },
+                      {
+                        name: t("resourceLessonTemplates"),
+                        downloads: "12,450",
+                      },
+                      { name: t("resourceCommentBank"), downloads: "18,920" },
+                      { name: t("resourceIEPTemplates"), downloads: "9,340" },
+                    ],
+                  },
+                  {
+                    category: t("categoryGuides"),
+                    items: [
+                      {
+                        name: t("resourceGettingStarted"),
+                        downloads: "14,560",
+                      },
+                      { name: t("resourceAIChecklist"), downloads: "8,760" },
+                      {
+                        name: t("resourceEthicsFramework"),
+                        downloads: "6,920",
+                      },
+                    ],
+                  },
+                ],
+                [t],
+              );
+
               return (
                 <div
                   key={path.id}
