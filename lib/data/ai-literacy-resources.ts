@@ -29,6 +29,7 @@ export const aiLiteracyResources: AILiteracyResource[] = [
     category: "templates",
     downloads: "15,230",
     downloadUrl: "/downloads/parent-email-templates.docx",
+
     fileType: "pdf",
     features: [
       "Introduction to AI letter",
