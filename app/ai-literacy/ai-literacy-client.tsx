@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState, useMemo } from "react";
 
@@ -114,23 +114,53 @@ export default function AILiteracyClient() {
       : featuredCourses;
 
   // Resources data - uses translations with useMemo for SSR safety
+  
+  // Resources data - uses translations with useMemo for SSR safety
   const resources = useMemo(
     () => [
       {
         category: t("categoryTemplates"),
         items: [
-          { name: t("resourceEmailTemplates"), downloads: "15,230" },
-          { name: t("resourceLessonTemplates"), downloads: "12,450" },
-          { name: t("resourceCommentBank"), downloads: "18,920" },
-          { name: t("resourceIEPTemplates"), downloads: "9,340" },
+          {
+            id: "parent-email-templates",
+            name: t("resourceEmailTemplates"),
+            downloads: "15,230",
+          },
+          {
+            id: "lesson-plan-templates",
+            name: t("resourceLessonTemplates"),
+            downloads: "12,450",
+          },
+          {
+            id: "report-card-comment-bank",
+            name: t("resourceCommentBank"),
+            downloads: "18,920",
+          },
+          {
+            id: "iep-goal-templates",
+            name: t("resourceIEPTemplates"),
+            downloads: "9,340",
+          },
         ],
       },
       {
         category: t("categoryGuides"),
         items: [
-          { name: t("resourceGettingStarted"), downloads: "14,560" },
-          { name: t("resourceAIChecklist"), downloads: "8,760" },
-          { name: t("resourceEthicsFramework"), downloads: "6,920" },
+          {
+            id: "getting-started-with-ai-guide",
+            name: t("resourceGettingStarted"),
+            downloads: "14,560",
+          },
+          {
+            id: "ai-tool-evaluation-checklist",
+            name: t("resourceAIChecklist"),
+            downloads: "8,760",
+          },
+          {
+            id: "ai-ethics-framework",
+            name: t("resourceEthicsFramework"),
+            downloads: "6,920",
+          },
         ],
       },
     ],
@@ -148,7 +178,8 @@ export default function AILiteracyClient() {
           t("passAssessment80"),
           t("submitSamplePrompts"),
         ],
-        badge: <span className="text-sm leading-none">?????</span>,
+        holders: "4,500+",
+        badge: <span className="text-sm leading-none">A1</span>,
         icon: Award,
         color: "from-blue-500 to-purple-500",
       },
@@ -160,7 +191,8 @@ export default function AILiteracyClient() {
           t("passAdvancedAssessment"),
           t("leadWorkshops"),
         ],
-        badge: <span className="text-sm leading-none">?????</span>,
+        holders: "2,800+",
+        badge: <span className="text-sm leading-none">A2</span>,
         icon: Award,
         color: "from-green-500 to-blue-500",
       },
@@ -172,7 +204,8 @@ export default function AILiteracyClient() {
           t("completeCapstone"),
           t("mentorTeachers"),
         ],
-        badge: <span className="text-sm leading-none">?????</span>,
+        holders: "900+",
+        badge: <span className="text-sm leading-none">A3</span>,
         icon: Award,
         color: "from-orange-500 to-red-500",
       },
@@ -274,85 +307,7 @@ export default function AILiteracyClient() {
           <div className="grid md:grid-cols-3 gap-8">
             {learningPaths.map((path) => {
               const Icon = path.icon;
-              // Resources data - uses translations with useMemo for SSR safety
-              const resources = useMemo(
-                () => [
-                  {
-                    category: t("categoryTemplates"),
-                    items: [
-                      {
-                        name: t("resourceEmailTemplates"),
-                        downloads: "15,230",
-                      },
-                      {
-                        name: t("resourceLessonTemplates"),
-                        downloads: "12,450",
-                      },
-                      { name: t("resourceCommentBank"), downloads: "18,920" },
-                      { name: t("resourceIEPTemplates"), downloads: "9,340" },
-                    ],
-                  },
-                  {
-                    category: t("categoryGuides"),
-                    items: [
-                      {
-                        name: t("resourceGettingStarted"),
-                        downloads: "14,560",
-                      },
-                      { name: t("resourceAIChecklist"), downloads: "8,760" },
-                      {
-                        name: t("resourceEthicsFramework"),
-                        downloads: "6,920",
-                      },
-                    ],
-                  },
-                ],
-                [t],
-              );
-
-              // Certification levels - uses translations with useMemo for SSR safety
-              const certificationLevels = useMemo(
-                () => [
-                  {
-                    level: t("aiReadyTeacher"),
-                    description: t("foundationalDesc"),
-                    requirements: [
-                      t("completeBeginnerPath"),
-                      t("passAssessment80"),
-                      t("submitSamplePrompts"),
-                    ],
-                    badge: <span className="text-sm leading-none">?????</span>,
-                    icon: Award,
-                    color: "from-blue-500 to-purple-500",
-                  },
-                  {
-                    level: t("aiConfidentEducator"),
-                    description: t("intermediateDesc"),
-                    requirements: [
-                      t("completeIntermediatePath"),
-                      t("passAdvancedAssessment"),
-                      t("leadWorkshops"),
-                    ],
-                    badge: <span className="text-sm leading-none">?????</span>,
-                    icon: Award,
-                    color: "from-green-500 to-blue-500",
-                  },
-                  {
-                    level: t("aiEducationLeader"),
-                    description: t("advancedDesc"),
-                    requirements: [
-                      t("submitPortfolio"),
-                      t("completeCapstone"),
-                      t("mentorTeachers"),
-                    ],
-                    badge: <span className="text-sm leading-none">?????</span>,
-                    icon: Award,
-                    color: "from-orange-500 to-red-500",
-                  },
-                ],
-                [t],
-              );
-
+             
               return (
                 <div
                   key={path.id}
@@ -562,11 +517,12 @@ export default function AILiteracyClient() {
                 </h3>
                 <div className="space-y-4">
                   {category.items.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={`/ai-literacy/resources/${item.name.toLowerCase().replace(/\s+/g, "-")}`}
-                      className="flex items-center justify-between p-4 bg-[#0F172A] rounded-lg hover:bg-[#8B5CF6]/10 transition-colors group"
-                    >
+  <Link
+    key={item.id}
+    href={`/ai-literacy/resources/${item.id}`}
+    className="flex items-center justify-between p-4 bg-[#0F172A] rounded-lg hover:bg-[#8B5CF6]/10 transition-colors group"
+  >
+
                       <div className="flex items-center gap-3">
                         <Download className="w-5 h-5 text-[#A78BFA]" />
                         <div>
