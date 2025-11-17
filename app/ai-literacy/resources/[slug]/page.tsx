@@ -1,53 +1,55 @@
-import type { Metadata } from "next"
-import { notFound } from "next/navigation"
-import ResourceDetailClient from "./resource-detail-client"
+// Resource Detail Page with Static Generation
+// Save this as: app/ai-literacy/resources/[slug]/page.tsx
 
-const resources = [
-  {
-    slug: "parent-email-templates",
-    title: "25 Parent Email Templates",
-    description:
-      "Ready-to-use email templates for common parent communication scenarios including progress updates, behavior concerns, meeting requests, and positive feedback.",
-  },
-  {
-    slug: "prompt-engineering-guide",
-    title: "Prompt Engineering for Teachers",
-    description:
-      "Complete guide to writing effective AI prompts for educational contexts with examples and best practices.",
-  },
-  {
-    slug: "lesson-plan-templates",
-    title: "AI-Enhanced Lesson Plan Templates",
-    description: "10 customizable lesson plan templates with AI integration points for differentiation and assessment.",
-  },
-]
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import ResourceDetailClient from "./resource-detail-client";
+import {
+  getResourceBySlug,
+  getAllResourceSlugs,
+} from "@/lib/data/ai-literacy-resources";
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const resource = resources.find((r) => r.slug === params.slug)
+interface ResourcePageProps {
+  params: Promise<{ slug: string }>;
+}
+
+export async function generateStaticParams() {
+  const slugs = getAllResourceSlugs();
+  return slugs.map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: ResourcePageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const resource = getResourceBySlug(slug);
 
   if (!resource) {
     return {
       title: "Resource Not Found | Zaza Draft",
-    }
+    };
   }
 
   return {
-    title: `${resource.title} | Zaza Draft`,
+    title: `${resource.title} | Zaza Draft AI Literacy`,
     description: resource.description,
     openGraph: {
-      title: `${resource.title} | Zaza Draft`,
+      title: resource.title,
       description: resource.description,
-      type: "article",
+      type: "website",
     },
-  }
+  };
 }
 
-export default function ResourceDetailPage({ params }: { params: { slug: string } }) {
-  const resource = resources.find((r) => r.slug === params.slug)
+export default async function ResourceDetailPage({
+  params,
+}: ResourcePageProps) {
+  const { slug } = await params;
+  const resource = getResourceBySlug(slug);
 
   if (!resource) {
-    notFound()
+    notFound();
   }
 
-  return <ResourceDetailClient slug={params.slug} />
+  return <ResourceDetailClient resource={resource} />;
 }
