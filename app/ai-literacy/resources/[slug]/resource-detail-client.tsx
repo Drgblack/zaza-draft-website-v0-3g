@@ -18,6 +18,11 @@ export default function ResourceDetailClient({
   const { language } = useLanguage();
   const isGerman = language === "de";
 
+  const downloadUrl =
+    isGerman && resource.downloadUrlDe
+      ? resource.downloadUrlDe
+      : resource.downloadUrl;
+
   const handleDownload = () => {
     trackEvent("resource_downloaded", {
       resource_slug: resource.slug,
@@ -25,9 +30,8 @@ export default function ResourceDetailClient({
       category: resource.category,
     });
 
-    // Trigger download
-    if (resource.downloadUrl) {
-      window.open(resource.downloadUrl, "_blank");
+    if (downloadUrl) {
+      window.open(downloadUrl, "_blank");
     }
   };
 
