@@ -513,21 +513,21 @@ export default function AILiteracyClient() {
               author="Sarah Martinez"
               role={t("testimonial1Role")}
               rating={5}
-              image="SM"
+              image="/images/testimonials/emma-rodriguez.jpg"
             />
             <TestimonialCard
               quote={t("testimonial2")}
               author="Michael Chen"
               role={t("testimonial2Role")}
               rating={5}
-              image="MC"
+              image="/images/testimonials/james-chen.jpg"
             />
             <TestimonialCard
               quote={t("testimonial3")}
-              author={t("testimonial3Author")}
+              author="Dr. Emily Rodriguez"
               role={t("testimonial3Role")}
               rating={5}
-              image="JW"
+              image="/images/testimonials/sarah-mitchell.jpg"
             />
           </div>
         </div>
