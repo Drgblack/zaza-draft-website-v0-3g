@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState, useMemo } from "react";
 
@@ -148,7 +148,7 @@ export default function AILiteracyClient() {
           t("passAssessment80"),
           t("submitSamplePrompts"),
         ],
-        badge: <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>,
+        badge: <span className="text-sm leading-none">?????</span>,
         icon: Award,
         color: "from-blue-500 to-purple-500",
       },
@@ -160,7 +160,7 @@ export default function AILiteracyClient() {
           t("passAdvancedAssessment"),
           t("leadWorkshops"),
         ],
-        badge: <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>,
+        badge: <span className="text-sm leading-none">?????</span>,
         icon: Award,
         color: "from-green-500 to-blue-500",
       },
@@ -172,7 +172,7 @@ export default function AILiteracyClient() {
           t("completeCapstone"),
           t("mentorTeachers"),
         ],
-        badge: <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>,
+        badge: <span className="text-sm leading-none">?????</span>,
         icon: Award,
         color: "from-orange-500 to-red-500",
       },
@@ -321,9 +321,7 @@ export default function AILiteracyClient() {
                       t("passAssessment80"),
                       t("submitSamplePrompts"),
                     ],
-                    badge: (
-                      <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>
-                    ),
+                    badge: <span className="text-sm leading-none">?????</span>,
                     icon: Award,
                     color: "from-blue-500 to-purple-500",
                   },
@@ -335,9 +333,7 @@ export default function AILiteracyClient() {
                       t("passAdvancedAssessment"),
                       t("leadWorkshops"),
                     ],
-                    badge: (
-                      <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>
-                    ),
+                    badge: <span className="text-sm leading-none">?????</span>,
                     icon: Award,
                     color: "from-green-500 to-blue-500",
                   },
@@ -349,9 +345,7 @@ export default function AILiteracyClient() {
                       t("completeCapstone"),
                       t("mentorTeachers"),
                     ],
-                    badge: (
-                      <span className="text-sm leading-none">⭐⭐⭐⭐⭐</span>
-                    ),
+                    badge: <span className="text-sm leading-none">?????</span>,
                     icon: Award,
                     color: "from-orange-500 to-red-500",
                   },
@@ -676,7 +670,7 @@ export default function AILiteracyClient() {
                 <div className="flex items-center gap-2 text-sm text-gray-400 mb-6">
                   <Users className="w-4 h-4" />
                   <span>
-                    {cert.holders} `{t("certifiedTeachers")}`
+                    {cert.holders} {t("certifiedTeachers")}
                   </span>
                 </div>
                 <Button
