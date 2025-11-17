@@ -28,7 +28,7 @@ export const aiLiteracyResources: AILiteracyResource[] = [
       "Sofort einsatzbereite E-Mail-Vorlagen für die Kommunikation mit Eltern über KI im Klassenzimmer",
     category: "templates",
     downloads: "15,230",
-    downloadUrl: "/downloads/parent-email-templates.pdf",
+    downloadUrl: "/downloads/parent-email-templates.docx",
     fileType: "pdf",
     features: [
       "Introduction to AI letter",
