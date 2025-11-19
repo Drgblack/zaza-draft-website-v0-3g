@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "AI Glossary for Educators | Zaza Draft",
+    "description": "Essential AI terms and concepts explained for teachers. Learn about machine learning, NLP, prompt engineering, and more."
+  },
+  "hero": {
+    "title": "AI Glossary for Educators",
+    "subtitle": "Essential AI terms explained in plain language for teachers",
+    "description": "Navigate the world of AI with confidence. Our comprehensive glossary breaks down complex AI concepts into teacher-friendly explanations with practical examples from education."
+  },
+  "stats": {
+    "totalTerms": "Total Terms",
+    "categories": "Categories",
+    "coverage": "Topic Coverage"
+  },
+  "search": {
+    "placeholder": "Search for a term...",
+    "searchButton": "Search",
+    "clear": "Clear",
+    "noResults": "No terms found matching your search.",
+    "tryDifferent": "Try different keywords or browse by category."
+  },
+  "filters": {
+    "allCategories": "All Categories",
+    "filterBy": "Filter by Category",
+    "showing": "Showing",
+    "of": "of",
+    "terms": "terms"
+  },
+  "categories": {
+    "all": "All Categories",
+    "fundamentals": "AI Fundamentals",
+    "machineLearning": "Machine Learning",
+    "nlp": "Natural Language Processing",
+    "generativeAI": "Generative AI",
+    "modelsArchitectures": "AI Models & Architectures",
+    "promptEngineering": "Prompt Engineering",
+    "ethicsSafety": "AI Ethics & Safety",
+    "dataPrivacy": "Data & Privacy",
+    "toolsPlatforms": "AI Tools & Platforms",
+    "educationalApplications": "Educational AI Applications",
+    "implementation": "AI Implementation",
+    "future": "Future of AI"
+  },
+  "termCard": {
+    "definition": "Definition",
+    "example": "Example",
+    "category": "Category",
+    "relatedTerms": "Related Terms",
+    "learnMore": "Learn More"
+  },
+  "cta": {
+    "title": "Ready to Apply Your AI Knowledge?",
+    "description": "Now that you understand the terminology, see how Zaza Draft puts these AI concepts into practice for your teaching workflow.",
+    "button": "Try Zaza Draft",
+    "secondary": "Explore AI Literacy"
+  }
+}

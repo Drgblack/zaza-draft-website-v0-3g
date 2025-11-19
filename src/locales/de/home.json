@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "title": "Zaza Draft - KI-Schreibassistent für Lehrkräfte",
+    "description": "Sparen Sie jede Woche Stunden mit KI-gestützten Schreibwerkzeugen, die speziell für Lehrkräfte entwickelt wurden. Entwerfen Sie Eltern-E-Mails, Zeugnisse und Unterrichtspläne in Minuten."
+  },
+  "hero": {
+    "title": "KI-gestützter Schreibassistent für Lehrkräfte",
+    "subtitle": "Zeit sparen, besser kommunizieren",
+    "description": "Entwerfen Sie Eltern-E-Mails, Zeugnisse und Bildungsinhalte in Minuten—nicht Stunden. Zaza Draft hilft Ihnen, klar und professionell zu kommunizieren mit KI-Unterstützung, die für Lehrkräfte maßgeschneidert ist.",
+    "cta": {
+      "primary": "Kostenlos schreiben",
+      "secondary": "Demo ansehen"
+    },
+    "stats": {
+      "timeSaved": "Wöchentlich gesparte Zeit",
+      "teachers": "Nutzende Lehrkräfte",
+      "satisfaction": "Zufriedenheitsrate"
+    }
+  },
+  "features": {
+    "title": "Alles, was Sie brauchen, um besser und schneller zu schreiben",
+    "subtitle": "Leistungsstarke KI-Tools speziell für Lehrkräfte entwickelt",
+    "items": {
+      "emails": {
+        "title": "Eltern-E-Mail-Assistent",
+        "description": "Generieren Sie professionelle, einfühlsame Eltern-E-Mails in Sekunden. Wählen Sie den richtigen Ton und sparen Sie jede Woche Stunden."
+      },
+      "reportCards": {
+        "title": "Zeugnis-Schreiber",
+        "description": "Erstellen Sie personalisierte, konstruktive Zeugniskommentare, die Schülerfortschritte und Entwicklungsbereiche hervorheben."
+      },
+      "lessonPlans": {
+        "title": "Unterrichtsplan-Generator",
+        "description": "Entwerfen Sie schnell umfassende Unterrichtspläne, die auf Ihren Lehrplan und Unterrichtsstil abgestimmt sind."
+      },
+      "feedback": {
+        "title": "Schüler-Feedback",
+        "description": "Geben Sie sinnvolles, ermutigendes Feedback zu Schülerarbeiten, das motiviert und Verbesserungen leitet."
+      },
+      "multilingual": {
+        "title": "Mehrsprachige Unterstützung",
+        "description": "Kommunizieren Sie mit Eltern in ihrer bevorzugten Sprache. Übersetzen Sie E-Mails und Dokumente präzise."
+      },
+      "privacy": {
+        "title": "Datenschutz zuerst",
+        "description": "FERPA-konform und sicher. Ihre Daten und die Privatsphäre Ihrer Schüler sind geschützt."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "So funktioniert es",
+    "subtitle": "Beginnen Sie in drei einfachen Schritten",
+    "steps": {
+      "step1": {
+        "title": "Wählen Sie Ihre Aufgabe",
+        "description": "Wählen Sie aus Eltern-E-Mails, Zeugnissen, Unterrichtsplänen oder benutzerdefinierten Schreibaufgaben."
+      },
+      "step2": {
+        "title": "Kontext bereitstellen",
+        "description": "Fügen Sie relevante Details über den Schüler, die Situation oder das Thema hinzu. Die KI erledigt den Rest."
+      },
+      "step3": {
+        "title": "Überprüfen & Senden",
+        "description": "Bearbeiten Sie den KI-generierten Entwurf, um ihn an Ihre Stimme anzupassen, und senden Sie ihn dann mit Vertrauen."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Was Lehrkräfte sagen",
+    "subtitle": "Schließen Sie sich Tausenden von Lehrkräften an, die mit Zaza Draft Zeit sparen",
+    "items": [
+      {
+        "quote": "Zaza Draft hat mir mindestens 5 Stunden pro Woche bei der Elternkommunikation gespart. Die generierten E-Mails sind professionell und warmherzig—genau mein Stil.",
+        "author": "Sarah M.",
+        "role": "Drittklasslehrerin"
+      },
+      {
+        "quote": "Die Zeugniszeit war früher meine gefürchtetste Zeit des Jahres. Jetzt kann ich durchdachte, personalisierte Kommentare in der Hälfte der Zeit schreiben.",
+        "author": "Michael T.",
+        "role": "Gymnasiallehrer für Englisch"
+      },
+      {
+        "quote": "Als neue Lehrkraft war Zaza Draft von unschätzbarem Wert. Es hilft mir, professionell mit Eltern zu kommunizieren, während ich noch meinen eigenen Stil finde.",
+        "author": "Jessica L.",
+        "role": "Lehrkraft im ersten Jahr"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Zeit zu sparen und besser zu schreiben?",
+    "description": "Schließen Sie sich Tausenden von Lehrkräften an, die bereits KI nutzen, um effektiver zu kommunizieren.",
+    "button": "Kostenlos loslegen",
+    "note": "Keine Kreditkarte erforderlich. Jederzeit kündbar."
+  }
+}

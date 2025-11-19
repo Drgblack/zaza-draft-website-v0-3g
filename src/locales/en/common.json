@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "glossary": "AI Glossary",
+    "aiLiteracy": "AI Literacy",
+    "about": "About",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "demo": "Request Demo"
+  },
+  "footer": {
+    "tagline": "Empowering educators with AI-powered writing tools",
+    "description": "Zaza Draft helps teachers save time and communicate more effectively with AI-assisted writing.",
+    "copyright": "© 2024 Zaza Draft. All rights reserved.",
+    "product": "Product",
+    "company": "Company",
+    "resources": "Resources",
+    "legal": "Legal",
+    "links": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "demo": "Request Demo",
+      "about": "About Us",
+      "careers": "Careers",
+      "contact": "Contact",
+      "blog": "Blog",
+      "documentation": "Documentation",
+      "support": "Support",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "security": "Security"
+    },
+    "social": {
+      "followUs": "Follow Us",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn",
+      "facebook": "Facebook"
+    },
+    "newsletter": {
+      "title": "Stay Updated",
+      "description": "Get the latest updates on AI in education.",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe",
+      "success": "Thank you for subscribing!",
+      "error": "Please enter a valid email address."
+    }
+  },
+  "buttons": {
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "tryFree": "Try Free",
+    "signUp": "Sign Up",
+    "signIn": "Sign In",
+    "contactUs": "Contact Us",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "close": "Close"
+  },
+  "language": {
+    "switch": "Switch Language",
+    "en": "English",
+    "de": "Deutsch"
+  },
+  "meta": {
+    "defaultTitle": "Zaza Draft - AI Writing Assistant for Educators",
+    "defaultDescription": "Save time and communicate better with AI-powered writing tools designed specifically for teachers."
+  }
+}

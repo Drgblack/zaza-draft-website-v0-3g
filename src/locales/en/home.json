@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "title": "Zaza Draft - AI Writing Assistant for Educators",
+    "description": "Save hours every week with AI-powered writing tools designed specifically for teachers. Draft parent emails, report cards, and lesson plans in minutes."
+  },
+  "hero": {
+    "title": "AI-Powered Writing Assistant for Teachers",
+    "subtitle": "Save Time, Communicate Better",
+    "description": "Draft parent emails, report cards, and educational content in minutes—not hours. Zaza Draft helps you communicate clearly and professionally with AI assistance tailored for educators.",
+    "cta": {
+      "primary": "Start Writing for Free",
+      "secondary": "Watch Demo"
+    },
+    "stats": {
+      "timeSaved": "Time Saved Weekly",
+      "teachers": "Teachers Using",
+      "satisfaction": "Satisfaction Rate"
+    }
+  },
+  "features": {
+    "title": "Everything You Need to Write Better, Faster",
+    "subtitle": "Powerful AI tools designed specifically for teachers",
+    "items": {
+      "emails": {
+        "title": "Parent Email Assistant",
+        "description": "Generate professional, empathetic parent emails in seconds. Choose the right tone and save hours every week."
+      },
+      "reportCards": {
+        "title": "Report Card Writer",
+        "description": "Create personalized, constructive report card comments that highlight student progress and areas for growth."
+      },
+      "lessonPlans": {
+        "title": "Lesson Plan Generator",
+        "description": "Quickly draft comprehensive lesson plans aligned with your curriculum and teaching style."
+      },
+      "feedback": {
+        "title": "Student Feedback",
+        "description": "Provide meaningful, encouraging feedback on student work that motivates and guides improvement."
+      },
+      "multilingual": {
+        "title": "Multilingual Support",
+        "description": "Communicate with parents in their preferred language. Translate emails and documents accurately."
+      },
+      "privacy": {
+        "title": "Privacy First",
+        "description": "FERPA-compliant and secure. Your data and your students' privacy are protected."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Get started in three simple steps",
+    "steps": {
+      "step1": {
+        "title": "Choose Your Task",
+        "description": "Select from parent emails, report cards, lesson plans, or custom writing tasks."
+      },
+      "step2": {
+        "title": "Provide Context",
+        "description": "Add relevant details about the student, situation, or topic. The AI does the rest."
+      },
+      "step3": {
+        "title": "Review & Send",
+        "description": "Edit the AI-generated draft to match your voice, then send with confidence."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "What Teachers Are Saying",
+    "subtitle": "Join thousands of educators saving time with Zaza Draft",
+    "items": [
+      {
+        "quote": "Zaza Draft has saved me at least 5 hours a week on parent communications. The emails it generates are professional and warm—exactly my style.",
+        "author": "Sarah M.",
+        "role": "3rd Grade Teacher"
+      },
+      {
+        "quote": "Report card season used to be my most dreaded time of year. Now I can write thoughtful, personalized comments in half the time.",
+        "author": "Michael T.",
+        "role": "High School English Teacher"
+      },
+      {
+        "quote": "As a new teacher, Zaza Draft has been invaluable. It helps me communicate professionally with parents while I'm still finding my voice.",
+        "author": "Jessica L.",
+        "role": "1st Year Teacher"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Save Time and Write Better?",
+    "description": "Join thousands of teachers who are already using AI to communicate more effectively.",
+    "button": "Get Started Free",
+    "note": "No credit card required. Cancel anytime."
+  }
+}

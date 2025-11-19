@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import GlossaryClient from "@/app/glossary/glossary-client";
 import { BreadcrumbSchema } from "@/lib/seo/schema";
 import Script from "next/script";
