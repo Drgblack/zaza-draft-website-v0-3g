@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "badge": "50+ Professional Development Sessions",
+    "title": "Professional Development Webinars",
+    "subtitle": "Join live sessions or watch on-demand. Earn professional development certificates and learn from experienced educators."
+  },
+  "search": {
+    "placeholder": "Search webinars..."
+  },
+  "sections": {
+    "upcoming": "Upcoming Webinars",
+    "ondemand": "On-Demand Library"
+  },
+  "categories": {
+    "all": "All Webinars",
+    "getting-started": "Getting Started",
+    "advanced": "Advanced Techniques",
+    "best-practices": "Best Practices",
+    "case-studies": "Case Studies",
+    "product-updates": "Product Updates"
+  },
+  "buttons": {
+    "registerNow": "Register Now",
+    "watchNow": "Watch Now",
+    "waitlistFull": "Join Waitlist"
+  },
+  "labels": {
+    "featured": "Featured",
+    "certificate": "Certificate Included",
+    "views": "views",
+    "rating": "Avg Rating"
+  },
+  "noResults": "No webinars found matching your search.",
+  "relatedResources": {
+    "title": "Deepen Your Learning",
+    "subtitle": "Complement your webinar learning with these resources"
+  },
+  "finalCTA": {
+    "title": "Ready to Level Up?",
+    "subtitle": "Join thousands of teachers transforming their practice with AI. Register for your first webinar today.",
+    "browse": "Browse Upcoming Webinars",
+    "exploreCourses": "Explore Courses"
+  }
+}

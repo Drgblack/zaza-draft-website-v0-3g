@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "badge": "50+ Fortbildungssitzungen",
+    "title": "Fortbildungs-Webinare",
+    "subtitle": "Nehmen Sie live teil oder sehen Sie Aufzeichnungen. Erhalten Sie Fortbildungszertifikate und lernen Sie von erfahrenen Pädagogen."
+  },
+  "search": {
+    "placeholder": "Webinare durchsuchen..."
+  },
+  "sections": {
+    "upcoming": "Bevorstehende Live-Webinare",
+    "ondemand": "Mediathek (On-Demand)"
+  },
+  "categories": {
+    "all": "Alle Webinare",
+    "getting-started": "Erste Schritte",
+    "advanced": "Fortgeschrittene Techniken",
+    "best-practices": "Best Practices",
+    "case-studies": "Fallstudien",
+    "product-updates": "Produkt-Updates"
+  },
+  "buttons": {
+    "registerNow": "Jetzt registrieren",
+    "watchNow": "Jetzt ansehen",
+    "waitlistFull": "Warteliste voll"
+  },
+  "labels": {
+    "featured": "Empfohlen",
+    "certificate": "Zertifikat inklusive",
+    "views": "Aufrufe",
+    "rating": "Durchschn. Bewertung"
+  },
+  "noResults": "Keine Webinare gefunden.",
+  "relatedResources": {
+    "title": "Vertiefen Sie Ihr Lernen",
+    "subtitle": "Ergänzen Sie Ihre Webinare mit diesen Ressourcen"
+  },
+  "finalCTA": {
+    "title": "Bereit für den nächsten Schritt?",
+    "subtitle": "Schließen Sie sich Tausenden Lehrkräften an, die KI erfolgreich nutzen.",
+    "browse": "Bevorstehende Webinare ansehen",
+    "exploreCourses": "Kurse erkunden"
+  }
+}

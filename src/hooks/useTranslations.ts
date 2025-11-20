@@ -1,12 +1,29 @@
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // Import translation files
-import enCommon from '@/locales/en/common.json';
-import deCommon from '@/locales/de/common.json';
-import enHome from '@/locales/en/home.json';
-import deHome from '@/locales/de/home.json';
-import enGlossary from '@/locales/en/glossary.json';
-import deGlossary from '@/locales/de/glossary.json';
+import enCommon from "@/locales/en/common.json";
+import deCommon from "@/locales/de/common.json";
+import enHome from "@/locales/en/home.json";
+import deHome from "@/locales/de/home.json";
+import enGlossary from "@/locales/en/glossary.json";
+import deGlossary from "@/locales/de/glossary.json";
+import enWebinars from "@/locales/en/webinars.json";
+import deWebinars from "@/locales/de/webinars.json";
+
+const translations = {
+  en: {
+    common: enCommon,
+    home: enHome,
+    glossary: enGlossary,
+    webinars: enWebinars,
+  },
+  de: {
+    common: deCommon,
+    home: deHome,
+    glossary: deGlossary,
+    webinars: deWebinars,
+  },
+};
 
 const translations = {
   en: {
@@ -21,15 +38,15 @@ const translations = {
   },
 };
 
-export function useTranslations(namespace: 'common' | 'home' | 'glossary') {
+export function useTranslations(namespace: "common" | "home" | "glossary") {
   const { language } = useLanguage();
 
   const t = (key: string): string => {
-    const keys = key.split('.');
+    const keys = key.split(".");
     let value: any = translations[language][namespace];
 
     for (const k of keys) {
-      if (value && typeof value === 'object' && k in value) {
+      if (value && typeof value === "object" && k in value) {
         value = value[k];
       } else {
         console.warn(`Translation missing: ${namespace}.${key} (${language})`);
@@ -37,7 +54,7 @@ export function useTranslations(namespace: 'common' | 'home' | 'glossary') {
       }
     }
 
-    return typeof value === 'string' ? value : key;
+    return typeof value === "string" ? value : key;
   };
 
   return { t, language };
