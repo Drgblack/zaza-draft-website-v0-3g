@@ -1,12 +1,11 @@
-﻿import AiStudentReportsClient from "./ai-student-reports-client";
+﻿import { Metadata } from "next";
+import { AiForStudentReportsClient } from "./ai-for-student-reports-client";
 
-export default function Page() {
-  return (
-    <main className="min-h-screen bg-slate-950">
-      <div className="container mx-auto py-12 px-4">
-        {/* The Title is now handled entirely by AiStudentReportsClient */}
-        <AiStudentReportsClient />
-      </div>
-    </main>
-  );
+export const metadata: Metadata = {
+  title: "AI for Student Reports | Zaza Draft",
+  description: "Turn observations into professional reports in seconds.",
+};
+
+export default function AiForStudentReportsPage() {
+  return <AiForStudentReportsClient />;
 }
