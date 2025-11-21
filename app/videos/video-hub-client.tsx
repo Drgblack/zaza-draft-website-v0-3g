@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { useLanguage } from "@/lib/i18n/language-context";
@@ -434,7 +434,9 @@ export function VideoHubClient() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                       <div className="absolute bottom-3 left-3 right-3">
                         <Badge className="bg-purple-600 text-white border-0 mb-2">
-                          {playlist.videoCount} videos ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ {playlist.duration}
+                          {playlist.videoCount} videos
+                          ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢{" "}
+                          {playlist.duration}
                         </Badge>
                       </div>
                     </div>

@@ -31,6 +31,10 @@
       "terms": "Nutzungsbedingungen",
       "security": "Sicherheit"
     },
+    "aiStudentReports": {
+      "title": "AI for Student Reports",
+      "subtitle": "Generate comprehensive reports in seconds"
+    },
     "social": {
       "followUs": "Folgen Sie uns",
       "twitter": "Twitter",

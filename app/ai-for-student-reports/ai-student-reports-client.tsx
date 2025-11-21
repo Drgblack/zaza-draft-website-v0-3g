@@ -1,624 +1,518 @@
-"use client";
+﻿"use client";
 
-import { useEffect } from "react";
-import { useLanguage } from "@/lib/i18n/language-context";
-import { Breadcrumbs } from "@/components/breadcrumbs";
-import { QuickAnswerBox } from "@/components/quick-answer-box";
-import { TableOfContents } from "@/components/table-of-contents";
-import { FAQSection } from "@/components/faq-section";
-import {
-  Check,
-  AlertTriangle,
-  Shield,
-  Clock,
-  Star,
-  Zap,
-  FileText,
-  Calendar,
-} from "lucide-react";
+import React from "react";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
 
-export default function AIStudentReportsClient() {
-  const { t } = useLanguage();
+export default function AiStudentReportsClient() {
+  const pathname = usePathname();
+  const isGerman = pathname?.includes("/de") ?? false;
 
-  useEffect(() => {
-    // Track page view
-    if (typeof window !== "undefined" && (window as any).analytics) {
-      (window as any).analytics.track("cornerstone_page_viewed", {
-        page_slug: "ai-for-student-reports",
-        locale: "en",
-        referrer: document.referrer,
-      });
-    }
-  }, []);
+  // --- CONTENT DICTIONARY ---
+  const content = {
+    en: {
+      title: "AI for Student Reports",
+      hero_subtitle: "Turn observations into professional reports in seconds.",
 
-  const tocItems = [
-    { id: "stress", title: "Why report writing causes stress", level: 1 },
-    { id: "ai-helps", title: "How AI saves 60-70% of time", level: 1 },
-    { id: "privacy", title: "Privacy & FERPA compliance", level: 1 },
-    { id: "process", title: "Step-by-step process", level: 1 },
-    { id: "templates", title: "Report templates by grade", level: 1 },
-    { id: "examples", title: "Before & after examples", level: 1 },
-    { id: "mistakes", title: "Common mistakes to avoid", level: 1 },
-    { id: "testimonials", title: "Teacher results", level: 1 },
-  ];
+      // HERO BOX
+      example_label: "Example notes:",
+      example_notes: [
+        "Strong in reading comprehension (scored 85% on last assessment)",
+        "Struggles with math fact fluency (still counting on fingers)",
+        "Excellent class participation and peer collaboration",
+        "Needs reminders to stay on task during independent work",
+      ],
+      box_footer:
+        "This tool helps teachers turn observations into professional reports.",
 
-  const reportTypes = [
-    {
-      type: "Progress Reports",
-      frequency: "Quarterly",
-      timeWithoutAI: "15-20 min per student",
-      timeWithAI: "5-7 min per student",
-      savings: "60-70%",
-      bestTool: "Zaza Draft",
-    },
-    {
-      type: "Report Cards",
-      frequency: "Semester/Trimester",
-      timeWithoutAI: "20-30 min per student",
-      timeWithAI: "8-12 min per student",
-      savings: "60%",
-      bestTool: "Claude Pro",
-    },
-    {
-      type: "IEP Progress",
-      frequency: "Monthly/Quarterly",
-      timeWithoutAI: "30-45 min per student",
-      timeWithAI: "12-18 min per student",
-      savings: "60%",
-      bestTool: "Zaza Draft",
-    },
-    {
-      type: "Parent Conferences",
-      frequency: "2x per year",
-      timeWithoutAI: "10-15 min per student",
-      timeWithAI: "3-5 min per student",
-      savings: "70%",
-      bestTool: "Zaza Draft",
-    },
-  ];
+      // STRESS
+      stress_title: "Why Report Writing Causes Teacher Stress",
+      stress_items: [
+        "It takes hours of personal time on evenings and weekends.",
+        "Finding the right words to balance honesty and encouragement is hard.",
+        "Repetitive phrasing makes reports sound robotic.",
+      ],
 
-  const privacyRules = [
-    {
-      rule: "Never use student names",
-      why: "Protects identity and FERPA compliance",
-      instead: 'Use "the student" or initials only',
-      icon: Shield,
-    },
-    {
-      rule: "Anonymize specific details",
-      why: "Prevents re-identification",
-      instead: "Use general descriptions, not unique identifiers",
-      icon: AlertTriangle,
-    },
-    {
-      rule: "Use education-specific tools",
-      why: "FERPA-compliant data handling",
-      instead: "Zaza Draft, not generic ChatGPT",
-      icon: Check,
-    },
-    {
-      rule: "Review all AI output",
-      why: "Ensure accuracy and appropriateness",
-      instead: "Edit before sending to parents",
-      icon: Check,
-    },
-  ];
+      // TIME SAVINGS
+      time_title: "How AI Saves 10-20% of Time",
+      time_items: [
+        "Instantly drafts paragraphs from bullet points.",
+        "Suggests professional phrasing for difficult topics.",
+        "Automates the formatting and proofreading process.",
+      ],
 
-  const templates = [
-    {
-      title: "Elementary Progress Report",
-      grade: "K-5",
-      prompt: `Write a progress report for a [grade] student showing [strength area] and needing support in [growth area]. Tone: encouraging and specific. Include: academic progress, social-emotional development, and next steps for parents.`,
-      example:
-        "Student shows strong reading comprehension skills and participates actively in class discussions. Working on math fact fluency - practice at home would help. Socially, student is kind and inclusive with peers.",
-    },
-    {
-      title: "Middle School Report Card",
-      grade: "6-8",
-      prompt: `Write a report card comment for a [grade] [subject] student. Current grade: [letter]. Strengths: [list]. Areas for growth: [list]. Tone: balanced and constructive.`,
-      example:
-        "Student demonstrates solid understanding of core concepts and completes assignments on time. To reach the next level, focus on showing work in problem-solving and asking questions when stuck.",
-    },
-    {
-      title: "High School Progress Report",
-      grade: "9-12",
-      prompt: `Write a progress report for a [grade] [subject] student. Current performance: [description]. College-readiness focus. Tone: professional and forward-looking.`,
-      example:
-        "Student exhibits strong analytical skills in essay writing and contributes thoughtful perspectives to class discussions. To strengthen college applications, consider taking on leadership roles in group projects.",
-    },
-    {
-      title: "IEP Progress Report",
-      grade: "All",
-      prompt: `Write an IEP progress report for goal: [goal description]. Current level: [baseline]. Progress: [description]. Data: [specific metrics]. Tone: objective and data-driven.`,
-      example:
-        "Student has made measurable progress toward the goal of reading 80 words per minute. Current level: 65 wpm (up from 45 wpm baseline). Continues to benefit from small group instruction and visual supports.",
-    },
-  ];
+      // PRIVACY (UPDATED: Added GDPR)
+      privacy_title: "Privacy, GDPR & FERPA Compliance",
+      privacy_items: [
+        "No student names are required (use initials or pseudonyms).",
+        "Data is encrypted and never trained on without permission.",
+        "Compliant with FERPA and GDPR standards.",
+      ],
 
-  const beforeAfter = [
-    {
-      before:
-        "Student is doing okay in math. Sometimes struggles with word problems. Needs to work harder.",
-      after:
-        "Student demonstrates solid computational skills and completes practice problems accurately. To build confidence with word problems, we're working on identifying key information and drawing visual representations. Practice at home with real-world math scenarios (cooking, shopping) would reinforce these strategies.",
-      improvement: "More specific, actionable, and encouraging",
-    },
-    {
-      before: "Good student. Participates in class. Keep up the good work.",
-      after:
-        "Student consistently contributes thoughtful ideas during class discussions and demonstrates strong critical thinking skills. Their recent project on ecosystems showed excellent research and presentation abilities. To continue growing, I encourage taking on more leadership roles in group work.",
-      improvement: "Specific examples and clear next steps",
-    },
-  ];
+      // STEPS
+      steps_title: "Step-by-Step Process",
+      steps: [
+        {
+          title: "1. Enter Observations",
+          desc: "Paste your raw notes, bullet points, or assessment scores.",
+        },
+        {
+          title: "2. Select Tone",
+          desc: "Choose formal, encouraging, or direct communication styles.",
+        },
+        {
+          title: "3. Generate Report",
+          desc: "AI instantly creates a polished paragraph.",
+        },
+        {
+          title: "4. Refine & Save",
+          desc: "Make quick edits and export to your system.",
+        },
+      ],
 
-  const mistakes = [
-    {
-      mistake: "Using student names in AI prompts",
-      why: "FERPA violation and privacy risk",
-      fix: 'Use "the student" or anonymous descriptors',
-    },
-    {
-      mistake: "Copying AI output without editing",
-      why: "May contain errors or inappropriate language",
-      fix: "Always review, personalize, and verify accuracy",
-    },
-    {
-      mistake: "Generic, vague comments",
-      why: "Not helpful for parents or students",
-      fix: "Add specific examples and actionable next steps",
-    },
-    {
-      mistake: "Only focusing on negatives",
-      why: "Discouraging and unbalanced",
-      fix: "Start with strengths, then growth areas with support plan",
-    },
-    {
-      mistake: "Using jargon or edu-speak",
-      why: "Parents may not understand",
-      fix: "Use plain language and explain technical terms",
-    },
-  ];
+      // TEMPLATES
+      templates_title: "Report Templates by Grade Level",
+      templates: [
+        {
+          grade: "Elementary",
+          text: "Focuses on foundational skills, social development, and adjustment to school routines. Perfect for K-5 comments.",
+        },
+        {
+          grade: "Middle School",
+          text: "Highlights subject-specific progress, organizational skills, and independence. tailored for 6-8th grade expectations.",
+        },
+        {
+          grade: "High School",
+          text: "Emphasizes critical thinking, advanced analysis, and college-readiness skills. Professional tone for 9-12th grade.",
+        },
+      ],
 
-  const faqs = [
-    {
-      question: "Is it ethical to use AI for student reports?",
-      answer:
-        "Yes, when used properly. AI is a drafting tool that helps you write more efficiently and consistently. You still provide the observations, judgment, and personal touch. Think of it like spell-check - it assists, but you're still the author.",
+      // BEFORE & AFTER
+      ba_title: "Before & After Examples",
+      ba_bad_label: "🔴 Vague / Robotic",
+      ba_bad_text:
+        "He is a good student. He does his work. sometimes he talks too much.",
+      ba_good_label: "🟢 Professional / Specific",
+      ba_good_text:
+        "John demonstrates a strong work ethic and consistently submits assignments on time. While he participates actively, he benefits from reminders to maintain focus during quiet study periods.",
+
+      // MISTAKES
+      mistakes_title: "Common Mistakes to Avoid",
+      mistakes: [
+        "Using overly complex jargon parents won't understand.",
+        "Focusing only on negatives without actionable steps.",
+        "Copy-pasting the same comment for every student.",
+      ],
+
+      // TESTIMONIALS
+      reviews_title: "Teacher Results",
+      reviews: [
+        {
+          stars: "★★★★★",
+          text: "Saved me 10 hours this report season. The phrasing is exactly what I needed.",
+          author: "Sarah J., 4th Grade Teacher",
+          image: "/testimonials/teacher-2.jpg",
+        },
+        {
+          stars: "★★★★★",
+          text: "Finally, I can write personal comments for every student without burning out.",
+          author: "Mike T., High School English",
+          image: "/testimonials/teacher-3.jpg",
+        },
+      ],
+
+      // FAQ
+      faq_title: "Frequently Asked Questions",
+      faqs: [
+        {
+          q: "Is my student data safe?",
+          a: "Yes. We do not store personally identifiable information (PII). We recommend using initials.",
+        },
+        {
+          q: "Can I edit the output?",
+          a: "Absolutely. The AI produces a draft which you can fully edit before saving.",
+        },
+        {
+          q: "Does it work for all subjects?",
+          a: "Yes, from Math and Science to Art and PE, the AI adapts to your specific context.",
+        },
+        {
+          q: "Is it free to try?",
+          a: "Yes, you can generate your first few reports for free to see how much time you save.",
+        },
+      ],
+
+      // CTA
+      cta_title: "Ready to write reports faster?",
+      cta_button: "See Pricing & Plans",
     },
-    {
-      question: "How do I protect student privacy when using AI?",
-      answer:
-        "Never input student names or identifying information. Use education-specific tools like Zaza Draft that are FERPA-compliant. Anonymize all details and review output before sending. See our Privacy Guidelines section for complete rules.",
+
+    // --- GERMAN TRANSLATIONS ---
+    de: {
+      title: "KI für Schülerberichte",
+      hero_subtitle:
+        "Verwandeln Sie Beobachtungen in Sekunden in professionelle Berichte.",
+
+      example_label: "Beispielnotizen:",
+      example_notes: [
+        "Stark im Leseverständnis (85% bei der letzten Bewertung)",
+        "Schwierigkeiten beim Rechnen (zählt noch mit den Fingern)",
+        "Hervorragende Beteiligung und Zusammenarbeit",
+        "Benötigt Erinnerungen, um bei selbstständiger Arbeit fokussiert zu bleiben",
+      ],
+      box_footer:
+        "Dieses Tool hilft Lehrern, Beobachtungen in professionelle Berichte zu verwandeln.",
+
+      stress_title: "Warum das Schreiben von Berichten Stress verursacht",
+      stress_items: [
+        "Es kostet Stunden persönlicher Zeit an Abenden und Wochenenden.",
+        "Die richtigen Worte zwischen Ehrlichkeit und Ermutigung zu finden, ist schwer.",
+        "Wiederholende Formulierungen lassen Berichte roboterhaft klingen.",
+      ],
+
+      time_title: "Wie KI 10-20% der Zeit spart",
+      time_items: [
+        "Erstellt sofort Absätze aus Stichpunkten.",
+        "Schlägt professionelle Formulierungen für schwierige Themen vor.",
+        "Automatisiert die Formatierung und das Korrekturlesen.",
+      ],
+
+      privacy_title: "Datenschutz & Konformität",
+      privacy_items: [
+        "Keine Schülernamen erforderlich (nutzen Sie Initialen).",
+        "Daten werden verschlüsselt und niemals ohne Erlaubnis zum Training genutzt.",
+        "Konform mit DSGVO und FERPA Standards.",
+      ],
+
+      steps_title: "Schritt-für-Schritt-Prozess",
+      steps: [
+        {
+          title: "1. Beobachtungen eingeben",
+          desc: "Fügen Sie Ihre Notizen oder Bewertungsergebnisse ein.",
+        },
+        {
+          title: "2. Tonfall wählen",
+          desc: "Wählen Sie formell, ermutigend oder direkt.",
+        },
+        {
+          title: "3. Bericht erstellen",
+          desc: "Die KI erstellt sofort einen geschliffenen Absatz.",
+        },
+        {
+          title: "4. Verfeinern & Speichern",
+          desc: "Machen Sie schnelle Änderungen und exportieren Sie.",
+        },
+      ],
+
+      templates_title: "Berichtsvorlagen nach Klassenstufe",
+      templates: [
+        {
+          grade: "Grundschule",
+          text: "Fokus auf Grundfertigkeiten, soziale Entwicklung und Schulroutine. Perfekt für Kommentare der Klassen 1-4.",
+        },
+        {
+          grade: "Mittelstufe",
+          text: "Hebt fachspezifische Fortschritte, Organisation und Selbstständigkeit hervor. Zugeschnitten auf die Erwartungen der Mittelstufe.",
+        },
+        {
+          grade: "Oberstufe",
+          text: "Betont kritisches Denken, fortgeschrittene Analyse und Studienvorbereitung. Professioneller Ton für die Oberstufe.",
+        },
+      ],
+
+      ba_title: "Vorher & Nachher Beispiele",
+      ba_bad_label: "🔴 Vage / Roboterhaft",
+      ba_bad_text:
+        "Er ist ein guter Schüler. Er macht seine Arbeit. Manchmal redet er zu viel.",
+      ba_good_label: "🟢 Professionell / Spezifisch",
+      ba_good_text:
+        "John zeigt eine starke Arbeitsmoral und gibt Aufgaben pünktlich ab. Während er aktiv teilnimmt, profitiert er von Erinnerungen, um in Ruhephasen konzentriert zu bleiben.",
+
+      mistakes_title: "Häufige Fehler vermeiden",
+      mistakes: [
+        "Zu komplexen Fachjargon verwenden.",
+        "Nur auf Negatives fokussieren ohne Lösungen.",
+        "Den gleichen Kommentar für jeden Schüler kopieren.",
+      ],
+
+      reviews_title: "Ergebnisse von Lehrern",
+      reviews: [
+        {
+          stars: "★★★★★",
+          text: "Hat mir 10 Stunden gespart. Die Formulierungen sind genau das, was ich brauchte.",
+          author: "Sarah J., Lehrerin 4. Klasse",
+          image: "/testimonials/teacher-2.jpg",
+        },
+        {
+          stars: "★★★★★",
+          text: "Endlich kann ich persönliche Kommentare schreiben, ohne auszubrennen.",
+          author: "Mike T., Englischlehrer",
+          image: "/testimonials/teacher-3.jpg",
+        },
+      ],
+
+      faq_title: "Häufig gestellte Fragen",
+      faqs: [
+        {
+          q: "Sind meine Schülerdaten sicher?",
+          a: "Ja. Wir speichern keine personenbezogenen Daten (PII). Nutzen Sie Initialen.",
+        },
+        {
+          q: "Kann ich den Text bearbeiten?",
+          a: "Absolut. Die KI erstellt einen Entwurf, den Sie vollständig anpassen können.",
+        },
+        {
+          q: "Funktioniert es für alle Fächer?",
+          a: "Ja, von Mathe bis Sport passt sich die KI Ihrem Kontext an.",
+        },
+        {
+          q: "Ist es kostenlos?",
+          a: "Ja, Sie können Ihre ersten Berichte kostenlos erstellen, um zu sehen, wie viel Zeit Sie sparen.",
+        },
+      ],
+
+      cta_title: "Bereit, Berichte schneller zu schreiben?",
+      cta_button: "Preise & Pläne ansehen",
     },
-    {
-      question: "Will parents know I used AI?",
-      answer:
-        "Not if you edit and personalize the output. AI provides a strong first draft, but you add specific examples, adjust tone, and ensure accuracy. The final report should sound like you, not a robot.",
-    },
-    {
-      question: "What if AI makes a mistake?",
-      answer:
-        "Always review AI output carefully. AI can hallucinate facts or miss context. You're the expert on your students - verify all claims, add missing details, and adjust anything that doesn't sound right.",
-    },
-    {
-      question: "How much time can I really save?",
-      answer:
-        "Most teachers save 60-70% of report writing time. For a class of 25 students, that's 4-6 hours saved per reporting period. The key is using templates and reviewing efficiently rather than writing from scratch.",
-    },
-  ];
+  };
+
+  const text = isGerman ? content.de : content.en;
 
   return (
-    <div className="min-h-screen bg-[#0F172A]">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <Breadcrumbs
-          items={[
-            { label: "Learning Centre", href: "/learning-centre" },
-            { label: "AI for Student Reports" },
-          ]}
-        />
+    // HEADER FIX: 'pt-36' ensures ample space below navbar
+    <div className="max-w-5xl mx-auto space-y-24 pb-20 pt-36 px-6">
+      {/* --- HERO SECTION --- */}
+      <div className="text-center space-y-6">
+        <h1 className="text-5xl font-extrabold text-white tracking-tight">
+          {text.title}
+        </h1>
+        <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          {text.hero_subtitle}
+        </p>
 
-        <QuickAnswerBox answer="Use AI to draft student reports by providing anonymous observations (no names), reviewing and personalizing the output, and adding specific examples. Use FERPA-compliant tools like Zaza Draft. Most teachers save 60-70% of report writing time while improving quality and consistency." />
-
-        <header className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-            {t("aiStudentReports.title")}
-          </h1>
-          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4" />
-              <span>8 min read</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Calendar className="w-4 h-4" />
-              <span>Last updated: October 15, 2025</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Shield className="w-4 h-4 text-[#A78BFA]" />
-              <span className="text-[#A78BFA]">FERPA-Compliant Guide</span>
-            </div>
-          </div>
-        </header>
-
-        <TableOfContents items={tocItems} />
-
-        <article className="prose prose-invert prose-lg max-w-none">
-          {/* Why Report Writing Causes Stress */}
-          <section id="stress" className="mb-16 scroll-mt-20">
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <AlertTriangle className="w-8 h-8 text-[#A78BFA]" />
-              Why Report Writing Causes Teacher Stress
-            </h2>
-            <div className="space-y-4 text-gray-300 leading-relaxed">
-              <p>
-                Writing student reports is one of the most time-consuming tasks
-                in teaching. For a class of 25 students, report cards can take{" "}
-                <strong className="text-white">8-12 hours</strong> of focused
-                writing time. Multiply that by 2-4 reporting periods per year,
-                and you're spending{" "}
-                <strong className="text-white">30-50 hours annually</strong> on
-                reports alone.
-              </p>
-              <p>The pressure comes from multiple sources:</p>
-              <ul className="space-y-2 ml-6 text-gray-300">
-                <li>
-                  <strong className="text-white">Writer's block:</strong>{" "}
-                  Staring at a blank page for each student
-                </li>
-                <li>
-                  <strong className="text-white">
-                    Consistency challenges:
-                  </strong>{" "}
-                  Maintaining similar tone and structure across 25+ reports
-                </li>
-                <li>
-                  <strong className="text-white">Mental fatigue:</strong> By
-                  student #15, your brain is exhausted
-                </li>
-                <li>
-                  <strong className="text-white">Professional pressure:</strong>{" "}
-                  Every word will be read by parents and administrators
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          {/* How AI Saves 60-70% of Time */}
-          <section id="ai-helps" className="mb-16 scroll-mt-20">
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <Zap className="w-8 h-8 text-[#A78BFA]" />
-              How AI Saves 60-70% of Time
-            </h2>
-            <div className="space-y-4 text-gray-300 leading-relaxed">
-              <p>
-                AI can reduce the time spent writing reports by up to 60-70%.
-                For instance, writing a progress report for a student can take{" "}
-                <strong className="text-white">5-7 minutes</strong> with AI,
-                compared to{" "}
-                <strong className="text-white">15-20 minutes</strong> without
-                AI.
-              </p>
-              <p>Here's how AI can help:</p>
-              <ul className="space-y-2 ml-6 text-gray-300">
-                <li>
-                  <strong className="text-white">Drafts Quickly:</strong> AI
-                  generates drafts in a fraction of the time it takes to write
-                  manually.
-                </li>
-                <li>
-                  <strong className="text-white">Consistent Language:</strong>{" "}
-                  Ensures that all reports maintain a similar tone and
-                  structure.
-                </li>
-                <li>
-                  <strong className="text-white">Professional Phrasing:</strong>{" "}
-                  Provides more specific, actionable, and professional language.
-                </li>
-                <li>
-                  <strong className="text-white">
-                    Reduces Mental Fatigue:
-                  </strong>{" "}
-                  Lessens the mental strain during report writing season.
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          {/* Privacy & FERPA Compliance */}
-          <section id="privacy" className="mb-16 scroll-mt-20">
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <Shield className="w-8 h-8 text-[#A78BFA]" />
-              Privacy & FERPA Compliance
-            </h2>
-            <div className="space-y-4 text-gray-300 leading-relaxed">
-              <p>
-                Protecting student privacy is crucial when using AI for reports.
-                Follow these guidelines to ensure compliance with FERPA:
-              </p>
-              <ul className="space-y-2 ml-6 text-gray-300">
-                <li>
-                  <strong className="text-white">
-                    Never Use Student Names:
-                  </strong>{" "}
-                  Use "the student" or initials only.
-                </li>
-                <li>
-                  <strong className="text-white">
-                    Anonymize Specific Details:
-                  </strong>{" "}
-                  Avoid using unique identifiers.
-                </li>
-                <li>
-                  <strong className="text-white">
-                    Use Education-Specific Tools:
-                  </strong>{" "}
-                  Opt for tools like Zaza Draft that are FERPA-compliant.
-                </li>
-                <li>
-                  <strong className="text-white">Review All AI Output:</strong>{" "}
-                  Always edit and verify the content before finalizing it.
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          {/* Step-by-Step Process */}
-          <section id="process" className="mb-16 scroll-mt-20">
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <Check className="w-8 h-8 text-[#A78BFA]" />
-              Step-by-Step Process
-            </h2>
-            <div className="space-y-6 text-gray-300 leading-relaxed">
-              <div className="flex gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-lg font-bold text-primary-foreground">
-                  1
-                </div>
-                <div>
-                  <h3 className="mb-2 text-lg font-semibold text-white">
-                    Gather Your Observations
-                  </h3>
-                  <p className="mb-2">
-                    Collect your notes on each student: strengths, growth areas,
-                    specific examples, and data points. This is your expertise -
-                    AI can't replace it.
-                  </p>
-                  <div className="rounded-lg bg-muted p-4 text-sm text-gray-300">
-                    <p className="font-medium mb-1">Example notes:</p>
-                    <ul className="space-y-1">
-                      <li>
-                        • Strong in reading comprehension (scored 85% on last
-                        assessment)
-                      </li>
-                      <li>
-                        • Struggles with math fact fluency (still counting on
-                        fingers)
-                      </li>
-                      <li>
-                        • Excellent class participation and peer collaboration
-                      </li>
-                      <li>
-                        • Needs reminders to stay on task during independent
-                        work
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-lg font-bold text-primary-foreground">
-                  2
-                </div>
-                <div>
-                  <h3 className="mb-2 text-lg font-semibold text-white">
-                    Use a Template Prompt
-                  </h3>
-                  <p className="mb-2">
-                    Input your observations into a structured prompt. Never use
-                    student names - use "the student" or "this learner" instead.
-                  </p>
-                  <div className="rounded-lg bg-muted p-4 text-sm text-gray-300">
-                    <p className="font-medium mb-1">Template:</p>
-                    <p>
-                      "Write a progress report for a 4th grade student.
-                      Strengths: [your observations]. Growth areas: [your
-                      observations]. Tone: encouraging and specific. Include
-                      next steps for parents."
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-lg font-bold text-primary-foreground">
-                  3
-                </div>
-                <div>
-                  <h3 className="mb-2 text-lg font-semibold text-white">
-                    Review & Personalize
-                  </h3>
-                  <p>
-                    Read the AI draft carefully. Add specific examples, adjust
-                    tone, verify accuracy, and ensure it sounds like you. This
-                    step is crucial - never skip it.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-lg font-bold text-primary-foreground">
-                  4
-                </div>
-                <div>
-                  <h3 className="mb-2 text-lg font-semibold text-white">
-                    Add Student Name & Send
-                  </h3>
-                  <p>
-                    Only after reviewing and editing, add the student's name to
-                    the final report. Copy into your school's reporting system
-                    and submit.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Report Templates by Grade */}
-          <section id="templates" className="mb-16 scroll-mt-20">
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <FileText className="w-8 h-8 text-[#A78BFA]" />
-              Report Templates by Grade Level
-            </h2>
-            <div className="space-y-6 text-gray-300 leading-relaxed">
-              {templates.map((template) => (
-                <div
-                  key={template.title}
-                  className="rounded-lg border bg-card p-6"
-                >
-                  <div className="mb-4 flex items-start justify-between">
-                    <div>
-                      <h3 className="text-xl font-bold text-white">
-                        {template.title}
-                      </h3>
-                      <p className="text-sm text-gray-400">
-                        Grade Level: {template.grade}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="mb-4 rounded-lg bg-muted p-4 text-gray-300">
-                    <p className="mb-1 text-sm font-medium">Prompt Template:</p>
-                    <p className="text-sm">{template.prompt}</p>
-                  </div>
-
-                  <div className="rounded-lg bg-primary/5 p-4 text-gray-300">
-                    <p className="mb-1 text-sm font-medium">Example Output:</p>
-                    <p className="text-sm">{template.example}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Before & After Examples */}
-          <section id="examples" className="mb-16 scroll-mt-20">
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <FileText className="w-8 h-8 text-[#A78BFA]" />
-              Before & After Examples
-            </h2>
-            <div className="space-y-6 text-gray-300 leading-relaxed">
-              {beforeAfter.map((example, index) => (
-                <div key={index} className="rounded-lg border bg-card p-6">
-                  <div className="mb-4 rounded-lg bg-red-50 p-4 dark:bg-red-950/20">
-                    <p className="mb-1 text-sm font-medium text-red-900 dark:text-red-100">
-                      Before (Generic):
-                    </p>
-                    <p className="text-sm text-red-800 dark:text-red-200">
-                      {example.before}
-                    </p>
-                  </div>
-                  <div className="mb-4 rounded-lg bg-green-50 p-4 dark:bg-green-950/20">
-                    <p className="mb-1 text-sm font-medium text-green-900 dark:text-green-100">
-                      After (AI-Enhanced):
-                    </p>
-                    <p className="text-sm text-green-800 dark:text-green-200">
-                      {example.after}
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <Check className="h-4 w-4 text-green-600" />
-                    <span>{example.improvement}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Common Mistakes to Avoid */}
-          <section id="mistakes" className="mb-16 scroll-mt-20">
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <AlertTriangle className="w-8 h-8 text-[#A78BFA]" />
-              Common Mistakes to Avoid
-            </h2>
-            <div className="space-y-4 text-gray-300 leading-relaxed">
-              {mistakes.map((mistake) => (
-                <div
-                  key={mistake.mistake}
-                  className="flex gap-4 rounded-lg border bg-card p-6"
-                >
-                  <AlertTriangle className="h-6 w-6 shrink-0 text-orange-600" />
-                  <div>
-                    <h3 className="mb-1 font-semibold text-orange-900 dark:text-orange-100">
-                      {mistake.mistake}
-                    </h3>
-                    <p className="mb-2">{mistake.why}</p>
-                    <p>
-                      <span className="font-medium text-primary">Fix:</span>{" "}
-                      {mistake.fix}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Teacher Results */}
-          <section id="testimonials" className="mb-16 scroll-mt-20">
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <Star className="w-8 h-8 text-[#A78BFA]" />
-              Teacher Results
-            </h2>
-            <div className="grid gap-6 md:grid-cols-2 text-gray-300 leading-relaxed">
-              <div className="rounded-lg border bg-card p-6">
-                <div className="mb-4 flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 fill-yellow-400 text-yellow-400"
-                    />
-                  ))}
-                </div>
-                <p className="mb-4">
-                  "Report card season used to be my most dreaded time of year.
-                  With Zaza Draft, I finished 25 report cards in 3 hours instead
-                  of 8. The quality actually improved because I had more energy
-                  to personalize each one."
-                </p>
-                <p className="font-semibold text-white">Jennifer L.</p>
-                <p className="text-sm text-gray-400">3rd Grade Teacher, Ohio</p>
-              </div>
-              <div className="rounded-lg border bg-card p-6">
-                <div className="mb-4 flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 fill-yellow-400 text-yellow-400"
-                    />
-                  ))}
-                </div>
-                <p className="mb-4">
-                  "As a special ed teacher, IEP progress reports were taking
-                  30-45 minutes each. Now I can draft them in 12-15 minutes
-                  while maintaining the data-driven language required. Game
-                  changer."
-                </p>
-                <p className="font-semibold text-white">Marcus T.</p>
-                <p className="text-sm text-gray-400">
-                  Special Education Teacher, Florida
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Frequently Asked Questions */}
-          <FAQSection
-            id="faq"
-            title="Frequently Asked Questions"
-            faqs={faqs}
-            schemaContext="AI for Student Reports"
-            className="text-gray-300"
-          />
-        </article>
+        {/* NOTES BOX */}
+        <div className="bg-white text-gray-900 p-8 rounded-2xl shadow-2xl border border-gray-200 text-left max-w-2xl mx-auto mt-10 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-1 bg-indigo-500"></div>
+          <h3 className="font-bold text-xl mb-6 text-gray-900 border-b border-gray-100 pb-2">
+            {text.example_label}
+          </h3>
+          <ul className="list-disc pl-6 space-y-3 text-gray-700 text-lg">
+            {text.example_notes.map((note, index) => (
+              <li key={index} className="leading-snug">
+                {note}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <p className="text-slate-500 italic mt-6 text-sm">{text.box_footer}</p>
       </div>
+
+      {/* --- WHY IT CAUSES STRESS --- */}
+      <section>
+        <h2 className="text-3xl font-bold text-white mb-8 text-center">
+          {text.stress_title}
+        </h2>
+        <div className="grid gap-6 md:grid-cols-3">
+          {text.stress_items.map((item, i) => (
+            <div
+              key={i}
+              className="bg-slate-900/80 p-6 rounded-xl border border-slate-800 text-slate-300 hover:border-red-900/50 transition-colors"
+            >
+              <span className="text-2xl mb-4 block">⚠️</span>
+              {item}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* --- HOW AI SAVES TIME --- */}
+      <section>
+        <h2 className="text-3xl font-bold text-white mb-8 text-center">
+          {text.time_title}
+        </h2>
+        <div className="grid gap-6 md:grid-cols-3">
+          {text.time_items.map((item, i) => (
+            <div
+              key={i}
+              className="bg-blue-950/20 p-6 rounded-xl border border-blue-900/30 text-blue-100 hover:bg-blue-950/30 transition-colors"
+            >
+              <span className="text-2xl mb-4 block">⚡</span>
+              {item}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* --- PRIVACY --- */}
+      <section className="bg-slate-900/50 p-8 rounded-2xl border border-slate-800">
+        <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+          <span className="text-green-400">🔒</span> {text.privacy_title}
+        </h2>
+        <ul className="grid gap-4 md:grid-cols-1">
+          {text.privacy_items.map((item, i) => (
+            <li
+              key={i}
+              className="flex items-center gap-3 text-slate-300 bg-slate-950/50 p-3 rounded-lg border border-slate-800/50"
+            >
+              <span className="text-green-500 font-bold">✓</span> {item}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* --- STEPS --- */}
+      <section>
+        <h2 className="text-3xl font-bold text-white mb-10 text-center">
+          {text.steps_title}
+        </h2>
+        <div className="grid gap-6 md:grid-cols-2">
+          {text.steps.map((step, i) => (
+            <div
+              key={i}
+              className="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-indigo-500/50 transition-colors"
+            >
+              <h3 className="text-xl font-bold text-white mb-3">
+                {step.title}
+              </h3>
+              <p className="text-slate-400 leading-relaxed">{step.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* --- TEMPLATES --- */}
+      <section>
+        <h2 className="text-3xl font-bold text-white mb-10 text-center">
+          {text.templates_title}
+        </h2>
+        <div className="grid gap-6 md:grid-cols-3">
+          {text.templates.map((t, i) => (
+            <div
+              key={i}
+              className="bg-white text-gray-900 p-6 rounded-xl border border-gray-200 shadow-lg"
+            >
+              <div className="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2">
+                Template
+              </div>
+              <h3 className="text-xl font-bold mb-3">{t.grade}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{t.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* --- BEFORE & AFTER --- */}
+      <section>
+        <h2 className="text-3xl font-bold text-white mb-10 text-center">
+          {text.ba_title}
+        </h2>
+        <div className="grid gap-8 md:grid-cols-2">
+          {/* BAD */}
+          <div className="bg-red-950/20 border border-red-900/50 p-8 rounded-2xl">
+            <h3 className="text-red-400 font-bold mb-4 flex items-center gap-2">
+              {text.ba_bad_label}
+            </h3>
+            <p className="text-red-100/80 font-mono text-lg leading-relaxed">
+              "{text.ba_bad_text}"
+            </p>
+          </div>
+          {/* GOOD */}
+          <div className="bg-green-950/20 border border-green-900/50 p-8 rounded-2xl relative">
+            <div className="absolute top-4 right-4 text-green-500 text-2xl">
+              ✨
+            </div>
+            <h3 className="text-green-400 font-bold mb-4 flex items-center gap-2">
+              {text.ba_good_label}
+            </h3>
+            <p className="text-green-100/80 font-mono text-lg leading-relaxed">
+              "{text.ba_good_text}"
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* --- MISTAKES --- */}
+      <section>
+        <h2 className="text-2xl font-bold text-white mb-6">
+          {text.mistakes_title}
+        </h2>
+        <div className="bg-red-900/10 border border-red-900/30 rounded-xl p-8">
+          <ul className="space-y-4">
+            {text.mistakes.map((m, i) => (
+              <li key={i} className="flex items-start gap-4 text-red-200">
+                <span className="text-red-500 font-bold text-xl">✖</span>
+                <span className="text-lg">{m}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* --- TESTIMONIALS (UPDATED: No Em Dash) --- */}
+      <section>
+        <h2 className="text-3xl font-bold text-white mb-10 text-center">
+          {text.reviews_title}
+        </h2>
+        <div className="grid gap-8 md:grid-cols-2">
+          {text.reviews.map((r, i) => (
+            <div
+              key={i}
+              className="bg-slate-800 p-8 rounded-2xl border border-slate-700 flex flex-col md:flex-row gap-6 items-start"
+            >
+              {/* IMAGE */}
+              <div className="shrink-0">
+                <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-slate-600 relative">
+                  <Image
+                    src={r.image}
+                    alt={r.author}
+                    width={64}
+                    height={64}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="text-yellow-400 mb-2 tracking-widest text-sm">
+                  {r.stars}
+                </div>
+                <p className="text-slate-300 italic mb-4 leading-relaxed">
+                  "{r.text}"
+                </p>
+                <p className="text-white text-sm font-bold">{r.author}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* --- FAQ --- */}
+      <section className="max-w-3xl mx-auto">
+        <h2 className="text-3xl font-bold text-white mb-10 text-center">
+          {text.faq_title}
+        </h2>
+        <div className="space-y-4">
+          {text.faqs.map((f, i) => (
+            <div
+              key={i}
+              className="bg-slate-900/50 border border-slate-800 p-6 rounded-xl hover:bg-slate-900 transition-colors"
+            >
+              <h3 className="text-white font-bold mb-2 text-lg">{f.q}</h3>
+              <p className="text-slate-400 leading-relaxed">{f.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* --- CTA (UPDATED to /pricing) --- */}
+      <section className="text-center py-12">
+        <h2 className="text-3xl font-bold text-white mb-6">{text.cta_title}</h2>
+        <Link href="/pricing">
+          <button className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all transform hover:scale-105 shadow-xl shadow-indigo-900/20">
+            {text.cta_button}
+          </button>
+        </Link>
+      </section>
     </div>
   );
 }

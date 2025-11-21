@@ -31,6 +31,10 @@
       "terms": "Terms of Service",
       "security": "Security"
     },
+    "aiStudentReports": {
+      "title": "AI for Student Reports",
+      "subtitle": "Generate comprehensive reports in seconds"
+    },
     "social": {
       "followUs": "Follow Us",
       "twitter": "Twitter",
