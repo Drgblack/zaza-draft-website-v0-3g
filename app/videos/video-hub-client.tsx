@@ -597,8 +597,9 @@ export function VideoHubClient() {
   const allCategories = text.categories;
   const allPlaylists = text.playlists;
 
+  // Added pt-20 to the root container to push content below the fixed header
   return (
-    <div className="min-h-screen bg-[#0A1628]">
+    <div className="min-h-screen bg-[#0A1628] pt-20">
       {/* COMING SOON BANNER */}
       <div className="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 text-white py-3 px-4 text-center shadow-lg relative z-50">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-3">
