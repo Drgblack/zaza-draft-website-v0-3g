@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { useState } from "react";
-import { usePathname } from "next/navigation"; // Use usePathname for i18n logic
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,12 +18,18 @@ import {
   GraduationCap,
   Settings,
   TrendingUp,
+  Construction,
 } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 
-// --- CONTENT DICTIONARY (Combines structural and textual data) ---
+// --- CONTENT DICTIONARY ---
 const content = {
   en: {
+    banner: {
+      label: "COMING SOON",
+      message:
+        "We are currently filming these tutorials! This page is a preview of our upcoming Video Academy.",
+    },
     hero: {
       title: "Video Tutorials and Demos",
       description:
@@ -219,8 +225,6 @@ const content = {
         views: 5890,
         thumbnail: "/homework-reminder.jpg",
       },
-
-      // UPDATED PATHS FOR NEW IMAGES IN /videos FOLDER
       {
         id: "weekly-newsletters",
         title: "Creating Weekly Class Newsletters",
@@ -282,6 +286,11 @@ const content = {
     ],
   },
   de: {
+    banner: {
+      label: "DEMNÄCHST",
+      message:
+        "Wir zeichnen diese Tutorials gerade auf! Diese Seite ist eine Vorschau auf unsere kommende Video-Akademie.",
+    },
     hero: {
       title: "Video-Tutorials und Demos",
       description:
@@ -484,8 +493,6 @@ const content = {
         views: 5890,
         thumbnail: "/homework-reminder.jpg",
       },
-
-      // UPDATED PATHS FOR NEW IMAGES IN /videos FOLDER
       {
         id: "weekly-newsletters",
         title: "Erstellung wöchentlicher Klassen-Newsletter",
@@ -549,7 +556,6 @@ const content = {
 };
 
 export function VideoHubClient() {
-  // Use usePathname to determine the current language, as established in successful fixes
   const pathname = usePathname();
   const isGerman = pathname?.startsWith("/de") ?? false;
   const text = isGerman ? content.de : content.en;
@@ -557,7 +563,6 @@ export function VideoHubClient() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Use the locale-specific video data
   const filteredVideos = text.videos.filter((video) => {
     const matchesCategory =
       selectedCategory === "all" || video.category === selectedCategory;
@@ -594,6 +599,18 @@ export function VideoHubClient() {
 
   return (
     <div className="min-h-screen bg-[#0A1628]">
+      {/* COMING SOON BANNER */}
+      <div className="bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 text-white py-3 px-4 text-center shadow-lg relative z-50">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-3">
+          <Badge className="bg-white text-purple-600 hover:bg-white/90 border-0 font-bold px-3 py-1 tracking-widest">
+            {text.banner.label}
+          </Badge>
+          <p className="font-medium text-sm md:text-base drop-shadow-md">
+            {text.banner.message}
+          </p>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 bg-gradient-to-b from-[#0A1628] to-[#0F1F3A]">
         <div className="max-w-7xl mx-auto text-center">
