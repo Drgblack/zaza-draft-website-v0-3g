@@ -219,6 +219,8 @@ const content = {
         views: 5890,
         thumbnail: "/homework-reminder.jpg",
       },
+
+      // UPDATED PATHS FOR NEW IMAGES IN /videos FOLDER
       {
         id: "weekly-newsletters",
         title: "Creating Weekly Class Newsletters",
@@ -227,7 +229,7 @@ const content = {
         category: "use-cases",
         duration: "8:10",
         views: 7230,
-        thumbnail: "/weekly-newsletter.jpg",
+        thumbnail: "/videos/weekly-newsletter.jpg",
       },
       {
         id: "special-education",
@@ -237,7 +239,7 @@ const content = {
         category: "use-cases",
         duration: "10:25",
         views: 6540,
-        thumbnail: "/special-education.jpg",
+        thumbnail: "/videos/special-education.jpg",
       },
       {
         id: "tone-consistency",
@@ -247,7 +249,7 @@ const content = {
         category: "best-practices",
         duration: "5:40",
         views: 4320,
-        thumbnail: "/tone-consistency.jpg",
+        thumbnail: "/videos/tone-consistency.jpg",
       },
       {
         id: "privacy-ferpa",
@@ -256,7 +258,7 @@ const content = {
         category: "best-practices",
         duration: "7:55",
         views: 5670,
-        thumbnail: "/privacy-ferpa.jpg",
+        thumbnail: "/videos/privacy-ferpa.jpg",
       },
       {
         id: "ai-ethics",
@@ -266,7 +268,7 @@ const content = {
         category: "best-practices",
         duration: "9:10",
         views: 4890,
-        thumbnail: "/ai-ethics.jpg",
+        thumbnail: "/videos/ai-ethics.jpg",
       },
       {
         id: "personalization-tips",
@@ -275,7 +277,7 @@ const content = {
         category: "best-practices",
         duration: "6:30",
         views: 5120,
-        thumbnail: "/personalization.jpg",
+        thumbnail: "/videos/personalization.jpg",
       },
     ],
   },
@@ -482,6 +484,8 @@ const content = {
         views: 5890,
         thumbnail: "/homework-reminder.jpg",
       },
+
+      // UPDATED PATHS FOR NEW IMAGES IN /videos FOLDER
       {
         id: "weekly-newsletters",
         title: "Erstellung wöchentlicher Klassen-Newsletter",
@@ -490,7 +494,7 @@ const content = {
         category: "use-cases",
         duration: "8:10",
         views: 7230,
-        thumbnail: "/weekly-newsletter.jpg",
+        thumbnail: "/videos/weekly-newsletter.jpg",
       },
       {
         id: "special-education",
@@ -500,7 +504,7 @@ const content = {
         category: "use-cases",
         duration: "10:25",
         views: 6540,
-        thumbnail: "/special-education.jpg",
+        thumbnail: "/videos/special-education.jpg",
       },
       {
         id: "tone-consistency",
@@ -510,7 +514,7 @@ const content = {
         category: "best-practices",
         duration: "5:40",
         views: 4320,
-        thumbnail: "/tone-consistency.jpg",
+        thumbnail: "/videos/tone-consistency.jpg",
       },
       {
         id: "privacy-ferpa",
@@ -519,7 +523,7 @@ const content = {
         category: "best-practices",
         duration: "7:55",
         views: 5670,
-        thumbnail: "/privacy-ferpa.jpg",
+        thumbnail: "/videos/privacy-ferpa.jpg",
       },
       {
         id: "ai-ethics",
@@ -529,7 +533,7 @@ const content = {
         category: "best-practices",
         duration: "9:10",
         views: 4890,
-        thumbnail: "/ai-ethics.jpg",
+        thumbnail: "/videos/ai-ethics.jpg",
       },
       {
         id: "personalization-tips",
@@ -538,7 +542,7 @@ const content = {
         category: "best-practices",
         duration: "6:30",
         views: 5120,
-        thumbnail: "/personalization.jpg",
+        thumbnail: "/videos/personalization.jpg",
       },
     ],
   },
