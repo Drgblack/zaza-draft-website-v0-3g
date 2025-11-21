@@ -22,6 +22,7 @@ import {
   Calendar,
   MessageSquare,
   Layout,
+  FileText,
 } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 
@@ -151,7 +152,6 @@ const uiContent = {
 // --- Integration Data (EN & DE) ---
 const integrationsData: Record<string, Record<string, IntegrationData>> = {
   en: {
-    // Existing
     "google-classroom": {
       name: "Google Classroom",
       category: "Learning Management",
@@ -228,7 +228,6 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
         { name: "Gmail", slug: "gmail", category: "Communication" },
       ],
     },
-    // Fixed Key (was canvas-lms)
     canvas: {
       name: "Canvas LMS",
       category: "Learning Management",
@@ -309,7 +308,6 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
         { name: "Turnitin", slug: "turnitin", category: "Assessment" },
       ],
     },
-    // New Batch
     schoology: {
       name: "Schoology",
       category: "Learning Management",
@@ -1202,7 +1200,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
           question: "Does it show my address?",
           answer: "Yes, sent from your Gmail.",
         },
-        { question: "Is it secure?", answer: "Yes, OAuth 2.0 is used." },
+        { question: "Is it secure?", answer: "Yes, OAuth 2.0." },
       ],
       relatedIntegrations: [
         { name: "Outlook", slug: "outlook", category: "Communication" },
@@ -1285,9 +1283,9 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
         {
           name: "Google Classroom",
           slug: "google-classroom",
-          category: "Learning Management",
+          category: "Lernmanagement",
         },
-        { name: "Canvas", slug: "canvas", category: "Learning Management" },
+        { name: "Canvas", slug: "canvas", category: "Lernmanagement" },
       ],
     },
     "google-drive": {
