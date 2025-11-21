@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { useState } from "react";
-import { useLanguage } from "@/lib/i18n/language-context";
+import { usePathname } from "next/navigation"; // Use usePathname for i18n logic
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -21,248 +21,540 @@ import {
 } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 
-const categories = [
-  { id: "all", name: "All Videos", icon: Play, count: 24 },
-  { id: "getting-started", name: "Getting Started", icon: BookOpen, count: 6 },
-  { id: "advanced", name: "Advanced Features", icon: Zap, count: 5 },
-  { id: "use-cases", name: "Use Cases", icon: Users, count: 7 },
-  {
-    id: "best-practices",
-    name: "Best Practices",
-    icon: GraduationCap,
-    count: 4,
+// --- CONTENT DICTIONARY (Combines structural and textual data) ---
+const content = {
+  en: {
+    hero: {
+      title: "Video Tutorials and Demos",
+      description:
+        "Watch step-by-step tutorials and product demos to master AI-powered parent communication.",
+      badge: "24 Video Tutorials",
+      search_placeholder: "Search videos or playlists...",
+    },
+    sections: {
+      featured: "Featured Videos",
+      curated: "Curated Playlists",
+      all: "All Videos",
+      views: "views",
+    },
+    categories: [
+      { id: "all", name: "All Videos", icon: Play, count: 24 },
+      {
+        id: "getting-started",
+        name: "Getting Started",
+        icon: BookOpen,
+        count: 6,
+      },
+      { id: "advanced", name: "Advanced Features", icon: Zap, count: 5 },
+      { id: "use-cases", name: "Use Cases", icon: Users, count: 7 },
+      {
+        id: "best-practices",
+        name: "Best Practices",
+        icon: GraduationCap,
+        count: 4,
+      },
+      { id: "tips-tricks", name: "Tips & Tricks", icon: Settings, count: 2 },
+    ],
+    playlists: [
+      {
+        id: "quick-start",
+        title: "Quick Start Guide",
+        description: "Get up and running with Zaza Draft in under 30 minutes",
+        videoCount: 5,
+        duration: "28 min",
+        thumbnail: "/teacher-using-laptop-tutorial.jpg",
+      },
+      {
+        id: "parent-communication",
+        title: "Mastering Parent Communication",
+        description: "Advanced techniques for effective parent engagement",
+        videoCount: 8,
+        duration: "1h 15min",
+        thumbnail: "/parent-teacher-communication.jpg",
+      },
+      {
+        id: "time-saving",
+        title: "Time-Saving Workflows",
+        description: "Automate repetitive tasks and reclaim your time",
+        videoCount: 6,
+        duration: "45 min",
+        thumbnail: "/teacher-working-efficiently.jpg",
+      },
+    ],
+    videos: [
+      {
+        id: "welcome-to-zaza-draft",
+        title: "Welcome to Zaza Draft",
+        description:
+          "A quick introduction to Zaza Draft and what you can accomplish",
+        category: "getting-started",
+        duration: "3:24",
+        views: 15420,
+        thumbnail: "/welcome-introduction-video.jpg",
+        featured: true,
+      },
+      {
+        id: "first-parent-message",
+        title: "Creating Your First Parent Message",
+        description:
+          "Step-by-step guide to writing your first AI-powered message",
+        category: "getting-started",
+        duration: "5:12",
+        views: 12350,
+        thumbnail: "/writing-message-tutorial.jpg",
+        featured: true,
+      },
+      {
+        id: "customizing-tone",
+        title: "Customizing Message Tone & Style",
+        description:
+          "Learn how to adjust tone, formality, and language for different situations",
+        category: "getting-started",
+        duration: "4:45",
+        views: 9870,
+        thumbnail: "/customizing-settings.jpg",
+      },
+      {
+        id: "multilingual-messages",
+        title: "Writing Multilingual Messages",
+        description: "Communicate with parents in their preferred language",
+        category: "getting-started",
+        duration: "6:18",
+        views: 8920,
+        thumbnail: "/multilingual-translation.jpg",
+      },
+      {
+        id: "templates-library",
+        title: "Using the Templates Library",
+        description: "Save time with pre-built templates for common scenarios",
+        category: "getting-started",
+        duration: "4:30",
+        views: 7650,
+        thumbnail: "/templates-library.jpg",
+      },
+      {
+        id: "keyboard-shortcuts",
+        title: "Keyboard Shortcuts & Power User Tips",
+        description: "Work faster with keyboard shortcuts and hidden features",
+        category: "tips-tricks",
+        duration: "3:55",
+        views: 5420,
+        thumbnail: "/keyboard-shortcuts.png",
+      },
+      {
+        id: "advanced-prompts",
+        title: "Advanced Prompt Engineering",
+        description:
+          "Master the art of crafting effective prompts for better results",
+        category: "advanced",
+        duration: "8:42",
+        views: 6780,
+        thumbnail: "/advanced-prompts.jpg",
+        featured: true,
+      },
+      {
+        id: "batch-processing",
+        title: "Batch Processing Multiple Messages",
+        description: "Generate multiple personalized messages at once",
+        category: "advanced",
+        duration: "7:15",
+        views: 5230,
+        thumbnail: "/batch-processing.jpg",
+      },
+      {
+        id: "integration-google-classroom",
+        title: "Google Classroom Integration",
+        description:
+          "Connect Zaza Draft with Google Classroom for seamless workflows",
+        category: "advanced",
+        duration: "6:50",
+        views: 8940,
+        thumbnail: "/google-classroom-integration.jpg",
+      },
+      {
+        id: "difficult-conversations",
+        title: "Handling Difficult Conversations",
+        description:
+          "Communicate sensitive topics with empathy and professionalism",
+        category: "use-cases",
+        duration: "9:20",
+        views: 11250,
+        thumbnail: "/difficult-conversation.jpg",
+      },
+      {
+        id: "progress-reports",
+        title: "Writing Progress Reports",
+        description:
+          "Create comprehensive, personalized progress reports efficiently",
+        category: "use-cases",
+        duration: "7:35",
+        views: 9870,
+        thumbnail: "/progress-report.jpg",
+      },
+      {
+        id: "parent-teacher-conferences",
+        title: "Preparing for Parent-Teacher Conferences",
+        description: "Use AI to prepare talking points and follow-up messages",
+        category: "use-cases",
+        duration: "6:45",
+        views: 7650,
+        thumbnail: "/parent-teacher-conference.png",
+      },
+      {
+        id: "behavior-updates",
+        title: "Positive Behavior Updates",
+        description:
+          "Celebrate student successes with personalized positive messages",
+        category: "use-cases",
+        duration: "5:20",
+        views: 6420,
+        thumbnail: "/positive-behavior.jpg",
+      },
+      {
+        id: "homework-reminders",
+        title: "Homework Reminders & Assignments",
+        description: "Keep parents informed about assignments and due dates",
+        category: "use-cases",
+        duration: "4:55",
+        views: 5890,
+        thumbnail: "/homework-reminder.jpg",
+      },
+      {
+        id: "weekly-newsletters",
+        title: "Creating Weekly Class Newsletters",
+        description:
+          "Generate engaging newsletters to keep parents in the loop",
+        category: "use-cases",
+        duration: "8:10",
+        views: 7230,
+        thumbnail: "/weekly-newsletter.jpg",
+      },
+      {
+        id: "special-education",
+        title: "Special Education Communication",
+        description:
+          "Best practices for communicating with special education families",
+        category: "use-cases",
+        duration: "10:25",
+        views: 6540,
+        thumbnail: "/special-education.jpg",
+      },
+      {
+        id: "tone-consistency",
+        title: "Maintaining Consistent Tone",
+        description:
+          "Ensure your communication style remains consistent across messages",
+        category: "best-practices",
+        duration: "5:40",
+        views: 4320,
+        thumbnail: "/tone-consistency.jpg",
+      },
+      {
+        id: "privacy-ferpa",
+        title: "Privacy & FERPA Compliance",
+        description: "Protect student data while using AI tools",
+        category: "best-practices",
+        duration: "7:55",
+        views: 5670,
+        thumbnail: "/privacy-ferpa.jpg",
+      },
+      {
+        id: "ai-ethics",
+        title: "Ethical AI Use in Education",
+        description:
+          "Guidelines for responsible AI use in parent communication",
+        category: "best-practices",
+        duration: "9:10",
+        views: 4890,
+        thumbnail: "/ai-ethics.jpg",
+      },
+      {
+        id: "personalization-tips",
+        title: "Personalization Best Practices",
+        description: "Make every message feel personal and authentic",
+        category: "best-practices",
+        duration: "6:30",
+        views: 5120,
+        thumbnail: "/personalization.jpg",
+      },
+    ],
   },
-  { id: "tips-tricks", name: "Tips & Tricks", icon: Settings, count: 2 },
-];
-
-const playlists = [
-  {
-    id: "quick-start",
-    title: "Quick Start Guide",
-    description: "Get up and running with Zaza Draft in under 30 minutes",
-    videoCount: 5,
-    duration: "28 min",
-    thumbnail: "/teacher-using-laptop-tutorial.jpg",
+  de: {
+    hero: {
+      title: "Video-Tutorials und Demos",
+      description:
+        "Sehen Sie Schritt-für-Schritt-Anleitungen und Produktdemos, um die KI-gestützte Elternkommunikation zu meistern.",
+      badge: "24 Video-Tutorials",
+      search_placeholder: "Videos oder Playlists durchsuchen...",
+    },
+    sections: {
+      featured: "Ausgewählte Videos",
+      curated: "Kuratierte Playlists",
+      all: "Alle Videos",
+      views: "Aufrufe",
+    },
+    categories: [
+      { id: "all", name: "Alle Videos", icon: Play, count: 24 },
+      {
+        id: "getting-started",
+        name: "Erste Schritte",
+        icon: BookOpen,
+        count: 6,
+      },
+      { id: "advanced", name: "Erweiterte Funktionen", icon: Zap, count: 5 },
+      { id: "use-cases", name: "Anwendungsfälle", icon: Users, count: 7 },
+      {
+        id: "best-practices",
+        name: "Best Practices",
+        icon: GraduationCap,
+        count: 4,
+      },
+      { id: "tips-tricks", name: "Tipps & Tricks", icon: Settings, count: 2 },
+    ],
+    playlists: [
+      {
+        id: "quick-start",
+        title: "Schnelleinstiegs-Anleitung",
+        description: "Starten Sie Zaza Draft in unter 30 Minuten",
+        videoCount: 5,
+        duration: "28 Min.",
+        thumbnail: "/teacher-using-laptop-tutorial.jpg",
+      },
+      {
+        id: "parent-communication",
+        title: "Elternkommunikation meistern",
+        description: "Erweiterte Techniken für effektive Elternarbeit",
+        videoCount: 8,
+        duration: "1 Std. 15 Min.",
+        thumbnail: "/parent-teacher-communication.jpg",
+      },
+      {
+        id: "time-saving",
+        title: "Zeitsparende Arbeitsabläufe",
+        description:
+          "Automatisieren Sie sich wiederholende Aufgaben und gewinnen Sie Zeit zurück",
+        videoCount: 6,
+        duration: "45 Min.",
+        thumbnail: "/teacher-working-efficiently.jpg",
+      },
+    ],
+    videos: [
+      {
+        id: "welcome-to-zaza-draft",
+        title: "Willkommen bei Zaza Draft",
+        description:
+          "Eine kurze Einführung in Zaza Draft und was Sie erreichen können",
+        category: "getting-started",
+        duration: "3:24",
+        views: 15420,
+        thumbnail: "/welcome-introduction-video.jpg",
+        featured: true,
+      },
+      {
+        id: "first-parent-message",
+        title: "Erste Elternnachricht erstellen",
+        description:
+          "Schritt-für-Schritt-Anleitung zum Verfassen Ihrer ersten KI-gestützten Nachricht",
+        category: "getting-started",
+        duration: "5:12",
+        views: 12350,
+        thumbnail: "/writing-message-tutorial.jpg",
+        featured: true,
+      },
+      {
+        id: "customizing-tone",
+        title: "Ton & Stil der Nachricht anpassen",
+        description:
+          "Lernen Sie, Tonfall, Formalität und Sprache für verschiedene Situationen anzupassen",
+        category: "getting-started",
+        duration: "4:45",
+        views: 9870,
+        thumbnail: "/customizing-settings.jpg",
+      },
+      {
+        id: "multilingual-messages",
+        title: "Mehrsprachige Nachrichten verfassen",
+        description:
+          "Kommunizieren Sie mit Eltern in ihrer bevorzugten Sprache",
+        category: "getting-started",
+        duration: "6:18",
+        views: 8920,
+        thumbnail: "/multilingual-translation.jpg",
+      },
+      {
+        id: "templates-library",
+        title: "Die Vorlagenbibliothek nutzen",
+        description:
+          "Sparen Sie Zeit mit vorgefertigten Vorlagen für gängige Szenarien",
+        category: "getting-started",
+        duration: "4:30",
+        views: 7650,
+        thumbnail: "/templates-library.jpg",
+      },
+      {
+        id: "keyboard-shortcuts",
+        title: "Tastenkürzel & Profi-Tipps",
+        description:
+          "Arbeiten Sie schneller mit Tastenkürzeln und versteckten Funktionen",
+        category: "tips-tricks",
+        duration: "3:55",
+        views: 5420,
+        thumbnail: "/keyboard-shortcuts.png",
+      },
+      {
+        id: "advanced-prompts",
+        title: "Fortgeschrittenes Prompt-Engineering",
+        description:
+          "Meistern Sie die Kunst, effektive Prompts für bessere Ergebnisse zu erstellen",
+        category: "advanced",
+        duration: "8:42",
+        views: 6780,
+        thumbnail: "/advanced-prompts.jpg",
+        featured: true,
+      },
+      {
+        id: "batch-processing",
+        title: "Mehrere Nachrichten gleichzeitig verarbeiten",
+        description:
+          "Generieren Sie mehrere personalisierte Nachrichten auf einmal",
+        category: "advanced",
+        duration: "7:15",
+        views: 5230,
+        thumbnail: "/batch-processing.jpg",
+      },
+      {
+        id: "integration-google-classroom",
+        title: "Google Classroom Integration",
+        description:
+          "Verbinden Sie Zaza Draft mit Google Classroom für nahtlose Arbeitsabläufe",
+        category: "advanced",
+        duration: "6:50",
+        views: 8940,
+        thumbnail: "/google-classroom-integration.jpg",
+      },
+      {
+        id: "difficult-conversations",
+        title: "Umgang mit schwierigen Gesprächen",
+        description:
+          "Kommunizieren Sie sensible Themen mit Empathie und Professionalität",
+        category: "use-cases",
+        duration: "9:20",
+        views: 11250,
+        thumbnail: "/difficult-conversation.jpg",
+      },
+      {
+        id: "progress-reports",
+        title: "Fortschrittsberichte verfassen",
+        description:
+          "Erstellen Sie effizient umfassende, personalisierte Fortschrittsberichte",
+        category: "use-cases",
+        duration: "7:35",
+        views: 9870,
+        thumbnail: "/progress-report.jpg",
+      },
+      {
+        id: "parent-teacher-conferences",
+        title: "Vorbereitung auf Elternsprechtage",
+        description:
+          "Nutzen Sie KI, um Gesprächsthemen und Follow-up-Nachrichten vorzubereiten",
+        category: "use-cases",
+        duration: "6:45",
+        views: 7650,
+        thumbnail: "/parent-teacher-conference.png",
+      },
+      {
+        id: "behavior-updates",
+        title: "Positive Verhaltens-Updates",
+        description:
+          "Feiern Sie Schülererfolge mit personalisierten positiven Nachrichten",
+        category: "use-cases",
+        duration: "5:20",
+        views: 6420,
+        thumbnail: "/positive-behavior.jpg",
+      },
+      {
+        id: "homework-reminders",
+        title: "Hausaufgaben-Erinnerungen",
+        description:
+          "Halten Sie Eltern über Aufgaben und Fälligkeiten auf dem Laufenden",
+        category: "use-cases",
+        duration: "4:55",
+        views: 5890,
+        thumbnail: "/homework-reminder.jpg",
+      },
+      {
+        id: "weekly-newsletters",
+        title: "Erstellung wöchentlicher Klassen-Newsletter",
+        description:
+          "Erstellen Sie ansprechende Newsletter, um Eltern auf dem Laufenden zu halten",
+        category: "use-cases",
+        duration: "8:10",
+        views: 7230,
+        thumbnail: "/weekly-newsletter.jpg",
+      },
+      {
+        id: "special-education",
+        title: "Kommunikation in der Sonderpädagogik",
+        description:
+          "Best Practices für die Kommunikation mit Familien aus der Sonderpädagogik",
+        category: "use-cases",
+        duration: "10:25",
+        views: 6540,
+        thumbnail: "/special-education.jpg",
+      },
+      {
+        id: "tone-consistency",
+        title: "Konsistenten Tonfall beibehalten",
+        description:
+          "Stellen Sie sicher, dass Ihr Kommunikationsstil in allen Nachrichten konsistent bleibt",
+        category: "best-practices",
+        duration: "5:40",
+        views: 4320,
+        thumbnail: "/tone-consistency.jpg",
+      },
+      {
+        id: "privacy-ferpa",
+        title: "Datenschutz & DSGVO-Konformität",
+        description: "Schützen Sie Schülerdaten bei der Nutzung von KI-Tools",
+        category: "best-practices",
+        duration: "7:55",
+        views: 5670,
+        thumbnail: "/privacy-ferpa.jpg",
+      },
+      {
+        id: "ai-ethics",
+        title: "Ethischer KI-Einsatz in der Bildung",
+        description:
+          "Richtlinien für den verantwortungsvollen KI-Einsatz in der Elternkommunikation",
+        category: "best-practices",
+        duration: "9:10",
+        views: 4890,
+        thumbnail: "/ai-ethics.jpg",
+      },
+      {
+        id: "personalization-tips",
+        title: "Best Practices zur Personalisierung",
+        description: "Gestalten Sie jede Nachricht persönlich und authentisch",
+        category: "best-practices",
+        duration: "6:30",
+        views: 5120,
+        thumbnail: "/personalization.jpg",
+      },
+    ],
   },
-  {
-    id: "parent-communication",
-    title: "Mastering Parent Communication",
-    description: "Advanced techniques for effective parent engagement",
-    videoCount: 8,
-    duration: "1h 15min",
-    thumbnail: "/parent-teacher-communication.jpg",
-  },
-  {
-    id: "time-saving",
-    title: "Time-Saving Workflows",
-    description: "Automate repetitive tasks and reclaim your time",
-    videoCount: 6,
-    duration: "45 min",
-    thumbnail: "/teacher-working-efficiently.jpg",
-  },
-];
-
-const videos = [
-  {
-    id: "welcome-to-zaza-draft",
-    title: "Welcome to Zaza Draft",
-    description:
-      "A quick introduction to Zaza Draft and what you can accomplish",
-    category: "getting-started",
-    duration: "3:24",
-    views: 15420,
-    thumbnail: "/welcome-introduction-video.jpg",
-    featured: true,
-  },
-  {
-    id: "first-parent-message",
-    title: "Creating Your First Parent Message",
-    description: "Step-by-step guide to writing your first AI-powered message",
-    category: "getting-started",
-    duration: "5:12",
-    views: 12350,
-    thumbnail: "/writing-message-tutorial.jpg",
-    featured: true,
-  },
-  {
-    id: "customizing-tone",
-    title: "Customizing Message Tone & Style",
-    description:
-      "Learn how to adjust tone, formality, and language for different situations",
-    category: "getting-started",
-    duration: "4:45",
-    views: 9870,
-    thumbnail: "/customizing-settings.jpg",
-  },
-  {
-    id: "multilingual-messages",
-    title: "Writing Multilingual Messages",
-    description: "Communicate with parents in their preferred language",
-    category: "getting-started",
-    duration: "6:18",
-    views: 8920,
-    thumbnail: "/multilingual-translation.jpg",
-  },
-  {
-    id: "templates-library",
-    title: "Using the Templates Library",
-    description: "Save time with pre-built templates for common scenarios",
-    category: "getting-started",
-    duration: "4:30",
-    views: 7650,
-    thumbnail: "/templates-library.jpg",
-  },
-  {
-    id: "keyboard-shortcuts",
-    title: "Keyboard Shortcuts & Power User Tips",
-    description: "Work faster with keyboard shortcuts and hidden features",
-    category: "tips-tricks",
-    duration: "3:55",
-    views: 5420,
-    thumbnail: "/keyboard-shortcuts.png",
-  },
-  {
-    id: "advanced-prompts",
-    title: "Advanced Prompt Engineering",
-    description:
-      "Master the art of crafting effective prompts for better results",
-    category: "advanced",
-    duration: "8:42",
-    views: 6780,
-    thumbnail: "/advanced-prompts.jpg",
-    featured: true,
-  },
-  {
-    id: "batch-processing",
-    title: "Batch Processing Multiple Messages",
-    description: "Generate multiple personalized messages at once",
-    category: "advanced",
-    duration: "7:15",
-    views: 5230,
-    thumbnail: "/batch-processing.jpg",
-  },
-  {
-    id: "integration-google-classroom",
-    title: "Google Classroom Integration",
-    description:
-      "Connect Zaza Draft with Google Classroom for seamless workflows",
-    category: "advanced",
-    duration: "6:50",
-    views: 8940,
-    thumbnail: "/google-classroom-integration.jpg",
-  },
-  {
-    id: "difficult-conversations",
-    title: "Handling Difficult Conversations",
-    description:
-      "Communicate sensitive topics with empathy and professionalism",
-    category: "use-cases",
-    duration: "9:20",
-    views: 11250,
-    thumbnail: "/difficult-conversation.jpg",
-  },
-  {
-    id: "progress-reports",
-    title: "Writing Progress Reports",
-    description:
-      "Create comprehensive, personalized progress reports efficiently",
-    category: "use-cases",
-    duration: "7:35",
-    views: 9870,
-    thumbnail: "/progress-report.jpg",
-  },
-  {
-    id: "parent-teacher-conferences",
-    title: "Preparing for Parent-Teacher Conferences",
-    description: "Use AI to prepare talking points and follow-up messages",
-    category: "use-cases",
-    duration: "6:45",
-    views: 7650,
-    thumbnail: "/parent-teacher-conference.png",
-  },
-  {
-    id: "behavior-updates",
-    title: "Positive Behavior Updates",
-    description:
-      "Celebrate student successes with personalized positive messages",
-    category: "use-cases",
-    duration: "5:20",
-    views: 6420,
-    thumbnail: "/positive-behavior.jpg",
-  },
-  {
-    id: "homework-reminders",
-    title: "Homework Reminders & Assignments",
-    description: "Keep parents informed about assignments and due dates",
-    category: "use-cases",
-    duration: "4:55",
-    views: 5890,
-    thumbnail: "/homework-reminder.jpg",
-  },
-  {
-    id: "weekly-newsletters",
-    title: "Creating Weekly Class Newsletters",
-    description: "Generate engaging newsletters to keep parents in the loop",
-    category: "use-cases",
-    duration: "8:10",
-    views: 7230,
-    thumbnail: "/placeholder.svg?height=180&width=320",
-  },
-  {
-    id: "special-education",
-    title: "Special Education Communication",
-    description:
-      "Best practices for communicating with special education families",
-    category: "use-cases",
-    duration: "10:25",
-    views: 6540,
-    thumbnail: "/placeholder.svg?height=180&width=320",
-  },
-  {
-    id: "tone-consistency",
-    title: "Maintaining Consistent Tone",
-    description:
-      "Ensure your communication style remains consistent across messages",
-    category: "best-practices",
-    duration: "5:40",
-    views: 4320,
-    thumbnail: "/placeholder.svg?height=180&width=320",
-  },
-  {
-    id: "privacy-ferpa",
-    title: "Privacy & FERPA Compliance",
-    description: "Protect student data while using AI tools",
-    category: "best-practices",
-    duration: "7:55",
-    views: 5670,
-    thumbnail: "/placeholder.svg?height=180&width=320",
-  },
-  {
-    id: "ai-ethics",
-    title: "Ethical AI Use in Education",
-    description: "Guidelines for responsible AI use in parent communication",
-    category: "best-practices",
-    duration: "9:10",
-    views: 4890,
-    thumbnail: "/placeholder.svg?height=180&width=320",
-  },
-  {
-    id: "personalization-tips",
-    title: "Personalization Best Practices",
-    description: "Make every message feel personal and authentic",
-    category: "best-practices",
-    duration: "6:30",
-    views: 5120,
-    thumbnail: "/placeholder.svg?height=180&width=320",
-  },
-];
+};
 
 export function VideoHubClient() {
-  const { t } = useLanguage();
+  // Use usePathname to determine the current language, as established in successful fixes
+  const pathname = usePathname();
+  const isGerman = pathname?.startsWith("/de") ?? false;
+  const text = isGerman ? content.de : content.en;
+
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredVideos = videos.filter((video) => {
+  // Use the locale-specific video data
+  const filteredVideos = text.videos.filter((video) => {
     const matchesCategory =
       selectedCategory === "all" || video.category === selectedCategory;
     const matchesSearch =
@@ -271,7 +563,7 @@ export function VideoHubClient() {
     return matchesCategory && matchesSearch;
   });
 
-  const featuredVideos = videos.filter((v) => v.featured);
+  const featuredVideos = text.videos.filter((v) => v.featured);
 
   const handleCategoryClick = (categoryId: string) => {
     setSelectedCategory(categoryId);
@@ -293,19 +585,22 @@ export function VideoHubClient() {
     trackEvent("playlist_clicked", { playlist_id: playlistId });
   };
 
+  const allCategories = text.categories;
+  const allPlaylists = text.playlists;
+
   return (
     <div className="min-h-screen bg-[#0A1628]">
       {/* Hero Section */}
       <section className="relative py-20 px-4 bg-gradient-to-b from-[#0A1628] to-[#0F1F3A]">
         <div className="max-w-7xl mx-auto text-center">
           <Badge className="mb-4 bg-purple-500/10 text-purple-400 border-purple-500/20">
-            24 Video Tutorials
+            {text.hero.badge}
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            {t("videos.hero.title")}
+            {text.hero.title}
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            {t("videos.hero.description")}
+            {text.hero.description}
           </p>
 
           {/* Search Bar */}
@@ -313,7 +608,7 @@ export function VideoHubClient() {
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
             <Input
               type="text"
-              placeholder={t("videos.search.placeholder")}
+              placeholder={text.hero.search_placeholder}
               value={searchQuery}
               onChange={(e) => handleSearch(e.target.value)}
               className="pl-12 h-14 bg-white/5 border-white/10 text-white placeholder:text-gray-400"
@@ -326,7 +621,7 @@ export function VideoHubClient() {
       <section className="border-b border-white/10 bg-[#0F1F3A] sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex gap-2 overflow-x-auto py-4 scrollbar-hide">
-            {categories.map((category) => {
+            {allCategories.map((category) => {
               const Icon = category.icon;
               return (
                 <Button
@@ -342,7 +637,7 @@ export function VideoHubClient() {
                   }`}
                 >
                   <Icon className="h-4 w-4" />
-                  {t(`videos.categories.${category.id}`)}
+                  {category.name}
                   <Badge variant="secondary" className="ml-1">
                     {category.count}
                   </Badge>
@@ -360,7 +655,7 @@ export function VideoHubClient() {
             <div className="flex items-center gap-2 mb-6">
               <TrendingUp className="h-6 w-6 text-purple-400" />
               <h2 className="text-2xl font-bold text-white">
-                {t("videos.featured")}
+                {text.sections.featured}
               </h2>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
@@ -396,7 +691,7 @@ export function VideoHubClient() {
                       <div className="flex items-center gap-4 text-xs text-gray-500">
                         <div className="flex items-center gap-1">
                           <Eye className="h-3 w-3" />
-                          {video.views.toLocaleString()} views
+                          {video.views.toLocaleString()} {text.sections.views}
                         </div>
                         <div className="flex items-center gap-1">
                           <Clock className="h-3 w-3" />
@@ -415,10 +710,10 @@ export function VideoHubClient() {
         {selectedCategory === "all" && !searchQuery && (
           <section className="mb-16">
             <h2 className="text-2xl font-bold text-white mb-6">
-              {t("videos.curated")}
+              {text.sections.curated}
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
-              {playlists.map((playlist) => (
+              {allPlaylists.map((playlist) => (
                 <Link
                   key={playlist.id}
                   href={`/videos/playlists/${playlist.id}`}
@@ -434,9 +729,8 @@ export function VideoHubClient() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                       <div className="absolute bottom-3 left-3 right-3">
                         <Badge className="bg-purple-600 text-white border-0 mb-2">
-                          {playlist.videoCount} videos
-                          ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢{" "}
-                          {playlist.duration}
+                          {playlist.videoCount} {isGerman ? "Videos" : "videos"}{" "}
+                          · {playlist.duration}
                         </Badge>
                       </div>
                     </div>
@@ -459,8 +753,9 @@ export function VideoHubClient() {
         <section>
           <h2 className="text-2xl font-bold text-white mb-6">
             {selectedCategory === "all"
-              ? t("videos.section.all")
-              : t(`videos.categories.${selectedCategory}`)}
+              ? text.sections.all
+              : allCategories.find((c) => c.id === selectedCategory)?.name ||
+                text.sections.all}
             <span className="text-gray-400 text-lg ml-2">
               ({filteredVideos.length})
             </span>
@@ -495,7 +790,7 @@ export function VideoHubClient() {
                     <div className="flex items-center gap-3 text-xs text-gray-500">
                       <div className="flex items-center gap-1">
                         <Eye className="h-3 w-3" />
-                        {(video.views / 1000).toFixed(1)}K
+                        {(video.views / 1000).toFixed(1)}K {text.sections.views}
                       </div>
                     </div>
                   </div>

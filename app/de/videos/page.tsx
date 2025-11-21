@@ -1,49 +1,20 @@
-﻿import type { Metadata } from "next";
-import { cookies, headers } from "next/headers";
-import { VideoHubClient } from "@/app/videos/video-hub-client";
+﻿import { Metadata } from "next";
+// FINAL CORRECTION: Using the confirmed component name (VideoHubClient) and correct path.
+import { VideoHubClient } from "../../videos/video-hub-client";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const langCookie = cookies().get("language")?.value;
-  const referer = headers().get("referer") || "";
-  const hrefHint = headers().get("x-pathname") || "";
-  const path = hrefHint || referer;
-  const locale =
-    langCookie === "de" || path.includes("/de/") || path.endsWith("/de")
-      ? "de"
-      : "en";
-
-  const titles = {
-    en: "Video Tutorials and Demos | Zaza Draft",
-    de: "Video-Tutorials und Demos | Zaza Draft",
-  };
-  const descriptions = {
-    en: "Watch step-by-step tutorials and product demos to master AI-powered parent communication.",
-    de: "Sehen Sie Schritt-fÃƒÂ¼r-Schritt-Tutorials und Produktdemos fÃƒÂ¼r KI-gestÃƒÂ¼tzte Elternkommunikation.",
-  };
-
-  return {
-    title: titles[locale],
-    description: descriptions[locale],
-    alternates: {
-      canonical: "https://zazadraft.com/videos",
-      languages: {
-        en: "https://zazadraft.com/videos",
-        de: "https://zazadraft.com/de/videos",
-      },
+export const metadata: Metadata = {
+  title: "KI-Videos für Lehrer - Zaza Draft",
+  description:
+    "Sehen Sie sich kurze, lehrreiche Videos über den Einsatz von KI in Ihrem Klassenzimmer an, von der Zeugniserstellung bis zur Elternkommunikation.",
+  alternates: {
+    canonical: "https://zazadraft.com/de/videos",
+    languages: {
+      en: "/videos",
+      de: "/de/videos",
     },
-    openGraph: {
-      title: titles[locale],
-      description: descriptions[locale],
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: titles[locale],
-      description: descriptions[locale],
-    },
-  };
-}
+  },
+};
 
-export default function VideoHubPage() {
+export default function DeVideosPage() {
   return <VideoHubClient />;
 }
