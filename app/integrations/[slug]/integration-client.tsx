@@ -19,6 +19,9 @@ import {
   ExternalLink,
   Download,
   Play,
+  Calendar,
+  MessageSquare,
+  Layout,
 } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 
@@ -148,6 +151,7 @@ const uiContent = {
 // --- Integration Data (EN & DE) ---
 const integrationsData: Record<string, Record<string, IntegrationData>> = {
   en: {
+    // Existing
     "google-classroom": {
       name: "Google Classroom",
       category: "Learning Management",
@@ -157,87 +161,65 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       users: "45,000+",
       setupTime: "5 minutes",
       benefits: [
-        "Auto-sync assignments to Google Classroom",
-        "One-click sharing of AI-generated materials",
-        "Student roster synchronization",
-        "Grade passback integration",
-        "Bulk assignment creation",
-        "Class-specific content organization",
+        "Auto-sync assignments",
+        "One-click sharing",
+        "Student roster sync",
+        "Grade passback",
+        "Bulk creation",
+        "Content organization",
       ],
       setupSteps: [
         {
           step: 1,
-          title: "Connect Your Google Account",
+          title: "Connect Account",
           description:
-            'Click "Connect Google Classroom" and authorize Zaza Draft to access your Google Classroom data. We only request the minimum permissions needed.',
+            "Authorize Zaza Draft to access your Google Classroom data.",
         },
         {
           step: 2,
-          title: "Select Your Classes",
-          description:
-            "Choose which Google Classroom classes you want to sync with Zaza Draft. You can sync all classes or select specific ones.",
+          title: "Select Classes",
+          description: "Choose which classes to sync with Zaza Draft.",
         },
         {
           step: 3,
-          title: "Configure Sync Settings",
-          description:
-            "Set your preferences for automatic assignment posting, student roster updates, and grade synchronization.",
+          title: "Configure Sync",
+          description: "Set preferences for automatic posting and grade sync.",
         },
         {
           step: 4,
-          title: "Start Creating & Sharing",
-          description:
-            "Generate content in Zaza Draft and share directly to your Google Classroom with one click. Assignments, materials, and announcements sync automatically.",
+          title: "Start Sharing",
+          description: "Generate content and share directly to Classroom.",
         },
       ],
       useCases: [
         {
           title: "Assignment Distribution",
-          description:
-            "Create differentiated assignments in Zaza Draft and automatically post them to specific Google Classroom classes or student groups.",
+          description: "Create and post differentiated assignments instantly.",
           icon: BookOpen,
         },
         {
           title: "Material Sharing",
-          description:
-            "Generate lesson materials, worksheets, or study guides and share them instantly to your class stream or materials folder.",
+          description: "Share generated study guides to class streams.",
           icon: Zap,
         },
         {
-          title: "Grade Synchronization",
-          description:
-            "Grades from Zaza Draft assessments automatically sync back to Google Classroom gradebook, saving hours of manual entry.",
+          title: "Grade Sync",
+          description: "Sync grades back to Classroom automatically.",
           icon: CheckCircle2,
         },
       ],
       faqs: [
         {
-          question: "What permissions does Zaza Draft need?",
-          answer:
-            "We only request permissions to view your classes, post assignments, and sync grades. We never access student emails or personal information beyond what's necessary for the integration.",
+          question: "What permissions are needed?",
+          answer: "We only need access to classes, coursework, and grades.",
         },
         {
-          question: "Can I disconnect the integration later?",
-          answer:
-            "Yes, you can disconnect Google Classroom at any time from your Zaza Draft settings. This will stop all syncing but won't delete any existing content.",
-        },
-        {
-          question: "Does this work with Google Workspace for Education?",
-          answer:
-            "Yes, the integration works seamlessly with both personal Google accounts and Google Workspace for Education accounts.",
-        },
-        {
-          question: "How often does data sync?",
-          answer:
-            "Student rosters sync every 24 hours automatically. Assignments and materials post immediately when you click share. Grades sync within 5 minutes of completion.",
+          question: "Can I disconnect later?",
+          answer: "Yes, you can revoke access at any time.",
         },
       ],
       relatedIntegrations: [
-        {
-          name: "Canvas LMS",
-          slug: "canvas-lms",
-          category: "Learning Management",
-        },
+        { name: "Canvas", slug: "canvas", category: "Learning Management" },
         {
           name: "Google Drive",
           slug: "google-drive",
@@ -246,88 +228,71 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
         { name: "Gmail", slug: "gmail", category: "Communication" },
       ],
     },
-    "canvas-lms": {
+    // Fixed Key (was canvas-lms)
+    canvas: {
       name: "Canvas LMS",
       category: "Learning Management",
       description:
-        "Integrate Zaza Draft with Canvas LMS to streamline assignment creation, content sharing, and grade synchronization across your courses.",
+        "Integrate Zaza Draft with Canvas LMS to streamline assignment creation, content sharing, and grade synchronization.",
       logo: "/canvas-lms-logo.jpg",
       users: "28,000+",
       setupTime: "7 minutes",
       benefits: [
-        "Direct assignment publishing to Canvas",
-        "Automatic grade passback",
-        "Course roster synchronization",
-        "Module and page creation",
+        "Direct publishing",
+        "Grade passback",
+        "Roster sync",
+        "Module creation",
         "Rubric integration",
-        "Announcement posting",
+        "Announcements",
       ],
       setupSteps: [
         {
           step: 1,
-          title: "Generate Canvas API Token",
-          description:
-            "Log into Canvas, go to Account > Settings > Approved Integrations, and generate a new access token for Zaza Draft.",
+          title: "Generate Token",
+          description: "Create a new API access token in your Canvas settings.",
         },
         {
           step: 2,
-          title: "Enter API Credentials",
-          description:
-            "In Zaza Draft, navigate to Integrations > Canvas and paste your API token and Canvas instance URL.",
+          title: "Enter Credentials",
+          description: "Paste your token and Canvas URL into Zaza Draft.",
         },
         {
           step: 3,
-          title: "Select Courses to Sync",
-          description:
-            "Choose which Canvas courses you want to integrate with Zaza Draft. You can add or remove courses anytime.",
+          title: "Select Courses",
+          description: "Choose which courses to integrate.",
         },
         {
           step: 4,
-          title: "Configure Publishing Options",
-          description:
-            "Set default options for assignment publishing, including due dates, point values, and submission types.",
+          title: "Configure",
+          description: "Set default publishing options.",
         },
       ],
       useCases: [
         {
           title: "Assignment Creation",
           description:
-            "Generate assignments in Zaza Draft and publish directly to Canvas with rubrics, due dates, and submission settings configured.",
+            "Publish AI-generated assignments with rubrics directly to Canvas.",
           icon: BookOpen,
         },
         {
           title: "Module Building",
-          description:
-            "Create entire course modules with AI-generated content and push them to Canvas with proper sequencing and prerequisites.",
+          description: "Build and push entire course modules.",
           icon: Zap,
         },
         {
-          title: "Grade Integration",
-          description:
-            "Automatically sync grades from Zaza Draft assessments to Canvas gradebook with detailed feedback and rubric scores.",
+          title: "Grade Sync",
+          description: "Send assessment grades to the Canvas gradebook.",
           icon: CheckCircle2,
         },
       ],
       faqs: [
         {
-          question: "Is this compatible with Canvas Free for Teachers?",
-          answer:
-            "Yes, the integration works with Canvas Free for Teachers as well as institutional Canvas accounts.",
+          question: "Does it work with Free for Teachers?",
+          answer: "Yes, it supports both free and institutional accounts.",
         },
         {
-          question: "Can I edit assignments after publishing to Canvas?",
-          answer:
-            "Yes, you can edit assignments in either Zaza Draft or Canvas. Changes made in Zaza Draft can be re-synced to Canvas with one click.",
-        },
-        {
-          question: "Does this work with Canvas Studio?",
-          answer:
-            "Currently, the integration focuses on assignments, modules, and grades. Canvas Studio integration is planned for a future update.",
-        },
-        {
-          question: "How secure is my Canvas API token?",
-          answer:
-            "Your API token is encrypted and stored securely. We use industry-standard encryption and never share your credentials with third parties.",
+          question: "Is my token secure?",
+          answer: "Yes, tokens are encrypted and stored securely.",
         },
       ],
       relatedIntegrations: [
@@ -344,6 +309,843 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
         { name: "Turnitin", slug: "turnitin", category: "Assessment" },
       ],
     },
+    // New Batch
+    schoology: {
+      name: "Schoology",
+      category: "Learning Management",
+      description:
+        "Connect your Schoology courses to Zaza Draft for seamless content distribution and grade synchronization.",
+      logo: "/schoology-logo.png",
+      users: "15,000+",
+      setupTime: "8 minutes",
+      benefits: [
+        "Course content sync",
+        "Grade passback",
+        "Assignment creation",
+        "Resource folder organization",
+        "Update posting",
+        "Roster sync",
+      ],
+      setupSteps: [
+        {
+          step: 1,
+          title: "Get API Key",
+          description:
+            "Obtain your consumer key and secret from Schoology settings.",
+        },
+        {
+          step: 2,
+          title: "Connect Zaza Draft",
+          description:
+            "Enter your credentials in the Zaza Draft integration panel.",
+        },
+        {
+          step: 3,
+          title: "Map Courses",
+          description: "Select the Schoology courses you wish to manage.",
+        },
+        {
+          step: 4,
+          title: "Start Syncing",
+          description: "Begin pushing assignments and materials to Schoology.",
+        },
+      ],
+      useCases: [
+        {
+          title: "Daily Updates",
+          description: "Post daily summaries and updates to course feeds.",
+          icon: MessageSquare,
+        },
+        {
+          title: "Material Distribution",
+          description:
+            "Organize AI-generated resources into Schoology folders.",
+          icon: Layout,
+        },
+        {
+          title: "Grading",
+          description:
+            "Sync assessment scores back to the Schoology gradebook.",
+          icon: CheckCircle2,
+        },
+      ],
+      faqs: [
+        {
+          question: "Do I need admin access?",
+          answer: "Instructor access is sufficient for most features.",
+        },
+        {
+          question: "Does it sync attendance?",
+          answer: "Currently, we sync assignments and grades, not attendance.",
+        },
+      ],
+      relatedIntegrations: [
+        { name: "Canvas", slug: "canvas", category: "Learning Management" },
+        {
+          name: "PowerSchool",
+          slug: "powerschool",
+          category: "Student Information",
+        },
+        {
+          name: "Google Drive",
+          slug: "google-drive",
+          category: "Cloud Storage",
+        },
+      ],
+    },
+    "microsoft-teams": {
+      name: "Microsoft Teams",
+      category: "Communication",
+      description:
+        "Share assignments, announcements, and files directly to your Microsoft Teams for Education class channels.",
+      logo: "/teams-logo.png",
+      users: "32,000+",
+      setupTime: "4 minutes",
+      benefits: [
+        "Post to channels",
+        "Share files",
+        "Assignment notifications",
+        "Direct messaging",
+        "Meeting notes",
+        "Calendar sync",
+      ],
+      setupSteps: [
+        {
+          step: 1,
+          title: "Sign in with Microsoft",
+          description: "Use your Office 365 Education account to sign in.",
+        },
+        {
+          step: 2,
+          title: "Grant Permissions",
+          description: "Allow Zaza Draft to post messages and files to Teams.",
+        },
+        {
+          step: 3,
+          title: "Select Teams",
+          description: "Choose the Class Teams you want to connect.",
+        },
+        {
+          step: 4,
+          title: "Post Content",
+          description: "Send updates directly from the Zaza Draft editor.",
+        },
+      ],
+      useCases: [
+        {
+          title: "Class Announcements",
+          description: "Broadcast important updates to the General channel.",
+          icon: MessageSquare,
+        },
+        {
+          title: "Resource Sharing",
+          description: "Upload generated PDFs directly to the Files tab.",
+          icon: Download,
+        },
+        {
+          title: "Assignment Alerts",
+          description: "Notify students of new assignments via Teams.",
+          icon: Zap,
+        },
+      ],
+      faqs: [
+        {
+          question: "Does it work with personal Teams?",
+          answer: "It is optimized for Teams for Education accounts.",
+        },
+        {
+          question: "Can students reply?",
+          answer: "Yes, posts appear as standard Teams messages.",
+        },
+      ],
+      relatedIntegrations: [
+        { name: "Outlook", slug: "outlook", category: "Communication" },
+        { name: "OneNote", slug: "onenote", category: "Productivity" },
+        { name: "Canvas", slug: "canvas", category: "Learning Management" },
+      ],
+    },
+    "infinite-campus": {
+      name: "Infinite Campus",
+      category: "Student Information",
+      description:
+        "Sync student rosters and grades between Infinite Campus and Zaza Draft.",
+      logo: "/infinite-campus-logo.png",
+      users: "12,000+",
+      setupTime: "12 minutes",
+      benefits: [
+        "Roster sync",
+        "Grade passback",
+        "Attendance data",
+        "Demographics import",
+        "Parent contact sync",
+        "Secure data transfer",
+      ],
+      setupSteps: [
+        {
+          step: 1,
+          title: "Request API Access",
+          description:
+            "Contact your district IT for OneRoster API credentials.",
+        },
+        {
+          step: 2,
+          title: "Configure Connection",
+          description: "Input your district's API URL and keys.",
+        },
+        {
+          step: 3,
+          title: "Map Fields",
+          description:
+            "Match Zaza Draft fields to Infinite Campus data fields.",
+        },
+        {
+          step: 4,
+          title: "Run Initial Sync",
+          description: "Import your student rosters and data.",
+        },
+      ],
+      useCases: [
+        {
+          title: "Roster Updates",
+          description:
+            "Keep class lists automatically updated as students move.",
+          icon: Users,
+        },
+        {
+          title: "Report Cards",
+          description: "Pull student data to generate personalized comments.",
+          icon: FileText,
+        },
+        {
+          title: "Grading",
+          description: "Push assignment grades directly to the gradebook.",
+          icon: CheckCircle2,
+        },
+      ],
+      faqs: [
+        {
+          question: "Is it FERPA compliant?",
+          answer: "Yes, all data transfer is encrypted and compliant.",
+        },
+        {
+          question: "How often does it sync?",
+          answer: "Syncs typically occur nightly or on demand.",
+        },
+      ],
+      relatedIntegrations: [
+        {
+          name: "PowerSchool",
+          slug: "powerschool",
+          category: "Student Information",
+        },
+        { name: "Skyward", slug: "skyward", category: "Student Information" },
+        {
+          name: "Google Classroom",
+          slug: "google-classroom",
+          category: "Learning Management",
+        },
+      ],
+    },
+    skyward: {
+      name: "Skyward",
+      category: "Student Information",
+      description:
+        "Connect Skyward Qmlativ or SMS 2.0 to streamline student data and grade management.",
+      logo: "/skyward-logo.png",
+      users: "10,000+",
+      setupTime: "10 minutes",
+      benefits: [
+        "Student data sync",
+        "Gradebook integration",
+        "Attendance access",
+        "Family access sync",
+        "Discipline records",
+        "Schedule sync",
+      ],
+      setupSteps: [
+        {
+          step: 1,
+          title: "IT Authorization",
+          description: "Obtain authorization keys from your Skyward admin.",
+        },
+        {
+          step: 2,
+          title: "Connect API",
+          description: "Enter your Skyward API credentials in Zaza Draft.",
+        },
+        {
+          step: 3,
+          title: "Select Terms",
+          description: "Choose the current grading period/term.",
+        },
+        {
+          step: 4,
+          title: "Sync",
+          description: "Synchronize rosters and gradebooks.",
+        },
+      ],
+      useCases: [
+        {
+          title: "Data Import",
+          description: "Quickly import student emails for communication.",
+          icon: Download,
+        },
+        {
+          title: "Grade Entry",
+          description: "Eliminate double-entry of grades.",
+          icon: CheckCircle2,
+        },
+        {
+          title: "Progress Reports",
+          description: "Generate reports using real-time Skyward data.",
+          icon: FileText,
+        },
+      ],
+      faqs: [
+        {
+          question: "Which version is supported?",
+          answer: "We support both SMS 2.0 and Qmlativ.",
+        },
+        {
+          question: "Can I sync attendance?",
+          answer: "Read access for attendance is available.",
+        },
+      ],
+      relatedIntegrations: [
+        {
+          name: "Infinite Campus",
+          slug: "infinite-campus",
+          category: "Student Information",
+        },
+        {
+          name: "PowerSchool",
+          slug: "powerschool",
+          category: "Student Information",
+        },
+        { name: "Canvas", slug: "canvas", category: "Learning Management" },
+      ],
+    },
+    remind: {
+      name: "Remind",
+      category: "Communication",
+      description:
+        "Send AI-drafted announcements and messages to students and parents via Remind.",
+      logo: "/remind-logo.png",
+      users: "40,000+",
+      setupTime: "3 minutes",
+      benefits: [
+        "Draft in Zaza",
+        "Send via Remind",
+        "Class announcements",
+        "Direct messages",
+        "Schedule sends",
+        "Translation support",
+      ],
+      setupSteps: [
+        {
+          step: 1,
+          title: "Link Account",
+          description: "Log in to Remind through the Zaza Draft portal.",
+        },
+        {
+          step: 2,
+          title: "Authorize",
+          description: "Grant permission to send messages.",
+        },
+        {
+          step: 3,
+          title: "Select Classes",
+          description: "Choose which Remind classes to access.",
+        },
+        {
+          step: 4,
+          title: "Send",
+          description: "Draft messages and push them to Remind.",
+        },
+      ],
+      useCases: [
+        {
+          title: "Quick Updates",
+          description: "Send short, AI-refined reminders about homework.",
+          icon: MessageSquare,
+        },
+        {
+          title: "Parent Outreach",
+          description: "Draft empathetic messages for parents.",
+          icon: Users,
+        },
+        {
+          title: "Event Reminders",
+          description: "Schedule reminders for upcoming tests.",
+          icon: Calendar,
+        },
+      ],
+      faqs: [
+        {
+          question: "Is there a character limit?",
+          answer: "Remind limits apply (usually 140 chars for SMS).",
+        },
+        {
+          question: "Can I attach files?",
+          answer: "Yes, via links or direct attachments.",
+        },
+      ],
+      relatedIntegrations: [
+        { name: "ClassDojo", slug: "classdojo", category: "Communication" },
+        { name: "Gmail", slug: "gmail", category: "Communication" },
+        {
+          name: "Google Classroom",
+          slug: "google-classroom",
+          category: "Learning Management",
+        },
+      ],
+    },
+    classdojo: {
+      name: "ClassDojo",
+      category: "Communication",
+      description:
+        "Share positive moments and updates with families by posting to ClassDojo stories directly.",
+      logo: "/classdojo-logo.png",
+      users: "35,000+",
+      setupTime: "3 minutes",
+      benefits: [
+        "Story posting",
+        "Message parents",
+        "Behavior notes",
+        "Photo sharing",
+        "Event updates",
+        "Class broadcasts",
+      ],
+      setupSteps: [
+        {
+          step: 1,
+          title: "Login",
+          description: "Authenticate with your ClassDojo credentials.",
+        },
+        {
+          step: 2,
+          title: "Connect Class",
+          description: "Select the active class for integration.",
+        },
+        {
+          step: 3,
+          title: "Configure",
+          description: "Set preferences for sharing stories.",
+        },
+        {
+          step: 4,
+          title: "Post",
+          description: "Share updates directly from Zaza Draft.",
+        },
+      ],
+      useCases: [
+        {
+          title: "Class Story",
+          description: "Post weekly newsletters generated by AI.",
+          icon: BookOpen,
+        },
+        {
+          title: "Behavior Updates",
+          description: "Draft constructive feedback messages.",
+          icon: MessageSquare,
+        },
+        {
+          title: "Announcements",
+          description: "Share upcoming events with all parents.",
+          icon: Zap,
+        },
+      ],
+      faqs: [
+        {
+          question: "Can I give points?",
+          answer: "Currently, we support messaging and stories.",
+        },
+        {
+          question: "Is it private?",
+          answer: "Yes, messages are secure and private.",
+        },
+      ],
+      relatedIntegrations: [
+        { name: "Remind", slug: "remind", category: "Communication" },
+        { name: "Seesaw", slug: "seesaw", category: "Communication" },
+        {
+          name: "Google Classroom",
+          slug: "google-classroom",
+          category: "Learning Management",
+        },
+      ],
+    },
+    seesaw: {
+      name: "Seesaw",
+      category: "Communication",
+      description:
+        "Post activities, announcements, and student feedback to Seesaw journals.",
+      logo: "/seesaw-logo.png",
+      users: "25,000+",
+      setupTime: "5 minutes",
+      benefits: [
+        "Activity creation",
+        "Journal comments",
+        "Family announcements",
+        "Portfolio feedback",
+        "Drafting tools",
+        "Media uploads",
+      ],
+      setupSteps: [
+        {
+          step: 1,
+          title: "Connect Account",
+          description: "Sign in to Seesaw via Zaza Draft.",
+        },
+        {
+          step: 2,
+          title: "Select Classes",
+          description: "Choose classes to manage.",
+        },
+        {
+          step: 3,
+          title: "Draft Content",
+          description: "Create activities or comments.",
+        },
+        {
+          step: 4,
+          title: "Publish",
+          description: "Push content to student journals.",
+        },
+      ],
+      useCases: [
+        {
+          title: "Activity Library",
+          description: "Generate lesson activities and save to library.",
+          icon: BookOpen,
+        },
+        {
+          title: "Feedback",
+          description: "Write personalized comments on student work.",
+          icon: MessageSquare,
+        },
+        {
+          title: "Newsletters",
+          description: "Send class updates to families.",
+          icon: Users,
+        },
+      ],
+      faqs: [
+        {
+          question: "Does it work with Seesaw for Schools?",
+          answer: "Yes, both free and paid plans work.",
+        },
+        {
+          question: "Can I upload images?",
+          answer: "Yes, image and document uploads are supported.",
+        },
+      ],
+      relatedIntegrations: [
+        { name: "ClassDojo", slug: "classdojo", category: "Communication" },
+        {
+          name: "Google Classroom",
+          slug: "google-classroom",
+          category: "Learning Management",
+        },
+        { name: "Canvas", slug: "canvas", category: "Learning Management" },
+      ],
+    },
+    outlook: {
+      name: "Outlook",
+      category: "Communication",
+      description:
+        "Integrate your Microsoft Outlook email to draft, schedule, and send professional communications.",
+      logo: "/outlook-logo.png",
+      users: "42,000+",
+      setupTime: "3 minutes",
+      benefits: [
+        "Send emails",
+        "Calendar sync",
+        "Contact import",
+        "Template management",
+        "Schedule send",
+        "Signature sync",
+      ],
+      setupSteps: [
+        {
+          step: 1,
+          title: "Sign in with Microsoft",
+          description: "Authenticate your Outlook account.",
+        },
+        {
+          step: 2,
+          title: "Permissions",
+          description: "Grant sending permissions.",
+        },
+        {
+          step: 3,
+          title: "Preferences",
+          description: "Set signature and default folders.",
+        },
+        {
+          step: 4,
+          title: "Send",
+          description: "Draft and send emails directly.",
+        },
+      ],
+      useCases: [
+        {
+          title: "Parent Emails",
+          description: "Send formal updates to guardians.",
+          icon: Users,
+        },
+        {
+          title: "Admin Communication",
+          description: "Draft professional proposals.",
+          icon: FileText,
+        },
+        {
+          title: "Meeting Requests",
+          description: "Send calendar invites easily.",
+          icon: Calendar,
+        },
+      ],
+      faqs: [
+        {
+          question: "Does it work with Office 365?",
+          answer: "Yes, fully compatible with O365.",
+        },
+        {
+          question: "Are emails saved?",
+          answer: "Yes, in your Sent Items folder.",
+        },
+      ],
+      relatedIntegrations: [
+        { name: "Gmail", slug: "gmail", category: "Communication" },
+        {
+          name: "Microsoft Teams",
+          slug: "microsoft-teams",
+          category: "Communication",
+        },
+        { name: "OneNote", slug: "onenote", category: "Productivity" },
+      ],
+    },
+    "google-calendar": {
+      name: "Google Calendar",
+      category: "Productivity",
+      description:
+        "Schedule parent-teacher conferences, lesson deadlines, and reminders automatically.",
+      logo: "/google-calendar-logo.png",
+      users: "38,000+",
+      setupTime: "2 minutes",
+      benefits: [
+        "Event creation",
+        "Meeting scheduling",
+        "Reminder setup",
+        "Class schedule sync",
+        "Availability sharing",
+        "Video links",
+      ],
+      setupSteps: [
+        {
+          step: 1,
+          title: "Connect Google",
+          description: "Authorize Calendar access.",
+        },
+        {
+          step: 2,
+          title: "Select Calendars",
+          description: "Choose which calendars to manage.",
+        },
+        {
+          step: 3,
+          title: "Configure Defaults",
+          description: "Set default meeting durations.",
+        },
+        {
+          step: 4,
+          title: "Schedule",
+          description: "Create events from Zaza Draft.",
+        },
+      ],
+      useCases: [
+        {
+          title: "Conference Scheduling",
+          description: "Organize parent slots easily.",
+          icon: Users,
+        },
+        {
+          title: "Lesson Planning",
+          description: "Block out time for specific units.",
+          icon: Calendar,
+        },
+        {
+          title: "Reminders",
+          description: "Set alerts for grading deadlines.",
+          icon: Clock,
+        },
+      ],
+      faqs: [
+        {
+          question: "Does it add Meet links?",
+          answer: "Yes, optionally adds Google Meet.",
+        },
+        {
+          question: "Is it private?",
+          answer: "We only access calendars you select.",
+        },
+      ],
+      relatedIntegrations: [
+        { name: "Outlook", slug: "outlook", category: "Communication" },
+        {
+          name: "Google Classroom",
+          slug: "google-classroom",
+          category: "Learning Management",
+        },
+        { name: "Gmail", slug: "gmail", category: "Communication" },
+      ],
+    },
+    notion: {
+      name: "Notion",
+      category: "Productivity",
+      description:
+        "Export lesson plans, resource lists, and student notes directly to your Notion workspace.",
+      logo: "/notion-logo.png",
+      users: "18,000+",
+      setupTime: "4 minutes",
+      benefits: [
+        "Page creation",
+        "Database items",
+        "Template sync",
+        "Resource organizing",
+        "Lesson planning",
+        "Collaboration",
+      ],
+      setupSteps: [
+        {
+          step: 1,
+          title: "Authorize Notion",
+          description: "Connect your workspace.",
+        },
+        {
+          step: 2,
+          title: "Select Pages",
+          description: "Grant access to specific parent pages.",
+        },
+        {
+          step: 3,
+          title: "Map Databases",
+          description: "Choose databases for lesson plans.",
+        },
+        { step: 4, title: "Export", description: "Send content to Notion." },
+      ],
+      useCases: [
+        {
+          title: "Curriculum Mapping",
+          description: "Build visual curriculum maps.",
+          icon: Layout,
+        },
+        {
+          title: "Resource Wiki",
+          description: "Organize teaching resources.",
+          icon: BookOpen,
+        },
+        {
+          title: "Student Notes",
+          description: "Track anecdotal observations.",
+          icon: FileText,
+        },
+      ],
+      faqs: [
+        {
+          question: "Does it support databases?",
+          answer: "Yes, we can add items to databases.",
+        },
+        {
+          question: "Is formatting preserved?",
+          answer: "Yes, Markdown formatting is kept.",
+        },
+      ],
+      relatedIntegrations: [
+        { name: "Trello", slug: "trello", category: "Productivity" },
+        {
+          name: "Google Drive",
+          slug: "google-drive",
+          category: "Cloud Storage",
+        },
+        { name: "Evernote", slug: "evernote", category: "Productivity" },
+      ],
+    },
+    trello: {
+      name: "Trello",
+      category: "Productivity",
+      description:
+        "Turn lesson ideas and to-do lists into Trello cards to manage your teaching tasks.",
+      logo: "/trello-logo.png",
+      users: "14,000+",
+      setupTime: "3 minutes",
+      benefits: [
+        "Card creation",
+        "List management",
+        "Checklist sync",
+        "Due dates",
+        "Attachments",
+        "Labeling",
+      ],
+      setupSteps: [
+        {
+          step: 1,
+          title: "Connect Trello",
+          description: "Log in and authorize.",
+        },
+        {
+          step: 2,
+          title: "Select Board",
+          description: "Choose your class board.",
+        },
+        {
+          step: 3,
+          title: "Choose List",
+          description: "Set default list for new items.",
+        },
+        { step: 4, title: "Create", description: "Push tasks to Trello." },
+      ],
+      useCases: [
+        {
+          title: "Task Management",
+          description: "Track grading and planning to-dos.",
+          icon: CheckCircle2,
+        },
+        {
+          title: "Kanban Planning",
+          description: "Move lessons from Idea to Done.",
+          icon: Layout,
+        },
+        {
+          title: "Project Tracking",
+          description: "Manage long-term class projects.",
+          icon: Clock,
+        },
+      ],
+      faqs: [
+        {
+          question: "Can I assign members?",
+          answer: "Yes, if they are on the board.",
+        },
+        {
+          question: "Does it support checklists?",
+          answer: "Yes, convert lists to checklists.",
+        },
+      ],
+      relatedIntegrations: [
+        { name: "Notion", slug: "notion", category: "Productivity" },
+        {
+          name: "Google Calendar",
+          slug: "google-calendar",
+          category: "Productivity",
+        },
+        {
+          name: "Microsoft Teams",
+          slug: "microsoft-teams",
+          category: "Communication",
+        },
+      ],
+    },
     gmail: {
       name: "Gmail",
       category: "Communication",
@@ -353,87 +1155,57 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       users: "52,000+",
       setupTime: "3 minutes",
       benefits: [
-        "Send emails directly from Zaza Draft",
-        "Email template library integration",
-        "Bulk email sending with personalization",
-        "Email tracking and analytics",
-        "Scheduled email sending",
-        "Attachment support",
+        "Send emails directly",
+        "Template library",
+        "Bulk sending",
+        "Tracking",
+        "Scheduled send",
+        "Attachments",
       ],
       setupSteps: [
         {
           step: 1,
-          title: "Connect Gmail Account",
-          description:
-            'Click "Connect Gmail" and authorize Zaza Draft to send emails on your behalf using OAuth 2.0 secure authentication.',
+          title: "Connect Gmail",
+          description: "Authorize via OAuth 2.0.",
         },
         {
           step: 2,
-          title: "Set Email Preferences",
-          description:
-            "Configure your default email signature, reply-to address, and sending preferences.",
+          title: "Preferences",
+          description: "Set signature and defaults.",
         },
         {
           step: 3,
-          title: "Import Contacts (Optional)",
-          description:
-            "Import parent and student contacts from your SIS or upload a CSV file for easy email addressing.",
+          title: "Import Contacts",
+          description: "Upload CSV or sync from SIS.",
         },
-        {
-          step: 4,
-          title: "Start Sending",
-          description:
-            "Generate emails with AI in Zaza Draft and send them directly through your Gmail account with full tracking.",
-        },
+        { step: 4, title: "Send", description: "Generate and send." },
       ],
       useCases: [
         {
-          title: "Parent Communication",
-          description:
-            "Generate personalized parent emails about student progress, behavior, or upcoming events and send them in bulk with individual customization.",
+          title: "Parent Emails",
+          description: "Send personalized updates.",
           icon: Users,
         },
         {
-          title: "Professional Correspondence",
-          description:
-            "Draft professional emails to colleagues, administrators, or external partners with AI assistance and send directly from your Gmail.",
+          title: "Professional",
+          description: "Draft emails to colleagues.",
           icon: Zap,
         },
         {
-          title: "Student Feedback",
-          description:
-            "Send individualized feedback emails to students with assignment comments, encouragement, and next steps.",
+          title: "Feedback",
+          description: "Send student feedback.",
           icon: CheckCircle2,
         },
       ],
       faqs: [
         {
-          question: "Will emails show as sent from my Gmail address?",
-          answer:
-            "Yes, all emails are sent from your Gmail address and appear in your Gmail Sent folder. Recipients see your email address, not Zaza Draft.",
+          question: "Does it show my address?",
+          answer: "Yes, sent from your Gmail.",
         },
-        {
-          question: "Are there sending limits?",
-          answer:
-            "Gmail has daily sending limits (500 emails/day for personal accounts, 2000/day for Workspace). Zaza Draft respects these limits and will queue emails if needed.",
-        },
-        {
-          question: "Can I schedule emails for later?",
-          answer:
-            "Yes, you can schedule emails to send at a specific date and time. This is perfect for sending parent updates during business hours.",
-        },
-        {
-          question: "Is my Gmail password stored?",
-          answer:
-            "No, we use OAuth 2.0 authentication, which means we never see or store your Gmail password. You can revoke access anytime from your Google account settings.",
-        },
+        { question: "Is it secure?", answer: "Yes, OAuth 2.0 is used." },
       ],
       relatedIntegrations: [
-        {
-          name: "Microsoft Outlook",
-          slug: "microsoft-outlook",
-          category: "Communication",
-        },
+        { name: "Outlook", slug: "outlook", category: "Communication" },
         {
           name: "Google Classroom",
           slug: "google-classroom",
@@ -450,85 +1222,59 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       name: "PowerSchool",
       category: "Student Information",
       description:
-        "Sync student rosters, grades, and attendance data between PowerSchool and Zaza Draft for seamless data management.",
+        "Sync student rosters, grades, and attendance data between PowerSchool and Zaza Draft.",
       logo: "/powerschool-logo.jpg",
       users: "18,000+",
       setupTime: "10 minutes",
       benefits: [
-        "Automatic student roster synchronization",
-        "Grade passback to PowerSchool gradebook",
-        "Attendance data integration",
-        "Parent contact information sync",
-        "IEP and 504 plan visibility",
-        "Real-time data updates",
+        "Roster sync",
+        "Grade passback",
+        "Attendance sync",
+        "Parent contact sync",
+        "IEP visibility",
+        "Real-time updates",
       ],
       setupSteps: [
         {
           step: 1,
-          title: "Contact Your IT Administrator",
-          description:
-            "PowerSchool integration requires district-level API access. Contact your IT administrator to request API credentials for Zaza Draft.",
+          title: "Admin Contact",
+          description: "Request API credentials from IT.",
         },
         {
           step: 2,
-          title: "Enter API Credentials",
-          description:
-            "Once you receive your PowerSchool API credentials, enter them in Zaza Draft under Integrations > PowerSchool.",
+          title: "Enter Credentials",
+          description: "Input API keys in Zaza Draft.",
         },
         {
           step: 3,
-          title: "Configure Data Sync",
-          description:
-            "Select which data points to sync (rosters, grades, attendance) and set your sync frequency (hourly, daily, or real-time).",
+          title: "Configure Sync",
+          description: "Select data points and frequency.",
         },
-        {
-          step: 4,
-          title: "Map Grade Categories",
-          description:
-            "Map Zaza Draft assignment categories to PowerSchool grade categories to ensure grades sync to the correct columns.",
-        },
+        { step: 4, title: "Map Grades", description: "Map grade categories." },
       ],
       useCases: [
         {
-          title: "Roster Management",
-          description:
-            "Automatically sync student rosters from PowerSchool to Zaza Draft, including class assignments, schedule changes, and student demographics.",
+          title: "Roster Mgmt",
+          description: "Auto-update class lists.",
           icon: Users,
         },
         {
-          title: "Grade Synchronization",
-          description:
-            "Push grades from Zaza Draft assessments directly to PowerSchool gradebook, eliminating double entry and reducing errors.",
+          title: "Grade Sync",
+          description: "Push grades to gradebook.",
           icon: CheckCircle2,
         },
         {
-          title: "Parent Communication",
-          description:
-            "Access up-to-date parent contact information from PowerSchool to send personalized communications through Zaza Draft.",
+          title: "Communication",
+          description: "Access parent emails.",
           icon: Zap,
         },
       ],
       faqs: [
         {
-          question: "Do I need district approval for this integration?",
-          answer:
-            "Yes, PowerSchool integration requires district-level API access. Your IT administrator will need to approve and provide credentials.",
+          question: "Need approval?",
+          answer: "Yes, district API access is required.",
         },
-        {
-          question: "How often does data sync?",
-          answer:
-            "You can configure sync frequency from hourly to real-time. Most districts choose daily syncs overnight to minimize system load.",
-        },
-        {
-          question: "Can I sync historical grade data?",
-          answer:
-            "Yes, you can perform a one-time historical sync when setting up the integration to import past grades and student data.",
-        },
-        {
-          question: "Is student data secure?",
-          answer:
-            "Yes, all data is encrypted in transit and at rest. We are FERPA compliant and follow strict data security protocols required by educational institutions.",
-        },
+        { question: "How often?", answer: "Configurable, usually daily." },
       ],
       relatedIntegrations: [
         {
@@ -541,100 +1287,59 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
           slug: "google-classroom",
           category: "Learning Management",
         },
-        {
-          name: "Canvas LMS",
-          slug: "canvas-lms",
-          category: "Learning Management",
-        },
+        { name: "Canvas", slug: "canvas", category: "Learning Management" },
       ],
     },
     "google-drive": {
       name: "Google Drive",
       category: "Cloud Storage",
       description:
-        "Save and organize all your Zaza Draft content directly to Google Drive with automatic folder organization and version control.",
+        "Save and organize all your Zaza Draft content directly to Google Drive.",
       logo: "/google-drive-logo.png",
       users: "48,000+",
       setupTime: "2 minutes",
       benefits: [
-        "Auto-save content to Google Drive",
-        "Organized folder structure",
-        "Version history and recovery",
-        "Easy sharing with colleagues",
-        "Offline access to materials",
-        "Unlimited storage (with Workspace)",
+        "Auto-save",
+        "Folder organization",
+        "Version history",
+        "Sharing",
+        "Offline access",
+        "Unlimited storage",
       ],
       setupSteps: [
         {
           step: 1,
-          title: "Connect Google Drive",
-          description:
-            'Click "Connect Google Drive" and authorize Zaza Draft to create and manage files in your Drive.',
+          title: "Connect Drive",
+          description: "Authorize file creation.",
         },
-        {
-          step: 2,
-          title: "Choose Save Location",
-          description:
-            'Select where you want Zaza Draft to save files - either in a dedicated "Zaza Draft" folder or your existing folder structure.',
-        },
-        {
-          step: 3,
-          title: "Configure Auto-Save",
-          description:
-            "Enable auto-save to automatically backup all your Zaza Draft content to Google Drive as you work.",
-        },
-        {
-          step: 4,
-          title: "Start Creating",
-          description:
-            "All your Zaza Draft content now automatically saves to Google Drive with organized folders by content type and date.",
-        },
+        { step: 2, title: "Location", description: "Choose save folder." },
+        { step: 3, title: "Auto-Save", description: "Enable backup." },
+        { step: 4, title: "Create", description: "Start working." },
       ],
       useCases: [
         {
-          title: "Automatic Backup",
-          description:
-            "Every document, lesson plan, and assignment you create in Zaza Draft automatically saves to Google Drive for safekeeping.",
+          title: "Backup",
+          description: "Securely save all work.",
           icon: Shield,
         },
         {
-          title: "Colleague Collaboration",
-          description:
-            "Share Zaza Draft materials with colleagues by giving them access to your Google Drive folders - no need to export and email.",
+          title: "Collaboration",
+          description: "Share folders with team.",
           icon: Users,
         },
         {
-          title: "Offline Access",
-          description:
-            "Access your Zaza Draft materials offline through Google Drive when you don't have internet connectivity.",
+          title: "Offline",
+          description: "Access files anywhere.",
           icon: Download,
         },
       ],
       faqs: [
-        {
-          question: "Does this use my Google Drive storage quota?",
-          answer:
-            "Yes, files saved to Google Drive count toward your storage quota. Google Workspace for Education accounts typically have unlimited storage.",
-        },
-        {
-          question: "Can I organize files into custom folders?",
-          answer:
-            "Yes, you can customize the folder structure and organization. Zaza Draft will respect your preferences and save files accordingly.",
-        },
-        {
-          question: "What file formats are saved?",
-          answer:
-            "Content is saved in Google Docs format for text, Google Sheets for data, and PDF for finalized materials. You can configure your preferred formats.",
-        },
-        {
-          question: "Can I disconnect without losing files?",
-          answer:
-            "Yes, disconnecting the integration won't delete any files from your Google Drive. They'll remain accessible even after disconnecting.",
-        },
+        { question: "Use quota?", answer: "Yes, counts against storage." },
+        { question: "Formats?", answer: "Docs, Sheets, and PDF." },
       ],
       relatedIntegrations: [
         {
-          name: "Microsoft OneDrive",
+          name: "OneDrive",
           slug: "microsoft-onedrive",
           category: "Cloud Storage",
         },
@@ -652,88 +1357,62 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       name: "Google Classroom",
       category: "Lernmanagement",
       description:
-        "Synchronisieren Sie Ihre Zaza Draft-Inhalte nahtlos mit Google Classroom. Veröffentlichen Sie automatisch Aufgaben, teilen Sie KI-generierte Materialien und optimieren Sie Ihren Arbeitsablauf.",
+        "Synchronisieren Sie Inhalte nahtlos mit Google Classroom. Aufgaben posten, Materialien teilen und Workflow optimieren.",
       logo: "/google-classroom-logo.jpg",
       users: "45.000+",
       setupTime: "5 Minuten",
       benefits: [
-        "Aufgaben automatisch mit Google Classroom synchronisieren",
-        "KI-generierte Materialien mit einem Klick teilen",
-        "Synchronisation der Klassenliste",
-        "Notenrückgabe-Integration",
-        "Erstellung von Aufgaben in großen Mengen",
-        "Klassenspezifische Inhaltsorganisation",
+        "Auto-Sync von Aufgaben",
+        "One-Click Teilen",
+        "Listen-Sync",
+        "Notenrückgabe",
+        "Massen-Erstellung",
+        "Organisation",
       ],
       setupSteps: [
         {
           step: 1,
-          title: "Verbinden Sie Ihr Google-Konto",
-          description:
-            'Klicken Sie auf "Google Classroom verbinden" und autorisieren Sie Zaza Draft. Wir fordern nur die minimal erforderlichen Berechtigungen an.',
+          title: "Konto verbinden",
+          description: "Autorisieren Sie den Zugriff auf Classroom.",
         },
         {
           step: 2,
-          title: "Wählen Sie Ihre Klassen aus",
-          description:
-            "Wählen Sie aus, welche Google Classroom-Klassen Sie mit Zaza Draft synchronisieren möchten.",
+          title: "Klassen wählen",
+          description: "Wählen Sie die zu synchronisierenden Klassen.",
         },
         {
           step: 3,
-          title: "Synchronisierungseinstellungen",
-          description:
-            "Legen Sie Ihre Einstellungen für automatische Aufgabenveröffentlichung, Listenaktualisierungen und Notensynchronisierung fest.",
+          title: "Konfiguration",
+          description: "Einstellungen für Posts und Noten.",
         },
-        {
-          step: 4,
-          title: "Erstellen & Teilen",
-          description:
-            "Generieren Sie Inhalte in Zaza Draft und teilen Sie sie direkt. Aufgaben, Materialien und Ankündigungen werden automatisch synchronisiert.",
-        },
+        { step: 4, title: "Teilen", description: "Inhalte direkt teilen." },
       ],
       useCases: [
         {
-          title: "Aufgabenverteilung",
-          description:
-            "Erstellen Sie differenzierte Aufgaben in Zaza Draft und posten Sie diese automatisch in spezifischen Klassen oder Gruppen.",
+          title: "Aufgaben",
+          description: "Differenzierte Aufgaben erstellen.",
           icon: BookOpen,
         },
         {
-          title: "Materialfreigabe",
-          description:
-            "Erstellen Sie Unterrichtsmaterialien oder Arbeitsblätter und teilen Sie diese sofort in Ihrem Kurs-Stream.",
+          title: "Materialien",
+          description: "Arbeitsblätter teilen.",
           icon: Zap,
         },
         {
-          title: "Notensynchronisierung",
-          description:
-            "Noten aus Zaza Draft-Bewertungen werden automatisch in das Google Classroom-Notenbuch synchronisiert.",
+          title: "Noten",
+          description: "Noten automatisch synchronisieren.",
           icon: CheckCircle2,
         },
       ],
       faqs: [
         {
-          question: "Welche Berechtigungen benötigt Zaza Draft?",
-          answer:
-            "Wir benötigen nur Berechtigungen zum Anzeigen Ihrer Klassen, Posten von Aufgaben und Synchronisieren von Noten. Wir greifen niemals auf persönliche E-Mails zu.",
+          question: "Welche Rechte?",
+          answer: "Nur Zugriff auf Klassen und Aufgaben.",
         },
-        {
-          question: "Kann ich die Verbindung später trennen?",
-          answer:
-            "Ja, Sie können Google Classroom jederzeit in Ihren Einstellungen trennen. Bestehende Inhalte bleiben erhalten.",
-        },
-        {
-          question: "Funktioniert dies mit Google Workspace for Education?",
-          answer:
-            "Ja, die Integration funktioniert nahtlos sowohl mit persönlichen Konten als auch mit Workspace for Education.",
-        },
-        {
-          question: "Wie oft werden Daten synchronisiert?",
-          answer:
-            "Klassenlisten werden alle 24 Stunden synchronisiert. Aufgaben und Materialien sofort. Noten innerhalb von 5 Minuten.",
-        },
+        { question: "Trennen?", answer: "Ja, jederzeit widerrufbar." },
       ],
       relatedIntegrations: [
-        { name: "Canvas LMS", slug: "canvas-lms", category: "Lernmanagement" },
+        { name: "Canvas", slug: "canvas", category: "Lernmanagement" },
         {
           name: "Google Drive",
           slug: "google-drive",
@@ -742,89 +1421,52 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
         { name: "Gmail", slug: "gmail", category: "Kommunikation" },
       ],
     },
-    "canvas-lms": {
+    canvas: {
       name: "Canvas LMS",
       category: "Lernmanagement",
       description:
-        "Integrieren Sie Zaza Draft mit Canvas LMS, um die Aufgabenerstellung, das Teilen von Inhalten und die Notensynchronisierung in Ihren Kursen zu optimieren.",
+        "Integrieren Sie Zaza Draft mit Canvas für optimierte Aufgabenerstellung und Notensynchronisation.",
       logo: "/canvas-lms-logo.jpg",
       users: "28.000+",
       setupTime: "7 Minuten",
       benefits: [
-        "Direkte Aufgabenveröffentlichung in Canvas",
-        "Automatische Notenrückgabe",
-        "Kurslistensynchronisierung",
-        "Modul- und Seitenerstellung",
-        "Rubrik-Integration",
-        "Ankündigungen posten",
+        "Direkt-Publishing",
+        "Notenrückgabe",
+        "Listen-Sync",
+        "Module",
+        "Rubriken",
+        "Ankündigungen",
       ],
       setupSteps: [
         {
           step: 1,
-          title: "Canvas API-Token generieren",
-          description:
-            "Loggen Sie sich in Canvas ein, gehen Sie zu Konto > Einstellungen > Genehmigte Integrationen und generieren Sie ein neues Token.",
+          title: "Token generieren",
+          description: "Erstellen Sie ein API-Token in Canvas.",
         },
         {
           step: 2,
-          title: "API-Anmeldedaten eingeben",
-          description:
-            "Navigieren Sie in Zaza Draft zu Integrationen > Canvas und fügen Sie Ihr Token sowie die Canvas-URL ein.",
+          title: "Eingeben",
+          description: "Token in Zaza Draft einfügen.",
         },
-        {
-          step: 3,
-          title: "Kurse zur Synchronisierung wählen",
-          description:
-            "Wählen Sie aus, welche Canvas-Kurse Sie integrieren möchten. Sie können Kurse jederzeit hinzufügen oder entfernen.",
-        },
-        {
-          step: 4,
-          title: "Veröffentlichungsoptionen konfigurieren",
-          description:
-            "Legen Sie Standardoptionen fest, einschließlich Fälligkeitsdaten, Punktwerten und Einreichungstypen.",
-        },
+        { step: 3, title: "Kurse", description: "Kurse auswählen." },
+        { step: 4, title: "Konfig", description: "Optionen einstellen." },
       ],
       useCases: [
         {
-          title: "Aufgabenerstellung",
-          description:
-            "Erstellen Sie Aufgaben in Zaza Draft und veröffentlichen Sie diese direkt in Canvas mit konfigurierten Rubriken und Einstellungen.",
+          title: "Aufgaben",
+          description: "Direkt in Canvas veröffentlichen.",
           icon: BookOpen,
         },
+        { title: "Module", description: "Kursmodule erstellen.", icon: Zap },
         {
-          title: "Modulaufbau",
-          description:
-            "Erstellen Sie ganze Kursmodule mit KI-Inhalten und übertragen Sie diese mit der richtigen Reihenfolge nach Canvas.",
-          icon: Zap,
-        },
-        {
-          title: "Notenintegration",
-          description:
-            "Synchronisieren Sie Noten automatisch mit detailliertem Feedback und Rubrikbewertungen in das Canvas-Notenbuch.",
+          title: "Noten",
+          description: "Noten ins Notenbuch senden.",
           icon: CheckCircle2,
         },
       ],
       faqs: [
-        {
-          question: "Ist dies mit Canvas Free for Teachers kompatibel?",
-          answer:
-            "Ja, die Integration funktioniert sowohl mit der kostenlosen Version als auch mit institutionellen Konten.",
-        },
-        {
-          question: "Kann ich Aufgaben nach der Veröffentlichung bearbeiten?",
-          answer:
-            "Ja, Änderungen in Zaza Draft können mit einem Klick erneut mit Canvas synchronisiert werden.",
-        },
-        {
-          question: "Funktioniert dies mit Canvas Studio?",
-          answer:
-            "Derzeit konzentriert sich die Integration auf Aufgaben, Module und Noten. Canvas Studio folgt in einem Update.",
-        },
-        {
-          question: "Wie sicher ist mein API-Token?",
-          answer:
-            "Ihr Token wird verschlüsselt und sicher gespeichert. Wir geben Ihre Anmeldedaten niemals weiter.",
-        },
+        { question: "Kostenlos?", answer: "Ja, auch für Free-Accounts." },
+        { question: "Sicher?", answer: "Ja, Token sind verschlüsselt." },
       ],
       relatedIntegrations: [
         {
@@ -836,95 +1478,616 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
         { name: "Turnitin", slug: "turnitin", category: "Bewertung" },
       ],
     },
-    gmail: {
-      name: "Gmail",
-      category: "Kommunikation",
+    schoology: {
+      name: "Schoology",
+      category: "Lernmanagement",
       description:
-        "Verbinden Sie Gmail, um KI-generierte Eltern-E-Mails und Kommunikation direkt aus Zaza Draft zu senden.",
-      logo: "/gmail-logo.png",
-      users: "52.000+",
-      setupTime: "3 Minuten",
+        "Verbinden Sie Schoology-Kurse für nahtlose Inhaltsverteilung und Notensynchronisation.",
+      logo: "/schoology-logo.png",
+      users: "15.000+",
+      setupTime: "8 Minuten",
       benefits: [
-        "E-Mails direkt aus Zaza Draft senden",
-        "Vorlagenbibliothek-Integration",
-        "Massenversand mit Personalisierung",
-        "Tracking und Analysen",
-        "Geplanter Versand",
-        "Anhang-Unterstützung",
+        "Inhaltssync",
+        "Notenrückgabe",
+        "Aufgabenerstellung",
+        "Ressourcenordner",
+        "Updates",
+        "Listen-Sync",
       ],
       setupSteps: [
         {
           step: 1,
-          title: "Gmail-Konto verbinden",
-          description:
-            'Klicken Sie auf "Gmail verbinden" und autorisieren Sie Zaza Draft über OAuth 2.0.',
+          title: "API Key",
+          description: "Consumer Key und Secret besorgen.",
         },
         {
           step: 2,
-          title: "E-Mail-Einstellungen",
-          description:
-            "Konfigurieren Sie Ihre Standardsignatur, Antwortadresse und Versandeinstellungen.",
+          title: "Verbinden",
+          description: "Daten in Zaza Draft eingeben.",
         },
-        {
-          step: 3,
-          title: "Kontakte importieren (Optional)",
-          description:
-            "Importieren Sie Eltern- und Schülerkontakte für eine einfache Adressierung.",
-        },
+        { step: 3, title: "Kurse", description: "Kurse zuordnen." },
         {
           step: 4,
-          title: "Senden starten",
-          description:
-            "Generieren Sie E-Mails mit KI und senden Sie diese direkt über Ihr Gmail-Konto.",
+          title: "Starten",
+          description: "Synchronisierung beginnen.",
         },
       ],
       useCases: [
         {
-          title: "Elternkommunikation",
-          description:
-            "Erstellen Sie personalisierte E-Mails über Fortschritte oder Termine und senden Sie diese massenhaft.",
-          icon: Users,
+          title: "Updates",
+          description: "Tägliche Zusammenfassungen posten.",
+          icon: MessageSquare,
         },
         {
-          title: "Professionelle Korrespondenz",
-          description:
-            "Entwerfen Sie professionelle E-Mails an Kollegen oder Administratoren mit KI-Unterstützung.",
-          icon: Zap,
+          title: "Materialien",
+          description: "Ressourcen organisieren.",
+          icon: Layout,
         },
         {
-          title: "Schüler-Feedback",
-          description:
-            "Senden Sie individuelles Feedback mit Kommentaren und Ermutigungen direkt an Schüler.",
+          title: "Bewertung",
+          description: "Noten synchronisieren.",
           icon: CheckCircle2,
         },
       ],
       faqs: [
+        { question: "Admin-Rechte?", answer: "Lehrer-Rechte reichen meist." },
+        { question: "Anwesenheit?", answer: "Nein, nur Noten und Aufgaben." },
+      ],
+      relatedIntegrations: [
+        { name: "Canvas", slug: "canvas", category: "Lernmanagement" },
         {
-          question: "Werden E-Mails als von mir gesendet angezeigt?",
-          answer:
-            "Ja, alle E-Mails erscheinen in Ihrem Gesendet-Ordner und Empfänger sehen Ihre Adresse.",
+          name: "PowerSchool",
+          slug: "powerschool",
+          category: "Schülerinformationen",
         },
         {
-          question: "Gibt es Versandlimits?",
-          answer:
-            "Gmail hat Limits (500/Tag privat, 2000/Tag Workspace). Zaza Draft respektiert diese Limits.",
+          name: "Google Drive",
+          slug: "google-drive",
+          category: "Cloud-Speicher",
+        },
+      ],
+    },
+    "microsoft-teams": {
+      name: "Microsoft Teams",
+      category: "Kommunikation",
+      description:
+        "Teilen Sie Aufgaben und Dateien direkt in Ihren Teams-Klassenkanälen.",
+      logo: "/teams-logo.png",
+      users: "32.000+",
+      setupTime: "4 Minuten",
+      benefits: [
+        "Kanal-Posts",
+        "Dateien teilen",
+        "Benachrichtigungen",
+        "Direktnachrichten",
+        "Notizen",
+        "Kalender",
+      ],
+      setupSteps: [
+        {
+          step: 1,
+          title: "Anmelden",
+          description: "Mit Office 365 Education anmelden.",
+        },
+        { step: 2, title: "Berechtigung", description: "Zugriff gewähren." },
+        { step: 3, title: "Teams wählen", description: "Klassen auswählen." },
+        { step: 4, title: "Posten", description: "Updates senden." },
+      ],
+      useCases: [
+        {
+          title: "Ankündigungen",
+          description: "Wichtige Updates posten.",
+          icon: MessageSquare,
         },
         {
-          question: "Kann ich E-Mails planen?",
-          answer:
-            "Ja, Sie können den Versand für ein bestimmtes Datum und eine Uhrzeit planen.",
+          title: "Ressourcen",
+          description: "PDFs in Dateien hochladen.",
+          icon: Download,
+        },
+        { title: "Alarme", description: "Schüler benachrichtigen.", icon: Zap },
+      ],
+      faqs: [
+        { question: "Privat-Teams?", answer: "Optimiert für Education." },
+        { question: "Antworten?", answer: "Ja, normale Teams-Nachrichten." },
+      ],
+      relatedIntegrations: [
+        { name: "Outlook", slug: "outlook", category: "Kommunikation" },
+        { name: "OneNote", slug: "onenote", category: "Produktivität" },
+        { name: "Canvas", slug: "canvas", category: "Lernmanagement" },
+      ],
+    },
+    "infinite-campus": {
+      name: "Infinite Campus",
+      category: "Schülerinformationen",
+      description:
+        "Synchronisieren Sie Listen und Noten zwischen Infinite Campus und Zaza Draft.",
+      logo: "/infinite-campus-logo.png",
+      users: "12.000+",
+      setupTime: "12 Minuten",
+      benefits: [
+        "Listen-Sync",
+        "Notenrückgabe",
+        "Anwesenheit",
+        "Demografie",
+        "Elternkontakte",
+        "Sicher",
+      ],
+      setupSteps: [
+        {
+          step: 1,
+          title: "API anfordern",
+          description: "IT nach OneRoster-Zugang fragen.",
         },
         {
-          question: "Wird mein Passwort gespeichert?",
-          answer: "Nein, wir nutzen OAuth 2.0 und sehen niemals Ihr Passwort.",
+          step: 2,
+          title: "Konfigurieren",
+          description: "URL und Keys eingeben.",
         },
+        { step: 3, title: "Mapping", description: "Felder zuordnen." },
+        { step: 4, title: "Sync", description: "Daten importieren." },
+      ],
+      useCases: [
+        {
+          title: "Updates",
+          description: "Listen aktuell halten.",
+          icon: Users,
+        },
+        {
+          title: "Zeugnisse",
+          description: "Daten für Kommentare nutzen.",
+          icon: FileText,
+        },
+        {
+          title: "Noten",
+          description: "Noten direkt übertragen.",
+          icon: CheckCircle2,
+        },
+      ],
+      faqs: [
+        { question: "Konform?", answer: "Ja, FERPA-konform." },
+        { question: "Wie oft?", answer: "Meist nachts." },
       ],
       relatedIntegrations: [
         {
-          name: "Microsoft Outlook",
-          slug: "microsoft-outlook",
+          name: "PowerSchool",
+          slug: "powerschool",
+          category: "Schülerinformationen",
+        },
+        { name: "Skyward", slug: "skyward", category: "Schülerinformationen" },
+        {
+          name: "Google Classroom",
+          slug: "google-classroom",
+          category: "Lernmanagement",
+        },
+      ],
+    },
+    skyward: {
+      name: "Skyward",
+      category: "Schülerinformationen",
+      description:
+        "Verbinden Sie Skyward für optimiertes Daten- und Notenmanagement.",
+      logo: "/skyward-logo.png",
+      users: "10.000+",
+      setupTime: "10 Minuten",
+      benefits: [
+        "Datensync",
+        "Notenbuch",
+        "Anwesenheit",
+        "Familienzugang",
+        "Disziplin",
+        "Stundenplan",
+      ],
+      setupSteps: [
+        {
+          step: 1,
+          title: "Autorisierung",
+          description: "Keys vom Admin erhalten.",
+        },
+        { step: 2, title: "Verbinden", description: "Daten eingeben." },
+        { step: 3, title: "Term wählen", description: "Zeitraum festlegen." },
+        { step: 4, title: "Sync", description: "Starten." },
+      ],
+      useCases: [
+        {
+          title: "Import",
+          description: "E-Mails importieren.",
+          icon: Download,
+        },
+        {
+          title: "Noten",
+          description: "Keine doppelte Eingabe.",
+          icon: CheckCircle2,
+        },
+        {
+          title: "Berichte",
+          description: "Echtzeitdaten nutzen.",
+          icon: FileText,
+        },
+      ],
+      faqs: [
+        { question: "Version?", answer: "SMS 2.0 und Qmlativ." },
+        { question: "Anwesenheit?", answer: "Lesezugriff möglich." },
+      ],
+      relatedIntegrations: [
+        {
+          name: "Infinite Campus",
+          slug: "infinite-campus",
+          category: "Schülerinformationen",
+        },
+        {
+          name: "PowerSchool",
+          slug: "powerschool",
+          category: "Schülerinformationen",
+        },
+        { name: "Canvas", slug: "canvas", category: "Lernmanagement" },
+      ],
+    },
+    remind: {
+      name: "Remind",
+      category: "Kommunikation",
+      description:
+        "Senden Sie KI-entworfene Ankündigungen an Schüler und Eltern via Remind.",
+      logo: "/remind-logo.png",
+      users: "40.000+",
+      setupTime: "3 Minuten",
+      benefits: [
+        "In Zaza entwerfen",
+        "Via Remind senden",
+        "Ankündigungen",
+        "Direktnachrichten",
+        "Planen",
+        "Übersetzung",
+      ],
+      setupSteps: [
+        { step: 1, title: "Verknüpfen", description: "Bei Remind anmelden." },
+        { step: 2, title: "Autorisieren", description: "Zugriff gewähren." },
+        { step: 3, title: "Klassen", description: "Klassen wählen." },
+        { step: 4, title: "Senden", description: "Nachrichten pushen." },
+      ],
+      useCases: [
+        {
+          title: "Updates",
+          description: "Kurze Erinnerungen.",
+          icon: MessageSquare,
+        },
+        {
+          title: "Eltern",
+          description: "Empathische Nachrichten.",
+          icon: Users,
+        },
+        {
+          title: "Erinnerungen",
+          description: "Tests ankündigen.",
+          icon: Calendar,
+        },
+      ],
+      faqs: [
+        { question: "Limit?", answer: "Ja, meist 140 Zeichen." },
+        { question: "Dateien?", answer: "Ja, als Links/Anhang." },
+      ],
+      relatedIntegrations: [
+        { name: "ClassDojo", slug: "classdojo", category: "Kommunikation" },
+        { name: "Gmail", slug: "gmail", category: "Kommunikation" },
+        {
+          name: "Google Classroom",
+          slug: "google-classroom",
+          category: "Lernmanagement",
+        },
+      ],
+    },
+    classdojo: {
+      name: "ClassDojo",
+      category: "Kommunikation",
+      description:
+        "Teilen Sie Updates und positive Momente via ClassDojo Stories.",
+      logo: "/classdojo-logo.png",
+      users: "35.000+",
+      setupTime: "3 Minuten",
+      benefits: [
+        "Storys posten",
+        "Elternnachrichten",
+        "Verhalten",
+        "Fotos",
+        "Events",
+        "Broadcasts",
+      ],
+      setupSteps: [
+        { step: 1, title: "Login", description: "Anmelden." },
+        { step: 2, title: "Klasse", description: "Klasse wählen." },
+        { step: 3, title: "Konfig", description: "Präferenzen." },
+        { step: 4, title: "Posten", description: "Teilen." },
+      ],
+      useCases: [
+        { title: "Class Story", description: "Wochenbriefe.", icon: BookOpen },
+        {
+          title: "Verhalten",
+          description: "Feedback senden.",
+          icon: MessageSquare,
+        },
+        { title: "Ankündigungen", description: "Events teilen.", icon: Zap },
+      ],
+      faqs: [
+        { question: "Punkte?", answer: "Nur Nachrichten/Storys." },
+        { question: "Privat?", answer: "Ja, sicher." },
+      ],
+      relatedIntegrations: [
+        { name: "Remind", slug: "remind", category: "Kommunikation" },
+        { name: "Seesaw", slug: "seesaw", category: "Kommunikation" },
+        {
+          name: "Google Classroom",
+          slug: "google-classroom",
+          category: "Lernmanagement",
+        },
+      ],
+    },
+    seesaw: {
+      name: "Seesaw",
+      category: "Kommunikation",
+      description: "Posten Sie Aktivitäten und Feedback in Seesaw-Journale.",
+      logo: "/seesaw-logo.png",
+      users: "25.000+",
+      setupTime: "5 Minuten",
+      benefits: [
+        "Aktivitäten",
+        "Kommentare",
+        "Ankündigungen",
+        "Portfolio",
+        "Entwürfe",
+        "Medien",
+      ],
+      setupSteps: [
+        { step: 1, title: "Verbinden", description: "Anmelden." },
+        { step: 2, title: "Klassen", description: "Wählen." },
+        { step: 3, title: "Entwerfen", description: "Erstellen." },
+        { step: 4, title: "Veröffentlichen", description: "Pushen." },
+      ],
+      useCases: [
+        {
+          title: "Bibliothek",
+          description: "Aktivitäten speichern.",
+          icon: BookOpen,
+        },
+        {
+          title: "Feedback",
+          description: "Kommentare schreiben.",
+          icon: MessageSquare,
+        },
+        { title: "Newsletter", description: "Updates senden.", icon: Users },
+      ],
+      faqs: [
+        { question: "Schulen?", answer: "Ja, für alle Pläne." },
+        { question: "Bilder?", answer: "Ja, Upload möglich." },
+      ],
+      relatedIntegrations: [
+        { name: "ClassDojo", slug: "classdojo", category: "Kommunikation" },
+        {
+          name: "Google Classroom",
+          slug: "google-classroom",
+          category: "Lernmanagement",
+        },
+        { name: "Canvas", slug: "canvas", category: "Lernmanagement" },
+      ],
+    },
+    outlook: {
+      name: "Outlook",
+      category: "Kommunikation",
+      description:
+        "Integrieren Sie Outlook, um E-Mails zu entwerfen und zu senden.",
+      logo: "/outlook-logo.png",
+      users: "42.000+",
+      setupTime: "3 Minuten",
+      benefits: [
+        "Senden",
+        "Kalender",
+        "Kontakte",
+        "Vorlagen",
+        "Planen",
+        "Signatur",
+      ],
+      setupSteps: [
+        { step: 1, title: "Anmelden", description: "Microsoft-Login." },
+        { step: 2, title: "Rechte", description: "Gewähren." },
+        { step: 3, title: "Einstellungen", description: "Signatur setzen." },
+        { step: 4, title: "Senden", description: "Entwerfen und senden." },
+      ],
+      useCases: [
+        { title: "Eltern", description: "Updates senden.", icon: Users },
+        {
+          title: "Admin",
+          description: "Professionelle E-Mails.",
+          icon: FileText,
+        },
+        {
+          title: "Termine",
+          description: "Einladungen senden.",
+          icon: Calendar,
+        },
+      ],
+      faqs: [
+        { question: "O365?", answer: "Ja, kompatibel." },
+        { question: "Gespeichert?", answer: "Ja, in Gesendet." },
+      ],
+      relatedIntegrations: [
+        { name: "Gmail", slug: "gmail", category: "Kommunikation" },
+        {
+          name: "Microsoft Teams",
+          slug: "microsoft-teams",
           category: "Kommunikation",
         },
+        { name: "OneNote", slug: "onenote", category: "Produktivität" },
+      ],
+    },
+    "google-calendar": {
+      name: "Google Calendar",
+      category: "Produktivität",
+      description: "Planen Sie Elternsprechtage und Fristen automatisch.",
+      logo: "/google-calendar-logo.png",
+      users: "38.000+",
+      setupTime: "2 Minuten",
+      benefits: [
+        "Events",
+        "Planung",
+        "Erinnerungen",
+        "Stundenplan",
+        "Verfügbarkeit",
+        "Video-Links",
+      ],
+      setupSteps: [
+        { step: 1, title: "Verbinden", description: "Autorisieren." },
+        { step: 2, title: "Kalender", description: "Auswählen." },
+        { step: 3, title: "Konfig", description: "Dauer setzen." },
+        { step: 4, title: "Planen", description: "Erstellen." },
+      ],
+      useCases: [
+        {
+          title: "Sprechtage",
+          description: "Termine organisieren.",
+          icon: Users,
+        },
+        { title: "Planung", description: "Einheiten blocken.", icon: Calendar },
+        { title: "Alarme", description: "Fristen setzen.", icon: Clock },
+      ],
+      faqs: [
+        { question: "Meet Links?", answer: "Ja, optional." },
+        { question: "Privat?", answer: "Nur gewählte Kalender." },
+      ],
+      relatedIntegrations: [
+        { name: "Outlook", slug: "outlook", category: "Kommunikation" },
+        {
+          name: "Google Classroom",
+          slug: "google-classroom",
+          category: "Lernmanagement",
+        },
+        { name: "Gmail", slug: "gmail", category: "Kommunikation" },
+      ],
+    },
+    notion: {
+      name: "Notion",
+      category: "Produktivität",
+      description:
+        "Exportieren Sie Pläne und Ressourcen direkt in Ihren Notion-Workspace.",
+      logo: "/notion-logo.png",
+      users: "18.000+",
+      setupTime: "4 Minuten",
+      benefits: [
+        "Seiten",
+        "Datenbanken",
+        "Vorlagen",
+        "Ressourcen",
+        "Planung",
+        "Kollaboration",
+      ],
+      setupSteps: [
+        { step: 1, title: "Autorisieren", description: "Verbinden." },
+        { step: 2, title: "Seiten", description: "Zugriff geben." },
+        { step: 3, title: "Datenbanken", description: "Zuordnen." },
+        { step: 4, title: "Export", description: "Senden." },
+      ],
+      useCases: [
+        { title: "Curriculum", description: "Visuelle Pläne.", icon: Layout },
+        { title: "Wiki", description: "Ressourcen ordnen.", icon: BookOpen },
+        { title: "Notizen", description: "Beobachtungen.", icon: FileText },
+      ],
+      faqs: [
+        { question: "Datenbanken?", answer: "Ja, Items hinzufügen." },
+        { question: "Formatierung?", answer: "Ja, Markdown bleibt." },
+      ],
+      relatedIntegrations: [
+        { name: "Trello", slug: "trello", category: "Produktivität" },
+        {
+          name: "Google Drive",
+          slug: "google-drive",
+          category: "Cloud-Speicher",
+        },
+        { name: "Evernote", slug: "evernote", category: "Produktivität" },
+      ],
+    },
+    trello: {
+      name: "Trello",
+      category: "Produktivität",
+      description:
+        "Verwandeln Sie Ideen in Trello-Karten für Ihr Aufgabenmanagement.",
+      logo: "/trello-logo.png",
+      users: "14.000+",
+      setupTime: "3 Minuten",
+      benefits: [
+        "Karten",
+        "Listen",
+        "Checklisten",
+        "Fristen",
+        "Anhänge",
+        "Labels",
+      ],
+      setupSteps: [
+        { step: 1, title: "Verbinden", description: "Anmelden." },
+        { step: 2, title: "Board", description: "Wählen." },
+        { step: 3, title: "Liste", description: "Standard setzen." },
+        { step: 4, title: "Erstellen", description: "Pushen." },
+      ],
+      useCases: [
+        {
+          title: "Aufgaben",
+          description: "To-Dos tracken.",
+          icon: CheckCircle2,
+        },
+        { title: "Kanban", description: "Fortschritt planen.", icon: Layout },
+        { title: "Projekte", description: "Langzeitprojekte.", icon: Clock },
+      ],
+      faqs: [
+        { question: "Mitglieder?", answer: "Ja, zuweisen möglich." },
+        { question: "Checklisten?", answer: "Ja, Listen konvertieren." },
+      ],
+      relatedIntegrations: [
+        { name: "Notion", slug: "notion", category: "Produktivität" },
+        {
+          name: "Google Calendar",
+          slug: "google-calendar",
+          category: "Produktivität",
+        },
+        {
+          name: "Microsoft Teams",
+          slug: "microsoft-teams",
+          category: "Kommunikation",
+        },
+      ],
+    },
+    gmail: {
+      name: "Gmail",
+      category: "Kommunikation",
+      description:
+        "Verbinden Sie Gmail, um KI-generierte Eltern-E-Mails direkt zu senden.",
+      logo: "/gmail-logo.png",
+      users: "52.000+",
+      setupTime: "3 Minuten",
+      benefits: [
+        "Direkt senden",
+        "Vorlagen",
+        "Massenversand",
+        "Tracking",
+        "Planen",
+        "Anhänge",
+      ],
+      setupSteps: [
+        { step: 1, title: "Verbinden", description: "OAuth 2.0." },
+        { step: 2, title: "Einstellungen", description: "Signatur." },
+        { step: 3, title: "Import", description: "Kontakte laden." },
+        { step: 4, title: "Senden", description: "Generieren." },
+      ],
+      useCases: [
+        { title: "Eltern", description: "Updates senden.", icon: Users },
+        { title: "Profi", description: "Kollegen mailen.", icon: Zap },
+        {
+          title: "Feedback",
+          description: "Schülerfeedback.",
+          icon: CheckCircle2,
+        },
+      ],
+      faqs: [
+        { question: "Absender?", answer: "Ihre Gmail-Adresse." },
+        { question: "Sicher?", answer: "Ja, OAuth 2.0." },
+      ],
+      relatedIntegrations: [
+        { name: "Outlook", slug: "outlook", category: "Kommunikation" },
         {
           name: "Google Classroom",
           slug: "google-classroom",
@@ -940,86 +2103,32 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
     powerschool: {
       name: "PowerSchool",
       category: "Schülerinformationen",
-      description:
-        "Synchronisieren Sie Listen, Noten und Anwesenheitsdaten zwischen PowerSchool und Zaza Draft.",
+      description: "Sync für Listen, Noten und Anwesenheit.",
       logo: "/powerschool-logo.jpg",
       users: "18.000+",
       setupTime: "10 Minuten",
       benefits: [
-        "Automatische Listensynchronisierung",
-        "Notenrückgabe an PowerSchool",
-        "Anwesenheitsdaten-Integration",
-        "Elternkontakt-Sync",
-        "Einsicht in Förderpläne",
-        "Echtzeit-Updates",
+        "Listen-Sync",
+        "Notenrückgabe",
+        "Anwesenheit",
+        "Elternkontakte",
+        "IEP",
+        "Echtzeit",
       ],
       setupSteps: [
-        {
-          step: 1,
-          title: "IT-Administrator kontaktieren",
-          description:
-            "Die Integration erfordert API-Zugriff auf Bezirksebene. Bitten Sie Ihre IT um Zugangsdaten.",
-        },
-        {
-          step: 2,
-          title: "API-Daten eingeben",
-          description:
-            "Geben Sie die erhaltenen Zugangsdaten in Zaza Draft unter Integrationen > PowerSchool ein.",
-        },
-        {
-          step: 3,
-          title: "Datensynchronisierung konfigurieren",
-          description:
-            "Wählen Sie die zu synchronisierenden Daten (Listen, Noten, Anwesenheit) und die Häufigkeit.",
-        },
-        {
-          step: 4,
-          title: "Notenkategorien zuordnen",
-          description:
-            "Ordnen Sie Zaza Draft-Kategorien den PowerSchool-Notenkategorien zu.",
-        },
+        { step: 1, title: "Admin", description: "API anfragen." },
+        { step: 2, title: "Eingeben", description: "Keys eingeben." },
+        { step: 3, title: "Konfig", description: "Daten wählen." },
+        { step: 4, title: "Mapping", description: "Kategorien." },
       ],
       useCases: [
-        {
-          title: "Listenverwaltung",
-          description:
-            "Synchronisieren Sie Schülerlisten automatisch, einschließlich Stundenplanänderungen.",
-          icon: Users,
-        },
-        {
-          title: "Notensynchronisierung",
-          description:
-            "Übertragen Sie Noten direkt in das PowerSchool-Notenbuch, um doppelte Eingaben zu vermeiden.",
-          icon: CheckCircle2,
-        },
-        {
-          title: "Elternkommunikation",
-          description:
-            "Greifen Sie auf aktuelle Elternkontaktdaten zu, um personalisierte Nachrichten zu senden.",
-          icon: Zap,
-        },
+        { title: "Listen", description: "Auto-Update.", icon: Users },
+        { title: "Noten", description: "Übertragen.", icon: CheckCircle2 },
+        { title: "Kontakt", description: "Eltern-Emails.", icon: Zap },
       ],
       faqs: [
-        {
-          question: "Brauche ich eine Genehmigung?",
-          answer:
-            "Ja, der Zugriff auf Bezirksebene ist erforderlich. Ihr IT-Administrator muss dies genehmigen.",
-        },
-        {
-          question: "Wie oft wird synchronisiert?",
-          answer:
-            "Sie können die Frequenz konfigurieren. Die meisten wählen tägliche Synchronisierungen über Nacht.",
-        },
-        {
-          question: "Kann ich historische Daten synchronisieren?",
-          answer:
-            "Ja, ein einmaliger Import historischer Daten ist bei der Einrichtung möglich.",
-        },
-        {
-          question: "Sind die Daten sicher?",
-          answer:
-            "Ja, alle Daten sind verschlüsselt und wir sind FERPA-konform.",
-        },
+        { question: "Genehmigung?", answer: "Ja, Bezirksebene." },
+        { question: "Häufigkeit?", answer: "Konfigurierbar." },
       ],
       relatedIntegrations: [
         {
@@ -1032,95 +2141,42 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
           slug: "google-classroom",
           category: "Lernmanagement",
         },
-        { name: "Canvas LMS", slug: "canvas-lms", category: "Lernmanagement" },
+        { name: "Canvas", slug: "canvas", category: "Lernmanagement" },
       ],
     },
     "google-drive": {
       name: "Google Drive",
       category: "Cloud-Speicher",
-      description:
-        "Speichern und organisieren Sie alle Ihre Zaza Draft-Inhalte direkt in Google Drive.",
+      description: "Speichern Sie Zaza Draft Inhalte in Google Drive.",
       logo: "/google-drive-logo.png",
       users: "48.000+",
       setupTime: "2 Minuten",
       benefits: [
-        "Automatische Speicherung in Drive",
-        "Organisierte Ordnerstruktur",
-        "Versionsverlauf",
-        "Einfaches Teilen mit Kollegen",
-        "Offline-Zugriff",
-        "Unbegrenzter Speicher (mit Workspace)",
+        "Auto-Save",
+        "Ordner",
+        "Versionen",
+        "Teilen",
+        "Offline",
+        "Speicher",
       ],
       setupSteps: [
-        {
-          step: 1,
-          title: "Google Drive verbinden",
-          description:
-            'Klicken Sie auf "Verbinden" und autorisieren Sie Zaza Draft, Dateien zu erstellen.',
-        },
-        {
-          step: 2,
-          title: "Speicherort wählen",
-          description: "Wählen Sie einen Ordner für Zaza Draft-Dateien aus.",
-        },
-        {
-          step: 3,
-          title: "Auto-Save konfigurieren",
-          description:
-            "Aktivieren Sie das automatische Speichern, um Backups Ihrer Arbeit zu erstellen.",
-        },
-        {
-          step: 4,
-          title: "Erstellen starten",
-          description:
-            "Alle Inhalte werden nun automatisch organisiert in Google Drive gespeichert.",
-        },
+        { step: 1, title: "Verbinden", description: "Autorisieren." },
+        { step: 2, title: "Ort", description: "Ordner wählen." },
+        { step: 3, title: "Auto-Save", description: "Aktivieren." },
+        { step: 4, title: "Start", description: "Arbeiten." },
       ],
       useCases: [
-        {
-          title: "Automatisches Backup",
-          description:
-            "Jedes Dokument und jeder Plan wird sicher in Google Drive gespeichert.",
-          icon: Shield,
-        },
-        {
-          title: "Zusammenarbeit",
-          description:
-            "Teilen Sie Materialien mit Kollegen, indem Sie Drive-Ordner freigeben.",
-          icon: Users,
-        },
-        {
-          title: "Offline-Zugriff",
-          description:
-            "Greifen Sie über Drive offline auf Ihre Materialien zu.",
-          icon: Download,
-        },
+        { title: "Backup", description: "Sicher speichern.", icon: Shield },
+        { title: "Team", description: "Ordner teilen.", icon: Users },
+        { title: "Offline", description: "Überall Zugriff.", icon: Download },
       ],
       faqs: [
-        {
-          question: "Verbraucht dies meinen Speicherplatz?",
-          answer:
-            "Ja, Dateien zählen zu Ihrem Kontingent. Workspace-Konten haben oft unbegrenzten Speicher.",
-        },
-        {
-          question: "Kann ich Ordner anpassen?",
-          answer:
-            "Ja, Sie können die Struktur anpassen. Zaza Draft respektiert Ihre Einstellungen.",
-        },
-        {
-          question: "Welche Formate werden gespeichert?",
-          answer:
-            "Google Docs für Text, Sheets für Daten und PDF für fertige Materialien.",
-        },
-        {
-          question: "Kann ich die Verbindung trennen?",
-          answer:
-            "Ja, das Trennen der Verbindung löscht keine Dateien aus Ihrem Drive.",
-        },
+        { question: "Speicherplatz?", answer: "Ja, zählt zum Quota." },
+        { question: "Formate?", answer: "Docs, Sheets, PDF." },
       ],
       relatedIntegrations: [
         {
-          name: "Microsoft OneDrive",
+          name: "OneDrive",
           slug: "microsoft-onedrive",
           category: "Cloud-Speicher",
         },
