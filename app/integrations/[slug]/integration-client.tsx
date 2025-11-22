@@ -313,7 +313,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       category: "Learning Management",
       description:
         "Connect your Schoology courses to Zaza Draft for seamless content distribution and grade synchronization.",
-      logo: "/schoology-logo.png",
+      logo: "/schoology-symbol.png",
       users: "15,000+",
       setupTime: "8 minutes",
       benefits: [
@@ -396,7 +396,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       category: "Communication",
       description:
         "Share assignments, announcements, and files directly to your Microsoft Teams for Education class channels.",
-      logo: "/teams-logo.png",
+      logo: "/Microsoft-Teams-Logo.png",
       users: "32,000+",
       setupTime: "4 minutes",
       benefits: [
@@ -467,7 +467,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       category: "Student Information",
       description:
         "Sync student rosters and grades between Infinite Campus and Zaza Draft.",
-      logo: "/infinite-campus-logo.png",
+      logo: "/InfiniteCampusLogo.png",
       users: "12,000+",
       setupTime: "12 minutes",
       benefits: [
@@ -549,7 +549,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       category: "Student Information",
       description:
         "Connect Skyward Qmlativ or SMS 2.0 to streamline student data and grade management.",
-      logo: "/skyward-logo.png",
+      logo: "/Skyward-Logo-2021.webp",
       users: "10,000+",
       setupTime: "10 minutes",
       benefits: [
@@ -628,7 +628,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       category: "Communication",
       description:
         "Send AI-drafted announcements and messages to students and parents via Remind.",
-      logo: "/remind-logo.png",
+      logo: "/Remind-Symbol.png",
       users: "40,000+",
       setupTime: "3 minutes",
       benefits: [
@@ -703,7 +703,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       category: "Communication",
       description:
         "Share positive moments and updates with families by posting to ClassDojo stories directly.",
-      logo: "/classdojo-logo.png",
+      logo: "/ClassDojo-Emblem.png",
       users: "35,000+",
       setupTime: "3 minutes",
       benefits: [
@@ -778,7 +778,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       category: "Communication",
       description:
         "Post activities, announcements, and student feedback to Seesaw journals.",
-      logo: "/seesaw-logo.png",
+      logo: "/Seesaw.png",
       users: "25,000+",
       setupTime: "5 minutes",
       benefits: [
@@ -853,7 +853,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       category: "Communication",
       description:
         "Integrate your Microsoft Outlook email to draft, schedule, and send professional communications.",
-      logo: "/outlook-logo.png",
+      logo: "/Outlook-icon.png",
       users: "42,000+",
       setupTime: "3 minutes",
       benefits: [
@@ -928,7 +928,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       category: "Productivity",
       description:
         "Schedule parent-teacher conferences, lesson deadlines, and reminders automatically.",
-      logo: "/google-calendar-logo.png",
+      logo: "/Google-Calendar.png",
       users: "38,000+",
       setupTime: "2 minutes",
       benefits: [
@@ -1003,7 +1003,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       category: "Productivity",
       description:
         "Export lesson plans, resource lists, and student notes directly to your Notion workspace.",
-      logo: "/notion-logo.png",
+      logo: "/Notion_app_logo.png",
       users: "18,000+",
       setupTime: "4 minutes",
       benefits: [
@@ -1074,7 +1074,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       category: "Productivity",
       description:
         "Turn lesson ideas and to-do lists into Trello cards to manage your teaching tasks.",
-      logo: "/trello-logo.png",
+      logo: "/Trello-Logo.png",
       users: "14,000+",
       setupTime: "3 minutes",
       benefits: [
@@ -1481,7 +1481,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       category: "Lernmanagement",
       description:
         "Verbinden Sie Schoology-Kurse für nahtlose Inhaltsverteilung und Notensynchronisation.",
-      logo: "/schoology-logo.png",
+      logo: "/schoology-symbol.png",
       users: "15.000+",
       setupTime: "8 Minuten",
       benefits: [
@@ -1550,7 +1550,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       category: "Kommunikation",
       description:
         "Teilen Sie Aufgaben und Dateien direkt in Ihren Teams-Klassenkanälen.",
-      logo: "/teams-logo.png",
+      logo: "/Microsoft-Teams-Logo.png",
       users: "32.000+",
       setupTime: "4 Minuten",
       benefits: [
@@ -1599,7 +1599,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       category: "Schülerinformationen",
       description:
         "Synchronisieren Sie Listen und Noten zwischen Infinite Campus und Zaza Draft.",
-      logo: "/infinite-campus-logo.png",
+      logo: "/InfiniteCampusLogo.png",
       users: "12.000+",
       setupTime: "12 Minuten",
       benefits: [
@@ -1664,7 +1664,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       category: "Schülerinformationen",
       description:
         "Verbinden Sie Skyward für optimiertes Daten- und Notenmanagement.",
-      logo: "/skyward-logo.png",
+      logo: "/Skyward-Logo-2021.webp",
       users: "10.000+",
       setupTime: "10 Minuten",
       benefits: [
@@ -1725,7 +1725,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       category: "Kommunikation",
       description:
         "Senden Sie KI-entworfene Ankündigungen an Schüler und Eltern via Remind.",
-      logo: "/remind-logo.png",
+      logo: "/Remind-Symbol.png",
       users: "40.000+",
       setupTime: "3 Minuten",
       benefits: [
@@ -1778,7 +1778,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       category: "Kommunikation",
       description:
         "Teilen Sie Updates und positive Momente via ClassDojo Stories.",
-      logo: "/classdojo-logo.png",
+      logo: "/ClassDojo-Emblem.png",
       users: "35.000+",
       setupTime: "3 Minuten",
       benefits: [
@@ -1822,7 +1822,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       name: "Seesaw",
       category: "Kommunikation",
       description: "Posten Sie Aktivitäten und Feedback in Seesaw-Journale.",
-      logo: "/seesaw-logo.png",
+      logo: "/Seesaw.png",
       users: "25.000+",
       setupTime: "5 Minuten",
       benefits: [
@@ -1871,7 +1871,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       category: "Kommunikation",
       description:
         "Integrieren Sie Outlook, um E-Mails zu entwerfen und zu senden.",
-      logo: "/outlook-logo.png",
+      logo: "/Outlook-icon.png",
       users: "42.000+",
       setupTime: "3 Minuten",
       benefits: [
@@ -1919,7 +1919,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       name: "Google Calendar",
       category: "Produktivität",
       description: "Planen Sie Elternsprechtage und Fristen automatisch.",
-      logo: "/google-calendar-logo.png",
+      logo: "/Google-Calendar.png",
       users: "38.000+",
       setupTime: "2 Minuten",
       benefits: [
@@ -1964,7 +1964,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       category: "Produktivität",
       description:
         "Exportieren Sie Pläne und Ressourcen direkt in Ihren Notion-Workspace.",
-      logo: "/notion-logo.png",
+      logo: "/Notion_app_logo.png",
       users: "18.000+",
       setupTime: "4 Minuten",
       benefits: [
@@ -2005,7 +2005,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       category: "Produktivität",
       description:
         "Verwandeln Sie Ideen in Trello-Karten für Ihr Aufgabenmanagement.",
-      logo: "/trello-logo.png",
+      logo: "/Trello-Logo.png",
       users: "14.000+",
       setupTime: "3 Minuten",
       benefits: [
