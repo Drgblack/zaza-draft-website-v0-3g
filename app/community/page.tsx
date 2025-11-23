@@ -64,14 +64,14 @@ const uiContent = {
     mockData: {
         post1: {
             title: "Welcome to the new Zaza Draft Community!",
-            desc: "We're excited to launch this space for educators to connect. Start here by introducing yourself and sharing what you hope to learn.",
+            desc: "We're excited to launch this space for educators to connect. Start here by introducing yourself.",
             author: "Zaza Team",
             time: "2h",
             tag: "Announcements"
         },
         post2: {
             title: "How are you using AI for lesson planning?",
-            desc: "I've been experimenting with the new GradeFlow features. Has anyone found a good workflow for integrating state standards automatically?",
+            desc: "I've been experimenting with the new GradeFlow features. Has anyone found a good workflow for...",
             author: "Sarah Meyer",
             role: "Teacher",
             time: "4h",
@@ -79,7 +79,7 @@ const uiContent = {
         },
         post3: {
             title: "Feature Request: Export to PDF",
-            desc: "It would be great if we could export the student reports directly to PDF with our school branding included. Is this on the roadmap?",
+            desc: "It would be great if we could export the student reports directly to PDF with school branding.",
             author: "Marcus Weber",
             role: "Admin",
             time: "6h",
@@ -90,7 +90,7 @@ const uiContent = {
   },
   de: {
     hero: {
-      title: "Treten Sie der Lehrercommunity bei", // RESTORED EXACT TITLE
+      title: "Treten Sie der Lehrercommunity bei", // RESTORED: Matches your preferred build
       subtitle: "Vernetzen Sie sich mit anderen Pädagogen, teilen Sie Ressourcen und gestalten Sie die Zukunft der KI im Bildungswesen.",
       joinBtn: "Community beitreten",
       startBtn: "Diskussion starten"
@@ -127,14 +127,14 @@ const uiContent = {
     mockData: {
         post1: {
             title: "Willkommen in der neuen Zaza Draft Community!",
-            desc: "Wir freuen uns, diesen Raum für den Austausch von Pädagogen zu starten. Stellen Sie sich hier kurz vor und teilen Sie, was Sie lernen möchten.",
+            desc: "Wir freuen uns, diesen Raum für den Austausch von Pädagogen zu starten. Stellen Sie sich hier kurz vor.",
             author: "Zaza Team",
             time: "2 Std.",
             tag: "Ankündigungen"
         },
         post2: {
             title: "Wie nutzen Sie KI für die Unterrichtsplanung?",
-            desc: "Ich experimentiere mit den neuen GradeFlow-Funktionen. Hat jemand einen guten Workflow für die automatische Integration von Landesstandards gefunden?",
+            desc: "Ich experimentiere mit den neuen GradeFlow-Funktionen. Hat jemand einen guten Workflow für...",
             author: "Sarah Meyer",
             role: "Lehrerin",
             time: "4 Std.",
@@ -142,7 +142,7 @@ const uiContent = {
         },
         post3: {
             title: "Feature-Wunsch: Export als PDF",
-            desc: "Es wäre toll, wenn wir die Schülerberichte direkt als PDF mit unserem Schullogo exportieren könnten. Ist das geplant?",
+            desc: "Es wäre toll, wenn wir die Schülerberichte direkt als PDF mit Schullogo exportieren könnten.",
             author: "Marcus Weber",
             role: "Admin",
             time: "6 Std.",
@@ -154,9 +154,10 @@ const uiContent = {
 };
 
 export default function CommunityPage() {
-  // Language Detection
   const pathname = usePathname();
   const context = useLanguage();
+  
+  // Robust detection: Checks URL path OR Context state
   const isGerman = pathname?.includes("/de") || context?.language === "de";
   const langKey = isGerman ? "de" : "en";
   const text = uiContent[langKey];
@@ -241,7 +242,7 @@ export default function CommunityPage() {
               ))}
             </div>
 
-            {/* Pinned Post (Welcome) */}
+            {/* Pinned Post */}
             <Card className="bg-[#1E293B] border-[#8B5CF6]/30 p-6">
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-2">
@@ -266,7 +267,7 @@ export default function CommunityPage() {
               </div>
             </Card>
 
-            {/* Regular Post 1 (Sarah) */}
+            {/* Regular Post 1 */}
             <Card className="bg-[#1E293B] border-white/10 p-6 hover:border-[#8B5CF6]/50 transition-all">
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3">
@@ -294,7 +295,7 @@ export default function CommunityPage() {
               </div>
             </Card>
 
-             {/* Regular Post 2 (Marcus) */}
+             {/* Regular Post 2 */}
              <Card className="bg-[#1E293B] border-white/10 p-6 hover:border-[#8B5CF6]/50 transition-all">
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3">
