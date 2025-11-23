@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { useLanguage } from "@/lib/i18n/language-context";
-import { CheckCircle2, Globe, Clock, Users, Zap } from "lucide-react"; // Added Zap for design flair
+import { CheckCircle2, Globe, Clock, Users, Zap } from "lucide-react";
 
 export default function CompanyPage() {
   const { t } = useLanguage();
@@ -9,8 +9,8 @@ export default function CompanyPage() {
   return (
     // Ensure the main container has the full site gradient
     <div className="min-h-screen bg-gradient-to-b from-[#0F172A] via-[#1E293B] to-[#0F172A]">
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6">
+      {/* Hero Section - REDUCED PADDING */}
+      <section className="pt-32 pb-10 px-6"> 
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-purple-400 text-sm font-semibold mb-4 tracking-wider">
             {t("company.hero.label")}
@@ -29,7 +29,7 @@ export default function CompanyPage() {
         <div className="max-w-4xl mx-auto p-10 bg-white/5 border border-white/10 rounded-xl shadow-lg shadow-black/30">
           <h2 className="text-xl font-semibold text-purple-400 mb-6 flex items-center gap-2">
              <Zap className="w-5 h-5"/>
-             {t("company.origin.title")} {/* Assuming a title key should exist here */}
+             {t("company.origin.title")}
           </h2>
           <div className="space-y-6 text-gray-300 leading-relaxed">
             <p className="text-lg">{t("company.origin.p1")}</p>
