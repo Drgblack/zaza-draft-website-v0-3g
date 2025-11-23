@@ -1,45 +1,51 @@
 ﻿"use client";
 
 import { useLanguage } from "@/lib/i18n/language-context";
-import { CheckCircle2, Globe, Clock, Users } from "lucide-react";
+import { CheckCircle2, Globe, Clock, Users, Zap } from "lucide-react"; // Added Zap for design flair
 
 export default function CompanyPage() {
   const { t } = useLanguage();
 
   return (
-    // Updated background to match site-wide gradient
+    // Ensure the main container has the full site gradient
     <div className="min-h-screen bg-gradient-to-b from-[#0F172A] via-[#1E293B] to-[#0F172A]">
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto text-center">
           <div className="text-purple-400 text-sm font-semibold mb-4 tracking-wider">
             {t("company.hero.label")}
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             {t("company.hero.headline")}
           </h1>
-          <p className="text-xl text-gray-300 leading-relaxed">
+          <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
             {t("company.hero.subheading")}
           </p>
         </div>
       </section>
 
-      {/* Origin Story */}
+      {/* Origin Story (IMPROVED DESIGN) */}
       <section className="py-16 px-6">
-        <div className="max-w-4xl mx-auto space-y-8 text-gray-300 leading-relaxed">
-          <p className="text-lg">{t("company.origin.p1")}</p>
-          <p className="text-xl font-semibold text-white">
-            {t("company.origin.p2")}
-          </p>
-          <p className="text-lg">{t("company.origin.p3")}</p>
-          <p className="text-lg">{t("company.origin.aiDifferentiator")}</p>
-          <p className="text-xl font-bold text-purple-400 pt-4">
-            {t("company.origin.p4")}
-          </p>
+        <div className="max-w-4xl mx-auto p-10 bg-white/5 border border-white/10 rounded-xl shadow-lg shadow-black/30">
+          <h2 className="text-xl font-semibold text-purple-400 mb-6 flex items-center gap-2">
+             <Zap className="w-5 h-5"/>
+             {t("company.origin.title")} {/* Assuming a title key should exist here */}
+          </h2>
+          <div className="space-y-6 text-gray-300 leading-relaxed">
+            <p className="text-lg">{t("company.origin.p1")}</p>
+            <p className="text-xl font-bold text-white italic py-3 border-y border-white/10">
+              {t("company.origin.p2")}
+            </p>
+            <p className="text-lg">{t("company.origin.p3")}</p>
+            <p className="text-lg">{t("company.origin.aiDifferentiator")}</p>
+            <p className="text-xl font-bold text-purple-400 pt-4">
+              {t("company.origin.p4")}
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Mission and Vision Section (NEW: Added to break up text and introduce visual interest) */}
+      {/* Mission and Vision Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-purple-900/10 to-blue-900/10 border-t border-b border-white/10">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-sm font-semibold uppercase text-purple-400 mb-4 tracking-widest">
@@ -52,7 +58,6 @@ export default function CompanyPage() {
           {/* Placeholder for a company image, styled to fit the dark theme */}
           <div className="mt-12 w-full h-80 bg-[#1E293B] rounded-xl overflow-hidden shadow-2xl flex items-center justify-center border border-white/10">
              <span className="text-gray-500 italic text-lg">{t("company.mission.imagePlaceholder")}</span>
-             {/* If the image exists, replace the span above with an Image component */}
           </div>
         </div>
       </section>
@@ -68,7 +73,6 @@ export default function CompanyPage() {
           </p>
 
           <div className="space-y-6">
-            {/* Using CheckCircle2 icon for robust list rendering */}
             <div className="flex items-start gap-4">
               <CheckCircle2 className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
               <p className="text-lg text-gray-300">
