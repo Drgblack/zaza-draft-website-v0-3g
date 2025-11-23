@@ -40,7 +40,8 @@ export default function CommunityClient() {
     en: {
       hero: {
         badge: "25,000+ Active Educators",
-        title: "Join the Teacher Community",
+        titlePrefix: "Join the ",
+        titleHighlight: "Teacher Community", // Words to get the gradient
         subtitle: "Connect with educators worldwide. Share strategies, ask questions, and learn from successful case studies on using AI in the classroom.",
         searchPlaceholder: "Search discussions...",
         stats: { members: "Members", discussions: "Discussions", posts: "Posts", active: "Active" }
@@ -73,7 +74,8 @@ export default function CommunityClient() {
     de: {
       hero: {
         badge: "25.000+ aktive Lehrkräfte",
-        title: "Treten Sie der Lehrercommunity bei",
+        titlePrefix: "Treten Sie der ",
+        titleHighlight: "Lehrercommunity bei", // Words to get the gradient
         subtitle: "Vernetzen Sie sich weltweit mit Lehrkräften. Teilen Sie Strategien, stellen Sie Fragen und lernen Sie von erfolgreichen Praxisbeispielen zum Einsatz von KI im Unterricht.",
         searchPlaceholder: "Diskussionen suchen...",
         stats: { members: "Mitglieder", discussions: "Diskussionen", posts: "Beiträge", active: "Aktiv" }
@@ -356,18 +358,18 @@ export default function CommunityClient() {
   return (
     <div className="min-h-screen bg-[#0F172A]">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-[#8B5CF6] to-[#6366F1] py-20 border-b border-white/10">
-        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" />
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] py-20 border-b border-white/10">
+        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 mb-6">
-              <Users className="w-5 h-5 text-white" />
-              <span className="text-white font-medium text-sm">{text.hero.badge}</span>
+            <div className="inline-flex items-center gap-2 bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 rounded-full px-4 py-2 mb-6">
+              <Users className="w-5 h-5 text-[#A78BFA]" />
+              <span className="text-[#A78BFA] font-medium text-sm">{text.hero.badge}</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              {text.hero.title}
+              {text.hero.titlePrefix} <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#A78BFA] to-[#F472B6]">{text.hero.titleHighlight}</span>
             </h1>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">{text.hero.subtitle}</p>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">{text.hero.subtitle}</p>
 
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">
@@ -378,7 +380,7 @@ export default function CommunityClient() {
                   placeholder={text.hero.searchPlaceholder}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-12 pr-4 py-6 bg-[#1E293B] border-white/20 text-white placeholder:text-gray-400 focus:border-white text-lg shadow-xl"
+                  className="pl-12 pr-4 py-6 bg-[#1E293B] border-white/10 text-white placeholder:text-gray-400 focus:border-[#8B5CF6] text-lg"
                 />
               </div>
             </div>
@@ -387,19 +389,19 @@ export default function CommunityClient() {
             <div className="grid grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">25K+</div>
-                <div className="text-white/80 text-sm">{text.hero.stats.members}</div>
+                <div className="text-gray-400 text-sm">{text.hero.stats.members}</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">15K+</div>
-                <div className="text-white/80 text-sm">{text.hero.stats.discussions}</div>
+                <div className="text-gray-400 text-sm">{text.hero.stats.discussions}</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">98K+</div>
-                <div className="text-white/80 text-sm">{text.hero.stats.posts}</div>
+                <div className="text-gray-400 text-sm">{text.hero.stats.posts}</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-white mb-2">24/7</div>
-                <div className="text-white/80 text-sm">{text.hero.stats.active}</div>
+                <div className="text-gray-400 text-sm">{text.hero.stats.active}</div>
               </div>
             </div>
           </div>
