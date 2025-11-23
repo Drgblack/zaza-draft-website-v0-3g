@@ -1141,7 +1141,7 @@ const translationsEn: Record<string, string> = {
 "about.company.body.p3":
 "Today, Zaza serves over 500 teachers across 15 countries, saving them 10+ hours per week on writing tasks. But we're just getting started. Our vision is to build a complete suite of AI tools that help teachers reclaim their time and focus on what matters most: their students.",
 "company.origin.title": "OUR ORIGIN STORY",
-"company.origin.imagePlaceholder": "Team Photo Placeholder (The whole team smiling)",,
+"company.origin.imagePlaceholder": "Team Photo Placeholder (The whole team smiling)",
 "about.company.stats.teachers.label": "Teachers Using Zaza",
   "about.company.stats.teachers.value": "500+",
   "about.company.stats.countries.label": "Countries",
@@ -2344,7 +2344,7 @@ const translationsDe: Record<string, string> = {
 "about.company.body.p3":
 "Heute dient Zaza über 500 Lehrkräften in 15 Ländern und spart ihnen über 10 Stunden pro Woche bei Schreibaufgaben. Aber wir fangen gerade erst an. Unsere Vision ist es, eine vollständige Suite von KI-Tools zu entwickeln, die Lehrkräften helfen, ihre Zeit zurückzugewinnen und sich auf das Wichtigste zu konzentrieren: ihre Schüler.",
 "company.origin.title": "UNSERE GRÜNDUNGSGESCHICHTE",
-"company.origin.imagePlaceholder": "Teamfoto Platzhalter (Das ganze Team lächelt)",,
+"company.origin.imagePlaceholder": "Teamfoto Platzhalter (Das ganze Team lächelt)",
 "about.company.stats.teachers.label": "Lehrkräfte nutzen Zaza",
   "about.company.stats.teachers.value": "500+",
   "about.company.stats.countries.label": "Länder",
@@ -2469,6 +2469,7 @@ export function useLanguage() {
   }
   return context;
 }
+
 
 
 
