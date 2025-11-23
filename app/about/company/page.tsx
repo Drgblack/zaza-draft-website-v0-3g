@@ -148,7 +148,7 @@ export default function CompanyPage() {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6">
             {t("company.today.title")}
-          </h2
+          </h2>
           <p className="text-lg text-gray-300 mb-6">{t("company.today.p1")}</p>
           <p className="text-lg text-gray-300 mb-6">{t("company.today.p2")}</p>
           <p className="text-xl font-bold text-purple-400">
