@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { useLanguage } from "@/lib/i18n/language-context";
-import { CheckCircle2, Globe, Clock, Users } from "lucide-react"; // Import necessary icons
+import { CheckCircle2, Globe, Clock, Users } from "lucide-react";
 
 export default function CompanyPage() {
   const { t } = useLanguage();
@@ -39,6 +39,24 @@ export default function CompanyPage() {
         </div>
       </section>
 
+      {/* Mission and Vision Section (NEW: Added to break up text and introduce visual interest) */}
+      <section className="py-20 px-6 bg-gradient-to-r from-purple-900/10 to-blue-900/10 border-t border-b border-white/10">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-sm font-semibold uppercase text-purple-400 mb-4 tracking-widest">
+            {t("company.mission.title")}
+          </h2>
+          <blockquote className="text-3xl md:text-4xl font-extrabold text-white leading-tight italic max-w-3xl mx-auto">
+            "{t("company.mission.quote")}"
+          </blockquote>
+          <p className="text-lg text-gray-400 mt-6">— {t("company.mission.attribution")}</p>
+          {/* Placeholder for a company image, styled to fit the dark theme */}
+          <div className="mt-12 w-full h-80 bg-[#1E293B] rounded-xl overflow-hidden shadow-2xl flex items-center justify-center border border-white/10">
+             <span className="text-gray-500 italic text-lg">{t("company.mission.imagePlaceholder")}</span>
+             {/* If the image exists, replace the span above with an Image component */}
+          </div>
+        </div>
+      </section>
+
       {/* Philosophy Section */}
       <section className="py-16 px-6 bg-[#1E293B] border-y border-white/10">
         <div className="max-w-4xl mx-auto">
@@ -50,7 +68,7 @@ export default function CompanyPage() {
           </p>
 
           <div className="space-y-6">
-            {/* Replaced corrupted bullet points with CheckCircle2 icon */}
+            {/* Using CheckCircle2 icon for robust list rendering */}
             <div className="flex items-start gap-4">
               <CheckCircle2 className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
               <p className="text-lg text-gray-300">
@@ -98,7 +116,6 @@ export default function CompanyPage() {
           </p>
 
           <div className="space-y-6">
-            {/* Replaced corrupted bullet points with CheckCircle2 icon */}
             <div className="flex items-start gap-4">
               <CheckCircle2 className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
               <p className="text-lg text-gray-300">{t("company.boutique.point1")}</p>
