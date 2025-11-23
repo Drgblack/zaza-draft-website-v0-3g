@@ -9,7 +9,7 @@ export default function CompanyPage() {
   return (
     // Ensure the main container has the full site gradient
     <div className="min-h-screen bg-gradient-to-b from-[#0F172A] via-[#1E293B] to-[#0F172A]">
-      {/* Hero Section - REDUCED PADDING */}
+      {/* Hero Section - Padding already fixed in the previous commit */}
       <section className="pt-32 pb-10 px-6"> 
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-purple-400 text-sm font-semibold mb-4 tracking-wider">
@@ -24,7 +24,7 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* Origin Story (IMPROVED DESIGN: max-w-3xl) */}
+      {/* Origin Story (max-w-3xl for readability) */}
       <section className="py-16 px-6">
         <div className="max-w-3xl mx-auto p-10 bg-white/5 border border-white/10 rounded-xl shadow-lg shadow-black/30">
           <h2 className="text-xl font-semibold text-purple-400 mb-6 flex items-center gap-2">
@@ -45,8 +45,8 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* Mission and Vision Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-purple-900/10 to-blue-900/10 border-t border-b border-white/10">
+      {/* Mission and Vision Section - Reduced vertical padding (py-16) */}
+      <section className="py-16 px-6 bg-gradient-to-r from-purple-900/10 to-blue-900/10 border-t border-b border-white/10">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-sm font-semibold uppercase text-purple-400 mb-4 tracking-widest">
             {t("company.mission.title")}
@@ -62,7 +62,7 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* Philosophy Section (IMPROVED DESIGN: max-w-3xl) */}
+      {/* Philosophy Section (max-w-3xl for readability) */}
       <section className="py-16 px-6 bg-[#1E293B] border-y border-white/10">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -105,7 +105,7 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* Boutique Approach (IMPROVED DESIGN: max-w-3xl) */}
+      {/* Boutique Approach (max-w-3xl for readability) */}
       <section className="py-16 px-6">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -143,7 +143,7 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* Where We Are Today (IMPROVED DESIGN: max-w-3xl) */}
+      {/* Where We Are Today (max-w-3xl for readability) */}
       <section className="py-16 px-6 bg-[#1E293B] border-y border-white/10">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -157,8 +157,8 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-20 px-6">
+      {/* Stats - Reduced vertical padding (py-16) */}
+      <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center bg-white/5 p-6 rounded-xl border border-white/10 hover:border-purple-400 transition-colors">
