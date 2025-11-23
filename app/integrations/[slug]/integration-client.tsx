@@ -23,7 +23,6 @@ import {
   MessageSquare,
   Layout,
   FileText,
-  AlertTriangle,
   Info
 } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
@@ -445,7 +444,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       description: "Schedule parent-teacher conferences, lesson deadlines, and reminders automatically.",
       logo: "/Google-Calendar.png",
       users: "38,000+",
-      setupTime: "2 minutes",
+      setupTime: "2 Minuten",
       guideUrl: "/guides/google-calendar-guide.docx",
       benefits: ["Event creation", "Meeting scheduling", "Reminder setup", "Class schedule sync", "Availability sharing", "Video links"],
       setupSteps: [
@@ -471,7 +470,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
     },
     "notion": {
       name: "Notion",
-      category: "Productivity",
+      category: "Produktivität",
       description: "Export lesson plans, resource lists, and student notes directly to your Notion workspace.",
       logo: "/Notion_app_logo.png",
       users: "18,000+",
@@ -494,14 +493,14 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
         { question: "Is formatting preserved?", answer: "Yes, Markdown formatting is kept." },
       ],
       relatedIntegrations: [
-        { name: "Trello", slug: "trello", category: "Productivity" },
+        { name: "Trello", slug: "trello", category: "Produktivität" },
         { name: "Google Drive", slug: "google-drive", category: "Cloud Storage" },
         { name: "Evernote", slug: "evernote", category: "Productivity" },
       ],
     },
     "trello": {
       name: "Trello",
-      category: "Productivity",
+      category: "Produktivität",
       description: "Turn lesson ideas and to-do lists into Trello cards to manage your teaching tasks.",
       logo: "/Trello-Logo.png",
       users: "14,000+",
@@ -524,14 +523,14 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
         { question: "Does it support checklists?", answer: "Yes, convert lists to checklists." },
       ],
       relatedIntegrations: [
-        { name: "Notion", slug: "notion", category: "Productivity" },
-        { name: "Google Calendar", slug: "google-calendar", category: "Productivity" },
+        { name: "Notion", slug: "notion", category: "Produktivität" },
+        { name: "Google Calendar", slug: "google-calendar", category: "Produktivität" },
         { name: "Microsoft Teams", slug: "microsoft-teams", category: "Communication" },
       ],
     },
     "gmail": {
       name: "Gmail",
-      category: "Communication",
+      category: "Kommunikation",
       description: "Connect Gmail to send AI-generated parent emails, student communications, and professional correspondence directly from Zaza Draft.",
       logo: "/gmail-logo.png",
       users: "52,000+",
@@ -561,7 +560,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
     },
     "powerschool": {
       name: "PowerSchool",
-      category: "Student Information",
+      category: "Schülerinformationen",
       description: "Sync student rosters, grades, and attendance data between PowerSchool and Zaza Draft.",
       logo: "/powerschool-logo.jpg",
       users: "18,000+",
@@ -620,488 +619,6 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       ],
     },
   },
-  de: {
-    "google-classroom": {
-      name: "Google Classroom",
-      category: "Lernmanagement",
-      description: "Synchronisieren Sie Inhalte nahtlos mit Google Classroom. Aufgaben posten, Materialien teilen und Workflow optimieren.",
-      logo: "/google-classroom-logo.jpg",
-      users: "45.000+",
-      setupTime: "5 Minuten",
-      guideUrl: "/guides/de-google-classroom-guide.docx",
-      benefits: ["Auto-Sync von Aufgaben", "One-Click Teilen", "Listen-Sync", "Notenrückgabe", "Massen-Erstellung", "Organisation"],
-      setupSteps: [
-        { step: 1, title: "Konto verbinden", description: "Autorisieren Sie den Zugriff auf Classroom." },
-        { step: 2, title: "Klassen wählen", description: "Wählen Sie die zu synchronisierenden Klassen." },
-        { step: 3, title: "Konfiguration", description: "Einstellungen für Posts und Noten." },
-        { step: 4, title: "Teilen", description: "Inhalte direkt teilen." },
-      ],
-      useCases: [
-        { title: "Aufgaben", description: "Differenzierte Aufgaben erstellen.", icon: BookOpen },
-        { title: "Materialien", description: "Arbeitsblätter teilen.", icon: Zap },
-        { title: "Noten", description: "Noten automatisch synchronisieren.", icon: CheckCircle2 },
-      ],
-      faqs: [
-        { question: "Welche Rechte?", answer: "Nur Zugriff auf Klassen und Aufgaben." },
-        { question: "Trennen?", answer: "Ja, jederzeit widerrufbar." },
-      ],
-      relatedIntegrations: [
-        { name: "Canvas", slug: "canvas", category: "Lernmanagement" },
-        { name: "Google Drive", slug: "google-drive", category: "Cloud-Speicher" },
-        { name: "Gmail", slug: "gmail", category: "Kommunikation" },
-      ],
-    },
-    "canvas": {
-      name: "Canvas LMS",
-      category: "Lernmanagement",
-      description: "Integrieren Sie Zaza Draft mit Canvas für optimierte Aufgabenerstellung und Notensynchronisation.",
-      logo: "/canvas-lms-logo.jpg",
-      users: "28.000+",
-      setupTime: "7 Minuten",
-      guideUrl: "/guides/de-canvas-lms-integration.docx",
-      benefits: ["Direkt-Publishing", "Notenrückgabe", "Listen-Sync", "Module", "Rubriken", "Ankündigungen"],
-      setupSteps: [
-        { step: 1, title: "Token generieren", description: "Erstellen Sie ein API-Token in Canvas." },
-        { step: 2, title: "Eingeben", description: "Token in Zaza Draft einfügen." },
-        { step: 3, title: "Kurse", description: "Kurse auswählen." },
-        { step: 4, title: "Konfig", description: "Optionen einstellen." },
-      ],
-      useCases: [
-        { title: "Aufgaben", description: "Direkt in Canvas veröffentlichen.", icon: BookOpen },
-        { title: "Module", description: "Kursmodule erstellen.", icon: Zap },
-        { title: "Noten", description: "Noten ins Notenbuch senden.", icon: CheckCircle2 },
-      ],
-      faqs: [
-        { question: "Kostenlos?", answer: "Ja, auch für Free-Accounts." },
-        { question: "Sicher?", answer: "Ja, Token sind verschlüsselt." },
-      ],
-      relatedIntegrations: [
-        { name: "Google Classroom", slug: "google-classroom", category: "Lernmanagement" },
-        { name: "Schoology", slug: "schoology", category: "Lernmanagement" },
-        { name: "Turnitin", slug: "turnitin", category: "Bewertung" },
-      ],
-    },
-    "schoology": {
-      name: "Schoology",
-      category: "Lernmanagement",
-      description: "Verbinden Sie Schoology-Kurse für nahtlose Inhaltsverteilung und Notensynchronisation.",
-      logo: "/schoology-symbol.png",
-      users: "15.000+",
-      setupTime: "8 Minuten",
-      guideUrl: "/guides/de-schoology-integration.docx",
-      benefits: ["Inhaltssync", "Notenrückgabe", "Aufgabenerstellung", "Ressourcenordner", "Updates", "Listen-Sync"],
-      setupSteps: [
-        { step: 1, title: "API Key", description: "Consumer Key und Secret besorgen." },
-        { step: 2, title: "Verbinden", description: "Daten in Zaza Draft eingeben." },
-        { step: 3, title: "Kurse", description: "Kurse zuordnen." },
-        { step: 4, title: "Starten", description: "Synchronisierung beginnen." },
-      ],
-      useCases: [
-        { title: "Updates", description: "Tägliche Zusammenfassungen posten.", icon: MessageSquare },
-        { title: "Materialien", description: "Ressourcen organisieren.", icon: Layout },
-        { title: "Bewertung", description: "Noten synchronisieren.", icon: CheckCircle2 },
-      ],
-      faqs: [
-        { question: "Admin-Rechte?", answer: "Lehrer-Rechte reichen meist." },
-        { question: "Anwesenheit?", answer: "Nein, nur Noten und Aufgaben." },
-      ],
-      relatedIntegrations: [
-        { name: "Canvas", slug: "canvas", category: "Lernmanagement" },
-        { name: "PowerSchool", slug: "powerschool", category: "Schülerinformationen" },
-        { name: "Google Drive", slug: "google-drive", category: "Cloud-Speicher" },
-      ],
-    },
-    "microsoft-teams": {
-      name: "Microsoft Teams",
-      category: "Kommunikation",
-      description: "Teilen Sie Aufgaben und Dateien direkt in Ihren Teams-Klassenkanälen.",
-      logo: "/Microsoft-Teams-Logo.png",
-      users: "32.000+",
-      setupTime: "4 Minuten",
-      guideUrl: "/guides/de-microsoft-teams-guide.docx",
-      benefits: ["Kanal-Posts", "Dateien teilen", "Benachrichtigungen", "Direktnachrichten", "Notizen", "Kalender"],
-      setupSteps: [
-        { step: 1, title: "Anmelden", description: "Mit Office 365 Education anmelden." },
-        { step: 2, title: "Berechtigung", description: "Zugriff gewähren." },
-        { step: 3, title: "Teams wählen", description: "Klassen auswählen." },
-        { step: 4, title: "Posten", description: "Updates senden." },
-      ],
-      useCases: [
-        { title: "Ankündigungen", description: "Wichtige Updates posten.", icon: MessageSquare },
-        { title: "Ressourcen", description: "PDFs in Dateien hochladen.", icon: Download },
-        { title: "Alarme", description: "Schüler benachrichtigen.", icon: Zap },
-      ],
-      faqs: [
-        { question: "Privat-Teams?", answer: "Optimiert für Education." },
-        { question: "Antworten?", answer: "Ja, normale Teams-Nachrichten." },
-      ],
-      relatedIntegrations: [
-        { name: "Outlook", slug: "outlook", category: "Kommunikation" },
-        { name: "OneNote", slug: "onenote", category: "Produktivität" },
-        { name: "Canvas", slug: "canvas", category: "Lernmanagement" },
-      ],
-    },
-    "infinite-campus": {
-      name: "Infinite Campus",
-      category: "Schülerinformationen",
-      description: "Synchronisieren Sie Listen und Noten zwischen Infinite Campus und Zaza Draft.",
-      logo: "/InfiniteCampusLogo.png",
-      users: "12.000+",
-      setupTime: "12 Minuten",
-      guideUrl: "/guides/de-infinite-campus-guide.docx",
-      benefits: ["Listen-Sync", "Notenrückgabe", "Anwesenheit", "Demografie", "Elternkontakte", "Sicher"],
-      setupSteps: [
-        { step: 1, title: "API anfordern", description: "IT nach OneRoster-Zugang fragen." },
-        { step: 2, title: "Konfigurieren", description: "URL und Keys eingeben." },
-        { step: 3, title: "Mapping", description: "Felder zuordnen." },
-        { step: 4, title: "Sync", description: "Daten importieren." },
-      ],
-      useCases: [
-        { title: "Updates", description: "Listen aktuell halten.", icon: Users },
-        { title: "Zeugnisse", description: "Daten für Kommentare nutzen.", icon: FileText },
-        { title: "Noten", description: "Noten direkt übertragen.", icon: CheckCircle2 },
-      ],
-      faqs: [
-        { question: "Konform?", answer: "Ja, FERPA-konform." },
-        { question: "Wie oft?", answer: "Meist nachts." },
-      ],
-      relatedIntegrations: [
-        { name: "PowerSchool", slug: "powerschool", category: "Schülerinformationen" },
-        { name: "Skyward", slug: "skyward", category: "Schülerinformationen" },
-        { name: "Google Classroom", slug: "google-classroom", category: "Lernmanagement" },
-      ],
-    },
-    "skyward": {
-      name: "Skyward",
-      category: "Schülerinformationen",
-      description: "Verbinden Sie Skyward für optimiertes Daten- und Notenmanagement.",
-      logo: "/Skyward-Logo-2021.webp",
-      users: "10.000+",
-      setupTime: "10 Minuten",
-      guideUrl: "/guides/de-skyward-guide.docx",
-      benefits: ["Datensync", "Notenbuch", "Anwesenheit", "Familienzugang", "Disziplin", "Stundenplan"],
-      setupSteps: [
-        { step: 1, title: "Autorisierung", description: "Keys vom Admin erhalten." },
-        { step: 2, title: "Verbinden", description: "Daten eingeben." },
-        { step: 3, title: "Term wählen", description: "Zeitraum festlegen." },
-        { step: 4, title: "Sync", description: "Starten." },
-      ],
-      useCases: [
-        { title: "Import", description: "E-Mails importieren.", icon: Download },
-        { title: "Noten", description: "Keine doppelte Eingabe.", icon: CheckCircle2 },
-        { title: "Berichte", description: "Echtzeitdaten nutzen.", icon: FileText },
-      ],
-      faqs: [
-        { question: "Version?", answer: "SMS 2.0 und Qmlativ." },
-        { question: "Anwesenheit?", answer: "Lesezugriff möglich." },
-      ],
-      relatedIntegrations: [
-        { name: "Infinite Campus", slug: "infinite-campus", category: "Schülerinformationen" },
-        { name: "PowerSchool", slug: "powerschool", category: "Schülerinformationen" },
-        { name: "Canvas", slug: "canvas", category: "Lernmanagement" },
-      ],
-    },
-    "remind": {
-      name: "Remind",
-      category: "Kommunikation",
-      description: "Senden Sie KI-entworfene Ankündigungen an Schüler und Eltern via Remind.",
-      logo: "/Remind-Symbol.png",
-      users: "40.000+",
-      setupTime: "3 Minuten",
-      guideUrl: "/guides/de-remind-guide.docx",
-      benefits: ["In Zaza entwerfen", "Via Remind senden", "Ankündigungen", "Direktnachrichten", "Planen", "Übersetzung"],
-      setupSteps: [
-        { step: 1, title: "Verknüpfen", description: "Bei Remind anmelden." },
-        { step: 2, title: "Autorisieren", description: "Zugriff gewähren." },
-        { step: 3, title: "Klassen", description: "Klassen wählen." },
-        { step: 4, title: "Senden", description: "Nachrichten pushen." },
-      ],
-      useCases: [
-        { title: "Updates", description: "Kurze Erinnerungen.", icon: MessageSquare },
-        { title: "Eltern", description: "Empathische Nachrichten.", icon: Users },
-        { title: "Erinnerungen", description: "Tests ankündigen.", icon: Calendar },
-      ],
-      faqs: [
-        { question: "Limit?", answer: "Ja, meist 140 Zeichen." },
-        { question: "Dateien?", answer: "Ja, als Links/Anhang." },
-      ],
-      relatedIntegrations: [
-        { name: "ClassDojo", slug: "classdojo", category: "Kommunikation" },
-        { name: "Gmail", slug: "gmail", category: "Kommunikation" },
-        { name: "Google Classroom", slug: "google-classroom", category: "Lernmanagement" },
-      ],
-    },
-    "classdojo": {
-      name: "ClassDojo",
-      category: "Kommunikation",
-      description: "Teilen Sie Updates und positive Momente via ClassDojo Stories.",
-      logo: "/ClassDojo-Emblem.png",
-      users: "35.000+",
-      setupTime: "3 Minuten",
-      guideUrl: "/guides/de-classdojo-guide.docx",
-      benefits: ["Storys posten", "Elternnachrichten", "Verhalten", "Fotos", "Events", "Broadcasts"],
-      setupSteps: [
-        { step: 1, title: "Login", description: "Anmelden." },
-        { step: 2, title: "Klasse", description: "Klasse wählen." },
-        { step: 3, title: "Konfig", description: "Präferenzen." },
-        { step: 4, title: "Posten", description: "Teilen." },
-      ],
-      useCases: [
-        { title: "Class Story", description: "Wochenbriefe.", icon: BookOpen },
-        { title: "Verhalten", description: "Feedback senden.", icon: MessageSquare },
-        { title: "Ankündigungen", description: "Events teilen.", icon: Zap },
-      ],
-      faqs: [
-        { question: "Punkte?", answer: "Nur Nachrichten/Storys." },
-        { question: "Privat?", answer: "Ja, sicher." },
-      ],
-      relatedIntegrations: [
-        { name: "Remind", slug: "remind", category: "Kommunikation" },
-        { name: "Seesaw", slug: "seesaw", category: "Kommunikation" },
-        { name: "Google Classroom", slug: "google-classroom", category: "Lernmanagement" },
-      ],
-    },
-    "seesaw": {
-      name: "Seesaw",
-      category: "Kommunikation",
-      description: "Posten Sie Aktivitäten und Feedback in Seesaw-Journale.",
-      logo: "/Seesaw.png",
-      users: "25.000+",
-      setupTime: "5 Minuten",
-      guideUrl: "/guides/de-seesaw-guide.docx",
-      benefits: ["Aktivitäten", "Kommentare", "Ankündigungen", "Portfolio", "Entwürfe", "Medien"],
-      setupSteps: [
-        { step: 1, title: "Verbinden", description: "Anmelden." },
-        { step: 2, title: "Klassen", description: "Wählen." },
-        { step: 3, title: "Entwerfen", description: "Erstellen." },
-        { step: 4, title: "Veröffentlichen", description: "Pushen." },
-      ],
-      useCases: [
-        { title: "Bibliothek", description: "Aktivitäten speichern.", icon: BookOpen },
-        { title: "Feedback", description: "Kommentare schreiben.", icon: MessageSquare },
-        { title: "Newsletter", description: "Updates senden.", icon: Users },
-      ],
-      faqs: [
-        { question: "Schulen?", answer: "Ja, für alle Pläne." },
-        { question: "Bilder?", answer: "Ja, Upload möglich." },
-      ],
-      relatedIntegrations: [
-        { name: "ClassDojo", slug: "classdojo", category: "Kommunikation" },
-        { name: "Google Classroom", slug: "google-classroom", category: "Lernmanagement" },
-        { name: "Canvas", slug: "canvas", category: "Lernmanagement" },
-      ],
-    },
-    "outlook": {
-      name: "Outlook",
-      category: "Kommunikation",
-      description: "Integrieren Sie Outlook, um E-Mails zu entwerfen und zu senden.",
-      logo: "/Outlook-icon.png",
-      users: "42.000+",
-      setupTime: "3 Minuten",
-      guideUrl: "/guides/de-outlook-guide.docx",
-      benefits: ["Senden", "Kalender", "Kontakte", "Vorlagen", "Planen", "Signatur"],
-      setupSteps: [
-        { step: 1, title: "Anmelden", description: "Microsoft-Login." },
-        { step: 2, title: "Rechte", description: "Gewähren." },
-        { step: 3, title: "Einstellungen", description: "Signatur setzen." },
-        { step: 4, title: "Senden", description: "Entwerfen und senden." },
-      ],
-      useCases: [
-        { title: "Eltern", description: "Updates senden.", icon: Users },
-        { title: "Admin", description: "Professionelle E-Mails.", icon: FileText },
-        { title: "Termine", description: "Einladungen senden.", icon: Calendar },
-      ],
-      faqs: [
-        { question: "O365?", answer: "Ja, kompatibel." },
-        { question: "Gespeichert?", answer: "Ja, in Gesendet." },
-      ],
-      relatedIntegrations: [
-        { name: "Gmail", slug: "gmail", category: "Kommunikation" },
-        { name: "Microsoft Teams", slug: "microsoft-teams", category: "Kommunikation" },
-        { name: "OneNote", slug: "onenote", category: "Produktivität" },
-      ],
-    },
-    "google-calendar": {
-      name: "Google Calendar",
-      category: "Produktivität",
-      description: "Planen Sie Elternsprechtage und Fristen automatisch.",
-      logo: "/Google-Calendar.png",
-      users: "38.000+",
-      setupTime: "2 Minuten",
-      guideUrl: "/guides/de-google-calendar-guide.docx",
-      benefits: ["Events", "Planung", "Erinnerungen", "Stundenplan", "Verfügbarkeit", "Video-Links"],
-      setupSteps: [
-        { step: 1, title: "Verbinden", description: "Autorisieren." },
-        { step: 2, title: "Kalender", description: "Auswählen." },
-        { step: 3, title: "Konfig", description: "Dauer setzen." },
-        { step: 4, title: "Planen", description: "Erstellen." },
-      ],
-      useCases: [
-        { title: "Sprechtage", description: "Termine organisieren.", icon: Users },
-        { title: "Planung", description: "Einheiten blocken.", icon: Calendar },
-        { title: "Alarme", description: "Fristen setzen.", icon: Clock },
-      ],
-      faqs: [
-        { question: "Meet Links?", answer: "Ja, optional." },
-        { question: "Privat?", answer: "Nur gewählte Kalender." },
-      ],
-      relatedIntegrations: [
-        { name: "Outlook", slug: "outlook", category: "Kommunikation" },
-        { name: "Google Classroom", slug: "google-classroom", category: "Lernmanagement" },
-        { name: "Gmail", slug: "gmail", category: "Kommunikation" },
-      ],
-    },
-    "notion": {
-      name: "Notion",
-      category: "Produktivität",
-      description: "Exportieren Sie Pläne und Ressourcen direkt in Ihren Notion-Workspace.",
-      logo: "/Notion_app_logo.png",
-      users: "18.000+",
-      setupTime: "4 Minuten",
-      guideUrl: "/guides/de-notion-guide.docx",
-      benefits: ["Seiten", "Datenbanken", "Vorlagen", "Ressourcen", "Planung", "Kollaboration"],
-      setupSteps: [
-        { step: 1, title: "Autorisieren", description: "Verbinden." },
-        { step: 2, title: "Seiten", description: "Zugriff geben." },
-        { step: 3, title: "Datenbanken", description: "Zuordnen." },
-        { step: 4, title: "Export", description: "Senden." },
-      ],
-      useCases: [
-        { title: "Curriculum", description: "Visuelle Pläne.", icon: Layout },
-        { title: "Wiki", description: "Ressourcen ordnen.", icon: BookOpen },
-        { title: "Notizen", description: "Beobachtungen.", icon: FileText },
-      ],
-      faqs: [
-        { question: "Datenbanken?", answer: "Ja, Items hinzufügen." },
-        { question: "Formatierung?", answer: "Ja, Markdown bleibt." },
-      ],
-      relatedIntegrations: [
-        { name: "Trello", slug: "trello", category: "Produktivität" },
-        { name: "Google Drive", slug: "google-drive", category: "Cloud-Speicher" },
-        { name: "Evernote", slug: "evernote", category: "Produktivität" },
-      ],
-    },
-    "trello": {
-      name: "Trello",
-      category: "Produktivität",
-      description: "Verwandeln Sie Ideen in Trello-Karten für Ihr Aufgabenmanagement.",
-      logo: "/Trello-Logo.png",
-      users: "14.000+",
-      setupTime: "3 Minuten",
-      guideUrl: "/guides/de-trello-guide.docx",
-      benefits: ["Karten", "Listen", "Checklisten", "Fristen", "Anhänge", "Labels"],
-      setupSteps: [
-        { step: 1, title: "Verbinden", description: "Anmelden." },
-        { step: 2, title: "Board", description: "Wählen." },
-        { step: 3, title: "Liste", description: "Standard setzen." },
-        { step: 4, title: "Erstellen", description: "Pushen." },
-      ],
-      useCases: [
-        { title: "Aufgaben", description: "To-Dos tracken.", icon: CheckCircle2 },
-        { title: "Kanban", description: "Fortschritt planen.", icon: Layout },
-        { title: "Projekte", description: "Langzeitprojekte.", icon: Clock },
-      ],
-      faqs: [
-        { question: "Mitglieder?", answer: "Ja, zuweisen möglich." },
-        { question: "Checklisten?", answer: "Ja, Listen konvertieren." },
-      ],
-      relatedIntegrations: [
-        { name: "Notion", slug: "notion", category: "Produktivität" },
-        { name: "Google Calendar", slug: "google-calendar", category: "Produktivität" },
-        { name: "Microsoft Teams", slug: "microsoft-teams", category: "Kommunikation" },
-      ],
-    },
-    "gmail": {
-      name: "Gmail",
-      category: "Kommunikation",
-      description: "Verbinden Sie Gmail, um KI-generierte Eltern-E-Mails direkt zu senden.",
-      logo: "/gmail-logo.png",
-      users: "52.000+",
-      setupTime: "3 Minuten",
-      guideUrl: "/guides/de-gmail-guide.docx",
-      benefits: ["Direkt senden", "Vorlagen", "Massenversand", "Tracking", "Planen", "Anhänge"],
-      setupSteps: [
-        { step: 1, title: "Verbinden", description: "OAuth 2.0." },
-        { step: 2, title: "Einstellungen", description: "Signatur." },
-        { step: 3, title: "Import", description: "Kontakte laden." },
-        { step: 4, title: "Senden", description: "Generieren." },
-      ],
-      useCases: [
-        { title: "Eltern", description: "Updates senden.", icon: Users },
-        { title: "Profi", description: "Kollegen mailen.", icon: Zap },
-        { title: "Feedback", description: "Schülerfeedback.", icon: CheckCircle2 },
-      ],
-      faqs: [
-        { question: "Absender?", answer: "Ihre Gmail-Adresse." },
-        { question: "Sicher?", answer: "Ja, OAuth 2.0." },
-      ],
-      relatedIntegrations: [
-        { name: "Outlook", slug: "outlook", category: "Kommunikation" },
-        { name: "Google Classroom", slug: "google-classroom", category: "Lernmanagement" },
-        { name: "PowerSchool", slug: "powerschool", category: "Schülerinformationen" },
-      ],
-    },
-    "powerschool": {
-      name: "PowerSchool",
-      category: "Schülerinformationen",
-      description: "Sync für Listen, Noten und Anwesenheit.",
-      logo: "/powerschool-logo.jpg",
-      users: "18.000+",
-      setupTime: "10 Minuten",
-      guideUrl: "/guides/de-powerschool-guide.docx",
-      benefits: ["Listen-Sync", "Notenrückgabe", "Anwesenheit", "Elternkontakte", "IEP", "Echtzeit"],
-      setupSteps: [
-        { step: 1, title: "Admin", description: "API anfragen." },
-        { step: 2, title: "Eingeben", description: "Keys eingeben." },
-        { step: 3, title: "Konfig", description: "Daten wählen." },
-        { step: 4, title: "Mapping", description: "Kategorien." },
-      ],
-      useCases: [
-        { title: "Listen", description: "Auto-Update.", icon: Users },
-        { title: "Noten", description: "Übertragen.", icon: CheckCircle2 },
-        { title: "Kontakt", description: "Eltern-Emails.", icon: Zap },
-      ],
-      faqs: [
-        { question: "Genehmigung?", answer: "Ja, Bezirksebene." },
-        { question: "Häufigkeit?", answer: "Konfigurierbar." },
-      ],
-      relatedIntegrations: [
-        { name: "Infinite Campus", slug: "infinite-campus", category: "Schülerinformationen" },
-        { name: "Google Classroom", slug: "google-classroom", category: "Lernmanagement" },
-        { name: "Canvas", slug: "canvas", category: "Lernmanagement" },
-      ],
-    },
-    "google-drive": {
-      name: "Google Drive",
-      category: "Cloud-Speicher",
-      description: "Speichern Sie Zaza Draft Inhalte in Google Drive.",
-      logo: "/google-drive-logo.png",
-      users: "48.000+",
-      setupTime: "2 Minuten",
-      guideUrl: "/guides/de-google-drive-guide.docx",
-      benefits: ["Auto-Save", "Ordner", "Versionen", "Teilen", "Offline", "Speicher"],
-      setupSteps: [
-        { step: 1, title: "Verbinden", description: "Autorisieren." },
-        { step: 2, title: "Ort", description: "Ordner wählen." },
-        { step: 3, title: "Auto-Save", description: "Aktivieren." },
-        { step: 4, title: "Start", description: "Arbeiten." },
-      ],
-      useCases: [
-        { title: "Backup", description: "Sicher speichern.", icon: Shield },
-        { title: "Team", description: "Ordner teilen.", icon: Users },
-        { title: "Offline", description: "Überall Zugriff.", icon: Download },
-      ],
-      faqs: [
-        { question: "Speicherplatz?", answer: "Ja, zählt zum Quota." },
-        { question: "Formate?", answer: "Docs, Sheets, PDF." },
-      ],
-      relatedIntegrations: [
-        { name: "OneDrive", slug: "microsoft-onedrive", category: "Cloud-Speicher" },
-        { name: "Dropbox", slug: "dropbox", category: "Cloud-Speicher" },
-        { name: "Google Classroom", slug: "google-classroom", category: "Lernmanagement" },
-      ],
-    },
-  },
 };
 
 export default function IntegrationClient({ slug }: { slug: string }) {
@@ -1153,19 +670,18 @@ export default function IntegrationClient({ slug }: { slug: string }) {
   };
 
   return (
-    // FIX: Added pt-20 to ensure content starts below the fixed navbar
+    // Added pt-20 to ensure content starts below the fixed navbar
     <div className="min-h-screen bg-[#0F172A] text-white pt-20">
       
       {/* --- BANNER --- */}
-      {/* FIX: Removed z-10 so it behaves as normal flow content.
-         FIX: Changed bg to solid amber-600 to ensure high visibility.
-      */}
-      <div className="bg-amber-600 border-b border-amber-500/50 px-4 py-3">
+      {/* Changed to purple gradient to match Videos page style */}
+      <div className="bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] border-b border-white/10 px-4 py-3">
         <div className="container mx-auto flex items-center justify-between gap-4">
           <div className="flex items-center gap-3 text-white font-medium">
-            <AlertTriangle className="h-5 w-5 flex-shrink-0 text-white" />
+            {/* Changed icon to Info for better aesthetics on purple */}
+            <Info className="h-5 w-5 flex-shrink-0 text-white" />
             <p className="text-sm">
-              {text.banner.message}
+              {text.banner.message} {/* This handles DE/EN translations automatically */}
             </p>
           </div>
         </div>
