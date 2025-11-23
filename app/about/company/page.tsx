@@ -9,7 +9,7 @@ export default function CompanyPage() {
   return (
     // Ensure the main container has the full site gradient
     <div className="min-h-screen bg-gradient-to-b from-[#0F172A] via-[#1E293B] to-[#0F172A]">
-      {/* Hero Section - Padding already fixed in the previous commit */}
+      {/* Hero Section - Final Spacing (pt-32 pb-10) */}
       <section className="pt-32 pb-10 px-6"> 
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-purple-400 text-sm font-semibold mb-4 tracking-wider">
@@ -45,7 +45,7 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* Mission and Vision Section - Reduced vertical padding (py-16) */}
+      {/* Mission and Vision Section - Tightened Padding (py-16) */}
       <section className="py-16 px-6 bg-gradient-to-r from-purple-900/10 to-blue-900/10 border-t border-b border-white/10">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-sm font-semibold uppercase text-purple-400 mb-4 tracking-widest">
@@ -157,7 +157,7 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* Stats - Reduced vertical padding (py-16) */}
+      {/* Stats - Tightened Padding (py-16) */}
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
