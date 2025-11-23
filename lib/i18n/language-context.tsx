@@ -1130,20 +1130,19 @@ const translationsEn: Record<string, string> = {
 
   // About Company Page
   "about.company.hero.eyebrow": "OUR COMPANY",
-  "about.company.hero.title": "Zaza Technologies",
-  "about.company.hero.subtitle":
-    "We're a team of educators, engineers, and designers building the future of teacher technology.",
-
-  "about.company.body.p1":
-    "Zaza Technologies was founded in 2023 by teachers who were frustrated with generic AI tools that didn't understand education. We saw teachers spending hours on administrative writing tasks that could be automated, but existing AI tools were either unsafe for student data or produced output that sounded nothing like a teacher.",
-
-  "about.company.body.p2":
-    "So we built something different: AI tools trained specifically on educational communications and pedagogy. Tools that understand the nuances of parent-teacher communication, the importance of constructive feedback, and the need to maintain your authentic voice. Tools that are hallucination-safe, FERPA-compliant, and designed from the ground up for education.",
-
-  "about.company.body.p3":
-    "Today, Zaza serves over 500 teachers across 15 countries, saving them 10+ hours per week on writing tasks. But we're just getting started. Our vision is to build a complete suite of AI tools that help teachers reclaim their time and focus on what matters most: their students.",
-
-  "about.company.stats.teachers.label": "Teachers Using Zaza",
+"about.company.hero.eyebrow": "OUR COMPANY",
+"about.company.hero.title": "Zaza Technologies",
+"about.company.hero.subtitle":
+"We're a team of educators, engineers, and designers building the future of teacher technology.",
+"about.company.body.p1":
+"Zaza Technologies was founded in 2023 by teachers who were frustrated with generic AI tools that didn't understand education. We saw teachers spending hours on administrative writing tasks that could be automated, but existing AI tools were either unsafe for student data or produced output that sounded nothing like a teacher.",
+"about.company.body.p2":
+"So we built something different: AI tools trained specifically on educational communications and pedagogy. Tools that understand the nuances of parent-teacher communication, the importance of constructive feedback, and the need to maintain your authentic voice. Tools that are hallucination-safe, FERPA-compliant, and designed from the ground up for education.",
+"about.company.body.p3":
+"Today, Zaza serves over 500 teachers across 15 countries, saving them 10+ hours per week on writing tasks. But we're just getting started. Our vision is to build a complete suite of AI tools that help teachers reclaim their time and focus on what matters most: their students.",
+"company.origin.title": "OUR ORIGIN STORY",
+"company.origin.imagePlaceholder": "Team Photo Placeholder (The whole team smiling)",,
+"about.company.stats.teachers.label": "Teachers Using Zaza",
   "about.company.stats.teachers.value": "500+",
   "about.company.stats.countries.label": "Countries",
   "about.company.stats.countries.value": "15",
@@ -2334,20 +2333,19 @@ const translationsDe: Record<string, string> = {
 
   // About Company Page (German)
   "about.company.hero.eyebrow": "UNSER UNTERNEHMEN",
-  "about.company.hero.title": "Zaza Technologies",
-  "about.company.hero.subtitle":
-    "Wir sind ein Team aus Pädagogen, Ingenieuren und Designern, die die Zukunft der Lehrertechnologie gestalten.",
-
-  "about.company.body.p1":
-    "Zaza Technologies wurde 2023 von Lehrkräften gegründet, die von generischen KI-Tools frustriert waren, die Bildung nicht verstanden. Wir sahen Lehrkräfte, die Stunden mit administrativen Schreibaufgaben verbrachten, die automatisiert werden könnten, aber bestehende KI-Tools waren entweder unsicher für Schülerdaten oder produzierten Ausgaben, die überhaupt nicht wie eine Lehrkraft klangen.",
-
-  "about.company.body.p2":
-    "Also haben wir etwas anderes entwickelt: KI-Tools, die speziell auf pädagogische Kommunikation und Pädagogik trainiert sind. Tools, die die Nuancen der Eltern-Lehrer-Kommunikation verstehen, die Bedeutung konstruktiven Feedbacks und die Notwendigkeit, Ihre authentische Stimme zu bewahren. Tools, die halluzinationssicher, FERPA-konform und von Grund auf für Bildung entwickelt sind.",
-
-  "about.company.body.p3":
-    "Heute dient Zaza über 500 Lehrkräften in 15 Ländern und spart ihnen über 10 Stunden pro Woche bei Schreibaufgaben. Aber wir fangen gerade erst an. Unsere Vision ist es, eine vollständige Suite von KI-Tools zu entwickeln, die Lehrkräften helfen, ihre Zeit zurückzugewinnen und sich auf das Wichtigste zu konzentrieren: ihre Schüler.",\n  "company.origin.title": "UNSERE GRÜNDUNGSGESCHICHTE",,\n  "company.origin.title": "OUR ORIGIN STORY",,
-
-  "about.company.stats.teachers.label": "Lehrkräfte nutzen Zaza",
+"about.company.hero.eyebrow": "UNSER UNTERNEHMEN",
+"about.company.hero.title": "Zaza Technologies",
+"about.company.hero.subtitle":
+"Wir sind ein Team aus Pädagogen, Ingenieuren und Designern, die die Zukunft der Lehrertechnologie gestalten.",
+"about.company.body.p1":
+"Zaza Technologies wurde 2023 von Lehrkräften gegründet, die von generischen KI-Tools frustriert waren, die Bildung nicht verstanden. Wir sahen Lehrkräfte, die Stunden mit administrativen Schreibaufgaben verbrachten, die automatisiert werden könnten, aber bestehende KI-Tools waren entweder unsicher für Schülerdaten oder produzierten Ausgaben, die überhaupt nicht wie eine Lehrkraft klangen.",
+"about.company.body.p2":
+"Also haben wir etwas anderes entwickelt: KI-Tools, die speziell auf pädagogische Kommunikation und Pädagogik trainiert sind. Tools, die die Nuancen der Eltern-Lehrer-Kommunikation verstehen, die Bedeutung konstruktiven Feedbacks und die Notwendigkeit, Ihre authentische Stimme zu bewahren. Tools, die halluzinationssicher, FERPA-konform und von Grund auf für Bildung entwickelt sind.",
+"about.company.body.p3":
+"Heute dient Zaza über 500 Lehrkräften in 15 Ländern und spart ihnen über 10 Stunden pro Woche bei Schreibaufgaben. Aber wir fangen gerade erst an. Unsere Vision ist es, eine vollständige Suite von KI-Tools zu entwickeln, die Lehrkräften helfen, ihre Zeit zurückzugewinnen und sich auf das Wichtigste zu konzentrieren: ihre Schüler.",
+"company.origin.title": "UNSERE GRÜNDUNGSGESCHICHTE",
+"company.origin.imagePlaceholder": "Teamfoto Platzhalter (Das ganze Team lächelt)",,
+"about.company.stats.teachers.label": "Lehrkräfte nutzen Zaza",
   "about.company.stats.teachers.value": "500+",
   "about.company.stats.countries.label": "Länder",
   "about.company.stats.countries.value": "15",
@@ -2471,5 +2469,6 @@ export function useLanguage() {
   }
   return context;
 }
+
 
 
