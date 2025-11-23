@@ -24,9 +24,9 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* Origin Story (IMPROVED DESIGN) */}
+      {/* Origin Story (IMPROVED DESIGN: max-w-3xl) */}
       <section className="py-16 px-6">
-        <div className="max-w-4xl mx-auto p-10 bg-white/5 border border-white/10 rounded-xl shadow-lg shadow-black/30">
+        <div className="max-w-3xl mx-auto p-10 bg-white/5 border border-white/10 rounded-xl shadow-lg shadow-black/30">
           <h2 className="text-xl font-semibold text-purple-400 mb-6 flex items-center gap-2">
              <Zap className="w-5 h-5"/>
              {t("company.origin.title")}
@@ -62,9 +62,9 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* Philosophy Section */}
+      {/* Philosophy Section (IMPROVED DESIGN: max-w-3xl) */}
       <section className="py-16 px-6 bg-[#1E293B] border-y border-white/10">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6">
             {t("company.philosophy.title")}
           </h2>
@@ -105,9 +105,9 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* Boutique Approach */}
+      {/* Boutique Approach (IMPROVED DESIGN: max-w-3xl) */}
       <section className="py-16 px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6">
             {t("company.boutique.title")}
           </h2>
@@ -143,12 +143,12 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* Where We Are Today */}
+      {/* Where We Are Today (IMPROVED DESIGN: max-w-3xl) */}
       <section className="py-16 px-6 bg-[#1E293B] border-y border-white/10">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6">
             {t("company.today.title")}
-          </h2>
+          </h2
           <p className="text-lg text-gray-300 mb-6">{t("company.today.p1")}</p>
           <p className="text-lg text-gray-300 mb-6">{t("company.today.p2")}</p>
           <p className="text-xl font-bold text-purple-400">
