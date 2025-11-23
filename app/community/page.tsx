@@ -74,7 +74,7 @@ const uiContent = {
   },
   de: {
     hero: {
-      title: "Werden Sie Teil der Zaza Draft Community",
+      title: "Treten Sie der Lehrercommunity bei", // REVERTED TO REQUESTED TEXT
       subtitle: "Vernetzen Sie sich mit anderen Pädagogen, teilen Sie Ressourcen und gestalten Sie die Zukunft der KI im Bildungswesen.",
       joinBtn: "Community beitreten",
       startBtn: "Diskussion starten"
