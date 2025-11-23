@@ -1150,6 +1150,12 @@ const translationsEn: Record<string, string> = {
   "about.company.stats.timeSaved.label": "Hours Saved Weekly",
   "about.company.stats.timeSaved.value": "10+",
 
+    // Mission and Vision Section
+  "company.mission.title": "OUR MISSION AND VISION",
+  "company.mission.quote": "To empower teachers globally by giving them back their time, so they can focus on student success and their own well-being.",
+  "company.mission.attribution": "The Zaza Technologies Team",
+  "company.mission.imagePlaceholder": "Team Photo Placeholder (The whole team smiling)",
+
   // Founder Hero Section
   "founder.hero.headline": "Meet the Founder Building AI That Serves Teachers",
   "founder.hero.subheading":
@@ -2348,6 +2354,18 @@ const translationsDe: Record<string, string> = {
   "about.company.stats.timeSaved.label": "Wöchentlich gesparte Stunden",
   "about.company.stats.timeSaved.value": "10+",
 
+    // Mission and Vision Section
+  "company.mission.title": "OUR MISSION AND VISION",
+  "company.mission.quote": "To empower teachers globally by giving them back their time, so they can focus on student success and their own well-being.",
+  "company.mission.attribution": "The Zaza Technologies Team",
+  "company.mission.imagePlaceholder": "Team Photo Placeholder (The whole team smiling)",
+
+    // Mission and Vision Section (German)
+  "company.mission.title": "UNSERE MISSION UND VISION",
+  "company.mission.quote": "Lehrkräfte weltweit zu stärken, indem wir ihnen ihre Zeit zurückgeben, damit sie sich auf den Erfolg ihrer Schüler und ihr eigenes Wohlbefinden konzentrieren können.",
+  "company.mission.attribution": "Das Zaza Technologies Team",
+  "company.mission.imagePlaceholder": "Teamfoto Platzhalter (Das ganze Team lächelt)",
+
   // Founder Hero Section (German)
   "founder.hero.headline":
     "Lernen Sie den Gründer kennen, der KI für Lehrkräfte entwickelt",
@@ -2453,3 +2471,4 @@ export function useLanguage() {
   }
   return context;
 }
+
