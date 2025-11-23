@@ -9,7 +9,7 @@ export default function CompanyPage() {
   return (
     // Ensure the main container has the full site gradient
     <div className="min-h-screen bg-gradient-to-b from-[#0F172A] via-[#1E293B] to-[#0F172A]">
-      {/* Hero Section - FINAL FIX: Negative Margin Override */}
+      {/* Hero Section - FINAL FIX: Negative Margin Override (mt-[-8rem]) */}
       <section className="mt-[-8rem] pb-10 px-6"> 
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-purple-400 text-sm font-semibold mb-4 tracking-wider">
