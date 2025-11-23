@@ -931,7 +931,7 @@ export function CaseStudyDetailClient({ slug }: { slug: string }) {
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium px-8 py-6 rounded-full shadow-lg shadow-purple-500/25"
               onClick={() => trackEvent("case_study_cta_clicked", { slug, cta: "try_free" })}
             >
-              <Link href="/signup">{study.ui.ctaPrimary}</Link>
+              <Link href="/pricing">{study.ui.ctaPrimary}</Link>
             </Button>
             <Button
               asChild

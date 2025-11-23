@@ -236,7 +236,7 @@ export function SuccessStoriesClient() {
             {text.hero.subtitle}
           </p>
 
-          {/* Trust Metrics  */}
+          {/* Trust Metrics */}
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
               <Users className="w-8 h-8 text-purple-400 mx-auto mb-3" />
@@ -338,7 +338,7 @@ export function SuccessStoriesClient() {
               size="lg"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium px-8 py-6 rounded-full shadow-lg shadow-purple-500/25"
             >
-              <Link href="/signup">{text.cta.primary}</Link>
+              <Link href="/pricing">{text.cta.primary}</Link>
             </Button>
             <Button
               asChild
