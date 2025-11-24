@@ -663,7 +663,7 @@ const translationsEn: Record<string, string> = {
   "products.teach.hero.eyebrow": "LESSON PLANNING MADE EASY",
   "products.teach.hero.title": "Plan Better Lessons in Less Time",
   "products.teach.hero.subtitle":
-    "AI-powered lesson planning that adapts to your curriculum, saves hours of prep time, and helps you create engaging, standards-aligned lessons.",
+    "AI-powered lesson planning that adapts to your curriculum, saves hours of prep time, and keeps lessons engaging and standards-aligned.",
   "products.teach.hero.cta.primary": "Start Planning Free",
   "products.teach.hero.cta.secondary": "See Demo",
 
@@ -1430,7 +1430,7 @@ const translationsDe: Record<string, string> = {
   "suite.draft.cta": "Mehr über Draft erfahren",
 
   "suite.gradeflow.body":
-    "Ein erklärbarer Bewertungs-Copilot mit OCR, Rubriken und evidenzbasiertem Feedback - schnelleres Korrigieren mit Fairness und Konsistenz.",
+    "An erklärbarer Bewertungs-Copilot mit OCR, Rubriken und evidenzbasiertem Feedback - schnelleres Korrigieren mit Fairness und Konsistenz.",
   "suite.gradeflow.li1":
     "Rubrik-konformes, prüffähiges Feedback mit Nachweisen",
   "suite.gradeflow.li2": "Konsistenz über Klassen und Beurteilende hinweg",
@@ -2449,8 +2449,6 @@ const translationsDe: Record<string, string> = {
   "founder.personal.company": "Zaza Technologies",
   "founder.personal.cta": "Kontakt aufnehmen",
 };
-
-}; // <--- ERROR WAS HERE, REMOVING THIS LINE AND ADDING THE REST OF THE FILE
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>(() => {
