@@ -164,7 +164,8 @@ const translationsEn: Record<string, string> = {
   // Pricing - Decision Tool section
   "pricing.decision.title": "Not Sure Which Plan to Choose?",
   "pricing.decision.subtitle":
-    "Take our quick quiz to get a personalized recommendation",
+  "Take our quick quiz to get a personalized recommendation",
+
 
   // Navigation
   "nav.home": "Home",
@@ -1129,7 +1130,6 @@ const translationsEn: Record<string, string> = {
   "about.overview.cta.button": "Contact Us",
 
   // About Company Page
-  "about.company.hero.eyebrow": "OUR COMPANY",
 "about.company.hero.eyebrow": "OUR COMPANY",
 "about.company.hero.title": "Zaza Technologies",
 "about.company.hero.subtitle":
@@ -1143,7 +1143,7 @@ const translationsEn: Record<string, string> = {
 "company.origin.title": "OUR ORIGIN STORY",
 "company.origin.imagePlaceholder": "Team Photo Placeholder (The whole team smiling)",
 "about.company.stats.teachers.label": "Teachers Using Zaza",
-  "about.company.stats.teachers.value": "500+",
+  "about.company.stats.teachers.value": "500k+",
   "about.company.stats.countries.label": "Countries",
   "about.company.stats.countries.value": "15",
   "about.company.stats.timeSaved.label": "Hours Saved Weekly",
@@ -1561,7 +1561,7 @@ const translationsDe: Record<string, string> = {
     "Gemeinsam KI-gestützte Unterrichts- und Einheitenplanung erarbeiten.",
   "community.categories.parent-communication.name": "Elternkommunikation",
   "community.categories.parent-communication.desc":
-    "Tipps für den KI‑Einsatz zur Verbesserung der Eltern-Lehrer-Kommunikation.",
+    "Tipps für den KI-Einsatz zur Verbesserung der Eltern-Lehrer-Kommunikation.",
   "community.categories.assessment-feedback.name": "Bewertung & Feedback",
   "community.categories.assessment-feedback.desc":
     "KI-Tools für Korrektur, Feedback und formative Beurteilung diskutieren.",
@@ -1594,7 +1594,7 @@ const translationsDe: Record<string, string> = {
   "community.badges.expert.name": "Experte",
   "community.badges.expert.desc": "Expertenlevel erreicht",
   "community.badges.ambassador.name": "Botschafter",
-  "community.badges.ambassador.desc": "Offizieller Zaza‑Botschafter",
+  "community.badges.ambassador.desc": "Offizieller Zaza-Botschafter",
   // Richtlinien
   "community.guidelines.title": "Community-Richtlinien",
   "community.guidelines.li1": "Respektvoll und unterstützend sein",
@@ -1605,14 +1605,14 @@ const translationsDe: Record<string, string> = {
   // Verwandte Inhalte
   "community.related.title": "Wissen erweitern",
   "community.related.desc":
-    "Vertiefen Sie Ihr Community‑Erlebnis mit diesen Lernressourcen",
-  "community.related.aiLiteracy.title": "KI‑Kompetenzkurse",
+    "Vertiefen Sie Ihr Community-Erlebnis mit diesen Lernressourcen",
+  "community.related.aiLiteracy.title": "KI-Kompetenzkurse",
   "community.related.aiLiteracy.desc":
     "Grundlagen lernen, die in der Community diskutiert werden",
-  "community.related.webinars.title": "Experten‑Webinare",
+  "community.related.webinars.title": "Experten-Webinare",
   "community.related.webinars.desc":
-    "Live‑Sessions zu aktuellen Community‑Themen",
-  "community.related.glossary.title": "KI‑Glossar",
+    "Live-Sessions zu aktuellen Community-Themen",
+  "community.related.glossary.title": "KI-Glossar",
   "community.related.glossary.desc": "Begriffe aus den Diskussionen verstehen",
   // CTA
   "community.cta.titlePrefix": "Bereit,",
@@ -1714,9 +1714,18 @@ const translationsDe: Record<string, string> = {
   "demo.after.label": "NACHHER (DRAFT'S VERSION)",
   "demo.tryItYourself": "Selbst ausprobieren",
   "demo.testimonial.quote":
-    "Ich habe meinen Sonntag zurückbekommen. Draft verwandelt Stunden in Minuten.",
+  "Ich habe meinen Sonntag zurückbekommen. Draft verwandelt Stunden in Minuten.",
   "demo.testimonial.name": "Sarah Mitchell",
   "demo.testimonial.author": "Grundschullehrerin, UK",
+  "demo.email.before": "Sam passt im Unterricht nicht auf.",
+  "demo.email.after": "Ich möchte Sie bezüglich Sams jüngster Aufmerksamkeitsschwierigkeiten im Unterricht kontaktieren. Mir ist aufgefallen, dass Sam sich sehr bemüht, aber Schwierigkeiten hat, während der Stunden engagiert zu bleiben. Ich würde gerne ein kurzes Gespräch führen, um Strategien zu besprechen, die wir sowohl in der Schule als auch zu Hause anwenden können, um ihr Lernen zu unterstützen. Hätten Sie diese Woche Zeit für einen kurzen Anruf?",
+  
+  "demo.report.before": "Guter Schüler, gibt sich Mühe, muss mehr teilnehmen.",
+  "demo.report.after": "Sam zeigt durchweg Einsatz und eine positive Einstellung zum Lernen. Sie zeigen ein starkes Verständnis der Kernkonzepte und erledigen Aufgaben durchdacht. Um ihre Fähigkeiten weiterzuentwickeln, ermutige ich Sam, ihre Ideen häufiger in Klassendiskussionen zu teilen, da ihre Einsichten unserer Lerngemeinschaft sehr zugute kommen würden.",
+  
+  "demo.grading.before": "Aufsatz ist okay, braucht aber Arbeit an These und Beweisen.",
+  "demo.grading.after": "Ihr Aufsatz zeigt ein gutes Verständnis des Themas und enthält relevante Beispiele. Um Ihr Argument zu stärken, sollten Sie eine spezifischere These in Ihrer Einleitung entwickeln. Versuchen Sie außerdem, direkte Zitate aus dem Text einzubeziehen, um Ihre Analyse zu unterstützen. Ich würde gerne sehen, dass Sie Ihre Ideen im dritten Absatz erweitern. Guter Start!",
+
 
   // Use Cases Section
   "useCases.heading": "Für Ihre alltäglichen Schreibaufgaben entwickelt",
@@ -2352,13 +2361,7 @@ const translationsDe: Record<string, string> = {
   "about.company.stats.timeSaved.label": "Wöchentlich gesparte Stunden",
   "about.company.stats.timeSaved.value": "10+",
 
-    // Mission and Vision Section
-  "company.mission.title": "OUR MISSION AND VISION",
-  "company.mission.quote": "To empower teachers globally by giving them back their time, so they can focus on student success and their own well-being.",
-  "company.mission.attribution": "The Zaza Technologies Team",
-  "company.mission.imagePlaceholder": "Team Photo Placeholder (The whole team smiling)",
-
-    // Mission and Vision Section (German)
+  // Mission and Vision Section (German)
   "company.mission.title": "UNSERE MISSION UND VISION",
   "company.mission.quote": "Lehrkräfte weltweit zu stärken, indem wir ihnen ihre Zeit zurückgeben, damit sie sich auf den Erfolg ihrer Schüler und ihr eigenes Wohlbefinden konzentrieren können.",
   "company.mission.attribution": "Das Zaza Technologies Team",
@@ -2451,6 +2454,9 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       fr: translationsFr,
       it: translationsIt,
     };
+// ADD THIS to your existing translations object in language-context.tsx
+// Find the 'en' translations object and add this 'company' section
+
 
     return translations[language][key] || translationsEn[key] || key;
   };
@@ -2461,7 +2467,83 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     </LanguageContext.Provider>
   );
 }
+// Company Page - Complete
+  "about.company.hero.eyebrow": "OUR COMPANY",
+  "about.company.hero.title": "Zaza Technologies",
+  "about.company.hero.subtitle": "We are a small, specialised team of learning designers, engineers, and educational researchers building technology that helps teachers thrive.",
+  
+  "company.origin.title": "Our Origin Story",
+  "company.origin.p1": "Zaza Technologies was founded in 2025 with a clear belief: education deserves AI tools built with real pedagogical understanding, not repurposed corporate AI models. We build technology that protects teacher wellbeing.",
+  "company.origin.p2": "So we chose a different approach.",
+  "company.origin.p3": "We design tools that are trained on real pedagogy, developed with educators, and refined through classroom use. Tools that understand the nuance of teacher judgement, the emotional weight of parent interaction, and the importance of constructive feedback. Tools that are accurate, reliable, and safe for educational settings.",
+  "company.origin.p4": "Our models are trained on real teacher feedback and classroom language patterns, refined through iterative testing with educators, and designed to produce output that sounds like a teacher - not a machine.",
+  "company.origin.differentiator": "Our goal is simple: give teachers meaningful time back.",
+  
+  "company.philosophy.title": "Our Philosophy",
+  "company.philosophy.intro": "We do not believe in AI that replaces teachers. We believe in AI that supports teachers.",
+  "company.philosophy.principle1": "Tools must respect teacher expertise.",
+  "company.philosophy.principle2": "Tools must reduce workload, not shift it.",
+  "company.philosophy.principle3": "Tools must protect students and their learning environment.",
+  "company.philosophy.principle4": "Tools must be trustworthy and transparent.",
+  "company.philosophy.strong": "If technology cannot help teachers do what they do best - teach - then it does not belong in the classroom.",
+  
+  "company.boutique.title": "A Boutique Approach",
+  "company.boutique.intro": "We are intentionally not a large technology company. We are a focused team building for one audience only - teachers.",
+  "company.boutique.means": "This means:",
+  "company.boutique.point1": "We work closely with educators across multiple regions and contexts.",
+  "company.boutique.point2": "We test features directly in real classrooms.",
+  "company.boutique.point3": "We prioritise clarity, safety, and ease of use over novelty.",
+  "company.boutique.impact": "We do not optimise for rapid scale. We optimise for what works.",
+  "company.boutique.close": "Scale is not the goal. Impact is.",
+  
+  "company.today.title": "Where We Are Today",
+  "company.today.p1": "Zaza now supports over 500 teachers in more than 15 countries. On average, teachers save over 10 hours per week on writing and communication tasks by using Zaza's tools. And we are just getting started.",
+  "company.today.p2": "Our long-term vision is to build a complete suite of AI tools that help teachers reclaim their time, protect their wellbeing, and stay connected to the heart of their work - their students.",
+  "company.today.close": "Because when teachers thrive, students thrive.",
+  
+  "company.stats.teachers.number": "150k+",
+  "company.stats.teachers.label": "Teachers using Zaza",
+  "company.stats.countries.number": "15",
+  "company.stats.countries.label": "Countries",
+  "company.stats.hours.number": "10+",
+  "company.stats.hours.label": "Hours saved weekly",
 
+  "company.origin.title": "UNSERE GRÜNDUNGSGESCHICHTE",
+  "company.origin.p1": "Zaza Technologies wurde 2025 mit einer klaren Überzeugung gegründet: Bildung verdient KI-Tools, die mit echtem pädagogischem Verständnis entwickelt wurden, nicht umfunktionierte Unternehmens-KI-Modelle. Wir entwickeln Technologie, die das Wohlbefinden von Lehrkräften schützt.",
+  "company.origin.p2": "Also haben wir uns für einen anderen Ansatz entschieden.",
+  "company.origin.p3": "Wir entwickeln Tools, die auf echter Pädagogik trainiert sind, mit Pädagogen entwickelt werden und durch den Einsatz im Klassenzimmer verfeinert werden. Tools, die die Nuancen des Lehrerurteils, das emotionale Gewicht der Elterninteraktion und die Bedeutung konstruktiven Feedbacks verstehen. Tools, die genau, zuverlässig und sicher für Bildungseinrichtungen sind.",
+  "company.origin.p4": "Unsere Modelle werden mit echtem Lehrerfeedback und Klassenzimmersprachmustern trainiert, durch iteratives Testen mit Pädagogen verfeinert und entwickelt, um Ausgaben zu produzieren, die wie eine Lehrkraft klingen - nicht wie eine Maschine.",
+  "company.origin.differentiator": "Unser Ziel ist einfach: Lehrkräften bedeutungsvolle Zeit zurückgeben.",
+
+  "company.philosophy.title": "UNSERE PHILOSOPHIE",
+  "company.philosophy.intro": "Wir glauben nicht an KI, die Lehrkräfte ersetzt. Wir glauben an KI, die Lehrkräfte unterstützt.",
+  "company.philosophy.principle1": "Tools müssen die Expertise von Lehrkräften respektieren.",
+  "company.philosophy.principle2": "Tools müssen die Arbeitslast reduzieren, nicht verlagern.",
+  "company.philosophy.principle3": "Tools müssen Schüler und ihre Lernumgebung schützen.",
+  "company.philosophy.principle4": "Tools müssen vertrauenswürdig und transparent sein.",
+  "company.philosophy.strong": "Wenn Technologie Lehrkräften nicht dabei helfen kann, das zu tun, was sie am besten können - unterrichten - dann gehört sie nicht ins Klassenzimmer.",
+
+  "company.boutique.title": "EIN BOUTIQUE-ANSATZ",
+  "company.boutique.intro": "Wir sind absichtlich kein großes Technologieunternehmen. Wir sind ein fokussiertes Team, das nur für ein Publikum entwickelt - Lehrkräfte.",
+  "company.boutique.means": "Das bedeutet:",
+  "company.boutique.point1": "Wir arbeiten eng mit Pädagogen in verschiedenen Regionen und Kontexten zusammen.",
+  "company.boutique.point2": "Wir testen Funktionen direkt in echten Klassenzimmern.",
+  "company.boutique.point3": "Wir priorisieren Klarheit, Sicherheit und Benutzerfreundlichkeit über Neuheit.",
+  "company.boutique.impact": "Wir optimieren nicht für schnelles Wachstum. Wir optimieren für das, was funktioniert.",
+  "company.boutique.close": "Skalierung ist nicht das Ziel. Wirkung ist es.",
+
+  "company.today.title": "WO WIR HEUTE STEHEN",
+  "company.today.p1": "Zaza unterstützt jetzt über 500 Lehrkräfte in mehr als 15 Ländern. Im Durchschnitt sparen Lehrkräfte über 10 Stunden pro Woche bei Schreib- und Kommunikationsaufgaben durch die Nutzung von Zazas Tools. Und wir fangen gerade erst an.",
+  "company.today.p2": "Unsere langfristige Vision ist es, eine vollständige Suite von KI-Tools zu entwickeln, die Lehrkräften helfen, ihre Zeit zurückzugewinnen, ihr Wohlbefinden zu schützen und mit dem Kern ihrer Arbeit verbunden zu bleiben - ihren Schülern.",
+  "company.today.close": "Denn wenn Lehrkräfte gedeihen, gedeihen Schüler.",
+
+  "company.stats.teachers.number": "500+",
+  "company.stats.teachers.label": "Lehrkräfte nutzen Zaza",
+  "company.stats.countries.number": "15",
+  "company.stats.countries.label": "Länder",
+  "company.stats.hours.number": "10+",
+  "company.stats.hours.label": "Wöchentlich gesparte Stunden",
+};
 export function useLanguage() {
   const context = useContext(LanguageContext);
   if (context === undefined) {
@@ -2469,7 +2551,3 @@ export function useLanguage() {
   }
   return context;
 }
-
-
-
-
