@@ -1129,63 +1129,9 @@ const translationsEn: Record<string, string> = {
     "Get in touch with our team to discuss how Zaza can help your school or district.",
   "about.overview.cta.button": "Contact Us",
 
-  // About Company Page
-  "about.company.hero.eyebrow": "OUR COMPANY",
-  "about.company.hero.title": "Zaza Technologies",
-  "about.company.hero.subtitle":
-    "We're a team of educators, engineers, and designers building the future of teacher technology.",
-  "about.company.body.p1":
-    "Zaza Technologies was founded in 2023 by teachers who were frustrated with generic AI tools that didn't understand education. We saw teachers spending hours on administrative writing tasks that could be automated, but existing AI tools were either unsafe for student data or produced output that sounded nothing like a teacher.",
-  "about.company.body.p2":
-    "So we built something different: AI tools trained specifically on educational communications and pedagogy. Tools that understand the nuances of parent-teacher communication, the importance of constructive feedback, and the need to maintain your authentic voice. Tools that are hallucination-safe, FERPA-compliant, and designed from the ground up for education.",
-  "about.company.body.p3":
-    "Today, Zaza serves over 500 teachers across 15 countries, saving them 10+ hours per week on writing tasks. But we're just getting started. Our vision is to build a complete suite of AI tools that help teachers reclaim their time and focus on what matters most: their students.",
-  "company.origin.title": "OUR ORIGIN STORY",
-  "company.origin.imagePlaceholder": "Team Photo Placeholder (The whole team smiling)",
-  "about.company.stats.teachers.label": "Teachers Using Zaza",
-  "about.company.stats.teachers.value": "500+",
-  "about.company.stats.countries.label": "Countries",
-  "about.company.stats.countries.value": "15",
-  "about.company.stats.timeSaved.label": "Hours Saved Weekly",
-  "about.company.stats.timeSaved.value": "10+",
-
-  // Mission and Vision Section
-  "company.mission.title": "OUR MISSION AND VISION",
-  "company.mission.quote": "To empower teachers globally by giving them back their time, so they can focus on student success and their own well-being.",
-  "company.mission.attribution": "The Zaza Technologies Team",
-  "company.mission.imagePlaceholder": "Team Photo Placeholder (The whole team smiling)",
   
-  // Philosophy Section
-  "company.philosophy.title": "OUR PHILOSOPHY: TEACHER-FIRST",
-  "company.philosophy.intro": "Everything we do is guided by a commitment to the educator, their well-being, and their professional craft.",
-  "company.philosophy.principle1": "Respecting Expertise: Our AI assists, it never dictates. Teachers are always in control of the final output.",
-  "company.philosophy.principle2": "Promoting Wellbeing: We design for boundaries, aiming to reduce after-hours stress and workload.",
-  "company.philosophy.principle3": "Unwavering Trust: We are hallucination-safe and FERPA-compliant by design, never compromising student privacy.",
-  "company.philosophy.principle4": "Pedagogical Integrity: Our tools are trained on real educational principles, not general business rhetoric.",
-  "company.philosophy.closing": "Our focus is simple: less admin, more teaching.",
-
-  // Boutique Approach
-  "company.boutique.title": "The Boutique Approach: Focus Over Scale",
-  "company.boutique.intro": "We are a small, specialised team of learning designers, engineers, and educational researchers building technology that helps teachers thrive.",
-  "company.boutique.means": "What our 'Boutique' approach means for you:",
-  "company.boutique.point1": "Deep Specialisation: We only build for education. We understand your curriculum, standards, and challenges better than large, general tech companies.",
-  "company.boutique.point2": "Direct Feedback Loop: Your feature requests go directly to the team who builds them, not through layers of management.",
-  "company.boutique.point3": "Personalized Trust: Every school and district partner has direct access to our leadership team for implementation and support.",
-  "company.boutique.closing": "We believe deeply in doing one thing, and doing it exceptionally well: serving the world's educators.",
-  "company.boutique.impact": "The result is specialized, high-quality, trustworthy tools that genuinely save you time.",
   
-  // Where We Are Today
-  "company.today.title": "Where We Are Today",
-  "company.today.p1": "Today, Zaza serves over 500 teachers across 15 countries, saving them 10+ hours per week on administrative writing tasks.",
-  "company.today.p2": "We continue to expand our suite of tools—Draft, Teach, GradeFlow, and Shield—all built on the secure Zaza KnowledgeCore platform. Our commitment to our original mission remains absolute.",
-  "company.today.close": "We are just getting started. Our vision is to empower every teacher globally.",
-
-  // Stats
-  "company.stats.teachers.number": "500+",
-  "company.stats.countries.number": "15",
-  "company.stats.hours.number": "10+",
-
-  // Founder Hero Section
+  // About Company Page - NEW CONTENT\n\n\n  // Founder Hero Section
   "founder.hero.headline": "Meet the Founder Building AI That Serves Teachers",
   "founder.hero.subheading":
     "Dr. Greg Blackburn spent 15 years in classrooms before building Zaza - AI tools that understand what teachers actually need.",
@@ -2359,3 +2305,4 @@ export function useLanguage() {
   }
   return context;
 }
+
