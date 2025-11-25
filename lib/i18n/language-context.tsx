@@ -161,8 +161,7 @@ const translationsEn: Record<string, string> = {
   // Pricing - Decision Tool section
   "pricing.decision.title": "Not Sure Which Plan to Choose?",
   "pricing.decision.subtitle":
-  "Take our quick quiz to get a personalized recommendation",
-
+    "Take our quick quiz to get a personalized recommendation",
 
   // Navigation
   "nav.home": "Home",
@@ -1129,34 +1128,48 @@ const translationsEn: Record<string, string> = {
   // About Company Page - NEW CONTENT
   "about.company.hero.eyebrow": "OUR COMPANY",
   "about.company.hero.title": "Zaza Technologies",
-  "about.company.hero.subtitle": "We are a small, specialised team of learning designers, engineers, and educational researchers building technology that helps teachers thrive.",
+  "about.company.hero.subtitle":
+    "We are a small, specialised team of learning designers, engineers, and educational researchers building technology that helps teachers thrive.",
   "company.origin.title": "OUR COMPANY",
-  "company.origin.body.p1": "Zaza Technologies was founded in 2025 with a clear belief: education deserves AI tools built with real pedagogical understanding, not repurposed corporate AI models. We build technology that protects teacher wellbeing.",
+  "company.origin.body.p1":
+    "Zaza Technologies was founded in 2025 with a clear belief: education deserves AI tools built with real pedagogical understanding, not repurposed corporate AI models. We build technology that protects teacher wellbeing.",
   "company.origin.body.p2": "So we chose a different approach.",
-  "company.origin.body.p3": "We design tools that are trained on real pedagogy, developed with educators, and refined through classroom use. Tools that understand the nuance of teacher judgement, the emotional weight of parent interaction, and the importance of constructive feedback. Tools that are accurate, reliable, and safe for educational settings.",
-  "company.origin.body.p4": "Our models are trained on real teacher feedback and classroom language patterns, refined through iterative testing with educators, and designed to produce output that sounds like a teacher - not a machine.",
-  "company.origin.body.p5": "Our goal is simple: give teachers meaningful time back.",
-  
+  "company.origin.body.p3":
+    "We design tools that are trained on real pedagogy, developed with educators, and refined through classroom use. Tools that understand the nuance of teacher judgement, the emotional weight of parent interaction, and the importance of constructive feedback. Tools that are accurate, reliable, and safe for educational settings.",
+  "company.origin.body.p4":
+    "Our models are trained on real teacher feedback and classroom language patterns, refined through iterative testing with educators, and designed to produce output that sounds like a teacher - not a machine.",
+  "company.origin.body.p5":
+    "Our goal is simple: give teachers meaningful time back.",
+
   "company.philosophy.title": "Our Philosophy",
-  "company.philosophy.intro": "We do not believe in \"AI that replaces teachers.\" We believe in AI that supports teachers.",
+  "company.philosophy.intro":
+    'We do not believe in "AI that replaces teachers." We believe in AI that supports teachers.',
   "company.philosophy.principle1": "Tools must respect teacher expertise.",
   "company.philosophy.principle2": "Tools must reduce workload, not shift it.",
-  "company.philosophy.principle3": "Tools must protect students and their learning environment.",
+  "company.philosophy.principle3":
+    "Tools must protect students and their learning environment.",
   "company.philosophy.principle4": "Tools must be trustworthy and transparent.",
-  "company.philosophy.closing": "If technology cannot help teachers do what they do best - teach - then it does not belong in the classroom.",
+  "company.philosophy.closing":
+    "If technology cannot help teachers do what they do best - teach - then it does not belong in the classroom.",
 
   "company.boutique.title": "A Boutique Approach",
-  "company.boutique.intro": "We are intentionally not a large technology company. We are a focused team building for one audience only – teachers.",
+  "company.boutique.intro":
+    "We are intentionally not a large technology company. We are a focused team building for one audience only – teachers.",
   "company.boutique.means": "This means:",
-  "company.boutique.point1": "We work closely with educators across multiple regions and contexts.",
+  "company.boutique.point1":
+    "We work closely with educators across multiple regions and contexts.",
   "company.boutique.point2": "We test features directly in real classrooms.",
-  "company.boutique.point3": "We prioritise clarity, safety, and ease of use over novelty.",
-  "company.boutique.closing": "We do not optimise for rapid scale. We optimise for what works.",
+  "company.boutique.point3":
+    "We prioritise clarity, safety, and ease of use over novelty.",
+  "company.boutique.closing":
+    "We do not optimise for rapid scale. We optimise for what works.",
   "company.boutique.impact": "Scale is not the goal. Impact is.",
 
   "company.today.title": "Where We Are Today",
-  "company.today.p1": "Zaza now supports over 500 teachers in more than 15 countries. On average, teachers save over 10 hours per week on writing and communication tasks by using Zaza's tools. And we are just getting started.",
-  "company.today.p2": "Our long-term vision is to build a complete suite of AI tools that help teachers reclaim their time, protect their wellbeing, and stay connected to the heart of their work – their students.",
+  "company.today.p1":
+    "Zaza now supports over 500 teachers in more than 15 countries. On average, teachers save over 10 hours per week on writing and communication tasks by using Zaza's tools. And we are just getting started.",
+  "company.today.p2":
+    "Our long-term vision is to build a complete suite of AI tools that help teachers reclaim their time, protect their wellbeing, and stay connected to the heart of their work – their students.",
   "company.today.close": "Because when teachers thrive, students thrive.",
 
   "company.stats.teachers.number": "500+",
@@ -1211,6 +1224,14 @@ const translationsEn: Record<string, string> = {
   "founder.personal.title2": "Founder & CEO",
   "founder.personal.company": "Zaza Technologies",
   "founder.personal.cta": "Get in Touch",
+
+  // Signup modal form (EN)
+  "form.name": "Name",
+  "form.email": "Email",
+  "form.consent":
+    "I agree to receive helpful Zaza emails about new features, tips, and occasional offers. I can unsubscribe at any time.",
+  "form.privacyLink": "Privacy policy",
+  "form.submit": "Get started",
 };
 
 const translationsDe: Record<string, string> = {
@@ -1356,8 +1377,7 @@ const translationsDe: Record<string, string> = {
   // Pricing - Decision Tool section
   "pricing.decision.title": "Nicht sicher, welchen Plan Sie wählen sollen?",
   "pricing.decision.subtitle":
-  "Machen Sie unser kurzes Quiz, um eine personalisierte Empfehlung zu erhalten",
-
+    "Machen Sie unser kurzes Quiz, um eine personalisierte Empfehlung zu erhalten",
 
   // Navigation
   "nav.home": "Startseite",
@@ -1693,8 +1713,7 @@ const translationsDe: Record<string, string> = {
   "howItWorks.heading": "So funktioniert es",
   "howItWorks.diagram.step1.title": "Ihre Eingabe",
   "howItWorks.diagram.step1.description": "Grobe Notizen oder Stichpunkte",
-  "howItWorks.diagram.step1.example":
-    "Sam passt im Unterricht nicht auf.",
+  "howItWorks.diagram.step1.example": "Sam passt im Unterricht nicht auf.",
   "howItWorks.diagram.step2.title": "Tonauswahl",
   "howItWorks.diagram.step2.description": "Wählen Sie Ihre Stimme",
   "howItWorks.diagram.step2.example":
@@ -1704,11 +1723,13 @@ const translationsDe: Record<string, string> = {
   "howItWorks.diagram.step3.example":
     "Ich wollte mich wegen Sams jüngsten Konzentrationsschwierigkeiten melden...",
   "howItWorks.steps.step1.number": "1",
-  "howItWorks.steps.step1.title": "Fügen Sie Ihren Entwurf ein oder beschreiben Sie, was Sie benötigen",
+  "howItWorks.steps.step1.title":
+    "Fügen Sie Ihren Entwurf ein oder beschreiben Sie, was Sie benötigen",
   "howItWorks.steps.step1.description":
     "Beginnen Sie mit groben Notizen, Stichpunkten oder einem vollständigen Entwurf",
   "howItWorks.steps.step2.number": "2",
-  "howItWorks.steps.step2.title": "Wählen Sie Ihren Ton und sehen Sie zu, wie Draft ihn verfeinert",
+  "howItWorks.steps.step2.title":
+    "Wählen Sie Ihren Ton und sehen Sie zu, wie Draft ihn verfeinert",
   "howItWorks.steps.step2.description":
     "Unterstützend, formell, prägnant oder neutral – immer bearbeitbar",
   "howItWorks.steps.step3.number": "3",
@@ -1776,16 +1797,15 @@ const translationsDe: Record<string, string> = {
     "IEP-Dokumentation, Elternkonferenzen",
 
   // Comparison Section
-  "comparison.heading": "Warum Lehrkräfte Zaza gegenüber generischer KI vertrauen",
+  "comparison.heading":
+    "Warum Lehrkräfte Zaza gegenüber generischer KI vertrauen",
   "comparison.subheading":
     "Speziell für Bildung entwickelt, nicht aus Business-Tools angepasst",
   "comparison.tableHeaders.feature": "Funktion",
-  "comparison.tableHeaders.genericAI":
-    "Generische KI-Tools (ChatGPT, usw.)",
+  "comparison.tableHeaders.genericAI": "Generische KI-Tools (ChatGPT, usw.)",
   "comparison.tableHeaders.zazaDraft": "Zaza Draft",
   "comparison.rows.training.feature": "Training",
-  "comparison.rows.training.generic":
-    "Allgemeinwissen, geschäftsorientiert",
+  "comparison.rows.training.generic": "Allgemeinwissen, geschäftsorientiert",
   "comparison.rows.training.zaza":
     "Trainiert auf echter Kommunikation von Lehrkräften & Pädagogik",
   "comparison.rows.safety.feature": "Sicherheit",
@@ -1810,8 +1830,7 @@ const translationsDe: Record<string, string> = {
   "comparison.rows.learningCurve.zaza": "Einfügen, Ton wählen, fertig",
   "comparison.rows.community.feature": "Community",
   "comparison.rows.community.generic": "Kein Lehrkräfte-Support",
-  "comparison.rows.community.zaza":
-    "500+ Pädagogen teilen Best Practices",
+  "comparison.rows.community.zaza": "500+ Pädagogen teilen Best Practices",
 
   // Why Choose Section
   "whyChoose.heading": "Warum Lehrkräfte Zaza wählen",
@@ -1874,8 +1893,7 @@ const translationsDe: Record<string, string> = {
 
   // Products - Teach
   "products.teach.hero.eyebrow": "UNTERRICHTSPLANUNG LEICHT GEMACHT",
-  "products.teach.hero.title":
-    "Bessere Lektionen in kürzerer Zeit planen",
+  "products.teach.hero.title": "Bessere Lektionen in kürzerer Zeit planen",
   "products.teach.hero.subtitle":
     "KI-gestützte Unterrichtsplanung, die sich an Ihren Lehrplan anpasst, Stunden Vorbereitungszeit spart und Ihnen hilft, spannende, standardkonforme Lektionen zu erstellen.",
   "products.teach.hero.cta.primary": "Kostenlos mit der Planung beginnen",
@@ -1920,7 +1938,8 @@ const translationsDe: Record<string, string> = {
     "Schulen, die konsistente, standardkonforme Lehrpläne suchen",
 
   "products.teach.change.title": "Transformieren Sie Ihren Planungsprozess",
-  "products.teach.change.step1": "Planungszeit von Stunden auf Minuten reduzieren",
+  "products.teach.change.step1":
+    "Planungszeit von Stunden auf Minuten reduzieren",
   "products.teach.change.step2":
     "Spannendere, differenziertere Lektionen erstellen",
   "products.teach.change.step3":
@@ -1957,7 +1976,8 @@ const translationsDe: Record<string, string> = {
   "products.draft.turn.pain3":
     "Immer wieder dieselben Feedback-Kommentare schreiben",
 
-  "products.draft.features.title": "Für die Kommunikation von Lehrkräften entwickelt",
+  "products.draft.features.title":
+    "Für die Kommunikation von Lehrkräften entwickelt",
   "products.draft.features.toneGuardrails.title": "Ton-Leitplanken",
   "products.draft.features.toneGuardrails.desc":
     "Wählen Sie aus unterstützendem, formellem, prägnantem oder neutralem Ton – immer professionell",
@@ -1992,7 +2012,8 @@ const translationsDe: Record<string, string> = {
   "products.draft.change.step2":
     "Konsistenter, professioneller Ton in allen Kommunikationen",
   "products.draft.change.step3": "Zuversicht in sensiblen Gesprächen",
-  "products.draft.change.step4": "Mehr Zeit für den Unterricht, weniger fürs Schreiben",
+  "products.draft.change.step4":
+    "Mehr Zeit für den Unterricht, weniger fürs Schreiben",
 
   "products.draft.techNote.title": "Halluzinationssicher:",
   "products.draft.techNote.body":
@@ -2025,7 +2046,8 @@ const translationsDe: Record<string, string> = {
   "products.gradeflow.turn.pain3":
     "Schwierigkeiten, detaillierte, konstruktive Kommentare zu geben",
 
-  "products.gradeflow.change.title": "Transformieren Sie Ihren Bewertungsprozess",
+  "products.gradeflow.change.title":
+    "Transformieren Sie Ihren Bewertungsprozess",
   "products.gradeflow.change.step1": "Aufgabe und Rubrik hochladen",
   "products.gradeflow.change.step2":
     "KI analysiert Schülerarbeit anhand von Kriterien",
@@ -2150,8 +2172,7 @@ const translationsDe: Record<string, string> = {
     "Schließen Sie sich zukunftsorientierten Schulen an, die Shield nutzen, um KI sicher einzusetzen",
   "shield.finalCta.primary": "Demo planen",
   "shield.finalCta.secondary": "Vertrieb kontaktieren",
-  "shield.finalCta.note":
-    "Enterprise-Support und Onboarding inbegriffen",
+  "shield.finalCta.note": "Enterprise-Support und Onboarding inbegriffen",
 
   // FAQ Page
   "faq.hero.eyebrow": "HÄUFIG GESTELLTE FRAGEN",
@@ -2186,8 +2207,7 @@ const translationsDe: Record<string, string> = {
   "faq.about.a4":
     "Keine technischen Kenntnisse erforderlich! Zaza Draft ist unglaublich einfach konzipiert: Fügen Sie Ihre Notizen ein, wählen Sie Ihren Ton und erhalten Sie eine überarbeitete Ausgabe. Wenn Sie E-Mails verwenden können, können Sie auch Draft verwenden.",
 
-  "faq.about.q5":
-    "Kann ich Zaza Draft ausprobieren, bevor ich mich festlege?",
+  "faq.about.q5": "Kann ich Zaza Draft ausprobieren, bevor ich mich festlege?",
   "faq.about.a5":
     "Ja – wir bieten eine kostenlose Testversion an, damit Sie selbst erleben können, wie Draft Ihnen Zeit spart und Ihre Kommunikation verbessert. Zum Start ist keine Kreditkarte erforderlich.",
 
@@ -2196,8 +2216,7 @@ const translationsDe: Record<string, string> = {
   "faq.about.a6":
     "Draft ist auf sechs Schlüsselbereiche spezialisiert: Elternnachrichten, Zeugnisse, Bewertungs-Kommentare, Schulkommunikation, Empfehlungsschreiben und Dokumentation. Es ist für die täglichen Schreibaufgaben von Lehrkräften entwickelt worden.",
 
-  "faq.about.q7":
-    "Wie viel Zeit kann ich mit Zaza Draft sparen?",
+  "faq.about.q7": "Wie viel Zeit kann ich mit Zaza Draft sparen?",
   "faq.about.a7":
     "Lehrkräfte, die Draft nutzen, berichten, dass sie 10+ Stunden pro Woche bei Schreibaufgaben sparen. Aufgaben, die typischerweise 2 Stunden dauern, können mit Drafts Unterstützung in 5 Minuten erledigt werden.",
 
@@ -2230,8 +2249,7 @@ const translationsDe: Record<string, string> = {
   "faq.safety.a3":
     "Ja. Zaza Draft ist auf FERPA-Compliance ausgelegt. Wir implementieren angemessene Schutzmaßnahmen, um die Privatsphäre der Schüler und Bildungsunterlagen zu schützen, und wir teilen oder verkaufen niemals Schülerdaten.",
 
-  "faq.safety.q4":
-    "Kann ich Schülernamen in meinen Entwürfen nennen?",
+  "faq.safety.q4": "Kann ich Schülernamen in meinen Entwürfen nennen?",
   "faq.safety.a4":
     "Ja, Sie können Schülernamen und relevante Details nennen. Draft verarbeitet diese Informationen sicher und speichert oder verwendet sie nur zur Generierung Ihrer spezifischen Ausgabe. Alle Schülerinformationen bleiben vertraulich.",
 
@@ -2253,8 +2271,7 @@ const translationsDe: Record<string, string> = {
   "faq.features.a2":
     "Ja! Draft kann Ihre Kommunikation in 20+ Sprachen übersetzen, was die Verbindung mit Familien, die unterschiedliche Sprachen sprechen, erleichtert. Übersetzungen behalten den angemessenen Ton und den pädagogischen Kontext bei.",
 
-  "faq.features.q3":
-    "Funktioniert Draft mit den Systemen meiner Schule?",
+  "faq.features.q3": "Funktioniert Draft mit den Systemen meiner Schule?",
   "faq.features.a3":
     "Draft generiert Text, den Sie einfach kopieren und in jedes System einfügen können – E-Mail, Lernmanagementsysteme, Notenbücher oder Textverarbeitungsprogramme. Keine speziellen Integrationen erforderlich.",
 
@@ -2267,8 +2284,7 @@ const translationsDe: Record<string, string> = {
   "faq.features.a5":
     "Ja! Zaza Draft ist vollständig responsiv und funktioniert auf Smartphones, Tablets und Computern. Verfassen und verfeinern Sie Kommunikationen, wo immer Sie sind.",
 
-  "faq.features.q6":
-    "Können mehrere Lehrkräfte Vorlagen teilen?",
+  "faq.features.q6": "Können mehrere Lehrkräfte Vorlagen teilen?",
   "faq.features.a6":
     "Mit unseren Schulplänen können Teams Vorlagen und Best Practices teilen, um eine konsistente Kommunikation in Ihrer Abteilung oder Schule zu gewährleisten.",
 
@@ -2281,8 +2297,7 @@ const translationsDe: Record<string, string> = {
   "faq.pricing.a2":
     "Wir bieten eine kostenlose Testphase an, damit Sie die volle Leistung von Draft erleben können. Nach der Testphase können Sie einen Plan wählen, der Ihren Bedürfnissen und Ihrem Budget entspricht.",
 
-  "faq.pricing.q3":
-    "Bieten Sie Preise für Schulen oder Bezirke an?",
+  "faq.pricing.q3": "Bieten Sie Preise für Schulen oder Bezirke an?",
   "faq.pricing.a3":
     "Ja! Wir bieten spezielle Preise für Schulen und Bezirke an, einschließlich Mengenrabatten, zentraler Abrechnung und zusätzlichen Funktionen wie Team-Kollaboration und Admin-Steuerung. Kontaktieren Sie unser Vertriebsteam für ein individuelles Angebot.",
 
@@ -2310,8 +2325,7 @@ const translationsDe: Record<string, string> = {
   "faq.schools.a1":
     "Unsere Schul- und Bezirkspläne umfassen zentrale Verwaltung, Team-Kollaborationsfunktionen, gemeinsame Vorlagen, Nutzungsanalysen, priorisierten Support und Mengenpreise. Administratoren können Lizenzen verwalten, die Nutzung überwachen und konsistente Kommunikationsstandards in der gesamten Organisation sicherstellen.",
 
-  "faq.schools.q2":
-    "Bieten Sie Schulungen und Support für Schulen an?",
+  "faq.schools.q2": "Bieten Sie Schulungen und Support für Schulen an?",
   "faq.schools.a2":
     "Ja! Schul- und Bezirkspläne umfassen Onboarding-Support, Schulungsmaterialien und fortlaufende professionelle Entwicklungsressourcen. Wir helfen dabei, dass Ihr gesamtes Team Draft effektiv nutzen kann, um Zeit zu sparen und die Kommunikation zu verbessern.",
 
@@ -2323,8 +2337,7 @@ const translationsDe: Record<string, string> = {
 
   // About Overview Page
   "about.overview.hero.eyebrow": "ÜBER ZAZA",
-  "about.overview.hero.title":
-    "Wir bauen die Zukunft der Lehrer-Technologie",
+  "about.overview.hero.title": "Wir bauen die Zukunft der Lehrer-Technologie",
   "about.overview.hero.subtitle":
     "Unsere Mission ist es, Lehrkräften ihre Zeit zurückzugeben, indem wir KI-Tools bauen, die Bildung tatsächlich verstehen.",
 
@@ -2365,35 +2378,54 @@ const translationsDe: Record<string, string> = {
   // About Company Page - NEW CONTENT
   "about.company.hero.eyebrow": "UNSER UNTERNEHMEN",
   "about.company.hero.title": "Zaza Technologies",
-  "about.company.hero.subtitle": "Wir sind ein kleines, spezialisiertes Team aus Lerndesigner, Ingenieuren und Bildungsforschern, das Technologie entwickelt, die Lehrkräften hilft, aufzublühen.",
+  "about.company.hero.subtitle":
+    "Wir sind ein kleines, spezialisiertes Team aus Lerndesigner, Ingenieuren und Bildungsforschern, das Technologie entwickelt, die Lehrkräften hilft, aufzublühen.",
   "company.origin.title": "UNSER UNTERNEHMEN",
-  "company.origin.body.p1": "Zaza Technologies wurde 2025 mit einer klaren Überzeugung gegründet: Bildung verdient KI-Tools, die mit echtem pädagogischem Verständnis entwickelt werden, nicht neu aufbereitete Unternehmens-KI-Modelle. Wir bauen Technologie, die das Wohlbefinden von Lehrkräften schützt.",
+  "company.origin.body.p1":
+    "Zaza Technologies wurde 2025 mit einer klaren Überzeugung gegründet: Bildung verdient KI-Tools, die mit echtem pädagogischem Verständnis entwickelt werden, nicht neu aufbereitete Unternehmens-KI-Modelle. Wir bauen Technologie, die das Wohlbefinden von Lehrkräften schützt.",
   "company.origin.body.p2": "Daher haben wir einen anderen Ansatz gewählt.",
-  "company.origin.body.p3": "Wir entwickeln Tools, die auf echter Pädagogik trainiert, mit Pädagogen entwickelt und durch den Einsatz im Klassenzimmer verfeinert werden. Tools, die die Nuance des Lehrerurteils, das emotionale Gewicht der Elterninteraktion und die Bedeutung von konstruktivem Feedback verstehen. Tools, die genau, zuverlässig und sicher für Bildungseinrichtungen sind.",
-  "company.origin.body.p4": "Unsere Modelle werden auf echtem Lehrer-Feedback und sprachlichen Mustern im Klassenzimmer trainiert, durch iterative Tests mit Pädagogen verfeinert und so konzipiert, dass die Ausgabe wie von einer Lehrkraft klingt – und nicht wie von einer Maschine.",
-  "company.origin.body.p5": "Unser Ziel ist einfach: Lehrkräften wertvolle Zeit zurückgeben.",
-  
+  "company.origin.body.p3":
+    "Wir entwickeln Tools, die auf echter Pädagogik trainiert, mit Pädagogen entwickelt und durch den Einsatz im Klassenzimmer verfeinert werden. Tools, die die Nuance des Lehrerurteils, das emotionale Gewicht der Elterninteraktion und die Bedeutung von konstruktivem Feedback verstehen. Tools, die genau, zuverlässig und sicher für Bildungseinrichtungen sind.",
+  "company.origin.body.p4":
+    "Unsere Modelle werden auf echtem Lehrer-Feedback und sprachlichen Mustern im Klassenzimmer trainiert, durch iterative Tests mit Pädagogen verfeinert und so konzipiert, dass die Ausgabe wie von einer Lehrkraft klingt – und nicht wie von einer Maschine.",
+  "company.origin.body.p5":
+    "Unser Ziel ist einfach: Lehrkräften wertvolle Zeit zurückgeben.",
+
   "company.philosophy.title": "Unsere Philosophie",
-  "company.philosophy.intro": "Wir glauben nicht an „KI, die Lehrkräfte ersetzt“. Wir glauben an KI, die Lehrkräfte unterstützt.",
-  "company.philosophy.principle1": "Tools müssen die Expertise der Lehrkräfte respektieren.",
-  "company.philosophy.principle2": "Tools müssen die Arbeitslast reduzieren, nicht verlagern.",
-  "company.philosophy.principle3": "Tools müssen Schüler und deren Lernumgebung schützen.",
-  "company.philosophy.principle4": "Tools müssen vertrauenswürdig und transparent sein.",
-  "company.philosophy.closing": "Wenn Technologie Lehrkräften nicht helfen kann, das zu tun, was sie am besten können – unterrichten – dann gehört sie nicht in den Klassenraum.",
+  "company.philosophy.intro":
+    "Wir glauben nicht an „KI, die Lehrkräfte ersetzt“. Wir glauben an KI, die Lehrkräfte unterstützt.",
+  "company.philosophy.principle1":
+    "Tools müssen die Expertise der Lehrkräfte respektieren.",
+  "company.philosophy.principle2":
+    "Tools müssen die Arbeitslast reduzieren, nicht verlagern.",
+  "company.philosophy.principle3":
+    "Tools müssen Schüler und deren Lernumgebung schützen.",
+  "company.philosophy.principle4":
+    "Tools müssen vertrauenswürdig und transparent sein.",
+  "company.philosophy.closing":
+    "Wenn Technologie Lehrkräften nicht helfen kann, das zu tun, was sie am besten können – unterrichten – dann gehört sie nicht in den Klassenraum.",
 
   "company.boutique.title": "Ein Boutique-Ansatz",
-  "company.boutique.intro": "Wir sind bewusst kein großes Technologieunternehmen. Wir sind ein fokussiertes Team, das nur für eine Zielgruppe entwickelt – Lehrkräfte.",
+  "company.boutique.intro":
+    "Wir sind bewusst kein großes Technologieunternehmen. Wir sind ein fokussiertes Team, das nur für eine Zielgruppe entwickelt – Lehrkräfte.",
   "company.boutique.means": "Das bedeutet:",
-  "company.boutique.point1": "Wir arbeiten eng mit Pädagogen aus verschiedenen Regionen und Kontexten zusammen.",
-  "company.boutique.point2": "Wir testen Funktionen direkt in echten Klassenzimmern.",
-  "company.boutique.point3": "Wir priorisieren Klarheit, Sicherheit und Benutzerfreundlichkeit über Neuheit.",
-  "company.boutique.closing": "Wir optimieren nicht für schnelles Wachstum. Wir optimieren für das, was funktioniert.",
+  "company.boutique.point1":
+    "Wir arbeiten eng mit Pädagogen aus verschiedenen Regionen und Kontexten zusammen.",
+  "company.boutique.point2":
+    "Wir testen Funktionen direkt in echten Klassenzimmern.",
+  "company.boutique.point3":
+    "Wir priorisieren Klarheit, Sicherheit und Benutzerfreundlichkeit über Neuheit.",
+  "company.boutique.closing":
+    "Wir optimieren nicht für schnelles Wachstum. Wir optimieren für das, was funktioniert.",
   "company.boutique.impact": "Skalierung ist nicht das Ziel. Wirkung ist es.",
 
   "company.today.title": "Wo wir heute stehen",
-  "company.today.p1": "Zaza unterstützt heute über 500 Lehrkräfte in mehr als 15 Ländern. Im Durchschnitt sparen Lehrkräfte durch die Nutzung der Zaza-Tools über 10 Stunden pro Woche bei Schreib- und Kommunikationsaufgaben. Und wir fangen gerade erst an.",
-  "company.today.p2": "Unsere langfristige Vision ist es, eine komplette Suite von KI-Tools zu bauen, die Lehrkräften helfen, ihre Zeit zurückzugewinnen, ihr Wohlbefinden zu schützen und mit dem Kern ihrer Arbeit – ihren Schülern – verbunden zu bleiben.",
-  "company.today.close": "Denn wenn Lehrkräfte gedeihen, gedeihen auch Schüler.",
+  "company.today.p1":
+    "Zaza unterstützt heute über 500 Lehrkräfte in mehr als 15 Ländern. Im Durchschnitt sparen Lehrkräfte durch die Nutzung der Zaza-Tools über 10 Stunden pro Woche bei Schreib- und Kommunikationsaufgaben. Und wir fangen gerade erst an.",
+  "company.today.p2":
+    "Unsere langfristige Vision ist es, eine komplette Suite von KI-Tools zu bauen, die Lehrkräften helfen, ihre Zeit zurückzugewinnen, ihr Wohlbefinden zu schützen und mit dem Kern ihrer Arbeit – ihren Schülern – verbunden zu bleiben.",
+  "company.today.close":
+    "Denn wenn Lehrkräfte gedeihen, gedeihen auch Schüler.",
 
   "company.stats.teachers.number": "500+",
   "company.stats.teachers.label": "Lehrkräfte nutzen Zaza",
@@ -2403,12 +2435,14 @@ const translationsDe: Record<string, string> = {
   "company.stats.hours.label": "Wöchentlich gesparte Stunden",
 
   // Founder Hero Section
-  "founder.hero.headline": "Treffen Sie den Gründer, der KI baut, die Lehrkräften dient",
+  "founder.hero.headline":
+    "Treffen Sie den Gründer, der KI baut, die Lehrkräften dient",
   "founder.hero.subheading":
     "Dr. Greg Blackburn spent 15 years in classrooms before building Zaza - AI tools that understand what teachers actually need.",
   "founder.hero.label": "GRÜNDER & CEO",
   "founder.hero.name": "Dr. Greg Blackburn",
-  "founder.hero.tagline": "Ehemaliger Lehrer, EdTech-Entwickler, KI-Befürworter",
+  "founder.hero.tagline":
+    "Ehemaliger Lehrer, EdTech-Entwickler, KI-Befürworter",
 
   // Founder Journey Section
   "founder.journey.title": "Die Reise",
@@ -2426,8 +2460,7 @@ const translationsDe: Record<string, string> = {
     "Every teacher deserves tools that respect their expertise, protect their students, and give them time to do what they do best: teach.",
   "founder.mission.attribution": "Dr. Greg Blackburn, Gründer & CEO",
   "founder.whyZaza.title": "Why I Built Zaza",
-  "founder.whyZaza.subtitle":
-    "Drei Prinzipien, die alles leiten, was wir tun",
+  "founder.whyZaza.subtitle": "Drei Prinzipien, die alles leiten, was wir tun",
   "founder.whyZaza.card1.title": "Für Lehrkräfte, von Lehrkräften",
   "founder.whyZaza.card1.body":
     "I've lived the teacher experience - the late nights, the endless emails, the report card marathons. Zaza is built by someone who understands because I've been there.",
@@ -2448,6 +2481,14 @@ const translationsDe: Record<string, string> = {
   "founder.personal.title2": "Gründer & CEO",
   "founder.personal.company": "Zaza Technologies",
   "founder.personal.cta": "Kontakt aufnehmen",
+
+  // Signup modal form (DE)
+  "form.name": "Name",
+  "form.email": "E-Mail",
+  "form.consent":
+    "Ich bin damit einverstanden, gelegentlich hilfreiche E-Mails von Zaza zu neuen Funktionen, Tipps und Angeboten zu erhalten. Ich kann mich jederzeit abmelden.",
+  "form.privacyLink": "Datenschutzerklärung",
+  "form.submit": "Jetzt starten",
 };
 
 export function LanguageProvider({ children }: { children: ReactNode }) {

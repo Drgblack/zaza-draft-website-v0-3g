@@ -274,11 +274,13 @@ export function Header() {
           </div>
 
           <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-6 items-center">
+            {/* EN / DE toggle */}
             <div className="flex items-center gap-2 rounded-lg bg-white/5 p-1">
               <button
                 onClick={() => {
                   const newPath = pathname.replace(/^\/de(\/|$)/, "$1") || "/";
-                  window.location.href = newPath;
+                  setLanguage("en");
+                  router.push(newPath);
                 }}
                 className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200 ${
                   language === "en"
@@ -293,7 +295,8 @@ export function Header() {
                   const newPath = pathname.startsWith("/de")
                     ? pathname
                     : "/de" + (pathname === "/" ? "" : pathname);
-                  window.location.href = newPath;
+                  setLanguage("de");
+                  router.push(newPath);
                 }}
                 className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200 ${
                   language === "de"
@@ -304,9 +307,11 @@ export function Header() {
                 DE
               </button>
             </div>
+
+            {/* Desktop Get Started CTA */}
             <Button
               onClick={() => setSignupOpen(true)}
-              className="bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] hover:from-[#7C3AED] hover:to-[#9333EA] text-white font-semibold px-6 py-2.5 rounded-lg shadow-lg shadow-purple-500/25 transition-all duration-200 hover:shadow-purple-500/40 hover:scale-105"
+              className="ml-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-purple-500/25"
             >
               {t("nav.getStarted")}
             </Button>
@@ -399,8 +404,9 @@ export function Header() {
                         ? pathname.replace("/de/", "/")
                         : pathname.startsWith("/de")
                           ? pathname.replace("/de", "")
-                          : pathname;
-                      router.push(newPath || "/");
+                          : pathname || "/";
+                      setLanguage("en");
+                      router.push(newPath);
                     }}
                     className={`flex-1 px-4 py-2 text-sm font-medium rounded-full transition-all ${
                       language === "en"
@@ -414,7 +420,8 @@ export function Header() {
                     onClick={() => {
                       const newPath = pathname.startsWith("/de")
                         ? pathname
-                        : "/de" + pathname;
+                        : "/de" + (pathname === "/" ? "" : pathname);
+                      setLanguage("de");
                       router.push(newPath);
                     }}
                     className={`flex-1 px-4 py-2 text-sm font-medium rounded-full transition-all ${
