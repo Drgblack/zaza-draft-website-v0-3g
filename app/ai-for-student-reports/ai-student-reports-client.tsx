@@ -1,13 +1,13 @@
 ﻿"use client";
 
 import React from "react";
-import { usePathname } from "next/navigation";
+import { useLanguage } from "../../src/contexts/LanguageContext";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function AiStudentReportsClient() {
-  const pathname = usePathname();
-  const isGerman = pathname?.includes("/de") ?? false;
+  const { language } = useLanguage();
+  const isGerman = language === "de";
 
   // --- CONTENT DICTIONARY ---
   const content = {

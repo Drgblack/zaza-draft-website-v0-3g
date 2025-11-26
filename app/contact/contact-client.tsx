@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { useLanguage } from "../../src/contexts/LanguageContext";
 import Link from "next/link";
 import {
   ChevronRight,
@@ -79,8 +79,8 @@ const content = {
 };
 
 export function ContactClient() {
-  const pathname = usePathname();
-  const isGerman = pathname?.startsWith("/de") ?? false;
+  const { language } = useLanguage();
+  const isGerman = language === "de";
   const t = isGerman ? content.de : content.en;
 
   const [formData, setFormData] = useState({

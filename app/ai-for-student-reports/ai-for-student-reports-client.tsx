@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import React from "react";
-import { usePathname } from "next/navigation";
+import { useLanguage } from "../../src/contexts/LanguageContext";
 import Image from "next/image";
 import {
   Check,
@@ -390,8 +390,8 @@ const renderListIcon = (isCheck: boolean) => {
 };
 
 export function AiForStudentReportsClient() {
-  const pathname = usePathname();
-  const isGerman = pathname?.startsWith("/de") ?? false;
+  const { language } = useLanguage();
+  const isGerman = language === "de";
   const text = isGerman ? content.de : content.en;
 
   // Dynamically adjust TOC based on language

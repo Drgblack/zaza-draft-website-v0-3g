@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { useLanguage } from "../../src/contexts/LanguageContext";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -556,8 +556,8 @@ const content = {
 };
 
 export function VideoHubClient() {
-  const pathname = usePathname();
-  const isGerman = pathname?.startsWith("/de") ?? false;
+  const { language } = useLanguage();
+  const isGerman = language === "de";
   const text = isGerman ? content.de : content.en;
 
   const [selectedCategory, setSelectedCategory] = useState("all");

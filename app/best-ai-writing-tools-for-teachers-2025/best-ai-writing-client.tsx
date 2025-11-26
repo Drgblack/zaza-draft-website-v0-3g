@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import React from "react";
-import { usePathname } from "next/navigation";
+import { useLanguage } from "../../src/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { QuickAnswerBox } from "@/components/quick-answer-box";
@@ -9,10 +9,11 @@ import { TableOfContents } from "@/components/table-of-contents";
 import { FAQSection } from "@/components/faq-section";
 import { Check, Star, TrendingUp, X, Sparkles, Zap } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function BestAIWritingClient() {
-  const pathname = usePathname();
-  const isGerman = pathname?.includes("/de") ?? false;
+  const { language } = useLanguage();
+  const isGerman = language === "de";
 
   // --- CONTENT DICTIONARY (Dual-Language) ---
   const content = {
@@ -429,7 +430,7 @@ export default function BestAIWritingClient() {
             <h1 className="mb-6 text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
               {text.hero_title}
             </h1>
-            <p className="mb-8 text-balance text-lg text-gray-300 sm:text-xl leading-relaxed">
+            <p className="mb-8 text-balance text-lg text-slate-200 sm:text-xl leading-relaxed">
               {text.hero_subtitle}
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
@@ -474,7 +475,7 @@ export default function BestAIWritingClient() {
                 <Sparkles className="w-8 h-8 text-[#A78BFA]" />
                 {text.why_title}
               </h2>
-              <div className="space-y-6 text-gray-300 leading-relaxed text-lg">
+              <div className="space-y-6 text-slate-200 leading-relaxed text-lg">
                 <p>{text.why_p1}</p>
                 <p>{text.why_p2}</p>
                 <p>{text.why_p3}</p>
@@ -502,12 +503,12 @@ export default function BestAIWritingClient() {
                             {tool.name}
                           </h3>
                         </div>
-                        <p className="text-base text-gray-400">
+                        <p className="text-base text-slate-200">
                           {tool.tagline}
                         </p>
                       </div>
                       <div className="flex items-center gap-1 bg-[#8B5CF6]/10 px-3 py-1.5 rounded-full">
-                        <Star className="h-4 w-4 fill-[#A78BFA] text-[#A78BFA]" />
+                        <Star className="h-4 w-4 fill-[#A78BFA] text-[#A78BFA] text-yellow-400" />
                         <span className="font-semibold text-white">
                           {tool.rating}
                         </span>
@@ -516,13 +517,13 @@ export default function BestAIWritingClient() {
 
                     <div className="mb-6 grid gap-4 sm:grid-cols-2">
                       <div className="bg-[#0F172A]/50 rounded-lg p-4 border border-white/5">
-                        <p className="mb-1 text-sm font-medium text-gray-400">
+                        <p className="mb-1 text-sm font-medium text-slate-200">
                           {isGerman ? "Preis" : "Price"}
                         </p>
                         <p className="text-white font-semibold">{tool.price}</p>
                       </div>
                       <div className="bg-[#0F172A]/50 rounded-lg p-4 border border-white/5">
-                        <p className="mb-1 text-sm font-medium text-gray-400">
+                        <p className="mb-1 text-sm font-medium text-slate-200">
                           {isGerman ? "Am besten geeignet für" : "Best For"}
                         </p>
                         <p className="text-white font-semibold">
@@ -541,7 +542,7 @@ export default function BestAIWritingClient() {
                           {tool.pros.map((pro, i) => (
                             <li
                               key={i}
-                              className="flex items-start gap-2 text-sm text-gray-300"
+                              className="flex items-start gap-2 text-sm text-slate-200"
                             >
                               <Check className="mt-0.5 h-4 w-4 shrink-0 text-green-400" />
                               {pro}
@@ -558,7 +559,7 @@ export default function BestAIWritingClient() {
                           {tool.cons.map((con, i) => (
                             <li
                               key={i}
-                              className="flex items-start gap-2 text-sm text-gray-300"
+                              className="flex items-start gap-2 text-sm text-slate-200"
                             >
                               <span className="text-orange-400">−</span>
                               {con}
@@ -612,42 +613,42 @@ export default function BestAIWritingClient() {
                   <tbody className="divide-y divide-white/10 bg-[#0F172A]">
                     {/* Teacher Templates */}
                     <tr className="hover:bg-[#1E293B]/50 transition-colors">
-                      <td className="p-4 font-medium text-gray-300">
+                      <td className="p-4 font-medium text-slate-200">
                         {isGerman ? "Lehrervorlagen" : "Teacher Templates"}
                       </td>
                       <td className="p-4 text-center">
                         <Check className="mx-auto h-5 w-5 text-green-400" />
                       </td>
-                      <td className="p-4 text-center text-gray-500">-</td>
-                      <td className="p-4 text-center text-gray-500">-</td>
-                      <td className="p-4 text-center text-gray-500">-</td>
+                      <td className="p-4 text-center text-slate-200">-</td>
+                      <td className="p-4 text-center text-slate-200">-</td>
+                      <td className="p-4 text-center text-slate-200">-</td>
                     </tr>
                     {/* FERPA Compliant / GDPR-konform */}
                     <tr className="hover:bg-[#1E293B]/50 transition-colors">
-                      <td className="p-4 font-medium text-gray-300">
+                      <td className="p-4 font-medium text-slate-200">
                         {isGerman ? "DSGVO-konform" : "FERPA Compliant"}
                       </td>
                       <td className="p-4 text-center">
                         <Check className="mx-auto h-5 w-5 text-green-400" />
                       </td>
-                      <td className="p-4 text-center text-gray-500">-</td>
-                      <td className="p-4 text-center text-gray-500">-</td>
+                      <td className="p-4 text-center text-slate-200">-</td>
+                      <td className="p-4 text-center text-slate-200">-</td>
                       <td className="p-4 text-center">
                         <Check className="mx-auto h-5 w-5 text-green-400" />
                       </td>
                     </tr>
                     {/* Tone Control */}
                     <tr className="hover:bg-[#1E293B]/50 transition-colors">
-                      <td className="p-4 font-medium text-gray-300">
+                      <td className="p-4 font-medium text-slate-200">
                         {isGerman ? "Tonfallkontrolle" : "Tone Control"}
                       </td>
                       <td className="p-4 text-center">
                         <Check className="mx-auto h-5 w-5 text-green-400" />
                       </td>
-                      <td className="p-4 text-center text-gray-400 text-sm">
+                      <td className="p-4 text-center text-slate-200 text-sm">
                         {isGerman ? "Manuell" : "Manual"}
                       </td>
-                      <td className="p-4 text-center text-gray-400 text-sm">
+                      <td className="p-4 text-center text-slate-200 text-sm">
                         {isGerman ? "Manuell" : "Manual"}
                       </td>
                       <td className="p-4 text-center">
@@ -656,7 +657,7 @@ export default function BestAIWritingClient() {
                     </tr>
                     {/* Multi-language */}
                     <tr className="hover:bg-[#1E293B]/50 transition-colors">
-                      <td className="p-4 font-medium text-gray-300">
+                      <td className="p-4 font-medium text-slate-200">
                         {isGerman ? "Mehrsprachig" : "Multi-language"}
                       </td>
                       <td className="p-4 text-center">
@@ -668,13 +669,13 @@ export default function BestAIWritingClient() {
                       <td className="p-4 text-center">
                         <Check className="mx-auto h-5 w-5 text-green-400" />
                       </td>
-                      <td className="p-4 text-center text-gray-400 text-sm">
+                      <td className="p-4 text-center text-slate-200 text-sm">
                         {isGerman ? "Begrenzt" : "Limited"}
                       </td>
                     </tr>
                     {/* Free Tier */}
                     <tr className="hover:bg-[#1E293B]/50 transition-colors">
-                      <td className="p-4 font-medium text-gray-300">
+                      <td className="p-4 font-medium text-slate-200">
                         {isGerman ? "Kostenlose Version" : "Free Tier"}
                       </td>
                       <td className="p-4 text-center">
@@ -692,7 +693,7 @@ export default function BestAIWritingClient() {
                     </tr>
                     {/* Price (Premium) */}
                     <tr className="hover:bg-[#1E293B]/50 transition-colors">
-                      <td className="p-4 font-medium text-gray-300">
+                      <td className="p-4 font-medium text-slate-200">
                         {isGerman ? "Preis (Premium)" : "Price (Premium)"}
                       </td>
                       <td className="p-4 text-center text-white font-semibold">
@@ -728,14 +729,14 @@ export default function BestAIWritingClient() {
                       {useCase.subject}
                     </h3>
                     <div className="mb-4 space-y-3">
-                      <p className="text-sm font-medium text-gray-400">
+                      <p className="text-sm font-medium text-slate-200">
                         {isGerman ? "Häufige Aufgaben:" : "Common Tasks:"}
                       </p>
                       <ul className="space-y-2">
                         {useCase.tasks.map((task, i) => (
                           <li
                             key={i}
-                            className="flex items-start gap-2 text-sm text-gray-300"
+                            className="flex items-start gap-2 text-sm text-slate-200"
                           >
                             <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#A78BFA]" />
                             {task}
@@ -744,7 +745,7 @@ export default function BestAIWritingClient() {
                       </ul>
                     </div>
                     <div className="rounded-lg bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 p-4">
-                      <p className="mb-1 text-sm font-medium text-gray-400">
+                      <p className="mb-1 text-sm font-medium text-slate-200">
                         {isGerman
                           ? "Empfohlenes Werkzeug:"
                           : "Recommended Tool:"}
@@ -752,7 +753,7 @@ export default function BestAIWritingClient() {
                       <p className="mb-2 font-semibold text-[#A78BFA] text-lg">
                         {useCase.recommendedTool}
                       </p>
-                      <p className="text-sm text-gray-300">{useCase.why}</p>
+                      <p className="text-sm text-slate-200">{useCase.why}</p>
                     </div>
                   </div>
                 ))}
@@ -824,7 +825,7 @@ export default function BestAIWritingClient() {
                       <h3 className="mb-2 text-xl font-semibold text-white">
                         {item.title}
                       </h3>
-                      <p className="text-gray-300 leading-relaxed">
+                      <p className="text-slate-200 leading-relaxed">
                         {item.description}
                       </p>
                     </div>
@@ -845,6 +846,7 @@ export default function BestAIWritingClient() {
                       ? "Zaza Draft hat meine Zeit für Eltern-E-Mails von 2 Stunden auf 30 Minuten pro Woche reduziert. Die Vorlagen verstehen die Sprache der Lehrer und die Tonfallkontrolle ist perfekt für sensible Situationen."
                       : "Zaza Draft cut my parent email time from 2 hours to 30 minutes per week. The templates understand teacher language and the tone control is perfect for sensitive situations.",
                     name: "Sarah M.",
+                    imageSrc: "/testimonials/pricing-teacher-1.jpg",
                     role: isGerman
                       ? "Grundschullehrerin, Texas"
                       : "4th Grade Teacher, Texas",
@@ -854,6 +856,7 @@ export default function BestAIWritingClient() {
                       ? "Ich nutze ChatGPT für die Unterrichtsplanung und Zaza Draft für die Elternkommunikation. Zusammen sparen sie mir 6–7 Stunden pro Woche. Ein Wendepunkt für die Work-Life-Balance."
                       : "I use ChatGPT for lesson planning and Zaza Draft for parent communication. Together they save me 6-7 hours per week. Game changer for work-life balance.",
                     name: "Michael T.",
+                    imageSrc: "/testimonials/pricing-teacher-2.jpg",
                     role: isGerman
                       ? "Englischlehrer an der Oberstufe, Kalifornien"
                       : "High School English, California",
@@ -867,17 +870,24 @@ export default function BestAIWritingClient() {
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className="h-5 w-5 fill-[#A78BFA] text-[#A78BFA]"
+                          className="h-5 w-5 fill-[#A78BFA] text-[#A78BFA] text-yellow-400"
                         />
                       ))}
                     </div>
-                    <p className="mb-4 text-gray-300 leading-relaxed italic">
+                    <Image
+                      src={testimonial.imageSrc}
+                      alt={testimonial.name}
+                      width={56}
+                      height={56}
+                      className="mb-4 h-14 w-14 rounded-full object-cover"
+                    />
+                    <p className="mb-4 text-slate-200 leading-relaxed italic">
                       "{testimonial.quote}"
                     </p>
                     <p className="font-semibold text-white">
                       {testimonial.name}
                     </p>
-                    <p className="text-sm text-gray-400">{testimonial.role}</p>
+                    <p className="text-sm text-slate-200">{testimonial.role}</p>
                   </div>
                 ))}
               </div>
@@ -900,7 +910,7 @@ export default function BestAIWritingClient() {
               <h2 className="mb-4 text-3xl font-bold text-white">
                 {text.cta_final_title}
               </h2>
-              <p className="mb-6 text-balance text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto">
+              <p className="mb-6 text-balance text-slate-200 text-lg leading-relaxed max-w-2xl mx-auto">
                 {text.cta_final_subtitle}
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
@@ -970,7 +980,7 @@ export default function BestAIWritingClient() {
               <h3 className="mb-2 font-semibold text-white">
                 {text.sidebar_cta_title}
               </h3>
-              <p className="mb-4 text-sm text-gray-300">
+              <p className="mb-4 text-sm text-slate-200">
                 {text.sidebar_cta_text}
               </p>
               <Button

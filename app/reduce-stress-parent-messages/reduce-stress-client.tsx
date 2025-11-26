@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import React from "react";
-import { usePathname } from "next/navigation";
+import { useLanguage } from "../../src/contexts/LanguageContext";
 import Image from "next/image";
 import { Check, Shield, Zap, Volume2, X, TrendingUp, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,8 +11,8 @@ import { TableOfContents } from "@/components/table-of-contents";
 import Link from "next/link";
 
 export default function ReduceStressClient() {
-  const pathname = usePathname();
-  const isGerman = pathname?.includes("/de") ?? false;
+  const { language } = useLanguage();
+  const isGerman = language === "de";
 
   const IconMap = {
     Check: Check,

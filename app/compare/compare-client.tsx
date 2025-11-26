@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
-import { usePathname } from "next/navigation";
+import { useLanguage } from "../../src/contexts/LanguageContext";
 
 const content = {
   en: {
@@ -76,8 +76,8 @@ const content = {
 };
 
 export function CompareClient() {
-  const pathname = usePathname();
-  const isGerman = pathname?.startsWith("/de") ?? false;
+  const { language } = useLanguage();
+  const isGerman = language === "de";
   const text = isGerman ? content.de : content.en;
 
   return (

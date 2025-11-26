@@ -12,11 +12,12 @@ import {
   Users,
 } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   TableOfContents,
   TableOfContentsItem,
 } from "@/components/table-of-contents";
-import { usePathname } from "next/navigation";
+import { useLanguage } from "../../src/contexts/LanguageContext";
 
 // -------------------------------------------
 // CONTENT DICTIONARY (EN + DE)

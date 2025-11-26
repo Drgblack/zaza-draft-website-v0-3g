@@ -2477,11 +2477,10 @@ const translationsDe: Record<string, string> = {
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>(() => {
-    // Initialise language from localStorage or default to 'en'
     if (typeof window !== "undefined") {
-      const storedLang = localStorage.getItem("language") as Language;
-      if (storedLang && ["en", "de"].includes(storedLang)) {
-        return storedLang;
+      const storedLang = localStorage.getItem("language");
+      if (storedLang === "en" || storedLang === "de") {
+        return storedLang as Language;
       }
     }
     return "en";
@@ -2495,7 +2494,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const t = (key: string) => {
     const translations = language === "en" ? translationsEn : translationsDe;
-    return translations[key] || `[Missing ${language} key: ${key}]`;
+    return translations[key] ?? `[Missing ${language} key: ${key}]`;
   };
 
   return (
@@ -2505,9 +2504,9 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   );
 }
 
-export function useLanguage() {
+export function useLanguage(): LanguageContextType {
   const context = useContext(LanguageContext);
-  if (context === undefined) {
+  if (!context) {
     throw new Error("useLanguage must be used within a LanguageProvider");
   }
   return context;
