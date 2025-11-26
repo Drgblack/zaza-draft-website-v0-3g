@@ -1,121 +1,149 @@
 ﻿"use client";
 
 import React from "react";
-import Image from "next/image";
-import { Check, X, Star, Shield, Zap, TrendingUp } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Breadcrumbs } from "@/components/breadcrumbs";
-import { FAQSection, type FAQItem } from "@/components/faq-section";
-import { TableOfContents } from "@/components/table-of-contents";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Clock,
+  Mail,
+  Shield,
+  Sparkles,
+  Star,
+  Users,
+} from "lucide-react";
 import Link from "next/link";
+import {
+  TableOfContents,
+  TableOfContentsItem,
+} from "@/components/table-of-contents";
 import { usePathname } from "next/navigation";
 
-// --- CONTENT DICTIONARY ---
+// -------------------------------------------
+// CONTENT DICTIONARY (EN + DE)
+// -------------------------------------------
+
 const content = {
   en: {
-    meta_updated: "Updated November 2025",
+    // Hero
+    updated_label: "Updated November 2025",
     hero_title: "Best AI Tool for Parent Emails in 2025",
     hero_subtitle:
       "Find the AI assistant purpose-built for teacher-parent communication, tone control, and FERPA/GDPR compliance.",
-    cta_primary: "Try Zaza Draft Free",
-    cta_secondary: "See Comparison",
-    quick_answer:
-      "Zaza Draft is the best tool, offering teacher-specific templates, FERPA compliance, and automated tone control. Generic tools like ChatGPT are too risky for sensitive communication.",
+    hero_primary_cta: "Try Zaza Draft Free",
+    hero_secondary_cta: "See Comparison",
+
+    // Quick Answer
+    quick_answer_label: "Quick Answer: The Best AI Tool",
+    quick_answer_title: "Quick Answer: The Best AI Tool",
+    quick_answer_body:
+      "Zaza Draft is the best tool, offering teacher-specific templates, FERPA compliance, and automated tone control. Generic tools like ChatGPT are too risky for sensitive communications.",
+
+    // Why Stress
     why_stress_title: "Why Parent Emails Cause Teacher Stress",
-    why_stress_points: [
+    why_stress_cards: [
       {
         title: "Finding the Right Words",
-        description:
-          "It’s hard to find the right words to be both honest and encouraging at the same time. The pressure to get the tone right causes major delays.",
-        icon: "X",
+        body: "It’s hard to find the right words to be both honest and encouraging at the same time. The pressure to get the tone right causes major delays.",
       },
       {
         title: "Breaking Consistency",
-        description:
-          "Writing consistency across 40+ parents, 3 different contexts (email, report, message) while managing your time is near impossible.",
-        icon: "X",
+        body: "Writing consistency across 40+ parents, 3 different contexts (email, report, message) while managing your time is near impossible.",
       },
       {
         title: "Time and Wellbeing",
-        description:
-          "Emails take up personal time on evenings and weekends. This ambiguity is a significant drain on teacher wellbeing.",
-        icon: "X",
+        body: "Emails take up personal time on evenings and weekends. This ambiguity has a significant drain on teacher wellbeing.",
       },
     ],
-    how_ai_helps_title: "How AI Helps Write Clear, Empathetic Messages",
-    ai_features: [
+
+    // How AI Helps
+    how_ai_title: "How AI Helps Write Clear, Empathetic Messages",
+    how_ai_cards: [
       {
         title: "Instant Drafts",
-        description:
-          "Instantly drafts clear, professional emails from a few bullet points, saving 60-70% of the writing time.",
-        icon: "Zap",
+        body: "Instantly drafts clear, professional emails from a few bullet points, saving 60–70% of the writing time.",
       },
       {
         title: "Tone Control",
-        description:
-          "Provides precise control over formality, warmth, and directness, ensuring the right message every time.",
-        icon: "Shield",
+        body: "Provides precise control over formality, warmth, and directness, ensuring the right message every time.",
       },
       {
         title: "Saves Time",
-        description:
-          "Saves 60-70% of the time usually spent drafting, reviewing, and worrying about parent communication.",
-        icon: "TrendingUp",
+        body: "Saves 60–70% of the time usually spent drafting, reviewing, and worrying about parent communication.",
       },
     ],
+
+    // Comparison
     comparison_title: "Comparison: Zaza Draft vs. other tools",
-    comparison_features: [
-      "Teacher Templates",
-      "FERPA Compliant",
-      "Tone Control",
-      "Multi-language",
-      "Free Tier",
-      "Price (Premium)",
-    ],
-    comparison_tools: [
-      {
-        name: "Zaza Draft",
-        template: "Check",
-        ferpa: "Check",
-        tone: "Check",
-        multi: "Check",
-        free: "Check",
-        price: "$16/mo",
-      },
-      {
-        name: "ChatGPT",
-        template: "X",
-        ferpa: "X",
-        tone: "Manual",
-        multi: "Check",
-        free: "Check",
-        price: "$20/mo",
-      },
-      {
-        name: "Claude",
-        template: "X",
-        ferpa: "X",
-        tone: "Manual",
-        multi: "Check",
-        free: "Check",
-        price: "$20/mo",
-      },
-      {
-        name: "Grammarly",
-        template: "X",
-        ferpa: "Check",
-        tone: "Check",
-        multi: "Limited",
-        free: "Check",
-        price: "$30/mo",
-      },
-    ],
+    comparison_table: {
+      feature_label: "Feature",
+      tool_label: "Zaza Draft",
+      chatgpt_label: "ChatGPT",
+      claude_label: "Claude",
+      grammarly_label: "Grammarly",
+      rows: [
+        {
+          feature: "Teacher Templates",
+          zaza: "✔",
+          chatgpt: "✖",
+          claude: "✖",
+          grammarly: "✖",
+        },
+        {
+          feature: "FERPA Compliant",
+          zaza: "✔",
+          chatgpt: "✖",
+          claude: "✖",
+          grammarly: "✖",
+        },
+        {
+          feature: "Tone Control",
+          zaza: "✔",
+          chatgpt: "Manual",
+          claude: "Manual",
+          grammarly: "✔",
+        },
+        {
+          feature: "Multi-language",
+          zaza: "✔",
+          chatgpt: "✔",
+          claude: "✔",
+          grammarly: "Limited",
+        },
+        {
+          feature: "Free Tier",
+          zaza: "✔",
+          chatgpt: "✔",
+          claude: "✔",
+          grammarly: "✔",
+        },
+        {
+          feature: "Price (Premium)",
+          zaza: "$16/mo",
+          chatgpt: "$20/mo",
+          claude: "$20/mo",
+          grammarly: "$30/mo",
+        },
+      ],
+    },
+
+    // Safeguards
     safeguards_title: "Safeguards for tone, clarity, and professionalism",
-    safeguards_points: [
-      "**Tone Calibration:** Automatically adjusts formality, warmth, and directness to ensure the email is received as intended.",
-      "**Clarity & Structure:** Organises bullet points into clear, professional paragraphs with appropriate headings and closing remarks.",
-      "**Multi-lingual Drafts:** Generate drafts in 10+ languages while maintaining the specified tone and structure.",
+    safeguards_items: [
+      {
+        title: "Tone Calibration",
+        body: "Automatically adjusts formality, warmth, and directness to ensure the email is received as intended.",
+      },
+      {
+        title: "Clarity & Structure",
+        body: "Organises bullet points into clear, professional paragraphs with appropriate headings and closing remarks.",
+      },
+      {
+        title: "Multi-lingual Drafts",
+        body: "Generate drafts in 10+ languages while maintaining the specified tone and structure.",
+      },
     ],
+
+    // Testimonials
     testimonials_title: "Real teacher testimonials",
     testimonials: [
       {
@@ -123,293 +151,270 @@ const content = {
           "Zaza Draft cut my parent email time from 2 hours to 30 minutes per week. The templates understand teacher language and the tone control is perfect for sensitive situations.",
         name: "Sarah M.",
         role: "4th Grade Teacher, Texas",
-        image: "/testimonials/sarah-teacher.jpg",
       },
       {
         quote:
-          "I use Zaza Draft for parent communication and ChatGPT for lesson planning. Together they save me 6-7 hours per week. Game changer for work-life balance.",
+          "I use Zaza Draft for parent communication and ChatGPT for lesson planning. Together they save me 6–7 hours per week. Game changer for work-life balance.",
         name: "Jessica T.",
         role: "High School English, California",
-        image: "/testimonials/maria-teacher.jpg",
       },
     ],
+
+    // FAQ
     faq_title: "Frequently Asked Questions",
-    faqs: [
+    faq: [
       {
         question: "Is Zaza Draft FERPA compliant?",
         answer:
-          "Yes. It does not require student names (initials or pseudonyms are used) and data is encrypted and never used for training. This makes it a safe option for educational use.",
+          "Yes. Zaza Draft is designed with FERPA-appropriate data handling for student information and sensitive communication contexts.",
       },
       {
         question: "How much time can I save?",
         answer:
-          "Teachers typically report saving 5-8 hours per week on communication alone, depending on their existing workload.",
+          "Most teachers report saving 60–70% of the time they previously spent drafting, revising, and editing parent emails.",
       },
       {
         question: "Does it work in my native language?",
         answer:
-          "Yes, Zaza Draft supports drafting and translating communication in over 10 languages while preserving the intended tone.",
+          "Zaza Draft supports drafts in over 10 languages and can adapt tone and phrasing to different cultural expectations.",
       },
       {
         question: "Can I use it for report cards?",
         answer:
-          "Yes, while Zaza Draft excels at shorter communication, our GradeFlow product is specifically designed for long-form student reports.",
+          "Yes. Many teachers use Zaza Draft to draft report comments first, then adapt them for parent emails or official reporting systems.",
       },
     ],
-    continue_learning_title: "Continue Learning",
-    related_guides: [
-      {
-        title: "Reduce Stress with AI Messages",
-        href: "/reduce-stress-parent-messages",
-      },
-      { title: "AI for Student Reports", href: "/ai-for-student-reports" },
-    ],
-    cta_final_title: "Write better parent emails in less time",
-    cta_final_subtitle: "Start your free trial today. No credit card required.",
-    cta_final_button: "Start Free Trial",
+
+    // CTA
+    cta_title: "Write better parent emails in less time",
+    cta_subtitle: "Start your free trial today. No credit card required.",
+    cta_button: "Start Free Trial",
+
+    // Sidebar / Continued Learning
+    sidebar_on_this_page: "On this page",
+    sidebar_continue_learning: "Continue Learning",
+    sidebar_quick_answer: "Quick Answer",
+    sidebar_why_stress: "Why Parent Emails Cause Teacher Stress",
+    sidebar_how_ai_saves: "How AI Saves 60–70% of Writing Time",
+    sidebar_comparison: "Comparison: Zaza Draft vs. other tools",
+    sidebar_safeguards: "Safeguards for tone, clarity, and professionalism",
+    sidebar_testimonials: "Real teacher testimonials",
+    sidebar_faq: "Frequently Asked Questions",
+    sidebar_reduce_stress: "Reduce Stress with AI Messages",
+    sidebar_student_reports: "AI for Student Reports",
+    sidebar_learning_centre: "Full Learning Centre",
+
+    // Breadcrumb
     breadcrumb_label: "Learning Centre",
-    sidebar_cta_title: "Try Zaza Draft",
-    sidebar_cta_subtitle:
-      "Purpose-built for teachers. FERPA compliant. Free to start.",
-    sidebar_cta_button: "Start Free",
-    sidebar_resource_full: "Full Learning Centre",
   },
+
   de: {
-    meta_updated: "Aktualisiert: November 2025",
+    // Hero
+    updated_label: "Aktualisiert: November 2025",
     hero_title: "Das beste KI-Tool für Eltern-E-Mails 2025",
     hero_subtitle:
       "Finden Sie den KI-Assistenten, der speziell für die Lehrer-Eltern-Kommunikation, Tonfallkontrolle und DSGVO-Konformität entwickelt wurde.",
-    cta_primary: "Zaza Draft kostenlos testen",
-    cta_secondary: "Vergleich ansehen",
-    quick_answer:
-      "Zaza Draft ist das beste Tool, da es Lehrerspezifische Vorlagen, DSGVO-Konformität und automatische Tonfallkontrolle bietet. Generische Tools wie ChatGPT sind für sensible Kommunikation zu riskant.",
+    hero_primary_cta: "Zaza Draft kostenlos testen",
+    hero_secondary_cta: "Vergleich ansehen",
+
+    // Quick Answer
+    quick_answer_label: "Kurzantwort: Das beste KI-Tool",
+    quick_answer_title: "Kurzantwort: Das beste KI-Tool",
+    quick_answer_body:
+      "Zaza Draft ist das beste Tool, das lehrerspezifische Vorlagen, DSGVO-Konformität und automatische Tonfallkontrolle bietet. Generische Tools wie ChatGPT sind zu riskant für sensible Kommunikation.",
+
+    // Why Stress
     why_stress_title: "Warum Eltern-E-Mails bei Lehrern Stress verursachen",
-    why_stress_points: [
+    why_stress_cards: [
       {
         title: "Die richtigen Worte finden",
-        description:
-          "Es ist schwierig, die richtigen Worte zu finden, um gleichzeitig ehrlich und ermutigend zu sein. Der Druck, den richtigen Ton zu treffen, führt zu großen Verzögerungen.",
-        icon: "X",
+        body: "Es ist schwierig, Worte zu finden, die gleichzeitig ehrlich und ermutigend sind. Der Druck, den Ton genau zu treffen, führt oft zu großer Verzögerung.",
       },
       {
-        title: "Konsistenz wahren",
-        description:
-          "Es ist nahezu unmöglich, die Konsistenz des Schreibens bei über 40 Eltern, 3 verschiedenen Kontexten (E-Mail, Bericht, Nachricht) und gleichzeitigem Zeitmanagement aufrechtzuerhalten.",
-        icon: "X",
+        title: "Konsistent bleiben",
+        body: "Konsequente Formulierungen für über 40 Eltern, 3 verschiedene Kontexte (E-Mail, Bericht, Nachricht) und ein voller Stundenplan – das ist kaum machbar.",
       },
       {
         title: "Zeit und Wohlbefinden",
-        description:
-          "E-Mails beanspruchen persönliche Zeit an Abenden und Wochenenden. Diese Unklarheit ist eine erhebliche Belastung für das Wohlbefinden der Lehrer.",
-        icon: "X",
+        body: "E-Mails beanspruchen wertvolle Zeit an Abenden und Wochenenden. Diese zusätzliche Belastung wirkt sich direkt auf das Wohlbefinden der Lehrkräfte aus.",
       },
     ],
-    how_ai_helps_title:
-      "Wie KI hilft, klare, empathische Nachrichten zu verfassen",
-    ai_features: [
+
+    // How AI Helps
+    how_ai_title: "Wie KI hilft, klare, empathische Nachrichten zu verfassen",
+    how_ai_cards: [
       {
         title: "Sofortige Entwürfe",
-        description:
-          "Erstellt sofort klare, professionelle E-Mail-Entwürfe aus wenigen Stichpunkten, wodurch 60-70 % der Schreibzeit eingespart werden.",
-        icon: "Zap",
+        body: "Erstellt sofort klare, professionelle E-Mail-Entwürfe aus wenigen Stichpunkten und spart so 60–70 % der Schreibzeit.",
       },
       {
         title: "Tonfallkontrolle",
-        description:
-          "Bietet präzise Kontrolle über Formalität, Wärme und Direktheit, um sicherzustellen, dass die Nachricht jedes Mal richtig ankommt.",
-        icon: "Shield",
+        body: "Bietet exakte Kontrolle über Formalität, Wärme und Direktheit, damit die Nachricht so ankommt, wie Sie es meinen.",
       },
       {
         title: "Spart Zeit",
-        description:
-          "Spart 60-70 % der Zeit, die normalerweise für das Entwerfen, Überprüfen und Sorgenmachen über die Elternkommunikation aufgewendet wird.",
-        icon: "TrendingUp",
+        body: "Spart 60–70 % der Zeit, die normalerweise für das Verfassen, Überarbeiten und Zweifeln an Elternkommunikation draufgeht.",
       },
     ],
+
+    // Comparison
     comparison_title: "Vergleich: Zaza Draft vs. andere Tools",
-    comparison_features: [
-      "Lehrer-Vorlagen",
-      "DSGVO-Konform",
-      "Tonfallkontrolle",
-      "Mehrsprachig",
-      "Kostenlose Stufe",
-      "Preis (Premium)",
-    ],
-    comparison_tools: [
-      {
-        name: "Zaza Draft",
-        template: "Check",
-        ferpa: "Check",
-        tone: "Check",
-        multi: "Check",
-        free: "Check",
-        price: "€14.99/Monat",
-      },
-      {
-        name: "ChatGPT",
-        template: "X",
-        ferpa: "X",
-        tone: "Manuell",
-        multi: "Check",
-        free: "Check",
-        price: "€20/Monat",
-      },
-      {
-        name: "Claude",
-        template: "X",
-        ferpa: "X",
-        tone: "Manuell",
-        multi: "Check",
-        free: "Check",
-        price: "€20/Monat",
-      },
-      {
-        name: "Grammarly",
-        template: "X",
-        ferpa: "Check",
-        tone: "Check",
-        multi: "Begrenzt",
-        free: "Check",
-        price: "€30/Monat",
-      },
-    ],
+    comparison_table: {
+      feature_label: "Merkmal",
+      tool_label: "Zaza Draft",
+      chatgpt_label: "ChatGPT",
+      claude_label: "Claude",
+      grammarly_label: "Grammarly",
+      rows: [
+        {
+          feature: "Lehrer-Vorlagen",
+          zaza: "✔",
+          chatgpt: "✖",
+          claude: "✖",
+          grammarly: "✖",
+        },
+        {
+          feature: "DSGVO-konform",
+          zaza: "✔",
+          chatgpt: "✖",
+          claude: "✖",
+          grammarly: "✖",
+        },
+        {
+          feature: "Tonfallkontrolle",
+          zaza: "✔",
+          chatgpt: "Manuell",
+          claude: "Manuell",
+          grammarly: "✔",
+        },
+        {
+          feature: "Mehrsprachig",
+          zaza: "✔",
+          chatgpt: "✔",
+          claude: "✔",
+          grammarly: "Begrenzt",
+        },
+        {
+          feature: "Kostenlose Stufe",
+          zaza: "✔",
+          chatgpt: "✔",
+          claude: "✔",
+          grammarly: "✔",
+        },
+        {
+          feature: "Preis (Premium)",
+          zaza: "≈ 14,99€/Monat",
+          chatgpt: "≈ 20€/Monat",
+          claude: "≈ 20€/Monat",
+          grammarly: "≈ 30€/Monat",
+        },
+      ],
+    },
+
+    // Safeguards
     safeguards_title:
       "Schutzmaßnahmen für Tonfall, Klarheit und Professionalität",
-    safeguards_points: [
-      "**Tonfallkalibrierung:** Passt Formalität, Wärme und Direktheit automatisch an, um sicherzustellen, dass die E-Mail wie beabsichtigt empfangen wird.",
-      "**Klarheit und Struktur:** Organisiert Stichpunkte in klare, professionelle Absätze mit angemessenen Überschriften und Abschlussbemerkungen.",
-      "**Mehrsprachige Entwürfe:** Erstellt Entwürfe und Übersetzungen in über 10 Sprachen unter Beibehaltung des angegebenen Tonfalls und der Struktur.",
+    safeguards_items: [
+      {
+        title: "Tonfallkalibrierung",
+        body: "Passt Formalität, Wärme und Direktheit automatisch an, um sicherzustellen, dass die E-Mail wie beabsichtigt ankommt.",
+      },
+      {
+        title: "Klarheit und Struktur",
+        body: "Strukturiert Stichpunkte in klare, professionelle Absätze mit passenden Zwischenüberschriften und Abschlussformeln.",
+      },
+      {
+        title: "Mehrsprachige Entwürfe",
+        body: "Erstellt Entwürfe und Antworten in über 10 Sprachen unter Beibehaltung des angegebenen Tons und der Struktur.",
+      },
     ],
+
+    // Testimonials
     testimonials_title: "Echte Lehrerstimmen",
     testimonials: [
       {
         quote:
-          "Zaza Draft hat meine Zeit für Eltern-E-Mails von 2 Stunden auf 30 Minuten pro Woche reduziert. Die Vorlagen verstehen die Lehrersprache und die Tonfallkontrolle ist perfekt für sensible Situationen.",
+          "Mit Zaza Draft habe ich meine Eltern-E-Mails von 2 Stunden auf 30 Minuten pro Woche reduziert. Die Vorlagen verstehen unsere Lehrersprache und die Tonfallkontrolle ist perfekt für sensible Situationen.",
         name: "Sarah M.",
         role: "Lehrerin 4. Klasse, Texas",
-        image: "/testimonials/sarah-teacher.jpg",
       },
       {
         quote:
-          "Ich nutze Zaza Draft für die Elternkommunikation und ChatGPT für die Unterrichtsplanung. Zusammen sparen sie mir 6-7 Stunden pro Woche. Eine Wende für die Work-Life-Balance.",
+          "Ich nutze Zaza Draft für die Elternkommunikation und ChatGPT für die Unterrichtsplanung. Zusammen sparen sie mir 6–7 Stunden pro Woche. Eine Wende für die Work-Life-Balance.",
         name: "Jessica T.",
         role: "Englischlehrerin Oberstufe, Kalifornien",
-        image: "/testimonials/maria-teacher.jpg",
       },
     ],
+
+    // FAQ
     faq_title: "Häufig gestellte Fragen",
-    faqs: [
+    faq: [
       {
         question: "Ist Zaza Draft DSGVO-konform?",
         answer:
-          "Ja. Es erfordert keine Schülernamen (Initialen oder Pseudonyme werden verwendet) und Daten werden verschlüsselt und niemals zum Training verwendet. Dies macht es zu einer sicheren Option für den Bildungsbereich.",
+          "Ja. Zaza Draft ist für DSGVO-konforme Verarbeitung von Schülerdaten und sensibler Kommunikation ausgelegt.",
       },
       {
         question: "Wie viel Zeit kann ich realistisch sparen?",
         answer:
-          "Lehrer berichten in der Regel, dass sie allein bei der Kommunikation 5-8 Stunden pro Woche einsparen, je nach ihrem bestehenden Arbeitsaufwand.",
+          "Die meisten Lehrkräfte berichten, dass sie 60–70 % der bisherigen Zeit für das Verfassen, Überarbeiten und Kontrolllesen von Eltern-E-Mails einsparen.",
       },
       {
         question: "Funktioniert es in meiner Muttersprache?",
         answer:
-          "Ja, Zaza Draft unterstützt das Entwerfen und Übersetzen von Kommunikation in über 10 Sprachen unter Beibehaltung des beabsichtigten Tonfalls.",
+          "Zaza Draft unterstützt Entwürfe in über 10 Sprachen und kann Ton und Formulierungen an unterschiedliche kulturelle Erwartungen anpassen.",
       },
       {
         question: "Kann ich es für Zeugnisse verwenden?",
         answer:
-          "Ja, obwohl Zaza Draft sich hervorragend für kürzere Kommunikationen eignet, ist unser Produkt GradeFlow speziell für lange Schülerberichte konzipiert.",
+          "Ja. Viele Lehrkräfte verfassen zuerst Berichtskommentare mit Zaza Draft und passen sie anschließend für Eltern-E-Mails oder offizielle Systeme an.",
       },
     ],
-    continue_learning_title: "Weiter lernen",
-    related_guides: [
-      {
-        title: "Stress mit KI-Nachrichten reduzieren",
-        href: "/reduce-stress-parent-messages",
-      },
-      {
-        title: "Das beste KI-Tool für Eltern-E-Mails",
-        href: "/best-ai-tool-parent-emails",
-      },
-    ],
-    cta_final_title: "Schreiben Sie bessere Eltern-E-Mails in kürzerer Zeit",
-    cta_final_subtitle:
+
+    // CTA
+    cta_title: "Schreiben Sie bessere Eltern-E-Mails in kürzerer Zeit",
+    cta_subtitle:
       "Starten Sie noch heute Ihre kostenlose Testversion. Keine Kreditkarte erforderlich.",
-    cta_final_button: "Kostenlose Testversion starten",
+    cta_button: "Kostenlose Testversion starten",
+
+    // Sidebar / Continued Learning
+    sidebar_on_this_page: "Auf dieser Seite",
+    sidebar_continue_learning: "Weiter lernen",
+    sidebar_quick_answer: "Kurzantwort",
+    sidebar_why_stress: "Warum Eltern-E-Mails Stress verursachen",
+    sidebar_how_ai_saves: "Wie KI 60–70 % Schreibzeit spart",
+    sidebar_comparison: "Vergleich: Zaza Draft vs. andere Tools",
+    sidebar_safeguards:
+      "Schutzmaßnahmen für Tonfall, Klarheit und Professionalität",
+    sidebar_testimonials: "Echte Lehrerstimmen",
+    sidebar_faq: "Häufig gestellte Fragen",
+    sidebar_reduce_stress: "Stress mit KI-Nachrichten reduzieren",
+    sidebar_student_reports: "KI für Schülerberichte",
+    sidebar_learning_centre: "Gesamtes Lernzentrum",
+
+    // Breadcrumb
     breadcrumb_label: "Lernzentrum",
-    sidebar_cta_title: "Zaza Draft testen",
-    sidebar_cta_subtitle:
-      "Speziell für Lehrer entwickelt. DSGVO-konform. Kostenlos starten.",
-    sidebar_cta_button: "Kostenlos starten",
-    sidebar_resource_full: "Gesamtes Lernzentrum",
   },
 };
 
-const tocItems = [
-  { id: "quick-answer", title: "Quick Answer", level: 2 },
-  {
-    id: "why-stress",
-    title: "Why Parent Emails Cause Teacher Stress",
-    level: 2,
-  },
-  {
-    id: "how-ai-helps",
-    title: "How AI Saves 60-70% of Writing Time",
-    level: 2,
-  },
-  {
-    id: "comparison",
-    title: "Comparison: Zaza Draft vs. other tools",
-    level: 2,
-  },
-  {
-    id: "safeguards",
-    title: "Safeguards for tone, clarity, and professionalism",
-    level: 2,
-  },
-  { id: "testimonials", title: "Real teacher testimonials", level: 2 },
-  { id: "faq", title: "Frequently Asked Questions", level: 2 },
-];
-
-const renderIcon = (type: string): JSX.Element | string => {
-  if (type === "Check")
-    return <Check className="mx-auto h-5 w-5 text-green-400" />;
-  if (type === "X") return <X className="mx-auto h-5 w-5 text-red-400" />;
-  return <span className="text-gray-500">-</span>;
-};
-
-const renderCellText = (content: string): JSX.Element | string => {
-  if (content.startsWith("$") || content.startsWith("€"))
-    return <span className="font-semibold text-white">{content}</span>;
-  if (
-    content === "Manual" ||
-    content === "Manuell" ||
-    content === "Limited" ||
-    content === "Begrenzt"
-  )
-    return <span className="text-gray-400 text-sm">{content}</span>;
-  return renderIcon(content);
-};
+// -------------------------------------------
+// COMPONENT
+// -------------------------------------------
 
 export default function BestAIToolParentEmailsClient() {
   const pathname = usePathname();
   const isGerman = pathname?.startsWith("/de") ?? false;
-  const text = isGerman ? content.de : content.en;
+  const language: "en" | "de" = isGerman ? "de" : "en";
+  const text = content[language];
 
-  // Dynamically adjust TOC based on language
-  const currentToc = [
+  const tocItems: TableOfContentsItem[] = [
     {
       id: "quick-answer",
       title: isGerman ? "Kurzantwort" : "Quick Answer",
       level: 2,
     },
     { id: "why-stress", title: text.why_stress_title, level: 2 },
-    {
-      id: "how-ai-helps",
-      title: isGerman
-        ? "Wie KI 60-70% der Schreibzeit spart"
-        : "How AI Saves 60-70% of Writing Time",
-      level: 2,
-    },
+    { id: "how-ai-helps", title: text.how_ai_title, level: 2 },
     { id: "comparison", title: text.comparison_title, level: 2 },
     { id: "safeguards", title: text.safeguards_title, level: 2 },
     { id: "testimonials", title: text.testimonials_title, level: 2 },
@@ -418,394 +423,392 @@ export default function BestAIToolParentEmailsClient() {
 
   const breadcrumbItems = [
     { label: text.breadcrumb_label, href: "/learning-centre" },
-    { label: text.hero_title },
+    {
+      label: isGerman
+        ? "Bestes KI-Tool für Eltern-E-Mails 2025"
+        : "Best AI Tool for Parent Emails in 2025",
+      href: "/best-ai-tool-parent-emails",
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-[#0F172A]">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden border-b border-white/10 bg-gradient-to-b from-[#1E293B] to-[#0F172A] py-20">
-        <div className="container mx-auto px-4">
-          <div className="mb-8">
-            <Breadcrumbs items={breadcrumbItems} />
-          </div>
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-950 to-slate-950 text-slate-50">
+      {/* Top section with hero + TOC sidebar */}
+      <section className="border-b border-white/10 bg-gradient-to-b from-slate-950/80 via-slate-950/90 to-slate-950/95">
+        <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-16 pt-32 lg:flex-row lg:items-start lg:gap-16">
+          {/* Main Hero */}
+          <div className="flex-1 space-y-6">
+            {/* Breadcrumb */}
+            <nav className="mb-4 text-sm text-slate-400">
+              <ol className="flex items-center gap-2">
+                <li>
+                  <Link
+                    href="/"
+                    className="hover:text-slate-100 transition-colors duration-150"
+                  >
+                    {isGerman ? "Startseite" : "Home"}
+                  </Link>
+                </li>
+                <li className="text-slate-500">/</li>
+                <li>
+                  <Link
+                    href="/learning-centre"
+                    className="hover:text-slate-100 transition-colors duration-150"
+                  >
+                    {text.breadcrumb_label}
+                  </Link>
+                </li>
+                <li className="text-slate-500">/</li>
+                <li className="text-slate-300">
+                  {isGerman
+                    ? "Bestes KI-Tool für Eltern-E-Mails 2025"
+                    : "Best AI Tool for Parent Emails in 2025"}
+                </li>
+              </ol>
+            </nav>
 
-          <div className="mx-auto max-w-4xl text-center">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-[#8B5CF6]/20 border border-[#8B5CF6]/30 px-4 py-1.5 text-sm font-medium text-[#A78BFA]">
-              <Zap className="h-4 w-4" />
-              {text.meta_updated}
+            {/* Updated badge */}
+            <div className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-4 py-1 text-sm text-purple-300 ring-1 ring-purple-500/40">
+              <Sparkles className="h-4 w-4" />
+              <span>{text.updated_label}</span>
             </div>
-            <h1 className="mb-6 text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+
+            {/* Hero Title */}
+            <h1 className="mt-4 text-balance text-4xl font-bold tracking-tight text-slate-50 sm:text-5xl lg:text-6xl">
               {text.hero_title}
             </h1>
-            <p className="mb-8 text-balance text-lg text-gray-300 sm:text-xl leading-relaxed">
+
+            {/* Hero Subtitle */}
+            <p className="max-w-2xl text-lg text-slate-300">
               {text.hero_subtitle}
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <Button
-                size="lg"
-                asChild
-                className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white"
+
+            {/* CTA buttons */}
+            <div className="mt-6 flex flex-wrap items-center gap-4">
+              <Link
+                href="/pricing"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-fuchsia-500 via-purple-500 to-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-purple-500/40 transition hover:scale-[1.02] hover:shadow-purple-500/60"
               >
-                <Link href="/pricing">{text.cta_primary}</Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                asChild
-                className="border-[#8B5CF6] text-[#A78BFA] hover:bg-[#8B5CF6]/10 bg-transparent"
+                <Sparkles className="h-4 w-4" />
+                <span>{text.hero_primary_cta}</span>
+              </Link>
+
+              <Link
+                href="/compare-tools"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:bg-slate-800/60"
               >
-                <Link href="#comparison">{text.cta_secondary}</Link>
-              </Button>
+                <ArrowRight className="h-4 w-4" />
+                <span>{text.hero_secondary_cta}</span>
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
 
-      <div className="container mx-auto px-4 py-12">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_300px]">
-          {/* Main Content */}
-          <div className="space-y-16">
-            {/* Quick Answer */}
-            <div
-              id="quick-answer"
-              className="scroll-mt-20 rounded-xl border border-[#8B5CF6]/30 bg-[#1E293B] p-6"
-            >
-              <h3 className="mb-3 text-xl font-bold text-white flex items-center gap-2">
-                <Star className="h-5 w-5 fill-[#A78BFA] text-[#A78BFA]" />
-                {isGerman
-                  ? "Kurzantwort: Das beste KI-Tool"
-                  : "Quick Answer: The Best AI Tool"}
+          {/* On this page sidebar */}
+          <aside className="mt-8 w-full max-w-xs rounded-2xl border border-white/10 bg-slate-900/60 p-4 shadow-lg shadow-slate-900/40 lg:mt-0">
+            <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-400">
+              {text.sidebar_on_this_page}
+            </h2>
+            <TableOfContents items={tocItems} />
+
+            {/* Continue learning */}
+            <div className="mt-6 space-y-2 rounded-xl bg-slate-900/70 p-4">
+              <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                {text.sidebar_continue_learning}
               </h3>
-              <p className="text-gray-300 leading-relaxed">
-                {text.quick_answer}
-              </p>
-            </div>
+              <div className="space-y-2 text-sm">
+                <Link
+                  href="/reduce-stress-parent-messages"
+                  className="group flex items-center justify-between rounded-lg px-2 py-1 text-slate-200 hover:bg-slate-800/70"
+                >
+                  <span className="flex items-center gap-2">
+                    <Mail className="h-4 w-4 text-purple-300" />
+                    <span>{text.sidebar_reduce_stress}</span>
+                  </span>
+                  <ArrowRight className="h-4 w-4 text-slate-500 group-hover:text-purple-300" />
+                </Link>
 
-            {/* Why Stress */}
-            <section id="why-stress" className="scroll-mt-20">
-              <h2 className="mb-8 text-3xl font-bold text-white flex items-center gap-3">
-                <X className="w-8 h-8 text-red-500" />
-                {text.why_stress_title}
-              </h2>
-              <div className="grid gap-6 md:grid-cols-3">
-                {text.why_stress_points.map((point, i) => (
-                  <div
-                    key={i}
-                    className="rounded-xl border border-red-500/20 bg-[#1E293B] p-5"
-                  >
-                    <h3 className="mb-2 text-xl font-semibold text-white">
-                      {point.title}
-                    </h3>
-                    <p className="text-gray-300 text-sm">{point.description}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
+                <Link
+                  href="/ai-for-student-reports"
+                  className="group flex items-center justify-between rounded-lg px-2 py-1 text-slate-200 hover:bg-slate-800/70"
+                >
+                  <span className="flex items-center gap-2">
+                    <Users className="h-4 w-4 text-purple-300" />
+                    <span>{text.sidebar_student_reports}</span>
+                  </span>
+                  <ArrowRight className="h-4 w-4 text-slate-500 group-hover:text-purple-300" />
+                </Link>
 
-            {/* How AI Helps */}
-            <section id="how-ai-helps" className="scroll-mt-20">
-              <h2 className="mb-8 text-3xl font-bold text-white flex items-center gap-3">
-                <Shield className="w-8 h-8 text-green-400" />
-                {text.how_ai_helps_title}
-              </h2>
-              <div className="grid gap-6 md:grid-cols-3">
-                {text.ai_features.map((feature, i) => (
-                  <div
-                    key={i}
-                    className="rounded-xl border border-green-500/20 bg-[#1E293B] p-5 text-center"
-                  >
-                    <div className="flex justify-center mb-3">
-                      {React.createElement(
-                        feature.icon === "Zap"
-                          ? Zap
-                          : feature.icon === "Shield"
-                            ? Shield
-                            : TrendingUp,
-                        { className: "w-8 h-8 text-green-400" },
-                      )}
-                    </div>
-                    <h3 className="mb-2 text-xl font-semibold text-white">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-300 text-sm">
-                      {feature.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Comparison Table */}
-            <section id="comparison" className="scroll-mt-20">
-              <h2 className="mb-6 text-3xl font-bold text-white">
-                {text.comparison_title}
-              </h2>
-              <div className="overflow-x-auto rounded-xl border border-white/10">
-                <table className="w-full">
-                  <thead className="bg-[#1E293B]">
-                    <tr>
-                      <th className="p-4 text-left font-semibold text-white border-b border-white/10">
-                        {isGerman ? "Merkmal" : "Feature"}
-                      </th>
-                      {text.comparison_tools.map((tool) => (
-                        <th
-                          key={tool.name}
-                          className="p-4 text-center font-semibold text-white border-b border-white/10"
-                        >
-                          {tool.name}
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-white/10 bg-[#0F172A]">
-                    {/* Hardcoding rows to ensure feature rows match correctly */}
-                    <tr className="hover:bg-[#1E293B]/50 transition-colors">
-                      <td className="p-4 font-medium text-gray-300">
-                        {text.comparison_features[0]}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[0].template)}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[1].template)}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[2].template)}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[3].template)}
-                      </td>
-                    </tr>
-                    <tr className="hover:bg-[#1E293B]/50 transition-colors">
-                      <td className="p-4 font-medium text-gray-300">
-                        {text.comparison_features[1]}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[0].ferpa)}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[1].ferpa)}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[2].ferpa)}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[3].ferpa)}
-                      </td>
-                    </tr>
-                    <tr className="hover:bg-[#1E293B]/50 transition-colors">
-                      <td className="p-4 font-medium text-gray-300">
-                        {text.comparison_features[2]}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[0].tone)}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[1].tone)}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[2].tone)}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[3].tone)}
-                      </td>
-                    </tr>
-                    <tr className="hover:bg-[#1E293B]/50 transition-colors">
-                      <td className="p-4 font-medium text-gray-300">
-                        {text.comparison_features[3]}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[0].multi)}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[1].multi)}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[2].multi)}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[3].multi)}
-                      </td>
-                    </tr>
-                    <tr className="hover:bg-[#1E293B]/50 transition-colors">
-                      <td className="p-4 font-medium text-gray-300">
-                        {text.comparison_features[4]}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[0].free)}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[1].free)}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[2].free)}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[3].free)}
-                      </td>
-                    </tr>
-                    <tr className="hover:bg-[#1E293B]/50 transition-colors">
-                      <td className="p-4 font-medium text-gray-300">
-                        {text.comparison_features[5]}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[0].price)}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[1].price)}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[2].price)}
-                      </td>
-                      <td className="p-4 text-center">
-                        {renderCellText(text.comparison_tools[3].price)}
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </section>
-
-            {/* Safeguards */}
-            <section id="safeguards" className="scroll-mt-20">
-              <h2 className="mb-6 text-3xl font-bold text-white flex items-center gap-3">
-                <Shield className="w-8 h-8 text-[#A78BFA]" />
-                {text.safeguards_title}
-              </h2>
-              <div className="space-y-4">
-                {text.safeguards_points.map((point, i) => (
-                  <div
-                    key={i}
-                    className="rounded-xl border border-[#8B5CF6]/20 bg-[#1E293B] p-4 text-gray-300 flex items-start gap-3"
-                  >
-                    <Check className="mt-1 h-5 w-5 shrink-0 text-green-400" />
-                    <p dangerouslySetInnerHTML={{ __html: point }}></p>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Testimonials */}
-            <section id="testimonials" className="scroll-mt-20">
-              <h2 className="mb-6 text-3xl font-bold text-white">
-                {text.testimonials_title}
-              </h2>
-              <div className="grid gap-6 md:grid-cols-2">
-                {text.testimonials.map((testimonial, i) => (
-                  <div
-                    key={i}
-                    className="rounded-xl border border-white/10 bg-gradient-to-br from-[#8B5CF6]/10 to-[#A78BFA]/5 p-6"
-                  >
-                    <div className="mb-4 flex gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="h-5 w-5 fill-[#A78BFA] text-[#A78BFA]"
-                        />
-                      ))}
-                    </div>
-                    <p className="mb-4 text-gray-300 leading-relaxed italic">
-                      "{testimonial.quote}"
-                    </p>
-                    <div className="flex items-center gap-3">
-                      <Image
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        width={56}
-                        height={56}
-                        className="rounded-full object-cover border border-white/20"
-                      />
-                      <div>
-                        <p className="font-semibold text-white">
-                          {testimonial.name}
-                        </p>
-                        <p className="text-sm text-gray-400">
-                          {testimonial.role}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* FAQ */}
-            <FAQSection
-              id="faq"
-              title={text.faq_title}
-              faqs={text.faqs as FAQItem[]}
-              schemaContext={
-                isGerman
-                  ? "Beste KI-Tools für Eltern-E-Mails"
-                  : "Best AI Tool for Parent Emails"
-              }
-            />
-
-            {/* Final CTA */}
-            <section className="rounded-xl border border-[#8B5CF6]/30 bg-gradient-to-br from-[#8B5CF6]/20 to-[#A78BFA]/10 p-8 text-center">
-              <h2 className="mb-4 text-3xl font-bold text-white">
-                {text.cta_final_title}
-              </h2>
-              <p className="mb-6 text-balance text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto">
-                {text.cta_final_subtitle}
-              </p>
-              <Button
-                size="lg"
-                asChild
-                className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white"
-              >
-                <Link href="/pricing">{text.cta_final_button}</Link>
-              </Button>
-            </section>
-          </div>
-
-          {/* Sidebar */}
-          <aside className="space-y-6">
-            <TableOfContents items={currentToc} />
-
-            {/* Related Resources */}
-            <div className="rounded-xl border border-white/10 bg-[#1E293B] p-6">
-              <h3 className="mb-4 font-semibold text-white">
-                {text.continue_learning_title}
-              </h3>
-              <div className="space-y-3">
-                {text.related_guides.map((guide, i) => (
-                  <Link
-                    key={i}
-                    href={guide.href}
-                    className="block text-sm text-[#A78BFA] hover:text-[#8B5CF6] transition-colors"
-                  >
-                    → {guide.title}
-                  </Link>
-                ))}
                 <Link
                   href="/learning-centre"
-                  className="block text-sm text-[#A78BFA] hover:text-[#8B5CF6] transition-colors"
+                  className="group flex items-center justify-between rounded-lg px-2 py-1 text-slate-200 hover:bg-slate-800/70"
                 >
-                  → {text.sidebar_resource_full}
+                  <span className="flex items-center gap-2">
+                    <Sparkles className="h-4 w-4 text-purple-300" />
+                    <span>{text.sidebar_learning_centre}</span>
+                  </span>
+                  <ArrowRight className="h-4 w-4 text-slate-500 group-hover:text-purple-300" />
                 </Link>
               </div>
             </div>
-
-            {/* CTA Card */}
-            <div className="rounded-xl border border-[#8B5CF6]/30 bg-gradient-to-br from-[#8B5CF6]/20 to-[#A78BFA]/10 p-6">
-              <h3 className="mb-2 font-semibold text-white">
-                {text.sidebar_cta_title}
-              </h3>
-              <p className="mb-4 text-sm text-gray-300">
-                {text.sidebar_cta_subtitle}
-              </p>
-              <Button
-                asChild
-                className="w-full bg-[#8B5CF6] hover:bg-[#7C3AED] text-white"
-              >
-                <Link href="/pricing">{text.sidebar_cta_button}</Link>
-              </Button>
-            </div>
           </aside>
         </div>
-      </div>
+      </section>
+
+      {/* Main content */}
+      <main className="mx-auto max-w-6xl space-y-12 px-4 pb-24 pt-8">
+        {/* Quick Answer */}
+        <section
+          id="quick-answer"
+          className="grid gap-6 lg:grid-cols-[2fr,1fr]"
+        >
+          <div className="rounded-2xl bg-slate-900/80 p-6 shadow-xl shadow-slate-900/40">
+            <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-purple-500/10 px-3 py-1 text-xs font-medium text-purple-200">
+              <Star className="h-4 w-4 fill-purple-400 text-purple-400" />
+              <span>{text.quick_answer_label}</span>
+            </div>
+            <h2 className="mb-3 text-2xl font-bold text-slate-50">
+              {text.quick_answer_title}
+            </h2>
+            <p className="text-slate-200">{text.quick_answer_body}</p>
+          </div>
+
+          {/* Key features summary card */}
+          <div className="rounded-2xl border border-purple-500/40 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-900 p-6 shadow-xl shadow-purple-900/30">
+            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-purple-200">
+              {isGerman ? "Warum Zaza Draft?" : "Why Zaza Draft?"}
+            </h3>
+            <ul className="space-y-3 text-sm text-slate-100">
+              <li className="flex gap-2">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 text-emerald-400" />
+                <span>
+                  {isGerman
+                    ? "Vorlagen speziell für Lehrer-Eltern-Kommunikation, nicht für allgemeine E-Mails."
+                    : "Templates purpose-built for teacher–parent communication, not generic email writing."}
+                </span>
+              </li>
+              <li className="flex gap-2">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 text-emerald-400" />
+                <span>
+                  {isGerman
+                    ? "DSGVO-/FERPA-orientierte Behandlung sensibler Schülerdaten."
+                    : "FERPA/GDPR-aware handling of sensitive student information."}
+                </span>
+              </li>
+              <li className="flex gap-2">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 text-emerald-400" />
+                <span>
+                  {isGerman
+                    ? "Automatische Tonfallkontrolle, damit Nachrichten so ankommen, wie sie gemeint sind."
+                    : "Automated tone control so messages are received as you intend."}
+                </span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Why Stress */}
+        <section id="why-stress" className="space-y-6">
+          <div className="flex items-center gap-2">
+            <Mail className="h-5 w-5 text-rose-400" />
+            <h2 className="text-2xl font-bold text-slate-50">
+              {text.why_stress_title}
+            </h2>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            {text.why_stress_cards.map((card, idx) => (
+              <div
+                key={idx}
+                className="rounded-2xl bg-slate-900/80 p-5 shadow-lg shadow-slate-900/40"
+              >
+                <h3 className="mb-2 text-base font-semibold text-slate-50">
+                  {card.title}
+                </h3>
+                <p className="text-sm text-slate-300">{card.body}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* How AI Helps */}
+        <section id="how-ai-helps" className="space-y-6">
+          <div className="flex items-center gap-2">
+            <Sparkles className="h-5 w-5 text-emerald-400" />
+            <h2 className="text-2xl font-bold text-slate-50">
+              {text.how_ai_title}
+            </h2>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            {text.how_ai_cards.map((card, idx) => (
+              <div
+                key={idx}
+                className="rounded-2xl bg-slate-900/80 p-5 shadow-lg shadow-slate-900/40"
+              >
+                <h3 className="mb-2 text-base font-semibold text-slate-50">
+                  {card.title}
+                </h3>
+                <p className="text-sm text-slate-300">{card.body}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Comparison */}
+        <section id="comparison" className="space-y-6">
+          <div className="flex items-center gap-2">
+            <Users className="h-5 w-5 text-sky-400" />
+            <h2 className="text-2xl font-bold text-slate-50">
+              {text.comparison_title}
+            </h2>
+          </div>
+
+          <div className="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80 shadow-xl shadow-slate-900/40">
+            <table className="min-w-full divide-y divide-slate-800 text-sm">
+              <thead className="bg-slate-900/90">
+                <tr>
+                  <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-400">
+                    {text.comparison_table.feature_label}
+                  </th>
+                  <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-fuchsia-300">
+                    {text.comparison_table.tool_label}
+                  </th>
+                  <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-300">
+                    {text.comparison_table.chatgpt_label}
+                  </th>
+                  <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-300">
+                    {text.comparison_table.claude_label}
+                  </th>
+                  <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-300">
+                    {text.comparison_table.grammarly_label}
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-800 bg-slate-950/40">
+                {text.comparison_table.rows.map((row, idx) => (
+                  <tr key={idx}>
+                    <td className="px-4 py-3 text-slate-200">{row.feature}</td>
+                    <td className="px-4 py-3 text-slate-100">{row.zaza}</td>
+                    <td className="px-4 py-3 text-slate-300">{row.chatgpt}</td>
+                    <td className="px-4 py-3 text-slate-300">{row.claude}</td>
+                    <td className="px-4 py-3 text-slate-300">
+                      {row.grammarly}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Safeguards */}
+        <section id="safeguards" className="space-y-6">
+          <div className="flex items-center gap-2">
+            <Shield className="h-5 w-5 text-emerald-400" />
+            <h2 className="text-2xl font-bold text-slate-50">
+              {text.safeguards_title}
+            </h2>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            {text.safeguards_items.map((item, idx) => (
+              <div
+                key={idx}
+                className="rounded-2xl bg-slate-900/80 p-5 shadow-lg shadow-slate-900/40"
+              >
+                <h3 className="mb-2 text-base font-semibold text-slate-50">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-slate-300">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Testimonials */}
+        <section id="testimonials" className="space-y-6">
+          <div className="flex items-center gap-2">
+            <Star className="h-5 w-5 text-yellow-400" />
+            <h2 className="text-2xl font-bold text-slate-50">
+              {text.testimonials_title}
+            </h2>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2">
+            {text.testimonials.map((t, idx) => (
+              <figure
+                key={idx}
+                className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/90 via-slate-900 to-slate-950 p-6 shadow-xl shadow-slate-900/50"
+              >
+                <div className="mb-2 flex items-center gap-1 text-yellow-400">
+                  <Star className="h-4 w-4 fill-yellow-400" />
+                  <Star className="h-4 w-4 fill-yellow-400" />
+                  <Star className="h-4 w-4 fill-yellow-400" />
+                  <Star className="h-4 w-4 fill-yellow-400" />
+                  <Star className="h-4 w-4 fill-yellow-400" />
+                </div>
+                <blockquote className="mb-3 text-sm text-slate-100">
+                  “{t.quote}”
+                </blockquote>
+                <figcaption className="text-xs text-slate-400">
+                  <span className="font-semibold text-slate-200">{t.name}</span>
+                  {" • "}
+                  <span>{t.role}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section id="faq" className="space-y-6">
+          <div className="flex items-center gap-2">
+            <Clock className="h-5 w-5 text-sky-400" />
+            <h2 className="text-2xl font-bold text-slate-50">
+              {text.faq_title}
+            </h2>
+          </div>
+
+          <div className="divide-y divide-slate-800 rounded-2xl border border-slate-800 bg-slate-900/80">
+            {text.faq.map((item, idx) => (
+              <details
+                key={idx}
+                className="group border-t border-slate-800 px-4 py-3 first:border-t-0"
+              >
+                <summary className="flex cursor-pointer items-center justify-between text-sm text-slate-100">
+                  <span>{item.question}</span>
+                  <span className="ml-4 text-xs text-slate-500 group-open:hidden">
+                    +
+                  </span>
+                  <span className="ml-4 text-xs text-slate-500 hidden group-open:inline">
+                    -
+                  </span>
+                </summary>
+                <p className="mt-2 text-sm text-slate-300">{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="mt-12 rounded-3xl bg-gradient-to-r from-purple-600 via-fuchsia-500 to-indigo-500 p-[1px] shadow-2xl shadow-purple-900/40">
+          <div className="flex flex-col items-start justify-between gap-6 rounded-[22px] bg-slate-950/95 px-6 py-8 text-slate-50 md:flex-row md:items-center md:px-10">
+            <div className="space-y-2">
+              <h2 className="text-2xl font-bold">{text.cta_title}</h2>
+              <p className="max-w-xl text-sm text-slate-200">
+                {text.cta_subtitle}
+              </p>
+            </div>
+            <Link
+              href="/pricing"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-lg shadow-slate-900/30 transition hover:scale-[1.02]"
+            >
+              <Clock className="h-4 w-4" />
+              <span>{text.cta_button}</span>
+            </Link>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }

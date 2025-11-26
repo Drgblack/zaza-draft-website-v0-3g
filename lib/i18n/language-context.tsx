@@ -1224,14 +1224,6 @@ const translationsEn: Record<string, string> = {
   "founder.personal.title2": "Founder & CEO",
   "founder.personal.company": "Zaza Technologies",
   "founder.personal.cta": "Get in Touch",
-
-  // Signup modal form (EN)
-  "form.name": "Name",
-  "form.email": "Email",
-  "form.consent":
-    "I agree to receive helpful Zaza emails about new features, tips, and occasional offers. I can unsubscribe at any time.",
-  "form.privacyLink": "Privacy policy",
-  "form.submit": "Get started",
 };
 
 const translationsDe: Record<string, string> = {
@@ -2481,14 +2473,6 @@ const translationsDe: Record<string, string> = {
   "founder.personal.title2": "Gründer & CEO",
   "founder.personal.company": "Zaza Technologies",
   "founder.personal.cta": "Kontakt aufnehmen",
-
-  // Signup modal form (DE)
-  "form.name": "Name",
-  "form.email": "E-Mail",
-  "form.consent":
-    "Ich bin damit einverstanden, gelegentlich hilfreiche E-Mails von Zaza zu neuen Funktionen, Tipps und Angeboten zu erhalten. Ich kann mich jederzeit abmelden.",
-  "form.privacyLink": "Datenschutzerklärung",
-  "form.submit": "Jetzt starten",
 };
 
 export function LanguageProvider({ children }: { children: ReactNode }) {

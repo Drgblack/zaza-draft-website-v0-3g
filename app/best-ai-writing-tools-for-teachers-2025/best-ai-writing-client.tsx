@@ -2,7 +2,6 @@
 
 import React from "react";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { QuickAnswerBox } from "@/components/quick-answer-box";
@@ -56,7 +55,7 @@ export default function BestAIWritingClient() {
         "Purpose-built for teachers. FERPA compliant. Free to start.",
       sidebar_cta_button: "Start Free",
 
-      // Tool Data
+      // Tool Data (English hardcoded data)
       tools: [
         {
           rank: 1,
@@ -164,24 +163,6 @@ export default function BestAIWritingClient() {
         },
       ],
 
-      // Testimonial Data (ENGLISH) - ADDED MISSING ARRAY
-      testimonials: [
-        {
-          quote:
-            "Zaza Draft cut my parent email time from 2 hours to 30 minutes per week. The templates understand teacher language and the tone control is perfect for sensitive situations.",
-          name: "Sarah M.",
-          role: "4th Grade Teacher, Texas",
-          image: "/testimonials/sarah-teacher.jpg",
-        },
-        {
-          quote:
-            "I use ChatGPT for lesson planning and Zaza Draft for parent communication. Together they save me 6-7 hours per week. Game changer for work-life balance.",
-          name: "Michael T.",
-          role: "High School English, California",
-          image: "/testimonials/james-teacher.jpg",
-        },
-      ],
-
       // FAQ Data
       faqs: [
         {
@@ -253,7 +234,7 @@ export default function BestAIWritingClient() {
         "Speziell für Lehrer entwickelt. DSGVO-konform. Kostenlos starten.",
       sidebar_cta_button: "Kostenlos starten",
 
-      // Tool Data
+      // Tool Data (German hardcoded data)
       tools: [
         {
           rank: 1,
@@ -365,25 +346,7 @@ export default function BestAIWritingClient() {
         },
       ],
 
-      // Testimonial Data (GERMAN) - Renamed to 'testimonials'
-      testimonials: [
-        {
-          quote:
-            "Zaza Draft hat meine Zeit für Eltern-E-Mails von 2 Stunden auf 30 Minuten pro Woche reduziert. Die Vorlagen verstehen die Sprache der Lehrer und die Tonfallkontrolle ist perfekt für sensible Situationen.",
-          name: "Sarah M.",
-          role: "Grundschullehrerin, Texas",
-          image: "/testimonials/sarah-teacher.jpg",
-        },
-        {
-          quote:
-            "Ich nutze ChatGPT für die Unterrichtsplanung und Zaza Draft für die Elternkommunikation. Zusammen sparen sie mir 6–7 Stunden pro Woche. Ein Wendepunkt für die Work-Life-Balance.",
-          name: "Michael T.",
-          role: "Englischlehrer an der Oberstufe, Kalifornien",
-          image: "/testimonials/james-teacher.jpg",
-        },
-      ],
-
-      // FAQ Data
+      // FAQ Data (German translations)
       faqs: [
         {
           question: "Sind KI-Schreibwerkzeuge in Schulen erlaubt?",
@@ -421,8 +384,6 @@ export default function BestAIWritingClient() {
   const tools = text.tools;
   const useCases = text.useCases;
   const faqs = text.faqs;
-  // SIMPLIFIED ARRAY SELECTION: Now correctly points to the 'testimonials' key in the selected language object
-  const testimonials = text.testimonials;
 
   const tocItems = [
     {
@@ -599,7 +560,6 @@ export default function BestAIWritingClient() {
                               key={i}
                               className="flex items-start gap-2 text-sm text-gray-300"
                             >
-                              {/* FIX: Replaced Ã¢â‚¬Â¢ with a standard hyphen/dash or nothing if not needed */}
                               <span className="text-orange-400">−</span>
                               {con}
                             </li>
@@ -730,12 +690,11 @@ export default function BestAIWritingClient() {
                         <Check className="mx-auto h-5 w-5 text-green-400" />
                       </td>
                     </tr>
-                    {/* Price (Premium) - UPDATED PRICE */}
+                    {/* Price (Premium) */}
                     <tr className="hover:bg-[#1E293B]/50 transition-colors">
                       <td className="p-4 font-medium text-gray-300">
                         {isGerman ? "Preis (Premium)" : "Price (Premium)"}
                       </td>
-                      {/* Zaza Draft: $16/mo or 14.99 €/Monat */}
                       <td className="p-4 text-center text-white font-semibold">
                         {isGerman ? "14.99 €/Monat" : "$16/mo"}
                       </td>
@@ -880,49 +839,47 @@ export default function BestAIWritingClient() {
                 {text.testimonials_title}
               </h2>
               <div className="grid gap-6 md:grid-cols-2">
-                {testimonials.map(
-                  (
-                    testimonial,
-                    i, // Using the correctly selected 'testimonials' array
-                  ) => (
-                    <div
-                      key={i}
-                      className="rounded-xl border border-white/10 bg-gradient-to-br from-[#8B5CF6]/10 to-[#A78BFA]/5 p-6"
-                    >
-                      <div className="mb-4 flex gap-1">
-                        {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className="h-5 w-5 fill-[#A78BFA] text-[#A78BFA]"
-                          />
-                        ))}
-                      </div>
-
-                      <p className="mb-4 text-gray-300 leading-relaxed italic">
-                        "{testimonial.quote}"
-                      </p>
-
-                      {/* Teacher Profile Section */}
-                      <div className="flex items-center gap-4 mt-6">
-                        <Image
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          width={56}
-                          height={56}
-                          className="rounded-full object-cover border-2 border-[#A78BFA]"
+                {[
+                  {
+                    quote: isGerman
+                      ? "Zaza Draft hat meine Zeit für Eltern-E-Mails von 2 Stunden auf 30 Minuten pro Woche reduziert. Die Vorlagen verstehen die Sprache der Lehrer und die Tonfallkontrolle ist perfekt für sensible Situationen."
+                      : "Zaza Draft cut my parent email time from 2 hours to 30 minutes per week. The templates understand teacher language and the tone control is perfect for sensitive situations.",
+                    name: "Sarah M.",
+                    role: isGerman
+                      ? "Grundschullehrerin, Texas"
+                      : "4th Grade Teacher, Texas",
+                  },
+                  {
+                    quote: isGerman
+                      ? "Ich nutze ChatGPT für die Unterrichtsplanung und Zaza Draft für die Elternkommunikation. Zusammen sparen sie mir 6–7 Stunden pro Woche. Ein Wendepunkt für die Work-Life-Balance."
+                      : "I use ChatGPT for lesson planning and Zaza Draft for parent communication. Together they save me 6-7 hours per week. Game changer for work-life balance.",
+                    name: "Michael T.",
+                    role: isGerman
+                      ? "Englischlehrer an der Oberstufe, Kalifornien"
+                      : "High School English, California",
+                  },
+                ].map((testimonial, i) => (
+                  <div
+                    key={i}
+                    className="rounded-xl border border-white/10 bg-gradient-to-br from-[#8B5CF6]/10 to-[#A78BFA]/5 p-6"
+                  >
+                    <div className="mb-4 flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className="h-5 w-5 fill-[#A78BFA] text-[#A78BFA]"
                         />
-                        <div>
-                          <p className="font-semibold text-white">
-                            {testimonial.name}
-                          </p>
-                          <p className="text-sm text-gray-400">
-                            {testimonial.role}
-                          </p>
-                        </div>
-                      </div>
+                      ))}
                     </div>
-                  ),
-                )}
+                    <p className="mb-4 text-gray-300 leading-relaxed italic">
+                      "{testimonial.quote}"
+                    </p>
+                    <p className="font-semibold text-white">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-sm text-gray-400">{testimonial.role}</p>
+                  </div>
+                ))}
               </div>
             </section>
 
