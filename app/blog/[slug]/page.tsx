@@ -1,76 +1,114 @@
-import { notFound } from "next/navigation"
-import { getPostBySlug, getRelatedPosts, getAllPosts } from "@/lib/cms/posts"
-import type { Metadata } from "next"
-import { BlogPostClient } from "./blog-post-client"
+import type { Metadata } from "next";
+import Image from "next/image";
+import { notFound } from "next/navigation";
+
+import {
+  getAllPosts,
+  getPostBySlug,
+  getRelatedPosts,
+  getPostImage,
+} from "@/lib/cms/posts";
+import { BlogPostClient } from "./blog-post-client";
 
 export async function generateStaticParams() {
-  const posts = getAllPosts()
+  const posts = getAllPosts();
   return posts.map((post) => ({
     slug: post.slug,
-  }))
+  }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const post = getPostBySlug(params.slug)
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
 
   if (!post) {
     return {
-      title: "Post Not Found",
-    }
+      title: "Post not found | Zaza Draft",
+      description: "This blog post could not be found.",
+    };
   }
 
+  const image = getPostImage(post.slug);
+
   return {
-    title: `${post.title} | Zaza Draft Blog`,
-    description: post.excerpt,
+    title: `${post.title} | Zaza Draft`,
+    description: post.excerpt ?? "",
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
+      title: `${post.title} | Zaza Draft`,
+      description: post.excerpt ?? "",
       type: "article",
-      publishedTime: post.publishedAt,
+      url: `https://zazadraft.com/blog/${post.slug}`,
+      images: image ? [image] : [],
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      description: post.excerpt,
+      title: `${post.title} | Zaza Draft`,
+      description: post.excerpt ?? "",
+      images: image ? [image] : [],
     },
-  }
+  };
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug)
+export default async function BlogPostPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
 
   if (!post) {
-    notFound()
+    notFound();
   }
 
-  const relatedPosts = getRelatedPosts(params.slug)
+  const relatedPosts = getRelatedPosts(slug);
+  const imageSrc = getPostImage(post.slug);
 
   const blogPostSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
-    description: post.excerpt,
-    datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
-    publisher: {
-      "@type": "Organization",
+    description: post.excerpt ?? "",
+    image: imageSrc ? [`https://zazadraft.com${imageSrc}`] : [],
+    author: {
+      "@type": "Person",
       name: "Zaza Draft",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://zazadraft.com/logo.png",
-      },
     },
+    datePublished: post.date,
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `https://zazadraft.com/blog/${post.slug}`,
     },
-    keywords: post.tags.join(", "),
-  }
+  };
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }} />
-      <BlogPostClient post={post} relatedPosts={relatedPosts} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }}
+      />
+
+      <article className="mx-auto max-w-3xl px-4 pb-20 pt-24 sm:px-6 lg:px-0">
+        {/* HERO IMAGE FIRST (FIX FOR CUT-OFF TAGS) */}
+        {imageSrc && (
+          <div className="relative mb-10 aspect-[16/9] overflow-hidden rounded-2xl">
+            <Image
+              src={imageSrc}
+              alt={post.title}
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        )}
+
+        {/* CONTENT RENDERED BY CLIENT COMPONENT */}
+        <BlogPostClient post={post} relatedPosts={relatedPosts} />
+      </article>
     </>
-  )
+  );
 }

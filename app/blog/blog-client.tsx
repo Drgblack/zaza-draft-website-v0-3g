@@ -1,254 +1,256 @@
-"use client";
+﻿"use client";
 
-import type React from "react"
-import { useState, useMemo } from "react"
-import Link from "next/link"
-import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Calendar, Search, Clock } from "lucide-react"
-import type { BlogPost } from "@/lib/cms/posts"
+import { useMemo, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import type { BlogPost } from "@/lib/cms/posts";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 interface BlogClientProps {
-  posts: BlogPost[]
-  language: string
+  posts: BlogPost[];
+  language: "en" | "de";
 }
 
-const CATEGORIES = [
-  "All Posts",
-  "How-To Guides",
-  "AI in Education",
-  "Teacher Wellness",
-  "Best Practices",
-  "Product Updates",
-  "Research & Insights",
-]
-
 export function BlogClient({ posts, language }: BlogClientProps) {
-  const [selectedCategory, setSelectedCategory] = useState("All Posts")
-  const [searchQuery, setSearchQuery] = useState("")
-  const [newsletterEmail, setNewsletterEmail] = useState("")
+  // Sort newest first
+  const sortedPosts = useMemo(
+    () =>
+      [...posts].sort(
+        (a, b) =>
+          new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+      ),
+    [posts],
+  );
 
-  // Filter posts by category and search
-  const filteredPosts = useMemo(() => {
-    let filtered = posts
+  // Tag filter (optional)
+  const [activeTag, setActiveTag] = useState<string | null>(null);
 
-    // Category filter
-    if (selectedCategory !== "All Posts") {
-      filtered = filtered.filter((post) => post.tags.some((tag) => tag.includes(selectedCategory.split(" ")[0])))
-    }
+  const allTags = useMemo(
+    () =>
+      Array.from(new Set(sortedPosts.flatMap((p) => p.tags ?? []))).slice(
+        0,
+        12,
+      ),
+    [sortedPosts],
+  );
 
-    // Search filter
-    if (searchQuery) {
-      const query = searchQuery.toLowerCase()
-      filtered = filtered.filter(
-        (post) =>
-          post.title.toLowerCase().includes(query) ||
-          post.excerpt.toLowerCase().includes(query) ||
-          post.tags.some((tag) => tag.toLowerCase().includes(query)),
-      )
-    }
+  const filteredPosts = useMemo(
+    () =>
+      activeTag
+        ? sortedPosts.filter((p) => (p.tags ?? []).includes(activeTag))
+        : sortedPosts,
+    [sortedPosts, activeTag],
+  );
 
-    return filtered
-  }, [posts, selectedCategory, searchQuery])
-
-  // Get featured post (most recent)
-  const featuredPost = posts[0]
-  const regularPosts = filteredPosts.slice(selectedCategory === "All Posts" && !searchQuery ? 1 : 0)
-
-  // Get popular posts (first 5)
-  const popularPosts = posts.slice(0, 5)
-
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // TODO: Implement newsletter signup
-    console.log("Newsletter signup:", newsletterEmail)
-    setNewsletterEmail("")
+  if (!filteredPosts.length) {
+    return (
+      <div className="min-h-screen bg-slate-950 text-slate-100">
+        <div className="max-w-6xl mx-auto px-4 py-16">
+          <h1 className="text-3xl font-bold mb-4">Blog</h1>
+          <p className="text-slate-400">
+            {language === "de" ? "Keine Beiträge gefunden." : "No posts found."}
+          </p>
+        </div>
+      </div>
+    );
   }
 
+  const [heroPost, ...restPosts] = filteredPosts;
+
+  const formatDate = (iso: string) =>
+    new Date(iso).toLocaleDateString(language === "de" ? "de-DE" : "en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
+
+  const getImageForPost = (post: BlogPost) => {
+    // Prefer explicit images if present, fall back to static /public/blog path
+    if (post.coverImage) return post.coverImage;
+    if (post.ogImage) return post.ogImage;
+    return `/blog/${post.slug}.jpeg`;
+  };
+
   return (
-    <div className="min-h-screen bg-[#0F172A] py-20 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Hero Section with Featured Post */}
-        {selectedCategory === "All Posts" && !searchQuery && featuredPost && (
-          <div className="mb-16">
-            <div className="text-center mb-12">
-              <h1 className="text-4xl font-bold text-white sm:text-5xl mb-4">The Zaza Blog</h1>
-              <p className="text-xl text-gray-400">Practical insights on AI, teaching, and effective communication</p>
+    <div className="min-h-screen bg-slate-950 text-slate-50">
+      <section className="border-b border-slate-800 bg-gradient-to-b from-slate-950 to-slate-900/60">
+        <div className="max-w-6xl mx-auto px-4 lg:px-6 py-10 lg:py-14">
+          <div className="flex items-center justify-between gap-4 mb-6">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-400">
+                {language === "de" ? "Zaza Draft Blog" : "The Zaza Blog"}
+              </p>
+              <h1 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight text-slate-50">
+                {language === "de"
+                  ? "Ideen, wie KI Lehrkräften wirklich hilft"
+                  : "AI ideas that actually help teachers"}
+              </h1>
+              <p className="mt-2 max-w-2xl text-sm sm:text-base text-slate-400">
+                {language === "de"
+                  ? "Praktische Tipps, Vorlagen und Strategien, damit KI Ihnen Zeit zurückgibt - nicht Stress."
+                  : "Practical tips, templates, and strategies so AI gives you time back - not more stress."}
+              </p>
             </div>
 
-            {/* Featured Post Card */}
-            <Link href={`/blog/${featuredPost.slug}`}>
-              <Card className="bg-[#1E293B] border-[#334155] overflow-hidden hover:border-[#8B5CF6]/50 transition-all group">
-                <div className="p-8">
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <Badge className="bg-[#8B5CF6] text-white border-0">Featured</Badge>
-                    {featuredPost.tags.slice(0, 2).map((tag) => (
-                      <Badge key={tag} variant="secondary" className="bg-[#8B5CF6]/10 text-[#A78BFA] border-0">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                  <h2 className="text-3xl font-bold text-white mb-4 group-hover:text-[#A78BFA] transition-colors">
-                    {featuredPost.title}
-                  </h2>
-                  <p className="text-gray-400 mb-6 line-clamp-3">{featuredPost.excerpt}</p>
-                  <div className="flex items-center gap-6 text-sm text-gray-500">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="h-4 w-4" />
-                      <span>{new Date(featuredPost.publishedAt).toLocaleDateString()}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="h-4 w-4" />
-                      <span>5 min read</span>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            </Link>
-          </div>
-        )}
-
-        {/* Category Navigation */}
-        <div className="mb-12 overflow-x-auto">
-          <div className="flex gap-3 pb-4 min-w-max">
-            {CATEGORIES.map((category) => (
-              <Button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                variant={selectedCategory === category ? "default" : "outline"}
-                className={
-                  selectedCategory === category
-                    ? "bg-[#8B5CF6] hover:bg-[#7C3AED] text-white border-0"
-                    : "bg-[#1E293B] hover:bg-[#334155] text-gray-300 border-[#334155]"
-                }
-              >
-                {category}
-              </Button>
-            ))}
-          </div>
-        </div>
-
-        {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-3 gap-12">
-          {/* Posts Grid */}
-          <div className="lg:col-span-2">
-            {/* Search Bar */}
-            <div className="mb-8">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500" />
-                <Input
-                  type="text"
-                  placeholder="Search articles..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10 bg-[#1E293B] border-[#334155] text-white placeholder:text-gray-500 focus:border-[#8B5CF6]"
-                />
-              </div>
-            </div>
-
-            {/* Posts Grid */}
-            {filteredPosts.length === 0 ? (
-              <Card className="bg-[#1E293B] border-[#334155] p-12 text-center">
-                <p className="text-gray-400 text-lg">No articles found matching your search.</p>
-              </Card>
-            ) : (
-              <div className="grid gap-8">
-                {regularPosts.map((post) => (
-                  <Link key={post.slug} href={`/blog/${post.slug}`}>
-                    <Card className="bg-[#1E293B] border-[#334155] overflow-hidden hover:border-[#8B5CF6]/50 transition-all group">
-                      <div className="p-6">
-                        <div className="flex flex-wrap gap-2 mb-3">
-                          {post.tags.slice(0, 2).map((tag) => (
-                            <Badge key={tag} variant="secondary" className="bg-[#8B5CF6]/10 text-[#A78BFA] border-0">
-                              {tag}
-                            </Badge>
-                          ))}
-                        </div>
-                        <h3 className="text-xl font-bold text-white mb-3 line-clamp-2 group-hover:text-[#A78BFA] transition-colors">
-                          {post.title}
-                        </h3>
-                        <p className="text-gray-400 mb-4 line-clamp-2">{post.excerpt}</p>
-                        <div className="flex items-center gap-4 text-sm text-gray-500">
-                          <div className="flex items-center gap-1">
-                            <Calendar className="h-4 w-4" />
-                            <span>{new Date(post.publishedAt).toLocaleDateString()}</span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <Clock className="h-4 w-4" />
-                            <span>5 min read</span>
-                          </div>
-                        </div>
-                      </div>
-                    </Card>
-                  </Link>
+            {allTags.length > 0 && (
+              <div className="hidden md:flex flex-wrap justify-end gap-2 max-w-xs">
+                {allTags.map((tag) => (
+                  <button
+                    key={tag}
+                    type="button"
+                    onClick={() =>
+                      setActiveTag((prev) => (prev === tag ? null : tag))
+                    }
+                    className={`text-xs rounded-full px-3 py-1 border transition-colors ${
+                      activeTag === tag
+                        ? "bg-fuchsia-500 text-white border-fuchsia-500"
+                        : "border-slate-700 text-slate-300 hover:border-fuchsia-400 hover:text-fuchsia-200"
+                    }`}
+                  >
+                    {tag}
+                  </button>
                 ))}
               </div>
             )}
           </div>
 
-          {/* Sidebar */}
-          <div className="space-y-8">
-            {/* Newsletter Signup */}
-            <Card className="bg-[#1E293B] border-[#334155] p-6">
-              <h3 className="text-xl font-bold text-white mb-3">Get Weekly Teacher Tips</h3>
-              <p className="text-gray-400 text-sm mb-4">Join 5,000+ teachers receiving practical AI tips every week.</p>
-              <form onSubmit={handleNewsletterSubmit} className="space-y-3">
-                <Input
-                  type="email"
-                  placeholder="Your email"
-                  value={newsletterEmail}
-                  onChange={(e) => setNewsletterEmail(e.target.value)}
-                  required
-                  className="bg-[#0F172A] border-[#334155] text-white placeholder:text-gray-500 focus:border-[#8B5CF6]"
+          {/* Hero post */}
+          <Link
+            href={`/blog/${heroPost.slug}`}
+            className="group grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(0,1.2fr)] items-stretch"
+          >
+            <div className="relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/80 shadow-xl shadow-black/40">
+              <div className="relative aspect-[16/9]">
+                <Image
+                  src={getImageForPost(heroPost)}
+                  alt={heroPost.title}
+                  fill
+                  priority
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <Button type="submit" className="w-full bg-[#8B5CF6] hover:bg-[#7C3AED] text-white">
-                  Subscribe
-                </Button>
-              </form>
-              <p className="text-xs text-gray-500 mt-3">No spam. Unsubscribe anytime.</p>
-            </Card>
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+              </div>
+              <div className="p-6 sm:p-7">
+                <div className="flex flex-wrap items-center gap-3 mb-4">
+                  <Badge className="bg-fuchsia-500 text-white border-0">
+                    {heroPost.category}
+                  </Badge>
+                  <span className="text-xs text-slate-400">
+                    {formatDate(heroPost.publishedAt)}
+                    {" · "}
+                    {heroPost.readTime ||
+                      (language === "de" ? "8 Min. Lesezeit" : "8 min read")}
+                  </span>
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-50 mb-3 group-hover:text-fuchsia-300 transition-colors">
+                  {heroPost.title}
+                </h2>
+                <p className="text-sm sm:text-base text-slate-300 line-clamp-3">
+                  {heroPost.excerpt}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {(heroPost.tags ?? []).slice(0, 3).map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-slate-700/70 px-3 py-1 text-xs text-slate-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
 
-            {/* Popular Posts */}
-            <Card className="bg-[#1E293B] border-[#334155] p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Most Popular</h3>
-              <div className="space-y-4">
-                {popularPosts.map((post, index) => (
-                  <Link key={post.slug} href={`/blog/${post.slug}`} className="block group">
-                    <div>
-                      <h4 className="text-sm font-semibold text-white line-clamp-2 group-hover:text-[#A78BFA] transition-colors mb-1">
-                        {post.title}
-                      </h4>
-                      <p className="text-xs text-gray-500">5 min read</p>
+            {/* Side column: a few more posts */}
+            <div className="space-y-3 lg:space-y-4">
+              {restPosts.slice(0, 3).map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="group block"
+                >
+                  <Card className="flex gap-4 overflow-hidden border-slate-800 bg-slate-900/70 hover:border-fuchsia-400/80 hover:bg-slate-900 transition-colors">
+                    <div className="relative w-28 sm:w-32 flex-shrink-0">
+                      <div className="relative h-full min-h-[80px]">
+                        <Image
+                          src={getImageForPost(post)}
+                          alt={post.title}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
-                  </Link>
-                ))}
-              </div>
-            </Card>
+                    <div className="py-3 pr-4 flex flex-col justify-center">
+                      <p className="text-[11px] uppercase tracking-[0.2em] text-slate-500 mb-1">
+                        {formatDate(post.publishedAt)}
+                      </p>
+                      <h3 className="text-sm sm:text-base font-semibold text-slate-50 group-hover:text-fuchsia-300 line-clamp-2">
+                        {post.title}
+                      </h3>
+                      <p className="mt-1 text-xs text-slate-400 line-clamp-2">
+                        {post.excerpt}
+                      </p>
+                    </div>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </Link>
+        </div>
+      </section>
 
-            {/* Categories List */}
-            <Card className="bg-[#1E293B] border-[#334155] p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Categories</h3>
-              <div className="space-y-2">
-                {CATEGORIES.map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`block w-full text-left px-3 py-2 rounded-lg transition-colors ${
-                      selectedCategory === category
-                        ? "bg-[#8B5CF6]/10 text-[#A78BFA]"
-                        : "text-gray-400 hover:bg-[#334155] hover:text-white"
-                    }`}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
-            </Card>
+      {/* Grid of remaining posts */}
+      <section className="border-t border-slate-800 bg-slate-950">
+        <div className="max-w-6xl mx-auto px-4 lg:px-6 py-10 lg:py-14">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {restPosts.slice(3).map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group"
+              >
+                <Card className="h-full overflow-hidden border-slate-800 bg-slate-900/70 hover:border-fuchsia-400/80 hover:bg-slate-900 transition-colors">
+                  <div className="relative aspect-[16/10]">
+                    <Image
+                      src={getImageForPost(post)}
+                      alt={post.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-4 sm:p-5">
+                    <div className="flex items-center justify-between gap-2 mb-2">
+                      <Badge className="bg-slate-800 text-slate-100 border-0 text-[11px]">
+                        {post.category}
+                      </Badge>
+                      <span className="text-[11px] text-slate-500">
+                        {formatDate(post.publishedAt)}
+                      </span>
+                    </div>
+                    <h3 className="text-sm sm:text-base font-semibold text-slate-50 mb-1 line-clamp-2 group-hover:text-fuchsia-300 transition-colors">
+                      {post.title}
+                    </h3>
+                    <p className="text-xs text-slate-400 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <div className="mt-3 flex flex-wrap gap-1.5">
+                      {(post.tags ?? []).slice(0, 2).map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full bg-slate-900/80 border border-slate-800 px-2 py-0.5 text-[11px] text-slate-300"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </Card>
+              </Link>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
     </div>
-  )
+  );
 }

@@ -100,11 +100,17 @@
 }
 
 body {
-  font-feature-settings: "rlig" 1, "calt" 1;
+  font-feature-settings:
+    "rlig" 1,
+    "calt" 1;
 }
 
 .gradient-primary {
-  background: linear-gradient(135deg, var(--color-primary-from), var(--color-primary-to));
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-from),
+    var(--color-primary-to)
+  );
 }
 
 .gradient-text {
@@ -132,7 +138,9 @@ body {
   .animate-in {
     opacity: 1 !important;
     transform: translateY(0) !important;
-    transition: opacity 450ms ease-out, transform 450ms ease-out;
+    transition:
+      opacity 450ms ease-out,
+      transform 450ms ease-out;
   }
 
   /* Initial state for motion-safe animations */
@@ -216,7 +224,12 @@ body {
 .blog-content h2,
 .blog-content h3,
 .blog-content h4 {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    "Montserrat",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-weight: 700;
   color: #2c3e50;
   scroll-margin-top: 6rem;
@@ -574,7 +587,12 @@ body {
 }
 
 .blog-enhanced-content h2 {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    "Montserrat",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-size: 2rem;
   font-weight: 700;
   color: #2c3e50;
@@ -584,7 +602,12 @@ body {
 }
 
 .blog-enhanced-content h3 {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    "Montserrat",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
   color: #2d5b8f;
@@ -594,7 +617,12 @@ body {
 }
 
 .blog-enhanced-content h4 {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    "Montserrat",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-size: 1.25rem;
   font-weight: 500;
   color: #5a6c7d;
@@ -690,7 +718,12 @@ body {
 
 /* Blog headings with proper spacing */
 .blog-h1 {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    "Montserrat",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
   color: #2c3e50;
@@ -700,7 +733,12 @@ body {
 }
 
 .blog-h2 {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    "Montserrat",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-size: 2rem;
   font-weight: 700;
   color: #2c3e50;
@@ -712,7 +750,12 @@ body {
 }
 
 .blog-h3 {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    "Montserrat",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
   color: #2d5b8f;
@@ -814,7 +857,12 @@ body {
 }
 
 .callout-title {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    "Montserrat",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
   color: #2c3e50;
@@ -879,7 +927,12 @@ body {
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    "Montserrat",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-size: 1rem;
   font-weight: 600;
   color: #2d5b8f;
@@ -944,3 +997,7 @@ img[src*="vusercontent.net"] {
   display: none !important;
 }
 
+/* Blog: hide the duplicate MDX H1 because the page already renders a title */
+.blog-article h1:first-of-type {
+  display: none;
+}

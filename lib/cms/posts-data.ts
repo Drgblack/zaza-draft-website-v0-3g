@@ -1,4 +1,4 @@
-import type { BlogPost } from "@/lib/cms/posts";
+import type { BlogPost } from "./inbox-transform";
 
 export const blogPosts: BlogPost[] = [
   {

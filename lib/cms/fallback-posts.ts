@@ -1,4 +1,4 @@
-import type { BlogPost } from "@/lib/cms/posts"
+import type { BlogPost } from "./inbox-transform";
 
 const fallback: BlogPost[] = [
   {
@@ -8,9 +8,8 @@ const fallback: BlogPost[] = [
     excerpt: "Content will appear here shortly.",
     content: "Temporary placeholder to keep the site stable.",
     publishedAt: "1970-01-01",
-    tags: ["system"]
-  }
-]
+    tags: ["system"],
+  },
+];
 
-export default fallback
-
+export default fallback;
