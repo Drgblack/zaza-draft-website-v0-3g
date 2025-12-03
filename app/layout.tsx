@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Zaza Draft",
   description: "Teacher-first, explainable AI writing assistant",
+  metadataBase: new URL("https://zazadraft.com"),
 };
 
 export default function RootLayout({

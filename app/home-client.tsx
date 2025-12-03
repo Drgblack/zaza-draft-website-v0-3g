@@ -5,6 +5,7 @@ import { SignupModal } from "@/components/signup-modal";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
+import { track } from "@/lib/analytics";
 
 const Check = ({ className }: { className?: string }) => (
   <svg
@@ -125,7 +126,7 @@ const CheckCircleIcon = ({ className }: { className?: string }) => (
 );
 
 export function HomePageClient() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [signupOpen, setSignupOpen] = useState(false);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -144,6 +145,7 @@ export function HomePageClient() {
   }, [isPaused, prefersReducedMotion]);
 
   const scrollToDemo = () => {
+    track("cta_click_home_see_examples", { language });
     document.getElementById("demo")?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -248,7 +250,10 @@ export function HomePageClient() {
                 className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
               >
                 <Button
-                  onClick={() => setSignupOpen(true)}
+                  onClick={() => {
+                    track("cta_click_home_get_started", { language })
+                    setSignupOpen(true)
+                  }}
                   size="lg"
                   className="w-full sm:w-auto inline-flex items-center justify-center bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl hover:shadow-purple-500/30 transition-all duration-300 hover:scale-105"
                 >
@@ -690,7 +695,10 @@ export function HomePageClient() {
 
             <div className="text-center mt-8">
               <Button
-                onClick={() => setSignupOpen(true)}
+                onClick={() => {
+                  track("cta_click_home_try_demo", { language, tab: demoTabs[activeTab].label })
+                  setSignupOpen(true)
+                }}
                 variant="outline"
                 className="border-2 border-[#8B5CF6] bg-transparent text-[#8B5CF6] hover:bg-[#8B5CF6]/10 font-semibold px-8 py-3 rounded-lg"
                 style={{ minHeight: "44px" }}
@@ -1060,7 +1068,10 @@ export function HomePageClient() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Button
-              onClick={() => setSignupOpen(true)}
+              onClick={() => {
+                track("cta_click_home_final", { language })
+                setSignupOpen(true)
+              }}
               size="lg"
               className="bg-white text-[#8B5CF6] hover:bg-gray-50 font-semibold px-12 py-5 text-xl rounded-lg shadow-[0_8px_20px_rgba(0,0,0,0.2)] transition-all duration-300 hover:scale-105"
               style={{ minHeight: "44px" }}

@@ -8,9 +8,10 @@ import { useLanguage } from "@/lib/i18n/language-context"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { DemoModal } from "@/components/demo-modal"
 import { useState } from "react"
+import { track } from "@/lib/analytics"
 
 export default function DraftClient() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
   const [demoOpen, setDemoOpen] = useState(false)
 
   const features = [
@@ -82,11 +83,19 @@ export default function DraftClient() {
                 </h1>
                 <p className="text-lg md:text-xl text-[#D1D5DB] leading-relaxed">{t("products.draft.hero.subtitle")}</p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <Button asChild size="lg" className="gradient-primary text-white font-medium rounded-xl">
+                  <Button
+                    asChild
+                    size="lg"
+                    className="gradient-primary text-white font-medium rounded-xl"
+                    onClick={() => track("cta_click_draft_start_free", { language, source: "hero" })}
+                  >
                     <Link href="/pricing#draft">{t("products.draft.hero.cta.primary")}</Link>
                   </Button>
                   <Button
-                    onClick={() => setDemoOpen(true)}
+                    onClick={() => {
+                      track("cta_click_draft_see_examples", { language, source: "hero" })
+                      setDemoOpen(true)
+                    }}
                     size="lg"
                     variant="outline"
                     className="border-[#374151] bg-transparent text-[#F9FAFB] hover:bg-[#1F2937] rounded-xl"

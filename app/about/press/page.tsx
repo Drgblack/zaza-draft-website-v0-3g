@@ -6,10 +6,33 @@ import { ExpandableBio } from "@/components/expandable-bio"
 import { Button } from "@/components/ui/button"
 import { Mail, ExternalLink, Download, Sparkles, Quote, FileText, Award } from "lucide-react"
 
+const ogImage = "/press-kit/screenshot-hero-preview.jpg"
+
 export const metadata: Metadata = {
-  title: "Press Kit - Zaza Draft",
+  title: "Press Kit | Zaza Draft media resources",
   description:
-    "Download logos, screenshots, brand guidelines, and founder bio for Zaza Draft. Media resources for journalists and partners.",
+    "Everything you need to cover Zaza Draft: logos, screenshots, brand guidelines, fact sheet, and founder bio with press contact.",
+  openGraph: {
+    title: "Press Kit | Zaza Draft media resources",
+    description:
+      "Download logos, screenshots, brand guidelines, and founder bio. Ready-to-use media assets for journalists and partners.",
+    url: "https://zazadraft.com/about/press",
+    type: "website",
+    images: [{ url: ogImage, alt: "Zaza Draft press kit previews" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Press Kit | Zaza Draft",
+    description: "Logos, screenshots, guidelines, and founder bio for your coverage.",
+    images: [ogImage],
+  },
+  alternates: {
+    canonical: "https://zazadraft.com/about/press",
+    languages: {
+      en: "https://zazadraft.com/about/press",
+      de: "https://zazadraft.com/de/about/press",
+    },
+  },
 }
 
 export default function PressKitPage() {

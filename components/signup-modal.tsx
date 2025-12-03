@@ -7,6 +7,7 @@ import { X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/lib/i18n/language-context"
 import { subscribeToNewsletter } from "@/app/actions/signup"
+import { track } from "@/lib/analytics"
 
 interface SignupModalProps {
   open: boolean
@@ -14,7 +15,7 @@ interface SignupModalProps {
 }
 
 export function SignupModal({ open, onOpenChange }: SignupModalProps) {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [consent, setConsent] = useState(false)
@@ -37,6 +38,7 @@ export function SignupModal({ open, onOpenChange }: SignupModalProps) {
 
       if (result.success) {
         setSuccess(true)
+        track("signup_submitted", { source: "homepage_modal", language })
       } else {
         setError(result.error || t("form.error"))
       }

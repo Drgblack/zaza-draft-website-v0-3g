@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next"
+import type { Metadata } from "next"
 import { cookies, headers } from "next/headers"
 import SuiteClient from "./SuiteClient"
 
@@ -14,13 +14,14 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = langCookie === "de" || path.includes("/de/") || path.endsWith("/de") ? "de" : "en"
 
   const titles = {
-    en: "Zaza Suite: Safe, teacher-first AI apps",
-    de: "Zaza Suite: Sichere, lehrerzentrierte KI-Apps",
+    en: "Zaza Suite | Safe, teacher-first AI apps",
+    de: "Zaza Suite | Sichere, lehrerzentrierte KI-Apps",
   }
   const descriptions = {
-    en: "A family of safe, teacher-first AI apps that reduce workload and strengthen teacher efficiency and well-being. Powered by Zaza KnowledgeCore for trusted, explainable AI and consistent school-ready safeguards.",
-    de: "Eine Familie sicherer, lehrerzentrierter KI-Apps zur Reduktion des Arbeitsaufwands und StÃƒÂ¤rkung von Effizienz und Wohlbefinden. Betrieben von der Zaza KnowledgeCore Plattform mit vertrauenswÃƒÂ¼rdiger, erklÃƒÂ¤rbarer KI und konsistenten, schulbereiten Schutzmechanismen.",
+    en: "A family of safe, teacher-first AI apps that cut busywork and protect your voice. Powered by Zaza KnowledgeCore for explainable, classroom-ready guardrails.",
+    de: "Eine Familie sicherer, lehrerzentrierter KI-Apps, die Routinearbeit reduzieren und deine Stimme schützen. Betrieben von Zaza KnowledgeCore für erklärbare, klassenraumtaugliche Schutzmechanismen.",
   }
+  const ogImage = "/hero-teacher-classroom.jpg"
 
   return {
     title: titles[locale],
@@ -37,11 +38,13 @@ export async function generateMetadata(): Promise<Metadata> {
       description: descriptions[locale],
       type: "website",
       url: locale === "de" ? "https://zazadraft.com/de/suite" : "https://zazadraft.com/suite",
+      images: [{ url: ogImage, alt: "Teacher using the Zaza Suite apps" }],
     },
     twitter: {
       card: "summary_large_image",
       title: titles[locale],
       description: descriptions[locale],
+      images: [ogImage],
     },
   }
 }
@@ -49,4 +52,3 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function SuitePage() {
   return <SuiteClient />
 }
-

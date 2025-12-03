@@ -1,44 +1,31 @@
-﻿import type { Metadata } from "next"
+import type { Metadata } from "next"
 import ShieldClient from "./shield-client"
 
+const ogImage = "/school-safety-shield-icon.jpg"
+const canonicalUrl = "https://zazadraft.com/products/shield"
+
 export const metadata: Metadata = {
-  title: "Zaza Shield - AI Safety & Compliance for Schools | Zaza",
+  title: "Zaza Shield | AI safety and compliance guardrails for schools",
   description:
-    "Privacy-first AI guardrails for teachers and schools. Policy enforcement, PII redaction, explainability, and audit trails built for education.",
-  keywords: [
-    "AI safety",
-    "school compliance",
-    "FERPA",
-    "GDPR",
-    "AI guardrails",
-    "education technology",
-    "teacher AI tools",
-    "student privacy",
-  ],
+    "Privacy-first guardrails that keep AI helpful and safe for teachers. Policy enforcement, PII redaction, explainability, and audit trails built for education.",
   openGraph: {
-    title: "Zaza Shield - AI Safety & Compliance for Schools",
-    description: "Give teachers AI superpowers with the safety and compliance schools demand.",
+    title: "Zaza Shield | AI safety and compliance guardrails for schools",
+    description:
+      "Give teachers AI support with the safety, auditability, and policy controls schools need.",
     type: "website",
-    url: "https://zazadraft.com/products/shield",
-    images: [
-      {
-        url: "https://zazadraft.com/og-images/shield-og.png",
-        width: 1200,
-        height: 630,
-        alt: "Zaza Shield",
-      },
-    ],
+    url: canonicalUrl,
+    images: [{ url: ogImage, alt: "Zaza Shield safety and compliance" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zaza Shield - AI Safety & Compliance for Schools",
-    description: "Privacy-first AI guardrails built for education.",
-    images: ["https://zazadraft.com/og-images/shield-twitter.png"],
+    title: "Zaza Shield | AI safety for education",
+    description: "Privacy-first AI guardrails that keep teachers supported and student data protected.",
+    images: [ogImage],
   },
   alternates: {
-    canonical: "https://zazadraft.com/products/shield",
+    canonical: canonicalUrl,
     languages: {
-      en: "https://zazadraft.com/products/shield",
+      en: canonicalUrl,
       de: "https://zazadraft.com/de/products/shield",
     },
   },
@@ -78,4 +65,3 @@ export default function ShieldPage() {
     </>
   )
 }
-

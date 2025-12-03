@@ -1,36 +1,31 @@
-﻿import type { Metadata } from "next"
+import type { Metadata } from "next"
 import DraftClient from "./draft-client"
 
+const ogImage = "/teacher-writing-parent-email-on-laptop.jpg"
+const canonicalUrl = "https://zazadraft.com/products/draft"
+
 export const metadata: Metadata = {
-  title: "Zaza Draft | AI Parent Communication Tool for Teachers",
+  title: "Zaza Draft | AI parent communication built for teachers",
   description:
-    "Write better parent emails in seconds with Zaza Draft. AI-powered tone guardrails, translation checks, and review steps. Free trial for teachers.",
-  keywords: [
-    "AI parent communication",
-    "teacher productivity",
-    "save time teaching",
-    "Zaza Draft",
-    "parent emails",
-    "teacher communication",
-    "KI Elternkommunikation",
-    "Lehrer ProduktivitÃƒÂ¤t",
-  ],
+    "Write calmer parent emails, protect your tone, and save hours each week. Zaza Draft keeps your voice, adds safety checks, and speeds up every message.",
   openGraph: {
-    title: "Zaza Draft | AI Parent Communication Tool for Teachers",
+    title: "Zaza Draft | AI parent communication built for teachers",
     description:
-      "Write better parent emails in seconds with Zaza Draft. AI-powered tone guardrails and translation checks.",
+      "Draft parent emails in minutes with tone guardrails and safety checks. Save time without losing your voice or credibility.",
+    url: canonicalUrl,
     type: "website",
-    url: "https://zazadraft.com/products/draft",
+    images: [{ url: ogImage, alt: "Teacher composing a parent email with Zaza Draft" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zaza Draft | AI Parent Communication",
-    description: "Write better parent emails in seconds with AI-powered tone guardrails and translation checks.",
+    title: "Zaza Draft | Teacher-first parent messaging",
+    description: "Faster parent emails with calm tone and safety guardrails teachers can trust.",
+    images: [ogImage],
   },
   alternates: {
-    canonical: "https://zazadraft.com/products/draft",
+    canonical: canonicalUrl,
     languages: {
-      en: "https://zazadraft.com/products/draft",
+      en: canonicalUrl,
       de: "https://zazadraft.com/de/products/draft",
     },
   },
@@ -74,4 +69,3 @@ export default function DraftPage() {
     </>
   )
 }
-

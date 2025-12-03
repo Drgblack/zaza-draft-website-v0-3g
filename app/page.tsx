@@ -1,56 +1,35 @@
-﻿import type { Metadata } from "next"
+import type { Metadata } from "next"
 import { HomePageClient } from "./home-client"
 
+const siteUrl = "https://zazadraft.com"
+const ogImage = "/hero/teacher.jpg"
+
 export const metadata: Metadata = {
-  title: "Zaza Draft - AI Lesson Planning & Grading that Saves Teachers 10+ Hours Weekly",
+  title: "Zaza Draft | AI writing help built for teachers, not tech hype",
   description:
-    "Trusted AI support for teachers. Save 10+ hours every week with hallucination-safe tools for lesson planning, grading, and parent communication.",
-  keywords: [
-    // English target keywords
-    "AI lesson planning",
-    "AI grading tool",
-    "teacher productivity",
-    "save time teaching",
-    "Zaza Draft",
-    "Zaza GradeFlow",
-    "AI for teachers",
-    "parent message generator",
-    "report comments AI",
-    "lesson planner AI",
-    "automated grading",
-    "teacher workload reduction",
-    "hallucination-safe AI",
-    "save 10 hours weekly",
-    // German target keywords
-    "KI Unterrichtsplanung",
-    "KI Bewertungstool",
-    "Lehrer ProduktivitÃƒÂ¤t",
-    "Zeit sparen Lehre",
-    "KI fÃƒÂ¼r Lehrer",
-    "Elternbriefe KI",
-    "Zeugniskommentare KI",
-    "halluzinationssichere KI",
-    "10 Stunden pro Woche sparen",
-  ],
+    "Teacher-first AI that drafts parent messages, calm replies, and kinder feedback in minutes. Save hours every week with safety guardrails you can trust.",
   openGraph: {
-    title: "Zaza Draft - AI Lesson Planning & Grading that Saves Teachers 10+ Hours Weekly",
+    title: "Zaza Draft | AI writing help built for teachers",
     description:
-      "Trusted AI support for teachers. Save 10+ hours every week with hallucination-safe tools for lesson planning, grading, and parent communication.",
+      "Draft parent emails, de-escalate tough replies, and write kinder feedback faster. Hallucination-safe guardrails keep your voice and credibility intact.",
     type: "website",
     locale: "en_GB",
     alternateLocale: ["de_DE"],
+    url: siteUrl,
+    images: [{ url: ogImage, alt: "Teacher using Zaza Draft to write a parent message" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zaza Draft - Save Teachers 10+ Hours Weekly",
+    title: "Zaza Draft | Teacher-first AI writing support",
     description:
-      "Trusted AI support for teachers. Save 10+ hours every week with hallucination-safe tools for lesson planning, grading, and parent communication.",
+      "Save time on parent messages and feedback with explainable AI guardrails made for teachers.",
+    images: [ogImage],
   },
   alternates: {
-    canonical: "https://zazadraft.com",
+    canonical: siteUrl,
     languages: {
-      "en-GB": "https://zazadraft.com",
-      "de-DE": "https://zazadraft.com/de",
+      "en-GB": siteUrl,
+      "de-DE": `${siteUrl}/de`,
     },
   },
 }
@@ -66,7 +45,7 @@ export default function HomePage() {
             "@type": "Organization",
             name: "Zaza Technologies",
             url: "https://zazatechnologies.com",
-            logo: "https://zazadraft.com/zaza-logo.png",
+            logo: `${siteUrl}/zaza-logo.png`,
             description:
               "Zaza Technologies builds hallucination-safe AI tools for teachers, including Zaza Draft, Zaza Teach, and GradeFlow. Save 10+ hours weekly with trusted AI support.",
             founder: {
@@ -123,7 +102,3 @@ export default function HomePage() {
     </>
   )
 }
-import type { Metadata } from "next"
-
-
-

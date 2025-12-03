@@ -1,36 +1,31 @@
-﻿import type { Metadata } from "next"
+import type { Metadata } from "next"
 import TeachClient from "./teach-client"
 
+const ogImage = "/fast-lesson-planning-workflow.jpg"
+const canonicalUrl = "https://zazadraft.com/products/teach"
+
 export const metadata: Metadata = {
-  title: "Zaza Teach | AI Lesson Planning Tool for Teachers",
+  title: "Zaza Teach | AI lesson planning that respects your craft",
   description:
-    "Save hours on lesson planning with Zaza Teach. AI-powered curriculum alignment, auto-planner, and gamified activities. Free trial for teachers.",
-  keywords: [
-    "AI lesson planning",
-    "teacher productivity",
-    "save time teaching",
-    "Zaza Teach",
-    "curriculum planning",
-    "lesson planner",
-    "KI Unterrichtsplanung",
-    "Lehrer ProduktivitÃƒÂ¤t",
-  ],
+    "Build lessons faster with curriculum-aware AI, differentiation ideas, and ready-to-use activities. Save hours while keeping your voice as a teacher.",
   openGraph: {
-    title: "Zaza Teach | AI Lesson Planning Tool for Teachers",
+    title: "Zaza Teach | AI lesson planning that respects your craft",
     description:
-      "Save hours on lesson planning with Zaza Teach. AI-powered curriculum alignment, auto-planner, and gamified activities.",
+      "Draft lessons, activities, and differentiation ideas in minutes. Keep control of your pedagogy with explainable guardrails.",
+    url: canonicalUrl,
     type: "website",
-    url: "https://zazadraft.com/products/teach",
+    images: [{ url: ogImage, alt: "Teacher planning lessons with Zaza Teach" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zaza Teach | AI Lesson Planning Tool",
-    description: "Save hours on lesson planning with AI-powered curriculum alignment and auto-planner.",
+    title: "Zaza Teach | Faster, safer lesson planning",
+    description: "Curriculum-aware AI that helps you plan lessons quickly without losing your teaching voice.",
+    images: [ogImage],
   },
   alternates: {
-    canonical: "https://zazadraft.com/products/teach",
+    canonical: canonicalUrl,
     languages: {
-      en: "https://zazadraft.com/products/teach",
+      en: canonicalUrl,
       de: "https://zazadraft.com/de/products/teach",
     },
   },
@@ -74,4 +69,3 @@ export default function TeachPage() {
     </>
   )
 }
-

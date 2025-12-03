@@ -1,35 +1,31 @@
-﻿import type { Metadata } from "next"
+import type { Metadata } from "next"
 import GradeFlowClient from "./gradeflow-client"
 
+const ogImage = "/assessment-rubrics-feedback.jpg"
+const canonicalUrl = "https://zazadraft.com/products/gradeflow"
+
 export const metadata: Metadata = {
-  title: "GradeFlow | AI Grading Assistant for Teachers",
+  title: "GradeFlow | AI grading that saves hours, keeps fairness",
   description:
-    "Save hours grading with GradeFlow. AI-powered rubric alignment, faster feedback, and audit trails. Free trial for teachers.",
-  keywords: [
-    "AI grading tool",
-    "teacher productivity",
-    "save time grading",
-    "Zaza GradeFlow",
-    "rubric alignment",
-    "automated grading",
-    "KI Bewertungstool",
-    "Lehrer ProduktivitÃƒÂ¤t",
-  ],
+    "Speed up grading with rubric-aware AI, meaningful feedback, and clear audit trails. Designed to protect your judgment and save weekends.",
   openGraph: {
-    title: "GradeFlow | AI Grading Assistant for Teachers",
-    description: "Save hours grading with GradeFlow. AI-powered rubric alignment, faster feedback, and audit trails.",
+    title: "GradeFlow | AI grading that saves hours, keeps fairness",
+    description:
+      "Rubric-aware grading assistance with feedback you can trust and audit trails for peace of mind.",
+    url: canonicalUrl,
     type: "website",
-    url: "https://zazadraft.com/products/gradeflow",
+    images: [{ url: ogImage, alt: "Teacher reviewing rubric-aligned feedback with GradeFlow" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "GradeFlow | AI Grading Assistant",
-    description: "Save hours grading with AI-powered rubric alignment and faster feedback.",
+    title: "GradeFlow | Faster, fairer grading",
+    description: "Generate rubric-aligned feedback quickly while keeping transparency and control.",
+    images: [ogImage],
   },
   alternates: {
-    canonical: "https://zazadraft.com/products/gradeflow",
+    canonical: canonicalUrl,
     languages: {
-      en: "https://zazadraft.com/products/gradeflow",
+      en: canonicalUrl,
       de: "https://zazadraft.com/de/products/gradeflow",
     },
   },
@@ -73,4 +69,3 @@ export default function GradeFlowPage() {
     </>
   )
 }
-

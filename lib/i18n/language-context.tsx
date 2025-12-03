@@ -1298,7 +1298,18 @@ const translationsEn: Record<string, string> = {
   "terms.s6.content":
     'Services are provided “as is.” To the extent allowed by law, we’re not liable for indirect or consequential losses. We may suspend or terminate accounts that violate these terms.',
   "terms.contact.text": "Questions about these terms? Email us at",
-};
+  // Not Found / Error
+  "notFound.title": "Page not found",
+  "notFound.subtitle":
+    "We couldn’t find this page. Head back to the homepage, try Zaza Draft, or explore recent posts.",
+  "notFound.home": "Back to homepage",
+  "notFound.draft": "Go to Zaza Draft",
+  "notFound.blog": "Visit the blog",
+  "error.title": "Something went wrong",
+  "error.subtitle":
+    "The page had a hiccup. Please retry, or head back while we keep things running for teachers.",
+  "error.home": "Return home",
+  "error.contact": "Contact support",};
 
 const translationsDe: Record<string, string> = {
   // Pricing Page (DE) - Boutique Version
@@ -2625,7 +2636,18 @@ const translationsDe: Record<string, string> = {
     "Die Dienste werden \"wie besehen\" bereitgestellt. Soweit gesetzlich zulässig, haften wir nicht für indirekte oder Folgeschäden. Wir können Konten sperren oder beenden, wenn Bedingungen verletzt werden.",
   "terms.contact.text":
     "Fragen zu den Bedingungen? Schreibe uns jederzeit an",
-};
+  // Not Found / Error
+  "notFound.title": "Seite nicht gefunden",
+  "notFound.subtitle":
+    "Diese Seite gibt es nicht. Zurück zur Startseite, zu Zaza Draft oder schau dir unsere aktuellen Beiträge an.",
+  "notFound.home": "Zur Startseite",
+  "notFound.draft": "Zu Zaza Draft",
+  "notFound.blog": "Zum Blog",
+  "error.title": "Etwas ist schiefgelaufen",
+  "error.subtitle":
+    "Die Seite hatte ein Problem. Versuche es erneut oder gehe zurück, während wir alles für Lehrkräfte stabil halten.",
+  "error.home": "Zurück zur Startseite",
+  "error.contact": "Support kontaktieren",};
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>(() => {

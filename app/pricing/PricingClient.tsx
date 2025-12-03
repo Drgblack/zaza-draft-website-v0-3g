@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { SignupModal } from "@/components/signup-modal";
 import { motion, AnimatePresence } from "framer-motion";
+import { track } from "@/lib/analytics";
 
 type Currency = "EUR" | "USD" | "GBP";
 
@@ -30,7 +31,7 @@ const prices = {
 };
 
 export default function PricingClient() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "annual">(
     "monthly",
   );
@@ -39,6 +40,16 @@ export default function PricingClient() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const symbol = currencySymbols[currency];
+
+  const handlePlanClick = (planId: string) => {
+    track("cta_click_pricing_select_plan", {
+      planId,
+      billingCycle: billingPeriod,
+      currency,
+      language,
+    });
+    setSignupOpen(true);
+  };
 
   return (
     <>
@@ -205,7 +216,7 @@ export default function PricingClient() {
               </div>
 
               <Button
-                onClick={() => setSignupOpen(true)}
+                onClick={() => handlePlanClick("free")}
                 className="w-full bg-transparent border-2 border-[#8B5CF6] text-[#8B5CF6] hover:bg-[#8B5CF6]/10 py-5 text-base font-semibold rounded-lg mb-6"
               >
                 {t("pricing.free.cta")}
@@ -285,7 +296,7 @@ export default function PricingClient() {
               )}
 
               <Button
-                onClick={() => setSignupOpen(true)}
+                onClick={() => handlePlanClick("teacher")}
                 className="w-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white hover:scale-105 py-6 text-lg font-semibold rounded-lg mb-3 shadow-lg shadow-[#8B5CF6]/40 transition-transform"
               >
                 {t("pricing.teacher.cta")}
@@ -460,7 +471,7 @@ export default function PricingClient() {
                   </p>
                 )}
                 <Button
-                  onClick={() => setSignupOpen(true)}
+                  onClick={() => handlePlanClick("bundle")}
                   className="bg-white text-[#8B5CF6] hover:bg-white/90 py-6 px-8 text-lg font-semibold rounded-lg shadow-lg"
                 >
                   {t("pricing.bundle.cta")}
@@ -558,7 +569,10 @@ export default function PricingClient() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
-                  onClick={() => setSignupOpen(true)}
+                  onClick={() => {
+                    track("cta_click_pricing_cta_primary", { language })
+                    setSignupOpen(true)
+                  }}
                   className="bg-white text-[#8B5CF6] hover:bg-white/90 py-6 px-8 text-lg font-semibold rounded-lg shadow-lg"
                 >
                   {t("pricing.cta.primary")}
