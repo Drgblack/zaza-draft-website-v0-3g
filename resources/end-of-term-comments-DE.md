@@ -1,7 +1,7 @@
-# Der Kommentarbank-Builder: Zeugnisberichte
-## Über 50 anpassbare Kommentarvorlagen für jedes Fach und jede Leistungsstufe
+﻿# Der Kommentarbank-Builder: Zeugnisberichte
+## Ãœber 50 anpassbare Kommentarvorlagen fÃ¼r jedes Fach und jede Leistungsstufe
 
-*Schreiben Sie bessere Zeugnisse in der Hälfte der Zeit. Hören Sie auf, auf leere Kommentarfelder zu starren. Diese Vorlagen geben Ihnen spezifische, abwechslungsreiche, professionelle Sprache, die die Reise jedes Schülers ehrt - und Ihnen Stunden an Stress erspart.*
+*Schreiben Sie bessere Zeugnisse in der HÃ¤lfte der Zeit. HÃ¶ren Sie auf, auf leere Kommentarfelder zu starren. Diese Vorlagen geben Ihnen spezifische, abwechslungsreiche, professionelle Sprache, die die Reise jedes SchÃ¼lers ehrt - und Ihnen Stunden an Stress erspart.*
 
 **Autor:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
@@ -10,221 +10,221 @@
 
 ## Warum das wichtig ist
 
-Es ist Zeugniszeit. Sie haben 90 Kommentare zu schreiben, eine nahende Frist, und jedes leere Kommentarfeld fühlt sich an wie Schreibblockade.
+Es ist Zeugniszeit. Sie haben 90 Kommentare zu schreiben, eine nahende Frist, und jedes leere Kommentarfeld fÃ¼hlt sich an wie Schreibblockade.
 
-Sie möchten etwas Bedeutungsvolles schreiben - nicht Allgemeines. Aber Sie haben auch keine 6 Stunden, um poetische Absätze über die Lernreise jedes Schülers zu verfassen.
+Sie mÃ¶chten etwas Bedeutungsvolles schreiben - nicht Allgemeines. Aber Sie haben auch keine 6 Stunden, um poetische AbsÃ¤tze Ã¼ber die Lernreise jedes SchÃ¼lers zu verfassen.
 
-**Das Problem:** 90 einzigartige, professionelle, spezifische Kommentare zu schreiben dauert ewig. Und bei Schüler Nr. 47 fangen sie alle an, gleich zu klingen.
+**Das Problem:** 90 einzigartige, professionelle, spezifische Kommentare zu schreiben dauert ewig. Und bei SchÃ¼ler Nr. 47 fangen sie alle an, gleich zu klingen.
 
-**Die Lösung:** Eine Kommentarbank - vorgeschriebene Vorlagen, die Sie in Sekunden mischen, kombinieren und anpassen können.
+**Die LÃ¶sung:** Eine Kommentarbank - vorgeschriebene Vorlagen, die Sie in Sekunden mischen, kombinieren und anpassen kÃ¶nnen.
 
 Dieser Leitfaden gibt Ihnen:
-- **Über 50 Kommentarstämme** organisiert nach Fach und Leistungsstufe
-- **Mix-and-Match-Vorlagen** (Stärke + Wachstum + nächster Schritt)
+- **Ãœber 50 KommentarstÃ¤mme** organisiert nach Fach und Leistungsstufe
+- **Mix-and-Match-Vorlagen** (StÃ¤rke + Wachstum + nÃ¤chster Schritt)
 - **Ton-Variationen** (ermutigend, direkt, feiernd, besorgt)
-- **Differenzierungstipps** für Sonderpädagogik, DaZ und hochbegabte Schüler
+- **Differenzierungstipps** fÃ¼r SonderpÃ¤dagogik, DaZ und hochbegabte SchÃ¼ler
 - **KI-Prompts** um das Kommentarschreiben noch mehr zu beschleunigen
 
-> **Für wen das ist:** Jede Lehrkraft, die Zeugnisse, Fortschrittsberichte oder narrative Bewertungen schreibt und spezifisch und professionell sein möchte, ohne ihr Wochenende zu opfern.
+> **FÃ¼r wen das ist:** Jede Lehrkraft, die Zeugnisse, Fortschrittsberichte oder narrative Bewertungen schreibt und spezifisch und professionell sein mÃ¶chte, ohne ihr Wochenende zu opfern.
 
 ---
 
-## Die Anatomie eines großartigen Zeugniskommentars
+## Die Anatomie eines groÃŸartigen Zeugniskommentars
 
-Bevor Sie eine Vorlage nehmen, hier ist, was einen Kommentar wertvoll für Eltern und Schüler macht:
+Bevor Sie eine Vorlage nehmen, hier ist, was einen Kommentar wertvoll fÃ¼r Eltern und SchÃ¼ler macht:
 
 ### Die 3-Teile-Formel
 
-**1. SPEZIFISCHE BEOBACHTUNG** (Nicht "arbeitet hart" - was tun sie tatsächlich?)
-- ✅ "Maya trägt während Klassendiskussionen durchgehend durchdachte Ideen bei"
-- ❌ "Maya ist eine gute Schülerin"
+**1. SPEZIFISCHE BEOBACHTUNG** (Nicht "arbeitet hart" - was tun sie tatsÃ¤chlich?)
+- âœ… "Maya trÃ¤gt wÃ¤hrend Klassendiskussionen durchgehend durchdachte Ideen bei"
+- âŒ "Maya ist eine gute SchÃ¼lerin"
 
-**2. BEWEIS ODER KONTEXT** (Welche Fähigkeit oder welches Wachstum zeigt das?)
-- ✅ "demonstriert starkes Verständnis komplexer Texte"
-- ❌ "sie versucht es"
+**2. BEWEIS ODER KONTEXT** (Welche FÃ¤higkeit oder welches Wachstum zeigt das?)
+- âœ… "demonstriert starkes VerstÃ¤ndnis komplexer Texte"
+- âŒ "sie versucht es"
 
-**3. NÄCHSTER SCHRITT** (Wohin gehen sie? Was ist der Fokus?)
-- ✅ "Um weiter zu wachsen, sollte Maya daran arbeiten, ihre Behauptungen mit direkten Textbelegen zu unterstützen."
-- ❌ "Weiter so!"
+**3. NÃ„CHSTER SCHRITT** (Wohin gehen sie? Was ist der Fokus?)
+- âœ… "Um weiter zu wachsen, sollte Maya daran arbeiten, ihre Behauptungen mit direkten Textbelegen zu unterstÃ¼tzen."
+- âŒ "Weiter so!"
 
-> **Profi-Tipp:** Eltern können erkennen, wenn Sie kopieren und einfügen. Variieren Sie Ihre Sprache. Verwenden Sie verschiedene Satzstrukturen. Fügen Sie ein spezifisches Detail pro Schüler hinzu (ein Projekt, einen Moment, eine Stärke).
+> **Profi-Tipp:** Eltern kÃ¶nnen erkennen, wenn Sie kopieren und einfÃ¼gen. Variieren Sie Ihre Sprache. Verwenden Sie verschiedene Satzstrukturen. FÃ¼gen Sie ein spezifisches Detail pro SchÃ¼ler hinzu (ein Projekt, einen Moment, eine StÃ¤rke).
 
 ---
 
 ## Wie Sie diese Kommentarbank verwenden
 
 ### Schritt 1: Identifizieren Sie die Leistungsstufe
-Wählen Sie den Abschnitt, der zur Leistung des Schülers passt:
-- **Übertrifft Erwartungen:** Schüler arbeitet über Klassenstufe
-- **Erfüllt Erwartungen:** Schüler liegt auf Kurs
-- **Nähert sich Erwartungen:** Schüler macht Fortschritte, braucht aber Unterstützung
-- **Unter Erwartungen:** Schüler braucht erhebliche Intervention
+WÃ¤hlen Sie den Abschnitt, der zur Leistung des SchÃ¼lers passt:
+- **Ãœbertrifft Erwartungen:** SchÃ¼ler arbeitet Ã¼ber Klassenstufe
+- **ErfÃ¼llt Erwartungen:** SchÃ¼ler liegt auf Kurs
+- **NÃ¤hert sich Erwartungen:** SchÃ¼ler macht Fortschritte, braucht aber UnterstÃ¼tzung
+- **Unter Erwartungen:** SchÃ¼ler braucht erhebliche Intervention
 
-### Schritt 2: Wählen Sie Ihren Vorlagentyp
-- **Stärke + Wachstum:** Heben Sie hervor, was gut läuft, dann nennen Sie den nächsten Schritt
-- **Anliegen + Unterstützung:** Nennen Sie die Herausforderung und was Sie tun, um zu helfen
-- **Feier:** Rein positiv (für starke Leister oder Jahresendabschlüsse)
-- **Gezieltes Wachstum:** Fokussieren Sie sich ganz auf Fähigkeitsentwicklung
+### Schritt 2: WÃ¤hlen Sie Ihren Vorlagentyp
+- **StÃ¤rke + Wachstum:** Heben Sie hervor, was gut lÃ¤uft, dann nennen Sie den nÃ¤chsten Schritt
+- **Anliegen + UnterstÃ¼tzung:** Nennen Sie die Herausforderung und was Sie tun, um zu helfen
+- **Feier:** Rein positiv (fÃ¼r starke Leister oder JahresendabschlÃ¼sse)
+- **Gezieltes Wachstum:** Fokussieren Sie sich ganz auf FÃ¤higkeitsentwicklung
 
 ### Schritt 3: Anpassen
-- Fügen Sie den Namen des Schülers hinzu
+- FÃ¼gen Sie den Namen des SchÃ¼lers hinzu
 - Setzen Sie ein spezifisches Beispiel ein (Projekt, Test, Diskussionsmoment)
 - Passen Sie Pronomen an (er/sie)
-- Fügen Sie eine persönliche Note hinzu
+- FÃ¼gen Sie eine persÃ¶nliche Note hinzu
 
 ### Schritt 4: Variieren Sie Ihre Sprache
-Verwenden Sie nicht denselben Stamm für jeden Schüler. Mischen und kombinieren Sie. Verwenden Sie Synonyme. Ändern Sie die Struktur.
+Verwenden Sie nicht denselben Stamm fÃ¼r jeden SchÃ¼ler. Mischen und kombinieren Sie. Verwenden Sie Synonyme. Ã„ndern Sie die Struktur.
 
 ---
 
 ## Abschnitt 1: Deutsch/Sprachunterricht-Kommentare
 
-### Übertrifft Erwartungen
+### Ãœbertrifft Erwartungen
 
-**Leseverständnis:**
-> "[Name] demonstriert außergewöhnliches Leseverständnis, analysiert komplexe Texte mit Einsicht und macht raffinierte Verbindungen zwischen Ideen. [Er/Sie] geht durchgehend über oberflächliches Verständnis hinaus, um Themen, Symbolik und Handwerk des Autors zu erforschen. Um weiter zu wachsen, sollte [Name] sich mit Texten außerhalb [seiner/ihrer] Komfortzone herausfordern, besonders in [Genre oder Stil]."
+**LeseverstÃ¤ndnis:**
+> "[Name] demonstriert auÃŸergewÃ¶hnliches LeseverstÃ¤ndnis, analysiert komplexe Texte mit Einsicht und macht raffinierte Verbindungen zwischen Ideen. [Er/Sie] geht durchgehend Ã¼ber oberflÃ¤chliches VerstÃ¤ndnis hinaus, um Themen, Symbolik und Handwerk des Autors zu erforschen. Um weiter zu wachsen, sollte [Name] sich mit Texten auÃŸerhalb [seiner/ihrer] Komfortzone herausfordern, besonders in [Genre oder Stil]."
 
 **Schreiben:**
-> "[Name] ist ein geschickter Schreiber, der gut organisierte, ansprechende Texte mit einer klaren Stimme verfasst. [Seine/Ihre] Verwendung von variierten Satzstrukturen und präzisem Vokabular stärkt [seine/ihre] Arbeit. Um die nächste Stufe zu erreichen, sollte [Name] sich auf [spezifische Fähigkeit: Integration von Textbelegen / Entwicklung von Gegenargumenten / Verfeinerung von Übergängen] konzentrieren."
+> "[Name] ist ein geschickter Schreiber, der gut organisierte, ansprechende Texte mit einer klaren Stimme verfasst. [Seine/Ihre] Verwendung von variierten Satzstrukturen und prÃ¤zisem Vokabular stÃ¤rkt [seine/ihre] Arbeit. Um die nÃ¤chste Stufe zu erreichen, sollte [Name] sich auf [spezifische FÃ¤higkeit: Integration von Textbelegen / Entwicklung von Gegenargumenten / Verfeinerung von ÃœbergÃ¤ngen] konzentrieren."
 
 **Klassenbeteiligung:**
-> "[Name] ist ein nachdenklicher Beitragender zu Klassendiskussionen, stellt Fragen, die das Denken aller vertiefen. [Er/Sie] hört aktiv zu und baut auf Ideen der Mitschüler auf. Ermutigen Sie [Name], weiterhin intellektuelle Risiken einzugehen, indem [er/sie] mehrere Perspektiven zu herausfordernden Themen erkundet."
+> "[Name] ist ein nachdenklicher Beitragender zu Klassendiskussionen, stellt Fragen, die das Denken aller vertiefen. [Er/Sie] hÃ¶rt aktiv zu und baut auf Ideen der MitschÃ¼ler auf. Ermutigen Sie [Name], weiterhin intellektuelle Risiken einzugehen, indem [er/sie] mehrere Perspektiven zu herausfordernden Themen erkundet."
 
 ---
 
-### Erfüllt Erwartungen
+### ErfÃ¼llt Erwartungen
 
-**Leseverständnis:**
-> "[Name] macht solide Fortschritte im Leseverständnis. [Er/Sie] identifiziert Hauptideen und Schlüsseldetails in Texten auf Klassenstufe genau. Um [seine/ihre] Fähigkeiten zu stärken, sollte [Name] daran üben, Schlussfolgerungen zu ziehen und Schlussfolgerungen mit Beweisen aus dem Text zu unterstützen."
+**LeseverstÃ¤ndnis:**
+> "[Name] macht solide Fortschritte im LeseverstÃ¤ndnis. [Er/Sie] identifiziert Hauptideen und SchlÃ¼sseldetails in Texten auf Klassenstufe genau. Um [seine/ihre] FÃ¤higkeiten zu stÃ¤rken, sollte [Name] daran Ã¼ben, Schlussfolgerungen zu ziehen und Schlussfolgerungen mit Beweisen aus dem Text zu unterstÃ¼tzen."
 
 **Schreiben:**
-> "[Name] kommuniziert Ideen klar im Schreiben und folgt der Struktur von Aufgaben. [Sein/Ihr] nächster Schritt ist es, mehr Detail und Entwicklung zu [seinen/ihren] Ideen hinzuzufügen, besonders in [Hauptabsätzen / Einleitungen / Schlussfolgerungen]."
+> "[Name] kommuniziert Ideen klar im Schreiben und folgt der Struktur von Aufgaben. [Sein/Ihr] nÃ¤chster Schritt ist es, mehr Detail und Entwicklung zu [seinen/ihren] Ideen hinzuzufÃ¼gen, besonders in [HauptabsÃ¤tzen / Einleitungen / Schlussfolgerungen]."
 
 **Vokabular:**
-> "[Name] baut Vokabular auf Klassenstufe auf und verwendet Kontexthinweise effektiv. Um weiter zu wachsen, sollte [Name] daran üben, neues Vokabular in [seinem/ihrem] eigenen Schreiben und Sprechen zu verwenden."
+> "[Name] baut Vokabular auf Klassenstufe auf und verwendet Kontexthinweise effektiv. Um weiter zu wachsen, sollte [Name] daran Ã¼ben, neues Vokabular in [seinem/ihrem] eigenen Schreiben und Sprechen zu verwenden."
 
 **Lesefluss:**
-> "[Name] liest Texte auf Klassenstufe mit angemessenem Tempo und Ausdruck. Ermutigen Sie [ihn/sie], zu Hause laut zu lesen, um Vertrauen und Flüssigkeit aufzubauen."
+> "[Name] liest Texte auf Klassenstufe mit angemessenem Tempo und Ausdruck. Ermutigen Sie [ihn/sie], zu Hause laut zu lesen, um Vertrauen und FlÃ¼ssigkeit aufzubauen."
 
 ---
 
-### Nähert sich Erwartungen
+### NÃ¤hert sich Erwartungen
 
-**Leseverständnis:**
-> "[Name] arbeitet hart daran, [sein/ihr] Leseverständnis zu verbessern. [Er/Sie] profitiert von grafischen Organizern und geführten Fragen zur Unterstützung des Verständnisses. Zu Hause ermutigen Sie [Name], täglich 15-20 Minuten zu lesen und zu besprechen, was [er/sie] gelesen hat, um [seine/ihre] Fähigkeiten zu stärken."
+**LeseverstÃ¤ndnis:**
+> "[Name] arbeitet hart daran, [sein/ihr] LeseverstÃ¤ndnis zu verbessern. [Er/Sie] profitiert von grafischen Organizern und gefÃ¼hrten Fragen zur UnterstÃ¼tzung des VerstÃ¤ndnisses. Zu Hause ermutigen Sie [Name], tÃ¤glich 15-20 Minuten zu lesen und zu besprechen, was [er/sie] gelesen hat, um [seine/ihre] FÃ¤higkeiten zu stÃ¤rken."
 
 **Schreiben:**
-> "[Name] zeigt Anstrengung in [seinem/ihrem] Schreiben, würde aber von zusätzlicher Übung mit [Organisation / Satzstruktur / Grammatik] profitieren. Wir arbeiten gemeinsam an [spezifischer Strategie: Verwendung von Satzanfängen / Planung vor dem Entwurf / Überarbeitung mit einer Checkliste]. Fortgesetzte Übung zu Hause wird [ihm/ihr] helfen, Vertrauen aufzubauen."
+> "[Name] zeigt Anstrengung in [seinem/ihrem] Schreiben, wÃ¼rde aber von zusÃ¤tzlicher Ãœbung mit [Organisation / Satzstruktur / Grammatik] profitieren. Wir arbeiten gemeinsam an [spezifischer Strategie: Verwendung von SatzanfÃ¤ngen / Planung vor dem Entwurf / Ãœberarbeitung mit einer Checkliste]. Fortgesetzte Ãœbung zu Hause wird [ihm/ihr] helfen, Vertrauen aufzubauen."
 
 **Beteiligung:**
-> "[Name] baut Vertrauen auf, [seine/ihre] Ideen während des Unterrichts zu teilen. Ermutigen Sie [ihn/sie], zuerst an Kleingruppendiskussionen teilzunehmen, da dies [ihm/ihr] hilft, sich wohl zu fühlen, bevor [er/sie] zu Gesamtklassengesprächen beiträgt."
+> "[Name] baut Vertrauen auf, [seine/ihre] Ideen wÃ¤hrend des Unterrichts zu teilen. Ermutigen Sie [ihn/sie], zuerst an Kleingruppendiskussionen teilzunehmen, da dies [ihm/ihr] hilft, sich wohl zu fÃ¼hlen, bevor [er/sie] zu GesamtklassengesprÃ¤chen beitrÃ¤gt."
 
 ---
 
 ### Unter Erwartungen
 
-**Leseverständnis:**
-> "[Name] liest derzeit unter Klassenstufe und benötigt erhebliche Unterstützung, um auf Texte auf Klassenstufe zuzugreifen. Wir arbeiten eng zusammen unter Verwendung von [spezifischer Intervention: geführtes Lesen / Hörbücher / Lesestrategien]. Bitte stellen Sie sicher, dass [Name] täglich 20 Minuten auf [seinem/ihrem] unabhängigen Niveau zu Hause liest und das Gelesene mit einem Erwachsenen bespricht, um das Verständnis aufzubauen."
+**LeseverstÃ¤ndnis:**
+> "[Name] liest derzeit unter Klassenstufe und benÃ¶tigt erhebliche UnterstÃ¼tzung, um auf Texte auf Klassenstufe zuzugreifen. Wir arbeiten eng zusammen unter Verwendung von [spezifischer Intervention: gefÃ¼hrtes Lesen / HÃ¶rbÃ¼cher / Lesestrategien]. Bitte stellen Sie sicher, dass [Name] tÃ¤glich 20 Minuten auf [seinem/ihrem] unabhÃ¤ngigen Niveau zu Hause liest und das Gelesene mit einem Erwachsenen bespricht, um das VerstÃ¤ndnis aufzubauen."
 
 **Schreiben:**
-> "[Name] kämpft mit [spezifischer Herausforderung: Organisieren von Ideen / Schreiben vollständiger Sätze / Rechtschreibung]. Wir setzen gezielte Unterstützungen um, einschließlich [grafische Organizer / Wortbanken / Einzelgespräche]. Fortgesetzte Verstärkung zu Hause mit [spezifischer Aktivität] wird für [seinen/ihren] Fortschritt essentiell sein."
+> "[Name] kÃ¤mpft mit [spezifischer Herausforderung: Organisieren von Ideen / Schreiben vollstÃ¤ndiger SÃ¤tze / Rechtschreibung]. Wir setzen gezielte UnterstÃ¼tzungen um, einschlieÃŸlich [grafische Organizer / Wortbanken / EinzelgesprÃ¤che]. Fortgesetzte VerstÃ¤rkung zu Hause mit [spezifischer AktivitÃ¤t] wird fÃ¼r [seinen/ihren] Fortschritt essentiell sein."
 
 ---
 
 ## Abschnitt 2: Mathematik-Kommentare
 
-### Übertrifft Erwartungen
+### Ãœbertrifft Erwartungen
 
-**Problemlösung:**
-> "[Name] demonstriert außergewöhnliches mathematisches Denken, löst Mehrschritt-Probleme mit Genauigkeit und Effizienz. [Er/Sie] versteht zugrunde liegende Konzepte tief und kann Strategien flexibel anwenden. Um weiter zu wachsen, sollte [Name] Mathematik-Bereicherungsmöglichkeiten erkunden wie [Logikrätsel / Mathematikwettbewerbe / fortgeschrittene Problemsätze]."
+**ProblemlÃ¶sung:**
+> "[Name] demonstriert auÃŸergewÃ¶hnliches mathematisches Denken, lÃ¶st Mehrschritt-Probleme mit Genauigkeit und Effizienz. [Er/Sie] versteht zugrunde liegende Konzepte tief und kann Strategien flexibel anwenden. Um weiter zu wachsen, sollte [Name] Mathematik-BereicherungsmÃ¶glichkeiten erkunden wie [LogikrÃ¤tsel / Mathematikwettbewerbe / fortgeschrittene ProblemsÃ¤tze]."
 
 **Zahlensinn:**
-> "[Name] zeigt starken Zahlensinn und rechnerische Flüssigkeit über alle Operationen hinweg. [Er/Sie] erkennt Muster, schätzt genau und überprüft [seine/ihre] Arbeit strategisch. Ermutigen Sie [Name], reale Mathematikherausforderungen anzugehen, um [seine/ihre] Fähigkeiten in authentischen Kontexten anzuwenden."
+> "[Name] zeigt starken Zahlensinn und rechnerische FlÃ¼ssigkeit Ã¼ber alle Operationen hinweg. [Er/Sie] erkennt Muster, schÃ¤tzt genau und Ã¼berprÃ¼ft [seine/ihre] Arbeit strategisch. Ermutigen Sie [Name], reale Mathematikherausforderungen anzugehen, um [seine/ihre] FÃ¤higkeiten in authentischen Kontexten anzuwenden."
 
 ---
 
-### Erfüllt Erwartungen
+### ErfÃ¼llt Erwartungen
 
 **Rechnen:**
-> "[Name] erfüllt Erwartungen auf Klassenstufe im Mathematikrechnen. [Er/Sie] löst Probleme mit [Addition/Subtraktion/Multiplikation/Division/Brüchen] genau und baut Flüssigkeit mit [spezifischer Fähigkeit] auf. Um [seine/ihre] Fähigkeiten zu stärken, sollte [Name] weiterhin [Fakten/Mehrschritt-Probleme] zu Hause üben."
+> "[Name] erfÃ¼llt Erwartungen auf Klassenstufe im Mathematikrechnen. [Er/Sie] lÃ¶st Probleme mit [Addition/Subtraktion/Multiplikation/Division/BrÃ¼chen] genau und baut FlÃ¼ssigkeit mit [spezifischer FÃ¤higkeit] auf. Um [seine/ihre] FÃ¤higkeiten zu stÃ¤rken, sollte [Name] weiterhin [Fakten/Mehrschritt-Probleme] zu Hause Ã¼ben."
 
-**Problemlösung:**
-> "[Name] entwickelt starke Problemlösungsfähigkeiten und geht Herausforderungen nachdenklich an. [Er/Sie] würde davon profitieren, langsamer zu werden, um Probleme sorgfältig zu lesen und [seine/ihre] Arbeit zu überprüfen, bevor [er/sie] einreicht."
+**ProblemlÃ¶sung:**
+> "[Name] entwickelt starke ProblemlÃ¶sungsfÃ¤higkeiten und geht Herausforderungen nachdenklich an. [Er/Sie] wÃ¼rde davon profitieren, langsamer zu werden, um Probleme sorgfÃ¤ltig zu lesen und [seine/ihre] Arbeit zu Ã¼berprÃ¼fen, bevor [er/sie] einreicht."
 
 **Konzepte:**
-> "[Name] versteht wichtige mathematische Konzepte einschließlich [Brüche/Dezimalzahlen/Geometrie/Algebra]. [Sein/Ihr] nächster Schritt ist es, diese Konzepte auf Textaufgaben und reale Szenarien anzuwenden."
+> "[Name] versteht wichtige mathematische Konzepte einschlieÃŸlich [BrÃ¼che/Dezimalzahlen/Geometrie/Algebra]. [Sein/Ihr] nÃ¤chster Schritt ist es, diese Konzepte auf Textaufgaben und reale Szenarien anzuwenden."
 
 ---
 
-### Nähert sich Erwartungen
+### NÃ¤hert sich Erwartungen
 
 **Rechnen:**
-> "[Name] arbeitet daran, rechnerische Flüssigkeit mit [spezifischer Operation] aufzubauen. Wir verwenden [Manipulative/visuelle Modelle/Übungsspiele], um [sein/ihr] Verständnis zu stärken. Tägliche Übung mit Mathematik-Fakten zu Hause wird [Name] helfen, Geschwindigkeit und Vertrauen aufzubauen."
+> "[Name] arbeitet daran, rechnerische FlÃ¼ssigkeit mit [spezifischer Operation] aufzubauen. Wir verwenden [Manipulative/visuelle Modelle/Ãœbungsspiele], um [sein/ihr] VerstÃ¤ndnis zu stÃ¤rken. TÃ¤gliche Ãœbung mit Mathematik-Fakten zu Hause wird [Name] helfen, Geschwindigkeit und Vertrauen aufzubauen."
 
-**Problemlösung:**
-> "[Name] kämpft mit Mehrschritt-Problemen und profitiert davon, Probleme in kleinere Teile zu zerlegen. Wir arbeiten gemeinsam an [Unterstreichen von Schlüsselinformationen/Zeichnen von Modellen/Überprüfen der Arbeit]. Ermutigen Sie [Name], [sein/ihr] Denken laut zu erklären, wenn [er/sie] Probleme zu Hause löst."
+**ProblemlÃ¶sung:**
+> "[Name] kÃ¤mpft mit Mehrschritt-Problemen und profitiert davon, Probleme in kleinere Teile zu zerlegen. Wir arbeiten gemeinsam an [Unterstreichen von SchlÃ¼sselinformationen/Zeichnen von Modellen/ÃœberprÃ¼fen der Arbeit]. Ermutigen Sie [Name], [sein/ihr] Denken laut zu erklÃ¤ren, wenn [er/sie] Probleme zu Hause lÃ¶st."
 
 ---
 
 ### Unter Erwartungen
 
-**Grundfähigkeiten:**
-> "[Name] benötigt erhebliche Unterstützung bei grundlegenden Mathematikfähigkeiten einschließlich [Zahlensinn/Grundoperationen/Stellenwert]. Wir bieten intensive Intervention unter Verwendung von [spezifischem Programm/Manipulativen/Strategien]. Bitte arbeiten Sie zu Hause mit [Name] an [spezifischer Fähigkeit] täglich 10-15 Minuten unter Verwendung der Ressourcen, die ich geteilt habe."
+**GrundfÃ¤higkeiten:**
+> "[Name] benÃ¶tigt erhebliche UnterstÃ¼tzung bei grundlegenden MathematikfÃ¤higkeiten einschlieÃŸlich [Zahlensinn/Grundoperationen/Stellenwert]. Wir bieten intensive Intervention unter Verwendung von [spezifischem Programm/Manipulativen/Strategien]. Bitte arbeiten Sie zu Hause mit [Name] an [spezifischer FÃ¤higkeit] tÃ¤glich 10-15 Minuten unter Verwendung der Ressourcen, die ich geteilt habe."
 
 ---
 
 ## Abschnitt 3: Naturwissenschaften-Kommentare
 
-### Übertrifft Erwartungen
+### Ãœbertrifft Erwartungen
 
 **Wissenschaftliches Denken:**
-> "[Name] demonstriert außergewöhnliche wissenschaftliche Neugier und kritisches Denken. [Er/Sie] stellt sondierender Fragen, entwirft durchdachte Untersuchungen und zieht evidenzbasierte Schlussfolgerungen. [Name] geht durchgehend über das Curriculum hinaus, um Themen unabhängig zu erforschen. Ermutigen Sie [ihn/sie], [Wissenschaftsmesse/Citizen Science-Projekte/MINT-Clubs] zu verfolgen."
+> "[Name] demonstriert auÃŸergewÃ¶hnliche wissenschaftliche Neugier und kritisches Denken. [Er/Sie] stellt sondierender Fragen, entwirft durchdachte Untersuchungen und zieht evidenzbasierte Schlussfolgerungen. [Name] geht durchgehend Ã¼ber das Curriculum hinaus, um Themen unabhÃ¤ngig zu erforschen. Ermutigen Sie [ihn/sie], [Wissenschaftsmesse/Citizen Science-Projekte/MINT-Clubs] zu verfolgen."
 
-**Laborfähigkeiten:**
-> "[Name] ist ein akribischer Wissenschaftler, der Verfahren sorgfältig folgt, detaillierte Beobachtungen aufzeichnet und Daten nachdenklich analysiert. [Seine/Ihre] Laborberichte zeigen starkes Verständnis des wissenschaftlichen Prozesses."
+**LaborfÃ¤higkeiten:**
+> "[Name] ist ein akribischer Wissenschaftler, der Verfahren sorgfÃ¤ltig folgt, detaillierte Beobachtungen aufzeichnet und Daten nachdenklich analysiert. [Seine/Ihre] Laborberichte zeigen starkes VerstÃ¤ndnis des wissenschaftlichen Prozesses."
 
 ---
 
-### Erfüllt Erwartungen
+### ErfÃ¼llt Erwartungen
 
 **Inhaltswissen:**
-> "[Name] erfüllt Erwartungen in Naturwissenschaften, demonstriert solides Verständnis von Schlüsselkonzepten einschließlich [spezifisches Thema]. [Er/Sie] beteiligt sich aktiv an Laboren und Diskussionen. Um [sein/ihr] Lernen zu vertiefen, sollte [Name] sich darauf konzentrieren, das 'Warum' hinter wissenschaftlichen Phänomenen zu erklären."
+> "[Name] erfÃ¼llt Erwartungen in Naturwissenschaften, demonstriert solides VerstÃ¤ndnis von SchlÃ¼sselkonzepten einschlieÃŸlich [spezifisches Thema]. [Er/Sie] beteiligt sich aktiv an Laboren und Diskussionen. Um [sein/ihr] Lernen zu vertiefen, sollte [Name] sich darauf konzentrieren, das 'Warum' hinter wissenschaftlichen PhÃ¤nomenen zu erklÃ¤ren."
 
 **Wissenschaftlicher Prozess:**
-> "[Name] folgt Laborverfahren genau und zeichnet Beobachtungen klar auf. [Er/Sie] entwickelt Fähigkeiten in Datenanalyse und dem Ziehen von Schlussfolgerungen aus Beweisen."
+> "[Name] folgt Laborverfahren genau und zeichnet Beobachtungen klar auf. [Er/Sie] entwickelt FÃ¤higkeiten in Datenanalyse und dem Ziehen von Schlussfolgerungen aus Beweisen."
 
 ---
 
-### Nähert sich Erwartungen
+### NÃ¤hert sich Erwartungen
 
 **Inhaltswissen:**
-> "[Name] arbeitet daran, Verständnis von Naturwissenschaftskonzepten auf Klassenstufe aufzubauen. [Er/Sie] profitiert von praktischen Aktivitäten und visuellen Modellen. Ermutigen Sie [Name], Notizen und Vokabular regelmäßig zu wiederholen, da dies [ihm/ihr] helfen wird, Ideen über Themen hinweg zu verbinden."
+> "[Name] arbeitet daran, VerstÃ¤ndnis von Naturwissenschaftskonzepten auf Klassenstufe aufzubauen. [Er/Sie] profitiert von praktischen AktivitÃ¤ten und visuellen Modellen. Ermutigen Sie [Name], Notizen und Vokabular regelmÃ¤ÃŸig zu wiederholen, da dies [ihm/ihr] helfen wird, Ideen Ã¼ber Themen hinweg zu verbinden."
 
 ---
 
 ## Abschnitt 4: Gesellschaftslehre-Kommentare
 
-### Übertrifft Erwartungen
+### Ãœbertrifft Erwartungen
 
 **Kritisches Denken:**
-> "[Name] analysiert historische Ereignisse und aktuelle Themen mit bemerkenswerter Tiefe und Reife. [Er/Sie] berücksichtigt mehrere Perspektiven, hinterfragt Quellen und macht Verbindungen über Zeitperioden hinweg. [Name]s Beiträge zu Klassendiskussionen heben durchgehend das Denken aller."
+> "[Name] analysiert historische Ereignisse und aktuelle Themen mit bemerkenswerter Tiefe und Reife. [Er/Sie] berÃ¼cksichtigt mehrere Perspektiven, hinterfragt Quellen und macht Verbindungen Ã¼ber Zeitperioden hinweg. [Name]s BeitrÃ¤ge zu Klassendiskussionen heben durchgehend das Denken aller."
 
-**Forschungsfähigkeiten:**
-> "[Name] führt gründliche Forschung unter Verwendung vielfältiger, glaubwürdiger Quellen durch. [Er/Sie] synthetisiert Informationen effektiv und präsentiert Ergebnisse mit Klarheit und Raffinesse."
-
----
-
-### Erfüllt Erwartungen
-
-**Inhaltswissen:**
-> "[Name] erfüllt Erwartungen in Gesellschaftslehre, demonstriert solides Verständnis von [historischen Perioden/Geografie/Regierung/Wirtschaft]. [Er/Sie] erledigt Aufgaben nachdenklich und beteiligt sich an Klassendiskussionen. Um weiter zu wachsen, sollte [Name] daran arbeiten, [Primärquellen zu analysieren/Verbindungen zu aktuellen Ereignissen zu machen]."
+**ForschungsfÃ¤higkeiten:**
+> "[Name] fÃ¼hrt grÃ¼ndliche Forschung unter Verwendung vielfÃ¤ltiger, glaubwÃ¼rdiger Quellen durch. [Er/Sie] synthetisiert Informationen effektiv und prÃ¤sentiert Ergebnisse mit Klarheit und Raffinesse."
 
 ---
 
-### Nähert sich Erwartungen
+### ErfÃ¼llt Erwartungen
 
 **Inhaltswissen:**
-> "[Name] baut Verständnis von wichtigen Gesellschaftslehre-Konzepten auf und profitiert von grafischen Organizern und Lernleitfäden. Das Wiederholen von Notizen nach jeder Lektion und das Besprechen aktueller Ereignisse zu Hause wird [Name] helfen, stärkere Verbindungen zum Material zu machen."
+> "[Name] erfÃ¼llt Erwartungen in Gesellschaftslehre, demonstriert solides VerstÃ¤ndnis von [historischen Perioden/Geografie/Regierung/Wirtschaft]. [Er/Sie] erledigt Aufgaben nachdenklich und beteiligt sich an Klassendiskussionen. Um weiter zu wachsen, sollte [Name] daran arbeiten, [PrimÃ¤rquellen zu analysieren/Verbindungen zu aktuellen Ereignissen zu machen]."
+
+---
+
+### NÃ¤hert sich Erwartungen
+
+**Inhaltswissen:**
+> "[Name] baut VerstÃ¤ndnis von wichtigen Gesellschaftslehre-Konzepten auf und profitiert von grafischen Organizern und LernleitfÃ¤den. Das Wiederholen von Notizen nach jeder Lektion und das Besprechen aktueller Ereignisse zu Hause wird [Name] helfen, stÃ¤rkere Verbindungen zum Material zu machen."
 
 ---
 
@@ -233,115 +233,115 @@ Verwenden Sie nicht denselben Stamm für jeden Schüler. Mischen und kombinieren
 ### Positive Arbeitsgewohnheiten
 
 **Organisation:**
-> "[Name] ist außergewöhnlich organisiert, hält [seine/ihre] Materialien ordentlich und reicht Arbeiten pünktlich ein. [Seine/Ihre] Planungsfähigkeiten setzen ein starkes Beispiel für Mitschüler."
+> "[Name] ist auÃŸergewÃ¶hnlich organisiert, hÃ¤lt [seine/ihre] Materialien ordentlich und reicht Arbeiten pÃ¼nktlich ein. [Seine/Ihre] PlanungsfÃ¤higkeiten setzen ein starkes Beispiel fÃ¼r MitschÃ¼ler."
 
 **Anstrengung:**
-> "[Name] geht Herausforderungen mit einer Wachstumsmentalität an und bleibt dran, selbst wenn Aufgaben schwierig sind. [Seine/Ihre] Bereitschaft, [seine/ihre] Arbeit zu überarbeiten und zu verbessern, zeigt Reife."
+> "[Name] geht Herausforderungen mit einer WachstumsmentalitÃ¤t an und bleibt dran, selbst wenn Aufgaben schwierig sind. [Seine/Ihre] Bereitschaft, [seine/ihre] Arbeit zu Ã¼berarbeiten und zu verbessern, zeigt Reife."
 
 **Zusammenarbeit:**
-> "[Name] ist ein wertvolles Teammitglied, das auf Ideen anderer hört, fair beiträgt und hilft, Konflikte konstruktiv zu lösen."
+> "[Name] ist ein wertvolles Teammitglied, das auf Ideen anderer hÃ¶rt, fair beitrÃ¤gt und hilft, Konflikte konstruktiv zu lÃ¶sen."
 
 ---
 
-### Bereiche für Wachstum (Arbeitsgewohnheiten)
+### Bereiche fÃ¼r Wachstum (Arbeitsgewohnheiten)
 
 **Organisation:**
-> "[Name] würde davon profitieren, stärkere Organisationssysteme zu entwickeln. Wir arbeiten gemeinsam an [Verwendung eines Planers/Organisation von Materialien/Zerlegung von Aufgaben in Schritte]. Bitte unterstützen Sie [Name] zu Hause, indem Sie [seinen/ihren] Rucksack und Planer wöchentlich überprüfen."
+> "[Name] wÃ¼rde davon profitieren, stÃ¤rkere Organisationssysteme zu entwickeln. Wir arbeiten gemeinsam an [Verwendung eines Planers/Organisation von Materialien/Zerlegung von Aufgaben in Schritte]. Bitte unterstÃ¼tzen Sie [Name] zu Hause, indem Sie [seinen/ihren] Rucksack und Planer wÃ¶chentlich Ã¼berprÃ¼fen."
 
 **Aufgabenerledigung:**
-> "[Name] kämpft damit, Arbeiten pünktlich zu erledigen, was [sein/ihr] Lernen beeinträchtigt. Wir haben ein System eingerichtet, bei dem [Name] täglich bei mir über Aufgaben nachfragt. Bitte helfen Sie [ihm/ihr], zu Hause eine Hausaufgabenroutine zu erstellen."
+> "[Name] kÃ¤mpft damit, Arbeiten pÃ¼nktlich zu erledigen, was [sein/ihr] Lernen beeintrÃ¤chtigt. Wir haben ein System eingerichtet, bei dem [Name] tÃ¤glich bei mir Ã¼ber Aufgaben nachfragt. Bitte helfen Sie [ihm/ihr], zu Hause eine Hausaufgabenroutine zu erstellen."
 
 **Fokus:**
-> "[Name] ist leicht abgelenkt und braucht häufige Erinnerungen, um bei der Aufgabe zu bleiben. Wir arbeiten an Strategien einschließlich [Bewegungspausen/bevorzugte Sitzplatzierung/Selbstüberwachungs-Checklisten]. Das Begrenzen von Ablenkungen während der Hausaufgabenzeit zu Hause wird [Name] auch helfen, Fokus aufzubauen."
+> "[Name] ist leicht abgelenkt und braucht hÃ¤ufige Erinnerungen, um bei der Aufgabe zu bleiben. Wir arbeiten an Strategien einschlieÃŸlich [Bewegungspausen/bevorzugte Sitzplatzierung/SelbstÃ¼berwachungs-Checklisten]. Das Begrenzen von Ablenkungen wÃ¤hrend der Hausaufgabenzeit zu Hause wird [Name] auch helfen, Fokus aufzubauen."
 
 ---
 
-### Sozial-Emotionale Stärken
+### Sozial-Emotionale StÃ¤rken
 
 **Freundlichkeit:**
-> "[Name] ist ein freundlicher, einfühlsamer Schüler, der dafür sorgt, dass sich alle einbezogen fühlen. [Er/Sie] bemerkt, wenn Mitschüler Unterstützung brauchen und bietet großzügig Hilfe an."
+> "[Name] ist ein freundlicher, einfÃ¼hlsamer SchÃ¼ler, der dafÃ¼r sorgt, dass sich alle einbezogen fÃ¼hlen. [Er/Sie] bemerkt, wenn MitschÃ¼ler UnterstÃ¼tzung brauchen und bietet groÃŸzÃ¼gig Hilfe an."
 
-**Führung:**
-> "[Name] demonstriert starke Führungsfähigkeiten, ergreift Initiative und ermutigt Mitschüler, ihr Bestes zu geben."
+**FÃ¼hrung:**
+> "[Name] demonstriert starke FÃ¼hrungsfÃ¤higkeiten, ergreift Initiative und ermutigt MitschÃ¼ler, ihr Bestes zu geben."
 
 **Belastbarkeit:**
-> "[Name] geht mit Rückschlägen mit Reife um und nutzt Fehler als Gelegenheiten zu lernen und zu wachsen."
+> "[Name] geht mit RÃ¼ckschlÃ¤gen mit Reife um und nutzt Fehler als Gelegenheiten zu lernen und zu wachsen."
 
 ---
 
-### Sozial-Emotionale Bereiche für Wachstum
+### Sozial-Emotionale Bereiche fÃ¼r Wachstum
 
 **Selbstregulation:**
-> "[Name] lernt, große Emotionen zu managen und nutzt unsere Klassenrückstellungsstrategien, wenn [er/sie] sich überfordert fühlt. Wir arbeiten an [tiefem Atmen/um Pausen bitten/Worte verwenden, um Gefühle auszudrücken]. Das Üben dieser Strategien zu Hause wird [Name] helfen, emotionales Bewusstsein aufzubauen."
+> "[Name] lernt, groÃŸe Emotionen zu managen und nutzt unsere KlassenrÃ¼ckstellungsstrategien, wenn [er/sie] sich Ã¼berfordert fÃ¼hlt. Wir arbeiten an [tiefem Atmen/um Pausen bitten/Worte verwenden, um GefÃ¼hle auszudrÃ¼cken]. Das Ãœben dieser Strategien zu Hause wird [Name] helfen, emotionales Bewusstsein aufzubauen."
 
 **Peer-Interaktionen:**
-> "[Name] arbeitet daran, [auf andere zu hören/zu teilen/Konflikte respektvoll zu lösen]. Wir üben diese Fähigkeiten durch [Rollenspiel/Sozialgeschichten/Peer-Mediation]. Bitte verstärken Sie diese Fähigkeiten zu Hause durch [spezifischen Vorschlag]."
+> "[Name] arbeitet daran, [auf andere zu hÃ¶ren/zu teilen/Konflikte respektvoll zu lÃ¶sen]. Wir Ã¼ben diese FÃ¤higkeiten durch [Rollenspiel/Sozialgeschichten/Peer-Mediation]. Bitte verstÃ¤rken Sie diese FÃ¤higkeiten zu Hause durch [spezifischen Vorschlag]."
 
 ---
 
 ## Abschnitt 6: Spezialisierte Populationen
 
-### DaZ-Schüler (Deutsch als Zweitsprache)
+### DaZ-SchÃ¼ler (Deutsch als Zweitsprache)
 
 **Anfangsstufe:**
-> "[Name] macht starke Fortschritte in der deutschen Sprachentwicklung. [Er/Sie] baut Vokabular auf und beginnt, [Bedürfnisse auszudrücken/an einfachen Gesprächen teilzunehmen/Basistexte zu lesen]. Um [Name]s Wachstum zu unterstützen, ermutigen Sie [ihn/sie], Deutsch zu Hause zu üben durch [Lesen zweisprachiger Bücher/Beschriften von Objekten/Ansehen von Bildungsvideos mit Untertiteln]."
+> "[Name] macht starke Fortschritte in der deutschen Sprachentwicklung. [Er/Sie] baut Vokabular auf und beginnt, [BedÃ¼rfnisse auszudrÃ¼cken/an einfachen GesprÃ¤chen teilzunehmen/Basistexte zu lesen]. Um [Name]s Wachstum zu unterstÃ¼tzen, ermutigen Sie [ihn/sie], Deutsch zu Hause zu Ã¼ben durch [Lesen zweisprachiger BÃ¼cher/Beschriften von Objekten/Ansehen von Bildungsvideos mit Untertiteln]."
 
 **Mittelstufe:**
-> "[Name] kommuniziert effektiv in sozialen Situationen und entwickelt akademische Sprachfähigkeiten. [Er/Sie] profitiert von Satzrahmen und Vokabularunterstützung für inhaltliches Lernen. Ermutigen Sie [Name] weiterhin, auf Deutsch zu lesen und zu besprechen, was [er/sie] lernt."
+> "[Name] kommuniziert effektiv in sozialen Situationen und entwickelt akademische SprachfÃ¤higkeiten. [Er/Sie] profitiert von Satzrahmen und VokabularunterstÃ¼tzung fÃ¼r inhaltliches Lernen. Ermutigen Sie [Name] weiterhin, auf Deutsch zu lesen und zu besprechen, was [er/sie] lernt."
 
 ---
 
-### Sonderpädagogik-Schüler (IEP/Nachteilsausgleich)
+### SonderpÃ¤dagogik-SchÃ¼ler (IEP/Nachteilsausgleich)
 
 **Positiver Fortschritt:**
-> "[Name] macht bedeutungsvolle Fortschritte in Richtung [seiner/ihrer] IEP-Ziele. [Er/Sie] demonstriert Wachstum in [spezifischer Fähigkeit] und nutzt [Anpassungen/Modifikationen] effektiv. Wir sind stolz auf [Name]s Anstrengung und Beharrlichkeit."
+> "[Name] macht bedeutungsvolle Fortschritte in Richtung [seiner/ihrer] IEP-Ziele. [Er/Sie] demonstriert Wachstum in [spezifischer FÃ¤higkeit] und nutzt [Anpassungen/Modifikationen] effektiv. Wir sind stolz auf [Name]s Anstrengung und Beharrlichkeit."
 
-**Fortlaufender Unterstützungsbedarf:**
-> "[Name] benötigt weiterhin erhebliche Unterstützung in [akademischem Bereich]. Wir setzen [spezifische Strategien/Interventionen] um und werden den Fortschritt eng überwachen. Bitte arbeiten Sie weiterhin mit uns und [Name]s Unterstützungsteam zusammen, um [seinen/ihren] Erfolg sicherzustellen."
+**Fortlaufender UnterstÃ¼tzungsbedarf:**
+> "[Name] benÃ¶tigt weiterhin erhebliche UnterstÃ¼tzung in [akademischem Bereich]. Wir setzen [spezifische Strategien/Interventionen] um und werden den Fortschritt eng Ã¼berwachen. Bitte arbeiten Sie weiterhin mit uns und [Name]s UnterstÃ¼tzungsteam zusammen, um [seinen/ihren] Erfolg sicherzustellen."
 
 ---
 
 ### Hochbegabte/Fortgeschrittene Lerner
 
 **Herausforderung + Wachstum:**
-> "[Name] gedeiht bei akademischer Herausforderung und demonstriert fortgeschrittene Fähigkeiten in [Fachbereich]. Um [ihn/sie] engagiert zu halten, haben wir Bereicherung durch [Erweiterungsprojekte/Führungsrollen/unabhängige Forschung] bereitgestellt. Ermutigen Sie [Name], [spezifisches Thema oder Gelegenheit] zu erkunden, um [seine/ihre] Leidenschaft fürs Lernen zu vertiefen."
+> "[Name] gedeiht bei akademischer Herausforderung und demonstriert fortgeschrittene FÃ¤higkeiten in [Fachbereich]. Um [ihn/sie] engagiert zu halten, haben wir Bereicherung durch [Erweiterungsprojekte/FÃ¼hrungsrollen/unabhÃ¤ngige Forschung] bereitgestellt. Ermutigen Sie [Name], [spezifisches Thema oder Gelegenheit] zu erkunden, um [seine/ihre] Leidenschaft fÃ¼rs Lernen zu vertiefen."
 
 ---
 
-## Abschnitt 7: KI-Prompts für benutzerdefinierte Kommentare
+## Abschnitt 7: KI-Prompts fÃ¼r benutzerdefinierte Kommentare
 
-Möchten Sie Kommentare noch schneller schreiben? Verwenden Sie diese Prompts mit ChatGPT, Claude oder Zaza Draft:
+MÃ¶chten Sie Kommentare noch schneller schreiben? Verwenden Sie diese Prompts mit ChatGPT, Claude oder Zaza Draft:
 
-### Prompt-Vorlage 1: Stärke + Wachstums-Kommentar
+### Prompt-Vorlage 1: StÃ¤rke + Wachstums-Kommentar
 
 ```
-Agiere als [Klassenstufe] Lehrkraft. Schreibe einen Zeugniskommentar für [Schülername] in [Fach].
+Agiere als [Klassenstufe] Lehrkraft. Schreibe einen Zeugniskommentar fÃ¼r [SchÃ¼lername] in [Fach].
 
-Einschließen:
-- Eine spezifische Stärke (verwende ein Beispiel aus dem Unterricht: [beschreibe Beispiel])
-- Einen Bereich für Wachstum
-- Einen umsetzbaren nächsten Schritt für den Schüler und die Familie
+EinschlieÃŸen:
+- Eine spezifische StÃ¤rke (verwende ein Beispiel aus dem Unterricht: [beschreibe Beispiel])
+- Einen Bereich fÃ¼r Wachstum
+- Einen umsetzbaren nÃ¤chsten Schritt fÃ¼r den SchÃ¼ler und die Familie
 
 Ton: Professionell, ermutigend, spezifisch
-Länge: 60-80 Wörter
+LÃ¤nge: 60-80 WÃ¶rter
 ```
 
 ---
 
-### Prompt-Vorlage 2: Ausgewogener Kommentar (Alle Fächer)
+### Prompt-Vorlage 2: Ausgewogener Kommentar (Alle FÃ¤cher)
 
 ```
-Schreibe einen ausgewogenen Zeugniskommentar für [Schülername], ein/e [Klassenstufe] Schüler/in.
+Schreibe einen ausgewogenen Zeugniskommentar fÃ¼r [SchÃ¼lername], ein/e [Klassenstufe] SchÃ¼ler/in.
 
 Kontext:
-- Stärken: [liste 2-3 spezifische Stärken auf]
+- StÃ¤rken: [liste 2-3 spezifische StÃ¤rken auf]
 - Herausforderungen: [liste 1-2 Herausforderungen auf]
 - Arbeitsgewohnheiten: [bei der Aufgabe / leicht abgelenkt / erledigt Arbeit / braucht Erinnerungen]
 
-Füge einen spezifischen nächsten Schritt hinzu und variiere die Sprache, um nicht generisch zu klingen.
+FÃ¼ge einen spezifischen nÃ¤chsten Schritt hinzu und variiere die Sprache, um nicht generisch zu klingen.
 
 Ton: Ehrlich aber freundlich
-Länge: 80-100 Wörter
+LÃ¤nge: 80-100 WÃ¶rter
 ```
 
 ---
@@ -349,15 +349,15 @@ Länge: 80-100 Wörter
 ### Prompt-Vorlage 3: Kommentarbank-Generator
 
 ```
-Erstelle eine Kommentarbank für [Klassenstufe] [Fach] mit jeweils 5 Kommentaren für:
-- Übertrifft Erwartungen
-- Erfüllt Erwartungen
-- Nähert sich Erwartungen
+Erstelle eine Kommentarbank fÃ¼r [Klassenstufe] [Fach] mit jeweils 5 Kommentaren fÃ¼r:
+- Ãœbertrifft Erwartungen
+- ErfÃ¼llt Erwartungen
+- NÃ¤hert sich Erwartungen
 
 Jeder Kommentar sollte:
 - Spezifisch und abwechslungsreich sein (keine Wiederholung)
-- Eine Stärke und einen nächsten Schritt enthalten
-- 50-70 Wörter umfassen
+- Eine StÃ¤rke und einen nÃ¤chsten Schritt enthalten
+- 50-70 WÃ¶rter umfassen
 - Professionelle, elternfreundliche Sprache verwenden
 ```
 
@@ -366,57 +366,57 @@ Jeder Kommentar sollte:
 ## Abschnitt 8: Dos und Don'ts
 
 ### Tun Sie:
-- ✅ Seien Sie spezifisch (nennen Sie ein Projekt, eine Fähigkeit, einen Moment)
-- ✅ Variieren Sie Ihre Sprache über Schüler hinweg
-- ✅ Verwenden Sie positive Formulierung selbst für Herausforderungen ("arbeitet daran, sich zu verbessern" vs. "kämpft mit")
-- ✅ Fügen Sie einen nächsten Schritt oder Aktionspunkt hinzu
-- ✅ Korrekturlesen Sie auf Fehler (Eltern bemerken das!)
+- âœ… Seien Sie spezifisch (nennen Sie ein Projekt, eine FÃ¤higkeit, einen Moment)
+- âœ… Variieren Sie Ihre Sprache Ã¼ber SchÃ¼ler hinweg
+- âœ… Verwenden Sie positive Formulierung selbst fÃ¼r Herausforderungen ("arbeitet daran, sich zu verbessern" vs. "kÃ¤mpft mit")
+- âœ… FÃ¼gen Sie einen nÃ¤chsten Schritt oder Aktionspunkt hinzu
+- âœ… Korrekturlesen Sie auf Fehler (Eltern bemerken das!)
 
 ### Tun Sie nicht:
-- ❌ Verwenden Sie nicht denselben Kommentar für mehrere Schüler
-- ❌ Seien Sie nicht vage ("läuft gut", "muss sich verbessern")
-- ❌ Vergleichen Sie Schüler nicht miteinander
-- ❌ Verwenden Sie keinen Jargon ohne Erklärung (z.B. "Scaffolding", "Metakognition")
-- ❌ Schreiben Sie keine romanlangen Kommentare (80-120 Wörter sind ausreichend)
+- âŒ Verwenden Sie nicht denselben Kommentar fÃ¼r mehrere SchÃ¼ler
+- âŒ Seien Sie nicht vage ("lÃ¤uft gut", "muss sich verbessern")
+- âŒ Vergleichen Sie SchÃ¼ler nicht miteinander
+- âŒ Verwenden Sie keinen Jargon ohne ErklÃ¤rung (z.B. "Scaffolding", "Metakognition")
+- âŒ Schreiben Sie keine romanlangen Kommentare (80-120 WÃ¶rter sind ausreichend)
 
 ---
 
-## Ihre nächsten Schritte
+## Ihre nÃ¤chsten Schritte
 
 ### Diese Woche (Sparen Sie 2+ Stunden):
-1. **Wählen Sie 5 Schüler**, für die Sie Schwierigkeiten haben, Kommentare zu schreiben
-2. **Wählen Sie eine Vorlage** aus diesem Leitfaden, die zu ihrer Leistungsstufe passt
-3. **Passen Sie an** mit einem spezifischen Detail pro Schüler
-4. **Kopieren, einfügen, anpassen** - fertig!
+1. **WÃ¤hlen Sie 5 SchÃ¼ler**, fÃ¼r die Sie Schwierigkeiten haben, Kommentare zu schreiben
+2. **WÃ¤hlen Sie eine Vorlage** aus diesem Leitfaden, die zu ihrer Leistungsstufe passt
+3. **Passen Sie an** mit einem spezifischen Detail pro SchÃ¼ler
+4. **Kopieren, einfÃ¼gen, anpassen** - fertig!
 
 ### Dieser Zeugnis-Zyklus:
 - Erstellen Sie Ihren eigenen "Favoriten"-Ordner mit 10 bevorzugten Vorlagen
 - Verwenden Sie KI-Prompts, um Kommentare zu entwerfen, dann personalisieren
-- Verfolgen Sie, welche Vorlagen Sie am meisten verwenden - verfeinern Sie sie für das nächste Mal
+- Verfolgen Sie, welche Vorlagen Sie am meisten verwenden - verfeinern Sie sie fÃ¼r das nÃ¤chste Mal
 
 ### Langfristig:
-- Bauen Sie eine persönliche Kommentarbank in einem Google Doc oder Word-Datei auf
+- Bauen Sie eine persÃ¶nliche Kommentarbank in einem Google Doc oder Word-Datei auf
 - Teilen Sie Ihre besten Kommentare mit Kollegen (sie werden es Ihnen danken!)
-- Reflektieren Sie: Helfen Ihre Kommentare Eltern, ihre Kinder zu Hause zu unterstützen?
+- Reflektieren Sie: Helfen Ihre Kommentare Eltern, ihre Kinder zu Hause zu unterstÃ¼tzen?
 
 ---
 
 ## FAQ
 
 **F: Werden Eltern wissen, dass ich eine Vorlage verwendet habe?**  
-Nicht, wenn Sie sie anpassen. Fügen Sie den Namen des Schülers hinzu, ein spezifisches Beispiel und passen Sie die Formulierung an. Eltern schätzen Spezifität, nicht Originalität.
+Nicht, wenn Sie sie anpassen. FÃ¼gen Sie den Namen des SchÃ¼lers hinzu, ein spezifisches Beispiel und passen Sie die Formulierung an. Eltern schÃ¤tzen SpezifitÃ¤t, nicht OriginalitÃ¤t.
 
-**F: Wie schreibe ich Kommentare für Schüler, die ich kaum kenne?**  
-Verwenden Sie Daten (Noten, Testergebnisse, Beobachtungsnotizen) und fragen Sie sich: Was ist eine Sache, die mir aufgefallen ist? Was ist eine Sache, die sie verbessern könnten? Das ist Ihr Kommentar.
+**F: Wie schreibe ich Kommentare fÃ¼r SchÃ¼ler, die ich kaum kenne?**  
+Verwenden Sie Daten (Noten, Testergebnisse, Beobachtungsnotizen) und fragen Sie sich: Was ist eine Sache, die mir aufgefallen ist? Was ist eine Sache, die sie verbessern kÃ¶nnten? Das ist Ihr Kommentar.
 
-**F: Was, wenn ich 120 Schüler habe?**  
-Bündeln Sie nach Leistungsstufe. Schreiben Sie zuerst alle "übertrifft"-Kommentare, dann "erfüllt" und so weiter. Verwenden Sie KI-Prompts, um Entwürfe zu beschleunigen.
+**F: Was, wenn ich 120 SchÃ¼ler habe?**  
+BÃ¼ndeln Sie nach Leistungsstufe. Schreiben Sie zuerst alle "Ã¼bertrifft"-Kommentare, dann "erfÃ¼llt" und so weiter. Verwenden Sie KI-Prompts, um EntwÃ¼rfe zu beschleunigen.
 
-**F: Kann ich ehrlich über Verhaltensprobleme sein?**  
-Ja - aber formulieren Sie es konstruktiv. Statt "störend" versuchen Sie "lernt, [seine/ihre] Energie und Fokus im Unterricht zu managen." Fügen Sie hinzu, was Sie tun, um zu unterstützen.
+**F: Kann ich ehrlich Ã¼ber Verhaltensprobleme sein?**  
+Ja - aber formulieren Sie es konstruktiv. Statt "stÃ¶rend" versuchen Sie "lernt, [seine/ihre] Energie und Fokus im Unterricht zu managen." FÃ¼gen Sie hinzu, was Sie tun, um zu unterstÃ¼tzen.
 
-**F: Wie schreibe ich Kommentare für Schüler mit IEPs?**  
-Konzentrieren Sie sich auf Fortschritt in Richtung IEP-Ziele. Seien Sie positiv aber ehrlich. Arbeiten Sie bei Bedarf mit dem Sonderpädagogik-Team zusammen.
+**F: Wie schreibe ich Kommentare fÃ¼r SchÃ¼ler mit IEPs?**  
+Konzentrieren Sie sich auf Fortschritt in Richtung IEP-Ziele. Seien Sie positiv aber ehrlich. Arbeiten Sie bei Bedarf mit dem SonderpÃ¤dagogik-Team zusammen.
 
 ---
 
@@ -424,27 +424,28 @@ Konzentrieren Sie sich auf Fortschritt in Richtung IEP-Ziele. Seien Sie positiv 
 
 Manchmal brauchen Sie eine kurze Betreffzeile oder Zusammenfassungskommentar. Verwenden Sie diese Einzeiler:
 
-- "Übertrifft Erwartungen auf Klassenstufe in allen Bereichen."
-- "Erfüllt Erwartungen mit konsequenter Anstrengung und Wachstum."
-- "Nähert sich Erwartungen auf Klassenstufe; profitiert von zusätzlicher Unterstützung."
+- "Ãœbertrifft Erwartungen auf Klassenstufe in allen Bereichen."
+- "ErfÃ¼llt Erwartungen mit konsequenter Anstrengung und Wachstum."
+- "NÃ¤hert sich Erwartungen auf Klassenstufe; profitiert von zusÃ¤tzlicher UnterstÃ¼tzung."
 - "Starker Leser und kritischer Denker; fordern Sie [ihn/sie] weiterhin heraus."
-- "Baut Grundfähigkeiten auf mit gezielter Intervention und Ermutigung."
+- "Baut GrundfÃ¤higkeiten auf mit gezielter Intervention und Ermutigung."
 
 ---
 
-## Abschließende Gedanken
+## AbschlieÃŸende Gedanken
 
-Zeugnisse müssen Ihr Leben nicht übernehmen.
+Zeugnisse mÃ¼ssen Ihr Leben nicht Ã¼bernehmen.
 
-Diese Vorlagen geht nicht darum, Abkürzungen zu nehmen. Sie geht darum, intelligenter zu arbeiten, damit Sie Kommentare schreiben können, die hilfreich, spezifisch und professionell sind - ohne auszubrennen.
+Diese Vorlagen geht nicht darum, AbkÃ¼rzungen zu nehmen. Sie geht darum, intelligenter zu arbeiten, damit Sie Kommentare schreiben kÃ¶nnen, die hilfreich, spezifisch und professionell sind - ohne auszubrennen.
 
 Beginnen Sie mit ein paar Vorlagen. Passen Sie sie an Ihre Stimme an. Bevor Sie es wissen, haben Sie ein System, das die Zeugniszeit handhabbar macht.
 
-**Sie haben 90 Kommentare zu schreiben. Lassen Sie sie zählen - und lassen Sie sie schnell sein.** ✍
+**Sie haben 90 Kommentare zu schreiben. Lassen Sie sie zÃ¤hlen - und lassen Sie sie schnell sein.** âœ
 
 ---
 
 **Autor:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*© 2025 Zaza Technologies. Diese Ressource ist kostenlos für Lehrkräfte. Teilen Sie sie mit Ihrem Team, aber bitte behalten Sie die Quellenangabe bei.*
+*Â© 2025 Zaza Technologies. Diese Ressource ist kostenlos fÃ¼r LehrkrÃ¤fte. Teilen Sie sie mit Ihrem Team, aber bitte behalten Sie die Quellenangabe bei.*
+

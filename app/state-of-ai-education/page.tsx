@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import StateOfAIClient from "./state-of-ai-client"
 
 export const metadata: Metadata = {
@@ -16,5 +16,6 @@ export default function StateOfAIPage() {
   return <StateOfAIClient />
 }
 import type { Metadata } from "next"
+
 
 

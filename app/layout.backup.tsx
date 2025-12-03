@@ -1,4 +1,4 @@
-import "./globals.css";
+﻿import "./globals.css";
 import Providers from "./providers";
 
 export const metadata = {
@@ -19,3 +19,4 @@ export default function RootLayout({
     </html>
   );
 }
+

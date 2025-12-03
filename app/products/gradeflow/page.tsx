@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import GradeFlowClient from "./gradeflow-client"
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "rubric alignment",
     "automated grading",
     "KI Bewertungstool",
-    "Lehrer ProduktivitÃ¤t",
+    "Lehrer ProduktivitÃƒÂ¤t",
   ],
   openGraph: {
     title: "GradeFlow | AI Grading Assistant for Teachers",
@@ -73,3 +73,4 @@ export default function GradeFlowPage() {
     </>
   )
 }
+

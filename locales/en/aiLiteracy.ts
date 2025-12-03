@@ -258,3 +258,4 @@
   freeToStartText: "Free to start",
   exploreButtonText: "Explore",
 };
+

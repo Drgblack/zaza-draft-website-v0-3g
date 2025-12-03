@@ -1,6 +1,6 @@
-# Batch & Automate: Zeit-Playbook für Lehrkräfte
+﻿# Batch & Automate: Zeit-Playbook fÃ¼r LehrkrÃ¤fte
 
-_Mit kleinen Systemen 5+ Stunden zurückholen._
+_Mit kleinen Systemen 5+ Stunden zurÃ¼ckholen._
 
 ## Wochen-Batching
 
@@ -8,14 +8,15 @@ _Mit kleinen Systemen 5+ Stunden zurückholen._
 
 ## Postfach-Zero
 
-- Automatische Labels, 2-Pass-Verfahren (Sichten → Handeln).
+- Automatische Labels, 2-Pass-Verfahren (Sichten â†’ Handeln).
 
 ## Automatisierung
 
-- Google-Formular für Nachreichungen; Tabelle zählt.
-- Textbausteine für Top-5-Fragen.
-- Kalenderblöcke für Batch-Zeiten.
+- Google-Formular fÃ¼r Nachreichungen; Tabelle zÃ¤hlt.
+- Textbausteine fÃ¼r Top-5-Fragen.
+- KalenderblÃ¶cke fÃ¼r Batch-Zeiten.
 
 ## KI abgeben
 
 - Newsletter-Texte, Abruffragen, Kommentar-Bausteine.
+

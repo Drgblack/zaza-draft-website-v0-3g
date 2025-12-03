@@ -1,4 +1,4 @@
-# The Differentiation Toolkit: Strategies for Every Learner
+﻿# The Differentiation Toolkit: Strategies for Every Learner
 ## 20+ Quick Wins for Content, Process, Product, and Environment
 
 *Differentiation doesn't mean creating 30 different lessons. This toolkit gives you practical, research-backed strategies to meet diverse learners where they are - without burning yourself out.*
@@ -218,17 +218,17 @@ Don't have time to plan 3 tiers? Use these on-the-fly adjustments:
 ### The "More/Less" Adjustments:
 
 **For Struggling Students:**
-- ✅ More time
-- ✅ More examples
-- ✅ More scaffolds (sentence starters, graphic organizers)
-- ✅ Less text (simplify readings)
-- ✅ Less problems (5 instead of 10)
+- âœ… More time
+- âœ… More examples
+- âœ… More scaffolds (sentence starters, graphic organizers)
+- âœ… Less text (simplify readings)
+- âœ… Less problems (5 instead of 10)
 
 **For Advanced Students:**
-- ✅ Less direct instruction (let them explore)
-- ✅ More complexity (add variables, ask "what if?")
-- ✅ More independence (self-directed projects)
-- ✅ Less repetition (skip practice problems they've mastered)
+- âœ… Less direct instruction (let them explore)
+- âœ… More complexity (add variables, ask "what if?")
+- âœ… More independence (self-directed projects)
+- âœ… Less repetition (skip practice problems they've mastered)
 
 ---
 
@@ -402,11 +402,12 @@ Differentiation isn't about perfection. It's about progress. Every small adjustm
 
 Your students don't need you to be a superhero who plans 30 different lessons. They need you to see them, meet them where they are, and give them a path forward.
 
-**Start with one strategy. Build from there. You've got this.** 🌟
+**Start with one strategy. Build from there. You've got this.** ðŸŒŸ
 
 ---
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+

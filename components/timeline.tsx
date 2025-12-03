@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card"
+﻿import { Card } from "@/components/ui/card"
 
 interface TimelineItem {
   date: string
@@ -30,3 +30,4 @@ export function Timeline({ items }: TimelineProps) {
     </div>
   )
 }
+

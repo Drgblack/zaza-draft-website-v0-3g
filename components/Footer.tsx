@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -108,7 +108,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white"
-                  aria-label="Zaza Draft â€“ opens in new tab"
+                  aria-label="Zaza Draft Ã¢â‚¬â€œ opens in new tab"
                 >
                   Zaza Draft
                 </a>
@@ -119,7 +119,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white"
-                  aria-label="Zaza Teach â€“ opens in new tab"
+                  aria-label="Zaza Teach Ã¢â‚¬â€œ opens in new tab"
                 >
                   Zaza Teach
                 </a>
@@ -130,7 +130,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white"
-                  aria-label="Zaza Shield â€“ opens in new tab"
+                  aria-label="Zaza Shield Ã¢â‚¬â€œ opens in new tab"
                 >
                   Zaza Shield
                 </a>
@@ -141,7 +141,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white"
-                  aria-label="GradeFlow â€“ opens in new tab"
+                  aria-label="GradeFlow Ã¢â‚¬â€œ opens in new tab"
                 >
                   GradeFlow
                 </a>
@@ -152,7 +152,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white"
-                  aria-label="Zaza Technologies â€“ opens in new tab"
+                  aria-label="Zaza Technologies Ã¢â‚¬â€œ opens in new tab"
                 >
                   Zaza Technologies
                 </a>
@@ -239,3 +239,4 @@ export default function Footer() {
   );
 }
 // build: ensure footer rendered 2025-11-06T18:11:04
+

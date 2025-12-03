@@ -1,4 +1,4 @@
-# Zaza Draft Resources - Complete List
+﻿# Zaza Draft Resources - Complete List
 ## 12 Resources (EN + DE = 24 Total Files)
 
 **Author:** Dr. Greg Blackburn  
@@ -6,7 +6,7 @@
 
 ---
 
-## 1. ✅ The Teacher's AI Prompt Library
+## 1. âœ… The Teacher's AI Prompt Library
 **Status:** COMPLETE (EN)  
 **File:** ai-prompt-library  
 **Focus:** 25+ ready-to-use AI prompts for every teaching scenario  
@@ -122,3 +122,4 @@
 4. Update resources.index.json with proper metadata
 5. Test downloads on localhost
 6. Deploy to production
+

@@ -1,4 +1,4 @@
-export const pricingConfig = {
+﻿export const pricingConfig = {
   draft: {
     free: {
       monthly: "Free",
@@ -16,3 +16,4 @@ export const pricingConfig = {
 }
 
 export const yearlyDiscount = "2 months free"
+

@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import ReduceStressClient from "./reduce-stress-client"
 
 export const metadata: Metadata = {
@@ -36,4 +36,5 @@ export default function ReduceStressPage() {
   return <ReduceStressClient />
 }
 import type { Metadata } from "next"
+
 

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef, useState } from "react"
 import { Card } from "@/components/ui/card"
@@ -278,4 +278,5 @@ export default function FounderPage() {
     </div>
   )
 }
+
 

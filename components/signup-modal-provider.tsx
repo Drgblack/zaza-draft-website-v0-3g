@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useState, useEffect } from "react"
 import { SignupModal } from "./signup-modal"
@@ -20,3 +20,4 @@ export function SignupModalProvider() {
 
   return <SignupModal open={isOpen} onOpenChange={setIsOpen} />
 }
+

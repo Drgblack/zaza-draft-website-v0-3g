@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import type React from "react"
 
@@ -269,3 +269,4 @@ export function DemoModal({ open, onOpenChange, defaultProduct }: DemoModalProps
     </div>
   )
 }
+

@@ -1,4 +1,4 @@
-# AI Rubric Prompts (Ready-to-Run)
+﻿# AI Rubric Prompts (Ready-to-Run)
 
 _Prompts that produce clear, student-friendly rubrics fast._
 
@@ -6,7 +6,7 @@ _Prompts that produce clear, student-friendly rubrics fast._
 
 > Act as an experienced **[subject/grade]** teacher. Create a rubric for **[task]** aligned to **[standards]**.  
 > Four levels (**Exceeding/Meeting/Approaching/Beginning**). Use student-friendly language.  
-> Output a Markdown table with criteria **[list criteria]** and a one-line “Next Step” per criterion.
+> Output a Markdown table with criteria **[list criteria]** and a one-line â€œNext Stepâ€ per criterion.
 
 ## Examples
 
@@ -22,4 +22,5 @@ _Prompts that produce clear, student-friendly rubrics fast._
 
 ## Self-assessment add-on
 
-> After the rubric, add a 6-line student self-check with stems (“One way I met the criteria was …”).
+> After the rubric, add a 6-line student self-check with stems (â€œOne way I met the criteria was â€¦â€).
+

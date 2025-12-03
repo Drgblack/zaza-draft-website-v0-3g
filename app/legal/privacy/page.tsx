@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useLanguage } from "@/lib/i18n/language-context"
 import Link from "next/link"
@@ -92,4 +92,5 @@ export default function PrivacyPage() {
     </div>
   )
 }
+
 

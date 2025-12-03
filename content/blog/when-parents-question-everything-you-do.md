@@ -1,36 +1,41 @@
----
-title: "When Parents Question Everything You Do (And How to Turn Defense Into Partnership)"
-description: "For teachers facing challenging parent conversations and feeling like every decision is under scrutiny. Here's how to transform conflict into collaboration."
-date: "2024-12-29"
+﻿---
+title: >-
+  When Parents Question Everything You Do (And How to Turn Defense Into
+  Partnership)
+description: >-
+  For teachers facing challenging parent conversations and feeling like every
+  decision is under scrutiny. Here's how to transform conflict into
+  collaboration.
+date: '2024-12-29'
 author:
-  name: "Zaza Promptly Team"
-category: "Parent Communication"
+  name: Dr. Greg Blackburn
+category: Parent Communication
 tags:
-  [
-    "parent communication",
-    "difficult conversations",
-    "teacher confidence",
-    "parent partnerships",
-    "classroom management",
-  ]
-featuredImage: "/images/blog/parent-communication.jpg"
+  - parent communication
+  - difficult conversations
+  - teacher confidence
+  - parent partnerships
+  - classroom management
+featuredImage: /images/blog/parent-communication.jpg
 isPublished: true
 isDraft: false
-locale: "en"
+locale: en
 seo:
-  title: "When Parents Question Everything: Turn Defense Into Partnership"
-  description: "Transform challenging parent conversations into collaboration. Strategies for teachers dealing with questioning parents."
+  title: 'When Parents Question Everything: Turn Defense Into Partnership'
+  description: >-
+    Transform challenging parent conversations into collaboration. Strategies
+    for teachers dealing with questioning parents.
   keywords:
-    [
-      "parent communication",
-      "difficult conversations",
-      "teacher confidence",
-      "parent partnerships",
-      "classroom management",
-    ]
+    - parent communication
+    - difficult conversations
+    - teacher confidence
+    - parent partnerships
+    - classroom management
+image: /blog/ai-tools-teachers-guide-2025.de.jpeg
+imageAlt: Zaza Draft blog article cover
+lang: en
+language: en
 ---
-
-# When Parents Question Everything You Do (And How to Turn Defense Into Partnership)
 
 The email lands in your inbox at 6:47 AM:
 
@@ -182,4 +187,15 @@ _When we turn defense into partnership, everyone wins - especially the child at 
 
 ---
 
-**About the Author:** These insights come from educators who've learned that the most challenging parent conversations often lead to the strongest partnerships - when we choose connection over defensiveness.
+**About the Author:** Dr Greg Blackburn is a learning scientist and founder of Zaza Technologies.
+Zaza is built with current and former teachers who understand the reality of classroom life Ã¢" and weÃ¢re dedicated to helping educators work smarter, not harder.
+
+
+
+
+
+
+
+
+
+

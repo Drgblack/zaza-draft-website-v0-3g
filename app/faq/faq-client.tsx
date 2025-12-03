@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { FAQAccordion } from "@/components/faq-accordion"
@@ -134,3 +134,4 @@ export function FAQPageClient() {
     </>
   )
 }
+

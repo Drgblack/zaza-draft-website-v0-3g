@@ -1,49 +1,49 @@
-{
+﻿{
   "meta": {
-    "title": "Zaza Draft - KI-Schreibassistent für Lehrkräfte",
-    "description": "Sparen Sie jede Woche Stunden mit KI-gestützten Schreibwerkzeugen, die speziell für Lehrkräfte entwickelt wurden. Entwerfen Sie Eltern-E-Mails, Zeugnisse und Unterrichtspläne in Minuten."
+    "title": "Zaza Draft - KI-Schreibassistent fÃ¼r LehrkrÃ¤fte",
+    "description": "Sparen Sie jede Woche Stunden mit KI-gestÃ¼tzten Schreibwerkzeugen, die speziell fÃ¼r LehrkrÃ¤fte entwickelt wurden. Entwerfen Sie Eltern-E-Mails, Zeugnisse und UnterrichtsplÃ¤ne in Minuten."
   },
   "hero": {
-    "title": "KI-gestützter Schreibassistent für Lehrkräfte",
+    "title": "KI-gestÃ¼tzter Schreibassistent fÃ¼r LehrkrÃ¤fte",
     "subtitle": "Zeit sparen, besser kommunizieren",
-    "description": "Entwerfen Sie Eltern-E-Mails, Zeugnisse und Bildungsinhalte in Minuten—nicht Stunden. Zaza Draft hilft Ihnen, klar und professionell zu kommunizieren mit KI-Unterstützung, die für Lehrkräfte maßgeschneidert ist.",
+    "description": "Entwerfen Sie Eltern-E-Mails, Zeugnisse und Bildungsinhalte in Minutenâ€”nicht Stunden. Zaza Draft hilft Ihnen, klar und professionell zu kommunizieren mit KI-UnterstÃ¼tzung, die fÃ¼r LehrkrÃ¤fte maÃŸgeschneidert ist.",
     "cta": {
       "primary": "Kostenlos schreiben",
       "secondary": "Demo ansehen"
     },
     "stats": {
-      "timeSaved": "Wöchentlich gesparte Zeit",
-      "teachers": "Nutzende Lehrkräfte",
+      "timeSaved": "WÃ¶chentlich gesparte Zeit",
+      "teachers": "Nutzende LehrkrÃ¤fte",
       "satisfaction": "Zufriedenheitsrate"
     }
   },
   "features": {
     "title": "Alles, was Sie brauchen, um besser und schneller zu schreiben",
-    "subtitle": "Leistungsstarke KI-Tools speziell für Lehrkräfte entwickelt",
+    "subtitle": "Leistungsstarke KI-Tools speziell fÃ¼r LehrkrÃ¤fte entwickelt",
     "items": {
       "emails": {
         "title": "Eltern-E-Mail-Assistent",
-        "description": "Generieren Sie professionelle, einfühlsame Eltern-E-Mails in Sekunden. Wählen Sie den richtigen Ton und sparen Sie jede Woche Stunden."
+        "description": "Generieren Sie professionelle, einfÃ¼hlsame Eltern-E-Mails in Sekunden. WÃ¤hlen Sie den richtigen Ton und sparen Sie jede Woche Stunden."
       },
       "reportCards": {
         "title": "Zeugnis-Schreiber",
-        "description": "Erstellen Sie personalisierte, konstruktive Zeugniskommentare, die Schülerfortschritte und Entwicklungsbereiche hervorheben."
+        "description": "Erstellen Sie personalisierte, konstruktive Zeugniskommentare, die SchÃ¼lerfortschritte und Entwicklungsbereiche hervorheben."
       },
       "lessonPlans": {
         "title": "Unterrichtsplan-Generator",
-        "description": "Entwerfen Sie schnell umfassende Unterrichtspläne, die auf Ihren Lehrplan und Unterrichtsstil abgestimmt sind."
+        "description": "Entwerfen Sie schnell umfassende UnterrichtsplÃ¤ne, die auf Ihren Lehrplan und Unterrichtsstil abgestimmt sind."
       },
       "feedback": {
-        "title": "Schüler-Feedback",
-        "description": "Geben Sie sinnvolles, ermutigendes Feedback zu Schülerarbeiten, das motiviert und Verbesserungen leitet."
+        "title": "SchÃ¼ler-Feedback",
+        "description": "Geben Sie sinnvolles, ermutigendes Feedback zu SchÃ¼lerarbeiten, das motiviert und Verbesserungen leitet."
       },
       "multilingual": {
-        "title": "Mehrsprachige Unterstützung",
-        "description": "Kommunizieren Sie mit Eltern in ihrer bevorzugten Sprache. Übersetzen Sie E-Mails und Dokumente präzise."
+        "title": "Mehrsprachige UnterstÃ¼tzung",
+        "description": "Kommunizieren Sie mit Eltern in ihrer bevorzugten Sprache. Ãœbersetzen Sie E-Mails und Dokumente prÃ¤zise."
       },
       "privacy": {
         "title": "Datenschutz zuerst",
-        "description": "FERPA-konform und sicher. Ihre Daten und die Privatsphäre Ihrer Schüler sind geschützt."
+        "description": "FERPA-konform und sicher. Ihre Daten und die PrivatsphÃ¤re Ihrer SchÃ¼ler sind geschÃ¼tzt."
       }
     }
   },
@@ -52,35 +52,35 @@
     "subtitle": "Beginnen Sie in drei einfachen Schritten",
     "steps": {
       "step1": {
-        "title": "Wählen Sie Ihre Aufgabe",
-        "description": "Wählen Sie aus Eltern-E-Mails, Zeugnissen, Unterrichtsplänen oder benutzerdefinierten Schreibaufgaben."
+        "title": "WÃ¤hlen Sie Ihre Aufgabe",
+        "description": "WÃ¤hlen Sie aus Eltern-E-Mails, Zeugnissen, UnterrichtsplÃ¤nen oder benutzerdefinierten Schreibaufgaben."
       },
       "step2": {
         "title": "Kontext bereitstellen",
-        "description": "Fügen Sie relevante Details über den Schüler, die Situation oder das Thema hinzu. Die KI erledigt den Rest."
+        "description": "FÃ¼gen Sie relevante Details Ã¼ber den SchÃ¼ler, die Situation oder das Thema hinzu. Die KI erledigt den Rest."
       },
       "step3": {
-        "title": "Überprüfen & Senden",
+        "title": "ÃœberprÃ¼fen & Senden",
         "description": "Bearbeiten Sie den KI-generierten Entwurf, um ihn an Ihre Stimme anzupassen, und senden Sie ihn dann mit Vertrauen."
       }
     }
   },
   "testimonials": {
-    "title": "Was Lehrkräfte sagen",
-    "subtitle": "Schließen Sie sich Tausenden von Lehrkräften an, die mit Zaza Draft Zeit sparen",
+    "title": "Was LehrkrÃ¤fte sagen",
+    "subtitle": "SchlieÃŸen Sie sich Tausenden von LehrkrÃ¤ften an, die mit Zaza Draft Zeit sparen",
     "items": [
       {
-        "quote": "Zaza Draft hat mir mindestens 5 Stunden pro Woche bei der Elternkommunikation gespart. Die generierten E-Mails sind professionell und warmherzig—genau mein Stil.",
+        "quote": "Zaza Draft hat mir mindestens 5 Stunden pro Woche bei der Elternkommunikation gespart. Die generierten E-Mails sind professionell und warmherzigâ€”genau mein Stil.",
         "author": "Sarah M.",
         "role": "Drittklasslehrerin"
       },
       {
-        "quote": "Die Zeugniszeit war früher meine gefürchtetste Zeit des Jahres. Jetzt kann ich durchdachte, personalisierte Kommentare in der Hälfte der Zeit schreiben.",
+        "quote": "Die Zeugniszeit war frÃ¼her meine gefÃ¼rchtetste Zeit des Jahres. Jetzt kann ich durchdachte, personalisierte Kommentare in der HÃ¤lfte der Zeit schreiben.",
         "author": "Michael T.",
-        "role": "Gymnasiallehrer für Englisch"
+        "role": "Gymnasiallehrer fÃ¼r Englisch"
       },
       {
-        "quote": "Als neue Lehrkraft war Zaza Draft von unschätzbarem Wert. Es hilft mir, professionell mit Eltern zu kommunizieren, während ich noch meinen eigenen Stil finde.",
+        "quote": "Als neue Lehrkraft war Zaza Draft von unschÃ¤tzbarem Wert. Es hilft mir, professionell mit Eltern zu kommunizieren, wÃ¤hrend ich noch meinen eigenen Stil finde.",
         "author": "Jessica L.",
         "role": "Lehrkraft im ersten Jahr"
       }
@@ -88,8 +88,9 @@
   },
   "cta": {
     "title": "Bereit, Zeit zu sparen und besser zu schreiben?",
-    "description": "Schließen Sie sich Tausenden von Lehrkräften an, die bereits KI nutzen, um effektiver zu kommunizieren.",
+    "description": "SchlieÃŸen Sie sich Tausenden von LehrkrÃ¤ften an, die bereits KI nutzen, um effektiver zu kommunizieren.",
     "button": "Kostenlos loslegen",
-    "note": "Keine Kreditkarte erforderlich. Jederzeit kündbar."
+    "note": "Keine Kreditkarte erforderlich. Jederzeit kÃ¼ndbar."
   }
 }
+

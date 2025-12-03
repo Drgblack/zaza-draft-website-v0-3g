@@ -1,12 +1,12 @@
-{
+﻿{
   "meta": {
-    "title": "KI-Glossar für Lehrkräfte | Zaza Draft",
-    "description": "Wesentliche KI-Begriffe und Konzepte für Lehrkräfte erklärt. Lernen Sie über maschinelles Lernen, NLP, Prompt-Engineering und mehr."
+    "title": "KI-Glossar fÃ¼r LehrkrÃ¤fte | Zaza Draft",
+    "description": "Wesentliche KI-Begriffe und Konzepte fÃ¼r LehrkrÃ¤fte erklÃ¤rt. Lernen Sie Ã¼ber maschinelles Lernen, NLP, Prompt-Engineering und mehr."
   },
   "hero": {
-    "title": "KI-Glossar für Lehrkräfte",
-    "subtitle": "Wesentliche KI-Begriffe in verständlicher Sprache für Lehrkräfte erklärt",
-    "description": "Navigieren Sie mit Vertrauen durch die Welt der KI. Unser umfassendes Glossar zerlegt komplexe KI-Konzepte in lehrkräftefreundliche Erklärungen mit praktischen Beispielen aus dem Bildungsbereich."
+    "title": "KI-Glossar fÃ¼r LehrkrÃ¤fte",
+    "subtitle": "Wesentliche KI-Begriffe in verstÃ¤ndlicher Sprache fÃ¼r LehrkrÃ¤fte erklÃ¤rt",
+    "description": "Navigieren Sie mit Vertrauen durch die Welt der KI. Unser umfassendes Glossar zerlegt komplexe KI-Konzepte in lehrkrÃ¤ftefreundliche ErklÃ¤rungen mit praktischen Beispielen aus dem Bildungsbereich."
   },
   "stats": {
     "totalTerms": "Begriffe insgesamt",
@@ -16,7 +16,7 @@
   "search": {
     "placeholder": "Nach einem Begriff suchen...",
     "searchButton": "Suchen",
-    "clear": "Löschen",
+    "clear": "LÃ¶schen",
     "noResults": "Keine Begriffe gefunden, die Ihrer Suche entsprechen.",
     "tryDifferent": "Versuchen Sie andere Suchbegriffe oder durchsuchen Sie nach Kategorie."
   },
@@ -31,14 +31,14 @@
     "all": "Alle Kategorien",
     "fundamentals": "KI-Grundlagen",
     "machineLearning": "Maschinelles Lernen",
-    "nlp": "Natürliche Sprachverarbeitung",
+    "nlp": "NatÃ¼rliche Sprachverarbeitung",
     "generativeAI": "Generative KI",
     "modelsArchitectures": "KI-Modelle & Architekturen",
     "promptEngineering": "Prompt-Engineering",
     "ethicsSafety": "KI-Ethik & Sicherheit",
     "dataPrivacy": "Daten & Datenschutz",
     "toolsPlatforms": "KI-Tools & Plattformen",
-    "educationalApplications": "Pädagogische KI-Anwendungen",
+    "educationalApplications": "PÃ¤dagogische KI-Anwendungen",
     "implementation": "KI-Implementierung",
     "future": "Zukunft der KI"
   },
@@ -51,8 +51,9 @@
   },
   "cta": {
     "title": "Bereit, Ihr KI-Wissen anzuwenden?",
-    "description": "Jetzt, da Sie die Terminologie verstehen, sehen Sie, wie Zaza Draft diese KI-Konzepte für Ihren Unterrichtsablauf in die Praxis umsetzt.",
+    "description": "Jetzt, da Sie die Terminologie verstehen, sehen Sie, wie Zaza Draft diese KI-Konzepte fÃ¼r Ihren Unterrichtsablauf in die Praxis umsetzt.",
     "button": "Zaza Draft ausprobieren",
     "secondary": "KI-Kompetenz erkunden"
   }
 }
+

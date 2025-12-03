@@ -1,4 +1,4 @@
-# Zaza Draft - Marketing Website
+﻿# Zaza Draft - Marketing Website
 
 A production-ready multi-page marketing site for Zaza Draft, an AI-powered tool that helps teachers write better parent messages.
 
@@ -190,6 +190,7 @@ For questions or issues:
 
 ## License
 
-© Zaza Technologies. All rights reserved.
+Â© Zaza Technologies. All rights reserved.
+
 
 

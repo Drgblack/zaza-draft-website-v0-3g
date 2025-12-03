@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import Image from "next/image"
 import { useState } from "react"
@@ -32,3 +32,4 @@ export function SafeImage({ src, fallbackSrc = "/placeholder.svg", alt, ...props
     />
   )
 }
+

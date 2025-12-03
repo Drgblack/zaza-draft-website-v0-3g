@@ -1,4 +1,4 @@
-# The Teacher's Tech Troubleshooting Guide
+﻿# The Teacher's Tech Troubleshooting Guide
 ## Quick Fixes for Classroom Tech Crises (Projector, WiFi, LMS, and More)
 
 *When tech breaks during a lesson, you need solutions - fast. This guide gives you a 1-page troubleshooting flowchart, quick fixes for common issues, and templates for getting help from IT without waiting days.*
@@ -36,7 +36,7 @@ Every tech-based lesson should have a non-tech backup. Period.
 - Video lesson? Have discussion questions ready.
 - Digital quiz? Keep a paper version on hand.
 
-> 💡 **Pro Tip:** Keep a "Tech Fail Toolkit" in your desk - printed resources, markers, paper, activities that work without WiFi. You'll use it more than you think.
+> ðŸ’¡ **Pro Tip:** Keep a "Tech Fail Toolkit" in your desk - printed resources, markers, paper, activities that work without WiFi. You'll use it more than you think.
 
 ---
 
@@ -70,7 +70,7 @@ Every tech-based lesson should have a non-tech backup. Period.
 
 1. **Check the input source** - Press "Source" or "Input" button on remote. Cycle through HDMI 1, HDMI 2, VGA, etc. Your laptop might be on a different input.
 
-2. **Check your laptop display settings** - On Windows: Press `Windows + P`, choose "Duplicate" or "Extend." On Mac: System Preferences → Displays → Detect Displays.
+2. **Check your laptop display settings** - On Windows: Press `Windows + P`, choose "Duplicate" or "Extend." On Mac: System Preferences â†’ Displays â†’ Detect Displays.
 
 3. **Reconnect the HDMI/VGA cable** - Unplug and replug both ends. Sometimes it's just a loose connection.
 
@@ -130,7 +130,7 @@ Every tech-based lesson should have a non-tech backup. Period.
 
 1. **Check if it's a site-wide issue** - Go to downdetector.com or ask colleagues. Sometimes the platform is down for everyone.
 
-2. **Clear your browser cache** - Go to Settings → Privacy → Clear browsing data. Select "Cached images and files."
+2. **Clear your browser cache** - Go to Settings â†’ Privacy â†’ Clear browsing data. Select "Cached images and files."
 
 3. **Try a different browser** - If Chrome isn't working, try Edge, Safari, or Firefox.
 
@@ -152,7 +152,7 @@ Every tech-based lesson should have a non-tech backup. Period.
 
 2. **Unmute the video** - Many videos start muted. Look for a mute icon and click it.
 
-3. **Check audio output settings** - Your laptop might be sending audio to the wrong output (internal speakers vs. HDMI/external speakers). On Windows: Right-click sound icon → Playback devices. On Mac: System Preferences → Sound → Output.
+3. **Check audio output settings** - Your laptop might be sending audio to the wrong output (internal speakers vs. HDMI/external speakers). On Windows: Right-click sound icon â†’ Playback devices. On Mac: System Preferences â†’ Sound â†’ Output.
 
 4. **Reconnect the audio cable** - If using a separate audio cable (3.5mm jack), unplug and replug it.
 
@@ -246,23 +246,23 @@ Every tech-based lesson should have a non-tech backup. Period.
 
 ```
 STEP 1: Identify the Problem
-↓
-Is it a display issue (projector/screen)? → Go to "Display Fixes"
-Is it a network issue (WiFi/internet)? → Go to "Network Fixes"
-Is it a device issue (laptop/student device)? → Go to "Device Fixes"
-Is it an audio issue? → Go to "Audio Fixes"
-Is it a software issue (LMS/app)? → Go to "Software Fixes"
+â†“
+Is it a display issue (projector/screen)? â†’ Go to "Display Fixes"
+Is it a network issue (WiFi/internet)? â†’ Go to "Network Fixes"
+Is it a device issue (laptop/student device)? â†’ Go to "Device Fixes"
+Is it an audio issue? â†’ Go to "Audio Fixes"
+Is it a software issue (LMS/app)? â†’ Go to "Software Fixes"
 
 STEP 2: Try the Quick Fix (listed above)
-↓
+â†“
 Did it work?
-→ YES: You're good! Teach on.
-→ NO: Go to Step 3.
+â†’ YES: You're good! Teach on.
+â†’ NO: Go to Step 3.
 
 STEP 3: Implement Backup Plan
-↓
+â†“
 Switch to non-tech version of your lesson
-↓
+â†“
 STEP 4: Submit IT Ticket (see template below)
 ```
 
@@ -403,11 +403,12 @@ Tech is amazing when it works - and infuriating when it doesn't. But you're not 
 
 **Remember: You're a teacher, not an IT specialist.** Do what you can, then move on. Your students need you teaching, not troubleshooting for 20 minutes.
 
-**When tech fails, you don't. Keep teaching.** 🛠️
+**When tech fails, you don't. Keep teaching.** ðŸ› ï¸
 
 ---
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+

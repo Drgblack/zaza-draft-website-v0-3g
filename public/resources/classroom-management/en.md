@@ -1,4 +1,4 @@
-# The Reset Routine: A Proactive Classroom Management Guide
+﻿# The Reset Routine: A Proactive Classroom Management Guide
 
 _Calm, consistent routines that protect learning time._
 
@@ -27,9 +27,9 @@ A predictable start and a few low-effort interventions prevent 80% of disruption
 
 **Transition script (10-15s)**
 
-> “When the timer ends: pencils down, eyes front. We’ll check #2 together.”
+> â€œWhen the timer ends: pencils down, eyes front. Weâ€™ll check #2 together.â€
 
-## 2) Non-verbal interventions that don’t stop teaching
+## 2) Non-verbal interventions that donâ€™t stop teaching
 
 Use _private, brief, consistent_ signals before verbal redirection.
 
@@ -38,64 +38,65 @@ Use _private, brief, consistent_ signals before verbal redirection.
 | **Proximity**     | drift closer        | Keep teaching while you move |
 | **Pause**         | 2-3s silence        | Wait for attention to return |
 | **Name on board** | remind expectations | no commentary                |
-| **Cue card**      | visual reminder     | “Phone away” card on desk    |
+| **Cue card**      | visual reminder     | â€œPhone awayâ€ card on desk    |
 | **Tap & point**   | to instruction      | point at Do Now / rubric     |
 
-> **Rule:** If a non-verbal works, don’t add a lecture.
+> **Rule:** If a non-verbal works, donâ€™t add a lecture.
 
 ## 3) Co-creating expectations (15-20 min mini-lesson)
 
 **Goal:** 3-5 positive, observable rules.
 
-- Ask: “What does great learning _look/sound_ like here?”
+- Ask: â€œWhat does great learning _look/sound_ like here?â€
 - Build a T-chart from student examples.
 - Finalise rules and _examples for each rule_.
 - Post the chart; revisit weekly (2 minutes).
 
 **Rule examples (observable)**
 
-- “Phones in bags unless asked.”
-- “One voice at a time.”
-- “We start with Do Now.”
+- â€œPhones in bags unless asked.â€
+- â€œOne voice at a time.â€
+- â€œWe start with Do Now.â€
 
 ## 4) When a moment escalates: short scripts
 
-**Defiance →** keep direction clear, emotion low
+**Defiance â†’** keep direction clear, emotion low
 
-> “I hear you. We’ll talk after **[time]**. For now, the direction is **[X]**.”
+> â€œI hear you. Weâ€™ll talk after **[time]**. For now, the direction is **[X]**.â€
 
-**Disengagement →** get them started
+**Disengagement â†’** get them started
 
-> “Let’s do the first one together-then you try the next.”
+> â€œLetâ€™s do the first one together-then you try the next.â€
 
-**Side-talk →** redirect the behaviour, not the person
+**Side-talk â†’** redirect the behaviour, not the person
 
-> “Voices off. Track the speaker.”
+> â€œVoices off. Track the speaker.â€
 
 **Safety line** (if needed)
 
-> “We’re pausing. Step outside the door; I’ll join you in 30 seconds.”
+> â€œWeâ€™re pausing. Step outside the door; Iâ€™ll join you in 30 seconds.â€
 
 ## 5) Corrective routine (2-4 min) instead of confrontation
 
-1. Name the routine: “Reset: track, tools out, voices off.”
+1. Name the routine: â€œReset: track, tools out, voices off.â€
 2. Micro-rehearse (10-15 seconds).
 3. Re-start instruction immediately.
 
 ## 6) Track just enough data (1 page)
 
 - **Start-of-lesson on-time %** (weekly trend)
-- **Redirects** (✔ for non-verbal, V for verbal)
+- **Redirects** (âœ” for non-verbal, V for verbal)
 - **Follow-ups** (1-2 names + actions)
 
 ## 7) Family communication (ready-to-send mini-notes)
 
 **Positive:**
 
-> “Quick update-X led the group discussion today with thoughtful points. Great progress in speaking with confidence.”
+> â€œQuick update-X led the group discussion today with thoughtful points. Great progress in speaking with confidence.â€
 
 **Concern (neutral):**
 
-> “X missed today’s starter and needed two reminders to begin. Can you ask them to look for the Do Now immediately next lesson?”
+> â€œX missed todayâ€™s starter and needed two reminders to begin. Can you ask them to look for the Do Now immediately next lesson?â€
 
-- _Zaza Draft quick win:_ paste your class routines here → generate reminder slides & cue cards in one click.
+- _Zaza Draft quick win:_ paste your class routines here â†’ generate reminder slides & cue cards in one click.
+

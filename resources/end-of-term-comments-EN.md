@@ -1,4 +1,4 @@
-# The Comment Bank Builder: End-of-Term Reports
+﻿# The Comment Bank Builder: End-of-Term Reports
 ## 50+ Customizable Comment Templates for Every Subject and Achievement Level
 
 *Write better report cards in half the time. Stop staring at blank comment boxes. These templates give you specific, varied, professional language that honors each student's journey - and saves you hours of stress.*
@@ -36,16 +36,16 @@ Before you grab a template, here's what makes a comment valuable to parents and 
 ### The 3-Part Formula
 
 **1. SPECIFIC OBSERVATION** (Not "working hard" - what are they actually doing?)
-- âœ… "Maya consistently contributes thoughtful ideas during class discussions"
-- âŒ "Maya is a good student"
+- Ã¢Å“â€¦ "Maya consistently contributes thoughtful ideas during class discussions"
+- Ã¢Å’ "Maya is a good student"
 
 **2. EVIDENCE OR CONTEXT** (What skill or growth does this show?)
-- âœ… "demonstrating strong comprehension of complex texts"
-- âŒ "she tries hard"
+- Ã¢Å“â€¦ "demonstrating strong comprehension of complex texts"
+- Ã¢Å’ "she tries hard"
 
 **3. NEXT STEP** (Where are they going? What's the focus?)
-- âœ… "To continue growing, Maya should work on supporting her claims with direct textual evidence."
-- âŒ "Keep up the good work!"
+- Ã¢Å“â€¦ "To continue growing, Maya should work on supporting her claims with direct textual evidence."
+- Ã¢Å’ "Keep up the good work!"
 
 > **Pro Tip:** Parents can tell when you're copy-pasting. Vary your language. Use different sentence structures. Add one specific detail per student (a project, a moment, a strength).
 
@@ -366,18 +366,18 @@ Each comment should:
 ## Section 8: Dos and Don'ts
 
 ### Do:
-- âœ… Be specific (name a project, a skill, a moment)
-- âœ… Vary your language across students
-- âœ… Use positive framing even for challenges ("working to improve" vs. "struggles with")
-- âœ… Include a next step or action item
-- âœ… Proofread for errors (parents notice!)
+- Ã¢Å“â€¦ Be specific (name a project, a skill, a moment)
+- Ã¢Å“â€¦ Vary your language across students
+- Ã¢Å“â€¦ Use positive framing even for challenges ("working to improve" vs. "struggles with")
+- Ã¢Å“â€¦ Include a next step or action item
+- Ã¢Å“â€¦ Proofread for errors (parents notice!)
 
 ### Don't:
-- âŒ Use the same comment for multiple students
-- âŒ Be vague ("doing well," "needs improvement")
-- âŒ Compare students to each other
-- âŒ Use jargon without explaining (e.g., "scaffolding," "metacognition")
-- âŒ Write novel-length comments (80-120 words is plenty)
+- Ã¢Å’ Use the same comment for multiple students
+- Ã¢Å’ Be vague ("doing well," "needs improvement")
+- Ã¢Å’ Compare students to each other
+- Ã¢Å’ Use jargon without explaining (e.g., "scaffolding," "metacognition")
+- Ã¢Å’ Write novel-length comments (80-120 words is plenty)
 
 ---
 
@@ -440,11 +440,12 @@ These templates aren't about cutting corners. They're about working smarter so y
 
 Start with a few templates. Adjust them to fit your voice. Before you know it, you'll have a system that makes report card season manageable.
 
-**You've got 90 comments to write. Let's make them count - and let's make them fast.** âœ
+**You've got 90 comments to write. Let's make them count - and let's make them fast.** Ã¢Å“
 
 ---
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+

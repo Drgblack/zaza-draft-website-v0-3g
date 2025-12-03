@@ -1,4 +1,4 @@
-"use server"
+﻿"use server"
 
 export async function subscribeToNewsletter(name: string, email: string) {
   try {
@@ -41,3 +41,4 @@ export async function subscribeToNewsletter(name: string, email: string) {
     return { success: false, error: "An error occurred" }
   }
 }
+

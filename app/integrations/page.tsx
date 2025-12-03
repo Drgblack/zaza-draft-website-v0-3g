@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import IntegrationsClient from "./integrations-client"
 import { BreadcrumbSchema } from "@/lib/seo/schema"
 import Script from "next/script"
@@ -58,4 +58,5 @@ export default function IntegrationsPage() {
   )
 }
 import type { Metadata } from "next"
+
 

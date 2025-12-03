@@ -1,4 +1,4 @@
-# The Batch & Automate Playbook for Teachers
+﻿# The Batch & Automate Playbook for Teachers
 ## Reclaim 5+ Hours Per Week with Smart Batching and Simple Automation
 
 *Stop doing everything one task at a time. This playbook shows you how to batch similar tasks, automate repetitive work, and protect your time - without fancy tools or complicated systems.*
@@ -497,11 +497,12 @@ Batching and automation won't eliminate all your work. But they will help you wo
 
 Start small. Batch one thing this week. Automate one repetitive task. Notice how much mental space you gain.
 
-**You've got this - now go reclaim your time.** ⏰
+**You've got this - now go reclaim your time.** â°
 
 ---
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+

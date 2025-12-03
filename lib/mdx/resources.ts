@@ -1,4 +1,4 @@
-import fs from "fs"
+﻿import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
 
@@ -60,3 +60,4 @@ export function checkDownloadExists(downloadPath: string): boolean {
     return false
   }
 }
+

@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import TeachClient from "./teach-client"
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "curriculum planning",
     "lesson planner",
     "KI Unterrichtsplanung",
-    "Lehrer ProduktivitÃ¤t",
+    "Lehrer ProduktivitÃƒÂ¤t",
   ],
   openGraph: {
     title: "Zaza Teach | AI Lesson Planning Tool for Teachers",
@@ -74,3 +74,4 @@ export default function TeachPage() {
     </>
   )
 }
+

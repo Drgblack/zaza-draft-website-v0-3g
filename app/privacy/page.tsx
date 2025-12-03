@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import { PrivacyClient } from "./privacy-client"
 
 export const metadata: Metadata = {
@@ -11,4 +11,5 @@ export default function PrivacyPage() {
   return <PrivacyClient />
 }
 import type { Metadata } from "next"
+
 

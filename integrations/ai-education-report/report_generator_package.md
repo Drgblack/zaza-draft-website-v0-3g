@@ -1,4 +1,4 @@
-# State of AI in Education 2025 Report - Website Integration Package
+﻿# State of AI in Education 2025 Report - Website Integration Package
 
 ## Overview
 This package includes everything needed to generate and serve the AI in Education report from your website.
@@ -6,12 +6,12 @@ This package includes everything needed to generate and serve the AI in Educatio
 ## File Structure
 ```
 /report-generator/
-â”œâ”€â”€ python/
-â”‚   â”œâ”€â”€ requirements.txt
-â”‚   â””â”€â”€ generate_report.py
-â”œâ”€â”€ api/
-â”‚   â””â”€â”€ reportEndpoint.js
-â””â”€â”€ README.md
+Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ python/
+Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ requirements.txt
+Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ generate_report.py
+Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ api/
+Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ reportEndpoint.js
+Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ README.md
 ```
 
 ## 1. Python Report Generator
@@ -142,19 +142,19 @@ router.get('/report-formats', (req, res) => {
         value: 'pdf',
         label: 'PDF',
         description: 'Portable Document Format - Best for reading and printing',
-        icon: 'ðŸ“„'
+        icon: 'Ã°Å¸â€œâ€ž'
       },
       {
         value: 'docx',
         label: 'Word Document',
         description: 'Microsoft Word - Editable format',
-        icon: 'ðŸ“'
+        icon: 'Ã°Å¸â€œÂ'
       },
       {
         value: 'html',
         label: 'HTML',
         description: 'Web page - View in browser',
-        icon: 'ðŸŒ'
+        icon: 'Ã°Å¸Å’Â'
       }
     ]
   });
@@ -300,7 +300,7 @@ export default function ReportDownloadForm() {
 
       {downloadUrl && (
         <div className="success-message" style={{marginTop: '1rem', color: 'green'}}>
-          âœ“ Report generated! Your download should begin automatically.
+          Ã¢Å“â€œ Report generated! Your download should begin automatically.
           <br />
           <a href={downloadUrl} download>Click here</a> if download doesn't start.
         </div>
@@ -596,3 +596,4 @@ router.post('/generate-report', reportLimiter, async (req, res) => {
 For issues or questions, contact your development team or refer to the ReportLab documentation:
 - https://www.reportlab.com/docs/reportlab-userguide.pdf
 - https://matplotlib.org/stable/users/index.html
+

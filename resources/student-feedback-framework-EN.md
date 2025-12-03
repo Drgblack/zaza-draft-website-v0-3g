@@ -1,4 +1,4 @@
-# The Student Feedback Framework: Fast, Fair, and Effective
+﻿# The Student Feedback Framework: Fast, Fair, and Effective
 ## Templates and Methods for Essays, Projects, Tests, and Presentations
 
 *Give meaningful feedback in half the time. This framework includes 6 proven feedback methods (3+1, Glow-Grow, Two Stars and a Wish, Comment Codes), ready-to-use templates, and strategies for scaling feedback across 100+ students.*
@@ -76,21 +76,21 @@ Add a counterargument in paragraph 3. Try: "Some might say social media helps te
 
 **Template:**
 ```
-✨ GLOW (What's Shining):
+âœ¨ GLOW (What's Shining):
 [2-3 specific strengths]
 
-🌱 GROW (Growth Opportunity):
+ðŸŒ± GROW (Growth Opportunity):
 [1 specific area for improvement with guidance]
 ```
 
 **Example (Science Fair Project):**
 ```
-✨ GLOW (What's Shining):
+âœ¨ GLOW (What's Shining):
 - Your hypothesis was clearly stated and testable
 - Your data table was organized and easy to read
 - You explained your results using scientific vocabulary (independent variable, dependent variable, control)
 
-🌱 GROW (Growth Opportunity):
+ðŸŒ± GROW (Growth Opportunity):
 Next time, include more trials (you did 3, but 5-10 would make your data more reliable). This strengthens your conclusion because outliers have less impact.
 ```
 
@@ -101,24 +101,24 @@ Next time, include more trials (you did 3, but 5-10 would make your data more re
 **Best for:** Quick feedback on homework, exit tickets, formative assessments
 
 **How it works:**
-- ⭐ **Star 1:** One specific strength
-- ⭐ **Star 2:** Another specific strength
-- 💫 **Wish:** One thing you wish they'd improve or try next time
+- â­ **Star 1:** One specific strength
+- â­ **Star 2:** Another specific strength
+- ðŸ’« **Wish:** One thing you wish they'd improve or try next time
 
 **Why it works:** Fast to write (under 60 seconds per student), easy to remember, and gives balanced feedback.
 
 **Template:**
 ```
-⭐ [Specific strength]
-⭐ [Specific strength]
-💫 I wish you had... [specific improvement]
+â­ [Specific strength]
+â­ [Specific strength]
+ðŸ’« I wish you had... [specific improvement]
 ```
 
 **Example (Math Homework):**
 ```
-⭐ You correctly set up the equation for problem 3
-⭐ Your work is organized and easy to follow
-💫 I wish you had checked your answer by plugging it back into the original equation - that would have caught the error in problem 5
+â­ You correctly set up the equation for problem 3
+â­ Your work is organized and easy to follow
+ðŸ’« I wish you had checked your answer by plugging it back into the original equation - that would have caught the error in problem 5
 ```
 
 ---
@@ -142,16 +142,16 @@ Next time, include more trials (you did 3, but 5-10 would make your data more re
 | **E** | Need more evidence | Add a quote, stat, or example to support this claim |
 | **X** | Explanation needed | Explain HOW this evidence supports your claim |
 | **C** | Weak conclusion | Circle back to your thesis and answer "So what?" |
-| **⭐** | Strong point! | Keep doing this - it's working |
+| **â­** | Strong point! | Keep doing this - it's working |
 | **?** | Confusing sentence | Reread this aloud and simplify |
 
 **Example Use:**
 Instead of writing "Your thesis is unclear and you need more evidence in paragraph 2," you write:
 ```
-¶1: T
-¶2: E, E
-¶3: X
-¶4: ⭐
+Â¶1: T
+Â¶2: E, E
+Â¶3: X
+Â¶4: â­
 ```
 
 Students refer to the code bank, revise, and resubmit.
@@ -169,7 +169,7 @@ Students refer to the code bank, revise, and resubmit.
 
 **Template:**
 ```
-💭 Questions to Consider:
+ðŸ’­ Questions to Consider:
 1. [Question about content]
 2. [Question about structure/organization]
 3. [Question about evidence/support]
@@ -179,7 +179,7 @@ Next draft goal: [One specific focus area]
 
 **Example (Research Project Draft):**
 ```
-💭 Questions to Consider:
+ðŸ’­ Questions to Consider:
 1. What's the strongest piece of evidence you found? Could you move that to paragraph 2 to hook readers early?
 2. In paragraph 3, you mention "some studies" - which specific studies? How can you make that more credible?
 3. What would someone who disagrees with you say? How would you respond?
@@ -227,9 +227,9 @@ Your organization was excellent - the flow from intro to body to conclusion was 
 **For Strong Essays (A/B):**
 ```
 Strengths:
-✓ [Specific thesis or argument quality]
-✓ [Evidence/example usage]
-✓ [Organization or style element]
+âœ“ [Specific thesis or argument quality]
+âœ“ [Evidence/example usage]
+âœ“ [Organization or style element]
 
 Polish Point:
 [One small refinement - word choice, transition, or depth]
@@ -257,15 +257,15 @@ Let's revise this together. See me during office hours.
 
 **For Correct Work:**
 ```
-✓ Correct! Your process: [briefly describe their method]
-💡 Pro Tip: [One efficiency trick or alternative method]
+âœ“ Correct! Your process: [briefly describe their method]
+ðŸ’¡ Pro Tip: [One efficiency trick or alternative method]
 ```
 
 **For Incorrect Work:**
 ```
-❌ Error on line [X]: [identify where the mistake happened]
-✓ What you did well: [note correct steps]
-🔧 To fix: [specific correction]
+âŒ Error on line [X]: [identify where the mistake happened]
+âœ“ What you did well: [note correct steps]
+ðŸ”§ To fix: [specific correction]
 Try this problem again and show me tomorrow.
 ```
 
@@ -276,14 +276,14 @@ Try this problem again and show me tomorrow.
 **Live Feedback Form (Fill out during presentation):**
 ```
 CONTENT:
-✓ Clear thesis/main idea: Yes / Needs work
-✓ Supporting details: Strong / Adequate / Needs more
-✓ Organization: Logical / Somewhat clear / Confusing
+âœ“ Clear thesis/main idea: Yes / Needs work
+âœ“ Supporting details: Strong / Adequate / Needs more
+âœ“ Organization: Logical / Somewhat clear / Confusing
 
 DELIVERY:
-✓ Eye contact: Excellent / Good / Needs work
-✓ Voice volume: Excellent / Good / Too quiet
-✓ Confidence: High / Moderate / Nervous
+âœ“ Eye contact: Excellent / Good / Needs work
+âœ“ Voice volume: Excellent / Good / Too quiet
+âœ“ Confidence: High / Moderate / Nervous
 
 GLOW: [What shined?]
 
@@ -368,19 +368,19 @@ Have students complete this BEFORE turning in work:
 BEFORE YOU SUBMIT - SELF-CHECK:
 
 Content:
-☐ I have a clear thesis/main idea
-☐ I included [X number] pieces of evidence
-☐ I explained HOW my evidence supports my claim
+â˜ I have a clear thesis/main idea
+â˜ I included [X number] pieces of evidence
+â˜ I explained HOW my evidence supports my claim
 
 Organization:
-☐ My introduction hooks the reader
-☐ Each paragraph has a topic sentence
-☐ My conclusion answers "So what?"
+â˜ My introduction hooks the reader
+â˜ Each paragraph has a topic sentence
+â˜ My conclusion answers "So what?"
 
 Mechanics:
-☐ I read this aloud to catch errors
-☐ I checked spelling and punctuation
-☐ I followed the formatting requirements
+â˜ I read this aloud to catch errors
+â˜ I checked spelling and punctuation
+â˜ I followed the formatting requirements
 
 CONFIDENCE LEVEL: (circle one)
 Low (I'm unsure) | Medium (I tried my best) | High (I'm proud of this)
@@ -524,11 +524,12 @@ There's always something. "You turned it in on time" or "You attempted problem 3
 
 Feedback isn't about catching every error. It's about helping students see their strengths and giving them one clear next step. When you shift from "correcting" to "coaching," feedback becomes faster, more effective, and less exhausting.
 
-**You don't have to comment on everything to make a difference.** ✏️
+**You don't have to comment on everything to make a difference.** âœï¸
 
 ---
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+

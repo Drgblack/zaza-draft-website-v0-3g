@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import { TermsClient } from "./terms-client"
 
 export const metadata: Metadata = {
@@ -16,4 +16,5 @@ export default function TermsPage() {
   return <TermsClient />
 }
 import type { Metadata } from "next"
+
 

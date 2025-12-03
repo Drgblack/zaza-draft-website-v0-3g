@@ -1,4 +1,4 @@
-# Founder Page Content
+﻿# Founder Page Content
 
 ## Files:
 - **founder-en.md** - English version
@@ -25,3 +25,4 @@ These files contain the founder story for the Zaza Draft marketing site.
 Replace content on:
 - EN: /about/founder
 - DE: /about/founder (German version)
+

@@ -1,19 +1,19 @@
-# The Teacher’s AI Prompt Library
+﻿# The Teacherâ€™s AI Prompt Library
 
-_Reusable, reliable prompts + a quick “why this works” guide._
+_Reusable, reliable prompts + a quick â€œwhy this worksâ€ guide._
 
 ## The anatomy of a great prompt
 
-- **Role** (who the AI should act as) - “Act as a 5th-grade science teacher…”
-- **Task** (what to produce) - “Generate a 10-minute hook…”
-- **Constraints** (tone, length, reading level) - “150-180 words, friendly but professional.”
+- **Role** (who the AI should act as) - â€œAct as a 5th-grade science teacherâ€¦â€
+- **Task** (what to produce) - â€œGenerate a 10-minute hookâ€¦â€
+- **Constraints** (tone, length, reading level) - â€œ150-180 words, friendly but professional.â€
 - **Inputs** (paste student work, rubric, unit goals)
 
-> **Pro tip:** Start small → review → tighten constraints.
+> **Pro tip:** Start small â†’ review â†’ tighten constraints.
 
 ## A. Parent communication (pick one and paste details)
 
-**Supportive concern (≤150 words)**
+**Supportive concern (â‰¤150 words)**
 
 > Act as a middle-school teacher. Draft a calm, supportive email to a parent about **[student]** missing **[n]** assignments.  
 > Emphasise partnership, include 2 specific next steps and 1 sentence of encouragement. Keep neutral, professional tone.
@@ -28,7 +28,7 @@ _Reusable, reliable prompts + a quick “why this works” guide._
 **Essay feedback (3+1)**
 
 > Provide three encouraging, specific comments and one clear next step on this **[grade/level]** essay.  
-> Focus on **thesis clarity**, **evidence**, and **reasoning**. Use student-friendly language (≤60 words total).
+> Focus on **thesis clarity**, **evidence**, and **reasoning**. Use student-friendly language (â‰¤60 words total).
 
 **STEM working**
 
@@ -39,20 +39,21 @@ _Reusable, reliable prompts + a quick “why this works” guide._
 **Hooks (3 options, one hands-on)**
 
 > Generate 3 engaging hooks for a **[grade/subject]** lesson on **[topic]**.  
-> Include duration (≤10 min each), materials, and an accessible question that checks prior knowledge.
+> Include duration (â‰¤10 min each), materials, and an accessible question that checks prior knowledge.
 
 **Differentiation ideas**
 
-> For the **[objective]**, give supports for “Approaching”, “Meeting”, and “Extending” learners (sentence stems, visual, challenge).
+> For the **[objective]**, give supports for â€œApproachingâ€, â€œMeetingâ€, and â€œExtendingâ€ learners (sentence stems, visual, challenge).
 
 ## D. Rubrics & success criteria
 
-> Rewrite these criteria so students can self-assess (I can… statements). Add a one-line “Next Step” for each criterion.
+> Rewrite these criteria so students can self-assess (I canâ€¦ statements). Add a one-line â€œNext Stepâ€ for each criterion.
 
 ## E. Time savers
 
 - Turn long instructions into 3-step student checklist.
-- Draft 6 retrieval questions from yesterday’s lesson (2 easy, 3 core, 1 stretch).
+- Draft 6 retrieval questions from yesterdayâ€™s lesson (2 easy, 3 core, 1 stretch).
 - Turn a rubric into quick comment bank.
 
-- _Zaza Draft tip:_ Paste student work + rubric → “highlight 2 strengths, 1 next step, and a model sentence.”
+- _Zaza Draft tip:_ Paste student work + rubric â†’ â€œhighlight 2 strengths, 1 next step, and a model sentence.â€
+

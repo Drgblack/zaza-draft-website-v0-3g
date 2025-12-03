@@ -1,4 +1,4 @@
-export function extractFirstH2(html: string): string | undefined {
+﻿export function extractFirstH2(html: string): string | undefined {
   const m = html.match(/<h2[^>]*>([\s\S]*?)<\/h2>/i);
   return m ? stripTags(m[1]).trim() : undefined;
 }
@@ -21,3 +21,4 @@ export function localizeHero(post: { title: string; excerpt: string; contentDe: 
   }
   return { title: post.title, excerpt: post.excerpt };
 }
+

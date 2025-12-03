@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import { HomePageClient } from "./home-client"
 
 export const metadata: Metadata = {
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
     // German target keywords
     "KI Unterrichtsplanung",
     "KI Bewertungstool",
-    "Lehrer ProduktivitÃ¤t",
+    "Lehrer ProduktivitÃƒÂ¤t",
     "Zeit sparen Lehre",
-    "KI fÃ¼r Lehrer",
+    "KI fÃƒÂ¼r Lehrer",
     "Elternbriefe KI",
     "Zeugniskommentare KI",
     "halluzinationssichere KI",
@@ -124,5 +124,6 @@ export default function HomePage() {
   )
 }
 import type { Metadata } from "next"
+
 
 

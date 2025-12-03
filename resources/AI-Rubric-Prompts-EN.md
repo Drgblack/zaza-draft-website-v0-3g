@@ -1,4 +1,4 @@
-# AI Rubric Prompts: Create Better Rubrics in Less Time
+﻿# AI Rubric Prompts: Create Better Rubrics in Less Time
 ## The Complete Guide to Generating, Refining, and Student-ifying Assessment Tools
 
 **By Dr. Greg Blackburn**  
@@ -349,8 +349,8 @@ Format:
 
 Example:
 "Does the thesis take a clear, arguable stance?" 
-→ Yes → Move to next question
-→ No → Check "Developing" and note feedback
+â†’ Yes â†’ Move to next question
+â†’ No â†’ Check "Developing" and note feedback
 ```
 
 ---
@@ -532,11 +532,12 @@ Start with AI to do the heavy lifting. Then add your expertise, your examples, a
 
 **Clear expectations = better work. Less grading stress = better teaching.**
 
-You've got this. 🎯
+You've got this. ðŸŽ¯
 
 ---
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+

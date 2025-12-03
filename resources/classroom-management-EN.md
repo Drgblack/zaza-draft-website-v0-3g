@@ -1,4 +1,4 @@
-# The Reset Routine: A Proactive Classroom Management Guide
+﻿# The Reset Routine: A Proactive Classroom Management Guide
 ## De-escalation Strategies and Reset Protocols That Keep Learning On Track
 
 *Transform classroom disruptions from power struggles into teaching moments. Includes step-by-step scripts, prevention systems, and repair strategies that preserve relationships while maintaining boundaries.*
@@ -441,11 +441,12 @@ Start small. Try one script, one prevention strategy, one repair conversation. N
 
 And remember: The students who challenge you the most are often the ones who need you the most.
 
-**You've got this.** 💪
+**You've got this.** ðŸ’ª
 
 ---
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+

@@ -1,4 +1,4 @@
-import { Users, Star, Award, TrendingUp } from "lucide-react"
+﻿import { Users, Star, Award, TrendingUp } from "lucide-react"
 
 interface SocialProofBarProps {
   stats: Array<{
@@ -35,3 +35,4 @@ export function SocialProofBar({ stats }: SocialProofBarProps) {
     </div>
   )
 }
+

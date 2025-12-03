@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import ResourceLibraryClient from "./resource-library-client"
 
 export const metadata: Metadata = {
@@ -16,4 +16,5 @@ export default function ResourceLibraryPage() {
   return <ResourceLibraryClient />
 }
 import type { Metadata } from "next"
+
 

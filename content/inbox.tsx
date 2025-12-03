@@ -1,4 +1,4 @@
-// Inbox for new blog posts
+﻿// Inbox for new blog posts
 // Paste blogPostContent blocks here in this format:
 // { blogPostContent: { en: `...`, de: `...` } }
 
@@ -12,3 +12,4 @@ export const drafts = [
   //   }
   // }
 ]
+

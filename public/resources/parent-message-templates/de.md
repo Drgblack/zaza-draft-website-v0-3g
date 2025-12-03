@@ -1,18 +1,18 @@
-# Elternkommunikations-Toolkit: Vorlagen für jede Situation
+﻿# Elternkommunikations-Toolkit: Vorlagen fÃ¼r jede Situation
 
 _Kurz, klar, partnerschaftlich._
 
-## Positive Rückmeldung
+## Positive RÃ¼ckmeldung
 
 **Betreff:** Gute Neuigkeiten zu **[Name]**
 
-> Heute zeigte **[Name]** … **[konkret]**. Das stärkt **[Fähigkeit]**. Vielen Dank für die Unterstützung zu Hause!
+> Heute zeigte **[Name]** â€¦ **[konkret]**. Das stÃ¤rkt **[FÃ¤higkeit]**. Vielen Dank fÃ¼r die UnterstÃ¼tzung zu Hause!
 
 ## Fehlende Abgabe
 
 **Betreff:** Fehlende **[Aufgabe]**
 
-> **[Name]** fehlen **[n]** Abgabe(n). Nächster Schritt: **[Maßnahme]**. Bitte um kurze Bestätigung - danke!
+> **[Name]** fehlen **[n]** Abgabe(n). NÃ¤chster Schritt: **[MaÃŸnahme]**. Bitte um kurze BestÃ¤tigung - danke!
 
 ## Vorfall sachlich
 
@@ -21,5 +21,6 @@ _Kurz, klar, partnerschaftlich._
 ## Schuljahres-Start
 
 - Vorstellung & Kontakt
-- Inhalte + 1-2 konkrete Unterstützungen zu Hause
+- Inhalte + 1-2 konkrete UnterstÃ¼tzungen zu Hause
 - Rhythmus der Updates
+

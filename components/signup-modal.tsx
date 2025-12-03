@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import type React from "react"
 
@@ -153,3 +153,4 @@ export function SignupModal({ open, onOpenChange }: SignupModalProps) {
     </div>
   )
 }
+

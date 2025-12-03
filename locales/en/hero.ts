@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   eyebrow: "FOR TEACHERS",
   badge: "Hallucination-safe AI for teachers",
   headline: "Write like you",
@@ -13,3 +13,4 @@ export default {
     teachers: "500+ teachers",
   },
 };
+

@@ -1,18 +1,18 @@
-{
+﻿{
   "nav": {
     "home": "Startseite",
     "features": "Funktionen",
     "glossary": "KI-Glossar",
     "aiLiteracy": "KI-Kompetenz",
-    "about": "Über uns",
+    "about": "Ãœber uns",
     "pricing": "Preise",
     "contact": "Kontakt",
     "demo": "Demo anfordern"
   },
   "footer": {
-    "tagline": "Lehrkräfte mit KI-gestützten Schreibwerkzeugen stärken",
-    "description": "Zaza Draft hilft Lehrkräften, Zeit zu sparen und effektiver mit KI-unterstütztem Schreiben zu kommunizieren.",
-    "copyright": "© 2024 Zaza Draft. Alle Rechte vorbehalten.",
+    "tagline": "LehrkrÃ¤fte mit KI-gestÃ¼tzten Schreibwerkzeugen stÃ¤rken",
+    "description": "Zaza Draft hilft LehrkrÃ¤ften, Zeit zu sparen und effektiver mit KI-unterstÃ¼tztem Schreiben zu kommunizieren.",
+    "copyright": "Â© 2024 Zaza Draft. Alle Rechte vorbehalten.",
     "product": "Produkt",
     "company": "Unternehmen",
     "resources": "Ressourcen",
@@ -21,7 +21,7 @@
       "features": "Funktionen",
       "pricing": "Preise",
       "demo": "Demo anfordern",
-      "about": "Über uns",
+      "about": "Ãœber uns",
       "careers": "Karriere",
       "contact": "Kontakt",
       "blog": "Blog",
@@ -46,8 +46,8 @@
       "description": "Erhalten Sie die neuesten Updates zu KI in der Bildung.",
       "placeholder": "E-Mail-Adresse eingeben",
       "subscribe": "Abonnieren",
-      "success": "Vielen Dank für Ihr Abonnement!",
-      "error": "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+      "success": "Vielen Dank fÃ¼r Ihr Abonnement!",
+      "error": "Bitte geben Sie eine gÃ¼ltige E-Mail-Adresse ein."
     }
   },
   "buttons": {
@@ -59,14 +59,14 @@
     "contactUs": "Kontaktieren Sie uns",
     "readMore": "Weiterlesen",
     "viewAll": "Alle anzeigen",
-    "back": "Zurück",
+    "back": "ZurÃ¼ck",
     "next": "Weiter",
     "submit": "Absenden",
     "cancel": "Abbrechen",
     "save": "Speichern",
     "edit": "Bearbeiten",
-    "delete": "Löschen",
-    "close": "Schließen"
+    "delete": "LÃ¶schen",
+    "close": "SchlieÃŸen"
   },
   "language": {
     "switch": "Sprache wechseln",
@@ -74,7 +74,8 @@
     "de": "Deutsch"
   },
   "meta": {
-    "defaultTitle": "Zaza Draft - KI-Schreibassistent für Lehrkräfte",
-    "defaultDescription": "Sparen Sie Zeit und kommunizieren Sie besser mit KI-gestützten Schreibwerkzeugen, die speziell für Lehrkräfte entwickelt wurden."
+    "defaultTitle": "Zaza Draft - KI-Schreibassistent fÃ¼r LehrkrÃ¤fte",
+    "defaultDescription": "Sparen Sie Zeit und kommunizieren Sie besser mit KI-gestÃ¼tzten Schreibwerkzeugen, die speziell fÃ¼r LehrkrÃ¤fte entwickelt wurden."
   }
 }
+

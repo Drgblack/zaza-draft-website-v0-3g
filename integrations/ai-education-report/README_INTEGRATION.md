@@ -1,6 +1,6 @@
-# State of AI in Education 2025 Report - Complete Integration Guide
+﻿# State of AI in Education 2025 Report - Complete Integration Guide
 
-## ðŸ“¦ Package Contents
+## Ã°Å¸â€œÂ¦ Package Contents
 
 You now have everything needed to integrate the report generation into your website:
 
@@ -12,7 +12,7 @@ You now have everything needed to integrate the report generation into your webs
 4. **report_generator_package.md** - Full integration documentation
 5. **State_of_AI_Education_2025.pdf** - Sample generated report
 
-## ðŸš€ Quick Start for Claude Code
+## Ã°Å¸Å¡â‚¬ Quick Start for Claude Code
 
 ### Step 1: Set Up Python Environment
 
@@ -50,7 +50,7 @@ python generate_report.py --format docx --output test_report.docx
 python generate_report.py --format html --output test_report.html
 ```
 
-## ðŸ”Œ Website Integration Options
+## Ã°Å¸â€Å’ Website Integration Options
 
 ### Option 1: Simple Download Link (Easiest)
 
@@ -262,9 +262,9 @@ export default function ReportDownloadForm() {
           onChange={(e) => setFormData({ ...formData, format: e.target.value })}
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
         >
-          <option value="pdf">ðŸ“„ PDF (Recommended)</option>
-          <option value="docx">ðŸ“ Word Document (Editable)</option>
-          <option value="html">ðŸŒ HTML (Web View)</option>
+          <option value="pdf">Ã°Å¸â€œâ€ž PDF (Recommended)</option>
+          <option value="docx">Ã°Å¸â€œÂ Word Document (Editable)</option>
+          <option value="html">Ã°Å¸Å’Â HTML (Web View)</option>
         </select>
       </div>
 
@@ -305,7 +305,7 @@ async function sendReportEmail(email, filePath, filename) {
       name: "Zaza Draft",
     },
     to: [{ email: email }],
-    subject: "ðŸ“Š Your State of AI in Education 2025 Report",
+    subject: "Ã°Å¸â€œÅ  Your State of AI in Education 2025 Report",
     htmlContent: `
       <!DOCTYPE html>
       <html>
@@ -329,13 +329,13 @@ async function sendReportEmail(email, filePath, filename) {
       <body>
         <div class="container">
           <div class="header">
-            <h1>ðŸŽ“ State of AI in Education 2025</h1>
+            <h1>Ã°Å¸Å½â€œ State of AI in Education 2025</h1>
           </div>
           <div class="content">
             <h2>Thank you for downloading our report!</h2>
             <p>Your comprehensive 26-page report is attached to this email.</p>
             
-            <h3>ðŸ“Š What's Inside:</h3>
+            <h3>Ã°Å¸â€œÅ  What's Inside:</h3>
             <ul>
               <li>Key findings from 15,000+ teachers</li>
               <li>Adoption trends across grade levels and subjects</li>
@@ -371,7 +371,7 @@ if (email) {
 }
 ```
 
-## ðŸ”’ Security & Performance
+## Ã°Å¸â€â€™ Security & Performance
 
 ### 1. Rate Limiting
 
@@ -433,7 +433,7 @@ cron.schedule("0 * * * *", async () => {
 });
 ```
 
-## ðŸ“Š Analytics Integration
+## Ã°Å¸â€œÅ  Analytics Integration
 
 Track report downloads:
 
@@ -450,7 +450,7 @@ await trackEvent({
 });
 ```
 
-## ðŸ§ª Testing
+## Ã°Å¸Â§Âª Testing
 
 ### Test the Python script directly:
 
@@ -468,7 +468,7 @@ curl -X POST http://localhost:3000/api/generate-report \
   -d '{"format": "pdf", "email": "test@example.com"}'
 ```
 
-## ðŸ› Troubleshooting
+## Ã°Å¸Ââ€º Troubleshooting
 
 ### Python not found
 
@@ -506,7 +506,7 @@ mkdir -p public/downloads
 chmod 755 public/downloads
 ```
 
-## ðŸ“ Environment Variables
+## Ã°Å¸â€œÂ Environment Variables
 
 Add to your `.env` file:
 
@@ -523,7 +523,7 @@ BREVO_API_KEY=your_brevo_api_key
 MAX_REPORT_AGE_HOURS=24
 ```
 
-## ðŸš€ Deployment
+## Ã°Å¸Å¡â‚¬ Deployment
 
 ### Ensure these are in production:
 
@@ -551,14 +551,14 @@ crontab -e
 tail -f /var/log/app.log
 ```
 
-## ðŸ“- Additional Resources
+## Ã°Å¸â€œ- Additional Resources
 
 - ReportLab docs: https://www.reportlab.com/docs/
 - Matplotlib docs: https://matplotlib.org/
 - Express.js docs: https://expressjs.com/
 - Node.js child_process: https://nodejs.org/api/child_process.html
 
-## ðŸ¤ Support
+## Ã°Å¸Â¤Â Support
 
 For questions or issues:
 
@@ -570,3 +570,4 @@ For questions or issues:
 ---
 
 **Ready to integrate?** Start with Option 1 (simple download) and upgrade to Option 2 (dynamic generation) when needed!
+

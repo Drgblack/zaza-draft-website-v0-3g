@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   heading: "What teachers say",
   quote1: {
     text: "I got my Sunday back. Draft turns hours into minutes.",
@@ -16,3 +16,4 @@ export default {
     author: "Department Lead, DE",
   },
 };
+

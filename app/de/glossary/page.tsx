@@ -40,3 +40,4 @@ export default function GlossaryPage() {
   );
 }
 import type { Metadata } from "next";
+

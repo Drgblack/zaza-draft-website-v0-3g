@@ -1,4 +1,4 @@
-# The 5-Minute Professional Tone Checklist
+﻿# The 5-Minute Professional Tone Checklist
 ## Your Quick Audit Tool for Parent Emails Before You Hit Send
 
 *Stop second-guessing your parent emails. This checklist helps you review tone, clarity, and professionalism in under 5 minutes - so you can send with confidence.*
@@ -45,8 +45,8 @@ Use this checklist BEFORE hitting send on any parent email.
   Can they tell within 5 seconds why I'm emailing?
 
 - [ ] **Did I use specific details (not vague language)?**  
-  Example: âœ… "Alex missed 3 homework assignments this week"  
-  Example: âŒ "Alex isn't doing well"
+  Example: Ã¢Å“â€¦ "Alex missed 3 homework assignments this week"  
+  Example: Ã¢Å’ "Alex isn't doing well"
 
 - [ ] **Is there a clear action step?**  
   Do they know what I'm asking them to do (if anything)?
@@ -64,22 +64,22 @@ Use this checklist BEFORE hitting send on any parent email.
 
 - [ ] **Did I start with something positive or empathetic?**  
   Even for difficult emails, lead with care:  
-  âœ… "I've enjoyed having Maya in class"  
-  âœ… "I know this week has been tough for your family"
+  Ã¢Å“â€¦ "I've enjoyed having Maya in class"  
+  Ã¢Å“â€¦ "I know this week has been tough for your family"
 
 - [ ] **Am I describing behavior (not judging character)?**  
-  âœ… "Jamie left his seat 5 times during the lesson"  
-  âŒ "Jamie is disrespectful and lazy"
+  Ã¢Å“â€¦ "Jamie left his seat 5 times during the lesson"  
+  Ã¢Å’ "Jamie is disrespectful and lazy"
 
 - [ ] **Did I use "I" statements (not "you" accusations)?**  
-  âœ… "I noticed..."  
-  âœ… "I'm concerned about..."  
-  âŒ "You need to..."  
-  âŒ "You're not doing your job as a parent"
+  Ã¢Å“â€¦ "I noticed..."  
+  Ã¢Å“â€¦ "I'm concerned about..."  
+  Ã¢Å’ "You need to..."  
+  Ã¢Å’ "You're not doing your job as a parent"
 
 - [ ] **Is my tone collaborative (not commanding)?**  
-  âœ… "Could we work together on a plan?"  
-  âŒ "You need to fix this immediately."
+  Ã¢Å“â€¦ "Could we work together on a plan?"  
+  Ã¢Å’ "You need to fix this immediately."
 
 - [ ] **Would I be okay receiving this email?**  
   Read it as if you're the parent. Does it feel respectful?
@@ -93,9 +93,9 @@ Use this checklist BEFORE hitting send on any parent email.
 **Ask yourself:**
 
 - [ ] **Did I use a professional greeting and closing?**  
-  âœ… "Dear [Name]," / "Hi [Name],"  
-  âœ… "Best regards," / "Sincerely," / "Thank you,"  
-  âŒ "Hey" / "Later" / No greeting at all
+  Ã¢Å“â€¦ "Dear [Name]," / "Hi [Name],"  
+  Ã¢Å“â€¦ "Best regards," / "Sincerely," / "Thank you,"  
+  Ã¢Å’ "Hey" / "Later" / No greeting at all
 
 - [ ] **Did I spell the parent's name correctly?**  
   Double-check. This matters.
@@ -104,12 +104,12 @@ Use this checklist BEFORE hitting send on any parent email.
   Read it out loud or use a tool like Grammarly.
 
 - [ ] **Did I avoid jargon or acronyms without explaining them?**  
-  âœ… "Individualized Education Program (IEP)"  
-  âŒ "We need to discuss the 504"
+  Ã¢Å“â€¦ "Individualized Education Program (IEP)"  
+  Ã¢Å’ "We need to discuss the 504"
 
 - [ ] **Did I avoid using ALL CAPS or excessive punctuation?**  
-  âœ… "This is important."  
-  âŒ "THIS IS URGENT!!!"
+  Ã¢Å“â€¦ "This is important."  
+  Ã¢Å’ "THIS IS URGENT!!!"
 
 > **Quick Fix:** If you're unsure about a word or phrase, look it up or rephrase it. Better safe than embarrassed.
 
@@ -120,16 +120,16 @@ Use this checklist BEFORE hitting send on any parent email.
 **Ask yourself:**
 
 - [ ] **Did I acknowledge the parent's perspective or concerns?**  
-  âœ… "I understand this is frustrating"  
-  âœ… "I appreciate you sharing that with me"
+  Ã¢Å“â€¦ "I understand this is frustrating"  
+  Ã¢Å“â€¦ "I appreciate you sharing that with me"
 
 - [ ] **Did I offer support (not just criticism)?**  
-  âœ… "Here's what I'm doing to help..."  
-  âœ… "Let's work on this together"
+  Ã¢Å“â€¦ "Here's what I'm doing to help..."  
+  Ã¢Å“â€¦ "Let's work on this together"
 
 - [ ] **Did I end on a positive or hopeful note?**  
-  âœ… "I'm confident we can turn this around"  
-  âœ… "Thank you for your partnership"
+  Ã¢Å“â€¦ "I'm confident we can turn this around"  
+  Ã¢Å“â€¦ "Thank you for your partnership"
 
 - [ ] **Would this email strengthen or weaken our relationship?**  
   If it might weaken it, revise or request an in-person conversation instead.
@@ -197,60 +197,60 @@ Some words and phrases trigger defensiveness in parents. Avoid these:
 
 ### JUDGMENTAL LANGUAGE
 
-- âŒ "disrespectful"  
-- âŒ "lazy"  
-- âŒ "bad attitude"  
-- âŒ "doesn't care"  
-- âŒ "disruptive"
+- Ã¢Å’ "disrespectful"  
+- Ã¢Å’ "lazy"  
+- Ã¢Å’ "bad attitude"  
+- Ã¢Å’ "doesn't care"  
+- Ã¢Å’ "disruptive"
 
 **Better alternatives:**
-- âœ… "struggling to follow directions"
-- âœ… "not completing work consistently"
-- âœ… "having trouble staying engaged"
-- âœ… "needs support with focus"
+- Ã¢Å“â€¦ "struggling to follow directions"
+- Ã¢Å“â€¦ "not completing work consistently"
+- Ã¢Å“â€¦ "having trouble staying engaged"
+- Ã¢Å“â€¦ "needs support with focus"
 
 ---
 
 ### BLAMING LANGUAGE
 
-- âŒ "You're not doing your job"  
-- âŒ "This is your fault"  
-- âŒ "You need to make [student] do..."  
-- âŒ "Why haven't you...?"
+- Ã¢Å’ "You're not doing your job"  
+- Ã¢Å’ "This is your fault"  
+- Ã¢Å’ "You need to make [student] do..."  
+- Ã¢Å’ "Why haven't you...?"
 
 **Better alternatives:**
-- âœ… "Let's work together on..."
-- âœ… "Could you help by...?"
-- âœ… "I'd love your support with..."
+- Ã¢Å“â€¦ "Let's work together on..."
+- Ã¢Å“â€¦ "Could you help by...?"
+- Ã¢Å“â€¦ "I'd love your support with..."
 
 ---
 
 ### VAGUE LANGUAGE
 
-- âŒ "doing poorly"  
-- âŒ "having trouble"  
-- âŒ "needs improvement"  
-- âŒ "not meeting expectations"
+- Ã¢Å’ "doing poorly"  
+- Ã¢Å’ "having trouble"  
+- Ã¢Å’ "needs improvement"  
+- Ã¢Å’ "not meeting expectations"
 
 **Better alternatives:**
-- âœ… "scored 60% on the last quiz"
-- âœ… "struggling with [specific skill]"
-- âœ… "needs to work on [specific behavior]"
-- âœ… "currently at [specific level] instead of [expected level]"
+- Ã¢Å“â€¦ "scored 60% on the last quiz"
+- Ã¢Å“â€¦ "struggling with [specific skill]"
+- Ã¢Å“â€¦ "needs to work on [specific behavior]"
+- Ã¢Å“â€¦ "currently at [specific level] instead of [expected level]"
 
 ---
 
 ### ABSOLUTE LANGUAGE
 
-- âŒ "always"  
-- âŒ "never"  
-- âŒ "every time"  
-- âŒ "constantly"
+- Ã¢Å’ "always"  
+- Ã¢Å’ "never"  
+- Ã¢Å’ "every time"  
+- Ã¢Å’ "constantly"
 
 **Better alternatives:**
-- âœ… "frequently"
-- âœ… "often"
-- âœ… "has been [behavior] for the past [timeframe]"
+- Ã¢Å“â€¦ "frequently"
+- Ã¢Å“â€¦ "often"
+- Ã¢Å“â€¦ "has been [behavior] for the past [timeframe]"
 
 ---
 
@@ -465,11 +465,12 @@ This checklist won't make you a perfect writer. But it will help you catch tone 
 
 Use it every time. Over time, it'll become second nature.
 
-**You've got this - now go send that email with confidence.** âœ
+**You've got this - now go send that email with confidence.** Ã¢Å“
 
 ---
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+

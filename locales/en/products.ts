@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   teach: {
     hero: {
       eyebrow: "LESSON PLANNING MADE EASY",
@@ -200,3 +200,4 @@ export default {
     },
   },
 };
+

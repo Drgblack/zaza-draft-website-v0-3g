@@ -1,4 +1,4 @@
-# The Teacher's AI Prompt Library
+﻿# The Teacher's AI Prompt Library
 
 ## Your Complete Guide to Effective AI Prompts for Every Teaching Moment
 
@@ -29,25 +29,25 @@ Before we dive into templates, here's the framework that makes prompts work:
 
 **1. ROLE** - Tell the AI who to act as
 
-- ✅ "Act as a 7th-grade science teacher with 10 years of experience"
-- ❌ "You are a teacher"
+- âœ… "Act as a 7th-grade science teacher with 10 years of experience"
+- âŒ "You are a teacher"
 
 **2. TASK** - State exactly what you want
 
-- ✅ "Draft a 150-word email to a parent about missing homework"
-- ❌ "Write something about homework"
+- âœ… "Draft a 150-word email to a parent about missing homework"
+- âŒ "Write something about homework"
 
 **3. CONSTRAINTS** - Set boundaries (tone, length, reading level)
 
-- ✅ "Keep it under 180 words, professional but warm, reading level: 8th grade"
-- ❌ "Make it good"
+- âœ… "Keep it under 180 words, professional but warm, reading level: 8th grade"
+- âŒ "Make it good"
 
 **4. INPUTS** - Provide context (paste student work, rubric, or details)
 
-- ✅ "Context: Student has missed 4/6 assignments, but participates well in class"
-- ❌ No context given
+- âœ… "Context: Student has missed 4/6 assignments, but participates well in class"
+- âŒ No context given
 
-> 💡 **Pro Tip:** Start with role + task + one constraint. Review the output. Then add more constraints to refine. Don't try to write the perfect prompt on your first attempt.
+> ðŸ’¡ **Pro Tip:** Start with role + task + one constraint. Review the output. Then add more constraints to refine. Don't try to write the perfect prompt on your first attempt.
 
 ### Quick Example
 
@@ -539,8 +539,9 @@ Great prompts are like great lesson plans: they're adaptable, evidence-based, an
 
 Start small. Test one prompt this week. Refine it. Then add another. Before you know it, you'll have a personal library of prompts that feel like having a teaching assistant in your pocket.
 
-**You've got this.** 🎓
+**You've got this.** ðŸŽ“
 
 ---
 
-_© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact._
+_Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact._
+

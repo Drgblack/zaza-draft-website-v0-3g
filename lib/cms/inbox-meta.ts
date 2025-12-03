@@ -1,4 +1,4 @@
-// Metadata for inbox drafts (same order as content/inbox.ts)
+﻿// Metadata for inbox drafts (same order as content/inbox.ts)
 // Add one entry per draft in the same order
 
 export const meta = [
@@ -14,3 +14,4 @@ export const meta = [
   //   tags: ["AI", "Productivity"]
   // }
 ]
+

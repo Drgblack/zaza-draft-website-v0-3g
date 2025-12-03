@@ -1,10 +1,10 @@
-export default {
+﻿export default {
   hero: {
-    badge: "25.000+ aktive Lehrkräfte",
+    badge: "25.000+ aktive LehrkrÃ¤fte",
     titlePrefix: "Treten Sie der",
     titleHighlight: "Lehrercommunity bei",
     subtitle:
-      "Vernetzen Sie sich weltweit mit Lehrkräften. Teilen Sie Strategien, stellen Sie Fragen und lernen Sie von erfolgreichen Praxisbeispielen zum Einsatz von KI im Unterricht.",
+      "Vernetzen Sie sich weltweit mit LehrkrÃ¤ften. Teilen Sie Strategien, stellen Sie Fragen und lernen Sie von erfolgreichen Praxisbeispielen zum Einsatz von KI im Unterricht.",
   },
   search: {
     placeholder: "Diskussionen durchsuchen...",
@@ -12,39 +12,39 @@ export default {
   stats: {
     members: "Mitglieder",
     discussions: "Diskussionen",
-    posts: "Beiträge",
+    posts: "BeitrÃ¤ge",
     active: "Aktiv",
   },
   guidelines: {
     title: "Community-Richtlinien",
-    li1: "Respektvoll und unterstützend sein",
+    li1: "Respektvoll und unterstÃ¼tzend sein",
     li2: "Praktische, umsetzbare Tipps teilen",
-    li3: "Schülerdatenschutz wahren",
+    li3: "SchÃ¼lerdatenschutz wahren",
     li4: "Urheberschaft anerkennen",
-    read: "Vollständige Richtlinien lesen",
+    read: "VollstÃ¤ndige Richtlinien lesen",
   },
   related: {
     title: "Wissen erweitern",
-    desc: "Vertiefen Sie Ihr Communityâ€‘Erlebnis mit diesen Lernressourcen",
+    desc: "Vertiefen Sie Ihr CommunityÃ¢â‚¬â€˜Erlebnis mit diesen Lernressourcen",
     aiLiteracy: {
-      title: "KIâ€‘Kompetenzkurse",
+      title: "KIÃ¢â‚¬â€˜Kompetenzkurse",
       desc: "Grundlagen lernen, die in der Community diskutiert werden",
     },
     webinars: {
-      title: "Expertenâ€‘Webinare",
-      desc: "Liveâ€‘Sessions zu aktuellen Communityâ€‘Themen",
+      title: "ExpertenÃ¢â‚¬â€˜Webinare",
+      desc: "LiveÃ¢â‚¬â€˜Sessions zu aktuellen CommunityÃ¢â‚¬â€˜Themen",
     },
     glossary: {
-      title: "KIâ€‘Glossar",
+      title: "KIÃ¢â‚¬â€˜Glossar",
       desc: "Begriffe aus den Diskussionen verstehen",
     },
   },
   cta: {
     titlePrefix: "Bereit,",
     titleHighlight: "an der Diskussion teilzunehmen?",
-    body: "Erstellen Sie kostenlos ein Konto und vernetzen Sie sich mit Tausenden Lehrkräften, die KI im Unterricht einsetzen.",
+    body: "Erstellen Sie kostenlos ein Konto und vernetzen Sie sich mit Tausenden LehrkrÃ¤ften, die KI im Unterricht einsetzen.",
     primary: "Kostenloses Konto erstellen",
-    secondary: "Als Gast stöbern",
+    secondary: "Als Gast stÃ¶bern",
   },
   categoriesTitle: "Diskussionskategorien",
   categories: {
@@ -54,23 +54,23 @@ export default {
     },
     "prompt-engineering": {
       name: "Prompt-Engineering",
-      desc: "Teilen und diskutieren Sie wirksame Prompts für unterschiedliche Unterrichtsszenarien.",
+      desc: "Teilen und diskutieren Sie wirksame Prompts fÃ¼r unterschiedliche Unterrichtsszenarien.",
     },
     "lesson-planning": {
       name: "Unterrichtsplanung",
-      desc: "Gemeinsam KI-gestützte Unterrichts- und Einheitenplanung erarbeiten.",
+      desc: "Gemeinsam KI-gestÃ¼tzte Unterrichts- und Einheitenplanung erarbeiten.",
     },
     "parent-communication": {
       name: "Elternkommunikation",
-      desc: "Tipps für den KIâ€‘Einsatz zur Verbesserung der Eltern-Lehrer-Kommunikation.",
+      desc: "Tipps fÃ¼r den KIÃ¢â‚¬â€˜Einsatz zur Verbesserung der Eltern-Lehrer-Kommunikation.",
     },
     "assessment-feedback": {
       name: "Bewertung & Feedback",
-      desc: "KI-Tools für Korrektur, Feedback und formative Beurteilung diskutieren.",
+      desc: "KI-Tools fÃ¼r Korrektur, Feedback und formative Beurteilung diskutieren.",
     },
     differentiation: {
-      name: "Differenzierung & Förderpläne",
-      desc: "Mit KI vielfältige Lernende unterstützen und Nachteilsausgleiche erstellen.",
+      name: "Differenzierung & FÃ¶rderplÃ¤ne",
+      desc: "Mit KI vielfÃ¤ltige Lernende unterstÃ¼tzen und Nachteilsausgleiche erstellen.",
     },
     "ethics-policy": {
       name: "Ethik & Richtlinien",
@@ -94,7 +94,7 @@ export default {
     },
     "off-topic": {
       name: "Off-Topic-Lounge",
-      desc: "Austausch zu Themen außerhalb von KI.",
+      desc: "Austausch zu Themen auÃŸerhalb von KI.",
     },
   },
   badges: {
@@ -104,7 +104,7 @@ export default {
     },
     helpful: {
       name: "Hilfreich",
-      desc: "Über 50 Likes erhalten",
+      desc: "Ãœber 50 Likes erhalten",
     },
     expert: {
       name: "Experte",
@@ -112,7 +112,8 @@ export default {
     },
     ambassador: {
       name: "Botschafter",
-      desc: "Offizieller Zazaâ€‘Botschafter",
+      desc: "Offizieller ZazaÃ¢â‚¬â€˜Botschafter",
     },
   },
 };
+

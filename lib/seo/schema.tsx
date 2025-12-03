@@ -1,4 +1,4 @@
-import Script from "next/script"
+﻿import Script from "next/script"
 
 interface OrganizationSchemaProps {
   name: string
@@ -227,3 +227,4 @@ export function SoftwareApplicationSchema({
     </Script>
   )
 }
+

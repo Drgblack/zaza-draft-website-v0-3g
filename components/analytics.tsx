@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useEffect } from "react"
 
@@ -36,3 +36,4 @@ declare global {
     dataLayer: any[]
   }
 }
+

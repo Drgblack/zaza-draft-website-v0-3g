@@ -1,4 +1,4 @@
-type Lang = "en" | "de";
+﻿type Lang = "en" | "de";
 
 function stripTags(s: string){ return s.replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim() }
 function wc(html: string){ const t = stripTags(html); return t ? t.split(" ").length : 0 }
@@ -55,47 +55,47 @@ Include for each: goal (1 sentence), steps (numbered), one formative question, s
   return `
 <h2>Kernideen</h2>
 <ul>
-  <li><strong>Gleiches Ziel, unterschiedliche Wege:</strong> UnterstÃ¼tzung/Herausforderung anpassen, Standard bleibt.</li>
-  <li><strong>KI entwirft, Sie entscheiden:</strong> Varianten vorschlagen lassen, dann fÃ¼r die Lerngruppe zuschneiden.</li>
-  <li><strong>3 Spuren:</strong> Einstieg (GerÃ¼ste), Kern (Niveau), Erweiterung (Vertiefung).</li>
+  <li><strong>Gleiches Ziel, unterschiedliche Wege:</strong> UnterstÃƒÂ¼tzung/Herausforderung anpassen, Standard bleibt.</li>
+  <li><strong>KI entwirft, Sie entscheiden:</strong> Varianten vorschlagen lassen, dann fÃƒÂ¼r die Lerngruppe zuschneiden.</li>
+  <li><strong>3 Spuren:</strong> Einstieg (GerÃƒÂ¼ste), Kern (Niveau), Erweiterung (Vertiefung).</li>
 </ul>
 <h2>Mikro-Fallstudie</h2>
-<p><strong>Fall:</strong> Heterogene Gruppe bei "${title}". <strong>Herausforderung:</strong> Ein Arbeitsblatt passt selten. <strong>LÃ¶sung:</strong> Einstieg/Kern/Erweiterung mit gemeinsamen Erfolgskriterien. <strong>Ergebnis:</strong> Mehr Zugang, bessere Evidenz, weniger Vorbereitung.</p>
+<p><strong>Fall:</strong> Heterogene Gruppe bei "${title}". <strong>Herausforderung:</strong> Ein Arbeitsblatt passt selten. <strong>LÃƒÂ¶sung:</strong> Einstieg/Kern/Erweiterung mit gemeinsamen Erfolgskriterien. <strong>Ergebnis:</strong> Mehr Zugang, bessere Evidenz, weniger Vorbereitung.</p>
 <h2>Vorlagenpaket</h2>
 <pre><code>Prompt: Erstelle Einstieg/Kern/Erweiterung zu "${title}".
-- Einstieg: einfache SÃ¤tze, Visualisierungen, SatzanfÃ¤nge.
-- Kern: altersgemÃ¤ÃŸe Fachsprache, eine BegrÃ¼ndungsfrage.
+- Einstieg: einfache SÃƒÂ¤tze, Visualisierungen, SatzanfÃƒÂ¤nge.
+- Kern: altersgemÃƒÂ¤ÃƒÅ¸e Fachsprache, eine BegrÃƒÂ¼ndungsfrage.
 - Erweiterung: Transfer oder quantitative Argumentation.
-FÃ¼r jede Version: Ziel (1 Satz), Schritte (nummeriert),
+FÃƒÂ¼r jede Version: Ziel (1 Satz), Schritte (nummeriert),
 eine formative Frage, Erfolgskriterien.</code></pre>
-<h2>FÃ¼r den Unterricht</h2>
+<h2>FÃƒÂ¼r den Unterricht</h2>
 <ol>
-  <li>Eine anstehende Aufgabe wÃ¤hlen und Erfolgskriterien festlegen.</li>
+  <li>Eine anstehende Aufgabe wÃƒÂ¤hlen und Erfolgskriterien festlegen.</li>
   <li>Mit dem Prompt drei Versionen erzeugen.</li>
-  <li>Auf eine Seite kÃ¼rzen; eigene Beispiele ergÃ¤nzen.</li>
+  <li>Auf eine Seite kÃƒÂ¼rzen; eigene Beispiele ergÃƒÂ¤nzen.</li>
   <li>Den Wechsel Einstieg ? Kern ? Erweiterung anleiten.</li>
   <li>Mit 3-Fragen-Exit-Ticket gruppieren.</li>
 </ol>
 <h2>Erweiterte Checkliste</h2>
 <ul>
   <li>Gleiches Lernziel in allen Versionen.</li>
-  <li>VerstÃ¤ndnis-HÃ¼rden zuerst senken (Anweisungen, Vokabeln).</li>
-  <li>Ein Beispiel gelÃ¶st, eines halb gelÃ¶st.</li>
+  <li>VerstÃƒÂ¤ndnis-HÃƒÂ¼rden zuerst senken (Anweisungen, Vokabeln).</li>
+  <li>Ein Beispiel gelÃƒÂ¶st, eines halb gelÃƒÂ¶st.</li>
   <li>Transfer bei Erweiterung einfordern.</li>
   <li>Eine Rubrik, gemeinsame Sprache; Evidenz variiert.</li>
-  <li>Schnelle Datenerhebung fÃ¼r die nÃ¤chste Stunde.</li>
+  <li>Schnelle Datenerhebung fÃƒÂ¼r die nÃƒÂ¤chste Stunde.</li>
 </ul>
 <h2>Ressourcen</h2>
 <ul>
   <li>Drei-Spuren-Prompt</li>
-  <li>SchÃ¼lernahe 4-Stufen-Rubrik</li>
-  <li>SatzanfÃ¤nge &amp; Sprachrahmen</li>
+  <li>SchÃƒÂ¼lernahe 4-Stufen-Rubrik</li>
+  <li>SatzanfÃƒÂ¤nge &amp; Sprachrahmen</li>
   <li>Vokabel-Karten</li>
   <li>Fehlerbank</li>
   <li>Exit-Ticket-Vorlagen</li>
 </ul>
 <h2>Schlussgedanke</h2>
-<p>${excerpt ?? "Differenzierung ist Gestaltung, nicht drei getrennte Stunden - KI unterstÃ¼tzt Zugang und Herausforderung, Sie fokussieren auf Feedback."}</p>`;
+<p>${excerpt ?? "Differenzierung ist Gestaltung, nicht drei getrennte Stunden - KI unterstÃƒÂ¼tzt Zugang und Herausforderung, Sie fokussieren auf Feedback."}</p>`;
 }
 
 export function autoExtendIfNeeded(html: string, lang: Lang, title: string, excerpt?: string){
@@ -111,3 +111,4 @@ export function autoExtendIfNeeded(html: string, lang: Lang, title: string, exce
   const m = addon.match(/<h2>Resources<\/h2>[\s\S]*$/i) || addon.match(/<h2>Ressourcen<\/h2>[\s\S]*$/i);
   return html + "\n" + (m ? m[0] : withResources);
 }
+

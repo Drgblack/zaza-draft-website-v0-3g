@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { Lightbulb } from "lucide-react"
 
@@ -25,3 +25,4 @@ export function QuickAnswerBox({ answer }: QuickAnswerBoxProps) {
     </div>
   )
 }
+

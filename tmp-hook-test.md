@@ -1,1 +1,2 @@
-bad - dash
+﻿bad - dash
+

@@ -1,4 +1,4 @@
-import type { NextRequest } from "next/server";
+﻿import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
 const PUBLIC_FILE = /\.(.*)$/;
@@ -11,26 +11,27 @@ export function middleware(req: NextRequest) {
     return NextResponse.next();
   }
 
-  // Match /en/... or /de/...
+  // Match /en/... or /de/... and just tag the request + cookie without rewriting
   const m = pathname.match(/^\/(en|de)(\/.*)?$/);
   if (m) {
     const lang = m[1] as "en" | "de";
-    const rest = m[2] || "/";
-    const url = new URL(rest, req.url);
+    const requestHeaders = new Headers(req.headers);
+    requestHeaders.set("x-lang", lang);
 
-    const res = NextResponse.rewrite(url);
+    const res = NextResponse.next({ request: { headers: requestHeaders } });
     res.cookies.set("lang", lang, { path: "/", maxAge: 60 * 60 * 24 * 365 });
     return res;
   }
 
-  // For root path or paths without /de, set cookie to 'en'
-  const res = NextResponse.next();
-  if (!pathname.startsWith("/de")) {
-    res.cookies.set("lang", "en", { path: "/", maxAge: 60 * 60 * 24 * 365 });
-  }
+  // Default to English when no locale prefix
+  const requestHeaders = new Headers(req.headers);
+  requestHeaders.set("x-lang", "en");
+  const res = NextResponse.next({ request: { headers: requestHeaders } });
+  res.cookies.set("lang", "en", { path: "/", maxAge: 60 * 60 * 24 * 365 });
   return res;
 }
 
 export const config = {
   matcher: ["/((?!_next|.*\\..*|api).*)"],
 };
+

@@ -1,4 +1,4 @@
-# "This Week in Our Class" Newsletter Starter Kit
+﻿# "This Week in Our Class" Newsletter Starter Kit
 ## Weekly Parent Update Templates That Actually Get Read
 
 *Stop stressing about weekly newsletters. This kit includes 3 ready-to-use templates (elementary, middle, and high school), a content bank with 50+ pre-written sections, and a 10-minute production system.*
@@ -37,19 +37,19 @@ This kit gives you:
 ```
 Subject: This Week in [Grade/Class] - [Date Range]
 
-📚 THIS WEEK WE LEARNED:
+ðŸ“š THIS WEEK WE LEARNED:
 [2-3 bullet points about content covered]
 
-🌟 CLASSROOM HIGHLIGHTS:
+ðŸŒŸ CLASSROOM HIGHLIGHTS:
 [1-2 specific student achievements or fun moments]
 
-📝 UPCOMING:
+ðŸ“ UPCOMING:
 [Dates for tests, projects, field trips, or events]
 
-💡 HOW YOU CAN HELP AT HOME:
+ðŸ’¡ HOW YOU CAN HELP AT HOME:
 [1 specific, doable suggestion]
 
-📸 SNAPSHOTS:
+ðŸ“¸ SNAPSHOTS:
 [Optional: 1-2 photos of classroom activities]
 
 REMINDERS:
@@ -60,21 +60,21 @@ REMINDERS:
 ```
 Subject: This Week in 3rd Grade - November 6-10
 
-📚 THIS WEEK WE LEARNED:
+ðŸ“š THIS WEEK WE LEARNED:
 - Math: Multiplication facts (6, 7, 8 times tables)
 - Reading: Character traits and using text evidence
 - Science: States of matter - solids, liquids, gases
 
-🌟 CLASSROOM HIGHLIGHTS:
+ðŸŒŸ CLASSROOM HIGHLIGHTS:
 - Maya explained her science experiment so clearly that even I learned something new!
 - Our class read a combined 847 minutes this week - a new record!
 
-📝 UPCOMING:
+ðŸ“ UPCOMING:
 - Nov 15: Multiplication quiz (facts 0-10)
 - Nov 17: Book reports due
 - Nov 22-24: Thanksgiving break (no school)
 
-💡 HOW YOU CAN HELP AT HOME:
+ðŸ’¡ HOW YOU CAN HELP AT HOME:
 Practice multiplication facts for 5 minutes during dinner or car rides. Try the "Around the World" game: you say "6 x 7," and your child races to answer before the timer!
 
 REMINDERS:
@@ -263,7 +263,7 @@ Use these pre-written sections when you're short on time:
 - Send to your email list or post to your LMS
 - Done!
 
-> 💡 **Pro Tip:** Batch-write newsletters. On Sunday, draft newsletters for the next 2-3 weeks by leaving blanks for specific details. On Monday, fill in the blanks and send.
+> ðŸ’¡ **Pro Tip:** Batch-write newsletters. On Sunday, draft newsletters for the next 2-3 weeks by leaving blanks for specific details. On Monday, fill in the blanks and send.
 
 ---
 
@@ -303,7 +303,7 @@ Use these pre-written sections when you're short on time:
 - **Late Friday evening:** Gets buried in weekend emails
 - **Monday evening:** Competes with after-school rush
 
-> 💡 **Pro Tip:** Be consistent. Pick one day and time, and stick to it. Parents will come to expect and look for your newsletter.
+> ðŸ’¡ **Pro Tip:** Be consistent. Pick one day and time, and stick to it. Parents will come to expect and look for your newsletter.
 
 ---
 
@@ -396,7 +396,7 @@ Post a brief update directly to your LMS (parents get notified automatically).
 ### Option 3: The Seesaw/ClassDojo Message
 Use your class app to share a quick photo + caption.
 
-> 💡 **Pro Tip:** It's better to send something short than to skip a week. Consistency builds trust.
+> ðŸ’¡ **Pro Tip:** It's better to send something short than to skip a week. Consistency builds trust.
 
 ---
 
@@ -446,4 +446,5 @@ Parent communication doesn't have to be a time suck. With the right template, a 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+

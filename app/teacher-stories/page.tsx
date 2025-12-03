@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Button } from "@/components/ui/button"
 import { Clock, Heart, Users, Globe, Flame, Sparkles } from "lucide-react"
@@ -174,4 +174,5 @@ export default function TeacherStoriesPage() {
     </>
   )
 }
+
 

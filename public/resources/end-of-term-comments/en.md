@@ -1,4 +1,4 @@
-# Comment Bank Builder: End-of-Term Reports
+﻿# Comment Bank Builder: End-of-Term Reports
 
 _Personalised, balanced comments in minutes._
 
@@ -22,13 +22,14 @@ _Personalised, balanced comments in minutes._
 
 **Closers**
 
-- I’m excited to see how **[student]** applies these skills next term.
-- It’s been a pleasure to see their growing confidence.
+- Iâ€™m excited to see how **[student]** applies these skills next term.
+- Itâ€™s been a pleasure to see their growing confidence.
 
 ## Quick worksheet (per student)
 
-- One praise (evidence) →
-- One polish (skill) →
-- One next step (actionable) →
+- One praise (evidence) â†’
+- One polish (skill) â†’
+- One next step (actionable) â†’
 
-> **Copy/paste:** “Strength: … Growth: … Next step: …”
+> **Copy/paste:** â€œStrength: â€¦ Growth: â€¦ Next step: â€¦â€
+

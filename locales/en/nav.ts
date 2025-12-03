@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   home: "Home",
   pricing: "Pricing",
   products: "Products",
@@ -8,3 +8,4 @@ export default {
   about: "About",
   getStarted: "Get Started",
 };
+

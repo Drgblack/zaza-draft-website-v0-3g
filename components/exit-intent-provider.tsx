@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { usePathname } from "next/navigation"
 import { ExitIntentPopup } from "./exit-intent-popup"
@@ -28,3 +28,4 @@ export function ExitIntentProvider() {
 
   return <ExitIntentPopup pageType={getPageType()} />
 }
+

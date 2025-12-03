@@ -1,4 +1,4 @@
-export const footerConfig = {
+﻿export const footerConfig = {
   social: {
     twitter: "https://twitter.com/zazatech_",
     linkedin: "https://www.linkedin.com/company/zazatechnologies/",
@@ -46,3 +46,4 @@ export const footerConfig = {
     ],
   },
 }
+

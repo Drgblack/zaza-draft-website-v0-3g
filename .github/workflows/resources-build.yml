@@ -1,4 +1,4 @@
-name: Build Resource Downloads (PR)
+﻿name: Build Resource Downloads (PR)
 
 on:
   push:
@@ -40,7 +40,7 @@ jobs:
               md="$dir/$lang.md"
               [ -f "$md" ] || continue
               mkdir -p "$dir/build"
-              echo "Building $md â†’ DOCX/PDF"
+              echo "Building $md Ã¢â€ â€™ DOCX/PDF"
               pandoc "$md" --from=gfm --to=docx $REF_FLAG -o "$dir/build/$lang.docx"
               pandoc "$md" --from=gfm --pdf-engine=tectonic -o "$dir/build/$lang.pdf"
             done
@@ -59,3 +59,4 @@ jobs:
           add-paths: |
             public/resources/*/build/*.docx
             public/resources/*/build/*.pdf
+

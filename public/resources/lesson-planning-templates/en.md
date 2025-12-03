@@ -1,4 +1,4 @@
-# The Flexible Lesson Plan Designer
+﻿# The Flexible Lesson Plan Designer
 
 _Four adaptable Word templates with spots for differentiation and checks._
 
@@ -11,8 +11,9 @@ _Four adaptable Word templates with spots for differentiation and checks._
 
 ## Planning tips
 
-- Write the **learning intention** as a success verb: “I can explain…”
+- Write the **learning intention** as a success verb: â€œI can explainâ€¦â€
 - Add **CFU** every 8-10 minutes (thumbs/mini-whiteboard).
 - Pre-write **supports** (stems, word bank) and **extensions**.
 
-> Paste your standard → the template will align the sequence.
+> Paste your standard â†’ the template will align the sequence.
+

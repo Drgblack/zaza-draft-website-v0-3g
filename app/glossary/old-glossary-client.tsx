@@ -782,3 +782,4 @@ export default function GlossaryClient() {
     </div>
   );
 }
+

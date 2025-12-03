@@ -1,4 +1,4 @@
-# Meet the Founder Building AI That Helps Teachers Thrive
+﻿# Meet the Founder Building AI That Helps Teachers Thrive
 
 I've spent over twenty years working in learning and professional education-across classrooms, universities, and corporate training. One thing has always been true: **teaching is human work.** It requires judgment, care, and emotional labour that cannot be automated.
 
@@ -60,3 +60,4 @@ If that's the kind of future for education you believe in, you're in the right p
 **Greg**  
 **Dr. Greg Blackburn**  
 Founder & CEO, Zaza Technologies
+

@@ -1,4 +1,4 @@
-export const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+﻿export const trackEvent = (eventName: string, properties?: Record<string, any>) => {
   if (typeof window === "undefined") return
 
   // Track with GA4
@@ -92,3 +92,4 @@ export const analytics = {
     viewPricing: (source: string) => trackEvent("pricing_viewed", { source }),
   },
 }
+

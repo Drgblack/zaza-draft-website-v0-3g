@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import FeaturesClient from "./FeaturesClient"
 
 export const metadata: Metadata = {
@@ -14,3 +14,4 @@ export const metadata: Metadata = {
 export default function FeaturesPage() {
   return <FeaturesClient />
 }
+

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useLanguage } from "@/lib/i18n/language-context"
 
@@ -18,7 +18,7 @@ export function PrivacyClient() {
             "@type": "WebPage",
             name: isGerman ? "Datenschutz | Zaza Draft" : "Privacy Policy | Zaza Draft",
             description: isGerman
-              ? "Wie Zaza Draft personenbezogene Daten verarbeitet und schÃ¼tzt. DSGVO-konforme Richtlinie fÃ¼r LehrkrÃ¤fte und Schulen."
+              ? "Wie Zaza Draft personenbezogene Daten verarbeitet und schÃƒÂ¼tzt. DSGVO-konforme Richtlinie fÃƒÂ¼r LehrkrÃƒÂ¤fte und Schulen."
               : "How Zaza Draft collects, uses, and protects your data. GDPR-ready policy for teachers, schools, and partners.",
           }),
         }}
@@ -212,7 +212,7 @@ const contentDE = {
   hero: {
     title: "Datenschutzrichtlinie",
     intro:
-      'Diese Richtlinie erklÃ¤rt, wie Zaza Technologies (â€žwir") personenbezogene Daten fÃ¼r Zaza Draft und verbundene Dienste verarbeitet. Sie beschreibt, welche Daten wir erheben, warum, wie lange wir sie speichern, mit wem wir sie teilen und welche Rechte Sie nach der EU/UK-DSGVO haben.',
+      'Diese Richtlinie erklÃƒÂ¤rt, wie Zaza Technologies (Ã¢â‚¬Å¾wir") personenbezogene Daten fÃƒÂ¼r Zaza Draft und verbundene Dienste verarbeitet. Sie beschreibt, welche Daten wir erheben, warum, wie lange wir sie speichern, mit wem wir sie teilen und welche Rechte Sie nach der EU/UK-DSGVO haben.',
     lastUpdated: "Zuletzt aktualisiert: 12. Oktober 2025",
   },
   onThisPage: "Auf dieser Seite",
@@ -227,17 +227,17 @@ const contentDE = {
     {
       title: "Geltungsbereich",
       content: [
-        "Gilt fÃ¼r zaza-draft.com und verbundene Websites/Apps, einschlieÃŸlich Marketing-Seiten, Produktbereiche und Support.",
+        "Gilt fÃƒÂ¼r zaza-draft.com und verbundene Websites/Apps, einschlieÃƒÅ¸lich Marketing-Seiten, Produktbereiche und Support.",
       ],
     },
     {
       title: "Welche Daten wir erheben",
       content: [
-        "Konto- und IdentitÃ¤tsdaten: Name, E-Mail, Rolle, Schulname (optional), Sprache, Authentifizierungs-IDs.",
-        "Nutzungsdaten: besuchte Seiten, genutzte Funktionen, GerÃ¤te-/Browser-Informationen, ungefÃ¤hrer Standort (aus IP).",
-        "Von Ihnen eingegebene Inhalte: Prompts, eingefÃ¼gter/getippter Text, Nachrichtenvorlagen, gespeicherte Ressourcen.",
+        "Konto- und IdentitÃƒÂ¤tsdaten: Name, E-Mail, Rolle, Schulname (optional), Sprache, Authentifizierungs-IDs.",
+        "Nutzungsdaten: besuchte Seiten, genutzte Funktionen, GerÃƒÂ¤te-/Browser-Informationen, ungefÃƒÂ¤hrer Standort (aus IP).",
+        "Von Ihnen eingegebene Inhalte: Prompts, eingefÃƒÂ¼gter/getippter Text, Nachrichtenvorlagen, gespeicherte Ressourcen.",
         "Support: Nachrichten an unseren Helpdesk, Fehlerberichte, Feedback.",
-        "Zahlungsabwicklung: erfolgt Ã¼ber einen Zahlungsdienstleister; wir speichern keine vollstÃ¤ndigen Kartendaten auf unseren Servern.",
+        "Zahlungsabwicklung: erfolgt ÃƒÂ¼ber einen Zahlungsdienstleister; wir speichern keine vollstÃƒÂ¤ndigen Kartendaten auf unseren Servern.",
       ],
     },
     {
@@ -247,67 +247,67 @@ const contentDE = {
         "Personalisierung des Produkts (z. B. Sprache, zuletzt verwendete Vorlagen).",
         "Sicherheit und Missbrauchsvermeidung (Rate Limits, Anomalieerkennung).",
         "Kommunikation mit Ihnen (Service-E-Mails, Updates, Support).",
-        "ErfÃ¼llung gesetzlicher Pflichten und Durchsetzung der Nutzungsbedingungen.",
+        "ErfÃƒÂ¼llung gesetzlicher Pflichten und Durchsetzung der Nutzungsbedingungen.",
       ],
     },
     {
       title: "Rechtsgrundlagen (DSGVO)",
       content: [
-        "Wir stÃ¼tzen uns auf eine oder mehrere der folgenden Grundlagen: VertragserfÃ¼llung (zur Bereitstellung des Dienstes), berechtigte Interessen (Produktsicherheit, Analyse, Verbesserung), Einwilligung (optionales Marketing und bestimmte Cookies) und gesetzliche Verpflichtung.",
+        "Wir stÃƒÂ¼tzen uns auf eine oder mehrere der folgenden Grundlagen: VertragserfÃƒÂ¼llung (zur Bereitstellung des Dienstes), berechtigte Interessen (Produktsicherheit, Analyse, Verbesserung), Einwilligung (optionales Marketing und bestimmte Cookies) und gesetzliche Verpflichtung.",
       ],
     },
     {
       title: "KI & Auftragsverarbeiter",
       content: [
-        "Zur Generierung und Verbesserung der Schreibhilfe nutzen wir seriÃ¶se KI-Anbieter und Infrastrukturpartner als Auftragsverarbeiter. Wir beschrÃ¤nken die Datenweitergabe auf das zur Bereitstellung des Dienstes Notwendige. Beispiele:",
+        "Zur Generierung und Verbesserung der Schreibhilfe nutzen wir seriÃƒÂ¶se KI-Anbieter und Infrastrukturpartner als Auftragsverarbeiter. Wir beschrÃƒÂ¤nken die Datenweitergabe auf das zur Bereitstellung des Dienstes Notwendige. Beispiele:",
         "Modellanbieter (z. B. OpenAI, Anthropic): Prompt-/Response-Verarbeitung.",
         "Hosting & Infrastruktur (z. B. Cloud- und CDN-Anbieter).",
-        "Auth & Datenbank (z. B. verwaltete IdentitÃ¤t, Speicherung und Protokollierung).",
-        "E-Mail (z. B. Brevo) fÃ¼r Transaktionsnachrichten.",
-        "Wir verkaufen keine personenbezogenen Daten. Wir nutzen SchutzmaÃŸnahmen wie AV-VertrÃ¤ge und, wo erforderlich, Standardvertragsklauseln.",
+        "Auth & Datenbank (z. B. verwaltete IdentitÃƒÂ¤t, Speicherung und Protokollierung).",
+        "E-Mail (z. B. Brevo) fÃƒÂ¼r Transaktionsnachrichten.",
+        "Wir verkaufen keine personenbezogenen Daten. Wir nutzen SchutzmaÃƒÅ¸nahmen wie AV-VertrÃƒÂ¤ge und, wo erforderlich, Standardvertragsklauseln.",
       ],
     },
     {
       title: "Cookies & Analyse",
       content: [
-        "Wir verwenden unbedingt erforderliche Cookies fÃ¼r Login und Sicherheit sowie (mit Einwilligung, wo erforderlich) Analyse-Cookies, um die Nutzung zu verstehen und das Produkt zu verbessern. Sie kÃ¶nnen nicht erforderliche Cookies Ã¼ber unser Cookie-Banner oder Ihre Browser-Einstellungen verwalten.",
+        "Wir verwenden unbedingt erforderliche Cookies fÃƒÂ¼r Login und Sicherheit sowie (mit Einwilligung, wo erforderlich) Analyse-Cookies, um die Nutzung zu verstehen und das Produkt zu verbessern. Sie kÃƒÂ¶nnen nicht erforderliche Cookies ÃƒÂ¼ber unser Cookie-Banner oder Ihre Browser-Einstellungen verwalten.",
       ],
     },
     {
-      title: "Weitergabe & Ãœbermittlungen",
+      title: "Weitergabe & ÃƒÅ“bermittlungen",
       content: [
-        "Wir kÃ¶nnen Daten an Auftragsverarbeiter unter Vertrag, professionelle Berater oder wenn rechtlich erforderlich weitergeben. Bei DatenÃ¼bermittlungen auÃŸerhalb der UK/EU nutzen wir geeignete Garantien (z. B. SCCs).",
+        "Wir kÃƒÂ¶nnen Daten an Auftragsverarbeiter unter Vertrag, professionelle Berater oder wenn rechtlich erforderlich weitergeben. Bei DatenÃƒÂ¼bermittlungen auÃƒÅ¸erhalb der UK/EU nutzen wir geeignete Garantien (z. B. SCCs).",
       ],
     },
     {
       title: "Aufbewahrung",
       content: [
-        "Wir speichern personenbezogene Daten nur so lange wie nÃ¶tig, um den Dienst bereitzustellen und gesetzliche, buchhalterische oder Berichtspflichten zu erfÃ¼llen. Sie kÃ¶nnen die LÃ¶schung Ihrer Kontodaten beantragen (siehe Ihre Rechte).",
+        "Wir speichern personenbezogene Daten nur so lange wie nÃƒÂ¶tig, um den Dienst bereitzustellen und gesetzliche, buchhalterische oder Berichtspflichten zu erfÃƒÂ¼llen. Sie kÃƒÂ¶nnen die LÃƒÂ¶schung Ihrer Kontodaten beantragen (siehe Ihre Rechte).",
       ],
     },
     {
       title: "Sicherheit",
       content: [
-        "Wir nutzen branchenÃ¼bliche SicherheitsmaÃŸnahmen, VerschlÃ¼sselung bei der Ãœbertragung, Zugriffskontrollen und regelmÃ¤ÃŸige ÃœberprÃ¼fungen. Keine Methode ist zu 100 % sicher; bitte bewahren Sie Ihre Zugangsdaten vertraulich auf.",
+        "Wir nutzen branchenÃƒÂ¼bliche SicherheitsmaÃƒÅ¸nahmen, VerschlÃƒÂ¼sselung bei der ÃƒÅ“bertragung, Zugriffskontrollen und regelmÃƒÂ¤ÃƒÅ¸ige ÃƒÅ“berprÃƒÂ¼fungen. Keine Methode ist zu 100 % sicher; bitte bewahren Sie Ihre Zugangsdaten vertraulich auf.",
       ],
     },
     {
       title: "Ihre Rechte",
       content: [
-        "Nach der UK/EU-DSGVO kÃ¶nnen Sie Auskunft, Berichtigung, LÃ¶schung, EinschrÃ¤nkung, DatenÃ¼bertragbarkeit beantragen und bestimmten Verarbeitungen widersprechen. Sie kÃ¶nnen auch Einwilligungen jederzeit widerrufen.",
-        "Kontakt: help@zazatechnologies.com. Sie haben das Recht, Beschwerde bei Ihrer Ã¶rtlichen DatenschutzbehÃ¶rde einzulegen.",
+        "Nach der UK/EU-DSGVO kÃƒÂ¶nnen Sie Auskunft, Berichtigung, LÃƒÂ¶schung, EinschrÃƒÂ¤nkung, DatenÃƒÂ¼bertragbarkeit beantragen und bestimmten Verarbeitungen widersprechen. Sie kÃƒÂ¶nnen auch Einwilligungen jederzeit widerrufen.",
+        "Kontakt: help@zazatechnologies.com. Sie haben das Recht, Beschwerde bei Ihrer ÃƒÂ¶rtlichen DatenschutzbehÃƒÂ¶rde einzulegen.",
       ],
     },
     {
       title: "Kinder",
       content: [
-        "Zaza Draft richtet sich an LehrkrÃ¤fte, nicht an Kinder. Bitte Ã¼bermitteln Sie keine personenbezogenen Daten von Kindern.",
+        "Zaza Draft richtet sich an LehrkrÃƒÂ¤fte, nicht an Kinder. Bitte ÃƒÂ¼bermitteln Sie keine personenbezogenen Daten von Kindern.",
       ],
     },
     {
-      title: "Ã„nderungen",
+      title: "Ãƒâ€žnderungen",
       content: [
-        'Wir kÃ¶nnen diese Richtlinie aktualisieren. Ã„nderungen werden hier verÃ¶ffentlicht und das Datum "Zuletzt aktualisiert" angepasst.',
+        'Wir kÃƒÂ¶nnen diese Richtlinie aktualisieren. Ãƒâ€žnderungen werden hier verÃƒÂ¶ffentlicht und das Datum "Zuletzt aktualisiert" angepasst.',
       ],
     },
     {
@@ -317,6 +317,7 @@ const contentDE = {
   ],
   contactCta: {
     title: "Fragen zu Ihren Daten?",
-    text: "Kontaktieren Sie unser Team bei datenschutzbezogenen Fragen oder zur AusÃ¼bung Ihrer Rechte.",
+    text: "Kontaktieren Sie unser Team bei datenschutzbezogenen Fragen oder zur AusÃƒÂ¼bung Ihrer Rechte.",
   },
 }
+

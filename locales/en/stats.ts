@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   subtitle:
     "Trusted by 500+ teachers using Zaza Draft to save 10+ hours every week.",
   documentsRefined: {
@@ -14,3 +14,4 @@ export default {
     label: "Saved Weekly",
   },
 };
+

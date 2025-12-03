@@ -9,3 +9,4 @@ export default function LangProviderClient({
 }) {
   return <LanguageProvider>{children}</LanguageProvider>;
 }
+

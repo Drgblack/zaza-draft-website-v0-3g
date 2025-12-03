@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import { cookies, headers } from "next/headers"
 import SuiteClient from "./SuiteClient"
 
@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
   }
   const descriptions = {
     en: "A family of safe, teacher-first AI apps that reduce workload and strengthen teacher efficiency and well-being. Powered by Zaza KnowledgeCore for trusted, explainable AI and consistent school-ready safeguards.",
-    de: "Eine Familie sicherer, lehrerzentrierter KI-Apps zur Reduktion des Arbeitsaufwands und StÃ¤rkung von Effizienz und Wohlbefinden. Betrieben von der Zaza KnowledgeCore Plattform mit vertrauenswÃ¼rdiger, erklÃ¤rbarer KI und konsistenten, schulbereiten Schutzmechanismen.",
+    de: "Eine Familie sicherer, lehrerzentrierter KI-Apps zur Reduktion des Arbeitsaufwands und StÃƒÂ¤rkung von Effizienz und Wohlbefinden. Betrieben von der Zaza KnowledgeCore Plattform mit vertrauenswÃƒÂ¼rdiger, erklÃƒÂ¤rbarer KI und konsistenten, schulbereiten Schutzmechanismen.",
   }
 
   return {
@@ -46,3 +46,4 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function SuitePage() {
   return <SuiteClient />
 }
+

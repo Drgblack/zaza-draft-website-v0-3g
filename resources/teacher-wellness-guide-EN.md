@@ -1,4 +1,4 @@
-# The Teacher Wellness Quick-Start Guide
+﻿# The Teacher Wellness Quick-Start Guide
 ## Burnout Prevention, Boundary-Setting, and Self-Care Strategies for Teachers
 
 *You can't pour from an empty cup. This guide includes 5-minute daily wellness routines, scripts for saying "no" professionally, and research-backed strategies to prevent burnout before it happens.*
@@ -47,7 +47,7 @@ Burnout isn't just being tired. It's a specific pattern:
 - Counting down to breaks or retirement
 - Withdrawing from colleagues or family
 
-> 💡 **Self-Check:** If you nodded at 3+ of these signs, you're at risk. If you nodded at 6+, you're experiencing burnout and need intervention now.
+> ðŸ’¡ **Self-Check:** If you nodded at 3+ of these signs, you're at risk. If you nodded at 6+, you're experiencing burnout and need intervention now.
 
 ---
 
@@ -86,7 +86,7 @@ Burnout isn't just being tired. It's a specific pattern:
 
 **Minute 5:** Take 5 deep breaths. Inhale for 4 counts, hold for 4, exhale for 6.
 
-> 💡 **Why it works:** You start the day in control, not reactive. Your brain is primed for focus, not panic.
+> ðŸ’¡ **Why it works:** You start the day in control, not reactive. Your brain is primed for focus, not panic.
 
 ---
 
@@ -100,7 +100,7 @@ Burnout isn't just being tired. It's a specific pattern:
 
 **Minute 4-5:** Do ONE thing that's not work-related. Text a friend, read a page of a book, listen to a song.
 
-> 💡 **Why it works:** You break the cycle of constant "on" mode. Your brain gets a microbreak, which improves afternoon focus.
+> ðŸ’¡ **Why it works:** You break the cycle of constant "on" mode. Your brain gets a microbreak, which improves afternoon focus.
 
 ---
 
@@ -114,7 +114,7 @@ Burnout isn't just being tired. It's a specific pattern:
 
 **Minute 4-5:** Tidy your desk or close all your tabs. Physical closure = mental closure.
 
-> 💡 **Why it works:** You transition out of "teacher mode." When you leave, you actually leave. Work doesn't follow you home (mentally).
+> ðŸ’¡ **Why it works:** You transition out of "teacher mode." When you leave, you actually leave. Work doesn't follow you home (mentally).
 
 ---
 
@@ -126,7 +126,7 @@ Burnout isn't just being tired. It's a specific pattern:
 
 **Minute 4-5:** Set tomorrow's intention. "Tomorrow, I will focus on [one specific thing]."
 
-> 💡 **Why it works:** You end the day on a positive note instead of ruminating on what went wrong. Better sleep = better tomorrow.
+> ðŸ’¡ **Why it works:** You end the day on a positive note instead of ruminating on what went wrong. Better sleep = better tomorrow.
 
 ---
 
@@ -253,7 +253,7 @@ Don't say "yes" immediately. Say: "Let me check my schedule and get back to you 
 - **10 minutes:** Prep lunches/snacks for the week
 - **10 minutes:** Review Monday's lesson plans and gather materials
 
-> 💡 **Why it works:** You go to bed calm, not anxious. Monday morning runs smoothly, which sets the tone for the week.
+> ðŸ’¡ **Why it works:** You go to bed calm, not anxious. Monday morning runs smoothly, which sets the tone for the week.
 
 ---
 
@@ -302,7 +302,7 @@ Don't say "yes" immediately. Say: "Let me check my schedule and get back to you 
 - Text a friend one funny thing that happened that day
 - Join a non-teaching hobby group (book club, running club, game night)
 
-> 💡 **Why it works:** You need relationships that don't revolve around teaching. This reminds you that you're a whole person, not just a teacher.
+> ðŸ’¡ **Why it works:** You need relationships that don't revolve around teaching. This reminds you that you're a whole person, not just a teacher.
 
 ---
 
@@ -422,11 +422,12 @@ Teaching is one of the most important jobs in the world. But it's not worth sacr
 
 Start small. Pick one strategy from this guide. Practice it for two weeks. Then add another. You don't have to fix everything today.
 
-**You are enough. You are doing enough. You deserve to feel good.** 💚
+**You are enough. You are doing enough. You deserve to feel good.** ðŸ’š
 
 ---
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+

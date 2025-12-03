@@ -18,3 +18,4 @@ export const metadata: Metadata = {
 export default function DeComparePage() {
   return <CompareClient />;
 }
+

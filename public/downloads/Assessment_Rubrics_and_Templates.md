@@ -1,4 +1,4 @@
-# Assessment Rubrics & Templates
+﻿# Assessment Rubrics & Templates
 ## Your Complete Toolkit for Clear, Actionable Feedback
 
 **Part of the Zaza Teacher Resource Library**  
@@ -6,14 +6,15 @@
 
 ---
 
-## 📖 What's Inside
+## ðŸ“– What's Inside
 
 This toolkit gives you ready-to-use rubrics and feedback templates that turn assessment into actionable learning. Every template is designed for clarity, speed, and student growth.
 
 **You'll find:**
-- ✓ Single-point rubrics (just the target, not the noise)
-- ✓ Subject-specific comment banks (copy-paste ready)
-- ✓ Student-friendly success criteria
-- ✓ Feedback frameworks that take 2 minutes, not 20
+- âœ“ Single-point rubrics (just the target, not the noise)
+- âœ“ Subject-specific comment banks (copy-paste ready)
+- âœ“ Student-friendly success criteria
+- âœ“ Feedback frameworks that take 2 minutes, not 20
 
 ---
+

@@ -1,4 +1,4 @@
-# The Grading Workflow Optimizer
+﻿# The Grading Workflow Optimizer
 ## Systems for Faster, More Consistent Grading Without Quality Loss
 
 *Stop spending 6 hours on Sunday grading papers. This guide gives you a weekly grading schedule template, rubric shortcuts, and batch-processing strategies to cut your grading time in half - while actually improving feedback quality.*
@@ -50,7 +50,7 @@ Not all assignments deserve the same grading treatment. Use this framework:
 **Time Investment:** 1-2 minutes per student
 
 **Grading Method:**
-- Check/Check+/Check- (or ✓/✓+/✓-)
+- Check/Check+/Check- (or âœ“/âœ“+/âœ“-)
 - Completion grade (did they try?)
 - Use comment codes (see below)
 - Spot-check for patterns, not perfection
@@ -133,7 +133,7 @@ Not all assignments deserve the same grading treatment. Use this framework:
 - **Task:** Only Tier 3 work (major projects, essays) - and ONLY if absolutely necessary
 - **Why:** You deserve a weekend
 
-> 💡 **Pro Tip:** Use a timer for each grading session. When time's up, move on. This forces efficiency and prevents perfectionism.
+> ðŸ’¡ **Pro Tip:** Use a timer for each grading session. When time's up, move on. This forces efficiency and prevents perfectionism.
 
 ---
 
@@ -176,15 +176,15 @@ COMMENTS:
 | E | Need more evidence | Add quote/stat to support claim |
 | X | Explanation needed | Explain HOW evidence supports thesis |
 | C | Weak conclusion | Revisit thesis, answer "So what?" |
-| ⭐ | Strong! | Keep doing this |
+| â­ | Strong! | Keep doing this |
 | ? | Confusing | Simplify or clarify |
 
 **How to Use:**
 Instead of writing "Your thesis is unclear and you need more evidence in paragraph 2," you write:
 ```
-¶1: T
-¶2: E, E
-¶3: ⭐
+Â¶1: T
+Â¶2: E, E
+Â¶3: â­
 ```
 
 Students use the code bank to revise. Cuts grading time in half.
@@ -207,7 +207,7 @@ Students use the code bank to revise. Cuts grading time in half.
 4. Mark specific examples in the text (2 minutes)
 5. Write summary feedback (1 minute)
 
-> 💡 **Mindset Shift:** Your job isn't to catch every error. It's to guide the next draft.
+> ðŸ’¡ **Mindset Shift:** Your job isn't to catch every error. It's to guide the next draft.
 
 ---
 
@@ -264,7 +264,7 @@ Students use the code bank to revise. Cuts grading time in half.
 - Participation when you can observe it live
 - Work that students will self-assess effectively
 
-> 💡 **Ask yourself:** "If I didn't grade this, would it change student learning?" If the answer is no, skip it.
+> ðŸ’¡ **Ask yourself:** "If I didn't grade this, would it change student learning?" If the answer is no, skip it.
 
 ---
 
@@ -284,9 +284,9 @@ Before submitting work, students:
 
 ### Strategy 2: Peer Review Protocols
 Use structured peer feedback (like 2 Stars and a Wish):
-- ⭐ Strength #1
-- ⭐ Strength #2
-- 💫 One area for improvement
+- â­ Strength #1
+- â­ Strength #2
+- ðŸ’« One area for improvement
 
 **Then:** You grade the revised version (after peers helped them improve).
 
@@ -304,7 +304,7 @@ Grade drafts lightly (or not at all). Give feedback. Students revise. You grade 
 
 ## Grade Fewer Assignments (But Better Ones)
 
-**Unpopular Truth:** More assignments ≠ more learning.
+**Unpopular Truth:** More assignments â‰  more learning.
 
 **Better Approach:** Assign less, but make each assignment count.
 
@@ -361,16 +361,16 @@ Grade drafts lightly (or not at all). Give feedback. Students revise. You grade 
 Use this when deciding how to grade an assignment:
 
 **Question 1:** Is this formative (practice) or summative (mastery check)?
-- **Formative** → Tier 1 (Check/Check+/Check-, 1-2 min)
-- **Summative** → Move to Question 2
+- **Formative** â†’ Tier 1 (Check/Check+/Check-, 1-2 min)
+- **Summative** â†’ Move to Question 2
 
 **Question 2:** Is this a skill-builder or a comprehensive assessment?
-- **Skill-builder** → Tier 2 (Quick rubric, 3-5 min)
-- **Comprehensive** → Tier 3 (Full rubric, 5-10 min)
+- **Skill-builder** â†’ Tier 2 (Quick rubric, 3-5 min)
+- **Comprehensive** â†’ Tier 3 (Full rubric, 5-10 min)
 
 **Question 3:** Can students self-assess or peer review first?
-- **Yes** → Have them do it, then you review
-- **No** → Proceed with your grading
+- **Yes** â†’ Have them do it, then you review
+- **No** â†’ Proceed with your grading
 
 ---
 
@@ -463,11 +463,12 @@ Grading doesn't have to consume your life. The goal isn't perfection - it's prog
 
 **You became a teacher to teach, not to grade until midnight.** These systems will help you get back to why you started.
 
-**Grade smarter. Teach better. Live more.** ⏱️
+**Grade smarter. Teach better. Live more.** â±ï¸
 
 ---
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+

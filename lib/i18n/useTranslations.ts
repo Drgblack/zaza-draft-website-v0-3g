@@ -25,3 +25,4 @@ export function useTranslations<
 
   return { t, language: lang }
 }
+

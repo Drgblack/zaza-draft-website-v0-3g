@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+﻿@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -1001,3 +1001,4 @@ img[src*="vusercontent.net"] {
 .blog-article h1:first-of-type {
   display: none;
 }
+

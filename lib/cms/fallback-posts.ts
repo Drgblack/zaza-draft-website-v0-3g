@@ -1,4 +1,4 @@
-import type { BlogPost } from "./inbox-transform";
+﻿import type { BlogPost } from "./inbox-transform";
 
 const fallback: BlogPost[] = [
   {
@@ -13,3 +13,4 @@ const fallback: BlogPost[] = [
 ];
 
 export default fallback;
+

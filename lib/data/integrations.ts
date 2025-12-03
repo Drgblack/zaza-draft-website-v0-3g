@@ -1,4 +1,4 @@
-export interface Integration {
+﻿export interface Integration {
   id: string
   name: string
   slug: string
@@ -1236,3 +1236,4 @@ export function getRelatedIntegrations(slug: string, limit = 3): Integration[] {
     .filter((int): int is Integration => int !== undefined)
     .slice(0, limit)
 }
+

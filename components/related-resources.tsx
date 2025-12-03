@@ -1,4 +1,4 @@
-import Link from "next/link"
+﻿import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, type LucideIcon } from "lucide-react"
 
@@ -56,3 +56,4 @@ export function RelatedResources({ title = "Related Resources", description, res
     </section>
   )
 }
+

@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import DraftClient from "./draft-client"
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "parent emails",
     "teacher communication",
     "KI Elternkommunikation",
-    "Lehrer ProduktivitÃ¤t",
+    "Lehrer ProduktivitÃƒÂ¤t",
   ],
   openGraph: {
     title: "Zaza Draft | AI Parent Communication Tool for Teachers",
@@ -74,3 +74,4 @@ export default function DraftPage() {
     </>
   )
 }
+

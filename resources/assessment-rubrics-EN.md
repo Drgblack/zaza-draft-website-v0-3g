@@ -1,4 +1,4 @@
-# Differentiated Rubric Kit for Common Assignments
+﻿# Differentiated Rubric Kit for Common Assignments
 ## Ready-to-Use Assessment Tools That Meet Every Student Where They Are
 
 *Stop grading everything the same way. These 8 customizable rubrics help you assess fairly while honoring different learning paths - without creating 3 versions of every assignment.*
@@ -346,7 +346,7 @@ Pick the rubric that matches your assignment type.
 - Add one if something critical is missing (e.g., "Use of Data" for a social studies project)
 
 ### Step 4: Set Your Scale
-- Use 1-4, 1-5, or even emoji scales (😟 😐 😊 🤩)
+- Use 1-4, 1-5, or even emoji scales (ðŸ˜Ÿ ðŸ˜ ðŸ˜Š ðŸ¤©)
 - Avoid "zeros" - start at 1 ("Beginning" or "Not Yet")
 
 ### Step 5: Share With Students BEFORE the Assignment
@@ -448,11 +448,12 @@ These rubrics give you a starting point. But the real power comes when you adapt
 
 You don't have to reinvent the wheel. Start with these, adjust as you go, and watch how quickly students start using rubric language to talk about their own learning.
 
-**You're not just grading. You're teaching students to assess themselves - and that's a skill that lasts long after they leave your classroom.** 🎯
+**You're not just grading. You're teaching students to assess themselves - and that's a skill that lasts long after they leave your classroom.** ðŸŽ¯
 
 ---
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+

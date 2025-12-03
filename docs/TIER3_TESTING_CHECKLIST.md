@@ -1,4 +1,4 @@
-# Tier 3 Hub Enhancements - Testing Checklist
+﻿# Tier 3 Hub Enhancements - Testing Checklist
 
 ## Overview
 This document provides a comprehensive testing checklist for all Tier 3 hub enhancements including analytics, cross-linking, SEO, and conversion optimization.
@@ -58,11 +58,11 @@ This document provides a comprehensive testing checklist for all Tier 3 hub enha
 - [ ] Responsive layout works on mobile/tablet/desktop
 
 ### Hub-Specific Cross-Links
-- [ ] AI Literacy â†’ Webinars, Community, Integrations
-- [ ] Webinars â†’ AI Literacy, Glossary, Community
-- [ ] Community â†’ AI Literacy, Webinars, Glossary
-- [ ] Glossary â†’ AI Literacy, Webinars, Community
-- [ ] Integrations â†’ Webinars, AI Literacy, Glossary
+- [ ] AI Literacy Ã¢â€ â€™ Webinars, Community, Integrations
+- [ ] Webinars Ã¢â€ â€™ AI Literacy, Glossary, Community
+- [ ] Community Ã¢â€ â€™ AI Literacy, Webinars, Glossary
+- [ ] Glossary Ã¢â€ â€™ AI Literacy, Webinars, Community
+- [ ] Integrations Ã¢â€ â€™ Webinars, AI Literacy, Glossary
 
 ### Verification Steps
 1. Visit each hub page
@@ -335,3 +335,4 @@ Then visit:
 - http://localhost:3000/community
 - http://localhost:3000/glossary
 - http://localhost:3000/integrations
+

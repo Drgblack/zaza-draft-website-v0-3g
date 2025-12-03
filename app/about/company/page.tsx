@@ -74,7 +74,7 @@ export default function CompanyPage() {
               <p className="text-lg text-gray-300">{t("company.philosophy.principle4")}</p>
             </div>
           </div>
-          <p className="text-lg text-gray-400 mt-6 italic max-w-3xl mx-auto">— {t("company.philosophy.closing")}</p>
+          <p className="text-lg text-gray-400 mt-6 italic max-w-3xl mx-auto">- {t("company.philosophy.closing")}</p>
         </div>
       </section>
 
@@ -167,3 +167,4 @@ export default function CompanyPage() {
     </div>
   );
 }
+

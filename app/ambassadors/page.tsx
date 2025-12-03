@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import AmbassadorClient from "./ambassador-client"
 
 export const metadata: Metadata = {
@@ -17,4 +17,5 @@ export default function AmbassadorPage() {
   return <AmbassadorClient />
 }
 import type { Metadata } from "next"
+
 

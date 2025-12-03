@@ -11,3 +11,4 @@
     signUp: "Registrieren",
   },
 };
+

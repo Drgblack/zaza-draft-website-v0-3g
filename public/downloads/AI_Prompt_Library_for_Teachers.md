@@ -1,4 +1,4 @@
-# AI Prompt Library for Teachers
+﻿# AI Prompt Library for Teachers
 
 ## Copy-Paste Prompts That Save Hours Every Week
 
@@ -7,21 +7,21 @@ _Making great teaching easier, every day_
 
 ---
 
-## 📖 What's Inside
+## ðŸ“– What's Inside
 
 This library gives you ready-to-use AI prompts for every common teaching task. Each prompt is tested, teacher-approved, and designed to give you ship-ready content in minutes.
 
 **You'll find:**
 
-- ✓ Parent communication prompts (behavior, progress, attendance)
-- ✓ Feedback & grading generators (rubric-aligned, individualized)
-- ✓ Planning & instruction builders (lessons, exit tickets, differentiation)
-- ✓ Documentation templates (IEP notes, meeting recaps, contact logs)
-- ✓ Assessment creators (quizzes, rubrics, self-checks)
+- âœ“ Parent communication prompts (behavior, progress, attendance)
+- âœ“ Feedback & grading generators (rubric-aligned, individualized)
+- âœ“ Planning & instruction builders (lessons, exit tickets, differentiation)
+- âœ“ Documentation templates (IEP notes, meeting recaps, contact logs)
+- âœ“ Assessment creators (quizzes, rubrics, self-checks)
 
 ---
 
-## 🎯 How to Use This Library
+## ðŸŽ¯ How to Use This Library
 
 ### New to AI?
 
@@ -31,10 +31,10 @@ Start with **Section 1** (Parent Communication). Pick one prompt, customize the 
 
 Jump to the sections you need most. Each prompt includes:
 
-- ✅ The exact text to copy
-- ✅ What to customize (in [brackets])
-- ✅ Expected output format
-- ✅ Privacy reminders
+- âœ… The exact text to copy
+- âœ… What to customize (in [brackets])
+- âœ… Expected output format
+- âœ… Privacy reminders
 
 ### Want to save even more time?
 
@@ -42,9 +42,9 @@ Check **Section 6** (Voice Profile Builder) to teach the AI your personal style 
 
 ---
 
-## 🔒 Critical Privacy Rules
+## ðŸ”’ Critical Privacy Rules
 
-> ⚠️ **NEVER put these in external AI tools:**
+> âš ï¸ **NEVER put these in external AI tools:**
 >
 > - Student last names
 > - Medical diagnoses
@@ -52,7 +52,7 @@ Check **Section 6** (Voice Profile Builder) to teach the AI your personal style 
 > - Sensitive family information
 > - Any data your district prohibits
 
-✅ **Safe to use:**
+âœ… **Safe to use:**
 
 - First names only
 - Observable behaviors
@@ -66,7 +66,7 @@ Check **Section 6** (Voice Profile Builder) to teach the AI your personal style 
 
 # SECTION 1: Parent Communication Prompts
 
-## 📧 The 4-Sentence Behavior Email
+## ðŸ“§ The 4-Sentence Behavior Email
 
 ### When to Use
 
@@ -77,7 +77,7 @@ Check **Section 6** (Voice Profile Builder) to teach the AI your personal style 
 
 ### Time Saved
 
-From 15 minutes → 2 minutes
+From 15 minutes â†’ 2 minutes
 
 ---
 
@@ -132,7 +132,7 @@ Keep it under 120 words. Professional but warm.
 
 ---
 
-## 📞 Post-Call Recap Email
+## ðŸ“ž Post-Call Recap Email
 
 ### When to Use
 
@@ -140,7 +140,7 @@ After ANY phone call with parents-creates a paper trail and confirms alignment.
 
 ### Time Saved
 
-From 10 minutes → 90 seconds
+From 10 minutes â†’ 90 seconds
 
 ---
 
@@ -163,7 +163,7 @@ Keep it factual, neutral, and under 100 words.
 
 ---
 
-## 📬 Weekly Progress Update (One-Page Format)
+## ðŸ“¬ Weekly Progress Update (One-Page Format)
 
 ### When to Use
 
@@ -173,7 +173,7 @@ Keep it factual, neutral, and under 100 words.
 
 ### Time Saved
 
-From 20 minutes → 3 minutes
+From 20 minutes â†’ 3 minutes
 
 ---
 
@@ -208,7 +208,7 @@ Keep the whole update under 220 words. Bold the dates and "Action" labels.
 
 ---
 
-## 🎓 Report Card Progress Comment
+## ðŸŽ“ Report Card Progress Comment
 
 ### When to Use
 
@@ -218,7 +218,7 @@ Keep the whole update under 220 words. Bold the dates and "Action" labels.
 
 ### Time Saved
 
-From 10 minutes per student → 2 minutes per student
+From 10 minutes per student â†’ 2 minutes per student
 
 ---
 
@@ -227,7 +227,7 @@ From 10 minutes per student → 2 minutes per student
 \`\`\`
 Generate a report card comment (3-5 sentences) using this structure:
 
-Strength → Growth → Strategy → Next Step
+Strength â†’ Growth â†’ Strategy â†’ Next Step
 
 Requirements:
 
@@ -263,7 +263,7 @@ Make it honest, constructive, and parent-friendly.
 
 ---
 
-## 🚨 Escalation / Sensitive Situation Email
+## ðŸš¨ Escalation / Sensitive Situation Email
 
 ### When to Use
 
@@ -273,7 +273,7 @@ Make it honest, constructive, and parent-friendly.
 
 ### Time Saved
 
-From 25 minutes (lots of editing for tone) → 5 minutes
+From 25 minutes (lots of editing for tone) â†’ 5 minutes
 
 ---
 
@@ -282,7 +282,7 @@ From 25 minutes (lots of editing for tone) → 5 minutes
 \`\`\`
 Generate a professional, de-escalating email (5-7 sentences) following this structure:
 
-Acknowledge → State facts → Restate support → Invite collaboration → Next steps
+Acknowledge â†’ State facts â†’ Restate support â†’ Invite collaboration â†’ Next steps
 
 Tone: Calm, factual, solutions-focused. No blame language.
 
@@ -311,7 +311,7 @@ Keep it under 200 words. End with: "I'm committed to [Student]'s success and wan
 
 # SECTION 2: Feedback & Grading Prompts
 
-## ✍️ Glow-Grow-Go Comment Generator
+## âœï¸ Glow-Grow-Go Comment Generator
 
 ### When to Use
 
@@ -321,7 +321,7 @@ Keep it under 200 words. End with: "I'm committed to [Student]'s success and wan
 
 ### Time Saved
 
-From 5 minutes per comment → 60 seconds
+From 5 minutes per comment â†’ 60 seconds
 
 ---
 
@@ -358,7 +358,7 @@ Keep each line under 15 words. Student-friendly language.
 
 ---
 
-## 📊 Rubric-Aligned Detailed Feedback
+## ðŸ“Š Rubric-Aligned Detailed Feedback
 
 ### When to Use
 
@@ -368,7 +368,7 @@ Keep each line under 15 words. Student-friendly language.
 
 ### Time Saved
 
-From 12 minutes → 3 minutes
+From 12 minutes â†’ 3 minutes
 
 ---
 
@@ -397,7 +397,7 @@ Keep it under 250 words total. End with one overall priority for revision.
 
 ---
 
-## 🎯 Individualized Report Comment (with Name Usage)
+## ðŸŽ¯ Individualized Report Comment (with Name Usage)
 
 ### When to Use
 
@@ -407,7 +407,7 @@ Keep it under 250 words total. End with one overall priority for revision.
 
 ### Time Saved
 
-From 10 minutes → 2 minutes
+From 10 minutes â†’ 2 minutes
 
 ---
 
@@ -417,7 +417,7 @@ From 10 minutes → 2 minutes
 Generate an individualized report card comment (4-5 sentences) with these requirements:
 
 - Use [Student First Name] exactly TWICE
-- Structure: Strength (with evidence) → Growth area → Strategy → Next step
+- Structure: Strength (with evidence) â†’ Growth area â†’ Strategy â†’ Next step
 - Professional, parent-friendly tone
 - One specific example (assignment, skill, or date)
 - 120-180 words
@@ -433,7 +433,7 @@ Next step: [What would help them progress]
 
 ---
 
-## 🔄 Feedback for Revision (Before/After Guidance)
+## ðŸ”„ Feedback for Revision (Before/After Guidance)
 
 ### When to Use
 
@@ -443,7 +443,7 @@ Next step: [What would help them progress]
 
 ### Time Saved
 
-From 8 minutes → 2 minutes
+From 8 minutes â†’ 2 minutes
 
 ---
 
@@ -490,7 +490,7 @@ Keep it under 150 words. Use "Try this" language, not "You should."
 
 # SECTION 3: Planning & Instruction Prompts
 
-## 📚 Lesson Plan Skeleton Generator
+## ðŸ“š Lesson Plan Skeleton Generator
 
 ### When to Use
 
@@ -500,7 +500,7 @@ Keep it under 150 words. Use "Try this" language, not "You should."
 
 ### Time Saved
 
-From 25 minutes → 6 minutes
+From 25 minutes â†’ 6 minutes
 
 ---
 
@@ -595,7 +595,7 @@ Do-Now: 3 min | Mini: 8 min | Practice: 18 min | Exit: 3 min | Transition/Closin
 
 ---
 
-## 🎯 Exit Ticket Generator (Standards-Aligned)
+## ðŸŽ¯ Exit Ticket Generator (Standards-Aligned)
 
 ### When to Use
 
@@ -605,7 +605,7 @@ Do-Now: 3 min | Mini: 8 min | Practice: 18 min | Exit: 3 min | Transition/Closin
 
 ### Time Saved
 
-From 8 minutes → 90 seconds
+From 8 minutes â†’ 90 seconds
 
 ---
 
@@ -656,7 +656,7 @@ Checks for: Can they distinguish main idea from support?
 
 ---
 
-## 🔀 Differentiation Idea Generator
+## ðŸ”€ Differentiation Idea Generator
 
 ### When to Use
 
@@ -666,7 +666,7 @@ Checks for: Can they distinguish main idea from support?
 
 ### Time Saved
 
-From 15 minutes → 3 minutes
+From 15 minutes â†’ 3 minutes
 
 ---
 
@@ -693,7 +693,7 @@ Keep each strategy to 1-2 sentences. Practical and quick to implement.
 
 ---
 
-## 📝 Discussion Question Generator
+## ðŸ“ Discussion Question Generator
 
 ### When to Use
 
@@ -704,7 +704,7 @@ Keep each strategy to 1-2 sentences. Practical and quick to implement.
 
 ### Time Saved
 
-From 10 minutes → 2 minutes
+From 10 minutes â†’ 2 minutes
 
 ---
 
@@ -732,7 +732,7 @@ Format each as an open-ended question. Keep student-friendly language.
 
 # SECTION 4: Documentation Prompts
 
-## 📋 5-Field IEP/504 Note Generator
+## ðŸ“‹ 5-Field IEP/504 Note Generator
 
 ### When to Use
 
@@ -743,7 +743,7 @@ Format each as an open-ended question. Keep student-friendly language.
 
 ### Time Saved
 
-From 5 minutes → 45 seconds
+From 5 minutes â†’ 45 seconds
 
 ---
 
@@ -788,7 +788,7 @@ No identifying details beyond first name. Keep under 50 words total.
 
 ---
 
-## 📞 Parent Contact Log Entry
+## ðŸ“ž Parent Contact Log Entry
 
 ### When to Use
 
@@ -798,7 +798,7 @@ No identifying details beyond first name. Keep under 50 words total.
 
 ### Time Saved
 
-From 4 minutes → 60 seconds
+From 4 minutes â†’ 60 seconds
 
 ---
 
@@ -817,7 +817,7 @@ Keep it factual, neutral, under 60 words. Include specific dates for follow-up.
 
 ---
 
-## 🤝 Conference Recap Generator
+## ðŸ¤ Conference Recap Generator
 
 ### When to Use
 
@@ -827,7 +827,7 @@ Keep it factual, neutral, under 60 words. Include specific dates for follow-up.
 
 ### Time Saved
 
-From 12 minutes → 3 minutes
+From 12 minutes â†’ 3 minutes
 
 ---
 
@@ -852,7 +852,7 @@ Keep it organized, factual, and action-oriented. Professional but warm tone.
 
 ---
 
-## 📊 Accommodation Tracker Summary
+## ðŸ“Š Accommodation Tracker Summary
 
 ### When to Use
 
@@ -862,7 +862,7 @@ Keep it organized, factual, and action-oriented. Professional but warm tone.
 
 ### Time Saved
 
-From 10 minutes → 2 minutes
+From 10 minutes â†’ 2 minutes
 
 ---
 
@@ -889,7 +889,7 @@ Keep it under 100 words. Factual, compliance-ready tone.
 
 # SECTION 5: Assessment Creation Prompts
 
-## ✅ Quiz Question Generator (Standards-Aligned)
+## âœ… Quiz Question Generator (Standards-Aligned)
 
 ### When to Use
 
@@ -899,7 +899,7 @@ Keep it under 100 words. Factual, compliance-ready tone.
 
 ### Time Saved
 
-From 20 minutes → 4 minutes
+From 20 minutes â†’ 4 minutes
 
 ---
 
@@ -926,7 +926,7 @@ Ensure questions check for understanding, not just recall. Student-friendly lang
 
 ---
 
-## 📝 Rubric Creator from Learning Objectives
+## ðŸ“ Rubric Creator from Learning Objectives
 
 ### When to Use
 
@@ -936,7 +936,7 @@ Ensure questions check for understanding, not just recall. Student-friendly lang
 
 ### Time Saved
 
-From 30 minutes → 5 minutes
+From 30 minutes â†’ 5 minutes
 
 ---
 
@@ -962,7 +962,7 @@ Keep criteria measurable and specific. Avoid vague terms like "good" or "excelle
 
 ---
 
-## 🎯 Self-Assessment Checklist Generator
+## ðŸŽ¯ Self-Assessment Checklist Generator
 
 ### When to Use
 
@@ -972,7 +972,7 @@ Keep criteria measurable and specific. Avoid vague terms like "good" or "excelle
 
 ### Time Saved
 
-From 15 minutes → 3 minutes
+From 15 minutes â†’ 3 minutes
 
 ---
 
@@ -999,7 +999,7 @@ Keep it to one page, no more than 12 checkboxes total.
 
 # SECTION 6: Voice Profile Builder
 
-## 🎤 Creating Your AI Voice Profile
+## ðŸŽ¤ Creating Your AI Voice Profile
 
 ### Why This Matters
 
@@ -1011,7 +1011,7 @@ Keep it to one page, no more than 12 checkboxes total.
 
 ---
 
-## 📝 Voice Profile Template
+## ðŸ“ Voice Profile Template
 
 Copy this template, fill it out once, and paste it at the top of any prompt:
 
@@ -1050,7 +1050,7 @@ SPECIAL REQUESTS:
 
 ---
 
-## 💡 Example Voice Profiles
+## ðŸ’¡ Example Voice Profiles
 
 ### Example 1: Elementary Teacher
 
@@ -1166,7 +1166,7 @@ SPECIAL REQUESTS:
 
 ---
 
-## 🔧 How to Use Your Voice Profile
+## ðŸ”§ How to Use Your Voice Profile
 
 ### Option 1: Paste at the Top of Every Prompt
 
@@ -1188,7 +1188,7 @@ Many AI tools let you save custom instructions or system prompts. Put your voice
 
 ---
 
-## 📊 Before/After Examples
+## ðŸ“Š Before/After Examples
 
 ### WITHOUT Voice Profile
 
@@ -1205,7 +1205,7 @@ Many AI tools let you save custom instructions or system prompts. Put your voice
 > Sincerely,  
 > Ms. Johnson
 
-❌ Too formal, sounds robotic, no actionable steps
+âŒ Too formal, sounds robotic, no actionable steps
 
 ---
 
@@ -1222,11 +1222,11 @@ Many AI tools let you save custom instructions or system prompts. Put your voice
 > Appreciate your support,  
 > Ms. Johnson
 
-✅ Sounds like a real teacher, specific, actionable, warm but professional
+âœ… Sounds like a real teacher, specific, actionable, warm but professional
 
 ---
 
-## 🎯 Voice Profile Quick-Start Guide
+## ðŸŽ¯ Voice Profile Quick-Start Guide
 
 **Step 1 (3 min):** Write down 3 phrases you say all the time  
 **Step 2 (2 min):** List 3 phrases you NEVER want to say  
@@ -1240,11 +1240,11 @@ Many AI tools let you save custom instructions or system prompts. Put your voice
 
 # SECTION 7: Privacy & Ethics Checklist
 
-## 🔒 Before You Hit "Generate"
+## ðŸ”’ Before You Hit "Generate"
 
 Run through this checklist EVERY time:
 
-### ✅ Safe to Include:
+### âœ… Safe to Include:
 
 - [ ] Student first names only (no last names)
 - [ ] Observable behaviors (not diagnoses)
@@ -1252,7 +1252,7 @@ Run through this checklist EVERY time:
 - [ ] General classroom scenarios
 - [ ] Template structures
 
-### ❌ NEVER Include:
+### âŒ NEVER Include:
 
 - [ ] Student last names or IDs
 - [ ] Medical diagnoses or health conditions
@@ -1260,7 +1260,7 @@ Run through this checklist EVERY time:
 - [ ] IEP/504 confidential details beyond public accommodations
 - [ ] Any data your district explicitly prohibits
 
-### 🤔 When in Doubt:
+### ðŸ¤” When in Doubt:
 
 - Generate the STRUCTURE only (leave details blank)
 - Add specific names/info manually in your secure system
@@ -1268,7 +1268,7 @@ Run through this checklist EVERY time:
 
 ---
 
-## 💡 Pro Tips for Safe AI Use
+## ðŸ’¡ Pro Tips for Safe AI Use
 
 **Tip 1:** Use generic placeholders in prompts
 
@@ -1295,21 +1295,21 @@ Run through this checklist EVERY time:
 
 # SECTION 8: Quick Reference Guide
 
-## 🚀 Fastest Prompts by Task
+## ðŸš€ Fastest Prompts by Task
 
-### Need a parent email? → **Page 3** (4-sentence email)
+### Need a parent email? â†’ **Page 3** (4-sentence email)
 
-### Need report comments? → **Page 11** (Individualized comment generator)
+### Need report comments? â†’ **Page 11** (Individualized comment generator)
 
-### Need a lesson plan? → **Page 15** (Lesson skeleton)
+### Need a lesson plan? â†’ **Page 15** (Lesson skeleton)
 
-### Need feedback? → **Page 9** (Glow-Grow-Go)
+### Need feedback? â†’ **Page 9** (Glow-Grow-Go)
 
-### Need documentation? → **Page 19** (5-field note)
+### Need documentation? â†’ **Page 19** (5-field note)
 
 ---
 
-## 📋 Most Popular Prompts (Start Here)
+## ðŸ“‹ Most Popular Prompts (Start Here)
 
 1. **4-Sentence Parent Email** (Page 3)
 2. **Glow-Grow-Go Feedback** (Page 9)
@@ -1319,7 +1319,7 @@ Run through this checklist EVERY time:
 
 ---
 
-## ⏱️ Time Savings Calculator
+## â±ï¸ Time Savings Calculator
 
 Track your wins:
 
@@ -1335,7 +1335,7 @@ Track your wins:
 
 ---
 
-## 🎓 Professional Development Ideas
+## ðŸŽ“ Professional Development Ideas
 
 ### Staff Meeting (20 min)
 
@@ -1361,11 +1361,11 @@ Track your wins:
 
 ---
 
-## 📞 Need More Support?
+## ðŸ“ž Need More Support?
 
 ### From Your Zaza Dashboard:
 
-- **AI-powered generators** (paste rubric → get feedback)
+- **AI-powered generators** (paste rubric â†’ get feedback)
 - **Voice profile storage** (save once, use everywhere)
 - **Prompt templates** (editable, downloadable)
 
@@ -1377,7 +1377,7 @@ Track your wins:
 
 ---
 
-## 🙏 A Note from the Zaza Team
+## ðŸ™ A Note from the Zaza Team
 
 > AI should **remove the blank page**, not replace your judgment. These prompts give you the first 80%-you add the final 20% that makes it yours.
 >
@@ -1389,7 +1389,7 @@ Track your wins:
 
 ---
 
-**📥 Get the latest prompts delivered monthly:**  
+**ðŸ“¥ Get the latest prompts delivered monthly:**  
 **zazadraft.com/prompt-library**
 
 ---
@@ -1397,10 +1397,11 @@ Track your wins:
 **Part of the Zaza Teacher Resource Library**  
 _Building AI tools teachers actually want to use_
 
-🌐 zazadraft.com | 📧 hello@zazadraft.com | 🐦 @zazatech
+ðŸŒ zazadraft.com | ðŸ“§ hello@zazadraft.com | ðŸ¦ @zazatech
 
 ---
 
-_© 2025 Zaza Technologies. Free for educational use.  
+_Â© 2025 Zaza Technologies. Free for educational use.  
 Share with colleagues. Adapt for your classroom.  
 All we ask: Keep this footer so others can find us._
+

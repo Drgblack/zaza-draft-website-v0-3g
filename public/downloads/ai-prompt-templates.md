@@ -1,17 +1,17 @@
-# AI Prompt Templates for Teachers
+﻿# AI Prompt Templates for Teachers
 
 ## 50+ Copy-and-Paste Prompts to Save 10+ Hours Weekly
 
-### Perfect for Busy Educators Who Want to Work Smarter, Not Harder ### 🚀 Quick Start Guide
+### Perfect for Busy Educators Who Want to Work Smarter, Not Harder ### ðŸš€ Quick Start Guide
 
 **New to AI? Start here!** Simply copy any prompt below, fill in the bracketed information, and paste into ChatGPT, Claude, or your favorite AI tool. **Time Savings:** Each prompt saves 15-30 minutes of planning time! ### Table of Contents
 
-1. [📝 Lesson Planning Prompts](#lesson-planning-prompts) - Save 2-3 hours weekly
-2. [💬 Student Feedback Prompts](#student-feedback-prompts) - Speed up grading 3x
-3. [👨‍👩‍👧‍👦 Parent Communication Prompts](#parent-communication-prompts) - Professional messages in minutes
-4. [📊 Assessment Prompts](#assessment-prompts) - Create tests and rubrics instantly
-5. [🏫 Classroom Management Prompts](#classroom-management-prompts) - Handle challenges with confidence
-6. [🎯 Professional Development Prompts](#professional-development-prompts) - Grow your skills efficiently --- ## Lesson Planning Prompts ### 1. Unit Planning Template
+1. [ðŸ“ Lesson Planning Prompts](#lesson-planning-prompts) - Save 2-3 hours weekly
+2. [ðŸ’¬ Student Feedback Prompts](#student-feedback-prompts) - Speed up grading 3x
+3. [ðŸ‘¨â€ðŸ‘©â€ðŸ‘§â€ðŸ‘¦ Parent Communication Prompts](#parent-communication-prompts) - Professional messages in minutes
+4. [ðŸ“Š Assessment Prompts](#assessment-prompts) - Create tests and rubrics instantly
+5. [ðŸ« Classroom Management Prompts](#classroom-management-prompts) - Handle challenges with confidence
+6. [ðŸŽ¯ Professional Development Prompts](#professional-development-prompts) - Grow your skills efficiently --- ## Lesson Planning Prompts ### 1. Unit Planning Template
 
 ````
 Create a comprehensive unit plan for [SUBJECT] grade [GRADE_LEVEL] that covers [TOPIC] over [DURATION] weeks. Include: - Learning objectives aligned with [STANDARDS] - Daily lesson breakdown - Assessment strategies - Differentiation for diverse learners - Technology integration opportunities - Real-world connections
@@ -130,3 +130,4 @@ Develop a peer observation guide for teachers. Include: - Pre-observation questi
 5. **Smart Scheduling** - Use AI to optimize your time ### Professional Development - Join AI in Education communities - Attend workshops and webinars - Experiment with different AI tools - Share successes and challenges - Stay updated on AI developments --- *This resource was created to help teachers work smarter, not harder. Remember that AI is a tool to enhance your teaching, not replace your expertise and care for students.* **Last Updated:** December 2024
 **Version:** 1.0
 ```
+

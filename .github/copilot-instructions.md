@@ -1,4 +1,4 @@
-## Zaza Draft Ã¢â‚¬â€ AI Agent Instructions (concise)
+﻿## Zaza Draft ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â AI Agent Instructions (concise)
 
 This file tells an automated coding agent how this repo is structured and the exact, discoverable conventions to follow.
 
@@ -6,18 +6,18 @@ This file tells an automated coding agent how this repo is structured and the ex
 
 - Tech: Next.js 15 (App Router), TypeScript, Tailwind v4, React 19
 - Dev commands (found in `package.json`):
-  - `npm run dev` Ã¢â‚¬â€ start dev server (http://localhost:3000)
-  - `npm run build` Ã¢â‚¬â€ production build
-  - `npm run start` Ã¢â‚¬â€ start built app
-  - `npm run typecheck` Ã¢â‚¬â€ `tsc --noEmit`
-  - `npm run lint` Ã¢â‚¬â€ `next lint`
-  - `npm run validate-posts` Ã¢â‚¬â€ `tsx src/data/validate-posts.ts` (content checker)
+  - `npm run dev` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â start dev server (http://localhost:3000)
+  - `npm run build` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â production build
+  - `npm run start` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â start built app
+  - `npm run typecheck` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â `tsc --noEmit`
+  - `npm run lint` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â `next lint`
+  - `npm run validate-posts` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â `tsx src/data/validate-posts.ts` (content checker)
 
 2. Big-picture architecture (what to know)
 
 - Pages live under `app/` (Next 15 App Router). Use server and client components per file's "use client" pragma.
-- Blog and content: `lib/cms/posts.ts` dynamically loads `./posts-data` and falls back to `fallback-posts` Ã¢â‚¬â€ edits should target the source posts file (see `src/data/posts-data.tsx` / `src/data` in older docs).
-- Translations: centralized in `lib/i18n/language-context.tsx` Ã¢â‚¬â€ keys are flat strings (e.g. `nav.home`, `hero.headline`). Modify here to add languages or keys.
+- Blog and content: `lib/cms/posts.ts` dynamically loads `./posts-data` and falls back to `fallback-posts` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â edits should target the source posts file (see `src/data/posts-data.tsx` / `src/data` in older docs).
+- Translations: centralized in `lib/i18n/language-context.tsx` ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â keys are flat strings (e.g. `nav.home`, `hero.headline`). Modify here to add languages or keys.
 - UI: `components/` contains reusable shadcn-style primitives; shared primitives are under `components/ui/`.
 - Forms & integrations: signup uses `app/actions/signup.ts` which calls Brevo when env vars are present. If env vars missing, the code returns a mocked success.
 
@@ -51,11 +51,12 @@ This file tells an automated coding agent how this repo is structured and the ex
 7. Developer workflow notes
 
 - Local dev: `npm install` then `npm run dev`.
-- If Brevo env vars are absent, the signup action simulates success Ã¢â‚¬â€ tests and dev flows will still work.
+- If Brevo env vars are absent, the signup action simulates success ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â tests and dev flows will still work.
 - Run `npm run typecheck` and `npm run lint` after code changes.
 
 8. Tone & guardrails for generated copy
 
-- Voice: clear-but-kind, teacher-focused, avoid corporate jargon. Protect student privacy Ã¢â‚¬â€ never include PHI/PII in examples.
+- Voice: clear-but-kind, teacher-focused, avoid corporate jargon. Protect student privacy ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â never include PHI/PII in examples.
 
 If anything here is unclear or you'd like more examples (e.g., exact BlogPost object example, or how callout markers render), tell me which section to expand and I'll iterate.
+

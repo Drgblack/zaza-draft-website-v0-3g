@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import ExitIntentPopup from "./exit-intent-popup";
 
@@ -19,3 +19,4 @@ export default function ExitIntentMount() {
     </ExitIntentPopup>
   );
 }
+

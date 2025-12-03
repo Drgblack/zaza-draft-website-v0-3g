@@ -1,4 +1,4 @@
-import type { MetadataRoute } from "next"
+﻿import type { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://zazadraft.com"
@@ -90,3 +90,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...corePages, ...hubPages, ...legalPages]
 }
+

@@ -1,4 +1,4 @@
-import { blogPosts } from "../lib/cms/posts-data";
+﻿import { blogPosts } from "../lib/cms/posts-data";
 
 function wordCount(html: string) {
   const text = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
@@ -35,4 +35,5 @@ for (const r of offenders) {
   console.log(`- ${r.id} ${r.slug}: ${msgs.join("; ")}`);
 }
 process.exit(0);
+
 

@@ -1,8 +1,8 @@
-# ðŸš€ QUICK START GUIDE FOR CLAUDE CODE
+﻿# Ã°Å¸Å¡â‚¬ QUICK START GUIDE FOR CLAUDE CODE
 
 ## What You Have
 
-âœ… **Complete Report Generator System**
+Ã¢Å“â€¦ **Complete Report Generator System**
 
 - PDF report generator (Python)
 - Multi-format support (PDF, DOCX, HTML)
@@ -43,7 +43,7 @@ All files are in `/mnt/user-data/outputs/`:
    </a>
    ```
 
-3. **Done!** âœ…
+3. **Done!** Ã¢Å“â€¦
 
 ### Option B: Dynamic Generation with Multiple Formats
 
@@ -191,19 +191,20 @@ chmod 755 public/downloads
 
 ## Next Steps
 
-1. âœ… Copy files to your project
-2. âœ… Test Python script works
-3. âœ… Choose Option A or B
-4. âœ… Implement (5 mins for A, 30 mins for B)
-5. âœ… Test end-to-end
-6. âœ… Deploy!
+1. Ã¢Å“â€¦ Copy files to your project
+2. Ã¢Å“â€¦ Test Python script works
+3. Ã¢Å“â€¦ Choose Option A or B
+4. Ã¢Å“â€¦ Implement (5 mins for A, 30 mins for B)
+5. Ã¢Å“â€¦ Test end-to-end
+6. Ã¢Å“â€¦ Deploy!
 
 ## Need Help?
 
-ðŸ“- **Full docs:** See README_INTEGRATION.md  
-ðŸ“ **API examples:** See report_generator_package.md  
-ðŸ” **Debug:** Run Python script directly first
+Ã°Å¸â€œ- **Full docs:** See README_INTEGRATION.md  
+Ã°Å¸â€œÂ **API examples:** See report_generator_package.md  
+Ã°Å¸â€Â **Debug:** Run Python script directly first
 
 ---
 
 **Pro Tip:** Start with Option A (static), then upgrade to Option B when you need multiple formats or email delivery!
+

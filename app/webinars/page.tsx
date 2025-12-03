@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import { cookies, headers } from "next/headers"
 import WebinarsClient from "./webinars-client"
 import { BreadcrumbSchema } from "@/lib/seo/schema"
@@ -71,5 +71,6 @@ export default function WebinarsPage() {
     </>
   )
 }
+
 
 

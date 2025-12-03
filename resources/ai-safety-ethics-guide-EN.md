@@ -1,4 +1,4 @@
-# The AI Safety & Ethics Quick Guide for Teachers
+﻿# The AI Safety & Ethics Quick Guide for Teachers
 ## When and How to Use AI Responsibly in Your Classroom
 
 *AI is here to stay - but that doesn't mean anything goes. This guide gives you 5 non-negotiable rules for responsible AI use, student data privacy guidelines, and conversation starters to teach students about AI ethics and academic integrity.*
@@ -44,10 +44,10 @@ Here's what this guide covers:
 
 **Example:**
 ```
-❌ BAD: "Write feedback for John Smith's essay on climate change. He's 
+âŒ BAD: "Write feedback for John Smith's essay on climate change. He's 
 an 8th grader with an IEP for ADHD."
 
-✅ GOOD: "Write feedback for an 8th grade essay on climate change. The 
+âœ… GOOD: "Write feedback for an 8th grade essay on climate change. The 
 student struggles with organization and would benefit from structured 
 feedback."
 ```
@@ -59,12 +59,12 @@ feedback."
 **The Principle:** AI is a tool for brainstorming, drafting, and efficiency - NOT for making final decisions about students.
 
 **What This Means:**
-- ✅ Use AI to generate feedback drafts → YOU personalize and finalize
-- ✅ Use AI to create assignment ideas → YOU adapt for your students
-- ✅ Use AI to analyze patterns → YOU interpret and act
-- ❌ Don't let AI grade student work without your review
-- ❌ Don't use AI-generated reports without personalizing them
-- ❌ Don't rely on AI to make placement or intervention decisions
+- âœ… Use AI to generate feedback drafts â†’ YOU personalize and finalize
+- âœ… Use AI to create assignment ideas â†’ YOU adapt for your students
+- âœ… Use AI to analyze patterns â†’ YOU interpret and act
+- âŒ Don't let AI grade student work without your review
+- âŒ Don't use AI-generated reports without personalizing them
+- âŒ Don't rely on AI to make placement or intervention decisions
 
 **Why It Matters:** AI doesn't know your students. It doesn't see the context, the growth, or the humanity. You do.
 
@@ -118,7 +118,7 @@ machine. Questions? I'm happy to discuss!
 
 **AI Use Spectrum (Share This with Students):**
 
-| ✅ ALLOWED | ⚠️ ASK FIRST | ❌ NOT ALLOWED |
+| âœ… ALLOWED | âš ï¸ ASK FIRST | âŒ NOT ALLOWED |
 |------------|--------------|----------------|
 | Brainstorming ideas | Getting feedback on drafts | Having AI write your entire essay |
 | Checking grammar/spelling | Asking AI to explain a concept | Copying AI-generated text without citation |
@@ -170,18 +170,18 @@ AI POLICY FOR [YOUR CLASS]
 Before using ANY AI tool, ask yourself:
 
 **FERPA Compliance:**
-- ☐ Is this tool approved by my district?
-- ☐ Does the tool have a data privacy policy?
-- ☐ Am I anonymizing all student information?
+- â˜ Is this tool approved by my district?
+- â˜ Does the tool have a data privacy policy?
+- â˜ Am I anonymizing all student information?
 
 **COPPA Compliance (for students under 13):**
-- ☐ Does this tool require parental consent?
-- ☐ Am I sharing student work without identifiers?
+- â˜ Does this tool require parental consent?
+- â˜ Am I sharing student work without identifiers?
 
 **Your Professional Protection:**
-- ☐ Have I documented how I'm using AI?
-- ☐ Have I informed admin/parents about my AI use?
-- ☐ Am I following district policy on educational technology?
+- â˜ Have I documented how I'm using AI?
+- â˜ Have I informed admin/parents about my AI use?
+- â˜ Am I following district policy on educational technology?
 
 > **Pro Tip:** If your district doesn't have an AI policy yet, they will soon. Document everything you're doing now so you can show you've been responsible and thoughtful.
 
@@ -229,16 +229,16 @@ Before using ANY AI tool, ask yourself:
 **Responsible AI Use Examples:**
 
 **Scenario 1: You're Stuck on a Topic**
-- ❌ Ask AI to write the essay
-- ✅ Ask AI to brainstorm 5 possible angles on the topic, then YOU choose and develop one
+- âŒ Ask AI to write the essay
+- âœ… Ask AI to brainstorm 5 possible angles on the topic, then YOU choose and develop one
 
 **Scenario 2: You Don't Understand the Assignment**
-- ❌ Copy AI's explanation and submit it
-- ✅ Ask AI to explain it in simpler terms, then ask your teacher if you understood correctly
+- âŒ Copy AI's explanation and submit it
+- âœ… Ask AI to explain it in simpler terms, then ask your teacher if you understood correctly
 
 **Scenario 3: You're Editing Your Work**
-- ❌ Let AI rewrite your sentences
-- ✅ Ask AI to identify weak spots, then YOU improve them in your own voice
+- âŒ Let AI rewrite your sentences
+- âœ… Ask AI to identify weak spots, then YOU improve them in your own voice
 
 **The Rule:** AI should help you think better, not think for you.
 
@@ -253,17 +253,17 @@ As your teacher, I believe AI is a tool that can help you learn -
 when used responsibly. Here's our class policy:
 
 WHEN YOU CAN USE AI:
-✓ Brainstorming ideas for projects or essays
-✓ Generating practice quiz questions
-✓ Checking grammar and spelling
-✓ Explaining difficult concepts (after trying to understand on your own)
-✓ Creating study guides or flashcards
+âœ“ Brainstorming ideas for projects or essays
+âœ“ Generating practice quiz questions
+âœ“ Checking grammar and spelling
+âœ“ Explaining difficult concepts (after trying to understand on your own)
+âœ“ Creating study guides or flashcards
 
 WHEN YOU CANNOT USE AI:
-✗ Writing full essays, reports, or assignments
-✗ Completing homework problems without understanding the work
-✗ During tests, quizzes, or in-class assignments (unless I say otherwise)
-✗ Any time I specifically say "No AI on this assignment"
+âœ- Writing full essays, reports, or assignments
+âœ- Completing homework problems without understanding the work
+âœ- During tests, quizzes, or in-class assignments (unless I say otherwise)
+âœ- Any time I specifically say "No AI on this assignment"
 
 REQUIRED: AI USE STATEMENT
 If you use AI on any assignment, you must include a statement like this:
@@ -323,11 +323,13 @@ AI isn't going away. In fact, it's going to become more powerful and more integr
 
 The students who learn to use AI responsibly will have a massive advantage in college and careers. The students who don't will struggle. This is our chance to make a difference.
 
-**Teach them to use the tool. But more importantly, teach them to think.** 🧠
+**Teach them to use the tool. But more importantly, teach them to think.** ðŸ§ 
 
 ---
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+
+

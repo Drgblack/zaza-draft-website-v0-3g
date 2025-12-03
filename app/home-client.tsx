@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { SignupModal } from "@/components/signup-modal";
@@ -213,7 +213,7 @@ export function HomePageClient() {
                 transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
                 className="inline-flex items-center gap-2 rounded-full bg-[#8B5CF6]/10 px-4 py-2 text-sm font-medium text-[#A78BFA] border border-[#8B5CF6]/30 backdrop-blur-sm"
               >
-                <span className="text-xl">✨</span>
+                <span className="text-xl">âœ¨</span>
                 <span>{t("hero.badge")}</span>
               </motion.div>
 
@@ -671,12 +671,12 @@ export function HomePageClient() {
                   className="bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] hover:opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105"
                   style={{ minHeight: "44px" }}
                 >
-                  <span className="text-xl mr-2">✨</span>
+                  <span className="text-xl mr-2">âœ¨</span>
                   {isRewriting ? "..." : t("demo.ctaButton")}
                 </Button>
-                <div className="text-[#8B5CF6] text-3xl hidden lg:block">→</div>
+                <div className="text-[#8B5CF6] text-3xl hidden lg:block">â†’</div>
                 <div className="text-[#8B5CF6] text-3xl lg:hidden rotate-90">
-                  →
+                  â†’
                 </div>
               </div>
 
@@ -754,37 +754,37 @@ export function HomePageClient() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: "📧",
+                icon: "ðŸ“§",
                 title: t("useCases.cards.parentMessages.title"),
                 desc: t("useCases.cards.parentMessages.description"),
                 examples: t("useCases.cards.parentMessages.examples"),
               },
               {
-                icon: "📝",
+                icon: "ðŸ“",
                 title: t("useCases.cards.reportCards.title"),
                 desc: t("useCases.cards.reportCards.description"),
                 examples: t("useCases.cards.reportCards.examples"),
               },
               {
-                icon: "✍️",
+                icon: "âœï¸",
                 title: t("useCases.cards.gradingComments.title"),
                 desc: t("useCases.cards.gradingComments.description"),
                 examples: t("useCases.cards.gradingComments.examples"),
               },
               {
-                icon: "📰",
+                icon: "ðŸ“°",
                 title: t("useCases.cards.schoolCommunications.title"),
                 desc: t("useCases.cards.schoolCommunications.description"),
                 examples: t("useCases.cards.schoolCommunications.examples"),
               },
               {
-                icon: "💼",
+                icon: "ðŸ’¼",
                 title: t("useCases.cards.referenceLetters.title"),
                 desc: t("useCases.cards.referenceLetters.description"),
                 examples: t("useCases.cards.referenceLetters.examples"),
               },
               {
-                icon: "📋",
+                icon: "ðŸ“‹",
                 title: t("useCases.cards.documentation.title"),
                 desc: t("useCases.cards.documentation.description"),
                 examples: t("useCases.cards.documentation.examples"),
@@ -1078,3 +1078,4 @@ export function HomePageClient() {
     </>
   );
 }
+

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Sanitizer to remove ephemeral asset URLs that cause 404s
  * Strips blob: URLs and vusercontent.net URLs from HTML content
  */
@@ -21,3 +21,4 @@ export function stripEphemeralAssets(html: string): string {
 export function sanitizeHtmlContent(html: string): string {
   return stripEphemeralAssets(html)
 }
+

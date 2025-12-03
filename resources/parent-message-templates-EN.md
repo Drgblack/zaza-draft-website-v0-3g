@@ -1,4 +1,4 @@
-# Parent Communication Toolkit: Templates for Every Scenario
+﻿# Parent Communication Toolkit: Templates for Every Scenario
 ## 12+ Ready-to-Use Email Templates for Positive Updates, Concerns, and Everything In Between
 
 *Stop agonizing over every parent email. These templates give you professional, warm, and effective language for the most common parent communication scenarios - from celebrations to concerns.*
@@ -37,29 +37,29 @@ Before you use these templates, remember these principles:
 
 Parents need to know you care about their child before they'll trust your message. Start with something positive or empathetic.
 
-âœ… "I've enjoyed having Maya in class this year."  
-âŒ "Maya has been causing problems."
+Ã¢Å“â€¦ "I've enjoyed having Maya in class this year."  
+Ã¢Å’ "Maya has been causing problems."
 
 ### Rule 2: Be Specific, Not Vague
 
 Vague language creates confusion and defensiveness. Specific language builds trust.
 
-âœ… "Yesterday during math, Alex refused to start the assignment and said 'this is stupid.'"  
-âŒ "Alex has a bad attitude."
+Ã¢Å“â€¦ "Yesterday during math, Alex refused to start the assignment and said 'this is stupid.'"  
+Ã¢Å’ "Alex has a bad attitude."
 
 ### Rule 3: Offer Solutions, Not Just Problems
 
 Don't just name the issue - offer a path forward.
 
-âœ… "Here's what I'm doing... Here's what you can do... Let's check in next week."  
-âŒ "Please talk to him about this."
+Ã¢Å“â€¦ "Here's what I'm doing... Here's what you can do... Let's check in next week."  
+Ã¢Å’ "Please talk to him about this."
 
 ### Rule 4: Invite Partnership, Don't Demand Compliance
 
 Parents are your partners, not your subordinates.
 
-âœ… "Could we work together on a plan?"  
-âŒ "You need to make sure he does his homework."
+Ã¢Å“â€¦ "Could we work together on a plan?"  
+Ã¢Å’ "You need to make sure he does his homework."
 
 ### Rule 5: Proofread Before You Send
 
@@ -505,11 +505,12 @@ These templates give you a starting point. Make them yours. Add your voice. Adju
 
 And remember: Most parents want the same thing you do - for their child to succeed. When you approach them as partners (not adversaries), you'll build trust that lasts all year.
 
-**You've got this - now go build those bridges.** 🌉
+**You've got this - now go build those bridges.** ðŸŒ‰
 
 ---
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+

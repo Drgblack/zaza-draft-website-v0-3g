@@ -1,4 +1,4 @@
-# CLAUDE.md - Zaza Draft Monorepo Brief
+﻿# CLAUDE.md - Zaza Draft Monorepo Brief
 
 ## Purpose
 
@@ -49,7 +49,7 @@ When generating code or copy, protect teacher time and student privacy. Tone: cl
 
 ## Pipelines we rely on
 
-- One Plan → Comments → Parent Email → Newsletter line → 5-Field Note (documents/templates described in posts).
+- One Plan â†’ Comments â†’ Parent Email â†’ Newsletter line â†’ 5-Field Note (documents/templates described in posts).
 - Posts are rendered with design-system wrappers that consume the HTML comment markers above.
 
 ## Claude tasks you may perform
@@ -61,7 +61,7 @@ When generating code or copy, protect teacher time and student privacy. Tone: cl
 
 ## Test & ship
 
-- Local: pnpm dev → http://localhost:3000
+- Local: pnpm dev â†’ http://localhost:3000
 - Type/lint: pnpm typecheck and pnpm lint
 - Commit to a feature branch and open PR; Vercel previews on PR branches.
 
@@ -106,4 +106,5 @@ Each post must include:
 - Audience: busy teachers.
 - Style: clear-but-kind, professional, no corporate jargon.
 - Protect teacher time and student privacy.
-- Avoid clichés, fluff, or academic padding.
+- Avoid clichÃ©s, fluff, or academic padding.
+

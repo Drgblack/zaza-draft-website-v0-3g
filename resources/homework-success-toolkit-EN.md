@@ -1,4 +1,4 @@
-# The Homework Success Toolkit: Study Skills & Self-Directed Learning
+﻿# The Homework Success Toolkit: Study Skills & Self-Directed Learning
 ## A Complete Guide for Teachers + Printable Student Resources
 
 *Homework shouldn't be a battle. This toolkit gives you strategies to assign meaningful homework, teach study skills, and help students develop self-directed learning habits - plus a printable "Homework Survival Guide" for students.*
@@ -43,7 +43,7 @@ This toolkit gives you:
 - Punishment (extra homework for behavior issues)
 - Teaching new content (if you didn't teach it, don't assign it)
 
-> 💡 **Ask yourself before assigning homework:** "What's the purpose? Will this help students learn, or just keep them busy?"
+> ðŸ’¡ **Ask yourself before assigning homework:** "What's the purpose? Will this help students learn, or just keep them busy?"
 
 ---
 
@@ -139,7 +139,7 @@ Life happens. If you're struggling, TALK TO ME. We'll figure it out together.
 - What did I get wrong? Why? What will I do differently next time?
 - Time: 5-10 minutes
 
-> 💡 **Key Message:** Studying isn't something you do the night before a test. It's a cycle that starts before class even begins.
+> ðŸ’¡ **Key Message:** Studying isn't something you do the night before a test. It's a cycle that starts before class even begins.
 
 ---
 
@@ -160,12 +160,12 @@ Life happens. If you're struggling, TALK TO ME. We'll figure it out together.
 **Give students a bookmark template:**
 ```
 ACTIVE READING CHECKLIST:
-☐ Skimmed the chapter first
-☐ Turned headers into questions
-☐ Highlighted key terms
-☐ Wrote margin notes
-☐ Summarized each section
-☐ Quizzed myself at the end
+â˜ Skimmed the chapter first
+â˜ Turned headers into questions
+â˜ Highlighted key terms
+â˜ Wrote margin notes
+â˜ Summarized each section
+â˜ Quizzed myself at the end
 ```
 
 ---
@@ -241,13 +241,13 @@ ACTIVE READING CHECKLIST:
 
 **Set Yourself Up for Success:**
 
-☐ **Find a study space** - Quiet, good lighting, no distractions (put your phone away!)
+â˜ **Find a study space** - Quiet, good lighting, no distractions (put your phone away!)
 
-☐ **Gather materials** - Textbook, notebook, pencils, charger (so you don't have to keep getting up)
+â˜ **Gather materials** - Textbook, notebook, pencils, charger (so you don't have to keep getting up)
 
-☐ **Check the assignment** - What's due? When? What's the goal?
+â˜ **Check the assignment** - What's due? When? What's the goal?
 
-☐ **Plan your time** - Estimate how long each task will take. Set a timer if needed.
+â˜ **Plan your time** - Estimate how long each task will take. Set a timer if needed.
 
 ---
 
@@ -255,15 +255,15 @@ ACTIVE READING CHECKLIST:
 
 **Work Smart:**
 
-✓ **Start with the hardest thing** - Get the tough stuff done first when your brain is fresh.
+âœ“ **Start with the hardest thing** - Get the tough stuff done first when your brain is fresh.
 
-✓ **Take breaks** - Work for 25 minutes, break for 5. Repeat. (This is called the Pomodoro Technique.)
+âœ“ **Take breaks** - Work for 25 minutes, break for 5. Repeat. (This is called the Pomodoro Technique.)
 
-✓ **Eliminate distractions** - Turn off notifications. Put your phone in another room. Close extra tabs.
+âœ“ **Eliminate distractions** - Turn off notifications. Put your phone in another room. Close extra tabs.
 
-✓ **Show your work** - Even if it's not required. It helps you think and makes it easier to find mistakes.
+âœ“ **Show your work** - Even if it's not required. It helps you think and makes it easier to find mistakes.
 
-✓ **Ask for help if you're stuck** - Don't waste 30 minutes staring at a problem. Use the "Getting Unstuck Ladder" (see below).
+âœ“ **Ask for help if you're stuck** - Don't waste 30 minutes staring at a problem. Use the "Getting Unstuck Ladder" (see below).
 
 ---
 
@@ -336,16 +336,16 @@ Every Sunday (or Monday morning), write down all assignments for the week. Cross
 **Example Weekly Planner:**
 ```
 MONDAY:
-☐ Math worksheet (20 min)
-☐ Read history chapter 8 (30 min)
+â˜ Math worksheet (20 min)
+â˜ Read history chapter 8 (30 min)
 
 TUESDAY:
-☐ Science lab questions (15 min)
-☐ Start English essay outline (25 min)
+â˜ Science lab questions (15 min)
+â˜ Start English essay outline (25 min)
 
 WEDNESDAY:
-☐ Math practice problems (20 min)
-☐ Finish English outline (20 min)
+â˜ Math practice problems (20 min)
+â˜ Finish English outline (20 min)
 
 ... and so on
 ```
@@ -394,13 +394,13 @@ WEDNESDAY:
 
 **How Adults Can Help (Without Doing the Work):**
 
-✓ Provide a quiet space and materials  
-✓ Set a consistent homework time  
-✓ Ask "What's your plan?" (not "Did you finish?")  
-✓ Help them break down big projects  
-✓ Encourage breaks and healthy habits  
-✗ Don't do the work for them  
-✗ Don't hover or micromanage  
+âœ“ Provide a quiet space and materials  
+âœ“ Set a consistent homework time  
+âœ“ Ask "What's your plan?" (not "Did you finish?")  
+âœ“ Help them break down big projects  
+âœ“ Encourage breaks and healthy habits  
+âœ- Don't do the work for them  
+âœ- Don't hover or micromanage  
 
 **When to Get Involved:**
 - If your student is consistently overwhelmed (talk to the teacher)
@@ -414,7 +414,7 @@ WEDNESDAY:
 - It's okay to ask for help.
 - You're building skills that will help you for life.
 
-**You've got this!** 📚
+**You've got this!** ðŸ“š
 
 ---
 
@@ -494,11 +494,13 @@ Homework doesn't have to be a source of stress. When it's purposeful, manageable
 
 Your students want to succeed. Sometimes, they just need to be taught HOW.
 
-**Give them the tools. Watch them thrive.** 🎯
+**Give them the tools. Watch them thrive.** ðŸŽ¯
 
 ---
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+
+

@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   hero: {
     preheadline: "TRANSPARENT PRICING",
     headline: "Pricing that respects teachers' time and wellbeing",
@@ -135,3 +135,4 @@ export default {
     subtitle: "Take our quick quiz to get a personalized recommendation",
   },
 };
+

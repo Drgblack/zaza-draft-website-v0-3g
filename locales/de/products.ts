@@ -1,10 +1,10 @@
-export default {
+﻿export default {
   teach: {
     hero: {
       eyebrow: "UNTERRICHTSPLANUNG LEICHT GEMACHT",
-      title: "Bessere Unterrichtsstunden in kürzerer Zeit planen",
+      title: "Bessere Unterrichtsstunden in kÃ¼rzerer Zeit planen",
       subtitle:
-        "KI-gestützte Unterrichtsplanung, die sich an Ihren Lehrplan anpasst, Stunden an Vorbereitungszeit spart und Ihnen hilft, ansprechende, standardkonforme Unterrichtsstunden zu erstellen.",
+        "KI-gestÃ¼tzte Unterrichtsplanung, die sich an Ihren Lehrplan anpasst, Stunden an Vorbereitungszeit spart und Ihnen hilft, ansprechende, standardkonforme Unterrichtsstunden zu erstellen.",
       cta: {
         primary: "Kostenlos starten",
         secondary: "Demo ansehen",
@@ -12,25 +12,25 @@ export default {
     },
     turn: {
       pain1:
-        "Jede Woche Stunden damit verbringen, Unterrichtspläne von Grund auf zu erstellen",
+        "Jede Woche Stunden damit verbringen, UnterrichtsplÃ¤ne von Grund auf zu erstellen",
       pain2:
-        "Schwierigkeiten bei der Differenzierung für verschiedene Lernende",
+        "Schwierigkeiten bei der Differenzierung fÃ¼r verschiedene Lernende",
       pain3:
-        "Zeit für administrative Aufgaben statt für das Unterrichten verlieren",
+        "Zeit fÃ¼r administrative Aufgaben statt fÃ¼r das Unterrichten verlieren",
     },
     features: {
-      title: "Alles, was Sie für großartige Unterrichtsstunden brauchen",
+      title: "Alles, was Sie fÃ¼r groÃŸartige Unterrichtsstunden brauchen",
       autoplanner: {
         title: "Auto-Planer",
-        desc: "Erstellen Sie in Minuten vollständige, an Ihre Lehrplanstandards angepasste Unterrichtspläne",
+        desc: "Erstellen Sie in Minuten vollstÃ¤ndige, an Ihre Lehrplanstandards angepasste UnterrichtsplÃ¤ne",
       },
       curriculum: {
         title: "Lehrplankonform",
-        desc: "Integrierte Unterstützung für Common Core, Landesstandards und internationale Lehrpläne",
+        desc: "Integrierte UnterstÃ¼tzung fÃ¼r Common Core, Landesstandards und internationale LehrplÃ¤ne",
       },
       gamified: {
-        title: "Spielerische Aktivitäten",
-        desc: "Erstellen Sie ansprechende, interaktive Aktivitäten, die Schüler motiviert halten",
+        title: "Spielerische AktivitÃ¤ten",
+        desc: "Erstellen Sie ansprechende, interaktive AktivitÃ¤ten, die SchÃ¼ler motiviert halten",
       },
     },
     howItWorks: {
@@ -41,7 +41,7 @@ export default {
       },
       step2: {
         title: "KI erstellt Plan",
-        desc: "Erhalten Sie in Sekunden einen vollständigen, standardkonformen Unterrichtsplan",
+        desc: "Erhalten Sie in Sekunden einen vollstÃ¤ndigen, standardkonformen Unterrichtsplan",
       },
       step3: {
         title: "Anpassen & Unterrichten",
@@ -49,9 +49,9 @@ export default {
       },
     },
     whoItsFor: {
-      title: "Perfekt für",
-      item1: "Lehrkräfte, die Zeit bei der Unterrichtsplanung sparen möchten",
-      item2: "Pädagogen, die den Unterricht effektiver differenzieren möchten",
+      title: "Perfekt fÃ¼r",
+      item1: "LehrkrÃ¤fte, die Zeit bei der Unterrichtsplanung sparen mÃ¶chten",
+      item2: "PÃ¤dagogen, die den Unterricht effektiver differenzieren mÃ¶chten",
       item3:
         "Schulen, die einen konsistenten, standardkonformen Lehrplan suchen",
     },
@@ -59,29 +59,29 @@ export default {
       title: "Transformieren Sie Ihren Planungsprozess",
       step1: "Reduzieren Sie die Planungszeit von Stunden auf Minuten",
       step2: "Erstellen Sie ansprechendere, differenzierte Unterrichtsstunden",
-      step3: "Stellen Sie die Übereinstimmung mit Lehrplanstandards sicher",
+      step3: "Stellen Sie die Ãœbereinstimmung mit Lehrplanstandards sicher",
       step4: "Teilen und arbeiten Sie mit Ihrem Lehrerteam zusammen",
     },
     social: {
-      title: "Was Lehrkräfte sagen",
+      title: "Was LehrkrÃ¤fte sagen",
       quote1:
-        "Teach hat meine Planungszeit halbiert. Ich kann mich auf das Wesentliche konzentrieren - meine Schüler.",
+        "Teach hat meine Planungszeit halbiert. Ich kann mich auf das Wesentliche konzentrieren - meine SchÃ¼ler.",
       author1: "Emma Thompson, Grundschullehrerin",
       quote2:
-        "Die Lehrplan-Ausrichtungsfunktion ist ein Game-Changer für unsere Abteilung.",
+        "Die Lehrplan-Ausrichtungsfunktion ist ein Game-Changer fÃ¼r unsere Abteilung.",
       author2: "Michael Chen, Fachbereichsleiter",
     },
     cta: {
       title: "Bereit, Ihre Planung zu transformieren?",
       subtitle:
-        "Schließen Sie sich Hunderten von Lehrkräften an, die 10+ Stunden pro Woche sparen",
+        "SchlieÃŸen Sie sich Hunderten von LehrkrÃ¤ften an, die 10+ Stunden pro Woche sparen",
       primary: "Kostenlose Testversion starten",
       secondary: "Demo planen",
     },
   },
   draft: {
     hero: {
-      eyebrow: "KI-SCHREIBASSISTENT FÜR LEHRKRÄFTE",
+      eyebrow: "KI-SCHREIBASSISTENT FÃœR LEHRKRÃ„FTE",
       title: "Besser, schneller schreiben",
       subtitle:
         "Verwandeln Sie grobe Notizen in ausgefeilte Eltern-E-Mails, Zeugnisse und Feedback in Minuten. Bewahren Sie Ihre Stimme und sparen Sie jede Woche Stunden.",
@@ -94,69 +94,69 @@ export default {
       pain1:
         "2-3 Stunden pro Woche mit dem Schreiben von Eltern-E-Mails verbringen",
       pain2:
-        "Schwierigkeiten, den richtigen Ton für sensible Kommunikation zu finden",
+        "Schwierigkeiten, den richtigen Ton fÃ¼r sensible Kommunikation zu finden",
       pain3: "Immer wieder die gleichen Feedback-Kommentare schreiben",
     },
     features: {
-      title: "Für Lehrerkommunikation entwickelt",
+      title: "FÃ¼r Lehrerkommunikation entwickelt",
       toneGuardrails: {
         title: "Ton-Leitplanken",
-        desc: "Wählen Sie aus unterstützenden, formellen, prägnanten oder neutralen Tönen - immer professionell",
+        desc: "WÃ¤hlen Sie aus unterstÃ¼tzenden, formellen, prÃ¤gnanten oder neutralen TÃ¶nen - immer professionell",
       },
       translationChecks: {
-        title: "Übersetzungsprüfungen",
-        desc: "Kommunizieren Sie selbstbewusst mit Familien in über 20 Sprachen",
+        title: "ÃœbersetzungsprÃ¼fungen",
+        desc: "Kommunizieren Sie selbstbewusst mit Familien in Ã¼ber 20 Sprachen",
       },
       reviewSteps: {
-        title: "Überprüfungsschritte",
-        desc: "Integrierter Überprüfungsprozess gewährleistet Genauigkeit vor dem Senden",
+        title: "ÃœberprÃ¼fungsschritte",
+        desc: "Integrierter ÃœberprÃ¼fungsprozess gewÃ¤hrleistet Genauigkeit vor dem Senden",
       },
     },
     howItWorks: {
       title: "So funktioniert es",
       step1: {
-        title: "Notizen einfügen",
+        title: "Notizen einfÃ¼gen",
         desc: "Beginnen Sie mit Stichpunkten oder einem groben Entwurf",
       },
       step2: {
-        title: "Ton wählen",
-        desc: "Wählen Sie die richtige Stimme für Ihre Nachricht",
+        title: "Ton wÃ¤hlen",
+        desc: "WÃ¤hlen Sie die richtige Stimme fÃ¼r Ihre Nachricht",
       },
       step3: {
-        title: "Überprüfen & Senden",
+        title: "ÃœberprÃ¼fen & Senden",
         desc: "Bei Bedarf bearbeiten, dann kopieren oder exportieren",
       },
     },
     whoItsFor: {
-      title: "Perfekt für",
-      item1: "Lehrkräfte, die Elternkommunikation schreiben",
-      item2: "Pädagogen, die Zeugniskommentare erstellen",
-      item3: "Schulen, die konsistente, professionelle Kommunikation benötigen",
+      title: "Perfekt fÃ¼r",
+      item1: "LehrkrÃ¤fte, die Elternkommunikation schreiben",
+      item2: "PÃ¤dagogen, die Zeugniskommentare erstellen",
+      item3: "Schulen, die konsistente, professionelle Kommunikation benÃ¶tigen",
     },
     change: {
-      title: "Was sich mit Draft ändert",
+      title: "Was sich mit Draft Ã¤ndert",
       step1: "2-Stunden-Aufgaben in 5 Minuten erledigt",
       step2: "Konsistenter, professioneller Ton in allen Kommunikationen",
-      step3: "Selbstvertrauen in sensiblen Gesprächen",
+      step3: "Selbstvertrauen in sensiblen GesprÃ¤chen",
       step4: "Mehr Zeit zum Unterrichten, weniger Zeit zum Schreiben",
     },
     techNote: {
       title: "Halluzinationssicher:",
-      body: "Im Gegensatz zu generischer KI erfindet Draft niemals Schülerinformationen oder fabriziert Details. Jede Ausgabe basiert auf dem, was Sie bereitstellen.",
+      body: "Im Gegensatz zu generischer KI erfindet Draft niemals SchÃ¼lerinformationen oder fabriziert Details. Jede Ausgabe basiert auf dem, was Sie bereitstellen.",
     },
     social: {
-      title: "Was Lehrkräfte sagen",
+      title: "Was LehrkrÃ¤fte sagen",
       quote1:
-        "Ich habe meinen Sonntag zurückbekommen. Draft verwandelt Stunden in Minuten.",
+        "Ich habe meinen Sonntag zurÃ¼ckbekommen. Draft verwandelt Stunden in Minuten.",
       author1: "Sarah Mitchell, Grundschullehrerin",
       quote2:
         "Die Tonoptionen helfen mir, selbstbewusst zu kommunizieren, auch in schwierigen Situationen.",
       author2: "James Rodriguez, Mittelschullehrer",
     },
     cta: {
-      title: "Holen Sie sich Ihre Zeit zurück",
+      title: "Holen Sie sich Ihre Zeit zurÃ¼ck",
       subtitle:
-        "Schließen Sie sich 500+ Lehrkräften an, die jede Woche 10+ Stunden sparen",
+        "SchlieÃŸen Sie sich 500+ LehrkrÃ¤ften an, die jede Woche 10+ Stunden sparen",
       primary: "Kostenlose Testversion starten",
       secondary: "Beispiele ansehen",
     },
@@ -165,40 +165,40 @@ export default {
     hero: {
       title: "Schneller, fairer bewerten",
       subtitle:
-        "KI-gestützter Bewertungsassistent, der Ihnen hilft, in der Hälfte der Zeit konsistentes, konstruktives Feedback zu geben.",
+        "KI-gestÃ¼tzter Bewertungsassistent, der Ihnen hilft, in der HÃ¤lfte der Zeit konsistentes, konstruktives Feedback zu geben.",
       cta: "Kostenlos starten",
     },
     turn: {
       pain1: "4-6 Stunden pro Woche mit der Bewertung von Aufgaben verbringen",
-      pain2: "Inkonsistentes Feedback bei ähnlichen Schülerarbeiten",
+      pain2: "Inkonsistentes Feedback bei Ã¤hnlichen SchÃ¼lerarbeiten",
       pain3: "Schwierigkeiten, detaillierte, konstruktive Kommentare zu geben",
     },
     change: {
       title: "Transformieren Sie Ihren Bewertungsprozess",
       step1: "Aufgabe und Bewertungsraster hochladen",
-      step2: "KI analysiert Schülerarbeit anhand von Kriterien",
-      step3: "Vorgeschlagene Noten und Feedback überprüfen und anpassen",
+      step2: "KI analysiert SchÃ¼lerarbeit anhand von Kriterien",
+      step3: "Vorgeschlagene Noten und Feedback Ã¼berprÃ¼fen und anpassen",
       step4: "Mit einem Klick in Ihr Notenbuch exportieren",
     },
     features: {
       title: "Bewertung leicht gemacht",
       faster: {
         title: "3x schnellere Bewertung",
-        desc: "Reduzieren Sie die Bewertungszeit von Stunden auf Minuten bei gleichbleibender Qualität",
+        desc: "Reduzieren Sie die Bewertungszeit von Stunden auf Minuten bei gleichbleibender QualitÃ¤t",
       },
       fair: {
         title: "Konsistentes Feedback",
-        desc: "Stellen Sie faire, standardkonforme Bewertung für alle Schüler sicher",
+        desc: "Stellen Sie faire, standardkonforme Bewertung fÃ¼r alle SchÃ¼ler sicher",
       },
       audit: {
-        title: "Prüfpfad",
-        desc: "Verfolgen Sie alle Bewertungsentscheidungen mit vollständiger Transparenz",
+        title: "PrÃ¼fpfad",
+        desc: "Verfolgen Sie alle Bewertungsentscheidungen mit vollstÃ¤ndiger Transparenz",
       },
     },
     social: {
-      title: "Was Lehrkräfte sagen",
+      title: "Was LehrkrÃ¤fte sagen",
       quote1:
-        "GradeFlow hat meine Bewertungszeit halbiert, ohne die Qualität zu beeinträchtigen.",
+        "GradeFlow hat meine Bewertungszeit halbiert, ohne die QualitÃ¤t zu beeintrÃ¤chtigen.",
       author1: "Lisa Park, Gymnasiallehrerin Englisch",
       quote2: "Mein Feedback ist jetzt konsistenter und hilfreicher.",
       author2: "David Kim, Mittelschullehrer Mathematik",
@@ -209,3 +209,4 @@ export default {
     },
   },
 };
+

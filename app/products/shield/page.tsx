@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import ShieldClient from "./shield-client"
 
 export const metadata: Metadata = {
@@ -78,3 +78,4 @@ export default function ShieldPage() {
     </>
   )
 }
+

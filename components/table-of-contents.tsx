@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useState, useEffect } from "react"
 import { ChevronRight } from "lucide-react"
@@ -102,3 +102,4 @@ export function TableOfContents({ items }: TableOfContentsProps) {
     </div>
   )
 }
+

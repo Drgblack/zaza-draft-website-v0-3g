@@ -1,4 +1,4 @@
-{
+﻿{
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
@@ -6,3 +6,4 @@
     }
   }
 }
+

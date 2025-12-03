@@ -237,3 +237,4 @@ export function getResourcesByCategory(
 export function getAllResourceSlugs(): string[] {
   return aiLiteracyResources.map((r) => r.slug);
 }
+

@@ -1,4 +1,4 @@
-// Transforms inbox drafts into BlogPost format
+﻿// Transforms inbox drafts into BlogPost format
 
 export type InboxBlock = { en: string; de?: string };
 
@@ -13,6 +13,7 @@ export type BlogPost = {
   category?: string;
   tags: string[];
   ogImage?: string;
+  language?: "en" | "de";
 };
 
 export function toBlogPosts(
@@ -53,3 +54,4 @@ export function toBlogPosts(
     };
   });
 }
+

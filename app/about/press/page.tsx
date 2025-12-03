@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import { AboutSidebar } from "@/components/about-sidebar"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { AssetCard } from "@/components/asset-card"
@@ -205,4 +205,5 @@ export default function PressKitPage() {
   )
 }
 import type { Metadata } from "next"
+
 

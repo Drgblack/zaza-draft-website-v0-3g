@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import AILiteracyClient from "./ai-literacy-client"
 import { CourseSchema, BreadcrumbSchema } from "@/lib/seo/schema"
 
@@ -36,4 +36,5 @@ export default function AILiteracyPage() {
   )
 }
 import type { Metadata } from "next"
+
 

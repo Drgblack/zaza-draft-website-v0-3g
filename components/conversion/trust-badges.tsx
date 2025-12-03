@@ -1,4 +1,4 @@
-import { Shield, Lock, Award, CheckCircle } from "lucide-react"
+﻿import { Shield, Lock, Award, CheckCircle } from "lucide-react"
 
 export function TrustBadges() {
   const badges = [
@@ -41,3 +41,4 @@ export function TrustBadges() {
     </div>
   )
 }
+

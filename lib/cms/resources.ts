@@ -1,4 +1,4 @@
-export interface Resource {
+﻿export interface Resource {
   slug: string
   title: string
   type: "Guide" | "Template" | "Checklist"
@@ -149,3 +149,4 @@ export function getResourceBySlug(slug: string): Resource | undefined {
 export function getResourcesByType(type: Resource["type"]): Resource[] {
   return resources.filter((resource) => resource.type === type)
 }
+

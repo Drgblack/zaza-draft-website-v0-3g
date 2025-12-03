@@ -1,4 +1,4 @@
-import { useLanguage } from "@/contexts/LanguageContext";
+﻿import { useLanguage } from "@/contexts/LanguageContext";
 
 // Import translation files
 import enCommon from "@/locales/en/common.json";
@@ -59,3 +59,4 @@ export function useTranslations(namespace: "common" | "home" | "glossary") {
 
   return { t, language };
 }
+

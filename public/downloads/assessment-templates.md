@@ -1,4 +1,4 @@
-# Assessment Templates for Teachers
+﻿# Assessment Templates for Teachers
 
 ## 18 Copy-and-Paste Rubrics & Checklists That Save 2+ Hours Per Week
 
@@ -17,10 +17,10 @@ _________________ _________________ _________________ _________________ ________
 COMMENTS: ________________________________________________________________________________` ### 2. Standards-Based Assessment Template ```
    STANDARDS-BASED ASSESSMENT
    Student Name: ******\_\_\_\_****** Class: ******\_\_\_\_****** Date: ******\_\_\_\_****** STANDARD: [Insert specific standard here] PERFORMANCE LEVELS:
-   □ Exceeds Standard (4) - Student demonstrates mastery beyond grade level expectations
-   □ Meets Standard (3) - Student demonstrates grade level proficiency
-   □ Approaching Standard (2) - Student shows progress toward grade level expectations
-   □ Below Standard (1) - Student needs significant support to meet grade level expectations EVIDENCE:
+   â–¡ Exceeds Standard (4) - Student demonstrates mastery beyond grade level expectations
+   â–¡ Meets Standard (3) - Student demonstrates grade level proficiency
+   â–¡ Approaching Standard (2) - Student shows progress toward grade level expectations
+   â–¡ Below Standard (1) - Student needs significant support to meet grade level expectations EVIDENCE:
 
 ---
 
@@ -34,11 +34,11 @@ COMMENTS: ______________________________________________________________________
 `### 3. Project Assessment Checklist`
 PROJECT ASSESSMENT CHECKLIST
 Project: ******\_\_\_\_****** Student: ******\_\_\_\_****** Due Date: ******\_\_\_\_****** REQUIREMENTS COMPLETED QUALITY COMMENTS
-□ [ ] Project meets all □ Yes □ High ******\_\_\_\_****** specified requirements □ No □ Medium ******\_\_\_\_****** □ Partial □ Low ******\_\_\_\_****** □ [ ] Work is original and □ Yes □ High ******\_\_\_\_****** creative □ No □ Medium ******\_\_\_\_****** □ Partial □ Low ******\_\_\_\_****** □ [ ] Presentation is clear □ Yes □ High ******\_\_\_\_****** and organized □ No □ Medium ******\_\_\_\_****** □ Partial □ Low ******\_\_\_\_****** □ [ ] Sources are properly □ Yes □ High ******\_\_\_\_****** cited □ No □ Medium ******\_\_\_\_****** □ Partial □ Low ******\_\_\_\_****** □ [ ] Project demonstrates □ Yes □ High ******\_\_\_\_****** understanding of concepts □ No □ Medium ******\_\_\_\_****** □ Partial □ Low ******\_\_\_\_****** OVERALL ASSESSMENT:
-□ Exceeds Expectations
-□ Meets Expectations
-□ Approaching Expectations
-□ Below Expectations STRENGTHS: **********************************\_\_\_\_**********************************
+â–¡ [ ] Project meets all â–¡ Yes â–¡ High ******\_\_\_\_****** specified requirements â–¡ No â–¡ Medium ******\_\_\_\_****** â–¡ Partial â–¡ Low ******\_\_\_\_****** â–¡ [ ] Work is original and â–¡ Yes â–¡ High ******\_\_\_\_****** creative â–¡ No â–¡ Medium ******\_\_\_\_****** â–¡ Partial â–¡ Low ******\_\_\_\_****** â–¡ [ ] Presentation is clear â–¡ Yes â–¡ High ******\_\_\_\_****** and organized â–¡ No â–¡ Medium ******\_\_\_\_****** â–¡ Partial â–¡ Low ******\_\_\_\_****** â–¡ [ ] Sources are properly â–¡ Yes â–¡ High ******\_\_\_\_****** cited â–¡ No â–¡ Medium ******\_\_\_\_****** â–¡ Partial â–¡ Low ******\_\_\_\_****** â–¡ [ ] Project demonstrates â–¡ Yes â–¡ High ******\_\_\_\_****** understanding of concepts â–¡ No â–¡ Medium ******\_\_\_\_****** â–¡ Partial â–¡ Low ******\_\_\_\_****** OVERALL ASSESSMENT:
+â–¡ Exceeds Expectations
+â–¡ Meets Expectations
+â–¡ Approaching Expectations
+â–¡ Below Expectations STRENGTHS: **********************************\_\_\_\_**********************************
 AREAS FOR IMPROVEMENT: ****************************\_\_\_\_****************************
 `--- ## Subject-Specific Rubrics ### 4. Writing Assessment Rubric`
 WRITING ASSESSMENT RUBRIC
@@ -57,7 +57,7 @@ GRADE EQUIVALENT: **\_**
 COMMENTS: **************************************\_\_\_\_**************************************
 `--- ## Formative Assessment Tools ### 7. Exit Ticket Template`
 EXIT TICKET
-Name: ******\_\_\_\_****** Class: ******\_\_\_\_****** Date: ******\_\_\_\_****** Today's Learning Objective: **************************\_\_\_\_************************** 1. What is one thing you learned today? **************************************\_\_\_\_************************************** 2. What is one question you still have? **************************************\_\_\_\_************************************** 3. How confident do you feel about today's topic? □ Very Confident □ Somewhat Confident □ Not Very Confident □ Not Confident 4. What would help you understand this better? **************************************\_\_\_\_************************************** 5. Rate your participation today: □ Excellent □ Good □ Fair □ Poor Teacher Notes: **********************************\_\_\_**********************************
+Name: ******\_\_\_\_****** Class: ******\_\_\_\_****** Date: ******\_\_\_\_****** Today's Learning Objective: **************************\_\_\_\_************************** 1. What is one thing you learned today? **************************************\_\_\_\_************************************** 2. What is one question you still have? **************************************\_\_\_\_************************************** 3. How confident do you feel about today's topic? â–¡ Very Confident â–¡ Somewhat Confident â–¡ Not Very Confident â–¡ Not Confident 4. What would help you understand this better? **************************************\_\_\_\_************************************** 5. Rate your participation today: â–¡ Excellent â–¡ Good â–¡ Fair â–¡ Poor Teacher Notes: **********************************\_\_\_**********************************
 `### 8. Quick Check Assessment`
 QUICK CHECK ASSESSMENT
 Topic: ******\_\_\_\_****** Student: ******\_\_\_\_****** Date: ******\_\_\_\_****** DIRECTIONS: Rate your understanding of each concept on a scale of 1-4
@@ -75,7 +75,7 @@ Topic: ******\_\_\_\_****** Student: ******\_\_\_\_****** Date: ******\_\_\_\_**
 `### 9. Learning Target Tracker`
 LEARNING TARGET TRACKER
 Unit: ******\_\_\_\_****** Student: ******\_\_\_\_****** LEARNING TARGET NOT YET DEVELOPING PROFICIENT ADVANCED
-********\_******** STARTED (1) (2) (3) (0) 1. ******\_\_\_\_****** □ □ □ □ 2. ******\_\_\_\_****** □ □ □ □ 3. ******\_\_\_\_****** □ □ □ □ 4. ******\_\_\_\_****** □ □ □ □ 5. ******\_\_\_\_****** □ □ □ □ TOTAL SCORE: **\_** / 15 REFLECTION: What helped you learn these concepts? ****************\_\_\_\_**************** NEXT STEPS: What do you need to work on next? ******************\_\_\_******************
+********\_******** STARTED (1) (2) (3) (0) 1. ******\_\_\_\_****** â–¡ â–¡ â–¡ â–¡ 2. ******\_\_\_\_****** â–¡ â–¡ â–¡ â–¡ 3. ******\_\_\_\_****** â–¡ â–¡ â–¡ â–¡ 4. ******\_\_\_\_****** â–¡ â–¡ â–¡ â–¡ 5. ******\_\_\_\_****** â–¡ â–¡ â–¡ â–¡ TOTAL SCORE: **\_** / 15 REFLECTION: What helped you learn these concepts? ****************\_\_\_\_**************** NEXT STEPS: What do you need to work on next? ******************\_\_\_******************
 `--- ## Summative Assessment Templates ### 10. Unit Test Template`
 UNIT TEST: [UNIT NAME]
 Student Name: ******\_\_\_\_****** Class: ******\_\_\_\_****** Date: ******\_\_\_\_****** MULTIPLE CHOICE (20 points)
@@ -91,7 +91,7 @@ Student Name: ******\_\_\_\_****** Class: ******\_\_\_\_****** Date: ******\_\_\
    COMMENTS: ************************************\_\_\_************************************
    `### 11. Performance Task Assessment`
    PERFORMANCE TASK ASSESSMENT
-   Task: ******\_\_\_\_****** Student: ******\_\_\_\_****** Date: ******\_\_\_\_****** PERFORMANCE CRITERIA EXCELLENT GOOD DEVELOPING NEEDS IMPROVEMENT (4) (3) (2) (1) 1. ******\_\_\_\_****** □ □ □ □ 2. ******\_\_\_\_****** □ □ □ □ 3. ******\_\_\_\_****** □ □ □ □ 4. ******\_\_\_\_****** □ □ □ □ 5. ******\_\_\_\_****** □ □ □ □ TOTAL SCORE: **\_** / 20 STRENGTHS: ************************************\_\_\_************************************ AREAS FOR IMPROVEMENT: ******************************\_\_\_\_****************************** NEXT STEPS: ************************************\_\_\_************************************
+   Task: ******\_\_\_\_****** Student: ******\_\_\_\_****** Date: ******\_\_\_\_****** PERFORMANCE CRITERIA EXCELLENT GOOD DEVELOPING NEEDS IMPROVEMENT (4) (3) (2) (1) 1. ******\_\_\_\_****** â–¡ â–¡ â–¡ â–¡ 2. ******\_\_\_\_****** â–¡ â–¡ â–¡ â–¡ 3. ******\_\_\_\_****** â–¡ â–¡ â–¡ â–¡ 4. ******\_\_\_\_****** â–¡ â–¡ â–¡ â–¡ 5. ******\_\_\_\_****** â–¡ â–¡ â–¡ â–¡ TOTAL SCORE: **\_** / 20 STRENGTHS: ************************************\_\_\_************************************ AREAS FOR IMPROVEMENT: ******************************\_\_\_\_****************************** NEXT STEPS: ************************************\_\_\_************************************
    `--- ## Self-Assessment Tools ### 12. Student Self-Assessment`
    STUDENT SELF-ASSESSMENT
    Assignment: ******\_\_\_\_****** Name: ******\_\_\_\_****** Date: ******\_\_\_\_****** DIRECTIONS: Rate yourself on each criterion using the scale below:
@@ -133,73 +133,73 @@ Student: ******\_\_\_\_****** Week of: ******\_\_\_\_****** Subject: ******\_\_\
 ---
 
 ********\_******** **\_ \_** **\_ \_** **\_ ******\_\_******** WEEKLY ASSESSMENTS:
-□ Quiz/Test: **\_** / **\_**
-□ Project: **\_** / **\_**
-□ Participation: **\_** / **\_**
-□ Homework: **\_** / **\_**
-□ Other: **\_** / **\_** OVERALL WEEKLY GRADE: **\_** STRENGTHS THIS WEEK: ******************************\_\_\_\_****************************** CHALLENGES THIS WEEK: ******************************\_\_\_\_****************************** GOALS FOR NEXT WEEK: ******************************\_\_\_\_****************************** PARENT SIGNATURE: ******\_\_\_\_****** DATE: ******\_\_\_\_******
+â–¡ Quiz/Test: **\_** / **\_**
+â–¡ Project: **\_** / **\_**
+â–¡ Participation: **\_** / **\_**
+â–¡ Homework: **\_** / **\_**
+â–¡ Other: **\_** / **\_** OVERALL WEEKLY GRADE: **\_** STRENGTHS THIS WEEK: ******************************\_\_\_\_****************************** CHALLENGES THIS WEEK: ******************************\_\_\_\_****************************** GOALS FOR NEXT WEEK: ******************************\_\_\_\_****************************** PARENT SIGNATURE: ******\_\_\_\_****** DATE: ******\_\_\_\_******
 `### 15. Quarterly Progress Summary`
 QUARTERLY PROGRESS SUMMARY
 Student: ******\_\_\_\_****** Quarter: ******\_\_\_\_****** Subject: ******\_\_\_\_****** ACADEMIC PERFORMANCE:
-□ Exceeds Standards □ Meets Standards □ Approaching Standards □ Below Standards MAJOR ASSESSMENTS:
+â–¡ Exceeds Standards â–¡ Meets Standards â–¡ Approaching Standards â–¡ Below Standards MAJOR ASSESSMENTS:
 Assessment 1: **\_** / **\_** (**\_**%)
 Assessment 2: **\_** / **\_** (**\_**%)
 Assessment 3: **\_** / **\_** (**\_**%)
 Assessment 4: **\_** / **\_** (**\_**%) QUARTERLY AVERAGE: **\_**% LEARNING OBJECTIVES MASTERY:
-□ Objective 1: □ Mastered □ Developing □ Needs Support
-□ Objective 2: □ Mastered □ Developing □ Needs Support
-□ Objective 3: □ Mastered □ Developing □ Needs Support
-□ Objective 4: □ Mastered □ Developing □ Needs Support
-□ Objective 5: □ Mastered □ Developing □ Needs Support STRENGTHS: ************************************\_\_\_************************************ AREAS FOR GROWTH: ********************************\_\_\_\_******************************** RECOMMENDATIONS: **********************************\_********************************** TEACHER SIGNATURE: ******\_\_\_\_****** DATE: ******\_\_\_\_******
+â–¡ Objective 1: â–¡ Mastered â–¡ Developing â–¡ Needs Support
+â–¡ Objective 2: â–¡ Mastered â–¡ Developing â–¡ Needs Support
+â–¡ Objective 3: â–¡ Mastered â–¡ Developing â–¡ Needs Support
+â–¡ Objective 4: â–¡ Mastered â–¡ Developing â–¡ Needs Support
+â–¡ Objective 5: â–¡ Mastered â–¡ Developing â–¡ Needs Support STRENGTHS: ************************************\_\_\_************************************ AREAS FOR GROWTH: ********************************\_\_\_\_******************************** RECOMMENDATIONS: **********************************\_********************************** TEACHER SIGNATURE: ******\_\_\_\_****** DATE: ******\_\_\_\_******
 PARENT SIGNATURE: ******\_\_\_\_****** DATE: ******\_\_\_\_******
 `--- ## Special Education Accommodations ### 16. Accommodation Checklist`
 ACCOMMODATION CHECKLIST
 Student: ******\_\_\_\_****** IEP Date: ******\_\_\_\_****** Review Date: ******\_\_\_\_****** PRESENTATION ACCOMMODATIONS:
-□ [ ] Extended time for assignments
-□ [ ] Reduced number of problems
-□ [ ] Oral administration of tests
-□ [ ] Use of calculator
-□ [ ] Graphic organizers
-□ [ ] Visual aids
-□ [ ] Audio recordings
-□ [ ] Large print materials
-□ [ ] Other: ******\_\_\_\_****** RESPONSE ACCOMMODATIONS:
-□ [ ] Oral responses
-□ [ ] Use of computer/word processor
-□ [ ] Scribe for written work
-□ [ ] Speech-to-text software
-□ [ ] Alternative response formats
-□ [ ] Other: ******\_\_\_\_****** SETTING ACCOMMODATIONS:
-□ [ ] Small group testing
-□ [ ] Individual testing
-□ [ ] Preferential seating
-□ [ ] Distraction-free environment
-□ [ ] Other: ******\_\_\_\_****** TIMING/SCHEDULING ACCOMMODATIONS:
-□ [ ] Extended time for tests
-□ [ ] Frequent breaks
-□ [ ] Testing over multiple days
-□ [ ] Other: ******\_\_\_\_****** ASSESSMENT MODIFICATIONS:
-□ [ ] Modified grading criteria
-□ [ ] Alternative assessments
-□ [ ] Portfolio assessment
-□ [ ] Other: ******\_\_\_\_****** EFFECTIVENESS MONITORING:
-□ [ ] Accommodations are effective
-□ [ ] Student is making progress
-□ [ ] Accommodations need adjustment
-□ [ ] Other: ******\_\_\_\_****** NOTES: **************************************\_\_\_**************************************
+â–¡ [ ] Extended time for assignments
+â–¡ [ ] Reduced number of problems
+â–¡ [ ] Oral administration of tests
+â–¡ [ ] Use of calculator
+â–¡ [ ] Graphic organizers
+â–¡ [ ] Visual aids
+â–¡ [ ] Audio recordings
+â–¡ [ ] Large print materials
+â–¡ [ ] Other: ******\_\_\_\_****** RESPONSE ACCOMMODATIONS:
+â–¡ [ ] Oral responses
+â–¡ [ ] Use of computer/word processor
+â–¡ [ ] Scribe for written work
+â–¡ [ ] Speech-to-text software
+â–¡ [ ] Alternative response formats
+â–¡ [ ] Other: ******\_\_\_\_****** SETTING ACCOMMODATIONS:
+â–¡ [ ] Small group testing
+â–¡ [ ] Individual testing
+â–¡ [ ] Preferential seating
+â–¡ [ ] Distraction-free environment
+â–¡ [ ] Other: ******\_\_\_\_****** TIMING/SCHEDULING ACCOMMODATIONS:
+â–¡ [ ] Extended time for tests
+â–¡ [ ] Frequent breaks
+â–¡ [ ] Testing over multiple days
+â–¡ [ ] Other: ******\_\_\_\_****** ASSESSMENT MODIFICATIONS:
+â–¡ [ ] Modified grading criteria
+â–¡ [ ] Alternative assessments
+â–¡ [ ] Portfolio assessment
+â–¡ [ ] Other: ******\_\_\_\_****** EFFECTIVENESS MONITORING:
+â–¡ [ ] Accommodations are effective
+â–¡ [ ] Student is making progress
+â–¡ [ ] Accommodations need adjustment
+â–¡ [ ] Other: ******\_\_\_\_****** NOTES: **************************************\_\_\_**************************************
 `--- ## Digital Assessment Tools ### 17. Google Forms Assessment Template`
 GOOGLE FORMS ASSESSMENT SETUP FORM TITLE: [Unit/Topic] Assessment
 FORM DESCRIPTION: This assessment covers [specific topics/standards] SECTION 1: Multiple Choice Questions
 Question 1: [Question text]
-□ Option A
-□ Option B
-□ Option C
-□ Option D
+â–¡ Option A
+â–¡ Option B
+â–¡ Option C
+â–¡ Option D
 Correct Answer: [Letter] Question 2: [Question text]
-□ Option A
-□ Option B
-□ Option C
-□ Option D
+â–¡ Option A
+â–¡ Option B
+â–¡ Option C
+â–¡ Option D
 Correct Answer: [Letter] SECTION 2: Short Answer Questions
 Question 3: [Question text]
 Response Type: Short answer
@@ -209,11 +209,11 @@ Expected Length: [X] sentences SECTION 3: Extended Response
 Question 5: [Question text]
 Response Type: Paragraph
 Expected Length: [X] paragraphs SETTINGS:
-□ Collect email addresses
-□ Limit to 1 response
-□ Show progress bar
-□ Shuffle question order
-□ Auto-submit when time expires
+â–¡ Collect email addresses
+â–¡ Limit to 1 response
+â–¡ Show progress bar
+â–¡ Shuffle question order
+â–¡ Auto-submit when time expires
 Time Limit: [X] minutes GRADING RUBRIC:
 Multiple Choice: [X] points each
 Short Answer: [X] points each
@@ -222,21 +222,22 @@ Total: [X] points
 `### 18. Digital Portfolio Assessment`
 DIGITAL PORTFOLIO ASSESSMENT
 Student: ******\_\_\_\_****** Portfolio Period: ******\_\_\_\_****** PORTFOLIO COMPONENTS:
-□ [ ] Best work samples (3-5 pieces)
-□ [ ] Reflection on learning growth
-□ [ ] Evidence of meeting learning objectives
-□ [ ] Self-assessment of progress
-□ [ ] Goals for future learning
-□ [ ] Peer feedback
-□ [ ] Teacher feedback ASSESSMENT CRITERIA:
-□ [ ] Quality of work samples
-□ [ ] Depth of reflection
-□ [ ] Evidence of growth
-□ [ ] Organization and presentation
-□ [ ] Meeting of objectives
-□ [ ] Goal setting DIGITAL PLATFORM: □ Google Sites □ Seesaw □ Weebly □ Other: ******\_\_\_****** PORTFOLIO LINK: **********************************\_\_\_********************************** ASSESSMENT SCORE: **\_** / **\_**
+â–¡ [ ] Best work samples (3-5 pieces)
+â–¡ [ ] Reflection on learning growth
+â–¡ [ ] Evidence of meeting learning objectives
+â–¡ [ ] Self-assessment of progress
+â–¡ [ ] Goals for future learning
+â–¡ [ ] Peer feedback
+â–¡ [ ] Teacher feedback ASSESSMENT CRITERIA:
+â–¡ [ ] Quality of work samples
+â–¡ [ ] Depth of reflection
+â–¡ [ ] Evidence of growth
+â–¡ [ ] Organization and presentation
+â–¡ [ ] Meeting of objectives
+â–¡ [ ] Goal setting DIGITAL PLATFORM: â–¡ Google Sites â–¡ Seesaw â–¡ Weebly â–¡ Other: ******\_\_\_****** PORTFOLIO LINK: **********************************\_\_\_********************************** ASSESSMENT SCORE: **\_** / **\_**
 GRADE: **\_** COMMENTS: ************************************\_\_\_************************************
 
 ```--- ## Implementation Guide ### How to Use These Templates #### 1. Customization - Replace bracketed text with specific content - Adjust point values and criteria as needed - Modify language for your grade level - Add or remove criteria based on your needs #### 2. Best Practices - Use rubrics consistently across similar assignments - Provide students with rubrics before they begin work - Use formative assessments regularly to guide instruction - Combine multiple assessment types for comprehensive evaluation - Keep assessment data organized and accessible #### 3. Digital Integration - Convert paper templates to digital formats - Use Google Forms for quick assessments - Implement digital portfolios for long-term tracking - Use spreadsheet tools for data analysis - Share templates with colleagues #### 4. Student Involvement - Teach students to use self-assessment tools - Involve students in creating assessment criteria - Use peer assessment to build collaboration skills - Help students set and track their own goals - Provide regular feedback on assessment results --- ## Additional Resources ### Assessment Tools and Apps - **Google Forms** - Create and grade assessments - **Kahoot** - Interactive quizzes and games - **Quizizz** - Self-paced assessments - **Socrative** - Real-time assessment and feedback - **Plickers** - Quick formative assessments - **Seesaw** - Digital portfolios and assessment - **ClassDojo** - Behavior and skill tracking ### Professional Development - Assessment literacy workshops - Standards-based grading training - Digital assessment tools training - Data analysis and interpretation - Student-centered assessment practices ### Books and Articles - "Assessment for Learning" by Dylan Wiliam - "Embedded Formative Assessment" by Dylan Wiliam - "Classroom Assessment Techniques" by Angelo and Cross - "How to Grade for Learning" by Ken O'Connor --- *These templates are designed to help teachers create fair, consistent, and meaningful assessments that support student learning and growth.* **Last Updated:** December 2024
 **Version:** 1.0
 ```
+

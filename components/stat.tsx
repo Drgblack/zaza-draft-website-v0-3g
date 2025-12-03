@@ -1,4 +1,4 @@
-interface StatProps {
+﻿interface StatProps {
   label: string
   value: string
 }
@@ -11,3 +11,4 @@ export function Stat({ label, value }: StatProps) {
     </div>
   )
 }
+

@@ -276,3 +276,4 @@
   freeToStartText: "Kostenlos starten",
   exploreButtonText: "Erkunden",
 };
+

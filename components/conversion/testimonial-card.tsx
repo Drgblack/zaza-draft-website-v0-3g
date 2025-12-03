@@ -1,4 +1,4 @@
-import { Star, Quote } from "lucide-react";
+﻿import { Star, Quote } from "lucide-react";
 import Image from "next/image";
 
 interface TestimonialCardProps {
@@ -53,3 +53,4 @@ export function TestimonialCard({
     </div>
   );
 }
+

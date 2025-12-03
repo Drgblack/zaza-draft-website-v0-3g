@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import type React from "react";
 
@@ -56,11 +56,11 @@ export default function StateOfAIClient() {
       stat: "87%",
       label:
         language === "de"
-          ? "der Lehrkräfte nutzen KI wöchentlich"
+          ? "der LehrkrÃ¤fte nutzen KI wÃ¶chentlich"
           : "of teachers use AI weekly",
       description:
         language === "de"
-          ? "Anstieg von 34% im Jahr 2024, zeigt schnelle Akzeptanz über alle Klassenstufen"
+          ? "Anstieg von 34% im Jahr 2024, zeigt schnelle Akzeptanz Ã¼ber alle Klassenstufen"
           : "Up from 34% in 2024, showing rapid adoption across all grade levels",
       icon: TrendingUp,
     },
@@ -72,7 +72,7 @@ export default function StateOfAIClient() {
           : "saved per week per teacher",
       description:
         language === "de"
-          ? "Durchschnittliche Zeitersparnis von regelmäßigen KI-Nutzern für administrative Aufgaben"
+          ? "Durchschnittliche Zeitersparnis von regelmÃ¤ÃŸigen KI-Nutzern fÃ¼r administrative Aufgaben"
           : "Average time savings reported by regular AI users for administrative tasks",
       icon: Users,
     },
@@ -84,7 +84,7 @@ export default function StateOfAIClient() {
           : "report improved communication",
       description:
         language === "de"
-          ? "Lehrkräfte, die KI für Eltern-E-Mails nutzen, berichten von besserem Engagement und Klarheit"
+          ? "LehrkrÃ¤fte, die KI fÃ¼r Eltern-E-Mails nutzen, berichten von besserem Engagement und Klarheit"
           : "Teachers using AI for parent emails report better engagement and clarity",
       icon: Award,
     },
@@ -92,11 +92,11 @@ export default function StateOfAIClient() {
       stat: "68%",
       label:
         language === "de"
-          ? "wünschen mehr KI-Schulung"
+          ? "wÃ¼nschen mehr KI-Schulung"
           : "want more AI training",
       description:
         language === "de"
-          ? "Mehrheit der Pädagogen sucht berufliche Weiterbildung in KI-Kompetenz"
+          ? "Mehrheit der PÃ¤dagogen sucht berufliche Weiterbildung in KI-Kompetenz"
           : "Majority of educators seek professional development in AI literacy",
       icon: BookOpen,
     },
@@ -107,7 +107,7 @@ export default function StateOfAIClient() {
       title: language === "de" ? "Zusammenfassung" : "Executive Summary",
       description:
         language === "de"
-          ? "Übergeordnete Erkenntnisse und wichtige Erkenntnisse für Administratoren und Entscheidungsträger"
+          ? "Ãœbergeordnete Erkenntnisse und wichtige Erkenntnisse fÃ¼r Administratoren und EntscheidungstrÃ¤ger"
           : "High-level insights and key takeaways for administrators and policymakers",
       icon: FileText,
     },
@@ -115,18 +115,18 @@ export default function StateOfAIClient() {
       title: language === "de" ? "Akzeptanztrends" : "Adoption Trends",
       description:
         language === "de"
-          ? "Wie sich die KI-Nutzung über Klassenstufen, Fächer und Schultypen entwickelt hat"
+          ? "Wie sich die KI-Nutzung Ã¼ber Klassenstufen, FÃ¤cher und Schultypen entwickelt hat"
           : "How AI usage has evolved across grade levels, subjects, and school types",
       icon: TrendingUp,
     },
     {
       title:
         language === "de"
-          ? "Anwendungsfälle & Auswirkungen"
+          ? "AnwendungsfÃ¤lle & Auswirkungen"
           : "Use Cases & Impact",
       description:
         language === "de"
-          ? "Reale Anwendungen und gemessene Ergebnisse von 15.000+ Lehrkräften"
+          ? "Reale Anwendungen und gemessene Ergebnisse von 15.000+ LehrkrÃ¤ften"
           : "Real-world applications and measured outcomes from 15,000+ teachers",
       icon: BarChart3,
     },
@@ -137,7 +137,7 @@ export default function StateOfAIClient() {
           : "Challenges & Concerns",
       description:
         language === "de"
-          ? "Datenschutz, Chancengleichheit, Schulungslücken und ethische Überlegungen"
+          ? "Datenschutz, Chancengleichheit, SchulungslÃ¼cken und ethische Ãœberlegungen"
           : "Privacy, equity, training gaps, and ethical considerations",
       icon: Award,
     },
@@ -145,7 +145,7 @@ export default function StateOfAIClient() {
       title: language === "de" ? "Zukunftsausblick" : "Future Outlook",
       description:
         language === "de"
-          ? "Prognosen und Empfehlungen für die nächsten 3-5 Jahre"
+          ? "Prognosen und Empfehlungen fÃ¼r die nÃ¤chsten 3-5 Jahre"
           : "Predictions and recommendations for the next 3-5 years",
       icon: BookOpen,
     },
@@ -171,21 +171,21 @@ export default function StateOfAIClient() {
       outlet: "The Chronicle",
       quote:
         language === "de"
-          ? "Pflichtlektüre für jeden Schuladministrator und Entscheidungsträger"
+          ? "PflichtlektÃ¼re fÃ¼r jeden Schuladministrator und EntscheidungstrÃ¤ger"
           : "Essential reading for every school administrator and policymaker",
     },
     {
       outlet: "EdSurge",
       quote:
         language === "de"
-          ? "Datengestützte Erkenntnisse, die konventionelle Weisheiten über KI in Schulen in Frage stellen"
+          ? "DatengestÃ¼tzte Erkenntnisse, die konventionelle Weisheiten Ã¼ber KI in Schulen in Frage stellen"
           : "Data-driven insights that challenge conventional wisdom about AI in schools",
     },
     {
       outlet: "Education Dive",
       quote:
         language === "de"
-          ? "Eine wegweisende Studie, die die Bildungspolitik für Jahre prägen wird"
+          ? "Eine wegweisende Studie, die die Bildungspolitik fÃ¼r Jahre prÃ¤gen wird"
           : "A landmark study that will shape education policy for years to come",
     },
   ];
@@ -225,7 +225,7 @@ export default function StateOfAIClient() {
 
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 {language === "de"
-                  ? "Die umfassendste Analyse der KI-Akzeptanz in der K-12-Bildung. 120+ Seiten Erkenntnisse von 15.000+ Lehrkräften aus 50 Bundesstaaten."
+                  ? "Die umfassendste Analyse der KI-Akzeptanz in der K-12-Bildung. 120+ Seiten Erkenntnisse von 15.000+ LehrkrÃ¤ften aus 50 Bundesstaaten."
                   : "The most comprehensive analysis of AI adoption in K-12 education. 120+ pages of insights from 15,000+ teachers across 50 states."}
               </p>
 
@@ -234,7 +234,7 @@ export default function StateOfAIClient() {
                   <Users className="w-5 h-5 text-[#A78BFA]" />
                   <span>
                     {language === "de"
-                      ? "15.000+ befragte Lehrkräfte"
+                      ? "15.000+ befragte LehrkrÃ¤fte"
                       : "15,000+ Teachers Surveyed"}
                   </span>
                 </div>
@@ -304,7 +304,7 @@ export default function StateOfAIClient() {
                     <div className="mt-6 pt-6 border-t border-white/20">
                       <p className="text-sm opacity-75">
                         {language === "de"
-                          ? "120+ Seiten | 15.000+ Lehrkräfte"
+                          ? "120+ Seiten | 15.000+ LehrkrÃ¤fte"
                           : "120+ Pages | 15,000+ Teachers"}
                       </p>
                     </div>
@@ -317,7 +317,7 @@ export default function StateOfAIClient() {
                 <div className="text-3xl font-bold text-[#A78BFA]">87%</div>
                 <div className="text-sm text-gray-400">
                   {language === "de"
-                    ? "Wöchentliche KI-Nutzung"
+                    ? "WÃ¶chentliche KI-Nutzung"
                     : "Weekly AI Usage"}
                 </div>
               </div>
@@ -346,7 +346,7 @@ export default function StateOfAIClient() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               {language === "de"
-                ? "Datengestützte Erkenntnisse, die zeigen, wie KI die Bildung im Jahr 2025 verändert"
+                ? "DatengestÃ¼tzte Erkenntnisse, die zeigen, wie KI die Bildung im Jahr 2025 verÃ¤ndert"
                 : "Data-driven insights that reveal how AI is transforming education in 2025"}
             </p>
           </div>
@@ -431,7 +431,7 @@ export default function StateOfAIClient() {
             </h2>
             <p className="text-xl text-gray-300">
               {language === "de"
-                ? "Rigorose, datengestützte Forschung, der Sie vertrauen können"
+                ? "Rigorose, datengestÃ¼tzte Forschung, der Sie vertrauen kÃ¶nnen"
                 : "Rigorous, data-driven research you can trust"}
             </p>
           </div>
@@ -444,7 +444,7 @@ export default function StateOfAIClient() {
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
                   {language === "de"
-                    ? "Unser Forschungsteam führte eine umfassende Umfrage mit 45 Fragen durch, die zwischen September und November 2024 an K-12-Pädagogen in allen 50 Bundesstaaten verteilt wurde. Die Umfrage umfasste KI-Akzeptanzraten, Anwendungsfälle, Herausforderungen, Schulungsbedarf und Zukunftsausblick."
+                    ? "Unser Forschungsteam fÃ¼hrte eine umfassende Umfrage mit 45 Fragen durch, die zwischen September und November 2024 an K-12-PÃ¤dagogen in allen 50 Bundesstaaten verteilt wurde. Die Umfrage umfasste KI-Akzeptanzraten, AnwendungsfÃ¤lle, Herausforderungen, Schulungsbedarf und Zukunftsausblick."
                     : "Our research team conducted a comprehensive 45-question survey distributed to K-12 educators across all 50 states between September and November 2024. The survey covered AI adoption rates, use cases, challenges, training needs, and future outlook."}
                 </p>
               </div>
@@ -462,19 +462,19 @@ export default function StateOfAIClient() {
                     </p>
                     <ul className="space-y-1 text-sm">
                       <li>
-                        •{" "}
+                        â€¢{" "}
                         {language === "de"
                           ? "Grundschule (K-5): 38%"
                           : "Elementary (K-5): 38%"}
                       </li>
                       <li>
-                        •{" "}
+                        â€¢{" "}
                         {language === "de"
                           ? "Mittelschule (6-8): 29%"
                           : "Middle School (6-8): 29%"}
                       </li>
                       <li>
-                        •{" "}
+                        â€¢{" "}
                         {language === "de"
                           ? "Oberschule (9-12): 33%"
                           : "High School (9-12): 33%"}
@@ -487,14 +487,14 @@ export default function StateOfAIClient() {
                     </p>
                     <ul className="space-y-1 text-sm">
                       <li>
-                        •{" "}
-                        {language === "de" ? "Öffentlich: 76%" : "Public: 76%"}
+                        â€¢{" "}
+                        {language === "de" ? "Ã–ffentlich: 76%" : "Public: 76%"}
                       </li>
                       <li>
-                        • {language === "de" ? "Privat: 18%" : "Private: 18%"}
+                        â€¢ {language === "de" ? "Privat: 18%" : "Private: 18%"}
                       </li>
                       <li>
-                        • {language === "de" ? "Charter: 6%" : "Charter: 6%"}
+                        â€¢ {language === "de" ? "Charter: 6%" : "Charter: 6%"}
                       </li>
                     </ul>
                   </div>
@@ -507,8 +507,8 @@ export default function StateOfAIClient() {
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
                   {language === "de"
-                    ? "Die Antworten wurden mit statistischen Methoden analysiert, um Trends, Korrelationen und signifikante Muster zu identifizieren. Alle Daten wurden anonymisiert und aggregiert, um die Privatsphäre der Teilnehmer zu schützen. Fehlertoleranz: ±0,8% bei 95% Konfidenzniveau."
-                    : "Responses were analyzed using statistical methods to identify trends, correlations, and significant patterns. All data was anonymized and aggregated to protect participant privacy. Margin of error: ±0.8% at 95% confidence level."}
+                    ? "Die Antworten wurden mit statistischen Methoden analysiert, um Trends, Korrelationen und signifikante Muster zu identifizieren. Alle Daten wurden anonymisiert und aggregiert, um die PrivatsphÃ¤re der Teilnehmer zu schÃ¼tzen. Fehlertoleranz: Â±0,8% bei 95% Konfidenzniveau."
+                    : "Responses were analyzed using statistical methods to identify trends, correlations, and significant patterns. All data was anonymized and aggregated to protect participant privacy. Margin of error: Â±0.8% at 95% confidence level."}
                 </p>
               </div>
             </div>
@@ -526,7 +526,7 @@ export default function StateOfAIClient() {
                   <Download className="w-16 h-16 text-[#A78BFA] mx-auto mb-4" />
                   <h2 className="text-3xl font-bold text-white mb-3">
                     {language === "de"
-                      ? "Vollständigen Bericht herunterladen"
+                      ? "VollstÃ¤ndigen Bericht herunterladen"
                       : "Download the Full Report"}
                   </h2>
                   <p className="text-gray-300">
@@ -571,7 +571,7 @@ export default function StateOfAIClient() {
                     >
                       <option value="">
                         {language === "de"
-                          ? "Wählen Sie Ihre Rolle..."
+                          ? "WÃ¤hlen Sie Ihre Rolle..."
                           : "Select your role..."}
                       </option>
                       <option value="teacher">
@@ -635,7 +635,7 @@ export default function StateOfAIClient() {
                 <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-3">
                   {language === "de"
-                    ? "Überprüfen Sie Ihre E-Mails!"
+                    ? "ÃœberprÃ¼fen Sie Ihre E-Mails!"
                     : "Check Your Email!"}
                 </h3>
                 <p className="text-gray-300 mb-6">
@@ -647,7 +647,7 @@ export default function StateOfAIClient() {
                 </p>
                 <p className="text-sm text-gray-400">
                   {language === "de"
-                    ? "Nicht gefunden? Überprüfen Sie Ihren Spam-Ordner oder "
+                    ? "Nicht gefunden? ÃœberprÃ¼fen Sie Ihren Spam-Ordner oder "
                     : "Don't see it? Check your spam folder or "}
                   <button
                     onClick={() => setIsSubmitted(false)}
@@ -673,7 +673,7 @@ export default function StateOfAIClient() {
             </h2>
             <p className="text-xl text-gray-300">
               {language === "de"
-                ? "Berichterstattung von führenden Bildungspublikationen"
+                ? "Berichterstattung von fÃ¼hrenden Bildungspublikationen"
                 : "Coverage from leading education publications"}
             </p>
           </div>
@@ -706,11 +706,11 @@ export default function StateOfAIClient() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">
-              {language === "de" ? "Frühere Berichte" : "Previous Reports"}
+              {language === "de" ? "FrÃ¼here Berichte" : "Previous Reports"}
             </h2>
             <p className="text-xl text-gray-300">
               {language === "de"
-                ? "Erkunden Sie unser Archiv der jährlichen Berichte zum Stand der KI in der Bildung"
+                ? "Erkunden Sie unser Archiv der jÃ¤hrlichen Berichte zum Stand der KI in der Bildung"
                 : "Explore our archive of annual State of AI in Education reports"}
             </p>
           </div>
@@ -816,7 +816,7 @@ export default function StateOfAIClient() {
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               {language === "de"
-                ? "Schließen Sie sich 50.000+ Pädagogen an, die Zaza Draft nutzen, um Zeit zu sparen und die Kommunikation zu verbessern"
+                ? "SchlieÃŸen Sie sich 50.000+ PÃ¤dagogen an, die Zaza Draft nutzen, um Zeit zu sparen und die Kommunikation zu verbessern"
                 : "Join 50,000+ educators using Zaza Draft to save time and improve communication"}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -852,3 +852,4 @@ export default function StateOfAIClient() {
     </div>
   );
 }
+

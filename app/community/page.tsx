@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import CommunityClient from "./community-client"
 import { BreadcrumbSchema } from "@/lib/seo/schema"
 import Script from "next/script"
@@ -47,4 +47,5 @@ export default function CommunityPage() {
   )
 }
 import type { Metadata } from "next"
+
 

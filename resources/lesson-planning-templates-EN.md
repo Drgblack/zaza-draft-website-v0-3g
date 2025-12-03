@@ -1,4 +1,4 @@
-# The Flexible Lesson Plan Designer
+﻿# The Flexible Lesson Plan Designer
 ## 5 Proven Lesson Plan Templates for Every Teaching Style and Learning Goal
 
 *Stop starting from scratch every time you plan a lesson. These 5 editable templates give you structured frameworks for engagement, differentiation, and assessment - no matter what you're teaching.*
@@ -717,11 +717,12 @@ Pick one. Try it. Adjust it. Make it yours.
 
 And remember: Even the best lesson plan needs to be flexible. Sometimes the best teaching moments happen when you throw the plan out the window and follow your students' curiosity.
 
-**You've got this - now go teach something amazing.** 🎓
+**You've got this - now go teach something amazing.** ðŸŽ“
 
 ---
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
+

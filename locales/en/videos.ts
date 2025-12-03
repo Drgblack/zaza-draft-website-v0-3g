@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   hero: {
     title: "Video Tutorials and Demos",
   },
@@ -17,3 +17,4 @@ export default {
     all: "All Videos",
   },
 };
+

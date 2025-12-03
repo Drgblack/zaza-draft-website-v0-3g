@@ -12,35 +12,29 @@ interface BlogClientProps {
   language: "en" | "de";
 }
 
-export function BlogClient({ posts, language }: BlogClientProps) {
-  // Sort newest first
-  const sortedPosts = useMemo(
-    () =>
-      [...posts].sort(
-        (a, b) =>
-          new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
-      ),
-    [posts],
-  );
+const BASE_PATH: Record<"en" | "de", string> = {
+  en: "/blog",
+  de: "/de/blog",
+};
 
+export function BlogClient({ posts, language }: BlogClientProps) {
   // Tag filter (optional)
   const [activeTag, setActiveTag] = useState<string | null>(null);
+  const basePath = BASE_PATH[language] ?? "/blog";
 
+  // Tags are based only on the posts we were given (already EN/DE filtered)
   const allTags = useMemo(
     () =>
-      Array.from(new Set(sortedPosts.flatMap((p) => p.tags ?? []))).slice(
-        0,
-        12,
-      ),
-    [sortedPosts],
+      Array.from(new Set(posts.flatMap((p) => p.tags ?? []))).slice(0, 12),
+    [posts],
   );
 
   const filteredPosts = useMemo(
     () =>
       activeTag
-        ? sortedPosts.filter((p) => (p.tags ?? []).includes(activeTag))
-        : sortedPosts,
-    [sortedPosts, activeTag],
+        ? posts.filter((p) => (p.tags ?? []).includes(activeTag))
+        : posts,
+    [posts, activeTag],
   );
 
   if (!filteredPosts.length) {
@@ -56,7 +50,22 @@ export function BlogClient({ posts, language }: BlogClientProps) {
     );
   }
 
-  const [heroPost, ...restPosts] = filteredPosts;
+  // --- Force a specific hero post if available ---
+  const desiredHeroSlug = "ai-inclusive-materials";
+  const desiredHeroIndex = filteredPosts.findIndex(
+    (p) => p.slug === desiredHeroSlug,
+  );
+
+  const heroPost =
+    desiredHeroIndex >= 0 ? filteredPosts[desiredHeroIndex] : filteredPosts[0];
+
+  const restPosts =
+    desiredHeroIndex >= 0
+      ? [
+          ...filteredPosts.slice(0, desiredHeroIndex),
+          ...filteredPosts.slice(desiredHeroIndex + 1),
+        ]
+      : filteredPosts.slice(1);
 
   const formatDate = (iso: string) =>
     new Date(iso).toLocaleDateString(language === "de" ? "de-DE" : "en-US", {
@@ -67,7 +76,8 @@ export function BlogClient({ posts, language }: BlogClientProps) {
 
   const getImageForPost = (post: BlogPost) => {
     // Prefer explicit images if present, fall back to static /public/blog path
-    if (post.coverImage) return post.coverImage;
+    // @ts-expect-error – BlogPost may not declare these, but they exist at runtime
+    if (post.coverImage) return (post as any).coverImage;
     if (post.ogImage) return post.ogImage;
     return `/blog/${post.slug}.jpeg`;
   };
@@ -88,8 +98,8 @@ export function BlogClient({ posts, language }: BlogClientProps) {
               </h1>
               <p className="mt-2 max-w-2xl text-sm sm:text-base text-slate-400">
                 {language === "de"
-                  ? "Praktische Tipps, Vorlagen und Strategien, damit KI Ihnen Zeit zurückgibt - nicht Stress."
-                  : "Practical tips, templates, and strategies so AI gives you time back - not more stress."}
+                  ? "Praktische Tipps, Vorlagen und Strategien, damit KI dir Zeit zurückgibt – nicht noch mehr Stress."
+                  : "Practical tips, templates, and strategies so AI gives you time back – not more stress."}
               </p>
             </div>
 
@@ -117,7 +127,7 @@ export function BlogClient({ posts, language }: BlogClientProps) {
 
           {/* Hero post */}
           <Link
-            href={`/blog/${heroPost.slug}`}
+            href={`${basePath}/${heroPost.slug}`}
             className="group grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(0,1.2fr)] items-stretch"
           >
             <div className="relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/80 shadow-xl shadow-black/40">
@@ -167,7 +177,7 @@ export function BlogClient({ posts, language }: BlogClientProps) {
               {restPosts.slice(0, 3).map((post) => (
                 <Link
                   key={post.slug}
-                  href={`/blog/${post.slug}`}
+                  href={`${basePath}/${post.slug}`}
                   className="group block"
                 >
                   <Card className="flex gap-4 overflow-hidden border-slate-800 bg-slate-900/70 hover:border-fuchsia-400/80 hover:bg-slate-900 transition-colors">
@@ -207,7 +217,7 @@ export function BlogClient({ posts, language }: BlogClientProps) {
             {restPosts.slice(3).map((post) => (
               <Link
                 key={post.slug}
-                href={`/blog/${post.slug}`}
+                href={`${basePath}/${post.slug}`}
                 className="group"
               >
                 <Card className="h-full overflow-hidden border-slate-800 bg-slate-900/70 hover:border-fuchsia-400/80 hover:bg-slate-900 transition-colors">
@@ -254,3 +264,4 @@ export function BlogClient({ posts, language }: BlogClientProps) {
     </div>
   );
 }
+

@@ -1,4 +1,4 @@
-import fs from "node:fs";
+﻿import fs from "node:fs";
 import path from "node:path";
 
 function extractPosts(tsText: string){
@@ -67,3 +67,4 @@ fs.writeFileSync(current + ".backup.before-merge.ts", fs.readFileSync(current));
 fs.writeFileSync(current, out);
 console.log(`Merged from ${path.basename(source)} | posts updated: ${changed}`);
 for(const line of report){ console.log(" - " + line) }
+

@@ -1,8 +1,8 @@
-{
+﻿{
   "hero": {
     "badge": "50+ Fortbildungssitzungen",
     "title": "Fortbildungs-Webinare",
-    "subtitle": "Nehmen Sie live teil oder sehen Sie Aufzeichnungen. Erhalten Sie Fortbildungszertifikate und lernen Sie von erfahrenen Pädagogen."
+    "subtitle": "Nehmen Sie live teil oder sehen Sie Aufzeichnungen. Erhalten Sie Fortbildungszertifikate und lernen Sie von erfahrenen PÃ¤dagogen."
   },
   "search": {
     "placeholder": "Webinare durchsuchen..."
@@ -33,12 +33,13 @@
   "noResults": "Keine Webinare gefunden.",
   "relatedResources": {
     "title": "Vertiefen Sie Ihr Lernen",
-    "subtitle": "Ergänzen Sie Ihre Webinare mit diesen Ressourcen"
+    "subtitle": "ErgÃ¤nzen Sie Ihre Webinare mit diesen Ressourcen"
   },
   "finalCTA": {
-    "title": "Bereit für den nächsten Schritt?",
-    "subtitle": "Schließen Sie sich Tausenden Lehrkräften an, die KI erfolgreich nutzen.",
+    "title": "Bereit fÃ¼r den nÃ¤chsten Schritt?",
+    "subtitle": "SchlieÃŸen Sie sich Tausenden LehrkrÃ¤ften an, die KI erfolgreich nutzen.",
     "browse": "Bevorstehende Webinare ansehen",
     "exploreCourses": "Kurse erkunden"
   }
 }
+

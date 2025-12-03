@@ -377,7 +377,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
             className="text-[#5A6C7D] hover:text-[#2D5B8F] hover:bg-white"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
-            {language === "de" ? "ZurÃ¼ck zum Blog" : "Back to Blog"}
+            {language === "de" ? "Zurück zum Blog" : "Back to Blog"}
           </Button>
         </Link>
 

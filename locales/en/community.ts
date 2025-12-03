@@ -1,4 +1,4 @@
-export default {
+﻿export default {
   hero: {
     badge: "25,000+ Active Teachers",
     titlePrefix: "Join the",
@@ -116,3 +116,4 @@ export default {
     },
   },
 };
+

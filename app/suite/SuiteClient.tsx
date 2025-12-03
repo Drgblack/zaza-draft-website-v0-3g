@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useLanguage } from "@/lib/i18n/language-context";
@@ -466,3 +466,4 @@ export default function SuiteClient() {
     </main>
   );
 }
+

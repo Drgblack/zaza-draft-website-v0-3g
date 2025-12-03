@@ -1,22 +1,27 @@
----
-title: "The Sunday Night Teacher Anxiety (And Why Monday Doesn't Have to Feel Like a Mountain)"
-description: "For every educator who feels their chest tighten as Sunday evening approaches. You're not alone in the Sunday Scaries, and there are ways to reclaim your weekends."
-date: "2024-12-31"
-author: "Zaza Promptly Team"
-category: "Teacher Wellness"
+﻿---
+title: >-
+  The Sunday Night Teacher Anxiety (And Why Monday Doesn't Have to Feel Like a
+  Mountain)
+description: >-
+  For every educator who feels their chest tighten as Sunday evening approaches.
+  You're not alone in the Sunday Scaries, and there are ways to reclaim your
+  weekends.
+date: '2024-12-31'
+author: Dr. Greg Blackburn
+category: Teacher Wellness
 tags:
-  [
-    "teacher anxiety",
-    "work-life balance",
-    "sunday scaries",
-    "teacher mental health",
-    "weekend recovery",
-  ]
-readingTime: "7 min read"
+  - teacher anxiety
+  - work-life balance
+  - sunday scaries
+  - teacher mental health
+  - weekend recovery
+readingTime: 7 min read
 featured: false
+image: /blog/ai-vs-chatgpt-for-teachers.de.jpeg
+imageAlt: Zaza Draft blog article cover
+lang: en
+language: en
 ---
-
-# The Sunday Night Teacher Anxiety (And Why Monday Doesn't Have to Feel Like a Mountain)
 
 It's 7:30 PM on Sunday. You've had a lovely weekend - slept in, spent time with family, maybe even read a book that had nothing to do with education. But now, as the sun starts to set, that familiar feeling creeps in.
 
@@ -82,16 +87,16 @@ You can't eliminate Sunday anxiety entirely (show me a teacher who has, and I'll
 
 Instead of spiraling, create a 20-minute Sunday evening routine:
 
-**✅ The Brain Dump (5 minutes)**  
+**Ã¢ The Brain Dump (5 minutes)**  
 Write down everything swirling in your head for Monday. Don't organize it, just get it out.
 
-**✅ The Monday Preview (5 minutes)**  
+**Ã¢ The Monday Preview (5 minutes)**  
 Look at your plan for tomorrow. Make one small adjustment if needed, then close the planner.
 
-**✅ The Victory Review (5 minutes)**  
+**Ã¢ The Victory Review (5 minutes)**  
 Write down three things that went well this past week. Yes, three. No, "I survived" doesn't count.
 
-**✅ The Kindness Reminder (5 minutes)**  
+**Ã¢ The Kindness Reminder (5 minutes)**  
 Write yourself a note for Monday morning: _"You've got this. Take it one moment at a time."_
 
 ### The Saturday Boundary
@@ -176,3 +181,12 @@ _And you always do._
 ---
 
 **About the Author:** This reflection comes from educators who've learned that Sunday night anxiety is part of the territory when you love students as much as we do. The goal isn't to eliminate the care - it's to carry it more gently.
+
+
+
+
+
+
+
+
+

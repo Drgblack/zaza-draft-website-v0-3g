@@ -1,6 +1,5 @@
 ﻿import type { Metadata } from "next";
-
-import { getAllPosts } from "@/lib/cms/posts";
+import { getAllPostsByLanguage } from "@/lib/cms/posts";
 import { BlogClient } from "./blog-client";
 
 export const metadata: Metadata = {
@@ -10,7 +9,8 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  const posts = getAllPosts();
+  const posts = getAllPostsByLanguage("en");
 
   return <BlogClient posts={posts} language="en" />;
 }
+

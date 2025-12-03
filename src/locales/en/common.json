@@ -1,4 +1,4 @@
-{
+﻿{
   "nav": {
     "home": "Home",
     "features": "Features",
@@ -12,7 +12,7 @@
   "footer": {
     "tagline": "Empowering educators with AI-powered writing tools",
     "description": "Zaza Draft helps teachers save time and communicate more effectively with AI-assisted writing.",
-    "copyright": "© 2024 Zaza Draft. All rights reserved.",
+    "copyright": "Â© 2024 Zaza Draft. All rights reserved.",
     "product": "Product",
     "company": "Company",
     "resources": "Resources",
@@ -78,3 +78,4 @@
     "defaultDescription": "Save time and communicate better with AI-powered writing tools designed specifically for teachers."
   }
 }
+
