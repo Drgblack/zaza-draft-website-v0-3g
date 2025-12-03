@@ -51,7 +51,7 @@ export function BlogClient({ posts, language }: BlogClientProps) {
   }
 
   // --- Force a specific hero post if available ---
-  const desiredHeroSlug = "ai-inclusive-materials";
+  const desiredHeroSlug = "ai-lesson-planning-guide-2025";
   const desiredHeroIndex = filteredPosts.findIndex(
     (p) => p.slug === desiredHeroSlug,
   );
