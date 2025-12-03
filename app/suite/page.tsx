@@ -4,9 +4,12 @@ import SuiteClient from "./SuiteClient"
 
 export async function generateMetadata(): Promise<Metadata> {
   // Best-effort locale detection: cookie > URL prefix (if present) > default EN
-  const langCookie = cookies().get("language")?.value
-  const referer = headers().get("referer") || ""
-  const hrefHint = headers().get("x-pathname") || ""
+  const cookieStore = await cookies()
+  const headerStore = await headers()
+
+  const langCookie = cookieStore.get("language")?.value
+  const referer = headerStore.get("referer") || ""
+  const hrefHint = headerStore.get("x-pathname") || ""
   const path = hrefHint || referer
   const locale = langCookie === "de" || path.includes("/de/") || path.endsWith("/de") ? "de" : "en"
 

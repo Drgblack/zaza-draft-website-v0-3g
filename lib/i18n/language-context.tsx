@@ -440,11 +440,11 @@ const translationsEn: Record<string, string> = {
 
   // Hero Section
   "hero.eyebrow": "FOR TEACHERS",
-  "hero.badge": "Hallucination-safe AI for teachers",
-  "hero.headline": "Write like you",
-  "hero.headlineAccent": "just faster.",
+  "hero.badge": "Teacher-first AI writing",
+  "hero.headline": "Less stress,",
+  "hero.headlineAccent": "better messages.",
   "hero.subheading":
-    "AI writing assistant that helps teachers craft parent emails, student reports, and grading comments in minutes, not hours.",
+    "Zaza Draft writes the parent emails, grading feedback, and report notes you dread. Calm tone, de-escalation help, and time savings in minutes, not hours.",
   "hero.ctaPrimary": "Start Writing Free",
   "hero.ctaSecondary": "See Examples",
   "hero.trustIndicators.hallucinationSafe": "Hallucination-safe",
@@ -457,9 +457,9 @@ const translationsEn: Record<string, string> = {
     "Unlike generic AI tools, Zaza Draft is specifically trained to avoid making up student information, fabricating parent interactions, or inventing details about your class. Every output is grounded in what you actually provide - no invented facts, no fictional scenarios.",
 
   // Problem Section
-  "problem.heading": "Teachers spend 10+ hours per week on writing tasks",
+  "problem.heading": "You became a teacher, not a 24/7 writer",
   "problem.body":
-    "The challenge isn't what to say - it's finding the time and right words to say it professionally while maintaining your authentic voice.",
+    "Nights drafting parent emails, grading comments, and reports. The words matter, but so do your energy and calm.",
   "problem.stats.parentEmails.value": "2-3 hrs/week",
   "problem.stats.parentEmails.label": "Parent Emails",
   "problem.stats.reportCards.value": "4-6 hrs/term",
@@ -468,12 +468,11 @@ const translationsEn: Record<string, string> = {
   "problem.stats.gradingFeedback.label": "Grading Feedback",
 
   // Solution/Mission Section
-  "solution.heading":
-    "The first AI suite built specifically for teacher communications",
+  "solution.heading": "Draft writes the hard messages so you can breathe",
   "solution.bodyPrimary":
-    "Zaza is the world's first teacher-first AI suite - built on real pedagogy, powered by a trusted assistant, and designed not just to save time but to help teachers thrive.",
+    "Teacher-first AI that drafts parent messages, grading comments, and report notes with the right tone. Built to lower your stress, not replace your voice.",
   "solution.bodySecondary":
-    "Trained on real pedagogy and teacher language - not business writing. Every output maintains your authentic voice while saving hours on parent emails, report cards, and feedback comments.",
+    "Tone guardrails, de-escalation support, and empathetic phrasing turn rough notes into ready-to-send messages while you keep control and save hours every week.",
 
   // Stats Section
   "stats.documentsRefined.number": "150k+",
@@ -483,7 +482,7 @@ const translationsEn: Record<string, string> = {
   "stats.timeSaved.number": "10+ hrs",
   "stats.timeSaved.label": "Saved Weekly",
   "stats.subtitle":
-    "Trusted by 500+ teachers using Zaza Draft to save 10+ hours every week.",
+    "Trusted by 500+ teachers using Zaza Draft to get evenings back and stay calm with parents.",
 
   // How It Works Section
   "howItWorks.heading": "How it works",
@@ -535,20 +534,20 @@ const translationsEn: Record<string, string> = {
     "Your essay shows good understanding of the topic and includes relevant examples. To strengthen your argument, consider developing a more specific thesis statement in your introduction. Additionally, try incorporating direct quotes from the text to support your analysis. I'd like to see you expand on your ideas in the third paragraph. Great start!",
 
   // Use Cases Section
-  "useCases.heading": "Built for your everyday writing tasks",
+  "useCases.heading": "Built for the writing that drains you",
   "useCases.cards.parentMessages.title": "Parent Messages",
   "useCases.cards.parentMessages.description":
-    "Rewrite sensitive emails with the right tone",
+    "Draft calm, clear replies that de-escalate",
   "useCases.cards.parentMessages.examples":
     "Behavior concerns, progress updates, attendance issues",
   "useCases.cards.reportCards.title": "Report Cards",
   "useCases.cards.reportCards.description":
-    "Transform bullet points into meaningful narratives",
+    "Turn quick notes into human report comments",
   "useCases.cards.reportCards.examples":
     "Term reports, progress summaries, intervention plans",
   "useCases.cards.gradingComments.title": "Grading Comments",
   "useCases.cards.gradingComments.description":
-    "Generate constructive feedback faster",
+    "Faster, kinder feedback with your voice intact",
   "useCases.cards.gradingComments.examples":
     "Criterion-based comments, rubric feedback",
   "useCases.cards.schoolCommunications.title": "School Communications",
@@ -726,68 +725,68 @@ const translationsEn: Record<string, string> = {
 
   // Products - Draft
   "products.draft.hero.eyebrow": "AI WRITING ASSISTANT FOR TEACHERS",
-  "products.draft.hero.title": "Write Better, Faster",
+  "products.draft.hero.title": "Parent emails without the Sunday dread",
   "products.draft.hero.subtitle":
-    "Transform rough notes into polished parent emails, report cards, and feedback in minutes. Maintain your voice while saving hours every week.",
+    "Draft turns rough notes into calm, professional parent messages, report comments, and grading feedback. Tone guardrails and de-escalation support keep you confident and save time.",
   "products.draft.hero.cta.primary": "Start Writing Free",
   "products.draft.hero.cta.secondary": "See Examples",
 
   "products.draft.turn.pain1":
-    "Spending 2-3 hours per week writing parent emails",
+    "Late-night parent emails that need calm, de-escalating tone",
   "products.draft.turn.pain2":
-    "Struggling to find the right tone for sensitive communications",
+    "Report comments that take hours to make sound human",
   "products.draft.turn.pain3":
-    "Writing the same feedback comments over and over",
+    "Rewriting grading feedback to be clear, kind, and fast",
 
-  "products.draft.features.title": "Built for Teacher Communications",
+  "products.draft.features.title": "Built for the tough conversations",
   "products.draft.features.toneGuardrails.title": "Tone Guardrails",
   "products.draft.features.toneGuardrails.desc":
-    "Choose from supportive, formal, concise, or neutral tones - always professional",
+    "Keep messages calm, kind, and de-escalating when emotions run high",
   "products.draft.features.translationChecks.title": "Translation Checks",
   "products.draft.features.translationChecks.desc":
-    "Communicate with families in 20+ languages with confidence",
+    "Make sure tone and intent stay respectful across languages",
   "products.draft.features.reviewSteps.title": "Review Steps",
   "products.draft.features.reviewSteps.desc":
-    "Built-in review process ensures accuracy before sending",
+    "You stay in control: review, edit, and approve every draft",
 
-  "products.draft.howItWorks.title": "How It Works",
-  "products.draft.howItWorks.step1.title": "Paste Your Notes",
+  "products.draft.howItWorks.title": "How it calms your writing",
+  "products.draft.howItWorks.step1.title": "Drop in your notes",
   "products.draft.howItWorks.step1.desc":
-    "Start with bullet points or a rough draft",
-  "products.draft.howItWorks.step2.title": "Choose Your Tone",
+    "Start with bullet points or a rough draft — no perfect wording needed",
+  "products.draft.howItWorks.step2.title": "Pick the tone",
   "products.draft.howItWorks.step2.desc":
-    "Select the right voice for your message",
-  "products.draft.howItWorks.step3.title": "Review & Send",
-  "products.draft.howItWorks.step3.desc": "Edit if needed, then copy or export",
+    "Supportive, formal, concise — with safety guardrails by default",
+  "products.draft.howItWorks.step3.title": "Review & send",
+  "products.draft.howItWorks.step3.desc": "Edit quickly, copy, and share when it feels right",
 
-  "products.draft.whoItsFor.title": "Perfect For",
-  "products.draft.whoItsFor.item1": "Teachers writing parent communications",
-  "products.draft.whoItsFor.item2": "Educators creating report card comments",
+  "products.draft.whoItsFor.title": "Perfect for",
+  "products.draft.whoItsFor.item1": "Teachers juggling parent communications after hours",
+  "products.draft.whoItsFor.item2": "Educators turning quick notes into human report comments",
   "products.draft.whoItsFor.item3":
-    "Schools needing consistent, professional messaging",
+    "School staff who need respectful, concise messages without stress",
 
-  "products.draft.change.title": "What Changes With Draft",
-  "products.draft.change.step1": "2-hour tasks done in 5 minutes",
+  "products.draft.change.title": "What changes with Draft",
+  "products.draft.change.step1": "Two-hour email marathons become 5-minute reviews",
   "products.draft.change.step2":
-    "Consistent, professional tone across all communications",
-  "products.draft.change.step3": "Confidence in sensitive conversations",
-  "products.draft.change.step4": "More time for teaching, less time writing",
+    "Parent communication that stays calm, clear, and professional",
+  "products.draft.change.step3": "Confidence in stressful conversations",
+  "products.draft.change.step4": "More time to teach, less time rewriting",
 
   "products.draft.techNote.title": "Hallucination-Safe:",
   "products.draft.techNote.body":
-    "Unlike generic AI, Draft never invents student information or fabricates details. Every output is grounded in what you provide.",
+    "Draft never invents student details or parent interactions. Guardrails keep every message grounded in what you provide.",
 
-  "products.draft.social.title": "What Teachers Say",
+  "products.draft.social.title": "What teachers say",
   "products.draft.social.quote1":
-    "I got my Sunday back. Draft turns hours into minutes.",
+    "Draft saves me 2-3 hours every Sunday on parent emails and behavior updates. It keeps my tone calm even when I'm stressed.",
   "products.draft.social.author1": "Sarah Mitchell, Year 5 Teacher",
   "products.draft.social.quote2":
-    "The tone options help me communicate with confidence, even in difficult situations.",
+    "Tone guardrails help me communicate with confidence, especially in tough conversations. It feels like emotional support for my inbox.",
   "products.draft.social.author2": "James Rodriguez, Middle School Teacher",
 
-  "products.draft.cta.title": "Get Your Time Back",
+  "products.draft.cta.title": "Get your time back",
   "products.draft.cta.subtitle":
-    "Join 500+ teachers saving 10+ hours every week",
+    "Start free and see how many stressful emails you can clear in a week with Draft.",
   "products.draft.cta.primary": "Start Free Trial",
   "products.draft.cta.secondary": "See Examples",
 
@@ -1643,7 +1642,7 @@ const translationsDe: Record<string, string> = {
   "community.cta.titlePrefix": "Bereit zum",
   "community.cta.titleHighlight": "Beitritt zur Konversation?",
   "community.cta.body":
-    "Erstellen Sie Ihr kostenloses Konto und vernetzen Sie sich mit Tausenden von Lehrkräften, die KI in ihren Klassenzimmern einsetzen.",
+    "Erstelle dein kostenloses Konto und vernetze dich mit Tausenden Lehrkräften, die KI im Alltag einsetzen.",
   "community.cta.primary": "Kostenloses Konto erstellen",
   "community.cta.secondary": "Als Gast stöbern",
 
@@ -1655,11 +1654,11 @@ const translationsDe: Record<string, string> = {
 
   // Hero Section
   "hero.eyebrow": "FÜR LEHRKRÄFTE",
-  "hero.badge": "Halluzinationssichere KI für Lehrkräfte",
-  "hero.headline": "Schreiben Sie wie Sie",
-  "hero.headlineAccent": "nur schneller.",
+  "hero.badge": "Lehrerzentrierte KI für Schreiben",
+  "hero.headline": "Weniger Stress,",
+  "hero.headlineAccent": "bessere Nachrichten.",
   "hero.subheading":
-    "KI-Schreibassistent, der Lehrkräften hilft, E-Mails an Eltern, Schülerberichte und Bewertungs-Kommentare in Minuten statt Stunden zu verfassen.",
+    "Zaza Draft schreibt die Elternmails, Feedback-Kommentare und Berichtstexte, die dich auslaugen. Ruhiger Ton, Deeskalation und Zeitersparnis in Minuten statt Stunden.",
   "hero.ctaPrimary": "Kostenlos mit Schreiben beginnen",
   "hero.ctaSecondary": "Beispiele ansehen",
   "hero.trustIndicators.hallucinationSafe": "Halluzinationssicher",
@@ -1673,9 +1672,9 @@ const translationsDe: Record<string, string> = {
 
   // Problem Section
   "problem.heading":
-    "Lehrkräfte verbringen 10+ Stunden pro Woche mit Schreibaufgaben",
+    "Du bist Lehrer:in, nicht 24/7-Schriftsteller:in",
   "problem.body":
-    "Die Herausforderung ist nicht, was man sagen soll – sondern die Zeit und die richtigen Worte zu finden, um es professionell und mit Ihrer authentischen Stimme zu sagen.",
+    "Abende für Elternmails, Feedback und Berichte. Die Worte sind wichtig – deine Ruhe und Energie aber auch.",
   "problem.stats.parentEmails.value": "2-3 Std./Woche",
   "problem.stats.parentEmails.label": "Eltern-E-Mails",
   "problem.stats.reportCards.value": "4-6 Std./Quartal",
@@ -1685,11 +1684,11 @@ const translationsDe: Record<string, string> = {
 
   // Solution/Mission Section
   "solution.heading":
-    "Die erste KI-Suite, die speziell für die Kommunikation von Lehrkräften entwickelt wurde",
+    "Draft schreibt die schweren Nachrichten, du behältst die Ruhe",
   "solution.bodyPrimary":
-    "Zaza ist die weltweit erste lehrerzentrierte KI-Suite – aufgebaut auf echter Pädagogik, angetrieben von einem vertrauenswürdigen Assistenten und konzipiert, um nicht nur Zeit zu sparen, sondern Lehrkräften zu helfen, aufzublühen.",
+    "Lehrerzentrierte KI, die Elternnachrichten, Feedback-Kommentare und Berichtstexte im richtigen Ton entwirft. Entlastet dich, ohne deine Stimme zu ersetzen.",
   "solution.bodySecondary":
-    "Trainiert auf echter Pädagogik und der Sprache von Lehrkräften – nicht auf Geschäftsschreiben. Jede Ausgabe behält Ihre authentische Stimme bei und spart Stunden bei Eltern-E-Mails, Zeugnissen und Feedback-Kommentaren.",
+    "Ton-Leitplanken, Deeskalations-Hilfe und empathische Formulierungen machen aus Stichpunkten versandfertige Texte – du bleibst im Steuer und sparst jede Woche Stunden.",
 
   // Stats Section
   "stats.documentsRefined.number": "150k+",
@@ -1699,7 +1698,7 @@ const translationsDe: Record<string, string> = {
   "stats.timeSaved.number": "10+ Std.",
   "stats.timeSaved.label": "Wöchentlich gespart",
   "stats.subtitle":
-    "Vertraut von 500+ Lehrkräften, die Zaza Draft nutzen, um jede Woche 10+ Stunden zu sparen.",
+    "Vertraut von 500+ Lehrkräften, die mit Zaza Draft Abende zurückgewinnen und ruhig mit Eltern bleiben.",
 
   // How It Works Section
   "howItWorks.heading": "So funktioniert es",
@@ -1756,20 +1755,20 @@ const translationsDe: Record<string, string> = {
     "Ihr Aufsatz zeigt ein gutes Verständnis für das Thema und enthält relevante Beispiele. Um Ihr Argument zu stärken, sollten Sie in Ihrer Einleitung eine spezifischere These entwickeln. Versuchen Sie außerdem, direkte Zitate aus dem Text einzubauen, um Ihre Analyse zu untermauern. Ich würde gerne sehen, wie Sie Ihre Ideen im dritten Absatz erweitern. Großartiger Anfang!",
 
   // Use Cases Section
-  "useCases.heading": "Für Ihre täglichen Schreibaufgaben entwickelt",
+  "useCases.heading": "Für das Schreiben, das dich auslaugt",
   "useCases.cards.parentMessages.title": "Elternnachrichten",
   "useCases.cards.parentMessages.description":
-    "Sensible E-Mails mit dem richtigen Ton neu schreiben",
+    "Ruhige, klare Antworten, die deeskalieren",
   "useCases.cards.parentMessages.examples":
     "Verhaltensbedenken, Fortschritts-Updates, Anwesenheitsprobleme",
   "useCases.cards.reportCards.title": "Zeugnisse",
   "useCases.cards.reportCards.description":
-    "Stichpunkte in aussagekräftige Berichte umwandeln",
+    "Aus Stichpunkten werden menschliche Berichtskommentare",
   "useCases.cards.reportCards.examples":
     "Quartalsberichte, Fortschritts-Zusammenfassungen, Interventionspläne",
   "useCases.cards.gradingComments.title": "Bewertungs-Kommentare",
   "useCases.cards.gradingComments.description":
-    "Konstruktives Feedback schneller generieren",
+    "Schnelleres, wärmeres Feedback in deiner Stimme",
   "useCases.cards.gradingComments.examples":
     "Kriteriumsbasierte Kommentare, Rubrik-Feedback",
   "useCases.cards.schoolCommunications.title": "Schulkommunikation",
@@ -1955,73 +1954,73 @@ const translationsDe: Record<string, string> = {
 
   // Products - Draft
   "products.draft.hero.eyebrow": "KI-SCHREIBASSISTENT FÜR LEHRKRÄFTE",
-  "products.draft.hero.title": "Besser schreiben, schneller",
+  "products.draft.hero.title": "Elternmails ohne Sonntagsdruck",
   "products.draft.hero.subtitle":
-    "Verwandeln Sie grobe Notizen in Minuten in überarbeitete Eltern-E-Mails, Zeugnisse und Feedback. Behalten Sie Ihre Stimme bei und sparen Sie jede Woche Stunden.",
+    "Draft macht aus Stichpunkten ruhige, professionelle Elternnachrichten, Berichtskommentare und Bewertungs-Feedback. Ton-Leitplanken und Deeskalation geben dir Sicherheit und Zeit zurück.",
   "products.draft.hero.cta.primary": "Kostenlos mit Schreiben beginnen",
   "products.draft.hero.cta.secondary": "Beispiele ansehen",
 
   "products.draft.turn.pain1":
-    "2-3 Stunden pro Woche mit dem Schreiben von Eltern-E-Mails verbringen",
+    "Elternmails spätabends, die ruhig und deeskalierend sein müssen",
   "products.draft.turn.pain2":
-    "Schwierigkeiten haben, den richtigen Ton für sensible Kommunikationen zu finden",
+    "Berichtskommentare, die ewig dauern, um menschlich zu klingen",
   "products.draft.turn.pain3":
-    "Immer wieder dieselben Feedback-Kommentare schreiben",
+    "Feedback immer neu formulieren, damit es klar, freundlich und schnell ist",
 
   "products.draft.features.title":
-    "Für die Kommunikation von Lehrkräften entwickelt",
+    "Für die schwierigen Gespräche gebaut",
   "products.draft.features.toneGuardrails.title": "Ton-Leitplanken",
   "products.draft.features.toneGuardrails.desc":
-    "Wählen Sie aus unterstützendem, formellem, prägnantem oder neutralem Ton – immer professionell",
+    "Hält Nachrichten ruhig, wertschätzend und deeskalierend, wenn es brennt",
   "products.draft.features.translationChecks.title": "Übersetzungsprüfungen",
   "products.draft.features.translationChecks.desc":
-    "Kommunizieren Sie selbstbewusst mit Familien in 20+ Sprachen",
+    "Sicherstellen, dass Ton und Absicht in jeder Sprache respektvoll bleiben",
   "products.draft.features.reviewSteps.title": "Überprüfungsschritte",
   "products.draft.features.reviewSteps.desc":
-    "Integrierter Überprüfungsprozess stellt die Genauigkeit vor dem Senden sicher",
+    "Du behältst die Kontrolle: prüfen, anpassen, freigeben",
 
-  "products.draft.howItWorks.title": "So funktioniert es",
-  "products.draft.howItWorks.step1.title": "Notizen einfügen",
+  "products.draft.howItWorks.title": "So beruhigt es dein Schreiben",
+  "products.draft.howItWorks.step1.title": "Notizen reinkopieren",
   "products.draft.howItWorks.step1.desc":
-    "Beginnen Sie mit Stichpunkten oder einem groben Entwurf",
-  "products.draft.howItWorks.step2.title": "Ton auswählen",
+    "Starte mit Stichpunkten oder einem groben Entwurf – kein Feinschliff nötig",
+  "products.draft.howItWorks.step2.title": "Ton wählen",
   "products.draft.howItWorks.step2.desc":
-    "Wählen Sie die richtige Stimme für Ihre Nachricht",
-  "products.draft.howItWorks.step3.title": "Überprüfen & Senden",
+    "Unterstützend, formell, prägnant – mit Sicherheitsleitplanken als Standard",
+  "products.draft.howItWorks.step3.title": "Prüfen & senden",
   "products.draft.howItWorks.step3.desc":
-    "Bei Bedarf bearbeiten, dann kopieren oder exportieren",
+    "Kurz bearbeiten, kopieren und teilen, wenn es sich richtig anfühlt",
 
   "products.draft.whoItsFor.title": "Perfekt für",
   "products.draft.whoItsFor.item1":
-    "Lehrkräfte, die Elternkommunikation verfassen",
+    "Lehrkräfte, die Elternkommunikation nach Feierabend jonglieren",
   "products.draft.whoItsFor.item2":
-    "Pädagogen, die Zeugnisbemerkungen erstellen",
+    "Pädagog:innen, die aus Stichpunkten menschliche Berichtskommentare machen",
   "products.draft.whoItsFor.item3":
-    "Schulen, die eine konsistente, professionelle Kommunikation benötigen",
+    "Schulteams, die respektvolle, prägnante Nachrichten ohne Stress brauchen",
 
   "products.draft.change.title": "Was sich mit Draft ändert",
-  "products.draft.change.step1": "2-Stunden-Aufgaben in 5 Minuten erledigt",
+  "products.draft.change.step1": "Zwei-Stunden-Mail-Marathons werden 5-Minuten-Reviews",
   "products.draft.change.step2":
-    "Konsistenter, professioneller Ton in allen Kommunikationen",
-  "products.draft.change.step3": "Zuversicht in sensiblen Gesprächen",
+    "Elternkommunikation bleibt ruhig, klar und professionell",
+  "products.draft.change.step3": "Zuversicht in stressigen Gesprächen",
   "products.draft.change.step4":
-    "Mehr Zeit für den Unterricht, weniger fürs Schreiben",
+    "Mehr Zeit zum Unterrichten, weniger Zeit fürs Umschreiben",
 
   "products.draft.techNote.title": "Halluzinationssicher:",
   "products.draft.techNote.body":
-    "Im Gegensatz zu generischer KI erfindet Draft niemals Schülerinformationen oder Details. Jede Ausgabe basiert auf dem, was Sie bereitstellen.",
+    "Draft erfindet keine Schülerdetails oder Elterninteraktionen. Leitplanken halten jede Nachricht bei dem, was du vorgibst.",
 
   "products.draft.social.title": "Was Lehrkräfte sagen",
   "products.draft.social.quote1":
-    "Ich habe meinen Sonntag zurück. Draft macht aus Stunden Minuten.",
+    "Ich habe meinen Sonntag zurück. Draft macht aus Stunden Minuten – und hält meinen Ton ruhig, wenn ich gestresst bin.",
   "products.draft.social.author1": "Sarah Mitchell, Lehrerin 5. Klasse",
   "products.draft.social.quote2":
-    "Die Tonoptionen helfen mir, auch in schwierigen Situationen mit Zuversicht zu kommunizieren.",
+    "Die Tonleitplanken geben mir Sicherheit, besonders in schwierigen Gesprächen. Es fühlt sich wie emotionale Unterstützung für mein Postfach an.",
   "products.draft.social.author2": "James Rodriguez, Mittelschullehrer",
 
-  "products.draft.cta.title": "Holen Sie sich Ihre Zeit zurück",
+  "products.draft.cta.title": "Hol dir deine Zeit zurück",
   "products.draft.cta.subtitle":
-    "Schließen Sie sich 500+ Lehrkräften an, die 10+ Stunden pro Woche sparen",
+    "Starte kostenlos und sieh, wie viele stressige Mails du in einer Woche mit Draft klärst.",
   "products.draft.cta.primary": "Kostenlose Testversion starten",
   "products.draft.cta.secondary": "Beispiele ansehen",
 
@@ -2428,7 +2427,7 @@ const translationsDe: Record<string, string> = {
 
   // Founder Hero Section
   "founder.hero.headline":
-    "Lernen Sie den Gründer kennen, der KI für Lehrkräfte entwickelt",
+    "Lerne den Gründer kennen, der KI für Lehrkräfte entwickelt",
   "founder.hero.subheading":
     "Dr. Greg Blackburn war 15 Jahre in Klassenzimmern, bevor er Zaza gründete – KI-Tools, die wirklich verstehen, was Lehrkräfte brauchen.",
   "founder.hero.label": "GRÜNDER & CEO",
@@ -2464,11 +2463,11 @@ const translationsDe: Record<string, string> = {
     "Es geht nicht um schnellen Gewinn. Es geht darum, etwas zu bauen, das Lehrkräften wirklich hilft und Bildung verbessert. Das Vermächtnis, das ich hinterlassen möchte.",
   "founder.personal.title": "Eine persönliche Anmerkung",
   "founder.personal.message1":
-    "Wenn Sie das lesen, sind Sie vermutlich neugierig auf KI, aber skeptisch, ob sie wirklich hilft. Das verstehe ich – ich war es auch. Viele KI-Tools wirken, als wären sie ohne Einblick in Klassenzimmer gebaut.",
+    "Wenn du das liest, bist du vermutlich neugierig auf KI, aber skeptisch, ob sie wirklich hilft. Das verstehe ich – ich war es auch. Viele KI-Tools wirken, als wären sie ohne Einblick in Klassenzimmer gebaut.",
   "founder.personal.message2":
-    "Deshalb habe ich Zaza anders gebaut. Jede Funktion entsteht mit echten Lehrkräften, wird in echten Klassen getestet und nach realem Feedback verbessert. Wir bauen nicht nur Software, sondern Partnerschaften mit Pädagoginnen und Pädagogen.",
+    "Deshalb habe ich Zaza anders gebaut. Jede Funktion entsteht mit echten Lehrkräften, wird in echten Klassen getestet und nach realem Feedback verbessert. Wir bauen nicht nur Software, sondern Partnerschaften mit Pädagog:innen.",
   "founder.personal.message3":
-    "Ich freue mich, von Ihnen zu hören. Ob Fragen, Feedback oder ein Austausch über Bildung und Technologie – meine Tür steht offen. Gestalten wir die Zukunft der Lehrer-Tools gemeinsam.",
+    "Ich freue mich, von dir zu hören. Ob Fragen, Feedback oder ein Austausch über Bildung und Technologie – meine Tür steht offen. Gestalten wir die Zukunft der Lehrer-Tools gemeinsam.",
   "founder.personal.name": "Dr. Greg Blackburn",
   "founder.personal.title2": "Gründer & CEO",
   "founder.personal.company": "Zaza Technologies",

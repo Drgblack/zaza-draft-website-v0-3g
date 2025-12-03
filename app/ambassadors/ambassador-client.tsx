@@ -46,6 +46,7 @@ export default function AmbassadorClient() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState("")
 
   useEffect(() => {
     if (typeof window !== "undefined" && (window as any).analytics) {
@@ -57,6 +58,12 @@ export default function AmbassadorClient() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailPattern.test(formData.email)) {
+      setError(isGerman ? "Bitte geben Sie eine gültige E-Mail-Adresse ein." : "Please enter a valid email address.")
+      return
+    }
+    setError("")
     setIsSubmitting(true)
 
     // Track application submission
@@ -68,11 +75,17 @@ export default function AmbassadorClient() {
       })
     }
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-
-    setIsSubmitted(true)
-    setIsSubmitting(false)
+    try {
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 1500))
+      console.log("TODO: connect ambassador application to Brevo", formData)
+      setIsSubmitted(true)
+    } catch (err) {
+      console.error("[ambassador] submission failed", err)
+      setError(isGerman ? "Etwas ist schiefgelaufen. Bitte erneut versuchen." : "Something went wrong. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -389,6 +402,8 @@ export default function AmbassadorClient() {
                 />
               </div>
 
+              {error && <p className="text-sm text-red-400">{error}</p>}
+
               <Button
                 type="submit"
                 size="lg"
@@ -417,6 +432,11 @@ export default function AmbassadorClient() {
               </div>
               <h3 className="text-3xl font-bold text-white mb-4">{content.application.success.title}</h3>
               <p className="text-gray-300 mb-8 leading-relaxed">{content.application.success.message}</p>
+              <p className="text-sm text-gray-400 mb-6">
+                {isGerman
+                  ? "Dieses Formular ist aktuell eine Vorschau. Schreiben Sie uns bei Fragen an hello@zazatechnologies.com."
+                  : "This form is currently a preview. Email hello@zazatechnologies.com if you have questions."}
+              </p>
               <Button
                 asChild
                 size="lg"

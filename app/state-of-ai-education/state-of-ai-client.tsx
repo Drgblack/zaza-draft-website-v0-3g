@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import type React from "react";
 
@@ -28,9 +28,20 @@ export default function StateOfAIClient() {
   const [role, setRole] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      setError(
+        language === "de"
+          ? "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+          : "Please enter a valid email address.",
+      );
+      return;
+    }
+    setError("");
     setIsSubmitting(true);
 
     // Track download request
@@ -41,14 +52,20 @@ export default function StateOfAIClient() {
       });
     }
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-
-    // In production, this would trigger email with download link
-    console.log("[v0] Report download requested:", { email, role });
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      console.log("TODO: connect to Brevo", { email, role, report: "State of AI 2025" });
+      setIsSubmitted(true);
+    } catch (err) {
+      console.error("[v0] Report download failed", err);
+      setError(
+        language === "de"
+          ? "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+          : "Something went wrong. Please try again.",
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const keyFindings = [
@@ -601,6 +618,8 @@ export default function StateOfAIClient() {
                     </select>
                   </div>
 
+                  {error && <p className="text-sm text-red-400">{error}</p>}
+
                   <Button
                     type="submit"
                     size="lg"
@@ -633,21 +652,28 @@ export default function StateOfAIClient() {
             ) : (
               <div className="text-center py-8">
                 <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-3">
+                                <h3 className="text-2xl font-bold text-white mb-3">
                   {language === "de"
-                    ? "ÃœberprÃ¼fen Sie Ihre E-Mails!"
+                    ? "Ueberpruefen Sie Ihre E-Mails!"
                     : "Check Your Email!"}
                 </h3>
                 <p className="text-gray-300 mb-6">
                   {language === "de"
-                    ? "Wir haben den Download-Link an "
-                    : "We've sent the download link to "}
+                    ? "Danke fuer Ihr Interesse! Dieses Formular ist aktuell eine Vorschau."
+                    : "Thanks for your interest! For now this form is a preview."}
+                </p>
+                <p className="text-gray-300 mb-6">
+                  {language === "de"
+                    ? "Bitte schreiben Sie an hello@zazatechnologies.com, wir melden uns umgehend."
+                    : "Please email hello@zazatechnologies.com and we will get back to you."}
+                </p>
+                <p className="text-sm text-gray-400">
+                  {language === "de" ? "Ihre Anfrage wurde gespeichert fuer " : "We logged your request for "}{" "}
                   <strong className="text-[#A78BFA]">{email}</strong>
-                  {language === "de" ? " gesendet" : ""}
                 </p>
                 <p className="text-sm text-gray-400">
                   {language === "de"
-                    ? "Nicht gefunden? ÃœberprÃ¼fen Sie Ihren Spam-Ordner oder "
+                    ? "Nicht gefunden? Bitte pruefen Sie Ihren Spam-Ordner oder "
                     : "Don't see it? Check your spam folder or "}
                   <button
                     onClick={() => setIsSubmitted(false)}

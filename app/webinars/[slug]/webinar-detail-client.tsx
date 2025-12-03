@@ -35,16 +35,31 @@ export default function WebinarDetailClient({ webinar }: WebinarDetailClientProp
   const [email, setEmail] = useState("")
   const [name, setName] = useState("")
   const [isRegistered, setIsRegistered] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState("")
 
   useEffect(() => {
     analytics.webinars.viewWebinar(webinar.id, webinar.title)
   }, [webinar.id, webinar.title])
 
-  const handleRegister = (e: React.FormEvent) => {
+  const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (email && name) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailPattern.test(email) || !name.trim()) {
+      setError("Please enter your name and a valid email.")
+      return
+    }
+    setError("")
+    setIsSubmitting(true)
+    try {
       analytics.webinars.registerWebinar(webinar.id, webinar.title)
+      console.log("TODO: connect webinar registration to Brevo", { email, name, webinarId: webinar.id })
       setIsRegistered(true)
+    } catch (err) {
+      console.error("[webinar] registration failed", err)
+      setError("Something went wrong. Please try again.")
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -207,17 +222,23 @@ export default function WebinarDetailClient({ webinar }: WebinarDetailClientProp
                           className="bg-[#0F172A] border-white/10 text-white"
                         />
                       </div>
+                      {error && <p className="text-sm text-red-400">{error}</p>}
                       <Button
                         type="submit"
                         size="lg"
-                        className="w-full bg-[#8B5CF6] hover:bg-[#7C3AED] text-white"
-                        disabled={webinar.attendees >= webinar.maxAttendees}
+                        className="w-full bg-[#8B5CF6] hover:bg-[#7C3AED] text-white disabled:opacity-60"
+                        disabled={webinar.attendees >= webinar.maxAttendees || isSubmitting}
                       >
-                        {webinar.attendees >= webinar.maxAttendees ? "Waitlist Full" : "Register Free"}
+                        {webinar.attendees >= webinar.maxAttendees
+                          ? "Waitlist Full"
+                          : isSubmitting
+                            ? "Submitting..."
+                            : "Register Free"}
                       </Button>
                     </form>
                     <p className="text-sm text-gray-400 text-center mt-4">
-                      You'll receive a confirmation email with the webinar link.
+                      You'll receive a confirmation email with the webinar link. This preview form is not yet wired to
+                      Brevo—email hello@zazatechnologies.com if you need help.
                     </p>
                   </>
                 )}
@@ -230,7 +251,8 @@ export default function WebinarDetailClient({ webinar }: WebinarDetailClientProp
                     <h3 className="text-2xl font-bold text-white mb-3">You're Registered!</h3>
                     <p className="text-gray-300 mb-6">
                       Check your email for the webinar link and calendar invite. We'll send you a reminder 24 hours
-                      before the session.
+                      before the session. If you do not receive it, email hello@zazatechnologies.com and we will
+                      confirm your spot.
                     </p>
                     <Button asChild variant="outline" className="w-full border-white/10 text-gray-300 bg-transparent">
                       <Link href="/webinars">Browse More Webinars</Link>

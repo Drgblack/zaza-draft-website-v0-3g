@@ -90,22 +90,28 @@ export function ContactClient() {
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(formData.email)) {
+      setError(t.contact.form.error);
+      return;
+    }
     setLoading(true);
-    setError(false);
+    setError("");
 
     try {
       // Mock submission
       await new Promise((resolve) => setTimeout(resolve, 1000));
+      console.log("TODO: connect contact form to Brevo");
       setSuccess(true);
       setFormData({ name: "", email: "", message: "" });
       setTimeout(() => setSuccess(false), 5000);
     } catch (err) {
-      setError(true);
-      setTimeout(() => setError(false), 5000);
+      setError(t.contact.form.error);
+      setTimeout(() => setError(""), 5000);
     } finally {
       setLoading(false);
     }
@@ -148,7 +154,11 @@ export function ContactClient() {
                   <div className="mx-auto w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mb-4">
                     <Send className="h-8 w-8 text-green-500" />
                   </div>
-                  <p className="text-lg text-white">{t.contact.form.success}</p>
+                  <p className="text-lg text-white">
+                    {language === "de"
+                      ? "Danke für Ihre Nachricht! Dieses Formular ist eine Vorschau. Bitte schreiben Sie an hello@zazatechnologies.com."
+                      : "Thanks for your message! This form is a preview. Please email hello@zazatechnologies.com."}
+                  </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -212,7 +222,7 @@ export function ContactClient() {
 
                   {error && (
                     <p className="text-sm text-red-400">
-                      {t.contact.form.error}
+                      {error}
                     </p>
                   )}
 

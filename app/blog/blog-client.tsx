@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
@@ -52,20 +52,10 @@ export function BlogClient({ posts, language }: BlogClientProps) {
 
   // --- Force a specific hero post if available ---
   const desiredHeroSlug = "ai-lesson-planning-guide-2025";
-  const desiredHeroIndex = filteredPosts.findIndex(
-    (p) => p.slug === desiredHeroSlug,
-  );
-
   const heroPost =
-    desiredHeroIndex >= 0 ? filteredPosts[desiredHeroIndex] : filteredPosts[0];
+    filteredPosts.find((p) => p.slug === desiredHeroSlug) ?? filteredPosts[0];
 
-  const restPosts =
-    desiredHeroIndex >= 0
-      ? [
-          ...filteredPosts.slice(0, desiredHeroIndex),
-          ...filteredPosts.slice(desiredHeroIndex + 1),
-        ]
-      : filteredPosts.slice(1);
+  const restPosts = filteredPosts.filter((p) => p.slug !== heroPost.slug);
 
   const formatDate = (iso: string) =>
     new Date(iso).toLocaleDateString(language === "de" ? "de-DE" : "en-US", {
@@ -86,17 +76,17 @@ export function BlogClient({ posts, language }: BlogClientProps) {
     <div className="min-h-screen bg-slate-950 text-slate-50">
       <section className="border-b border-slate-800 bg-gradient-to-b from-slate-950 to-slate-900/60">
         <div className="max-w-6xl mx-auto px-4 lg:px-6 py-10 lg:py-14">
-          <div className="flex items-center justify-between gap-4 mb-6">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-400">
+          <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+            <div className="space-y-2">
+              <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
                 {language === "de" ? "Zaza Draft Blog" : "The Zaza Blog"}
               </p>
-              <h1 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight text-slate-50">
+              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-50">
                 {language === "de"
                   ? "Ideen, wie KI Lehrkräften wirklich hilft"
                   : "AI ideas that actually help teachers"}
               </h1>
-              <p className="mt-2 max-w-2xl text-sm sm:text-base text-slate-400">
+              <p className="max-w-2xl text-sm sm:text-base text-slate-400 leading-relaxed">
                 {language === "de"
                   ? "Praktische Tipps, Vorlagen und Strategien, damit KI dir Zeit zurückgibt – nicht noch mehr Stress."
                   : "Practical tips, templates, and strategies so AI gives you time back – not more stress."}
@@ -141,8 +131,8 @@ export function BlogClient({ posts, language }: BlogClientProps) {
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
               </div>
-              <div className="p-6 sm:p-7">
-                <div className="flex flex-wrap items-center gap-3 mb-4">
+              <div className="p-6 sm:p-7 space-y-3">
+                <div className="flex flex-wrap items-center gap-3">
                   <Badge className="bg-fuchsia-500 text-white border-0">
                     {heroPost.category}
                   </Badge>
@@ -153,13 +143,13 @@ export function BlogClient({ posts, language }: BlogClientProps) {
                       (language === "de" ? "8 Min. Lesezeit" : "8 min read")}
                   </span>
                 </div>
-                <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-50 mb-3 group-hover:text-fuchsia-300 transition-colors">
+                <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-slate-50 group-hover:text-fuchsia-300 transition-colors">
                   {heroPost.title}
                 </h2>
-                <p className="text-sm sm:text-base text-slate-300 line-clamp-3">
+                <p className="text-sm sm:text-base text-slate-300 leading-relaxed line-clamp-3">
                   {heroPost.excerpt}
                 </p>
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2">
                   {(heroPost.tags ?? []).slice(0, 3).map((tag) => (
                     <span
                       key={tag}
@@ -191,19 +181,19 @@ export function BlogClient({ posts, language }: BlogClientProps) {
                         />
                       </div>
                     </div>
-                    <div className="py-3 pr-4 flex flex-col justify-center">
-                      <p className="text-[11px] uppercase tracking-[0.2em] text-slate-500 mb-1">
-                        {formatDate(post.publishedAt)}
-                      </p>
-                      <h3 className="text-sm sm:text-base font-semibold text-slate-50 group-hover:text-fuchsia-300 line-clamp-2">
-                        {post.title}
-                      </h3>
-                      <p className="mt-1 text-xs text-slate-400 line-clamp-2">
-                        {post.excerpt}
-                      </p>
-                    </div>
-                  </Card>
-                </Link>
+                  <div className="py-3 pr-4 flex flex-col justify-center">
+                    <p className="text-[11px] uppercase tracking-[0.18em] text-slate-500 mb-1">
+                      {formatDate(post.publishedAt)}
+                    </p>
+                    <h3 className="text-sm sm:text-base font-semibold text-slate-50 group-hover:text-fuchsia-300 line-clamp-2">
+                      {post.title}
+                    </h3>
+                    <p className="mt-1 text-xs text-slate-400 leading-relaxed line-clamp-2">
+                      {post.excerpt}
+                    </p>
+                  </div>
+                </Card>
+              </Link>
               ))}
             </div>
           </Link>

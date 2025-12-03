@@ -29,9 +29,16 @@ export default function YearReportClient({ year }: YearReportClientProps) {
   const [role, setRole] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState("")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailPattern.test(email)) {
+      setError("Please enter a valid email address.")
+      return
+    }
+    setError("")
     setIsSubmitting(true)
 
     // Track download request
@@ -42,9 +49,16 @@ export default function YearReportClient({ year }: YearReportClientProps) {
       })
     }
 
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-    setIsSubmitted(true)
-    setIsSubmitting(false)
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 1500))
+      console.log("TODO: connect historical report download to Brevo", { email, role, year })
+      setIsSubmitted(true)
+    } catch (err) {
+      console.error("[year-report] submission failed", err)
+      setError("Something went wrong. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   // Year-specific data
@@ -314,6 +328,8 @@ export default function YearReportClient({ year }: YearReportClientProps) {
                     </select>
                   </div>
 
+                  {error && <p className="text-sm text-red-400">{error}</p>}
+
                   <Button
                     type="submit"
                     size="lg"
@@ -335,8 +351,11 @@ export default function YearReportClient({ year }: YearReportClientProps) {
               <div className="text-center py-8">
                 <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-3">Check Your Email!</h3>
-                <p className="text-gray-300 mb-6">
-                  We've sent the download link to <strong className="text-[#A78BFA]">{email}</strong>
+                <p className="text-gray-300 mb-4">
+                  This form is currently a preview. Please email hello@zazatechnologies.com and we will send the report.
+                </p>
+                <p className="text-sm text-gray-400">
+                  We logged your request for <strong className="text-[#A78BFA]">{email}</strong>
                 </p>
               </div>
             )}

@@ -11,19 +11,37 @@ interface LeadMagnetProps {
   title: string
   description: string
   resourceName: string
-  onSubmit?: (email: string) => void
+  onSubmit?: (email: string) => void | Promise<void>
 }
 
 export function LeadMagnet({ title, description, resourceName, onSubmit }: LeadMagnetProps) {
   const [email, setEmail] = useState("")
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState("")
+  const [loading, setLoading] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (onSubmit) {
-      onSubmit(email)
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailPattern.test(email)) {
+      setError("Please enter a valid email address.")
+      return
     }
-    setSubmitted(true)
+    setError("")
+    setLoading(true)
+
+    try {
+      if (onSubmit) {
+        await onSubmit(email)
+      }
+      console.log("TODO: connect to Brevo")
+      setSubmitted(true)
+    } catch (err) {
+      console.error("[LeadMagnet] submission failed", err)
+      setError("Something went wrong. Please try again.")
+    } finally {
+      setLoading(false)
+    }
   }
 
   if (submitted) {
@@ -34,7 +52,14 @@ export function LeadMagnet({ title, description, resourceName, onSubmit }: LeadM
         </div>
         <h3 className="text-2xl font-bold text-white mb-2">Check Your Email!</h3>
         <p className="text-gray-300">
-          We've sent {resourceName} to {email}
+          Thanks for your interest! For now this form is a preview. Please email{" "}
+          <a href="mailto:hello@zazatechnologies.com" className="text-[#8B5CF6] underline">
+            hello@zazatechnologies.com
+          </a>{" "}
+          and we will get back to you.
+        </p>
+        <p className="text-sm text-gray-400 mt-3">
+          We have your request for {resourceName} at {email}.
         </p>
       </div>
     )
@@ -60,12 +85,16 @@ export function LeadMagnet({ title, description, resourceName, onSubmit }: LeadM
           required
           className="flex-1 bg-[#1E293B] border-white/10 text-white placeholder:text-gray-400"
         />
-        <Button type="submit" className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white whitespace-nowrap">
-          Download Free Resource
+        <Button
+          type="submit"
+          disabled={loading}
+          className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white whitespace-nowrap disabled:opacity-50"
+        >
+          {loading ? "Submitting..." : "Download Free Resource"}
         </Button>
       </form>
+      {error && <p className="text-sm text-red-400 mt-2">{error}</p>}
       <p className="text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
     </div>
   )
 }
-

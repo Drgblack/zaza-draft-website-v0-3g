@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -104,44 +104,28 @@ export default function Footer() {
             <ul className="mt-3 space-y-2 text-sm">
               <li>
                 <a
-                  href="https://www.zazadraft.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white"
-                  aria-label="Zaza Draft Ã¢â‚¬â€œ opens in new tab"
+                  href="/products/draft" className="hover:text-white" aria-label="Zaza Draft"
                 >
                   Zaza Draft
                 </a>
               </li>
               <li>
                 <a
-                  href="https://www.zazateach.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white"
-                  aria-label="Zaza Teach Ã¢â‚¬â€œ opens in new tab"
+                  href="/products/teach" className="hover:text-white" aria-label="Zaza Teach"
                 >
                   Zaza Teach
                 </a>
               </li>
               <li>
                 <a
-                  href="https://www.zazashield.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white"
-                  aria-label="Zaza Shield Ã¢â‚¬â€œ opens in new tab"
+                  href="/products/shield" className="hover:text-white" aria-label="Zaza Shield"
                 >
                   Zaza Shield
                 </a>
               </li>
               <li>
                 <a
-                  href="https://www.zazagradeflow.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white"
-                  aria-label="GradeFlow Ã¢â‚¬â€œ opens in new tab"
+                  href="/products/gradeflow" className="hover:text-white" aria-label="Zaza GradeFlow"
                 >
                   GradeFlow
                 </a>
@@ -152,7 +136,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white"
-                  aria-label="Zaza Technologies Ã¢â‚¬â€œ opens in new tab"
+                  aria-label="Zaza Technologies"
                 >
                   Zaza Technologies
                 </a>
@@ -239,4 +223,5 @@ export default function Footer() {
   );
 }
 // build: ensure footer rendered 2025-11-06T18:11:04
+
 

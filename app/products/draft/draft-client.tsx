@@ -61,7 +61,7 @@ export default function DraftClient() {
             <Breadcrumbs
               items={[
                 { label: t("nav.home"), href: "/" },
-                { label: t("nav.products"), href: "#" },
+                { label: t("nav.products"), href: "/suite" },
                 { label: "Draft", href: "/products/draft" },
               ]}
             />

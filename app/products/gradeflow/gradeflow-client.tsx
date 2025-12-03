@@ -65,7 +65,7 @@ export default function GradeFlowClient() {
             <Breadcrumbs
               items={[
                 { label: t("nav.home"), href: "/" },
-                { label: t("nav.products"), href: "#" },
+                { label: t("nav.products"), href: "/suite" },
                 { label: "GradeFlow", href: "/products/gradeflow" },
               ]}
             />
