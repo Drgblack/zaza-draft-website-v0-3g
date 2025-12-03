@@ -3,9 +3,9 @@ import { getAllPostsByLanguage } from "@/lib/cms/posts";
 import { BlogClient } from "@/app/blog/blog-client";
 
 export const metadata: Metadata = {
-  title: "Blog | Zaza Draft - KI-Ideen fÃ¼r LehrkrÃ¤fte",
+  title: "Blog | Zaza Draft - KI-Ideen für Lehrkräfte",
   description:
-    "Vertiefende Artikel zu KI, Elternkommunikation und Unterrichtsplanung fÃ¼r LehrkrÃ¤fte, die Zaza Draft nutzen.",
+    "Vertiefende Artikel zu KI, Elternkommunikation und Unterrichtsplanung für Lehrkräfte, die Zaza Draft nutzen.",
 };
 
 export default function BlogPageDe() {

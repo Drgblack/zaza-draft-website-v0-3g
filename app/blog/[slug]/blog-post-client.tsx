@@ -267,7 +267,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
       CLASSROOM: {
         icon: <Apple className="h-5 w-5" />,
         title:
-          language === "de" ? "FÃ¼r Ihr Klassenzimmer" : "For Your Classroom",
+          language === "de" ? "Für Ihr Klassenzimmer" : "For Your Classroom",
         className: "callout-classroom",
       },
       TEMPLATE: {

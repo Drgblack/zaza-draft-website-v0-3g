@@ -25,7 +25,7 @@ export function SignupModal({ open, onOpenChange }: SignupModalProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!consent) {
-      setError("Please accept the privacy policy")
+      setError(t("form.consentRequired"))
       return
     }
 
@@ -69,7 +69,7 @@ export function SignupModal({ open, onOpenChange }: SignupModalProps) {
           className="absolute right-4 top-4 rounded-lg p-1 text-[#9CA3AF] hover:text-[#F9FAFB] hover:bg-[#1F2937] transition-colors"
         >
           <X className="h-5 w-5" />
-          <span className="sr-only">Close</span>
+          <span className="sr-only">{t("form.close")}</span>
         </button>
 
         {success ? (
@@ -80,15 +80,15 @@ export function SignupModal({ open, onOpenChange }: SignupModalProps) {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-[#F9FAFB] mb-2">{t("form.success")}</h3>
-            <p className="text-[#9CA3AF]">We'll be in touch soon!</p>
+            <p className="text-[#9CA3AF]">{t("form.successNote")}</p>
             <Button onClick={handleClose} className="mt-6 gradient-primary text-white">
-              Close
+              {t("form.close")}
             </Button>
           </div>
         ) : (
           <>
             <h2 className="text-2xl font-bold text-[#F9FAFB] mb-2">{t("nav.getStarted")}</h2>
-            <p className="text-[#9CA3AF] mb-6">Try 5 comments for free</p>
+            <p className="text-[#9CA3AF] mb-6">{t("form.trialCopy")}</p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
@@ -102,7 +102,7 @@ export function SignupModal({ open, onOpenChange }: SignupModalProps) {
                   onChange={(e) => setName(e.target.value)}
                   required
                   className="w-full px-4 py-2 bg-[#0F172A] border border-[#1F2937] rounded-xl text-[#F9FAFB] placeholder-[#6B7280] focus:outline-none focus:ring-2 focus:ring-[#7C3AED]"
-                  placeholder="Your name"
+                  placeholder={t("form.placeholder.name")}
                 />
               </div>
 
@@ -117,7 +117,7 @@ export function SignupModal({ open, onOpenChange }: SignupModalProps) {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   className="w-full px-4 py-2 bg-[#0F172A] border border-[#1F2937] rounded-xl text-[#F9FAFB] placeholder-[#6B7280] focus:outline-none focus:ring-2 focus:ring-[#7C3AED]"
-                  placeholder="you@example.com"
+                  placeholder={t("form.placeholder.email")}
                 />
               </div>
 
@@ -144,7 +144,7 @@ export function SignupModal({ open, onOpenChange }: SignupModalProps) {
                 disabled={loading || !consent}
                 className="w-full gradient-primary text-white font-medium disabled:opacity-50"
               >
-                {loading ? "Submitting..." : t("form.submit")}
+                {loading ? t("form.submitting") : t("form.submit")}
               </Button>
             </form>
           </>

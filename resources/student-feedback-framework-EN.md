@@ -76,7 +76,7 @@ Add a counterargument in paragraph 3. Try: "Some might say social media helps te
 
 **Template:**
 ```
-âœ¨ GLOW (What's Shining):
+✨ GLOW (What's Shining):
 [2-3 specific strengths]
 
 ðŸŒ± GROW (Growth Opportunity):
@@ -85,7 +85,7 @@ Add a counterargument in paragraph 3. Try: "Some might say social media helps te
 
 **Example (Science Fair Project):**
 ```
-âœ¨ GLOW (What's Shining):
+✨ GLOW (What's Shining):
 - Your hypothesis was clearly stated and testable
 - Your data table was organized and easy to read
 - You explained your results using scientific vocabulary (independent variable, dependent variable, control)

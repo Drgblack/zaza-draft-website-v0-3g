@@ -44,9 +44,9 @@ The debate between **AI-enhanced teaching** and **traditional teaching** is resh
 ## The detailed comparison
 
 ### 1) Time efficiency
-- Traditional: manual grading (2â€“3 hours/assignment), 15â€“20 minutes/student feedback, 3â€“4 hours weekly planning, manual tracking.
+- Traditional: manual grading (2-3 hours/assignment), 15-20 minutes/student feedback, 3-4 hours weekly planning, manual tracking.
 - AI-enhanced: automated grading (seconds), ~30 seconds/student feedback, ~1 hour planning with AI, live dashboards.
-- **Edge:** AI (saves ~10â€“15 hours weekly).
+- **Edge:** AI (saves ~10-15 hours weekly).
 
 ### 2) Personalisation
 - Traditional: limited differentiation, uniform pacing, manual gap spotting.

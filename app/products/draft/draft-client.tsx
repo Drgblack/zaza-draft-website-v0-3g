@@ -246,13 +246,33 @@ export default function DraftClient() {
               {t("products.draft.social.title")}
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="bg-[#111827] border-[#1F2937] p-6">
-                <p className="text-[#D1D5DB] italic mb-4">"{t("products.draft.social.quote1")}"</p>
-                <p className="text-sm text-[#9CA3AF]">- {t("products.draft.social.author1")}</p>
+              <Card className="bg-[#111827] border-[#1F2937] p-6 flex flex-col md:flex-row md:items-center gap-4">
+                <div className="relative w-16 h-16 rounded-full overflow-hidden bg-[#1F2937] flex-shrink-0">
+                  <Image
+                    src="/testimonials/sarah-mitchell-teacher.jpg"
+                    alt="Sarah Mitchell - Year 5 teacher"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="text-[#D1D5DB] italic mb-3 md:mb-2">"{t("products.draft.social.quote1")}"</p>
+                  <p className="text-sm text-[#9CA3AF]">- {t("products.draft.social.author1")}</p>
+                </div>
               </Card>
-              <Card className="bg-[#111827] border-[#1F2937] p-6">
-                <p className="text-[#D1D5DB] italic mb-4">"{t("products.draft.social.quote2")}"</p>
-                <p className="text-sm text-[#9CA3AF]">- {t("products.draft.social.author2")}</p>
+              <Card className="bg-[#111827] border-[#1F2937] p-6 flex flex-col md:flex-row md:items-center gap-4">
+                <div className="relative w-16 h-16 rounded-full overflow-hidden bg-[#1F2937] flex-shrink-0">
+                  <Image
+                    src="/testimonials/james-Rodrigues-teacher.jpg"
+                    alt="James Rodriguez - middle school teacher"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="text-[#D1D5DB] italic mb-3 md:mb-2">"{t("products.draft.social.quote2")}"</p>
+                  <p className="text-sm text-[#9CA3AF]">- {t("products.draft.social.author2")}</p>
+                </div>
               </Card>
             </div>
           </div>

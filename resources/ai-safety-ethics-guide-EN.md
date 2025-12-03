@@ -59,9 +59,9 @@ feedback."
 **The Principle:** AI is a tool for brainstorming, drafting, and efficiency - NOT for making final decisions about students.
 
 **What This Means:**
-- âœ… Use AI to generate feedback drafts â†’ YOU personalize and finalize
-- âœ… Use AI to create assignment ideas â†’ YOU adapt for your students
-- âœ… Use AI to analyze patterns â†’ YOU interpret and act
+- âœ… Use AI to generate feedback drafts → YOU personalize and finalize
+- âœ… Use AI to create assignment ideas → YOU adapt for your students
+- âœ… Use AI to analyze patterns → YOU interpret and act
 - âŒ Don't let AI grade student work without your review
 - âŒ Don't use AI-generated reports without personalizing them
 - âŒ Don't rely on AI to make placement or intervention decisions

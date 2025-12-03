@@ -450,7 +450,7 @@ export default function CourseClient({ slug, course }: CourseProps) {
                               <div className="text-white font-medium">{lesson.title}</div>
                               <div className="text-gray-400 text-sm flex items-center gap-2">
                                 <span className="capitalize">{lesson.type}</span>
-                                <span>â€¢</span>
+                                <span>•</span>
                                 <span>{lesson.duration}</span>
                               </div>
                             </div>
@@ -555,14 +555,14 @@ export default function CourseClient({ slug, course }: CourseProps) {
                     className="block p-3 rounded-lg hover:bg-white/5 transition-colors"
                   >
                     <div className="text-white font-medium text-sm mb-1">Prompt Engineering Fundamentals</div>
-                    <div className="text-gray-400 text-xs">3 hours â€¢ Beginner</div>
+                    <div className="text-gray-400 text-xs">3 hours • Beginner</div>
                   </Link>
                   <Link
                     href="/ai-literacy/courses/ai-for-lesson-planning"
                     className="block p-3 rounded-lg hover:bg-white/5 transition-colors"
                   >
                     <div className="text-white font-medium text-sm mb-1">AI for Lesson Planning</div>
-                    <div className="text-gray-400 text-xs">3 hours â€¢ Intermediate</div>
+                    <div className="text-gray-400 text-xs">3 hours • Intermediate</div>
                   </Link>
                 </div>
               </div>

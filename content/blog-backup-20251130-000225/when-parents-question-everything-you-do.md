@@ -183,5 +183,5 @@ _When we turn defense into partnership, everyone wins - especially the child at 
 ---
 
 **About the Author:** Dr Greg Blackburn is a learning scientist and founder of Zaza Technologies.
-Zaza is built with current and former teachers who understand the reality of classroom life â€“ and weâ€™re dedicated to helping educators work smarter, not harder.
+Zaza is built with current and former teachers who understand the reality of classroom life - and we’re dedicated to helping educators work smarter, not harder.
 

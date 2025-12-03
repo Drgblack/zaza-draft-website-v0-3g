@@ -49,10 +49,14 @@ export default function GradeFlowClient() {
     {
       quote: t("products.gradeflow.social.quote1"),
       author: t("products.gradeflow.social.author1"),
+      image: "/testimonials/maria-teacher.jpg",
+      alt: "Lisa Park",
     },
     {
       quote: t("products.gradeflow.social.quote2"),
       author: t("products.gradeflow.social.author2"),
+      image: "/testimonials/professional-teacher-headshot-man.jpg",
+      alt: "David Kim",
     },
   ]
 
@@ -173,9 +177,17 @@ export default function GradeFlowClient() {
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               {testimonials.map((testimonial, index) => (
-                <Card key={index} className="bg-[#111827] border-[#1F2937] p-6">
-                  <p className="text-lg text-[#D1D5DB] mb-4 italic">"{testimonial.quote}"</p>
-                  <p className="text-sm text-[#9CA3AF]">{testimonial.author}</p>
+                <Card
+                  key={index}
+                  className="bg-[#111827] border-[#1F2937] p-6 flex flex-col md:flex-row md:items-center gap-4"
+                >
+                  <div className="relative w-16 h-16 rounded-full overflow-hidden bg-[#1F2937] flex-shrink-0">
+                    <Image src={testimonial.image} alt={testimonial.alt} fill className="object-cover" />
+                  </div>
+                  <div>
+                    <p className="text-lg text-[#D1D5DB] mb-3 md:mb-2 italic">"{testimonial.quote}"</p>
+                    <p className="text-sm text-[#9CA3AF]">{testimonial.author}</p>
+                  </div>
                 </Card>
               ))}
             </div>

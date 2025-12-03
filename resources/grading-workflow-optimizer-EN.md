@@ -361,16 +361,16 @@ Grade drafts lightly (or not at all). Give feedback. Students revise. You grade 
 Use this when deciding how to grade an assignment:
 
 **Question 1:** Is this formative (practice) or summative (mastery check)?
-- **Formative** â†’ Tier 1 (Check/Check+/Check-, 1-2 min)
-- **Summative** â†’ Move to Question 2
+- **Formative** → Tier 1 (Check/Check+/Check-, 1-2 min)
+- **Summative** → Move to Question 2
 
 **Question 2:** Is this a skill-builder or a comprehensive assessment?
-- **Skill-builder** â†’ Tier 2 (Quick rubric, 3-5 min)
-- **Comprehensive** â†’ Tier 3 (Full rubric, 5-10 min)
+- **Skill-builder** → Tier 2 (Quick rubric, 3-5 min)
+- **Comprehensive** → Tier 3 (Full rubric, 5-10 min)
 
 **Question 3:** Can students self-assess or peer review first?
-- **Yes** â†’ Have them do it, then you review
-- **No** â†’ Proceed with your grading
+- **Yes** → Have them do it, then you review
+- **No** → Proceed with your grading
 
 ---
 

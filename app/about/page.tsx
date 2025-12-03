@@ -50,7 +50,7 @@ export default function AboutPage() {
   ]
 
   return (
-    <div className="py-16 md:py-24">
+    <div className="min-h-screen bg-[#0B1220] text-[#F9FAFB] py-16 md:py-24">
       <div className="mx-auto max-w-screen-2xl px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-12">
           {/* Sidebar */}
@@ -63,10 +63,16 @@ export default function AboutPage() {
             <Breadcrumbs items={[{ label: t("nav.about") }]} />
 
             {/* Hero */}
-            <div className="mb-16">
-              <div className="text-sm font-medium text-[#7C3AED] mb-4">{t("about.overview.hero.eyebrow")}</div>
-              <h1 className="text-4xl md:text-5xl font-bold text-[#F9FAFB] mb-6">{t("about.overview.hero.title")}</h1>
-              <p className="text-xl text-[#D1D5DB] leading-relaxed max-w-3xl">{t("about.overview.hero.subtitle")}</p>
+            <div className="mb-16 bg-[#111827] border border-[#1F2937] rounded-3xl p-8 lg:p-10 shadow-lg">
+              <div className="text-sm font-medium text-[#A78BFA] mb-4 uppercase tracking-[0.18em]">
+                {t("about.overview.hero.eyebrow")}
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold text-[#F9FAFB] mb-6 leading-tight">
+                {t("about.overview.hero.title")}
+              </h1>
+              <p className="text-xl text-[#D1D5DB] leading-relaxed max-w-3xl">
+                {t("about.overview.hero.subtitle")}
+              </p>
             </div>
 
             {/* Mission */}

@@ -26,7 +26,7 @@ export const aiLiteracyResources: AILiteracyResource[] = [
     description:
       "Ready-to-use email templates for communicating with parents about AI in the classroom",
     descriptionDe:
-      "Sofort einsatzbereite E-Mail-Vorlagen fÃ¼r die Kommunikation mit Eltern Ã¼ber KI im Klassenzimmer",
+      "Sofort einsatzbereite E-Mail-Vorlagen für die Kommunikation mit Eltern über KI im Klassenzimmer",
     category: "templates",
     downloads: "15,230",
     downloadUrl: "/downloads/parent-email-templates.docx",
@@ -41,10 +41,10 @@ export const aiLiteracyResources: AILiteracyResource[] = [
       "Opt-in/opt-out forms",
     ],
     featuresDe: [
-      "EinfÃ¼hrungsbrief zu KI",
+      "Einführungsbrief zu KI",
       "Fortschrittsupdate-Vorlagen",
-      "Elternsprechtag-LeitfÃ¤den",
-      "KI-RichtlinienerklÃ¤rung",
+      "Elternsprechtag-Leitfäden",
+      "KI-Richtlinienerklärung",
       "Einwilligungs-/Ablehnungsformulare",
     ],
   },
@@ -55,7 +55,7 @@ export const aiLiteracyResources: AILiteracyResource[] = [
     description:
       "AI-enhanced lesson planning templates for all grade levels and subjects",
     descriptionDe:
-      "KI-erweiterte Unterrichtsplanungsvorlagen fÃ¼r alle Klassenstufen und FÃ¤cher",
+      "KI-erweiterte Unterrichtsplanungsvorlagen für alle Klassenstufen und Fächer",
     category: "templates",
     downloads: "12,450",
     downloadUrl: "/downloads/lesson-plan-templates.docx",
@@ -70,7 +70,7 @@ export const aiLiteracyResources: AILiteracyResource[] = [
     ],
     featuresDe: [
       "Differenzierte Unterrichtsvorlagen",
-      "Projektbasierte LernplÃ¤ne",
+      "Projektbasierte Lernpläne",
       "Bewertungsintegration",
       "KI-Tool-Empfehlungen",
       "Lernziel-Ausrichtungen",
@@ -83,7 +83,7 @@ export const aiLiteracyResources: AILiteracyResource[] = [
     description:
       "Comprehensive library of personalized report card comments generated with AI assistance",
     descriptionDe:
-      "Umfassende Bibliothek personalisierter Zeugniskommentare, erstellt mit KI-UnterstÃ¼tzung",
+      "Umfassende Bibliothek personalisierter Zeugniskommentare, erstellt mit KI-Unterstützung",
     category: "templates",
     downloads: "18,920",
     downloadUrl: "/downloads/report-card-comments.xlsx",
@@ -111,7 +111,7 @@ export const aiLiteracyResources: AILiteracyResource[] = [
     description:
       "SMART goal templates for individualized education programs with AI support suggestions",
     descriptionDe:
-      "SMART-Zielvorlagen fÃ¼r individuelle FÃ¶rderplÃ¤ne mit KI-UnterstÃ¼tzungsvorschlÃ¤gen",
+      "SMART-Zielvorlagen für individuelle Förderpläne mit KI-Unterstützungsvorschlägen",
     category: "templates",
     downloads: "9,340",
     downloadUrl: "/downloads/iep-goal-templates.docx",
@@ -127,7 +127,7 @@ export const aiLiteracyResources: AILiteracyResource[] = [
     featuresDe: [
       "SMART-Ziel-Framework",
       "Messbare Ziele",
-      "AnpassungsvorschlÃ¤ge",
+      "Anpassungsvorschläge",
       "Fortschrittskontrolltools",
       "KI-Implementierungsideen",
     ],
@@ -155,10 +155,10 @@ export const aiLiteracyResources: AILiteracyResource[] = [
       "Quick win strategies",
     ],
     featuresDe: [
-      "KI-Grundlagen fÃ¼r LehrkrÃ¤fte",
+      "KI-Grundlagen für Lehrkräfte",
       "Tool-Auswahlkriterien",
       "Implementierungszeitplan",
-      "HÃ¤ufige Fehler vermeiden",
+      "Häufige Fehler vermeiden",
       "Schnelle Erfolgsstrategien",
     ],
   },
@@ -169,7 +169,7 @@ export const aiLiteracyResources: AILiteracyResource[] = [
     description:
       "Systematic checklist for evaluating AI tools for educational use",
     descriptionDe:
-      "Systematische Checkliste zur Bewertung von KI-Tools fÃ¼r den Bildungsbereich",
+      "Systematische Checkliste zur Bewertung von KI-Tools für den Bildungsbereich",
     category: "guides",
     downloads: "8,760",
     downloadUrl: "/downloads/ai-tool-evaluation.pdf",
@@ -184,10 +184,10 @@ export const aiLiteracyResources: AILiteracyResource[] = [
     ],
     featuresDe: [
       "Datenschutz- und Sicherheitskriterien",
-      "PÃ¤dagogische Wirksamkeit",
+      "Pädagogische Wirksamkeit",
       "Einfache Implementierung",
       "Kosten-Nutzen-Analyse",
-      "SchÃ¼lerengagement-Faktoren",
+      "Schülerengagement-Faktoren",
     ],
   },
   {
@@ -196,7 +196,7 @@ export const aiLiteracyResources: AILiteracyResource[] = [
     titleDe: "KI-Ethik-Rahmenwerk",
     description: "Ethical guidelines for responsible AI use in education",
     descriptionDe:
-      "Ethische Richtlinien fÃ¼r verantwortungsvollen KI-Einsatz in der Bildung",
+      "Ethische Richtlinien für verantwortungsvollen KI-Einsatz in der Bildung",
     category: "guides",
     downloads: "6,920",
     downloadUrl: "/downloads/ai-ethics-framework.pdf",
@@ -212,7 +212,7 @@ export const aiLiteracyResources: AILiteracyResource[] = [
     featuresDe: [
       "Ethische Prinzipien",
       "Bias-Identifizierung",
-      "SchÃ¼lerdatenschutz",
+      "Schülerdatenschutz",
       "Transparenzrichtlinien",
       "Entscheidungsfindungs-Frameworks",
     ],

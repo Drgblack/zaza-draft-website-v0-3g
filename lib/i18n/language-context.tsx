@@ -81,7 +81,7 @@ const translationsEn: Record<string, string> = {
   "pricing.department.title": "Department",
   "pricing.department.description":
     "Collaborative writing with shared quality and consistency.",
-  "pricing.department.perTeacher": "/teacher",
+  "pricing.department.perTeacher": " per teacher",
   "pricing.department.billing": "Billed annually • 5-50 seats",
   "pricing.department.cta": "Talk to Sales",
   "pricing.department.includes": "Everything in Teacher, plus:",
@@ -177,6 +177,22 @@ const translationsEn: Record<string, string> = {
   "nav.faq": "FAQ",
   "nav.about": "About",
   "nav.getStarted": "Get Started",
+
+  // Forms & modal
+  "form.name": "Name",
+  "form.email": "Email",
+  "form.consent": "I agree to the privacy policy.",
+  "form.privacyLink": "Privacy policy",
+  "form.submit": "Get started free",
+  "form.success": "You’re on the list. We’ll be in touch soon.",
+  "form.error": "Something went wrong. Please try again.",
+  "form.consentRequired": "Please accept the privacy policy to continue.",
+  "form.trialCopy": "Try 5 comments for free",
+  "form.placeholder.name": "Your name",
+  "form.placeholder.email": "you@example.com",
+  "form.submitting": "Submitting...",
+  "form.close": "Close",
+  "form.successNote": "Thanks for joining. We’ll be in touch soon.",
 
   // Suite Page Hero (EN)
   "suite.hero.title":
@@ -752,10 +768,10 @@ const translationsEn: Record<string, string> = {
   "products.draft.howItWorks.title": "How it calms your writing",
   "products.draft.howItWorks.step1.title": "Drop in your notes",
   "products.draft.howItWorks.step1.desc":
-    "Start with bullet points or a rough draft — no perfect wording needed",
+    "Start with bullet points or a rough draft - no perfect wording needed",
   "products.draft.howItWorks.step2.title": "Pick the tone",
   "products.draft.howItWorks.step2.desc":
-    "Supportive, formal, concise — with safety guardrails by default",
+    "Supportive, formal, concise - with safety guardrails by default",
   "products.draft.howItWorks.step3.title": "Review & send",
   "products.draft.howItWorks.step3.desc": "Edit quickly, copy, and share when it feels right",
 
@@ -1223,6 +1239,65 @@ const translationsEn: Record<string, string> = {
   "founder.personal.title2": "Founder & CEO",
   "founder.personal.company": "Zaza Technologies",
   "founder.personal.cta": "Get in Touch",
+
+  // Support Page (EN)
+  "support.title": "Support",
+  "support.intro":
+    "We’re here to help when Draft raises questions or something feels off. Reach out—real humans reply quickly.",
+  "support.email.title": "Email support",
+  "support.email.description":
+    "Tell us what you need or share feedback. Every message is read by our team.",
+  "support.email.response": "Typical response time: within 24 hours.",
+  "support.faq.title": "FAQs",
+  "support.faq.description": "Browse answers about Draft, accounts, and billing.",
+  "support.resources.title": "Guides & resources",
+  "support.resources.description":
+    "Short how-tos and checklists you can use right away.",
+  "support.troubleshooting.title": "Quick fixes",
+  "support.troubleshooting.login.title": "Can’t log in",
+  "support.troubleshooting.login.description":
+    "Reset your password or confirm your email is correct.",
+  "support.troubleshooting.email.title": "Not getting emails",
+  "support.troubleshooting.email.description":
+    "Check spam and add help@zazatechnologies.com to your contacts.",
+  "support.troubleshooting.subscription.title": "Plan or payment issues",
+  "support.troubleshooting.subscription.description":
+    "Check your billing details or message us if something looks wrong.",
+  "support.troubleshooting.browser.title": "Page looks off or won’t load",
+  "support.troubleshooting.browser.description":
+    "Refresh, try another browser, or clear your cache.",
+  "support.troubleshooting.bugs.title": "Something’s behaving oddly",
+  "support.troubleshooting.bugs.description":
+    "Send a quick note with a screenshot—we’ll take a look.",
+
+  // Terms Page (EN)
+  "terms.back": "Back to home",
+  "terms.title": "Terms of Service",
+  "terms.company": "Zaza Technologies — creators of Zaza Draft, Zaza Teach, and GradeFlow",
+  "terms.lastUpdated": "Last updated: 12 October 2025",
+  "terms.intro":
+    "These terms govern your use of Zaza Draft, Zaza Teach, and GradeFlow. By using the services, you agree to them.",
+  "terms.s1.title": "1. Accounts & eligibility",
+  "terms.s1.content":
+    "You’re responsible for accurate account information, safeguarding your login, and following any school or district policies. If you act for an organisation, you confirm you’re authorised to do so.",
+  "terms.s2.title": "2. Subscriptions & billing",
+  "terms.s2.content":
+    "Paid plans bill in advance. Subscriptions renew automatically until cancelled. Prices may change; we’ll notify you before adjustments take effect.",
+  "terms.s3.title": "3. Acceptable use",
+  "terms.s3.item1": "Do not use the services for illegal, harmful, or misleading purposes.",
+  "terms.s3.item2": "Do not upload content that infringes rights or breaches privacy laws.",
+  "terms.s3.item3":
+    "Do not attempt to disrupt, probe, or bypass the services (e.g., scraping, reverse engineering, automated attacks).",
+  "terms.s4.title": "4. Privacy & security",
+  "terms.s4.content":
+    "Our processing of personal data is described in the Privacy Policy. We apply safeguards but cannot guarantee absolute security.",
+  "terms.s5.title": "5. Intellectual property",
+  "terms.s5.content":
+    "The services, brands, and content remain Zaza’s property. Use them as intended and do not create derivative works without permission.",
+  "terms.s6.title": "6. Liability & termination",
+  "terms.s6.content":
+    'Services are provided “as is.” To the extent allowed by law, we’re not liable for indirect or consequential losses. We may suspend or terminate accounts that violate these terms.',
+  "terms.contact.text": "Questions about these terms? Email us at",
 };
 
 const translationsDe: Record<string, string> = {
@@ -1288,7 +1363,7 @@ const translationsDe: Record<string, string> = {
   "pricing.department.title": "Department",
   "pricing.department.description":
     "Kollaboratives Schreiben mit gemeinsamer Qualität und Konsistenz.",
-  "pricing.department.perTeacher": "/Lehrkraft",
+  "pricing.department.perTeacher": " pro Lehrkraft",
   "pricing.department.billing": "Jährliche Abrechnung • 5-50 Plätze",
   "pricing.department.cta": "Mit Vertrieb sprechen",
   "pricing.department.includes": "Alles in Teacher, plus:",
@@ -1384,6 +1459,22 @@ const translationsDe: Record<string, string> = {
   "nav.faq": "FAQ",
   "nav.about": "Über uns",
   "nav.getStarted": "Jetzt starten",
+
+  // Forms & modal
+  "form.name": "Name",
+  "form.email": "E-Mail",
+  "form.consent": "Ich stimme der Datenschutzerklärung zu.",
+  "form.privacyLink": "Datenschutzerklärung",
+  "form.submit": "Jetzt kostenlos starten",
+  "form.success": "Du stehst auf der Liste. Wir melden uns bald.",
+  "form.error": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+  "form.consentRequired": "Bitte stimme der Datenschutzerklärung zu, um fortzufahren.",
+  "form.trialCopy": "Teste 5 Kommentare kostenlos",
+  "form.placeholder.name": "Dein Name",
+  "form.placeholder.email": "du@example.com",
+  "form.submitting": "Wird gesendet...",
+  "form.close": "Schließen",
+  "form.successNote": "Danke für dein Interesse. Wir melden uns bald.",
 
   // Suite Page Hero (DE)
   "suite.hero.title":
@@ -2472,6 +2563,68 @@ const translationsDe: Record<string, string> = {
   "founder.personal.title2": "Gründer & CEO",
   "founder.personal.company": "Zaza Technologies",
   "founder.personal.cta": "Kontakt aufnehmen",
+
+  // Support Page (DE)
+  "support.title": "Support",
+  "support.intro":
+    "Wir sind für dich da, wenn bei Draft Fragen auftauchen oder etwas hakt. Melde dich – echte Menschen antworten schnell.",
+  "support.email.title": "E-Mail-Support",
+  "support.email.description":
+    "Schreib uns, was du brauchst oder gib Feedback. Jede Nachricht lesen wir persönlich.",
+  "support.email.response": "Antwort in der Regel innerhalb von 24 Stunden.",
+  "support.faq.title": "Häufige Fragen",
+  "support.faq.description": "Stöbere durch Antworten zu Draft, Konto und Abrechnung.",
+  "support.resources.title": "Ressourcen & Leitfäden",
+  "support.resources.description":
+    "Kurze Anleitungen und Checklisten, die sofort helfen.",
+  "support.troubleshooting.title": "Schnelle Lösungen",
+  "support.troubleshooting.login.title": "Anmeldung klappt nicht",
+  "support.troubleshooting.login.description":
+    "Passwort zurücksetzen oder E-Mail-Adresse prüfen.",
+  "support.troubleshooting.email.title": "Keine E-Mails bekommen",
+  "support.troubleshooting.email.description":
+    "Spam-Ordner prüfen und help@zazatechnologies.com zu den Kontakten hinzufügen.",
+  "support.troubleshooting.subscription.title": "Abo oder Zahlung",
+  "support.troubleshooting.subscription.description":
+    "Rechnungsdaten prüfen oder uns kurz schreiben, falls etwas nicht passt.",
+  "support.troubleshooting.browser.title": "Seite lädt oder sieht falsch aus",
+  "support.troubleshooting.browser.description":
+    "Aktualisieren, anderen Browser probieren oder Cache löschen.",
+  "support.troubleshooting.bugs.title": "Etwas verhält sich komisch",
+  "support.troubleshooting.bugs.description":
+    "Schick uns einen Screenshot und eine kurze Beschreibung – wir kümmern uns darum.",
+
+  // Terms Page (DE)
+  "terms.back": "Zurück zur Startseite",
+  "terms.title": "Nutzungsbedingungen",
+  "terms.company": "Zaza Technologies – Anbieter von Zaza Draft, Zaza Teach und GradeFlow",
+  "terms.lastUpdated": "Zuletzt aktualisiert: 12. Oktober 2025",
+  "terms.intro":
+    "Diese Bedingungen regeln deine Nutzung von Zaza Draft, Zaza Teach und GradeFlow. Mit der Nutzung stimmst du ihnen zu.",
+  "terms.s1.title": "1. Konten & Berechtigung",
+  "terms.s1.content":
+    "Du bist für korrekte Kontodaten, den Schutz deiner Zugangsdaten und die Einhaltung von Schul- oder Bezirksrichtlinien verantwortlich. Wenn du für eine Organisation handelst, bist du dazu berechtigt.",
+  "terms.s2.title": "2. Abonnements & Zahlungen",
+  "terms.s2.content":
+    "Kostenpflichtige Pläne werden im Voraus berechnet. Abos verlängern sich automatisch, bis du kündigst. Preisänderungen kündigen wir vorab an.",
+  "terms.s3.title": "3. Zulässige Nutzung",
+  "terms.s3.item1":
+    "Keine rechtswidrigen, schädlichen oder irreführenden Zwecke.",
+  "terms.s3.item2":
+    "Keine Inhalte hochladen, die Rechte Dritter verletzen oder Datenschutzgesetze brechen.",
+  "terms.s3.item3":
+    "Die Dienste nicht stören, testen oder umgehen (z. B. Scraping, Reverse Engineering, automatisierte Angriffe).",
+  "terms.s4.title": "4. Datenschutz & Sicherheit",
+  "terms.s4.content":
+    "Die Verarbeitung personenbezogener Daten richtet sich nach der Datenschutzrichtlinie. Wir setzen Schutzmaßnahmen ein, können aber keine absolute Sicherheit garantieren.",
+  "terms.s5.title": "5. Geistiges Eigentum",
+  "terms.s5.content":
+    "Dienste, Marken und Inhalte bleiben Eigentum von Zaza. Nutze sie wie vorgesehen und erstelle ohne Zustimmung keine abgeleiteten Werke.",
+  "terms.s6.title": "6. Haftung & Beendigung",
+  "terms.s6.content":
+    "Die Dienste werden \"wie besehen\" bereitgestellt. Soweit gesetzlich zulässig, haften wir nicht für indirekte oder Folgeschäden. Wir können Konten sperren oder beenden, wenn Bedingungen verletzt werden.",
+  "terms.contact.text":
+    "Fragen zu den Bedingungen? Schreibe uns jederzeit an",
 };
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
@@ -2481,6 +2634,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       if (storedLang === "en" || storedLang === "de") {
         return storedLang as Language;
       }
+      const pathLang = window.location.pathname.startsWith("/de") ? "de" : "en";
+      return pathLang as Language;
     }
     return "en";
   });

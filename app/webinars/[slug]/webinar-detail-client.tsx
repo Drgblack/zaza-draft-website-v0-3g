@@ -274,7 +274,7 @@ export default function WebinarDetailClient({ webinar }: WebinarDetailClientProp
                       Watch Now
                     </Button>
                     <p className="text-sm text-gray-400 text-center">
-                      Lifetime access â€¢ Certificate included â€¢ Downloadable resources
+                      Lifetime access • Certificate included • Downloadable resources
                     </p>
                   </>
                 )}

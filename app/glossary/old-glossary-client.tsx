@@ -507,7 +507,7 @@ export default function GlossaryClient() {
 </h1>
 <p className="text-xl text-gray-300 leading-relaxed">
   {language === "de"
-    ? "Einfache, lehrkraftfreundliche ErklÃ¤rungen zu den wichtigsten KI-Begriffen."
+    ? "Einfache, lehrkraftfreundliche Erklärungen zu den wichtigsten KI-Begriffen."
     : "Clear, teacher-friendly definitions of the key AI concepts you see every day."}
 </p>
           </div>

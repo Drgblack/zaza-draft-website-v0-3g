@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next"
+import type { Metadata } from "next"
 import { AboutSidebar } from "@/components/about-sidebar"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { AssetCard } from "@/components/asset-card"
@@ -36,20 +36,25 @@ export default function PressKitPage() {
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                 <div className="space-y-4">
                   <h1 className="text-4xl md:text-5xl font-bold text-[#F9FAFB] leading-tight">
-                    Alles für Ihre Berichterstattung über Zaza Draft
+                    Everything press-ready for Zaza Draft
                   </h1>
                   <p className="text-lg text-[#CBD5E1] max-w-3xl">
-                    Logos, Screenshots, Brand-Guidelines, Fact Sheet, Gründer-Bio, Kontakt und mehr – pressefertig, klar beschriftet und konsistent gestaltet.
+                    Logos, screenshots, brand guidelines, fact sheet, founder bio, and contact details—clean, current, and ready
+                    to use.
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <Button asChild className="rounded-full bg-gradient-to-r from-[#7C3AED] to-[#6366F1] text-white">
                       <a href="/press-kit/zaza-draft-press-kit.zip" download>
                         <Download className="w-4 h-4 mr-2" />
-                        Alle Assets herunterladen (ZIP)
+                        Download all assets (ZIP)
                       </a>
                     </Button>
-                    <Button asChild variant="outline" className="rounded-full border-[#7C3AED]/60 text-[#F9FAFB]">
-                      <a href="mailto:press@zazatechnologies.com">Interview anfragen</a>
+                    <Button
+                      asChild
+                      className="rounded-full border border-white/20 bg-white text-[#111827] hover:bg-[#E5E7EB]"
+                      variant="outline"
+                    >
+                      <a href="mailto:press@zazatechnologies.com">Request interview</a>
                     </Button>
                   </div>
                 </div>
@@ -58,13 +63,31 @@ export default function PressKitPage() {
                     <Sparkles className="w-5 h-5 text-[#A78BFA]" />
                     <span className="text-sm uppercase tracking-[0.18em] text-[#A78BFA]">Fact Sheet</span>
                   </div>
-                  <dl className="space-y-2 text-sm text-[#CBD5E1]">
-                    <div className="flex justify-between gap-4"><dt className="text-[#9CA3AF]">Gegründet</dt><dd>2025</dd></div>
-                    <div className="flex justify-between gap-4"><dt className="text-[#9CA3AF]">HQ</dt><dd>Dresden, Deutschland</dd></div>
-                    <div className="flex justify-between gap-4"><dt className="text-[#9CA3AF]">Mission</dt><dd>KI, die Lehrkräften Zeit zurückgibt</dd></div>
-                    <div className="flex justify-between gap-4"><dt className="text-[#9CA3AF]">Zielgruppe</dt><dd>Lehrkräfte & Schulen (K12)</dd></div>
-                    <div className="flex justify-between gap-4"><dt className="text-[#9CA3AF]">Funding</dt><dd>Bootstrapped</dd></div>
-                    <div className="flex justify-between gap-4"><dt className="text-[#9CA3AF]">Traktion</dt><dd>500+ Lehrkräfte, 15 Länder</dd></div>
+                  <dl className="grid grid-cols-2 gap-x-4 gap-y-3 text-sm text-[#CBD5E1]">
+                    <div className="flex flex-col gap-1">
+                      <dt className="text-[#9CA3AF]">Founded</dt>
+                      <dd>2025</dd>
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <dt className="text-[#9CA3AF]">HQ</dt>
+                      <dd>Dresden, Germany</dd>
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <dt className="text-[#9CA3AF]">Mission</dt>
+                      <dd>Teacher-first AI that gives time back</dd>
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <dt className="text-[#9CA3AF]">Audience</dt>
+                      <dd>Teachers & schools (K12)</dd>
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <dt className="text-[#9CA3AF]">Funding</dt>
+                      <dd>Bootstrapped</dd>
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <dt className="text-[#9CA3AF]">Traction</dt>
+                      <dd>500+ teachers, 15 countries</dd>
+                    </div>
                   </dl>
                 </div>
               </div>
@@ -75,9 +98,9 @@ export default function PressKitPage() {
               <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">Outcomes at a glance</h2>
               <div className="grid md:grid-cols-3 gap-4">
                 {[
-                  { label: "Zeitersparnis", value: "10+ Std./Woche", detail: "Durchschnittliche Zeit, die Lehrkräfte mit Draft zurückgewinnen" },
-                  { label: "Lehrkräfte", value: "500+", detail: "Aktive Nutzer aus 15 Ländern" },
-                  { label: "Verlässlichkeit", value: "Halluzinationsarm", detail: "Built-in Guardrails & erklärbare Outputs" },
+                  { label: "Time saved", value: "10+ hrs/week", detail: "Average time teachers reclaim with Draft" },
+                  { label: "Teachers", value: "500+", detail: "Active users across 15 countries" },
+                  { label: "Reliability", value: "Hallucination-aware", detail: "Guardrails and explainable outputs" },
                 ].map((item) => (
                   <div key={item.label} className="bg-[#111827] border border-[#1F2937] rounded-2xl p-5">
                     <p className="text-sm text-[#9CA3AF]">{item.label}</p>
@@ -92,38 +115,38 @@ export default function PressKitPage() {
             <section className="mb-16">
               <div className="flex items-center justify-between gap-4 mb-6">
                 <h2 className="text-2xl font-bold text-[#F9FAFB]">Brand Assets</h2>
-                <Button asChild variant="outline" className="rounded-full border-[#7C3AED]/60 text-[#F9FAFB]">
+                <Button asChild className="rounded-full bg-gradient-to-r from-[#7C3AED] to-[#6366F1] text-white">
                   <a href="/press-kit/zaza-draft-press-kit.zip" download>
                     <Download className="w-4 h-4 mr-2" />
-                    Alle Assets (ZIP)
+                    Download all (ZIP)
                   </a>
                 </Button>
               </div>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <AssetCard
-                  title="Primärlogo (RGB, PNG)"
-                  description="Farblogo auf hellem Hintergrund, transparent."
+                  title="Primary Logo (PNG)"
+                  description="Full-color on light background, transparent."
                   previewImage="/press-kit/logo-light-preview.jpg"
                   downloadUrl="/press-kit/zaza-draft-logo-primary.png"
                   downloadLabel="Download PNG"
                 />
                 <AssetCard
-                  title="Dunkel-Hintergrund Logo"
-                  description="Farblogo für dunkle Flächen, transparent."
+                  title="Dark Background Logo"
+                  description="Full-color for dark surfaces, transparent."
                   previewImage="/press-kit/logo-dark-preview.jpg"
                   downloadUrl="/press-kit/zaza-draft-logo-dark.png"
                   downloadLabel="Download PNG"
                 />
                 <AssetCard
-                  title="Monochrom (SVG)"
-                  description="Einfarbig für Druck & Prägung."
+                  title="Monochrome (SVG)"
+                  description="Single color for print and embossing."
                   previewImage="/press-kit/logo-mono-preview.jpg"
                   downloadUrl="/press-kit/zaza-draft-logo-mono.svg"
                   downloadLabel="Download SVG"
                 />
                 <AssetCard
                   title="App Icon"
-                  description="iOS/Android App Icon, 1024x1024."
+                  description="iOS/Android app icon, 1024x1024."
                   previewImage="/press-kit/logo-dark-preview.jpg"
                   downloadUrl="/press-kit/zaza-draft-app-icon.png"
                   downloadLabel="Download PNG"
@@ -133,11 +156,11 @@ export default function PressKitPage() {
 
             {/* Product & Context Screens */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">Screenshots & Kontextbilder</h2>
+              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">Screenshots & context images</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <AssetCard
                   title="Hero Screenshot"
-                  description="Main product hero image showing the Zaza Draft interface."
+                  description="Main product hero showing the Zaza Draft interface."
                   previewImage="/press-kit/screenshot-hero-preview.jpg"
                   downloadUrl="/press-kit/screenshot-hero.png"
                   downloadLabel="Download PNG"
@@ -164,15 +187,15 @@ export default function PressKitPage() {
                   downloadLabel="Download PNG"
                 />
                 <AssetCard
-                  title="Kontext: Lehrkraft im Klassenzimmer"
-                  description="Realistische Szene mit Zaza Draft im Unterrichtskontext."
+                  title="Context: Classroom"
+                  description="Realistic classroom scene with Zaza Draft in use."
                   previewImage="/press-kit/context-classroom.jpg"
                   downloadUrl="/press-kit/context-classroom.jpg"
                   downloadLabel="Download JPG"
                 />
                 <AssetCard
-                  title="Kontext: Home Office"
-                  description="Lehrkraft nutzt Draft zuhause für Elternkommunikation."
+                  title="Context: Home Office"
+                  description="Teacher using Draft at home for parent communications."
                   previewImage="/press-kit/context-home.jpg"
                   downloadUrl="/press-kit/context-home.jpg"
                   downloadLabel="Download JPG"
@@ -186,7 +209,7 @@ export default function PressKitPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <AssetCard
                   title="Brand Guidelines PDF"
-                  description="Logo-Spacings, Farbwerte, Typo-Hierarchien, Do's & Don'ts, Anwendungsbeispiele."
+                  description="Logo spacing, color values, typography hierarchy, do's & don'ts, usage examples."
                   downloadUrl="/press-kit/zaza-brand-guidelines.pdf"
                   downloadLabel="Download PDF"
                 />
@@ -198,9 +221,9 @@ export default function PressKitPage() {
               <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">Company Boilerplate</h2>
               <div className="bg-[#1F2937] rounded-2xl p-8 border border-[#374151]">
                 <p className="text-[#D1D5DB] leading-relaxed mb-4">
-                  Zaza Technologies builds safe, empathetic AI tools for educators. Our flagship app, Zaza Draft, helps
-                  teachers save hours each week on parent communications with hallucination-safe AI. Headquartered in
-                  Germany, Zaza is teacher-first, GDPR-compliant, and trusted by schools worldwide.
+                  Zaza Technologies builds safe, empathetic AI tools for educators. Our flagship app, Zaza Draft, helps teachers
+                  save hours each week on parent communications with hallucination-aware AI. Headquartered in Germany, Zaza is
+                  teacher-first, GDPR-ready, and trusted by schools worldwide.
                 </p>
                 <p className="text-[#9CA3AF] text-sm">
                   For media inquiries or interviews, contact{" "}
@@ -213,16 +236,16 @@ export default function PressKitPage() {
 
             {/* Testimonials / Social Proof */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">Stimmen von Lehrkräften</h2>
+              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">What teachers say</h2>
               <div className="grid md:grid-cols-3 gap-4">
                 {[
-                  { quote: "Draft gibt mir Abende zurück – Mails dauern jetzt Minuten, nicht Stunden.", name: "Sarah L., Mittelstufenlehrerin" },
-                  { quote: "Ton und Klarheit passen sofort. Eltern reagieren entspannter.", name: "Mark R., Abteilungsleiter" },
-                  { quote: "Endlich KI, die nicht generisch klingt. Meine Stimme bleibt erhalten.", name: "Emma K., Grundschule" },
+                  { quote: "Draft gives me evenings back—emails now take minutes, not hours.", name: "Sarah L., Middle School" },
+                  { quote: "Tone and clarity land immediately. Parents respond with less friction.", name: "Mark R., Department Lead" },
+                  { quote: "Finally AI that doesn’t sound generic. My voice stays intact.", name: "Emma K., Primary Teacher" },
                 ].map((item) => (
                   <div key={item.name} className="bg-[#111827] border border-[#1F2937] rounded-2xl p-5 space-y-3">
                     <Quote className="w-5 h-5 text-[#A78BFA]" />
-                    <p className="text-[#E5E7EB] leading-relaxed">“{item.quote}”</p>
+                    <p className="text-[#E5E7EB] leading-relaxed">"{item.quote}"</p>
                     <p className="text-sm text-[#9CA3AF]">{item.name}</p>
                   </div>
                 ))}
@@ -233,11 +256,11 @@ export default function PressKitPage() {
             <section className="mb-16">
               <div className="flex items-center gap-3 mb-2">
                 <Award className="w-5 h-5 text-[#A78BFA]" />
-                <h2 className="text-2xl font-bold text-[#F9FAFB]">Coverage & Awards</h2>
+                <h2 className="text-2xl font-bold text-[#F9FAFB]">Coverage & awards</h2>
               </div>
-              <p className="text-[#9CA3AF] mb-4">Erste Features und Interviews werden derzeit geplant. Medienpartner willkommen.</p>
+              <p className="text-[#9CA3AF] mb-4">First features and interviews are being scheduled. Media partners welcome.</p>
               <div className="bg-[#111827] border border-dashed border-[#374151] rounded-2xl p-6 text-[#CBD5E1]">
-                <p>“First coverage coming soon” – melden Sie sich für exklusive Early-Access-Interviews oder Demos.</p>
+                <p>"First coverage coming soon" — reach out for exclusive early interviews or demos.</p>
               </div>
             </section>
 
@@ -254,18 +277,18 @@ export default function PressKitPage() {
 
             {/* FAQ for media */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">FAQ für Medien</h2>
+              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">FAQ for media</h2>
               <div className="grid md:grid-cols-2 gap-4">
                 {[
-                  { q: "Was macht Zaza Draft anders?", a: "Halluzinationsarme, erklärbare KI, die auf Pädagogik trainiert ist und Lehrerstimme bewahrt." },
-                  { q: "Wie geht ihr mit Datenschutz um?", a: "EU-Hosting, GDPR-orientiert, keine Trainingsnutzung von Kundendaten, Privacy-by-Design." },
-                  { q: "Wer nutzt Zaza?", a: "Lehrkräfte und Schulen (K12), aktuell 500+ Lehrkräfte in 15 Ländern." },
-                  { q: "Wie wird Bias adressiert?", a: "Kuratiertes Prompting, menschliches QA, Monitoring von Fehlverhalten, schnelle Korrekturzyklen." },
-                  { q: "Welche Daten verarbeitet Draft?", a: "Textbasierte Kommunikations- und Planungsinhalte; keine Schüler-Personendaten erforderlich, sensible Felder optional pseudonymisiert." },
-                  { q: "Wie lange dauert die Einführung?", a: "Self-serve in Minuten; Schul-Deployments mit Onboarding-Checkliste in Tagen." },
-                  { q: "Bietet ihr Schulungen?", a: "Ja. Live-Workshops, On-Demand-Videos und kurze In-App-Guides." },
-                  { q: "Finanzierung?", a: "Bootstrapped; Fokus auf nachhaltigem, nutzerzentriertem Wachstum." },
-                  { q: "Kontakt für Interviews?", a: "press@zazatechnologies.com – Antworten binnen 24h; Kommentar-Statements auf Anfrage." },
+                  { q: "What makes Zaza Draft different?", a: "Hallucination-aware, explainable AI trained on pedagogy that keeps the teacher’s voice." },
+                  { q: "How do you handle privacy?", a: "EU hosting, GDPR-minded, no training on customer data, privacy by design." },
+                  { q: "Who uses Zaza?", a: "Teachers and schools (K12), currently 500+ teachers in 15 countries." },
+                  { q: "How do you address bias?", a: "Curated prompting, human QA, misuse monitoring, fast correction cycles." },
+                  { q: "What data does Draft process?", a: "Text-based communication and planning content; no full student PII required, sensitive fields optional/pseudonymised." },
+                  { q: "How long is onboarding?", a: "Self-serve in minutes; school deployments with a short onboarding checklist." },
+                  { q: "Do you provide training?", a: "Yes. Live workshops, on-demand videos, and concise in-app guides." },
+                  { q: "Funding?", a: "Bootstrapped; focused on sustainable, user-first growth." },
+                  { q: "Interview contact?", a: "press@zazatechnologies.com — replies within 24h; prepared statements on request." },
                 ].map((item) => (
                   <div key={item.q} className="bg-[#111827] border border-[#1F2937] rounded-2xl p-5">
                     <p className="text-sm font-semibold text-[#E5E7EB]">{item.q}</p>
@@ -277,7 +300,7 @@ export default function PressKitPage() {
 
             {/* Media Contact */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">Media Contact</h2>
+              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">Media contact</h2>
               <div className="bg-[#1F2937] rounded-2xl p-8 border border-[#374151]">
                 <div className="space-y-4 mb-6">
                   <div className="flex items-center gap-3">
@@ -309,7 +332,7 @@ export default function PressKitPage() {
                 </div>
                 <Button className="w-full bg-gradient-to-r from-[#7C3AED] to-[#6366F1] hover:from-[#6D28D9] hover:to-[#4F46E5] text-white rounded-xl">
                   <Mail className="w-4 h-4 mr-2" />
-                  Get in Touch
+                  Get in touch
                 </Button>
               </div>
             </section>
@@ -330,6 +353,3 @@ export default function PressKitPage() {
     </div>
   )
 }
-import type { Metadata } from "next"
-
-

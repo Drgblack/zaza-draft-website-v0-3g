@@ -195,7 +195,7 @@ export default function GlossaryTermClient({ term, allTerms }: GlossaryTermClien
                     href={`/glossary?category=${encodeURIComponent(term.category)}`}
                     className="block mt-4 text-sm text-[#A78BFA] hover:text-[#8B5CF6] transition-colors"
                   >
-                    View all {term.category} terms â†’
+                    View all {term.category} terms →
                   </Link>
                 </div>
               )}

@@ -61,7 +61,7 @@ and one five-minute discussion question families can use at home.</code></pre>
 <ul>
   <li>State the same learning goal on all versions.</li>
   <li>Lower barriers first: decoding &amp; directions before content.</li>
-  <li>Pre-teach 3Ã¢â‚¬"5 key words with examples and non-examples.</li>
+  <li>Pre-teach 3Ã¢€"5 key words with examples and non-examples.</li>
   <li>Provide one worked example on Entry and one partial example on Core.</li>
   <li>On Stretch, ask for transfer to a novel context or numbers.</li>
   <li>Use one rubric across versions; change evidence, not criteria.</li>
@@ -84,7 +84,7 @@ and one five-minute discussion question families can use at home.</code></pre>
 <p>Differentiation is a design choice, not three different lessons. With tight prompts and one shared rubric, AI helps you build just-right on-ramps and true stretch-while you stay focused on feedback and relationships.</p>
 `,
     contentDe: String.raw`<h2>EinfÃƒÂ¼hrung</h2>
-<p>KI kann die Differenzierung im Unterricht erleichtern: Lernende mit UnterstÃƒÂ¼tzungsbedarf erhalten GerÃƒÂ¼ste, die Mitte der Klasse ÃƒÂ¼bt auf dem passenden Niveau, Fortgeschrittene bekommen herausfordernde Aufgaben Ã¢â‚¬" ohne dass die Vorbereitungszeit explodiert. Diese Anleitung zeigt einen konkreten Ablauf, den Sie sofort einsetzen kÃƒÂ¶nnen.</p>
+<p>KI kann die Differenzierung im Unterricht erleichtern: Lernende mit UnterstÃƒÂ¼tzungsbedarf erhalten GerÃƒÂ¼ste, die Mitte der Klasse ÃƒÂ¼bt auf dem passenden Niveau, Fortgeschrittene bekommen herausfordernde Aufgaben Ã¢€" ohne dass die Vorbereitungszeit explodiert. Diese Anleitung zeigt einen konkreten Ablauf, den Sie sofort einsetzen kÃƒÂ¶nnen.</p>
 
 <h2>Kernideen</h2>
 <ul>
@@ -137,7 +137,7 @@ und eine fÃƒÂ¼nfminÃƒÂ¼tige GesprÃƒÂ¤chsfrage fÃƒÂ¼r zuhause.</c
 <ul>
   <li>Gleiches Lernziel auf allen Versionen.</li>
   <li>HÃƒÂ¼rden zuerst senken: VerstÃƒÂ¤ndnis der Anweisungen vor Fachinhalten.</li>
-  <li>3Ã¢â‚¬"5 SchlÃƒÂ¼sselwÃƒÂ¶rter vorentlasten (Beispiele/Nicht-Beispiele).</li>
+  <li>3Ã¢€"5 SchlÃƒÂ¼sselwÃƒÂ¶rter vorentlasten (Beispiele/Nicht-Beispiele).</li>
   <li>Ein Beispiel gelÃƒÂ¶st (Einstieg) und ein halbes Beispiel (Kern) bereitstellen.</li>
   <li>Bei Erweiterung Transfer in neuen Kontext oder mit Zahlen verlangen.</li>
   <li>Eine Rubrik fÃƒÂ¼r alle Spuren; Evidenz variiert, Kriterien bleiben.</li>
@@ -157,7 +157,7 @@ und eine fÃƒÂ¼nfminÃƒÂ¼tige GesprÃƒÂ¤chsfrage fÃƒÂ¼r zuhause.</c
 </ul>
 
 <h2>Schlussgedanke</h2>
-<p>Differenzierung bedeutet nicht drei separate Stunden, sondern kluge Varianten derselben Kompetenz. Mit prÃƒÂ¤zisen Prompts und einer gemeinsamen Rubrik liefert KI passende ZugÃƒÂ¤nge und echte Herausforderung Ã¢â‚¬" Sie investieren Ihre Zeit in Feedback und Beziehung.</p>
+<p>Differenzierung bedeutet nicht drei separate Stunden, sondern kluge Varianten derselben Kompetenz. Mit prÃƒÂ¤zisen Prompts und einer gemeinsamen Rubrik liefert KI passende ZugÃƒÂ¤nge und echte Herausforderung Ã¢€" Sie investieren Ihre Zeit in Feedback und Beziehung.</p>
 `,
     publishedAt: "2025-02-01",
     category: "Lesson Planning",
@@ -175,52 +175,52 @@ und eine fÃƒÂ¼nfminÃƒÂ¼tige GesprÃƒÂ¤chsfrage fÃƒÂ¼r zuhause.</c
     excerpt:
       "A step-by-step workflow for generating concise student reports using AI while preserving teacher voice.",
     content: String.raw`
-<h1>Quick Student Reports with AI: A TeacherÃ¢â‚¬â„¢s Workflow</h1>
-<p>These short, evidence-based reports come together in minutes when you pair a tight template with clear prompts. The goal is not to Ã¢â‚¬Å“let AI speak,Ã¢â‚¬Â but to speed up the drafting so your professional judgment stays front and center.</p>
+<h1>Quick Student Reports with AI: A TeacherÃ¢€â„¢s Workflow</h1>
+<p>These short, evidence-based reports come together in minutes when you pair a tight template with clear prompts. The goal is not to Ã¢€Å“let AI speak,Ã¢€Â but to speed up the drafting so your professional judgment stays front and center.</p>
 
-<h2>Overview (what youÃ¢â‚¬â„¢ll build)</h2>
+<h2>Overview (what youÃ¢€â„¢ll build)</h2>
 <ul class="blog-ul">
-  <li class="blog-li">A reusable <em>3-section template</em> (Strengths Ã¢â‚¬Â¢ Growth Focus Ã¢â‚¬Â¢ Next Steps)</li>
+  <li class="blog-li">A reusable <em>3-section template</em> (Strengths Ã¢€Â¢ Growth Focus Ã¢€Â¢ Next Steps)</li>
   <li class="blog-li">Prompt snippets that <em>preserve teacher voice</em> and avoid generic praise</li>
   <li class="blog-li">A <em>checklist</em> so each report is specific, kind, and actionable</li>
 </ul>
 
 <h2>Step 1 - Collect quick evidence</h2>
-<p>Skim your recent artifacts (2Ã¢â‚¬"5 bullets max): quiz item, draft paragraph, exit ticket trend, observation note. Copy those bullets into the prompt so the model grounds to real work.</p>
+<p>Skim your recent artifacts (2Ã¢€"5 bullets max): quiz item, draft paragraph, exit ticket trend, observation note. Copy those bullets into the prompt so the model grounds to real work.</p>
 
 <h2>Step 2 - Draft with a tone primer</h2>
 <pre><code>ROLE: You are my assistant. Draft a concise student report in my voice: warm, specific, and actionable.
 CONTEXT: Grade [X], subject [Y]. Evidence bullets:
-Ã¢â‚¬Â¢ [evidence 1]
-Ã¢â‚¬Â¢ [evidence 2]
-Ã¢â‚¬Â¢ [evidence 3]
+Ã¢€Â¢ [evidence 1]
+Ã¢€Â¢ [evidence 2]
+Ã¢€Â¢ [evidence 3]
 TEMPLATE: 
 <strong>Strengths:</strong> one sentence anchored to evidence.
 <strong>Growth focus:</strong> one sentence naming a skill with neutral language.
-<strong>Next steps:</strong> 2Ã¢â‚¬"3 concrete actions (teacher + student), each 10Ã¢â‚¬"14 words.
-CONSTRAINTS: Avoid vague adjectives. Use student-friendly words. Keep to ~120Ã¢â‚¬"150 words.</code></pre>
+<strong>Next steps:</strong> 2Ã¢€"3 concrete actions (teacher + student), each 10Ã¢€"14 words.
+CONSTRAINTS: Avoid vague adjectives. Use student-friendly words. Keep to ~120Ã¢€"150 words.</code></pre>
 
 <h2>Step 3 - Personalize and anchor to examples</h2>
-<p>Edit names, swap any generic phrasing, and add one concrete example (quote, problem number, or rubric row). If needed, run the Ã¢â‚¬Å“tighten and humanizeÃ¢â‚¬Â pass:</p>
+<p>Edit names, swap any generic phrasing, and add one concrete example (quote, problem number, or rubric row). If needed, run the Ã¢€Å“tighten and humanizeÃ¢€Â pass:</p>
 <pre><code>Improve concision and specificity. Keep evidence and my tone. Replace any generic praise with precise phrasing.</code></pre>
 
 <h2>Step 4 - Translate/Plain-language add-on (optional)</h2>
 <pre><code>Produce a parent-friendly version at ~6th-grade reading level. Keep the same structure and facts. No jargon.</code></pre>
 
 <h2>Micro-case</h2>
-<p><strong>Context:</strong> Grade 8 science lab reports. <strong>Problem:</strong> Reports were inconsistent and took 12Ã¢â‚¬"15 mins each. <strong>Change:</strong> Using the template + prompts above with 3 evidence bullets. <strong>Result:</strong> Drafts in 3Ã¢â‚¬"4 mins, final in 6Ã¢â‚¬"7 mins, tone stayed warm and specific.</p>
+<p><strong>Context:</strong> Grade 8 science lab reports. <strong>Problem:</strong> Reports were inconsistent and took 12Ã¢€"15 mins each. <strong>Change:</strong> Using the template + prompts above with 3 evidence bullets. <strong>Result:</strong> Drafts in 3Ã¢€"4 mins, final in 6Ã¢€"7 mins, tone stayed warm and specific.</p>
 
 <h2>Copy-paste template pack</h2>
 <pre><code>REPORT TEMPLATE
 <strong>Strengths:</strong> [evidence-anchored skill in one sentence].
 <strong>Growth focus:</strong> [one prioritized skill stated neutrally].
 <strong>Next steps:</strong>
-Ã¢â‚¬Â¢ Teacher: [support action].
-Ã¢â‚¬Â¢ Student: [practice action].
-Ã¢â‚¬Â¢ Home: [1-minute conversation prompt].</code></pre>
+Ã¢€Â¢ Teacher: [support action].
+Ã¢€Â¢ Student: [practice action].
+Ã¢€Â¢ Home: [1-minute conversation prompt].</code></pre>
 
 <h3>Evidence bullets helper</h3>
-<pre><code>Make 3 bullets from my notes that are <em>observable</em> (no labels), each 6Ã¢â‚¬"10 words:
+<pre><code>Make 3 bullets from my notes that are <em>observable</em> (no labels), each 6Ã¢€"10 words:
 Notes: [paste]</code></pre>
 
 <h2>Quality checklist (60 seconds)</h2>
@@ -233,14 +233,14 @@ Notes: [paste]</code></pre>
 
 <h2>Variants</h2>
 <ul class="blog-ul">
-  <li class="blog-li"><strong>Progress snapshot:</strong> Ask the model to contrast Ã¢â‚¬Å“since OctoberÃ¢â‚¬Â using two artifacts.</li>
+  <li class="blog-li"><strong>Progress snapshot:</strong> Ask the model to contrast Ã¢€Å“since OctoberÃ¢€Â using two artifacts.</li>
   <li class="blog-li"><strong>IEP alignment:</strong> Provide goal language and request alignment notes in the next steps.</li>
   <li class="blog-li"><strong>Multi-class batch:</strong> Loop template with per-student bullets; you still review each draft.</li>
 </ul>
 
 <h2>Resources</h2>
 <ul class="blog-ul">
-  <li class="blog-li"><strong>Template:</strong> 3-section report scaffold (Strengths Ã¢â‚¬Â¢ Growth Ã¢â‚¬Â¢ Next steps)</li>
+  <li class="blog-li"><strong>Template:</strong> 3-section report scaffold (Strengths Ã¢€Â¢ Growth Ã¢€Â¢ Next steps)</li>
   <li class="blog-li"><strong>Prompt pack:</strong> tone primer, draft, tighten, plain-language, translation</li>
   <li class="blog-li"><strong>Checklist:</strong> evidence-anchored, neutral growth focus, actionable steps</li>
 </ul>
@@ -249,51 +249,51 @@ Notes: [paste]</code></pre>
     `,
     contentDe: String.raw`
 <h1>Schnelle SchÃƒÂ¼lerberichte mit KI: Ein praxisnaher Workflow</h1>
-<p>Kurze, evidenzbasierte Berichte entstehen in wenigen Minuten, wenn du eine klare Vorlage mit prÃƒÂ¤zisen Prompts kombinierst. Ziel ist nicht, dass Ã¢â‚¬Å¾die KI sprichtÃ¢â‚¬Å“, sondern dass sie das <em>Entwerfen</em> beschleunigt-deine fachliche Entscheidung bleibt maÃƒÅ¸geblich.</p>
+<p>Kurze, evidenzbasierte Berichte entstehen in wenigen Minuten, wenn du eine klare Vorlage mit prÃƒÂ¤zisen Prompts kombinierst. Ziel ist nicht, dass Ã¢€Å¾die KI sprichtÃ¢€Å“, sondern dass sie das <em>Entwerfen</em> beschleunigt-deine fachliche Entscheidung bleibt maÃƒÅ¸geblich.</p>
 
 <h2>ÃƒÅ“berblick (das baust du)</h2>
 <ul class="blog-ul">
-  <li class="blog-li">Wiederverwendbare <em>3-Teil-Vorlage</em> (StÃƒÂ¤rken Ã¢â‚¬Â¢ Fokus Ã¢â‚¬Â¢ NÃƒÂ¤chste Schritte)</li>
+  <li class="blog-li">Wiederverwendbare <em>3-Teil-Vorlage</em> (StÃƒÂ¤rken Ã¢€Â¢ Fokus Ã¢€Â¢ NÃƒÂ¤chste Schritte)</li>
   <li class="blog-li">Prompt-Bausteine, die <em>Lehrerstimme erhalten</em> und leere Floskeln vermeiden</li>
   <li class="blog-li"><em>Checkliste</em> fÃƒÂ¼r freundliche, konkrete, umsetzbare RÃƒÂ¼ckmeldungen</li>
 </ul>
 
 <h2>Schritt 1 - Kurze Evidenz sammeln</h2>
-<p>2Ã¢â‚¬"5 Stichpunkte aus aktuellen Arbeiten: Testaufgabe, Textauszug, Exit-Ticket-Trend, Beobachtung. Diese Stichpunkte in den Prompt kopieren-so bleibt der Text am echten Lernprodukt.</p>
+<p>2Ã¢€"5 Stichpunkte aus aktuellen Arbeiten: Testaufgabe, Textauszug, Exit-Ticket-Trend, Beobachtung. Diese Stichpunkte in den Prompt kopieren-so bleibt der Text am echten Lernprodukt.</p>
 
 <h2>Schritt 2 - Entwurf mit Ton-Primer</h2>
 <pre><code>ROLLE: Du bist mein Assistent. Entwirf einen kurzen SchÃƒÂ¼lerbericht in meiner Stimme: warm, konkret, umsetzbar.
 KONTEXT: Klasse [X], Fach [Y]. Evidenz:
-Ã¢â‚¬Â¢ [Evidenz 1]
-Ã¢â‚¬Â¢ [Evidenz 2]
-Ã¢â‚¬Â¢ [Evidenz 3]
+Ã¢€Â¢ [Evidenz 1]
+Ã¢€Â¢ [Evidenz 2]
+Ã¢€Â¢ [Evidenz 3]
 VORLAGE:
 <strong>StÃƒÂ¤rken:</strong> ein Satz mit Bezug auf Evidenz.
 <strong>Fokus:</strong> ein Satz zu einer <em>Fertigkeit</em> in neutraler Sprache.
-<strong>NÃƒÂ¤chste Schritte:</strong> 2Ã¢â‚¬"3 konkrete Aktionen (Lehrkraft + SchÃƒÂ¼ler), je 10Ã¢â‚¬"14 WÃƒÂ¶rter.
-REGELN: Keine vagen Adjektive. SchÃƒÂ¼lergerechte Sprache. ~120Ã¢â‚¬"150 WÃƒÂ¶rter.</code></pre>
+<strong>NÃƒÂ¤chste Schritte:</strong> 2Ã¢€"3 konkrete Aktionen (Lehrkraft + SchÃƒÂ¼ler), je 10Ã¢€"14 WÃƒÂ¶rter.
+REGELN: Keine vagen Adjektive. SchÃƒÂ¼lergerechte Sprache. ~120Ã¢€"150 WÃƒÂ¶rter.</code></pre>
 
 <h2>Schritt 3 - Personalisieren & Beispiele einfÃƒÂ¼gen</h2>
-<p>Namen prÃƒÂ¼fen, pauschale Formulierungen ersetzen, ein konkretes Beispiel ergÃƒÂ¤nzen (Zitat, Aufgaben-Nr., Rubrik-Zeile). Bei Bedarf Ã¢â‚¬Å¾kÃƒÂ¼rzen & menschlichÃ¢â‚¬Å“:</p>
+<p>Namen prÃƒÂ¼fen, pauschale Formulierungen ersetzen, ein konkretes Beispiel ergÃƒÂ¤nzen (Zitat, Aufgaben-Nr., Rubrik-Zeile). Bei Bedarf Ã¢€Å¾kÃƒÂ¼rzen & menschlichÃ¢€Å“:</p>
 <pre><code>Mehr PrÃƒÂ¤zision und KÃƒÂ¼rze. Evidenz und Ton beibehalten. Floskeln durch konkrete Sprache ersetzen.</code></pre>
 
 <h2>Schritt 4 - ÃƒÅ“bersetzung/Klartext (optional)</h2>
 <pre><code>Erstelle eine elternfreundliche Version auf ca. 6. Klassenstufe. Gleiche Struktur, gleiche Fakten. Kein Fachjargon.</code></pre>
 
 <h2>Mikro-Fall</h2>
-<p><strong>Kontext:</strong> Naturwissenschaft 8. Klasse. <strong>Problem:</strong> 12Ã¢â‚¬"15 Min. pro Bericht. <strong>Umstellung:</strong> Vorlage + Prompts mit 3 Evidenz-Stichpunkten. <strong>Ergebnis:</strong> Entwurf 3Ã¢â‚¬"4 Min., final 6Ã¢â‚¬"7 Min., Ton blieb warm und spezifisch.</p>
+<p><strong>Kontext:</strong> Naturwissenschaft 8. Klasse. <strong>Problem:</strong> 12Ã¢€"15 Min. pro Bericht. <strong>Umstellung:</strong> Vorlage + Prompts mit 3 Evidenz-Stichpunkten. <strong>Ergebnis:</strong> Entwurf 3Ã¢€"4 Min., final 6Ã¢€"7 Min., Ton blieb warm und spezifisch.</p>
 
 <h2>Vorlagenpaket zum Kopieren</h2>
 <pre><code>BERICHTS-VORLAGE
 <strong>StÃƒÂ¤rken:</strong> [Evidenz-gebundene FÃƒÂ¤higkeit in einem Satz].
 <strong>Fokus:</strong> [eine priorisierte Fertigkeit, neutral formuliert].
 <strong>NÃƒÂ¤chste Schritte:</strong>
-Ã¢â‚¬Â¢ Lehrkraft: [UnterstÃƒÂ¼tzung].
-Ã¢â‚¬Â¢ SchÃƒÂ¼ler: [ÃƒÅ“bung/Strategie].
-Ã¢â‚¬Â¢ Zuhause: [1-Minuten-GesprÃƒÂ¤chsimpuls].</code></pre>
+Ã¢€Â¢ Lehrkraft: [UnterstÃƒÂ¼tzung].
+Ã¢€Â¢ SchÃƒÂ¼ler: [ÃƒÅ“bung/Strategie].
+Ã¢€Â¢ Zuhause: [1-Minuten-GesprÃƒÂ¤chsimpuls].</code></pre>
 
 <h3>Helfer fÃƒÂ¼r Evidenz-Stichpunkte</h3>
-<pre><code>Forme aus meinen Notizen 3 <em>beobachtbare</em> Stichpunkte (keine Etiketten), 6Ã¢â‚¬"10 WÃƒÂ¶rter:
+<pre><code>Forme aus meinen Notizen 3 <em>beobachtbare</em> Stichpunkte (keine Etiketten), 6Ã¢€"10 WÃƒÂ¶rter:
 Notizen: [einfÃƒÂ¼gen]</code></pre>
 
 <h2>QualitÃƒÂ¤tscheck (60 Sekunden)</h2>
@@ -306,14 +306,14 @@ Notizen: [einfÃƒÂ¼gen]</code></pre>
 
 <h2>Varianten</h2>
 <ul class="blog-ul">
-  <li class="blog-li"><strong>Fortschritt:</strong> Ã¢â‚¬Å¾seit OktoberÃ¢â‚¬Å“ mit zwei Artefakten kontrastieren.</li>
-  <li class="blog-li"><strong>FÃƒÂ¶rderplan-Bezug:</strong> Zieltext geben und Abgleich in Ã¢â‚¬Å¾NÃƒÂ¤chste SchritteÃ¢â‚¬Å“ einfordern.</li>
+  <li class="blog-li"><strong>Fortschritt:</strong> Ã¢€Å¾seit OktoberÃ¢€Å“ mit zwei Artefakten kontrastieren.</li>
+  <li class="blog-li"><strong>FÃƒÂ¶rderplan-Bezug:</strong> Zieltext geben und Abgleich in Ã¢€Å¾NÃƒÂ¤chste SchritteÃ¢€Å“ einfordern.</li>
   <li class="blog-li"><strong>Klassen-Batch:</strong> Vorlage pro SchÃƒÂ¼ler mit Stichpunkten fÃƒÂ¼llen; jeden Entwurf prÃƒÂ¼fen.</li>
 </ul>
 
 <h2>Ressourcen</h2>
 <ul class="blog-ul">
-  <li class="blog-li"><strong>Vorlage:</strong> 3-Teil-Bericht (StÃƒÂ¤rken Ã¢â‚¬Â¢ Fokus Ã¢â‚¬Â¢ NÃƒÂ¤chste Schritte)</li>
+  <li class="blog-li"><strong>Vorlage:</strong> 3-Teil-Bericht (StÃƒÂ¤rken Ã¢€Â¢ Fokus Ã¢€Â¢ NÃƒÂ¤chste Schritte)</li>
   <li class="blog-li"><strong>Prompt-Paket:</strong> Ton-Primer, Entwurf, KÃƒÂ¼rzen, Klartext, ÃƒÅ“bersetzung</li>
   <li class="blog-li"><strong>Checkliste:</strong> Evidenz-gebunden, neutraler Fokus, umsetzbare Schritte</li>
 </ul>
@@ -362,9 +362,9 @@ Notizen: [einfÃƒÂ¼gen]</code></pre>
 <pre><code>ROLE: You help me write parent friendly summaries in plain language.
 CONTEXT: Grade [X], subject [Y]. Keep 90-140 words. Warm, respectful tone.
 EVIDENCE:
-Ã¢â‚¬Â¢ [bullet 1]
-Ã¢â‚¬Â¢ [bullet 2]
-Ã¢â‚¬Â¢ [bullet 3]
+Ã¢€Â¢ [bullet 1]
+Ã¢€Â¢ [bullet 2]
+Ã¢€Â¢ [bullet 3]
 STRUCTURE:
 1) What we are learning and why it matters.
 2) What the student did well with one concrete example.
@@ -385,8 +385,8 @@ Learning focus: [topic in one sentence].
 Strengths: [one sentence + example].
 Working on: [one skill in neutral language].
 Next steps: 
-Ã¢â‚¬Â¢ School: [one 10 to 14 word action].
-Ã¢â‚¬Â¢ Home: [one 10 to 14 word idea].</code></pre>
+Ã¢€Â¢ School: [one 10 to 14 word action].
+Ã¢€Â¢ Home: [one 10 to 14 word idea].</code></pre>
 
 <h3>Evidence bullets helper</h3>
 <pre><code>From these notes make 3 observable bullets, each 6 to 10 words:
@@ -447,9 +447,9 @@ Notes: [paste]</code></pre>
 <pre><code>ROLLE: Du hilfst mir, elternfreundliche Zusammenfassungen in Klartext zu schreiben.
 KONTEXT: Klasse [X], Fach [Y]. 90 bis 140 WÃƒÂ¶rter. Warm und respektvoll.
 EVIDENZ:
-Ã¢â‚¬Â¢ [Stichpunkt 1]
-Ã¢â‚¬Â¢ [Stichpunkt 2]
-Ã¢â‚¬Â¢ [Stichpunkt 3]
+Ã¢€Â¢ [Stichpunkt 1]
+Ã¢€Â¢ [Stichpunkt 2]
+Ã¢€Â¢ [Stichpunkt 3]
 STRUKTUR:
 1) Was wir lernen und warum es wichtig ist.
 2) Was gut gelang mit einem konkreten Beispiel.
@@ -470,8 +470,8 @@ Lernfokus: [Thema in einem Satz].
 StÃƒÂ¤rken: [ein Satz + Beispiel].
 Arbeits Fokus: [eine Fertigkeit neutral beschrieben].
 NÃƒÂ¤chste Schritte:
-Ã¢â‚¬Â¢ Schule: [eine MaÃƒÅ¸nahme in 10 bis 14 WÃƒÂ¶rtern].
-Ã¢â‚¬Â¢ Zuhause: [eine Idee in 10 bis 14 WÃƒÂ¶rtern].</code></pre>
+Ã¢€Â¢ Schule: [eine MaÃƒÅ¸nahme in 10 bis 14 WÃƒÂ¶rtern].
+Ã¢€Â¢ Zuhause: [eine Idee in 10 bis 14 WÃƒÂ¶rtern].</code></pre>
 
 <h3>Helfer fÃƒÂ¼r Evidenz Stichpunkte</h3>
 <pre><code>Forme aus meinen Notizen 3 beobachtbare Stichpunkte, je 6 bis 10 WÃƒÂ¶rter:
@@ -518,7 +518,7 @@ Notizen: [einfÃƒÂ¼gen]</code></pre>
 <ul class="blog-ul">
   <li class="blog-li"><strong>Direct identifiers:</strong> full name, email, student ID, address, photo/video, voice.</li>
   <li class="blog-li"><strong>Sensitive or protected info:</strong> grades, attendance, behavior notes, IEP/504 info, health data, immigration status.</li>
-  <li class="blog-li"><strong>Indirect identifiers:</strong> small-class combinations (e.g., Ã¢â‚¬Å“only 1 new student in 7th grade AlgebraÃ¢â‚¬Â), timestamps tied to events, unique writing samples.</li>
+  <li class="blog-li"><strong>Indirect identifiers:</strong> small-class combinations (e.g., Ã¢€Å“only 1 new student in 7th grade AlgebraÃ¢€Â), timestamps tied to events, unique writing samples.</li>
 </ul>
 <p><em>Rule of thumb:</em> If a detail could let someone reasonably figure out a specific student, treat it as student data.</p>
 
@@ -533,9 +533,9 @@ Notizen: [einfÃƒÂ¼gen]</code></pre>
 <pre><code>De-identify the following text. Replace names with neutral labels (e.g., Student A), remove locations, dates, and any specific identifiers. Preserve the learning content and error patterns.</code></pre>
 
 <h2>Safe prompting patterns for teachers</h2>
-<pre><code>Ã¢â‚¬Å“Summarize key error patterns in this <anonymized> student paragraph. Do not retain or store information. Focus on writing goals aligned to this rubric: [paste rubric].Ã¢â‚¬Â</code></pre>
-<pre><code>Ã¢â‚¬Å“Generate three feedback suggestions using only the text below (anonymized). Avoid personal data; refer to the author as Ã¢â‚¬Ëœthe student.Ã¢â‚¬â„¢ Return feedback as bullets with one actionable next step.Ã¢â‚¬Â</code></pre>
-<pre><code>Ã¢â‚¬Å“Create two re-teach mini-activities for these misconceptions (anonymized dataset). No names, no dates, no locations. Keep suggestions under 100 words each.Ã¢â‚¬Â</code></pre>
+<pre><code>Ã¢€Å“Summarize key error patterns in this <anonymized> student paragraph. Do not retain or store information. Focus on writing goals aligned to this rubric: [paste rubric].Ã¢€Â</code></pre>
+<pre><code>Ã¢€Å“Generate three feedback suggestions using only the text below (anonymized). Avoid personal data; refer to the author as Ã¢€Ëœthe student.Ã¢€â„¢ Return feedback as bullets with one actionable next step.Ã¢€Â</code></pre>
+<pre><code>Ã¢€Å“Create two re-teach mini-activities for these misconceptions (anonymized dataset). No names, no dates, no locations. Keep suggestions under 100 words each.Ã¢€Â</code></pre>
 
 <h2>Vendor vetting checklist (10 questions)</h2>
 <ol class="blog-ol">
@@ -547,13 +547,13 @@ Notizen: [einfÃƒÂ¼gen]</code></pre>
   <li class="blog-li-numbered">Deletion: Guaranteed deletion upon request and at term end?</li>
   <li class="blog-li-numbered">Student rights: Export/correct/delete mechanisms? Parent access workflow?</li>
   <li class="blog-li-numbered">Data minimization: What fields are required? Pseudonymization options?</li>
-  <li class="blog-li-numbered">Incident response: 24Ã¢â‚¬"72h notice SLA? Named contact? Root-cause reports?</li>
+  <li class="blog-li-numbered">Incident response: 24Ã¢€"72h notice SLA? Named contact? Root-cause reports?</li>
   <li class="blog-li-numbered">Compliance: District DPA, FERPA/GDPR alignment, cross-border transfer terms.</li>
 </ol>
 
 <h2>Classroom workflow (5 steps to stay safe)</h2>
 <ol class="blog-ol">
-  <li class="blog-li-numbered"><strong>Plan:</strong> Write prompts with placeholders (Student A, Ã¢â‚¬Å“a Grade 6 narrative,Ã¢â‚¬Â Ã¢â‚¬Å“Unit 3 rubricÃ¢â‚¬Â).</li>
+  <li class="blog-li-numbered"><strong>Plan:</strong> Write prompts with placeholders (Student A, Ã¢€Å“a Grade 6 narrative,Ã¢€Â Ã¢€Å“Unit 3 rubricÃ¢€Â).</li>
   <li class="blog-li-numbered"><strong>Strip IDs:</strong> Remove names, dates, locations, email addresses, IDs, photos.</li>
   <li class="blog-li-numbered"><strong>Use secured channels:</strong> Prefer district-approved tools; disable training if possible.</li>
   <li class="blog-li-numbered"><strong>Store locally:</strong> Save graded work and notes in your school system, not inside the AI tool.</li>
@@ -563,8 +563,8 @@ Notizen: [einfÃƒÂ¼gen]</code></pre>
 <h2>When you really need specifics (use templates instead)</h2>
 <ul class="blog-ul">
   <li class="blog-li">Replace names with neutral labels (Student A/B).</li>
-  <li class="blog-li">Replace dates with relative time (Ã¢â‚¬Å“last weekÃ¢â‚¬Â).</li>
-  <li class="blog-li">Replace locations with generic terms (Ã¢â‚¬Å“the cafeteriaÃ¢â‚¬Â).</li>
+  <li class="blog-li">Replace dates with relative time (Ã¢€Å“last weekÃ¢€Â).</li>
+  <li class="blog-li">Replace locations with generic terms (Ã¢€Å“the cafeteriaÃ¢€Â).</li>
   <li class="blog-li">Remove metadata (emails, IDs, photo EXIF).</li>
 </ul>
 
@@ -572,7 +572,7 @@ Notizen: [einfÃƒÂ¼gen]</code></pre>
 <pre><code>Subject: How we protect student information while using classroom AI tools
 
 Hello families,
-We sometimes use AI tools to draft lesson materials and feedback. We do not upload student names, IDs, contact information, IEP/health data, or photos. When we analyze writing or misconceptions, we remove all identifying details (e.g., Ã¢â‚¬Å“Student AÃ¢â‚¬Â). District-approved tools and settings prevent data from being used to train public models. If you have questions, please reply-happy to explain our safeguards.
+We sometimes use AI tools to draft lesson materials and feedback. We do not upload student names, IDs, contact information, IEP/health data, or photos. When we analyze writing or misconceptions, we remove all identifying details (e.g., Ã¢€Å“Student AÃ¢€Â). District-approved tools and settings prevent data from being used to train public models. If you have questions, please reply-happy to explain our safeguards.
 Thank you, [Your Name]</code></pre>
 
 <h2>Incident mini-playbook (if something goes wrong)</h2>
@@ -619,9 +619,9 @@ Thank you, [Your Name]</code></pre>
 <pre><code>Anononymisiere den folgenden Text. Ersetze Namen durch neutrale Labels (z. B. SchÃƒÂ¼ler A), entferne Orte, Daten und Identifikatoren. Erhalte Lerninhalt und Fehlerbilder.</code></pre>
 
 <h2>Sichere Prompt-Muster fÃƒÂ¼r LehrkrÃƒÂ¤fte</h2>
-<pre><code>Ã¢â‚¬Å¾Fasse Fehlerbilder in diesem <anonymisierten> Text kurz zusammen. Keine Speicherung. Beziehe dich auf diese Rubric: [einfÃƒÂ¼gen].Ã¢â‚¬Å“</code></pre>
-<pre><code>Ã¢â‚¬Å¾Erzeuge drei Feedback-VorschlÃƒÂ¤ge ausschlieÃƒÅ¸lich aus dem <anonymisierten> Text. Sprich von Ã¢â‚¬Å¡der/die SchÃƒÂ¼ler/inÃ¢â‚¬Ëœ. Bulletpoints mit je einem nÃƒÂ¤chsten Schritt.Ã¢â‚¬Å“</code></pre>
-<pre><code>Ã¢â‚¬Å¾Erstelle zwei Nachlern-MiniaktivitÃƒÂ¤ten zu diesen Fehlvorstellungen (<anonymisierte> Daten). Keine Namen, keine Orte, keine Daten. Max. 100 WÃƒÂ¶rter je Vorschlag.Ã¢â‚¬Å“</code></pre>
+<pre><code>Ã¢€Å¾Fasse Fehlerbilder in diesem <anonymisierten> Text kurz zusammen. Keine Speicherung. Beziehe dich auf diese Rubric: [einfÃƒÂ¼gen].Ã¢€Å“</code></pre>
+<pre><code>Ã¢€Å¾Erzeuge drei Feedback-VorschlÃƒÂ¤ge ausschlieÃƒÅ¸lich aus dem <anonymisierten> Text. Sprich von Ã¢€Å¡der/die SchÃƒÂ¼ler/inÃ¢€Ëœ. Bulletpoints mit je einem nÃƒÂ¤chsten Schritt.Ã¢€Å“</code></pre>
+<pre><code>Ã¢€Å¾Erstelle zwei Nachlern-MiniaktivitÃƒÂ¤ten zu diesen Fehlvorstellungen (<anonymisierte> Daten). Keine Namen, keine Orte, keine Daten. Max. 100 WÃƒÂ¶rter je Vorschlag.Ã¢€Å“</code></pre>
 
 <h2>Anbieter-Checkliste (10 Fragen)</h2>
 <ol class="blog-ol">
@@ -633,13 +633,13 @@ Thank you, [Your Name]</code></pre>
   <li class="blog-li-numbered">LÃƒÂ¶schung: Garantierte LÃƒÂ¶schung auf Anfrage und nach Vertragsende?</li>
   <li class="blog-li-numbered">Betroffenenrechte: Export/Korrektur/LÃƒÂ¶schung? Elternzugang?</li>
   <li class="blog-li-numbered">Datenminimierung: Welche Felder zwingend? Pseudonymisierung?</li>
-  <li class="blog-li-numbered">Vorfallmanagement: Meldung binnen 24Ã¢â‚¬"72 h, fester Kontakt, Ursachenanalyse?</li>
+  <li class="blog-li-numbered">Vorfallmanagement: Meldung binnen 24Ã¢€"72 h, fester Kontakt, Ursachenanalyse?</li>
   <li class="blog-li-numbered">Compliance: BehÃƒÂ¶rdliche/kommunale DPA, FERPA/GDPR-KonformitÃƒÂ¤t, DatenÃƒÂ¼bermittlungen.</li>
 </ol>
 
 <h2>Unterrichts-Ablauf (5 Schritte fÃƒÂ¼r Sicherheit)</h2>
 <ol class="blog-ol">
-  <li class="blog-li-numbered"><strong>Planen:</strong> Prompts mit Platzhaltern (SchÃƒÂ¼ler A, Ã¢â‚¬Å¾Klasse-6-ErzÃƒÂ¤hlungÃ¢â‚¬Å“, Ã¢â‚¬Å¾Rubric Einheit 3Ã¢â‚¬Å“).</li>
+  <li class="blog-li-numbered"><strong>Planen:</strong> Prompts mit Platzhaltern (SchÃƒÂ¼ler A, Ã¢€Å¾Klasse-6-ErzÃƒÂ¤hlungÃ¢€Å“, Ã¢€Å¾Rubric Einheit 3Ã¢€Å“).</li>
   <li class="blog-li-numbered"><strong>IDs entfernen:</strong> Namen, Daten, Orte, E-Mails, IDs, Fotos lÃƒÂ¶schen.</li>
   <li class="blog-li-numbered"><strong>Sichere Tools nutzen:</strong> Bevorzugt freigegebene Systeme; Trainingsnutzung deaktivieren.</li>
   <li class="blog-li-numbered"><strong>Lokal ablegen:</strong> Arbeiten/Notizen im Schul-System speichern, nicht im KI-Tool.</li>
@@ -649,8 +649,8 @@ Thank you, [Your Name]</code></pre>
 <h2>Wenn Details nÃƒÂ¶tig sind (besser Schablonen nutzen)</h2>
 <ul class="blog-ul">
   <li class="blog-li">Namen Ã¢" ' neutrale Labels (SchÃƒÂ¼ler A/B).</li>
-  <li class="blog-li">Daten Ã¢" ' relative Angaben (Ã¢â‚¬Å¾letzte WocheÃ¢â‚¬Å“).</li>
-  <li class="blog-li">Orte Ã¢" ' generische Begriffe (Ã¢â‚¬Å¾MensaÃ¢â‚¬Å“).</li>
+  <li class="blog-li">Daten Ã¢" ' relative Angaben (Ã¢€Å¾letzte WocheÃ¢€Å“).</li>
+  <li class="blog-li">Orte Ã¢" ' generische Begriffe (Ã¢€Å¾MensaÃ¢€Å“).</li>
   <li class="blog-li">Metadaten entfernen (E-Mails, IDs, Foto-EXIF).</li>
 </ul>
 
@@ -658,7 +658,7 @@ Thank you, [Your Name]</code></pre>
 <pre><code>Betreff: So schÃƒÂ¼tzen wir SchÃƒÂ¼ler-Informationen bei KI-Einsatz
 
 Liebe Familien,
-Wir nutzen gelegentlich KI-Tools, um Unterrichtsmaterial und Feedback schneller zu erstellen. Wir laden keine Namen, IDs, Kontaktdaten, FÃƒÂ¶rder-/Gesundheitsdaten oder Fotos hoch. Bei Analysen von Texten entfernen wir alle PersonenbezÃƒÂ¼ge (z. B. Ã¢â‚¬Å¾SchÃƒÂ¼ler AÃ¢â‚¬Å“). Freigegebene Systeme und Einstellungen verhindern, dass Daten ÃƒÂ¶ffentliche Modelle trainieren. Bei Fragen melden Sie sich gern-ich erklÃƒÂ¤re unsere SchutzmaÃƒÅ¸nahmen.
+Wir nutzen gelegentlich KI-Tools, um Unterrichtsmaterial und Feedback schneller zu erstellen. Wir laden keine Namen, IDs, Kontaktdaten, FÃƒÂ¶rder-/Gesundheitsdaten oder Fotos hoch. Bei Analysen von Texten entfernen wir alle PersonenbezÃƒÂ¼ge (z. B. Ã¢€Å¾SchÃƒÂ¼ler AÃ¢€Å“). Freigegebene Systeme und Einstellungen verhindern, dass Daten ÃƒÂ¶ffentliche Modelle trainieren. Bei Fragen melden Sie sich gern-ich erklÃƒÂ¤re unsere SchutzmaÃƒÅ¸nahmen.
 Viele GrÃƒÂ¼ÃƒÅ¸e, [Ihr Name]</code></pre>
 
 <h2>Mini-Notfallplan (falls etwas schiefgeht)</h2>
@@ -694,40 +694,40 @@ Viele GrÃƒÂ¼ÃƒÅ¸e, [Ihr Name]</code></pre>
       "Short, classroom-ready prompts that produce varied exit tickets aligned to objectives.",
     content: String.raw`
  <h1>5 Quick Prompts for Generating Exit Tickets</h1>
-<p>Exit tickets help you check for understanding in the last 3Ã¢â‚¬"5 minutes of class. With AI, you can generate targeted checks that align to your objective, surface misconceptions, and plan tomorrowÃ¢â‚¬â„¢s reteach groups. Use the prompts and templates below to create exit tickets that are short, scorable, and genuinely useful.</p>
+<p>Exit tickets help you check for understanding in the last 3Ã¢€"5 minutes of class. With AI, you can generate targeted checks that align to your objective, surface misconceptions, and plan tomorrowÃ¢€â„¢s reteach groups. Use the prompts and templates below to create exit tickets that are short, scorable, and genuinely useful.</p>
 
 <h2>What makes a great exit ticket?</h2>
 <ul class="blog-ul">
   <li class="blog-li"><strong>Aligned:</strong> One exit ticket checks one learning goal from today.</li>
-  <li class="blog-li"><strong>Small:</strong> Takes 2Ã¢â‚¬"3 minutes to complete; 30Ã¢â‚¬"60 seconds to scan.</li>
+  <li class="blog-li"><strong>Small:</strong> Takes 2Ã¢€"3 minutes to complete; 30Ã¢€"60 seconds to scan.</li>
   <li class="blog-li"><strong>Actionable:</strong> Responses sort students into next-step groups.</li>
   <li class="blog-li"><strong>Visible thinking:</strong> Prompts make students reveal reasoning, not just answers.</li>
 </ul>
 
-<h2>Prompt 1 - Draft a 3-question exit ticket for todayÃ¢â‚¬â„¢s objective</h2>
+<h2>Prompt 1 - Draft a 3-question exit ticket for todayÃ¢€â„¢s objective</h2>
 <pre><code>Create a 3-item exit ticket aligned to this objective: [paste objective].
 Constraints:
-Ã¢â‚¬Â¢ 1 multiple choice that targets a common misconception; include the correct answer and why the distractors are tempting.
-Ã¢â‚¬Â¢ 1 short-response (one or two sentences) where students explain reasoning.
-Ã¢â‚¬Â¢ 1 self-rating (confidence 1Ã¢â‚¬"4) that names the skill in student-friendly language.
+Ã¢€Â¢ 1 multiple choice that targets a common misconception; include the correct answer and why the distractors are tempting.
+Ã¢€Â¢ 1 short-response (one or two sentences) where students explain reasoning.
+Ã¢€Â¢ 1 self-rating (confidence 1Ã¢€"4) that names the skill in student-friendly language.
 Return items and an answer key. Avoid jargon.</code></pre>
 
-<h2>Prompt 2 - Turn todayÃ¢â‚¬â„¢s worked example into a quick CFU</h2>
+<h2>Prompt 2 - Turn todayÃ¢€â„¢s worked example into a quick CFU</h2>
 <pre><code>Using this worked example [paste steps or screenshot text], write a 2-item exit ticket:
 1) Ask students to annotate a critical step (what happens and why).
 2) Give a near-transfer item that changes one feature. Provide key and a 1-sentence rationale for the right answer.</code></pre>
 
 <h2>Prompt 3 - Catch the most likely misconception</h2>
-<pre><code>From this standard [paste] and todayÃ¢â‚¬â„¢s mini-lesson summary [paste], propose one misconception. Write a single multiple-choice question where each distractor represents that misconception. Provide correct answer, rationale, and a 20-second reteach script I can say tomorrow.</code></pre>
+<pre><code>From this standard [paste] and todayÃ¢€â„¢s mini-lesson summary [paste], propose one misconception. Write a single multiple-choice question where each distractor represents that misconception. Provide correct answer, rationale, and a 20-second reteach script I can say tomorrow.</code></pre>
 
 <h2>Prompt 4 - Make it language-aware (supports multilingual learners)</h2>
 <pre><code>Draft a 2-item exit ticket for [objective]. Use simple sentences and high-frequency words. Include a picture prompt idea or sentence starters. Output English first, then a version in [student language] with the same meaning.</code></pre>
 
-<h2>Prompt 5 - Build tomorrowÃ¢â‚¬â„¢s small groups automatically</h2>
+<h2>Prompt 5 - Build tomorrowÃ¢€â„¢s small groups automatically</h2>
 <pre><code>Create a 3-item exit ticket for [objective]. Also provide a simple grouping rule to sort students into three groups:
-Ã¢â‚¬Â¢ Regroup A: needs reteach on [specific sticking point]
-Ã¢â‚¬Â¢ Regroup B: needs practice on [skill]
-Ã¢â‚¬Â¢ Regroup C: ready for extension
+Ã¢€Â¢ Regroup A: needs reteach on [specific sticking point]
+Ã¢€Â¢ Regroup B: needs practice on [skill]
+Ã¢€Â¢ Regroup C: ready for extension
 Give me if-then rules based on responses to assign students quickly.</code></pre>
 
 <h2>Subject-specific examples</h2>
@@ -736,60 +736,60 @@ Give me if-then rules based on responses to assign students quickly.</code></pre
   <li class="blog-li"><strong>MCQ:</strong> What is the first step to solve 3x + 5 = 17? 
     <em>Tempting distractor:</em> subtract 17 from both sides (confuses operations).</li>
   <li class="blog-li"><strong>Short response:</strong> Explain why we subtract 5 before dividing.</li>
-  <li class="blog-li"><strong>Self-rating:</strong> I can solve two-step equations (1Ã¢â‚¬"4).</li>
+  <li class="blog-li"><strong>Self-rating:</strong> I can solve two-step equations (1Ã¢€"4).</li>
 </ul>
 
 <h3>Science (CER about phase change)</h3>
 <ul class="blog-ul">
-  <li class="blog-li"><strong>MCQ:</strong> Heating ice at 0Ã‚Â°C first increasesÃ¢â‚¬Â¦ A) temperature B) kinetic energy C) potential energy D) mass. <em>Right:</em> C.</li>
+  <li class="blog-li"><strong>MCQ:</strong> Heating ice at 0Ã‚Â°C first increasesÃ¢€Â¦ A) temperature B) kinetic energy C) potential energy D) mass. <em>Right:</em> C.</li>
   <li class="blog-li"><strong>Short response:</strong> In one sentence, connect particle spacing to the phase change at 0Ã‚Â°C.</li>
-  <li class="blog-li"><strong>Self-rating:</strong> I can explain energy changes during melting (1Ã¢â‚¬"4).</li>
+  <li class="blog-li"><strong>Self-rating:</strong> I can explain energy changes during melting (1Ã¢€"4).</li>
 </ul>
 
 <h3>ELA (Theme vs. main idea)</h3>
 <ul class="blog-ul">
   <li class="blog-li"><strong>MCQ:</strong> Which is a theme? A) A boy moves to a new school B) Change is difficult but leads to growth C) The story takes place in winter D) The main character is shy. <em>Right:</em> B.</li>
   <li class="blog-li"><strong>Short response:</strong> Cite one detail that supports your chosen theme.</li>
-  <li class="blog-li"><strong>Self-rating:</strong> I can explain theme with evidence (1Ã¢â‚¬"4).</li>
+  <li class="blog-li"><strong>Self-rating:</strong> I can explain theme with evidence (1Ã¢€"4).</li>
 </ul>
 
 <h3>Social Studies (DBQ sourcing)</h3>
 <ul class="blog-ul">
-  <li class="blog-li"><strong>MCQ:</strong> Which source factor most affects reliability here? A) Date B) AuthorÃ¢â‚¬â„¢s purpose C) Font D) Page number. <em>Right:</em> B.</li>
-  <li class="blog-li"><strong>Short response:</strong> Explain how the authorÃ¢â‚¬â„¢s purpose might influence the information.</li>
-  <li class="blog-li"><strong>Self-rating:</strong> I can evaluate a sourceÃ¢â‚¬â„¢s reliability (1Ã¢â‚¬"4).</li>
+  <li class="blog-li"><strong>MCQ:</strong> Which source factor most affects reliability here? A) Date B) AuthorÃ¢€â„¢s purpose C) Font D) Page number. <em>Right:</em> B.</li>
+  <li class="blog-li"><strong>Short response:</strong> Explain how the authorÃ¢€â„¢s purpose might influence the information.</li>
+  <li class="blog-li"><strong>Self-rating:</strong> I can evaluate a sourceÃ¢€â„¢s reliability (1Ã¢€"4).</li>
 </ul>
 
 <h3>World Languages (Past tense practice)</h3>
 <ul class="blog-ul">
-  <li class="blog-li"><strong>MCQ:</strong> Choose correct past-tense form for Ã¢â‚¬Å“to goÃ¢â‚¬Â with Ã¢â‚¬Å“we.Ã¢â‚¬Â</li>
+  <li class="blog-li"><strong>MCQ:</strong> Choose correct past-tense form for Ã¢€Å“to goÃ¢€Â with Ã¢€Å“we.Ã¢€Â</li>
   <li class="blog-li"><strong>Short response:</strong> Write one sentence about where you went last weekend.</li>
-  <li class="blog-li"><strong>Self-rating:</strong> I can form the past tense (1Ã¢â‚¬"4).</li>
+  <li class="blog-li"><strong>Self-rating:</strong> I can form the past tense (1Ã¢€"4).</li>
 </ul>
 
 <h2>Fast scoring & regrouping</h2>
-<p>Use the MCQ to flag misconceptions, the short response to see reasoning, and the confidence rating to decide whether you reteach whole class or just a small group. TomorrowÃ¢â‚¬â„¢s plan writes itself:</p>
+<p>Use the MCQ to flag misconceptions, the short response to see reasoning, and the confidence rating to decide whether you reteach whole class or just a small group. TomorrowÃ¢€â„¢s plan writes itself:</p>
 <ul class="blog-ul">
   <li class="blog-li"><strong>Group A (Reteach):</strong> missed MCQ or confidence Ã¢"°Â¤2; run the 20-second reteach plus a guided example.</li>
-  <li class="blog-li"><strong>Group B (Practice):</strong> mixed performance; assign 2Ã¢â‚¬"3 near-transfer problems with feedback.</li>
+  <li class="blog-li"><strong>Group B (Practice):</strong> mixed performance; assign 2Ã¢€"3 near-transfer problems with feedback.</li>
   <li class="blog-li"><strong>Group C (Extend):</strong> correct + confidence Ã¢"°Â¥3; give an application or challenge task.</li>
 </ul>
 
 <h2>Templates you can copy</h2>
 <h3>3-Item Exit Ticket (universal)</h3>
 <pre><code>1) MCQ (common misconception)
-2) Explain your reasoning (1Ã¢â‚¬"2 sentences)
-3) Confidence check (I can [skill] 1Ã¢â‚¬"4)</code></pre>
+2) Explain your reasoning (1Ã¢€"2 sentences)
+3) Confidence check (I can [skill] 1Ã¢€"4)</code></pre>
 
 <h3>Annotation Exit Ticket (from worked example)</h3>
 <pre><code>1) Circle or underline the step where the big change happens.
 2) In one sentence, explain that step in your own words.</code></pre>
 
 <h3>Single-standard Exit Ticket</h3>
-<pre><code>Goal: [write todayÃ¢â‚¬â„¢s goal in student language]
+<pre><code>Goal: [write todayÃ¢€â„¢s goal in student language]
 Q1 (MCQ): [targets misconception]
 Q2 (Explain): [why or how question]
-Q3 (Confidence 1Ã¢â‚¬"4): [I canÃ¢â‚¬Â¦ statement]</code></pre>
+Q3 (Confidence 1Ã¢€"4): [I canÃ¢€Â¦ statement]</code></pre>
 
 <h2>Prompts for multilingual versions</h2>
 <pre><code>Translate this 3-item exit ticket to [language], keeping the same meaning and grade-level. Use short, simple sentences. Return both versions labeled clearly.</code></pre>
@@ -799,7 +799,7 @@ Q3 (Confidence 1Ã¢â‚¬"4): [I canÃ¢â‚¬Â¦ statement]</code></pre>
   <li class="blog-li">Objective is clear and in student-friendly words.</li>
   <li class="blog-li">At least one item reveals reasoning or a misconception.</li>
   <li class="blog-li">Takes under 3 minutes; can be scanned in under 1 minute.</li>
-  <li class="blog-li">There is a simple rule for forming tomorrowÃ¢â‚¬â„¢s groups.</li>
+  <li class="blog-li">There is a simple rule for forming tomorrowÃ¢€â„¢s groups.</li>
 </ul>
 
 <h2>Resources</h2>
@@ -822,12 +822,12 @@ Q3 (Confidence 1Ã¢â‚¬"4): [I canÃ¢â‚¬Â¦ statement]</code></pre>
     `,
     contentDe: String.raw`
 <h1>5 schnelle Prompts fÃƒÂ¼r wirksame Exit Tickets</h1>
-<p>Exit Tickets prÃƒÂ¼fen das VerstÃƒÂ¤ndnis in den letzten 3Ã¢â‚¬"5 Minuten. Mit KI erzeugst du gezielte Checks, die zum Lernziel passen, typische Fehlvorstellungen sichtbar machen und dir morgen beim Gruppieren helfen. Nutze die Prompts und Vorlagen unten: kurz, auswertbar, handlungsleitend.</p>
+<p>Exit Tickets prÃƒÂ¼fen das VerstÃƒÂ¤ndnis in den letzten 3Ã¢€"5 Minuten. Mit KI erzeugst du gezielte Checks, die zum Lernziel passen, typische Fehlvorstellungen sichtbar machen und dir morgen beim Gruppieren helfen. Nutze die Prompts und Vorlagen unten: kurz, auswertbar, handlungsleitend.</p>
 
 <h2>Was macht ein gutes Exit Ticket aus?</h2>
 <ul class="blog-ul">
   <li class="blog-li"><strong>Passgenau:</strong> Ein Ticket prÃƒÂ¼ft ein Lernziel von heute.</li>
-  <li class="blog-li"><strong>Kurz:</strong> 2Ã¢â‚¬"3 Minuten Bearbeitung, 30Ã¢â‚¬"60 Sekunden Auswertung.</li>
+  <li class="blog-li"><strong>Kurz:</strong> 2Ã¢€"3 Minuten Bearbeitung, 30Ã¢€"60 Sekunden Auswertung.</li>
   <li class="blog-li"><strong>NÃƒÂ¼tzlich:</strong> Antworten fÃƒÂ¼hren direkt zu den nÃƒÂ¤chsten Schritten.</li>
   <li class="blog-li"><strong>Denkwege sichtbar:</strong> Aufgaben lassen BegrÃƒÂ¼ndungen erkennen, nicht nur Ergebnisse.</li>
 </ul>
@@ -835,9 +835,9 @@ Q3 (Confidence 1Ã¢â‚¬"4): [I canÃ¢â‚¬Â¦ statement]</code></pre>
 <h2>Prompt 1 - 3-Fragen-Ticket zum Tagesziel</h2>
 <pre><code>Erstelle ein 3-teiliges Exit Ticket zum Lernziel: [Ziel einfÃƒÂ¼gen].
 Vorgaben:
-Ã¢â‚¬Â¢ 1 Multiple-Choice-Frage mit typischer Fehlvorstellung; nenne richtige LÃƒÂ¶sung und warum die Ablenker verlockend sind.
-Ã¢â‚¬Â¢ 1 Kurzantwort (1Ã¢â‚¬"2 SÃƒÂ¤tze), in der Lernende ihre BegrÃƒÂ¼ndung erklÃƒÂ¤ren.
-Ã¢â‚¬Â¢ 1 SelbsteinschÃƒÂ¤tzung (1Ã¢â‚¬"4) mit schÃƒÂ¼lernaher Ich-Kann-Formulierung.
+Ã¢€Â¢ 1 Multiple-Choice-Frage mit typischer Fehlvorstellung; nenne richtige LÃƒÂ¶sung und warum die Ablenker verlockend sind.
+Ã¢€Â¢ 1 Kurzantwort (1Ã¢€"2 SÃƒÂ¤tze), in der Lernende ihre BegrÃƒÂ¼ndung erklÃƒÂ¤ren.
+Ã¢€Â¢ 1 SelbsteinschÃƒÂ¤tzung (1Ã¢€"4) mit schÃƒÂ¼lernaher Ich-Kann-Formulierung.
 Gib Aufgaben und LÃƒÂ¶sungsschlÃƒÂ¼ssel zurÃƒÂ¼ck. Keine Fachjargon.</code></pre>
 
 <h2>Prompt 2 - Aus dem Musterbeispiel ein CFU bauen</h2>
@@ -853,9 +853,9 @@ Gib Aufgaben und LÃƒÂ¶sungsschlÃƒÂ¼ssel zurÃƒÂ¼ck. Keine Fachjargon.
 
 <h2>Prompt 5 - Morgen automatisch gruppieren</h2>
 <pre><code>Erstelle ein 3-teiliges Ticket fÃƒÂ¼r [Ziel] und liefere eine einfache Regel zur Einteilung:
-Ã¢â‚¬Â¢ Gruppe A: Nachlernbedarf bei [HÃƒÂ¼rde]
-Ã¢â‚¬Â¢ Gruppe B: ÃƒÅ“ben von [Fertigkeit]
-Ã¢â‚¬Â¢ Gruppe C: Erweiterung
+Ã¢€Â¢ Gruppe A: Nachlernbedarf bei [HÃƒÂ¼rde]
+Ã¢€Â¢ Gruppe B: ÃƒÅ“ben von [Fertigkeit]
+Ã¢€Â¢ Gruppe C: Erweiterung
 Gib If-Then-Regeln basierend auf Antworten an, um Lernende schnell zuzuordnen.</code></pre>
 
 <h2>Fachbeispiele</h2>
@@ -863,49 +863,49 @@ Gib If-Then-Regeln basierend auf Antworten an, um Lernende schnell zuzuordnen.</
 <ul class="blog-ul">
   <li class="blog-li"><strong>MC:</strong> Erster Schritt bei 3x + 5 = 17? <em>Verlockender Ablenker:</em> 17 Ã¢Ë†' 3x (Operationen verwechselt).</li>
   <li class="blog-li"><strong>Kurzantwort:</strong> Warum zuerst 5 subtrahieren, bevor geteilt wird?</li>
-  <li class="blog-li"><strong>SelbsteinschÃƒÂ¤tzung:</strong> Ich kann Zweischritt-Gleichungen lÃƒÂ¶sen (1Ã¢â‚¬"4).</li>
+  <li class="blog-li"><strong>SelbsteinschÃƒÂ¤tzung:</strong> Ich kann Zweischritt-Gleichungen lÃƒÂ¶sen (1Ã¢€"4).</li>
 </ul>
 
 <h3>Naturwissenschaften (Phasenwechsel, CER)</h3>
 <ul class="blog-ul">
-  <li class="blog-li"><strong>MC:</strong> Beim ErwÃƒÂ¤rmen von Eis bei 0Ã‚Â°C steigt zuerst Ã¢â‚¬Â¦ A) Temperatur B) kinetische Energie C) potenzielle Energie D) Masse. <em>Richtig:</em> C.</li>
+  <li class="blog-li"><strong>MC:</strong> Beim ErwÃƒÂ¤rmen von Eis bei 0Ã‚Â°C steigt zuerst Ã¢€Â¦ A) Temperatur B) kinetische Energie C) potenzielle Energie D) Masse. <em>Richtig:</em> C.</li>
   <li class="blog-li"><strong>Kurzantwort:</strong> Verbinde in einem Satz Teilchenabstand und Phasenwechsel bei 0Ã‚Â°C.</li>
-  <li class="blog-li"><strong>SelbsteinschÃƒÂ¤tzung:</strong> Ich kann EnergieÃƒÂ¤nderungen beim Schmelzen erklÃƒÂ¤ren (1Ã¢â‚¬"4).</li>
+  <li class="blog-li"><strong>SelbsteinschÃƒÂ¤tzung:</strong> Ich kann EnergieÃƒÂ¤nderungen beim Schmelzen erklÃƒÂ¤ren (1Ã¢€"4).</li>
 </ul>
 
 <h3>Deutsch/Englisch (Thema vs. Hauptaussage)</h3>
 <ul class="blog-ul">
   <li class="blog-li"><strong>MC:</strong> Was ist ein Thema? A) Ein Junge zieht um B) VerÃƒÂ¤nderung ist schwer, fÃƒÂ¼hrt aber zu Wachstum C) Es ist Winter D) Die Figur ist schÃƒÂ¼chtern. <em>Richtig:</em> B.</li>
   <li class="blog-li"><strong>Kurzantwort:</strong> Nenne ein Detail, das das Thema stÃƒÂ¼tzt.</li>
-  <li class="blog-li"><strong>SelbsteinschÃƒÂ¤tzung:</strong> Ich kann ein Thema mit Belegen erklÃƒÂ¤ren (1Ã¢â‚¬"4).</li>
+  <li class="blog-li"><strong>SelbsteinschÃƒÂ¤tzung:</strong> Ich kann ein Thema mit Belegen erklÃƒÂ¤ren (1Ã¢€"4).</li>
 </ul>
 
 <h3>Gesellschaftslehre (Quellenkritik)</h3>
 <ul class="blog-ul">
   <li class="blog-li"><strong>MC:</strong> Welcher Faktor beeinflusst hier die VerlÃƒÂ¤sslichkeit am meisten? A) Datum B) Absicht des Autors C) Schriftart D) Seitenzahl. <em>Richtig:</em> B.</li>
   <li class="blog-li"><strong>Kurzantwort:</strong> ErklÃƒÂ¤re kurz, wie die Absicht die Informationen prÃƒÂ¤gen kann.</li>
-  <li class="blog-li"><strong>SelbsteinschÃƒÂ¤tzung:</strong> Ich kann die VerlÃƒÂ¤sslichkeit einer Quelle bewerten (1Ã¢â‚¬"4).</li>
+  <li class="blog-li"><strong>SelbsteinschÃƒÂ¤tzung:</strong> Ich kann die VerlÃƒÂ¤sslichkeit einer Quelle bewerten (1Ã¢€"4).</li>
 </ul>
 
 <h3>Fremdsprachen (PrÃƒÂ¤teritum/Perfekt)</h3>
 <ul class="blog-ul">
   <li class="blog-li"><strong>MC:</strong> WÃƒÂ¤hle die korrekte Vergangenheitsform fÃƒÂ¼r wir von gehen.</li>
   <li class="blog-li"><strong>Kurzantwort:</strong> Ein Satz: Wohin bist du letztes Wochenende gegangen?</li>
-  <li class="blog-li"><strong>SelbsteinschÃƒÂ¤tzung:</strong> Ich kann die Vergangenheitsform bilden (1Ã¢â‚¬"4).</li>
+  <li class="blog-li"><strong>SelbsteinschÃƒÂ¤tzung:</strong> Ich kann die Vergangenheitsform bilden (1Ã¢€"4).</li>
 </ul>
 
 <h2>Schnell auswerten & gruppieren</h2>
 <ul class="blog-ul">
   <li class="blog-li"><strong>Gruppe A (Reteach):</strong> MC falsch oder Selbstwert Ã¢"°Â¤2; 20-Sekunden-ErklÃƒÂ¤rung + angeleitete Aufgabe.</li>
-  <li class="blog-li"><strong>Gruppe B (ÃƒÅ“ben):</strong> gemischte Leistung; 2Ã¢â‚¬"3 Nahtransfer-Aufgaben mit Feedback.</li>
+  <li class="blog-li"><strong>Gruppe B (ÃƒÅ“ben):</strong> gemischte Leistung; 2Ã¢€"3 Nahtransfer-Aufgaben mit Feedback.</li>
   <li class="blog-li"><strong>Gruppe C (Erweitern):</strong> korrekt + Selbstwert Ã¢"°Â¥3; Anwendungs- oder Knobelaufgabe.</li>
 </ul>
 
 <h2>Vorlagen zum Kopieren</h2>
 <h3>3-Teile-Exit-Ticket (universal)</h3>
 <pre><code>1) MC (hÃƒÂ¤ufige Fehlvorstellung)
-2) BegrÃƒÂ¼ndung (1Ã¢â‚¬"2 SÃƒÂ¤tze)
-3) Ich-Kann-Check (1Ã¢â‚¬"4)</code></pre>
+2) BegrÃƒÂ¼ndung (1Ã¢€"2 SÃƒÂ¤tze)
+3) Ich-Kann-Check (1Ã¢€"4)</code></pre>
 
 <h3>Annotation aus Beispiel</h3>
 <pre><code>1) Kritischen Schritt markieren.
@@ -915,7 +915,7 @@ Gib If-Then-Regeln basierend auf Antworten an, um Lernende schnell zuzuordnen.</
 <pre><code>Ziel: [in SchÃƒÂ¼lersprache]
 F1 (MC): [Fehlvorstellung adressieren]
 F2 (ErklÃƒÂ¤ren): [Warum/Wie-Frage]
-F3 (Selbstwert 1Ã¢â‚¬"4): [Ich kann Ã¢â‚¬Â¦]</code></pre>
+F3 (Selbstwert 1Ã¢€"4): [Ich kann Ã¢€Â¦]</code></pre>
 
 <h2>Prompts fÃƒÂ¼r mehrsprachige Versionen</h2>
 <pre><code>ÃƒÅ“bersetze dieses 3-Teile-Ticket in [Sprache], gleiche Bedeutung und Klassenstufe. Kurze SÃƒÂ¤tze, einfache WÃƒÂ¶rter. Beide Versionen klar beschriften.</code></pre>
@@ -962,10 +962,10 @@ F3 (Selbstwert 1Ã¢â‚¬"4): [Ich kann Ã¢â‚¬Â¦]</code></pre>
 
 <h2>Why rubrics matter (and where AI helps)</h2>
 <ul class="blog-ul">
-  <li class="blog-li"><strong>Clarity:</strong> Students see what Ã¢â‚¬Å“goodÃ¢â‚¬Â looks like before they start.</li>
+  <li class="blog-li"><strong>Clarity:</strong> Students see what Ã¢€Å“goodÃ¢€Â looks like before they start.</li>
   <li class="blog-li"><strong>Consistency:</strong> Criteria + descriptors reduce subjective swings between papers.</li>
   <li class="blog-li"><strong>Speed:</strong> Reusable language shortens the comment-writing grind.</li>
-  <li class="blog-li"><strong>AIÃ¢â‚¬â„¢s role:</strong> Draft structure and descriptors fast. <em>Your</em> role: set criteria, examples, and standards alignment.</li>
+  <li class="blog-li"><strong>AIÃ¢€â„¢s role:</strong> Draft structure and descriptors fast. <em>Your</em> role: set criteria, examples, and standards alignment.</li>
 </ul>
 
 <h2>Core 4-level rubric frame (copy this)</h2>
@@ -976,13 +976,13 @@ Compare: each level should differ by quality, accuracy, independence, transfer</
 <h2>Prompt: draft a rubric from success criteria</h2>
 <pre><code>Draft a 4-level analytic rubric. Criteria must be observable and aligned to these success criteria:
 
-Ã¢â‚¬Â¢ Claim is clear
-Ã¢â‚¬Â¢ Evidence is relevant
-Ã¢â‚¬Â¢ Reasoning explains how evidence supports the claim
+Ã¢€Â¢ Claim is clear
+Ã¢€Â¢ Evidence is relevant
+Ã¢€Â¢ Reasoning explains how evidence supports the claim
 
 Use plain classroom language (no jargon). Keep levels: Beginning, Developing, Proficient, Exemplary. Make differences specific and measurable. Return as a table.</code></pre>
 
-<h2>Analytic rubric example (Argument paragraph, Grades 6Ã¢â‚¬"9)</h2>
+<h2>Analytic rubric example (Argument paragraph, Grades 6Ã¢€"9)</h2>
 <table>
   <thead>
     <tr>
@@ -1047,7 +1047,7 @@ Use plain classroom language (no jargon). Keep levels: Beginning, Developing, Pr
 </ul>
 
 <h2>Prompt: convert standards to criteria</h2>
-<pre><code>Given this standard: Ã¢â‚¬Å“Write arguments to support claims with clear reasons and relevant evidence.Ã¢â‚¬Â
+<pre><code>Given this standard: Ã¢€Å“Write arguments to support claims with clear reasons and relevant evidence.Ã¢€Â
 Return 4 observable criteria a teacher can see in student work. Avoid vague words (good, great).
 Each criterion should have one action verb (identify, cite, explain, calculate...).</code></pre>
 
@@ -1055,13 +1055,13 @@ Each criterion should have one action verb (identify, cite, explain, calculate..
 <pre><code>Rewrite these descriptors to be observable and measurable. Remove subjective adjectives. Keep level-to-level differences clear and incremental. Use student-friendly language and one sentence per cell.</code></pre>
 
 <h2>Single-point rubric (fast conferencing)</h2>
-<p>Use a single-point rubric when you want one set of Ã¢â‚¬Å“ProficientÃ¢â‚¬Â descriptors and quick notes for Ã¢â‚¬Å“BelowÃ¢â‚¬Â and Ã¢â‚¬Å“Above.Ã¢â‚¬Â</p>
+<p>Use a single-point rubric when you want one set of Ã¢€Å“ProficientÃ¢€Â descriptors and quick notes for Ã¢€Å“BelowÃ¢€Â and Ã¢€Å“Above.Ã¢€Â</p>
 <pre><code>| Below expectations | Proficient (target)                                   | Above expectations |
 |--------------------|--------------------------------------------------------|--------------------|
 | Notes...           | Claim is clear; evidence is relevant; reasoning links | Notes...           |</code></pre>
 
 <h2>Prompt: generate a single-point rubric</h2>
-<pre><code>Create a single-point rubric with one Proficient column and blank Ã¢â‚¬Å“Below/AboveÃ¢â‚¬Â columns. Criteria: claim, evidence, reasoning, conventions. Use verbs and concrete outcomes.</code></pre>
+<pre><code>Create a single-point rubric with one Proficient column and blank Ã¢€Å“Below/AboveÃ¢€Â columns. Criteria: claim, evidence, reasoning, conventions. Use verbs and concrete outcomes.</code></pre>
 
 <h2>Speed-grade with comment tiles</h2>
 <p>Pair rubrics with quick comment tiles so feedback is fast and specific.</p>
@@ -1070,13 +1070,13 @@ Grow: Watch [slip]; it affects [criterion].
 Go: Next time, [one action] before submitting.</code></pre>
 
 <h2>Prompt: auto-generate comment tiles from rubric</h2>
-<pre><code>From this rubric, create 6 Ã¢â‚¬Å“GlowÃ¢â‚¬"GrowÃ¢â‚¬"GoÃ¢â‚¬Â comment tiles that name the criterion and suggest one concrete next action. Student-friendly language. 2 sentences max per tile.</code></pre>
+<pre><code>From this rubric, create 6 Ã¢€Å“GlowÃ¢€"GrowÃ¢€"GoÃ¢€Â comment tiles that name the criterion and suggest one concrete next action. Student-friendly language. 2 sentences max per tile.</code></pre>
 
 <h2>Quality checks before you publish</h2>
 <ul class="blog-ul">
   <li class="blog-li">Descriptors compare quality, not just length or neatness.</li>
   <li class="blog-li">Language is plain and student-friendly.</li>
-  <li class="blog-li">You have at least one example/exemplar to show Ã¢â‚¬Å“Proficient.Ã¢â‚¬Â</li>
+  <li class="blog-li">You have at least one example/exemplar to show Ã¢€Å“Proficient.Ã¢€Â</li>
   <li class="blog-li">You can score two sample works consistently using the rubric.</li>
 </ul>
 
@@ -1096,19 +1096,19 @@ Go: Next time, [one action] before submitting.</code></pre>
 
 <h3>Prompt pack (copy/paste)</h3>
 <pre><code>1) Draft rubric from criteria
-Ã¢â‚¬Å“Create a 4-level analytic rubric for [task]. Criteria: [list]. Use concrete, observable descriptors. No jargon.Ã¢â‚¬Â
+Ã¢€Å“Create a 4-level analytic rubric for [task]. Criteria: [list]. Use concrete, observable descriptors. No jargon.Ã¢€Â
 
 2) Tighten descriptors
-Ã¢â‚¬Å“Rewrite descriptors so each level changes one thing at a time (accuracy, depth, independence, transfer). One sentence per cell.Ã¢â‚¬Â
+Ã¢€Å“Rewrite descriptors so each level changes one thing at a time (accuracy, depth, independence, transfer). One sentence per cell.Ã¢€Â
 
 3) Convert standard to criteria
-Ã¢â‚¬Å“From standard [paste], produce 3Ã¢â‚¬"4 observable criteria with verbs a teacher can see.Ã¢â‚¬Â
+Ã¢€Å“From standard [paste], produce 3Ã¢€"4 observable criteria with verbs a teacher can see.Ã¢€Â
 
 4) Make a single-point rubric
-Ã¢â‚¬Å“Return a single-point rubric with a Ã¢â‚¬ËœProficientÃ¢â‚¬â„¢ column only, plus blank Ã¢â‚¬ËœBelow/AboveÃ¢â‚¬â„¢ columns for notes.Ã¢â‚¬Â
+Ã¢€Å“Return a single-point rubric with a Ã¢€ËœProficientÃ¢€â„¢ column only, plus blank Ã¢€ËœBelow/AboveÃ¢€â„¢ columns for notes.Ã¢€Â
 
 5) Comment tiles
-Ã¢â‚¬Å“From this rubric, output 8 GlowÃ¢â‚¬"GrowÃ¢â‚¬"Go tiles that each name a criterion and give one next step.Ã¢â‚¬Â</code></pre>
+Ã¢€Å“From this rubric, output 8 GlowÃ¢€"GrowÃ¢€"Go tiles that each name a criterion and give one next step.Ã¢€Â</code></pre>
 
 <h2>Try-it-today workflow (15 minutes)</h2>
 <ol class="blog-ol">
@@ -1127,7 +1127,7 @@ Go: Next time, [one action] before submitting.</code></pre>
 
 <h2>Warum Rubrics wichtig sind (und wo KI hilft)</h2>
 <ul class="blog-ul">
-  <li class="blog-li"><strong>Transparenz:</strong> Lernende sehen vorab, was Ã¢â‚¬Å“gutÃ¢â‚¬Â bedeutet.</li>
+  <li class="blog-li"><strong>Transparenz:</strong> Lernende sehen vorab, was Ã¢€Å“gutÃ¢€Â bedeutet.</li>
   <li class="blog-li"><strong>Konsistenz:</strong> Kriterien + Beschreibungen verringern subjektive Schwankungen.</li>
   <li class="blog-li"><strong>Tempo:</strong> Wiederverwendbare Formulierungen verkÃƒÂ¼rzen die Kommentararbeit.</li>
   <li class="blog-li"><strong>Rolle der KI:</strong> Struktur und Beschreibungen schnell entwerfen. <em>Deine</em> Rolle: Kriterien, Beispiele, Standards-Bezug setzen.</li>
@@ -1141,13 +1141,13 @@ Vergleich: Jede Stufe unterscheidet sich in QualitÃƒÂ¤t, Genauigkeit, Selbst
 <h2>Prompt: Rubric aus Erfolgskriterien erzeugen</h2>
 <pre><code>Erstelle eine 4-stufige analytische Rubric. Kriterien mÃƒÂ¼ssen beobachtbar sein und zu diesen Erfolgskriterien passen:
 
-Ã¢â‚¬Â¢ Aussage (Claim) ist klar
-Ã¢â‚¬Â¢ Evidenz ist relevant
-Ã¢â‚¬Â¢ BegrÃƒÂ¼ndung erklÃƒÂ¤rt, wie Evidenz die Aussage stÃƒÂ¼tzt
+Ã¢€Â¢ Aussage (Claim) ist klar
+Ã¢€Â¢ Evidenz ist relevant
+Ã¢€Â¢ BegrÃƒÂ¼ndung erklÃƒÂ¤rt, wie Evidenz die Aussage stÃƒÂ¼tzt
 
 Verwende einfache Unterrichtssprache. Stufen: Anfang, Aufbau, Zielerreichung, Exzellenz. Unterschiede konkret und messbar. Gib eine Tabelle zurÃƒÂ¼ck.</code></pre>
 
-<h2>Beispiel (Argumentationsabsatz, Klassen 6Ã¢â‚¬"9)</h2>
+<h2>Beispiel (Argumentationsabsatz, Klassen 6Ã¢€"9)</h2>
 <table>
   <thead>
     <tr>
@@ -1212,19 +1212,19 @@ Verwende einfache Unterrichtssprache. Stufen: Anfang, Aufbau, Zielerreichung, Ex
 </ul>
 
 <h2>Prompt: Standards in Kriterien ÃƒÂ¼bersetzen</h2>
-<pre><code>Aus diesem Standard [einfÃƒÂ¼gen] 3Ã¢â‚¬"4 beobachtbare Kriterien ableiten. Verben verwenden, die man sieht (benennen, zitieren, erklÃƒÂ¤ren...).</code></pre>
+<pre><code>Aus diesem Standard [einfÃƒÂ¼gen] 3Ã¢€"4 beobachtbare Kriterien ableiten. Verben verwenden, die man sieht (benennen, zitieren, erklÃƒÂ¤ren...).</code></pre>
 
 <h2>Prompt: Beschreibungen schÃƒÂ¤rfen (ohne Floskeln)</h2>
 <pre><code>Formuliere die Beschreibungen beobachtbar und messbar. Subjektive Adjektive entfernen. Unterschiede zwischen den Stufen klar und schrittweise. Eine Aussage pro Zelle.</code></pre>
 
 <h2>Ein-Punkt-Rubric (schnell fÃƒÂ¼rs GesprÃƒÂ¤ch)</h2>
-<p>Eine Ein-Punkt-Rubric hat nur die Zielbeschreibung und Platz fÃƒÂ¼r Notizen zu Ã¢â‚¬Å“darunterÃ¢â‚¬Â/Ã¢â‚¬Å“darÃƒÂ¼berÃ¢â‚¬Â.</p>
+<p>Eine Ein-Punkt-Rubric hat nur die Zielbeschreibung und Platz fÃƒÂ¼r Notizen zu Ã¢€Å“darunterÃ¢€Â/Ã¢€Å“darÃƒÂ¼berÃ¢€Â.</p>
 <pre><code>| Unter Ziel | Ziel (Proficient)                            | ÃƒÅ“ber Ziel |
 |------------|----------------------------------------------|----------|
 | Notizen    | Aussage klar; Evidenz relevant; BegrÃƒÂ¼ndung   | Notizen  |</code></pre>
 
 <h2>Prompt: Ein-Punkt-Rubric erzeugen</h2>
-<pre><code>Erstelle eine Ein-Punkt-Rubric mit einer Ziel-Spalte und leeren Spalten Ã¢â‚¬Å“Unter/ÃƒÅ“ber ZielÃ¢â‚¬Â. Kriterien: Aussage, Evidenz, BegrÃƒÂ¼ndung, Konventionen. Konkrete Verben verwenden.</code></pre>
+<pre><code>Erstelle eine Ein-Punkt-Rubric mit einer Ziel-Spalte und leeren Spalten Ã¢€Å“Unter/ÃƒÅ“ber ZielÃ¢€Â. Kriterien: Aussage, Evidenz, BegrÃƒÂ¼ndung, Konventionen. Konkrete Verben verwenden.</code></pre>
 
 <h2>Schnell bewerten mit Kommentar-Kacheln</h2>
 <pre><code>Glanz: Du erfÃƒÂ¼llst [Kriterium] durch [Beleg].
@@ -1232,13 +1232,13 @@ Wachstum: Achte auf [Stolperstein]; betrifft [Kriterium].
 NÃƒÂ¤chster Schritt: NÃƒÂ¤chstes Mal [eine Handlung] vor der Abgabe.</code></pre>
 
 <h2>Prompt: Kommentar-Kacheln aus einer Rubric</h2>
-<pre><code>Erzeuge aus dieser Rubric 6 Ã¢â‚¬Å“GlanzÃ¢â‚¬"WachstumÃ¢â‚¬"NÃƒÂ¤chster SchrittÃ¢â‚¬Â-Kacheln. Nenne jeweils das Kriterium und schlage eine konkrete nÃƒÂ¤chste Handlung vor. Maximal 2 SÃƒÂ¤tze pro Kachel.</code></pre>
+<pre><code>Erzeuge aus dieser Rubric 6 Ã¢€Å“GlanzÃ¢€"WachstumÃ¢€"NÃƒÂ¤chster SchrittÃ¢€Â-Kacheln. Nenne jeweils das Kriterium und schlage eine konkrete nÃƒÂ¤chste Handlung vor. Maximal 2 SÃƒÂ¤tze pro Kachel.</code></pre>
 
 <h2>QualitÃƒÂ¤tscheck vor dem Einsatz</h2>
 <ul class="blog-ul">
   <li class="blog-li">Beschreibungen unterscheiden QualitÃƒÂ¤t, nicht nur LÃƒÂ¤nge oder Sauberkeit.</li>
   <li class="blog-li">Sprache ist klar und schÃƒÂ¼lerfreundlich.</li>
-  <li class="blog-li">Mindestens ein Beispiel/Exemplar zeigt Ã¢â‚¬Å“ZielerreichungÃ¢â‚¬Â.</li>
+  <li class="blog-li">Mindestens ein Beispiel/Exemplar zeigt Ã¢€Å“ZielerreichungÃ¢€Â.</li>
   <li class="blog-li">Du kannst zwei Musterarbeiten damit konsistent bewerten.</li>
 </ul>
 
@@ -1258,19 +1258,19 @@ NÃƒÂ¤chster Schritt: NÃƒÂ¤chstes Mal [eine Handlung] vor der Abgabe.</co
 
 <h3>Prompt-Paket (kopieren)</h3>
 <pre><code>1) Rubric aus Kriterien
-Ã¢â‚¬Å¾Erstelle eine 4-stufige analytische Rubric fÃƒÂ¼r [Aufgabe]. Kriterien: [Liste]. Konkrete, beobachtbare Beschreibungen.Ã¢â‚¬Å“
+Ã¢€Å¾Erstelle eine 4-stufige analytische Rubric fÃƒÂ¼r [Aufgabe]. Kriterien: [Liste]. Konkrete, beobachtbare Beschreibungen.Ã¢€Å“
 
 2) Beschreibungen schÃƒÂ¤rfen
-Ã¢â‚¬Å¾Beschreibungen so ÃƒÂ¼berarbeiten, dass pro Stufe genau eine Sache besser wird (Genauigkeit, Tiefe, SelbststÃƒÂ¤ndigkeit, Transfer).Ã¢â‚¬Å“
+Ã¢€Å¾Beschreibungen so ÃƒÂ¼berarbeiten, dass pro Stufe genau eine Sache besser wird (Genauigkeit, Tiefe, SelbststÃƒÂ¤ndigkeit, Transfer).Ã¢€Å“
 
 3) Standard Ã¢" ' Kriterien
-Ã¢â‚¬Å¾Aus Standard [einfÃƒÂ¼gen] 3Ã¢â‚¬"4 beobachtbare Kriterien mit Verben bilden.Ã¢â‚¬Å“
+Ã¢€Å¾Aus Standard [einfÃƒÂ¼gen] 3Ã¢€"4 beobachtbare Kriterien mit Verben bilden.Ã¢€Å“
 
 4) Ein-Punkt-Rubric
-Ã¢â‚¬Å¾Ein-Punkt-Rubric mit Ziel-Spalte und leeren Notizspalten Ã¢â‚¬Å¡Unter/ÃƒÅ“ber ZielÃ¢â‚¬Ëœ erstellen.Ã¢â‚¬Å“
+Ã¢€Å¾Ein-Punkt-Rubric mit Ziel-Spalte und leeren Notizspalten Ã¢€Å¡Unter/ÃƒÅ“ber ZielÃ¢€Ëœ erstellen.Ã¢€Å“
 
 5) Kommentar-Kacheln
-Ã¢â‚¬Å¾Aus dieser Rubric 8 GlanzÃ¢â‚¬"WachstumÃ¢â‚¬"NÃƒÂ¤chster Schritt-Kacheln mit einer konkreten nÃƒÂ¤chsten Handlung generieren.Ã¢â‚¬Å“</code></pre>
+Ã¢€Å¾Aus dieser Rubric 8 GlanzÃ¢€"WachstumÃ¢€"NÃƒÂ¤chster Schritt-Kacheln mit einer konkreten nÃƒÂ¤chsten Handlung generieren.Ã¢€Å“</code></pre>
 
 <h2>Heute ausprobieren (15 Minuten)</h2>
 <ol class="blog-ol">
@@ -1297,35 +1297,35 @@ NÃƒÂ¤chster Schritt: NÃƒÂ¤chstes Mal [eine Handlung] vor der Abgabe.</co
 <h1>Using AI to Identify Literacy Gaps Quickly</h1>
 <p>When time is short, you need a fast way to see which skills most students are missing-decoding, fluency, vocabulary, or evidence-based writing. This workflow turns small artifacts into clear patterns you can teach the next day.</p>
 
-<h2>What youÃ¢â‚¬â„¢ll build</h2>
+<h2>What youÃ¢€â„¢ll build</h2>
 <ul class="blog-ul">
-  <li class="blog-li">A <em>5-skill screen</em> for reading/writing (decoding Ã¢â‚¬Â¢ fluency Ã¢â‚¬Â¢ vocab Ã¢â‚¬Â¢ comprehension Ã¢â‚¬Â¢ evidence).</li>
+  <li class="blog-li">A <em>5-skill screen</em> for reading/writing (decoding Ã¢€Â¢ fluency Ã¢€Â¢ vocab Ã¢€Â¢ comprehension Ã¢€Â¢ evidence).</li>
   <li class="blog-li">Prompt pack that turns exit tickets and short passages into <em>actionable groups</em>.</li>
   <li class="blog-li">Mini-lesson menu for the top three gaps.</li>
 </ul>
 
-<h2>Quick data sources (pick 1Ã¢â‚¬"2)</h2>
+<h2>Quick data sources (pick 1Ã¢€"2)</h2>
 <ul class="blog-ul">
-  <li class="blog-li">30Ã¢â‚¬"60 word cold read with one question.</li>
+  <li class="blog-li">30Ã¢€"60 word cold read with one question.</li>
   <li class="blog-li">Sentence-combining or cloze item (vocabulary/structure).</li>
-  <li class="blog-li">3Ã¢â‚¬"4 sentence written response with a quote.</li>
+  <li class="blog-li">3Ã¢€"4 sentence written response with a quote.</li>
   <li class="blog-li">High-frequency word probe (primary) or morphology sort (upper grades).</li>
 </ul>
 
 <h2>Core analysis prompt</h2>
 <pre><code>ROLE: Literacy coach. Analyze student samples to surface patterns without grading.
 INPUT: Grade [X], text difficulty [Y]. Samples below: 
-[Paste 8Ã¢â‚¬"25 brief samples separated by ---]
+[Paste 8Ã¢€"25 brief samples separated by ---]
 TASKS:
 1) Cluster students by the FIRST limiting skill (decoding, fluency, vocabulary, comprehension, evidence-based writing).
-2) For each cluster list 2Ã¢â‚¬"3 <em>observable features</em> from the samples.
-3) Recommend a 10Ã¢â‚¬"12 minute mini-lesson with a concrete routine and example.
+2) For each cluster list 2Ã¢€"3 <em>observable features</em> from the samples.
+3) Recommend a 10Ã¢€"12 minute mini-lesson with a concrete routine and example.
 CONSTRAINTS: Use neutral language. No labels. Output a table.</code></pre>
 
 <h2>Output you want</h2>
 <pre><code>GROUP | Limiting skill | Observable features | 12-minute mini-lesson
 A     | Vocabulary     | Mis-uses of tier-2 words; context ignored | Frayer mini + sentence frames
-B     | Evidence       | Quote missing or not linked | Two-column Ã¢â‚¬Å“claim Ã¢" ' quote Ã¢" ' becauseÃ¢â‚¬Â drill
+B     | Evidence       | Quote missing or not linked | Two-column Ã¢€Å“claim Ã¢" ' quote Ã¢" ' becauseÃ¢€Â drill
 C     | Fluency        | Word-by-word reading; punctuation ignored | Echo read + phrase scoop marks</code></pre>
 
 <h2>Mini-lesson menu (plug-and-play)</h2>
@@ -1338,7 +1338,7 @@ C     | Fluency        | Word-by-word reading; punctuation ignored | Echo read +
 <h3>Evidence-based writing</h3>
 <ul class="blog-ul">
   <li class="blog-li">Two-column organizer: <em>Claim | Quote | Because</em> with one modeled example.</li>
-  <li class="blog-li">Sentence frames: Ã¢â‚¬Å“The text states Ã¢â‚¬ËœÃ¢â‚¬Â¦,Ã¢â‚¬â„¢ which shows Ã¢â‚¬Â¦Ã¢â‚¬Â.</li>
+  <li class="blog-li">Sentence frames: Ã¢€Å“The text states Ã¢€ËœÃ¢€Â¦,Ã¢€â„¢ which shows Ã¢€Â¦Ã¢€Â.</li>
 </ul>
 
 <h3>Fluency</h3>
@@ -1350,7 +1350,7 @@ C     | Fluency        | Word-by-word reading; punctuation ignored | Echo read +
 <h3>Decoding / Morphology</h3>
 <ul class="blog-ul">
   <li class="blog-li">Blend drill with target pattern (e.g., CVCe Ã¢" ' <em>make, time, late</em>).</li>
-  <li class="blog-li">Prefix/suffix sort with quick Ã¢â‚¬Å“meaning checkÃ¢â‚¬Â.</li>
+  <li class="blog-li">Prefix/suffix sort with quick Ã¢€Å“meaning checkÃ¢€Â.</li>
 </ul>
 
 <h2>Micro-case</h2>
@@ -1364,7 +1364,7 @@ LESSON WRITER: Draft a 12-minute routine with materials list and 2 checks for un
 <h2>Quality checks (1 minute)</h2>
 <ul class="blog-ul">
   <li class="blog-li">Is each cluster defined by <em>one limiting skill</em>?</li>
-  <li class="blog-li">Do examples quote studentsÃ¢â‚¬â„¢ words or text-not impressions?</li>
+  <li class="blog-li">Do examples quote studentsÃ¢€â„¢ words or text-not impressions?</li>
   <li class="blog-li">Does each mini-lesson name <em>exact teacher moves</em> and a quick check?</li>
 </ul>
 
@@ -1383,33 +1383,33 @@ LESSON WRITER: Draft a 12-minute routine with materials list and 2 checks for un
 
 <h2>Was du erstellst</h2>
 <ul class="blog-ul">
-  <li class="blog-li">Einen <em>5-Fertigkeits-Check</em> (Dekodieren Ã¢â‚¬Â¢ FlÃƒÂ¼ssigkeit Ã¢â‚¬Â¢ Wortschatz Ã¢â‚¬Â¢ Verstehen Ã¢â‚¬Â¢ Evidenz).</li>
+  <li class="blog-li">Einen <em>5-Fertigkeits-Check</em> (Dekodieren Ã¢€Â¢ FlÃƒÂ¼ssigkeit Ã¢€Â¢ Wortschatz Ã¢€Â¢ Verstehen Ã¢€Â¢ Evidenz).</li>
   <li class="blog-li">Prompt-Bausteine, die Exit-Tickets und Kurztexte in <em>handlungsfÃƒÂ¤hige Gruppen</em> verwandeln.</li>
   <li class="blog-li">Mini-UnterrichtsmenÃƒÂ¼ fÃƒÂ¼r die drei hÃƒÂ¤ufigsten LÃƒÂ¼cken.</li>
 </ul>
 
-<h2>Schnelle Datenquellen (1Ã¢â‚¬"2 wÃƒÂ¤hlen)</h2>
+<h2>Schnelle Datenquellen (1Ã¢€"2 wÃƒÂ¤hlen)</h2>
 <ul class="blog-ul">
-  <li class="blog-li">30Ã¢â‚¬"60 WÃƒÂ¶rter Lautlesen mit einer Frage.</li>
+  <li class="blog-li">30Ã¢€"60 WÃƒÂ¶rter Lautlesen mit einer Frage.</li>
   <li class="blog-li">Satz verbinden oder LÃƒÂ¼ckentext (Wortschatz/Struktur).</li>
-  <li class="blog-li">3Ã¢â‚¬"4 SÃƒÂ¤tze Schreibantwort mit Zitat.</li>
+  <li class="blog-li">3Ã¢€"4 SÃƒÂ¤tze Schreibantwort mit Zitat.</li>
   <li class="blog-li">HÃƒÂ¤ufigkeitswort-Probe (Primar) oder Morphem-Sort (Sek I/II).</li>
 </ul>
 
 <h2>Kern-Analyse-Prompt</h2>
 <pre><code>ROLLE: Literacy-Coach. Analysiere Proben, um Muster zu erkennen-ohne zu benoten.
 EINGABE: Klasse [X], Textniveau [Y]. Proben:
-[8Ã¢â‚¬"25 Kurzproben, getrennt durch ---]
+[8Ã¢€"25 Kurzproben, getrennt durch ---]
 AUFTRÃƒ"GE:
 1) SchÃƒÂ¼ler nach <em>erstem begrenzenden Skill</em> clustern (Dekodieren, FlÃƒÂ¼ssigkeit, Wortschatz, Verstehen, Evidenz-Schreiben).
-2) FÃƒÂ¼r jedes Cluster 2Ã¢â‚¬"3 <em>beobachtbare Merkmale</em> nennen.
-3) Eine 10Ã¢â‚¬"12-Minuten-Mini-Lektion mit Routine und Beispiel vorschlagen.
+2) FÃƒÂ¼r jedes Cluster 2Ã¢€"3 <em>beobachtbare Merkmale</em> nennen.
+3) Eine 10Ã¢€"12-Minuten-Mini-Lektion mit Routine und Beispiel vorschlagen.
 REGELN: Neutrale Sprache. Keine Etiketten. Ausgabe als Tabelle.</code></pre>
 
 <h2>GewÃƒÂ¼nschte Ausgabe</h2>
 <pre><code>GRUPPE | Skill | Beobachtbare Merkmale | 12-Min-Mini-Lektion
 A      | Wortschatz | Fehlgebrauch von Tier-2-WÃƒÂ¶rtern; Kontext ignoriert | Mini-Frayer + Satzstarter
-B      | Evidenz    | Zitat fehlt/ohne VerknÃƒÂ¼pfung | Tabelle Ã¢â‚¬Å¾Behauptung Ã¢" ' Zitat Ã¢" ' weilÃ¢â‚¬Å“
+B      | Evidenz    | Zitat fehlt/ohne VerknÃƒÂ¼pfung | Tabelle Ã¢€Å¾Behauptung Ã¢" ' Zitat Ã¢" ' weilÃ¢€Å“
 C      | FlÃƒÂ¼ssigkeit| Wort-fÃƒÂ¼r-Wort; Interpunktion ignoriert | Echo-Lesen + Phrasen-Scoop</code></pre>
 
 <h2>Mini-UnterrichtsmenÃƒÂ¼</h2>
@@ -1422,7 +1422,7 @@ C      | FlÃƒÂ¼ssigkeit| Wort-fÃƒÂ¼r-Wort; Interpunktion ignoriert | Ech
 <h3>Evidenz-Schreiben</h3>
 <ul class="blog-ul">
   <li class="blog-li">Zweispalter: <em>Behauptung | Zitat | weil</em> mit einem Modell.</li>
-  <li class="blog-li">Satzrahmen: Ã¢â‚¬Å¾Im Text steht Ã¢â‚¬ËœÃ¢â‚¬Â¦Ã¢â‚¬â„¢, das zeigt Ã¢â‚¬Â¦Ã¢â‚¬Å“.</li>
+  <li class="blog-li">Satzrahmen: Ã¢€Å¾Im Text steht Ã¢€ËœÃ¢€Â¦Ã¢€â„¢, das zeigt Ã¢€Â¦Ã¢€Å“.</li>
 </ul>
 
 <h3>FlÃƒÂ¼ssigkeit</h3>
@@ -1434,7 +1434,7 @@ C      | FlÃƒÂ¼ssigkeit| Wort-fÃƒÂ¼r-Wort; Interpunktion ignoriert | Ech
 <h3>Dekodieren / Morphologie</h3>
 <ul class="blog-ul">
   <li class="blog-li">Blend-Drill mit Zielmuster (z. B. CVCe Ã¢" ' <em>miete, Rate, Sekunde</em> je nach Sprache).</li>
-  <li class="blog-li">PrÃƒÂ¤fix/Suffix-Sort mit kurzem Ã¢â‚¬Å¾Bedeutungs-CheckÃ¢â‚¬Å“.</li>
+  <li class="blog-li">PrÃƒÂ¤fix/Suffix-Sort mit kurzem Ã¢€Å¾Bedeutungs-CheckÃ¢€Å“.</li>
 </ul>
 
 <h2>Mikro-Fall</h2>
@@ -1494,13 +1494,13 @@ LEKTION-AUTOR: 12-Minuten-Routine mit Materialliste und 2 VerstÃƒÂ¤ndnistest
 <pre><code>ROLE: Writing coach. Draft growth comments in warm, student-friendly language.
 INPUT: Rubric criteria [ideas, evidence, organization, conventions]; level definitions; samples (below).
 TASK: For each student, write 2 strengths + 1 next step with a sentence frame.
-CONSTRAINTS: 80Ã¢â‚¬"120 words total; avoid labels; use examples from the sample.</code></pre>
+CONSTRAINTS: 80Ã¢€"120 words total; avoid labels; use examples from the sample.</code></pre>
 
 <h3>Checklist</h3>
 <ul class="blog-ul">
   <li class="blog-li">Names a <em>strength</em> before a next step.</li>
-  <li class="blog-li">Uses evidence (Ã¢â‚¬Å“In paragraph 2 you Ã¢â‚¬Â¦Ã¢â‚¬Â).</li>
-  <li class="blog-li">Ends with an action (Ã¢â‚¬Å“Try the frame: Ã¢â‚¬Â¦Ã¢â‚¬Â).</li>
+  <li class="blog-li">Uses evidence (Ã¢€Å“In paragraph 2 you Ã¢€Â¦Ã¢€Â).</li>
+  <li class="blog-li">Ends with an action (Ã¢€Å“Try the frame: Ã¢€Â¦Ã¢€Â).</li>
 </ul>
 
 <h3>Micro-case</h3>
@@ -1537,9 +1537,9 @@ Differentiation:
 <p>Convert notes into respectful, specific summaries with one school action and one at-home idea.</p>
 
 <h3>Starter prompt</h3>
-<pre><code>ROLE: Family liaison. Write a 90Ã¢â‚¬"130 word parent summary.
-EVIDENCE BULLETS: [3Ã¢â‚¬"4 bullets].
-STRUCTURE: what weÃ¢â‚¬â„¢re learning; what the student did well + example; what weÃ¢â‚¬â„¢re working on as a skill; next steps (school & home).
+<pre><code>ROLE: Family liaison. Write a 90Ã¢€"130 word parent summary.
+EVIDENCE BULLETS: [3Ã¢€"4 bullets].
+STRUCTURE: what weÃ¢€â„¢re learning; what the student did well + example; what weÃ¢€â„¢re working on as a skill; next steps (school & home).
 TONE: warm, neutral, no labels. Reading level ~6th grade.</code></pre>
 
 <h3>Translation add-on</h3>
@@ -1572,23 +1572,23 @@ Then draft a 4-level rubric (Beginning/Developing/Proficient/Advanced) for [skil
 
 <h3>Progress note prompt</h3>
 <pre><code>Using this CSV of student name, goal, current data, and next step, draft a 2-sentence progress note per student.
-Constraints: 35Ã¢â‚¬"60 words; neutral tone; no labels; include 1 concrete action.</code></pre>
+Constraints: 35Ã¢€"60 words; neutral tone; no labels; include 1 concrete action.</code></pre>
 
 <hr/>
 
 <h2>For your classroom this week</h2>
 <ul class="blog-ul">
   <li class="blog-li">Pick 1 workflow. Time box to 25 minutes using a timer.</li>
-  <li class="blog-li">Save winning prompts in a shared doc titled Ã¢â‚¬Å“Zaza Time SaversÃ¢â‚¬Â.</li>
+  <li class="blog-li">Save winning prompts in a shared doc titled Ã¢€Å“Zaza Time SaversÃ¢€Â.</li>
   <li class="blog-li">Reflect Friday: what to keep, cut, or automate next.</li>
 </ul>
 
-<h2>Extended checklist Ã¢â‚¬" protect quality</h2>
+<h2>Extended checklist Ã¢€" protect quality</h2>
 <ul class="blog-ul">
   <li class="blog-li">Students never see AI raw output.</li>
   <li class="blog-li">Every message to families includes one school action + one at-home idea.</li>
   <li class="blog-li">Rubrics use <em>evidence of learning</em>, not effort or personality.</li>
-  <li class="blog-li">Keep a running Ã¢â‚¬Å“prompt packÃ¢â‚¬Â per unit.</li>
+  <li class="blog-li">Keep a running Ã¢€Å“prompt packÃ¢€Â per unit.</li>
 </ul>
 
 <h2>Resources</h2>
@@ -1621,13 +1621,13 @@ Constraints: 35Ã¢â‚¬"60 words; neutral tone; no labels; include 1 concrete
 <pre><code>ROLLE: Schreibcoach. Formuliere Wachstums-Kommentare in freundlicher, schÃƒÂ¼lernaher Sprache.
 EINGABE: Rubrik-Kriterien [Ideen, Belege, Aufbau, Sprache]; Niveaubeschreibungen; Proben (unten).
 AUFTRAG: FÃƒÂ¼r jeden SchÃƒÂ¼ler 2 StÃƒÂ¤rken + 1 nÃƒÂ¤chster Schritt mit Satzstarter.
-REGELN: 80Ã¢â‚¬"120 WÃƒÂ¶rter; keine Etiketten; Beispiele aus der Probe nutzen.</code></pre>
+REGELN: 80Ã¢€"120 WÃƒÂ¶rter; keine Etiketten; Beispiele aus der Probe nutzen.</code></pre>
 
 <h3>Checkliste</h3>
 <ul class="blog-ul">
   <li class="blog-li">Erst <em>StÃƒÂ¤rke</em>, dann nÃƒÂ¤chster Schritt.</li>
-  <li class="blog-li">Mit Evidenz (Ã¢â‚¬Å“Im 2. Absatz Ã¢â‚¬Â¦Ã¢â‚¬Â).</li>
-  <li class="blog-li">Mit Aktion enden (Ã¢â‚¬Å“Nutze den Satzstarter: Ã¢â‚¬Â¦Ã¢â‚¬Â).</li>
+  <li class="blog-li">Mit Evidenz (Ã¢€Å“Im 2. Absatz Ã¢€Â¦Ã¢€Â).</li>
+  <li class="blog-li">Mit Aktion enden (Ã¢€Å“Nutze den Satzstarter: Ã¢€Â¦Ã¢€Â).</li>
 </ul>
 
 <h3>Mikro-Fall</h3>
@@ -1664,8 +1664,8 @@ Differenzierung:
 <p>Notizen in respektvolle, konkrete Zusammenfassungen mit einer Schul- und einer Zuhause-Aktion verwandeln.</p>
 
 <h3>Starter-Prompt</h3>
-<pre><code>ROLLE: Schul-Eltern-Liaison. Schreibe 90Ã¢â‚¬"130 WÃƒÂ¶rter.
-EVIDENZ: [3Ã¢â‚¬"4 Stichpunkte].
+<pre><code>ROLLE: Schul-Eltern-Liaison. Schreibe 90Ã¢€"130 WÃƒÂ¶rter.
+EVIDENZ: [3Ã¢€"4 Stichpunkte].
 STRUKTUR: Was wir lernen; was gut lief + Beispiel; woran wir arbeiten als Fertigkeit; nÃƒÂ¤chste Schritte (Schule & Zuhause).
 TON: warm, neutral, ohne Etiketten. Lesestufe etwa 6.</code></pre>
 
@@ -1698,14 +1698,14 @@ Erstelle anschlieÃƒÅ¸end eine 4-stufige Rubrik (Anfang/Entwicklung/Ziel/Exze
 
 <h3>Prompt fÃƒÂ¼r Fortschrittsnotizen</h3>
 <pre><code>Aus CSV mit Name, Ziel, aktuellem Stand und nÃƒÂ¤chstem Schritt je 2-Satz-Notiz erzeugen.
-Regeln: 35Ã¢â‚¬"60 WÃƒÂ¶rter; neutral; 1 konkrete Aktion angeben.</code></pre>
+Regeln: 35Ã¢€"60 WÃƒÂ¶rter; neutral; 1 konkrete Aktion angeben.</code></pre>
 
 <hr/>
 
 <h2>FÃƒÂ¼r diese Woche</h2>
 <ul class="blog-ul">
   <li class="blog-li">Einen Workflow wÃƒÂ¤hlen; 25 Minuten Timebox setzen.</li>
-  <li class="blog-li">Gewinner-Prompts im geteilten Doc Ã¢â‚¬Å¾Zaza ZeitsparerÃ¢â‚¬Å“ sammeln.</li>
+  <li class="blog-li">Gewinner-Prompts im geteilten Doc Ã¢€Å¾Zaza ZeitsparerÃ¢€Å“ sammeln.</li>
   <li class="blog-li">Freitag: behalten, kÃƒÂ¼rzen, automatisieren.</li>
 </ul>
 
@@ -1714,7 +1714,7 @@ Regeln: 35Ã¢â‚¬"60 WÃƒÂ¶rter; neutral; 1 konkrete Aktion angeben.</cod
   <li class="blog-li">SchÃƒÂ¼ler sehen nie Roh-KI-Text.</li>
   <li class="blog-li">Familiennachrichten: immer Schulaktion + Zuhause-Idee.</li>
   <li class="blog-li">Rubriken beschreiben <em>Lernbelege</em>, nicht Anstrengung/Person.</li>
-  <li class="blog-li">Pro Einheit ein wachsendes Ã¢â‚¬Å¾Prompt-PaketÃ¢â‚¬Å“ pflegen.</li>
+  <li class="blog-li">Pro Einheit ein wachsendes Ã¢€Å¾Prompt-PaketÃ¢€Å“ pflegen.</li>
 </ul>
 
 <h2>Ressourcen</h2>
@@ -1749,7 +1749,7 @@ Regeln: 35Ã¢â‚¬"60 WÃƒÂ¶rter; neutral; 1 konkrete Aktion angeben.</cod
 <p><strong>Ask:</strong> What outcome do I need in the next 24 hours?</p>
 <ul class="blog-ul">
   <li class="blog-li"><strong>Safety or urgent disruption today?</strong> Ã¢" ' <strong>CALL</strong> now. Then send a 2-line recap email for the record.</li>
-  <li class="blog-li"><strong>Pattern forming</strong> (2Ã¢â‚¬"3 repeats) or tone likely to be misread? Ã¢" ' <strong>CALL</strong> first to align on facts/feelings, then recap by email.</li>
+  <li class="blog-li"><strong>Pattern forming</strong> (2Ã¢€"3 repeats) or tone likely to be misread? Ã¢" ' <strong>CALL</strong> first to align on facts/feelings, then recap by email.</li>
   <li class="blog-li"><strong>Minor first incident</strong> with a clear next step, no urgency? Ã¢" ' <strong>EMAIL</strong> with one fact + one next step + a check-in date.</li>
   <li class="blog-li"><strong>Need a searchable paper trail</strong> (plans, accommodations, previous contacts)? Ã¢" ' <strong>EMAIL</strong> (you can still call), documentation matters.</li>
   <li class="blog-li"><strong>Language/access needs</strong> (parent prefers phone, interpreter needed)? Ã¢" ' <strong>CALL</strong> (use interpreter), then send a brief bilingual recap.</li>
@@ -1777,21 +1777,21 @@ Regeln: 35Ã¢â‚¬"60 WÃƒÂ¶rter; neutral; 1 konkrete Aktion angeben.</cod
 <h3>Two-Minute Prep</h3>
 <ul class="blog-ul">
   <li class="blog-li">One sentence of <em>evidence</em> (period/time + observable behavior + impact).</li>
-  <li class="blog-li">One <em>school step</em> and one <em>home step</em> youÃ¢â‚¬â„¢ll propose.</li>
+  <li class="blog-li">One <em>school step</em> and one <em>home step</em> youÃ¢€â„¢ll propose.</li>
   <li class="blog-li">Open gradebook/notes in case of questions.</li>
 </ul>
 
 <h3>Call Script (teacher voice, calm &amp; specific)</h3>
 <blockquote>
-  <p>Hi [Parent/Guardian], this is [Your Name] from [School]. IÃ¢â‚¬â„¢m calling to partner with you about [Student] in [class]. Today during [period] I observed [specific behavior], which affected [learning/peers/task]. At school I will [one step]. Could we try [one simple action] at home this week? IÃ¢â‚¬â„¢ll check back by [date]. Thank you for working with me.</p>
+  <p>Hi [Parent/Guardian], this is [Your Name] from [School]. IÃ¢€â„¢m calling to partner with you about [Student] in [class]. Today during [period] I observed [specific behavior], which affected [learning/peers/task]. At school I will [one step]. Could we try [one simple action] at home this week? IÃ¢€â„¢ll check back by [date]. Thank you for working with me.</p>
 </blockquote>
 
 <h3>If Emotions Rise</h3>
 <ul class="blog-ul">
-  <li class="blog-li"><strong>Acknowledge:</strong> Ã¢â‚¬Å“I hear your concern.Ã¢â‚¬Â</li>
-  <li class="blog-li"><strong>Return to facts:</strong> Ã¢â‚¬Å“HereÃ¢â‚¬â„¢s what I observed today, exactly Ã¢â‚¬Â¦Ã¢â‚¬Â</li>
-  <li class="blog-li"><strong>Offer choice:</strong> Ã¢â‚¬Å“We can try A or B-what feels workable?Ã¢â‚¬Â</li>
-  <li class="blog-li"><strong>Close:</strong> Ã¢â‚¬Å“IÃ¢â‚¬â„¢ll send a quick summary so weÃ¢â‚¬â„¢re aligned.Ã¢â‚¬Â</li>
+  <li class="blog-li"><strong>Acknowledge:</strong> Ã¢€Å“I hear your concern.Ã¢€Â</li>
+  <li class="blog-li"><strong>Return to facts:</strong> Ã¢€Å“HereÃ¢€â„¢s what I observed today, exactly Ã¢€Â¦Ã¢€Â</li>
+  <li class="blog-li"><strong>Offer choice:</strong> Ã¢€Å“We can try A or B-what feels workable?Ã¢€Â</li>
+  <li class="blog-li"><strong>Close:</strong> Ã¢€Å“IÃ¢€â„¢ll send a quick summary so weÃ¢€â„¢re aligned.Ã¢€Â</li>
 </ul>
 <p><strong>Immediately after:</strong> send a 2-line recap email and log the contact.</p>
 
@@ -1799,28 +1799,28 @@ Regeln: 35Ã¢â‚¬"60 WÃƒÂ¶rter; neutral; 1 konkrete Aktion angeben.</cod
 
 <h2>Write-It-Once Email Templates</h2>
 <h3>Minor first incident (document + de-escalate)</h3>
-<pre><code>Subject: Quick update about [Student] Ã¢â‚¬" [Class/Date]
+<pre><code>Subject: Quick update about [Student] Ã¢€" [Class/Date]
 Hi [Parent],
 Today during [period] I observed [1 clear fact]. In class we will [1 school step].
-Could you try [1 simple home step] this week? IÃ¢â‚¬â„¢ll check back on [date].
+Could you try [1 simple home step] this week? IÃ¢€â„¢ll check back on [date].
 Thanks for partnering with me, 
 [Your Name]</code></pre>
 
 <h3>Pattern forming (invite partnership)</h3>
 <pre><code>Subject: Partnering on a plan for [Student]
 Hi [Parent],
-IÃ¢â‚¬â„¢ve noticed this pattern over [timeframe]: [2Ã¢â‚¬"3 specific observations]. My goal is to support [Student] to [desired skill].
-At school weÃ¢â‚¬â„¢ll try [school step]. Would [home step] be possible at home?
-Happy to talk by phone if you prefer. IÃ¢â‚¬â„¢ll follow up on [date].
+IÃ¢€â„¢ve noticed this pattern over [timeframe]: [2Ã¢€"3 specific observations]. My goal is to support [Student] to [desired skill].
+At school weÃ¢€â„¢ll try [school step]. Would [home step] be possible at home?
+Happy to talk by phone if you prefer. IÃ¢€â„¢ll follow up on [date].
 Warmly, [Your Name]</code></pre>
 
 <h3>Post-call recap (memorialize)</h3>
-<pre><code>Subject: Thanks for speaking today Ã¢â‚¬" recap for our records
+<pre><code>Subject: Thanks for speaking today Ã¢€" recap for our records
 Hi [Parent], thanks for the call. Recap:
-Ã¢â‚¬Â¢ Today we saw: [fact].
-Ã¢â‚¬Â¢ School will: [action].
-Ã¢â‚¬Â¢ Home will: [action].
-IÃ¢â‚¬â„¢ll check back by [date]. Appreciate your partnership.
+Ã¢€Â¢ Today we saw: [fact].
+Ã¢€Â¢ School will: [action].
+Ã¢€Â¢ Home will: [action].
+IÃ¢€â„¢ll check back by [date]. Appreciate your partnership.
 [Your Name]</code></pre>
 
 <hr/>
@@ -1828,14 +1828,14 @@ IÃ¢â‚¬â„¢ll check back by [date]. Appreciate your partnership.
 <h2>Interpreter & Accessibility Notes</h2>
 <ul class="blog-ul">
   <li class="blog-li">Use a <em>trained interpreter</em> when needed; avoid student peers translating.</li>
-  <li class="blog-li">Ask for the familyÃ¢â‚¬â„¢s preferred language and channel.</li>
+  <li class="blog-li">Ask for the familyÃ¢€â„¢s preferred language and channel.</li>
   <li class="blog-li">Send bilingual recaps when possible; keep sentences short and concrete.</li>
 </ul>
 
 <h2>Boundaries & Equity</h2>
 <ul class="blog-ul">
-  <li class="blog-li">Describe skills and situations, not labels (Ã¢â‚¬Å“still developing turn-takingÃ¢â‚¬Â vs. Ã¢â‚¬Å“disruptiveÃ¢â‚¬Â).</li>
-  <li class="blog-li">Avoid Ã¢â‚¬Å“always/neverÃ¢â‚¬Â; anchor to recent, observable examples.</li>
+  <li class="blog-li">Describe skills and situations, not labels (Ã¢€Å“still developing turn-takingÃ¢€Â vs. Ã¢€Å“disruptiveÃ¢€Â).</li>
+  <li class="blog-li">Avoid Ã¢€Å“always/neverÃ¢€Â; anchor to recent, observable examples.</li>
   <li class="blog-li">Offer a way to act today (one school step + one home step).</li>
 </ul>
 
@@ -1872,7 +1872,7 @@ IÃ¢â‚¬â„¢ll check back by [date]. Appreciate your partnership.
 <p><strong>Frage:</strong> Welches Ergebnis brauche ich in den nÃƒÂ¤chsten 24 Stunden?</p>
 <ul class="blog-ul">
   <li class="blog-li"><strong>Sicherheit oder akute StÃƒÂ¶rung heute?</strong> Ã¢" ' <strong>ANRUF</strong> jetzt. Danach 2-Zeilen-Zusammenfassung per E-Mail fÃƒÂ¼r die Akte.</li>
-  <li class="blog-li"><strong>Sich bildendes Muster</strong> (2Ã¢â‚¬"3 Wiederholungen) oder Ton leicht missverstÃƒÂ¤ndlich? Ã¢" ' Zuerst <strong>ANRUF</strong> zur Abstimmung, danach kurze E-Mail.</li>
+  <li class="blog-li"><strong>Sich bildendes Muster</strong> (2Ã¢€"3 Wiederholungen) oder Ton leicht missverstÃƒÂ¤ndlich? Ã¢" ' Zuerst <strong>ANRUF</strong> zur Abstimmung, danach kurze E-Mail.</li>
   <li class="blog-li"><strong>Kleiner Erstvorfall</strong> mit klarem nÃƒÂ¤chsten Schritt, keine Dringlichkeit? Ã¢" ' <strong>E-MAIL</strong> mit einer Tatsache + einem Schritt + Kontrolltermin.</li>
   <li class="blog-li"><strong>Durchsuchbare Dokumentation nÃƒÂ¶tig</strong> (PlÃƒÂ¤ne, Nachteilsausgleiche, frÃƒÂ¼here Kontakte)? Ã¢" ' <strong>E-MAIL</strong> (Anruf optional), Dokumentation zÃƒÂ¤hlt.</li>
   <li class="blog-li"><strong>Sprache/Zugang</strong> (Telefon bevorzugt, Dolmetschung nÃƒÂ¶tig)? Ã¢" ' <strong>ANRUF</strong> mit Dolmetscher, danach kurze zweisprachige Zusammenfassung.</li>
@@ -1911,10 +1911,10 @@ IÃ¢â‚¬â„¢ll check back by [date]. Appreciate your partnership.
 
 <h3>Wenn Emotionen steigen</h3>
 <ul class="blog-ul">
-  <li class="blog-li"><strong>Anerkennen:</strong> Ã¢â‚¬Å¾Ich verstehe Ihre Sorge.Ã¢â‚¬Å“</li>
-  <li class="blog-li"><strong>Zu Fakten zurÃƒÂ¼ckkehren:</strong> Ã¢â‚¬Å¾Heute habe ich genau Folgendes gesehen Ã¢â‚¬Â¦Ã¢â‚¬Å“</li>
-  <li class="blog-li"><strong>Wahl anbieten:</strong> Ã¢â‚¬Å¾Wir kÃƒÂ¶nnen A oder B versuchen-was passt besser?Ã¢â‚¬Å“</li>
-  <li class="blog-li"><strong>Abschluss:</strong> Ã¢â‚¬Å¾Ich sende eine kurze Zusammenfassung zur gemeinsamen Grundlage.Ã¢â‚¬Å“</li>
+  <li class="blog-li"><strong>Anerkennen:</strong> Ã¢€Å¾Ich verstehe Ihre Sorge.Ã¢€Å“</li>
+  <li class="blog-li"><strong>Zu Fakten zurÃƒÂ¼ckkehren:</strong> Ã¢€Å¾Heute habe ich genau Folgendes gesehen Ã¢€Â¦Ã¢€Å“</li>
+  <li class="blog-li"><strong>Wahl anbieten:</strong> Ã¢€Å¾Wir kÃƒÂ¶nnen A oder B versuchen-was passt besser?Ã¢€Å“</li>
+  <li class="blog-li"><strong>Abschluss:</strong> Ã¢€Å¾Ich sende eine kurze Zusammenfassung zur gemeinsamen Grundlage.Ã¢€Å“</li>
 </ul>
 <p><strong>Direkt danach:</strong> 2-Zeilen-Recap senden und Kontakt protokollieren.</p>
 
@@ -1922,7 +1922,7 @@ IÃ¢â‚¬â„¢ll check back by [date]. Appreciate your partnership.
 
 <h2>E-Mail-Vorlagen</h2>
 <h3>Kleiner Erstvorfall</h3>
-<pre><code>Betreff: Kurzes Update zu [SchÃƒÂ¼ler] Ã¢â‚¬" [Fach/Datum]
+<pre><code>Betreff: Kurzes Update zu [SchÃƒÂ¼ler] Ã¢€" [Fach/Datum]
 Guten Tag [Eltern],
 heute in [Stunde] beobachtete ich [1 klare Tatsache]. In der Schule setzen wir [1 Schritt] um.
 WÃƒÂ¤re [1 einfache MaÃƒÅ¸nahme] zu Hause diese Woche mÃƒÂ¶glich? RÃƒÂ¼ckmeldung am [Datum].
@@ -1932,17 +1932,17 @@ Danke fÃƒÂ¼r Ihre Zusammenarbeit,
 <h3>Sich bildendes Muster</h3>
 <pre><code>Betreff: Gemeinsam einen Plan fÃƒÂ¼r [SchÃƒÂ¼ler]
 Guten Tag [Eltern],
-ÃƒÂ¼ber [Zeitraum] sehe ich dieses Muster: [2Ã¢â‚¬"3 konkrete Beobachtungen]. Ziel ist, [SchÃƒÂ¼ler] bei [Fertigkeit] zu unterstÃƒÂ¼tzen.
+ÃƒÂ¼ber [Zeitraum] sehe ich dieses Muster: [2Ã¢€"3 konkrete Beobachtungen]. Ziel ist, [SchÃƒÂ¼ler] bei [Fertigkeit] zu unterstÃƒÂ¼tzen.
 In der Schule: [Schritt]. WÃƒÂ¤re zu Hause [Schritt] machbar?
 Gerne Telefon, wenn Sie mÃƒÂ¶chten. RÃƒÂ¼ckmeldung am [Datum].
 Freundliche GrÃƒÂ¼ÃƒÅ¸e, [Ihr Name]</code></pre>
 
 <h3>Nach dem Telefonat (Dokumentation)</h3>
-<pre><code>Betreff: Danke fÃƒÂ¼r das GesprÃƒÂ¤ch Ã¢â‚¬" kurze Zusammenfassung
+<pre><code>Betreff: Danke fÃƒÂ¼r das GesprÃƒÂ¤ch Ã¢€" kurze Zusammenfassung
 Guten Tag [Eltern], danke fÃƒÂ¼r den Anruf. Zusammenfassung:
-Ã¢â‚¬Â¢ Heute: [Fakt].
-Ã¢â‚¬Â¢ Schule: [MaÃƒÅ¸nahme].
-Ã¢â‚¬Â¢ Zuhause: [MaÃƒÅ¸nahme].
+Ã¢€Â¢ Heute: [Fakt].
+Ã¢€Â¢ Schule: [MaÃƒÅ¸nahme].
+Ã¢€Â¢ Zuhause: [MaÃƒÅ¸nahme].
 Ich melde mich bis [Datum]. Vielen Dank.
 [Ihr Name]</code></pre>
 
@@ -1957,8 +1957,8 @@ Ich melde mich bis [Datum]. Vielen Dank.
 
 <h2>Grenzen & Fairness</h2>
 <ul class="blog-ul">
-  <li class="blog-li">Fertigkeiten und Situationen statt Etiketten beschreiben (Ã¢â‚¬Å¾entwickelt noch Ã¢â‚¬Â¦Ã¢â‚¬Å“ statt Ã¢â‚¬Å¾stÃƒÂ¶rendÃ¢â‚¬Å“).</li>
-  <li class="blog-li">Nie Ã¢â‚¬Å¾immer/nieÃ¢â‚¬Å“-lieber aktuelle, beobachtbare Beispiele.</li>
+  <li class="blog-li">Fertigkeiten und Situationen statt Etiketten beschreiben (Ã¢€Å¾entwickelt noch Ã¢€Â¦Ã¢€Å“ statt Ã¢€Å¾stÃƒÂ¶rendÃ¢€Å“).</li>
+  <li class="blog-li">Nie Ã¢€Å¾immer/nieÃ¢€Å“-lieber aktuelle, beobachtbare Beispiele.</li>
   <li class="blog-li">Heute handelbar machen: ein Schul- und ein Zuhause-Schritt.</li>
 </ul>
 
@@ -2043,7 +2043,7 @@ Ich melde mich bis [Datum]. Vielen Dank.
     </ul>
     <p>Her reflection: "AI gave me the structure I needed so I could focus on creativity. It's like having a planning assistant."</p>
 
-    <h2>Bonus template pack Ã¢â‚¬" lesson planning prompts</h2>
+    <h2>Bonus template pack Ã¢€" lesson planning prompts</h2>
     <!-- CALLOUT:TEMPLATE -->
     <ul>
       <li>"Create a 50-minute lesson on [topic] for [grade level] with objectives, activities, and assessments."</li>
@@ -2063,7 +2063,7 @@ Ich melde mich bis [Datum]. Vielen Dank.
       <li>Pair AI structure with your own creative activities.</li>
     </ul>
 
-    <h2>Extended checklist Ã¢â‚¬" AI lesson planning workflow</h2>
+    <h2>Extended checklist Ã¢€" AI lesson planning workflow</h2>
     <ul>
       <li>Ã¢Å“" Choose one subject and week to trial AI lesson planning.</li>
       <li>Ã¢Å“" Generate 3 draft lessons with objectives and timing.</li>
@@ -2147,7 +2147,7 @@ Ich melde mich bis [Datum]. Vielen Dank.
 
     <h2>The challenges of giving writing feedback</h2>
     <ul>
-      <li><strong>Time intensity:</strong> Each piece of writing can take 10Ã¢â‚¬"20 minutes to review thoroughly.</li>
+      <li><strong>Time intensity:</strong> Each piece of writing can take 10Ã¢€"20 minutes to review thoroughly.</li>
       <li><strong>Repetition:</strong> Common mistakes (grammar, structure, clarity) appear across many students.</li>
       <li><strong>Consistency:</strong> Maintaining fairness and tone across all students is challenging.</li>
       <li><strong>Student engagement:</strong> Many students skim comments instead of reflecting deeply on feedback.</li>
@@ -2176,7 +2176,7 @@ Ich melde mich bis [Datum]. Vielen Dank.
     </ul>
     <p>Her reflection: "Students said the comments felt clearer and more actionable. For the first time, I saw them actually using the feedback to improve."</p>
 
-    <h2>Bonus template pack Ã¢â‚¬" writing feedback prompts</h2>
+    <h2>Bonus template pack Ã¢€" writing feedback prompts</h2>
     <!-- CALLOUT:TEMPLATE -->
     <ul>
       <li>"Provide one strength, one area for improvement, and one next step for this student's writing."</li>
@@ -2197,7 +2197,7 @@ Ich melde mich bis [Datum]. Vielen Dank.
     </ul>
     <!-- /CALLOUT:CLASSROOM -->
 
-    <h2>Extended checklist Ã¢â‚¬" AI for writing feedback</h2>
+    <h2>Extended checklist Ã¢€" AI for writing feedback</h2>
     <ul>
       <li>Ã¢Å“" Start with one writing assignment to test AI tools.</li>
       <li>Ã¢Å“" Generate feedback in student-friendly language.</li>
@@ -2224,7 +2224,7 @@ Ich melde mich bis [Datum]. Vielen Dank.
 
     <h2>Herausforderungen beim Feedback</h2>
     <ul>
-      <li><strong>Zeitaufwand:</strong> 10Ã¢â‚¬"20 Minuten pro Text.</li>
+      <li><strong>Zeitaufwand:</strong> 10Ã¢€"20 Minuten pro Text.</li>
       <li><strong>Wiederholung:</strong> HÃƒÂ¤ufig dieselben Fehler (Grammatik, Struktur, Klarheit).</li>
       <li><strong>Konsistenz:</strong> Einheitlicher Ton fÃƒÂ¼r alle SchÃƒÂ¼ler ist schwer.</li>
       <li><strong>Engagement:</strong> Viele SchÃƒÂ¼ler ÃƒÂ¼berfliegen Kommentare statt sie zu nutzen.</li>
@@ -2241,7 +2241,7 @@ Ich melde mich bis [Datum]. Vielen Dank.
 
     <!-- CALLOUT:QUICK_WIN -->
     <h3>Schneller Gewinn</h3>
-    <p>SchÃƒÂ¼lertext in KI einfÃƒÂ¼gen und prompten: Ã¢â‚¬Å¾Gib ein Lob, eine Verbesserung und einen nÃƒÂ¤chsten Schritt in schÃƒÂ¼lerfreundlicher Sprache." Ergebnis in Sekunden.</p>
+    <p>SchÃƒÂ¼lertext in KI einfÃƒÂ¼gen und prompten: Ã¢€Å¾Gib ein Lob, eine Verbesserung und einen nÃƒÂ¤chsten Schritt in schÃƒÂ¼lerfreundlicher Sprache." Ergebnis in Sekunden.</p>
     <!-- /CALLOUT:QUICK_WIN -->
 
     <h2>Mikro-Fallstudie</h2>
@@ -2251,16 +2251,16 @@ Ich melde mich bis [Datum]. Vielen Dank.
       <li><strong>LÃƒÂ¶sung:</strong> KI-Tool genutzt, das Texte analysiert und Kommentare vorschlÃƒÂ¤gt.</li>
       <li><strong>Ergebnis:</strong> 50 % weniger Zeit, klareres Feedback, bessere Nutzung durch SchÃƒÂ¼ler.</li>
     </ul>
-    <p>Ihr Fazit: Ã¢â‚¬Å¾Erstmals habe ich gesehen, dass SchÃƒÂ¼ler Feedback wirklich nutzen, um sich zu verbessern."</p>
+    <p>Ihr Fazit: Ã¢€Å¾Erstmals habe ich gesehen, dass SchÃƒÂ¼ler Feedback wirklich nutzen, um sich zu verbessern."</p>
 
-    <h2>Bonus Vorlagenpaket Ã¢â‚¬" Feedback-Prompts</h2>
+    <h2>Bonus Vorlagenpaket Ã¢€" Feedback-Prompts</h2>
     <!-- CALLOUT:TEMPLATE -->
     <ul>
-      <li>Ã¢â‚¬Å¾Formuliere Lob, Verbesserung und nÃƒÂ¤chsten Schritt fÃƒÂ¼r diesen Text."</li>
-      <li>Ã¢â‚¬Å¾Schreibe Feedback in schÃƒÂ¼lerfreundlicher Sprache."</li>
-      <li>Ã¢â‚¬Å¾Gib 3 positive Varianten fÃƒÂ¼r diese Kritik."</li>
-      <li>Ã¢â‚¬Å¾Schlage Verbesserungen fÃƒÂ¼r Struktur und Klarheit vor."</li>
-      <li>Ã¢â‚¬Å¾Fasse die grÃƒÂ¶ÃƒÅ¸te StÃƒÂ¤rke in einem Satz ermutigend zusammen."</li>
+      <li>Ã¢€Å¾Formuliere Lob, Verbesserung und nÃƒÂ¤chsten Schritt fÃƒÂ¼r diesen Text."</li>
+      <li>Ã¢€Å¾Schreibe Feedback in schÃƒÂ¼lerfreundlicher Sprache."</li>
+      <li>Ã¢€Å¾Gib 3 positive Varianten fÃƒÂ¼r diese Kritik."</li>
+      <li>Ã¢€Å¾Schlage Verbesserungen fÃƒÂ¼r Struktur und Klarheit vor."</li>
+      <li>Ã¢€Å¾Fasse die grÃƒÂ¶ÃƒÅ¸te StÃƒÂ¤rke in einem Satz ermutigend zusammen."</li>
     </ul>
     <!-- /CALLOUT:TEMPLATE -->
 
@@ -2274,7 +2274,7 @@ Ich melde mich bis [Datum]. Vielen Dank.
     </ul>
     <!-- /CALLOUT:CLASSROOM -->
 
-    <h2>Checkliste Ã¢â‚¬" KI fÃƒÂ¼r Schreibfeedback</h2>
+    <h2>Checkliste Ã¢€" KI fÃƒÂ¼r Schreibfeedback</h2>
     <ul>
       <li>Ã¢Å“" Mit einer Aufgabe starten.</li>
       <li>Ã¢Å“" Feedback in schÃƒÂ¼lerfreundlicher Sprache generieren.</li>
@@ -2347,7 +2347,7 @@ Ich melde mich bis [Datum]. Vielen Dank.
     </ul>
     <p>His reflection: "AI gave me the structure I needed so I could focus on creativity. It's like having a planning assistant that never gets tired."</p>
 
-    <h2>Bonus template pack Ã¢â‚¬" time-saving lesson prompts</h2>
+    <h2>Bonus template pack Ã¢€" time-saving lesson prompts</h2>
     <!-- CALLOUT:TEMPLATE -->
     <ul>
       <li>"Create a 45-minute science lesson on ecosystems with objectives, activities, and assessments."</li>
@@ -2368,7 +2368,7 @@ Ich melde mich bis [Datum]. Vielen Dank.
     </ul>
     <!-- /CALLOUT:CLASSROOM -->
 
-    <h2>Extended checklist Ã¢â‚¬" AI for faster lesson planning</h2>
+    <h2>Extended checklist Ã¢€" AI for faster lesson planning</h2>
     <ul>
       <li>Ã¢Å“" Choose one subject and week to trial AI lesson planning.</li>
       <li>Ã¢Å“" Generate 3 draft lessons with objectives and timing.</li>
@@ -2387,10 +2387,10 @@ Ich melde mich bis [Datum]. Vielen Dank.
   `,
     contentDe: String.raw`
     <h2>Wie kann ich mit KI Zeit bei der Unterrichtsplanung sparen?</h2>
-    <p>Unterrichtsplanung ist lohnend Ã¢â‚¬" aber zeitintensiv. LehrkrÃƒÂ¤fte wollen spannende, standardgerechte und differenzierte Stunden. Doch Ressourcen zu sichten, Ziele zu formulieren, AktivitÃƒÂ¤ten zu entwerfen und PrÃƒÂ¼fungen vorzubereiten, kostet Stunden. KI-Tools verringern diese Last erheblich, ohne die QualitÃƒÂ¤t zu beeintrÃƒÂ¤chtigen.</p>
+    <p>Unterrichtsplanung ist lohnend Ã¢€" aber zeitintensiv. LehrkrÃƒÂ¤fte wollen spannende, standardgerechte und differenzierte Stunden. Doch Ressourcen zu sichten, Ziele zu formulieren, AktivitÃƒÂ¤ten zu entwerfen und PrÃƒÂ¼fungen vorzubereiten, kostet Stunden. KI-Tools verringern diese Last erheblich, ohne die QualitÃƒÂ¤t zu beeintrÃƒÂ¤chtigen.</p>
 
     <!-- PULL_QUOTE -->
-    <p><strong>Kernaussage:</strong> KI ersetzt nicht die KreativitÃƒÂ¤t Ã¢â‚¬" sie liefert das GerÃƒÂ¼st fÃƒÂ¼r schnelle, hochwertige Planung.</p>
+    <p><strong>Kernaussage:</strong> KI ersetzt nicht die KreativitÃƒÂ¤t Ã¢€" sie liefert das GerÃƒÂ¼st fÃƒÂ¼r schnelle, hochwertige Planung.</p>
     <!-- /PULL_QUOTE -->
 
     <h2>Warum Planung so viel Zeit kostet</h2>
@@ -2413,7 +2413,7 @@ Ich melde mich bis [Datum]. Vielen Dank.
 
     <!-- CALLOUT:QUICK_WIN -->
     <h3>Schneller Gewinn</h3>
-    <p>Prompt: Ã¢â‚¬Å¾Erstelle eine 50-minÃƒÂ¼tige Stunde zu BrÃƒÂ¼chen (6. Klasse). Ziele, Warm-up, Partnerarbeit, GruppenÃƒÂ¼bung, Exit Ticket." Entwurf in Sekunden.</p>
+    <p>Prompt: Ã¢€Å¾Erstelle eine 50-minÃƒÂ¼tige Stunde zu BrÃƒÂ¼chen (6. Klasse). Ziele, Warm-up, Partnerarbeit, GruppenÃƒÂ¼bung, Exit Ticket." Entwurf in Sekunden.</p>
     <!-- /CALLOUT:QUICK_WIN -->
 
     <h2>Mikro-Fallstudie</h2>
@@ -2423,16 +2423,16 @@ Ich melde mich bis [Datum]. Vielen Dank.
       <li><strong>LÃƒÂ¶sung:</strong> KI fÃƒÂ¼r EntwÃƒÂ¼rfe und Differenzierung genutzt.</li>
       <li><strong>Ergebnis:</strong> 7 Stunden wÃƒÂ¶chentlich gespart. Mehr Zeit fÃƒÂ¼r Zusatzangebote, weniger Stress.</li>
     </ul>
-    <p>Sein Fazit: Ã¢â‚¬Å¾KI ist wie ein Planungsassistent, der nie mÃƒÂ¼de wird."</p>
+    <p>Sein Fazit: Ã¢€Å¾KI ist wie ein Planungsassistent, der nie mÃƒÂ¼de wird."</p>
 
-    <h2>Bonus Vorlagenpaket Ã¢â‚¬" Planungszeit sparen</h2>
+    <h2>Bonus Vorlagenpaket Ã¢€" Planungszeit sparen</h2>
     <!-- CALLOUT:TEMPLATE -->
     <ul>
-      <li>Ã¢â‚¬Å¾Erstelle eine 45-minÃƒÂ¼tige Naturkundestunde zu Ãƒ"“kosystemen."</li>
-      <li>Ã¢â‚¬Å¾Differenziere diese Stunde fÃƒÂ¼r stark, mittel, schwach."</li>
-      <li>Ã¢â‚¬Å¾Schlage 3 GruppenaktivitÃƒÂ¤ten zu [Thema] vor."</li>
-      <li>Ã¢â‚¬Å¾Formuliere 5 Exit-Ticket-Fragen."</li>
-      <li>Ã¢â‚¬Å¾Wandle diesen Wochenplan in eine Unit-ÃƒÅ“bersicht um."</li>
+      <li>Ã¢€Å¾Erstelle eine 45-minÃƒÂ¼tige Naturkundestunde zu Ãƒ"“kosystemen."</li>
+      <li>Ã¢€Å¾Differenziere diese Stunde fÃƒÂ¼r stark, mittel, schwach."</li>
+      <li>Ã¢€Å¾Schlage 3 GruppenaktivitÃƒÂ¤ten zu [Thema] vor."</li>
+      <li>Ã¢€Å¾Formuliere 5 Exit-Ticket-Fragen."</li>
+      <li>Ã¢€Å¾Wandle diesen Wochenplan in eine Unit-ÃƒÅ“bersicht um."</li>
     </ul>
     <!-- /CALLOUT:TEMPLATE -->
 
@@ -2446,7 +2446,7 @@ Ich melde mich bis [Datum]. Vielen Dank.
     </ul>
     <!-- /CALLOUT:CLASSROOM -->
 
-    <h2>Checkliste Ã¢â‚¬" KI fÃƒÂ¼r schnelle Planung</h2>
+    <h2>Checkliste Ã¢€" KI fÃƒÂ¼r schnelle Planung</h2>
     <ul>
       <li>Ã¢Å“" Fach/Woche fÃƒÂ¼r Pilot wÃƒÂ¤hlen.</li>
       <li>Ã¢Å“" 3 EntwÃƒÂ¼rfe mit Zielen generieren.</li>
@@ -2456,7 +2456,7 @@ Ich melde mich bis [Datum]. Vielen Dank.
     </ul>
 
     <!-- CALLOUT:TIME_SAVER -->
-    <p>Tipp: 5 Stunden wÃƒÂ¶chentlich sparen = 200+ Stunden pro Jahr Ã¢â‚¬" fÃƒÂ¼nf Zusatzwochen fÃƒÂ¼r LehrkrÃƒÂ¤fte.</p>
+    <p>Tipp: 5 Stunden wÃƒÂ¶chentlich sparen = 200+ Stunden pro Jahr Ã¢€" fÃƒÂ¼nf Zusatzwochen fÃƒÂ¼r LehrkrÃƒÂ¤fte.</p>
     <!-- /CALLOUT:TIME_SAVER -->
 
     <!-- PULL_QUOTE -->

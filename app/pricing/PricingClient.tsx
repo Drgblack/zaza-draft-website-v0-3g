@@ -10,9 +10,9 @@ import { motion, AnimatePresence } from "framer-motion";
 type Currency = "EUR" | "USD" | "GBP";
 
 const currencySymbols = {
-  EUR: "â‚¬",
+  EUR: "€",
   USD: "$",
-  GBP: "Â£",
+  GBP: "£",
 };
 
 const prices = {
@@ -581,4 +581,3 @@ export default function PricingClient() {
     </>
   );
 }
-

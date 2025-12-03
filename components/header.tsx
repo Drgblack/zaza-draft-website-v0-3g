@@ -63,7 +63,7 @@ export function Header() {
     },
     {
       name: L(
-        "Bestes KI-Tool fÃ¼r Eltern-E-Mails",
+        "Bestes KI-Tool für Eltern-E-Mails",
         "Best AI Tool for Parent Emails",
       ),
       href: "/best-ai-tool-parent-emails",
@@ -77,13 +77,13 @@ export function Header() {
     },
     {
       name: L(
-        "Beste KI-Schreibtools fÃ¼r LehrkrÃ¤fte 2025",
+        "Beste KI-Schreibtools für Lehrkräfte 2025",
         "Best AI Writing Tools for Teachers 2025",
       ),
       href: "/best-ai-writing-tools-for-teachers-2025",
     },
     {
-      name: L("KI fÃ¼r Zeugnis-/SchÃ¼lerberichte", "AI for Student Reports"),
+      name: L("KI für Zeugnis-/Schülerberichte", "AI for Student Reports"),
       href: "/ai-for-student-reports",
     },
   ];

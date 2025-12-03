@@ -177,7 +177,7 @@ export default function ShieldClient() {
               rel="noopener noreferrer"
               className="text-purple-400 hover:text-purple-300 font-semibold inline-flex items-center gap-2 transition-colors"
             >
-              {t("shield.solution.cta")} Ã¢â€ â€™
+              {t("shield.solution.cta")} Ã¢â€ ’
             </a>
           </div>
         </div>
@@ -256,14 +256,24 @@ export default function ShieldClient() {
             <h2 className="text-3xl font-bold text-white lg:text-4xl mb-4">{t("shield.socialProof.title")}</h2>
           </div>
 
-          <Card className="bg-[#1E293B] border-white/10 p-12 max-w-3xl mx-auto">
-            <blockquote className="text-center">
-              <p className="text-xl text-gray-300 leading-relaxed mb-6 italic">"{t("shield.socialProof.quote")}"</p>
-              <footer className="text-gray-400">
-                <p className="font-semibold text-white">{t("shield.socialProof.attribution")}</p>
-                <p className="text-sm">{t("shield.socialProof.role")}</p>
-              </footer>
-            </blockquote>
+          <Card className="bg-[#1E293B] border-white/10 p-12 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-[1fr_auto] gap-8 md:items-center">
+              <blockquote className="text-left">
+                <p className="text-xl text-gray-300 leading-relaxed mb-6 italic">"{t("shield.socialProof.quote")}"</p>
+                <footer className="text-gray-400">
+                  <p className="font-semibold text-white">{t("shield.socialProof.attribution")}</p>
+                  <p className="text-sm">{t("shield.socialProof.role")}</p>
+                </footer>
+              </blockquote>
+              <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border border-[#1F2937] bg-[#0B1220] mx-auto md:mx-0">
+                <Image
+                  src="/testimonials/teacher-using-laptop-tutorial.jpg"
+                  alt="Dr. Jennifer Martinez using laptop in classroom"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
           </Card>
         </div>
       </section>

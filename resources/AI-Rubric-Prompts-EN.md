@@ -349,8 +349,8 @@ Format:
 
 Example:
 "Does the thesis take a clear, arguable stance?" 
-â†’ Yes â†’ Move to next question
-â†’ No â†’ Check "Developing" and note feedback
+→ Yes → Move to next question
+→ No → Check "Developing" and note feedback
 ```
 
 ---

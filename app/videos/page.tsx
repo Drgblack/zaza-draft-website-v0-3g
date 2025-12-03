@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
   };
   const descriptions = {
     en: "Watch step-by-step tutorials and product demos to master AI-powered parent communication.",
-    de: "Sehen Sie Schritt-fÃ¼r-Schritt-Tutorials und Produktdemos fÃ¼r KI-gestÃ¼tzte Elternkommunikation.",
+    de: "Sehen Sie Schritt-für-Schritt-Tutorials und Produktdemos für KI-gestützte Elternkommunikation.",
   };
 
   return {
