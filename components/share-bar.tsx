@@ -40,8 +40,8 @@ export function ShareBar({ title, lang, currentUrl }: ShareBarProps) {
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeUrl(buildSharedUrl("facebook"))}`,
     linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeUrl(buildSharedUrl("linkedin"))}`,
     whatsapp: `https://wa.me/?text=${encodeText(title)}%20${encodeUrl(buildSharedUrl("whatsapp"))}`,
-    email: `mailto:?subject=${encodeText(title)}&body=${encodeText(title)}%0A%0A${encodeUrl(buildSharedUrl("email"))}`,
   }
+  const emailHref = `mailto:?subject=${encodeText(title)}&body=${encodeUrl(baseUrl)}`
 
   // Copy link to clipboard
   const copyLink = async () => {
@@ -181,14 +181,16 @@ export function ShareBar({ title, lang, currentUrl }: ShareBarProps) {
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
+                asChild
                 variant="secondary"
                 size="default"
                 className="gap-2.5 min-w-[100px]"
-                onClick={() => (window.location.href = shareUrls.email)}
                 aria-label={labels.shareByEmail}
               >
-                <Mail className="h-5 w-5" />
-                <span className="text-sm font-medium">Email</span>
+                <a href={emailHref}>
+                  <Mail className="h-5 w-5" />
+                  <span className="text-sm font-medium">Email</span>
+                </a>
               </Button>
             </TooltipTrigger>
             <TooltipContent>

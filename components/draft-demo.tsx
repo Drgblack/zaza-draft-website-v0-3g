@@ -255,11 +255,11 @@ export function DraftDemo({ language, onTryItYourself }: DraftDemoProps) {
               type="button"
               onClick={() => setScenario(id)}
               aria-pressed={scenario === id}
-              className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors duration-150 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8B5CF6] ${
+              className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors transition-transform transition-shadow duration-150 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8B5CF6] transform-gpu ${
                 scenario === id
-                  ? "bg-[#8B5CF6] text-white shadow-lg shadow-[#8B5CF6]/30"
-                  : "bg-[#020617] text-[#9CA3AF] border border-[#1F2937] hover:bg-[#111827]"
-              }`}
+                  ? "bg-[#8B5CF6] text-white shadow-lg shadow-[#8B5CF6]/30 scale-[1.02]"
+                  : "bg-[#020617] text-[#9CA3AF] border border-[#1F2937] hover:bg-[#111827] hover:scale-[1.02] hover:shadow-lg hover:shadow-[#0EA5E9]/5"
+              } active:scale-[0.98]`}
             >
               {language === "de" ? DEMOS[id].label.de : DEMOS[id].label.en}
             </button>
@@ -336,14 +336,14 @@ export function DraftDemo({ language, onTryItYourself }: DraftDemoProps) {
             <div className="flex flex-col sm:flex-row gap-3 mt-6">
               <Button
                 onClick={handleRewrite}
-                className="bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white"
+                className="bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white transition-transform transition-shadow duration-150 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#8B5CF6]/30"
               >
                 {rewriteLabel}
               </Button>
               <Button
                 variant="outline"
                 onClick={handleTry}
-                className="border-[#8B5CF6] text-[#E2E8F0] hover:bg-[#1F1720]"
+                className="border-[#8B5CF6] bg-[#0F172A] text-[#E5E7EB] hover:bg-[#1F2937] hover:text-white transition-transform transition-shadow duration-150 hover:scale-[1.02] hover:shadow-md hover:shadow-[#8B5CF6]/30 active:scale-[0.98]"
               >
                 {tryLabel}
               </Button>

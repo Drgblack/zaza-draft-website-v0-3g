@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Download, Sparkles } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/language-context";
 import rawIndex from "../../data/resources/resources.index.json";
+import { LeadMagnet } from "@/components/conversion/lead-magnet";
 
 type FileEntry = { docx?: string; pdf?: string; md?: string };
 type Resource = {
@@ -74,6 +75,14 @@ export default function ResourcesPage() {
         <div className="mx-auto max-w-2xl text-center mb-16">
           <h1 className="text-4xl font-bold text-white sm:text-5xl mb-4">{t("resources.title")}</h1>
           <p className="text-gray-300 text-xl">{t("resources.subtitle")}</p>
+        </div>
+
+        <div className="max-w-3xl mx-auto mb-14">
+          <LeadMagnet
+            title={t("resources.leadMagnet.title")}
+            description={t("resources.leadMagnet.description")}
+            resourceName="Parent Email Starter Pack"
+          />
         </div>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

@@ -6,8 +6,8 @@ import { useState } from "react"
 import { X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/lib/i18n/language-context"
-import { subscribeToNewsletter } from "@/app/actions/signup"
 import { track } from "@/lib/analytics"
+import { submitBrevoContact } from "@/lib/brevo-client"
 
 interface SignupModalProps {
   open: boolean
@@ -34,14 +34,14 @@ export function SignupModal({ open, onOpenChange }: SignupModalProps) {
     setError("")
 
     try {
-      const result = await subscribeToNewsletter(name, email)
-
-      if (result.success) {
-        setSuccess(true)
-        track("signup_submitted", { source: "homepage_modal", language })
-      } else {
-        setError(result.error || t("form.error"))
-      }
+      await submitBrevoContact({
+        name,
+        email,
+        source: "homepage_modal",
+        attributes: { LANGUAGE: language.toUpperCase() },
+      })
+      setSuccess(true)
+      track("signup_submitted", { source: "homepage_modal", language })
     } catch (err) {
       console.error("[v0] Signup error:", err)
       setError(t("form.error"))
@@ -133,7 +133,10 @@ export function SignupModal({ open, onOpenChange }: SignupModalProps) {
                 />
                 <label htmlFor="consent" className="text-sm text-[#9CA3AF]">
                   {t("form.consent")}{" "}
-                  <a href="/legal/privacy" className="text-[#60A5FA] hover:underline">
+                  <a
+                    href={language === "de" ? "/de/privacy" : "/privacy"}
+                    className="underline text-[#A5B4FC] hover:text-white"
+                  >
                     {t("form.privacyLink")}
                   </a>
                 </label>

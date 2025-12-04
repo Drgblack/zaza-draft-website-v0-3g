@@ -7,6 +7,8 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { track } from "@/lib/analytics";
 import { DraftDemo } from "@/components/draft-demo";
+import { CaseStudyCarousel } from "@/components/case-study-carousel";
+import { SocialProofBadges } from "@/components/social-proof-badges";
 
 const Check = ({ className }: { className?: string }) => (
   <svg
@@ -231,7 +233,7 @@ export function HomePageClient() {
                     setSignupOpen(true)
                   }}
                   size="lg"
-                  className="w-full sm:w-auto inline-flex items-center justify-center bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl hover:shadow-purple-500/30 transition-all duration-300 hover:scale-105"
+                  className="w-full sm:w-auto inline-flex items-center justify-center bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-transform transition-shadow duration-200 hover:scale-[1.03] hover:shadow-xl hover:shadow-purple-500/30 active:scale-[0.98]"
                 >
                   {t("hero.ctaPrimary")}
                 </Button>
@@ -239,7 +241,7 @@ export function HomePageClient() {
                   onClick={scrollToDemo}
                   size="lg"
                   variant="outline"
-                  className="w-full sm:w-auto inline-flex items-center justify-center bg-white/5 border border-white/10 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 backdrop-blur-sm transition-all duration-300 group"
+                  className="w-full sm:w-auto inline-flex items-center justify-center bg-white/5 border border-white/10 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 backdrop-blur-sm transition-transform transition-shadow duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/10 group active:scale-[0.98]"
                 >
                   {t("hero.ctaSecondary")}
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -478,6 +480,7 @@ export function HomePageClient() {
           >
             {t("stats.subtitle")}
           </motion.p>
+          <SocialProofBadges />
         </div>
       </section>
 
@@ -670,8 +673,8 @@ export function HomePageClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={prefersReducedMotion ? {} : { y: -4 }}
-                className="bg-[#1E293B] border border-[#334155] rounded-xl p-8 transition-all duration-300 hover:border-[#8B5CF6] hover:shadow-[0_12px_30px_rgba(139,92,246,0.2)]"
+                whileHover={prefersReducedMotion ? {} : { y: -3 }}
+                className="bg-[#1E293B] border border-[#334155] rounded-xl p-8 transition-transform transition-shadow duration-200 hover:border-[#8B5CF6] hover:shadow-[0_12px_30px_rgba(139,92,246,0.2)] hover:-translate-y-1 transform-gpu"
               >
                 <div className="text-4xl mb-4">{card.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -686,6 +689,8 @@ export function HomePageClient() {
           </div>
         </div>
       </section>
+
+      <CaseStudyCarousel />
 
       {/* Comparison Section */}
       <section className="bg-[#0F172A] py-24">
@@ -836,7 +841,7 @@ export function HomePageClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-[#0F172A] border border-[#8B5CF6]/20 rounded-xl p-10 transition-all duration-300 hover:border-[#8B5CF6] hover:shadow-[0_8px_20px_rgba(139,92,246,0.2)]"
+                className="bg-[#0F172A] border border-[#8B5CF6]/20 rounded-xl p-10 transition-transform transition-shadow duration-200 hover:border-[#8B5CF6] hover:shadow-[0_8px_20px_rgba(139,92,246,0.2)] hover:-translate-y-1 transform-gpu"
               >
                 <div className="w-12 h-12 rounded-full bg-[#8B5CF6]/20 flex items-center justify-center mb-5">
                   <Check className="w-6 h-6 text-[#8B5CF6]" />

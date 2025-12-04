@@ -40,6 +40,67 @@ export default function PricingClient() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const symbol = currencySymbols[currency];
+  const comparisonRows = [
+    {
+      feature: t("pricing.compare.rows.purpose.feature"),
+      generic: t("pricing.compare.rows.purpose.generic"),
+      zaza: t("pricing.compare.rows.purpose.zaza"),
+    },
+    {
+      feature: t("pricing.compare.rows.tone.feature"),
+      generic: t("pricing.compare.rows.tone.generic"),
+      zaza: t("pricing.compare.rows.tone.zaza"),
+    },
+    {
+      feature: t("pricing.compare.rows.privacy.feature"),
+      generic: t("pricing.compare.rows.privacy.generic"),
+      zaza: t("pricing.compare.rows.privacy.zaza"),
+    },
+    {
+      feature: t("pricing.compare.rows.templates.feature"),
+      generic: t("pricing.compare.rows.templates.generic"),
+      zaza: t("pricing.compare.rows.templates.zaza"),
+    },
+    {
+      feature: t("pricing.compare.rows.workload.feature"),
+      generic: t("pricing.compare.rows.workload.generic"),
+      zaza: t("pricing.compare.rows.workload.zaza"),
+    },
+    {
+      feature: t("pricing.compare.rows.cost.feature"),
+      generic: t("pricing.compare.rows.cost.generic"),
+      zaza: t("pricing.compare.rows.cost.zaza"),
+    },
+  ];
+  const teacherCheckoutUrl = process.env.NEXT_PUBLIC_CHECKOUT_URL_DRAFT_MONTHLY;
+  const bundleCheckoutUrl = process.env.NEXT_PUBLIC_CHECKOUT_URL_DRAFT_BUNDLE;
+  const departmentCheckoutUrl =
+    process.env.NEXT_PUBLIC_CHECKOUT_URL_DRAFT_DEPARTMENT;
+  const enterpriseCheckoutUrl =
+    process.env.NEXT_PUBLIC_CHECKOUT_URL_DRAFT_ENTERPRISE;
+
+  const buildCheckoutHref = (
+    url: string | undefined,
+    subject: string,
+    fallbackEmail = "help@zazatechnologies.com",
+  ) =>
+    url && url.trim().length > 0
+      ? url
+      : `mailto:${fallbackEmail}?subject=${encodeURIComponent(subject)}`;
+
+  const teacherCheckoutHref = buildCheckoutHref(
+    teacherCheckoutUrl,
+    language === "de"
+      ? "Zaza Draft Abonnement"
+      : "Zaza Draft subscription",
+  );
+  const bundleCheckoutHref = buildCheckoutHref(
+    bundleCheckoutUrl,
+    language === "de" ? "Zaza Draft Bundle" : "Zaza Draft bundle",
+  );
+  const salesMailto = "mailto:hello@zazatechnologies.com?subject=Zaza%20Draft%20-%20Sales%20Enquiry";
+  const departmentCheckoutHref = departmentCheckoutUrl || salesMailto;
+  const enterpriseCheckoutHref = enterpriseCheckoutUrl || salesMailto;
 
   const handlePlanClick = (planId: string) => {
     track("cta_click_pricing_select_plan", {
@@ -296,10 +357,24 @@ export default function PricingClient() {
               )}
 
               <Button
-                onClick={() => handlePlanClick("teacher")}
+                asChild
+                onClick={() =>
+                  track("cta_click_pricing_checkout_teacher", {
+                    billingCycle: billingPeriod,
+                    currency,
+                    language,
+                    hasCheckoutUrl: Boolean(teacherCheckoutUrl),
+                  })
+                }
                 className="w-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white hover:scale-105 py-6 text-lg font-semibold rounded-lg mb-3 shadow-lg shadow-[#8B5CF6]/40 transition-transform"
               >
-                {t("pricing.teacher.cta")}
+                <a
+                  href={teacherCheckoutHref}
+                  target={teacherCheckoutUrl ? "_blank" : undefined}
+                  rel={teacherCheckoutUrl ? "noreferrer" : undefined}
+                >
+                  {t("pricing.checkout.buyNow")}
+                </a>
               </Button>
               <p className="text-center text-sm text-[#94A3B8] mb-4">
                 {t("pricing.teacher.trial")}
@@ -362,9 +437,20 @@ export default function PricingClient() {
 
               <Button
                 asChild
+                onClick={() =>
+                  track("cta_click_pricing_checkout_department", {
+                    currency,
+                    language,
+                    hasCheckoutUrl: Boolean(departmentCheckoutUrl),
+                  })
+                }
                 className="w-full bg-transparent border-2 border-[#FB923C] text-[#FB923C] hover:bg-[#FB923C]/10 py-5 text-base font-semibold rounded-lg mb-6"
               >
-                <a href="mailto:sales@zazadraft.com">
+                <a
+                  href={departmentCheckoutHref}
+                  target={departmentCheckoutUrl ? "_blank" : undefined}
+                  rel={departmentCheckoutUrl ? "noreferrer" : undefined}
+                >
                   {t("pricing.department.cta")}
                 </a>
               </Button>
@@ -409,9 +495,20 @@ export default function PricingClient() {
 
               <Button
                 asChild
+                onClick={() =>
+                  track("cta_click_pricing_checkout_enterprise", {
+                    currency,
+                    language,
+                    hasCheckoutUrl: Boolean(enterpriseCheckoutUrl),
+                  })
+                }
                 className="w-full bg-transparent border-2 border-[#FB923C] text-[#FB923C] hover:bg-[#FB923C]/10 py-5 text-base font-semibold rounded-lg mb-6"
               >
-                <a href="mailto:sales@zazadraft.com">
+                <a
+                  href={enterpriseCheckoutHref}
+                  target={enterpriseCheckoutUrl ? "_blank" : undefined}
+                  rel={enterpriseCheckoutUrl ? "noreferrer" : undefined}
+                >
                   {t("pricing.enterprise.cta")}
                 </a>
               </Button>
@@ -471,13 +568,95 @@ export default function PricingClient() {
                   </p>
                 )}
                 <Button
-                  onClick={() => handlePlanClick("bundle")}
+                  asChild
+                  onClick={() =>
+                    track("cta_click_pricing_checkout_bundle", {
+                      billingCycle: billingPeriod,
+                      currency,
+                      language,
+                      hasCheckoutUrl: Boolean(bundleCheckoutUrl),
+                    })
+                  }
                   className="bg-white text-[#8B5CF6] hover:bg-white/90 py-6 px-8 text-lg font-semibold rounded-lg shadow-lg"
                 >
-                  {t("pricing.bundle.cta")}
+                  <a
+                    href={bundleCheckoutHref}
+                    target={bundleCheckoutUrl ? "_blank" : undefined}
+                    rel={bundleCheckoutUrl ? "noreferrer" : undefined}
+                  >
+                    {t("pricing.checkout.buyNow")}
+                  </a>
                 </Button>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Compare Table */}
+        <section className="pb-20 px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold text-white mb-3">
+                {t("pricing.compare.title")}
+              </h2>
+              <p className="text-[#94A3B8]">{t("pricing.compare.caption")}</p>
+            </div>
+
+            <div className="hidden md:block overflow-hidden rounded-2xl border border-white/10 bg-[#0B1220]">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-white/5 text-sm text-[#E2E8F0] uppercase tracking-wide">
+                    <th className="text-left px-6 py-4">{t("pricing.compare.column.generic")}</th>
+                    <th className="text-left px-6 py-4 bg-[#8B5CF6]/10 text-[#C4B5FD]">
+                      {t("pricing.compare.column.zaza")}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonRows.map((row, idx) => (
+                    <tr
+                      key={row.feature}
+                      className={`border-t border-white/5 ${idx % 2 === 0 ? "bg-white/[0.02]" : ""}`}
+                    >
+                      <td className="px-6 py-5 align-top">
+                        <div className="text-xs font-semibold text-[#94A3B8] uppercase tracking-wide">
+                          {row.feature}
+                        </div>
+                        <div className="mt-2 text-sm text-[#E2E8F0]">{row.generic}</div>
+                      </td>
+                      <td className="px-6 py-5 align-top bg-[#0F172A]">
+                        <div className="text-xs font-semibold text-[#C4B5FD] uppercase tracking-wide">
+                          {row.feature}
+                        </div>
+                        <div className="mt-2 text-sm text-white">{row.zaza}</div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="grid gap-4 md:hidden">
+              {comparisonRows.map((row) => (
+                <div key={row.feature} className="rounded-xl border border-white/10 bg-[#0B1220] p-5 space-y-3">
+                  <div className="text-sm font-semibold text-[#E2E8F0]">{row.feature}</div>
+                  <div className="rounded-lg border border-white/5 bg-[#111827] p-3 text-sm text-[#CBD5E1]">
+                    <span className="block text-xs font-semibold text-[#9CA3AF] mb-1">
+                      {t("pricing.compare.column.generic")}
+                    </span>
+                    {row.generic}
+                  </div>
+                  <div className="rounded-lg border border-[#8B5CF6]/30 bg-[#0F172A] p-3 text-sm text-white shadow-[0_10px_30px_rgba(139,92,246,0.15)]">
+                    <span className="block text-xs font-semibold text-[#C4B5FD] mb-1">
+                      {t("pricing.compare.column.zaza")}
+                    </span>
+                    {row.zaza}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <p className="mt-6 text-center text-sm text-[#94A3B8]">{t("pricing.compare.footer")}</p>
           </div>
         </section>
 

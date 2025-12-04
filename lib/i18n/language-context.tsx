@@ -129,6 +129,45 @@ const translationsEn: Record<string, string> = {
   // Wellbeing Metric
   "pricing.metric.text":
     "Across 90 days, teachers report 38% fewer after-hours messages and +24% confidence in parent communication.",
+  "pricing.checkout.buyNow": "Upgrade now",
+  "pricing.compare.title": "Compare: Zaza vs ChatGPT",
+  "pricing.compare.caption":
+    "ChatGPT is brilliant – but it wasn’t built for your classroom. Zaza Draft is.",
+  "pricing.compare.column.generic": "Generic AI (e.g. ChatGPT)",
+  "pricing.compare.column.zaza": "Zaza Draft",
+  "pricing.compare.footer":
+    "ChatGPT is brilliant – but it wasn’t built for your classroom. Zaza Draft is.",
+  "pricing.compare.rows.purpose.feature": "Purpose",
+  "pricing.compare.rows.purpose.generic":
+    "General-purpose chatbot – not built for schools.",
+  "pricing.compare.rows.purpose.zaza":
+    "Purpose-built for teacher communication and report comments.",
+  "pricing.compare.rows.tone.feature": "Tone & guardrails",
+  "pricing.compare.rows.tone.generic":
+    "No built-in school tone guardrails – you must prompt carefully.",
+  "pricing.compare.rows.tone.zaza":
+    "Tone presets for parents, reports, grading – with safety rails.",
+  "pricing.compare.rows.privacy.feature": "Student privacy",
+  "pricing.compare.rows.privacy.generic":
+    "Risk of entering identifiable student data into generic systems.",
+  "pricing.compare.rows.privacy.zaza":
+    "Designed for privacy – no student names required, GDPR-focused policy.",
+  "pricing.compare.rows.templates.feature": "Teacher-specific templates",
+  "pricing.compare.rows.templates.generic":
+    "No native report/parent templates; everything is manual.",
+  "pricing.compare.rows.templates.zaza":
+    "Templates for behaviour, praise, homework, attendance, reports, more.",
+  "pricing.compare.rows.workload.feature": "Workload reduction",
+  "pricing.compare.rows.workload.generic":
+    "Helpful but inconsistent; you still spend time rewriting.",
+  "pricing.compare.rows.workload.zaza":
+    "Optimised for fast, classroom-ready drafts you can tweak in seconds.",
+  "pricing.compare.rows.cost.feature": "Cost for teachers",
+  "pricing.compare.rows.cost.generic":
+    "Generic pricing – not optimised for teacher budgets.",
+  "pricing.compare.rows.cost.zaza":
+    "Transparent teacher plans, free tier plus affordable monthly options.",
+
 
   // FAQs
   "pricing.faq.title": "Pricing & Billing FAQs",
@@ -184,7 +223,7 @@ const translationsEn: Record<string, string> = {
   "form.consent": "I agree to the privacy policy.",
   "form.privacyLink": "Privacy policy",
   "form.submit": "Get started free",
-  "form.success": "You’re on the list. We’ll be in touch soon.",
+  "form.success": "Check your inbox",
   "form.error": "Something went wrong. Please try again.",
   "form.consentRequired": "Please accept the privacy policy to continue.",
   "form.trialCopy": "Try 5 comments for free",
@@ -192,7 +231,7 @@ const translationsEn: Record<string, string> = {
   "form.placeholder.email": "you@example.com",
   "form.submitting": "Submitting...",
   "form.close": "Close",
-  "form.successNote": "Thanks for joining. We’ll be in touch soon.",
+  "form.successNote": "We’ve sent your resource. If it doesn’t arrive, check your spam or write us.",
 
   // Suite Page Hero (EN)
   "suite.hero.title":
@@ -227,10 +266,14 @@ const translationsEn: Record<string, string> = {
 
   // Resources page (EN)
   "resources.title": "Free Resources for Teachers",
-  "resources.subtitle": "Time-savers you can use today. Download as DOCX.",
+  "resources.subtitle": "Time-savers you can use today. Download as Microsoft Word.",
   "resources.download": "Download",
+  "resources.downloadCta": "Download Free Resource",
   "resources.comingSoon": "Coming Soon",
   "resources.published": "Published",
+  "resources.leadMagnet.title": "Get future free resources in your inbox",
+  "resources.leadMagnet.description":
+    "Leave your email and we’ll send new templates, guides, and bonus packs for calmer parent communication – no spam.",
   "suite.teach.li2": "Curriculum-aware: Common Core + international frameworks",
   "suite.teach.li3": "Differentiation helpers and creative activity ideas",
   "suite.teach.cta": "Learn more about Teach",
@@ -499,6 +542,10 @@ const translationsEn: Record<string, string> = {
   "stats.timeSaved.label": "Saved Weekly",
   "stats.subtitle":
     "Trusted by 500+ teachers using Zaza Draft to get evenings back and stay calm with parents.",
+  "socialProof.badges.teacherFounded": "Teacher-founded, PhD in Professional Education",
+  "socialProof.badges.gdprReady": "Built in Germany – GDPR-ready",
+  "socialProof.badges.teacherFeedback": "Designed with real teacher feedback",
+  "socialProof.badges.hallucinationSafe": "Hallucination-safe outputs",
 
   // How It Works Section
   "howItWorks.heading": "How it works",
@@ -615,6 +662,15 @@ const translationsEn: Record<string, string> = {
   "comparison.rows.community.feature": "Community",
   "comparison.rows.community.generic": "No teacher support",
   "comparison.rows.community.zaza": "500+ educators sharing best practices",
+  "caseStudies.eyebrow": "Before / After",
+  "caseStudies.heading": "Before / After from real teachers",
+  "caseStudies.subheading":
+    "Quick snapshots of how Draft rewrites tricky messages into calm, specific notes.",
+  "caseStudies.beforeLabel": "Before",
+  "caseStudies.afterLabel": "After with Draft",
+  "caseStudies.afterTag": "Draft rewrite",
+  "caseStudies.prev": "Previous",
+  "caseStudies.next": "Next",
 
   // Why Choose Section
   "whyChoose.heading": "Why teachers choose Zaza",
@@ -1423,6 +1479,45 @@ const translationsDe: Record<string, string> = {
   "pricing.metric.text":
     "Über 90 Tage berichten Lehrkräfte von 38 % weniger Nachrichten nach Feierabend und +24 % Zuversicht in der Elternkommunikation.",
 
+
+  "pricing.checkout.buyNow": "Jetzt abonnieren",
+  "pricing.compare.title": "Vergleich: Zaza vs. ChatGPT",
+  "pricing.compare.caption":
+    "ChatGPT ist stark - aber nicht für dein Klassenzimmer gebaut. Zaza Draft schon.",
+  "pricing.compare.column.generic": "Generische KI (z. B. ChatGPT)",
+  "pricing.compare.column.zaza": "Zaza Draft",
+  "pricing.compare.footer":
+    "ChatGPT ist stark - aber nicht für dein Klassenzimmer gebaut. Zaza Draft schon.",
+  "pricing.compare.rows.purpose.feature": "Einsatz",
+  "pricing.compare.rows.purpose.generic":
+    "Allgemeiner Chatbot, nicht für Schulen entwickelt.",
+  "pricing.compare.rows.purpose.zaza":
+    "Speziell für Lehrkräftenkommunikation und Zeugnis-Kommentare gebaut.",
+  "pricing.compare.rows.tone.feature": "Ton & Leitplanken",
+  "pricing.compare.rows.tone.generic":
+    "Keine eingebauten Schul-Tonleitplanken - du musst viel prompten.",
+  "pricing.compare.rows.tone.zaza":
+    "Ton-Presets für Eltern, Zeugnisse, Feedback - mit Sicherungsrails.",
+  "pricing.compare.rows.privacy.feature": "Schüler:innenschutz",
+  "pricing.compare.rows.privacy.generic":
+    "Risiko, identifizierende Daten in generische Systeme einzugeben.",
+  "pricing.compare.rows.privacy.zaza":
+    "Auf Datenschutz ausgelegt - keine Namen nötig, DSGVO-fokussierte Policy.",
+  "pricing.compare.rows.templates.feature": "Lehrer-Vorlagen",
+  "pricing.compare.rows.templates.generic":
+    "Keine nativen Eltern-/Zeugnisvorlagen; alles manuell.",
+  "pricing.compare.rows.templates.zaza":
+    "Vorlagen für Verhalten, Lob, Hausaufgaben, Anwesenheit, Berichte u. mehr.",
+  "pricing.compare.rows.workload.feature": "Arbeitslast",
+  "pricing.compare.rows.workload.generic":
+    "Hilfreich, aber inkonsistent - viel Umschreiben nötig.",
+  "pricing.compare.rows.workload.zaza":
+    "Optimiert für schnelle, versandfertige Entwürfe, die du nur noch feinjustierst.",
+  "pricing.compare.rows.cost.feature": "Kosten für Lehrkräften",
+  "pricing.compare.rows.cost.generic":
+    "Generische Preise - nicht auf Lehrkräftenbudgets ausgelegt.",
+  "pricing.compare.rows.cost.zaza":
+    "Transparente Pläne, Gratisstufe plus bezahlbare Monatsoptionen.",
   // FAQs
   "pricing.faq.title": "Preis- und Abrechnungs-FAQs",
   "pricing.faq.q1": "Gibt es einen kostenlosen Plan?",
@@ -1477,15 +1572,15 @@ const translationsDe: Record<string, string> = {
   "form.consent": "Ich stimme der Datenschutzerklärung zu.",
   "form.privacyLink": "Datenschutzerklärung",
   "form.submit": "Jetzt kostenlos starten",
-  "form.success": "Du stehst auf der Liste. Wir melden uns bald.",
-  "form.error": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+  "form.success": "Bitte Posteingang prüfen",
+  "form.error": "Etwas ist schiefgelaufen. Bitte versuche es noch einmal.",
   "form.consentRequired": "Bitte stimme der Datenschutzerklärung zu, um fortzufahren.",
   "form.trialCopy": "Teste 5 Kommentare kostenlos",
   "form.placeholder.name": "Dein Name",
   "form.placeholder.email": "du@example.com",
   "form.submitting": "Wird gesendet...",
   "form.close": "Schließen",
-  "form.successNote": "Danke für dein Interesse. Wir melden uns bald.",
+  "form.successNote": "Wir haben dir das Material geschickt. Schau ggf. auch im Spam nach oder schreibe uns.",
 
   // Suite Page Hero (DE)
   "suite.hero.title":
@@ -1523,10 +1618,14 @@ const translationsDe: Record<string, string> = {
   // Resources page (DE)
   "resources.title": "Kostenlose Ressourcen für Lehrkräfte",
   "resources.subtitle":
-    "Zeitspartools für den sofortigen Einsatz. Als DOCX herunterladen.",
+    "Zeitsparer, die du sofort nutzen kannst. Download als Microsoft Word.",
   "resources.download": "Herunterladen",
+  "resources.downloadCta": "Ressource herunterladen",
   "resources.comingSoon": "Demnächst",
   "resources.published": "Veröffentlicht",
+  "resources.leadMagnet.title": "Neue Gratis-Materialien direkt in dein Postfach",
+  "resources.leadMagnet.description":
+    "Trage deine E-Mail ein und wir schicken dir neue Vorlagen, Leitfäden und Bonus-Pakete – ohne Spam.",
   "suite.teach.li2":
     "Lehrplanbewusst: Common Core + internationale Rahmenpläne",
   "suite.teach.li3": "Hilfen zur Differenzierung und kreative Aktivitätsideen",
@@ -1801,6 +1900,10 @@ const translationsDe: Record<string, string> = {
   "stats.timeSaved.label": "Wöchentlich gespart",
   "stats.subtitle":
     "Vertraut von 500+ Lehrkräften, die mit Zaza Draft Abende zurückgewinnen und ruhig mit Eltern bleiben.",
+  "socialProof.badges.teacherFounded": "Von Lehrkräften gegründet – mit Doktortitel in Bildungswissenschaft",
+  "socialProof.badges.gdprReady": "In Deutschland entwickelt – DSGVO-konform",
+  "socialProof.badges.teacherFeedback": "Mit echtem Lehrkräfte-Feedback entwickelt",
+  "socialProof.badges.hallucinationSafe": "Halluzinationssichere Ergebnisse",
 
   // How It Works Section
   "howItWorks.heading": "So funktioniert es",
@@ -1924,6 +2027,15 @@ const translationsDe: Record<string, string> = {
   "comparison.rows.community.feature": "Community",
   "comparison.rows.community.generic": "Kein Lehrkräfte-Support",
   "comparison.rows.community.zaza": "500+ Pädagogen teilen Best Practices",
+  "caseStudies.eyebrow": "Vorher / Nachher",
+  "caseStudies.heading": "Vorher / Nachher aus echten Klassenzimmern",
+  "caseStudies.subheading":
+    "Kurze Einblicke, wie Draft heikle Texte in klare, ruhige Nachrichten verwandelt.",
+  "caseStudies.beforeLabel": "Vorher",
+  "caseStudies.afterLabel": "Nachher mit Draft",
+  "caseStudies.afterTag": "Draft-Version",
+  "caseStudies.prev": "Zurück",
+  "caseStudies.next": "Weiter",
 
   // Why Choose Section
   "whyChoose.heading": "Warum Lehrkräfte Zaza wählen",

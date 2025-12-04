@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   title: "Zaza Draft",
   description: "Teacher-first, explainable AI writing assistant",
   metadataBase: new URL("https://zazadraft.com"),
+  icons: {
+    icon: "/z-logo.png",
+    shortcut: "/z-logo.png",
+    apple: "/z-logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -18,6 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/z-logo.png" sizes="any" />
+      </head>
       <body>
         <LanguageProvider>
           <Header />

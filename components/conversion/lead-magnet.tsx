@@ -6,6 +6,8 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Download, CheckCircle } from "lucide-react"
+import { useLanguage } from "@/lib/i18n/language-context"
+import { submitBrevoContact } from "@/lib/brevo-client"
 
 interface LeadMagnetProps {
   title: string
@@ -15,6 +17,7 @@ interface LeadMagnetProps {
 }
 
 export function LeadMagnet({ title, description, resourceName, onSubmit }: LeadMagnetProps) {
+  const { t, language } = useLanguage()
   const [email, setEmail] = useState("")
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState("")
@@ -34,11 +37,15 @@ export function LeadMagnet({ title, description, resourceName, onSubmit }: LeadM
       if (onSubmit) {
         await onSubmit(email)
       }
-      console.log("TODO: connect to Brevo")
+      await submitBrevoContact({
+        email,
+        attributes: { RESOURCE: resourceName, LANGUAGE: language.toUpperCase() },
+        source: "lead_magnet",
+      })
       setSubmitted(true)
     } catch (err) {
       console.error("[LeadMagnet] submission failed", err)
-      setError("Something went wrong. Please try again.")
+      setError(t("form.error"))
     } finally {
       setLoading(false)
     }
@@ -50,16 +57,10 @@ export function LeadMagnet({ title, description, resourceName, onSubmit }: LeadM
         <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
           <CheckCircle className="w-8 h-8 text-green-400" />
         </div>
-        <h3 className="text-2xl font-bold text-white mb-2">Check Your Email!</h3>
-        <p className="text-gray-300">
-          Thanks for your interest! For now this form is a preview. Please email{" "}
-          <a href="mailto:hello@zazatechnologies.com" className="text-[#8B5CF6] underline">
-            hello@zazatechnologies.com
-          </a>{" "}
-          and we will get back to you.
-        </p>
+        <h3 className="text-2xl font-bold text-white mb-2">{t("form.success")}</h3>
+        <p className="text-gray-300">{t("form.successNote") || "Thanks - check your inbox."}</p>
         <p className="text-sm text-gray-400 mt-3">
-          We have your request for {resourceName} at {email}.
+          {resourceName} · {email}
         </p>
       </div>
     )
@@ -79,7 +80,7 @@ export function LeadMagnet({ title, description, resourceName, onSubmit }: LeadM
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
         <Input
           type="email"
-          placeholder="Enter your email"
+          placeholder={language === "de" ? "Deine E-Mail" : "Enter your email"}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -90,11 +91,13 @@ export function LeadMagnet({ title, description, resourceName, onSubmit }: LeadM
           disabled={loading}
           className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white whitespace-nowrap disabled:opacity-50"
         >
-          {loading ? "Submitting..." : "Download Free Resource"}
+          {loading ? t("form.submitting") : t("resources.downloadCta")}
         </Button>
       </form>
       {error && <p className="text-sm text-red-400 mt-2">{error}</p>}
-      <p className="text-xs text-gray-400 mt-3">No spam. Unsubscribe anytime.</p>
+      <p className="text-xs text-gray-400 mt-3">
+        {language === "de" ? "Kein Spam. Jederzeit abmelden." : "No spam. Unsubscribe anytime."}
+      </p>
     </div>
   )
 }

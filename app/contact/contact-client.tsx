@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { submitBrevoContact } from "@/lib/brevo-client";
 
 const content = {
   en: {
@@ -103,9 +104,12 @@ export function ContactClient() {
     setError("");
 
     try {
-      // Mock submission
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      console.log("TODO: connect contact form to Brevo");
+      await submitBrevoContact({
+        email: formData.email,
+        name: formData.name,
+        attributes: { MESSAGE: formData.message },
+        source: "contact_page",
+      });
       setSuccess(true);
       setFormData({ name: "", email: "", message: "" });
       setTimeout(() => setSuccess(false), 5000);
@@ -156,8 +160,8 @@ export function ContactClient() {
                   </div>
                   <p className="text-lg text-white">
                     {language === "de"
-                      ? "Danke für Ihre Nachricht! Dieses Formular ist eine Vorschau. Bitte schreiben Sie an hello@zazatechnologies.com."
-                      : "Thanks for your message! This form is a preview. Please email hello@zazatechnologies.com."}
+                      ? "Danke für Ihre Nachricht! Wir melden uns in Kürze."
+                      : "Thanks for your message! We'll reply shortly."}
                   </p>
                 </div>
               ) : (
