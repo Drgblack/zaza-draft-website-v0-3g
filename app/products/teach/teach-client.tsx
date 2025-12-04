@@ -276,7 +276,7 @@ export default function TeachClient() {
         </section>
       </div>
 
-      <DemoModal open={demoOpen} onOpenChange={setDemoOpen} productContext="Teach" />
+      <DemoModal open={demoOpen} onOpenChange={setDemoOpen} defaultProduct="Teach" />
     </>
   )
 }

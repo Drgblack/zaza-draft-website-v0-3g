@@ -139,7 +139,7 @@ export function BlogClient({ posts, language }: BlogClientProps) {
                   <span className="text-xs text-slate-400">
                     {formatDate(heroPost.publishedAt)}
                     {" · "}
-                    {heroPost.readTime ||
+                    {(heroPost as any).readTime ||
                       (language === "de" ? "8 Min. Lesezeit" : "8 min read")}
                   </span>
                 </div>

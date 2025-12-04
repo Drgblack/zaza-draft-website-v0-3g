@@ -9,6 +9,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs"
 import { DemoModal } from "@/components/demo-modal"
 import { useState } from "react"
 import { track } from "@/lib/analytics"
+import { DraftDemo } from "@/components/draft-demo"
 
 export default function DraftClient() {
   const { t, language } = useLanguage()
@@ -217,6 +218,14 @@ export default function DraftClient() {
           </div>
         </section>
 
+        <DraftDemo
+          language={language}
+          onTryItYourself={() => {
+            track("cta_click_draft_demo_try", { language })
+            setDemoOpen(true)
+          }}
+        />
+
         {/* Change section to introduce solution */}
         <section className="py-16">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
@@ -309,7 +318,7 @@ export default function DraftClient() {
         </section>
       </div>
 
-      <DemoModal open={demoOpen} onOpenChange={setDemoOpen} productContext="Draft" />
+      <DemoModal open={demoOpen} onOpenChange={setDemoOpen} defaultProduct="Draft" />
     </>
   )
 }

@@ -8,13 +8,16 @@ import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/lib/i18n/language-context"
 import { useToast } from "@/hooks/use-toast"
 
+type ProductOption = "Teach" | "Draft" | "GradeFlow"
+
 interface DemoModalProps {
   open: boolean
   onOpenChange: (open: boolean) => void
-  defaultProduct?: "Teach" | "Draft" | "GradeFlow"
+  defaultProduct?: ProductOption
+  productContext?: ProductOption
 }
 
-export function DemoModal({ open, onOpenChange, defaultProduct }: DemoModalProps) {
+export function DemoModal({ open, onOpenChange, defaultProduct, productContext }: DemoModalProps) {
   const { t } = useLanguage()
   const { toast } = useToast()
   const [loading, setLoading] = useState(false)
@@ -24,7 +27,7 @@ export function DemoModal({ open, onOpenChange, defaultProduct }: DemoModalProps
     role: "",
     org: "",
     country: "",
-    product: defaultProduct || "Draft",
+    product: defaultProduct || productContext || "Draft",
     timePreference: "",
     notes: "",
     consent: false,
@@ -68,7 +71,7 @@ export function DemoModal({ open, onOpenChange, defaultProduct }: DemoModalProps
         role: "",
         org: "",
         country: "",
-        product: defaultProduct || "Draft",
+        product: defaultProduct || productContext || "Draft",
         timePreference: "",
         notes: "",
         consent: false,
@@ -197,7 +200,9 @@ export function DemoModal({ open, onOpenChange, defaultProduct }: DemoModalProps
             <select
               id="product"
               value={formData.product}
-              onChange={(e) => setFormData({ ...formData, product: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, product: e.target.value as ProductOption })
+              }
               className="w-full px-4 py-2.5 bg-[#0B1220] border border-white/10 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
             >
               <option value="Teach">Zaza Teach</option>

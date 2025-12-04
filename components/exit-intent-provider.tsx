@@ -1,7 +1,7 @@
 ﻿"use client"
 
 import { usePathname } from "next/navigation"
-import { ExitIntentPopup } from "./exit-intent-popup"
+import ExitIntentPopup from "./exit-intent-popup"
 
 export function ExitIntentProvider() {
   const pathname = usePathname()
@@ -26,6 +26,5 @@ export function ExitIntentProvider() {
     return null
   }
 
-  return <ExitIntentPopup pageType={getPageType()} />
+  return <ExitIntentPopup />
 }
-

@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { track } from "@/lib/analytics";
+import { DraftDemo } from "@/components/draft-demo";
 
 const Check = ({ className }: { className?: string }) => (
   <svg
@@ -130,8 +131,6 @@ export function HomePageClient() {
   const [signupOpen, setSignupOpen] = useState(false);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const [activeTab, setActiveTab] = useState(0);
-  const [isRewriting, setIsRewriting] = useState(false);
   const [showHallucinationTooltip, setShowHallucinationTooltip] =
     useState(false);
   const prefersReducedMotion = useReducedMotion();
@@ -148,29 +147,6 @@ export function HomePageClient() {
     track("cta_click_home_see_examples", { language });
     document.getElementById("demo")?.scrollIntoView({ behavior: "smooth" });
   };
-
-  const handleRewrite = () => {
-    setIsRewriting(true);
-    setTimeout(() => setIsRewriting(false), 2000);
-  };
-
-  const demoTabs = [
-    {
-      label: t("demo.tabs.parentEmail"),
-      before: t("demo.email.before"),
-      after: t("demo.email.after"),
-    },
-    {
-      label: t("demo.tabs.reportCard"),
-      before: t("demo.report.before"),
-      after: t("demo.report.after"),
-    },
-    {
-      label: t("demo.tabs.gradingComment"),
-      before: t("demo.grading.before"),
-      after: t("demo.grading.after"),
-    },
-  ];
 
   const testimonials = [
     {
@@ -625,123 +601,15 @@ export function HomePageClient() {
         </div>
       </section>
 
-      {/* Demo Section */}
-      <section id="demo" className="bg-[#0F172A] py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.h2
-            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-16"
-          >
-            {t("demo.heading")}
-          </motion.h2>
-
-          <div className="max-w-4xl mx-auto bg-[#1E293B] rounded-2xl p-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
-            <div className="flex flex-wrap justify-center gap-4 mb-10">
-              {demoTabs.map((tab, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveTab(index)}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    activeTab === index
-                      ? "bg-[#8B5CF6] text-white"
-                      : "bg-transparent text-[#94A3B8] hover:bg-[#8B5CF6]/10"
-                  }`}
-                  style={{ minHeight: "44px" }}
-                >
-                  {tab.label}
-                </button>
-              ))}
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-6 items-center">
-              <div>
-                <div className="text-xs uppercase tracking-wider text-[#94A3B8] mb-2">
-                  {t("demo.before.label")}
-                </div>
-                <div className="bg-[#0F172A] border border-[#334155] rounded-lg p-5 text-[#E2E8F0] text-sm leading-relaxed min-h-[150px]">
-                  {demoTabs[activeTab].before}
-                </div>
-              </div>
-
-              <div className="flex flex-col items-center gap-4">
-                <select className="bg-[#0F172A] border-2 border-[#8B5CF6] rounded-lg px-4 py-3 text-white text-sm">
-                  <option>{t("demo.toneSelector")}</option>
-                </select>
-                <Button
-                  onClick={handleRewrite}
-                  disabled={isRewriting}
-                  className="bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] hover:opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105"
-                  style={{ minHeight: "44px" }}
-                >
-                  <span className="text-xl mr-2" aria-hidden="true">✨</span>
-                  {isRewriting ? "..." : t("demo.ctaButton")}
-                </Button>
-                <div className="text-[#8B5CF6] text-3xl hidden lg:block" aria-hidden="true">→</div>
-                <div className="text-[#8B5CF6] text-3xl lg:hidden rotate-90" aria-hidden="true">→</div>
-              </div>
-
-              <div>
-                <div className="text-xs uppercase tracking-wider text-[#94A3B8] mb-2">
-                  {t("demo.after.label")}
-                </div>
-                <div className="bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 rounded-lg p-5 text-white text-sm leading-relaxed min-h-[150px]">
-                  {demoTabs[activeTab].after}
-                </div>
-              </div>
-            </div>
-
-            <div className="text-center mt-8">
-              <Button
-                onClick={() => {
-                  track("cta_click_home_try_demo", { language, tab: demoTabs[activeTab].label })
-                  setSignupOpen(true)
-                }}
-                variant="outline"
-                className="border-2 border-[#8B5CF6] bg-transparent text-[#8B5CF6] hover:bg-[#8B5CF6]/10 font-semibold px-8 py-3 rounded-lg"
-                style={{ minHeight: "44px" }}
-              >
-                {t("demo.tryItYourself")}
-              </Button>
-            </div>
-          </div>
-
-          {/* Early Testimonial */}
-          <motion.div
-            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="max-w-2xl mx-auto mt-16 bg-white rounded-xl p-10 shadow-lg text-center"
-          >
-            <div className="flex justify-center mb-6">
-              <div className="relative w-20 h-20 rounded-full overflow-hidden border-4 border-[#8B5CF6] flex-shrink-0">
-                <Image
-                  src="/testimonials/demo-teacher.jpg"
-                  alt={t("demo.testimonial.name")}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-            <div className="flex gap-1 justify-center mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 text-[#FCD34D]" />
-              ))}
-            </div>
-            <p className="text-2xl text-gray-900 italic mb-6">
-              {t("demo.testimonial.quote")}
-            </p>
-            <p className="text-base font-bold text-gray-900 mb-1">
-              {t("demo.testimonial.name")}
-            </p>
-            <p className="text-sm font-semibold text-gray-600">
-              {t("demo.testimonial.author")}
-            </p>
-          </motion.div>
-        </div>
+            {/* Demo Section */}
+      <section id="demo">
+        <DraftDemo
+          language={language}
+          onTryItYourself={() => {
+            track("cta_click_home_try_demo", { language, location: "home" });
+            setSignupOpen(true);
+          }}
+        />
       </section>
 
       {/* Use Cases Section */}

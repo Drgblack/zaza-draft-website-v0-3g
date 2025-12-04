@@ -16,7 +16,8 @@ async function detectLanguage(): Promise<"en" | "de"> {
   const headerLang = hdrs.get("x-lang");
   if (headerLang === "de" || headerLang === "en") return headerLang;
 
-  const langCookie = cookies().get("lang")?.value ?? cookies().get("language")?.value;
+  const cookieStore = await cookies();
+  const langCookie = cookieStore.get("lang")?.value ?? cookieStore.get("language")?.value;
   return langCookie === "de" ? "de" : "en";
 }
 

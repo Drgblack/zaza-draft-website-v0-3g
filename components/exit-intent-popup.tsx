@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 type ExitIntentPopupProps = {
   children?: React.ReactNode;
   onOpenChange?: (open: boolean) => void;
+  pageType?: string;
 };
 
 const STORAGE_KEY = "exitIntentShown";

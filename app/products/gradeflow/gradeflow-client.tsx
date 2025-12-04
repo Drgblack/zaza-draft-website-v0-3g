@@ -207,7 +207,7 @@ export default function GradeFlowClient() {
         </section>
       </div>
 
-      <DemoModal open={demoOpen} onOpenChange={setDemoOpen} productContext="GradeFlow" />
+      <DemoModal open={demoOpen} onOpenChange={setDemoOpen} defaultProduct="GradeFlow" />
     </>
   )
 }

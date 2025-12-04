@@ -90,7 +90,7 @@ export function ShareBar({ title, lang, currentUrl }: ShareBarProps) {
     },
   }
 
-  const labels = t[lang]
+  const labels = t[lang as keyof typeof t]
 
   return (
     <TooltipProvider>
