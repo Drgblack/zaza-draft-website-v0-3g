@@ -1251,25 +1251,25 @@ const translationsEn: Record<string, string> = {
   "company.stats.hours.label": "Hours saved weekly",
 
   // Founder Hero Section
-  "founder.hero.headline": "Meet the Founder Building AI That Serves Teachers",
+  "founder.hero.headline": "Meet your fellow educator",
   "founder.hero.subheading":
-    "Dr. Greg Blackburn spent 15 years in classrooms before building Zaza - AI tools that understand what teachers actually need.",
+    "Dr Greg Blackburn is a learning scientist and founder of Zaza Technologies, building teacher-first AI tools that give educators their time back.",
   "founder.hero.label": "FOUNDER & CEO",
   "founder.hero.name": "Dr. Greg Blackburn",
-  "founder.hero.tagline": "Former Teacher, EdTech Builder, AI Advocate",
+  "founder.hero.tagline": "Learning scientist, EdTech founder, and advocate for teacher-first AI.",
 
   // Founder Journey Section
   "founder.journey.title": "The Journey",
   "founder.journey.quote":
     "I built Zaza because I was tired of watching teachers drown in administrative work when technology should be setting them free.",
   "founder.journey.p1":
-    "I started my career as a high school English teacher in 2008. Like most teachers, I loved working with students but struggled with the endless administrative tasks - parent emails, report cards, grading feedback. I'd spend my evenings and weekends writing when I should have been planning great lessons or spending time with my family.",
+    "My working life began in Hobart, Tasmania, holding a paintbrush as an apprentice painter and decorator while my father co-owned a small paint factory. After a pre-vocational course at TAFE and a four year apprenticeship at the Cascade Brewery, I realised I wanted more from both my work and my education.",
   "founder.journey.p2":
-    "After earning my PhD in Educational Technology, I worked with schools implementing AI tools. But I kept seeing the same problem: generic AI tools weren't built for education. They'd invent student information, produce output that sounded nothing like a teacher, and create more work than they saved. Teachers needed something different.",
+    "Travel opened my eyes to how big the world really is and how far education can take you. I lived abroad, studied German, and eventually returned to Tasmania to study Administration, Information Systems and German at the University of Tasmania. Graduating with First Class Honours proved I could succeed academically despite early doubts and family tensions.",
   "founder.journey.p3":
-    "So in 2023, I founded Zaza Technologies with a simple mission: build AI tools that actually understand education. Tools trained on real pedagogy, not business writing. Tools that are hallucination-safe, FERPA-compliant, and designed from the ground up for education. Tools that respect teachers' expertise and give them their time back.",
+    "My career then took me to Brisbane, where I spent six years at Telstra and completed an MBA at the University of Queensland. That MBA opened doors into management roles at the University of Queensland, where I became a Business Manager and began publishing research into how people learn, solve problems and think critically in their work.",
   "founder.journey.p4":
-    "Today, Zaza serves over 500 teachers across 15 countries, saving them 10+ hours per week. But we're just getting started. My vision is to build a complete suite of AI tools that help teachers reclaim their time and focus on what matters most: their students.",
+    "Along the way my two daughters, Viola and Solara, were born, and I later completed a PhD in Professional Education at City, University of London. My research focused on critical thinking and problem solving in student-centred e-learning. Listening to teachers and learning professionals describe late-night marking, report writing and endless admin made something very clear: we needed humane, teacher-first AI tools that give people their time back. In 2025 that realisation became Zaza Technologies.",
   "founder.mission.quote":
     "Every teacher deserves tools that respect their expertise, protect their students, and give them time to do what they do best: teach.",
   "founder.mission.attribution": "Dr. Greg Blackburn, Founder & CEO",
@@ -1284,17 +1284,20 @@ const translationsEn: Record<string, string> = {
   "founder.whyZaza.card3.title": "Building a Legacy",
   "founder.whyZaza.card3.body":
     "This isn't about quick profits. It's about building something that genuinely helps teachers thrive and transforms education for the better. That's the legacy I want to leave.",
-  "founder.personal.title": "A Personal Note",
+    "founder.personal.title": "A personal note from Greg",
   "founder.personal.message1":
-    "If you're reading this, you're probably a teacher who's curious about AI but skeptical about whether it can really help. I get it. I was skeptical too. Most AI tools feel like they were built by people who've never set foot in a classroom.",
+    "If you are reading this, you are probably a teacher who is curious about AI but understandably cautious. You care deeply about your students and your professionalism, and you do not want a tool that treats teaching as a set of prompts and templates. I share that view. Technology should serve your judgement, not replace it.",
   "founder.personal.message2":
-    "That's why I built Zaza differently. Every feature is designed with real teachers, tested in real classrooms, and refined based on real feedback. We don't just build software - we build partnerships with educators who help us create tools that actually work.",
+    "That is why Zaza is built differently. Every feature is shaped with real teachers, tested in real classrooms or real professional contexts, and refined based on honest feedback. I draw on my background in learning and development, critical thinking research and system design, but the goal is always the same: calm, trustworthy support that fits the messy reality of teaching.",
   "founder.personal.message3":
-    "I'd love to hear from you. Whether you have questions, feedback, or just want to chat about education and technology, my door is always open. Let's build the future of teacher technology together.",
-  "founder.personal.name": "Dr. Greg Blackburn",
+    "I would love to hear from you – whether you have questions, feedback, or simply want to share what is happening in your classroom. My hope is that Zaza helps you reclaim time, reduce stress and feel more confident in your work. Let us build the future of teacher technology together.",
+  "founder.personal.name": "Greg",
   "founder.personal.title2": "Founder & CEO",
   "founder.personal.company": "Zaza Technologies",
   "founder.personal.cta": "Get in Touch",
+  "founder.personal.fullStoryIntro": "Want to read the full journey behind Zaza?",
+  "founder.personal.fullStoryLink": "Read Greg's full founder story",
+
 
   // Support Page (EN)
   "support.title": "Support",
@@ -2643,25 +2646,25 @@ const translationsDe: Record<string, string> = {
   "founder.hero.headline":
     "Lerne den Gründer kennen, der KI für Lehrkräfte entwickelt",
   "founder.hero.subheading":
-    "Dr. Greg Blackburn war 15 Jahre in Klassenzimmern, bevor er Zaza gründete – KI-Tools, die wirklich verstehen, was Lehrkräfte brauchen.",
+    "Dr. Greg Blackburn arbeitet seit über 20 Jahren in Learning & Development und gründete Zaza – eine Suite von KI-Tools, die Lehrkräften Zeit und Kopfkapazität zurückgeben, ohne ihre professionelle Urteilsfähigkeit zu ersetzen.",
   "founder.hero.label": "GRÜNDER & CEO",
   "founder.hero.name": "Dr. Greg Blackburn",
   "founder.hero.tagline":
-    "Ehemaliger Lehrer, EdTech-Entwickler, KI-Befürworter",
+    "Lernforscher, EdTech-Gründer und Vater, der KI-Werkzeuge speziell für Lehrkräfte baut.",
 
   // Founder Journey Section
   "founder.journey.title": "Die Reise",
   "founder.journey.quote":
     "Ich habe Zaza gebaut, weil ich nicht länger zusehen wollte, wie Lehrkräfte in Verwaltung versinken, obwohl Technologie sie entlasten sollte.",
   "founder.journey.p1":
-    "2008 begann ich als Englischlehrer an der Oberstufe. Wie viele Lehrkräfte liebte ich die Arbeit mit den Schülerinnen und Schülern, kämpfte aber mit endlosen Administrationsaufgaben – Elternmails, Zeugnisse, Feedback. Abende und Wochenenden verbrachte ich schreibend, statt großartige Stunden zu planen oder Zeit mit meiner Familie zu haben.",
-  "founder.journey.p2":
-    "Nach meinem PhD in Educational Technology arbeitete ich mit Schulen bei der Einführung von KI. Immer wieder sah ich das gleiche Problem: generische KI passte nicht zur Bildung. Sie erfand Schülerdaten, klang nicht wie eine Lehrkraft und machte oft mehr Arbeit als sie ersparte. Lehrkräfte brauchten etwas anderes.",
-  "founder.journey.p3":
-    "2023 gründete ich Zaza Technologies mit einer klaren Mission: KI-Tools zu bauen, die Bildung wirklich verstehen. Trainiert auf echter Pädagogik, nicht auf Business-Prosa. Halluzinationsbewusst, datenschutzkonform, von Grund auf für Unterricht entwickelt. Tools, die die Expertise von Lehrkräften respektieren und ihnen Zeit zurückgeben.",
-  "founder.journey.p4":
-    "Heute unterstützt Zaza über 500 Lehrkräfte in 15 Ländern und spart ihnen mehr als 10 Stunden pro Woche. Wir fangen gerade erst an. Mein Ziel ist eine komplette Suite von KI-Tools, die Lehrkräften Zeit zurückgibt, damit sie sich auf das Wichtigste konzentrieren können: ihre Schülerinnen und Schüler.",
-  "founder.mission.quote":
+  "Mein Berufsleben begann in Hobart, Tasmanien, mit einem Pinsel in der Hand. Ich habe eine berufsvorbereitende Ausbildung an der TAFE und eine vierjährige Lehre in der Cascade-Brauerei abgeschlossen – harte Arbeit in einem rauen Umfeld. Diese Jahre haben mir Durchhaltevermögen beigebracht, aber auch gezeigt, dass ich mehr aus meinem Berufsleben machen wollte.",
+"founder.journey.p2":
+  "Reisen haben mir die Augen geöffnet. Ich habe im Ausland gelebt, Deutsch studiert und gesehen, wie Bildung neue Wege eröffnen kann. Zurück in Tasmanien habe ich Administration, Informationssysteme und Deutsch an der University of Tasmania studiert und mit First Class Honours abgeschlossen – ein Beweis dafür, dass ich trotz früher Zweifel und familiärer Spannungen akademisch erfolgreich sein und mir eine neue Laufbahn aufbauen konnte.",
+"founder.journey.p3":
+  "Der nächste Schritt führte mich nach Brisbane zu Telstra, wo ich sechs Jahre gearbeitet habe, während ich parallel ein MBA-Studium an der University of Queensland absolvierte. Das MBA öffnete mir die Tür ins Management an der UQ, wo ich als Business Manager gearbeitet habe. Dort begann ich, Forschung darüber zu veröffentlichen, wie Menschen lernen, Probleme lösen und in komplexen Organisationen denken.",
+"founder.journey.p4":
+  "Später habe ich eine Promotion in Professional Education an der City, University of London, abgeschlossen – auf Basis von Publikationen – und bin schließlich Chief Learning Officer bei Communardo geworden. Parallel dazu habe ich Lehrkräften und Learning-Professionals zugehört: Berichte, Korrekturen, Elternkommunikation bis spät in die Nacht. Viele KI-Tools fühlten sich generisch an, ignorierten Kontext und erzeugten zusätzliche Kontrollarbeit. Aus dieser Lücke heraus ist Zaza entstanden: KI-Tools, die speziell für Lehrkräfte entwickelt wurden, ihre Urteilsfähigkeit respektieren und ihnen Zeit zurückgeben.",
+ "founder.mission.quote":
     "Jede Lehrkraft verdient Werkzeuge, die ihre Expertise respektieren, ihre Schülerinnen und Schüler schützen und Zeit fürs Unterrichten schaffen.",
   "founder.mission.attribution": "Dr. Greg Blackburn, Gründer & CEO",
   "founder.whyZaza.title": "Warum ich Zaza gegründet habe",
@@ -2768,6 +2771,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       if (storedLang === "en" || storedLang === "de") {
         return storedLang as Language;
       }
+
+      // Fallback: infer from URL prefix on first load
       const pathLang = window.location.pathname.startsWith("/de") ? "de" : "en";
       return pathLang as Language;
     }
@@ -2799,4 +2804,3 @@ export function useLanguage(): LanguageContextType {
   }
   return context;
 }
-

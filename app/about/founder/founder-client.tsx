@@ -1,50 +1,64 @@
 ﻿"use client";
 
-import { useEffect, useRef, useState } from "react"
-import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { useLanguage } from "@/lib/i18n/language-context"
-import { ArrowRight, Heart, Mountain, Sparkles } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
+import { useEffect, useRef, useState } from "react";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/lib/i18n/language-context";
+import { ArrowRight, Heart, Mountain, Sparkles } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function FounderPage() {
-  const { t } = useLanguage()
-  const heroRef = useRef<HTMLDivElement>(null)
-  const [showScrollTop, setShowScrollTop] = useState(false)
+  const { t } = useLanguage();
+  const pathname = usePathname();
+  const heroRef = useRef<HTMLDivElement>(null);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  // Determine if we are on a German URL based on the path
+  const isGerman = pathname?.startsWith("/de/");
+
+  // Hard-coded so we NEVER depend on translation keys for these two strings
+  const fullStoryIntro = isGerman
+    ? "Möchten Sie die ausführliche Geschichte hinter Zaza lesen?"
+    : "Want the longer version of the story?";
+
+  const fullStoryLink = isGerman
+    ? "Zur ausführlichen Gründerstory"
+    : "Read the full founder story";
 
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
       rootMargin: "0px 0px -100px 0px",
-    }
+    };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("animate-fade-in")
+          (entry.target as HTMLElement).classList.add("animate-fade-in");
         }
-      })
-    }, observerOptions)
+      });
+    }, observerOptions);
 
-    const sections = document.querySelectorAll(".fade-on-scroll")
-    sections.forEach((section) => observer.observe(section))
+    const sections = document.querySelectorAll(".fade-on-scroll");
+    sections.forEach((section) => observer.observe(section));
 
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 500)
-    }
+      setShowScrollTop(window.scrollY > 500);
+    };
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      observer.disconnect()
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div className="bg-[#0F172A] min-h-screen overflow-x-hidden">
@@ -90,8 +104,12 @@ export default function FounderPage() {
                 <div className="text-xs uppercase tracking-wider text-[#8B5CF6] font-semibold">
                   {t("founder.hero.label")}
                 </div>
-                <div className="text-2xl font-semibold text-white">{t("founder.hero.name")}</div>
-                <div className="text-base text-[#A78BFA]">{t("founder.hero.tagline")}</div>
+                <div className="text-2xl font-semibold text-white">
+                  {t("founder.hero.name")}
+                </div>
+                <div className="text-base text-[#A78BFA]">
+                  {t("founder.hero.tagline")}
+                </div>
               </div>
             </Card>
           </div>
@@ -165,7 +183,7 @@ export default function FounderPage() {
         </div>
       </section>
 
-      {/* SECTION 4: THE MISSION */}
+      {/* SECTION 4: THE MISSION / WHY I BUILT ZAZA */}
       <section className="py-24 px-4 sm:px-6 fade-on-scroll opacity-0">
         <div className="max-w-6xl mx-auto w-full">
           {/* Heading */}
@@ -186,7 +204,9 @@ export default function FounderPage() {
                 <div className="w-16 h-16 rounded-full bg-[rgba(139,92,246,0.2)] flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Heart className="w-8 h-8 text-[#8B5CF6]" />
                 </div>
-                <h3 className="text-2xl font-bold text-white">{t("founder.whyZaza.card1.title")}</h3>
+                <h3 className="text-2xl font-bold text-white">
+                  {t("founder.whyZaza.card1.title")}
+                </h3>
                 <p className="text-base text-[rgba(255,255,255,0.7)] leading-relaxed">
                   {t("founder.whyZaza.card1.body")}
                 </p>
@@ -199,7 +219,9 @@ export default function FounderPage() {
                 <div className="w-16 h-16 rounded-full bg-[rgba(139,92,246,0.2)] flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Sparkles className="w-8 h-8 text-[#8B5CF6]" />
                 </div>
-                <h3 className="text-2xl font-bold text-white">{t("founder.whyZaza.card2.title")}</h3>
+                <h3 className="text-2xl font-bold text-white">
+                  {t("founder.whyZaza.card2.title")}
+                </h3>
                 <p className="text-base text-[rgba(255,255,255,0.7)] leading-relaxed">
                   {t("founder.whyZaza.card2.body")}
                 </p>
@@ -212,7 +234,9 @@ export default function FounderPage() {
                 <div className="w-16 h-16 rounded-full bg-[rgba(139,92,246,0.2)] flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Mountain className="w-8 h-8 text-[#8B5CF6]" />
                 </div>
-                <h3 className="text-2xl font-bold text-white">{t("founder.whyZaza.card3.title")}</h3>
+                <h3 className="text-2xl font-bold text-white">
+                  {t("founder.whyZaza.card3.title")}
+                </h3>
                 <p className="text-base text-[rgba(255,255,255,0.7)] leading-relaxed">
                   {t("founder.whyZaza.card3.body")}
                 </p>
@@ -247,17 +271,34 @@ export default function FounderPage() {
 
           {/* Signature Block */}
           <div className="text-center space-y-4 pt-12 border-t border-[rgba(139,92,246,0.2)]">
-            <div className="text-4xl font-signature text-[#8B5CF6] mb-2">Greg</div>
-<div className="text-base text-[#A78BFA]">{t("founder.personal.title2")}</div>
-            <div className="text-sm text-[rgba(255,255,255,0.5)]">{t("founder.personal.company")}</div>
+            <div className="text-4xl font-signature text-[#8B5CF6] mb-2">
+              Greg
+            </div>
+            <div className="text-base text-[#A78BFA]">
+              {t("founder.personal.title2")}
+            </div>
+            <div className="text-sm text-[rgba(255,255,255,0.5)]">
+              {t("founder.personal.company")}
+            </div>
           </div>
 
           {/* CTA */}
-          <div className="mt-16 text-center">
+          <div className="mt-16 text-center space-y-4">
+            <p className="text-sm text-[rgba(255,255,255,0.75)]">
+              {fullStoryIntro}{" "}
+              <Link
+                href={isGerman ? "/de/about/founder-story" : "/about/founder-story"}
+                className="underline underline-offset-4 text-[#A78BFA] hover:text-white"
+              >
+                {fullStoryLink}
+              </Link>
+              .
+            </p>
+
             <Button
               asChild
               size="lg"
-              className="bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] hover:from-[#7C3AED] hover:to-[#8B5CF6] text-white font-medium px-8 py-6 rounded-full shadow-lg shadow-[#8B5CF6]/25 transition-all duration-200 hover:shadow-[#8B5CF6]/40 hover:scale-105"
+              className="bg-gradient-to-r from-[#8B5CF6] to-[#A855F7] text-sm sm:text-base font-medium shadow-lg shadow-[#8B5CF6]/25 hover:shadow-[#8B5CF6]/40 hover:scale-105 transition-all duration-200"
             >
               <Link href="/contact">
                 {t("founder.personal.cta")}
@@ -268,15 +309,16 @@ export default function FounderPage() {
         </div>
       </section>
 
+      {/* Scroll-to-top button */}
       <button
         onClick={scrollToTop}
-        className={`scroll-to-top ${showScrollTop ? "visible" : ""} bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white p-4 rounded-full shadow-lg shadow-[#8B5CF6]/25 hover:shadow-[#8B5CF6]/40 hover:scale-110 transition-all duration-200 fixed bottom-4 right-4 z-50`}
+        className={`scroll-to-top ${
+          showScrollTop ? "visible" : ""
+        } bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white p-4 rounded-full shadow-lg shadow-[#8B5CF6]/25 hover:shadow-[#8B5CF6]/40 hover:scale-110 transition-all duration-200 fixed bottom-4 right-4 z-50`}
         aria-label="Scroll to top"
       >
         <ArrowRight className="h-6 w-6 rotate-[-90deg]" />
       </button>
     </div>
-  )
+  );
 }
-
-

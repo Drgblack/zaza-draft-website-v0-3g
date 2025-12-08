@@ -992,9 +992,9 @@ const translationsEn: Record<string, string> = {
   "about.company.stats.timeSaved.value": "10+",
 
   // Founder Hero Section
-  "founder.hero.headline": "Meet the Founder Building AI That Serves Teachers",
+  "founder.hero.headline": "Meet your fellow educator",
   "founder.hero.subheading":
-    "Dr. Greg Blackburn spent 15 years in classrooms before building Zaza - AI tools that understand what teachers actually need.",
+    "Dr Greg Blackburn is a learning scientist and founder of Zaza Technologies, building teacher-first AI tools that give educators their time back.",
   "founder.hero.label": "FOUNDER & CEO",
   "founder.hero.name": "Dr. Greg Blackburn",
   "founder.hero.tagline": "Former Teacher, EdTech Builder, AI Advocate",
