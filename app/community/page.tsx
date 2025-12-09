@@ -46,6 +46,5 @@ export default function CommunityPage() {
     </>
   )
 }
-import type { Metadata } from "next"
 
 

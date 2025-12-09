@@ -15,7 +15,6 @@ export const metadata: Metadata = {
 export default function StateOfAIPage() {
   return <StateOfAIClient />
 }
-import type { Metadata } from "next"
 
 
 

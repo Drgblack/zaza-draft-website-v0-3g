@@ -35,6 +35,5 @@ export default function AILiteracyPage() {
     </>
   )
 }
-import type { Metadata } from "next"
 
 
