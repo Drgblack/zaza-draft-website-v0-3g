@@ -51,7 +51,7 @@ export default function FounderStoryPage() {
           </h1>
           <p className="text-base sm:text-lg text-[rgba(255,255,255,0.8)] max-w-3xl">
             This is the longer version of how I went from an apprenticeship in a
-            Tasmanian paint factory to building Zaza Technologies – a suite of
+            Tasmanian Brewery to building Zaza Technologies – a suite of
             teacher-first AI tools designed to give educators their time back.
           </p>
         </header>
