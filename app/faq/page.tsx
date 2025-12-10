@@ -10,6 +10,6 @@ export const metadata: Metadata = {
 export default function FAQPage() {
   return <FAQPageClient />
 }
-import type { Metadata } from "next"
+// import type { Metadata } from "next"
 
 

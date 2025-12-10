@@ -37,6 +37,6 @@ export default function GlossaryPage() {
     </>
   )
 }
-import type { Metadata } from "next"
+// import type { Metadata } from "next"
 
 

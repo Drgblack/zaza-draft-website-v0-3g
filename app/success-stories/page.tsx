@@ -15,6 +15,6 @@ export const metadata: Metadata = {
 export default function SuccessStoriesPage() {
   return <SuccessStoriesClient />
 }
-import type { Metadata } from "next"
+// import type { Metadata } from "next"
 
 

@@ -1,76 +1,26 @@
-﻿import type { Metadata } from "next"
-import { cookies, headers } from "next/headers"
-import WebinarsClient from "./webinars-client"
-import { BreadcrumbSchema } from "@/lib/seo/schema"
-import Script from "next/script"
+﻿import type { Metadata } from "next";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const langCookie = cookies().get("language")?.value
-  const referer = headers().get("referer") || ""
-  const hrefHint = headers().get("x-pathname") || ""
-  const path = hrefHint || referer
-  const locale = langCookie === "de" || path.includes("/de/") || path.endsWith("/de") ? "de" : "en"
-
-  const titles = {
-    en: "Professional Development Webinars | Zaza Draft",
-    de: "Fortbildungs-Webinare | Zaza Draft",
-  }
-  const descriptions = {
-    en: "Join live webinars and watch on-demand professional development sessions on AI in education.",
-    de: "Nehmen Sie an Live-Webinaren teil und sehen Sie Fortbildungssitzungen zu KI in der Bildung auf Abruf.",
-  }
-
-  return {
-    title: titles[locale],
-    description: descriptions[locale],
-    alternates: {
-      canonical: "https://zazadraft.com/webinars",
-      languages: {
-        en: "https://zazadraft.com/webinars",
-        de: "https://zazadraft.com/de/webinars",
-      },
-    },
-    openGraph: {
-      title: titles[locale],
-      description: descriptions[locale],
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: titles[locale],
-      description: descriptions[locale],
-    },
-  }
-}
+export const metadata: Metadata = {
+  title: "Webinare | Zaza Draft",
+  description: "Live-Sessions und On-Demand-Webinare rund um Zaza Draft und KI im Unterricht.",
+};
 
 export default function WebinarsPage() {
   return (
-    <>
-      <Script id="webinar-series-schema" type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "EducationalOrganization",
-          name: "Zaza Draft Webinar Series",
-          description: "Professional development webinars for teachers on AI in education",
-          url: "https://zazadraft.com/webinars",
-          offers: {
-            "@type": "Offer",
-            price: "0",
-            priceCurrency: "USD",
-            availability: "https://schema.org/InStock",
-          },
-        })}
-      </Script>
-      <BreadcrumbSchema
-        items={[
-          { name: "Home", url: "https://zazadraft.com" },
-          { name: "Webinars", url: "https://zazadraft.com/webinars" },
-        ]}
-      />
-      <WebinarsClient />
-    </>
-  )
+    <main className="min-h-screen bg-[#050816] text-white">
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-4">
+          Webinare für Lehrkräfte
+        </h1>
+        <p className="text-base sm:text-lg text-[rgba(226,232,240,0.9)] max-w-2xl mb-4">
+          Hier entstehen Webinare und Live-Sessions zu KI-gestützter
+          Elternkommunikation, stressärmeren Zeugnissen und Unterrichtsplanung mit Zaza.
+        </p>
+        <p className="text-sm text-[rgba(148,163,184,0.9)]">
+          Trage dich in die Warteliste ein, um als Erstes über neue Termine informiert
+          zu werden.
+        </p>
+      </section>
+    </main>
+  );
 }
-
-
-

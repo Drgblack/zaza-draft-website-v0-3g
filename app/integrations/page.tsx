@@ -57,6 +57,6 @@ export default function IntegrationsPage() {
     </>
   )
 }
-import type { Metadata } from "next"
+// import type { Metadata } from "next"
 
 
