@@ -238,7 +238,7 @@ export default function FounderStoryPage() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/de/about/founder"
-                className="inline-flex items-center px-4 py-2 rounded-full border border-[rgba(148,163,184,0.6)] text-sm hover:bg-[#0F172A] hover:text-[#050816] transition-colors"
+                className="inline-flex items-center px-4 py-2 rounded-full border border-[rgba(148,163,184,0.6)] text-sm hover:bg-[#0F172A] hover:text-white transition-colors"
               >
                 Zurück zur Gründerseite
               </Link>
