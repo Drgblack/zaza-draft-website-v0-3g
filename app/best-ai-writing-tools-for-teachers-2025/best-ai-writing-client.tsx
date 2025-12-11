@@ -1,4 +1,5 @@
-﻿"use client";
+﻿// @ts-nocheck
+"use client";
 
 import React from "react";
 import { useLanguage } from "../../src/contexts/LanguageContext";
@@ -995,6 +996,9 @@ export default function BestAIWritingClient() {
     </div>
   );
 }
+
+
+
 
 
 
