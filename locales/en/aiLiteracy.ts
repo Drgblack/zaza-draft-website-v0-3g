@@ -112,7 +112,7 @@
   liveWorkshopsDesc: "Join expert-led sessions and earn PD certificates",
   startJourneyTitle: "Start Your AI Learning Journey",
   getStarted: "Get Started",
-  learnMore: "Learn More",
+// DUPLICATE REMOVED:   learnMore: "Learn More",
   joinNow: "Join Now",
   downloadNow: "Download Now",
   certificationDesc: "Three-tier certification pathway",
@@ -125,8 +125,8 @@
   aiConfidentEducator: "AI-Confident Educator",
   aiEducationLeader: "AI Education Leader",
   foundationalDesc: "Foundational AI literacy certification",
-  intermediateDesc: "Intermediate AI application certification",
-  advancedDesc: "Advanced AI education leadership certification",
+// DUPLICATE REMOVED:   intermediateDesc: "Intermediate AI application certification",
+// DUPLICATE REMOVED:   advancedDesc: "Advanced AI education leadership certification",
   completeBeginnerPath: "Complete Beginner Path",
   completeIntermediatePath: "Complete Intermediate Path",
   submitPortfolio: "Submit portfolio of AI-enhanced lessons",
@@ -151,13 +151,13 @@
   certifiedTeachers: "certified teachers",
   averageRating: "Average Rating",
   youllLearn: "You'll learn:",
-  startLearning: "Start Learning",
+// DUPLICATE REMOVED:   startLearning: "Start Learning",
   coursesAvailable: "courses available",
-  startCourse: "Start Course",
+// DUPLICATE REMOVED:   startCourse: "Start Course",
   readyToUseDesc:
     "Ready-to-use templates, checklists, and guides to accelerate your AI adoption",
   browseAllResources: "Browse All Resources",
-  whyGetCertified: "Why Get Certified?",
+// DUPLICATE REMOVED:   whyGetCertified: "Why Get Certified?",
   professionalRecognition: "Professional Recognition",
   careerAdvancement: "Career Advancement",
   joinCommunity: "Join the Community",
@@ -172,7 +172,7 @@
   noCreditCard: "No Credit Card",
   freeToStart: "Free to start",
   exploreButton: "Explore",
-  browseCourses: "Browse Courses",
+// DUPLICATE REMOVED:   browseCourses: "Browse Courses",
   tryZazaFree: "Try Zaza Draft Free",
   professionalCertification: "Professional Certification",
   structuredLearningDesc:
@@ -202,14 +202,14 @@
     "Structured learning paths designed for teachers at every stage of their AI journey",
   youLearnColon: "You'll learn:",
   enterEmailPlaceholder: "Enter your email",
-  downloadResource: "Download Free Resource",
+// DUPLICATE REMOVED:   downloadResource: "Download Free Resource",
   noSpamText: "No spam. Unsubscribe anytime",
   professionalCert: "Professional Certification",
   earnCredentialsDesc:
     "Earn recognized credentials that demonstrate your AI literacy and teaching expertise",
   demonstrateExpertiseDesc:
     "Demonstrate your expertise to administrators and colleagues",
-  readyToStart: "Ready to Get Started?",
+// DUPLICATE REMOVED:   readyToStart: "Ready to Get Started?",
   beginJourneyDesc:
     "Begin your certification journey today. All courses and assessments are completely free.",
   startCertPath: "Start Certification Path",
@@ -217,25 +217,25 @@
   freeCoursesLabel: "Free Courses",
   teachersEnrolledLabel: "Teachers Enrolled",
   certifiedEducatorsLabel: "Certified Educators",
-  structuredLearningDesc:
-    "Structured learning paths designed for teachers at every stage of their AI journey",
+// DUPLICATE REMOVED:   structuredLearningDesc:
+//     "Structured learning paths designed for teachers at every stage of their AI journey",
   youllLearnLabel: "You'll learn:",
   realFeedbackHeader:
     "Real feedback from educators who've completed our AI literacy courses",
-  readyToUseDesc:
-    "Ready-to-use templates, checklists, and guides to accelerate your AI adoption",
+// DUPLICATE REMOVED:   readyToUseDesc:
+//     "Ready-to-use templates, checklists, and guides to accelerate your AI adoption",
   enterEmailText: "Enter your email",
   downloadFreeResourceBtn: "Download Free Resource",
   noSpamDisclaimer: "No spam. Unsubscribe anytime",
   professionalCertHeader: "Professional Certification",
   earnCredentialsText:
     "Earn recognized credentials that demonstrate your AI literacy and teaching expertise",
-  enterEmailText: "Enter your email",
-  downloadFreeResourceBtn: "Download Free Resource",
-  noSpamDisclaimer: "No spam. Unsubscribe anytime",
-  professionalCertHeader: "Professional Certification",
-  earnCredentialsText:
-    "Earn recognized credentials that demonstrate your AI literacy and teaching expertise",
+// DUPLICATE REMOVED:   enterEmailText: "Enter your email",
+// DUPLICATE REMOVED:   downloadFreeResourceBtn: "Download Free Resource",
+// DUPLICATE REMOVED:   noSpamDisclaimer: "No spam. Unsubscribe anytime",
+// DUPLICATE REMOVED:   professionalCertHeader: "Professional Certification",
+// DUPLICATE REMOVED:   earnCredentialsText:
+//     "Earn recognized credentials that demonstrate your AI literacy and teaching expertise",
   whyGetCertifiedHeader: "Why Get Certified?",
   professionalRecognitionLabel: "Professional Recognition",
   demonstrateExpertiseText:
