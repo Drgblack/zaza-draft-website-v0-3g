@@ -23,7 +23,7 @@ export default function ReduceStressClient() {
     TrendingUp: TrendingUp,
   };
 
-  const RenderIcon = ({ iconName, className }) => {
+  const RenderIcon = ({ iconName, className }: { iconName: keyof typeof IconMap; className?: string }) => {
     const IconComponent = IconMap[iconName];
     return IconComponent ? <IconComponent className={className} /> : null;
   };
@@ -982,5 +982,6 @@ export default function ReduceStressClient() {
     </div>
   );
 }
+
 
 

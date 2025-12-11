@@ -460,7 +460,6 @@ export default function BestAIWritingClient() {
           <div className="space-y-16">
             {/* Quick Answer */}
             <QuickAnswerBox
-              id="quick-answer"
               title={text.quick_answer_title}
               answer={text.quick_answer_answer}
               cta={{
@@ -996,5 +995,6 @@ export default function BestAIWritingClient() {
     </div>
   );
 }
+
 
 

@@ -407,7 +407,7 @@ export default function BestAIToolParentEmailsClient() {
   const language: "en" | "de" = isGerman ? "de" : "en";
   const text = content[language];
 
-  const tocItems: TableOfContentsItem[] = [
+  const tocItems = [
     {
       id: "quick-answer",
       title: isGerman ? "Kurzantwort" : "Quick Answer",
@@ -812,5 +812,6 @@ export default function BestAIToolParentEmailsClient() {
     </div>
   );
 }
+
 
 
