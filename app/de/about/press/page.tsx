@@ -10,7 +10,7 @@ import { SetLanguage } from "@/components/set-language"
 export const metadata: Metadata = {
   title: "Presse-Kit - Zaza Draft",
   description:
-    "Logos, Screenshots, Brand-Guidelines und Gr├╝nder-Bio f├╝r Zaza Draft. Medienressourcen f├╝r Journalist:innen und Partner.",
+    "Logos, Screenshots, Brand-Guidelines und Gründer-Bio für Zaza Draft. Medienressourcen für Journalist:innen und Partner.",
 }
 
 export default function PressKitPage() {
@@ -38,10 +38,10 @@ export default function PressKitPage() {
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                 <div className="space-y-4">
                   <h1 className="text-4xl md:text-5xl font-bold text-[#F9FAFB] leading-tight">
-                    Alles f├╝r Ihre Berichterstattung ├╝ber Zaza Draft
+                    Alles für Ihre Berichterstattung über Zaza Draft
                   </h1>
                   <p className="text-lg text-[#CBD5E1] max-w-3xl">
-                    Logos, Screenshots, Brand-Guidelines, Fact Sheet, Gr├╝nder-Bio, Kontakt und mehr ÔÇô pressefertig,
+                    Logos, Screenshots, Brand-Guidelines, Fact Sheet, Gründer-Bio, Kontakt und mehr - pressefertig,
                     klar beschriftet und konsistent gestaltet.
                   </p>
                   <div className="flex flex-wrap gap-3">
@@ -67,7 +67,7 @@ export default function PressKitPage() {
                   </div>
                   <dl className="grid grid-cols-2 gap-x-4 gap-y-3 text-sm text-[#CBD5E1]">
                     <div className="flex flex-col gap-1">
-                      <dt className="text-[#9CA3AF]">Gegr├╝ndet</dt>
+                      <dt className="text-[#9CA3AF]">Gegründet</dt>
                       <dd>2025</dd>
                     </div>
                     <div className="flex flex-col gap-1">
@@ -76,11 +76,11 @@ export default function PressKitPage() {
                     </div>
                     <div className="flex flex-col gap-1">
                       <dt className="text-[#9CA3AF]">Mission</dt>
-                      <dd>Lehrerzentrierte KI, die Zeit zur├╝ckgibt</dd>
+                      <dd>Lehrerzentrierte KI, die Zeit zurückgibt</dd>
                     </div>
                     <div className="flex flex-col gap-1">
                       <dt className="text-[#9CA3AF]">Zielgruppe</dt>
-                      <dd>Lehrkr├ñfte & Schulen (K12)</dd>
+                      <dd>Lehrkräfte & Schulen (K12)</dd>
                     </div>
                     <div className="flex flex-col gap-1">
                       <dt className="text-[#9CA3AF]">Funding</dt>
@@ -88,7 +88,7 @@ export default function PressKitPage() {
                     </div>
                     <div className="flex flex-col gap-1">
                       <dt className="text-[#9CA3AF]">Traktion</dt>
-                      <dd>500+ Lehrkr├ñfte, 15 L├ñnder</dd>
+                      <dd>500+ Lehrkräfte, 15 Länder</dd>
                     </div>
                   </dl>
                 </div>
@@ -100,9 +100,9 @@ export default function PressKitPage() {
               <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">Kennzahlen auf einen Blick</h2>
               <div className="grid md:grid-cols-3 gap-4">
                 {[
-                  { label: "Zeitersparnis", value: "10+ Std./Woche", detail: "Durchschnittliche Zeit, die Lehrkr├ñfte mit Draft zur├╝ckgewinnen" },
-                  { label: "Lehrkr├ñfte", value: "500+", detail: "Aktive Nutzer aus 15 L├ñndern" },
-                  { label: "Verl├ñsslichkeit", value: "Halluzinationsarm", detail: "Guardrails & erkl├ñrbare Outputs" },
+                  { label: "Zeitersparnis", value: "10+ Std./Woche", detail: "Durchschnittliche Zeit, die Lehrkräfte mit Draft zurückgewinnen" },
+                  { label: "Lehrkräfte", value: "500+", detail: "Aktive Nutzer aus 15 Ländern" },
+                  { label: "Verlässlichkeit", value: "Halluzinationsarm", detail: "Guardrails & erklärbare Outputs" },
                 ].map((item) => (
                   <div key={item.label} className="bg-[#111827] border border-[#1F2937] rounded-2xl p-5">
                     <p className="text-sm text-[#9CA3AF]">{item.label}</p>
@@ -126,7 +126,7 @@ export default function PressKitPage() {
               </div>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <AssetCard
-                  title="Prim├ñrlogo (PNG)"
+                  title="Primärlogo (PNG)"
                   description="Farblogo auf hellem Hintergrund, transparent."
                   previewImage="/press-kit/logo-light-preview.jpg"
                   downloadUrl="/press-kit/zaza-draft-logo-primary.png"
@@ -134,14 +134,14 @@ export default function PressKitPage() {
                 />
                 <AssetCard
                   title="Dunkel-Hintergrund Logo"
-                  description="Farblogo f├╝r dunkle Fl├ñchen, transparent."
+                  description="Farblogo für dunkle Flächen, transparent."
                   previewImage="/press-kit/logo-dark-preview.jpg"
                   downloadUrl="/press-kit/zaza-draft-logo-dark.png"
                   downloadLabel="Download PNG"
                 />
                 <AssetCard
                   title="Monochrom (SVG)"
-                  description="Einfarbig f├╝r Druck & Pr├ñgung."
+                  description="Einfarbig für Druck & Prägung."
                   previewImage="/press-kit/logo-mono-preview.jpg"
                   downloadUrl="/press-kit/zaza-draft-logo-mono.svg"
                   downloadLabel="Download SVG"
@@ -176,7 +176,7 @@ export default function PressKitPage() {
                 />
                 <AssetCard
                   title="Draft Editor"
-                  description="Schreib-Interface mit KI-Vorschl├ñgen und Tonsteuerung."
+                  description="Schreib-Interface mit KI-Vorschlägen und Tonsteuerung."
                   previewImage="/press-kit/screenshot-editor-preview.jpg"
                   downloadUrl="/press-kit/screenshot-editor.png"
                   downloadLabel="Download PNG"
@@ -197,7 +197,7 @@ export default function PressKitPage() {
                 />
                 <AssetCard
                   title="Kontext: Home Office"
-                  description="Lehrkraft nutzt Draft zuhause f├╝r Elternkommunikation."
+                  description="Lehrkraft nutzt Draft zuhause für Elternkommunikation."
                   previewImage="/press-kit/context-home.jpg"
                   downloadUrl="/press-kit/context-home.jpg"
                   downloadLabel="Download JPG"
@@ -223,12 +223,12 @@ export default function PressKitPage() {
               <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">Company Boilerplate</h2>
               <div className="bg-[#1F2937] rounded-2xl p-8 border border-[#374151]">
                 <p className="text-[#D1D5DB] leading-relaxed mb-4">
-                  Zaza Technologies baut sichere, empathische KI-Tools f├╝r P├ñdagog:innen. Unsere Haupt-App Zaza Draft hilft
-                  Lehrkr├ñften, jede Woche Stunden bei Elternkommunikation zu sparen ÔÇô mit halluzinationsbewusster KI. Mit Sitz in
+                  Zaza Technologies baut sichere, empathische KI-Tools für Pädagog:innen. Unsere Haupt-App Zaza Draft hilft
+                  Lehrkräften, jede Woche Stunden bei Elternkommunikation zu sparen - mit halluzinationsbewusster KI. Mit Sitz in
                   Deutschland ist Zaza lehrerzentriert, DSGVO-orientiert und wird weltweit von Schulen genutzt.
                 </p>
                 <p className="text-[#9CA3AF] text-sm">
-                  F├╝r Presseanfragen oder Interviews kontaktieren Sie{" "}
+                  Für Presseanfragen oder Interviews kontaktieren Sie{" "}
                   <a href="mailto:press@zazatechnologies.com" className="text-[#A78BFA] hover:underline">
                     press@zazatechnologies.com
                   </a>
@@ -238,10 +238,10 @@ export default function PressKitPage() {
 
             {/* Testimonials / Social Proof */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">Stimmen von Lehrkr├ñften</h2>
+              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">Stimmen von Lehrkräften</h2>
               <div className="grid md:grid-cols-3 gap-4">
                 {[
-                  { quote: "Draft gibt mir Abende zur├╝ck ÔÇô Mails dauern jetzt Minuten, nicht Stunden.", name: "Sarah L., Mittelstufenlehrerin" },
+                  { quote: "Draft gibt mir Abende zurück - Mails dauern jetzt Minuten, nicht Stunden.", name: "Sarah L., Mittelstufenlehrerin" },
                   { quote: "Ton und Klarheit passen sofort. Eltern reagieren entspannter.", name: "Mark R., Abteilungsleiter" },
                   { quote: "Endlich KI, die nicht generisch klingt. Meine Stimme bleibt erhalten.", name: "Emma K., Grundschule" },
                 ].map((item) => (
@@ -262,7 +262,7 @@ export default function PressKitPage() {
               </div>
               <p className="text-[#9CA3AF] mb-4">Erste Features und Interviews werden derzeit geplant. Medienpartner willkommen.</p>
               <div className="bg-[#111827] border border-dashed border-[#374151] rounded-2xl p-6 text-[#CBD5E1]">
-                <p>"First coverage coming soon" ÔÇô melden Sie sich f├╝r exklusive Early-Access-Interviews oder Demos.</p>
+                <p>"First coverage coming soon" - melden Sie sich für exklusive Early-Access-Interviews oder Demos.</p>
               </div>
             </section>
 
@@ -271,26 +271,26 @@ export default function PressKitPage() {
               <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">Founder Bio</h2>
               <ExpandableBio
                 shortLabel="Kurz-Bio"
-                longLabel="Ausf├╝hrliche Bio"
-                shortBio="Greg Blackburn ist Gr├╝nder von Zaza Technologies. Mit einem PhD in Professional Education und ├╝ber 20 Jahren in Learning & Development arbeitet Greg an der Schnittstelle von Bildung, KI und Technologie. Er gr├╝ndete Zaza, um Lehrkr├ñften Zeit zur├╝ckzugeben, Stress zu reduzieren und den Fokus auf das Wesentliche zu legen: unterrichten."
-                longBio="Dr. Harvey Gregory Scott Blackburn (Greg) ist Gr├╝nder von Zaza Technologies, einem KI-gest├╝tzten EdTech-Unternehmen mit Sitz in Deutschland. Greg begann seine Laufbahn im Learning & Development nach einem Diplom in Germanistik und einem MBA an der University of Queensland und promovierte anschlie├ƒend in Professional Education an der City, University of London. Seine Forschung konzentrierte sich auf kritisches Denken und Probleml├Âsen im studierendenzentrierten E-Learning. ├£ber zwei Jahrzehnte leitete er gro├ƒe Lerninitiativen in Hochschule und Wirtschaft, zuletzt als Group Director of Learning bei Communardo. Zaza Technologies spiegelt Gregs Vision wider, sichere, lehrerzentrierte KI-Tools zu bauen, die fundierte P├ñdagogik mit moderner KI verbinden. Greg lebt in Deutschland und m├Âchte Lehrkr├ñfte weltweit st├ñrken."
+                longLabel="Ausführliche Bio"
+                shortBio="Greg Blackburn ist Gründer von Zaza Technologies. Mit einem PhD in Professional Education und über 20 Jahren in Learning & Development arbeitet Greg an der Schnittstelle von Bildung, KI und Technologie. Er gründete Zaza, um Lehrkräften Zeit zurückzugeben, Stress zu reduzieren und den Fokus auf das Wesentliche zu legen: unterrichten."
+                longBio="Dr. Harvey Gregory Scott Blackburn (Greg) ist Gründer von Zaza Technologies, einem KI-gestützten EdTech-Unternehmen mit Sitz in Deutschland. Greg begann seine Laufbahn im Learning & Development nach einem Diplom in Germanistik und einem MBA an der University of Queensland und promovierte anschlie├ƒend in Professional Education an der City, University of London. Seine Forschung konzentrierte sich auf kritisches Denken und Probleml├Âsen im studierendenzentrierten E-Learning. ├£ber zwei Jahrzehnte leitete er gro├ƒe Lerninitiativen in Hochschule und Wirtschaft, zuletzt als Group Director of Learning bei Communardo. Zaza Technologies spiegelt Gregs Vision wider, sichere, lehrerzentrierte KI-Tools zu bauen, die fundierte Pädagogik mit moderner KI verbinden. Greg lebt in Deutschland und m├Âchte Lehrkräfte weltweit stärken."
               />
             </section>
 
             {/* FAQ for media */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">FAQ f├╝r Medien</h2>
+              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">FAQ für Medien</h2>
               <div className="grid md:grid-cols-2 gap-4">
                 {[
-                  { q: "Was macht Zaza Draft anders?", a: "Halluzinationsbewusste, erkl├ñrbare KI, trainiert auf P├ñdgogik und mit echter Lehrerstimme." },
+                  { q: "Was macht Zaza Draft anders?", a: "Halluzinationsbewusste, erklärbare KI, trainiert auf Pädgogik und mit echter Lehrerstimme." },
                   { q: "Wie geht ihr mit Datenschutz um?", a: "EU-Hosting, GDPR-orientiert, keine Trainingsnutzung von Kundendaten, Privacy-by-Design." },
-                  { q: "Wer nutzt Zaza?", a: "Lehrkr├ñfte und Schulen (K12), aktuell 500+ Lehrkr├ñfte in 15 L├ñndern." },
+                  { q: "Wer nutzt Zaza?", a: "Lehrkräfte und Schulen (K12), aktuell 500+ Lehrkräfte in 15 Ländern." },
                   { q: "Wie adressiert ihr Bias?", a: "Kuratiertes Prompting, menschliches QA, Monitoring von Fehlverhalten, schnelle Korrekturzyklen." },
-                  { q: "Welche Daten verarbeitet Draft?", a: "Textbasierte Kommunikations- und Planungsinhalte; keine vollst├ñndigen Sch├╝ler-PII erforderlich, sensible Felder optional/pseudonymisiert." },
-                  { q: "Wie lange dauert die Einf├╝hrung?", a: "Self-serve in Minuten; Schul-Deployments mit kurzer Onboarding-Checkliste." },
+                  { q: "Welche Daten verarbeitet Draft?", a: "Textbasierte Kommunikations- und Planungsinhalte; keine vollständigen Schüler-PII erforderlich, sensible Felder optional/pseudonymisiert." },
+                  { q: "Wie lange dauert die Einführung?", a: "Self-serve in Minuten; Schul-Deployments mit kurzer Onboarding-Checkliste." },
                   { q: "Bietet ihr Schulungen?", a: "Ja. Live-Workshops, On-Demand-Videos und kurze In-App-Guides." },
                   { q: "Finanzierung?", a: "Bootstrapped; Fokus auf nachhaltigem, nutzerzentriertem Wachstum." },
-                  { q: "Kontakt f├╝r Interviews?", a: "press@zazatechnologies.com ÔÇô Antworten binnen 24h; Statements auf Anfrage." },
+                  { q: "Kontakt für Interviews?", a: "press@zazatechnologies.com - Antworten binnen 24h; Statements auf Anfrage." },
                 ].map((item) => (
                   <div key={item.q} className="bg-[#111827] border border-[#1F2937] rounded-2xl p-5">
                     <p className="text-sm font-semibold text-[#E5E7EB]">{item.q}</p>
@@ -355,3 +355,4 @@ export default function PressKitPage() {
     </div>
   )
 }
+
