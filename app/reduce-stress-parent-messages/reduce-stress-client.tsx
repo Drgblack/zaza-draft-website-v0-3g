@@ -232,7 +232,7 @@ export default function ReduceStressClient() {
           name: "Sarah M.",
           role: "4th Grade, Texas",
           stats: ["90%", "Time Saved"],
-          image: "/testimonials/sarah-teacher.jpg",
+          image: "/testimonials/sarah.png",
         },
         {
           quote:
@@ -480,7 +480,7 @@ export default function ReduceStressClient() {
           name: "Sarah M.",
           role: "Grundschule, Texas",
           stats: ["90%", "Zeit gespart"],
-          image: "/testimonials/sarah-teacher.jpg",
+          image: "/testimonials/sarah.png",
         },
         {
           quote:
@@ -982,6 +982,7 @@ export default function ReduceStressClient() {
     </div>
   );
 }
+
 
 
 
