@@ -1,6 +1,6 @@
 ﻿'use client';
 // @ts-nocheck
-"use client";
+// duplicate use client removed: "use client";
 
 import React from "react";
 import { useLanguage } from "../../src/contexts/LanguageContext";
