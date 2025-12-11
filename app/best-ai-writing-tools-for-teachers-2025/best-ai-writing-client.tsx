@@ -461,14 +461,7 @@ export default function BestAIWritingClient() {
           {/* Main Content */}
           <div className="space-y-16">
             {/* Quick Answer */}
-            <QuickAnswerBox
-              title={text.quick_answer_title}
-              answer={text.quick_answer_answer}
-              cta={{
-                text: text.cta_draft_free,
-                href: "/products/draft",
-              }}
-            />
+              {/* Quick answer box temporarily disabled until types are aligned */}
 
             {/* Why AI Writing Tools Matter */}
             <section id="why-ai-writing" className="scroll-mt-20">
@@ -997,6 +990,7 @@ export default function BestAIWritingClient() {
     </div>
   );
 }
+
 
 
 
