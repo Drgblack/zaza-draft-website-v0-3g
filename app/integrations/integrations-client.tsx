@@ -819,7 +819,7 @@ export default function IntegrationsClient() {
                   </div>
                 </div>
                 <div className="space-y-2 mb-6">
-                  {integration.features.slice(0, 3).map((feature) => (
+                  {integration.features.slice(0, 3).map((feature: any) => (
                     <div
                       key={feature}
                       className="flex items-center gap-2 text-sm text-gray-300"
@@ -1015,4 +1015,5 @@ export default function IntegrationsClient() {
     </div>
   );
 }
+
 

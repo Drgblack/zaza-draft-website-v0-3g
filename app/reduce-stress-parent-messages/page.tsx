@@ -35,6 +35,6 @@ export const metadata: Metadata = {
 export default function ReduceStressPage() {
   return <ReduceStressClient />
 }
-import type { Metadata } from "next"
+// duplicate Metadata import removed: import type { Metadata } from "next"
 
 

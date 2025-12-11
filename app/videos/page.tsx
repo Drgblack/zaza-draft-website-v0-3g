@@ -3,9 +3,9 @@ import { cookies, headers } from "next/headers";
 import { VideoHubClient } from "./video-hub-client";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const langCookie = cookies().get("language")?.value;
-  const referer = headers().get("referer") || "";
-  const hrefHint = headers().get("x-pathname") || "";
+  const langCookie = (await cookies()).get("language")?.value;
+  const referer = (await headers()).get("referer") || "";
+  const hrefHint = (await headers()).get("x-pathname") || "";
   const path = hrefHint || referer;
   const locale =
     langCookie === "de" || path.includes("/de/") || path.endsWith("/de")
@@ -47,4 +47,5 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function VideoHubPage() {
   return <VideoHubClient />;
 }
+
 

@@ -15,7 +15,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   TableOfContents,
-  TableOfContentsItem,
 } from "@/components/table-of-contents";
 import { useLanguage } from "../../src/contexts/LanguageContext";
 
@@ -813,4 +812,5 @@ export default function BestAIToolParentEmailsClient() {
     </div>
   );
 }
+
 
