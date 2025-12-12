@@ -4,13 +4,61 @@ import { Breadcrumbs } from "@/components/breadcrumbs"
 import { AssetCard } from "@/components/asset-card"
 import { ExpandableBio } from "@/components/expandable-bio"
 import { Button } from "@/components/ui/button"
-import { Mail, ExternalLink, Download, Sparkles, Quote, Award } from "lucide-react"
+import { Mail, ExternalLink, Sparkles, Quote, Award } from "lucide-react"
 import { SetLanguage } from "@/components/set-language"
 
+const ogImage = "/press-kit/screenshot-hero-preview.jpg"
+const siteUrl = "https://zazadraft.com"
+const iconPackDe = [
+  {
+    name: "Zaza Z icon - colour",
+    description: "Nutzen Sie es auf hellen Hintergründen, damit der Verlauf die Marke ausspielt.",
+    file: "/press-kit/brand/zaza-z-icon-1024.png",
+    alt: "Zaza Z icon - colour",
+  },
+  {
+    name: "Zaza Z glyph - white",
+    description: "Für dunkle Hintergründe oder Überlagerungen mit hohem Kontrast.",
+    file: "/press-kit/brand/zaza-z-glyph-white-1024.png",
+    alt: "Zaza Z glyph - white",
+  },
+  {
+    name: "Zaza Z glyph - black",
+    description: "Für monochrome Drucksachen oder leichte neutrale Flächen ohne Verlauf.",
+    file: "/press-kit/brand/zaza-z-glyph-black-1024.png",
+    alt: "Zaza Z glyph - black",
+  },
+]
+import Image from "next/image"
+
 export const metadata: Metadata = {
-  title: "Presse-Kit - Zaza Draft",
+  title: "Presse-Kit | Zaza Draft Medienressourcen",
   description:
-    "Logos, Screenshots, Brand-Guidelines und Gründer-Bio für Zaza Draft. Medienressourcen für Journalist:innen und Partner.",
+    "Logos, Screenshots, Brand-Guidelines, Fact Sheet, Gründer-Bio und Kontaktdaten für Berichterstattung.",
+  openGraph: {
+    title: "Presse-Kit | Zaza Draft Medienressourcen",
+    description:
+      "Logos, Screenshots, Brand Guidelines und Gründer-Bio zum Download. Alle Medienassets für Journalist:innen und Partner.",
+    url: `${siteUrl}/de/about/press`,
+    type: "website",
+    siteName: "Zaza Draft",
+    locale: "de_DE",
+    alternateLocale: ["en_GB"],
+    images: [{ url: ogImage, alt: "Zaza Draft press kit previews" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Presse-Kit | Zaza Draft",
+    description: "Logos, Screenshots und Gründer-Bio für Ihre Berichterstattung.",
+    images: [ogImage],
+  },
+  alternates: {
+    canonical: `${siteUrl}/de/about/press`,
+    languages: {
+      en: "https://zazadraft.com/about/press",
+      de: `${siteUrl}/de/about/press`,
+    },
+  },
 }
 
 export default function PressKitPage() {
@@ -33,7 +81,7 @@ export default function PressKitPage() {
             />
 
             {/* Hero */}
-            <div className="mt-8 mb-16 bg-gradient-to-r from-[#111827] to-[#0F172A] rounded-3xl border border-[#1F2937] p-8 md:p-10">
+            <div className="mt-6 mb-12 bg-gradient-to-r from-[#111827] to-[#0F172A] rounded-3xl border border-[#1F2937] p-8 md:p-10">
               <p className="text-sm font-semibold text-[#A78BFA] uppercase tracking-[0.2em] mb-3">Presse-Kit</p>
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                 <div className="space-y-4">
@@ -41,16 +89,10 @@ export default function PressKitPage() {
                     Alles für Ihre Berichterstattung über Zaza Draft
                   </h1>
                   <p className="text-lg text-[#CBD5E1] max-w-3xl">
-                    Logos, Screenshots, Brand-Guidelines, Fact Sheet, Gründer-Bio, Kontakt und mehr - pressefertig,
-                    klar beschriftet und konsistent gestaltet.
+                    Logos, Screenshots, Brand-Guidelines, Fact Sheet, Gründer-Bio und Kontaktinformationen - aktuell,
+                    konsistent und sofort nutzbar.
                   </p>
                   <div className="flex flex-wrap gap-3">
-                    <Button asChild className="rounded-full bg-gradient-to-r from-[#7C3AED] to-[#6366F1] text-white">
-                      <a href="/press-kit/zaza-draft-press-kit.zip" download>
-                        <Download className="w-4 h-4 mr-2" />
-                        Alle Assets herunterladen (ZIP)
-                      </a>
-                    </Button>
                     <Button
                       asChild
                       className="rounded-full border border-white/20 bg-white text-[#111827] hover:bg-[#E5E7EB]"
@@ -80,7 +122,7 @@ export default function PressKitPage() {
                     </div>
                     <div className="flex flex-col gap-1">
                       <dt className="text-[#9CA3AF]">Zielgruppe</dt>
-                      <dd>Lehrkräfte & Schulen (K12)</dd>
+                      <dd>Lehrkräfte &amp; Schulen (K12)</dd>
                     </div>
                     <div className="flex flex-col gap-1">
                       <dt className="text-[#9CA3AF]">Funding</dt>
@@ -115,44 +157,44 @@ export default function PressKitPage() {
 
             {/* Brand Logos */}
             <section className="mb-16">
-              <div className="flex items-center justify-between gap-4 mb-6">
-                <h2 className="text-2xl font-bold text-[#F9FAFB]">Brand Assets</h2>
-                <Button asChild className="rounded-full bg-gradient-to-r from-[#7C3AED] to-[#6366F1] text-white">
-                  <a href="/press-kit/zaza-draft-press-kit.zip" download>
-                    <Download className="w-4 h-4 mr-2" />
-                    Alle Assets (ZIP)
-                  </a>
-                </Button>
+              <div className="flex flex-col gap-2 mb-4">
+                <div className="flex items-center gap-3">
+                  <Sparkles className="w-5 h-5 text-[#A78BFA]" />
+                  <h2 className="text-2xl font-bold text-[#F9FAFB]">Brand Assets</h2>
+                </div>
+                <p className="text-sm text-[#CBD5E1] max-w-3xl">
+                  Die offiziellen Z-Icons in drei Varianten. Wählen Sie die passende Version abhängig vom Hintergrund und behalten Sie klare Abstände ein.
+                </p>
               </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <AssetCard
-                  title="Primärlogo (PNG)"
-                  description="Farblogo auf hellem Hintergrund, transparent."
-                  previewImage="/press-kit/logo-light-preview.jpg"
-                  downloadUrl="/press-kit/zaza-draft-logo-primary.png"
-                  downloadLabel="Download PNG"
-                />
-                <AssetCard
-                  title="Dunkel-Hintergrund Logo"
-                  description="Farblogo für dunkle Flächen, transparent."
-                  previewImage="/press-kit/logo-dark-preview.jpg"
-                  downloadUrl="/press-kit/zaza-draft-logo-dark.png"
-                  downloadLabel="Download PNG"
-                />
-                <AssetCard
-                  title="Monochrom (SVG)"
-                  description="Einfarbig für Druck & Prägung."
-                  previewImage="/press-kit/logo-mono-preview.jpg"
-                  downloadUrl="/press-kit/zaza-draft-logo-mono.svg"
-                  downloadLabel="Download SVG"
-                />
-                <AssetCard
-                  title="App Icon"
-                  description="iOS/Android App Icon, 1024x1024."
-                  previewImage="/press-kit/logo-dark-preview.jpg"
-                  downloadUrl="/press-kit/zaza-draft-app-icon.png"
-                  downloadLabel="Download PNG"
-                />
+              <div className="grid gap-6 md:grid-cols-3">
+                {iconPackDe.map((icon) => (
+                  <div key={icon.name} className="bg-[#1F2937] border border-[#374151] rounded-2xl p-5 space-y-4">
+                    <div className="rounded-xl border border-[#1F2937] bg-[#0F172A] p-3">
+                      <div className="relative h-32 w-full">
+                        <Image src={icon.file} alt={icon.alt} fill className="object-contain" sizes="(max-width: 768px) 50vw, 30vw" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-[#F9FAFB]">{icon.name}</h3>
+                      <p className="text-sm text-[#CBD5E1] mt-1">{icon.description}</p>
+                    </div>
+                    <a
+                      href={icon.file}
+                      download
+                      className="inline-flex items-center justify-center rounded-full border border-white/20 bg-gradient-to-r from-[#7C3AED] to-[#6366F1] px-3 py-2 text-sm font-semibold text-white transition-colors hover:from-[#6D28D9] hover:to-[#4F46E5]"
+                    >
+                      Download PNG
+                    </a>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 rounded-2xl border border-dashed border-[#374151] bg-[#0F172A] p-4 text-sm text-[#CBD5E1]">
+                <p className="font-semibold text-white mb-2">Hinweise zur Verwendung</p>
+                <ul className="list-disc space-y-1 pl-4">
+                  <li>Das Farbicon nutzen Sie auf hellen Flächen, damit der Verlauf die Marke sichtbar macht.</li>
+                  <li>Weiß eignet sich für dunkle Hintergründe oder Überlagerungen mit hohem Kontrast.</li>
+                  <li>Schwarz verwenden Sie für monochrome Drucke, Prägungen oder neutrale Flächen ohne Verlauf – nicht einfärben oder strecken.</li>
+                </ul>
               </div>
             </section>
 
@@ -355,4 +397,3 @@ export default function PressKitPage() {
     </div>
   )
 }
-

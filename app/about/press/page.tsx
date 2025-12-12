@@ -1,23 +1,47 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import { AboutSidebar } from "@/components/about-sidebar"
 import { Breadcrumbs } from "@/components/breadcrumbs"
 import { AssetCard } from "@/components/asset-card"
 import { ExpandableBio } from "@/components/expandable-bio"
 import { Button } from "@/components/ui/button"
-import { Mail, ExternalLink, Download, Sparkles, Quote, FileText, Award } from "lucide-react"
+import { Mail, ExternalLink, Sparkles, Quote, Award } from "lucide-react"
 
 const ogImage = "/press-kit/screenshot-hero-preview.jpg"
+const iconPack = [
+  {
+    name: "Zaza Z icon - colour",
+    description: "Use on white or light backgrounds to let the gradient show the full brand depth.",
+    file: "/press-kit/brand/zaza-z-icon-1024.png",
+    alt: "Zaza Z icon - colour",
+  },
+  {
+    name: "Zaza Z glyph - white",
+    description: "Choose when the mark sits on dark or saturated surfaces for clear contrast.",
+    file: "/press-kit/brand/zaza-z-glyph-white-1024.png",
+    alt: "Zaza Z glyph - white",
+  },
+  {
+    name: "Zaza Z glyph - black",
+    description: "Reserve for restrained contexts such as monochrome print or light neutral backdrops.",
+    file: "/press-kit/brand/zaza-z-glyph-black-1024.png",
+    alt: "Zaza Z glyph - black",
+  },
+]
 
 export const metadata: Metadata = {
   title: "Press Kit | Zaza Draft media resources",
   description:
-    "Everything you need to cover Zaza Draft: logos, screenshots, brand guidelines, fact sheet, and founder bio with press contact.",
+    "Everything you need to cover Zaza Draft: logos, screenshots, brand guidelines, fact sheet, founder bio, and press contacts.",
   openGraph: {
     title: "Press Kit | Zaza Draft media resources",
     description:
       "Download logos, screenshots, brand guidelines, and founder bio. Ready-to-use media assets for journalists and partners.",
     url: "https://zazadraft.com/about/press",
     type: "website",
+    siteName: "Zaza Draft",
+    locale: "en_GB",
+    alternateLocale: ["de_DE"],
     images: [{ url: ogImage, alt: "Zaza Draft press kit previews" }],
   },
   twitter: {
@@ -54,7 +78,7 @@ export default function PressKitPage() {
             />
 
             {/* Hero */}
-            <div className="mt-8 mb-16 bg-gradient-to-r from-[#111827] to-[#0F172A] rounded-3xl border border-[#1F2937] p-8 md:p-10">
+            <div className="mt-6 mb-12 bg-gradient-to-r from-[#111827] to-[#0F172A] rounded-3xl border border-[#1F2937] p-8 md:p-10">
               <p className="text-sm font-semibold text-[#A78BFA] uppercase tracking-[0.2em] mb-3">Press Kit</p>
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                 <div className="space-y-4">
@@ -62,16 +86,10 @@ export default function PressKitPage() {
                     Everything press-ready for Zaza Draft
                   </h1>
                   <p className="text-lg text-[#CBD5E1] max-w-3xl">
-                    Logos, screenshots, brand guidelines, fact sheet, founder bio, and contact details—clean, current, and ready
+                    Logos, screenshots, brand guidelines, fact sheet, founder bio, and contact details-clean, current, and ready
                     to use.
                   </p>
                   <div className="flex flex-wrap gap-3">
-                    <Button asChild className="rounded-full bg-gradient-to-r from-[#7C3AED] to-[#6366F1] text-white">
-                      <a href="/press-kit/zaza-draft-press-kit.zip" download>
-                        <Download className="w-4 h-4 mr-2" />
-                        Download all assets (ZIP)
-                      </a>
-                    </Button>
                     <Button
                       asChild
                       className="rounded-full border border-white/20 bg-white text-[#111827] hover:bg-[#E5E7EB]"
@@ -136,44 +154,44 @@ export default function PressKitPage() {
 
             {/* Brand Logos */}
             <section className="mb-16">
-              <div className="flex items-center justify-between gap-4 mb-6">
-                <h2 className="text-2xl font-bold text-[#F9FAFB]">Brand Assets</h2>
-                <Button asChild className="rounded-full bg-gradient-to-r from-[#7C3AED] to-[#6366F1] text-white">
-                  <a href="/press-kit/zaza-draft-press-kit.zip" download>
-                    <Download className="w-4 h-4 mr-2" />
-                    Download all (ZIP)
-                  </a>
-                </Button>
+              <div className="flex flex-col gap-2 mb-4">
+                <div className="flex items-center gap-3">
+                  <Sparkles className="w-5 h-5 text-[#A78BFA]" />
+                  <h2 className="text-2xl font-bold text-[#F9FAFB]">Brand assets</h2>
+                </div>
+                <p className="text-sm text-[#CBD5E1] max-w-3xl">
+                  These are the official Z icon marks. Use the correct colourway per background, and keep lockups clear and respectful of the brand.
+                </p>
               </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <AssetCard
-                  title="Primary Logo (PNG)"
-                  description="Full-color on light background, transparent."
-                  previewImage="/press-kit/logo-light-preview.jpg"
-                  downloadUrl="/press-kit/zaza-draft-logo-primary.png"
-                  downloadLabel="Download PNG"
-                />
-                <AssetCard
-                  title="Dark Background Logo"
-                  description="Full-color for dark surfaces, transparent."
-                  previewImage="/press-kit/logo-dark-preview.jpg"
-                  downloadUrl="/press-kit/zaza-draft-logo-dark.png"
-                  downloadLabel="Download PNG"
-                />
-                <AssetCard
-                  title="Monochrome (SVG)"
-                  description="Single color for print and embossing."
-                  previewImage="/press-kit/logo-mono-preview.jpg"
-                  downloadUrl="/press-kit/zaza-draft-logo-mono.svg"
-                  downloadLabel="Download SVG"
-                />
-                <AssetCard
-                  title="App Icon"
-                  description="iOS/Android app icon, 1024x1024."
-                  previewImage="/press-kit/logo-dark-preview.jpg"
-                  downloadUrl="/press-kit/zaza-draft-app-icon.png"
-                  downloadLabel="Download PNG"
-                />
+              <div className="grid gap-6 md:grid-cols-3">
+                {iconPack.map((icon) => (
+                  <div key={icon.name} className="bg-[#1F2937] border border-[#374151] rounded-2xl p-5 space-y-4">
+                    <div className="rounded-xl border border-[#1F2937] bg-[#0F172A] p-3">
+                      <div className="relative h-32 w-full">
+                        <Image src={icon.file} alt={icon.alt} fill className="object-contain" sizes="(max-width: 768px) 50vw, 30vw" />
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-[#F9FAFB]">{icon.name}</h3>
+                      <p className="text-sm text-[#CBD5E1] mt-1">{icon.description}</p>
+                    </div>
+                    <a
+                      href={icon.file}
+                      download
+                      className="inline-flex items-center justify-center rounded-full border border-white/20 bg-gradient-to-r from-[#7C3AED] to-[#6366F1] px-3 py-2 text-sm font-semibold text-white transition-colors hover:from-[#6D28D9] hover:to-[#4F46E5]"
+                    >
+                      Download PNG
+                    </a>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 rounded-2xl border border-dashed border-[#374151] bg-[#0F172A] p-4 text-sm text-[#CBD5E1]">
+                <p className="font-semibold text-white mb-2">Usage notes</p>
+                <ul className="list-disc space-y-1 pl-4">
+                  <li>Use the colour icon on light surfaces where gradients show true-to-brand depth.</li>
+                  <li>Switch to the white icon for dark or saturated backdrops to keep the mark legible.</li>
+                  <li>The black icon is for monochrome printing, embossing, or situations where gradients are not supported; do not recolour or stretch.</li>
+                </ul>
               </div>
             </section>
 
