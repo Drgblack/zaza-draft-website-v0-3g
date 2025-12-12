@@ -1,93 +1,95 @@
-﻿import type { MetadataRoute } from "next"
+import type { MetadataRoute } from "next";
+import { readdirSync } from "fs";
+import { join } from "path";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://zazadraft.com"
-  const currentDate = new Date()
+const baseUrl = "https://zazadraft.com";
+const currentDate = new Date();
 
-  // Core pages
-  const corePages = [
-    {
-      url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: "weekly" as const,
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/features`,
-      lastModified: currentDate,
-      changeFrequency: "weekly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/pricing`,
-      lastModified: currentDate,
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: currentDate,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: currentDate,
-      changeFrequency: "monthly" as const,
-      priority: 0.6,
-    },
-  ]
+const marketingPages = [
+  { path: "", changeFrequency: "daily", priority: 1.0 },
+  { path: "/features", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/pricing", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/products/draft", changeFrequency: "weekly", priority: 0.85 },
+  { path: "/products/teach", changeFrequency: "weekly", priority: 0.85 },
+  { path: "/products/shield", changeFrequency: "weekly", priority: 0.85 },
+  { path: "/products/gradeflow", changeFrequency: "weekly", priority: 0.75 },
+  { path: "/suite", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/ai-literacy", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/ai-for-student-reports", changeFrequency: "weekly", priority: 0.7 },
+  { path: "/glossary", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/resources", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/integrations", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/community", changeFrequency: "daily", priority: 0.7 },
+  { path: "/blog", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/ambassadors", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/reduce-stress-parent-messages", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/state-of-ai-education", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/success-stories", changeFrequency: "monthly", priority: 0.65 },
+  { path: "/teacher-stories", changeFrequency: "monthly", priority: 0.6 },
+  { path: "/about/company", changeFrequency: "monthly", priority: 0.6 },
+  { path: "/about/founder", changeFrequency: "monthly", priority: 0.6 },
+  { path: "/about/press", changeFrequency: "monthly", priority: 0.55 },
+  { path: "/contact", changeFrequency: "monthly", priority: 0.6 },
+  { path: "/support", changeFrequency: "monthly", priority: 0.6 },
+  { path: "/webinars", changeFrequency: "weekly", priority: 0.6 },
+  { path: "/videos", changeFrequency: "weekly", priority: 0.6 },
+  { path: "/roi-calculator", changeFrequency: "monthly", priority: 0.55 },
+  { path: "/faq", changeFrequency: "monthly", priority: 0.5 },
+  { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/terms", changeFrequency: "yearly", priority: 0.3 },
+];
 
-  // Tier 3 Hub pages
-  const hubPages = [
-    {
-      url: `${baseUrl}/ai-literacy`,
-      lastModified: currentDate,
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/webinars`,
-      lastModified: currentDate,
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/community`,
-      lastModified: currentDate,
-      changeFrequency: "daily" as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/glossary`,
-      lastModified: currentDate,
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/integrations`,
-      lastModified: currentDate,
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    },
-  ]
+const localePrefixes = ["", "/de"];
 
-  // Legal pages
-  const legalPages = [
-    {
-      url: `${baseUrl}/privacy`,
+function buildLocalizedPages() {
+  return marketingPages.flatMap((entry) =>
+    localePrefixes.map((prefix) => ({
+      url: `${baseUrl}${prefix}${entry.path}`,
       lastModified: currentDate,
-      changeFrequency: "yearly" as const,
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/terms`,
-      lastModified: currentDate,
-      changeFrequency: "yearly" as const,
-      priority: 0.3,
-    },
-  ]
-
-  return [...corePages, ...hubPages, ...legalPages]
+      changeFrequency: entry.changeFrequency as MetadataRoute.Sitemap["changeFrequency"],
+      priority: entry.priority,
+    })),
+  );
 }
 
+function getBlogSlugs() {
+  const blogDir = join(process.cwd(), "content", "blog");
+  const files = readdirSync(blogDir, { withFileTypes: true });
+  const englishSlugs = new Set<string>();
+  const germanSlugs = new Set<string>();
+
+  files.forEach((entry) => {
+    if (!entry.isFile()) {
+      return;
+    }
+    if (entry.name.startsWith("_")) {
+      return;
+    }
+    const slug = entry.name.replace(/\.(mdx|md)$/i, "");
+    if (slug.endsWith(".de")) {
+      germanSlugs.add(slug.replace(/\.de$/, ""));
+      return;
+    }
+    englishSlugs.add(slug);
+  });
+
+  const englishEntries = Array.from(englishSlugs).map((slug) => ({
+    url: `${baseUrl}/blog/${slug}`,
+    lastModified: currentDate,
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
+  }));
+
+  const germanEntries = Array.from(germanSlugs).map((slug) => ({
+    url: `${baseUrl}/de/blog/${slug}`,
+    lastModified: currentDate,
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
+  }));
+
+  return [...englishEntries, ...germanEntries];
+}
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [...buildLocalizedPages(), ...getBlogSlugs()];
+}
