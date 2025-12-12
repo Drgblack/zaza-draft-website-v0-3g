@@ -8,6 +8,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { SignupModal } from "@/components/signup-modal";
+import { track } from "@/lib/analytics";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,6 +24,11 @@ export function Header() {
   const L = (de: string, en: string) => (language === "de" ? de : en);
 
   const navigation = [{ name: t("nav.pricing"), href: "/pricing" }];
+  const handleHeaderNavClick = (href: string) => {
+    if (href === "/pricing") {
+      track("cta_click", { location: "header", id: "pricing" });
+    }
+  };
 
   const productsMenuItems = [
     { name: t("nav.products.suite") || "Zaza Suite", href: "/suite" },
@@ -159,6 +165,7 @@ export function Header() {
                 key={item.name}
                 href={item.href}
                 className="text-[15px] font-medium text-gray-300 hover:text-white transition-colors duration-200"
+                onClick={() => handleHeaderNavClick(item.href)}
               >
                 {item.name}
               </Link>
@@ -310,7 +317,10 @@ export function Header() {
 
             {/* Desktop Get Started CTA */}
             <Button
-              onClick={() => setSignupOpen(true)}
+              onClick={() => {
+                track("cta_click", { location: "header", id: "get_started" });
+                setSignupOpen(true);
+              }}
               className="ml-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-purple-500/25"
             >
               {t("nav.getStarted")}
@@ -436,13 +446,14 @@ export function Header() {
               </div>
 
               <div className="pt-2">
-                <Button
-                  onClick={() => {
-                    setSignupOpen(true);
-                    setMobileMenuOpen(false);
-                  }}
-                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium py-3 rounded-full shadow-lg shadow-purple-500/25"
-                >
+              <Button
+                onClick={() => {
+                  track("cta_click", { location: "header", id: "mobile_get_started" });
+                  setSignupOpen(true);
+                  setMobileMenuOpen(false);
+                }}
+                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium py-3 rounded-full shadow-lg shadow-purple-500/25"
+              >
                   {t("nav.getStarted")}
                 </Button>
               </div>
@@ -455,4 +466,3 @@ export function Header() {
     </>
   );
 }
-

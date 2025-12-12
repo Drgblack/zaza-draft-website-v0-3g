@@ -79,6 +79,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9.39.1",
+    "@rushstack/eslint-patch": "1.15.0",
     "eslint-config-next": "^15.2.6",
     "eslint-plugin-import": "^2.32.0",
     "husky": "9",

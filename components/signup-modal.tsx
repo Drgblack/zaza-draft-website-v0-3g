@@ -41,7 +41,7 @@ export function SignupModal({ open, onOpenChange }: SignupModalProps) {
         attributes: { LANGUAGE: language.toUpperCase() },
       })
       setSuccess(true)
-      track("signup_submitted", { source: "homepage_modal", language })
+      track("form_submit", { form: "signup_modal", language })
     } catch (err) {
       console.error("[v0] Signup error:", err)
       setError(t("form.error"))
@@ -158,4 +158,3 @@ export function SignupModal({ open, onOpenChange }: SignupModalProps) {
     </div>
   )
 }
-

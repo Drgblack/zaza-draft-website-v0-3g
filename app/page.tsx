@@ -14,6 +14,7 @@ export const metadata: Metadata = {
       "Draft parent emails, de-escalate tough replies, and write kinder feedback faster. Hallucination-safe guardrails keep your voice and credibility intact.",
     type: "website",
     locale: "en_GB",
+    siteName: "Zaza Draft",
     alternateLocale: ["de_DE"],
     url: siteUrl,
     images: [{ url: ogImage, alt: "Teacher using Zaza Draft to write a parent message" }],

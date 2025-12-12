@@ -1,3 +1,5 @@
+type PlausibleProps = Record<string, string | number | boolean>
+
 type AnalyticsNamespace = {
   track: (event: string, props?: Record<string, any>) => void
   viewHub: () => void
@@ -10,6 +12,12 @@ type AnalyticsNamespace = {
 }
 
 const baseTrack = (event: string, props?: Record<string, any>) => {
+  if (typeof window === "undefined") return
+  try {
+    window.plausible?.(event, props as PlausibleProps)
+  } catch {
+    // no-op
+  }
   try {
     ;(window as any)?.analytics?.track?.(event, props)
   } catch {
@@ -41,3 +49,9 @@ export const analytics: AnalyticsNamespace & {
 
 export const track = (event: string, props?: Record<string, any>) => baseTrack(event, props)
 export const trackEvent = (event: string, props?: Record<string, any>) => baseTrack(event, props)
+
+declare global {
+  interface Window {
+    plausible?: (eventName: string, props?: PlausibleProps) => void
+  }
+}

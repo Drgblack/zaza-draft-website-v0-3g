@@ -101,8 +101,11 @@ export default function PricingClient() {
   const salesMailto = "mailto:hello@zazatechnologies.com?subject=Zaza%20Draft%20-%20Sales%20Enquiry";
   const departmentCheckoutHref = departmentCheckoutUrl || salesMailto;
   const enterpriseCheckoutHref = enterpriseCheckoutUrl || salesMailto;
+  const trackPricingCTA = (id: string) =>
+    track("cta_click", { location: "pricing", id });
 
   const handlePlanClick = (planId: string) => {
+    trackPricingCTA(`plan_${planId}`);
     track("cta_click_pricing_select_plan", {
       planId,
       billingCycle: billingPeriod,
@@ -356,18 +359,19 @@ export default function PricingClient() {
                 </p>
               )}
 
-              <Button
-                asChild
-                onClick={() =>
-                  track("cta_click_pricing_checkout_teacher", {
-                    billingCycle: billingPeriod,
-                    currency,
-                    language,
-                    hasCheckoutUrl: Boolean(teacherCheckoutUrl),
-                  })
-                }
-                className="w-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white hover:scale-105 py-6 text-lg font-semibold rounded-lg mb-3 shadow-lg shadow-[#8B5CF6]/40 transition-transform"
-              >
+                <Button
+                  asChild
+                  onClick={() => {
+                    trackPricingCTA("checkout_teacher");
+                    track("cta_click_pricing_checkout_teacher", {
+                      billingCycle: billingPeriod,
+                      currency,
+                      language,
+                      hasCheckoutUrl: Boolean(teacherCheckoutUrl),
+                    });
+                  }}
+                  className="w-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white hover:scale-105 py-6 text-lg font-semibold rounded-lg mb-3 shadow-lg shadow-[#8B5CF6]/40 transition-transform"
+                >
                 <a
                   href={teacherCheckoutHref}
                   target={teacherCheckoutUrl ? "_blank" : undefined}
@@ -437,13 +441,14 @@ export default function PricingClient() {
 
               <Button
                 asChild
-                onClick={() =>
+                onClick={() => {
+                  trackPricingCTA("checkout_department");
                   track("cta_click_pricing_checkout_department", {
                     currency,
                     language,
                     hasCheckoutUrl: Boolean(departmentCheckoutUrl),
-                  })
-                }
+                  });
+                }}
                 className="w-full bg-transparent border-2 border-[#FB923C] text-[#FB923C] hover:bg-[#FB923C]/10 py-5 text-base font-semibold rounded-lg mb-6"
               >
                 <a
@@ -495,13 +500,14 @@ export default function PricingClient() {
 
               <Button
                 asChild
-                onClick={() =>
+                onClick={() => {
+                  trackPricingCTA("checkout_enterprise");
                   track("cta_click_pricing_checkout_enterprise", {
                     currency,
                     language,
                     hasCheckoutUrl: Boolean(enterpriseCheckoutUrl),
-                  })
-                }
+                  });
+                }}
                 className="w-full bg-transparent border-2 border-[#FB923C] text-[#FB923C] hover:bg-[#FB923C]/10 py-5 text-base font-semibold rounded-lg mb-6"
               >
                 <a
@@ -569,14 +575,15 @@ export default function PricingClient() {
                 )}
                 <Button
                   asChild
-                  onClick={() =>
+                  onClick={() => {
+                    trackPricingCTA("checkout_bundle");
                     track("cta_click_pricing_checkout_bundle", {
                       billingCycle: billingPeriod,
                       currency,
                       language,
                       hasCheckoutUrl: Boolean(bundleCheckoutUrl),
-                    })
-                  }
+                    });
+                  }}
                   className="bg-white text-[#8B5CF6] hover:bg-white/90 py-6 px-8 text-lg font-semibold rounded-lg shadow-lg"
                 >
                   <a
@@ -749,6 +756,7 @@ export default function PricingClient() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   onClick={() => {
+                    trackPricingCTA("cta_primary")
                     track("cta_click_pricing_cta_primary", { language })
                     setSignupOpen(true)
                   }}

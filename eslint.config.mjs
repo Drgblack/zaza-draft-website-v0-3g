@@ -1,4 +1,5 @@
 // eslint.config.mjs
+import '@rushstack/eslint-patch/modern-module-resolution.js';
 import eslintConfigNext from 'eslint-config-next';
 
 export default [

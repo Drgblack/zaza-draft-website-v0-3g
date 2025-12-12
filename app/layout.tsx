@@ -1,5 +1,6 @@
-﻿import "./globals.css";
+import "./globals.css";
 import type { Metadata } from "next";
+import Script from "next/script";
 import React from "react";
 import { LanguageProvider } from "@/lib/i18n/language-context";
 import { Header } from "@/components/header";
@@ -27,6 +28,11 @@ export default function RootLayout({
         <link rel="icon" href="/z-logo.png" sizes="any" />
       </head>
       <body>
+        <Script
+          src="https://plausible.io/js/script.js"
+          data-domain="zazadraft.com"
+          strategy="afterInteractive"
+        />
         <LanguageProvider>
           <Header />
           <main>{children}</main>
@@ -36,4 +42,3 @@ export default function RootLayout({
     </html>
   );
 }
-
