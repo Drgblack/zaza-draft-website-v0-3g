@@ -5,15 +5,16 @@ import { BlogClient } from "@/app/blog/blog-client"
 const ogImage = "/blog/ai-lesson-planning-guide-2025.jpeg"
 
 export const metadata: Metadata = {
-  title: "Blog | Zaza Draft – KI-Hilfen und Tipps für Lehrkräfte",
+  title: "Blog | Zaza Draft - KI-Hilfen und Tipps für Lehrkräfte",
   description:
-    "Artikel über Elternkommunikation, Feedback und sichere KI-Nutzung im Unterricht – direkt aus dem Zaza Draft Team und der Lehrkräfte-Community.",
+    "Artikel über Elternkommunikation, Feedback und sichere KI-Nutzung im Unterricht - direkt aus dem Zaza Draft Team und der Lehrkräfte-Community.",
   openGraph: {
     title: "Blog | Zaza Draft",
     description: "Lehrerzentrierte Artikel zu KI-Schreiben, Elternmails und Unterrichts-Workflows.",
     url: "https://zazadraft.com/de/blog",
     type: "website",
     locale: "de_DE",
+    siteName: "Zaza Draft",
     images: [{ url: ogImage, alt: "Zaza Draft Blogartikel" }],
   },
   twitter: {

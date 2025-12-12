@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
   }
   const descriptions = {
     en: "A family of safe, teacher-first AI apps that cut busywork and protect your voice. Powered by Zaza KnowledgeCore for explainable, classroom-ready guardrails.",
-    de: "Eine Familie sicherer, lehrerzentrierter KI-Apps, die Routinearbeit reduzieren und deine Stimme schützen. Betrieben von Zaza KnowledgeCore für erklärbare, klassenraumtaugliche Schutzmechanismen.",
+    de: "Eine Familie sicherer, lehrerzentrierter KI-Apps, die Routinearbeit reduziert und deine Stimme schützt. Betrieben von Zaza KnowledgeCore für erklärbare, klassenraumtaugliche Schutzmechanismen.",
   }
   const ogImage = "/hero-teacher-classroom.jpg"
 
@@ -38,6 +38,8 @@ export async function generateMetadata(): Promise<Metadata> {
       description: descriptions[locale],
       type: "website",
       url: locale === "de" ? "https://zazadraft.com/de/suite" : "https://zazadraft.com/suite",
+      siteName: "Zaza Draft",
+      locale: locale === "de" ? "de_DE" : "en_GB",
       images: [{ url: ogImage, alt: "Teacher using the Zaza Suite apps" }],
     },
     twitter: {

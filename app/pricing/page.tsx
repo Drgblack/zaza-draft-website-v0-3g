@@ -19,6 +19,8 @@ export const metadata: Metadata = {
     description: "Start free. Unlock faster parent messages, calmer replies, and trusted guardrails when you upgrade.",
     url: siteUrl,
     type: "website",
+    siteName: "Zaza Draft",
+    locale: "en_GB",
     images: [{ url: ogImage, alt: "Teacher reviewing pricing options for Zaza Draft" }],
   },
   twitter: {

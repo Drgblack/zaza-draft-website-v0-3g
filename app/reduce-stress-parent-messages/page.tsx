@@ -1,5 +1,7 @@
-﻿import type { Metadata } from "next"
+import type { Metadata } from "next"
 import ReduceStressClient from "./reduce-stress-client"
+
+const canonicalUrl = "https://zazadraft.com/reduce-stress-parent-messages"
 
 export const metadata: Metadata = {
   title: "How to Reduce Stress from Parent Messages (Without Ignoring Them) | Zaza Draft",
@@ -7,11 +9,20 @@ export const metadata: Metadata = {
     "Discover proven strategies to manage parent communication stress while maintaining strong relationships. Learn how AI tools like Zaza Draft help teachers respond faster without sacrificing quality.",
   keywords:
     "teacher stress, parent communication, teacher burnout, parent emails, teacher mental health, AI for teachers, reduce teacher stress",
+  alternates: {
+    canonical: canonicalUrl,
+    languages: {
+      en: canonicalUrl,
+      de: "https://zazadraft.com/de/reduce-stress-parent-messages",
+    },
+  },
   openGraph: {
     title: "How to Reduce Stress from Parent Messages | Zaza Draft",
     description: "Proven strategies to manage parent communication stress while maintaining strong relationships.",
     type: "article",
-    url: "https://zazadraft.com/reduce-stress-parent-messages",
+    url: canonicalUrl,
+    siteName: "Zaza Draft",
+    locale: "en_GB",
     images: [
       {
         url: "https://zazadraft.com/og-reduce-stress.jpg",
@@ -27,14 +38,8 @@ export const metadata: Metadata = {
     description: "Proven strategies to manage parent communication stress.",
     images: ["https://zazadraft.com/og-reduce-stress.jpg"],
   },
-  alternates: {
-    canonical: "https://zazadraft.com/reduce-stress-parent-messages",
-  },
 }
 
 export default function ReduceStressPage() {
   return <ReduceStressClient />
 }
-// duplicate Metadata import removed: import type { Metadata } from "next"
-
-

@@ -1,2 +1,2 @@
-﻿export { metadata } from "@/app/success-stories/page";
-export { default } from "@/app/success-stories/page";
+export { metadata } from "./metadata"
+export { default } from "@/app/success-stories/page"

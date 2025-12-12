@@ -2,17 +2,33 @@
 import AILiteracyClient from "./ai-literacy-client"
 import { CourseSchema, BreadcrumbSchema } from "@/lib/seo/schema"
 
+const siteUrl = "https://zazadraft.com/ai-literacy"
+
 export const metadata: Metadata = {
   title: "AI Literacy for Teachers | Free Courses & Certification | Zaza Draft",
   description:
     "Master AI tools for education with free courses, certification programs, and downloadable resources. Learn prompt engineering, ethical AI use, and practical classroom applications.",
   keywords:
     "AI literacy for teachers, AI education courses, teacher AI certification, prompt engineering for educators, AI tools training, FERPA compliance AI, ethical AI in education",
+  alternates: {
+    canonical: siteUrl,
+    languages: {
+      en: siteUrl,
+      de: "https://zazadraft.com/de/ai-literacy",
+    },
+  },
   openGraph: {
     title: "AI Literacy Resource Center for Teachers",
     description: "Free courses, certification, and resources to help teachers confidently use AI in the classroom",
     type: "website",
-    url: "https://zazadraft.com/ai-literacy",
+    url: siteUrl,
+    siteName: "Zaza Draft",
+    locale: "en_GB",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Literacy Resource Center for Teachers",
+    description: "Free courses, certification, and resources to help teachers confidently use AI in the classroom",
   },
 }
 
@@ -36,5 +52,4 @@ export default function AILiteracyPage() {
   )
 }
 // import type { Metadata } from "next"
-
 

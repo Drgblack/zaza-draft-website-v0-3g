@@ -6,23 +6,30 @@ const ogImage = "/greg-blackburn-headshot.jpg"
 const canonicalUrl = "https://zazadraft.com/about/founder-story"
 
 export const metadata: Metadata = {
-  title: "Greg's Founder Story | Zaza Draft",
+  title: "Founder Story | Zaza Draft",
   description:
-    "From paint brushes in Hobart to a PhD in Professional Education and founding Zaza Technologies – Greg Blackburn's full founder story.",
-  openGraph: {
-    title: "Greg's Founder Story | Zaza Draft",
-    description:
-      "A deeper look at the journey behind Zaza Draft and Zaza Technologies – why Greg Blackburn built teacher-first AI tools.",
-    url: canonicalUrl,
-    type: "profile",
-    images: [ogImage],
-  },
+    "From paint brushes in Hobart to a PhD in Professional Education and founding Zaza Technologies - Greg Blackburn's full founder story.",
   alternates: {
     canonical: canonicalUrl,
     languages: {
       en: canonicalUrl,
       de: "https://zazadraft.com/de/about/founder-story",
     },
+  },
+  openGraph: {
+    title: "Founder Story | Zaza Draft",
+    description:
+      "A deeper look at the journey behind Zaza Draft and Zaza Technologies - why Greg Blackburn built teacher-first AI tools.",
+    url: canonicalUrl,
+    type: "website",
+    siteName: "Zaza Draft",
+    locale: "en_GB",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Founder Story | Zaza Draft",
+    description:
+      "A deeper look at the journey behind Zaza Draft and Zaza Technologies - why Greg Blackburn built teacher-first AI tools.",
   },
 }
 

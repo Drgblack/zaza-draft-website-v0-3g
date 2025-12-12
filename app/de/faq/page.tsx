@@ -1,2 +1,2 @@
-﻿export { metadata } from "@/app/faq/page";
-export { default } from "@/app/faq/page";
+export { metadata } from "./metadata"
+export { default } from "@/app/faq/page"

@@ -12,7 +12,9 @@ export const metadata: Metadata = {
     title: "Terms of Service | Zaza Draft",
     description: "Terms covering accounts, subscriptions, acceptable use, and intellectual property.",
     url: canonicalUrl,
-    type: "article",
+    type: "website",
+    siteName: "Zaza Draft",
+    locale: "en_GB",
     images: [{ url: ogImage, alt: "Zaza Draft brand graphic" }],
   },
   twitter: {

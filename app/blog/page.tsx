@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     description: "Teacher-first guides on AI writing, parent messages, and lesson workflows.",
     url: "https://zazadraft.com/blog",
     type: "website",
+    siteName: "Zaza Draft",
+    locale: "en_GB",
     images: [{ url: ogImage, alt: "Zaza Draft blog hero article" }],
   },
   twitter: {

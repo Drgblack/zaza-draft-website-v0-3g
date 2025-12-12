@@ -12,7 +12,9 @@ export const metadata: Metadata = {
     title: "Privacy Policy | Zaza Draft",
     description: "Learn how we protect teacher and student data with privacy-first safeguards.",
     url: canonicalUrl,
-    type: "article",
+    type: "website",
+    siteName: "Zaza Draft",
+    locale: "en_GB",
     images: [{ url: ogImage, alt: "Teacher working at a laptop reviewing privacy details" }],
   },
   twitter: {

@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteUrl,
     languages: {
-      "en-GB": siteUrl,
-      "de-DE": `${siteUrl}/de`,
+      en: siteUrl,
+      de: `${siteUrl}/de`,
     },
   },
 }

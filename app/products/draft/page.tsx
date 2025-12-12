@@ -14,6 +14,8 @@ export const metadata: Metadata = {
       "Draft parent emails in minutes with tone guardrails and safety checks. Save time without losing your voice or credibility.",
     url: canonicalUrl,
     type: "website",
+    siteName: "Zaza Draft",
+    locale: "en_GB",
     images: [{ url: ogImage, alt: "Teacher composing a parent email with Zaza Draft" }],
   },
   twitter: {

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import { useLanguage } from "../../src/contexts/LanguageContext";
@@ -947,7 +947,7 @@ export default function ReduceStressClient() {
                     : "AI for Student Reports"}
                 </Link>
                 <Link
-                  href="/teacher-blog"
+                  href="/blog"
                   className="block text-sm text-[#A78BFA] hover:text-[#8B5CF6] transition-colors"
                 >
                   → {isGerman ? "Lehrer-Blog" : "Teacher Blog"}
@@ -982,6 +982,7 @@ export default function ReduceStressClient() {
     </div>
   );
 }
+
 
 
 
