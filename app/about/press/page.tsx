@@ -8,26 +8,6 @@ import { Button } from "@/components/ui/button"
 import { Mail, ExternalLink, Sparkles, Quote, Award } from "lucide-react"
 
 const ogImage = "/press-kit/screenshot-hero-preview.jpg"
-const iconPack = [
-  {
-    name: "Zaza Z icon - colour",
-    description: "Use on white or light backgrounds to let the gradient show the full brand depth.",
-    file: "/press-kit/brand/zaza-z-icon-1024.png",
-    alt: "Zaza Z icon - colour",
-  },
-  {
-    name: "Zaza Z glyph - white",
-    description: "Choose when the mark sits on dark or saturated surfaces for clear contrast.",
-    file: "/press-kit/brand/zaza-z-glyph-white-1024.png",
-    alt: "Zaza Z glyph - white",
-  },
-  {
-    name: "Zaza Z glyph - black",
-    description: "Reserve for restrained contexts such as monochrome print or light neutral backdrops.",
-    file: "/press-kit/brand/zaza-z-glyph-black-1024.png",
-    alt: "Zaza Z glyph - black",
-  },
-]
 
 export const metadata: Metadata = {
   title: "Press Kit | Zaza Draft media resources",
@@ -109,10 +89,16 @@ export default function PressKitPage() {
                       <dt className="text-[#9CA3AF]">Founded</dt>
                       <dd>2025</dd>
                     </div>
-                    <div className="flex flex-col gap-1">
-                      <dt className="text-[#9CA3AF]">HQ</dt>
-                      <dd>Dresden, Germany</dd>
-                    </div>
+                  <div className="flex flex-col gap-1">
+                    <dt className="text-[#9CA3AF]">Registered office</dt>
+                    <dd>
+                      Gumbertstraße 150
+                      <br />
+                      40229 Düsseldorf
+                      <br />
+                      Deutschland
+                    </dd>
+                  </div>
                     <div className="flex flex-col gap-1">
                       <dt className="text-[#9CA3AF]">Mission</dt>
                       <dd>Teacher-first AI that gives time back</dd>
@@ -163,85 +149,52 @@ export default function PressKitPage() {
                   These are the official Z icon marks. Use the correct colourway per background, and keep lockups clear and respectful of the brand.
                 </p>
               </div>
-              <div className="grid gap-6 md:grid-cols-3">
-                {iconPack.map((icon) => (
-                  <div key={icon.name} className="bg-[#1F2937] border border-[#374151] rounded-2xl p-5 space-y-4">
-                    <div className="rounded-xl border border-[#1F2937] bg-[#0F172A] p-3">
-                      <div className="relative h-32 w-full">
-                        <Image src={icon.file} alt={icon.alt} fill className="object-contain" sizes="(max-width: 768px) 50vw, 30vw" />
-                      </div>
+              <div className="grid gap-6 md:grid-cols-1">
+                <div className="bg-[#1F2937] border border-[#374151] rounded-2xl p-5 space-y-4">
+                  <div className="rounded-xl border border-[#1F2937] bg-[#0F172A] p-3">
+                    <div className="relative h-32 w-full">
+                      <Image
+                        src="/press-kit/brand/zaza-z-icon-1024.png"
+                        alt="Zaza Z icon - colour"
+                        fill
+                        className="object-contain"
+                        sizes="(max-width: 768px) 80vw, 30vw"
+                      />
                     </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-[#F9FAFB]">{icon.name}</h3>
-                      <p className="text-sm text-[#CBD5E1] mt-1">{icon.description}</p>
-                    </div>
-                    <a
-                      href={icon.file}
-                      download
-                      className="inline-flex items-center justify-center rounded-full border border-white/20 bg-gradient-to-r from-[#7C3AED] to-[#6366F1] px-3 py-2 text-sm font-semibold text-white transition-colors hover:from-[#6D28D9] hover:to-[#4F46E5]"
-                    >
-                      Download PNG
-                    </a>
                   </div>
-                ))}
+                  <div>
+                    <h3 className="text-lg font-semibold text-[#F9FAFB]">Zaza Z icon - colour</h3>
+                    <p className="text-sm text-[#CBD5E1] mt-1">
+                      For use on light or neutral backgrounds so the gradient retains the brand depth.
+                    </p>
+                  </div>
+                  <a
+                    href="/press-kit/brand/zaza-z-icon-1024.png"
+                    download
+                    className="inline-flex items-center justify-center rounded-full border border-white/20 bg-gradient-to-r from-[#7C3AED] to-[#6366F1] px-3 py-2 text-sm font-semibold text-white transition-colors hover:from-[#6D28D9] hover:to-[#4F46E5]"
+                  >
+                    Download PNG
+                  </a>
+                </div>
               </div>
               <div className="mt-6 rounded-2xl border border-dashed border-[#374151] bg-[#0F172A] p-4 text-sm text-[#CBD5E1]">
-                <p className="font-semibold text-white mb-2">Usage notes</p>
-                <ul className="list-disc space-y-1 pl-4">
-                  <li>Use the colour icon on light surfaces where gradients show true-to-brand depth.</li>
-                  <li>Switch to the white icon for dark or saturated backdrops to keep the mark legible.</li>
-                  <li>The black icon is for monochrome printing, embossing, or situations where gradients are not supported; do not recolour or stretch.</li>
-                </ul>
+                <p className="font-semibold text-white mb-2">Usage note</p>
+                <p>The colour icon is the official mark for light and neutral contexts; keep the mark unaltered.</p>
               </div>
             </section>
 
             {/* Product & Context Screens */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">Screenshots & context images</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <AssetCard
-                  title="Hero Screenshot"
-                  description="Main product hero showing the Zaza Draft interface."
-                  previewImage="/press-kit/screenshot-hero-preview.jpg"
-                  downloadUrl="/press-kit/screenshot-hero.png"
-                  downloadLabel="Download PNG"
-                />
-                <AssetCard
-                  title="Dashboard View"
-                  description="Teacher dashboard with recent comments and quick actions."
-                  previewImage="/press-kit/screenshot-dashboard-preview.jpg"
-                  downloadUrl="/press-kit/screenshot-dashboard.png"
-                  downloadLabel="Download PNG"
-                />
-                <AssetCard
-                  title="Draft Editor"
-                  description="Comment drafting interface with AI suggestions and tone controls."
-                  previewImage="/press-kit/screenshot-editor-preview.jpg"
-                  downloadUrl="/press-kit/screenshot-editor.png"
-                  downloadLabel="Download PNG"
-                />
-                <AssetCard
-                  title="Safety Guardrails"
-                  description="Hallucination prevention and translation safety features in action."
-                  previewImage="/press-kit/screenshot-safety-preview.jpg"
-                  downloadUrl="/press-kit/screenshot-safety.png"
-                  downloadLabel="Download PNG"
-                />
-                <AssetCard
-                  title="Context: Classroom"
-                  description="Realistic classroom scene with Zaza Draft in use."
-                  previewImage="/press-kit/context-classroom.jpg"
-                  downloadUrl="/press-kit/context-classroom.jpg"
-                  downloadLabel="Download JPG"
-                />
-                <AssetCard
-                  title="Context: Home Office"
-                  description="Teacher using Draft at home for parent communications."
-                  previewImage="/press-kit/context-home.jpg"
-                  downloadUrl="/press-kit/context-home.jpg"
-                  downloadLabel="Download JPG"
-                />
-              </div>
+              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-4">Product screenshots</h2>
+              <p className="text-sm text-[#CBD5E1] max-w-3xl mb-4">
+                Product screenshots are available on request.
+              </p>
+              <Button
+                asChild
+                className="rounded-full bg-gradient-to-r from-[#7C3AED] to-[#6366F1] text-white"
+              >
+                <a href="mailto:press@zazatechnologies.com">Request screenshots</a>
+              </Button>
             </section>
 
             {/* Brand Guidelines */}
@@ -309,10 +262,10 @@ export default function PressKitPage() {
             <section className="mb-16">
               <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">Founder Bio</h2>
               <ExpandableBio
-                shortLabel="Short Bio"
-                longLabel="Long Bio"
-                shortBio="Greg Blackburn is the founder of Zaza Technologies. With a PhD in Professional Education and 20+ years in Learning & Development, Greg has worked at the intersection of education, AI, and technology. He founded Zaza to help teachers thrive by saving time, reducing stress, and focusing on what matters most: teaching."
-                longBio="Dr. Harvey Gregory Scott Blackburn (Greg) is the founder of Zaza Technologies, an AI-powered EdTech company based in Germany. Greg began his career in Learning & Development after completing a Diploma in German and an MBA from the University of Queensland, later earning a PhD in Professional Education from City, University of London. His research focused on critical thinking and problem-solving in student-centred eLearning. Over two decades, he has led major learning initiatives in both higher education and corporate environments, most recently as Group Director of Learning at Communardo. Zaza Technologies reflects Greg's vision of building safe, teacher-first AI tools that combine sound pedagogy with cutting-edge AI. Greg lives in Germany with his family and is passionate about empowering educators through technology."
+              shortLabel="Short Bio"
+              longLabel="Long Bio"
+              shortBio="Greg Blackburn is the founder of Zaza Technologies. With a PhD in Professional Education and 20+ years in Learning & Development, Greg has worked at the intersection of education, AI, and technology. He founded Zaza to help teachers thrive by saving time, reducing stress, and focusing on what matters most: teaching. Founder based in Saarland, Germany."
+              longBio="Dr. Harvey Gregory Scott Blackburn (Greg) is the founder of Zaza Technologies, an AI-powered EdTech company based in Germany. Greg began his career in Learning & Development after completing a Diploma in German and an MBA from the University of Queensland, later earning a PhD in Professional Education from City, University of London. His research focused on critical thinking and problem-solving in student-centred eLearning. Over two decades, he has led major learning initiatives in both higher education and corporate environments, most recently as Group Director of Learning at Communardo. Zaza Technologies reflects Greg's vision of building safe, teacher-first AI tools that combine sound pedagogy with cutting-edge AI. Greg lives in Germany with his family and is passionate about empowering educators through technology. Founder based in Saarland, Germany."
               />
             </section>
 
