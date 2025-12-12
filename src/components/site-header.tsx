@@ -9,13 +9,13 @@ export default function SiteHeader() {
           <span className="text-pink-400">Draft</span>
         </Link>
         <nav className="hidden md:flex gap-6 text-sm">
-          <Link href="/solutions" className="hover:opacity-80">
+          <Link href="/suite" className="hover:opacity-80">
             Our Solutions
           </Link>
-          <Link href="/learning-centre" className="hover:opacity-80">
+          <Link href="/ai-literacy" className="hover:opacity-80">
             Learning Centre
           </Link>
-          <Link href="/why-draft" className="hover:opacity-80">
+          <Link href="/products/draft" className="hover:opacity-80">
             Why Zaza Draft?
           </Link>
           <Link href="/about" className="hover:opacity-80">
@@ -30,7 +30,7 @@ export default function SiteHeader() {
             Try Zaza Teach
           </a>
           <Link
-            href="/waitlist"
+            href="/contact"
             className="rounded-xl bg-pink-500 px-3 py-1.5 text-sm text-white hover:bg-pink-400"
           >
             Join Waitlist
@@ -40,4 +40,3 @@ export default function SiteHeader() {
     </header>
   );
 }
-

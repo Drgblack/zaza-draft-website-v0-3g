@@ -233,7 +233,7 @@ export default function PressKitPage() {
               <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">What teachers say</h2>
               <div className="grid md:grid-cols-3 gap-4">
                 {[
-                  { quote: "Draft gives me evenings back—emails now take minutes, not hours.", name: "Sarah L., Middle School" },
+                  { quote: "Draft gives me evenings back - emails now take minutes, not hours.", name: "Sarah L., Middle School" },
                   { quote: "Tone and clarity land immediately. Parents respond with less friction.", name: "Mark R., Department Lead" },
                   { quote: "Finally AI that doesn’t sound generic. My voice stays intact.", name: "Emma K., Primary Teacher" },
                 ].map((item) => (
@@ -254,7 +254,7 @@ export default function PressKitPage() {
               </div>
               <p className="text-[#9CA3AF] mb-4">First features and interviews are being scheduled. Media partners welcome.</p>
               <div className="bg-[#111827] border border-dashed border-[#374151] rounded-2xl p-6 text-[#CBD5E1]">
-                <p>"First coverage coming soon" — reach out for exclusive early interviews or demos.</p>
+                <p>"First coverage coming soon" - reach out for exclusive early interviews or demos.</p>
               </div>
             </section>
 
@@ -282,7 +282,7 @@ export default function PressKitPage() {
                   { q: "How long is onboarding?", a: "Self-serve in minutes; school deployments with a short onboarding checklist." },
                   { q: "Do you provide training?", a: "Yes. Live workshops, on-demand videos, and concise in-app guides." },
                   { q: "Funding?", a: "Bootstrapped; focused on sustainable, user-first growth." },
-                  { q: "Interview contact?", a: "press@zazatechnologies.com — replies within 24h; prepared statements on request." },
+                  { q: "Interview contact?", a: "press@zazatechnologies.com - replies within 24h; prepared statements on request." },
                 ].map((item) => (
                   <div key={item.q} className="bg-[#111827] border border-[#1F2937] rounded-2xl p-5">
                     <p className="text-sm font-semibold text-[#E5E7EB]">{item.q}</p>
