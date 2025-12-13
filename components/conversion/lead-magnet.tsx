@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Download, CheckCircle } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
-import { submitBrevoContact } from "@/lib/brevo-client"
+import { describeBrevoError, submitBrevoContact } from "@/lib/brevo-client"
 
 interface LeadMagnetProps {
   title: string
@@ -45,7 +45,7 @@ export function LeadMagnet({ title, description, resourceName, onSubmit }: LeadM
       setSubmitted(true)
     } catch (err) {
       console.error("[LeadMagnet] submission failed", err)
-      setError(t("form.error"))
+      setError(describeBrevoError(err, t("form.error")))
     } finally {
       setLoading(false)
     }

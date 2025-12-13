@@ -7,7 +7,7 @@ import { X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/lib/i18n/language-context"
 import { track } from "@/lib/analytics"
-import { submitBrevoContact } from "@/lib/brevo-client"
+import { describeBrevoError, submitBrevoContact } from "@/lib/brevo-client"
 
 interface SignupModalProps {
   open: boolean
@@ -44,7 +44,7 @@ export function SignupModal({ open, onOpenChange }: SignupModalProps) {
       track("form_submit", { form: "signup_modal", language })
     } catch (err) {
       console.error("[v0] Signup error:", err)
-      setError(t("form.error"))
+      setError(describeBrevoError(err, t("form.error")))
     } finally {
       setLoading(false)
     }

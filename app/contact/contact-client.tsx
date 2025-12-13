@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { submitBrevoContact } from "@/lib/brevo-client";
+import { describeBrevoError, submitBrevoContact } from "@/lib/brevo-client";
 
 const content = {
   en: {
@@ -114,7 +114,8 @@ export function ContactClient() {
       setFormData({ name: "", email: "", message: "" });
       setTimeout(() => setSuccess(false), 5000);
     } catch (err) {
-      setError(t.contact.form.error);
+      const message = describeBrevoError(err, t.contact.form.error);
+      setError(message);
       setTimeout(() => setError(""), 5000);
     } finally {
       setLoading(false);
@@ -304,4 +305,3 @@ export function ContactClient() {
     </div>
   );
 }
-
