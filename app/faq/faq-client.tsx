@@ -34,6 +34,9 @@ export function FAQPageClient() {
         { question: t("faq.safety.q4"), answer: t("faq.safety.a4") },
         { question: t("faq.safety.q5"), answer: t("faq.safety.a5") },
         { question: t("faq.safety.q6"), answer: t("faq.safety.a6") },
+        { question: t("faq.safety.q7"), answer: t("faq.safety.a7") },
+        { question: t("faq.safety.q8"), answer: t("faq.safety.a8") },
+        { question: t("faq.safety.q9"), answer: t("faq.safety.a9") },
       ],
     },
     {
@@ -45,6 +48,10 @@ export function FAQPageClient() {
         { question: t("faq.features.q4"), answer: t("faq.features.a4") },
         { question: t("faq.features.q5"), answer: t("faq.features.a5") },
         { question: t("faq.features.q6"), answer: t("faq.features.a6") },
+        { question: t("faq.features.q7"), answer: t("faq.features.a7") },
+        { question: t("faq.features.q8"), answer: t("faq.features.a8") },
+        { question: t("faq.features.q9"), answer: t("faq.features.a9") },
+        { question: t("faq.features.q10"), answer: t("faq.features.a10") },
       ],
     },
     {
@@ -69,6 +76,8 @@ export function FAQPageClient() {
       items: [
         { question: t("faq.schools.q1"), answer: t("faq.schools.a1") },
         { question: t("faq.schools.q2"), answer: t("faq.schools.a2") },
+        { question: t("faq.schools.q3"), answer: t("faq.schools.a3") },
+        { question: t("faq.schools.q4"), answer: t("faq.schools.a4") },
       ],
     },
   ]
@@ -134,4 +143,3 @@ export function FAQPageClient() {
     </>
   )
 }
-

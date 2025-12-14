@@ -266,7 +266,7 @@ const translationsEn: Record<string, string> = {
 
   // Resources page (EN)
   "resources.title": "Free Resources for Teachers",
-  "resources.subtitle": "Time-savers you can use today. Download as Microsoft Word.",
+  "resources.subtitle": "Time-savers you can use today. Download as PDF.",
   "resources.download": "Download",
   "resources.downloadCta": "Download Free Resource",
   "resources.comingSoon": "Coming Soon",
@@ -1084,6 +1084,15 @@ const translationsEn: Record<string, string> = {
   "faq.safety.q6": "Is Zaza Draft GDPR compliant?",
   "faq.safety.a6":
     "Yes. We comply with GDPR requirements for data protection and privacy. Users have full control over their data, including the right to access, correct, and delete their information.",
+  "faq.safety.q7": "Will Zaza Draft make things up?",
+  "faq.safety.a7":
+    "No. Zaza Draft avoids unsupported claims and works only with the information you provide. It focuses on clear, professional wording instead of inventing details, and we recommend a final read-through before you send anything.",
+  "faq.safety.q8": "Is student information safe?",
+  "faq.safety.a8":
+    "Yes. Draft is built with privacy in mind. You do not need to enter student names for most drafts, and you should avoid unnecessary personal details. Data is handled securely and only used to create your draft. See our Privacy Policy for more detail.",
+  "faq.safety.q9": "Is Zaza Draft GDPR compliant?",
+  "faq.safety.a9":
+    "Yes. Draft follows GDPR principles such as data minimisation and secure processing, and you can request deletion of your data at any time.",
 
   // Features Questions
   "faq.features.q1": "What tone options are available?",
@@ -1109,6 +1118,32 @@ const translationsEn: Record<string, string> = {
   "faq.features.q6": "Can multiple teachers share templates?",
   "faq.features.a6":
     "With our school plans, teams can share templates and best practices, ensuring consistent communication across your department or school.",
+
+  "faq.features.q7": "How does Zaza Draft help me write faster?",
+  "faq.features.a7":
+    "Zaza Draft cuts writing time by handling structure, tone, and phrasing so you do not start from a blank page. Most teachers finish messages in minutes rather than rewriting emails from scratch.",
+  "faq.features.q8": "Can Zaza Draft match my tone and school style?",
+  "faq.features.a8":
+    "Yes. Draft adapts to calm, firm, supportive, or neutral tones. You remain in control and can adjust wording to match your school’s expectations or your own style before sending anything.",
+  "faq.features.q9": "Can Zaza Draft help with sensitive topics?",
+  "faq.features.a9":
+    "Absolutely. In sensitive or emotional situations, Draft shifts your language toward respectful, de-escalating phrasing while keeping the message clear. You decide what to send and when.",
+  "faq.features.q10": "Why not just use ChatGPT?",
+  "faq.features.a10":
+    "ChatGPT is a general-purpose tool. Zaza Draft is built for teachers and school communication, with guardrails around tone, clarity, and professionalism. That focus gives you faster drafts that are appropriate in school contexts.",
+
+  "faq.features.q7": "Wie hilft Zaza Draft mir, schneller zu schreiben?",
+  "faq.features.a7":
+    "Draft spart Zeit, indem es Struktur, Ton und Formulierungen vorbereitet. Statt bei Null zu beginnen, bekommst du einen ruhigen, klaren Entwurf, den du prüfst und bei Bedarf anpasst.",
+  "faq.features.q8": "Kann Zaza Draft meinen Ton und unseren Schulstil treffen?",
+  "faq.features.a8":
+    "Ja. Draft passt sich ruhigen, klaren, unterstützenden oder sachlichen Nuancen an. Du kannst Formulierungen so anpassen, dass sie zu euren Erwartungen und deinem Stil passen, bevor du etwas versendest.",
+  "faq.features.q9": "Hilft Zaza Draft auch bei sensiblen Themen?",
+  "faq.features.a9":
+    "Ja. Gerade bei heiklen Situationen unterstützt dich Draft dabei, respektvoll und deeskalierend zu formulieren, ohne dass die Botschaft unklar wird. Du entscheidest, was du sendest und wann.",
+  "faq.features.q10": "Warum nicht einfach ChatGPT nutzen?",
+  "faq.features.a10":
+    "ChatGPT ist ein allgemeines Tool. Zaza Draft wurde speziell für schulische Kommunikation entwickelt – Elternmails, Feedback und Berichtstexte. Der Fokus liegt auf Klarheit, Professionalität und passenden Formulierungen im Schulkontext, damit du schneller zu einem nutzbaren Entwurf kommst.",
 
   // Pricing Questions
   "faq.pricing.q1": "How much does Zaza Draft cost?",
@@ -1621,7 +1656,7 @@ const translationsDe: Record<string, string> = {
   // Resources page (DE)
   "resources.title": "Kostenlose Ressourcen für Lehrkräfte",
   "resources.subtitle":
-    "Zeitsparer, die du sofort nutzen kannst. Download als Microsoft Word.",
+    "Zeitsparer, die du sofort nutzen kannst. Download als PDF.",
   "resources.download": "Herunterladen",
   "resources.downloadCta": "Ressource herunterladen",
   "resources.comingSoon": "Demnächst",
@@ -2469,6 +2504,15 @@ const translationsDe: Record<string, string> = {
   "faq.safety.q6": "Ist Zaza Draft GDPR-konform?",
   "faq.safety.a6":
     "Ja. Wir halten die GDPR-Anforderungen für Datenschutz und Privatsphäre ein. Benutzer haben die volle Kontrolle über ihre Daten, einschließlich des Rechts auf Zugang, Korrektur und Löschung ihrer Informationen.",
+  "faq.safety.q7": "Erfindet Zaza Draft manchmal Dinge?",
+  "faq.safety.a7":
+    "Nein. Zaza Draft ist so aufgebaut, dass es keine unbelegten Details hinzufügt. Es arbeitet nur mit den Informationen, die du eingibst, und konzentriert sich darauf, daraus eine professionelle Nachricht zu formulieren. Lies vor dem Senden trotzdem kurz gegen.",
+  "faq.safety.q8": "Sind Schülerdaten sicher?",
+  "faq.safety.a8":
+    "Ja. Draft ist datensparsam gestaltet. Für die meisten Entwürfe brauchst du keine Klarnamen, und du solltest keine unnötigen persönlichen Details eingeben. Deine Angaben werden sicher verarbeitet und nur für die Entwurfserstellung genutzt. Lies mehr in unserer Datenschutzerklärung.",
+  "faq.safety.q9": "Ist Zaza Draft DSGVO-konform?",
+  "faq.safety.a9":
+    "Ja. Draft berücksichtigt zentrale DSGVO-Prinzipien wie Datensparsamkeit und sichere Verarbeitung. Du kannst jederzeit eine Löschung deiner Daten anfordern.",
 
   // Features Questions
   "faq.features.q1": "Welche Tonoptionen sind verfügbar?",
@@ -2536,6 +2580,12 @@ const translationsDe: Record<string, string> = {
   "faq.schools.q2": "Bieten Sie Schulungen und Support für Schulen an?",
   "faq.schools.a2":
     "Ja! Schul- und Bezirkspläne umfassen Onboarding-Support, Schulungsmaterialien und fortlaufende professionelle Entwicklungsressourcen. Wir helfen dabei, dass Ihr gesamtes Team Draft effektiv nutzen kann, um Zeit zu sparen und die Kommunikation zu verbessern.",
+  "faq.schools.q3": "Ist es „Schummeln“, Zaza Draft zu verwenden?",
+  "faq.schools.a3":
+    "Nein. Zaza Draft ist ein Schreib-Assistent, kein Ersatz für deine professionelle Einschätzung. Du gibst den Inhalt und den Kontext vor, Draft hilft dir beim Formulieren, und du trägst die Verantwortung für die finale Nachricht.",
+  "faq.schools.q4": "Passt Zaza Draft zu Schulregeln und Vorgaben?",
+  "faq.schools.a4":
+    "Ja. Draft unterstützt dich dabei, professionell und regelkonform zu kommunizieren. Es wird nichts automatisch versendet – du prüfst alles vorher. Orientiere dich an den Kommunikationsrichtlinien deiner Schule.",
 
   // FAQ CTA
   "faq.cta.title": "Haben Sie noch Fragen?",

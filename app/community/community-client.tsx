@@ -26,6 +26,7 @@ import {
 } from "lucide-react"
 import { analytics } from "@/lib/analytics"
 import { RelatedResources } from "@/components/related-resources"
+import HeroStats from "./hero-stats"
 
 export default function CommunityClient() {
   const { language } = useLanguage()
@@ -386,24 +387,7 @@ export default function CommunityClient() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-4 gap-8 mt-16 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">25K+</div>
-                <div className="text-gray-400 text-sm">{text.hero.stats.members}</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">15K+</div>
-                <div className="text-gray-400 text-sm">{text.hero.stats.discussions}</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">98K+</div>
-                <div className="text-gray-400 text-sm">{text.hero.stats.posts}</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">24/7</div>
-                <div className="text-gray-400 text-sm">{text.hero.stats.active}</div>
-              </div>
-            </div>
+            <HeroStats text={text.hero.stats} />
           </div>
         </div>
       </section>
@@ -634,4 +618,3 @@ export default function CommunityClient() {
     </div>
   )
 }
-
