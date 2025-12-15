@@ -27,7 +27,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/z-logo.png" sizes="any" />
       </head>
-      <body>
+      <body className="bg-slate-950 text-slate-100">
         <Script
           src="https://plausible.io/js/script.js"
           data-domain="zazadraft.com"
@@ -35,7 +35,7 @@ export default function RootLayout({
         />
         <LanguageProvider>
           <Header />
-          <main className="pt-[92px]">{children}</main>
+          <main className="pt-[92px] bg-slate-950">{children}</main>
           <Footer />
         </LanguageProvider>
       </body>
