@@ -61,40 +61,45 @@ export default function Footer() {
               <span className="text-slate-50 font-semibold">Zaza Draft</span>
             </div>
             <p className="mt-3 text-sm leading-6 text-slate-400">{tagline}</p>
-            <div className="mt-4 flex items-center gap-3">
-              <SocialIcon
-                label="TikTok"
-                href="https://www.tiktok.com/@zazateach"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  className="h-4 w-4"
-                  fill="currentColor"
+            <div className="mt-4 flex flex-col gap-2 text-xs">
+              <div className="flex items-center gap-3">
+                <SocialIcon
+                  label="TikTok"
+                  href="https://www.tiktok.com/@zazateach"
                 >
-                  <path d="M16.7 2c.3 2 1.6 3.6 3.3 4.5v3.1c-1.3-.1-2.6-.5-3.8-1.2v6.6a6.1 6.1 0 1 1-6.1-6.1h.6v3.2h-.6a2.9 2.9 0 1 0 2.9 2.9V2h3.7z" />
-                </svg>
-              </SocialIcon>
-              <SocialIcon label="X" href="https://twitter.com/zazateach">
-                <svg
-                  viewBox="0 0 24 24"
-                  className="h-4 w-4"
-                  fill="currentColor"
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-4 w-4"
+                    fill="currentColor"
+                  >
+                    <path d="M16.7 2c.3 2 1.6 3.6 3.3 4.5v3.1c-1.3-.1-2.6-.5-3.8-1.2v6.6a6.1 6.1 0 1 1-6.1-6.1h.6v3.2h-.6a2.9 2.9 0 1 0 2.9 2.9V2h3.7z" />
+                  </svg>
+                </SocialIcon>
+                <SocialIcon label="X" href="https://twitter.com/zazateach">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-4 w-4"
+                    fill="currentColor"
+                  >
+                    <path d="M18.9 3h3.1l-7 8.1 8 9.9h-6.2l-4.8-6-5.5 6H3.4l7.5-8.4L3 3h6.4l4.3 5.5L18.9 3z" />
+                  </svg>
+                </SocialIcon>
+                <SocialIcon
+                  label="LinkedIn"
+                  href="https://www.linkedin.com/company/zazatechnologies/"
                 >
-                  <path d="M18.9 3h3.1l-7 8.1 8 9.9h-6.2l-4.8-6-5.5 6H3.4l7.5-8.4L3 3h6.4l4.3 5.5L18.9 3z" />
-                </svg>
-              </SocialIcon>
-              <SocialIcon
-                label="LinkedIn"
-                href="https://www.linkedin.com/company/zazatechnologies/"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  className="h-4 w-4"
-                  fill="currentColor"
-                >
-                  <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 8.98h4v12H3v-12zM14.5 8.8c3 0 5.5 2.4 5.5 6.3v5.9h-4v-5.5c0-1.6-.6-2.8-2-2.8-1.1 0-1.8.7-2.1 1.5-.1.3-.1.7-.1 1.1v5.7h-4s.1-9.2 0-10.2h4v1.5c.5-.9 1.6-2.1 3.8-2.1z" />
-                </svg>
-              </SocialIcon>
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-4 w-4"
+                    fill="currentColor"
+                  >
+                    <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 8.98h4v12H3v-12zM14.5 8.8c3 0 5.5 2.4 5.5 6.3v5.9h-4v-5.5c0-1.6-.6-2.8-2-2.8-1.1 0-1.8.7-2.1 1.5-.1.3-.1.7-.1 1.1v5.7h-4s.1-9.2 0-10.2h4v1.5c.5-.9 1.6-2.1 3.8-2.1z" />
+                  </svg>
+                </SocialIcon>
+              </div>
+              <p className="italic text-slate-400">
+                Made with 💙 by teachers, for teachers.
+              </p>
             </div>
           </div>
 
@@ -104,28 +109,36 @@ export default function Footer() {
             <ul className="mt-3 space-y-2 text-sm">
               <li>
                 <a
-                  href="/products/draft" className="hover:text-white" aria-label="Zaza Draft"
+                  href="/products/draft"
+                  className="hover:text-white"
+                  aria-label="Zaza Draft"
                 >
                   Zaza Draft
                 </a>
               </li>
               <li>
                 <a
-                  href="/products/teach" className="hover:text-white" aria-label="Zaza Teach"
+                  href="/products/teach"
+                  className="hover:text-white"
+                  aria-label="Zaza Teach"
                 >
                   Zaza Teach
                 </a>
               </li>
               <li>
                 <a
-                  href="/products/shield" className="hover:text-white" aria-label="Zaza Shield"
+                  href="/products/shield"
+                  className="hover:text-white"
+                  aria-label="Zaza Shield"
                 >
                   Zaza Shield
                 </a>
               </li>
               <li>
                 <a
-                  href="/products/gradeflow" className="hover:text-white" aria-label="Zaza GradeFlow"
+                  href="/products/gradeflow"
+                  className="hover:text-white"
+                  aria-label="Zaza GradeFlow"
                 >
                   GradeFlow
                 </a>
@@ -223,5 +236,3 @@ export default function Footer() {
   );
 }
 // build: ensure footer rendered 2025-11-06T18:11:04
-
-
