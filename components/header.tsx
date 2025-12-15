@@ -125,7 +125,7 @@ export function Header() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 bg-[#0B1220]/80 backdrop-blur-md shadow-lg shadow-black/5">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8 h-20">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8 py-3 lg:py-4 min-h-[72px]">
           <div className="flex lg:flex-1">
             <Link
               href="/"
@@ -446,14 +446,17 @@ export function Header() {
               </div>
 
               <div className="pt-2">
-              <Button
-                onClick={() => {
-                  track("cta_click", { location: "header", id: "mobile_get_started" });
-                  setSignupOpen(true);
-                  setMobileMenuOpen(false);
-                }}
-                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium py-3 rounded-full shadow-lg shadow-purple-500/25"
-              >
+                <Button
+                  onClick={() => {
+                    track("cta_click", {
+                      location: "header",
+                      id: "mobile_get_started",
+                    });
+                    setSignupOpen(true);
+                    setMobileMenuOpen(false);
+                  }}
+                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium py-3 rounded-full shadow-lg shadow-purple-500/25"
+                >
                   {t("nav.getStarted")}
                 </Button>
               </div>
