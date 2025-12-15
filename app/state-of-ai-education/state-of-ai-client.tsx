@@ -54,7 +54,11 @@ export default function StateOfAIClient() {
 
     try {
       await new Promise((resolve) => setTimeout(resolve, 1500));
-      console.log("TODO: connect to Brevo", { email, role, report: "State of AI 2025" });
+      console.log("TODO: connect to Brevo", {
+        email,
+        role,
+        report: "State of AI 2025",
+      });
       setIsSubmitted(true);
     } catch (err) {
       console.error("[v0] Report download failed", err);
@@ -652,7 +656,7 @@ export default function StateOfAIClient() {
             ) : (
               <div className="text-center py-8">
                 <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                                <h3 className="text-2xl font-bold text-white mb-3">
+                <h3 className="text-2xl font-bold text-white mb-3">
                   {language === "de"
                     ? "Ueberpruefen Sie Ihre E-Mails!"
                     : "Check Your Email!"}
@@ -668,7 +672,9 @@ export default function StateOfAIClient() {
                     : "Please email hello@zazatechnologies.com and we will get back to you."}
                 </p>
                 <p className="text-sm text-gray-400">
-                  {language === "de" ? "Ihre Anfrage wurde gespeichert fuer " : "We logged your request for "}{" "}
+                  {language === "de"
+                    ? "Ihre Anfrage wurde gespeichert fuer "
+                    : "We logged your request for "}{" "}
                   <strong className="text-[#A78BFA]">{email}</strong>
                 </p>
                 <p className="text-sm text-gray-400">
@@ -834,13 +840,13 @@ export default function StateOfAIClient() {
       {/* Final CTA */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <Card className="bg-gradient-to-br from-[#8B5CF6]/10 to-[#A78BFA]/5 border-[#8B5CF6]/20 p-12">
+          <Card className="bg-gradient-to-br from-[#EC4899] via-[#9333EA] to-[#7C3AED] border-transparent p-12 text-center shadow-2xl shadow-[#9333EA]/40">
             <h2 className="text-4xl font-bold text-white mb-4">
               {language === "de"
                 ? "Bereit, Ihren Unterricht mit KI zu transformieren?"
                 : "Ready to Transform Your Teaching with AI?"}
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-white mb-8">
               {language === "de"
                 ? "Schließen Sie sich 50.000+ Pädagogen an, die Zaza Draft nutzen, um Zeit zu sparen und die Kommunikation zu verbessern"
                 : "Join 50,000+ educators using Zaza Draft to save time and improve communication"}
@@ -848,7 +854,7 @@ export default function StateOfAIClient() {
             <div className="flex flex-wrap justify-center gap-4">
               <Button
                 size="lg"
-                className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white"
+                className="gradient-primary text-white font-medium"
                 onClick={() => {
                   const event = new CustomEvent("openSignupModal");
                   window.dispatchEvent(event);
@@ -861,7 +867,7 @@ export default function StateOfAIClient() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-[#8B5CF6]/30 text-white hover:bg-[#8B5CF6]/10 bg-transparent"
+                className="border-white/40 text-white hover:bg-white/10 bg-transparent"
                 asChild
               >
                 <Link href="/ai-literacy">
@@ -878,4 +884,3 @@ export default function StateOfAIClient() {
     </div>
   );
 }
-
