@@ -97,7 +97,7 @@ export default function Footer() {
                   </svg>
                 </SocialIcon>
               </div>
-              <p className="italic text-slate-400">
+              <p className="text-slate-400">
                 Made with 💙 by teachers, for teachers.
               </p>
             </div>
