@@ -1,15 +1,15 @@
-import type { Metadata } from "next"
-import { AboutSidebar } from "@/components/about-sidebar"
-import { Breadcrumbs } from "@/components/breadcrumbs"
-import { AssetCard } from "@/components/asset-card"
-import { ExpandableBio } from "@/components/expandable-bio"
-import { Button } from "@/components/ui/button"
-import { Mail, ExternalLink, Sparkles, Quote, Award } from "lucide-react"
-import { SetLanguage } from "@/components/set-language"
+import type { Metadata } from "next";
+import { AboutSidebar } from "@/components/about-sidebar";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { AssetCard } from "@/components/asset-card";
+import { ExpandableBio } from "@/components/expandable-bio";
+import { Button } from "@/components/ui/button";
+import { Mail, ExternalLink, Sparkles, Quote, Award } from "lucide-react";
+import { SetLanguage } from "@/components/set-language";
 
-const ogImage = "/press-kit/screenshot-hero-preview.jpg"
-const siteUrl = "https://zazadraft.com"
-import Image from "next/image"
+const ogImage = "/press-kit/screenshot-hero-preview.jpg";
+const siteUrl = "https://zazadraft.com";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Presse-Kit | Zaza Draft Medienressourcen",
@@ -29,7 +29,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Presse-Kit | Zaza Draft",
-    description: "Logos, Screenshots und Gründer-Bio für Ihre Berichterstattung.",
+    description:
+      "Logos, Screenshots und Gründer-Bio für Ihre Berichterstattung.",
     images: [ogImage],
   },
   alternates: {
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
       de: `${siteUrl}/de/about/press`,
     },
   },
-}
+};
 
 export default function PressKitPage() {
   return (
@@ -62,15 +63,18 @@ export default function PressKitPage() {
 
             {/* Hero */}
             <div className="mt-6 mb-12 bg-gradient-to-r from-[#111827] to-[#0F172A] rounded-3xl border border-[#1F2937] p-8 md:p-10">
-              <p className="text-sm font-semibold text-[#A78BFA] uppercase tracking-[0.2em] mb-3">Presse-Kit</p>
+              <p className="text-sm font-semibold text-[#A78BFA] uppercase tracking-[0.2em] mb-3">
+                Presse-Kit
+              </p>
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                 <div className="space-y-4">
                   <h1 className="text-4xl md:text-5xl font-bold text-[#F9FAFB] leading-tight">
                     Alles für Ihre Berichterstattung über Zaza Draft
                   </h1>
                   <p className="text-lg text-[#CBD5E1] max-w-3xl">
-                    Logos, Screenshots, Brand-Guidelines, Fact Sheet, Gründer-Bio und Kontaktinformationen - aktuell,
-                    konsistent und sofort nutzbar.
+                    Logos, Screenshots, Brand-Guidelines, Fact Sheet,
+                    Gründer-Bio und Kontaktinformationen - aktuell, konsistent
+                    und sofort nutzbar.
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <Button
@@ -78,14 +82,18 @@ export default function PressKitPage() {
                       className="rounded-full border border-white/20 bg-white text-[#111827] hover:bg-[#E5E7EB]"
                       variant="outline"
                     >
-                      <a href="mailto:press@zazatechnologies.com">Interview anfragen</a>
+                      <a href="mailto:press@zazatechnologies.com">
+                        Interview anfragen
+                      </a>
                     </Button>
                   </div>
                 </div>
                 <div className="bg-[#111827] border border-[#1F2937] rounded-2xl p-6 min-w-[280px] shadow-lg">
                   <div className="flex items-center gap-3 text-[#E5E7EB] mb-3">
                     <Sparkles className="w-5 h-5 text-[#A78BFA]" />
-                    <span className="text-sm uppercase tracking-[0.18em] text-[#A78BFA]">Fact Sheet</span>
+                    <span className="text-sm uppercase tracking-[0.18em] text-[#A78BFA]">
+                      Fact Sheet
+                    </span>
                   </div>
                   <dl className="grid grid-cols-2 gap-x-4 gap-y-3 text-sm text-[#CBD5E1]">
                     <div className="flex flex-col gap-1">
@@ -125,16 +133,36 @@ export default function PressKitPage() {
 
             {/* Outcomes at a glance */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">Kennzahlen auf einen Blick</h2>
+              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">
+                Kennzahlen auf einen Blick
+              </h2>
               <div className="grid md:grid-cols-3 gap-4">
                 {[
-                  { label: "Zeitersparnis", value: "10+ Std./Woche", detail: "Durchschnittliche Zeit, die Lehrkräfte mit Draft zurückgewinnen" },
-                  { label: "Lehrkräfte", value: "500+", detail: "Aktive Nutzer aus 15 Ländern" },
-                  { label: "Verlässlichkeit", value: "Halluzinationsarm", detail: "Guardrails & erklärbare Outputs" },
+                  {
+                    label: "Zeitersparnis",
+                    value: "10+ Std./Woche",
+                    detail:
+                      "Durchschnittliche Zeit, die Lehrkräfte mit Draft zurückgewinnen",
+                  },
+                  {
+                    label: "Lehrkräfte",
+                    value: "500+",
+                    detail: "Aktive Nutzer aus 15 Ländern",
+                  },
+                  {
+                    label: "Verlässlichkeit",
+                    value: "Halluzinationsarm",
+                    detail: "Guardrails & erklärbare Outputs",
+                  },
                 ].map((item) => (
-                  <div key={item.label} className="bg-[#111827] border border-[#1F2937] rounded-2xl p-5">
+                  <div
+                    key={item.label}
+                    className="bg-[#111827] border border-[#1F2937] rounded-2xl p-5"
+                  >
                     <p className="text-sm text-[#9CA3AF]">{item.label}</p>
-                    <p className="text-2xl font-semibold text-white">{item.value}</p>
+                    <p className="text-2xl font-semibold text-white">
+                      {item.value}
+                    </p>
                     <p className="text-sm text-[#CBD5E1] mt-1">{item.detail}</p>
                   </div>
                 ))}
@@ -146,10 +174,13 @@ export default function PressKitPage() {
               <div className="flex flex-col gap-2 mb-4">
                 <div className="flex items-center gap-3">
                   <Sparkles className="w-5 h-5 text-[#A78BFA]" />
-                  <h2 className="text-2xl font-bold text-[#F9FAFB]">Brand Assets</h2>
+                  <h2 className="text-2xl font-bold text-[#F9FAFB]">
+                    Brand Assets
+                  </h2>
                 </div>
                 <p className="text-sm text-[#CBD5E1] max-w-3xl">
-                  Das offizielle Zaza Z icon ist für helle Hintergründe bestimmt; halten Sie es unverändert.
+                  Das offizielle Zaza Z icon ist für helle Hintergründe
+                  bestimmt; halten Sie es unverändert.
                 </p>
               </div>
               <div className="grid gap-6 md:grid-cols-1">
@@ -166,9 +197,12 @@ export default function PressKitPage() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-[#F9FAFB]">Zaza Z icon - colour</h3>
+                    <h3 className="text-lg font-semibold text-[#F9FAFB]">
+                      Zaza Z icon - colour
+                    </h3>
                     <p className="text-sm text-[#CBD5E1] mt-1">
-                      Für helle oder neutrale Hintergründe, damit der Farbverlauf die Marke sichtbar macht.
+                      Für helle oder neutrale Hintergründe, damit der
+                      Farbverlauf die Marke sichtbar macht.
                     </p>
                   </div>
                   <a
@@ -181,24 +215,38 @@ export default function PressKitPage() {
                 </div>
               </div>
               <div className="mt-6 rounded-2xl border border-dashed border-[#374151] bg-[#0F172A] p-4 text-sm text-[#CBD5E1]">
-                <p className="font-semibold text-white mb-2">Hinweis zur Verwendung</p>
-                <p>Das Farbicon ist das offizielle Zeichen für helle Kontexte; bitte nicht verändern.</p>
+                <p className="font-semibold text-white mb-2">
+                  Hinweis zur Verwendung
+                </p>
+                <p>
+                  Das Farbicon ist das offizielle Zeichen für helle Kontexte;
+                  bitte nicht verändern.
+                </p>
               </div>
             </section>
 
-                        {/* Product & Context Screens */}
-            <section class="mb-16">
-              <h2 class="text-2xl font-bold text-[#F9FAFB] mb-4">Produkt-Screenshots</h2>
-              <p class="text-sm text-[#CBD5E1] max-w-3xl mb-4">
+            {/* Product & Context Screens */}
+            <section className="mb-16">
+              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-4">
+                Produkt-Screenshots
+              </h2>
+              <p className="text-sm text-[#CBD5E1] max-w-3xl mb-4">
                 Produkt-Screenshots sind auf Anfrage erh�ltlich.
               </p>
-              <Button asChild class="rounded-full bg-gradient-to-r from-[#7C3AED] to-[#6366F1] text-white">
-                <a href="mailto:press@zazatechnologies.com">Screenshots anfordern</a>
+              <Button
+                asChild
+                className="rounded-full bg-gradient-to-r from-[#7C3AED] to-[#6366F1] text-white"
+              >
+                <a href="mailto:press@zazatechnologies.com">
+                  Screenshots anfordern
+                </a>
               </Button>
             </section>
-{/* Brand Guidelines */}
+            {/* Brand Guidelines */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">Brand Guidelines</h2>
+              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">
+                Brand Guidelines
+              </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <AssetCard
                   title="Brand Guidelines PDF"
@@ -211,16 +259,24 @@ export default function PressKitPage() {
 
             {/* Company Boilerplate */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">Company Boilerplate</h2>
+              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">
+                Company Boilerplate
+              </h2>
               <div className="bg-[#1F2937] rounded-2xl p-8 border border-[#374151]">
                 <p className="text-[#D1D5DB] leading-relaxed mb-4">
-                  Zaza Technologies baut sichere, empathische KI-Tools für Pädagog:innen. Unsere Haupt-App Zaza Draft hilft
-                  Lehrkräften, jede Woche Stunden bei Elternkommunikation zu sparen - mit halluzinationsbewusster KI. Mit Sitz in
-                  Deutschland ist Zaza lehrerzentriert, DSGVO-orientiert und wird weltweit von Schulen genutzt.
+                  Zaza Technologies baut sichere, empathische KI-Tools für
+                  Pädagog:innen. Unsere Haupt-App Zaza Draft hilft Lehrkräften,
+                  jede Woche Stunden bei Elternkommunikation zu sparen - mit
+                  halluzinationsbewusster KI. Mit Sitz in Deutschland ist Zaza
+                  lehrerzentriert, DSGVO-orientiert und wird weltweit von
+                  Schulen genutzt.
                 </p>
                 <p className="text-[#9CA3AF] text-sm">
                   Für Presseanfragen oder Interviews kontaktieren Sie{" "}
-                  <a href="mailto:press@zazatechnologies.com" className="text-[#A78BFA] hover:underline">
+                  <a
+                    href="mailto:press@zazatechnologies.com"
+                    className="text-[#A78BFA] hover:underline"
+                  >
                     press@zazatechnologies.com
                   </a>
                 </p>
@@ -229,16 +285,35 @@ export default function PressKitPage() {
 
             {/* Testimonials / Social Proof */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">Stimmen von Lehrkräften</h2>
+              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">
+                Stimmen von Lehrkräften
+              </h2>
               <div className="grid md:grid-cols-3 gap-4">
                 {[
-                  { quote: "Draft gibt mir Abende zurück - Mails dauern jetzt Minuten, nicht Stunden.", name: "Sarah L., Mittelstufenlehrerin" },
-                  { quote: "Ton und Klarheit passen sofort. Eltern reagieren entspannter.", name: "Mark R., Abteilungsleiter" },
-                  { quote: "Endlich KI, die nicht generisch klingt. Meine Stimme bleibt erhalten.", name: "Emma K., Grundschule" },
+                  {
+                    quote:
+                      "Draft gibt mir Abende zurück - Mails dauern jetzt Minuten, nicht Stunden.",
+                    name: "Sarah L., Mittelstufenlehrerin",
+                  },
+                  {
+                    quote:
+                      "Ton und Klarheit passen sofort. Eltern reagieren entspannter.",
+                    name: "Mark R., Abteilungsleiter",
+                  },
+                  {
+                    quote:
+                      "Endlich KI, die nicht generisch klingt. Meine Stimme bleibt erhalten.",
+                    name: "Emma K., Grundschule",
+                  },
                 ].map((item) => (
-                  <div key={item.name} className="bg-[#111827] border border-[#1F2937] rounded-2xl p-5 space-y-3">
+                  <div
+                    key={item.name}
+                    className="bg-[#111827] border border-[#1F2937] rounded-2xl p-5 space-y-3"
+                  >
                     <Quote className="w-5 h-5 text-[#A78BFA]" />
-                    <p className="text-[#E5E7EB] leading-relaxed">"{item.quote}"</p>
+                    <p className="text-[#E5E7EB] leading-relaxed">
+                      "{item.quote}"
+                    </p>
                     <p className="text-sm text-[#9CA3AF]">{item.name}</p>
                   </div>
                 ))}
@@ -249,17 +324,27 @@ export default function PressKitPage() {
             <section className="mb-16">
               <div className="flex items-center gap-3 mb-2">
                 <Award className="w-5 h-5 text-[#A78BFA]" />
-                <h2 className="text-2xl font-bold text-[#F9FAFB]">Coverage & Awards</h2>
+                <h2 className="text-2xl font-bold text-[#F9FAFB]">
+                  Coverage & Awards
+                </h2>
               </div>
-              <p className="text-[#9CA3AF] mb-4">Erste Features und Interviews werden derzeit geplant. Medienpartner willkommen.</p>
+              <p className="text-[#9CA3AF] mb-4">
+                Erste Features und Interviews werden derzeit geplant.
+                Medienpartner willkommen.
+              </p>
               <div className="bg-[#111827] border border-dashed border-[#374151] rounded-2xl p-6 text-[#CBD5E1]">
-                <p>"First coverage coming soon" - melden Sie sich für exklusive Early-Access-Interviews oder Demos.</p>
+                <p>
+                  "First coverage coming soon" - melden Sie sich für exklusive
+                  Early-Access-Interviews oder Demos.
+                </p>
               </div>
             </section>
 
             {/* Founder Bio */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">Founder Bio</h2>
+              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">
+                Founder Bio
+              </h2>
               <ExpandableBio
                 shortLabel="Kurz-Bio"
                 longLabel="Ausführliche Bio"
@@ -270,22 +355,58 @@ export default function PressKitPage() {
 
             {/* FAQ for media */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">FAQ für Medien</h2>
+              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">
+                FAQ für Medien
+              </h2>
               <div className="grid md:grid-cols-2 gap-4">
                 {[
-                  { q: "Was macht Zaza Draft anders?", a: "Halluzinationsbewusste, erklärbare KI, trainiert auf Pädgogik und mit echter Lehrerstimme." },
-                  { q: "Wie geht ihr mit Datenschutz um?", a: "EU-Hosting, GDPR-orientiert, keine Trainingsnutzung von Kundendaten, Privacy-by-Design." },
-                  { q: "Wer nutzt Zaza?", a: "Lehrkräfte und Schulen (K12), aktuell 500+ Lehrkräfte in 15 Ländern." },
-                  { q: "Wie adressiert ihr Bias?", a: "Kuratiertes Prompting, menschliches QA, Monitoring von Fehlverhalten, schnelle Korrekturzyklen." },
-                  { q: "Welche Daten verarbeitet Draft?", a: "Textbasierte Kommunikations- und Planungsinhalte; keine vollständigen Schüler-PII erforderlich, sensible Felder optional/pseudonymisiert." },
-                  { q: "Wie lange dauert die Einführung?", a: "Self-serve in Minuten; Schul-Deployments mit kurzer Onboarding-Checkliste." },
-                  { q: "Bietet ihr Schulungen?", a: "Ja. Live-Workshops, On-Demand-Videos und kurze In-App-Guides." },
-                  { q: "Finanzierung?", a: "Bootstrapped; Fokus auf nachhaltigem, nutzerzentriertem Wachstum." },
-                  { q: "Kontakt für Interviews?", a: "press@zazatechnologies.com - Antworten binnen 24h; Statements auf Anfrage." },
+                  {
+                    q: "Was macht Zaza Draft anders?",
+                    a: "Halluzinationsbewusste, erklärbare KI, trainiert auf Pädgogik und mit echter Lehrerstimme.",
+                  },
+                  {
+                    q: "Wie geht ihr mit Datenschutz um?",
+                    a: "EU-Hosting, GDPR-orientiert, keine Trainingsnutzung von Kundendaten, Privacy-by-Design.",
+                  },
+                  {
+                    q: "Wer nutzt Zaza?",
+                    a: "Lehrkräfte und Schulen (K12), aktuell 500+ Lehrkräfte in 15 Ländern.",
+                  },
+                  {
+                    q: "Wie adressiert ihr Bias?",
+                    a: "Kuratiertes Prompting, menschliches QA, Monitoring von Fehlverhalten, schnelle Korrekturzyklen.",
+                  },
+                  {
+                    q: "Welche Daten verarbeitet Draft?",
+                    a: "Textbasierte Kommunikations- und Planungsinhalte; keine vollständigen Schüler-PII erforderlich, sensible Felder optional/pseudonymisiert.",
+                  },
+                  {
+                    q: "Wie lange dauert die Einführung?",
+                    a: "Self-serve in Minuten; Schul-Deployments mit kurzer Onboarding-Checkliste.",
+                  },
+                  {
+                    q: "Bietet ihr Schulungen?",
+                    a: "Ja. Live-Workshops, On-Demand-Videos und kurze In-App-Guides.",
+                  },
+                  {
+                    q: "Finanzierung?",
+                    a: "Bootstrapped; Fokus auf nachhaltigem, nutzerzentriertem Wachstum.",
+                  },
+                  {
+                    q: "Kontakt für Interviews?",
+                    a: "press@zazatechnologies.com - Antworten binnen 24h; Statements auf Anfrage.",
+                  },
                 ].map((item) => (
-                  <div key={item.q} className="bg-[#111827] border border-[#1F2937] rounded-2xl p-5">
-                    <p className="text-sm font-semibold text-[#E5E7EB]">{item.q}</p>
-                    <p className="text-sm text-[#CBD5E1] mt-2 leading-relaxed">{item.a}</p>
+                  <div
+                    key={item.q}
+                    className="bg-[#111827] border border-[#1F2937] rounded-2xl p-5"
+                  >
+                    <p className="text-sm font-semibold text-[#E5E7EB]">
+                      {item.q}
+                    </p>
+                    <p className="text-sm text-[#CBD5E1] mt-2 leading-relaxed">
+                      {item.a}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -293,7 +414,9 @@ export default function PressKitPage() {
 
             {/* Media Contact */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">Pressekontakt</h2>
+              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">
+                Pressekontakt
+              </h2>
               <div className="bg-[#1F2937] rounded-2xl p-8 border border-[#374151]">
                 <div className="space-y-4 mb-6">
                   <div className="flex items-center gap-3">
@@ -344,5 +467,5 @@ export default function PressKitPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -2,13 +2,15 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/lib/i18n/language-context";
 import rawIndex from "../../data/resources/resources.index.json";
 import { LeadMagnet } from "@/components/conversion/lead-magnet";
-import { additionalResources, ExtendedResource } from "../../data/resources/additional-resources";
-import { Download, Link as LinkIcon } from "lucide-react";
+import {
+  additionalResources,
+  ExtendedResource,
+} from "../../data/resources/additional-resources";
+import { Download } from "lucide-react";
 
 type FileEntry = { docx?: string; pdf?: string; md?: string };
 type Resource = {
@@ -29,9 +31,12 @@ type Resource = {
   files?: { en?: FileEntry; de?: FileEntry } | null;
 };
 
-type DisplayResource = Resource & ExtendedResource & {
-  localizedDescription: string;
-};
+type DisplayResource = Resource &
+  ExtendedResource & {
+    localizedDescription: string;
+    downloadLabel: string;
+    releasedLabel?: string;
+  };
 
 const baseResources = normalizeIndex(rawIndex);
 
@@ -55,11 +60,39 @@ const slugCategoryOverrides: Record<string, string> = {
   "weekly-newsletter-bundle": "Communication",
 };
 
-const categoryFilters = ["All", "Communication", "Reporting", "Classroom", "Planning", "Assessment"];
+const categoryFilters = [
+  { key: "all", value: null, labelKey: "resources.categories.all" },
+  {
+    key: "communication",
+    value: "Communication",
+    labelKey: "resources.categories.communication",
+  },
+  {
+    key: "reporting",
+    value: "Reporting",
+    labelKey: "resources.categories.reporting",
+  },
+  {
+    key: "classroom",
+    value: "Classroom",
+    labelKey: "resources.categories.classroom",
+  },
+  {
+    key: "planning",
+    value: "Planning",
+    labelKey: "resources.categories.planning",
+  },
+  {
+    key: "assessment",
+    value: "Assessment",
+    labelKey: "resources.categories.assessment",
+  },
+];
+
 const sortOptions = [
-  { label: "Popular", value: "popular" },
-  { label: "Newest", value: "newest" },
-  { label: "A-Z", value: "alpha" },
+  { value: "popular", labelKey: "resources.sort.popular" },
+  { value: "newest", labelKey: "resources.sort.newest" },
+  { value: "alpha", labelKey: "resources.sort.alpha" },
 ];
 
 function normalizeIndex(input: any): Resource[] {
@@ -77,35 +110,41 @@ function normalizeIndex(input: any): Resource[] {
   return [];
 }
 
-function resolveUrl(resource: Resource): string | null {
+function resolveUrl(resource: Resource, locale: "en" | "de"): string | null {
   if (resource.fileUrl) return resource.fileUrl;
-  const localeFiles = resource.files?.en;
+  const targetLocale: "en" | "de" = locale === "de" ? "de" : "en";
+  const localeFiles = resource.files?.[targetLocale];
   if (localeFiles?.pdf) return localeFiles.pdf;
   if (localeFiles?.docx) return localeFiles.docx;
-  if (localeFiles?.md) return localeFiles.md;
+
+  const fallbackLocale: "en" | "de" = targetLocale === "en" ? "de" : "en";
+  const fallbackFiles = resource.files?.[fallbackLocale];
+  if (fallbackFiles?.pdf) return fallbackFiles.pdf;
+  if (fallbackFiles?.docx) return fallbackFiles.docx;
   return null;
 }
 
 function ResourceCard({
   resource,
-  onCopy,
+  comingSoonLabel,
 }: {
   resource: DisplayResource;
-  onCopy: (url: string) => void;
+  comingSoonLabel: string;
 }) {
-  const downloadLabel =
-    resource.fileType === "PDF" ? "Download PDF" : `Download ${resource.fileType ?? "resource"}`;
-
   return (
     <Card className="group bg-white/5 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10 h-full">
       <CardContent className="p-6 min-h-[320px] flex flex-col">
         <div className="flex items-center justify-between mb-3 gap-2">
-          <h2 className="text-2xl font-bold text-white">{resource.title ?? resource.slug}</h2>
+          <h2 className="text-2xl font-bold text-white">
+            {resource.title ?? resource.slug}
+          </h2>
           <span className="inline-flex items-center gap-1 px-3 py-1 text-[10px] font-semibold tracking-[0.2em] uppercase text-white bg-white/10 border border-white/10 rounded-full">
             {resource.language ?? "EN"}
           </span>
         </div>
-        <p className="text-gray-300 mb-5 line-clamp-4">{resource.localizedDescription}</p>
+        <p className="text-gray-300 mb-5 line-clamp-4">
+          {resource.localizedDescription}
+        </p>
         {resource.tags && resource.tags.length ? (
           <div className="flex flex-wrap gap-2 mb-4">
             {resource.tags.map((tag) => (
@@ -119,32 +158,25 @@ function ResourceCard({
           </div>
         ) : null}
         <div className="mt-auto">
-          {resource.releasedAt ? (
-            <p className="text-xs text-gray-400 mb-3">Released {new Date(resource.releasedAt).toLocaleDateString()}</p>
+          {resource.releasedLabel ? (
+            <p className="text-xs text-gray-400 mb-3">
+              {resource.releasedLabel}
+            </p>
           ) : null}
           {resource.fileUrl ? (
-            <div className="flex flex-wrap gap-3">
-              <a
-                href={resource.fileUrl}
-                download
-                className="flex-1 min-w-[160px] inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold tracking-wide px-4 py-3 transition-all hover:from-purple-700 hover:to-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-400"
-                aria-label={`Download ${resource.title}`}
-              >
-                <Download className="h-4 w-4" />
-                {downloadLabel}
-              </a>
-              <Button
-                variant="outline"
-                className="flex-1 min-w-[160px] bg-white text-slate-900 border border-white/30 shadow-sm hover:border-white/60 hover:shadow-md"
-                onClick={() => resource.fileUrl && onCopy(resource.fileUrl)}
-                aria-label={`Copy link for ${resource.title}`}
-              >
-                <LinkIcon className="h-4 w-4" />
-                Copy link
-              </Button>
-            </div>
+            <a
+              href={resource.fileUrl}
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold tracking-wide px-4 py-3 transition-all hover:from-purple-700 hover:to-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-400"
+              aria-label={`Download ${resource.title ?? resource.slug}`}
+            >
+              <Download className="h-4 w-4" />
+              {resource.downloadLabel}
+            </a>
           ) : (
-            <p className="text-sm text-gray-500">Download coming soon.</p>
+            <p className="text-sm text-gray-500">{comingSoonLabel}</p>
           )}
         </div>
       </CardContent>
@@ -155,43 +187,86 @@ function ResourceCard({
 export default function ResourcesPage() {
   const { t, language } = useLanguage();
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortOption, setSortOption] = useState("popular");
-  const [copyMessage, setCopyMessage] = useState("");
 
   const combinedResources = useMemo(() => {
     const normalizedResources = baseResources.map((resource) => ({
       ...resource,
-      category: resource.category ?? slugCategoryOverrides[resource.slug] ?? "Planning",
+      category:
+        resource.category ?? slugCategoryOverrides[resource.slug] ?? "Planning",
       language: resource.language ?? "EN/DE",
-      fileUrl: resource.fileUrl ?? resolveUrl(resource) ?? "",
+      fileUrl: resolveUrl(resource, language) ?? "",
       fileType:
         resource.fileType ??
         (resource.fileUrl?.toLowerCase().endsWith(".pdf")
           ? "PDF"
           : resource.fileUrl?.toLowerCase().endsWith(".docx")
-          ? "DOCX"
-          : "PDF"),
+            ? "DOCX"
+            : "PDF"),
       featured: resource.featured ?? false,
       popularity: resource.popularity ?? 50,
     }));
 
-    return [...normalizedResources, ...additionalResources] as DisplayResource[];
-  }, []);
+    const normalizedAdditional = additionalResources.map((resource) => ({
+      ...resource,
+      category: resource.category ?? "Planning",
+      fileUrl: resolveUrl(resource, language) ?? resource.fileUrl ?? "",
+      fileType:
+        resource.fileType ??
+        (resource.fileUrl?.toLowerCase().endsWith(".pdf")
+          ? "PDF"
+          : resource.fileUrl?.toLowerCase().endsWith(".docx")
+            ? "DOCX"
+            : "PDF"),
+      featured: resource.featured ?? false,
+      popularity: resource.popularity ?? 50,
+    }));
+
+    return [
+      ...normalizedResources,
+      ...normalizedAdditional,
+    ] as DisplayResource[];
+  }, [language]);
 
   const resources = useMemo(() => {
     return combinedResources.map((resource) => {
       const description =
         language === "de"
-          ? resource.blurb_de ?? resource.description ?? resource.blurb_en ?? ""
-          : resource.description ?? resource.blurb_en ?? "";
+          ? (resource.blurb_de ??
+            resource.description ??
+            resource.blurb_en ??
+            "")
+          : (resource.description ?? resource.blurb_en ?? "");
+
+      const locale = language === "de" ? "de-DE" : "en-US";
+      const releaseDate = resource.releasedAt
+        ? new Date(resource.releasedAt).toLocaleDateString(locale)
+        : null;
+      const releasedLabel = releaseDate
+        ? `${t("resources.released")} ${releaseDate}`
+        : undefined;
+
+      const fileType =
+        resource.fileType?.toUpperCase() ??
+        (resource.fileUrl?.toLowerCase().endsWith(".docx")
+          ? "DOCX"
+          : resource.fileUrl?.toLowerCase().endsWith(".pdf")
+            ? "PDF"
+            : "PDF");
+      const downloadLabel =
+        fileType === "DOCX"
+          ? t("resources.downloadLabel.docx")
+          : t("resources.downloadLabel.pdf");
 
       return {
         ...resource,
         localizedDescription: description,
+        downloadLabel,
+        releasedLabel,
       };
     });
-  }, [language, combinedResources]);
+  }, [combinedResources, language, t]);
 
   const featuredResources = useMemo(
     () => resources.filter((resource) => resource.featured),
@@ -200,12 +275,19 @@ export default function ResourcesPage() {
 
   const filteredResources = useMemo(() => {
     const normalizedSearch = searchTerm.trim().toLowerCase();
+    const activeCategory = categoryFilters.find(
+      (option) => option.key === selectedCategory,
+    );
+    const activeCategoryValue = activeCategory?.value;
 
     return resources
       .filter((resource) => {
-        const matchesCategory =
-          selectedCategory === "All" || resource.category === selectedCategory;
-        if (!matchesCategory) return false;
+        if (
+          activeCategory?.key !== "all" &&
+          resource.category !== activeCategoryValue
+        ) {
+          return false;
+        }
 
         if (!normalizedSearch) return true;
 
@@ -237,19 +319,6 @@ export default function ResourcesPage() {
       });
   }, [resources, searchTerm, selectedCategory, sortOption]);
 
-  const handleCopyLink = (url: string) => {
-    if (!url) return;
-    if ("clipboard" in navigator) {
-      navigator.clipboard
-        .writeText(`${window.location.origin}${url}`)
-        .then(() => setCopyMessage("Link copied to clipboard"))
-        .catch(() => setCopyMessage("Unable to copy link"));
-    } else {
-      setCopyMessage("Copy manually");
-    }
-    setTimeout(() => setCopyMessage(""), 3000);
-  };
-
   useEffect(() => {
     if (process.env.NODE_ENV === "production") return;
     if (typeof window === "undefined") return;
@@ -258,13 +327,22 @@ export default function ResourcesPage() {
 
     resources.forEach((resource) => {
       const url = resource.fileUrl;
-      if (!url || !url.startsWith("/resources/pdf/")) return;
+      if (!url) return;
 
       fetch(url, { method: "HEAD", signal: controller.signal })
         .then((res) => {
           if (!res.ok) {
             console.warn(
               `[Resources] Missing file for ${resource.slug} at ${url} (status ${res.status})`,
+            );
+            return;
+          }
+
+          const contentType =
+            res.headers.get("content-type")?.toLowerCase() ?? "";
+          if (contentType.includes("text/html")) {
+            console.warn(
+              `[Resources] Expected static file for ${url} but received HTML (${contentType})`,
             );
           }
         })
@@ -281,7 +359,9 @@ export default function ResourcesPage() {
     <div className="min-h-screen bg-gradient-to-b from-[#0F172A] via-[#1E293B] to-[#0F172A] py-20 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center mb-6">
-          <h1 className="text-4xl font-bold text-white sm:text-5xl mb-4">{t("resources.title")}</h1>
+          <h1 className="text-4xl font-bold text-white sm:text-5xl mb-4">
+            {t("resources.title")}
+          </h1>
           <p className="text-gray-300 text-xl">{t("resources.subtitle")}</p>
         </div>
 
@@ -289,28 +369,28 @@ export default function ResourcesPage() {
           <LeadMagnet
             title={t("resources.leadMagnet.title")}
             description={t("resources.leadMagnet.description")}
-            resourceName="Parent Email Starter Pack"
+            resourceName={t("resources.leadMagnet.resourceName")}
           />
         </div>
 
         <p className="text-sm text-gray-400 text-center mb-6">
-          Resources are currently available in English. German versions are coming.
+          {t("resources.languageNote")}
         </p>
 
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-6">
           <div className="flex flex-wrap gap-3">
-            {categoryFilters.map((category) => (
+            {categoryFilters.map((option) => (
               <button
-                key={category}
+                key={option.key}
                 className={`px-4 py-2 rounded-full border transition ${
-                  selectedCategory === category
+                  selectedCategory === option.key
                     ? "bg-purple-600 text-white border-transparent"
                     : "bg-white/5 border-white/10 text-gray-200"
                 }`}
-                onClick={() => setSelectedCategory(category)}
-                aria-pressed={selectedCategory === category}
+                onClick={() => setSelectedCategory(option.key)}
+                aria-pressed={selectedCategory === option.key}
               >
-                {category}
+                {t(option.labelKey)}
               </button>
             ))}
           </div>
@@ -319,7 +399,7 @@ export default function ResourcesPage() {
               <Input
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Search resources..."
+                placeholder={t("resources.search.placeholder")}
                 className="bg-[#121A2F] border-white/10 text-white"
               />
             </div>
@@ -327,30 +407,34 @@ export default function ResourcesPage() {
               value={sortOption}
               onChange={(e) => setSortOption(e.target.value)}
               className="bg-[#121A2F] border border-white/10 rounded-lg px-3 py-2 text-white"
-              aria-label="Sort resources"
+              aria-label={t("resources.sort.label")}
             >
               {sortOptions.map((option) => (
                 <option key={option.value} value={option.value}>
-                  {option.label}
+                  {t(option.labelKey)}
                 </option>
               ))}
             </select>
           </div>
         </div>
 
-        <div aria-live="polite" className="text-xs text-green-400 h-4 mb-4">
-          {copyMessage}
-        </div>
-
         {featuredResources.length ? (
           <section className="mb-12">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-2xl font-bold text-white">Featured resources</h2>
-              <p className="text-sm text-gray-400">Curated for quick wins</p>
+              <h2 className="text-2xl font-bold text-white">
+                {t("resources.featured.title")}
+              </h2>
+              <p className="text-sm text-gray-400">
+                {t("resources.featured.subtitle")}
+              </p>
             </div>
             <div className="grid gap-6 md:grid-cols-2">
               {featuredResources.map((resource) => (
-                <ResourceCard key={`featured-${resource.slug}`} resource={resource} onCopy={handleCopyLink} />
+                <ResourceCard
+                  key={`featured-${resource.slug}`}
+                  resource={resource}
+                  comingSoonLabel={t("resources.comingSoon")}
+                />
               ))}
             </div>
           </section>
@@ -359,13 +443,19 @@ export default function ResourcesPage() {
         {filteredResources.length ? (
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {filteredResources.map((resource) => (
-              <ResourceCard key={resource.slug} resource={resource} onCopy={handleCopyLink} />
+              <ResourceCard
+                key={resource.slug}
+                resource={resource}
+                comingSoonLabel={t("resources.comingSoon")}
+              />
             ))}
           </div>
         ) : (
           <div className="text-center text-gray-400 mt-12">
-            <p className="text-lg font-semibold">No resources match your filters.</p>
-            <p className="text-sm">Try a different keyword or select another category.</p>
+            <p className="text-lg font-semibold text-white">
+              {t("resources.empty.title")}
+            </p>
+            <p className="text-sm">{t("resources.empty.body")}</p>
           </div>
         )}
       </div>

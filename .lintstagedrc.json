@@ -1,1 +1,3 @@
-﻿{"*": "echo lint-staged noop"}
+{
+  "*.{js,jsx,ts,tsx,json,css,md,mdx}": ["prettier --write"]
+}

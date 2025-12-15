@@ -168,7 +168,6 @@ const translationsEn: Record<string, string> = {
   "pricing.compare.rows.cost.zaza":
     "Transparent teacher plans, free tier plus affordable monthly options.",
 
-
   // FAQs
   "pricing.faq.title": "Pricing & Billing FAQs",
   "pricing.faq.q1": "Is there a free plan?",
@@ -231,7 +230,8 @@ const translationsEn: Record<string, string> = {
   "form.placeholder.email": "you@example.com",
   "form.submitting": "Submitting...",
   "form.close": "Close",
-  "form.successNote": "We’ve sent your resource. If it doesn’t arrive, check your spam or write us.",
+  "form.successNote":
+    "We’ve sent your resource. If it doesn’t arrive, check your spam or write us.",
 
   // Suite Page Hero (EN)
   "suite.hero.title":
@@ -267,13 +267,34 @@ const translationsEn: Record<string, string> = {
   // Resources page (EN)
   "resources.title": "Free Resources for Teachers",
   "resources.subtitle": "Time-savers you can use today. Download as PDF.",
+  "resources.search.placeholder": "Search resources...",
   "resources.download": "Download",
   "resources.downloadCta": "Download Free Resource",
   "resources.comingSoon": "Coming Soon",
   "resources.published": "Published",
   "resources.leadMagnet.title": "Get future free resources in your inbox",
   "resources.leadMagnet.description":
-    "Leave your email and we’ll send new templates, guides, and bonus packs for calmer parent communication – no spam.",
+    "Leave your email and we'll send new templates, guides, and bonus packs for calmer parent communication - no spam.",
+  "resources.leadMagnet.resourceName": "Parent Email Starter Pack",
+  "resources.languageNote":
+    "Resources are currently available in English. German versions are coming.",
+  "resources.categories.all": "All",
+  "resources.categories.communication": "Communication",
+  "resources.categories.reporting": "Reporting",
+  "resources.categories.classroom": "Classroom",
+  "resources.categories.planning": "Planning",
+  "resources.categories.assessment": "Assessment",
+  "resources.sort.label": "Sort resources",
+  "resources.sort.popular": "Popular",
+  "resources.sort.newest": "Newest",
+  "resources.sort.alpha": "A-Z",
+  "resources.featured.title": "Featured resources",
+  "resources.featured.subtitle": "Curated for quick wins",
+  "resources.empty.title": "No resources match your filters.",
+  "resources.empty.body": "Try a different keyword or select another category.",
+  "resources.downloadLabel.pdf": "Download PDF",
+  "resources.downloadLabel.docx": "Download DOCX",
+  "resources.released": "Released",
   "suite.teach.li2": "Curriculum-aware: Common Core + international frameworks",
   "suite.teach.li3": "Differentiation helpers and creative activity ideas",
   "suite.teach.cta": "Learn more about Teach",
@@ -542,7 +563,8 @@ const translationsEn: Record<string, string> = {
   "stats.timeSaved.label": "Saved Weekly",
   "stats.subtitle":
     "Trusted by 500+ teachers using Zaza Draft to get evenings back and stay calm with parents.",
-  "socialProof.badges.teacherFounded": "Teacher-founded, PhD in Professional Education",
+  "socialProof.badges.teacherFounded":
+    "Teacher-founded, PhD in Professional Education",
   "socialProof.badges.gdprReady": "Built in Germany – GDPR-ready",
   "socialProof.badges.teacherFeedback": "Designed with real teacher feedback",
   "socialProof.badges.hallucinationSafe": "Hallucination-safe outputs",
@@ -829,16 +851,20 @@ const translationsEn: Record<string, string> = {
   "products.draft.howItWorks.step2.desc":
     "Supportive, formal, concise - with safety guardrails by default",
   "products.draft.howItWorks.step3.title": "Review & send",
-  "products.draft.howItWorks.step3.desc": "Edit quickly, copy, and share when it feels right",
+  "products.draft.howItWorks.step3.desc":
+    "Edit quickly, copy, and share when it feels right",
 
   "products.draft.whoItsFor.title": "Perfect for",
-  "products.draft.whoItsFor.item1": "Teachers juggling parent communications after hours",
-  "products.draft.whoItsFor.item2": "Educators turning quick notes into human report comments",
+  "products.draft.whoItsFor.item1":
+    "Teachers juggling parent communications after hours",
+  "products.draft.whoItsFor.item2":
+    "Educators turning quick notes into human report comments",
   "products.draft.whoItsFor.item3":
     "School staff who need respectful, concise messages without stress",
 
   "products.draft.change.title": "What changes with Draft",
-  "products.draft.change.step1": "Two-hour email marathons become 5-minute reviews",
+  "products.draft.change.step1":
+    "Two-hour email marathons become 5-minute reviews",
   "products.draft.change.step2":
     "Parent communication that stays calm, clear, and professional",
   "products.draft.change.step3": "Confidence in stressful conversations",
@@ -1132,19 +1158,6 @@ const translationsEn: Record<string, string> = {
   "faq.features.a10":
     "ChatGPT is a general-purpose tool. Zaza Draft is built for teachers and school communication, with guardrails around tone, clarity, and professionalism. That focus gives you faster drafts that are appropriate in school contexts.",
 
-  "faq.features.q7": "Wie hilft Zaza Draft mir, schneller zu schreiben?",
-  "faq.features.a7":
-    "Draft spart Zeit, indem es Struktur, Ton und Formulierungen vorbereitet. Statt bei Null zu beginnen, bekommst du einen ruhigen, klaren Entwurf, den du prüfst und bei Bedarf anpasst.",
-  "faq.features.q8": "Kann Zaza Draft meinen Ton und unseren Schulstil treffen?",
-  "faq.features.a8":
-    "Ja. Draft passt sich ruhigen, klaren, unterstützenden oder sachlichen Nuancen an. Du kannst Formulierungen so anpassen, dass sie zu euren Erwartungen und deinem Stil passen, bevor du etwas versendest.",
-  "faq.features.q9": "Hilft Zaza Draft auch bei sensiblen Themen?",
-  "faq.features.a9":
-    "Ja. Gerade bei heiklen Situationen unterstützt dich Draft dabei, respektvoll und deeskalierend zu formulieren, ohne dass die Botschaft unklar wird. Du entscheidest, was du sendest und wann.",
-  "faq.features.q10": "Warum nicht einfach ChatGPT nutzen?",
-  "faq.features.a10":
-    "ChatGPT ist ein allgemeines Tool. Zaza Draft wurde speziell für schulische Kommunikation entwickelt – Elternmails, Feedback und Berichtstexte. Der Fokus liegt auf Klarheit, Professionalität und passenden Formulierungen im Schulkontext, damit du schneller zu einem nutzbaren Entwurf kommst.",
-
   // Pricing Questions
   "faq.pricing.q1": "How much does Zaza Draft cost?",
   "faq.pricing.a1":
@@ -1291,7 +1304,8 @@ const translationsEn: Record<string, string> = {
     "Dr Greg Blackburn is a learning scientist and founder of Zaza Technologies, building teacher-first AI tools that give educators their time back.",
   "founder.hero.label": "FOUNDER & CEO",
   "founder.hero.name": "Dr. Greg Blackburn",
-  "founder.hero.tagline": "Learning scientist, EdTech founder, and advocate for teacher-first AI.",
+  "founder.hero.tagline":
+    "Learning scientist, EdTech founder, and advocate for teacher-first AI.",
 
   // Founder Journey Section
   "founder.journey.title": "The Journey",
@@ -1319,7 +1333,7 @@ const translationsEn: Record<string, string> = {
   "founder.whyZaza.card3.title": "Building a Legacy",
   "founder.whyZaza.card3.body":
     "This isn't about quick profits. It's about building something that genuinely helps teachers thrive and transforms education for the better. That's the legacy I want to leave.",
-    "founder.personal.title": "A personal note from Greg",
+  "founder.personal.title": "A personal note from Greg",
   "founder.personal.message1":
     "If you are reading this, you are probably a teacher who is curious about AI but understandably cautious. You care deeply about your students and your professionalism, and you do not want a tool that treats teaching as a set of prompts and templates. I share that view. Technology should serve your judgement, not replace it.",
   "founder.personal.message2":
@@ -1330,9 +1344,9 @@ const translationsEn: Record<string, string> = {
   "founder.personal.title2": "Founder & CEO",
   "founder.personal.company": "Zaza Technologies",
   "founder.personal.cta": "Get in Touch",
-  "founder.personal.fullStoryIntro": "Want to read the full journey behind Zaza?",
+  "founder.personal.fullStoryIntro":
+    "Want to read the full journey behind Zaza?",
   "founder.personal.fullStoryLink": "Read Greg's full founder story",
-
 
   // Support Page (EN)
   "support.title": "Support",
@@ -1343,7 +1357,8 @@ const translationsEn: Record<string, string> = {
     "Tell us what you need or share feedback. Every message is read by our team.",
   "support.email.response": "Typical response time: within 24 hours.",
   "support.faq.title": "FAQs",
-  "support.faq.description": "Browse answers about Draft, accounts, and billing.",
+  "support.faq.description":
+    "Browse answers about Draft, accounts, and billing.",
   "support.resources.title": "Guides & resources",
   "support.resources.description":
     "Short how-tos and checklists you can use right away.",
@@ -1367,7 +1382,8 @@ const translationsEn: Record<string, string> = {
   // Terms Page (EN)
   "terms.back": "Back to home",
   "terms.title": "Terms of Service",
-  "terms.company": "Zaza Technologies — creators of Zaza Draft, Zaza Teach, and GradeFlow",
+  "terms.company":
+    "Zaza Technologies — creators of Zaza Draft, Zaza Teach, and GradeFlow",
   "terms.lastUpdated": "Last updated: 12 October 2025",
   "terms.intro":
     "These terms govern your use of Zaza Draft, Zaza Teach, and GradeFlow. By using the services, you agree to them.",
@@ -1378,8 +1394,10 @@ const translationsEn: Record<string, string> = {
   "terms.s2.content":
     "Paid plans bill in advance. Subscriptions renew automatically until cancelled. Prices may change; we’ll notify you before adjustments take effect.",
   "terms.s3.title": "3. Acceptable use",
-  "terms.s3.item1": "Do not use the services for illegal, harmful, or misleading purposes.",
-  "terms.s3.item2": "Do not upload content that infringes rights or breaches privacy laws.",
+  "terms.s3.item1":
+    "Do not use the services for illegal, harmful, or misleading purposes.",
+  "terms.s3.item2":
+    "Do not upload content that infringes rights or breaches privacy laws.",
   "terms.s3.item3":
     "Do not attempt to disrupt, probe, or bypass the services (e.g., scraping, reverse engineering, automated attacks).",
   "terms.s4.title": "4. Privacy & security",
@@ -1390,7 +1408,7 @@ const translationsEn: Record<string, string> = {
     "The services, brands, and content remain Zaza’s property. Use them as intended and do not create derivative works without permission.",
   "terms.s6.title": "6. Liability & termination",
   "terms.s6.content":
-    'Services are provided “as is.” To the extent allowed by law, we’re not liable for indirect or consequential losses. We may suspend or terminate accounts that violate these terms.',
+    "Services are provided “as is.” To the extent allowed by law, we’re not liable for indirect or consequential losses. We may suspend or terminate accounts that violate these terms.",
   "terms.contact.text": "Questions about these terms? Email us at",
   // Not Found / Error
   "notFound.title": "Page not found",
@@ -1403,7 +1421,8 @@ const translationsEn: Record<string, string> = {
   "error.subtitle":
     "The page had a hiccup. Please retry, or head back while we keep things running for teachers.",
   "error.home": "Return home",
-  "error.contact": "Contact support",};
+  "error.contact": "Contact support",
+};
 
 const translationsDe: Record<string, string> = {
   // Pricing Page (DE) - Boutique Version
@@ -1517,7 +1536,6 @@ const translationsDe: Record<string, string> = {
   "pricing.metric.text":
     "Über 90 Tage berichten Lehrkräfte von 38 % weniger Nachrichten nach Feierabend und +24 % Zuversicht in der Elternkommunikation.",
 
-
   "pricing.checkout.buyNow": "Jetzt abonnieren",
   "pricing.compare.title": "Vergleich: Zaza vs. ChatGPT",
   "pricing.compare.caption":
@@ -1612,13 +1630,15 @@ const translationsDe: Record<string, string> = {
   "form.submit": "Jetzt kostenlos starten",
   "form.success": "Bitte Posteingang prüfen",
   "form.error": "Etwas ist schiefgelaufen. Bitte versuche es noch einmal.",
-  "form.consentRequired": "Bitte stimme der Datenschutzerklärung zu, um fortzufahren.",
+  "form.consentRequired":
+    "Bitte stimme der Datenschutzerklärung zu, um fortzufahren.",
   "form.trialCopy": "Teste 5 Kommentare kostenlos",
   "form.placeholder.name": "Dein Name",
   "form.placeholder.email": "du@example.com",
   "form.submitting": "Wird gesendet...",
   "form.close": "Schließen",
-  "form.successNote": "Wir haben dir das Material geschickt. Schau ggf. auch im Spam nach oder schreibe uns.",
+  "form.successNote":
+    "Wir haben dir das Material geschickt. Schau ggf. auch im Spam nach oder schreibe uns.",
 
   // Suite Page Hero (DE)
   "suite.hero.title":
@@ -1657,13 +1677,36 @@ const translationsDe: Record<string, string> = {
   "resources.title": "Kostenlose Ressourcen für Lehrkräfte",
   "resources.subtitle":
     "Zeitsparer, die du sofort nutzen kannst. Download als PDF.",
+  "resources.search.placeholder": "Ressourcen durchsuchen...",
   "resources.download": "Herunterladen",
   "resources.downloadCta": "Ressource herunterladen",
   "resources.comingSoon": "Demnächst",
   "resources.published": "Veröffentlicht",
-  "resources.leadMagnet.title": "Neue Gratis-Materialien direkt in dein Postfach",
+  "resources.leadMagnet.title":
+    "Neue Gratis-Materialien direkt in dein Postfach",
   "resources.leadMagnet.description":
-    "Trage deine E-Mail ein und wir schicken dir neue Vorlagen, Leitfäden und Bonus-Pakete – ohne Spam.",
+    "Trage deine E-Mail ein und wir schicken dir neue Vorlagen, Leitfäden und Bonus-Pakete - ohne Spam.",
+  "resources.leadMagnet.resourceName": "Eltern-E-Mail Starter-Pack",
+  "resources.languageNote":
+    "Ressourcen sind derzeit auf Englisch verfügbar. Deutsche Versionen folgen.",
+  "resources.categories.all": "Alle",
+  "resources.categories.communication": "Kommunikation",
+  "resources.categories.reporting": "Berichte",
+  "resources.categories.classroom": "Klassenraum",
+  "resources.categories.planning": "Planung",
+  "resources.categories.assessment": "Bewertung",
+  "resources.sort.label": "Ressourcen sortieren",
+  "resources.sort.popular": "Beliebt",
+  "resources.sort.newest": "Neueste",
+  "resources.sort.alpha": "A-Z",
+  "resources.featured.title": "Empfohlene Ressourcen",
+  "resources.featured.subtitle": "Handverlesene Downloads für schnelle Erfolge",
+  "resources.empty.title": "Keine Ressourcen passen zu deinen Filtern.",
+  "resources.empty.body":
+    "Probiere ein anderes Stichwort oder wähle eine andere Kategorie.",
+  "resources.downloadLabel.pdf": "PDF herunterladen",
+  "resources.downloadLabel.docx": "DOCX herunterladen",
+  "resources.released": "Veröffentlicht",
   "suite.teach.li2":
     "Lehrplanbewusst: Common Core + internationale Rahmenpläne",
   "suite.teach.li3": "Hilfen zur Differenzierung und kreative Aktivitätsideen",
@@ -1910,8 +1953,7 @@ const translationsDe: Record<string, string> = {
     "Im Gegensatz zu generischen KI-Tools ist Zaza Draft speziell darauf trainiert, das Erfinden von Schülerinformationen, die Erfindung von Elterninteraktionen oder das Erfinden von Details über Ihre Klasse zu vermeiden. Jede Ausgabe basiert auf dem, was Sie tatsächlich bereitstellen – keine erfundenen Fakten, keine fiktiven Szenarien.",
 
   // Problem Section
-  "problem.heading":
-    "Du bist Lehrer:in, nicht 24/7-Schriftsteller:in",
+  "problem.heading": "Du bist Lehrer:in, nicht 24/7-Schriftsteller:in",
   "problem.body":
     "Abende für Elternmails, Feedback und Berichte. Die Worte sind wichtig – deine Ruhe und Energie aber auch.",
   "problem.stats.parentEmails.value": "2-3 Std./Woche",
@@ -1938,9 +1980,11 @@ const translationsDe: Record<string, string> = {
   "stats.timeSaved.label": "Wöchentlich gespart",
   "stats.subtitle":
     "Vertraut von 500+ Lehrkräften, die mit Zaza Draft Abende zurückgewinnen und ruhig mit Eltern bleiben.",
-  "socialProof.badges.teacherFounded": "Von Lehrkräften gegründet – mit Doktortitel in Bildungswissenschaft",
+  "socialProof.badges.teacherFounded":
+    "Von Lehrkräften gegründet – mit Doktortitel in Bildungswissenschaft",
   "socialProof.badges.gdprReady": "In Deutschland entwickelt – DSGVO-konform",
-  "socialProof.badges.teacherFeedback": "Mit echtem Lehrkräfte-Feedback entwickelt",
+  "socialProof.badges.teacherFeedback":
+    "Mit echtem Lehrkräfte-Feedback entwickelt",
   "socialProof.badges.hallucinationSafe": "Halluzinationssichere Ergebnisse",
 
   // How It Works Section
@@ -2219,8 +2263,7 @@ const translationsDe: Record<string, string> = {
   "products.draft.turn.pain3":
     "Feedback immer neu formulieren, damit es klar, freundlich und schnell ist",
 
-  "products.draft.features.title":
-    "Für die schwierigen Gespräche gebaut",
+  "products.draft.features.title": "Für die schwierigen Gespräche gebaut",
   "products.draft.features.toneGuardrails.title": "Ton-Leitplanken",
   "products.draft.features.toneGuardrails.desc":
     "Hält Nachrichten ruhig, wertschätzend und deeskalierend, wenn es brennt",
@@ -2251,7 +2294,8 @@ const translationsDe: Record<string, string> = {
     "Schulteams, die respektvolle, prägnante Nachrichten ohne Stress brauchen",
 
   "products.draft.change.title": "Was sich mit Draft ändert",
-  "products.draft.change.step1": "Zwei-Stunden-Mail-Marathons werden 5-Minuten-Reviews",
+  "products.draft.change.step1":
+    "Zwei-Stunden-Mail-Marathons werden 5-Minuten-Reviews",
   "products.draft.change.step2":
     "Elternkommunikation bleibt ruhig, klar und professionell",
   "products.draft.change.step3": "Zuversicht in stressigen Gesprächen",
@@ -2707,14 +2751,14 @@ const translationsDe: Record<string, string> = {
   "founder.journey.quote":
     "Ich habe Zaza gebaut, weil ich nicht länger zusehen wollte, wie Lehrkräfte in Verwaltung versinken, obwohl Technologie sie entlasten sollte.",
   "founder.journey.p1":
-  "Mein Berufsleben begann in Hobart, Tasmanien, mit einem Pinsel in der Hand. Ich habe eine berufsvorbereitende Ausbildung an der TAFE und eine vierjährige Lehre in der Cascade-Brauerei abgeschlossen – harte Arbeit in einem rauen Umfeld. Diese Jahre haben mir Durchhaltevermögen beigebracht, aber auch gezeigt, dass ich mehr aus meinem Berufsleben machen wollte.",
-"founder.journey.p2":
-  "Reisen haben mir die Augen geöffnet. Ich habe im Ausland gelebt, Deutsch studiert und gesehen, wie Bildung neue Wege eröffnen kann. Zurück in Tasmanien habe ich Administration, Informationssysteme und Deutsch an der University of Tasmania studiert und mit First Class Honours abgeschlossen – ein Beweis dafür, dass ich trotz früher Zweifel und familiärer Spannungen akademisch erfolgreich sein und mir eine neue Laufbahn aufbauen konnte.",
-"founder.journey.p3":
-  "Der nächste Schritt führte mich nach Brisbane zu Telstra, wo ich sechs Jahre gearbeitet habe, während ich parallel ein MBA-Studium an der University of Queensland absolvierte. Das MBA öffnete mir die Tür ins Management an der UQ, wo ich als Business Manager gearbeitet habe. Dort begann ich, Forschung darüber zu veröffentlichen, wie Menschen lernen, Probleme lösen und in komplexen Organisationen denken.",
-"founder.journey.p4":
-  "Später habe ich eine Promotion in Professional Education an der City, University of London, abgeschlossen – auf Basis von Publikationen – und bin schließlich Chief Learning Officer bei Communardo geworden. Parallel dazu habe ich Lehrkräften und Learning-Professionals zugehört: Berichte, Korrekturen, Elternkommunikation bis spät in die Nacht. Viele KI-Tools fühlten sich generisch an, ignorierten Kontext und erzeugten zusätzliche Kontrollarbeit. Aus dieser Lücke heraus ist Zaza entstanden: KI-Tools, die speziell für Lehrkräfte entwickelt wurden, ihre Urteilsfähigkeit respektieren und ihnen Zeit zurückgeben.",
- "founder.mission.quote":
+    "Mein Berufsleben begann in Hobart, Tasmanien, mit einem Pinsel in der Hand. Ich habe eine berufsvorbereitende Ausbildung an der TAFE und eine vierjährige Lehre in der Cascade-Brauerei abgeschlossen – harte Arbeit in einem rauen Umfeld. Diese Jahre haben mir Durchhaltevermögen beigebracht, aber auch gezeigt, dass ich mehr aus meinem Berufsleben machen wollte.",
+  "founder.journey.p2":
+    "Reisen haben mir die Augen geöffnet. Ich habe im Ausland gelebt, Deutsch studiert und gesehen, wie Bildung neue Wege eröffnen kann. Zurück in Tasmanien habe ich Administration, Informationssysteme und Deutsch an der University of Tasmania studiert und mit First Class Honours abgeschlossen – ein Beweis dafür, dass ich trotz früher Zweifel und familiärer Spannungen akademisch erfolgreich sein und mir eine neue Laufbahn aufbauen konnte.",
+  "founder.journey.p3":
+    "Der nächste Schritt führte mich nach Brisbane zu Telstra, wo ich sechs Jahre gearbeitet habe, während ich parallel ein MBA-Studium an der University of Queensland absolvierte. Das MBA öffnete mir die Tür ins Management an der UQ, wo ich als Business Manager gearbeitet habe. Dort begann ich, Forschung darüber zu veröffentlichen, wie Menschen lernen, Probleme lösen und in komplexen Organisationen denken.",
+  "founder.journey.p4":
+    "Später habe ich eine Promotion in Professional Education an der City, University of London, abgeschlossen – auf Basis von Publikationen – und bin schließlich Chief Learning Officer bei Communardo geworden. Parallel dazu habe ich Lehrkräften und Learning-Professionals zugehört: Berichte, Korrekturen, Elternkommunikation bis spät in die Nacht. Viele KI-Tools fühlten sich generisch an, ignorierten Kontext und erzeugten zusätzliche Kontrollarbeit. Aus dieser Lücke heraus ist Zaza entstanden: KI-Tools, die speziell für Lehrkräfte entwickelt wurden, ihre Urteilsfähigkeit respektieren und ihnen Zeit zurückgeben.",
+  "founder.mission.quote":
     "Jede Lehrkraft verdient Werkzeuge, die ihre Expertise respektieren, ihre Schülerinnen und Schüler schützen und Zeit fürs Unterrichten schaffen.",
   "founder.mission.attribution": "Dr. Greg Blackburn, Gründer & CEO",
   "founder.whyZaza.title": "Warum ich Zaza gegründet habe",
@@ -2749,7 +2793,8 @@ const translationsDe: Record<string, string> = {
     "Schreib uns, was du brauchst oder gib Feedback. Jede Nachricht lesen wir persönlich.",
   "support.email.response": "Antwort in der Regel innerhalb von 24 Stunden.",
   "support.faq.title": "Häufige Fragen",
-  "support.faq.description": "Stöbere durch Antworten zu Draft, Konto und Abrechnung.",
+  "support.faq.description":
+    "Stöbere durch Antworten zu Draft, Konto und Abrechnung.",
   "support.resources.title": "Ressourcen & Leitfäden",
   "support.resources.description":
     "Kurze Anleitungen und Checklisten, die sofort helfen.",
@@ -2773,7 +2818,8 @@ const translationsDe: Record<string, string> = {
   // Terms Page (DE)
   "terms.back": "Zurück zur Startseite",
   "terms.title": "Nutzungsbedingungen",
-  "terms.company": "Zaza Technologies – Anbieter von Zaza Draft, Zaza Teach und GradeFlow",
+  "terms.company":
+    "Zaza Technologies – Anbieter von Zaza Draft, Zaza Teach und GradeFlow",
   "terms.lastUpdated": "Zuletzt aktualisiert: 12. Oktober 2025",
   "terms.intro":
     "Diese Bedingungen regeln deine Nutzung von Zaza Draft, Zaza Teach und GradeFlow. Mit der Nutzung stimmst du ihnen zu.",
@@ -2798,9 +2844,8 @@ const translationsDe: Record<string, string> = {
     "Dienste, Marken und Inhalte bleiben Eigentum von Zaza. Nutze sie wie vorgesehen und erstelle ohne Zustimmung keine abgeleiteten Werke.",
   "terms.s6.title": "6. Haftung & Beendigung",
   "terms.s6.content":
-    "Die Dienste werden \"wie besehen\" bereitgestellt. Soweit gesetzlich zulässig, haften wir nicht für indirekte oder Folgeschäden. Wir können Konten sperren oder beenden, wenn Bedingungen verletzt werden.",
-  "terms.contact.text":
-    "Fragen zu den Bedingungen? Schreibe uns jederzeit an",
+    'Die Dienste werden "wie besehen" bereitgestellt. Soweit gesetzlich zulässig, haften wir nicht für indirekte oder Folgeschäden. Wir können Konten sperren oder beenden, wenn Bedingungen verletzt werden.',
+  "terms.contact.text": "Fragen zu den Bedingungen? Schreibe uns jederzeit an",
   // Not Found / Error
   "notFound.title": "Seite nicht gefunden",
   "notFound.subtitle":
@@ -2812,7 +2857,8 @@ const translationsDe: Record<string, string> = {
   "error.subtitle":
     "Die Seite hatte ein Problem. Versuche es erneut oder gehe zurück, während wir alles für Lehrkräfte stabil halten.",
   "error.home": "Zurück zur Startseite",
-  "error.contact": "Support kontaktieren",};
+  "error.contact": "Support kontaktieren",
+};
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>(() => {
