@@ -1210,43 +1210,49 @@ const translationsEn: Record<string, string> = {
 
   // About Overview Page
   "about.overview.hero.eyebrow": "ABOUT ZAZA",
-  "about.overview.hero.title": "Building the Future of Teacher Technology",
+  "about.overview.hero.title": "Building technology to help teachers thrive",
   "about.overview.hero.subtitle":
-    "We're on a mission to give teachers their time back by building AI tools that actually understand education.",
+    "Zaza exists to give teachers their time, confidence, and wellbeing back – by building calm, safe AI tools that respect professional judgement and the realities of teaching.",
+  "about.overview.hero.context":
+    "Dr. Greg Blackburn is a learning science and professional education expert who leads professional learning work while staying close to teachers through family and friends, so he hears the lived experience and pain points educators face every day.",
 
   "about.overview.mission.title": "Our Mission",
   "about.overview.mission.body":
-    "Every teacher deserves tools that respect their expertise, protect their students, and give them time to do what they do best: teach. We're building AI that serves teachers, not the other way around.",
+    "Every teacher deserves tools that respect their expertise, protect their students, and reduce unnecessary stress. Zaza builds evidence-based, safety-first AI that supports teachers in their daily work – so they can focus on what matters most and thrive in their profession. Ultimately, Zaza exists to help teachers thrive – not just cope.",
 
   "about.overview.values.title": "Our Values",
   "about.overview.values.teacherFirst.title": "Teacher-First Design",
   "about.overview.values.teacherFirst.body":
-    "Every feature is designed with real teachers, tested in real classrooms, and refined based on real feedback.",
+    "Designed with and for teachers as professionals.",
   "about.overview.values.safety.title": "Safety by Design",
-  "about.overview.values.safety.body":
-    "We build hallucination-safe AI that never invents student information or fabricates details about your class.",
+  "about.overview.values.safety.body": "Calm, hallucination-safe AI.",
   "about.overview.values.privacy.title": "Privacy First",
   "about.overview.values.privacy.body":
     "FERPA-compliant from day one. Your data is yours, and we never use it to train our models.",
   "about.overview.values.evidence.title": "Evidence-Based",
   "about.overview.values.evidence.body":
-    "Built on real pedagogy and educational research, not generic business writing patterns.",
+    "Grounded in learning science and professional education research.",
 
   "about.overview.timeline.title": "Our Journey",
-  "about.overview.timeline.2023.title": "Founded",
-  "about.overview.timeline.2023.body":
-    "Started with a simple question: Why do teachers spend so much time writing when AI could help?",
-  "about.overview.timeline.2024.title": "Launch",
+  "about.overview.timeline.2019.title":
+    "Learning science and professional education",
+  "about.overview.timeline.2019.body":
+    "Completion of doctoral research focused on professional learning, critical thinking, and how people learn and perform in real, high-pressure work environments.",
+  "about.overview.timeline.2024.title":
+    "The pattern becomes impossible to ignore",
   "about.overview.timeline.2024.body":
-    "Released Zaza Draft to 100+ beta teachers. Saved over 50,000 hours of writing time.",
-  "about.overview.timeline.2025.title": "Growth",
+    "Through years of work in learning and development – combined with close personal connections to teachers through family and friends – a recurring problem became clear: written communication and reporting were consuming time, energy, and emotional bandwidth.",
+  "about.overview.timeline.2025.title": "Zaza Draft is founded",
   "about.overview.timeline.2025.body":
-    "Expanded to 500+ teachers across 15 countries. Launched Teach, GradeFlow, and Shield.",
+    "Zaza Draft is created to bring calm, safe, evidence-based AI into teachers’ daily work – reducing stress while respecting professional judgement.",
+  "about.overview.timeline.today.title": "Helping teachers thrive",
+  "about.overview.timeline.today.body":
+    "Zaza Draft is being built deliberately and carefully, prioritising trust, wellbeing, and usefulness over speed or hype.",
 
-  "about.overview.cta.title": "Want to Learn More?",
+  "about.overview.cta.title": "Help teachers thrive with calm, responsible AI",
   "about.overview.cta.body":
-    "Get in touch with our team to discuss how Zaza can help your school or district.",
-  "about.overview.cta.button": "Contact Us",
+    "Learn how Zaza Draft supports professional judgement, reduces stress, and protects what matters in teaching.",
+  "about.overview.cta.button": "Contact us",
 
   // About Company Page - NEW CONTENT
   "about.company.hero.eyebrow": "OUR COMPANY",
@@ -2647,43 +2653,50 @@ const translationsDe: Record<string, string> = {
 
   // About Overview Page
   "about.overview.hero.eyebrow": "ÜBER ZAZA",
-  "about.overview.hero.title": "Wir bauen die Zukunft der Lehrer-Technologie",
+  "about.overview.hero.title":
+    "Wir bauen Technologie, die Lehrkräfte erfolgreich unterstützt",
   "about.overview.hero.subtitle":
-    "Unsere Mission ist es, Lehrkräften ihre Zeit zurückzugeben, indem wir KI-Tools bauen, die Bildung tatsächlich verstehen.",
+    "Zaza existiert, um Lehrkräften ihre Zeit, ihr Vertrauen und ihr Wohlbefinden zurückzugeben – durch ruhige, sichere KI-Tools, die professionelles Urteilsvermögen respektieren und die Realität des Unterrichts anerkennen.",
+  "about.overview.hero.context":
+    "Dr. Greg Blackburn ist Experte für Lernwissenschaft und berufliche Bildung, verantwortet Professional-Learning-Initiativen und bleibt durch Familie und Freunde nah an Lehrkräften dran, sodass er deren gelebte Erfahrung und Herausforderungen hört.",
 
   "about.overview.mission.title": "Unsere Mission",
   "about.overview.mission.body":
-    "Jede Lehrkraft verdient Tools, die ihre Expertise respektieren, ihre Schüler schützen und ihnen Zeit geben, das zu tun, was sie am besten können: unterrichten. Wir bauen KI, die Lehrkräften dient, nicht umgekehrt.",
+    "Jede Lehrkraft verdient Tools, die ihre Expertise respektieren, ihre Schüler schützen und unnötigen Stress reduzieren. Zaza entwickelt evidenzbasierte, sicherheitsorientierte KI, die Lehrkräfte im Alltag unterstützt – damit sie sich auf das konzentrieren können, was wirklich zählt, und in ihrem Beruf aufblühen. Letztlich existiert Zaza, um Lehrkräfte erfolgreich zu machen – nicht nur um ihnen zu helfen, durchzuhalten.",
 
   "about.overview.values.title": "Unsere Werte",
   "about.overview.values.teacherFirst.title": "Lehrerzentriertes Design",
   "about.overview.values.teacherFirst.body":
-    "Jede Funktion wird mit echten Lehrkräften entworfen, in echten Klassenzimmern getestet und basierend auf echtem Feedback verfeinert.",
+    "Mit Lehrkräften als Profis entworfen.",
   "about.overview.values.safety.title": "Sicherheit von Grund auf",
-  "about.overview.values.safety.body":
-    "Wir bauen halluzinationssichere KI, die niemals Schülerinformationen erfindet oder Details über Ihre Klasse fabriziert.",
+  "about.overview.values.safety.body": "Ruhige, halluzinationssichere KI.",
   "about.overview.values.privacy.title": "Datenschutz an erster Stelle",
   "about.overview.values.privacy.body":
     "FERPA-konform vom ersten Tag an. Ihre Daten gehören Ihnen, und wir verwenden sie niemals, um unsere Modelle zu trainieren.",
   "about.overview.values.evidence.title": "Evidenzbasiert",
   "about.overview.values.evidence.body":
-    "Aufgebaut auf echter Pädagogik und Bildungsforschung, nicht auf generischen Geschäftsschreibmustern.",
+    "Auf Lernwissenschaft und berufspädagogische Forschung gestützt.",
 
   "about.overview.timeline.title": "Unsere Reise",
-  "about.overview.timeline.2023.title": "Gegründet",
-  "about.overview.timeline.2023.body":
-    "Begonnen mit einer einfachen Frage: Warum verbringen Lehrkräfte so viel Zeit mit Schreiben, wenn KI helfen könnte?",
-  "about.overview.timeline.2024.title": "Markteinführung",
+  "about.overview.timeline.2019.title": "Lernen und professionelle Bildung",
+  "about.overview.timeline.2019.body":
+    "Abschluss der Promotion mit Schwerpunkt auf professionellem Lernen, kritischem Denken und Lernen in anspruchsvollen beruflichen Kontexten.",
+  "about.overview.timeline.2024.title": "Ein Muster wird deutlich",
   "about.overview.timeline.2024.body":
-    "Released Zaza Draft to 100+ beta teachers. Saved over 50,000 hours of writing time.",
-  "about.overview.timeline.2025.title": "Wachstum",
+    "Durch jahrelange Arbeit im Bereich Learning & Development – sowie durch enge persönliche Beziehungen zu Lehrkräften im Freundes- und Familienkreis – wurde ein zentrales Problem immer klarer: Schriftliche Kommunikation und Berichte kosten Zeit, Energie und emotionale Kraft.",
+  "about.overview.timeline.2025.title": "Gründung von Zaza Draft",
   "about.overview.timeline.2025.body":
-    "Expanded to 500+ teachers across 15 countries. Launched Teach, GradeFlow, and Shield.",
+    "Zaza Draft entsteht, um ruhige, sichere und evidenzbasierte KI in den Lehreralltag zu bringen – mit Respekt vor professioneller Urteilsfähigkeit.",
+  "about.overview.timeline.today.title":
+    "Lehrkräfte dabei unterstützen, erfolgreich zu bleiben",
+  "about.overview.timeline.today.body":
+    "Zaza Draft wird bewusst und sorgfältig entwickelt – mit Fokus auf Vertrauen, Wohlbefinden und tatsächlichem Nutzen.",
 
-  "about.overview.cta.title": "Möchten Sie mehr erfahren?",
+  "about.overview.cta.title":
+    "Lehrkräfte dabei unterstützen, erfolgreich zu bleiben",
   "about.overview.cta.body":
-    "Get in touch with our team to discuss how Zaza can help your school or district.",
-  "about.overview.cta.button": "Contact Us",
+    "Erfahre, wie Zaza Draft professionelles Handeln stärkt, Stress reduziert und Vertrauen bewahrt.",
+  "about.overview.cta.button": "Kontakt aufnehmen",
 
   // About Company Page - NEW CONTENT
   "about.company.hero.eyebrow": "UNSER UNTERNEHMEN",

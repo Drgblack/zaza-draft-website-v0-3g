@@ -1,16 +1,16 @@
 "use client";
 
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { useLanguage } from "@/lib/i18n/language-context"
-import { AboutSidebar } from "@/components/about-sidebar"
-import { Timeline } from "@/components/timeline"
-import { Breadcrumbs } from "@/components/breadcrumbs"
-import { ArrowRight } from "lucide-react"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { useLanguage } from "@/lib/i18n/language-context";
+import { AboutSidebar } from "@/components/about-sidebar";
+import { Timeline } from "@/components/timeline";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function AboutPage() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   const values = [
     {
@@ -29,13 +29,13 @@ export default function AboutPage() {
       title: t("about.overview.values.evidence.title"),
       body: t("about.overview.values.evidence.body"),
     },
-  ]
+  ];
 
   const timeline = [
     {
-      date: "2023",
-      title: t("about.overview.timeline.2023.title"),
-      body: t("about.overview.timeline.2023.body"),
+      date: "2019",
+      title: t("about.overview.timeline.2019.title"),
+      body: t("about.overview.timeline.2019.body"),
     },
     {
       date: "2024",
@@ -47,7 +47,12 @@ export default function AboutPage() {
       title: t("about.overview.timeline.2025.title"),
       body: t("about.overview.timeline.2025.body"),
     },
-  ]
+    {
+      date: "Today",
+      title: t("about.overview.timeline.today.title"),
+      body: t("about.overview.timeline.today.body"),
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-[#0B1220] text-[#F9FAFB] py-16 md:py-24">
@@ -73,24 +78,40 @@ export default function AboutPage() {
               <p className="text-xl text-[#D1D5DB] leading-relaxed max-w-3xl">
                 {t("about.overview.hero.subtitle")}
               </p>
+              <p className="mt-6 text-base text-[#9CA3AF] leading-relaxed max-w-3xl">
+                {t("about.overview.hero.context")}
+              </p>
             </div>
 
             {/* Mission */}
             <section className="mb-16">
               <Card className="bg-[#111827] border-[#1F2937] p-8 lg:p-12">
-                <h2 className="text-3xl font-bold text-[#F9FAFB] mb-6">{t("about.overview.mission.title")}</h2>
-                <p className="text-lg text-[#D1D5DB] leading-relaxed">{t("about.overview.mission.body")}</p>
+                <h2 className="text-3xl font-bold text-[#F9FAFB] mb-6">
+                  {t("about.overview.mission.title")}
+                </h2>
+                <p className="text-lg text-[#D1D5DB] leading-relaxed">
+                  {t("about.overview.mission.body")}
+                </p>
               </Card>
             </section>
 
             {/* Values */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold text-[#F9FAFB] mb-8">{t("about.overview.values.title")}</h2>
+              <h2 className="text-3xl font-bold text-[#F9FAFB] mb-8">
+                {t("about.overview.values.title")}
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {values.map((value, index) => (
-                  <Card key={index} className="bg-[#111827] border-[#1F2937] p-6">
-                    <h3 className="text-xl font-bold text-[#F9FAFB] mb-3">{value.title}</h3>
-                    <p className="text-[#9CA3AF] leading-relaxed">{value.body}</p>
+                  <Card
+                    key={index}
+                    className="bg-[#111827] border-[#1F2937] p-6"
+                  >
+                    <h3 className="text-xl font-bold text-[#F9FAFB] mb-3">
+                      {value.title}
+                    </h3>
+                    <p className="text-[#9CA3AF] leading-relaxed">
+                      {value.body}
+                    </p>
                   </Card>
                 ))}
               </div>
@@ -98,16 +119,26 @@ export default function AboutPage() {
 
             {/* Timeline */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold text-[#F9FAFB] mb-8">{t("about.overview.timeline.title")}</h2>
+              <h2 className="text-3xl font-bold text-[#F9FAFB] mb-8">
+                {t("about.overview.timeline.title")}
+              </h2>
               <Timeline items={timeline} />
             </section>
 
             {/* CTA */}
             <section>
-              <Card className="bg-gradient-to-br from-[#7C3AED]/20 via-[#6366F1]/20 to-[#3B82F6]/20 border-[#1F2937] p-12 text-center">
-                <h2 className="text-3xl font-bold text-[#F9FAFB] mb-4">{t("about.overview.cta.title")}</h2>
-                <p className="text-lg text-[#D1D5DB] mb-8 max-w-2xl mx-auto">{t("about.overview.cta.body")}</p>
-                <Button asChild size="lg" className="gradient-primary text-white font-medium">
+              <Card className="bg-gradient-to-br from-[#EC4899] via-[#9333EA] to-[#7C3AED] border-transparent p-12 text-center shadow-2xl shadow-[#9333EA]/40">
+                <h2 className="text-3xl font-bold text-white mb-4">
+                  {t("about.overview.cta.title")}
+                </h2>
+                <p className="text-lg text-white mb-8 max-w-2xl mx-auto">
+                  {t("about.overview.cta.body")}
+                </p>
+                <Button
+                  asChild
+                  size="lg"
+                  className="gradient-primary text-white font-medium"
+                >
                   <Link href="/contact">
                     {t("about.overview.cta.button")}
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -119,6 +150,5 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-
