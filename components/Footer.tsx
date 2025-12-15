@@ -220,6 +220,11 @@ export default function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link href="/impressum" className="hover:text-white">
+                  Impressum
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
