@@ -2,57 +2,450 @@
   "resources": [
     {
       "slug": "ai-prompt-library-premium",
-      "title": "AI Prompt Library Premium",
-      "blurb_en": "50+ expertly crafted prompts for every classroom scenario - from personalized feedback to creative project ideas.",
-      "blurb_de": "50+ fachmännisch gestaltete Prompts für jedes Klassenzimmerszenario - von personalisiertem Feedback bis zu kreativen Projektideen.",
-      "tags": ["ai-tools", "prompts", "productivity"],
+      "category": "Planning",
+      "tags": ["ai-tools", "planning", "prompts"],
+      "title": {
+        "en": "AI Prompt Library Premium",
+        "de": "Premium KI-Prompt-Bibliothek"
+      },
+      "description": {
+        "en": "50+ classroom-ready prompts for feedback, reports, and lesson brainstorming, curated for teachers.",
+        "de": "Über 50 sofort einsatzbereite Classroom-Prompts für Feedback, Zeugnisse und Unterrichtsideen."
+      },
       "files": {
         "en": { "pdf": "/resources/pdf/ai-prompt-library-premium-en.pdf" },
         "de": { "pdf": "/resources/pdf/ai-prompt-library-premium-de.pdf" }
-      }
+      },
+      "featured": true,
+      "releasedAt": "2025-11-20",
+      "popularity": 90
     },
     {
-      "slug": "assessment-rubrics",
-      "title": "Assessment Rubrics",
-      "blurb_en": "Ready-to-use rubrics that save grading time while providing clear, meaningful feedback to students.",
-      "blurb_de": "Sofort einsetzbare Bewertungsraster, die Bewertungszeit sparen und gleichzeitig klares, aussagekräftiges Feedback an Schüler geben.",
-      "tags": ["assessment", "grading", "feedback"],
+      "slug": "ai-prompts-subject-planning",
+      "category": "Planning",
+      "tags": ["ai-tools", "planning"],
+      "title": {
+        "en": "AI Prompts for Subject Planning",
+        "de": "KI-Prompts für Unterrichtsplanung"
+      },
+      "description": {
+        "en": "Subject-specific prompt sets that keep lesson ideas aligned to standards and student needs.",
+        "de": "Fachspezifische Prompt-Sets, damit Unterrichtsideen sich an Standards und Lernbedürfnisse anpassen."
+      },
       "files": {
-        "en": { "pdf": "/resources/pdf/assessment-rubrics-pack-en.pdf" }
-      }
+        "en": { "pdf": "/resources/pdf/ai-prompts-subject-planning-en.pdf" },
+        "de": { "pdf": "/resources/pdf/ai-prompts-subject-planning-de.pdf" }
+      },
+      "releasedAt": "2025-10-15",
+      "popularity": 72
     },
     {
-      "slug": "teacher-wellness-guide",
-      "title": "Teacher Wellness Guide",
-      "blurb_en": "Sustainable strategies for managing stress, preventing burnout, and maintaining your passion for teaching.",
-      "blurb_de": "Nachhaltige Strategien zur Stressbewältigung, Burnout-Prävention und Erhaltung Ihrer Leidenschaft für das Unterrichten.",
-      "tags": ["wellness", "self-care", "burnout-prevention"],
+      "slug": "assessment-rubrics-pack",
+      "category": "Assessment",
+      "tags": ["assessment", "rubrics"],
+      "title": {
+        "en": "Assessment Rubrics Pack",
+        "de": "Bewertungsraster-Paket"
+      },
+      "description": {
+        "en": "Editable rubrics for math, literacy, and SEL that make scoring transparent and fast.",
+        "de": "Anpassbare Raster für Mathe, Schriftlichkeit und SEL, damit Bewertung klar und zügig gelingt."
+      },
       "files": {
-        "en": { "pdf": "/resources/pdf/teacher-wellness-guide-en.pdf" },
-        "de": { "pdf": "/resources/pdf/teacher-wellness-guide-de.pdf" }
-      }
+        "en": { "pdf": "/resources/pdf/assessment-rubrics-pack-en.pdf" },
+        "de": { "pdf": "/resources/pdf/assessment-rubrics-pack-de.pdf" }
+      },
+      "releasedAt": "2025-09-10",
+      "popularity": 78
     },
     {
-      "slug": "tech-troubleshooting-guide",
-      "title": "Tech Troubleshooting Guide",
-      "blurb_en": "Quick solutions for common classroom technology issues - keep lessons flowing when tech doesn't cooperate.",
-      "blurb_de": "Schnelle Lösungen für häufige Technologieprobleme im Klassenzimmer - halten Sie den Unterricht am Laufen, wenn die Technik nicht mitspielt.",
-      "tags": ["technology", "troubleshooting", "classroom-tech"],
+      "slug": "behavior-redirection-scripts",
+      "category": "Classroom",
+      "tags": ["behavior", "scripts"],
+      "title": {
+        "en": "Behavior Redirection Scripts",
+        "de": "Verhaltens-Redirection-Skripte"
+      },
+      "description": {
+        "en": "Calm, respectful scripts that guide students back on track without losing relationship capital.",
+        "de": "Ruhige, respektvolle Formulierungen, um Lernende zielsicher wieder in den Fokus zu holen."
+      },
       "files": {
-        "en": { "pdf": "/resources/pdf/tech-troubleshooting-guide-en.pdf" },
-        "de": { "pdf": "/resources/pdf/tech-troubleshooting-guide-de.pdf" }
-      }
+        "en": { "pdf": "/resources/pdf/behavior-redirection-scripts-en.pdf" },
+        "de": { "pdf": "/resources/pdf/behavior-redirection-scripts-de.pdf" }
+      },
+      "releasedAt": "2025-08-20",
+      "popularity": 74
     },
     {
-      "slug": "tone-checklist",
-      "title": "Communication Tone Checklist",
-      "blurb_en": "Strike the right tone in every message - guidelines for professional, empathetic communication with students and parents.",
-      "blurb_de": "Treffen Sie den richtigen Ton in jeder Nachricht - Richtlinien für professionelle, einfühlsame Kommunikation mit Schülern und Eltern.",
-      "tags": ["communication", "tone", "professionalism"],
+      "slug": "classroom-routines-guide",
+      "category": "Classroom",
+      "tags": ["routines", "management"],
+      "title": {
+        "en": "Classroom Routines Guide",
+        "de": "Routine-Kompass fürs Klassenzimmer"
+      },
+      "description": {
+        "en": "Routine templates and transition scripts to keep students engaged and class flowing.",
+        "de": "Vorlagen für Abläufe und Übergänge, damit der Unterricht ruhig, klar und zielgerichtet bleibt."
+      },
+      "files": {
+        "en": { "pdf": "/resources/pdf/classroom-routines-guide-en.pdf" },
+        "de": { "pdf": "/resources/pdf/classroom-routines-guide-de.pdf" }
+      },
+      "releasedAt": "2025-08-25",
+      "popularity": 76
+    },
+    {
+      "slug": "communication-tone-checklist",
+      "category": "Communication",
+      "tags": ["communication", "tone"],
+      "title": {
+        "en": "Communication Tone Checklist",
+        "de": "Tonfall-Checkliste"
+      },
+      "description": {
+        "en": "Pre-send audit that keeps every message calm, professional, and student-centered.",
+        "de": "Kurzcheck vor dem Versenden, damit jede Nachricht ruhig, professionell und schülerorientiert bleibt."
+      },
       "files": {
         "en": { "pdf": "/resources/pdf/communication-tone-checklist-en.pdf" },
         "de": { "pdf": "/resources/pdf/communication-tone-checklist-de.pdf" }
-      }
+      },
+      "featured": true,
+      "releasedAt": "2025-12-01",
+      "popularity": 92
+    },
+    {
+      "slug": "differentiated-question-stems",
+      "category": "Assessment",
+      "tags": ["differentiation", "questions"],
+      "title": {
+        "en": "Differentiated Question Stems",
+        "de": "Differenzierte Frageansätze"
+      },
+      "description": {
+        "en": "Sentence starters that scaffold deep thinking across levels and learning needs.",
+        "de": "Einstiege, die tiefes Denken und Anpassung an individuelle Lernstände unterstützen."
+      },
+      "files": {
+        "en": { "pdf": "/resources/pdf/differentiated-question-stems-en.pdf" },
+        "de": { "pdf": "/resources/pdf/differentiated-question-stems-de.pdf" }
+      },
+      "releasedAt": "2025-09-18",
+      "popularity": 73
+    },
+    {
+      "slug": "differentiation-menu-by-need",
+      "category": "Classroom",
+      "tags": ["differentiation", "menus"],
+      "title": {
+        "en": "Differentiation Menu by Need",
+        "de": "Differenzierungs-Menü nach Bedarfen"
+      },
+      "description": {
+        "en": "Organized actions and prompts to adjust instruction for readiness, interest, or acceleration.",
+        "de": "Strukturierte Maßnahmen und Formulierungen, um Unterricht nach Bedürfnis, Interesse oder Tempo anzupassen."
+      },
+      "files": {
+        "en": { "pdf": "/resources/pdf/differentiation-menu-by-need-en.pdf" },
+        "de": { "pdf": "/resources/pdf/differentiation-menu-by-need-de.pdf" }
+      },
+      "releasedAt": "2025-09-25",
+      "popularity": 70
+    },
+    {
+      "slug": "formative-assessment-checklist",
+      "category": "Assessment",
+      "tags": ["assessment", "formative"],
+      "title": {
+        "en": "Formative Assessment Checklist",
+        "de": "Checkliste für formative Bewertung"
+      },
+      "description": {
+        "en": "A quick diagnostic routine that keeps formative assessments focused on growth.",
+        "de": "Ein schneller Diagnoseablauf, der formative Bewertung auf Wachstum und Feedback ausrichtet."
+      },
+      "files": {
+        "en": { "pdf": "/resources/pdf/formative-assessment-checklist-en.pdf" },
+        "de": { "pdf": "/resources/pdf/formative-assessment-checklist-de.pdf" }
+      },
+      "releasedAt": "2025-10-05",
+      "popularity": 71
+    },
+    {
+      "slug": "iep-accommodation-phrases-pack",
+      "category": "Classroom",
+      "tags": ["iep", "phrases"],
+      "title": {
+        "en": "IEP Accommodation Phrases Pack",
+        "de": "Phrasen-Paket für IEP-Unterstützung"
+      },
+      "description": {
+        "en": "Framing language for drafting precise accommodations and progress summaries.",
+        "de": "Formulierungen für passgenaue Maßnahmen und Fortschrittsberichte im IEP-Kontext."
+      },
+      "files": {
+        "en": { "pdf": "/resources/pdf/iep-accommodation-phrases-pack-en.pdf" },
+        "de": { "pdf": "/resources/pdf/iep-accommodation-phrases-pack-de.pdf" }
+      },
+      "releasedAt": "2025-10-12",
+      "popularity": 69
+    },
+    {
+      "slug": "lesson-plan-template-primary",
+      "category": "Planning",
+      "tags": ["planning", "templates"],
+      "title": {
+        "en": "Lesson Plan Template — Primary",
+        "de": "Unterrichtsplan-Vorlage für Primarstufe"
+      },
+      "description": {
+        "en": "A flexible primary lesson planner that balances objectives, engagement, and evidence.",
+        "de": "Eine flexible Planvorlage für die Primarstufe: Lernziele, Engagement und Evidenz in einem."
+      },
+      "files": {
+        "en": { "pdf": "/resources/pdf/lesson-plan-template-primary-en.pdf" },
+        "de": { "pdf": "/resources/pdf/lesson-plan-template-primary-de.pdf" }
+      },
+      "releasedAt": "2025-08-30",
+      "popularity": 75
+    },
+    {
+      "slug": "parent-email-checklist",
+      "category": "Communication",
+      "tags": ["parents", "email", "communication"],
+      "title": {
+        "en": "Parent Email Checklist",
+        "de": "Eltern-E-Mail Checkliste"
+      },
+      "description": {
+        "en": "Ensure every email has purpose, tone, and next steps before you hit send.",
+        "de": "Sichere, dass jede Mail Zweck, Ton und klare nächste Schritte enthält."
+      },
+      "files": {
+        "en": { "pdf": "/resources/pdf/parent-email-checklist-en.pdf" },
+        "de": { "pdf": "/resources/pdf/parent-email-checklist-de.pdf" }
+      },
+      "featured": true,
+      "releasedAt": "2025-12-10",
+      "popularity": 95
+    },
+    {
+      "slug": "parent-email-playbook",
+      "category": "Communication",
+      "tags": ["parents", "playbook"],
+      "title": {
+        "en": "Parent Email Playbook",
+        "de": "Eltern-E-Mail Playbook"
+      },
+      "description": {
+        "en": "Scenario-based scripts and tone reminders for tricky parent situations.",
+        "de": "Szenariobasierte Skripte mit Tonhinweisen für herausfordernde Elternkommunikation."
+      },
+      "files": {
+        "en": { "pdf": "/resources/pdf/parent-email-playbook-en.pdf" },
+        "de": { "pdf": "/resources/pdf/parent-email-playbook-de.pdf" }
+      },
+      "featured": true,
+      "releasedAt": "2025-11-15",
+      "popularity": 92
+    },
+    {
+      "slug": "phone-call-scripts-parents",
+      "category": "Communication",
+      "tags": ["parents", "phone", "scripts"],
+      "title": {
+        "en": "Phone Call Scripts to Parents",
+        "de": "Telefon-Skripte für Eltern"
+      },
+      "description": {
+        "en": "Structured scripts for calm, action-oriented parent calls with clear outcomes.",
+        "de": "Strukturierte Skripte für ruhige, zielführende Elterngespräche mit klaren nächsten Schritten."
+      },
+      "files": {
+        "en": { "pdf": "/resources/pdf/phone-call-scripts-parents-en.pdf" },
+        "de": { "pdf": "/resources/pdf/phone-call-scripts-parents-de.pdf" }
+      },
+      "releasedAt": "2025-10-28",
+      "popularity": 74
+    },
+    {
+      "slug": "report-comment-bank",
+      "category": "Reporting",
+      "tags": ["reports", "comments"],
+      "title": {
+        "en": "Report Comment Bank",
+        "de": "Kommentarbank für Berichte"
+      },
+      "description": {
+        "en": "Hundreds of polished comment starters categorized by subject and skill.",
+        "de": "Hunderte professionelle Kommentar-Einstiege nach Fach und Kompetenz sortiert."
+      },
+      "files": {
+        "en": { "pdf": "/resources/pdf/report-comment-bank-en.pdf" },
+        "de": { "pdf": "/resources/pdf/report-comment-bank-de.pdf" }
+      },
+      "releasedAt": "2025-09-15",
+      "popularity": 85
+    },
+    {
+      "slug": "report-writing-framework",
+      "category": "Reporting",
+      "tags": ["reports", "framework"],
+      "title": {
+        "en": "Report Writing Framework",
+        "de": "Rahmenwerk für Berichtstexte"
+      },
+      "description": {
+        "en": "A simple structure to balance praise, growth, and evidence in every report.",
+        "de": "Ein klares Gerüst für Lob, Entwicklung und belegbare Aussagen in jedem Bericht."
+      },
+      "files": {
+        "en": { "pdf": "/resources/pdf/report-writing-framework-en.pdf" },
+        "de": { "pdf": "/resources/pdf/report-writing-framework-de.pdf" }
+      },
+      "releasedAt": "2025-07-10",
+      "popularity": 80
+    },
+    {
+      "slug": "report-writing-starters-closers",
+      "category": "Reporting",
+      "tags": ["reports", "writing"],
+      "title": {
+        "en": "Report Writing Starters & Closers",
+        "de": "Report-Start- & Schlussformeln"
+      },
+      "description": {
+        "en": "Starter lines and thoughtful closings for reports, meant to save time.",
+        "de": "Einleitungen und Abschlussformeln, die Zeit sparen und professionell klingen."
+      },
+      "files": {
+        "en": {
+          "pdf": "/resources/pdf/report-writing-starters-closers-en.pdf"
+        },
+        "de": { "pdf": "/resources/pdf/report-writing-starters-closers-de.pdf" }
+      },
+      "releasedAt": "2025-07-20",
+      "popularity": 77
+    },
+    {
+      "slug": "seating-plan-templates-routines",
+      "category": "Classroom",
+      "tags": ["planning", "routines"],
+      "title": {
+        "en": "Seating Plan Templates & Routines",
+        "de": "Sitzplan- & Routinen-Vorlagen"
+      },
+      "description": {
+        "en": "Seating charts plus routine scripts to support transitions and inclusion.",
+        "de": "Sitzpläne und Routine-Skripte, die Übergänge und Inklusion unterstützen."
+      },
+      "files": {
+        "en": {
+          "pdf": "/resources/pdf/seating-plan-templates-routines-en.pdf"
+        },
+        "de": { "pdf": "/resources/pdf/seating-plan-templates-routines-de.pdf" }
+      },
+      "releasedAt": "2025-08-18",
+      "popularity": 70
+    },
+    {
+      "slug": "secondary-lesson-plan-template",
+      "category": "Planning",
+      "tags": ["planning", "templates"],
+      "title": {
+        "en": "Secondary Lesson Plan Template",
+        "de": "Sekundarstufe — Unterrichtsplan-Vorlage"
+      },
+      "description": {
+        "en": "A full-period planner that scaffolds objectives, checks for understanding, and exit tickets.",
+        "de": "Ein Stundenplaner, der Ziele, Verständnischecks und Abschlussimpulse integriert."
+      },
+      "files": {
+        "en": { "pdf": "/resources/pdf/secondary-lesson-plan-template-en.pdf" },
+        "de": { "pdf": "/resources/pdf/secondary-lesson-plan-template-de.pdf" }
+      },
+      "releasedAt": "2025-08-05",
+      "popularity": 71
+    },
+    {
+      "slug": "teacher-ai-toolkit-v1.1",
+      "category": "Classroom",
+      "tags": ["ai-tools", "planning"],
+      "title": {
+        "en": "Teacher AI Toolkit v1.1",
+        "de": "Teacher AI Toolkit v1.1"
+      },
+      "description": {
+        "en": "An updated toolkit with prompts, rubrics, and guardrails for weaving AI into everyday teaching.",
+        "de": "Ein aktualisiertes Toolkit mit Prompts, Raster und Safeguards für den Alltag mit KI."
+      },
+      "files": {
+        "en": { "pdf": "/resources/pdf/teacher-ai-toolkit-v1.1-en.pdf" }
+      },
+      "releasedAt": "2025-12-12",
+      "popularity": 68
+    },
+    {
+      "slug": "teacher-wellness-guide",
+      "category": "Classroom",
+      "tags": ["wellness", "self-care"],
+      "title": {
+        "en": "Teacher Wellness Guide",
+        "de": "Lehrer*innen-Wellness-Guide"
+      },
+      "description": {
+        "en": "Mindfulness prompts, boundary scripts, and quick resets to protect energy.",
+        "de": "Achtsamkeitsimpulse, Grenzskripte und Mini-Reset-Rituale für mehr Energie im Alltag."
+      },
+      "files": {
+        "en": { "pdf": "/resources/pdf/teacher-wellness-guide-en.pdf" },
+        "de": { "pdf": "/resources/pdf/teacher-wellness-guide-de.pdf" }
+      },
+      "featured": true,
+      "releasedAt": "2025-12-08",
+      "popularity": 88
+    },
+    {
+      "slug": "tech-troubleshooting-guide",
+      "category": "Classroom",
+      "tags": ["technology", "troubleshooting"],
+      "title": {
+        "en": "Tech Troubleshooting Guide",
+        "de": "Tech Troubleshooting Guide"
+      },
+      "description": {
+        "en": "Step-by-step fixes for screen sharing, Wi-Fi, and audio hiccups that keep lessons moving.",
+        "de": "Anleitungen zu Screen Sharing, WLAN und Audio-Problemen, damit Unterricht ohne Pause läuft."
+      },
+      "files": {
+        "en": { "pdf": "/resources/pdf/tech-troubleshooting-guide-en.pdf" },
+        "de": { "pdf": "/resources/pdf/tech-troubleshooting-guide-de.pdf" }
+      },
+      "featured": true,
+      "releasedAt": "2025-12-05",
+      "popularity": 86
+    },
+    {
+      "slug": "translation-helpers-pack",
+      "category": "Communication",
+      "tags": ["translation", "family-communication"],
+      "title": {
+        "en": "Translation Helpers Pack",
+        "de": "Übersetzungshilfen-Pack"
+      },
+      "description": {
+        "en": "Phrase banks, respectful wording swaps, and quick glossaries for multilingual families.",
+        "de": "Formulierungshilfen, respektvolle Alternativen und Glossare für mehrsprachige Familien."
+      },
+      "files": {
+        "en": { "pdf": "/resources/pdf/translation-helpers-pack-en.pdf" },
+        "de": { "pdf": "/resources/pdf/translation-helpers-pack-de.pdf" }
+      },
+      "featured": true,
+      "releasedAt": "2025-10-01",
+      "popularity": 84
     }
   ]
 }

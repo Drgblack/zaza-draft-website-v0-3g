@@ -9,55 +9,52 @@ import { LeadMagnet } from "@/components/conversion/lead-magnet";
 import {
   additionalResources,
   ExtendedResource,
+  ResourceLocale,
 } from "../../data/resources/additional-resources";
 import { Download } from "lucide-react";
 
-type FileEntry = { docx?: string; pdf?: string; md?: string };
-type Resource = {
-  slug: string;
-  title?: string | null;
-  blurb_en?: string | null;
-  blurb_de?: string | null;
-  description?: string | null;
-  published?: string | null;
-  tags?: string[] | null;
-  category?: string | null;
-  language?: string | null;
-  fileUrl?: string | null;
-  fileType?: string | null;
-  featured?: boolean | null;
-  releasedAt?: string | null;
-  popularity?: number | null;
-  files?: { en?: FileEntry; de?: FileEntry } | null;
+type FileEntry = { pdf?: string };
+type CatalogResource = ExtendedResource & {
+  category: string;
+  featured: boolean;
+  popularity: number;
+  files?: Partial<Record<ResourceLocale, FileEntry>>;
 };
-
-type DisplayResource = Resource &
-  ExtendedResource & {
-    localizedDescription: string;
-    downloadLabel: string;
-    releasedLabel?: string;
-  };
-
-const baseResources = normalizeIndex(rawIndex);
+type NormalizedResource = CatalogResource & {
+  fileUrl: string;
+  fileType: "PDF";
+};
+type DisplayResource = NormalizedResource & {
+  localizedTitle: string;
+  localizedDescription: string;
+  downloadLabel: string;
+  releasedLabel?: string;
+  languageBadge: string;
+  englishOnlyNote?: string;
+};
 
 const slugCategoryOverrides: Record<string, string> = {
   "ai-prompt-library-premium": "Planning",
-  "ai-rubric-prompts": "Assessment",
-  "ai-safety-ethics-guide": "Classroom",
-  "assessment-rubrics": "Assessment",
-  "classroom-management": "Classroom",
-  "differentiation-toolkit": "Classroom",
-  "end-of-term-comments": "Reporting",
-  "grading-workflow-optimizer": "Planning",
-  "homework-success-toolkit": "Classroom",
-  "lesson-planning-templates": "Planning",
-  "parent-message-templates": "Communication",
-  "student-feedback-framework": "Communication",
-  "teacher-time-playbook": "Planning",
+  "assessment-rubrics-pack": "Assessment",
+  "behavior-redirection-scripts": "Classroom",
+  "classroom-routines-guide": "Classroom",
+  "communication-tone-checklist": "Communication",
+  "differentiated-question-stems": "Assessment",
+  "differentiation-menu-by-need": "Classroom",
+  "formative-assessment-checklist": "Assessment",
+  "lesson-plan-template-primary": "Planning",
+  "parent-email-checklist": "Communication",
+  "parent-email-playbook": "Communication",
+  "phone-call-scripts-parents": "Communication",
+  "report-comment-bank": "Reporting",
+  "report-writing-framework": "Reporting",
+  "report-writing-starters-closers": "Reporting",
+  "seating-plan-templates-routines": "Classroom",
+  "secondary-lesson-plan-template": "Planning",
+  "teacher-ai-toolkit-v1.1": "Classroom",
   "teacher-wellness-guide": "Classroom",
   "tech-troubleshooting-guide": "Classroom",
-  "tone-checklist": "Communication",
-  "weekly-newsletter-bundle": "Communication",
+  "translation-helpers-pack": "Communication",
 };
 
 const categoryFilters = [
@@ -95,33 +92,23 @@ const sortOptions = [
   { value: "alpha", labelKey: "resources.sort.alpha" },
 ];
 
-function normalizeIndex(input: any): Resource[] {
+function normalizeIndex(input: any): ExtendedResource[] {
   if (!input) return [];
-  if (Array.isArray(input)) return input as Resource[];
-  if (typeof input === "object") {
-    if (Array.isArray((input as any).value)) {
-      return ((input as any).value ?? []) as Resource[];
-    }
-    if (Array.isArray((input as any).resources)) {
-      return ((input as any).resources ?? []) as Resource[];
-    }
-    return [input as Resource];
+  if (Array.isArray(input)) return input as ExtendedResource[];
+  if (Array.isArray(input?.resources)) {
+    return input.resources as ExtendedResource[];
   }
-  return [];
+  return [input] as ExtendedResource[];
 }
 
-function resolveUrl(resource: Resource, locale: "en" | "de"): string | null {
-  if (resource.fileUrl) return resource.fileUrl;
-  const targetLocale: "en" | "de" = locale === "de" ? "de" : "en";
-  const localeFiles = resource.files?.[targetLocale];
-  if (localeFiles?.pdf) return localeFiles.pdf;
-  if (localeFiles?.docx) return localeFiles.docx;
-
-  const fallbackLocale: "en" | "de" = targetLocale === "en" ? "de" : "en";
-  const fallbackFiles = resource.files?.[fallbackLocale];
-  if (fallbackFiles?.pdf) return fallbackFiles.pdf;
-  if (fallbackFiles?.docx) return fallbackFiles.docx;
-  return null;
+function resolveUrl(
+  resource: ExtendedResource,
+  locale: ResourceLocale,
+): string | null {
+  const preferred = resource.files?.[locale];
+  if (preferred?.pdf) return preferred.pdf;
+  const fallback = resource.files?.en ?? resource.files?.de;
+  return fallback?.pdf ?? null;
 }
 
 function ResourceCard({
@@ -134,17 +121,24 @@ function ResourceCard({
   return (
     <Card className="group bg-white/5 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10 h-full">
       <CardContent className="p-6 min-h-[320px] flex flex-col">
-        <div className="flex items-center justify-between mb-3 gap-2">
-          <h2 className="text-2xl font-bold text-white">
-            {resource.title ?? resource.slug}
-          </h2>
+        <div className="flex items-start justify-between mb-3 gap-3">
+          <div>
+            <h2 className="text-2xl font-bold text-white">
+              {resource.localizedTitle}
+            </h2>
+          </div>
           <span className="inline-flex items-center gap-1 px-3 py-1 text-[10px] font-semibold tracking-[0.2em] uppercase text-white bg-white/10 border border-white/10 rounded-full">
-            {resource.language ?? "EN"}
+            {resource.languageBadge}
           </span>
         </div>
-        <p className="text-gray-300 mb-5 line-clamp-4">
+        <p className="text-gray-300 mb-3 line-clamp-5">
           {resource.localizedDescription}
         </p>
+        {resource.englishOnlyNote ? (
+          <p className="text-xs text-gray-400 italic mb-4">
+            {resource.englishOnlyNote}
+          </p>
+        ) : null}
         {resource.tags && resource.tags.length ? (
           <div className="flex flex-wrap gap-2 mb-4">
             {resource.tags.map((tag) => (
@@ -170,7 +164,7 @@ function ResourceCard({
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold tracking-wide px-4 py-3 transition-all hover:from-purple-700 hover:to-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-400"
-              aria-label={`Download ${resource.title ?? resource.slug}`}
+              aria-label={`Download ${resource.localizedTitle}`}
             >
               <Download className="h-4 w-4" />
               {resource.downloadLabel}
@@ -190,54 +184,44 @@ export default function ResourcesPage() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortOption, setSortOption] = useState("popular");
 
+  const catalogResources = useMemo(() => {
+    const entries = [
+      ...normalizeIndex(rawIndex),
+      ...additionalResources,
+    ] as ExtendedResource[];
+    const map = new Map<string, ExtendedResource>();
+    entries.forEach((entry) => {
+      if (!entry.slug) return;
+      if (map.has(entry.slug)) return;
+      map.set(entry.slug, {
+        ...entry,
+        category:
+          entry.category ?? slugCategoryOverrides[entry.slug] ?? "Planning",
+        featured: entry.featured ?? false,
+        popularity: entry.popularity ?? 50,
+      });
+    });
+    return Array.from(map.values());
+  }, []);
+
   const combinedResources = useMemo(() => {
-    const normalizedResources = baseResources.map((resource) => ({
+    return catalogResources.map((resource) => ({
       ...resource,
-      category:
-        resource.category ?? slugCategoryOverrides[resource.slug] ?? "Planning",
-      language: resource.language ?? "EN/DE",
-      fileUrl: resolveUrl(resource, language) ?? "",
-      fileType:
-        resource.fileType ??
-        (resource.fileUrl?.toLowerCase().endsWith(".pdf")
-          ? "PDF"
-          : resource.fileUrl?.toLowerCase().endsWith(".docx")
-            ? "DOCX"
-            : "PDF"),
-      featured: resource.featured ?? false,
-      popularity: resource.popularity ?? 50,
-    }));
-
-    const normalizedAdditional = additionalResources.map((resource) => ({
-      ...resource,
-      category: resource.category ?? "Planning",
-      fileUrl: resolveUrl(resource, language) ?? resource.fileUrl ?? "",
-      fileType:
-        resource.fileType ??
-        (resource.fileUrl?.toLowerCase().endsWith(".pdf")
-          ? "PDF"
-          : resource.fileUrl?.toLowerCase().endsWith(".docx")
-            ? "DOCX"
-            : "PDF"),
-      featured: resource.featured ?? false,
-      popularity: resource.popularity ?? 50,
-    }));
-
-    return [
-      ...normalizedResources,
-      ...normalizedAdditional,
-    ] as DisplayResource[];
-  }, [language]);
+      fileUrl: resolveUrl(resource, language === "de" ? "de" : "en") ?? "",
+      fileType: "PDF" as const,
+    })) as NormalizedResource[];
+  }, [language, catalogResources]);
 
   const resources = useMemo(() => {
     return combinedResources.map((resource) => {
-      const description =
+      const localizedTitle =
         language === "de"
-          ? (resource.blurb_de ??
-            resource.description ??
-            resource.blurb_en ??
-            "")
-          : (resource.description ?? resource.blurb_en ?? "");
+          ? (resource.title?.de ?? resource.title?.en ?? resource.slug)
+          : (resource.title?.en ?? resource.title?.de ?? resource.slug);
+      const localizedDescription =
+        language === "de"
+          ? (resource.description?.de ?? resource.description?.en ?? "")
+          : (resource.description?.en ?? resource.description?.de ?? "");
 
       const locale = language === "de" ? "de-DE" : "en-US";
       const releaseDate = resource.releasedAt
@@ -247,23 +231,32 @@ export default function ResourcesPage() {
         ? `${t("resources.released")} ${releaseDate}`
         : undefined;
 
-      const fileType =
-        resource.fileType?.toUpperCase() ??
-        (resource.fileUrl?.toLowerCase().endsWith(".docx")
-          ? "DOCX"
-          : resource.fileUrl?.toLowerCase().endsWith(".pdf")
-            ? "PDF"
-            : "PDF");
-      const downloadLabel =
-        fileType === "DOCX"
-          ? t("resources.downloadLabel.docx")
-          : t("resources.downloadLabel.pdf");
+      const availableLanguages = Object.keys(
+        resource.files ?? {},
+      ) as ResourceLocale[];
+      const hasGerman = availableLanguages.includes("de");
+      const hasEnglish = availableLanguages.includes("en");
+      const badgeKey =
+        hasEnglish && hasGerman
+          ? "resources.badge.multilingual"
+          : hasGerman
+            ? "resources.badge.de"
+            : "resources.badge.en";
+      const languageBadge = t(badgeKey);
+
+      const englishOnlyNote =
+        language === "de" && !hasGerman
+          ? t("resources.englishOnlyNote")
+          : undefined;
 
       return {
         ...resource,
-        localizedDescription: description,
-        downloadLabel,
+        localizedTitle,
+        localizedDescription,
+        downloadLabel: t("resources.downloadLabel.pdf"),
         releasedLabel,
+        languageBadge,
+        englishOnlyNote,
       };
     });
   }, [combinedResources, language, t]);
@@ -292,12 +285,12 @@ export default function ResourcesPage() {
         if (!normalizedSearch) return true;
 
         const haystack = [
-          resource.title,
+          resource.localizedTitle,
           resource.localizedDescription,
           ...(resource.tags ?? []),
         ]
           .filter(Boolean)
-          .map((value) => value?.toLowerCase() ?? "")
+          .map((value) => (value ?? "").toLowerCase())
           .join(" ");
 
         return haystack.includes(normalizedSearch);
@@ -310,7 +303,7 @@ export default function ResourcesPage() {
         }
 
         if (sortOption === "alpha") {
-          return (a.title ?? a.slug).localeCompare(b.title ?? b.slug);
+          return a.localizedTitle.localeCompare(b.localizedTitle);
         }
 
         const scoreA = (a.featured ? 100 : 0) + (a.popularity ?? 0);
@@ -327,7 +320,10 @@ export default function ResourcesPage() {
 
     resources.forEach((resource) => {
       const url = resource.fileUrl;
-      if (!url) return;
+      if (!url) {
+        console.warn(`[Resources] No PDF url defined for ${resource.slug}`);
+        return;
+      }
 
       fetch(url, { method: "HEAD", signal: controller.signal })
         .then((res) => {
