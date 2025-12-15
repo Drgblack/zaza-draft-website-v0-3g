@@ -10,7 +10,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function FounderPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const pathname = usePathname();
   const heroRef = useRef<HTMLDivElement>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -165,6 +165,11 @@ export default function FounderPage() {
                 <p className="text-sm sm:text-base md:text-lg text-[rgba(255,255,255,0.9)] leading-[1.8] break-words">
                   {t("founder.journey.p4")}
                 </p>
+                <p className="text-sm sm:text-base md:text-lg text-[rgba(255,255,255,0.9)] leading-[1.8] break-words">
+                  {language === "de"
+                    ? "Alles, was ich bei Zaza baue, folgt einem einfachen Ziel: Lehrkräfte beruflich, emotional und nachhaltig erfolgreich zu machen."
+                    : "Everything I build at Zaza is guided by one simple goal: to help teachers thrive - professionally, emotionally, and sustainably."}
+                </p>
               </div>
             </div>
           </div>
@@ -176,6 +181,11 @@ export default function FounderPage() {
         <div className="max-w-4xl mx-auto text-center space-y-8 w-full">
           <blockquote className="text-lg sm:text-xl md:text-2xl italic text-white leading-relaxed text-balance px-4 break-words">
             {t("founder.mission.quote")}
+            <span className="block mt-4 text-base sm:text-lg text-white">
+              {language === "de"
+                ? "Denn wenn Lehrkräfte erfolgreich sind, profitiert die Bildung."
+                : "Because when teachers thrive, education thrives."}
+            </span>
           </blockquote>
           <p className="text-base sm:text-lg md:text-xl text-[#A78BFA] break-words">
             {t("founder.mission.attribution")}
@@ -287,7 +297,9 @@ export default function FounderPage() {
             <p className="text-sm text-[rgba(255,255,255,0.75)]">
               {fullStoryIntro}{" "}
               <Link
-                href={isGerman ? "/de/about/founder-story" : "/about/founder-story"}
+                href={
+                  isGerman ? "/de/about/founder-story" : "/about/founder-story"
+                }
                 className="underline underline-offset-4 text-[#A78BFA] hover:text-white"
               >
                 {fullStoryLink}
