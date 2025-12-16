@@ -1,5 +1,6 @@
-﻿"use client";
+"use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/lib/i18n/language-context";
 
@@ -22,6 +23,30 @@ function Card({
 
 export default function SuiteClient() {
   const { t } = useLanguage();
+  const suiteImages = [
+    {
+      src: "/images/teacher-writing-or-reflecting.png",
+      alt: "Teacher writing or reflecting",
+    },
+    {
+      src: "/images/teacher-interacting-warmly-with-students.png",
+      alt: "Teacher interacting warmly with students",
+    },
+    {
+      src: "/images/teacher-working-after-class.png",
+      alt: "Teacher working after class",
+    },
+  ];
+
+  useEffect(() => {
+    if (process.env.NODE_ENV === "production") return;
+
+    suiteImages.forEach((image) => {
+      if (image.src.includes("C:\\") || image.src.includes("/public/")) {
+        console.warn("[suite] suspicious image path used:", image.src);
+      }
+    });
+  }, [suiteImages]);
 
   return (
     <main className="bg-[#0F172A] text-white">
@@ -108,27 +133,18 @@ export default function SuiteClient() {
             {t("suite.screens.caption")}
           </p>
           <div className="grid gap-6 md:grid-cols-3">
-            <div className="rounded-2xl border border-[#334155] bg-[#0F172A] overflow-hidden">
-              <img
-                src="/images/teacher-writing-or-reflecting.png"
-                alt="Teacher writing or reflecting"
-                className="w-full h-60 object-cover"
-              />
-            </div>
-            <div className="rounded-2xl border border-[#334155] bg-[#0F172A] overflow-hidden">
-              <img
-                src="/images/teacher-interacting-warmly-with-students.png"
-                alt="Teacher interacting warmly with students"
-                className="w-full h-60 object-cover"
-              />
-            </div>
-            <div className="rounded-2xl border border-[#334155] bg-[#0F172A] overflow-hidden">
-              <img
-                src="/images/teacher-working-after-class.png"
-                alt="Teacher working after class"
-                className="w-full h-60 object-cover"
-              />
-            </div>
+            {suiteImages.map((image) => (
+              <div
+                key={image.src}
+                className="rounded-2xl border border-[#334155] bg-[#0F172A] overflow-hidden"
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-60 object-cover"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
