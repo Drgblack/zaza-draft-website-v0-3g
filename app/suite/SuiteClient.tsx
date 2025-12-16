@@ -1,8 +1,24 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/lib/i18n/language-context";
+
+const suiteImages = [
+  {
+    src: "/images/teacher-writing-or-reflecting.png",
+    alt: "Teacher writing or reflecting",
+  },
+  {
+    src: "/images/teacher-interacting-warmly-with-students.png",
+    alt: "Teacher interacting warmly with students",
+  },
+  {
+    src: "/images/teacher-working-after-class.png",
+    alt: "Teacher working after class",
+  },
+];
 
 function Card({
   title,
@@ -23,30 +39,16 @@ function Card({
 
 export default function SuiteClient() {
   const { t } = useLanguage();
-  const suiteImages = [
-    {
-      src: "/images/teacher-writing-or-reflecting.png",
-      alt: "Teacher writing or reflecting",
-    },
-    {
-      src: "/images/teacher-interacting-warmly-with-students.png",
-      alt: "Teacher interacting warmly with students",
-    },
-    {
-      src: "/images/teacher-working-after-class.png",
-      alt: "Teacher working after class",
-    },
-  ];
 
   useEffect(() => {
-    if (process.env.NODE_ENV === "production") return;
+    if (process.env.NODE_ENV !== "development") return;
 
     suiteImages.forEach((image) => {
       if (image.src.includes("C:\\") || image.src.includes("/public/")) {
         console.warn("[suite] suspicious image path used:", image.src);
       }
     });
-  }, [suiteImages]);
+  }, []);
 
   return (
     <main className="bg-[#0F172A] text-white">
@@ -138,11 +140,15 @@ export default function SuiteClient() {
                 key={image.src}
                 className="rounded-2xl border border-[#334155] bg-[#0F172A] overflow-hidden"
               >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-60 object-cover"
-                />
+                <div className="relative h-60 w-full">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
               </div>
             ))}
           </div>
