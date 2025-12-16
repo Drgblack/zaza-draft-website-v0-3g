@@ -216,11 +216,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-white">
-                  Contact
-                </Link>
-              </li>
-              <li>
                 <Link
                   href={isDE ? "/de/impressum" : "/impressum"}
                   className="hover:text-white"
