@@ -399,9 +399,9 @@ const translationsEn: Record<string, string> = {
   "suite.logos.item5": "Greenwood School",
 
   // Suite - Screenshots (EN)
-  "suite.screens.title": "Real product screenshots",
+  "suite.screens.title": "Built for real teachers, in real classrooms",
   "suite.screens.caption":
-    "A quick peek at planning, writing, and grading flows.",
+    "Calm, responsible AI designed around the realities of teaching – not generic software workflows.",
 
   // Videos (EN)
   "videos.hero.title": "Video Tutorials and Demos",
@@ -1825,9 +1825,9 @@ const translationsDe: Record<string, string> = {
   "suite.logos.item5": "Greenwood Schule",
 
   // Suite - Screenshots (DE)
-  "suite.screens.title": "Echte Produkt-Screenshots",
+  "suite.screens.title": "Für echte Lehrkräfte in echten Klassenzimmern gebaut",
   "suite.screens.caption":
-    "Ein schneller Blick auf Planungs-, Schreib- und Bewertungsabläufe.",
+    "Ruhige, verantwortliche KI, die sich an die Realität des Unterrichtens anpasst – nicht an generische Software-Workflows.",
 
   // Videos (DE)
   "videos.hero.title": "Video-Tutorials und Demos",

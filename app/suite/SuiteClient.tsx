@@ -104,28 +104,28 @@ export default function SuiteClient() {
           <h2 className="text-center text-3xl md:text-4xl font-bold text-white mb-4">
             {t("suite.screens.title")}
           </h2>
-          <p className="text-center text-[#94A3B8] mb-10">
+          <p className="text-center text-[#E0E7FF] mb-10">
             {t("suite.screens.caption")}
           </p>
           <div className="grid gap-6 md:grid-cols-3">
             <div className="rounded-2xl border border-[#334155] bg-[#0F172A] overflow-hidden">
               <img
-                src="/welcome-introduction-video.jpg"
-                alt="Suite overview"
+                src="/images/teacher-writing-or-reflecting.png"
+                alt="Teacher writing or reflecting"
                 className="w-full h-60 object-cover"
               />
             </div>
             <div className="rounded-2xl border border-[#334155] bg-[#0F172A] overflow-hidden">
               <img
-                src="/writing-message-tutorial.jpg"
-                alt="Draft writing flow"
+                src="/images/teacher-interacting-warmly-with-students.png"
+                alt="Teacher interacting warmly with students"
                 className="w-full h-60 object-cover"
               />
             </div>
             <div className="rounded-2xl border border-[#334155] bg-[#0F172A] overflow-hidden">
               <img
-                src="/young-happy-female-teacher-classroom.jpg"
-                alt="Planning and grading"
+                src="/images/teacher-working-after-class.png"
+                alt="Teacher working after class"
                 className="w-full h-60 object-cover"
               />
             </div>
@@ -466,4 +466,3 @@ export default function SuiteClient() {
     </main>
   );
 }
-
