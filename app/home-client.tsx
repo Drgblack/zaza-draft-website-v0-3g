@@ -161,7 +161,7 @@ export function HomePageClient() {
       quote: t("testimonials.quote2.text"),
       author: t("testimonials.quote2.author"),
       name: t("testimonials.quote2.name"),
-      image: "/testimonials/teacher-2.jpg",
+      image: "/images/marcus-johnson.png",
     },
     {
       quote: t("testimonials.quote3.text"),
@@ -193,7 +193,9 @@ export function HomePageClient() {
                 transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
                 className="inline-flex items-center gap-2 rounded-full bg-[#8B5CF6]/10 px-4 py-2 text-sm font-medium text-[#A78BFA] border border-[#8B5CF6]/30 backdrop-blur-sm"
               >
-                <span className="text-xl" aria-hidden="true">✦</span>
+                <span className="text-xl" aria-hidden="true">
+                  ✦
+                </span>
                 <span>{t("hero.badge")}</span>
               </motion.div>
 
@@ -229,8 +231,8 @@ export function HomePageClient() {
               >
                 <Button
                   onClick={() => {
-                    track("cta_click_home_get_started", { language })
-                    setSignupOpen(true)
+                    track("cta_click_home_get_started", { language });
+                    setSignupOpen(true);
                   }}
                   size="lg"
                   className="w-full sm:w-auto inline-flex items-center justify-center bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-transform transition-shadow duration-200 hover:scale-[1.03] hover:shadow-xl hover:shadow-purple-500/30 active:scale-[0.98]"
@@ -604,7 +606,7 @@ export function HomePageClient() {
         </div>
       </section>
 
-            {/* Demo Section */}
+      {/* Demo Section */}
       <section id="demo">
         <DraftDemo
           language={language}
@@ -942,8 +944,8 @@ export function HomePageClient() {
           >
             <Button
               onClick={() => {
-                track("cta_click_home_final", { language })
-                setSignupOpen(true)
+                track("cta_click_home_final", { language });
+                setSignupOpen(true);
               }}
               size="lg"
               className="bg-white text-[#8B5CF6] hover:bg-gray-50 font-semibold px-12 py-5 text-xl rounded-lg shadow-[0_8px_20px_rgba(0,0,0,0.2)] transition-all duration-300 hover:scale-105"
@@ -960,4 +962,3 @@ export function HomePageClient() {
     </>
   );
 }
-
