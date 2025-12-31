@@ -1,17 +1,16 @@
-﻿export default {
+export default {
   subtitle:
-    "Vertraut von 500+ LehrkrÃ¤ften, die mit Zaza Draft jede Woche 10+ Stunden sparen.",
+    "Von Lehrkräften gebaut, um Sonntagnacht-Stress zu reduzieren - werde Teil unseres Early-Access-Programms und gestalte ruhige Elternkommunikation mit KI.",
   documentsRefined: {
     number: "150k+",
     label: "Dokumente verfeinert",
   },
   teachers: {
-    number: "500+",
-    label: "LehrkrÃ¤fte",
+    number: "Lehrerzentriert",
+    label: "Designpartner",
   },
   timeSaved: {
     number: "10+ Std.",
-    label: "WÃ¶chentlich gespart",
+    label: "Wöchentlich gespart",
   },
 };
-

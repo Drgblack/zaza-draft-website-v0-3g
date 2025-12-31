@@ -124,7 +124,9 @@ export default function PressKitPage() {
                     </div>
                     <div className="flex flex-col gap-1">
                       <dt className="text-[#9CA3AF]">Traktion</dt>
-                      <dd>500+ Lehrkräfte, 15 Länder</dd>
+                      <dd>
+                        Private Beta mit Lehrkräften, die Draft mitgestalten.
+                      </dd>
                     </div>
                   </dl>
                 </div>
@@ -145,9 +147,10 @@ export default function PressKitPage() {
                       "Durchschnittliche Zeit, die Lehrkräfte mit Draft zurückgewinnen",
                   },
                   {
-                    label: "Lehrkräfte",
-                    value: "500+",
-                    detail: "Aktive Nutzer aus 15 Ländern",
+                    label: "Beta-Community",
+                    value: "Pilot-Lehrkräfte",
+                    detail:
+                      "Frühzeitige Anwender, die ruhige, professionelle Kommunikation mitgestalten.",
                   },
                   {
                     label: "Verlässlichkeit",
@@ -370,7 +373,7 @@ export default function PressKitPage() {
                   },
                   {
                     q: "Wer nutzt Zaza?",
-                    a: "Lehrkräfte und Schulen (K12), aktuell 500+ Lehrkräfte in 15 Ländern.",
+                    a: "Lehrkräfte und Schulen (K12) in unserer privaten Beta, die das Erlebnis gemeinsam gestalten.",
                   },
                   {
                     q: "Wie adressiert ihr Bias?",

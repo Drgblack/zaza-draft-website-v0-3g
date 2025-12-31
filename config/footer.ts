@@ -1,8 +1,8 @@
 ﻿export const footerConfig = {
   social: {
-    twitter: "https://twitter.com/zazatech_",
-    linkedin: "https://www.linkedin.com/company/zazatechnologies/",
-    tiktok: "https://www.tiktok.com/@zazateach",
+    twitter: "https://x.com/zazateachapp",
+    linkedin: "https://www.linkedin.com/company/zaza-technologies",
+    tiktok: "https://www.tiktok.com/@zazatechnologies",
   },
   links: {
     product: [
@@ -23,9 +23,18 @@
       { label: "Glossary", href: "/glossary" },
       { label: "Webinars", href: "/webinars" },
       { label: "Video Tutorials", href: "/videos" },
-      { label: "Best AI Tool for Parent Emails", href: "/best-ai-tool-parent-emails" },
-      { label: "Reduce Stress Writing Parent Messages", href: "/reduce-stress-parent-messages" },
-      { label: "Best AI Writing Tools for Teachers 2025", href: "/best-ai-writing-tools-for-teachers-2025" },
+      {
+        label: "Best AI Tool for Parent Emails",
+        href: "/best-ai-tool-parent-emails",
+      },
+      {
+        label: "Reduce Stress Writing Parent Messages",
+        href: "/reduce-stress-parent-messages",
+      },
+      {
+        label: "Best AI Writing Tools for Teachers 2025",
+        href: "/best-ai-writing-tools-for-teachers-2025",
+      },
       { label: "AI for Student Reports", href: "/ai-for-student-reports" },
     ],
     resourcesCompany: [
@@ -45,5 +54,4 @@
       { label: "footer.contact", href: "/contact" },
     ],
   },
-}
-
+};

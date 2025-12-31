@@ -8,7 +8,8 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Zaza Draft",
-  description: "Teacher-first, explainable AI writing assistant",
+  description:
+    "Teacher-first AI built with educators to calm Sunday night admin - join early access to shape the private beta.",
   metadataBase: new URL("https://zazadraft.com"),
   icons: {
     icon: "/z-logo.png",

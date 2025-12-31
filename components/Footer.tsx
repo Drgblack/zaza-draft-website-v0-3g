@@ -65,7 +65,7 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <SocialIcon
                   label="TikTok"
-                  href="https://www.tiktok.com/@zazateach"
+                  href="https://www.tiktok.com/@zazatechnologies"
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -75,7 +75,10 @@ export default function Footer() {
                     <path d="M16.7 2c.3 2 1.6 3.6 3.3 4.5v3.1c-1.3-.1-2.6-.5-3.8-1.2v6.6a6.1 6.1 0 1 1-6.1-6.1h.6v3.2h-.6a2.9 2.9 0 1 0 2.9 2.9V2h3.7z" />
                   </svg>
                 </SocialIcon>
-                <SocialIcon label="X" href="https://twitter.com/zazateach">
+                <SocialIcon
+                  label="X (Twitter)"
+                  href="https://x.com/zazateachapp"
+                >
                   <svg
                     viewBox="0 0 24 24"
                     className="h-4 w-4"
@@ -86,7 +89,7 @@ export default function Footer() {
                 </SocialIcon>
                 <SocialIcon
                   label="LinkedIn"
-                  href="https://www.linkedin.com/company/zazatechnologies/"
+                  href="https://www.linkedin.com/company/zaza-technologies"
                 >
                   <svg
                     viewBox="0 0 24 24"

@@ -18,12 +18,17 @@ export function Header() {
   const [learningCentreDropdownOpen, setLearningCentreDropdownOpen] =
     useState(false);
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
+  const [mobileAccordion, setMobileAccordion] = useState<
+    Record<string, boolean>
+  >({});
   const router = useRouter();
   const pathname = usePathname();
   const { language, setLanguage, t } = useLanguage();
   const L = (de: string, en: string) => (language === "de" ? de : en);
 
   const navigation = [{ name: t("nav.pricing"), href: "/pricing" }];
+  const toggleMobileAccordion = (id: string) =>
+    setMobileAccordion((prev) => ({ ...prev, [id]: !prev[id] }));
   const handleHeaderNavClick = (href: string) => {
     if (href === "/pricing") {
       track("cta_click", { location: "header", id: "pricing" });
@@ -120,6 +125,22 @@ export function Header() {
       name: L("State-of-AI-Report", "State of AI Report"),
       href: "/state-of-ai-education",
     },
+  ];
+
+  const mobileSections = [
+    { id: "pricing", title: t("nav.pricing"), href: "/pricing" },
+    { id: "products", title: t("nav.products"), children: productsMenuItems },
+    {
+      id: "learning",
+      title: t("nav.learningCentre"),
+      children: learningCentreMenuItems,
+    },
+    {
+      id: "resources",
+      title: t("nav.resources"),
+      children: resourcesMenuItems,
+    },
+    { id: "about", title: t("nav.about"), children: aboutMenuItems },
   ];
 
   return (
@@ -329,136 +350,136 @@ export function Header() {
         </nav>
 
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-white/10 bg-[#0B1220]/98 backdrop-blur-xl">
-            <div className="space-y-1 px-6 pb-6 pt-4">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="block rounded-xl px-4 py-3 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
+          <div className="fixed inset-0 z-40 flex lg:hidden">
+            <div
+              className="absolute inset-0 bg-black/60"
+              onClick={() => setMobileMenuOpen(false)}
+            />
+            <div className="relative z-10 flex w-full flex-col bg-[#0B1220]">
+              <div className="sticky top-0 z-10 flex items-center justify-between border-b border-white/10 bg-[#0B1220] px-4 py-3">
+                <span className="text-xs font-semibold uppercase tracking-[0.4em] text-gray-400">
+                  Menu
+                </span>
+                <button
+                  type="button"
+                  className="rounded-xl border border-white/10 px-3 py-2 text-gray-200 hover:bg-white/5 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
+                  aria-label="Close menu"
                 >
-                  {item.name}
-                </Link>
-              ))}
-
-              <div className="pt-2">
-                <div className="px-4 py-2 text-sm font-semibold text-gray-400">
-                  {t("nav.products")}
-                </div>
-                {productsMenuItems.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block rounded-xl px-6 py-2.5 text-base text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+                  <X className="h-5 w-5" aria-hidden="true" />
+                </button>
               </div>
 
-              <div className="pt-2">
-                <div className="px-4 py-2 text-sm font-semibold text-gray-400">
-                  Learning Centre
+              <nav className="flex-1 overflow-y-auto px-4 py-6">
+                <div className="space-y-2">
+                  {mobileSections.map((section) =>
+                    section.children ? (
+                      <div
+                        key={section.id}
+                        className="overflow-hidden rounded-2xl border border-white/5 bg-white/5"
+                      >
+                        <button
+                          type="button"
+                          className="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-white"
+                          onClick={() => toggleMobileAccordion(section.id)}
+                        >
+                          {section.title}
+                          <ChevronDown
+                            className={`h-4 w-4 transition-transform duration-200 ${
+                              mobileAccordion[section.id] ? "rotate-180" : ""
+                            }`}
+                          />
+                        </button>
+                        {mobileAccordion[section.id] && (
+                          <div className="space-y-1 border-t border-white/5 px-4 pb-3">
+                            {section.children.map((item) => (
+                              <Link
+                                key={item.name}
+                                href={item.href}
+                                onClick={() => setMobileMenuOpen(false)}
+                                className="block rounded-xl px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white transition-colors"
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <Link
+                        key={section.id}
+                        href={section.href || "#"}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block rounded-xl px-4 py-3 text-base font-medium text-gray-300 hover:bg-white/10 hover:text-white transition-colors"
+                      >
+                        {section.title}
+                      </Link>
+                    ),
+                  )}
                 </div>
-                {learningCentreMenuItems.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block rounded-xl px-6 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
+              </nav>
 
-              <div className="pt-2">
-                <div className="px-4 py-2 text-sm font-semibold text-gray-400">
-                  Resources
-                </div>
-                {resourcesMenuItems.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block rounded-xl px-6 py-2.5 text-base text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-
-              <div className="pt-2">
-                <div className="px-4 py-2 text-sm font-semibold text-gray-400">
-                  {t("nav.about")}
-                </div>
-                {aboutMenuItems.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block rounded-xl px-6 py-2.5 text-base text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-
-              <div className="pt-4 pb-2">
-                <div className="flex items-center gap-2 rounded-full bg-white/5 p-1 border border-white/10">
-                  <button
+              <div className="border-t border-white/10 px-4 py-6">
+                <div className="space-y-3">
+                  <div className="flex gap-2 rounded-full bg-white/5 p-1">
+                    <button
+                      onClick={() => {
+                        const newPath = pathname.startsWith("/de")
+                          ? pathname.replace(/^\/de/, "")
+                          : pathname;
+                        setLanguage("en");
+                        router.push(newPath === "" ? "/" : newPath);
+                      }}
+                      className={`flex-1 rounded-full px-3 py-2 text-xs font-medium uppercase tracking-[0.2em] transition-all ${
+                        language === "en"
+                          ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
+                          : "text-gray-400"
+                      }`}
+                    >
+                      EN
+                    </button>
+                    <button
+                      onClick={() => {
+                        const newPath = pathname.startsWith("/de")
+                          ? pathname
+                          : "/de" + (pathname === "/" ? "" : pathname);
+                        setLanguage("de");
+                        router.push(newPath);
+                      }}
+                      className={`flex-1 rounded-full px-3 py-2 text-xs font-medium uppercase tracking-[0.2em] transition-all ${
+                        language === "de"
+                          ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
+                          : "text-gray-400"
+                      }`}
+                    >
+                      DE
+                    </button>
+                  </div>
+                  <Button
                     onClick={() => {
-                      const newPath = pathname.startsWith("/de/")
-                        ? pathname.replace("/de/", "/")
-                        : pathname.startsWith("/de")
-                          ? pathname.replace("/de", "")
-                          : pathname || "/";
-                      setLanguage("en");
-                      router.push(newPath);
+                      track("cta_click", {
+                        location: "header",
+                        id: "mobile_get_started",
+                      });
+                      setSignupOpen(true);
+                      setMobileMenuOpen(false);
                     }}
-                    className={`flex-1 px-4 py-2 text-sm font-medium rounded-full transition-all ${
-                      language === "en"
-                        ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
-                        : "text-gray-400"
-                    }`}
+                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium py-3 rounded-full shadow-lg shadow-purple-500/25"
                   >
-                    English
-                  </button>
-                  <button
-                    onClick={() => {
-                      const newPath = pathname.startsWith("/de")
-                        ? pathname
-                        : "/de" + (pathname === "/" ? "" : pathname);
-                      setLanguage("de");
-                      router.push(newPath);
-                    }}
-                    className={`flex-1 px-4 py-2 text-sm font-medium rounded-full transition-all ${
-                      language === "de"
-                        ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
-                        : "text-gray-400"
-                    }`}
-                  >
-                    Deutsch
-                  </button>
+                    {t("nav.getStarted")}
+                  </Button>
                 </div>
-              </div>
-
-              <div className="pt-2">
-                <Button
-                  onClick={() => {
-                    track("cta_click", {
-                      location: "header",
-                      id: "mobile_get_started",
-                    });
-                    setSignupOpen(true);
-                    setMobileMenuOpen(false);
-                  }}
-                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium py-3 rounded-full shadow-lg shadow-purple-500/25"
-                >
-                  {t("nav.getStarted")}
-                </Button>
+                <div className="mt-6 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-gray-500">
+                  <Link href="/privacy-policy" className="hover:text-white">
+                    Privacy
+                  </Link>
+                  <Link href="/terms-of-service" className="hover:text-white">
+                    Terms
+                  </Link>
+                  <Link href="/impressum" className="hover:text-white">
+                    Impressum
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

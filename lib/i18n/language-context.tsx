@@ -52,7 +52,7 @@ const translationsEn: Record<string, string> = {
   "pricing.free.title": "Starter",
   "pricing.free.description":
     "Everything you need to try Draft and save your first hours.",
-  "pricing.free.cta": "Start Free",
+  "pricing.free.cta": "Join Early Access",
   "pricing.free.feature1": "5 drafts/month",
   "pricing.free.feature2": "Basic templates",
   "pricing.free.feature3": "Save & copy",
@@ -193,7 +193,7 @@ const translationsEn: Record<string, string> = {
   "pricing.cta.title": "Ready to save hours every week?",
   "pricing.cta.subtitle":
     "Start free today • No credit card required • Cancel anytime",
-  "pricing.cta.primary": "Start Free Trial",
+  "pricing.cta.primary": "Join Early Access",
   "pricing.cta.secondary": "Talk to Sales",
 
   // Pricing - Decision Tool section
@@ -361,7 +361,7 @@ const translationsEn: Record<string, string> = {
   // Suite - Trust Bar (EN)
   "suite.trust.hallucinationSafe": "Hallucination-safe",
   "suite.trust.ferpa": "FERPA compliant",
-  "suite.trust.teachers": "500+ teachers",
+  "suite.trust.teachers": "Built with teachers at every step",
 
   // Suite - How It Works (EN)
   "suite.hiw.title": "How the suite works",
@@ -529,11 +529,11 @@ const translationsEn: Record<string, string> = {
   "hero.headlineAccent": "better messages.",
   "hero.subheading":
     "Zaza Draft writes the parent emails, grading feedback, and report notes you dread. Calm tone, de-escalation help, and time savings in minutes, not hours.",
-  "hero.ctaPrimary": "Start Writing Free",
+  "hero.ctaPrimary": "Join Early Access",
   "hero.ctaSecondary": "See Examples",
   "hero.trustIndicators.hallucinationSafe": "Hallucination-safe",
   "hero.trustIndicators.ferpaCompliant": "FERPA compliant",
-  "hero.trustIndicators.teachers": "500+ teachers",
+  "hero.trustIndicators.teachers": "Teacher-first by design",
 
   // Hallucination-Safe Tooltip
   "hallucinationSafe.tooltip.heading": "What does hallucination-safe mean?",
@@ -561,12 +561,12 @@ const translationsEn: Record<string, string> = {
   // Stats Section
   "stats.documentsRefined.number": "150k+",
   "stats.documentsRefined.label": "Documents Refined",
-  "stats.teachers.number": "500+",
-  "stats.teachers.label": "Teachers",
+  "stats.teachers.number": "Teacher-first",
+  "stats.teachers.label": "Design partners shaping Draft",
   "stats.timeSaved.number": "10+ hrs",
   "stats.timeSaved.label": "Saved Weekly",
   "stats.subtitle":
-    "Trusted by 500+ teachers using Zaza Draft to get evenings back and stay calm with parents.",
+    "Built by teachers to relieve Sunday night stress - join our early access programme and help shape calm, professional communication with AI.",
   "socialProof.badges.teacherFounded":
     "Teacher-founded, PhD in Professional Education",
   "socialProof.badges.gdprReady": "Built in Germany – GDPR-ready",
@@ -687,7 +687,7 @@ const translationsEn: Record<string, string> = {
   "comparison.rows.learningCurve.zaza": "Paste, select tone, done",
   "comparison.rows.community.feature": "Community",
   "comparison.rows.community.generic": "No teacher support",
-  "comparison.rows.community.zaza": "500+ educators sharing best practices",
+  "comparison.rows.community.zaza": "Educators shaping our private beta",
   "caseStudies.eyebrow": "Before / After",
   "caseStudies.heading": "Before / After from real teachers",
   "caseStudies.subheading":
@@ -728,8 +728,8 @@ const translationsEn: Record<string, string> = {
   // Final CTA Section
   "finalCTA.heading": "Get your time back",
   "finalCTA.subheading":
-    "Join 500+ teachers using Zaza Draft to save 10+ hours every week.",
-  "finalCTA.button": "Start Writing Free",
+    "Join our private beta and help shape the future of teacher-first AI writing support.",
+  "finalCTA.button": "Join Early Access",
 
   // Footer
   "footer.social.tiktok": "Follow us on TikTok @zazatechnologies",
@@ -818,7 +818,7 @@ const translationsEn: Record<string, string> = {
   "products.teach.cta.title": "Ready to Transform Your Planning?",
   "products.teach.cta.subtitle":
     "Join hundreds of teachers saving 10+ hours per week",
-  "products.teach.cta.primary": "Start Free Trial",
+  "products.teach.cta.primary": "Join Early Access",
   "products.teach.cta.secondary": "Schedule Demo",
 
   // Products - Draft
@@ -826,7 +826,7 @@ const translationsEn: Record<string, string> = {
   "products.draft.hero.title": "Parent emails without the Sunday dread",
   "products.draft.hero.subtitle":
     "Draft turns rough notes into calm, professional parent messages, report comments, and grading feedback. Tone guardrails and de-escalation support keep you confident and save time.",
-  "products.draft.hero.cta.primary": "Start Writing Free",
+  "products.draft.hero.cta.primary": "Join Early Access",
   "products.draft.hero.cta.secondary": "See Examples",
 
   "products.draft.turn.pain1":
@@ -857,6 +857,12 @@ const translationsEn: Record<string, string> = {
   "products.draft.howItWorks.step3.title": "Review & send",
   "products.draft.howItWorks.step3.desc":
     "Edit quickly, copy, and share when it feels right",
+  "products.draft.insights.heading": "Insights & Progress",
+  "products.draft.insights.body":
+    "Draft tracks time saved, drafts created, streaks, and a quality score so you can celebrate the growth you deliver with every thoughtful message.",
+  "products.draft.interface.heading": "Guided Drafting Interface",
+  "products.draft.interface.body":
+    "An intuitive canvas keeps tone guardrails, message type selection, and language settings in reach so each draft feels like your voice, faster.",
 
   "products.draft.whoItsFor.title": "Perfect for",
   "products.draft.whoItsFor.item1":
@@ -888,8 +894,8 @@ const translationsEn: Record<string, string> = {
 
   "products.draft.cta.title": "Get your time back",
   "products.draft.cta.subtitle":
-    "Start free and see how many stressful emails you can clear in a week with Draft.",
-  "products.draft.cta.primary": "Start Free Trial",
+    "Join our private beta and help shape teacher-first AI writing support.",
+  "products.draft.cta.primary": "Join Early Access",
   "products.draft.cta.secondary": "See Examples",
 
   // Products - GradeFlow
@@ -933,7 +939,7 @@ const translationsEn: Record<string, string> = {
   "products.gradeflow.social.author2": "David Kim, Middle School Math",
 
   "products.gradeflow.cta.title": "Ready to Grade Smarter?",
-  "products.gradeflow.cta.button": "Start Free Trial",
+  "products.gradeflow.cta.button": "Join Early Access",
 
   // Products - Shield
   "shield.hero.eyebrow": "AI GOVERNANCE FOR SCHOOLS",
@@ -1296,15 +1302,15 @@ const translationsEn: Record<string, string> = {
 
   "company.today.title": "Where We Are Today",
   "company.today.p1":
-    "Zaza now supports over 500 teachers in more than 15 countries. On average, teachers save over 10 hours per week on writing and communication tasks by using Zaza's tools. And we are just getting started.",
+    "We're inviting a small group of teachers and schools into a private beta so every workflow is refined with real classroom feedback before launch.",
   "company.today.p2":
     "Our long-term vision is to build a complete suite of AI tools that help teachers reclaim their time, protect their wellbeing, and stay connected to the heart of their work – their students.",
   "company.today.close": "Because when teachers thrive, students thrive.",
 
-  "company.stats.teachers.number": "500+",
-  "company.stats.teachers.label": "Teachers using Zaza",
-  "company.stats.countries.number": "15",
-  "company.stats.countries.label": "Countries",
+  "company.stats.teachers.number": "Teacher-built",
+  "company.stats.teachers.label": "Design & beta partners",
+  "company.stats.countries.number": "Private beta",
+  "company.stats.countries.label": "Early access programme",
   "company.stats.hours.number": "10+",
   "company.stats.hours.label": "Hours saved weekly",
 
@@ -1468,7 +1474,7 @@ const translationsDe: Record<string, string> = {
   "pricing.free.title": "Starter",
   "pricing.free.description":
     "Alles, was Sie brauchen, um Draft auszuprobieren und Ihre ersten Stunden zu sparen.",
-  "pricing.free.cta": "Kostenlos starten",
+  "pricing.free.cta": "Early Access beitreten",
   "pricing.free.feature1": "5 Entwürfe pro Monat",
   "pricing.free.feature2": "Basisvorlagen",
   "pricing.free.feature3": "Speichern & Kopieren",
@@ -1609,7 +1615,7 @@ const translationsDe: Record<string, string> = {
   "pricing.cta.title": "Bereit, jede Woche Stunden zu sparen?",
   "pricing.cta.subtitle":
     "Heute kostenlos starten • Keine Kreditkarte erforderlich • Jederzeit kündbar",
-  "pricing.cta.primary": "Kostenlose Testversion starten",
+  "pricing.cta.primary": "Early Access beitreten",
   "pricing.cta.secondary": "Mit Vertrieb sprechen",
 
   // Pricing - Decision Tool section
@@ -1787,7 +1793,7 @@ const translationsDe: Record<string, string> = {
   // Suite - Trust Bar (DE)
   "suite.trust.hallucinationSafe": "Halluzinationssicher",
   "suite.trust.ferpa": "FERPA-konform",
-  "suite.trust.teachers": "500+ Lehrkräfte",
+  "suite.trust.teachers": "Mit Lehrkräften an jedem Schritt entwickelt",
 
   // Suite - How It Works (DE)
   "suite.hiw.title": "So funktioniert die Suite",
@@ -1955,11 +1961,11 @@ const translationsDe: Record<string, string> = {
   "hero.headlineAccent": "bessere Nachrichten.",
   "hero.subheading":
     "Zaza Draft schreibt die Elternmails, Feedback-Kommentare und Berichtstexte, die dich auslaugen. Ruhiger Ton, Deeskalation und Zeitersparnis in Minuten statt Stunden.",
-  "hero.ctaPrimary": "Kostenlos mit Schreiben beginnen",
+  "hero.ctaPrimary": "Early Access beitreten",
   "hero.ctaSecondary": "Beispiele ansehen",
   "hero.trustIndicators.hallucinationSafe": "Halluzinationssicher",
   "hero.trustIndicators.ferpaCompliant": "FERPA-konform",
-  "hero.trustIndicators.teachers": "500+ Lehrkräfte",
+  "hero.trustIndicators.teachers": "Lehrerzentriert konzipiert",
 
   // Hallucination-Safe Tooltip
   "hallucinationSafe.tooltip.heading": "Was bedeutet halluzinationssicher?",
@@ -1988,12 +1994,12 @@ const translationsDe: Record<string, string> = {
   // Stats Section
   "stats.documentsRefined.number": "150k+",
   "stats.documentsRefined.label": "Dokumente verfeinert",
-  "stats.teachers.number": "500+",
-  "stats.teachers.label": "Lehrkräfte",
+  "stats.teachers.number": "Lehrerzentriert",
+  "stats.teachers.label": "Designpartner",
   "stats.timeSaved.number": "10+ Std.",
   "stats.timeSaved.label": "Wöchentlich gespart",
   "stats.subtitle":
-    "Vertraut von 500+ Lehrkräften, die mit Zaza Draft Abende zurückgewinnen und ruhig mit Eltern bleiben.",
+    "Von Lehrkräften gebaut, um Sonntagnacht-Stress zu reduzieren - werde Teil unseres Early-Access-Programms und gestalte ruhige, professionelle Kommunikation mit KI mit.",
   "socialProof.badges.teacherFounded":
     "Von Lehrkräften gegründet – mit Doktortitel in Bildungswissenschaft",
   "socialProof.badges.gdprReady": "In Deutschland entwickelt – DSGVO-konform",
@@ -2122,7 +2128,8 @@ const translationsDe: Record<string, string> = {
   "comparison.rows.learningCurve.zaza": "Einfügen, Ton wählen, fertig",
   "comparison.rows.community.feature": "Community",
   "comparison.rows.community.generic": "Kein Lehrkräfte-Support",
-  "comparison.rows.community.zaza": "500+ Pädagogen teilen Best Practices",
+  "comparison.rows.community.zaza":
+    "Lehrkräfte gestalten unsere private Beta mit",
   "caseStudies.eyebrow": "Vorher / Nachher",
   "caseStudies.heading": "Vorher / Nachher aus echten Klassenzimmern",
   "caseStudies.subheading":
@@ -2165,8 +2172,8 @@ const translationsDe: Record<string, string> = {
   // Final CTA Section
   "finalCTA.heading": "Holen Sie sich Ihre Zeit zurück",
   "finalCTA.subheading":
-    "Schließen Sie sich 500+ Lehrkräften an, die Zaza Draft nutzen, um jede Woche 10+ Stunden zu sparen.",
-  "finalCTA.button": "Kostenlos mit Schreiben beginnen",
+    "Tritt unserer privaten Beta bei und gestalte die Zukunft lehrerzentrierter KI-Schreibunterstützung mit.",
+  "finalCTA.button": "Early Access beitreten",
 
   // Footer
   "footer.social.tiktok": "Folgen Sie uns auf TikTok @zazatechnologies",
@@ -2259,7 +2266,7 @@ const translationsDe: Record<string, string> = {
   "products.teach.cta.title": "Bereit, Ihre Planung zu transformieren?",
   "products.teach.cta.subtitle":
     "Schließen Sie sich Hunderten von Lehrkräften an, die 10+ Stunden pro Woche sparen",
-  "products.teach.cta.primary": "Kostenlose Testversion starten",
+  "products.teach.cta.primary": "Early Access beitreten",
   "products.teach.cta.secondary": "Demo planen",
 
   // Products - Draft
@@ -2267,7 +2274,7 @@ const translationsDe: Record<string, string> = {
   "products.draft.hero.title": "Elternmails ohne Sonntagsdruck",
   "products.draft.hero.subtitle":
     "Draft macht aus Stichpunkten ruhige, professionelle Elternnachrichten, Berichtskommentare und Bewertungs-Feedback. Ton-Leitplanken und Deeskalation geben dir Sicherheit und Zeit zurück.",
-  "products.draft.hero.cta.primary": "Kostenlos mit Schreiben beginnen",
+  "products.draft.hero.cta.primary": "Early Access beitreten",
   "products.draft.hero.cta.secondary": "Beispiele ansehen",
 
   "products.draft.turn.pain1":
@@ -2298,6 +2305,12 @@ const translationsDe: Record<string, string> = {
   "products.draft.howItWorks.step3.title": "Prüfen & senden",
   "products.draft.howItWorks.step3.desc":
     "Kurz bearbeiten, kopieren und teilen, wenn es sich richtig anfühlt",
+  "products.draft.insights.heading": "Insights & Fortschritt",
+  "products.draft.insights.body":
+    "Draft verfolgt Zeitersparnis, erstellte Entwürfe, Streaks und Qualitätskennzahlen, damit du deine Entwicklung feiern kannst.",
+  "products.draft.interface.heading": "Geführte Entwurfsoberfläche",
+  "products.draft.interface.body":
+    "Die intuitive Oberfläche bringt Tonleitplanken, Moduswahl für Elternnachrichten vs. Zeugnisse und Spracheinstellungen zusammen, damit jeder Entwurf nach dir klingt.",
 
   "products.draft.whoItsFor.title": "Perfekt für",
   "products.draft.whoItsFor.item1":
@@ -2330,8 +2343,8 @@ const translationsDe: Record<string, string> = {
 
   "products.draft.cta.title": "Hol dir deine Zeit zurück",
   "products.draft.cta.subtitle":
-    "Starte kostenlos und sieh, wie viele stressige Mails du in einer Woche mit Draft klärst.",
-  "products.draft.cta.primary": "Kostenlose Testversion starten",
+    "Tritt unserer privaten Beta bei und gestalte lehrerzentrierte Kommunikation mit KI mit.",
+  "products.draft.cta.primary": "Early Access beitreten",
   "products.draft.cta.secondary": "Beispiele ansehen",
 
   // Products - GradeFlow
@@ -2377,7 +2390,7 @@ const translationsDe: Record<string, string> = {
   "products.gradeflow.social.author2": "David Kim, Mittelschule Mathematik",
 
   "products.gradeflow.cta.title": "Bereit, smarter zu bewerten?",
-  "products.gradeflow.cta.button": "Kostenlose Testversion starten",
+  "products.gradeflow.cta.button": "Early Access beitreten",
 
   // Products - Shield
   "shield.hero.eyebrow": "KI-GOVERNANCE FÜR SCHULEN",
@@ -2744,16 +2757,16 @@ const translationsDe: Record<string, string> = {
 
   "company.today.title": "Wo wir heute stehen",
   "company.today.p1":
-    "Zaza unterstützt heute über 500 Lehrkräfte in mehr als 15 Ländern. Im Durchschnitt sparen Lehrkräfte durch die Nutzung der Zaza-Tools über 10 Stunden pro Woche bei Schreib- und Kommunikationsaufgaben. Und wir fangen gerade erst an.",
+    "Wir arbeiten mit einer kleinen Gruppe von Lehrkräften und Schulen in einer privaten Beta, um jedes Feature mit echtem Klassenzimmer-Feedback vor dem Launch zu verfeinern.",
   "company.today.p2":
     "Unsere langfristige Vision ist es, eine komplette Suite von KI-Tools zu bauen, die Lehrkräften helfen, ihre Zeit zurückzugewinnen, ihr Wohlbefinden zu schützen und mit dem Kern ihrer Arbeit – ihren Schülern – verbunden zu bleiben.",
   "company.today.close":
     "Denn wenn Lehrkräfte gedeihen, gedeihen auch Schüler.",
 
-  "company.stats.teachers.number": "500+",
-  "company.stats.teachers.label": "Lehrkräfte nutzen Zaza",
-  "company.stats.countries.number": "15",
-  "company.stats.countries.label": "Länder",
+  "company.stats.teachers.number": "Lehrergebaut",
+  "company.stats.teachers.label": "Design- & Beta-Partner",
+  "company.stats.countries.number": "Private Beta",
+  "company.stats.countries.label": "Early Access-Programm",
   "company.stats.hours.number": "10+",
   "company.stats.hours.label": "Wöchentlich gesparte Stunden",
 

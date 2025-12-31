@@ -1,13 +1,13 @@
 ﻿"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useEffect, useState } from "react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { useLanguage } from "@/lib/i18n/language-context"
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useLanguage } from "@/lib/i18n/language-context";
 import {
   Star,
   Gift,
@@ -26,14 +26,14 @@ import {
   Video,
   Globe,
   Shield,
-} from "lucide-react"
+} from "lucide-react";
 
 // Removed the original benefits, responsibilities, ambassadors, and faqs arrays as they are now defined within contentEN and contentDE
 
 export default function AmbassadorClient() {
-  const { language } = useLanguage()
-  const isGerman = language === "de"
-  const content = isGerman ? contentDE : contentEN
+  const { language } = useLanguage();
+  const isGerman = language === "de";
+  const content = isGerman ? contentDE : contentEN;
 
   const [formData, setFormData] = useState({
     name: "",
@@ -43,57 +43,67 @@ export default function AmbassadorClient() {
     experience: "",
     social: "",
     why: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [error, setError] = useState("")
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     if (typeof window !== "undefined" && (window as any).analytics) {
-      ;(window as any).analytics.track("ambassador_page_viewed", {
+      (window as any).analytics.track("ambassador_page_viewed", {
         referrer: document.referrer,
-      })
+      });
     }
-  }, [])
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    e.preventDefault();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(formData.email)) {
-      setError(isGerman ? "Bitte geben Sie eine gültige E-Mail-Adresse ein." : "Please enter a valid email address.")
-      return
+      setError(
+        isGerman
+          ? "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+          : "Please enter a valid email address.",
+      );
+      return;
     }
-    setError("")
-    setIsSubmitting(true)
+    setError("");
+    setIsSubmitting(true);
 
     // Track application submission
     if (typeof window !== "undefined" && (window as any).analytics) {
-      ;(window as any).analytics.track("ambassador_application_submitted", {
+      (window as any).analytics.track("ambassador_application_submitted", {
         name: formData.name,
         email: formData.email,
         role: formData.role,
-      })
+      });
     }
 
     try {
       // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500))
-      console.log("TODO: connect ambassador application to Brevo", formData)
-      setIsSubmitted(true)
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      console.log("TODO: connect ambassador application to Brevo", formData);
+      setIsSubmitted(true);
     } catch (err) {
-      console.error("[ambassador] submission failed", err)
-      setError(isGerman ? "Etwas ist schiefgelaufen. Bitte erneut versuchen." : "Something went wrong. Please try again.")
+      console.error("[ambassador] submission failed", err);
+      setError(
+        isGerman
+          ? "Etwas ist schiefgelaufen. Bitte erneut versuchen."
+          : "Something went wrong. Please try again.",
+      );
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
   return (
     <div className="min-h-screen bg-[#0F172A]">
@@ -104,14 +114,25 @@ export default function AmbassadorClient() {
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 rounded-full px-4 py-2 mb-6">
               <Star className="w-5 h-5 text-[#A78BFA]" />
-              <span className="text-[#A78BFA] font-medium text-sm">{content.hero.badge}</span>
+              <span className="text-[#A78BFA] font-medium text-sm">
+                {content.hero.badge}
+              </span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              {content.hero.title} <span className="gradient-text">{content.hero.titleHighlight}</span>
+              {content.hero.title}{" "}
+              <span className="gradient-text">
+                {content.hero.titleHighlight}
+              </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">{content.hero.description}</p>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              {content.hero.description}
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white text-lg px-8 py-6">
+              <Button
+                asChild
+                size="lg"
+                className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white text-lg px-8 py-6"
+              >
                 <a href="#apply">{content.hero.ctaPrimary}</a>
               </Button>
               <Button
@@ -128,7 +149,9 @@ export default function AmbassadorClient() {
             <div className="grid grid-cols-3 gap-8 mt-16 max-w-3xl mx-auto">
               {content.hero.stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
+                  <div className="text-4xl font-bold text-white mb-2">
+                    {stat.value}
+                  </div>
                   <div className="text-gray-400 text-sm">{stat.label}</div>
                 </div>
               ))}
@@ -143,16 +166,24 @@ export default function AmbassadorClient() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 rounded-full px-4 py-2 mb-6">
               <Gift className="w-5 h-5 text-[#A78BFA]" />
-              <span className="text-[#A78BFA] font-medium text-sm">{content.benefits.badge}</span>
+              <span className="text-[#A78BFA] font-medium text-sm">
+                {content.benefits.badge}
+              </span>
             </div>
-            <h2 className="text-4xl font-bold text-white mb-4">{content.benefits.title}</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">{content.benefits.description}</p>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              {content.benefits.title}
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              {content.benefits.description}
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {content.benefits.items.map((benefit, index) => {
               // Directly map icons to benefit items based on order
-              const Icon = [Gift, Zap, Users, MessageSquare, Award, TrendingUp][index]
+              const Icon = [Gift, Zap, Users, MessageSquare, Award, TrendingUp][
+                index
+              ];
               const colors = [
                 "from-purple-500 to-pink-500",
                 "from-blue-500 to-cyan-500",
@@ -160,7 +191,7 @@ export default function AmbassadorClient() {
                 "from-green-500 to-emerald-500",
                 "from-indigo-500 to-purple-500",
                 "from-pink-500 to-rose-500",
-              ]
+              ];
               return (
                 <div
                   key={benefit.title}
@@ -174,9 +205,11 @@ export default function AmbassadorClient() {
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#A78BFA] transition-colors">
                     {benefit.title}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
+                  <p className="text-gray-300 leading-relaxed">
+                    {benefit.description}
+                  </p>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
@@ -188,16 +221,29 @@ export default function AmbassadorClient() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 rounded-full px-4 py-2 mb-6">
               <Shield className="w-5 h-5 text-[#A78BFA]" />
-              <span className="text-[#A78BFA] font-medium text-sm">{content.responsibilities.badge}</span>
+              <span className="text-[#A78BFA] font-medium text-sm">
+                {content.responsibilities.badge}
+              </span>
             </div>
-            <h2 className="text-4xl font-bold text-white mb-4">{content.responsibilities.title}</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">{content.responsibilities.description}</p>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              {content.responsibilities.title}
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              {content.responsibilities.description}
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {content.responsibilities.items.map((responsibility, index) => {
               // Directly map icons to responsibility items based on order
-              const Icon = [Megaphone, MessageSquare, BookOpen, Video, Users, Globe][index]
+              const Icon = [
+                Megaphone,
+                MessageSquare,
+                BookOpen,
+                Video,
+                Users,
+                Globe,
+              ][index];
               return (
                 <div
                   key={responsibility.title}
@@ -208,22 +254,30 @@ export default function AmbassadorClient() {
                       <Icon className="w-6 h-6 text-[#A78BFA]" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white mb-2">{responsibility.title}</h3>
+                      <h3 className="text-xl font-bold text-white mb-2">
+                        {responsibility.title}
+                      </h3>
                       <span className="text-xs font-semibold text-[#A78BFA] bg-[#8B5CF6]/10 px-2 py-1 rounded">
                         {responsibility.commitment}
                       </span>
                     </div>
                   </div>
-                  <p className="text-gray-300 leading-relaxed">{responsibility.description}</p>
+                  <p className="text-gray-300 leading-relaxed">
+                    {responsibility.description}
+                  </p>
                 </div>
-              )
+              );
             })}
           </div>
 
           <div className="mt-12 bg-gradient-to-br from-[#8B5CF6]/10 to-[#A78BFA]/5 border border-[#8B5CF6]/30 rounded-2xl p-8 text-center">
             <Heart className="w-12 h-12 text-[#A78BFA] mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-white mb-3">{content.responsibilities.authenticity.title}</h3>
-            <p className="text-gray-300 max-w-2xl mx-auto">{content.responsibilities.authenticity.description}</p>
+            <h3 className="text-2xl font-bold text-white mb-3">
+              {content.responsibilities.authenticity.title}
+            </h3>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              {content.responsibilities.authenticity.description}
+            </p>
           </div>
         </div>
       </section>
@@ -234,10 +288,16 @@ export default function AmbassadorClient() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 rounded-full px-4 py-2 mb-6">
               <Users className="w-5 h-5 text-[#A78BFA]" />
-              <span className="text-[#A78BFA] font-medium text-sm">{content.ambassadors.badge}</span>
+              <span className="text-[#A78BFA] font-medium text-sm">
+                {content.ambassadors.badge}
+              </span>
             </div>
-            <h2 className="text-4xl font-bold text-white mb-4">{content.ambassadors.title}</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">{content.ambassadors.description}</p>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              {content.ambassadors.title}
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              {content.ambassadors.description}
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -252,8 +312,12 @@ export default function AmbassadorClient() {
                   className="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-[#8B5CF6]/30"
                 />
                 <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold text-white mb-1">{ambassador.name}</h3>
-                  <p className="text-[#A78BFA] text-sm mb-1">{ambassador.role}</p>
+                  <h3 className="text-xl font-bold text-white mb-1">
+                    {ambassador.name}
+                  </h3>
+                  <p className="text-[#A78BFA] text-sm mb-1">
+                    {ambassador.role}
+                  </p>
                   <p className="text-gray-400 text-xs">{ambassador.location}</p>
                 </div>
                 <blockquote className="text-gray-300 text-sm italic mb-6 leading-relaxed">
@@ -261,12 +325,20 @@ export default function AmbassadorClient() {
                 </blockquote>
                 <div className="border-t border-white/10 pt-4 space-y-2">
                   <div className="flex items-center justify-between text-xs">
-                    <span className="text-gray-400">{content.ambassadors.joinedLabel}:</span>
-                    <span className="text-white font-medium">{ambassador.joined}</span>
+                    <span className="text-gray-400">
+                      {content.ambassadors.joinedLabel}:
+                    </span>
+                    <span className="text-white font-medium">
+                      {ambassador.joined}
+                    </span>
                   </div>
                   <div className="flex items-center justify-between text-xs">
-                    <span className="text-gray-400">{content.ambassadors.contributionsLabel}:</span>
-                    <span className="text-white font-medium">{ambassador.contributions}</span>
+                    <span className="text-gray-400">
+                      {content.ambassadors.contributionsLabel}:
+                    </span>
+                    <span className="text-white font-medium">
+                      {ambassador.contributions}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -281,17 +353,29 @@ export default function AmbassadorClient() {
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 rounded-full px-4 py-2 mb-6">
               <Sparkles className="w-5 h-5 text-[#A78BFA]" />
-              <span className="text-[#A78BFA] font-medium text-sm">{content.application.badge}</span>
+              <span className="text-[#A78BFA] font-medium text-sm">
+                {content.application.badge}
+              </span>
             </div>
-            <h2 className="text-4xl font-bold text-white mb-4">{content.application.title}</h2>
-            <p className="text-xl text-gray-300">{content.application.description}</p>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              {content.application.title}
+            </h2>
+            <p className="text-xl text-gray-300">
+              {content.application.description}
+            </p>
           </div>
 
           {!isSubmitted ? (
-            <form onSubmit={handleSubmit} className="bg-[#1E293B] border border-white/10 rounded-2xl p-8 space-y-6">
+            <form
+              onSubmit={handleSubmit}
+              className="bg-[#1E293B] border border-white/10 rounded-2xl p-8 space-y-6"
+            >
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-white font-medium mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-white font-medium mb-2"
+                  >
                     {content.application.form.name} *
                   </label>
                   <Input
@@ -306,7 +390,10 @@ export default function AmbassadorClient() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-white font-medium mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-white font-medium mb-2"
+                  >
                     {content.application.form.email} *
                   </label>
                   <Input
@@ -324,7 +411,10 @@ export default function AmbassadorClient() {
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="school" className="block text-white font-medium mb-2">
+                  <label
+                    htmlFor="school"
+                    className="block text-white font-medium mb-2"
+                  >
                     {content.application.form.school} *
                   </label>
                   <Input
@@ -339,7 +429,10 @@ export default function AmbassadorClient() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="role" className="block text-white font-medium mb-2">
+                  <label
+                    htmlFor="role"
+                    className="block text-white font-medium mb-2"
+                  >
                     {content.application.form.role} *
                   </label>
                   <Input
@@ -356,7 +449,10 @@ export default function AmbassadorClient() {
               </div>
 
               <div>
-                <label htmlFor="experience" className="block text-white font-medium mb-2">
+                <label
+                  htmlFor="experience"
+                  className="block text-white font-medium mb-2"
+                >
                   {content.application.form.experience} *
                 </label>
                 <Input
@@ -372,7 +468,10 @@ export default function AmbassadorClient() {
               </div>
 
               <div>
-                <label htmlFor="social" className="block text-white font-medium mb-2">
+                <label
+                  htmlFor="social"
+                  className="block text-white font-medium mb-2"
+                >
                   {content.application.form.social}
                 </label>
                 <Input
@@ -387,8 +486,12 @@ export default function AmbassadorClient() {
               </div>
 
               <div>
-                <label htmlFor="why" className="block text-white font-medium mb-2">
-                  {content.application.form.why} * {content.application.form.whyLength}
+                <label
+                  htmlFor="why"
+                  className="block text-white font-medium mb-2"
+                >
+                  {content.application.form.why} *{" "}
+                  {content.application.form.whyLength}
                 </label>
                 <Textarea
                   id="why"
@@ -410,17 +513,25 @@ export default function AmbassadorClient() {
                 disabled={isSubmitting}
                 className="w-full bg-[#8B5CF6] hover:bg-[#7C3AED] text-white text-lg py-6"
               >
-                {isSubmitting ? content.application.form.submitting : content.application.form.submit}
+                {isSubmitting
+                  ? content.application.form.submitting
+                  : content.application.form.submit}
                 {!isSubmitting && <ArrowRight className="w-5 h-5 ml-2" />}
               </Button>
 
               <p className="text-gray-400 text-sm text-center">
                 {content.application.form.agreement}{" "}
-                <Link href="/legal/terms" className="text-[#A78BFA] hover:underline">
+                <Link
+                  href="/legal/terms"
+                  className="text-[#A78BFA] hover:underline"
+                >
                   {content.application.form.terms}
                 </Link>{" "}
                 {content.application.form.and}{" "}
-                <Link href="/legal/privacy" className="text-[#A78BFA] hover:underline">
+                <Link
+                  href="/legal/privacy"
+                  className="text-[#A78BFA] hover:underline"
+                >
                   {content.application.form.privacy}
                 </Link>
               </p>
@@ -430,8 +541,12 @@ export default function AmbassadorClient() {
               <div className="w-20 h-20 rounded-full bg-[#8B5CF6]/10 flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="w-10 h-10 text-[#A78BFA]" />
               </div>
-              <h3 className="text-3xl font-bold text-white mb-4">{content.application.success.title}</h3>
-              <p className="text-gray-300 mb-8 leading-relaxed">{content.application.success.message}</p>
+              <h3 className="text-3xl font-bold text-white mb-4">
+                {content.application.success.title}
+              </h3>
+              <p className="text-gray-300 mb-8 leading-relaxed">
+                {content.application.success.message}
+              </p>
               <p className="text-sm text-gray-400 mb-6">
                 {isGerman
                   ? "Dieses Formular ist aktuell eine Vorschau. Schreiben Sie uns bei Fragen an hello@zazatechnologies.com."
@@ -454,14 +569,21 @@ export default function AmbassadorClient() {
       <section className="py-20 bg-[#0F172A]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">{content.faq.title}</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              {content.faq.title}
+            </h2>
             <p className="text-xl text-gray-300">{content.faq.description}</p>
           </div>
 
           <div className="space-y-6">
             {content.faq.items.map((faq, index) => (
-              <div key={index} className="bg-[#1E293B] border border-white/10 rounded-xl p-8">
-                <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
+              <div
+                key={index}
+                className="bg-[#1E293B] border border-white/10 rounded-xl p-8"
+              >
+                <h3 className="text-xl font-bold text-white mb-3">
+                  {faq.question}
+                </h3>
                 <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
               </div>
             ))}
@@ -484,7 +606,7 @@ export default function AmbassadorClient() {
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 const contentEN = {
@@ -499,17 +621,19 @@ const contentEN = {
     stats: [
       { value: "50+", label: "Active Ambassadors" },
       { value: "12", label: "Countries Represented" },
-      { value: "500K+", label: "Teachers Reached" },
+      { value: "Private beta", label: "Early access community" },
     ],
   },
   benefits: {
     badge: "Exclusive Benefits",
     title: "What You'll Get",
-    description: "Ambassadors receive exclusive perks, recognition, and opportunities to grow professionally",
+    description:
+      "Ambassadors receive exclusive perks, recognition, and opportunities to grow professionally",
     items: [
       {
         title: "Exclusive Perks",
-        description: "Free lifetime Pro account, exclusive swag, and priority support",
+        description:
+          "Free lifetime Pro account, exclusive swag, and priority support",
       },
       {
         title: "Early Access",
@@ -517,7 +641,8 @@ const contentEN = {
       },
       {
         title: "Private Community",
-        description: "Join exclusive Slack channel with product team and fellow ambassadors",
+        description:
+          "Join exclusive Slack channel with product team and fellow ambassadors",
       },
       {
         title: "Direct Influence",
@@ -525,11 +650,13 @@ const contentEN = {
       },
       {
         title: "Recognition",
-        description: "Featured on our website, social media, and marketing materials",
+        description:
+          "Featured on our website, social media, and marketing materials",
       },
       {
         title: "Professional Growth",
-        description: "Speaking opportunities, co-marketing, and thought leadership",
+        description:
+          "Speaking opportunities, co-marketing, and thought leadership",
       },
     ],
   },
@@ -541,17 +668,20 @@ const contentEN = {
     items: [
       {
         title: "Share Your Story",
-        description: "Post about Zaza Draft on social media 2-3 times per month",
+        description:
+          "Post about Zaza Draft on social media 2-3 times per month",
         commitment: "2-3 hours/month",
       },
       {
         title: "Provide Feedback",
-        description: "Test new features and share honest feedback with our team",
+        description:
+          "Test new features and share honest feedback with our team",
         commitment: "1-2 hours/month",
       },
       {
         title: "Create Content",
-        description: "Write blog posts, create tutorials, or share classroom examples",
+        description:
+          "Write blog posts, create tutorials, or share classroom examples",
         commitment: "Optional",
       },
       {
@@ -579,7 +709,8 @@ const contentEN = {
   ambassadors: {
     badge: "Meet the Team",
     title: "Current Ambassadors",
-    description: "Hear from educators who are already making an impact as Zaza Draft ambassadors",
+    description:
+      "Hear from educators who are already making an impact as Zaza Draft ambassadors",
     joinedLabel: "Joined",
     contributionsLabel: "Contributions",
     people: [
@@ -618,7 +749,8 @@ const contentEN = {
   application: {
     badge: "Join the Program",
     title: "Apply to Become an Ambassador",
-    description: "Applications are reviewed on a rolling basis. We'll get back to you within 2 weeks.",
+    description:
+      "Applications are reviewed on a rolling basis. We'll get back to you within 2 weeks.",
     form: {
       name: "Full Name",
       namePlaceholder: "Jane Smith",
@@ -688,7 +820,7 @@ const contentEN = {
       },
     ],
   },
-}
+};
 
 const contentDE = {
   hero: {
@@ -702,7 +834,7 @@ const contentDE = {
     stats: [
       { value: "50+", label: "Aktive Botschafter" },
       { value: "12", label: "Vertretene Länder" },
-      { value: "500K+", label: "Erreichte Lehrkräfte" },
+      { value: "Private Beta", label: "Frühzeitige Community" },
     ],
   },
   benefits: {
@@ -713,27 +845,33 @@ const contentDE = {
     items: [
       {
         title: "Exklusive Vorteile",
-        description: "Kostenloses Pro-Konto auf Lebenszeit, exklusive Goodies und vorrangiger Support.",
+        description:
+          "Kostenloses Pro-Konto auf Lebenszeit, exklusive Goodies und vorrangiger Support.",
       },
       {
         title: "Früher Zugang",
-        description: "Seien Sie unter den Ersten, die neue Funktionen testen und Feedback geben.",
+        description:
+          "Seien Sie unter den Ersten, die neue Funktionen testen und Feedback geben.",
       },
       {
         title: "Private Community",
-        description: "Treten Sie dem exklusiven Slack-Kanal mit dem Produktteam und anderen Botschaftern bei.",
+        description:
+          "Treten Sie dem exklusiven Slack-Kanal mit dem Produktteam und anderen Botschaftern bei.",
       },
       {
         title: "Direkter Einfluss",
-        description: "Gestalten Sie unsere Produkt-Roadmap mit monatlichen Feedback-Sitzungen aktiv mit.",
+        description:
+          "Gestalten Sie unsere Produkt-Roadmap mit monatlichen Feedback-Sitzungen aktiv mit.",
       },
       {
         title: "Anerkennung",
-        description: "Präsentation auf unserer Website, in sozialen Medien und in Marketingmaterialien.",
+        description:
+          "Präsentation auf unserer Website, in sozialen Medien und in Marketingmaterialien.",
       },
       {
         title: "Berufliche Entwicklung",
-        description: "Vortragsmöglichkeiten, Co-Marketing und Sichtbarkeit als Thought Leader.",
+        description:
+          "Vortragsmöglichkeiten, Co-Marketing und Sichtbarkeit als Thought Leader.",
       },
     ],
   },
@@ -745,32 +883,38 @@ const contentDE = {
     items: [
       {
         title: "Teilen Sie Ihre Geschichte",
-        description: "Posten Sie 2–3 Mal pro Monat über Zaza Draft in Ihren bevorzugten sozialen Netzwerken.",
+        description:
+          "Posten Sie 2–3 Mal pro Monat über Zaza Draft in Ihren bevorzugten sozialen Netzwerken.",
         commitment: "2–3 Std./Monat",
       },
       {
         title: "Feedback geben",
-        description: "Testen Sie neue Funktionen und geben Sie unserem Team ehrliches, praxisnahes Feedback.",
+        description:
+          "Testen Sie neue Funktionen und geben Sie unserem Team ehrliches, praxisnahes Feedback.",
         commitment: "1–2 Std./Monat",
       },
       {
         title: "Inhalte erstellen",
-        description: "Schreiben Sie Blogbeiträge, erstellen Sie Tutorials oder teilen Sie Beispiele aus Ihrem Unterricht.",
+        description:
+          "Schreiben Sie Blogbeiträge, erstellen Sie Tutorials oder teilen Sie Beispiele aus Ihrem Unterricht.",
         commitment: "Optional",
       },
       {
         title: "Community-Calls beitreten",
-        description: "Nehmen Sie an unseren monatlichen Botschafter-Calls und Q&A-Sessions teil.",
+        description:
+          "Nehmen Sie an unseren monatlichen Botschafter-Calls und Q&A-Sessions teil.",
         commitment: "1 Std./Monat",
       },
       {
         title: "Lehrkräfte unterstützen",
-        description: "Beantworten Sie Fragen in der Community und helfen Sie neuen Nutzerinnen und Nutzern beim Einstieg.",
+        description:
+          "Beantworten Sie Fragen in der Community und helfen Sie neuen Nutzerinnen und Nutzern beim Einstieg.",
         commitment: "Optional",
       },
       {
         title: "Zaza vertreten",
-        description: "Sprechen Sie auf Konferenzen oder stellen Sie Zaza Draft an Ihrer Schule oder in Ihrem Schulträger vor.",
+        description:
+          "Sprechen Sie auf Konferenzen oder stellen Sie Zaza Draft an Ihrer Schule oder in Ihrem Schulträger vor.",
         commitment: "Optional",
       },
     ],
@@ -888,10 +1032,11 @@ const contentDE = {
           "Das Leben ist voll – wir wissen, wie viel Lehrkräfte leisten. Sprechen Sie einfach mit uns. Wir sind flexibel und können Erwartungen anpassen oder Ihre Botschafter-Rolle bei Bedarf pausieren.",
       },
       {
-        question: "Kann ich mich bewerben, wenn ich Zaza Draft derzeit nicht nutze?",
+        question:
+          "Kann ich mich bewerben, wenn ich Zaza Draft derzeit nicht nutze?",
         answer:
           "Wir bevorzugen Botschafterinnen und Botschafter, die unser Produkt bereits kennen. Wenn Sie jedoch begeistert von KI in der Bildung sind und bereit, Zaza Draft aktiv auszuprobieren, freuen wir uns trotzdem auf Ihre Bewerbung.",
       },
     ],
   },
-}
+};

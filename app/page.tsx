@@ -1,29 +1,34 @@
-import type { Metadata } from "next"
-import { HomePageClient } from "./home-client"
+import type { Metadata } from "next";
+import { HomePageClient } from "./home-client";
 
-const siteUrl = "https://zazadraft.com"
-const ogImage = "/hero/teacher.jpg"
+const siteUrl = "https://zazadraft.com";
+const ogImage = "/hero/teacher.jpg";
 
 export const metadata: Metadata = {
   title: "Zaza Draft | AI writing help built for teachers, not tech hype",
   description:
-    "Teacher-first AI that drafts parent messages, calm replies, and kinder feedback in minutes. Save hours every week with safety guardrails you can trust.",
+    "Teacher-first AI built with educators to calm Sunday night admin - join early access to shape the private beta.",
   openGraph: {
     title: "Zaza Draft | AI writing help built for teachers",
     description:
-      "Draft parent emails, de-escalate tough replies, and write kinder feedback faster. Hallucination-safe guardrails keep your voice and credibility intact.",
+      "Draft calm parent emails and report comments faster - join early access to help shape the private beta experience.",
     type: "website",
     locale: "en_GB",
     siteName: "Zaza Draft",
     alternateLocale: ["de_DE"],
     url: siteUrl,
-    images: [{ url: ogImage, alt: "Teacher using Zaza Draft to write a parent message" }],
+    images: [
+      {
+        url: ogImage,
+        alt: "Teacher using Zaza Draft to write a parent message",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Zaza Draft | Teacher-first AI writing support",
     description:
-      "Save time on parent messages and feedback with explainable AI guardrails made for teachers.",
+      "Calm parent messages and report comments with teacher-first AI - join early access to shape the beta.",
     images: [ogImage],
   },
   alternates: {
@@ -33,7 +38,7 @@ export const metadata: Metadata = {
       de: `${siteUrl}/de`,
     },
   },
-}
+};
 
 export default function HomePage() {
   return (
@@ -48,7 +53,7 @@ export default function HomePage() {
             url: "https://zazatechnologies.com",
             logo: `${siteUrl}/zaza-logo.png`,
             description:
-              "Zaza Technologies builds hallucination-safe AI tools for teachers, including Zaza Draft, Zaza Teach, and GradeFlow. Save 10+ hours weekly with trusted AI support.",
+              "Zaza Technologies builds teacher-first AI to calm Sunday night admin and invites early access partners to shape the private beta.",
             founder: {
               "@type": "Person",
               name: "Dr. Greg Blackburn",
@@ -58,8 +63,8 @@ export default function HomePage() {
             },
             sameAs: [
               "https://www.linkedin.com/company/zaza-technologies",
-              "https://twitter.com/zazatech",
-              "https://www.tiktok.com/@zazatech",
+              "https://x.com/zazateachapp",
+              "https://www.tiktok.com/@zazatechnologies",
             ],
           }),
         }}
@@ -80,7 +85,7 @@ export default function HomePage() {
               description: "Free tier with 5 drafts per month",
             },
             description:
-              "Hallucination-safe AI writing assistant for teachers. Save 10+ hours weekly generating professional parent emails, report comments, and student messages with built-in safety features and school-appropriate tone guardrails.",
+              "Hallucination-safe AI writing assistant for teachers. Calm parent emails and report comments faster - join early access to shape the private beta.",
             featureList: [
               "Hallucination prevention",
               "School-appropriate tone guardrails",
@@ -101,5 +106,5 @@ export default function HomePage() {
       />
       <HomePageClient />
     </>
-  )
+  );
 }

@@ -69,8 +69,9 @@
     },
     cta: {
       title: "Ready to Transform Your Planning?",
-      subtitle: "Join hundreds of teachers saving 10+ hours per week",
-      primary: "Start Free Trial",
+      subtitle:
+        "Join our private beta and help shape teacher-first planning support.",
+      primary: "Join Early Access",
       secondary: "Schedule Demo",
     },
   },
@@ -81,7 +82,7 @@
       subtitle:
         "Transform rough notes into polished parent emails, report cards, and feedback in minutes. Maintain your voice while saving hours every week.",
       cta: {
-        primary: "Start Writing Free",
+        primary: "Join Early Access",
         secondary: "See Examples",
       },
     },
@@ -133,6 +134,16 @@
       step3: "Confidence in sensitive conversations",
       step4: "More time for teaching, less time writing",
     },
+    insights: {
+      heading: "Insights & Progress",
+      description:
+        "Draft tracks time saved, drafts created, streaks, and a quality score so you can celebrate the growth in every message.",
+    },
+    interface: {
+      heading: "Guided Drafting Interface",
+      description:
+        "Tone guardrails, channel-specific modes, and language settings sit together in an intuitive workspace so each draft feels like you.",
+    },
     techNote: {
       title: "Hallucination-Safe:",
       body: "Unlike generic AI, Draft never invents student information or fabricates details. Every output is grounded in what you provide.",
@@ -147,8 +158,9 @@
     },
     cta: {
       title: "Get Your Time Back",
-      subtitle: "Join 500+ teachers saving 10+ hours every week",
-      primary: "Start Free Trial",
+      subtitle:
+        "Join our private beta and help shape teacher-first AI writing support.",
+      primary: "Join Early Access",
       secondary: "See Examples",
     },
   },
@@ -196,8 +208,7 @@
     },
     cta: {
       title: "Ready to Grade Smarter?",
-      button: "Start Free Trial",
+      button: "Join Early Access",
     },
   },
 };
-

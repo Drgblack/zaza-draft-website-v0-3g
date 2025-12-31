@@ -6,7 +6,7 @@
       subtitle:
         "KI-gestÃ¼tzte Unterrichtsplanung, die sich an Ihren Lehrplan anpasst, Stunden an Vorbereitungszeit spart und Ihnen hilft, ansprechende, standardkonforme Unterrichtsstunden zu erstellen.",
       cta: {
-        primary: "Kostenlos starten",
+        primary: "Early Access beitreten",
         secondary: "Demo ansehen",
       },
     },
@@ -51,7 +51,8 @@
     whoItsFor: {
       title: "Perfekt fÃ¼r",
       item1: "LehrkrÃ¤fte, die Zeit bei der Unterrichtsplanung sparen mÃ¶chten",
-      item2: "PÃ¤dagogen, die den Unterricht effektiver differenzieren mÃ¶chten",
+      item2:
+        "PÃ¤dagogen, die den Unterricht effektiver differenzieren mÃ¶chten",
       item3:
         "Schulen, die einen konsistenten, standardkonformen Lehrplan suchen",
     },
@@ -61,6 +62,16 @@
       step2: "Erstellen Sie ansprechendere, differenzierte Unterrichtsstunden",
       step3: "Stellen Sie die Ãœbereinstimmung mit Lehrplanstandards sicher",
       step4: "Teilen und arbeiten Sie mit Ihrem Lehrerteam zusammen",
+    },
+    insights: {
+      heading: "Insights & Fortschritt",
+      description:
+        "Draft zeichnet Zeitersparnis, erstellte Entwürfe, Streaks und Qualitätskennzahlen auf, damit du deine Fortschritte feiern kannst.",
+    },
+    interface: {
+      heading: "Geführte Entwurfsoberfläche",
+      description:
+        "Tonleitplanken, Modusauswahl für Elternnachrichten vs. Zeugnisse und Spracheinstellungen kommen in einem intuitiven Workspace zusammen, damit jeder Entwurf nach dir klingt.",
     },
     social: {
       title: "Was LehrkrÃ¤fte sagen",
@@ -75,7 +86,7 @@
       title: "Bereit, Ihre Planung zu transformieren?",
       subtitle:
         "SchlieÃŸen Sie sich Hunderten von LehrkrÃ¤ften an, die 10+ Stunden pro Woche sparen",
-      primary: "Kostenlose Testversion starten",
+      primary: "Early Access beitreten",
       secondary: "Demo planen",
     },
   },
@@ -86,7 +97,7 @@
       subtitle:
         "Verwandeln Sie grobe Notizen in ausgefeilte Eltern-E-Mails, Zeugnisse und Feedback in Minuten. Bewahren Sie Ihre Stimme und sparen Sie jede Woche Stunden.",
       cta: {
-        primary: "Kostenlos starten",
+        primary: "Early Access beitreten",
         secondary: "Beispiele ansehen",
       },
     },
@@ -131,7 +142,8 @@
       title: "Perfekt fÃ¼r",
       item1: "LehrkrÃ¤fte, die Elternkommunikation schreiben",
       item2: "PÃ¤dagogen, die Zeugniskommentare erstellen",
-      item3: "Schulen, die konsistente, professionelle Kommunikation benÃ¶tigen",
+      item3:
+        "Schulen, die konsistente, professionelle Kommunikation benÃ¶tigen",
     },
     change: {
       title: "Was sich mit Draft Ã¤ndert",
@@ -156,8 +168,8 @@
     cta: {
       title: "Holen Sie sich Ihre Zeit zurÃ¼ck",
       subtitle:
-        "SchlieÃŸen Sie sich 500+ LehrkrÃ¤ften an, die jede Woche 10+ Stunden sparen",
-      primary: "Kostenlose Testversion starten",
+        "Treten Sie unserer privaten Beta bei und gestalten Sie lehrerzentrierte Planung.",
+      primary: "Early Access beitreten",
       secondary: "Beispiele ansehen",
     },
   },
@@ -205,8 +217,7 @@
     },
     cta: {
       title: "Bereit, intelligenter zu bewerten?",
-      button: "Kostenlose Testversion starten",
+      button: "Early Access beitreten",
     },
   },
 };
-
