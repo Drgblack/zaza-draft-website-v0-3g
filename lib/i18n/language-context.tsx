@@ -535,6 +535,51 @@ const translationsEn: Record<string, string> = {
   "hero.trustIndicators.ferpaCompliant": "FERPA compliant",
   "hero.trustIndicators.teachers": "Teacher-first by design",
 
+  // Early Access Page
+  "earlyAccess.hero.title": "Join the Zaza Draft Early-Access Programme",
+  "earlyAccess.hero.subtitle":
+    "Help us build the calm, teacher-first AI writing assistant you deserve.",
+  "earlyAccess.hero.cta": "Join Early Access",
+  "earlyAccess.overview.heading": "Why we run the private beta",
+  "earlyAccess.overview.body":
+    "We invite teachers who juggle parent emails, report comments, and feedback to shape the guardrails and priorities we launch with.",
+  "earlyAccess.benefits.title": "Beta perks",
+  "earlyAccess.benefits.heading": "What you unlock as a beta partner",
+  "earlyAccess.benefits.shaping.title": "Shape the product",
+  "earlyAccess.benefits.shaping.body":
+    "Share what matters—tone guardrails, mode toggles, and insights that reflect your classroom.",
+  "earlyAccess.benefits.saving.title": "Save hours each week",
+  "earlyAccess.benefits.saving.body":
+    "Experience calm, confident drafts while seeing how much time you reclaim from admin.",
+  "earlyAccess.benefits.perks.title": "Enjoy exclusive perks",
+  "earlyAccess.benefits.perks.body":
+    "Get first access to post-launch resources, private webinars, and a teachers-only community.",
+  "earlyAccess.steps.title": "How the early-access programme works",
+  "earlyAccess.steps.step1.title": "Share your story",
+  "earlyAccess.steps.step1.body":
+    "Tell us about your teaching context, communication challenges, and why you want to help.",
+  "earlyAccess.steps.step2.title": "Receive confirmation",
+  "earlyAccess.steps.step2.body":
+    "Watch for an email that outlines next steps, platform expectations, and when access opens.",
+  "earlyAccess.steps.step3.title": "Access for 30 days",
+  "earlyAccess.steps.step3.body":
+    "Test guided drafts, tone selectors, and progress insights during a limited trial window.",
+  "earlyAccess.steps.step4.title": "Provide feedback",
+  "earlyAccess.steps.step4.body":
+    "Share insights through brief surveys or optional calls so we build with your voice.",
+  "earlyAccess.note.limited":
+    "Seats are limited and we close applications as soon as the classroom slots fill.",
+  "earlyAccess.faq.title": "FAQ",
+  "earlyAccess.faq.eligibility.question": "Who can join?",
+  "earlyAccess.faq.eligibility.answer":
+    "Primary, secondary, and administrative educators who handle parent communication are welcome to apply.",
+  "earlyAccess.faq.privacy.question": "Is my writing private?",
+  "earlyAccess.faq.privacy.answer":
+    "Yes. Everything stays private, encrypted, and covered by our GDPR-ready policies—no public posting and no data sharing without consent.",
+  "earlyAccess.faq.afterBeta.question": "What happens after the beta?",
+  "earlyAccess.faq.afterBeta.answer":
+    "You can stay in the community, get early notice for the launch, and keep shaping Zaza Draft before general availability.",
+
   // Hallucination-Safe Tooltip
   "hallucinationSafe.tooltip.heading": "What does hallucination-safe mean?",
   "hallucinationSafe.tooltip.body":
@@ -859,10 +904,12 @@ const translationsEn: Record<string, string> = {
     "Edit quickly, copy, and share when it feels right",
   "products.draft.insights.heading": "Insights & Progress",
   "products.draft.insights.body":
-    "Draft tracks time saved, drafts created, streaks, and a quality score so you can celebrate the growth you deliver with every thoughtful message.",
+    "Draft tracks time saved, drafts created, streaks, and a quality score so you can celebrate the growth you deliver while helping shape our teacher-first beta.",
   "products.draft.interface.heading": "Guided Drafting Interface",
   "products.draft.interface.body":
-    "An intuitive canvas keeps tone guardrails, message type selection, and language settings in reach so each draft feels like your voice, faster.",
+    "Tone guardrails, channel-aware modes, and language settings live together in an intuitive workspace so every draft sounds calm and confident while you help steer the early access programme.",
+  "products.draft.insights.imageAlt": "Zaza Draft insights dashboard",
+  "products.draft.interface.imageAlt": "Zaza Draft guided drafting interface",
 
   "products.draft.whoItsFor.title": "Perfect for",
   "products.draft.whoItsFor.item1":
@@ -1967,6 +2014,51 @@ const translationsDe: Record<string, string> = {
   "hero.trustIndicators.ferpaCompliant": "FERPA-konform",
   "hero.trustIndicators.teachers": "Lehrerzentriert konzipiert",
 
+  // Early Access Page
+  "earlyAccess.hero.title": "Tritt dem Zaza Draft Early-Access-Programm bei",
+  "earlyAccess.hero.subtitle":
+    "Hilf uns, die ruhige, lehrerzentrierte KI-Schreibassistenz zu bauen, die du verdienst.",
+  "earlyAccess.hero.cta": "Early Access beitreten",
+  "earlyAccess.overview.heading": "Warum wir die private Beta starten",
+  "earlyAccess.overview.body":
+    "Wir laden Lehrkräfte ein, die Elternmails, Zeugnisnoten und Feedback jonglieren, um Workflows, Leitplanken und Prioritäten mitzugestalten.",
+  "earlyAccess.benefits.title": "Beta-Vorteile",
+  "earlyAccess.benefits.heading": "Was du als Beta-Partner erhältst",
+  "earlyAccess.benefits.shaping.title": "Produkt gestalten",
+  "earlyAccess.benefits.shaping.body":
+    "Teile, was wichtig ist – Tonleitplanken, Modus-Umschalter und Insights, die deinen Unterricht widerspiegeln.",
+  "earlyAccess.benefits.saving.title": "Wöchentlich Stunden gewinnen",
+  "earlyAccess.benefits.saving.body":
+    "Erlebe ruhige, sichere Entwürfe und sieh, wie viel Zeit du zurückgewinnst.",
+  "earlyAccess.benefits.perks.title": "Exklusive Vorteile genießen",
+  "earlyAccess.benefits.perks.body":
+    "Erhalte Vorabzugang zu Post-Launch-Inhalten, privaten Webinaren und einer Lehrer:innen-Community.",
+  "earlyAccess.steps.title": "So funktioniert das Early-Access-Programm",
+  "earlyAccess.steps.step1.title": "Erzähl uns, wer du bist",
+  "earlyAccess.steps.step1.body":
+    "Fülle ein kurzes Formular mit deiner Rolle, deinem Schulkontext und deinen Kommunikationsaufgaben aus.",
+  "earlyAccess.steps.step2.title": "Bestätigung erhalten",
+  "earlyAccess.steps.step2.body":
+    "Du bekommst eine E-Mail mit den nächsten Schritten, Erwartungen und dem Startzeitraum.",
+  "earlyAccess.steps.step3.title": "30 Tage Zugang",
+  "earlyAccess.steps.step3.body":
+    "Teste geführte Entwürfe, Tonoptionen und Fortschrittsmetriken für einen begrenzten Zeitraum.",
+  "earlyAccess.steps.step4.title": "Feedback geben",
+  "earlyAccess.steps.step4.body":
+    "Teile Eindrücke über kurze Umfragen oder optionale Gespräche, damit wir mit deiner Stimme bauen.",
+  "earlyAccess.note.limited":
+    "Plätze sind begrenzt und wir schließen Bewerbungen, sobald alle Slots vergeben sind.",
+  "earlyAccess.faq.title": "FAQ",
+  "earlyAccess.faq.eligibility.question": "Wer darf mitmachen?",
+  "earlyAccess.faq.eligibility.answer":
+    "Lehrkräfte, Schulleitungen und pädagogische Teams, die Elternkommunikation verantworten, dürfen sich bewerben.",
+  "earlyAccess.faq.privacy.question": "Sind meine Texte privat?",
+  "earlyAccess.faq.privacy.answer":
+    "Ja. Alles bleibt privat, verschlüsselt und unterliegt unseren GDPR-ready Richtlinien – keine öffentliche Veröffentlichung und kein Teilen ohne deine Zustimmung.",
+  "earlyAccess.faq.afterBeta.question": "Was passiert nach der Beta?",
+  "earlyAccess.faq.afterBeta.answer":
+    "Du kannst Teil der Community bleiben, bekommst Launch-Infos und bleibst weiter im Gespräch, während wir Zaza Draft vor dem allgemeinen Release verbessern.",
+
   // Hallucination-Safe Tooltip
   "hallucinationSafe.tooltip.heading": "Was bedeutet halluzinationssicher?",
   "hallucinationSafe.tooltip.body":
@@ -2307,10 +2399,12 @@ const translationsDe: Record<string, string> = {
     "Kurz bearbeiten, kopieren und teilen, wenn es sich richtig anfühlt",
   "products.draft.insights.heading": "Insights & Fortschritt",
   "products.draft.insights.body":
-    "Draft verfolgt Zeitersparnis, erstellte Entwürfe, Streaks und Qualitätskennzahlen, damit du deine Entwicklung feiern kannst.",
+    "Draft zeichnet Zeitersparnis, erstellte Entwürfe, Streaks und eine Qualitätsbewertung auf, damit du das Wachstum feiern kannst, das du mit jedem durchdachten Elternbrief bewirkst, und gleichzeitig unsere lehrerzentrierte Beta mitgestaltest.",
   "products.draft.interface.heading": "Geführte Entwurfsoberfläche",
   "products.draft.interface.body":
-    "Die intuitive Oberfläche bringt Tonleitplanken, Moduswahl für Elternnachrichten vs. Zeugnisse und Spracheinstellungen zusammen, damit jeder Entwurf nach dir klingt.",
+    "Tonleitplanken, kanalbezogene Modi und Spracheinstellungen vereinen sich in einem intuitiven Workspace, damit jeder Entwurf ruhig und professionell klingt, während du das Early-Access-Programm weiterentwickelst.",
+  "products.draft.insights.imageAlt": "Zaza Draft Insights-Dashboard",
+  "products.draft.interface.imageAlt": "Zaza Draft geführte Schreiboberfläche",
 
   "products.draft.whoItsFor.title": "Perfekt für",
   "products.draft.whoItsFor.item1":

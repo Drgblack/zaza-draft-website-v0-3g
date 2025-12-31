@@ -1,27 +1,34 @@
-import type { Metadata } from "next"
-import DraftClient from "./draft-client"
+import type { Metadata } from "next";
+import DraftClient from "./draft-client";
 
-const ogImage = "/teacher-writing-parent-email-on-laptop.jpg"
-const canonicalUrl = "https://zazadraft.com/products/draft"
+const ogImage = "/images/draft-interface.png";
+const canonicalUrl = "https://zazadraft.com/products/draft";
 
 export const metadata: Metadata = {
-  title: "Zaza Draft | AI parent communication built for teachers",
+  title: "Zaza Draft | Teacher-first AI for calm parent communication",
   description:
-    "Write calmer parent emails, protect your tone, and save hours each week. Zaza Draft keeps your voice, adds safety checks, and speeds up every message.",
+    "Teacher-built Zaza Draft calms Sunday night messaging with guided tone guardrails and insights on time saved, streaks, and quality—join early access to help shape the beta.",
   openGraph: {
-    title: "Zaza Draft | AI parent communication built for teachers",
+    title: "Zaza Draft | Teacher-first AI for calm parent communication",
     description:
-      "Draft parent emails in minutes with tone guardrails and safety checks. Save time without losing your voice or credibility.",
+      "Zaza Draft pairs guided drafting modes with insights on time saved, streaks, and quality score so you can share calm, confident parent messages faster. Join early access to shape the teacher-first experience.",
     url: canonicalUrl,
     type: "website",
     siteName: "Zaza Draft",
     locale: "en_GB",
-    images: [{ url: ogImage, alt: "Teacher composing a parent email with Zaza Draft" }],
+    images: [
+      { url: ogImage, alt: "Zaza Draft writing interface" },
+      {
+        url: "/images/insights-dashboard.png",
+        alt: "Zaza Draft insights dashboard showing progress metrics",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zaza Draft | Teacher-first parent messaging",
-    description: "Faster parent emails with calm tone and safety guardrails teachers can trust.",
+    title: "Zaza Draft | Teacher-first early access",
+    description:
+      "Guided drafts, tone guardrails, and metrics on time saved, streaks, and quality—join early access to help shape the private beta.",
     images: [ogImage],
   },
   alternates: {
@@ -31,7 +38,7 @@ export const metadata: Metadata = {
       de: "https://zazadraft.com/de/products/draft",
     },
   },
-}
+};
 
 export default function DraftPage() {
   return (
@@ -51,23 +58,23 @@ export default function DraftPage() {
               price: "9.99",
               priceCurrency: "GBP",
               availability: "https://schema.org/InStock",
+              description:
+                "Private beta early access with guided drafts, tone guardrails, and insights for teachers.",
             },
             description:
-              "AI-powered parent communication tool for teachers. Write better emails with tone guardrails and translation checks.",
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "4.9",
-              ratingCount: "203",
-            },
+              "Teacher-built AI for calm parent communication. Guided drafts, tone guardrails, and insights on time saved, streaks, and quality score invite teachers to shape the private beta.",
+            image: [`${ogImage}`, "/images/insights-dashboard.png"],
             featureList: [
-              "AI-powered tone guardrails",
+              "Teacher-first tone guardrails",
+              "Guided drafting modes for parents, reports, and languages",
+              "Insights dashboards that track time saved, streaks, and quality score",
               "Translation checks for 50+ languages",
-              "Review steps before sending",
-              "Save hours on parent communication",
+              "Review steps and hallucination safeguards before sending",
+              "Early access to help shape the teacher-first private beta",
             ],
           }),
         }}
       />
     </>
-  )
+  );
 }

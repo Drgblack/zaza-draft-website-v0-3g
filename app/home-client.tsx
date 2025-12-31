@@ -1,4 +1,5 @@
 ﻿"use client";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { SignupModal } from "@/components/signup-modal";
@@ -230,14 +231,18 @@ export function HomePageClient() {
                 className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
               >
                 <Button
-                  onClick={() => {
-                    track("cta_click_home_get_started", { language });
-                    setSignupOpen(true);
-                  }}
+                  asChild
                   size="lg"
                   className="w-full sm:w-auto inline-flex items-center justify-center bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-transform transition-shadow duration-200 hover:scale-[1.03] hover:shadow-xl hover:shadow-purple-500/30 active:scale-[0.98]"
                 >
-                  {t("hero.ctaPrimary")}
+                  <Link
+                    href="/early-access"
+                    onClick={() =>
+                      track("cta_click_home_get_started", { language })
+                    }
+                  >
+                    {t("hero.ctaPrimary")}
+                  </Link>
                 </Button>
                 <Button
                   onClick={scrollToDemo}

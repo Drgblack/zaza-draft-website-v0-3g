@@ -65,13 +65,13 @@
     },
     insights: {
       heading: "Insights & Fortschritt",
-      description:
-        "Draft zeichnet Zeitersparnis, erstellte Entwürfe, Streaks und Qualitätskennzahlen auf, damit du deine Fortschritte feiern kannst.",
+      body: "Draft zeichnet Zeitersparnis, erstellte Entwürfe, Streaks und eine Qualitätsbewertung auf, damit du das Wachstum feiern kannst, das du mit jedem durchdachten Elternbrief bewirkst, und gleichzeitig unsere lehrerzentrierte Beta mitgestaltest.",
+      imageAlt: "Zaza Draft Insights-Dashboard",
     },
     interface: {
       heading: "Geführte Entwurfsoberfläche",
-      description:
-        "Tonleitplanken, Modusauswahl für Elternnachrichten vs. Zeugnisse und Spracheinstellungen kommen in einem intuitiven Workspace zusammen, damit jeder Entwurf nach dir klingt.",
+      body: "Tonleitplanken, kanalbezogene Modi und Spracheinstellungen vereinen sich in einem intuitiven Workspace, damit jeder Entwurf ruhig und professionell klingt, während du das Early-Access-Programm weiterentwickelst.",
+      imageAlt: "Zaza Draft geführte Schreiboberfläche",
     },
     social: {
       title: "Was LehrkrÃ¤fte sagen",

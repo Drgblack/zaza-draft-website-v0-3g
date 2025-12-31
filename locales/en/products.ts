@@ -136,13 +136,13 @@
     },
     insights: {
       heading: "Insights & Progress",
-      description:
-        "Draft tracks time saved, drafts created, streaks, and a quality score so you can celebrate the growth in every message.",
+      body: "Draft tracks time saved, drafts created, streaks, and a quality score so you can celebrate the growth you deliver while helping shape our teacher-first beta.",
+      imageAlt: "Zaza Draft insights dashboard",
     },
     interface: {
       heading: "Guided Drafting Interface",
-      description:
-        "Tone guardrails, channel-specific modes, and language settings sit together in an intuitive workspace so each draft feels like you.",
+      body: "Tone guardrails, channel-aware modes, and language settings live together in an intuitive workspace so every draft sounds calm and confident while you help steer the early access programme.",
+      imageAlt: "Zaza Draft guided drafting interface",
     },
     techNote: {
       title: "Hallucination-Safe:",

@@ -238,7 +238,7 @@ export default function DraftClient() {
               <div className="relative w-full min-h-[280px] overflow-hidden rounded-3xl border border-white/10 bg-[#070B16]">
                 <Image
                   src="/images/insights-dashboard.png"
-                  alt="Zaza Draft Insights Dashboard"
+                  alt={t("products.draft.insights.imageAlt")}
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 55vw"
@@ -255,22 +255,22 @@ export default function DraftClient() {
             </div>
 
             <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-              <div className="space-y-4 text-white">
+              <div className="relative w-full min-h-[280px] overflow-hidden rounded-3xl border border-white/10 bg-[#070B16] order-1 lg:order-2">
+                <Image
+                  src="/images/draft-interface.png"
+                  alt={t("products.draft.interface.imageAlt")}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 55vw"
+                />
+              </div>
+              <div className="space-y-4 text-white order-2 lg:order-1">
                 <h3 className="text-3xl font-bold">
                   {t("products.draft.interface.heading")}
                 </h3>
                 <p className="text-lg text-white/80">
                   {t("products.draft.interface.body")}
                 </p>
-              </div>
-              <div className="relative w-full min-h-[280px] overflow-hidden rounded-3xl border border-white/10 bg-[#070B16]">
-                <Image
-                  src="/images/draft-interface.png"
-                  alt="Zaza Draft writing interface"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 55vw"
-                />
               </div>
             </div>
           </div>
