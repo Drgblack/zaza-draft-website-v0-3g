@@ -301,6 +301,14 @@ export function HomePageClient() {
                   {t("hero.trustIndicators.teachers")}
                 </div>
               </motion.div>
+              <motion.p
+                initial={prefersReducedMotion ? {} : { opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.45, ease: "easeOut" }}
+                className="text-xs text-gray-400 leading-relaxed max-w-[640px] mx-auto lg:mx-0"
+              >
+                {t("hero.trustClarifier")}
+              </motion.p>
             </div>
 
             <motion.div
@@ -723,6 +731,9 @@ export function HomePageClient() {
             </h2>
             <p className="text-lg text-[#CBD5E1]">
               {t("comparison.subheading")}
+            </p>
+            <p className="text-sm text-[#94A3B8] mt-3 max-w-3xl mx-auto">
+              {t("comparison.clarifier")}
             </p>
           </motion.div>
 

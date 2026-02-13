@@ -531,9 +531,11 @@ const translationsEn: Record<string, string> = {
     "Draft takes the pressure out of parent emails, grading feedback, and report notes so your focus stays on teaching. You stay in professional control while Draft helps you write clearly and calmly.",
   "hero.ctaPrimary": "Join Early Access",
   "hero.ctaSecondary": "See Examples",
-  "hero.trustIndicators.hallucinationSafe": "Hallucination-safe",
-  "hero.trustIndicators.ferpaCompliant": "FERPA compliant",
+  "hero.trustIndicators.hallucinationSafe": "No invented student facts",
+  "hero.trustIndicators.ferpaCompliant": "FERPA-ready",
   "hero.trustIndicators.teachers": "Built with teachers",
+  "hero.trustClarifier":
+    "Draft rewrites teacher-provided text. Schools remain the data controller; Draft is built for privacy-first handling of communication drafts.",
 
   // Early Access Page
   "earlyAccess.hero.title": "Join the Zaza Draft Early-Access Programme",
@@ -611,8 +613,8 @@ const translationsEn: Record<string, string> = {
   "stats.documentsRefined.label": "Documents Refined",
   "stats.teachers.number": "Teacher-first",
   "stats.teachers.label": "Design partners shaping Draft",
-  "stats.timeSaved.number": "10+ hrs",
-  "stats.timeSaved.label": "Saved Weekly",
+  "stats.timeSaved.number": "Hours saved",
+  "stats.timeSaved.label": "each week",
   "stats.subtitle":
     "Built by teachers to relieve Sunday night stress - join our early access programme and help shape calm, professional communication with AI.",
   "socialProof.badges.teacherFounded":
@@ -707,23 +709,25 @@ const translationsEn: Record<string, string> = {
   "comparison.heading": "Why Zaza Draft feels different from generic AI",
   "comparison.subheading":
     "Built for professional school communication with safer tone support, lower cognitive load, and teacher judgment always in control",
+  "comparison.clarifier":
+    "Draft rewrites teacher-provided text. Schools remain the data controller; Draft is built for privacy-first handling of communication drafts.",
   "comparison.tableHeaders.feature": "Feature",
   "comparison.tableHeaders.genericAI": "Generic AI Tools (ChatGPT, etc.)",
   "comparison.tableHeaders.zazaDraft": "Zaza Draft",
   "comparison.rows.training.feature": "Training",
   "comparison.rows.training.generic": "General knowledge, business-focused",
   "comparison.rows.training.zaza":
-    "Trained on real teacher communications & pedagogy",
+    "Built with teacher design partners and education-specific workflows",
   "comparison.rows.safety.feature": "Safety",
   "comparison.rows.safety.generic": "May invent student details or scenarios",
   "comparison.rows.safety.zaza":
-    "Hallucination-safe - never fabricates information",
+    "Does not invent student-specific claims - rewrites only what you provide",
   "comparison.rows.toneControl.feature": "Tone Control",
   "comparison.rows.toneControl.generic": "Limited or inconsistent",
   "comparison.rows.toneControl.zaza": "4+ education-specific tones",
   "comparison.rows.compliance.feature": "Compliance",
   "comparison.rows.compliance.generic": "Not FERPA-designed",
-  "comparison.rows.compliance.zaza": "FERPA-compliant by design",
+  "comparison.rows.compliance.zaza": "FERPA-ready by design",
   "comparison.rows.useCases.feature": "Use Cases",
   "comparison.rows.useCases.generic": "Generic writing tasks",
   "comparison.rows.useCases.zaza": "6 specialized teacher workflows",
@@ -2016,9 +2020,12 @@ const translationsDe: Record<string, string> = {
     "Draft nimmt Druck aus Elternmails, Feedback-Kommentaren und Berichtstexten, damit dein Fokus beim Unterrichten bleibt. Du behältst die professionelle Kontrolle, Draft unterstützt dich beim klaren und ruhigen Formulieren.",
   "hero.ctaPrimary": "Early Access beitreten",
   "hero.ctaSecondary": "Beispiele ansehen",
-  "hero.trustIndicators.hallucinationSafe": "Halluzinationssicher",
-  "hero.trustIndicators.ferpaCompliant": "FERPA-konform",
+  "hero.trustIndicators.hallucinationSafe":
+    "Keine erfundenen Schülerinformationen",
+  "hero.trustIndicators.ferpaCompliant": "FERPA-ready",
   "hero.trustIndicators.teachers": "Mit Lehrkräften entwickelt",
+  "hero.trustClarifier":
+    "Draft überarbeitet von Lehrkräften bereitgestellten Text. Schulen bleiben Datenverantwortliche; Draft ist für den datenschutzorientierten Umgang mit Kommunikationsentwürfen entwickelt.",
 
   // Early Access Page
   "earlyAccess.hero.title": "Tritt dem Zaza Draft Early-Access-Programm bei",
@@ -2097,8 +2104,8 @@ const translationsDe: Record<string, string> = {
   "stats.documentsRefined.label": "Dokumente verfeinert",
   "stats.teachers.number": "Lehrerzentriert",
   "stats.teachers.label": "Designpartner",
-  "stats.timeSaved.number": "10+ Std.",
-  "stats.timeSaved.label": "Wöchentlich gespart",
+  "stats.timeSaved.number": "Eingesparte Stunden",
+  "stats.timeSaved.label": "pro Woche",
   "stats.subtitle":
     "Von Lehrkräften gebaut, um Sonntagnacht-Stress zu reduzieren - werde Teil unseres Early-Access-Programms und gestalte ruhige, professionelle Kommunikation mit KI mit.",
   "socialProof.badges.teacherFounded":
@@ -2200,24 +2207,26 @@ const translationsDe: Record<string, string> = {
     "Warum Zaza Draft sich anders anfühlt als generische KI",
   "comparison.subheading":
     "Für professionelle Schulkommunikation entwickelt: sicherere Tonführung, weniger kognitive Last und pädagogisches Urteil bleibt immer bei dir",
+  "comparison.clarifier":
+    "Draft überarbeitet von Lehrkräften bereitgestellten Text. Schulen bleiben Datenverantwortliche; Draft ist für den datenschutzorientierten Umgang mit Kommunikationsentwürfen entwickelt.",
   "comparison.tableHeaders.feature": "Funktion",
   "comparison.tableHeaders.genericAI": "Generische KI-Tools (ChatGPT, usw.)",
   "comparison.tableHeaders.zazaDraft": "Zaza Draft",
   "comparison.rows.training.feature": "Training",
   "comparison.rows.training.generic": "Allgemeinwissen, geschäftsorientiert",
   "comparison.rows.training.zaza":
-    "Trainiert auf echter Kommunikation von Lehrkräften & Pädagogik",
+    "Mit Lehrkräfte-Designpartnern und bildungsspezifischen Workflows entwickelt",
   "comparison.rows.safety.feature": "Sicherheit",
   "comparison.rows.safety.generic":
     "Kann Schülerdetails oder Szenarien erfinden",
   "comparison.rows.safety.zaza":
-    "Halluzinationssicher – erfindet niemals Informationen",
+    "Erfindet keine schülerbezogenen Aussagen – überarbeitet nur das, was du vorgibst",
   "comparison.rows.toneControl.feature": "Tonkontrolle",
   "comparison.rows.toneControl.generic": "Begrenzt oder inkonsistent",
   "comparison.rows.toneControl.zaza": "4+ bildungsspezifische Töne",
   "comparison.rows.compliance.feature": "Compliance",
   "comparison.rows.compliance.generic": "Nicht FERPA-konzipiert",
-  "comparison.rows.compliance.zaza": "FERPA-konform von Grund auf",
+  "comparison.rows.compliance.zaza": "FERPA-ready von Grund auf",
   "comparison.rows.useCases.feature": "Anwendungsfälle",
   "comparison.rows.useCases.generic": "Generische Schreibaufgaben",
   "comparison.rows.useCases.zaza": "6 spezialisierte Lehrer-Workflows",
