@@ -616,7 +616,7 @@ def create_getting_started_en():
     
     <h2>Common Concerns Addressed</h2>
     <p><strong>Will AI replace teachers?</strong> No. AI is a tool to enhance your capabilities, not replace them.</p>
-    <p><strong>Student privacy?</strong> Always use FERPA-compliant tools and never input personally identifiable information.</p>
+    <p><strong>Student privacy?</strong> Always use FERPA-ready tools and never input personally identifiable information.</p>
     <p><strong>Not tech-savvy enough?</strong> If you can type a question, you can use AI. No coding required.</p>
     """
     
@@ -778,7 +778,7 @@ def create_ethics_framework_en():
     <p><strong>Principle:</strong> Student data must be protected and AI tools should minimize data collection.</p>
     <p><strong>In Practice:</strong></p>
     <ul>
-        <li>Use only FERPA-compliant AI tools</li>
+        <li>Use only FERPA-ready AI tools</li>
         <li>Never input personally identifiable information</li>
         <li>Understand what data AI tools collect</li>
     </ul>

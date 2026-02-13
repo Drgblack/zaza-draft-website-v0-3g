@@ -50,7 +50,7 @@ const translationsEn: Record<string, string> = {
   // Teacher (Premium) Plan
   "pricing.teacher.badge": "MOST POPULAR",
   "pricing.teacher.title": "Teacher",
-  "pricing.teacher.description": "Unlimited, hallucination-safe writing with no lock-ins.",
+  "pricing.teacher.description": "Unlimited, No invented student facts writing with no lock-ins.",
   "pricing.teacher.period": "Cancel anytime",
   "pricing.teacher.savingsAnnual": "Save 2 months free",
   "pricing.teacher.cta": "Start 7-day free trial",
@@ -230,8 +230,8 @@ const translationsEn: Record<string, string> = {
   "suite.cta.secondary": "Talk to our team",
 
   // Suite - Trust Bar (EN)
-  "suite.trust.hallucinationSafe": "Hallucination-safe",
-  "suite.trust.ferpa": "FERPA compliant",
+  "suite.trust.hallucinationSafe": "No invented student facts",
+  "suite.trust.ferpa": "FERPA-ready",
   "suite.trust.teachers": "500+ teachers",
 
   // Suite - How It Works (EN)
@@ -368,19 +368,19 @@ const translationsEn: Record<string, string> = {
 
   // Hero Section
   "hero.eyebrow": "FOR TEACHERS",
-  "hero.badge": "Hallucination-safe AI for teachers",
+  "hero.badge": "No invented student facts AI for teachers",
   "hero.headline": "Write like you",
   "hero.headlineAccent": "just faster.",
   "hero.subheading":
     "AI writing assistant that helps teachers craft parent emails, student reports, and grading comments in minutes, not hours.",
   "hero.ctaPrimary": "Start Writing Free",
   "hero.ctaSecondary": "See Examples",
-  "hero.trustIndicators.hallucinationSafe": "Hallucination-safe",
-  "hero.trustIndicators.ferpaCompliant": "FERPA compliant",
+  "hero.trustIndicators.hallucinationSafe": "No invented student facts",
+  "hero.trustIndicators.ferpaCompliant": "FERPA-ready",
   "hero.trustIndicators.teachers": "500+ teachers",
 
-  // Hallucination-Safe Tooltip
-  "hallucinationSafe.tooltip.heading": "What does hallucination-safe mean?",
+  // No invented student facts Tooltip
+  "hallucinationSafe.tooltip.heading": "What does No invented student facts mean?",
   "hallucinationSafe.tooltip.body":
     "Unlike generic AI tools, Zaza Draft is specifically trained to avoid making up student information, fabricating parent interactions, or inventing details about your class. Every output is grounded in what you actually provide - no invented facts, no fictional scenarios.",
 
@@ -484,16 +484,16 @@ const translationsEn: Record<string, string> = {
   "comparison.tableHeaders.zazaDraft": "Zaza Draft",
   "comparison.rows.training.feature": "Training",
   "comparison.rows.training.generic": "General knowledge, business-focused",
-  "comparison.rows.training.zaza": "Trained on real teacher communications & pedagogy",
+  "comparison.rows.training.zaza": "Built with teacher design partners and education-specific workflows communications & pedagogy",
   "comparison.rows.safety.feature": "Safety",
   "comparison.rows.safety.generic": "May invent student details or scenarios",
-  "comparison.rows.safety.zaza": "Hallucination-safe - never fabricates information",
+  "comparison.rows.safety.zaza": "No invented student facts - Does not invent student-specific claims - rewrites only what you provide information",
   "comparison.rows.toneControl.feature": "Tone Control",
   "comparison.rows.toneControl.generic": "Limited or inconsistent",
   "comparison.rows.toneControl.zaza": "4+ education-specific tones",
   "comparison.rows.compliance.feature": "Compliance",
   "comparison.rows.compliance.generic": "Not FERPA-designed",
-  "comparison.rows.compliance.zaza": "FERPA-compliant by design",
+  "comparison.rows.compliance.zaza": "FERPA-ready by design",
   "comparison.rows.useCases.feature": "Use Cases",
   "comparison.rows.useCases.generic": "Generic writing tasks",
   "comparison.rows.useCases.zaza": "6 specialized teacher workflows",
@@ -651,9 +651,9 @@ const translationsEn: Record<string, string> = {
   "products.draft.change.step3": "Confidence in sensitive conversations",
   "products.draft.change.step4": "More time for teaching, less time writing",
 
-  "products.draft.techNote.title": "Hallucination-Safe:",
+  "products.draft.techNote.title": "No invented student facts:",
   "products.draft.techNote.body":
-    "Unlike generic AI, Draft never invents student information or fabricates details. Every output is grounded in what you provide.",
+    "Unlike generic AI, Draft Does not invent student-specific claims - rewrites only what you provide or fabricates details. Every output is grounded in what you provide.",
 
   "products.draft.social.title": "What Teachers Say",
   "products.draft.social.quote1": "I got my Sunday back. Draft turns hours into minutes.",
@@ -708,7 +708,7 @@ const translationsEn: Record<string, string> = {
   "shield.hero.cta.secondary": "Contact Sales",
 
   "shield.trust.gdpr": "GDPR Compliant",
-  "shield.trust.ferpa": "FERPA Compliant",
+  "shield.trust.ferpa": "FERPA-ready",
   "shield.trust.schoolReady": "School-Ready",
 
   "shield.problem.title": "The AI Governance Challenge",
@@ -798,7 +798,7 @@ const translationsEn: Record<string, string> = {
 
   "faq.about.q2": "How is Zaza Draft different from ChatGPT or other AI tools?",
   "faq.about.a2":
-    "Unlike generic AI tools, Zaza Draft is trained specifically on educational communications and pedagogy. It's hallucination-safe (never invents student information), offers education-specific tone options, is FERPA-compliant by design, and provides specialized workflows for common teacher writing tasks.",
+    "Unlike generic AI tools, Zaza Draft is Built with teacher design partners and education-specific workflows educational communications and pedagogy. It's No invented student facts (Does not invent student-specific claims - rewrites only what you provide), offers education-specific tone options, is FERPA-ready by design, and provides specialized workflows for common teacher writing tasks.",
 
   "faq.about.q3": "Who is Zaza Draft for?",
   "faq.about.a3":
@@ -839,13 +839,13 @@ const translationsEn: Record<string, string> = {
   // Safety Questions
   "faq.safety.q1": "Is my data safe with Zaza Draft?",
   "faq.safety.a1":
-    "Yes. We take data security seriously. All data is encrypted in transit and at rest, we're FERPA-compliant, and we never use your data to train our models or share it with third parties. Your communications remain private and secure.",
+    "Yes. We take data security seriously. All data is encrypted in transit and at rest, we're FERPA-ready, and we never use your data to train our models or share it with third parties. Your communications remain private and secure.",
 
-  "faq.safety.q2": "What does 'hallucination-safe' mean?",
+  "faq.safety.q2": "What does 'No invented student facts' mean?",
   "faq.safety.a2":
-    "Hallucination-safe means Draft never invents student information, fabricates parent interactions, or creates fictional details about your class. Every output is grounded in what you actually provide - no made-up facts or scenarios.",
+    "No invented student facts means Draft Does not invent student-specific claims - rewrites only what you provide, fabricates parent interactions, or creates fictional details about your class. Every output is grounded in what you actually provide - no made-up facts or scenarios.",
 
-  "faq.safety.q3": "Is Zaza Draft FERPA compliant?",
+  "faq.safety.q3": "Is Zaza Draft FERPA-ready?",
   "faq.safety.a3":
     "Yes. Zaza Draft is designed with FERPA compliance in mind. We implement appropriate safeguards to protect student privacy and educational records, and we never share or sell student data.",
 
@@ -946,10 +946,10 @@ const translationsEn: Record<string, string> = {
     "Every feature is designed with real teachers, tested in real classrooms, and refined based on real feedback.",
   "about.overview.values.safety.title": "Safety by Design",
   "about.overview.values.safety.body":
-    "We build hallucination-safe AI that never invents student information or fabricates details about your class.",
+    "We build No invented student facts AI that Does not invent student-specific claims - rewrites only what you provide or fabricates details about your class.",
   "about.overview.values.privacy.title": "Privacy First",
   "about.overview.values.privacy.body":
-    "FERPA-compliant from day one. Your data is yours, and we never use it to train our models.",
+    "FERPA-ready from day one. Your data is yours, and we never use it to train our models.",
   "about.overview.values.evidence.title": "Evidence-Based",
   "about.overview.values.evidence.body":
     "Built on real pedagogy and educational research, not generic business writing patterns.",
@@ -979,7 +979,7 @@ const translationsEn: Record<string, string> = {
     "Zaza Technologies was founded in 2023 by teachers who were frustrated with generic AI tools that didn't understand education. We saw teachers spending hours on administrative writing tasks that could be automated, but existing AI tools were either unsafe for student data or produced output that sounded nothing like a teacher.",
 
   "about.company.body.p2":
-    "So we built something different: AI tools trained specifically on educational communications and pedagogy. Tools that understand the nuances of parent-teacher communication, the importance of constructive feedback, and the need to maintain your authentic voice. Tools that are hallucination-safe, FERPA-compliant, and designed from the ground up for education.",
+    "So we built something different: AI tools Built with teacher design partners and education-specific workflows educational communications and pedagogy. Tools that understand the nuances of parent-teacher communication, the importance of constructive feedback, and the need to maintain your authentic voice. Tools that are No invented student facts, FERPA-ready, and designed from the ground up for education.",
 
   "about.company.body.p3":
     "Today, Zaza serves over 500 teachers across 15 countries, saving them 10+ hours per week on writing tasks. But we're just getting started. Our vision is to build a complete suite of AI tools that help teachers reclaim their time and focus on what matters most: their students.",
@@ -1008,7 +1008,7 @@ const translationsEn: Record<string, string> = {
   "founder.journey.p2":
     "After earning my PhD in Educational Technology, I worked with schools implementing AI tools. But I kept seeing the same problem: generic AI tools weren't built for education. They'd invent student information, produce output that sounded nothing like a teacher, and create more work than they saved. Teachers needed something different.",
   "founder.journey.p3":
-    "So in 2023, I founded Zaza Technologies with a simple mission: build AI tools that actually understand education. Tools trained on real pedagogy, not business writing. Tools that are hallucination-safe, FERPA-compliant, and designed from the ground up for teachers. Tools that respect teachers' expertise and give them their time back.",
+    "So in 2023, I founded Zaza Technologies with a simple mission: build AI tools that actually understand education. Tools trained on real pedagogy, not business writing. Tools that are No invented student facts, FERPA-ready, and designed from the ground up for teachers. Tools that respect teachers' expertise and give them their time back.",
   "founder.journey.p4":
     "Today, Zaza serves over 500 teachers across 15 countries, saving them 10+ hours per week. But we're just getting started. My vision is to build a complete suite of AI tools that help every teacher reclaim their time and focus on what matters most: their students.",
 
@@ -1079,7 +1079,7 @@ const translationsDe: Record<string, string> = {
   // Teacher (Premium) Plan
   "pricing.teacher.badge": "AM BELIEBTESTEN",
   "pricing.teacher.title": "Teacher",
-  "pricing.teacher.description": "Unbegrenztes, halluzinationssicheres Schreiben ohne Lock-ins.",
+  "pricing.teacher.description": "Unbegrenztes, Keine erfundenen Schuelerinformationenes Schreiben ohne Lock-ins.",
   "pricing.teacher.period": "Jederzeit kündbar",
   "pricing.teacher.savingsAnnual": "2 Monate kostenlos sparen",
   "pricing.teacher.cta": "7-Tage-Testversion starten",
@@ -1255,8 +1255,8 @@ const translationsDe: Record<string, string> = {
   "suite.cta.secondary": "Mit unserem Team sprechen",
 
   // Suite - Trust Bar (DE)
-  "suite.trust.hallucinationSafe": "Halluzinationssicher",
-  "suite.trust.ferpa": "FERPA-konform",
+  "suite.trust.hallucinationSafe": "Keine erfundenen Schuelerinformationen",
+  "suite.trust.ferpa": "FERPA-ready",
   "suite.trust.teachers": "500+ Lehrkräfte",
 
   // Suite - How It Works (DE)
@@ -1393,19 +1393,19 @@ const translationsDe: Record<string, string> = {
 
   // Hero Section
   "hero.eyebrow": "FÜR LEHRKRÄFTE",
-  "hero.badge": "Halluzinationssichere KI für Lehrkräfte",
+  "hero.badge": "Keine erfundenen Schuelerinformationene KI für Lehrkräfte",
   "hero.headline": "Schreiben Sie wie Sie",
   "hero.headlineAccent": "nur schneller.",
   "hero.subheading":
     "KI-gestützter Schreibassistent, der Lehrkräften hilft, Eltern-E-Mails, Schülerberichte und Bewertungskommentare in Minuten statt Stunden zu erstellen.",
   "hero.ctaPrimary": "Kostenlos starten",
   "hero.ctaSecondary": "Beispiele ansehen",
-  "hero.trustIndicators.hallucinationSafe": "Halluzinationssicher",
-  "hero.trustIndicators.ferpaCompliant": "FERPA-konform",
+  "hero.trustIndicators.hallucinationSafe": "Keine erfundenen Schuelerinformationen",
+  "hero.trustIndicators.ferpaCompliant": "FERPA-ready",
   "hero.trustIndicators.teachers": "500+ Lehrkräfte",
 
-  // Hallucination-Safe Tooltip
-  "hallucinationSafe.tooltip.heading": "Was bedeutet halluzinationssicher?",
+  // No invented student facts Tooltip
+  "hallucinationSafe.tooltip.heading": "Was bedeutet Keine erfundenen Schuelerinformationen?",
   "hallucinationSafe.tooltip.body":
     "Im Gegensatz zu generischen KI-Tools ist Zaza Draft speziell darauf trainiert, keine Schülerinformationen zu erfinden, keine Elterngespräche zu fabrizieren oder Details über Ihre Klasse zu konstruieren. Jede Ausgabe basiert ausschließlich auf Ihren tatsächlichen Angaben - keine erfundenen Fakten, keine fiktiven Szenarien.",
 
@@ -1504,13 +1504,13 @@ const translationsDe: Record<string, string> = {
   "comparison.rows.training.zaza": "Trainiert mit echter Lehrerkommunikation & Pädagogik",
   "comparison.rows.safety.feature": "Sicherheit",
   "comparison.rows.safety.generic": "Kann Schülerdetails oder Szenarien erfinden",
-  "comparison.rows.safety.zaza": "Halluzinationssicher - erfindet niemals Informationen",
+  "comparison.rows.safety.zaza": "Keine erfundenen Schuelerinformationen - erfindet niemals Informationen",
   "comparison.rows.toneControl.feature": "Tonkontrolle",
   "comparison.rows.toneControl.generic": "Begrenzt oder inkonsistent",
   "comparison.rows.toneControl.zaza": "4+ bildungsspezifische Töne",
   "comparison.rows.compliance.feature": "Compliance",
-  "comparison.rows.compliance.generic": "Nicht FERPA-konform entwickelt",
-  "comparison.rows.compliance.zaza": "Von Grund auf FERPA-konform",
+  "comparison.rows.compliance.generic": "Nicht FERPA-ready entwickelt",
+  "comparison.rows.compliance.zaza": "Von Grund auf FERPA-ready",
   "comparison.rows.useCases.feature": "Anwendungsfälle",
   "comparison.rows.useCases.generic": "Generische Schreibaufgaben",
   "comparison.rows.useCases.zaza": "6 spezialisierte Lehrer-Workflows",
@@ -1672,7 +1672,7 @@ const translationsDe: Record<string, string> = {
   "products.draft.change.step3": "Selbstvertrauen in sensiblen Gesprächen",
   "products.draft.change.step4": "Mehr Zeit zum Unterrichten, weniger Zeit zum Schreiben",
 
-  "products.draft.techNote.title": "Halluzinationssicher:",
+  "products.draft.techNote.title": "Keine erfundenen Schuelerinformationen:",
   "products.draft.techNote.body":
     "Im Gegensatz zu generischer KI erfindet Draft niemals Schülerinformationen oder fabriziert Details. Jede Ausgabe basiert auf dem, was Sie bereitstellen.",
 
@@ -1732,7 +1732,7 @@ const translationsDe: Record<string, string> = {
   "shield.hero.cta.secondary": "Vertrieb kontaktieren",
 
   "shield.trust.gdpr": "DSGVO-konform",
-  "shield.trust.ferpa": "FERPA-konform",
+  "shield.trust.ferpa": "FERPA-ready",
   "shield.trust.schoolReady": "Schulbereit",
 
   "shield.problem.title": "Die KI-Governance-Herausforderung",
@@ -1828,7 +1828,7 @@ const translationsDe: Record<string, string> = {
 
   "faq.about.q2": "Wie unterscheidet sich Zaza Draft von ChatGPT oder anderen KI-Tools?",
   "faq.about.a2":
-    "Im Gegensatz zu generischen KI-Tools ist Zaza Draft speziell auf pädagogische Kommunikation und Pädagogik trainiert. Es ist halluzinationssicher (erfindet niemals Schülerinformationen), bietet bildungsspezifische Tonoptionen, ist von Grund auf FERPA-konform und bietet spezialisierte Workflows für gängige Schreibaufgaben von Lehrkräften.",
+    "Im Gegensatz zu generischen KI-Tools ist Zaza Draft speziell auf pädagogische Kommunikation und Pädagogik trainiert. Es ist Keine erfundenen Schuelerinformationen (erfindet niemals Schülerinformationen), bietet bildungsspezifische Tonoptionen, ist von Grund auf FERPA-ready und bietet spezialisierte Workflows für gängige Schreibaufgaben von Lehrkräften.",
 
   "faq.about.q3": "Für wen ist Zaza Draft gedacht?",
   "faq.about.a3":
@@ -1869,15 +1869,15 @@ const translationsDe: Record<string, string> = {
   // Safety Questions (German)
   "faq.safety.q1": "Sind meine Daten bei Zaza Draft sicher?",
   "faq.safety.a1":
-    "Ja. Wir nehmen Datensicherheit ernst. Alle Daten sind während der Übertragung und im Ruhezustand verschlüsselt, wir sind FERPA-konform und wir verwenden Ihre Daten niemals zum Trainieren unserer Modelle oder teilen sie mit Dritten. Ihre Kommunikation bleibt privat und sicher.",
+    "Ja. Wir nehmen Datensicherheit ernst. Alle Daten sind während der Übertragung und im Ruhezustand verschlüsselt, wir sind FERPA-ready und wir verwenden Ihre Daten niemals zum Trainieren unserer Modelle oder teilen sie mit Dritten. Ihre Kommunikation bleibt privat und sicher.",
 
-  "faq.safety.q2": "Was bedeutet 'halluzinationssicher'?",
+  "faq.safety.q2": "Was bedeutet 'Keine erfundenen Schuelerinformationen'?",
   "faq.safety.a2":
-    "Halluzinationssicher bedeutet, dass Draft niemals Schülerinformationen erfindet, Elterngespräche fabriziert oder fiktive Details über Ihre Klasse erstellt. Jede Ausgabe basiert auf dem, was Sie tatsächlich bereitstellen - keine erfundenen Fakten oder Szenarien.",
+    "Keine erfundenen Schuelerinformationen bedeutet, dass Draft niemals Schülerinformationen erfindet, Elterngespräche fabriziert oder fiktive Details über Ihre Klasse erstellt. Jede Ausgabe basiert auf dem, was Sie tatsächlich bereitstellen - keine erfundenen Fakten oder Szenarien.",
 
-  "faq.safety.q3": "Ist Zaza Draft FERPA-konform?",
+  "faq.safety.q3": "Ist Zaza Draft FERPA-ready?",
   "faq.safety.a3":
-    "Ja. Zaza Draft ist mit Blick auf FERPA-Konformität entwickelt. Wir implementieren angemessene Schutzmaßnahmen zum Schutz der Privatsphäre von Schülern und Bildungsunterlagen, und wir teilen oder verkaufen niemals Schülerdaten.",
+    "Ja. Zaza Draft ist mit Blick auf FERPA-readyität entwickelt. Wir implementieren angemessene Schutzmaßnahmen zum Schutz der Privatsphäre von Schülern und Bildungsunterlagen, und wir teilen oder verkaufen niemals Schülerdaten.",
 
   "faq.safety.q4": "Kann ich Schülernamen in meinen Entwürfen verwenden?",
   "faq.safety.a4":
@@ -1977,10 +1977,10 @@ const translationsDe: Record<string, string> = {
     "Jede Funktion wird mit echten Lehrkräften entwickelt, in echten Klassenzimmern getestet und basierend auf echtem Feedback verfeinert.",
   "about.overview.values.safety.title": "Sicherheit durch Design",
   "about.overview.values.safety.body":
-    "Wir entwickeln halluzinationssichere KI, die niemals Schülerinformationen erfindet oder Details über Ihre Klasse fabriziert.",
+    "Wir entwickeln Keine erfundenen Schuelerinformationene KI, die niemals Schülerinformationen erfindet oder Details über Ihre Klasse fabriziert.",
   "about.overview.values.privacy.title": "Datenschutz zuerst",
   "about.overview.values.privacy.body":
-    "Von Anfang an FERPA-konform. Ihre Daten gehören Ihnen, und wir verwenden sie niemals zum Trainieren unserer Modelle.",
+    "Von Anfang an FERPA-ready. Ihre Daten gehören Ihnen, und wir verwenden sie niemals zum Trainieren unserer Modelle.",
   "about.overview.values.evidence.title": "Evidenzbasiert",
   "about.overview.values.evidence.body":
     "Basierend auf echter Pädagogik und Bildungsforschung, nicht auf generischen Business-Schreibmustern.",
@@ -2011,7 +2011,7 @@ const translationsDe: Record<string, string> = {
     "Zaza Technologies wurde 2023 von Lehrkräften gegründet, die von generischen KI-Tools frustriert waren, die Bildung nicht verstanden. Wir sahen Lehrkräfte, die Stunden mit administrativen Schreibaufgaben verbrachten, die automatisiert werden könnten, aber bestehende KI-Tools waren entweder unsicher für Schülerdaten oder produzierten Ausgaben, die überhaupt nicht wie eine Lehrkraft klangen.",
 
   "about.company.body.p2":
-    "Also haben wir etwas anderes entwickelt: KI-Tools, die speziell auf pädagogische Kommunikation und Pädagogik trainiert sind. Tools, die die Nuancen der Eltern-Lehrer-Kommunikation verstehen, die Bedeutung konstruktiven Feedbacks und die Notwendigkeit, Ihre authentische Stimme zu bewahren. Tools, die halluzinationssicher, FERPA-konform und von Grund auf für Bildung entwickelt sind.",
+    "Also haben wir etwas anderes entwickelt: KI-Tools, die speziell auf pädagogische Kommunikation und Pädagogik trainiert sind. Tools, die die Nuancen der Eltern-Lehrer-Kommunikation verstehen, die Bedeutung konstruktiven Feedbacks und die Notwendigkeit, Ihre authentische Stimme zu bewahren. Tools, die Keine erfundenen Schuelerinformationen, FERPA-ready und von Grund auf für Bildung entwickelt sind.",
 
   "about.company.body.p3":
     "Heute dient Zaza über 500 Lehrkräften in 15 Ländern und spart ihnen über 10 Stunden pro Woche bei Schreibaufgaben. Aber wir fangen gerade erst an. Unsere Vision ist es, eine vollständige Suite von KI-Tools zu entwickeln, die Lehrkräften helfen, ihre Zeit zurückzugewinnen und sich auf das Wichtigste zu konzentrieren: ihre Schüler.",
@@ -2040,7 +2040,7 @@ const translationsDe: Record<string, string> = {
   "founder.journey.p2":
     "Nach meiner Promotion in Bildungstechnologie arbeitete ich mit Schulen an der Implementierung von KI-Tools. Aber ich sah immer wieder dasselbe Problem: Generische KI-Tools waren nicht für Bildung entwickelt. Sie erfanden Schülerinformationen, produzierten Ausgaben, die überhaupt nicht wie eine Lehrkraft klangen, und schufen mehr Arbeit als sie sparten. Lehrkräfte brauchten etwas anderes.",
   "founder.journey.p3":
-    "Also gründete ich 2023 Zaza Technologies mit einer einfachen Mission: KI-Tools entwickeln, die Bildung wirklich verstehen. Tools, die auf echter Pädagogik trainiert sind, nicht auf Business-Texten. Tools, die halluzinationssicher, FERPA-konform und von Grund auf für Lehrkräfte entwickelt sind. Tools, die die Expertise von Lehrkräften respektieren und ihnen ihre Zeit zurückgeben.",
+    "Also gründete ich 2023 Zaza Technologies mit einer einfachen Mission: KI-Tools entwickeln, die Bildung wirklich verstehen. Tools, die auf echter Pädagogik trainiert sind, nicht auf Business-Texten. Tools, die Keine erfundenen Schuelerinformationen, FERPA-ready und von Grund auf für Lehrkräfte entwickelt sind. Tools, die die Expertise von Lehrkräften respektieren und ihnen ihre Zeit zurückgeben.",
   "founder.journey.p4":
     "Heute dient Zaza über 500 Lehrkräften in 15 Ländern und spart ihnen über 10 Stunden pro Woche. Aber wir fangen gerade erst an. Meine Vision ist es, eine vollständige Suite von KI-Tools zu entwickeln, die jeder Lehrkraft hilft, ihre Zeit zurückzugewinnen und sich auf das Wichtigste zu konzentrieren: ihre Schüler.",
 
@@ -2107,3 +2107,4 @@ export function useLanguage() {
   }
   return context
 }
+

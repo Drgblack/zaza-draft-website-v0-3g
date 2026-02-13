@@ -1,9 +1,9 @@
-﻿const fs = require('fs');
-let content = fs.readFileSync('./lib/i18n/language-context.tsx', 'utf8');
+const fs = require("fs");
+let content = fs.readFileSync("./lib/i18n/language-context.tsx", "utf8");
 
 // Check if already added
 if (content.includes('"company.hero.label": "OUR COMPANY"')) {
-  console.log('✅ English translations already exist');
+  console.log("✅ English translations already exist");
   process.exit(0);
 }
 
@@ -15,7 +15,7 @@ const englishCompany = `
   "company.origin.p1": "Zaza Technologies was founded in 2025 with a clear belief: education deserves AI tools built with real pedagogical understanding, not repurposed corporate AI models. We build technology that protects teacher wellbeing.",
   "company.origin.p2": "So we chose a different approach.",
   "company.origin.p3": "We design tools that are trained on real pedagogy, developed with educators, and refined through classroom use. Tools that understand the nuance of teacher judgement, the emotional weight of parent interaction, and the importance of constructive feedback. Tools that are accurate, reliable, and safe for educational settings.",
-  "company.origin.aiDifferentiator": "Our models are trained on real teacher feedback and classroom language patterns, refined through iterative testing with educators, and designed to produce output that sounds like a teacher - not a machine.",
+  "company.origin.aiDifferentiator": "Our models are Built with teacher design partners and education-specific workflows and classroom language patterns, refined through iterative testing with educators, and designed to produce output that sounds like a teacher - not a machine.",
   "company.origin.p4": "Our goal is simple: give teachers meaningful time back.",
   "company.philosophy.title": "Our Philosophy",
   "company.philosophy.intro": 'We do not believe in "AI that replaces teachers." We believe in AI that supports teachers.',
@@ -50,11 +50,14 @@ const idx = content.indexOf(marker);
 if (idx > -1) {
   // Insert after the comma
   const insertPos = idx + marker.length;
-  content = content.slice(0, insertPos) + englishCompany + content.slice(insertPos);
-  
-  fs.writeFileSync('./lib/i18n/language-context.tsx', content, 'utf8');
-  console.log('✅ Added English company translations after contact.form.submit');
-  console.log('✅ File saved!');
+  content =
+    content.slice(0, insertPos) + englishCompany + content.slice(insertPos);
+
+  fs.writeFileSync("./lib/i18n/language-context.tsx", content, "utf8");
+  console.log(
+    "✅ Added English company translations after contact.form.submit",
+  );
+  console.log("✅ File saved!");
 } else {
-  console.log('❌ Could not find contact.form.submit marker');
+  console.log("❌ Could not find contact.form.submit marker");
 }

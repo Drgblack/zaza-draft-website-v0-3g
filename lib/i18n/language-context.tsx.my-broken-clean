@@ -34,15 +34,15 @@ const translations = {
 
     // ===== HERO & CTA =====
     "hero.eyebrow": "FOR TEACHERS",
-    "hero.badge": "Hallucination-safe AI for teachers",
+    "hero.badge": "No invented student facts AI for teachers",
     "hero.headline": "Write like you",
     "hero.headlineAccent": "just faster.",
     "hero.subheading":
       "AI-powered writing assistant that helps teachers write parent emails, student reports, and grade comments in minutes instead of hours.",
     "hero.ctaPrimary": "Start Writing Free",
     "hero.ctaSecondary": "See Examples",
-    "hero.trustIndicators.hallucinationSafe": "Hallucination-safe",
-    "hero.trustIndicators.ferpaCompliant": "FERPA compliant",
+    "hero.trustIndicators.hallucinationSafe": "No invented student facts",
+    "hero.trustIndicators.ferpaCompliant": "FERPA-ready",
     "hero.trustIndicators.teachers": "500+ teachers",
 
     // ===== VIDEOS =====
@@ -199,7 +199,7 @@ const translations = {
       "Yes, you can cancel your subscription at any time. No long-term commitments.",
     "pricing.faq.data": "Is my data safe?",
     "pricing.faq.dataAnswer":
-      "Absolutely. We are FERPA compliant and take data privacy very seriously.",
+      "Absolutely. We are FERPA-ready and take data privacy very seriously.",
 
     // ===== FOOTER =====
     "footer.tagline": "AI-powered communication for teachers",
@@ -250,15 +250,15 @@ const translations = {
 
     // ===== HERO & CTA =====
     "hero.eyebrow": "FÜR LEHRKRÄFTE",
-    "hero.badge": "Halluzinationssichere KI für Lehrkräfte",
+    "hero.badge": "Keine erfundenen Schuelerinformationene KI für Lehrkräfte",
     "hero.headline": "Schreiben Sie wie Sie",
     "hero.headlineAccent": "nur schneller.",
     "hero.subheading":
       "KI-gestützter Schreibassistent, der Lehrkräften hilft, Eltern-E-Mails, Schülerberichte und Bewertungskommentare in Minuten statt Stunden zu erstellen.",
     "hero.ctaPrimary": "Kostenlos starten",
     "hero.ctaSecondary": "Beispiele ansehen",
-    "hero.trustIndicators.hallucinationSafe": "Halluzinationssicher",
-    "hero.trustIndicators.ferpaCompliant": "FERPA-konform",
+    "hero.trustIndicators.hallucinationSafe": "Keine erfundenen Schuelerinformationen",
+    "hero.trustIndicators.ferpaCompliant": "FERPA-ready",
     "hero.trustIndicators.teachers": "500+ Lehrkräfte",
 
     // ===== VIDEOS =====
@@ -301,7 +301,7 @@ const translations = {
     "videos.title.weeklyNewsletters": "Wöchentliche Klassenbriefe erstellen",
     "videos.title.specialEducation": "Sonderpädagogik-Kommunikation",
     "videos.title.consistentTone": "Einheitlichen Ton beibehalten",
-    "videos.title.privacyCompliance": "Datenschutz & FERPA-Konformität",
+    "videos.title.privacyCompliance": "Datenschutz & FERPA-readyität",
     "videos.title.ethicalAI": "Ethischer KI-Einsatz in der Bildung",
     "videos.title.personalization": "Personalisierungs-Best-Practices",
 
@@ -420,7 +420,7 @@ const translations = {
       "Ja, Sie können Ihr Abonnement jederzeit kündigen. Keine langfristigen Verpflichtungen.",
     "pricing.faq.data": "Sind meine Daten sicher?",
     "pricing.faq.dataAnswer":
-      "Absolut. Wir sind FERPA-konform und nehmen Datenschutz sehr ernst.",
+      "Absolut. Wir sind FERPA-ready und nehmen Datenschutz sehr ernst.",
 
     // ===== FOOTER =====
     "footer.tagline": "KI-gestützte Kommunikation für Lehrkräfte",
@@ -490,3 +490,4 @@ export function useLanguage() {
   }
   return context;
 }
+

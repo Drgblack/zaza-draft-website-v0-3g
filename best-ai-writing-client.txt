@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { blogPosts } from "./page";   // NOT: import blogPosts from "./page"
 import { useLanguage } from "@/lib/i18n/language-context"
@@ -32,7 +32,7 @@ export default function BestAIWritingClient() {
       rating: 4.9,
       price: "Free - $12/mo",
       bestFor: "Parent emails, feedback, IEPs",
-      pros: ["Teacher-specific templates", "FERPA compliant", "Tone control", "Multi-language"],
+      pros: ["Teacher-specific templates", "FERPA-ready", "Tone control", "Multi-language"],
       cons: ["Newer platform"],
       link: "/products/draft",
     },
@@ -101,7 +101,7 @@ export default function BestAIWritingClient() {
       subject: "Special Education",
       tasks: ["IEP goals", "Accommodation letters", "Progress monitoring", "Parent communication"],
       recommendedTool: "Zaza Draft",
-      why: "FERPA-compliant with special ed templates",
+      why: "FERPA-ready with special ed templates",
     },
   ]
 
@@ -124,7 +124,7 @@ export default function BestAIWritingClient() {
     {
       question: "What about student data privacy?",
       answer:
-        "Never input student names, IDs, or sensitive information into generic AI tools. Use education-specific tools like Zaza Draft that are FERPA-compliant and designed for teacher use.",
+        "Never input student names, IDs, or sensitive information into generic AI tools. Use education-specific tools like Zaza Draft that are FERPA-ready and designed for teacher use.",
     },
     {
       question: "Which tool is best for beginners?",
@@ -316,7 +316,7 @@ export default function BestAIWritingClient() {
                       <td className="p-4 text-center text-gray-500">-</td>
                     </tr>
                     <tr className="hover:bg-[#1E293B]/50 transition-colors">
-                      <td className="p-4 font-medium text-gray-300">FERPA Compliant</td>
+                      <td className="p-4 font-medium text-gray-300">FERPA-ready</td>
                       <td className="p-4 text-center">
                         <Check className="mx-auto h-5 w-5 text-green-400" />
                       </td>
@@ -561,7 +561,7 @@ export default function BestAIWritingClient() {
             {/* CTA Card */}
             <div className="rounded-xl border border-[#8B5CF6]/30 bg-gradient-to-br from-[#8B5CF6]/20 to-[#A78BFA]/10 p-6">
               <h3 className="mb-2 font-semibold text-white">Try Zaza Draft</h3>
-              <p className="mb-4 text-sm text-gray-300">Purpose-built for teachers. FERPA compliant. Free to start.</p>
+              <p className="mb-4 text-sm text-gray-300">Purpose-built for teachers. FERPA-ready. Free to start.</p>
               <Button asChild className="w-full bg-[#8B5CF6] hover:bg-[#7C3AED] text-white">
                 <Link href="/products/draft">Start Free</Link>
               </Button>
@@ -572,4 +572,5 @@ export default function BestAIWritingClient() {
     </div>
   )
 }
+
 

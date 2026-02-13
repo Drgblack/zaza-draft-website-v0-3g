@@ -65,7 +65,7 @@ const translationsEn: Record<string, string> = {
   "pricing.teacher.badge": "MOST POPULAR",
   "pricing.teacher.title": "Teacher",
   "pricing.teacher.description":
-    "Unlimited, hallucination-safe writing with no lock-ins.",
+    "Unlimited, No invented student facts writing with no lock-ins.",
   "pricing.teacher.period": "Cancel anytime",
   "pricing.teacher.savingsAnnual": "Save 2 months free",
   "pricing.teacher.cta": "Start 7-day free trial",
@@ -278,8 +278,8 @@ const translationsEn: Record<string, string> = {
   "suite.cta.secondary": "Talk to our team",
 
   // Suite - Trust Bar (EN)
-  "suite.trust.hallucinationSafe": "Hallucination-safe",
-  "suite.trust.ferpa": "FERPA compliant",
+  "suite.trust.hallucinationSafe": "No invented student facts",
+  "suite.trust.ferpa": "FERPA-ready",
   "suite.trust.teachers": "500+ teachers",
 
   // Suite - How It Works (EN)
@@ -444,19 +444,19 @@ const translationsEn: Record<string, string> = {
 
   // Hero Section
   "hero.eyebrow": "FOR TEACHERS",
-  "hero.badge": "Hallucination-safe AI for teachers",
+  "hero.badge": "No invented student facts AI for teachers",
   "hero.headline": "Write like you",
   "hero.headlineAccent": "just faster.",
   "hero.subheading":
     "AI writing assistant that helps teachers craft parent emails, student reports, and grading comments in minutes, not hours.",
   "hero.ctaPrimary": "Start Writing Free",
   "hero.ctaSecondary": "See Examples",
-  "hero.trustIndicators.hallucinationSafe": "Hallucination-safe",
-  "hero.trustIndicators.ferpaCompliant": "FERPA compliant",
+  "hero.trustIndicators.hallucinationSafe": "No invented student facts",
+  "hero.trustIndicators.ferpaCompliant": "FERPA-ready",
   "hero.trustIndicators.teachers": "500+ teachers",
 
-  // Hallucination-Safe Tooltip
-  "hallucinationSafe.tooltip.heading": "What does hallucination-safe mean?",
+  // No invented student facts Tooltip
+  "hallucinationSafe.tooltip.heading": "What does No invented student facts mean?",
   "hallucinationSafe.tooltip.body":
     "Unlike generic AI tools, Zaza Draft is specifically trained to avoid making up student information, fabricating parent interactions, or inventing details about your class. Every output is grounded in what you actually provide - no invented facts, no fictional scenarios.",
 
@@ -581,17 +581,17 @@ const translationsEn: Record<string, string> = {
   "comparison.rows.training.feature": "Training",
   "comparison.rows.training.generic": "General knowledge, business-focused",
   "comparison.rows.training.zaza":
-    "Trained on real teacher communications & pedagogy",
+    "Built with teacher design partners and education-specific workflows communications & pedagogy",
   "comparison.rows.safety.feature": "Safety",
   "comparison.rows.safety.generic": "May invent student details or scenarios",
   "comparison.rows.safety.zaza":
-    "Hallucination-safe - never fabricates information",
+    "No invented student facts - Does not invent student-specific claims - rewrites only what you provide information",
   "comparison.rows.toneControl.feature": "Tone Control",
   "comparison.rows.toneControl.generic": "Limited or inconsistent",
   "comparison.rows.toneControl.zaza": "4+ education-specific tones",
   "comparison.rows.compliance.feature": "Compliance",
   "comparison.rows.compliance.generic": "Not FERPA-designed",
-  "comparison.rows.compliance.zaza": "FERPA-compliant by design",
+  "comparison.rows.compliance.zaza": "FERPA-ready by design",
   "comparison.rows.useCases.feature": "Use Cases",
   "comparison.rows.useCases.generic": "Generic writing tasks",
   "comparison.rows.useCases.zaza": "6 specialized teacher workflows",
@@ -777,9 +777,9 @@ const translationsEn: Record<string, string> = {
   "products.draft.change.step3": "Confidence in sensitive conversations",
   "products.draft.change.step4": "More time for teaching, less time writing",
 
-  "products.draft.techNote.title": "Hallucination-Safe:",
+  "products.draft.techNote.title": "No invented student facts:",
   "products.draft.techNote.body":
-    "Unlike generic AI, Draft never invents student information or fabricates details. Every output is grounded in what you provide.",
+    "Unlike generic AI, Draft Does not invent student-specific claims - rewrites only what you provide or fabricates details. Every output is grounded in what you provide.",
 
   "products.draft.social.title": "What Teachers Say",
   "products.draft.social.quote1":
@@ -847,7 +847,7 @@ const translationsEn: Record<string, string> = {
   "shield.hero.cta.secondary": "Contact Sales",
 
   "shield.trust.gdpr": "GDPR Compliant",
-  "shield.trust.ferpa": "FERPA Compliant",
+  "shield.trust.ferpa": "FERPA-ready",
   "shield.trust.schoolReady": "School-Ready",
 
   "shield.problem.title": "The AI Governance Challenge",
@@ -955,7 +955,7 @@ const translationsEn: Record<string, string> = {
 
   "faq.about.q2": "How is Zaza Draft different from ChatGPT or other AI tools?",
   "faq.about.a2":
-    "Unlike generic AI tools, Zaza Draft is trained specifically on educational communications and pedagogy. It's hallucination-safe (never invents student information), offers education-specific tone options, is FERPA-compliant by design, and provides specialized workflows for common teacher writing tasks.",
+    "Unlike generic AI tools, Zaza Draft is Built with teacher design partners and education-specific workflows educational communications and pedagogy. It's No invented student facts (Does not invent student-specific claims - rewrites only what you provide), offers education-specific tone options, is FERPA-ready by design, and provides specialized workflows for common teacher writing tasks.",
 
   "faq.about.q3": "Who is Zaza Draft for?",
   "faq.about.a3":
@@ -996,13 +996,13 @@ const translationsEn: Record<string, string> = {
   // Safety Questions
   "faq.safety.q1": "Is my data safe with Zaza Draft?",
   "faq.safety.a1":
-    "Yes. We take data security seriously. All data is encrypted in transit and at rest, we're FERPA-compliant, and we never use your data to train our models or share it with third parties. Your communications remain private and secure.",
+    "Yes. We take data security seriously. All data is encrypted in transit and at rest, we're FERPA-ready, and we never use your data to train our models or share it with third parties. Your communications remain private and secure.",
 
-  "faq.safety.q2": "What does 'hallucination-safe' mean?",
+  "faq.safety.q2": "What does 'No invented student facts' mean?",
   "faq.safety.a2":
-    "Hallucination-safe means Draft never invents student information, fabricates parent interactions, or creates fictional details about your class. Every output is grounded in what you actually provide - no made-up facts or scenarios.",
+    "No invented student facts means Draft Does not invent student-specific claims - rewrites only what you provide, fabricates parent interactions, or creates fictional details about your class. Every output is grounded in what you actually provide - no made-up facts or scenarios.",
 
-  "faq.safety.q3": "Is Zaza Draft FERPA compliant?",
+  "faq.safety.q3": "Is Zaza Draft FERPA-ready?",
   "faq.safety.a3":
     "Yes. Zaza Draft is designed with FERPA compliance in mind. We implement appropriate safeguards to protect student privacy and educational records, and we never share or sell student data.",
 
@@ -1105,10 +1105,10 @@ const translationsEn: Record<string, string> = {
     "Every feature is designed with real teachers, tested in real classrooms, and refined based on real feedback.",
   "about.overview.values.safety.title": "Safety by Design",
   "about.overview.values.safety.body":
-    "We build hallucination-safe AI that never invents student information or fabricates details about your class.",
+    "We build No invented student facts AI that Does not invent student-specific claims - rewrites only what you provide or fabricates details about your class.",
   "about.overview.values.privacy.title": "Privacy First",
   "about.overview.values.privacy.body":
-    "FERPA-compliant from day one. Your data is yours, and we never use it to train our models.",
+    "FERPA-ready from day one. Your data is yours, and we never use it to train our models.",
   "about.overview.values.evidence.title": "Evidence-Based",
   "about.overview.values.evidence.body":
     "Built on real pedagogy and educational research, not generic business writing patterns.",
@@ -1139,7 +1139,7 @@ const translationsEn: Record<string, string> = {
     "Zaza Technologies was founded in 2023 by teachers who were frustrated with generic AI tools that didn't understand education. We saw teachers spending hours on administrative writing tasks that could be automated, but existing AI tools were either unsafe for student data or produced output that sounded nothing like a teacher.",
 
   "about.company.body.p2":
-    "So we built something different: AI tools trained specifically on educational communications and pedagogy. Tools that understand the nuances of parent-teacher communication, the importance of constructive feedback, and the need to maintain your authentic voice. Tools that are hallucination-safe, FERPA-compliant, and designed from the ground up for education.",
+    "So we built something different: AI tools Built with teacher design partners and education-specific workflows educational communications and pedagogy. Tools that understand the nuances of parent-teacher communication, the importance of constructive feedback, and the need to maintain your authentic voice. Tools that are No invented student facts, FERPA-ready, and designed from the ground up for education.",
 
   "about.company.body.p3":
     "Today, Zaza serves over 500 teachers across 15 countries, saving them 10+ hours per week on writing tasks. But we're just getting started. Our vision is to build a complete suite of AI tools that help teachers reclaim their time and focus on what matters most: their students.",
@@ -1257,7 +1257,7 @@ const translationsEn: Record<string, string> = {
   "company.origin.p3":
     "We design tools that are trained on real pedagogy, developed with educators, and refined through classroom use. Tools that understand the nuance of teacher judgement, the emotional weight of parent interaction, and the importance of constructive feedback. Tools that are accurate, reliable, and safe for educational settings.",
   "company.origin.aiDifferentiator":
-    "Our models are trained on real teacher feedback and classroom language patterns, refined through iterative testing with educators, and designed to produce output that sounds like a teacher - not a machine.",
+    "Our models are Built with teacher design partners and education-specific workflows and classroom language patterns, refined through iterative testing with educators, and designed to produce output that sounds like a teacher - not a machine.",
   "company.origin.p4":
     "Our goal is simple: give teachers meaningful time back.",
   "company.philosophy.title": "Our Philosophy",
@@ -1367,7 +1367,7 @@ const translationsEn: Record<string, string> = {
   "videos.title.weeklyNewsletters": "Wöchentliche Klassenbriefe erstellen",
   "videos.title.specialEducation": "Sonderpädagogik-Kommunikation",
   "videos.title.consistentTone": "Einheitlichen Ton beibehalten",
-  "videos.title.privacyCompliance": "Datenschutz & FERPA-Konformität",
+  "videos.title.privacyCompliance": "Datenschutz & FERPA-readyität",
   "videos.title.ethicalAI": "Ethischer KI-Einsatz in der Bildung",
   "videos.title.personalization": "Personalisierungs-Best-Practices",
 
@@ -1496,7 +1496,7 @@ const translationsDe: Record<string, string> = {
   "pricing.teacher.badge": "AM BELIEBTESTEN",
   "pricing.teacher.title": "Teacher",
   "pricing.teacher.description":
-    "Unbegrenztes, halluzinationssicheres Schreiben ohne Lock-ins.",
+    "Unbegrenztes, Keine erfundenen Schuelerinformationenes Schreiben ohne Lock-ins.",
   "pricing.teacher.period": "Jederzeit kÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼ndbar",
   "pricing.teacher.savingsAnnual": "2 Monate kostenlos sparen",
   "pricing.teacher.cta": "7-Tage-Testversion starten",
@@ -1711,8 +1711,8 @@ const translationsDe: Record<string, string> = {
   "suite.cta.secondary": "Mit unserem Team sprechen",
 
   // Suite - Trust Bar (DE)
-  "suite.trust.hallucinationSafe": "Halluzinationssicher",
-  "suite.trust.ferpa": "FERPA-konform",
+  "suite.trust.hallucinationSafe": "Keine erfundenen Schuelerinformationen",
+  "suite.trust.ferpa": "FERPA-ready",
   "suite.trust.teachers": "500+ LehrkrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤fte",
 
   // Suite - How It Works (DE)
@@ -1877,19 +1877,19 @@ const translationsDe: Record<string, string> = {
 
   // Hero Section
   "hero.eyebrow": "FÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢€Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œR LEHRKRÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¾FTE",
-  "hero.badge": "Halluzinationssichere KI fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼r LehrkrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤fte",
+  "hero.badge": "Keine erfundenen Schuelerinformationene KI fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼r LehrkrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤fte",
   "hero.headline": "Schreiben Sie wie Sie",
   "hero.headlineAccent": "nur schneller.",
   "hero.subheading":
     "KI-gestÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼tzter Schreibassistent, der LehrkrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤ften hilft, Eltern-E-Mails, SchÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼lerberichte und Bewertungskommentare in Minuten statt Stunden zu erstellen.",
   "hero.ctaPrimary": "Kostenlos starten",
   "hero.ctaSecondary": "Beispiele ansehen",
-  "hero.trustIndicators.hallucinationSafe": "Halluzinationssicher",
-  "hero.trustIndicators.ferpaCompliant": "FERPA-konform",
+  "hero.trustIndicators.hallucinationSafe": "Keine erfundenen Schuelerinformationen",
+  "hero.trustIndicators.ferpaCompliant": "FERPA-ready",
   "hero.trustIndicators.teachers": "500+ LehrkrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤fte",
 
-  // Hallucination-Safe Tooltip
-  "hallucinationSafe.tooltip.heading": "Was bedeutet halluzinationssicher?",
+  // No invented student facts Tooltip
+  "hallucinationSafe.tooltip.heading": "Was bedeutet Keine erfundenen Schuelerinformationen?",
   "hallucinationSafe.tooltip.body":
     "Im Gegensatz zu generischen KI-Tools ist Zaza Draft speziell darauf trainiert, keine SchÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼lerinformationen zu erfinden, keine ElterngesprÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤che zu fabrizieren oder Details ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼ber Ihre Klasse zu konstruieren. Jede Ausgabe basiert ausschlieÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¸lich auf Ihren tatsÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤chlichen Angaben - keine erfundenen Fakten, keine fiktiven Szenarien.",
 
@@ -2014,13 +2014,13 @@ const translationsDe: Record<string, string> = {
   "comparison.rows.safety.generic":
     "Kann SchÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼lerdetails oder Szenarien erfinden",
   "comparison.rows.safety.zaza":
-    "Halluzinationssicher - erfindet niemals Informationen",
+    "Keine erfundenen Schuelerinformationen - erfindet niemals Informationen",
   "comparison.rows.toneControl.feature": "Tonkontrolle",
   "comparison.rows.toneControl.generic": "Begrenzt oder inkonsistent",
   "comparison.rows.toneControl.zaza": "4+ bildungsspezifische TÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¶ne",
   "comparison.rows.compliance.feature": "Compliance",
-  "comparison.rows.compliance.generic": "Nicht FERPA-konform entwickelt",
-  "comparison.rows.compliance.zaza": "Von Grund auf FERPA-konform",
+  "comparison.rows.compliance.generic": "Nicht FERPA-ready entwickelt",
+  "comparison.rows.compliance.zaza": "Von Grund auf FERPA-ready",
   "comparison.rows.useCases.feature": "AnwendungsfÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤lle",
   "comparison.rows.useCases.generic": "Generische Schreibaufgaben",
   "comparison.rows.useCases.zaza": "6 spezialisierte Lehrer-Workflows",
@@ -2218,7 +2218,7 @@ const translationsDe: Record<string, string> = {
   "products.draft.change.step4":
     "Mehr Zeit zum Unterrichten, weniger Zeit zum Schreiben",
 
-  "products.draft.techNote.title": "Halluzinationssicher:",
+  "products.draft.techNote.title": "Keine erfundenen Schuelerinformationen:",
   "products.draft.techNote.body":
     "Im Gegensatz zu generischer KI erfindet Draft niemals SchÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼lerinformationen oder fabriziert Details. Jede Ausgabe basiert auf dem, was Sie bereitstellen.",
 
@@ -2291,7 +2291,7 @@ const translationsDe: Record<string, string> = {
   "shield.hero.cta.secondary": "Vertrieb kontaktieren",
 
   "shield.trust.gdpr": "DSGVO-konform",
-  "shield.trust.ferpa": "FERPA-konform",
+  "shield.trust.ferpa": "FERPA-ready",
   "shield.trust.schoolReady": "Schulbereit",
 
   "shield.problem.title": "Die KI-Governance-Herausforderung",
@@ -2400,7 +2400,7 @@ const translationsDe: Record<string, string> = {
   "faq.about.q2":
     "Wie unterscheidet sich Zaza Draft von ChatGPT oder anderen KI-Tools?",
   "faq.about.a2":
-    "Im Gegensatz zu generischen KI-Tools ist Zaza Draft speziell auf pÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤dagogische Kommunikation und PÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤dagogik trainiert. Es ist halluzinationssicher (erfindet niemals SchÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼lerinformationen), bietet bildungsspezifische Tonoptionen, ist von Grund auf FERPA-konform und bietet spezialisierte Workflows fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼r gÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤ngige Schreibaufgaben von LehrkrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤ften.",
+    "Im Gegensatz zu generischen KI-Tools ist Zaza Draft speziell auf pÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤dagogische Kommunikation und PÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤dagogik trainiert. Es ist Keine erfundenen Schuelerinformationen (erfindet niemals SchÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼lerinformationen), bietet bildungsspezifische Tonoptionen, ist von Grund auf FERPA-ready und bietet spezialisierte Workflows fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼r gÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤ngige Schreibaufgaben von LehrkrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤ften.",
 
   "faq.about.q3": "FÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼r wen ist Zaza Draft gedacht?",
   "faq.about.a3":
@@ -2442,15 +2442,15 @@ const translationsDe: Record<string, string> = {
   // Safety Questions (German)
   "faq.safety.q1": "Sind meine Daten bei Zaza Draft sicher?",
   "faq.safety.a1":
-    "Ja. Wir nehmen Datensicherheit ernst. Alle Daten sind wÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤hrend der ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢€Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œbertragung und im Ruhezustand verschlÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼sselt, wir sind FERPA-konform und wir verwenden Ihre Daten niemals zum Trainieren unserer Modelle oder teilen sie mit Dritten. Ihre Kommunikation bleibt privat und sicher.",
+    "Ja. Wir nehmen Datensicherheit ernst. Alle Daten sind wÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤hrend der ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢€Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œbertragung und im Ruhezustand verschlÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼sselt, wir sind FERPA-ready und wir verwenden Ihre Daten niemals zum Trainieren unserer Modelle oder teilen sie mit Dritten. Ihre Kommunikation bleibt privat und sicher.",
 
-  "faq.safety.q2": "Was bedeutet 'halluzinationssicher'?",
+  "faq.safety.q2": "Was bedeutet 'Keine erfundenen Schuelerinformationen'?",
   "faq.safety.a2":
-    "Halluzinationssicher bedeutet, dass Draft niemals SchÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼lerinformationen erfindet, ElterngesprÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤che fabriziert oder fiktive Details ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼ber Ihre Klasse erstellt. Jede Ausgabe basiert auf dem, was Sie tatsÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤chlich bereitstellen - keine erfundenen Fakten oder Szenarien.",
+    "Keine erfundenen Schuelerinformationen bedeutet, dass Draft niemals SchÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼lerinformationen erfindet, ElterngesprÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤che fabriziert oder fiktive Details ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼ber Ihre Klasse erstellt. Jede Ausgabe basiert auf dem, was Sie tatsÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤chlich bereitstellen - keine erfundenen Fakten oder Szenarien.",
 
-  "faq.safety.q3": "Ist Zaza Draft FERPA-konform?",
+  "faq.safety.q3": "Ist Zaza Draft FERPA-ready?",
   "faq.safety.a3":
-    "Ja. Zaza Draft ist mit Blick auf FERPA-KonformitÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤t entwickelt. Wir implementieren angemessene SchutzmaÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¸nahmen zum Schutz der PrivatsphÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤re von SchÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼lern und Bildungsunterlagen, und wir teilen oder verkaufen niemals SchÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼lerdaten.",
+    "Ja. Zaza Draft ist mit Blick auf FERPA-readyitÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤t entwickelt. Wir implementieren angemessene SchutzmaÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¸nahmen zum Schutz der PrivatsphÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤re von SchÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼lern und Bildungsunterlagen, und wir teilen oder verkaufen niemals SchÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼lerdaten.",
 
   "faq.safety.q4": "Kann ich SchÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼lernamen in meinen EntwÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼rfen verwenden?",
   "faq.safety.a4":
@@ -2554,10 +2554,10 @@ const translationsDe: Record<string, string> = {
     "Jede Funktion wird mit echten LehrkrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤ften entwickelt, in echten Klassenzimmern getestet und basierend auf echtem Feedback verfeinert.",
   "about.overview.values.safety.title": "Sicherheit durch Design",
   "about.overview.values.safety.body":
-    "Wir entwickeln halluzinationssichere KI, die niemals SchÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼lerinformationen erfindet oder Details ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼ber Ihre Klasse fabriziert.",
+    "Wir entwickeln Keine erfundenen Schuelerinformationene KI, die niemals SchÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼lerinformationen erfindet oder Details ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼ber Ihre Klasse fabriziert.",
   "about.overview.values.privacy.title": "Datenschutz zuerst",
   "about.overview.values.privacy.body":
-    "Von Anfang an FERPA-konform. Ihre Daten gehÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¶ren Ihnen, und wir verwenden sie niemals zum Trainieren unserer Modelle.",
+    "Von Anfang an FERPA-ready. Ihre Daten gehÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¶ren Ihnen, und wir verwenden sie niemals zum Trainieren unserer Modelle.",
   "about.overview.values.evidence.title": "Evidenzbasiert",
   "about.overview.values.evidence.body":
     "Basierend auf echter PÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤dagogik und Bildungsforschung, nicht auf generischen Business-Schreibmustern.",
@@ -2588,7 +2588,7 @@ const translationsDe: Record<string, string> = {
     "Zaza Technologies wurde 2023 von LehrkrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤ften gegrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼ndet, die von generischen KI-Tools frustriert waren, die Bildung nicht verstanden. Wir sahen LehrkrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤fte, die Stunden mit administrativen Schreibaufgaben verbrachten, die automatisiert werden kÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¶nnten, aber bestehende KI-Tools waren entweder unsicher fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼r SchÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼lerdaten oder produzierten Ausgaben, die ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼berhaupt nicht wie eine Lehrkraft klangen.",
 
   "about.company.body.p2":
-    "Also haben wir etwas anderes entwickelt: KI-Tools, die speziell auf pÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤dagogische Kommunikation und PÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤dagogik trainiert sind. Tools, die die Nuancen der Eltern-Lehrer-Kommunikation verstehen, die Bedeutung konstruktiven Feedbacks und die Notwendigkeit, Ihre authentische Stimme zu bewahren. Tools, die halluzinationssicher, FERPA-konform und von Grund auf fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼r Bildung entwickelt sind.",
+    "Also haben wir etwas anderes entwickelt: KI-Tools, die speziell auf pÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤dagogische Kommunikation und PÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤dagogik trainiert sind. Tools, die die Nuancen der Eltern-Lehrer-Kommunikation verstehen, die Bedeutung konstruktiven Feedbacks und die Notwendigkeit, Ihre authentische Stimme zu bewahren. Tools, die Keine erfundenen Schuelerinformationen, FERPA-ready und von Grund auf fÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼r Bildung entwickelt sind.",
 
   "about.company.body.p3":
     "Heute dient Zaza ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼ber 500 LehrkrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤ften in 15 LÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤ndern und spart ihnen ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼ber 10 Stunden pro Woche bei Schreibaufgaben. Aber wir fangen gerade erst an. Unsere Vision ist es, eine vollstÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤ndige Suite von KI-Tools zu entwickeln, die LehrkrÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¤ften helfen, ihre Zeit zurÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼ckzugewinnen und sich auf das Wichtigste zu konzentrieren: ihre SchÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã¢€Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬ÃƒÂ¢Ã¢€Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢€â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢€Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢€Å¡Ãƒâ€šÃ‚Â¼ler.",
@@ -3040,3 +3040,4 @@ export function useLanguage() {
   }
   return context;
 }
+

@@ -1,5 +1,5 @@
-﻿const fs = require('fs');
-let content = fs.readFileSync('./lib/i18n/language-context.tsx', 'utf8');
+const fs = require("fs");
+let content = fs.readFileSync("./lib/i18n/language-context.tsx", "utf8");
 
 // All company translations - using single quotes where needed
 const allTranslations = {
@@ -14,7 +14,7 @@ const allTranslations = {
   "company.origin.p1": "Zaza Technologies was founded in 2025 with a clear belief: education deserves AI tools built with real pedagogical understanding, not repurposed corporate AI models. We build technology that protects teacher wellbeing.",
   "company.origin.p2": "So we chose a different approach.",
   "company.origin.p3": "We design tools that are trained on real pedagogy, developed with educators, and refined through classroom use. Tools that understand the nuance of teacher judgement, the emotional weight of parent interaction, and the importance of constructive feedback. Tools that are accurate, reliable, and safe for educational settings.",
-  "company.origin.aiDifferentiator": "Our models are trained on real teacher feedback and classroom language patterns, refined through iterative testing with educators, and designed to produce output that sounds like a teacher - not a machine.",
+  "company.origin.aiDifferentiator": "Our models are Built with teacher design partners and education-specific workflows and classroom language patterns, refined through iterative testing with educators, and designed to produce output that sounds like a teacher - not a machine.",
   "company.origin.p4": "Our goal is simple: give teachers meaningful time back.",
   "company.philosophy.title": "Our Philosophy",
   "company.philosophy.intro": 'We do not believe in "AI that replaces teachers." We believe in AI that supports teachers.',
@@ -40,9 +40,9 @@ const allTranslations = {
   "company.stats.countries.number": "15",
   "company.stats.countries.label": "Countries",
   "company.stats.hours.number": "10+",
-  "company.stats.hours.label": "Hours saved weekly",`
+  "company.stats.hours.label": "Hours saved weekly",`,
   },
-  
+
   // German - add after German "contact.help.support"
   de: {
     marker: '"contact.help.support": "→ Support-Center",',
@@ -79,30 +79,36 @@ const allTranslations = {
   "company.stats.countries.number": "15",
   "company.stats.countries.label": "Länder",
   "company.stats.hours.number": "10+",
-  "company.stats.hours.label": "Wöchentlich gesparte Stunden",`
-  }
+  "company.stats.hours.label": "Wöchentlich gesparte Stunden",`,
+  },
 };
 
 // Check if already exists
 if (content.includes('"company.hero.label"')) {
-  console.log('⚠️  Company translations already exist, skipping...');
+  console.log("⚠️  Company translations already exist, skipping...");
 } else {
   // Add English
   const enIdx = content.indexOf(allTranslations.en.marker);
   if (enIdx > -1) {
-    const afterComma = content.indexOf(',', enIdx) + 1;
-    content = content.slice(0, afterComma) + allTranslations.en.translations + content.slice(afterComma);
-    console.log('✅ Added English company translations');
+    const afterComma = content.indexOf(",", enIdx) + 1;
+    content =
+      content.slice(0, afterComma) +
+      allTranslations.en.translations +
+      content.slice(afterComma);
+    console.log("✅ Added English company translations");
   }
 
   // Add German
   const deIdx = content.lastIndexOf(allTranslations.de.marker);
   if (deIdx > -1) {
-    const afterComma = content.indexOf(',', deIdx) + 1;
-    content = content.slice(0, afterComma) + allTranslations.de.translations + content.slice(afterComma);
-    console.log('✅ Added German company translations');
+    const afterComma = content.indexOf(",", deIdx) + 1;
+    content =
+      content.slice(0, afterComma) +
+      allTranslations.de.translations +
+      content.slice(afterComma);
+    console.log("✅ Added German company translations");
   }
 
-  fs.writeFileSync('./lib/i18n/language-context.tsx', content, 'utf8');
-  console.log('✅ Company page complete!');
+  fs.writeFileSync("./lib/i18n/language-context.tsx", content, "utf8");
+  console.log("✅ Company page complete!");
 }

@@ -1,4 +1,4 @@
-﻿# Zaza Draft + GradeFlow SEO Strategy
+# Zaza Draft + GradeFlow SEO Strategy
 
 ## Overview
 
@@ -48,7 +48,7 @@ This document outlines the comprehensive SEO optimization strategy for Zaza Draf
 #### Draft Product Page
 
 **Title (59 chars):** AI Parent Messages & Report Comments | Zaza Draft  
-**Description (157 chars):** Write parent emails and report comments in minutes with AI. Hallucination-safe, GDPR-compliant, built for teachers. Try free with 5 comments this month.
+**Description (157 chars):** Write parent emails and report comments in minutes with AI. No invented student facts, GDPR-compliant, built for teachers. Try free with 5 comments this month.
 
 #### GradeFlow Product Page
 
@@ -76,14 +76,14 @@ This document outlines the comprehensive SEO optimization strategy for Zaza Draf
 - **H2:** AI lesson planning with Zaza Teach
 - **H2:** AI grading with GradeFlow
 - **H2:** Teacher partners shaping our private beta
-- **H3:** Hallucination-safe AI for teachers
+- **H3:** No invented student facts AI for teachers
 - **H3:** GDPR-compliant and privacy-focused
 
 #### Draft Product Page
 
 - **H1:** Parent emails shouldn't take hours to write
 - **H2:** The problem: Teachers drowning in parent communications
-- **H2:** The solution: Zaza Draft's hallucination-safe AI
+- **H2:** The solution: Zaza Draft's No invented student facts AI
 - **H2:** Built for teacher safety
 - **H3:** Tone guardrails
 - **H3:** Translation checks
@@ -108,8 +108,8 @@ This document outlines the comprehensive SEO optimization strategy for Zaza Draf
 **Before:** "Write better parent messages in minutes - not hours"  
 **After:** "AI lesson planning and grading that saves teachers 10+ hours every week"
 
-**Subtext Before:** "The only hallucination-safe AI built for teachers writing report cards and parent communications."  
-**Subtext After:** "The only hallucination-safe AI for teachers built with educator beta partners to shape calm parent messages, report comments, and AI grading."
+**Subtext Before:** "The only No invented student facts AI built for teachers writing report cards and parent communications."  
+**Subtext After:** "The only No invented student facts AI for teachers built with educator beta partners to shape calm parent messages, report comments, and AI grading."
 
 **CTA Before:** "Try it free, 5 comments this month"  
 **CTA After:** "Start Free - Save Time Teaching Today"
@@ -196,7 +196,7 @@ This document outlines the comprehensive SEO optimization strategy for Zaza Draf
 #### Draft Product Page
 
 **Title (58 chars):** KI Elternbriefe & Zeugniskommentare | Zaza Draft  
-**Description (158 chars):** Schreiben Sie Eltern-E-Mails und Zeugniskommentare in Minuten mit KI. Halluzinationssicher, DSGVO-konform, fÃƒÂ¼r Lehrer entwickelt. Jetzt kostenlos testen.
+**Description (158 chars):** Schreiben Sie Eltern-E-Mails und Zeugniskommentare in Minuten mit KI. Keine erfundenen Schuelerinformationen, DSGVO-konform, fÃƒÂ¼r Lehrer entwickelt. Jetzt kostenlos testen.
 
 #### GradeFlow Product Page
 
@@ -224,14 +224,14 @@ This document outlines the comprehensive SEO optimization strategy for Zaza Draf
 - **H2:** KI Unterrichtsplanung mit Zaza Teach
 - **H2:** KI-Bewertung mit GradeFlow
 - **H2:** Lehrkräfte gestalten unsere private Beta
-- **H3:** Halluzinationssichere KI fÃƒÂ¼r Lehrer
+- **H3:** Keine erfundenen Schuelerinformationene KI fÃƒÂ¼r Lehrer
 - **H3:** DSGVO-konform und datenschutzorientiert
 
 #### Draft Product Page
 
 - **H1:** Eltern-E-Mails sollten nicht Stunden zum Schreiben brauchen
 - **H2:** Das Problem: Lehrer ertrinken in Elternkommunikation
-- **H2:** Die LÃƒÂ¶sung: Zaza Drafts halluzinationssichere KI
+- **H2:** Die LÃƒÂ¶sung: Zaza Drafts Keine erfundenen Schuelerinformationene KI
 - **H2:** FÃƒÂ¼r Lehrersicherheit entwickelt
 - **H3:** Ton-Leitplanken
 - **H3:** ÃƒÅ“bersetzungsprÃƒÂ¼fungen
@@ -256,8 +256,8 @@ This document outlines the comprehensive SEO optimization strategy for Zaza Draf
 **Before:** "Bessere Elternnachrichten in Minuten - statt Stunden"  
 **After:** "KI Unterrichtsplanung und Bewertung, die Lehrern 10+ Stunden jede Woche spart"
 
-**Subtext Before:** "Die einzige halluzinationssichere KI entwickelt fÃƒÂ¼r LehrkrÃƒÂ¤fte - fÃƒÂ¼r Zeugnisse und Elternkommunikation."  
-**Subtext After:** "Die einzige halluzinationssichere KI für Lehrer, gebaut mit Beta-Partnern, um ruhige Elternnachrichten, Zeugniskommentare und KI-Bewertung zu gestalten."
+**Subtext Before:** "Die einzige Keine erfundenen Schuelerinformationene KI entwickelt fÃƒÂ¼r LehrkrÃƒÂ¤fte - fÃƒÂ¼r Zeugnisse und Elternkommunikation."  
+**Subtext After:** "Die einzige Keine erfundenen Schuelerinformationene KI für Lehrer, gebaut mit Beta-Partnern, um ruhige Elternnachrichten, Zeugniskommentare und KI-Bewertung zu gestalten."
 
 **CTA Before:** "Jetzt gratis testen - 5 Kommentare in diesem Monat"  
 **CTA After:** "Kostenlos starten - Zeit sparen beim Unterrichten"
