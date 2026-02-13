@@ -1,4 +1,4 @@
-﻿'use client';
+"use client";
 // @ts-nocheck
 // duplicate use client removed: "use client";
 
@@ -29,7 +29,7 @@ export default function BestAIWritingClient() {
 
       quick_answer_title: "Quick Answer: Best AI Writing Tool for Teachers",
       quick_answer_answer:
-        "Zaza Draft is the best AI writing tool for teachers in 2025 because it's purpose-built for education with teacher-specific templates, FERPA compliance, and tone control. For general writing, ChatGPT Plus offers the most versatility. Claude Pro excels at long documents like report cards.",
+        "Zaza Draft is the best AI writing tool for teachers in 2025 because it's purpose-built for education with teacher-specific templates, FERPA-ready positioning, and tone control. For general writing, ChatGPT Plus offers the most versatility. Claude Pro excels at long documents like report cards.",
 
       why_title: "Why AI Writing Tools Matter in 2025",
       why_p1:
@@ -55,7 +55,7 @@ export default function BestAIWritingClient() {
       related_guides_title: "Related Guides",
       sidebar_cta_title: "Try Zaza Draft",
       sidebar_cta_text:
-        "Purpose-built for teachers. FERPA compliant. Free to start.",
+        "Purpose-built for teachers. FERPA-ready. Free to start.",
       sidebar_cta_button: "Start Free",
 
       // Tool Data (English hardcoded data)
@@ -69,7 +69,7 @@ export default function BestAIWritingClient() {
           bestFor: "Parent emails, feedback, IEPs",
           pros: [
             "Teacher-specific templates",
-            "FERPA compliant",
+            "FERPA-ready",
             "Tone control",
             "Multi-language",
           ],
@@ -162,7 +162,7 @@ export default function BestAIWritingClient() {
             "Parent communication",
           ],
           recommendedTool: "Zaza Draft",
-          why: "FERPA-compliant with special ed templates",
+          why: "FERPA-ready with special ed templates",
         },
       ],
 
@@ -186,7 +186,7 @@ export default function BestAIWritingClient() {
         {
           question: "What about student data privacy?",
           answer:
-            "Never input student names, IDs, or sensitive information into generic AI tools. Use education-specific tools like Zaza Draft that are FERPA-compliant and designed for teacher use.",
+            "Never input student names, IDs, or sensitive information into generic AI tools. Use education-specific tools like Zaza Draft that are FERPA-ready and designed for teacher use.",
         },
         {
           question: "Which tool is best for beginners?",
@@ -461,7 +461,7 @@ export default function BestAIWritingClient() {
           {/* Main Content */}
           <div className="space-y-16">
             {/* Quick Answer */}
-              {/* Quick answer box temporarily disabled until types are aligned */}
+            {/* Quick answer box temporarily disabled until types are aligned */}
 
             {/* Why AI Writing Tools Matter */}
             <section id="why-ai-writing" className="scroll-mt-20">
@@ -617,10 +617,10 @@ export default function BestAIWritingClient() {
                       <td className="p-4 text-center text-slate-200">-</td>
                       <td className="p-4 text-center text-slate-200">-</td>
                     </tr>
-                    {/* FERPA Compliant / GDPR-konform */}
+                    {/* FERPA-ready / GDPR-konform */}
                     <tr className="hover:bg-[#1E293B]/50 transition-colors">
                       <td className="p-4 font-medium text-slate-200">
-                        {isGerman ? "DSGVO-konform" : "FERPA Compliant"}
+                        {isGerman ? "DSGVO-konform" : "FERPA-ready"}
                       </td>
                       <td className="p-4 text-center">
                         <Check className="mx-auto h-5 w-5 text-green-400" />
@@ -990,12 +990,3 @@ export default function BestAIWritingClient() {
     </div>
   );
 }
-
-
-
-
-
-
-
-
-

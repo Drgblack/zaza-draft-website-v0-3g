@@ -13,9 +13,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  TableOfContents,
-} from "@/components/table-of-contents";
+import { TableOfContents } from "@/components/table-of-contents";
 import { useLanguage } from "../../src/contexts/LanguageContext";
 
 // -------------------------------------------
@@ -164,7 +162,7 @@ const content = {
     faq_title: "Frequently Asked Questions",
     faq: [
       {
-        question: "Is Zaza Draft FERPA compliant?",
+        question: "Is Zaza Draft FERPA-ready?",
         answer:
           "Yes. Zaza Draft is designed with FERPA-appropriate data handling for student information and sensitive communication contexts.",
       },
@@ -812,6 +810,3 @@ export default function BestAIToolParentEmailsClient() {
     </div>
   );
 }
-
-
-

@@ -1,6 +1,6 @@
 export default {
   eyebrow: "FÜR LEHRKRÄFTE",
-  badge: "Halluzinationssichere KI für Lehrkräfte",
+  badge: "KI ohne erfundene Schuelerinformationen fuer Lehrkraefte",
   headline: "Schreiben Sie wie Sie",
   headlineAccent: "nur schneller.",
   subheading:
@@ -8,8 +8,8 @@ export default {
   ctaPrimary: "Early Access beitreten",
   ctaSecondary: "Beispiele ansehen",
   trustIndicators: {
-    hallucinationSafe: "Halluzinationssicher",
-    ferpaCompliant: "FERPA-konform",
+    hallucinationSafe: "Keine erfundenen Schuelerinformationen",
+    ferpaCompliant: "FERPA-ready",
     teachers: "Lehrerzentriert konzipiert",
   },
 };

@@ -12,7 +12,7 @@
       "secondary": "Demo ansehen"
     },
     "stats": {
-      "timeSaved": "WÃ¶chentlich gesparte Zeit",
+      "timeSaved": "Eingesparte Stunden pro Woche",
       "teachers": "Nutzende LehrkrÃ¤fte",
       "satisfaction": "Zufriedenheitsrate"
     }
@@ -43,7 +43,7 @@
       },
       "privacy": {
         "title": "Datenschutz zuerst",
-        "description": "FERPA-konform und sicher. Ihre Daten und die PrivatsphÃ¤re Ihrer SchÃ¼ler sind geschÃ¼tzt."
+        "description": "FERPA-ready und sicher. Ihre Daten und die PrivatsphÃ¤re Ihrer SchÃ¼ler sind geschÃ¼tzt."
       }
     }
   },
@@ -93,4 +93,3 @@
     "note": "Keine Kreditkarte erforderlich. Jederzeit kÃ¼ndbar."
   }
 }
-

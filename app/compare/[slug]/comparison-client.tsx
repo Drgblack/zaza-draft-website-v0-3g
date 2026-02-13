@@ -416,7 +416,7 @@ const content = {
           },
           {
             feature: "Datenschutzkontrollen",
-            zaza: { icon: "check", text: "FERPA-konform, PII-Redaktion" },
+            zaza: { icon: "check", text: "FERPA-ready, PII-Redaktion" },
             competitor: { icon: "warning", text: "Allgemeine Datenrichtlinie" },
           },
           {
@@ -444,7 +444,7 @@ const content = {
           {
             question: "Ist Zaza Draft einfach nur ChatGPT mit Vorlagen?",
             answer:
-              "Nein. Während beide KI nutzen, ist Zaza Draft speziell für Lehrer entwickelt, mit FERPA-konformen Datenschutzkontrollen, lehrerspezifischen Vorlagen, Tonfall-Anleitung für Elternkommunikation und eingebauten Schutzmaßnahmen, die ChatGPT nicht hat.",
+              "Nein. Waehrend beide KI nutzen, ist Zaza Draft speziell fuer Lehrer entwickelt, mit FERPA-ready Datenschutzkontrollen, lehrerspezifischen Vorlagen, Tonfall-Anleitung fuer Elternkommunikation und eingebauten Schutzmassnahmen, die ChatGPT nicht hat.",
           },
           {
             question: "Kann ich ChatGPT für Eltern-E-Mails verwenden?",

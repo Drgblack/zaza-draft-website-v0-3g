@@ -1,35 +1,35 @@
 ﻿export interface Integration {
-  id: string
-  name: string
-  slug: string
-  category: string
-  description: string
-  logo: string
-  setupTime: string
-  users: string
-  rating: number
-  overview: string
-  benefits: string[]
+  id: string;
+  name: string;
+  slug: string;
+  category: string;
+  description: string;
+  logo: string;
+  setupTime: string;
+  users: string;
+  rating: number;
+  overview: string;
+  benefits: string[];
   setupSteps: {
-    step: number
-    title: string
-    description: string
-  }[]
+    step: number;
+    title: string;
+    description: string;
+  }[];
   useCases: {
-    title: string
-    description: string
-    icon: string
-  }[]
+    title: string;
+    description: string;
+    icon: string;
+  }[];
   faqs: {
-    question: string
-    answer: string
-  }[]
+    question: string;
+    answer: string;
+  }[];
   security: {
-    encryption: boolean
-    ferpaCompliant: boolean
-    sso: boolean
-  }
-  relatedIntegrations: string[]
+    encryption: boolean;
+    ferpaCompliant: boolean;
+    sso: boolean;
+  };
+  relatedIntegrations: string[];
 }
 
 export const integrations: Integration[] = [
@@ -38,7 +38,8 @@ export const integrations: Integration[] = [
     name: "Google Classroom",
     slug: "google-classroom",
     category: "Learning Management",
-    description: "Seamlessly sync assignments, grades, and student rosters between Zaza Draft and Google Classroom.",
+    description:
+      "Seamlessly sync assignments, grades, and student rosters between Zaza Draft and Google Classroom.",
     logo: "/google-classroom-logo.jpg",
     setupTime: "5 minutes",
     users: "2.5M+",
@@ -68,7 +69,8 @@ export const integrations: Integration[] = [
       {
         step: 3,
         title: "Configure Sync Settings",
-        description: "Set your preferences for automatic roster updates, grade syncing, and assignment publishing.",
+        description:
+          "Set your preferences for automatic roster updates, grade syncing, and assignment publishing.",
       },
       {
         step: 4,
@@ -86,7 +88,8 @@ export const integrations: Integration[] = [
       },
       {
         title: "One-Click Assignment Publishing",
-        description: "Create assignments in Zaza Draft and publish them directly to Google Classroom with one click.",
+        description:
+          "Create assignments in Zaza Draft and publish them directly to Google Classroom with one click.",
         icon: "Send",
       },
       {
@@ -130,7 +133,8 @@ export const integrations: Integration[] = [
     name: "Canvas LMS",
     slug: "canvas-lms",
     category: "Learning Management",
-    description: "Connect Zaza Draft with Canvas to sync courses, assignments, and grades seamlessly.",
+    description:
+      "Connect Zaza Draft with Canvas to sync courses, assignments, and grades seamlessly.",
     logo: "/canvas-lms-logo.jpg",
     setupTime: "10 minutes",
     users: "850K+",
@@ -148,33 +152,39 @@ export const integrations: Integration[] = [
       {
         step: 1,
         title: "Generate Canvas API Token",
-        description: "Log into Canvas, go to Account Settings, and generate a new API access token.",
+        description:
+          "Log into Canvas, go to Account Settings, and generate a new API access token.",
       },
       {
         step: 2,
         title: "Enter API Token in Zaza Draft",
-        description: "Paste your Canvas API token into the integration settings in Zaza Draft.",
+        description:
+          "Paste your Canvas API token into the integration settings in Zaza Draft.",
       },
       {
         step: 3,
         title: "Select Courses to Sync",
-        description: "Choose which Canvas courses you want to integrate with Zaza Draft.",
+        description:
+          "Choose which Canvas courses you want to integrate with Zaza Draft.",
       },
       {
         step: 4,
         title: "Configure Grade Sync",
-        description: "Set up your grade syncing preferences and test with a sample assignment.",
+        description:
+          "Set up your grade syncing preferences and test with a sample assignment.",
       },
     ],
     useCases: [
       {
         title: "Course Management",
-        description: "Automatically sync course rosters and keep student information up to date across both platforms.",
+        description:
+          "Automatically sync course rosters and keep student information up to date across both platforms.",
         icon: "BookOpen",
       },
       {
         title: "Assignment Distribution",
-        description: "Create assignments in Zaza Draft and publish them to Canvas with all settings intact.",
+        description:
+          "Create assignments in Zaza Draft and publish them to Canvas with all settings intact.",
         icon: "FileText",
       },
       {
@@ -202,7 +212,8 @@ export const integrations: Integration[] = [
       },
       {
         question: "Is my Canvas API token secure?",
-        answer: "Yes, your API token is encrypted and stored securely. We never share your token with third parties.",
+        answer:
+          "Yes, your API token is encrypted and stored securely. We never share your token with third parties.",
       },
     ],
     security: {
@@ -217,7 +228,8 @@ export const integrations: Integration[] = [
     name: "Gmail",
     slug: "gmail",
     category: "Communication",
-    description: "Send AI-generated parent emails and student feedback directly from Zaza Draft through Gmail.",
+    description:
+      "Send AI-generated parent emails and student feedback directly from Zaza Draft through Gmail.",
     logo: "/gmail-logo.png",
     setupTime: "3 minutes",
     users: "3.2M+",
@@ -235,17 +247,20 @@ export const integrations: Integration[] = [
       {
         step: 1,
         title: "Connect Gmail Account",
-        description: 'Click "Connect Gmail" and authorize Zaza Draft to send emails on your behalf.',
+        description:
+          'Click "Connect Gmail" and authorize Zaza Draft to send emails on your behalf.',
       },
       {
         step: 2,
         title: "Configure Email Settings",
-        description: "Set up your default email signature, reply-to address, and sending preferences.",
+        description:
+          "Set up your default email signature, reply-to address, and sending preferences.",
       },
       {
         step: 3,
         title: "Test Email Sending",
-        description: "Send a test email to yourself to verify the integration is working correctly.",
+        description:
+          "Send a test email to yourself to verify the integration is working correctly.",
       },
     ],
     useCases: [
@@ -257,19 +272,22 @@ export const integrations: Integration[] = [
       },
       {
         title: "Student Feedback",
-        description: "Email detailed feedback on assignments directly to students through your Gmail account.",
+        description:
+          "Email detailed feedback on assignments directly to students through your Gmail account.",
         icon: "MessageSquare",
       },
       {
         title: "Class Announcements",
-        description: "Send class-wide announcements and reminders while maintaining your professional email identity.",
+        description:
+          "Send class-wide announcements and reminders while maintaining your professional email identity.",
         icon: "Bell",
       },
     ],
     faqs: [
       {
         question: "Will emails show as coming from my Gmail address?",
-        answer: "Yes, all emails are sent from your Gmail address, so recipients see your familiar email identity.",
+        answer:
+          "Yes, all emails are sent from your Gmail address, so recipients see your familiar email identity.",
       },
       {
         question: "Can I use my school Gmail account?",
@@ -283,7 +301,8 @@ export const integrations: Integration[] = [
       },
       {
         question: "Can I schedule emails to send later?",
-        answer: "Yes, you can schedule emails to send at a specific date and time for optimal delivery.",
+        answer:
+          "Yes, you can schedule emails to send at a specific date and time for optimal delivery.",
       },
     ],
     security: {
@@ -298,7 +317,8 @@ export const integrations: Integration[] = [
     name: "PowerSchool",
     slug: "powerschool",
     category: "Student Information System",
-    description: "Sync student data, grades, and attendance between PowerSchool and Zaza Draft.",
+    description:
+      "Sync student data, grades, and attendance between PowerSchool and Zaza Draft.",
     logo: "/powerschool-logo.jpg",
     setupTime: "15 minutes",
     users: "450K+",
@@ -316,7 +336,8 @@ export const integrations: Integration[] = [
       {
         step: 1,
         title: "Contact Your IT Administrator",
-        description: "Work with your school IT admin to obtain PowerSchool API credentials and necessary permissions.",
+        description:
+          "Work with your school IT admin to obtain PowerSchool API credentials and necessary permissions.",
       },
       {
         step: 2,
@@ -327,39 +348,46 @@ export const integrations: Integration[] = [
       {
         step: 3,
         title: "Map Grade Categories",
-        description: "Map your Zaza Draft assignment categories to PowerSchool grade categories.",
+        description:
+          "Map your Zaza Draft assignment categories to PowerSchool grade categories.",
       },
       {
         step: 4,
         title: "Configure Sync Schedule",
-        description: "Set up automatic sync intervals and test the integration with a sample grade entry.",
+        description:
+          "Set up automatic sync intervals and test the integration with a sample grade entry.",
       },
     ],
     useCases: [
       {
         title: "Student Data Management",
-        description: "Automatically import and update student rosters, demographics, and enrollment information.",
+        description:
+          "Automatically import and update student rosters, demographics, and enrollment information.",
         icon: "Database",
       },
       {
         title: "Grade Reporting",
-        description: "Push grades from Zaza Draft directly to PowerSchool gradebook, eliminating double entry.",
+        description:
+          "Push grades from Zaza Draft directly to PowerSchool gradebook, eliminating double entry.",
         icon: "BarChart",
       },
       {
         title: "Attendance Integration",
-        description: "View student attendance data from PowerSchool within Zaza Draft for better context.",
+        description:
+          "View student attendance data from PowerSchool within Zaza Draft for better context.",
         icon: "Calendar",
       },
     ],
     faqs: [
       {
         question: "Do I need special permissions to set up this integration?",
-        answer: "Yes, you'll need API access permissions from your school or district IT administrator.",
+        answer:
+          "Yes, you'll need API access permissions from your school or district IT administrator.",
       },
       {
         question: "Can I sync historical grade data?",
-        answer: "Yes, you can import historical grades from PowerSchool to maintain complete records in Zaza Draft.",
+        answer:
+          "Yes, you can import historical grades from PowerSchool to maintain complete records in Zaza Draft.",
       },
       {
         question: "How often does student data sync?",
@@ -367,8 +395,9 @@ export const integrations: Integration[] = [
           "Student roster data syncs automatically every 24 hours, with the option to trigger manual syncs anytime.",
       },
       {
-        question: "Is this integration FERPA compliant?",
-        answer: "Yes, all data transmission is encrypted and we maintain strict FERPA compliance standards.",
+        question: "Is this integration FERPA-ready?",
+        answer:
+          "Yes, all data transmission is encrypted and we maintain strict FERPA compliance standards.",
       },
     ],
     security: {
@@ -383,7 +412,8 @@ export const integrations: Integration[] = [
     name: "Google Drive",
     slug: "google-drive",
     category: "Cloud Storage",
-    description: "Store and organize all your Zaza Draft documents, assignments, and resources in Google Drive.",
+    description:
+      "Store and organize all your Zaza Draft documents, assignments, and resources in Google Drive.",
     logo: "/google-drive-logo.png",
     setupTime: "5 minutes",
     users: "2.8M+",
@@ -401,33 +431,39 @@ export const integrations: Integration[] = [
       {
         step: 1,
         title: "Connect Google Drive",
-        description: 'Click "Connect Google Drive" and authorize Zaza Draft to access your Drive.',
+        description:
+          'Click "Connect Google Drive" and authorize Zaza Draft to access your Drive.',
       },
       {
         step: 2,
         title: "Choose Storage Location",
-        description: "Select or create a folder in Google Drive where Zaza Draft will save your content.",
+        description:
+          "Select or create a folder in Google Drive where Zaza Draft will save your content.",
       },
       {
         step: 3,
         title: "Configure Auto-Save",
-        description: "Set up automatic saving preferences for different types of content.",
+        description:
+          "Set up automatic saving preferences for different types of content.",
       },
     ],
     useCases: [
       {
         title: "Automatic Backup",
-        description: "All your lesson plans, assignments, and resources are automatically backed up to Google Drive.",
+        description:
+          "All your lesson plans, assignments, and resources are automatically backed up to Google Drive.",
         icon: "Cloud",
       },
       {
         title: "Easy Sharing",
-        description: "Share teaching materials with colleagues by simply sharing the Google Drive folder.",
+        description:
+          "Share teaching materials with colleagues by simply sharing the Google Drive folder.",
         icon: "Share2",
       },
       {
         title: "Cross-Device Access",
-        description: "Access your Zaza Draft materials from any device with Google Drive sync.",
+        description:
+          "Access your Zaza Draft materials from any device with Google Drive sync.",
         icon: "Smartphone",
       },
     ],
@@ -439,7 +475,8 @@ export const integrations: Integration[] = [
       },
       {
         question: "Can I organize materials into different folders?",
-        answer: "Yes, you can create custom folder structures and Zaza Draft will respect your organization.",
+        answer:
+          "Yes, you can create custom folder structures and Zaza Draft will respect your organization.",
       },
       {
         question: "What file formats are saved to Drive?",
@@ -448,7 +485,8 @@ export const integrations: Integration[] = [
       },
       {
         question: "Can I disconnect Drive without losing my Zaza Draft data?",
-        answer: "Yes, your data remains in Zaza Draft. Disconnecting only stops the automatic syncing to Drive.",
+        answer:
+          "Yes, your data remains in Zaza Draft. Disconnecting only stops the automatic syncing to Drive.",
       },
     ],
     security: {
@@ -463,7 +501,8 @@ export const integrations: Integration[] = [
     name: "Schoology",
     slug: "schoology",
     category: "Learning Management",
-    description: "Integrate Zaza Draft with Schoology to sync courses, assignments, and grades.",
+    description:
+      "Integrate Zaza Draft with Schoology to sync courses, assignments, and grades.",
     logo: "/schoology-logo.jpg",
     setupTime: "10 minutes",
     users: "620K+",
@@ -481,12 +520,14 @@ export const integrations: Integration[] = [
       {
         step: 1,
         title: "Generate Schoology API Key",
-        description: "Log into Schoology, navigate to App Center, and generate API credentials.",
+        description:
+          "Log into Schoology, navigate to App Center, and generate API credentials.",
       },
       {
         step: 2,
         title: "Enter API Credentials",
-        description: "Input your Schoology consumer key and secret in Zaza Draft settings.",
+        description:
+          "Input your Schoology consumer key and secret in Zaza Draft settings.",
       },
       {
         step: 3,
@@ -496,38 +537,45 @@ export const integrations: Integration[] = [
       {
         step: 4,
         title: "Test Integration",
-        description: "Create a test assignment and verify it syncs correctly to Schoology.",
+        description:
+          "Create a test assignment and verify it syncs correctly to Schoology.",
       },
     ],
     useCases: [
       {
         title: "Course Synchronization",
-        description: "Keep student rosters and course information automatically updated across both platforms.",
+        description:
+          "Keep student rosters and course information automatically updated across both platforms.",
         icon: "RefreshCw",
       },
       {
         title: "Assignment Management",
-        description: "Create assignments in Zaza Draft and publish them to Schoology with one click.",
+        description:
+          "Create assignments in Zaza Draft and publish them to Schoology with one click.",
         icon: "FileText",
       },
       {
         title: "Grade Integration",
-        description: "Grades from Zaza Draft automatically sync to Schoology gradebook.",
+        description:
+          "Grades from Zaza Draft automatically sync to Schoology gradebook.",
         icon: "Award",
       },
     ],
     faqs: [
       {
         question: "Do I need administrator access to set this up?",
-        answer: "No, individual teachers can set up the integration with their own Schoology API credentials.",
+        answer:
+          "No, individual teachers can set up the integration with their own Schoology API credentials.",
       },
       {
         question: "Can I use Schoology rubrics in Zaza Draft?",
-        answer: "Yes, you can import Schoology rubrics or create new ones that sync back to Schoology.",
+        answer:
+          "Yes, you can import Schoology rubrics or create new ones that sync back to Schoology.",
       },
       {
         question: "How often does data sync?",
-        answer: "Roster data syncs every 6 hours automatically. Grades and assignments sync in real-time.",
+        answer:
+          "Roster data syncs every 6 hours automatically. Grades and assignments sync in real-time.",
       },
     ],
     security: {
@@ -542,7 +590,8 @@ export const integrations: Integration[] = [
     name: "Infinite Campus",
     slug: "infinite-campus",
     category: "Student Information System",
-    description: "Sync student data, grades, and attendance between Infinite Campus and Zaza Draft.",
+    description:
+      "Sync student data, grades, and attendance between Infinite Campus and Zaza Draft.",
     logo: "/infinite-campus-logo.jpg",
     setupTime: "15 minutes",
     users: "380K+",
@@ -560,53 +609,63 @@ export const integrations: Integration[] = [
       {
         step: 1,
         title: "Obtain API Credentials",
-        description: "Work with your IT administrator to get Infinite Campus API access credentials.",
+        description:
+          "Work with your IT administrator to get Infinite Campus API access credentials.",
       },
       {
         step: 2,
         title: "Configure Connection",
-        description: "Enter your district's Infinite Campus URL and API credentials in Zaza Draft.",
+        description:
+          "Enter your district's Infinite Campus URL and API credentials in Zaza Draft.",
       },
       {
         step: 3,
         title: "Map Grade Categories",
-        description: "Map Zaza Draft assignment types to Infinite Campus grade categories.",
+        description:
+          "Map Zaza Draft assignment types to Infinite Campus grade categories.",
       },
       {
         step: 4,
         title: "Test Grade Sync",
-        description: "Submit a test grade to verify the integration is working correctly.",
+        description:
+          "Submit a test grade to verify the integration is working correctly.",
       },
     ],
     useCases: [
       {
         title: "Roster Management",
-        description: "Automatically import and update student rosters from Infinite Campus.",
+        description:
+          "Automatically import and update student rosters from Infinite Campus.",
         icon: "Users",
       },
       {
         title: "Grade Submission",
-        description: "Push grades directly to Infinite Campus, eliminating manual data entry.",
+        description:
+          "Push grades directly to Infinite Campus, eliminating manual data entry.",
         icon: "Upload",
       },
       {
         title: "Data Context",
-        description: "View attendance and demographic data within Zaza Draft for better student understanding.",
+        description:
+          "View attendance and demographic data within Zaza Draft for better student understanding.",
         icon: "Info",
       },
     ],
     faqs: [
       {
         question: "Do I need special permissions?",
-        answer: "Yes, you'll need API access permissions from your school or district IT department.",
+        answer:
+          "Yes, you'll need API access permissions from your school or district IT department.",
       },
       {
         question: "Can I sync historical data?",
-        answer: "Yes, you can import historical grades and student data from previous terms.",
+        answer:
+          "Yes, you can import historical grades and student data from previous terms.",
       },
       {
-        question: "Is this FERPA compliant?",
-        answer: "Yes, all data transmission is encrypted and we maintain strict FERPA compliance.",
+        question: "Is this FERPA-ready?",
+        answer:
+          "Yes, all data transmission is encrypted and we maintain strict FERPA compliance.",
       },
     ],
     security: {
@@ -621,7 +680,8 @@ export const integrations: Integration[] = [
     name: "Microsoft Outlook",
     slug: "outlook",
     category: "Communication",
-    description: "Send AI-generated emails and communications through your Microsoft Outlook account.",
+    description:
+      "Send AI-generated emails and communications through your Microsoft Outlook account.",
     logo: "/outlook-logo.jpg",
     setupTime: "5 minutes",
     users: "1.8M+",
@@ -639,7 +699,8 @@ export const integrations: Integration[] = [
       {
         step: 1,
         title: "Connect Outlook Account",
-        description: 'Click "Connect Outlook" and sign in with your Microsoft account.',
+        description:
+          'Click "Connect Outlook" and sign in with your Microsoft account.',
       },
       {
         step: 2,
@@ -649,13 +710,15 @@ export const integrations: Integration[] = [
       {
         step: 3,
         title: "Test Email",
-        description: "Send a test email to verify the integration works correctly.",
+        description:
+          "Send a test email to verify the integration works correctly.",
       },
     ],
     useCases: [
       {
         title: "Parent Updates",
-        description: "Send personalized parent emails about student progress and behavior.",
+        description:
+          "Send personalized parent emails about student progress and behavior.",
         icon: "Mail",
       },
       {
@@ -672,15 +735,18 @@ export const integrations: Integration[] = [
     faqs: [
       {
         question: "Does this work with Office 365 Education?",
-        answer: "Yes, the integration works with both personal Outlook accounts and Office 365 Education accounts.",
+        answer:
+          "Yes, the integration works with both personal Outlook accounts and Office 365 Education accounts.",
       },
       {
         question: "Are there sending limits?",
-        answer: "Microsoft has daily sending limits (typically 500-10,000 depending on your account type).",
+        answer:
+          "Microsoft has daily sending limits (typically 500-10,000 depending on your account type).",
       },
       {
         question: "Can I use my school email signature?",
-        answer: "Yes, you can configure your signature in the integration settings.",
+        answer:
+          "Yes, you can configure your signature in the integration settings.",
       },
     ],
     security: {
@@ -695,7 +761,8 @@ export const integrations: Integration[] = [
     name: "Microsoft OneDrive",
     slug: "onedrive",
     category: "Cloud Storage",
-    description: "Store and organize your Zaza Draft content in Microsoft OneDrive.",
+    description:
+      "Store and organize your Zaza Draft content in Microsoft OneDrive.",
     logo: "/onedrive-logo.jpg",
     setupTime: "5 minutes",
     users: "1.5M+",
@@ -713,12 +780,14 @@ export const integrations: Integration[] = [
       {
         step: 1,
         title: "Connect OneDrive",
-        description: 'Click "Connect OneDrive" and sign in with your Microsoft account.',
+        description:
+          'Click "Connect OneDrive" and sign in with your Microsoft account.',
       },
       {
         step: 2,
         title: "Choose Storage Location",
-        description: "Select or create a folder in OneDrive for Zaza Draft content.",
+        description:
+          "Select or create a folder in OneDrive for Zaza Draft content.",
       },
       {
         step: 3,
@@ -739,14 +808,16 @@ export const integrations: Integration[] = [
       },
       {
         title: "Multi-Device Access",
-        description: "Access your materials from any device with OneDrive sync.",
+        description:
+          "Access your materials from any device with OneDrive sync.",
         icon: "Monitor",
       },
     ],
     faqs: [
       {
         question: "How much storage do I need?",
-        answer: "Most teachers use less than 1GB. Office 365 Education provides 1TB+ of storage.",
+        answer:
+          "Most teachers use less than 1GB. Office 365 Education provides 1TB+ of storage.",
       },
       {
         question: "Can I organize files into folders?",
@@ -754,7 +825,8 @@ export const integrations: Integration[] = [
       },
       {
         question: "What file formats are saved?",
-        answer: "Documents are saved as Word files, spreadsheets as Excel, and other files in native formats.",
+        answer:
+          "Documents are saved as Word files, spreadsheets as Excel, and other files in native formats.",
       },
     ],
     security: {
@@ -792,7 +864,8 @@ export const integrations: Integration[] = [
       {
         step: 2,
         title: "Choose Folder",
-        description: "Select or create a Dropbox folder for your Zaza Draft content.",
+        description:
+          "Select or create a Dropbox folder for your Zaza Draft content.",
       },
       {
         step: 3,
@@ -803,12 +876,14 @@ export const integrations: Integration[] = [
     useCases: [
       {
         title: "Automatic Backup",
-        description: "All your teaching materials are automatically backed up to Dropbox.",
+        description:
+          "All your teaching materials are automatically backed up to Dropbox.",
         icon: "Save",
       },
       {
         title: "Version Control",
-        description: "Access previous versions of documents with Dropbox version history.",
+        description:
+          "Access previous versions of documents with Dropbox version history.",
         icon: "History",
       },
       {
@@ -820,15 +895,18 @@ export const integrations: Integration[] = [
     faqs: [
       {
         question: "How much storage do I need?",
-        answer: "Most teachers use 1-2GB per year. Dropbox offers 2GB free or unlimited with paid plans.",
+        answer:
+          "Most teachers use 1-2GB per year. Dropbox offers 2GB free or unlimited with paid plans.",
       },
       {
         question: "Can I share folders with other teachers?",
-        answer: "Yes, you can share Dropbox folders with colleagues for collaboration.",
+        answer:
+          "Yes, you can share Dropbox folders with colleagues for collaboration.",
       },
       {
         question: "Does this work with Dropbox Business?",
-        answer: "Yes, the integration works with both personal and Dropbox Business accounts.",
+        answer:
+          "Yes, the integration works with both personal and Dropbox Business accounts.",
       },
     ],
     security: {
@@ -843,7 +921,8 @@ export const integrations: Integration[] = [
     name: "Kahoot!",
     slug: "kahoot",
     category: "Assessment",
-    description: "Create and import Kahoot! quizzes with AI assistance from Zaza Draft.",
+    description:
+      "Create and import Kahoot! quizzes with AI assistance from Zaza Draft.",
     logo: "/kahoot-logo.jpg",
     setupTime: "5 minutes",
     users: "720K+",
@@ -861,23 +940,27 @@ export const integrations: Integration[] = [
       {
         step: 1,
         title: "Connect Kahoot! Account",
-        description: 'Click "Connect Kahoot!" and sign in with your Kahoot! account.',
+        description:
+          'Click "Connect Kahoot!" and sign in with your Kahoot! account.',
       },
       {
         step: 2,
         title: "Authorize Access",
-        description: "Grant Zaza Draft permission to create and manage Kahoot! quizzes.",
+        description:
+          "Grant Zaza Draft permission to create and manage Kahoot! quizzes.",
       },
       {
         step: 3,
         title: "Create Test Quiz",
-        description: "Generate a test quiz in Zaza Draft and export it to Kahoot!.",
+        description:
+          "Generate a test quiz in Zaza Draft and export it to Kahoot!.",
       },
     ],
     useCases: [
       {
         title: "Quick Formative Assessment",
-        description: "Generate quiz questions with AI and export to Kahoot! in minutes.",
+        description:
+          "Generate quiz questions with AI and export to Kahoot! in minutes.",
         icon: "Zap",
       },
       {
@@ -887,18 +970,21 @@ export const integrations: Integration[] = [
       },
       {
         title: "Data Analysis",
-        description: "Import Kahoot! results back to Zaza Draft for detailed analysis.",
+        description:
+          "Import Kahoot! results back to Zaza Draft for detailed analysis.",
         icon: "PieChart",
       },
     ],
     faqs: [
       {
         question: "Do I need a Kahoot! Pro account?",
-        answer: "No, the integration works with free Kahoot! accounts, though Pro accounts have additional features.",
+        answer:
+          "No, the integration works with free Kahoot! accounts, though Pro accounts have additional features.",
       },
       {
         question: "Can I edit questions after exporting?",
-        answer: "Yes, you can edit questions in Kahoot! after exporting from Zaza Draft.",
+        answer:
+          "Yes, you can edit questions in Kahoot! after exporting from Zaza Draft.",
       },
       {
         question: "How many questions can I export at once?",
@@ -917,7 +1003,8 @@ export const integrations: Integration[] = [
     name: "Quizizz",
     slug: "quizizz",
     category: "Assessment",
-    description: "Generate and export AI-powered quizzes to Quizizz for student practice.",
+    description:
+      "Generate and export AI-powered quizzes to Quizizz for student practice.",
     logo: "/quizizz-logo.jpg",
     setupTime: "5 minutes",
     users: "650K+",
@@ -935,7 +1022,8 @@ export const integrations: Integration[] = [
       {
         step: 1,
         title: "Connect Quizizz",
-        description: 'Click "Connect Quizizz" and sign in with your Quizizz account.',
+        description:
+          'Click "Connect Quizizz" and sign in with your Quizizz account.',
       },
       {
         step: 2,
@@ -951,12 +1039,14 @@ export const integrations: Integration[] = [
     useCases: [
       {
         title: "Self-Paced Practice",
-        description: "Create quizzes for students to complete at their own pace.",
+        description:
+          "Create quizzes for students to complete at their own pace.",
         icon: "Clock",
       },
       {
         title: "Homework Assignments",
-        description: "Generate engaging homework quizzes with instant feedback.",
+        description:
+          "Generate engaging homework quizzes with instant feedback.",
         icon: "Home",
       },
       {
@@ -968,15 +1058,18 @@ export const integrations: Integration[] = [
     faqs: [
       {
         question: "Does this work with Quizizz for Schools?",
-        answer: "Yes, the integration works with both free and Quizizz for Schools accounts.",
+        answer:
+          "Yes, the integration works with both free and Quizizz for Schools accounts.",
       },
       {
         question: "Can I include images in questions?",
-        answer: "Yes, you can add images to questions before exporting to Quizizz.",
+        answer:
+          "Yes, you can add images to questions before exporting to Quizizz.",
       },
       {
         question: "How are quiz results imported?",
-        answer: "Quiz results automatically sync back to Zaza Draft after students complete the quiz.",
+        answer:
+          "Quiz results automatically sync back to Zaza Draft after students complete the quiz.",
       },
     ],
     security: {
@@ -991,7 +1084,8 @@ export const integrations: Integration[] = [
     name: "Formative",
     slug: "formative",
     category: "Assessment",
-    description: "Create and export formative assessments to Formative with AI assistance.",
+    description:
+      "Create and export formative assessments to Formative with AI assistance.",
     logo: "/formative-logo.jpg",
     setupTime: "5 minutes",
     users: "420K+",
@@ -1009,7 +1103,8 @@ export const integrations: Integration[] = [
       {
         step: 1,
         title: "Connect Formative",
-        description: 'Click "Connect Formative" and sign in with your Formative account.',
+        description:
+          'Click "Connect Formative" and sign in with your Formative account.',
       },
       {
         step: 2,
@@ -1025,32 +1120,38 @@ export const integrations: Integration[] = [
     useCases: [
       {
         title: "Real-Time Checks",
-        description: "Create quick formative assessments to check understanding in real-time.",
+        description:
+          "Create quick formative assessments to check understanding in real-time.",
         icon: "Activity",
       },
       {
         title: "Exit Tickets",
-        description: "Generate exit tickets to assess learning at the end of class.",
+        description:
+          "Generate exit tickets to assess learning at the end of class.",
         icon: "LogOut",
       },
       {
         title: "Differentiation",
-        description: "Create multiple versions of assessments for differentiated instruction.",
+        description:
+          "Create multiple versions of assessments for differentiated instruction.",
         icon: "GitBranch",
       },
     ],
     faqs: [
       {
         question: "Do I need a Formative Premium account?",
-        answer: "No, the integration works with free Formative accounts, though Premium has additional features.",
+        answer:
+          "No, the integration works with free Formative accounts, though Premium has additional features.",
       },
       {
         question: "Can students see feedback immediately?",
-        answer: "Yes, you can configure Formative to show instant feedback to students.",
+        answer:
+          "Yes, you can configure Formative to show instant feedback to students.",
       },
       {
         question: "What question types are supported?",
-        answer: "Multiple choice, short answer, true/false, and show your work questions are all supported.",
+        answer:
+          "Multiple choice, short answer, true/false, and show your work questions are all supported.",
       },
     ],
     security: {
@@ -1088,7 +1189,8 @@ export const integrations: Integration[] = [
       {
         step: 2,
         title: "Configure Settings",
-        description: "Set up default form settings and response collection preferences.",
+        description:
+          "Set up default form settings and response collection preferences.",
       },
       {
         step: 3,
@@ -1099,7 +1201,8 @@ export const integrations: Integration[] = [
     useCases: [
       {
         title: "Student Surveys",
-        description: "Create student interest surveys and feedback forms quickly.",
+        description:
+          "Create student interest surveys and feedback forms quickly.",
         icon: "ClipboardList",
       },
       {
@@ -1109,7 +1212,8 @@ export const integrations: Integration[] = [
       },
       {
         title: "Quick Assessments",
-        description: "Create simple quizzes and assessments with automatic grading.",
+        description:
+          "Create simple quizzes and assessments with automatic grading.",
         icon: "CheckSquare",
       },
     ],
@@ -1124,7 +1228,8 @@ export const integrations: Integration[] = [
       },
       {
         question: "Where are responses stored?",
-        answer: "Responses are stored in Google Forms and can be exported to Google Sheets.",
+        answer:
+          "Responses are stored in Google Forms and can be exported to Google Sheets.",
       },
     ],
     security: {
@@ -1139,7 +1244,8 @@ export const integrations: Integration[] = [
     name: "Turnitin",
     slug: "turnitin",
     category: "Assessment",
-    description: "Submit student work to Turnitin for plagiarism detection directly from Zaza Draft.",
+    description:
+      "Submit student work to Turnitin for plagiarism detection directly from Zaza Draft.",
     logo: "/turnitin-logo.jpg",
     setupTime: "10 minutes",
     users: "380K+",
@@ -1157,57 +1263,68 @@ export const integrations: Integration[] = [
       {
         step: 1,
         title: "Obtain Turnitin API Key",
-        description: "Contact your institution's Turnitin administrator to get API credentials.",
+        description:
+          "Contact your institution's Turnitin administrator to get API credentials.",
       },
       {
         step: 2,
         title: "Enter API Credentials",
-        description: "Input your Turnitin API key and institution ID in Zaza Draft settings.",
+        description:
+          "Input your Turnitin API key and institution ID in Zaza Draft settings.",
       },
       {
         step: 3,
         title: "Configure Submission Settings",
-        description: "Set up default submission preferences and similarity report options.",
+        description:
+          "Set up default submission preferences and similarity report options.",
       },
       {
         step: 4,
         title: "Test Submission",
-        description: "Submit a test document to verify the integration works correctly.",
+        description:
+          "Submit a test document to verify the integration works correctly.",
       },
     ],
     useCases: [
       {
         title: "Plagiarism Detection",
-        description: "Submit student work to Turnitin for comprehensive plagiarism checking.",
+        description:
+          "Submit student work to Turnitin for comprehensive plagiarism checking.",
         icon: "Search",
       },
       {
         title: "Originality Reports",
-        description: "View detailed similarity reports and sources directly in Zaza Draft.",
+        description:
+          "View detailed similarity reports and sources directly in Zaza Draft.",
         icon: "FileSearch",
       },
       {
         title: "Batch Processing",
-        description: "Submit entire classes of assignments to Turnitin at once.",
+        description:
+          "Submit entire classes of assignments to Turnitin at once.",
         icon: "Layers",
       },
     ],
     faqs: [
       {
         question: "Do I need a Turnitin license?",
-        answer: "Yes, your institution must have an active Turnitin license for this integration to work.",
+        answer:
+          "Yes, your institution must have an active Turnitin license for this integration to work.",
       },
       {
         question: "How long do similarity reports take?",
-        answer: "Most reports are ready within 15-30 minutes, depending on document length and Turnitin server load.",
+        answer:
+          "Most reports are ready within 15-30 minutes, depending on document length and Turnitin server load.",
       },
       {
         question: "Can students see their similarity scores?",
-        answer: "Yes, you can configure whether students can view their similarity reports.",
+        answer:
+          "Yes, you can configure whether students can view their similarity reports.",
       },
       {
         question: "Is student data secure?",
-        answer: "Yes, all submissions are encrypted and Turnitin maintains strict data privacy standards.",
+        answer:
+          "Yes, all submissions are encrypted and Turnitin maintains strict data privacy standards.",
       },
     ],
     security: {
@@ -1217,23 +1334,24 @@ export const integrations: Integration[] = [
     },
     relatedIntegrations: ["canvas-lms", "google-classroom", "schoology"],
   },
-]
+];
 
 export function getIntegrationBySlug(slug: string): Integration | undefined {
-  return integrations.find((integration) => integration.slug === slug)
+  return integrations.find((integration) => integration.slug === slug);
 }
 
 export function getIntegrationsByCategory(category: string): Integration[] {
-  return integrations.filter((integration) => integration.category === category)
+  return integrations.filter(
+    (integration) => integration.category === category,
+  );
 }
 
 export function getRelatedIntegrations(slug: string, limit = 3): Integration[] {
-  const integration = getIntegrationBySlug(slug)
-  if (!integration) return []
+  const integration = getIntegrationBySlug(slug);
+  if (!integration) return [];
 
   return integration.relatedIntegrations
     .map((relatedSlug) => getIntegrationBySlug(relatedSlug))
     .filter((int): int is Integration => int !== undefined)
-    .slice(0, limit)
+    .slice(0, limit);
 }
-

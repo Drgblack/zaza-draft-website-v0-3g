@@ -117,21 +117,21 @@
     "Nehmen Sie an expertengeleiteten Sitzungen teil und erhalten Sie PD-Zertifikate",
   startJourneyTitle: "Beginnen Sie Ihre KI-Lernreise",
   getStarted: "Jetzt starten",
-// DUPLICATE REMOVED:   learnMore: "Mehr erfahren",
+  // DUPLICATE REMOVED:   learnMore: "Mehr erfahren",
   joinNow: "Jetzt beitreten",
   downloadNow: "Jetzt herunterladen",
-// DUPLICATE REMOVED:   leadMagnetDesc:
-//     "Erhalten Sie 50+ einsatzbereite KI-Prompts für Unterrichtsplanung, Elternkommunikation und Bewertung. Sofort-Download.",
-// DUPLICATE REMOVED:   continueJourneyTitle: "Setzen Sie Ihre KI-Reise fort",
-// DUPLICATE REMOVED:   continueJourneyDesc:
-//     "Entdecken Sie weitere Ressourcen zur Verbesserung Ihrer KI-Lehrkompetenz",
-// DUPLICATE REMOVED:   liveWorkshopsDesc:
-//     "Nehmen Sie an expertengeleiteten Sitzungen teil und erhalten Sie PD-Zertifikate",
-// DUPLICATE REMOVED:   startJourneyTitle: "Beginnen Sie Ihre KI-Lernreise",
-// DUPLICATE REMOVED:   getStarted: "Jetzt starten",
-// DUPLICATE REMOVED:   learnMore: "Mehr erfahren",
-// DUPLICATE REMOVED:   joinNow: "Jetzt beitreten",
-// DUPLICATE REMOVED:   downloadNow: "Jetzt herunterladen",
+  // DUPLICATE REMOVED:   leadMagnetDesc:
+  //     "Erhalten Sie 50+ einsatzbereite KI-Prompts für Unterrichtsplanung, Elternkommunikation und Bewertung. Sofort-Download.",
+  // DUPLICATE REMOVED:   continueJourneyTitle: "Setzen Sie Ihre KI-Reise fort",
+  // DUPLICATE REMOVED:   continueJourneyDesc:
+  //     "Entdecken Sie weitere Ressourcen zur Verbesserung Ihrer KI-Lehrkompetenz",
+  // DUPLICATE REMOVED:   liveWorkshopsDesc:
+  //     "Nehmen Sie an expertengeleiteten Sitzungen teil und erhalten Sie PD-Zertifikate",
+  // DUPLICATE REMOVED:   startJourneyTitle: "Beginnen Sie Ihre KI-Lernreise",
+  // DUPLICATE REMOVED:   getStarted: "Jetzt starten",
+  // DUPLICATE REMOVED:   learnMore: "Mehr erfahren",
+  // DUPLICATE REMOVED:   joinNow: "Jetzt beitreten",
+  // DUPLICATE REMOVED:   downloadNow: "Jetzt herunterladen",
   certificationDesc: "Dreistufiger Zertifizierungspfad",
   whyGetCertified: "Warum sich zertifizieren lassen?",
   readyToStart: "Bereit zum Start?",
@@ -142,8 +142,8 @@
   aiConfidentEducator: "KI-versierte Pädagogin",
   aiEducationLeader: "KI-Bildungsleitung",
   foundationalDesc: "Grundlegende KI-Kompetenz-Zertifizierung",
-// DUPLICATE REMOVED:   intermediateDesc: "Fortgeschrittene KI-Anwendungs-Zertifizierung",
-// DUPLICATE REMOVED:   advancedDesc: "Fortgeschrittene KI-Bildungsführungs-Zertifizierung",
+  // DUPLICATE REMOVED:   intermediateDesc: "Fortgeschrittene KI-Anwendungs-Zertifizierung",
+  // DUPLICATE REMOVED:   advancedDesc: "Fortgeschrittene KI-Bildungsführungs-Zertifizierung",
   completeBeginnerPath: "Anfängerpfad abschließen",
   completeIntermediatePath: "Fortgeschrittenen-Pfad abschließen",
   submitPortfolio: "Portfolio KI-unterstützter Lektionen einreichen",
@@ -168,19 +168,19 @@
   certifiedTeachers: "zertifizierte Lehrkräfte",
   averageRating: "Durchschnittliche Bewertung",
   youllLearn: "Sie lernen:",
-// DUPLICATE REMOVED:   startLearning: "Lernen beginnen",
+  // DUPLICATE REMOVED:   startLearning: "Lernen beginnen",
   coursesAvailable: "Kurse verfügbar",
-// DUPLICATE REMOVED:   startCourse: "Kurs beginnen",
+  // DUPLICATE REMOVED:   startCourse: "Kurs beginnen",
   readyToUseDesc:
     "Einsatzbereite Vorlagen, Checklisten und Leitfäden zur Beschleunigung Ihrer KI-Einführung",
   browseAllResources: "Alle Ressourcen durchsuchen",
-// DUPLICATE REMOVED:   whyGetCertified: "Warum sich zertifizieren lassen?",
+  // DUPLICATE REMOVED:   whyGetCertified: "Warum sich zertifizieren lassen?",
   professionalRecognition: "Professionelle Anerkennung",
   careerAdvancement: "Karriereförderung",
   joinCommunity: "Der Gemeinschaft beitreten",
   readyToGetStarted: "Bereit zum Start?",
   startCertificationPath: "Zertifizierungspfad beginnen",
-  ferpaCompliant: "FERPA-konform",
+  ferpaCompliant: "FERPA-ready",
   studentDataProtected: "Schülerdaten geschützt",
   enterpriseSecurity: "Unternehmenssicherheit",
   bankLevelEncryption: "Verschlüsselung auf Bankniveau",
@@ -189,7 +189,7 @@
   noCreditCard: "Keine Kreditkarte",
   freeToStart: "Kostenlos starten",
   exploreButton: "Erkunden",
-// DUPLICATE REMOVED:   browseCourses: "Kurse durchsuchen",
+  // DUPLICATE REMOVED:   browseCourses: "Kurse durchsuchen",
   tryZazaFree: "Zaza kostenlos testen",
   professionalCertification: "Professionelle Zertifizierung",
   structuredLearningDesc:
@@ -220,14 +220,14 @@
     "Strukturierte Lernpfade, die für Lehrkräfte in jeder Phase ihrer KI-Reise entwickelt wurden",
   youLearnColon: "Sie lernen:",
   enterEmailPlaceholder: "Geben Sie Ihre E-Mail-Adresse ein",
-// DUPLICATE REMOVED:   downloadResource: "Ressource herunterladen",
+  // DUPLICATE REMOVED:   downloadResource: "Ressource herunterladen",
   noSpamText: "Kein Spam. Jederzeit abbestellbar",
   professionalCert: "Professionelle Zertifizierung",
   earnCredentialsDesc:
     "Erwerben Sie anerkannte Qualifikationen, die Ihre KI-Kompetenz und Lehrerfahrung demonstrieren",
   demonstrateExpertiseDesc:
     "Zeigen Sie Ihre Expertise gegenüber Verwaltung und Kollegen",
-// DUPLICATE REMOVED:   readyToStart: "Bereit zum Start?",
+  // DUPLICATE REMOVED:   readyToStart: "Bereit zum Start?",
   beginJourneyDesc:
     "Beginnen Sie noch heute Ihre Zertifizierungsreise. Alle Kurse und Bewertungen sind völlig kostenlos.",
   startCertPath: "Zertifizierungspfad beginnen",
@@ -235,25 +235,25 @@
   freeCoursesLabel: "Kostenlose Kurse",
   teachersEnrolledLabel: "Teilnehmende Lehrkräfte",
   certifiedEducatorsLabel: "Zertifizierte Pädagogen",
-// DUPLICATE REMOVED:   structuredLearningDesc:
-//     "Strukturierte Lernpfade, die für Lehrkräfte in jeder Phase ihrer KI-Reise entwickelt wurden",
+  // DUPLICATE REMOVED:   structuredLearningDesc:
+  //     "Strukturierte Lernpfade, die für Lehrkräfte in jeder Phase ihrer KI-Reise entwickelt wurden",
   youllLearnLabel: "Sie lernen:",
   realFeedbackHeader:
     "Echtes Feedback von Pädagogen, die unsere KI-Kompetenz-Kurse abgeschlossen haben",
-// DUPLICATE REMOVED:   readyToUseDesc:
-//     "Einsatzbereite Vorlagen, Checklisten und Leitfäden zur Beschleunigung Ihrer KI-Einführung",
+  // DUPLICATE REMOVED:   readyToUseDesc:
+  //     "Einsatzbereite Vorlagen, Checklisten und Leitfäden zur Beschleunigung Ihrer KI-Einführung",
   enterEmailText: "Geben Sie Ihre E-Mail-Adresse ein",
   downloadFreeResourceBtn: "Kostenlose Ressource herunterladen",
   noSpamDisclaimer: "Kein Spam. Jederzeit abbestellbar",
   professionalCertHeader: "Professionelle Zertifizierung",
   earnCredentialsText:
     "Erwerben Sie anerkannte Qualifikationen, die Ihre KI-Kompetenz und Lehrerfahrung demonstrieren",
-// DUPLICATE REMOVED:   enterEmailText: "Geben Sie Ihre E-Mail-Adresse ein",
-// DUPLICATE REMOVED:   downloadFreeResourceBtn: "Kostenlose Ressource herunterladen",
-// DUPLICATE REMOVED:   noSpamDisclaimer: "Kein Spam. Jederzeit abbestellbar",
-// DUPLICATE REMOVED:   professionalCertHeader: "Professionelle Zertifizierung",
-// DUPLICATE REMOVED:   earnCredentialsText:
-//     "Erwerben Sie anerkannte Qualifikationen, die Ihre KI-Kompetenz und Lehrerfahrung demonstrieren",
+  // DUPLICATE REMOVED:   enterEmailText: "Geben Sie Ihre E-Mail-Adresse ein",
+  // DUPLICATE REMOVED:   downloadFreeResourceBtn: "Kostenlose Ressource herunterladen",
+  // DUPLICATE REMOVED:   noSpamDisclaimer: "Kein Spam. Jederzeit abbestellbar",
+  // DUPLICATE REMOVED:   professionalCertHeader: "Professionelle Zertifizierung",
+  // DUPLICATE REMOVED:   earnCredentialsText:
+  //     "Erwerben Sie anerkannte Qualifikationen, die Ihre KI-Kompetenz und Lehrerfahrung demonstrieren",
   whyGetCertifiedHeader: "Warum sich zertifizieren lassen?",
   professionalRecognitionLabel: "Professionelle Anerkennung",
   demonstrateExpertiseText:
@@ -266,7 +266,7 @@
   beginJourneyText:
     "Beginnen Sie noch heute Ihre Zertifizierungsreise. Alle Kurse und Bewertungen sind völlig kostenlos.",
   startCertificationPathBtn: "Zertifizierungspfad beginnen",
-  ferpaCompliantLabel: "FERPA-konform",
+  ferpaCompliantLabel: "FERPA-ready",
   studentDataProtectedText: "Schülerdaten geschützt",
   enterpriseSecurityLabel: "Unternehmenssicherheit",
   bankLevelEncryptionText: "Verschlüsselung auf Bankniveau",
@@ -277,8 +277,4 @@
   exploreButtonText: "Erkunden",
 };
 
-
-
 export default aiLiteracy;
-
-

@@ -12,7 +12,7 @@
       "secondary": "Watch Demo"
     },
     "stats": {
-      "timeSaved": "Time Saved Weekly",
+      "timeSaved": "Hours saved each week",
       "teachers": "Teachers Using",
       "satisfaction": "Satisfaction Rate"
     }
@@ -43,7 +43,7 @@
       },
       "privacy": {
         "title": "Privacy First",
-        "description": "FERPA-compliant and secure. Your data and your students' privacy are protected."
+        "description": "FERPA-ready and secure. Your data and your students' privacy are protected."
       }
     }
   },
@@ -93,4 +93,3 @@
     "note": "No credit card required. Cancel anytime."
   }
 }
-

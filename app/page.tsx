@@ -92,7 +92,7 @@ export default function HomePage() {
               "One-click translation to 50+ languages",
               "GDPR-compliant data handling",
               "Privacy-focused design",
-              "Save 10+ hours weekly",
+              "Hours saved each week",
             ],
             aggregateRating: {
               "@type": "AggregateRating",

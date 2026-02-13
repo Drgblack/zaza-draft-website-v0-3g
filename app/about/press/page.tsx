@@ -139,7 +139,7 @@ export default function PressKitPage() {
                 {[
                   {
                     label: "Time saved",
-                    value: "10+ hrs/week",
+                    value: "Hours saved each week",
                     detail: "Average time teachers reclaim with Draft",
                   },
                   {

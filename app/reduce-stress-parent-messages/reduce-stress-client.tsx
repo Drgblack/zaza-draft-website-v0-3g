@@ -23,7 +23,13 @@ export default function ReduceStressClient() {
     TrendingUp: TrendingUp,
   };
 
-  const RenderIcon = ({ iconName, className }: { iconName: keyof typeof IconMap; className?: string }) => {
+  const RenderIcon = ({
+    iconName,
+    className,
+  }: {
+    iconName: keyof typeof IconMap;
+    className?: string;
+  }) => {
     const IconComponent = IconMap[iconName];
     return IconComponent ? <IconComponent className={className} /> : null;
   };
@@ -35,7 +41,7 @@ export default function ReduceStressClient() {
       hero_title:
         "How to Reduce Stress from Parent Messages (Without Ignoring Them)",
       hero_subtitle:
-        "Messages that usually take 10+ hours per week can be drafted in minutes.",
+        "Messages that usually take significant weekly time can be drafted in minutes.",
       cta_primary: "Try Zaza Shield Free",
       cta_secondary: "See 5 Strategies",
 
@@ -982,11 +988,3 @@ export default function ReduceStressClient() {
     </div>
   );
 }
-
-
-
-
-
-
-
-

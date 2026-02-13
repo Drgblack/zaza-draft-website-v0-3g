@@ -85,7 +85,7 @@
     cta: {
       title: "Bereit, Ihre Planung zu transformieren?",
       subtitle:
-        "SchlieÃŸen Sie sich Hunderten von LehrkrÃ¤ften an, die 10+ Stunden pro Woche sparen",
+        "Schliessen Sie sich Hunderten von Lehrkraeften an, die eingesparte Stunden pro Woche sehen",
       primary: "Early Access beitreten",
       secondary: "Demo planen",
     },
@@ -153,8 +153,8 @@
       step4: "Mehr Zeit zum Unterrichten, weniger Zeit zum Schreiben",
     },
     techNote: {
-      title: "Halluzinationssicher:",
-      body: "Im Gegensatz zu generischer KI erfindet Draft niemals SchÃ¼lerinformationen oder fabriziert Details. Jede Ausgabe basiert auf dem, was Sie bereitstellen.",
+      title: "Keine erfundenen Schuelerinformationen:",
+      body: "Draft erfindet keine schuelerbezogenen Aussagen - ueberarbeitet nur das, was Sie bereitstellen.",
     },
     social: {
       title: "Was LehrkrÃ¤fte sagen",

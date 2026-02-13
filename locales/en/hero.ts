@@ -1,6 +1,6 @@
 ﻿export default {
   eyebrow: "FOR TEACHERS",
-  badge: "Hallucination-safe AI for teachers",
+  badge: "No invented student facts for teachers",
   headline: "Write like you",
   headlineAccent: "just faster.",
   subheading:
@@ -8,8 +8,8 @@
   ctaPrimary: "Join Early Access",
   ctaSecondary: "See Examples",
   trustIndicators: {
-    hallucinationSafe: "Hallucination-safe",
-    ferpaCompliant: "FERPA compliant",
+    hallucinationSafe: "No invented student facts",
+    ferpaCompliant: "FERPA-ready",
     teachers: "Teacher-first by design",
   },
 };

@@ -1,7 +1,8 @@
 ﻿# The AI Safety & Ethics Quick Guide for Teachers
+
 ## When and How to Use AI Responsibly in Your Classroom
 
-*AI is here to stay - but that doesn't mean anything goes. This guide gives you 5 non-negotiable rules for responsible AI use, student data privacy guidelines, and conversation starters to teach students about AI ethics and academic integrity.*
+_AI is here to stay - but that doesn't mean anything goes. This guide gives you 5 non-negotiable rules for responsible AI use, student data privacy guidelines, and conversation starters to teach students about AI ethics and academic integrity._
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
@@ -13,6 +14,7 @@
 Your students are already using AI. ChatGPT, Gemini, Claude, and dozens of other tools are in their pockets. The question isn't "Should students use AI?" - they already are. The question is: **"How do we teach them to use it ethically, safely, and effectively?"**
 
 Here's what this guide covers:
+
 - **5 non-negotiable rules** for AI use in education
 - **Student data privacy** essentials (what to never put into AI)
 - **Academic integrity** guidelines (the difference between using AI and cheating)
@@ -30,6 +32,7 @@ Here's what this guide covers:
 **The Risk:** Most AI tools are not FERPA or COPPA compliant. Anything you put into ChatGPT, Gemini, or similar tools may be stored and used to train future models.
 
 **What NOT to Put Into AI:**
+
 - Student names, IDs, or email addresses
 - Grade information or assessment scores
 - IEP details or accommodation information
@@ -38,17 +41,19 @@ Here's what this guide covers:
 - Student work with identifying information (unless anonymized)
 
 **Safe Alternative:**
+
 - Use generic placeholders: "Student A," "a 7th grader," "my class"
 - Remove all identifying details before inputting student work
-- Use school-approved, FERPA-compliant AI tools if available
+- Use school-approved, FERPA-ready AI tools if available
 
 **Example:**
+
 ```
-âŒ BAD: "Write feedback for John Smith's essay on climate change. He's 
+âŒ BAD: "Write feedback for John Smith's essay on climate change. He's
 an 8th grader with an IEP for ADHD."
 
-âœ… GOOD: "Write feedback for an 8th grade essay on climate change. The 
-student struggles with organization and would benefit from structured 
+âœ… GOOD: "Write feedback for an 8th grade essay on climate change. The
+student struggles with organization and would benefit from structured
 feedback."
 ```
 
@@ -59,6 +64,7 @@ feedback."
 **The Principle:** AI is a tool for brainstorming, drafting, and efficiency - NOT for making final decisions about students.
 
 **What This Means:**
+
 - âœ… Use AI to generate feedback drafts → YOU personalize and finalize
 - âœ… Use AI to create assignment ideas → YOU adapt for your students
 - âœ… Use AI to analyze patterns → YOU interpret and act
@@ -75,6 +81,7 @@ feedback."
 **The Principle:** If you use AI, tell students (and parents).
 
 **Why Transparency Matters:**
+
 - Builds trust with students and families
 - Models ethical AI use
 - Allows students to opt out if they're uncomfortable
@@ -83,28 +90,30 @@ feedback."
 **How to Be Transparent:**
 
 **Option 1: Course Syllabus Statement**
+
 ```
-"In this class, I may use AI tools (like ChatGPT or Grammarly) to help 
-me create resources, provide feedback drafts, or generate discussion 
-prompts. All AI-generated content is reviewed and personalized by me 
-before sharing with students. If you have questions or concerns about 
+"In this class, I may use AI tools (like ChatGPT or Grammarly) to help
+me create resources, provide feedback drafts, or generate discussion
+prompts. All AI-generated content is reviewed and personalized by me
+before sharing with students. If you have questions or concerns about
 AI use, please contact me."
 ```
 
 **Option 2: Email/Newsletter to Parents**
+
 ```
 Subject: How We're Using AI as a Learning Tool This Year
 
 Dear Families,
 
-This year, I'm exploring AI tools to help me work more efficiently - 
+This year, I'm exploring AI tools to help me work more efficiently -
 which means more time for your students. Here's how I'm using it:
 - Generating first drafts of feedback (I personalize every comment)
 - Creating differentiated resources for different learning levels
 - Brainstorming creative lesson ideas
 
-I never input student names, grades, or personal information into AI. 
-All final decisions about your child's learning are made by me, not a 
+I never input student names, grades, or personal information into AI.
+All final decisions about your child's learning are made by me, not a
 machine. Questions? I'm happy to discuss!
 ```
 
@@ -118,14 +127,15 @@ machine. Questions? I'm happy to discuss!
 
 **AI Use Spectrum (Share This with Students):**
 
-| âœ… ALLOWED | âš ï¸ ASK FIRST | âŒ NOT ALLOWED |
-|------------|--------------|----------------|
-| Brainstorming ideas | Getting feedback on drafts | Having AI write your entire essay |
-| Checking grammar/spelling | Asking AI to explain a concept | Copying AI-generated text without citation |
-| Outlining structure | Using AI to create a study guide | Using AI during tests/quizzes (unless approved) |
-| Translating vocabulary | Asking AI to simplify complex text | Claiming AI work as your own |
+| âœ… ALLOWED               | âš ï¸ ASK FIRST                    | âŒ NOT ALLOWED                                  |
+| ------------------------- | ---------------------------------- | ----------------------------------------------- |
+| Brainstorming ideas       | Getting feedback on drafts         | Having AI write your entire essay               |
+| Checking grammar/spelling | Asking AI to explain a concept     | Copying AI-generated text without citation      |
+| Outlining structure       | Using AI to create a study guide   | Using AI during tests/quizzes (unless approved) |
+| Translating vocabulary    | Asking AI to simplify complex text | Claiming AI work as your own                    |
 
 **Classroom Policy Template:**
+
 ```
 AI POLICY FOR [YOUR CLASS]
 
@@ -133,7 +143,7 @@ AI POLICY FOR [YOUR CLASS]
 2. You may NOT use AI to write assignments for you.
 3. If you use AI to help with any assignment, you must:
    - Include an "AI Use Statement" explaining HOW you used it
-   - Example: "I used ChatGPT to brainstorm 3 thesis ideas. I chose 
+   - Example: "I used ChatGPT to brainstorm 3 thesis ideas. I chose
      one and wrote the essay myself."
 4. If you're unsure whether your AI use is okay, ASK FIRST.
 5. Violation = academic integrity violation (same as plagiarism).
@@ -146,6 +156,7 @@ AI POLICY FOR [YOUR CLASS]
 **The Reality:** AI is trained on internet data - which includes bias, misinformation, and outdated information.
 
 **What Students Need to Know:**
+
 - AI can be confident and wrong at the same time
 - AI reflects biases from its training data (racial, gender, cultural)
 - AI doesn't always cite sources or provide accurate information
@@ -154,11 +165,13 @@ AI POLICY FOR [YOUR CLASS]
 **How to Teach This:**
 
 **Activity 1: The AI Fact-Check Challenge**
+
 - Have students ask AI a factual question in your subject area
 - Students fact-check the AI's response using credible sources
 - Discuss: When was AI accurate? When did it hallucinate or mislead?
 
 **Activity 2: Bias Detection**
+
 - Ask AI to describe "a successful scientist" or "a great leader"
 - Analyze the response: What assumptions did AI make? What's missing?
 - Discuss: How can we recognize and challenge AI bias?
@@ -170,15 +183,18 @@ AI POLICY FOR [YOUR CLASS]
 Before using ANY AI tool, ask yourself:
 
 **FERPA Compliance:**
+
 - â˜ Is this tool approved by my district?
 - â˜ Does the tool have a data privacy policy?
 - â˜ Am I anonymizing all student information?
 
 **COPPA Compliance (for students under 13):**
+
 - â˜ Does this tool require parental consent?
 - â˜ Am I sharing student work without identifiers?
 
 **Your Professional Protection:**
+
 - â˜ Have I documented how I'm using AI?
 - â˜ Have I informed admin/parents about my AI use?
 - â˜ Am I following district policy on educational technology?
@@ -194,6 +210,7 @@ Before using ANY AI tool, ask yourself:
 **The Hook:** "Would you trust a doctor who cheated through med school?"
 
 **Key Points to Cover:**
+
 - Integrity builds real skills (you'll need those skills in real life)
 - Your reputation matters (colleges, employers, references)
 - Learning is the goal, not the grade
@@ -210,6 +227,7 @@ Before using ANY AI tool, ask yourself:
 **The Reality Check:** "We can tell when you use AI."
 
 **How Teachers Spot AI:**
+
 - Voice changes suddenly (your writing has a personality - AI doesn't)
 - Vocabulary that's too advanced or formal for your level
 - Generic content with no personal examples
@@ -229,14 +247,17 @@ Before using ANY AI tool, ask yourself:
 **Responsible AI Use Examples:**
 
 **Scenario 1: You're Stuck on a Topic**
+
 - âŒ Ask AI to write the essay
 - âœ… Ask AI to brainstorm 5 possible angles on the topic, then YOU choose and develop one
 
 **Scenario 2: You Don't Understand the Assignment**
+
 - âŒ Copy AI's explanation and submit it
 - âœ… Ask AI to explain it in simpler terms, then ask your teacher if you understood correctly
 
 **Scenario 3: You're Editing Your Work**
+
 - âŒ Let AI rewrite your sentences
 - âœ… Ask AI to identify weak spots, then YOU improve them in your own voice
 
@@ -249,7 +270,7 @@ Before using ANY AI tool, ask yourself:
 ```
 AI USE POLICY FOR [CLASS NAME]
 
-As your teacher, I believe AI is a tool that can help you learn - 
+As your teacher, I believe AI is a tool that can help you learn -
 when used responsibly. Here's our class policy:
 
 WHEN YOU CAN USE AI:
@@ -268,15 +289,15 @@ WHEN YOU CANNOT USE AI:
 REQUIRED: AI USE STATEMENT
 If you use AI on any assignment, you must include a statement like this:
 
-"I used [AI tool name] to [specific task]. I reviewed the output and 
+"I used [AI tool name] to [specific task]. I reviewed the output and
 made my own decisions about how to use it."
 
 CONSEQUENCES:
-Using AI without disclosure or using it to complete work for you will be 
+Using AI without disclosure or using it to complete work for you will be
 treated as an academic integrity violation (same as plagiarism).
 
 QUESTIONS?
-If you're not sure whether your use of AI is okay, ask me FIRST. 
+If you're not sure whether your use of AI is okay, ask me FIRST.
 I'd rather answer 100 questions than see you make a mistake.
 ```
 
@@ -304,11 +325,13 @@ Assistive technology (like text-to-speech, speech-to-text, or Grammarly) is diff
 ## Your Next Steps
 
 ### This Week:
+
 1. Review your current AI use - are you following the 5 rules?
 2. Draft an AI policy for your class (use the template)
 3. Have a 10-minute conversation with students about AI ethics
 
 ### This Month:
+
 - Share your AI policy with parents (via email or newsletter)
 - Check with your district about approved AI tools
 - Try one AI responsibility activity with your class (Fact-Check Challenge or Bias Detection)
@@ -330,6 +353,4 @@ The students who learn to use AI responsibly will have a massive advantage in co
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
-
-
+_Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact._

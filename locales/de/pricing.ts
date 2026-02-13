@@ -42,7 +42,7 @@
     badge: "AM BELIEBTESTEN",
     title: "Teacher",
     description:
-      "Unbegrenztes, halluzinationssicheres Schreiben ohne Lock-ins.",
+      "Unbegrenzte Schreibunterstuetzung ohne erfundene Schuelerinformationen und ohne Lock-ins.",
     period: "Jederzeit kÃ¼ndbar",
     savingsAnnual: "2 Monate kostenlos sparen",
     cta: "7-Tage-Testversion starten",
@@ -138,4 +138,3 @@
     secondary: "Mit Vertrieb sprechen",
   },
 };
-

@@ -44,7 +44,7 @@ const content = {
     features: {
       security: {
         title: "Enterprise Security",
-        desc: "All integrations use OAuth 2.0 and are FERPA compliant. Your data is encrypted in transit and at rest.",
+        desc: "All integrations use OAuth 2.0 and are FERPA-ready. Your data is encrypted in transit and at rest.",
       },
       guides: {
         title: "Step-by-Step Guides",
@@ -309,7 +309,7 @@ const content = {
     features: {
       security: {
         title: "Unternehmenssicherheit",
-        desc: "Alle Integrationen nutzen OAuth 2.0 und sind DSGVO/FERPA-konform. Ihre Daten werden bei der Übertragung und im Ruhezustand verschlüsselt.",
+        desc: "Alle Integrationen nutzen OAuth 2.0 und sind DSGVO/FERPA-ready. Ihre Daten werden bei der Uebertragung und im Ruhezustand verschluesselt.",
       },
       guides: {
         title: "Schritt-für-Schritt-Anleitungen",
@@ -1015,5 +1015,3 @@ export default function IntegrationsClient() {
     </div>
   );
 }
-
-

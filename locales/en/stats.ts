@@ -10,7 +10,7 @@
     label: "Design partners shaping Draft",
   },
   timeSaved: {
-    number: "10+ hrs",
-    label: "Saved Weekly",
+    number: "Hours saved",
+    label: "each week",
   },
 };

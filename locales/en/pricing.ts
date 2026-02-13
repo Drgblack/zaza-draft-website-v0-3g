@@ -37,7 +37,8 @@
   teacher: {
     badge: "MOST POPULAR",
     title: "Teacher",
-    description: "Unlimited, hallucination-safe writing with no lock-ins.",
+    description:
+      "Unlimited writing support with no invented student facts and no lock-ins.",
     period: "Cancel anytime",
     savingsAnnual: "Save 2 months free",
     cta: "Start 7-day free trial",
@@ -135,4 +136,3 @@
     subtitle: "Take our quick quiz to get a personalized recommendation",
   },
 };
-

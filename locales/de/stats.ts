@@ -10,7 +10,7 @@ export default {
     label: "Designpartner",
   },
   timeSaved: {
-    number: "10+ Std.",
-    label: "Wöchentlich gespart",
+    number: "Eingesparte Stunden",
+    label: "pro Woche",
   },
 };

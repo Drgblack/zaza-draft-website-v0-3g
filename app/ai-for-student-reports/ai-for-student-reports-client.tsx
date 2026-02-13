@@ -166,7 +166,7 @@ const content = {
       {
         question: "Is this safe for student data?",
         answer:
-          "Yes, our tools are DSGVO and FERPA compliant. They require no student names and never train the model on your data.",
+          "Yes, our tools are DSGVO and FERPA-ready. They require no student names and never train the model on your data.",
       },
       {
         question: "Does it work for all subjects?",
@@ -338,7 +338,7 @@ const content = {
       {
         question: "Ist dies für Schülerdaten sicher?",
         answer:
-          "Ja, unsere Tools sind DSGVO- und FERPA-konform. Sie benötigen keine Schülernamen und trainieren das Modell niemals mit Ihren Daten.",
+          "Ja, unsere Tools sind DSGVO- und FERPA-ready. Sie benoetigen keine Schuelernamen und trainieren das Modell niemals mit Ihren Daten.",
       },
       {
         question: "Funktioniert es für alle Fächer?",
@@ -758,4 +758,3 @@ export function AiForStudentReportsClient() {
     </div>
   );
 }
-

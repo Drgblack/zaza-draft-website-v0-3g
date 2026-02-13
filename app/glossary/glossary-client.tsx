@@ -16,7 +16,10 @@ interface BilingualGlossaryTerm {
 const glossaryTerms: BilingualGlossaryTerm[] = [
   {
     id: "artificial-intelligence",
-    term: { en: "Artificial Intelligence (AI)", de: "Künstliche Intelligenz (KI)" },
+    term: {
+      en: "Artificial Intelligence (AI)",
+      de: "Künstliche Intelligenz (KI)",
+    },
     definition: {
       en: "Computer systems designed to perform tasks that typically require human intelligence, such as learning, problem-solving, pattern recognition, and decision-making.",
       de: "Computersysteme, die dafür entwickelt wurden, Aufgaben auszuführen, die normalerweise menschliche Intelligenz erfordern, wie Lernen, Problemlösung, Mustererkennung und Entscheidungsfindung.",
@@ -54,7 +57,11 @@ const glossaryTerms: BilingualGlossaryTerm[] = [
       de: "Deep Learning ermöglicht es KI, den nuancierten Unterschied zwischen 'Der Schüler benötigt Unterstützung' und 'Der Schüler zeichnet sich aus' in Ihren Zeugnissen zu verstehen.",
     },
     category: { en: "AI Fundamentals", de: "KI-Grundlagen" },
-    relatedTerms: ["Neural Network", "Machine Learning", "Artificial Intelligence (AI)"],
+    relatedTerms: [
+      "Neural Network",
+      "Machine Learning",
+      "Artificial Intelligence (AI)",
+    ],
   },
   {
     id: "algorithm",
@@ -114,7 +121,10 @@ const glossaryTerms: BilingualGlossaryTerm[] = [
   },
   {
     id: "natural-language-processing",
-    term: { en: "Natural Language Processing (NLP)", de: "Natürliche Sprachverarbeitung (NLP)" },
+    term: {
+      en: "Natural Language Processing (NLP)",
+      de: "Natürliche Sprachverarbeitung (NLP)",
+    },
     definition: {
       en: "The branch of AI that helps computers understand, interpret, and generate human language in a way that is meaningful and useful.",
       de: "Der Zweig der KI, der Computern hilft, menschliche Sprache auf sinnvolle und nützliche Weise zu verstehen, zu interpretieren und zu generieren.",
@@ -123,8 +133,15 @@ const glossaryTerms: BilingualGlossaryTerm[] = [
       en: "NLP enables Zaza Draft to understand your writing intent and suggest contextually appropriate improvements.",
       de: "NLP ermöglicht es Zaza Draft, Ihre Schreibabsicht zu verstehen und kontextgerechte Verbesserungen vorzuschlagen.",
     },
-    category: { en: "Natural Language Processing", de: "Natürliche Sprachverarbeitung" },
-    relatedTerms: ["Large Language Model", "Tokenization", "Sentiment Analysis"],
+    category: {
+      en: "Natural Language Processing",
+      de: "Natürliche Sprachverarbeitung",
+    },
+    relatedTerms: [
+      "Large Language Model",
+      "Tokenization",
+      "Sentiment Analysis",
+    ],
   },
   {
     id: "tokenization",
@@ -137,7 +154,10 @@ const glossaryTerms: BilingualGlossaryTerm[] = [
       en: "When you type 'The student is making progress,' the AI breaks it into tokens to analyze each word's meaning and context.",
       de: "Wenn Sie 'Der Schüler macht Fortschritte' eingeben, zerlegt die KI es in Tokens, um die Bedeutung und den Kontext jedes Wortes zu analysieren.",
     },
-    category: { en: "Natural Language Processing", de: "Natürliche Sprachverarbeitung" },
+    category: {
+      en: "Natural Language Processing",
+      de: "Natürliche Sprachverarbeitung",
+    },
     relatedTerms: ["Natural Language Processing (NLP)", "Large Language Model"],
   },
   {
@@ -151,7 +171,10 @@ const glossaryTerms: BilingualGlossaryTerm[] = [
       en: "Sentiment analysis helps ensure your parent emails strike the right toneâ€”supportive rather than critical.",
       de: "Sentimentanalyse hilft sicherzustellen, dass Ihre Eltern-E-Mails den richtigen Ton treffenâ€”unterstützend statt kritisch.",
     },
-    category: { en: "Natural Language Processing", de: "Natürliche Sprachverarbeitung" },
+    category: {
+      en: "Natural Language Processing",
+      de: "Natürliche Sprachverarbeitung",
+    },
     relatedTerms: ["Natural Language Processing (NLP)", "Tone"],
   },
   {
@@ -184,7 +207,10 @@ const glossaryTerms: BilingualGlossaryTerm[] = [
   },
   {
     id: "gpt",
-    term: { en: "GPT (Generative Pre-trained Transformer)", de: "GPT (Generative Pre-trained Transformer)" },
+    term: {
+      en: "GPT (Generative Pre-trained Transformer)",
+      de: "GPT (Generative Pre-trained Transformer)",
+    },
     definition: {
       en: "A specific type of large language model developed by OpenAI that's particularly good at understanding context and generating coherent text.",
       de: "Ein spezifischer Typ großer Sprachmodelle, entwickelt von OpenAI, der besonders gut darin ist, Kontext zu verstehen und kohärenten Text zu generieren.",
@@ -316,15 +342,18 @@ const glossaryTerms: BilingualGlossaryTerm[] = [
       de: "Einhaltung des Family Educational Rights and Privacy Act, der Schülerbildungsunterlagen und persönliche Informationen schützt.",
     },
     example: {
-      en: "When using AI tools, never input student names, IDs, or other personally identifiable information unless the tool is FERPA-compliant.",
-      de: "Bei der Verwendung von KI-Tools geben Sie niemals Schülernamen, IDs oder andere personenbezogene Informationen ein, es sei denn, das Tool ist FERPA-konform.",
+      en: "When using AI tools, never input student names, IDs, or other personally identifiable information unless the tool is FERPA-ready.",
+      de: "Bei der Verwendung von KI-Tools geben Sie niemals Schuelernamen, IDs oder andere personenbezogene Informationen ein, es sei denn, das Tool ist FERPA-ready.",
     },
     category: { en: "Data & Privacy", de: "Daten & Datenschutz" },
     relatedTerms: ["Student Privacy", "Data Security", "PII"],
   },
   {
     id: "pii",
-    term: { en: "PII (Personally Identifiable Information)", de: "PII (Personenbezogene Daten)" },
+    term: {
+      en: "PII (Personally Identifiable Information)",
+      de: "PII (Personenbezogene Daten)",
+    },
     definition: {
       en: "Any information that can be used to identify a specific individual, such as names, addresses, or student ID numbers.",
       de: "Alle Informationen, die verwendet werden können, um eine bestimmte Person zu identifizieren, wie Namen, Adressen oder Schüler-ID-Nummern.",
@@ -362,11 +391,18 @@ const glossaryTerms: BilingualGlossaryTerm[] = [
       de: "Zaza Draft ist ein KI-Schreibassistent, der speziell für die Kommunikationsbedürfnisse von Lehrkräften entwickelt wurde.",
     },
     category: { en: "AI Tools & Platforms", de: "KI-Tools & Plattformen" },
-    relatedTerms: ["Generative AI", "Natural Language Processing (NLP)", "Grammarly"],
+    relatedTerms: [
+      "Generative AI",
+      "Natural Language Processing (NLP)",
+      "Grammarly",
+    ],
   },
   {
     id: "api",
-    term: { en: "API (Application Programming Interface)", de: "API (Programmierschnittstelle)" },
+    term: {
+      en: "API (Application Programming Interface)",
+      de: "API (Programmierschnittstelle)",
+    },
     definition: {
       en: "A way for different software applications to communicate and share data with each other.",
       de: "Eine Möglichkeit für verschiedene Softwareanwendungen, miteinander zu kommunizieren und Daten auszutauschen.",
@@ -389,7 +425,10 @@ const glossaryTerms: BilingualGlossaryTerm[] = [
       en: "AI-powered reading programs that automatically adjust difficulty based on student responses use adaptive learning.",
       de: "KI-gestützte Leseprogramme, die die Schwierigkeit basierend auf Schülerantworten automatisch anpassen, nutzen adaptives Lernen.",
     },
-    category: { en: "Educational AI Applications", de: "Pädagogische KI-Anwendungen" },
+    category: {
+      en: "Educational AI Applications",
+      de: "Pädagogische KI-Anwendungen",
+    },
     relatedTerms: ["Personalization", "Differentiation", "Machine Learning"],
   },
   {
@@ -403,8 +442,15 @@ const glossaryTerms: BilingualGlossaryTerm[] = [
       en: "AI can provide instant feedback on grammar and structure in student essays, but teachers should review subjective elements like creativity.",
       de: "KI kann sofortiges Feedback zu Grammatik und Struktur in Schüleraufsätzen geben, aber Lehrkräfte sollten subjektive Elemente wie Kreativität überprüfen.",
     },
-    category: { en: "Educational AI Applications", de: "Pädagogische KI-Anwendungen" },
-    relatedTerms: ["Assessment", "Feedback", "Natural Language Processing (NLP)"],
+    category: {
+      en: "Educational AI Applications",
+      de: "Pädagogische KI-Anwendungen",
+    },
+    relatedTerms: [
+      "Assessment",
+      "Feedback",
+      "Natural Language Processing (NLP)",
+    ],
   },
   {
     id: "change-management",
@@ -436,7 +482,10 @@ const glossaryTerms: BilingualGlossaryTerm[] = [
   },
   {
     id: "agi",
-    term: { en: "AGI (Artificial General Intelligence)", de: "AGI (Allgemeine Künstliche Intelligenz)" },
+    term: {
+      en: "AGI (Artificial General Intelligence)",
+      de: "AGI (Allgemeine Künstliche Intelligenz)",
+    },
     definition: {
       en: "Hypothetical AI that can understand, learn, and apply knowledge across any domain, like human intelligence. This doesn't exist yet.",
       de: "Hypothetische KI, die Wissen in jedem Bereich verstehen, lernen und anwenden kann, wie menschliche Intelligenz. Dies existiert noch nicht.",
@@ -549,7 +598,9 @@ export default function GlossaryClient() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            {language === "de" ? "KI-Glossar für Lehrkräfte" : "AI Glossary for Educators"}
+            {language === "de"
+              ? "KI-Glossar für Lehrkräfte"
+              : "AI Glossary for Educators"}
           </h1>
 
           <p className="text-xl text-gray-300 leading-relaxed">
@@ -589,7 +640,11 @@ export default function GlossaryClient() {
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
             <input
               type="text"
-              placeholder={language === "de" ? "Nach einem Begriff suchen..." : "Search for a term..."}
+              placeholder={
+                language === "de"
+                  ? "Nach einem Begriff suchen..."
+                  : "Search for a term..."
+              }
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-6 text-lg bg-white/5 border border-white/10 text-white placeholder:text-gray-500 focus:border-[#A78BFA] focus:ring-[#A78BFA] rounded-lg"
@@ -619,7 +674,9 @@ export default function GlossaryClient() {
           {filteredTerms.length === 0 ? (
             <div className="text-center py-12">
               <p className="text-xl text-gray-400">
-                {language === "de" ? "Keine Begriffe gefunden" : "No terms found"}
+                {language === "de"
+                  ? "Keine Begriffe gefunden"
+                  : "No terms found"}
               </p>
             </div>
           ) : (
@@ -682,7 +739,9 @@ export default function GlossaryClient() {
                         {term.relatedTerms && term.relatedTerms.length > 0 && (
                           <div>
                             <h4 className="text-sm font-semibold text-gray-400 mb-2">
-                              {language === "de" ? "Verwandte Begriffe" : "Related Terms"}
+                              {language === "de"
+                                ? "Verwandte Begriffe"
+                                : "Related Terms"}
                             </h4>
                             <div className="flex flex-wrap gap-2">
                               {term.relatedTerms.map((relatedTerm) => (
@@ -726,4 +785,3 @@ export default function GlossaryClient() {
     </div>
   );
 }
-

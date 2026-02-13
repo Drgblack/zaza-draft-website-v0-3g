@@ -62,7 +62,7 @@ const translationsEn: Record<string, string> = {
   "pricing.teacher.badge": "MOST POPULAR",
   "pricing.teacher.title": "Teacher",
   "pricing.teacher.description":
-    "Unlimited, hallucination-safe writing with no lock-ins.",
+    "Unlimited writing support with no invented student facts and no lock-ins.",
   "pricing.teacher.period": "Cancel anytime",
   "pricing.teacher.savingsAnnual": "Save 2 months free",
   "pricing.teacher.cta": "Start 7-day free trial",
@@ -359,8 +359,8 @@ const translationsEn: Record<string, string> = {
   "suite.cta.secondary": "Talk to our team",
 
   // Suite - Trust Bar (EN)
-  "suite.trust.hallucinationSafe": "Hallucination-safe",
-  "suite.trust.ferpa": "FERPA compliant",
+  "suite.trust.hallucinationSafe": "No invented student facts",
+  "suite.trust.ferpa": "FERPA-ready",
   "suite.trust.teachers": "Built with teachers at every step",
 
   // Suite - How It Works (EN)
@@ -583,7 +583,8 @@ const translationsEn: Record<string, string> = {
     "You can stay in the community, get early notice for the launch, and keep shaping Zaza Draft before general availability.",
 
   // Hallucination-Safe Tooltip
-  "hallucinationSafe.tooltip.heading": "What does hallucination-safe mean?",
+  "hallucinationSafe.tooltip.heading":
+    "What does 'No invented student facts' mean?",
   "hallucinationSafe.tooltip.body":
     "Unlike generic AI tools, Zaza Draft is specifically trained to avoid making up student information, fabricating parent interactions, or inventing details about your class. Every output is grounded in what you actually provide - no invented facts, no fictional scenarios.",
 
@@ -621,7 +622,7 @@ const translationsEn: Record<string, string> = {
     "Teacher-founded, PhD in Professional Education",
   "socialProof.badges.gdprReady": "Built in Germany – GDPR-ready",
   "socialProof.badges.teacherFeedback": "Designed with real teacher feedback",
-  "socialProof.badges.hallucinationSafe": "Hallucination-safe outputs",
+  "socialProof.badges.hallucinationSafe": "No invented student facts",
 
   // How It Works Section
   "howItWorks.heading": "How Draft restores clarity",
@@ -872,7 +873,7 @@ const translationsEn: Record<string, string> = {
 
   "products.teach.cta.title": "Ready to Transform Your Planning?",
   "products.teach.cta.subtitle":
-    "Join hundreds of teachers saving 10+ hours per week",
+    "Join hundreds of teachers seeing hours saved each week",
   "products.teach.cta.primary": "Join Early Access",
   "products.teach.cta.secondary": "Schedule Demo",
 
@@ -1115,7 +1116,7 @@ const translationsEn: Record<string, string> = {
 
   "faq.about.q2": "How is Zaza Draft different from ChatGPT or other AI tools?",
   "faq.about.a2":
-    "Unlike generic AI tools, Zaza Draft is trained specifically on educational communications and pedagogy. It's hallucination-safe (never invents student information), offers education-specific tone options, is FERPA-compliant by design, and provides specialized workflows for common teacher writing tasks.",
+    "Unlike generic AI tools, Zaza Draft is built with teacher design partners and education-specific workflows. It does not invent student-specific claims - rewrites only what you provide, offers education-specific tone options, is FERPA-ready by design, and provides specialized workflows for common teacher writing tasks.",
 
   "faq.about.q3": "Who is Zaza Draft for?",
   "faq.about.a3":
@@ -1135,7 +1136,7 @@ const translationsEn: Record<string, string> = {
 
   "faq.about.q7": "How much time can I save with Zaza Draft?",
   "faq.about.a7":
-    "Teachers using Draft report saving 10+ hours per week on writing tasks. Tasks that typically take 2 hours can be completed in 5 minutes with Draft's assistance.",
+    "Teachers using Draft report hours saved each week on writing tasks. Tasks that typically take 2 hours can be completed in 5 minutes with Draft's assistance.",
 
   "faq.about.q8": "Can I customize the output?",
   "faq.about.a8":
@@ -1156,13 +1157,13 @@ const translationsEn: Record<string, string> = {
   // Safety Questions
   "faq.safety.q1": "Is my data safe with Zaza Draft?",
   "faq.safety.a1":
-    "Yes. We take data security seriously. All data is encrypted in transit and at rest, we're FERPA-compliant, and we never use your data to train our models or share it with third parties. Your communications remain private and secure.",
+    "Yes. We take data security seriously. All data is encrypted in transit and at rest, we're FERPA-ready, and we never use your data to train our models or share it with third parties. Your communications remain private and secure.",
 
-  "faq.safety.q2": "What does 'hallucination-safe' mean?",
+  "faq.safety.q2": "What does 'No invented student facts' mean?",
   "faq.safety.a2":
-    "Hallucination-safe means Draft never invents student information, fabricates parent interactions, or creates fictional details about your class. Every output is grounded in what you actually provide - no made-up facts or scenarios.",
+    "Draft does not invent student-specific claims - rewrites only what you provide. Every output is grounded in what you actually provide.",
 
-  "faq.safety.q3": "Is Zaza Draft FERPA compliant?",
+  "faq.safety.q3": "Is Zaza Draft FERPA-ready?",
   "faq.safety.a3":
     "Yes. Zaza Draft is designed with FERPA compliance in mind. We implement appropriate safeguards to protect student privacy and educational records, and we never share or sell student data.",
 
@@ -1288,10 +1289,11 @@ const translationsEn: Record<string, string> = {
   "about.overview.values.teacherFirst.body":
     "Designed with and for teachers as professionals.",
   "about.overview.values.safety.title": "Safety by Design",
-  "about.overview.values.safety.body": "Calm, hallucination-safe AI.",
+  "about.overview.values.safety.body":
+    "Calm AI with no invented student facts.",
   "about.overview.values.privacy.title": "Privacy First",
   "about.overview.values.privacy.body":
-    "FERPA-compliant from day one. Your data is yours, and we never use it to train our models.",
+    "FERPA-ready from day one. Your data is yours, and we never use it to train our models.",
   "about.overview.values.evidence.title": "Evidence-Based",
   "about.overview.values.evidence.body":
     "Grounded in learning science and professional education research.",
@@ -1329,7 +1331,7 @@ const translationsEn: Record<string, string> = {
   "company.origin.body.p3":
     "We design tools that are trained on real pedagogy, developed with educators, and refined through classroom use. Tools that understand the nuance of teacher judgement, the emotional weight of parent interaction, and the importance of constructive feedback. Tools that are accurate, reliable, and safe for educational settings.",
   "company.origin.body.p4":
-    "Our models are trained on real teacher feedback and classroom language patterns, refined through iterative testing with educators, and designed to produce output that sounds like a teacher - not a machine.",
+    "Built with teacher design partners and education-specific workflows.",
   "company.origin.body.p5":
     "Our goal is simple: give teachers meaningful time back.",
 
@@ -1541,7 +1543,7 @@ const translationsDe: Record<string, string> = {
   "pricing.teacher.badge": "AM BELIEBTESTEN",
   "pricing.teacher.title": "Teacher",
   "pricing.teacher.description":
-    "Unbegrenztes, halluzinationssicheres Schreiben ohne Lock-ins.",
+    "Unbegrenzte Schreibunterstuetzung ohne erfundene Schuelerinformationen und ohne Lock-ins.",
   "pricing.teacher.period": "Jederzeit kündbar",
   "pricing.teacher.savingsAnnual": "2 Monate kostenlos sparen",
   "pricing.teacher.cta": "7-Tage-Testversion starten",
@@ -1848,8 +1850,8 @@ const translationsDe: Record<string, string> = {
   "suite.cta.secondary": "Mit unserem Team sprechen",
 
   // Suite - Trust Bar (DE)
-  "suite.trust.hallucinationSafe": "Halluzinationssicher",
-  "suite.trust.ferpa": "FERPA-konform",
+  "suite.trust.hallucinationSafe": "Keine erfundenen Schuelerinformationen",
+  "suite.trust.ferpa": "FERPA-ready",
   "suite.trust.teachers": "Mit Lehrkräften an jedem Schritt entwickelt",
 
   // Suite - How It Works (DE)
@@ -2073,7 +2075,8 @@ const translationsDe: Record<string, string> = {
     "Du kannst Teil der Community bleiben, bekommst Launch-Infos und bleibst weiter im Gespräch, während wir Zaza Draft vor dem allgemeinen Release verbessern.",
 
   // Hallucination-Safe Tooltip
-  "hallucinationSafe.tooltip.heading": "Was bedeutet halluzinationssicher?",
+  "hallucinationSafe.tooltip.heading":
+    "Was bedeutet 'Keine erfundenen Schuelerinformationen'?",
   "hallucinationSafe.tooltip.body":
     "Im Gegensatz zu generischen KI-Tools ist Zaza Draft speziell darauf trainiert, das Erfinden von Schülerinformationen, die Erfindung von Elterninteraktionen oder das Erfinden von Details über Ihre Klasse zu vermeiden. Jede Ausgabe basiert auf dem, was Sie tatsächlich bereitstellen – keine erfundenen Fakten, keine fiktiven Szenarien.",
 
@@ -2113,7 +2116,8 @@ const translationsDe: Record<string, string> = {
   "socialProof.badges.gdprReady": "In Deutschland entwickelt – DSGVO-konform",
   "socialProof.badges.teacherFeedback":
     "Mit echtem Lehrkräfte-Feedback entwickelt",
-  "socialProof.badges.hallucinationSafe": "Halluzinationssichere Ergebnisse",
+  "socialProof.badges.hallucinationSafe":
+    "Keine erfundenen Schuelerinformationen",
 
   // How It Works Section
   "howItWorks.heading": "Wie Draft Klarheit zurückbringt",
@@ -2378,7 +2382,7 @@ const translationsDe: Record<string, string> = {
 
   "products.teach.cta.title": "Bereit, Ihre Planung zu transformieren?",
   "products.teach.cta.subtitle":
-    "Schließen Sie sich Hunderten von Lehrkräften an, die 10+ Stunden pro Woche sparen",
+    "Schliessen Sie sich Hunderten von Lehrkraeften an, die eingesparte Stunden pro Woche sehen",
   "products.teach.cta.primary": "Early Access beitreten",
   "products.teach.cta.secondary": "Demo planen",
 
@@ -2444,7 +2448,7 @@ const translationsDe: Record<string, string> = {
   "products.draft.change.step4":
     "Mehr Zeit zum Unterrichten, weniger Zeit fürs Umschreiben",
 
-  "products.draft.techNote.title": "Halluzinationssicher:",
+  "products.draft.techNote.title": "Keine erfundenen Schuelerinformationen:",
   "products.draft.techNote.body":
     "Draft erfindet keine Schülerdetails oder Elterninteraktionen. Leitplanken halten jede Nachricht bei dem, was du vorgibst.",
 
@@ -2516,7 +2520,7 @@ const translationsDe: Record<string, string> = {
   "shield.hero.cta.secondary": "Vertrieb kontaktieren",
 
   "shield.trust.gdpr": "GDPR-konform",
-  "shield.trust.ferpa": "FERPA-konform",
+  "shield.trust.ferpa": "FERPA-ready",
   "shield.trust.schoolReady": "Schulbereit",
 
   "shield.problem.title": "Die Herausforderung der KI-Governance",
@@ -2625,7 +2629,7 @@ const translationsDe: Record<string, string> = {
   "faq.about.q2":
     "Wie unterscheidet sich Zaza Draft von ChatGPT oder anderen KI-Tools?",
   "faq.about.a2":
-    "Im Gegensatz zu generischen KI-Tools ist Zaza Draft speziell auf pädagogische Kommunikation und Pädagogik trainiert. Es ist halluzinationssicher (erfindet niemals Schülerinformationen), bietet bildungsspezifische Tonoptionen, ist von Grund auf FERPA-konform und bietet spezialisierte Workflows für gängige Schreibaufgaben von Lehrkräften.",
+    "Im Gegensatz zu generischen KI-Tools ist Zaza Draft mit Lehrkraefte-Designpartnern und bildungsspezifischen Workflows entwickelt. Es erfindet keine schuelerbezogenen Aussagen und ueberarbeitet nur das, was du vorgibst, bietet bildungsspezifische Tonoptionen und ist FERPA-ready von Grund auf.",
 
   "faq.about.q3": "Für wen ist Zaza Draft gedacht?",
   "faq.about.a3":
@@ -2647,7 +2651,7 @@ const translationsDe: Record<string, string> = {
 
   "faq.about.q7": "Wie viel Zeit kann ich mit Zaza Draft sparen?",
   "faq.about.a7":
-    "Lehrkräfte, die Draft nutzen, berichten, dass sie 10+ Stunden pro Woche bei Schreibaufgaben sparen. Aufgaben, die typischerweise 2 Stunden dauern, können mit Drafts Unterstützung in 5 Minuten erledigt werden.",
+    "Lehrkraefte, die Draft nutzen, berichten von eingesparten Stunden pro Woche bei Schreibaufgaben. Aufgaben, die typischerweise 2 Stunden dauern, koennen mit Drafts Unterstuetzung in 5 Minuten erledigt werden.",
 
   "faq.about.q8": "Kann ich die Ausgabe anpassen?",
   "faq.about.a8":
@@ -2668,13 +2672,13 @@ const translationsDe: Record<string, string> = {
   // Safety Questions
   "faq.safety.q1": "Sind meine Daten bei Zaza Draft sicher?",
   "faq.safety.a1":
-    "Ja. Wir nehmen die Datensicherheit sehr ernst. Alle Daten werden verschlüsselt übertragen und gespeichert, wir sind FERPA-konform und verwenden Ihre Daten niemals, um unsere Modelle zu trainieren oder mit Dritten zu teilen. Ihre Kommunikation bleibt privat und sicher.",
+    "Ja. Wir nehmen die Datensicherheit sehr ernst. Alle Daten werden verschluesselt uebertragen und gespeichert, wir sind FERPA-ready und verwenden Ihre Daten niemals, um unsere Modelle zu trainieren oder mit Dritten zu teilen. Ihre Kommunikation bleibt privat und sicher.",
 
-  "faq.safety.q2": "Was bedeutet 'halluzinationssicher'?",
+  "faq.safety.q2": "Was bedeutet 'Keine erfundenen Schuelerinformationen'?",
   "faq.safety.a2":
-    "Halluzinationssicher bedeutet, dass Draft niemals Schülerinformationen erfindet, Elterninteraktionen fabriziert oder fiktive Details über Ihre Klasse erstellt. Jede Ausgabe basiert auf dem, was Sie tatsächlich bereitstellen – keine erfundenen Fakten oder Szenarien.",
+    "Draft erfindet keine schuelerbezogenen Aussagen und ueberarbeitet nur das, was du vorgibst. Jede Ausgabe basiert auf dem, was Sie tatsaechlich bereitstellen.",
 
-  "faq.safety.q3": "Ist Zaza Draft FERPA-konform?",
+  "faq.safety.q3": "Ist Zaza Draft FERPA-ready?",
   "faq.safety.a3":
     "Ja. Zaza Draft ist auf FERPA-Compliance ausgelegt. Wir implementieren angemessene Schutzmaßnahmen, um die Privatsphäre der Schüler und Bildungsunterlagen zu schützen, und wir teilen oder verkaufen niemals Schülerdaten.",
 
@@ -2797,10 +2801,11 @@ const translationsDe: Record<string, string> = {
   "about.overview.values.teacherFirst.body":
     "Mit Lehrkräften als Profis entworfen.",
   "about.overview.values.safety.title": "Sicherheit von Grund auf",
-  "about.overview.values.safety.body": "Ruhige, halluzinationssichere KI.",
+  "about.overview.values.safety.body":
+    "Ruhige KI ohne erfundene Schuelerinformationen.",
   "about.overview.values.privacy.title": "Datenschutz an erster Stelle",
   "about.overview.values.privacy.body":
-    "FERPA-konform vom ersten Tag an. Ihre Daten gehören Ihnen, und wir verwenden sie niemals, um unsere Modelle zu trainieren.",
+    "FERPA-ready vom ersten Tag an. Ihre Daten gehoeren Ihnen, und wir verwenden sie niemals, um unsere Modelle zu trainieren.",
   "about.overview.values.evidence.title": "Evidenzbasiert",
   "about.overview.values.evidence.body":
     "Auf Lernwissenschaft und berufspädagogische Forschung gestützt.",
