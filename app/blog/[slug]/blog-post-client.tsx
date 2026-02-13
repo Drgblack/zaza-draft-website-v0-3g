@@ -30,6 +30,7 @@ interface BlogPostClientProps {
 
 export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
   const { language } = useLanguage();
+  const basePath = language === "de" ? "/de/blog" : "/blog";
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [readingProgress, setReadingProgress] = useState(0);
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
@@ -371,7 +372,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
 
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12 lg:pt-6 lg:pb-16">
         {/* Back button */}
-        <Link href="/blog" className="inline-block mb-8">
+        <Link href={basePath} className="inline-block mb-8">
           <Button
             variant="ghost"
             className="text-[#5A6C7D] hover:text-[#2D5B8F] hover:bg-white"
@@ -446,7 +447,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
               {relatedPosts.map((relatedPost) => (
                 <Link
                   key={relatedPost.slug}
-                  href={`/blog/${relatedPost.slug}`}
+                  href={`${basePath}/${relatedPost.slug}`}
                   className="group"
                 >
                   <Card className="bg-white border-[#E5E7EB] hover:border-[#2D5B8F] hover:shadow-lg transition-all h-full p-6">

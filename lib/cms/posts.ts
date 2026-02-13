@@ -22,6 +22,12 @@ type Frontmatter = {
 const BLOG_CONTENT_DIR = path.join(process.cwd(), "content", "blog");
 const BLOG_IMAGE_DIR = path.join(process.cwd(), "public", "blog");
 
+function hasGermanSourceFile(slug: string): boolean {
+  const deMdx = path.join(BLOG_CONTENT_DIR, `${slug}.de.mdx`);
+  const deMd = path.join(BLOG_CONTENT_DIR, `${slug}.de.md`);
+  return fs.existsSync(deMdx) || fs.existsSync(deMd);
+}
+
 const SLUG_ALIASES: Record<string, string> = {
   "five-email-openers-deescalate-tense-situations":
     "parent-email-deescalation-templates",
@@ -244,7 +250,8 @@ function mergePosts(curated: BlogPost[], imported: BlogPost[]): BlogPost[] {
   }, []);
 
   return combined.sort(
-    (a, b) => parseDate((b as any).publishedAt) - parseDate((a as any).publishedAt),
+    (a, b) =>
+      parseDate((b as any).publishedAt) - parseDate((a as any).publishedAt),
   );
 }
 
@@ -271,10 +278,15 @@ export function getAllPostsByLanguage(language: "en" | "de"): BlogPost[] {
 
   // Exact language matches only
   const exact = posts.filter((p) => langOf(p) === language);
+  const filtered =
+    language === "de"
+      ? exact.filter((p) => hasGermanSourceFile(p.slug))
+      : exact;
 
   // Ensure stable sort by publishedAt (newest first)
-  return exact.sort(
-    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+  return filtered.sort(
+    (a, b) =>
+      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
   );
 }
 
@@ -283,7 +295,9 @@ export function getAllSlugs(): string[] {
 }
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
-  return getPostBySlugAndLanguage(slug, "en") ?? posts.find((p) => p.slug === slug);
+  return (
+    getPostBySlugAndLanguage(slug, "en") ?? posts.find((p) => p.slug === slug)
+  );
 }
 
 export function getRelatedPosts(
@@ -312,8 +326,13 @@ export function getPostImage(slug: string): string {
 export function getPostBySlugAndLanguage(
   slug: string,
   language: "en" | "de",
+  options?: { fallbackToEnglish?: boolean },
 ): BlogPost | undefined {
+  const fallbackToEnglish = options?.fallbackToEnglish ?? true;
   const { target, isAlias } = resolveSlugAlias(slug);
+  if (language === "de" && !hasGermanSourceFile(target)) {
+    return undefined;
+  }
   const match = posts.find(
     (p: any) => p.slug === target && (p.language ?? "en") === language,
   );
@@ -326,12 +345,14 @@ export function getPostBySlugAndLanguage(
     return resolved;
   }
 
-  if (language === "de") {
+  if (language === "de" && fallbackToEnglish) {
     const fallbackEn = posts.find(
       (p: any) => p.slug === target && (p.language ?? "en") === "en",
     );
     if (fallbackEn) {
-      const resolved = isAlias ? ({ ...fallbackEn, slug } as BlogPost) : fallbackEn;
+      const resolved = isAlias
+        ? ({ ...fallbackEn, slug } as BlogPost)
+        : fallbackEn;
       if (isAlias && !resolved.ogImage) {
         resolved.ogImage = getPostImage(target);
       }
@@ -350,4 +371,3 @@ export function getPostBySlugAndLanguage(
 
   return anyMatch;
 }
-

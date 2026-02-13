@@ -1,30 +1,18 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { cookies, headers } from "next/headers";
 import { notFound } from "next/navigation";
 
 import {
-  getAllSlugs,
+  getAllPostsByLanguage,
   getPostBySlugAndLanguage,
   getRelatedPosts,
   getPostImage,
 } from "@/lib/cms/posts";
 import { BlogPostClient } from "./blog-post-client";
 
-async function detectLanguage(): Promise<"en" | "de"> {
-  const hdrs = await headers();
-  const headerLang = hdrs.get("x-lang");
-  if (headerLang === "de" || headerLang === "en") return headerLang;
-
-  const cookieStore = await cookies();
-  const langCookie = cookieStore.get("lang")?.value ?? cookieStore.get("language")?.value;
-  return langCookie === "de" ? "de" : "en";
-}
-
 export async function generateStaticParams() {
-  const slugs = getAllSlugs();
-  return slugs.map((slug) => ({
-    slug,
+  return getAllPostsByLanguage("en").map((post) => ({
+    slug: post.slug,
   }));
 }
 
@@ -34,10 +22,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const language = await detectLanguage();
-  const post =
-    getPostBySlugAndLanguage(slug, language) ??
-    getPostBySlugAndLanguage(slug, "en");
+  const post = getPostBySlugAndLanguage(slug, "en");
 
   if (!post) {
     return {
@@ -47,7 +32,7 @@ export async function generateMetadata({
   }
 
   const image = post.ogImage ?? getPostImage(post.slug);
-  const urlPath = language === "de" ? `/de/blog/${post.slug}` : `/blog/${post.slug}`;
+  const urlPath = `/blog/${post.slug}`;
 
   return {
     title: `${post.title} | Zaza Draft`,
@@ -74,19 +59,16 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const language = await detectLanguage();
-  const post =
-    getPostBySlugAndLanguage(slug, language) ??
-    getPostBySlugAndLanguage(slug, "en");
+  const post = getPostBySlugAndLanguage(slug, "en");
 
   if (!post) {
     notFound();
     return null;
   }
 
-  const relatedPosts = getRelatedPosts(slug, language);
+  const relatedPosts = getRelatedPosts(slug, "en");
   const imageSrc = post.ogImage ?? getPostImage(post.slug);
-  const urlPath = language === "de" ? `/de/blog/${post.slug}` : `/blog/${post.slug}`;
+  const urlPath = `/blog/${post.slug}`;
 
   const blogPostSchema = {
     "@context": "https://schema.org",
