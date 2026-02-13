@@ -5,13 +5,13 @@ const siteUrl = "https://zazadraft.com";
 const ogImage = "/hero/teacher.jpg";
 
 export const metadata: Metadata = {
-  title: "Zaza Draft | AI writing help built for teachers, not tech hype",
+  title: "Zaza Draft | Zaza - Just Teach.",
   description:
-    "Teacher-first AI built with educators to calm Sunday night admin - join early access to shape the private beta.",
+    "Zaza helps teachers thrive. Draft reduces writing burden so teachers can focus on teaching with calm, professional communication support.",
   openGraph: {
-    title: "Zaza Draft | AI writing help built for teachers",
+    title: "Zaza Draft | Zaza - Just Teach.",
     description:
-      "Draft calm parent emails and report comments faster - join early access to help shape the private beta experience.",
+      "Zaza helps teachers thrive. Draft reduces cognitive load and supports clear, professional school communication.",
     type: "website",
     locale: "en_GB",
     siteName: "Zaza Draft",
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zaza Draft | Teacher-first AI writing support",
+    title: "Zaza Draft | Zaza - Just Teach.",
     description:
-      "Calm parent messages and report comments with teacher-first AI - join early access to shape the beta.",
+      "Draft removes writing burden so teachers can focus on teaching with calm, professional support.",
     images: [ogImage],
   },
   alternates: {
@@ -53,7 +53,7 @@ export default function HomePage() {
             url: "https://zazatechnologies.com",
             logo: `${siteUrl}/zaza-logo.png`,
             description:
-              "Zaza Technologies builds teacher-first AI to calm Sunday night admin and invites early access partners to shape the private beta.",
+              "Zaza helps teachers thrive with calm, professional tools that reduce cognitive load and protect teacher judgment.",
             founder: {
               "@type": "Person",
               name: "Dr. Greg Blackburn",
@@ -85,7 +85,7 @@ export default function HomePage() {
               description: "Free tier with 5 drafts per month",
             },
             description:
-              "Hallucination-safe AI writing assistant for teachers. Calm parent emails and report comments faster - join early access to shape the private beta.",
+              "Professional writing support for teachers that reduces cognitive load, protects tone, and keeps teacher judgment in control.",
             featureList: [
               "Hallucination prevention",
               "School-appropriate tone guardrails",

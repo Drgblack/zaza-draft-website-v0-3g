@@ -354,6 +354,15 @@ export function HomePageClient() {
 
       <section className="relative overflow-hidden bg-[#1E293B] py-20 md:py-28">
         <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
+          <motion.p
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-base md:text-lg text-[#CBD5E1] leading-relaxed text-pretty max-w-[780px] mx-auto mb-8"
+          >
+            {t("philosophy.topParagraph")}
+          </motion.p>
           <motion.h2
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

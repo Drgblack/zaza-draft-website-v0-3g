@@ -523,17 +523,17 @@ const translationsEn: Record<string, string> = {
   "about.nav.careers": "Careers",
 
   // Hero Section
-  "hero.eyebrow": "FOR TEACHERS",
-  "hero.badge": "Teacher-first AI writing",
-  "hero.headline": "Less stress,",
-  "hero.headlineAccent": "better messages.",
+  "hero.eyebrow": "Zaza - Just Teach.",
+  "hero.badge": "Zaza helps teachers thrive",
+  "hero.headline": "Protect your teaching time,",
+  "hero.headlineAccent": "let Draft handle the writing load.",
   "hero.subheading":
-    "Zaza Draft writes the parent emails, grading feedback, and report notes you dread. Calm tone, de-escalation help, and time savings in minutes, not hours.",
+    "Draft takes the pressure out of parent emails, grading feedback, and report notes so your focus stays on teaching. You stay in professional control while Draft helps you write clearly and calmly.",
   "hero.ctaPrimary": "Join Early Access",
   "hero.ctaSecondary": "See Examples",
   "hero.trustIndicators.hallucinationSafe": "Hallucination-safe",
   "hero.trustIndicators.ferpaCompliant": "FERPA compliant",
-  "hero.trustIndicators.teachers": "Teacher-first by design",
+  "hero.trustIndicators.teachers": "Built with teachers",
 
   // Early Access Page
   "earlyAccess.hero.title": "Join the Zaza Draft Early-Access Programme",
@@ -586,9 +586,11 @@ const translationsEn: Record<string, string> = {
     "Unlike generic AI tools, Zaza Draft is specifically trained to avoid making up student information, fabricating parent interactions, or inventing details about your class. Every output is grounded in what you actually provide - no invented facts, no fictional scenarios.",
 
   // Problem Section
-  "problem.heading": "You became a teacher, not a 24/7 writer",
+  "philosophy.topParagraph":
+    "Zaza helps teachers thrive. Draft is professional writing support that reduces cognitive load, protects tone, and lowers the hidden stress of school communication.",
+  "problem.heading": "Restore focus to teaching, not late-night writing",
   "problem.body":
-    "Nights drafting parent emails, grading comments, and reports. The words matter, but so do your energy and calm.",
+    "Parent emails, grading comments, and reports still need care and precision. Draft helps you finish them with less mental strain so your energy stays with students.",
   "problem.stats.parentEmails.value": "2-3 hrs/week",
   "problem.stats.parentEmails.label": "Parent Emails",
   "problem.stats.reportCards.value": "4-6 hrs/term",
@@ -597,11 +599,12 @@ const translationsEn: Record<string, string> = {
   "problem.stats.gradingFeedback.label": "Grading Feedback",
 
   // Solution/Mission Section
-  "solution.heading": "Draft writes the hard messages so you can breathe",
+  "solution.heading":
+    "Calm writing support for high-stakes school communication",
   "solution.bodyPrimary":
-    "Teacher-first AI that drafts parent messages, grading comments, and report notes with the right tone. Built to lower your stress, not replace your voice.",
+    "Draft turns rough notes into clear, parent-ready communication for messages, feedback, and reports. It is built to reduce cognitive load and support professional safety, not replace teacher judgment.",
   "solution.bodySecondary":
-    "Tone guardrails, de-escalation support, and empathetic phrasing turn rough notes into ready-to-send messages while you keep control and save hours every week.",
+    "Tone guardrails and de-escalation guidance help you stay calm, clear, and consistent in difficult moments. You review every draft, keep your voice, and send with confidence.",
 
   // Stats Section
   "stats.documentsRefined.number": "150k+",
@@ -619,7 +622,7 @@ const translationsEn: Record<string, string> = {
   "socialProof.badges.hallucinationSafe": "Hallucination-safe outputs",
 
   // How It Works Section
-  "howItWorks.heading": "How it works",
+  "howItWorks.heading": "How Draft restores clarity",
   "howItWorks.diagram.step1.title": "Your Input",
   "howItWorks.diagram.step1.description": "Rough notes or bullet points",
   "howItWorks.diagram.step1.example": "Sam is not paying attention in class.",
@@ -668,7 +671,7 @@ const translationsEn: Record<string, string> = {
     "Your essay shows good understanding of the topic and includes relevant examples. To strengthen your argument, consider developing a more specific thesis statement in your introduction. Additionally, try incorporating direct quotes from the text to support your analysis. I'd like to see you expand on your ideas in the third paragraph. Great start!",
 
   // Use Cases Section
-  "useCases.heading": "Built for the writing that drains you",
+  "useCases.heading": "Built for the writing that pulls you away from teaching",
   "useCases.cards.parentMessages.title": "Parent Messages",
   "useCases.cards.parentMessages.description":
     "Draft calm, clear replies that de-escalate",
@@ -701,9 +704,9 @@ const translationsEn: Record<string, string> = {
     "IEP documentation, parent conferences",
 
   // Comparison Section
-  "comparison.heading": "Why Teachers Trust Zaza Over Generic AI",
+  "comparison.heading": "Why Zaza Draft feels different from generic AI",
   "comparison.subheading":
-    "Built specifically for education, not adapted from business tools",
+    "Built for professional school communication with safer tone support, lower cognitive load, and teacher judgment always in control",
   "comparison.tableHeaders.feature": "Feature",
   "comparison.tableHeaders.genericAI": "Generic AI Tools (ChatGPT, etc.)",
   "comparison.tableHeaders.zazaDraft": "Zaza Draft",
@@ -744,18 +747,21 @@ const translationsEn: Record<string, string> = {
   "caseStudies.next": "Next",
 
   // Why Choose Section
-  "whyChoose.heading": "Why teachers choose Zaza",
-  "whyChoose.benefits.beatWritersBlock.title": "Beat writer's block",
+  "whyChoose.heading":
+    "Why teachers choose Draft for calm, confident communication",
+  "whyChoose.benefits.beatWritersBlock.title": "Restore focus quickly",
   "whyChoose.benefits.beatWritersBlock.description":
-    "Start with AI, finish with your authentic voice",
-  "whyChoose.benefits.writeWithConfidence.title": "Write with confidence",
+    "Turn rough notes into clear drafts without mental overload",
+  "whyChoose.benefits.writeWithConfidence.title":
+    "Protect professional confidence",
   "whyChoose.benefits.writeWithConfidence.description":
-    "Professional quality across all communications",
-  "whyChoose.benefits.saveTime.title": "Save hours every week",
+    "Stay clear, calm, and school-appropriate in every message",
+  "whyChoose.benefits.saveTime.title": "Reduce cognitive load daily",
   "whyChoose.benefits.saveTime.description": "2-hour tasks done in 5 minutes",
-  "whyChoose.benefits.breakBarriers.title": "Break language barriers",
+  "whyChoose.benefits.breakBarriers.title":
+    "Communicate clearly across languages",
   "whyChoose.benefits.breakBarriers.description":
-    "Translate to 20+ languages instantly",
+    "Translate family communication while keeping professional tone",
 
   // Testimonials Section
   "testimonials.heading": "What teachers say",
@@ -771,9 +777,9 @@ const translationsEn: Record<string, string> = {
   "testimonials.quote3.author": "Department Lead, DE",
 
   // Final CTA Section
-  "finalCTA.heading": "Get your time back",
+  "finalCTA.heading": "Zaza - Just Teach.",
   "finalCTA.subheading":
-    "Join our private beta and help shape the future of teacher-first AI writing support.",
+    "Zaza helps teachers thrive. Join our private beta and use Draft as calm, professional writing support that gives teaching time back.",
   "finalCTA.button": "Join Early Access",
 
   // Footer
@@ -2002,17 +2008,17 @@ const translationsDe: Record<string, string> = {
   "about.nav.careers": "Karriere",
 
   // Hero Section
-  "hero.eyebrow": "FÜR LEHRKRÄFTE",
-  "hero.badge": "Lehrerzentrierte KI für Schreiben",
-  "hero.headline": "Weniger Stress,",
-  "hero.headlineAccent": "bessere Nachrichten.",
+  "hero.eyebrow": "Zaza - Just Teach.",
+  "hero.badge": "Zaza hilft Lehrkräften, erfolgreich zu bleiben",
+  "hero.headline": "Schütze deine Unterrichtszeit,",
+  "hero.headlineAccent": "Draft trägt die Schreiblast.",
   "hero.subheading":
-    "Zaza Draft schreibt die Elternmails, Feedback-Kommentare und Berichtstexte, die dich auslaugen. Ruhiger Ton, Deeskalation und Zeitersparnis in Minuten statt Stunden.",
+    "Draft nimmt Druck aus Elternmails, Feedback-Kommentaren und Berichtstexten, damit dein Fokus beim Unterrichten bleibt. Du behältst die professionelle Kontrolle, Draft unterstützt dich beim klaren und ruhigen Formulieren.",
   "hero.ctaPrimary": "Early Access beitreten",
   "hero.ctaSecondary": "Beispiele ansehen",
   "hero.trustIndicators.hallucinationSafe": "Halluzinationssicher",
   "hero.trustIndicators.ferpaCompliant": "FERPA-konform",
-  "hero.trustIndicators.teachers": "Lehrerzentriert konzipiert",
+  "hero.trustIndicators.teachers": "Mit Lehrkräften entwickelt",
 
   // Early Access Page
   "earlyAccess.hero.title": "Tritt dem Zaza Draft Early-Access-Programm bei",
@@ -2065,9 +2071,12 @@ const translationsDe: Record<string, string> = {
     "Im Gegensatz zu generischen KI-Tools ist Zaza Draft speziell darauf trainiert, das Erfinden von Schülerinformationen, die Erfindung von Elterninteraktionen oder das Erfinden von Details über Ihre Klasse zu vermeiden. Jede Ausgabe basiert auf dem, was Sie tatsächlich bereitstellen – keine erfundenen Fakten, keine fiktiven Szenarien.",
 
   // Problem Section
-  "problem.heading": "Du bist Lehrer:in, nicht 24/7-Schriftsteller:in",
+  "philosophy.topParagraph":
+    "Zaza hilft Lehrkräften, erfolgreich zu bleiben. Draft ist professionelle Schreibunterstützung, die kognitive Last reduziert, Ton schützt und den unsichtbaren Stress schulischer Kommunikation senkt.",
+  "problem.heading":
+    "Mehr Fokus auf Unterricht, weniger Nachtarbeit beim Schreiben",
   "problem.body":
-    "Abende für Elternmails, Feedback und Berichte. Die Worte sind wichtig – deine Ruhe und Energie aber auch.",
+    "Elternmails, Feedback und Berichte brauchen weiterhin Sorgfalt und Präzision. Draft hilft dir, sie mit weniger mentaler Belastung zu erledigen, damit mehr Energie für Schülerinnen und Schüler bleibt.",
   "problem.stats.parentEmails.value": "2-3 Std./Woche",
   "problem.stats.parentEmails.label": "Eltern-E-Mails",
   "problem.stats.reportCards.value": "4-6 Std./Quartal",
@@ -2077,11 +2086,11 @@ const translationsDe: Record<string, string> = {
 
   // Solution/Mission Section
   "solution.heading":
-    "Draft schreibt die schweren Nachrichten, du behältst die Ruhe",
+    "Ruhige Schreibunterstützung für professionelle Schulkommunikation",
   "solution.bodyPrimary":
-    "Lehrerzentrierte KI, die Elternnachrichten, Feedback-Kommentare und Berichtstexte im richtigen Ton entwirft. Entlastet dich, ohne deine Stimme zu ersetzen.",
+    "Draft macht aus Rohnotizen klare, versandfertige Kommunikation für Nachrichten, Feedback und Berichte. Entwickelt, um kognitive Last zu senken und professionelle Sicherheit zu stärken, nicht um pädagogisches Urteil zu ersetzen.",
   "solution.bodySecondary":
-    "Ton-Leitplanken, Deeskalations-Hilfe und empathische Formulierungen machen aus Stichpunkten versandfertige Texte – du bleibst im Steuer und sparst jede Woche Stunden.",
+    "Ton-Leitplanken und Deeskalations-Hilfe unterstützen dich dabei, in schwierigen Situationen ruhig, klar und konsistent zu bleiben. Du prüfst jeden Entwurf, behältst deine Stimme und sendest mit Sicherheit.",
 
   // Stats Section
   "stats.documentsRefined.number": "150k+",
@@ -2100,7 +2109,7 @@ const translationsDe: Record<string, string> = {
   "socialProof.badges.hallucinationSafe": "Halluzinationssichere Ergebnisse",
 
   // How It Works Section
-  "howItWorks.heading": "So funktioniert es",
+  "howItWorks.heading": "Wie Draft Klarheit zurückbringt",
   "howItWorks.diagram.step1.title": "Ihre Eingabe",
   "howItWorks.diagram.step1.description": "Grobe Notizen oder Stichpunkte",
   "howItWorks.diagram.step1.example": "Sam passt im Unterricht nicht auf.",
@@ -2154,7 +2163,7 @@ const translationsDe: Record<string, string> = {
     "Ihr Aufsatz zeigt ein gutes Verständnis für das Thema und enthält relevante Beispiele. Um Ihr Argument zu stärken, sollten Sie in Ihrer Einleitung eine spezifischere These entwickeln. Versuchen Sie außerdem, direkte Zitate aus dem Text einzubauen, um Ihre Analyse zu untermauern. Ich würde gerne sehen, wie Sie Ihre Ideen im dritten Absatz erweitern. Großartiger Anfang!",
 
   // Use Cases Section
-  "useCases.heading": "Für das Schreiben, das dich auslaugt",
+  "useCases.heading": "Für Schreiben, das dich vom Unterrichten abhält",
   "useCases.cards.parentMessages.title": "Elternnachrichten",
   "useCases.cards.parentMessages.description":
     "Ruhige, klare Antworten, die deeskalieren",
@@ -2188,9 +2197,9 @@ const translationsDe: Record<string, string> = {
 
   // Comparison Section
   "comparison.heading":
-    "Warum Lehrkräfte Zaza gegenüber generischer KI vertrauen",
+    "Warum Zaza Draft sich anders anfühlt als generische KI",
   "comparison.subheading":
-    "Speziell für Bildung entwickelt, nicht aus Business-Tools angepasst",
+    "Für professionelle Schulkommunikation entwickelt: sicherere Tonführung, weniger kognitive Last und pädagogisches Urteil bleibt immer bei dir",
   "comparison.tableHeaders.feature": "Funktion",
   "comparison.tableHeaders.genericAI": "Generische KI-Tools (ChatGPT, usw.)",
   "comparison.tableHeaders.zazaDraft": "Zaza Draft",
@@ -2233,19 +2242,22 @@ const translationsDe: Record<string, string> = {
   "caseStudies.next": "Weiter",
 
   // Why Choose Section
-  "whyChoose.heading": "Warum Lehrkräfte Zaza wählen",
-  "whyChoose.benefits.beatWritersBlock.title": "Schreibblockaden überwinden",
+  "whyChoose.heading":
+    "Warum Lehrkräfte Draft für ruhige, sichere Kommunikation wählen",
+  "whyChoose.benefits.beatWritersBlock.title": "Fokus schnell zurückgewinnen",
   "whyChoose.benefits.beatWritersBlock.description":
-    "Mit KI beginnen, mit Ihrer authentischen Stimme beenden",
-  "whyChoose.benefits.writeWithConfidence.title": "Mit Zuversicht schreiben",
+    "Aus Rohnotizen werden klare Entwürfe ohne mentale Überlastung",
+  "whyChoose.benefits.writeWithConfidence.title":
+    "Professionelle Sicherheit stärken",
   "whyChoose.benefits.writeWithConfidence.description":
-    "Professionelle Qualität in allen Kommunikationen",
-  "whyChoose.benefits.saveTime.title": "Jede Woche Stunden sparen",
+    "Klar, ruhig und schulgeeignet in jeder Nachricht",
+  "whyChoose.benefits.saveTime.title": "Kognitive Last täglich senken",
   "whyChoose.benefits.saveTime.description":
     "2-Stunden-Aufgaben in 5 Minuten erledigt",
-  "whyChoose.benefits.breakBarriers.title": "Sprachbarrieren überwinden",
+  "whyChoose.benefits.breakBarriers.title":
+    "Über Sprachgrenzen klar kommunizieren",
   "whyChoose.benefits.breakBarriers.description":
-    "Sofort in 20+ Sprachen übersetzen",
+    "Familienkommunikation übersetzen und professionellen Ton behalten",
 
   // Testimonials Section
   "testimonials.heading": "Was Lehrkräfte sagen",
@@ -2262,9 +2274,9 @@ const translationsDe: Record<string, string> = {
   "testimonials.quote3.author": "Abteilungsleiterin, DE",
 
   // Final CTA Section
-  "finalCTA.heading": "Holen Sie sich Ihre Zeit zurück",
+  "finalCTA.heading": "Zaza - Just Teach.",
   "finalCTA.subheading":
-    "Tritt unserer privaten Beta bei und gestalte die Zukunft lehrerzentrierter KI-Schreibunterstützung mit.",
+    "Zaza hilft Lehrkräften, erfolgreich zu bleiben. Trete der privaten Beta bei und nutze Draft als ruhige, professionelle Schreibunterstützung, die Unterrichtszeit zurückgibt.",
   "finalCTA.button": "Early Access beitreten",
 
   // Footer

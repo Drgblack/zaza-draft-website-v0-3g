@@ -1,0 +1,72 @@
+Next Codex prompt (for the website repo)
+
+Copy-paste this into the Codex chat that is connected to C:\Users\User\zaza-draft-website-v0-3g:
+
+PROMPT
+You are Codex working in:
+C:\Users\User\zaza-draft-website-v0-3g
+
+Goal:
+Implement the PR10 “Website copy pack (EN/DE)” into the actual Next.js website pages, with strict EN/DE parity.
+
+Source of truth (already copied into this repo):
+docs/website-copy/HOMEPAGE_EN.md
+docs/website-copy/HOMEPAGE_DE.md
+docs/website-copy/FAQ_EN.md
+docs/website-copy/FAQ_DE.md
+docs/website-copy/PRICING_EN.md
+docs/website-copy/PRICING_DE.md
+docs/website-copy/PRIVACY_TRUST_EN.md
+docs/website-copy/PRIVACY_TRUST_DE.md
+
+Hard constraints:
+
+Preserve the existing design system/components. Keep diffs minimal.
+
+No em dashes in new copy (run pnpm guard:no-emdash or pnpm guard:all if available).
+
+EN/DE parity: both languages must be updated in the same PR.
+
+Do not touch the app repo. Only change this website repo.
+
+Tasks:
+
+Locate where the homepage content currently lives (likely app/page.tsx or src pages). Wire in the new EN/DE homepage copy.
+
+Locate or create pages/routes for:
+
+/faq
+
+/pricing
+
+/privacy (or /privacy-trust)
+Use the corresponding EN/DE markdown content.
+
+If the site uses MD/MDX rendering, use the existing pattern. If it uses hardcoded React components, port the copy carefully.
+
+Ensure navigation links (header/footer) point to these pages and work in both locales.
+
+Run:
+
+pnpm lint
+
+pnpm typecheck
+
+pnpm build
+
+pnpm guard:all (if present)
+
+Commit and open a PR.
+
+Branch:
+docs/website-copy-implementation
+
+Deliverables in your reply:
+
+Which files you changed
+
+Proof commands + outputs summary (lint/typecheck/build)
+
+PR creation commands (PowerShell friendly)
+
+Start now.
