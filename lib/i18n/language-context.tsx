@@ -6,6 +6,7 @@ import {
   useEffect,
   type ReactNode,
 } from "react";
+import { usePathname } from "next/navigation";
 
 type Language = "en" | "de";
 
@@ -3015,19 +3016,16 @@ const translationsDe: Record<string, string> = {
 };
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>(() => {
-    if (typeof window !== "undefined") {
-      const storedLang = localStorage.getItem("language");
-      if (storedLang === "en" || storedLang === "de") {
-        return storedLang as Language;
-      }
+  const pathname = usePathname();
 
-      // Fallback: infer from URL prefix on first load
-      const pathLang = window.location.pathname.startsWith("/de") ? "de" : "en";
-      return pathLang as Language;
-    }
-    return "en";
-  });
+  const [language, setLanguage] = useState<Language>(
+    pathname?.startsWith("/de") ? "de" : "en",
+  );
+
+  useEffect(() => {
+    const routeLang: Language = pathname?.startsWith("/de") ? "de" : "en";
+    setLanguage(routeLang);
+  }, [pathname]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {

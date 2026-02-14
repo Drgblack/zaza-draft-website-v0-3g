@@ -1,28 +1,16 @@
-﻿import type { Metadata } from "next"
-import { cookies, headers } from "next/headers"
-import WebinarsClient from "./webinars-client"
-import { BreadcrumbSchema } from "@/lib/seo/schema"
-import Script from "next/script"
+﻿import type { Metadata } from "next";
+import WebinarsClient from "./webinars-client";
+import { BreadcrumbSchema } from "@/lib/seo/schema";
+import Script from "next/script";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const langCookie = (await cookies()).get("language")?.value
-  const referer = (await headers()).get("referer") || ""
-  const hrefHint = (await headers()).get("x-pathname") || ""
-  const path = hrefHint || referer
-  const locale = langCookie === "de" || path.includes("/de/") || path.endsWith("/de") ? "de" : "en"
-
-  const titles = {
-    en: "Professional Development Webinars | Zaza Draft",
-    de: "Fortbildungs-Webinare | Zaza Draft",
-  }
-  const descriptions = {
-    en: "Join live webinars and watch on-demand professional development sessions on AI in education.",
-    de: "Nehmen Sie an Live-Webinaren teil und sehen Sie Fortbildungssitzungen zu KI in der Bildung auf Abruf.",
-  }
+  const title = "Professional Development Webinars | Zaza Draft";
+  const description =
+    "Join live webinars and watch on-demand professional development sessions on AI in education.";
 
   return {
-    title: titles[locale],
-    description: descriptions[locale],
+    title,
+    description,
     alternates: {
       canonical: "https://zazadraft.com/webinars",
       languages: {
@@ -31,16 +19,16 @@ export async function generateMetadata(): Promise<Metadata> {
       },
     },
     openGraph: {
-      title: titles[locale],
-      description: descriptions[locale],
+      title,
+      description,
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: titles[locale],
-      description: descriptions[locale],
+      title,
+      description,
     },
-  }
+  };
 }
 
 export default async function WebinarsPage() {
@@ -51,7 +39,8 @@ export default async function WebinarsPage() {
           "@context": "https://schema.org",
           "@type": "EducationalOrganization",
           name: "Zaza Draft Webinar Series",
-          description: "Professional development webinars for teachers on AI in education",
+          description:
+            "Professional development webinars for teachers on AI in education",
           url: "https://zazadraft.com/webinars",
           offers: {
             "@type": "Offer",
@@ -69,9 +58,5 @@ export default async function WebinarsPage() {
       />
       <WebinarsClient />
     </>
-  )
+  );
 }
-
-
-
-

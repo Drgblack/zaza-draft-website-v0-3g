@@ -23,7 +23,7 @@ export function Header() {
   >({});
   const router = useRouter();
   const pathname = usePathname();
-  const { language, setLanguage, t } = useLanguage();
+  const { language, t } = useLanguage();
   const L = (de: string, en: string) => (language === "de" ? de : en);
 
   const navigation = [{ name: t("nav.pricing"), href: "/pricing" }];
@@ -307,7 +307,6 @@ export function Header() {
               <button
                 onClick={() => {
                   const newPath = pathname.replace(/^\/de(\/|$)/, "$1") || "/";
-                  setLanguage("en");
                   router.push(newPath);
                 }}
                 className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200 ${
@@ -323,7 +322,6 @@ export function Header() {
                   const newPath = pathname.startsWith("/de")
                     ? pathname
                     : "/de" + (pathname === "/" ? "" : pathname);
-                  setLanguage("de");
                   router.push(newPath);
                 }}
                 className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200 ${
@@ -438,7 +436,6 @@ export function Header() {
                         const newPath = pathname.startsWith("/de")
                           ? pathname.replace(/^\/de/, "")
                           : pathname;
-                        setLanguage("en");
                         router.push(newPath === "" ? "/" : newPath);
                       }}
                       className={`flex-1 rounded-full px-3 py-2 text-xs font-medium uppercase tracking-[0.2em] transition-all ${
@@ -454,7 +451,6 @@ export function Header() {
                         const newPath = pathname.startsWith("/de")
                           ? pathname
                           : "/de" + (pathname === "/" ? "" : pathname);
-                        setLanguage("de");
                         router.push(newPath);
                       }}
                       className={`flex-1 rounded-full px-3 py-2 text-xs font-medium uppercase tracking-[0.2em] transition-all ${
