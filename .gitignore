@@ -28,3 +28,15 @@ next-env.d.ts
 !public/resources/**/build/
 
 .vercel
+# one-off scripts / recovery artefacts
+*.backup
+*.bak
+recovery.ps1
+.validate-resources.ps1
+fix-encoding.mjs
+fix_*.py
+fix-*.py
+fix_*.mjs
+fix-*.mjs
+add_keys.py
+remove_duplicates.py
