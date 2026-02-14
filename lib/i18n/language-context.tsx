@@ -2,11 +2,13 @@
 import {
   createContext,
   useContext,
-  useState,
   useEffect,
+  useMemo,
+  useCallback,
   type ReactNode,
 } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { detectLocaleFromPath, toLocalePath } from "@/lib/i18n/locale-routing";
 
 type Language = "en" | "de";
 
@@ -3016,16 +3018,31 @@ const translationsDe: Record<string, string> = {
 };
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
+  const router = useRouter();
   const pathname = usePathname();
 
-  const [language, setLanguage] = useState<Language>(
-    pathname?.startsWith("/de") ? "de" : "en",
+  const resolvedPathname = useMemo(() => {
+    if (pathname) return pathname;
+    if (typeof window !== "undefined" && window.location?.pathname) {
+      return window.location.pathname;
+    }
+    return "/";
+  }, [pathname]);
+
+  const language = useMemo<Language>(
+    () => detectLocaleFromPath(resolvedPathname),
+    [resolvedPathname],
   );
 
-  useEffect(() => {
-    const routeLang: Language = pathname?.startsWith("/de") ? "de" : "en";
-    setLanguage(routeLang);
-  }, [pathname]);
+  const setLanguage = useCallback(
+    (nextLanguage: Language) => {
+      const nextPath = toLocalePath(resolvedPathname, nextLanguage);
+      if (nextPath !== resolvedPathname) {
+        router.push(nextPath);
+      }
+    },
+    [resolvedPathname, router],
+  );
 
   useEffect(() => {
     if (typeof window !== "undefined") {

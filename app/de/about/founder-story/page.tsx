@@ -76,7 +76,7 @@ export default function FounderStoryPage() {
             Gründerstory
           </p>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-[#E5E7FF]">
             Von der Malerlehre zum PhD
           </h1>
 
@@ -96,12 +96,12 @@ export default function FounderStoryPage() {
           </h2>
 
           <div className="grid gap-4 md:grid-cols-2">
-            <Card className="bg-[rgba(15,23,42,0.95)] border border-[rgba(148,163,184,0.5)] rounded-xl p-6 shadow-lg shadow-black/30">
+            <Card className="bg-[rgba(15,23,42,0.95)] border border-[rgba(148,163,184,0.5)] rounded-xl p-6 shadow-lg shadow-black/30 text-[rgba(226,232,240,0.95)]">
               <p className="text-xs uppercase tracking-wide text-[#A78BFA] mb-1">
                 Frühe Jahre
               </p>
 
-              <h3 className="font-semibold mb-2">
+              <h3 className="font-semibold mb-2 text-[#E5E7FF]">
                 Farbe, TAFE & Cascade Brewery
               </h3>
 
@@ -114,12 +114,14 @@ export default function FounderStoryPage() {
               </p>
             </Card>
 
-            <Card className="bg-[rgba(15,23,42,0.9)] border border-[rgba(148,163,184,0.3)] p-5">
+            <Card className="bg-[rgba(15,23,42,0.9)] border border-[rgba(148,163,184,0.3)] p-5 text-[rgba(226,232,240,0.95)]">
               <p className="text-xs uppercase tracking-wide text-[#A78BFA] mb-1">
                 Studium & Sprache
               </p>
 
-              <h3 className="font-semibold mb-2">UTas & Germanistik</h3>
+              <h3 className="font-semibold mb-2 text-[#E5E7FF]">
+                UTas & Germanistik
+              </h3>
 
               <p className="text-sm text-[rgba(226,232,240,0.9)]">
                 Studium von Administration, Informationssystemen und Deutsch an
@@ -129,12 +131,14 @@ export default function FounderStoryPage() {
               </p>
             </Card>
 
-            <Card className="bg-[rgba(15,23,42,0.9)] border border-[rgba(148,163,184,0.3)] p-5">
+            <Card className="bg-[rgba(15,23,42,0.9)] border border-[rgba(148,163,184,0.3)] p-5 text-[rgba(226,232,240,0.95)]">
               <p className="text-xs uppercase tracking-wide text-[#A78BFA] mb-1">
                 Unternehmen & Führung
               </p>
 
-              <h3 className="font-semibold mb-2">Telstra & MBA an der UQ</h3>
+              <h3 className="font-semibold mb-2 text-[#E5E7FF]">
+                Telstra & MBA an der UQ
+              </h3>
 
               <p className="text-sm text-[rgba(226,232,240,0.9)]">
                 Umzug nach Brisbane, sechs Jahre bei Telstra und ein MBA an der
@@ -144,12 +148,12 @@ export default function FounderStoryPage() {
               </p>
             </Card>
 
-            <Card className="bg-[rgba(15,23,42,0.9)] border border-[rgba(148,163,184,0.3)] p-5">
+            <Card className="bg-[rgba(15,23,42,0.9)] border border-[rgba(148,163,184,0.3)] p-5 text-[rgba(226,232,240,0.95)]">
               <p className="text-xs uppercase tracking-wide text-[#A78BFA] mb-1">
                 Forschung & EdTech
               </p>
 
-              <h3 className="font-semibold mb-2">
+              <h3 className="font-semibold mb-2 text-[#E5E7FF]">
                 PhD & Chief Learning Officer
               </h3>
 
@@ -162,12 +166,14 @@ export default function FounderStoryPage() {
               </p>
             </Card>
 
-            <Card className="bg-[rgba(15,23,42,0.9)] border border-[rgba(148,163,184,0.3)] p-5 md:col-span-2">
+            <Card className="bg-[rgba(15,23,42,0.9)] border border-[rgba(148,163,184,0.3)] p-5 md:col-span-2 text-[rgba(226,232,240,0.95)]">
               <p className="text-xs uppercase tracking-wide text-[#A78BFA] mb-1">
                 Zaza Technologies
               </p>
 
-              <h3 className="font-semibold mb-2">Gründung von Zaza 2025</h3>
+              <h3 className="font-semibold mb-2 text-[#E5E7FF]">
+                Gründung von Zaza 2025
+              </h3>
 
               <p className="text-sm text-[rgba(226,232,240,0.9)]">
                 Nach vielen Jahren im Learning & Development, in denen ich

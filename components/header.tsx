@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { useRouter, usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
@@ -21,9 +20,7 @@ export function Header() {
   const [mobileAccordion, setMobileAccordion] = useState<
     Record<string, boolean>
   >({});
-  const router = useRouter();
-  const pathname = usePathname();
-  const { language, t } = useLanguage();
+  const { language, setLanguage, t } = useLanguage();
   const L = (de: string, en: string) => (language === "de" ? de : en);
 
   const navigation = [{ name: t("nav.pricing"), href: "/pricing" }];
@@ -305,10 +302,7 @@ export function Header() {
             {/* EN / DE toggle */}
             <div className="flex items-center gap-2 rounded-lg bg-white/5 p-1">
               <button
-                onClick={() => {
-                  const newPath = pathname.replace(/^\/de(\/|$)/, "$1") || "/";
-                  router.push(newPath);
-                }}
+                onClick={() => setLanguage("en")}
                 className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200 ${
                   language === "en"
                     ? "bg-[#8B5CF6] text-white"
@@ -318,12 +312,7 @@ export function Header() {
                 EN
               </button>
               <button
-                onClick={() => {
-                  const newPath = pathname.startsWith("/de")
-                    ? pathname
-                    : "/de" + (pathname === "/" ? "" : pathname);
-                  router.push(newPath);
-                }}
+                onClick={() => setLanguage("de")}
                 className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200 ${
                   language === "de"
                     ? "bg-[#8B5CF6] text-white"
@@ -432,12 +421,7 @@ export function Header() {
                 <div className="space-y-3">
                   <div className="flex gap-2 rounded-full bg-white/5 p-1">
                     <button
-                      onClick={() => {
-                        const newPath = pathname.startsWith("/de")
-                          ? pathname.replace(/^\/de/, "")
-                          : pathname;
-                        router.push(newPath === "" ? "/" : newPath);
-                      }}
+                      onClick={() => setLanguage("en")}
                       className={`flex-1 rounded-full px-3 py-2 text-xs font-medium uppercase tracking-[0.2em] transition-all ${
                         language === "en"
                           ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
@@ -447,12 +431,7 @@ export function Header() {
                       EN
                     </button>
                     <button
-                      onClick={() => {
-                        const newPath = pathname.startsWith("/de")
-                          ? pathname
-                          : "/de" + (pathname === "/" ? "" : pathname);
-                        router.push(newPath);
-                      }}
+                      onClick={() => setLanguage("de")}
                       className={`flex-1 rounded-full px-3 py-2 text-xs font-medium uppercase tracking-[0.2em] transition-all ${
                         language === "de"
                           ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
