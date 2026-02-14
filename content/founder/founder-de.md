@@ -60,4 +60,3 @@ Wenn das die Art von Zukunft fÃƒÂ¼r Bildung ist, an die Sie glauben, sind Si
 **Greg**  
 **Dr. Greg Blackburn**  
 GrÃƒÂ¼nder & CEO, Zaza Technologies
-

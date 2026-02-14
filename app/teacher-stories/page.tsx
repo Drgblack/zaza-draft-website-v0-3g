@@ -1,17 +1,18 @@
 ﻿"use client";
 
-import { Button } from "@/components/ui/button"
-import { Clock, Heart, Users, Globe, Flame, Sparkles } from "lucide-react"
-import { SignupModal } from "@/components/signup-modal"
-import { useState } from "react"
-import Image from "next/image"
+import { Button } from "@/components/ui/button";
+import { Clock, Heart, Users, Globe, Flame, Sparkles } from "lucide-react";
+import { SignupModal } from "@/components/signup-modal";
+import { useState } from "react";
+import Image from "next/image";
 
 export default function TeacherStoriesPage() {
-  const [signupOpen, setSignupOpen] = useState(false)
+  const [signupOpen, setSignupOpen] = useState(false);
 
   const stories = [
     {
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400",
+      image:
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400",
       alt: "Sarah K., Year 4 Teacher",
       name: "Sarah K.",
       role: "Year 4 Teacher, Manchester",
@@ -25,7 +26,8 @@ export default function TeacherStoriesPage() {
       tag: "Parent Communication",
     },
     {
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
+      image:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
       alt: "James M., Secondary English Teacher",
       name: "James M.",
       role: "Secondary English Teacher, Bristol",
@@ -39,7 +41,8 @@ export default function TeacherStoriesPage() {
       tag: "Report Writing",
     },
     {
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400",
+      image:
+        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400",
       alt: "Priya S., Primary Teacher",
       name: "Priya S.",
       role: "Primary Teacher, Birmingham",
@@ -52,15 +55,19 @@ export default function TeacherStoriesPage() {
       ],
       tag: "Multilingual Support",
     },
-  ]
+  ];
 
   return (
     <>
       <main className="min-h-screen bg-[#0F172A]">
         {/* Hero Section */}
         <section className="text-center py-20 px-6">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 text-balance">Teacher Stories</h1>
-          <p className="text-xl md:text-2xl text-gray-400 text-balance">Real teachers. Real time saved. Real impact.</p>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 text-balance">
+            Teacher Stories
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-400 text-balance">
+            Real teachers. Real time saved. Real impact.
+          </p>
         </section>
 
         {/* Teacher Story Cards */}
@@ -82,18 +89,24 @@ export default function TeacherStoriesPage() {
                 </div>
 
                 {/* Name and Role */}
-                <h3 className="text-xl font-bold text-white mb-1">{story.name}</h3>
+                <h3 className="text-xl font-bold text-white mb-1">
+                  {story.name}
+                </h3>
                 <p className="text-sm text-gray-400 mb-4">{story.role}</p>
 
                 {/* Story Quote */}
-                <blockquote className="text-gray-300 italic mb-6 leading-relaxed">"{story.story}"</blockquote>
+                <blockquote className="text-gray-300 italic mb-6 leading-relaxed">
+                  "{story.story}"
+                </blockquote>
 
                 {/* Impact Section */}
                 <div className="space-y-3 mb-4">
                   {story.impacts.map((impact, impactIndex) => (
                     <div key={impactIndex} className="flex items-start gap-3">
                       <impact.icon className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-gray-300">{impact.text}</span>
+                      <span className="text-sm text-gray-300">
+                        {impact.text}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -110,10 +123,13 @@ export default function TeacherStoriesPage() {
         {/* Call-to-Action Section */}
         <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-20 px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance">Ready to Reclaim Your Time?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-balance">
+              Ready to Reclaim Your Time?
+            </h2>
             <p className="text-xl text-gray-100 mb-8 text-balance leading-relaxed">
-              Join thousands of teachers who are writing less and connecting more. Start your 7-day free trial and see
-              how Draft can transform your workload.
+              Join thousands of teachers who are writing less and connecting
+              more. Start your 7-day free trial and see how Draft can transform
+              your workload.
             </p>
 
             {/* CTA Buttons */}
@@ -137,7 +153,11 @@ export default function TeacherStoriesPage() {
             {/* Trust Indicators */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-100">
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
                   <path
                     fillRule="evenodd"
                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -147,7 +167,11 @@ export default function TeacherStoriesPage() {
                 <span>No credit card required</span>
               </div>
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
                   <path
                     fillRule="evenodd"
                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -157,7 +181,11 @@ export default function TeacherStoriesPage() {
                 <span>Cancel anytime</span>
               </div>
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <svg
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
                   <path
                     fillRule="evenodd"
                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -172,7 +200,5 @@ export default function TeacherStoriesPage() {
       </main>
       <SignupModal open={signupOpen} onOpenChange={setSignupOpen} />
     </>
-  )
+  );
 }
-
-

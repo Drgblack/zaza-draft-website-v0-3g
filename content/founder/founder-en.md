@@ -60,4 +60,3 @@ If that's the kind of future for education you believe in, you're in the right p
 **Greg**  
 **Dr. Greg Blackburn**  
 Founder & CEO, Zaza Technologies
-
