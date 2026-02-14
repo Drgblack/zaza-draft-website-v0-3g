@@ -9,10 +9,13 @@
     "lint": "eslint . --ext .ts,.tsx --max-warnings=0",
     "validate-posts": "tsx src/data/validate-posts.ts",
     "validate-content": "tsx scripts/validate-content.ts",
+    "test:locale-routing": "tsx scripts/test-locale-routing.ts",
+    "guard:de-blog-english": "tsx scripts/check-de-blog-english.ts",
     "start": "next start",
     "guard:default-exports": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/verify-default-exports.ps1",
     "guard:no-emdash": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/no-emdash.ps1",
-    "guard:all": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/fix-css-import.ps1 && pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/verify-use-client.ps1 && pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/verify-default-exports.ps1 && pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/no-emdash.ps1",
+    "guard:all": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/fix-css-import.ps1 && pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/verify-use-client.ps1 && pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/verify-default-exports.ps1 && pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/no-emdash.ps1 && pnpm run guard:de-blog-english",
+    "verify": "pnpm run typecheck && pnpm run build && pnpm run guard:de-blog-english",
     "prepare": "husky"
   },
   "dependencies": {
