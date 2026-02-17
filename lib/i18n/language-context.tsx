@@ -28,7 +28,7 @@ const translationsEn: Record<string, string> = {
   "pricing.hero.headline": "Pricing that respects teachers' time and wellbeing",
   "pricing.hero.subheadline":
     "Save hours every week, reduce after-hours stress, and write with confidence - with pricing that's simple and fair.",
-  "pricing.trust.teachers": "Trusted by caring teachers",
+  "pricing.trust.teachers": "Teacher-first (early access)",
   "pricing.trust.ferpa": "FERPA-minded",
   "pricing.trust.cancel": "Cancel anytime",
 
@@ -48,7 +48,7 @@ const translationsEn: Record<string, string> = {
 
   // Outcome Proof
   "pricing.outcome.text":
-    "Most teachers spend 3-5 hours/week on messages and comments. Draft cuts that by 50-70% while preserving your tone and intent.",
+    "Many teachers lose hours each week to parent messages, behaviour notes, and report comments. Draft helps you write faster, with safer wording and less back-and-forth.",
 
   // Free Plan
   "pricing.free.badge": "FREE",
@@ -131,7 +131,7 @@ const translationsEn: Record<string, string> = {
 
   // Wellbeing Metric
   "pricing.metric.text":
-    "Across 90 days, teachers report 38% fewer after-hours messages and +24% confidence in parent communication.",
+    "Early access is live. We’re collecting real classroom feedback and will publish measurable results once we have a meaningful sample.",
   "pricing.checkout.buyNow": "Upgrade now",
   "pricing.compare.title": "Compare: Zaza vs ChatGPT",
   "pricing.compare.caption":
@@ -1562,7 +1562,7 @@ const translationsDe: Record<string, string> = {
     "Preise, die die Zeit und das Wohlbefinden von Lehrkräften respektieren",
   "pricing.hero.subheadline":
     "Sparen Sie jede Woche Stunden, reduzieren Sie Stress nach Feierabend und schreiben Sie mit Zuversicht - mit Preisen, die einfach und fair sind.",
-  "pricing.trust.teachers": "Vertraut von fürsorglichen Lehrkräften",
+  "pricing.trust.teachers": "Lehrerzentriert (Early Access)",
   "pricing.trust.ferpa": "FERPA-orientiert",
   "pricing.trust.cancel": "Jederzeit kündbar",
 
@@ -1582,7 +1582,7 @@ const translationsDe: Record<string, string> = {
 
   // Outcome Proof
   "pricing.outcome.text":
-    "Die meisten Lehrkräfte verbringen 3-5 Stunden pro Woche mit Nachrichten und Kommentaren. Draft reduziert dies um 50-70 %, während Ihr Ton und Ihre Absicht erhalten bleiben.",
+    "Viele Lehrkräfte verlieren jede Woche Stunden an Elternmails, Vorfallsdokumentation und Berichtskommentare. Draft hilft dir, schneller zu formulieren – mit abgesicherten Formulierungen und weniger Hin-und-her.",
 
   // Free Plan
   "pricing.free.badge": "KOSTENLOS",
@@ -1665,7 +1665,7 @@ const translationsDe: Record<string, string> = {
 
   // Wellbeing Metric
   "pricing.metric.text":
-    "Über 90 Tage berichten Lehrkräfte von 38 % weniger Nachrichten nach Feierabend und +24 % Zuversicht in der Elternkommunikation.",
+    "Early Access läuft. Wir sammeln echtes Feedback aus Schulen und veröffentlichen messbare Ergebnisse, sobald wir eine belastbare Stichprobe haben.",
 
   "pricing.checkout.buyNow": "Jetzt abonnieren",
   "pricing.compare.title": "Vergleich: Zaza vs. ChatGPT",
