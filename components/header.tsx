@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
@@ -19,9 +19,23 @@ export function Header() {
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
   const [mobileAccordion, setMobileAccordion] = useState<
     Record<string, boolean>
-  >({});
+  >({
+    products: true,
+    learning: true,
+    resources: true,
+    about: true,
+  });
   const { language, setLanguage, t } = useLanguage();
   const L = (de: string, en: string) => (language === "de" ? de : en);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [mobileMenuOpen]);
 
   const navigation = [{ name: t("nav.pricing"), href: "/pricing" }];
   const toggleMobileAccordion = (id: string) =>
@@ -337,13 +351,13 @@ export function Header() {
         </nav>
 
         {mobileMenuOpen && (
-          <div className="fixed inset-0 z-40 flex lg:hidden">
+          <div className="fixed inset-0 z-[60] flex lg:hidden">
             <div
               className="absolute inset-0 bg-black/60"
               onClick={() => setMobileMenuOpen(false)}
             />
-            <div className="relative z-10 flex w-full flex-col bg-[#0B1220]">
-              <div className="sticky top-0 z-10 flex items-center justify-between border-b border-white/10 bg-[#0B1220] px-4 py-3">
+            <div className="relative z-10 flex h-[100dvh] w-full flex-col bg-[#0B1220] pt-[env(safe-area-inset-top)]">
+              <div className="sticky top-0 z-20 flex items-center justify-between border-b border-white/10 bg-[#0B1220] px-4 py-3">
                 <span className="text-xs font-semibold uppercase tracking-[0.4em] text-gray-400">
                   Menu
                 </span>
@@ -357,7 +371,29 @@ export function Header() {
                 </button>
               </div>
 
-              <nav className="flex-1 overflow-y-auto px-4 py-6">
+              <nav className="flex-1 min-h-0 overflow-y-auto px-4 py-6">
+                <div className="mb-6 flex w-fit gap-2 rounded-full bg-white/5 p-1">
+                  <button
+                    onClick={() => setLanguage("en")}
+                    className={`rounded-full px-3 py-2 text-xs font-medium uppercase tracking-[0.2em] transition-all ${
+                      language === "en"
+                        ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
+                        : "text-gray-400"
+                    }`}
+                  >
+                    EN
+                  </button>
+                  <button
+                    onClick={() => setLanguage("de")}
+                    className={`rounded-full px-3 py-2 text-xs font-medium uppercase tracking-[0.2em] transition-all ${
+                      language === "de"
+                        ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
+                        : "text-gray-400"
+                    }`}
+                  >
+                    DE
+                  </button>
+                </div>
                 <div className="space-y-2">
                   {mobileSections.map((section) => {
                     const controlsId = `mobile-section-${section.id}`;
@@ -419,28 +455,6 @@ export function Header() {
 
               <div className="border-t border-white/10 px-4 py-6">
                 <div className="space-y-3">
-                  <div className="flex gap-2 rounded-full bg-white/5 p-1">
-                    <button
-                      onClick={() => setLanguage("en")}
-                      className={`flex-1 rounded-full px-3 py-2 text-xs font-medium uppercase tracking-[0.2em] transition-all ${
-                        language === "en"
-                          ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
-                          : "text-gray-400"
-                      }`}
-                    >
-                      EN
-                    </button>
-                    <button
-                      onClick={() => setLanguage("de")}
-                      className={`flex-1 rounded-full px-3 py-2 text-xs font-medium uppercase tracking-[0.2em] transition-all ${
-                        language === "de"
-                          ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
-                          : "text-gray-400"
-                      }`}
-                    >
-                      DE
-                    </button>
-                  </div>
                   <Button
                     onClick={() => {
                       track("cta_click", {
