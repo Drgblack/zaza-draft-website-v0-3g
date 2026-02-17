@@ -360,6 +360,43 @@ export function HomePageClient() {
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-purple-600/5 rounded-full blur-3xl -z-10"></div>
       </section>
 
+      {/* Situations Section */}
+      <section className="bg-[#0F172A] py-16 md:py-20">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
+          <motion.h2
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center"
+          >
+            {t("situations.title")}
+          </motion.h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
+            {[
+              t("situations.items.gradeDispute"),
+              t("situations.items.accidentalCC"),
+              t("situations.items.escalation"),
+              t("situations.items.behaviorIncident"),
+              t("situations.items.toneAccusation"),
+              t("situations.items.sensitiveReport"),
+            ].map((item, index) => (
+              <motion.div
+                key={item}
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className="flex items-start gap-3 text-[#CBD5E1]"
+              >
+                <CheckCircleIcon className="w-5 h-5 text-[#A78BFA] mt-0.5 flex-shrink-0" />
+                <span className="text-base leading-relaxed">{item}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="relative overflow-hidden bg-[#1E293B] py-20 md:py-28">
         <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
           <motion.p

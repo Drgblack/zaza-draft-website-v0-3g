@@ -528,10 +528,10 @@ const translationsEn: Record<string, string> = {
   // Hero Section
   "hero.eyebrow": "Zaza - Just Teach.",
   "hero.badge": "Zaza helps teachers thrive",
-  "hero.headline": "Protect your teaching time,",
-  "hero.headlineAccent": "let Draft handle the writing load.",
+  "hero.headline": "Write emails that are",
+  "hero.headlineAccent": "safe to send.",
   "hero.subheading":
-    "Draft takes the pressure out of parent emails, grading feedback, and report notes so your focus stays on teaching. You stay in professional control while Draft helps you write clearly and calmly.",
+    "Draft helps teachers produce clear, measured wording for parent and admin communication—written as though it could be forwarded, screenshot, or read out of context. Defensible wording, a clean paper trail, and a professional co-writer—not a replacement. Less rewriting. Less exposure. More headspace.",
   "hero.ctaPrimary": "Join Early Access",
   "hero.ctaSecondary": "See Examples",
   "hero.trustIndicators.hallucinationSafe": "No invented student facts",
@@ -539,6 +539,17 @@ const translationsEn: Record<string, string> = {
   "hero.trustIndicators.teachers": "Built with teachers",
   "hero.trustClarifier":
     "Draft rewrites teacher-provided text. Schools remain the data controller; Draft is built for privacy-first handling of communication drafts.",
+  "situations.title": "Situations you'll recognise",
+  "situations.items.gradeDispute": "A grade dispute with admin CC'd.",
+  "situations.items.accidentalCC": 'An "accidental" CC/BCC or wrong recipient.',
+  "situations.items.escalation":
+    "A parent threatens to escalate to the principal or board.",
+  "situations.items.behaviorIncident":
+    "Behavior incident documentation that could be read out of context.",
+  "situations.items.toneAccusation":
+    'Your tone is questioned — "unprofessional" with a screenshot.',
+  "situations.items.sensitiveReport":
+    "A sensitive report comment that needs a clean paper trail.",
 
   // Early Access Page
   "earlyAccess.hero.title": "Join the Zaza Draft Early-Access Programme",
@@ -597,11 +608,11 @@ const translationsEn: Record<string, string> = {
   "problem.heading": "Restore focus to teaching, not late-night writing",
   "problem.body":
     "Parent emails, grading comments, and reports still need care and precision. Draft helps you finish them with less mental strain so your energy stays with students.",
-  "problem.stats.parentEmails.value": "2-3 hrs/week",
+  "problem.stats.parentEmails.value": "Weekly",
   "problem.stats.parentEmails.label": "Parent Emails",
-  "problem.stats.reportCards.value": "4-6 hrs/term",
+  "problem.stats.reportCards.value": "Each term",
   "problem.stats.reportCards.label": "Report Cards",
-  "problem.stats.gradingFeedback.value": "1-2 hrs/week",
+  "problem.stats.gradingFeedback.value": "Ongoing",
   "problem.stats.gradingFeedback.label": "Grading Feedback",
 
   // Solution/Mission Section
@@ -617,8 +628,8 @@ const translationsEn: Record<string, string> = {
   "stats.documentsRefined.label": "Documents Refined",
   "stats.teachers.number": "Teacher-first",
   "stats.teachers.label": "Design partners shaping Draft",
-  "stats.timeSaved.number": "Hours saved",
-  "stats.timeSaved.label": "each week",
+  "stats.timeSaved.number": "Time back",
+  "stats.timeSaved.label": "for teaching",
   "stats.subtitle":
     "Built by teachers to relieve Sunday night stress - join our early access programme and help shape calm, professional communication with AI.",
   "socialProof.badges.teacherFounded":
@@ -663,7 +674,7 @@ const translationsEn: Record<string, string> = {
   "demo.after.label": "AFTER (DRAFT'S VERSION)",
   "demo.tryItYourself": "Try It Yourself",
   "demo.testimonial.quote":
-    "I got my Sunday back. Draft turns hours into minutes.",
+    "I got my Sunday back. Draft keeps my messages calm and clear.",
   "demo.testimonial.name": "Sarah Mitchell",
   "demo.testimonial.author": "Year 5 Teacher, UK",
   "demo.email.before": "Sam is not paying attention in class.",
@@ -712,9 +723,9 @@ const translationsEn: Record<string, string> = {
   // Comparison Section
   "comparison.heading": "Why Zaza Draft feels different from generic AI",
   "comparison.subheading":
-    "Built for professional school communication with safer tone support, lower cognitive load, and teacher judgment always in control",
+    "Defensible wording matters more than fluent wording. Draft is built for paper-trail communication and written as if it could be forwarded, screenshot, or read out of context.",
   "comparison.clarifier":
-    "Draft rewrites teacher-provided text. Schools remain the data controller; Draft is built for privacy-first handling of communication drafts.",
+    "No student names required. Draft is not trained on your inputs and focuses on phrasing and tone only.",
   "comparison.tableHeaders.feature": "Feature",
   "comparison.tableHeaders.genericAI": "Generic AI Tools (ChatGPT, etc.)",
   "comparison.tableHeaders.zazaDraft": "Zaza Draft",
@@ -737,7 +748,7 @@ const translationsEn: Record<string, string> = {
   "comparison.rows.useCases.zaza": "6 specialized teacher workflows",
   "comparison.rows.outputQuality.feature": "Output Quality",
   "comparison.rows.outputQuality.generic": "Requires heavy editing",
-  "comparison.rows.outputQuality.zaza": "Teacher-ready in minutes",
+  "comparison.rows.outputQuality.zaza": "Defensible, teacher-ready wording",
   "comparison.rows.learningCurve.feature": "Learning Curve",
   "comparison.rows.learningCurve.generic": "Complex prompting needed",
   "comparison.rows.learningCurve.zaza": "Paste, select tone, done",
@@ -765,7 +776,8 @@ const translationsEn: Record<string, string> = {
   "whyChoose.benefits.writeWithConfidence.description":
     "Stay clear, calm, and school-appropriate in every message",
   "whyChoose.benefits.saveTime.title": "Reduce cognitive load daily",
-  "whyChoose.benefits.saveTime.description": "2-hour tasks done in 5 minutes",
+  "whyChoose.benefits.saveTime.description":
+    "Less rewriting and second-guessing in sensitive moments",
   "whyChoose.benefits.breakBarriers.title":
     "Communicate clearly across languages",
   "whyChoose.benefits.breakBarriers.description":
@@ -774,7 +786,7 @@ const translationsEn: Record<string, string> = {
   // Testimonials Section
   "testimonials.heading": "What teachers say",
   "testimonials.quote1.text":
-    "I got my Sunday back. Draft turns hours into minutes.",
+    "I got my Sunday back. Draft keeps my messages calm and clear.",
   "testimonials.quote1.name": "Sarah Mitchell",
   "testimonials.quote1.author": "Year 5 Teacher, UK",
   "testimonials.quote2.text": "Comments are consistent and kind.",
@@ -2019,10 +2031,10 @@ const translationsDe: Record<string, string> = {
   // Hero Section
   "hero.eyebrow": "Zaza - Just Teach.",
   "hero.badge": "Zaza hilft Lehrkräften, erfolgreich zu bleiben",
-  "hero.headline": "Schütze deine Unterrichtszeit,",
-  "hero.headlineAccent": "Draft trägt die Schreiblast.",
+  "hero.headline": "Schreibe E-Mails, die",
+  "hero.headlineAccent": "sicher zu senden sind.",
   "hero.subheading":
-    "Draft nimmt Druck aus Elternmails, Feedback-Kommentaren und Berichtstexten, damit dein Fokus beim Unterrichten bleibt. Du behältst die professionelle Kontrolle, Draft unterstützt dich beim klaren und ruhigen Formulieren.",
+    "Draft hilft dir, klare, sachliche Formulierungen für Eltern- und Schulleitungskommunikation zu erstellen – so geschrieben, als könnten sie weitergeleitet, gescreenshotet oder später geprüft werden. Abgesicherte Formulierungen, eine saubere Dokumentationsspur und ein professioneller Co-Writer – kein Ersatz. Weniger Umschreiben. Weniger Risiko. Mehr Kopf frei.",
   "hero.ctaPrimary": "Early Access beitreten",
   "hero.ctaSecondary": "Beispiele ansehen",
   "hero.trustIndicators.hallucinationSafe":
@@ -2031,6 +2043,18 @@ const translationsDe: Record<string, string> = {
   "hero.trustIndicators.teachers": "Mit Lehrkräften entwickelt",
   "hero.trustClarifier":
     "Draft überarbeitet von Lehrkräften bereitgestellten Text. Schulen bleiben Datenverantwortliche; Draft ist für den datenschutzorientierten Umgang mit Kommunikationsentwürfen entwickelt.",
+  "situations.title": "Situationen, die du kennen wirst",
+  "situations.items.gradeDispute": "Notenstreit mit Schulleitung im CC.",
+  "situations.items.accidentalCC":
+    '"Aus Versehen" CC/BCC oder falscher Empfänger.',
+  "situations.items.escalation":
+    "Eltern drohen mit Eskalation zur Schulleitung oder zum Schulträger.",
+  "situations.items.behaviorIncident":
+    "Dokumentation eines Vorfalls, der aus dem Kontext gelesen werden könnte.",
+  "situations.items.toneAccusation":
+    "Der Ton wird angegriffen – Screenshot als Beleg.",
+  "situations.items.sensitiveReport":
+    "Sensibler Berichtskommentar mit Bedarf an sauberer Dokumentationsspur.",
 
   // Early Access Page
   "earlyAccess.hero.title": "Tritt dem Zaza Draft Early-Access-Programm bei",
@@ -2090,11 +2114,11 @@ const translationsDe: Record<string, string> = {
     "Mehr Fokus auf Unterricht, weniger Nachtarbeit beim Schreiben",
   "problem.body":
     "Elternmails, Feedback und Berichte brauchen weiterhin Sorgfalt und Präzision. Draft hilft dir, sie mit weniger mentaler Belastung zu erledigen, damit mehr Energie für Schülerinnen und Schüler bleibt.",
-  "problem.stats.parentEmails.value": "2-3 Std./Woche",
+  "problem.stats.parentEmails.value": "Wöchentlich",
   "problem.stats.parentEmails.label": "Eltern-E-Mails",
-  "problem.stats.reportCards.value": "4-6 Std./Quartal",
+  "problem.stats.reportCards.value": "Je Quartal",
   "problem.stats.reportCards.label": "Zeugnisse",
-  "problem.stats.gradingFeedback.value": "1-2 Std./Woche",
+  "problem.stats.gradingFeedback.value": "Laufend",
   "problem.stats.gradingFeedback.label": "Bewertungs-Feedback",
 
   // Solution/Mission Section
@@ -2110,8 +2134,8 @@ const translationsDe: Record<string, string> = {
   "stats.documentsRefined.label": "Dokumente verfeinert",
   "stats.teachers.number": "Lehrerzentriert",
   "stats.teachers.label": "Designpartner",
-  "stats.timeSaved.number": "Eingesparte Stunden",
-  "stats.timeSaved.label": "pro Woche",
+  "stats.timeSaved.number": "Zeit zurück",
+  "stats.timeSaved.label": "für den Unterricht",
   "stats.subtitle":
     "Von Lehrkräften gebaut, um Sonntagnacht-Stress zu reduzieren - werde Teil unseres Early-Access-Programms und gestalte ruhige, professionelle Kommunikation mit KI mit.",
   "socialProof.badges.teacherFounded":
@@ -2161,7 +2185,7 @@ const translationsDe: Record<string, string> = {
   "demo.after.label": "NACHHER (DRAFTS VERSION)",
   "demo.tryItYourself": "Selbst ausprobieren",
   "demo.testimonial.quote":
-    "Ich habe meinen Sonntag zurück. Draft macht aus Stunden Minuten.",
+    "Ich habe meinen Sonntag zurück. Draft hält meine Nachrichten ruhig und klar.",
   "demo.testimonial.name": "Sarah Mitchell",
   "demo.testimonial.author": "Grundschullehrerin, UK",
   "demo.email.before": "Sam passt im Unterricht nicht auf.",
@@ -2213,9 +2237,9 @@ const translationsDe: Record<string, string> = {
   "comparison.heading":
     "Warum Zaza Draft sich anders anfühlt als generische KI",
   "comparison.subheading":
-    "Für professionelle Schulkommunikation entwickelt: sicherere Tonführung, weniger kognitive Last und pädagogisches Urteil bleibt immer bei dir",
+    "Abgesicherte Formulierungen sind wichtiger als flüssiger Text. Draft ist für schriftliche Nachvollziehbarkeit gebaut und so formuliert, als könnte es weitergeleitet, gescreenshotet oder aus dem Kontext gelesen werden.",
   "comparison.clarifier":
-    "Draft überarbeitet von Lehrkräften bereitgestellten Text. Schulen bleiben Datenverantwortliche; Draft ist für den datenschutzorientierten Umgang mit Kommunikationsentwürfen entwickelt.",
+    "Keine Schülervornamen erforderlich. Draft wird nicht mit deinen Eingaben trainiert und fokussiert sich nur auf Formulierung und Ton.",
   "comparison.tableHeaders.feature": "Funktion",
   "comparison.tableHeaders.genericAI": "Generische KI-Tools (ChatGPT, usw.)",
   "comparison.tableHeaders.zazaDraft": "Zaza Draft",
@@ -2239,7 +2263,8 @@ const translationsDe: Record<string, string> = {
   "comparison.rows.useCases.zaza": "6 spezialisierte Lehrer-Workflows",
   "comparison.rows.outputQuality.feature": "Ausgabequalität",
   "comparison.rows.outputQuality.generic": "Erfordert starke Bearbeitung",
-  "comparison.rows.outputQuality.zaza": "Lehrerbereit in Minuten",
+  "comparison.rows.outputQuality.zaza":
+    "Abgesicherte, lehrerbereite Formulierungen",
   "comparison.rows.learningCurve.feature": "Lernkurve",
   "comparison.rows.learningCurve.generic": "Komplexe Prompts erforderlich",
   "comparison.rows.learningCurve.zaza": "Einfügen, Ton wählen, fertig",
@@ -2269,7 +2294,7 @@ const translationsDe: Record<string, string> = {
     "Klar, ruhig und schulgeeignet in jeder Nachricht",
   "whyChoose.benefits.saveTime.title": "Kognitive Last täglich senken",
   "whyChoose.benefits.saveTime.description":
-    "2-Stunden-Aufgaben in 5 Minuten erledigt",
+    "Weniger Umschreiben und Grübeln in sensiblen Momenten",
   "whyChoose.benefits.breakBarriers.title":
     "Über Sprachgrenzen klar kommunizieren",
   "whyChoose.benefits.breakBarriers.description":
@@ -2278,7 +2303,7 @@ const translationsDe: Record<string, string> = {
   // Testimonials Section
   "testimonials.heading": "Was Lehrkräfte sagen",
   "testimonials.quote1.text":
-    "Ich habe meinen Sonntag zurück. Draft macht aus Stunden Minuten.",
+    "Ich habe meinen Sonntag zurück. Draft hält meine Nachrichten ruhig und klar.",
   "testimonials.quote1.name": "Sarah Mitchell",
   "testimonials.quote1.author": "Grundschullehrerin, UK",
   "testimonials.quote2.text": "Kommentare sind konsistent und wertschätzend.",
