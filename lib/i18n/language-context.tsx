@@ -534,6 +534,7 @@ const translationsEn: Record<string, string> = {
     "Draft helps teachers produce clear, measured wording for parent and admin communication—written as though it could be forwarded, screenshot, or read out of context. Defensible wording, a clean paper trail, and a professional co-writer—not a replacement. Less rewriting. Less exposure. More headspace.",
   "hero.ctaPrimary": "Join Early Access",
   "hero.ctaSecondary": "See Examples",
+  "hero.privacyLine": "No student names needed. Not trained on your inputs.",
   "hero.trustIndicators.hallucinationSafe": "No invented student facts",
   "hero.trustIndicators.ferpaCompliant": "FERPA-ready",
   "hero.trustIndicators.teachers": "Built with teachers",
@@ -624,8 +625,9 @@ const translationsEn: Record<string, string> = {
     "Tone guardrails and de-escalation guidance help you stay calm, clear, and consistent in difficult moments. You review every draft, keep your voice, and send with confidence.",
 
   // Stats Section
-  "stats.documentsRefined.number": "150k+",
-  "stats.documentsRefined.label": "Documents Refined",
+  "stats.documentsRefined.number": "Defensible by design",
+  "stats.documentsRefined.label":
+    "Written for paper-trail communication and high-stakes contexts.",
   "stats.teachers.number": "Teacher-first",
   "stats.teachers.label": "Design partners shaping Draft",
   "stats.timeSaved.number": "Time back",
@@ -2032,11 +2034,13 @@ const translationsDe: Record<string, string> = {
   "hero.eyebrow": "Zaza - Just Teach.",
   "hero.badge": "Zaza hilft Lehrkräften, erfolgreich zu bleiben",
   "hero.headline": "Schreibe E-Mails, die",
-  "hero.headlineAccent": "sicher zu senden sind.",
+  "hero.headlineAccent": "du sicher senden kannst.",
   "hero.subheading":
     "Draft hilft dir, klare, sachliche Formulierungen für Eltern- und Schulleitungskommunikation zu erstellen – so geschrieben, als könnten sie weitergeleitet, gescreenshotet oder später geprüft werden. Abgesicherte Formulierungen, eine saubere Dokumentationsspur und ein professioneller Co-Writer – kein Ersatz. Weniger Umschreiben. Weniger Risiko. Mehr Kopf frei.",
   "hero.ctaPrimary": "Early Access beitreten",
   "hero.ctaSecondary": "Beispiele ansehen",
+  "hero.privacyLine":
+    "Keine Schülernamen nötig. Nicht auf deinen Eingaben trainiert.",
   "hero.trustIndicators.hallucinationSafe":
     "Keine erfundenen Schülerinformationen",
   "hero.trustIndicators.ferpaCompliant": "FERPA-ready",
@@ -2130,8 +2134,9 @@ const translationsDe: Record<string, string> = {
     "Ton-Leitplanken und Deeskalations-Hilfe unterstützen dich dabei, in schwierigen Situationen ruhig, klar und konsistent zu bleiben. Du prüfst jeden Entwurf, behältst deine Stimme und sendest mit Sicherheit.",
 
   // Stats Section
-  "stats.documentsRefined.number": "150k+",
-  "stats.documentsRefined.label": "Dokumente verfeinert",
+  "stats.documentsRefined.number": "Abgesichert by Design",
+  "stats.documentsRefined.label":
+    "Für schriftliche Nachvollziehbarkeit und sensible Situationen.",
   "stats.teachers.number": "Lehrerzentriert",
   "stats.teachers.label": "Designpartner",
   "stats.timeSaved.number": "Zeit zurück",

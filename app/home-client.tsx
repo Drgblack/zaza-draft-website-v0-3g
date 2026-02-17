@@ -255,6 +255,15 @@ export function HomePageClient() {
                 </Button>
               </motion.div>
 
+              <motion.p
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.45, ease: "easeOut" }}
+                className="text-sm text-[#94A3B8] leading-relaxed max-w-[600px] mx-auto lg:mx-0"
+              >
+                {t("hero.privacyLine")}
+              </motion.p>
+
               <motion.div
                 initial={prefersReducedMotion ? {} : { opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -390,7 +399,9 @@ export function HomePageClient() {
                 className="flex items-start gap-3 text-[#CBD5E1]"
               >
                 <CheckCircleIcon className="w-5 h-5 text-[#A78BFA] mt-0.5 flex-shrink-0" />
-                <span className="text-base leading-relaxed">{item}</span>
+                <span className="text-base md:text-lg leading-7 text-[#E2E8F0]">
+                  {item}
+                </span>
               </motion.div>
             ))}
           </div>
