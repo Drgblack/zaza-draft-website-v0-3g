@@ -425,7 +425,7 @@ export default function DraftClient() {
                 onClick={() => setDemoOpen(true)}
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white/10 rounded-xl"
+                className="border-white/60 bg-white/10 text-white hover:bg-white/20 rounded-xl"
               >
                 {t("products.draft.cta.secondary")}
               </Button>
