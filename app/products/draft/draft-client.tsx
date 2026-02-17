@@ -87,6 +87,12 @@ export default function DraftClient() {
                 <p className="text-lg md:text-xl text-[#D1D5DB] leading-relaxed">
                   {t("products.draft.hero.subtitle")}
                 </p>
+                <p className="text-base text-[#CBD5E1] leading-relaxed">
+                  {t("products.draft.hero.assumption")}
+                </p>
+                <p className="text-sm text-[#9CA3AF]">
+                  {t("products.draft.hero.supporting")}
+                </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <Button
                     asChild
@@ -118,6 +124,9 @@ export default function DraftClient() {
                     {t("products.draft.hero.cta.secondary")}
                   </Button>
                 </div>
+                <p className="text-sm text-[#9CA3AF]">
+                  {t("products.draft.hero.privacyLine")}
+                </p>
               </div>
 
               <div className="relative aspect-[16/9] rounded-2xl overflow-hidden shadow-lg">

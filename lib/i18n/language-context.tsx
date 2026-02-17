@@ -896,11 +896,16 @@ const translationsEn: Record<string, string> = {
 
   // Products - Draft
   "products.draft.hero.eyebrow": "AI WRITING ASSISTANT FOR TEACHERS",
-  "products.draft.hero.title": "Parent emails without the Sunday dread",
+  "products.draft.hero.title": "Parent emails that are safe to send",
   "products.draft.hero.subtitle":
-    "Draft turns rough notes into calm, professional parent messages, report comments, and grading feedback. Tone guardrails and de-escalation support keep you confident and save time.",
+    "Draft turns rough notes into calm, professional parent messages, report comments, and grading feedback — written as though they could be forwarded, screenshot, or reviewed later. Built for high-stakes school communication, not generic AI writing.",
+  "products.draft.hero.assumption":
+    "Draft assumes messages may be read out of context — by parents, leadership, or administration — and helps you write accordingly.",
+  "products.draft.hero.supporting": "Less Sunday dread, more headspace.",
   "products.draft.hero.cta.primary": "Join Early Access",
   "products.draft.hero.cta.secondary": "See Examples",
+  "products.draft.hero.privacyLine":
+    "No student names needed. Not trained on your inputs.",
 
   "products.draft.turn.pain1":
     "Late-night parent emails that need calm, de-escalating tone",
@@ -920,16 +925,17 @@ const translationsEn: Record<string, string> = {
   "products.draft.features.reviewSteps.desc":
     "You stay in control: review, edit, and approve every draft",
 
-  "products.draft.howItWorks.title": "How it calms your writing",
+  "products.draft.howItWorks.title": "How Draft reduces communication risk",
   "products.draft.howItWorks.step1.title": "Drop in your notes",
   "products.draft.howItWorks.step1.desc":
     "Start with bullet points or a rough draft - no perfect wording needed",
-  "products.draft.howItWorks.step2.title": "Pick the tone",
+  "products.draft.howItWorks.step2.title": "Choose a defensible tone",
   "products.draft.howItWorks.step2.desc":
-    "Supportive, formal, concise - with safety guardrails by default",
-  "products.draft.howItWorks.step3.title": "Review & send",
+    "Supportive, formal, concise - with defensible guardrails by default",
+  "products.draft.howItWorks.step3.title":
+    "Review for clarity and paper-trail safety",
   "products.draft.howItWorks.step3.desc":
-    "Edit quickly, copy, and share when it feels right",
+    "Edit quickly, copy, and send when it reads as clear and professional",
   "products.draft.insights.heading": "Insights & Progress",
   "products.draft.insights.body":
     "Draft tracks time saved, drafts created, streaks, and a quality score so you can celebrate the growth you deliver while helping shape our teacher-first beta.",
@@ -2421,11 +2427,16 @@ const translationsDe: Record<string, string> = {
 
   // Products - Draft
   "products.draft.hero.eyebrow": "KI-SCHREIBASSISTENT FÜR LEHRKRÄFTE",
-  "products.draft.hero.title": "Elternmails ohne Sonntagsdruck",
+  "products.draft.hero.title": "Elternmails, die du sicher senden kannst",
   "products.draft.hero.subtitle":
-    "Draft macht aus Stichpunkten ruhige, professionelle Elternnachrichten, Berichtskommentare und Bewertungs-Feedback. Ton-Leitplanken und Deeskalation geben dir Sicherheit und Zeit zurück.",
+    "Draft macht aus Stichpunkten ruhige, professionelle Elternnachrichten, Berichtskommentare und Bewertungsfeedback – so formuliert, als könnten sie weitergeleitet, gescreenshotet oder später geprüft werden. Entwickelt für sensible Schulkommunikation, nicht für generische KI-Texte.",
+  "products.draft.hero.assumption":
+    "Draft geht davon aus, dass Nachrichten aus dem Kontext gelesen werden können – von Eltern, Schulleitung oder Verwaltung – und unterstützt dich genau dafür.",
+  "products.draft.hero.supporting": "Weniger Sonntagsdruck, mehr Kopf frei.",
   "products.draft.hero.cta.primary": "Early Access beitreten",
   "products.draft.hero.cta.secondary": "Beispiele ansehen",
+  "products.draft.hero.privacyLine":
+    "Keine Schülernamen nötig. Nicht auf deinen Eingaben trainiert.",
 
   "products.draft.turn.pain1":
     "Elternmails spätabends, die ruhig und deeskalierend sein müssen",
@@ -2445,16 +2456,16 @@ const translationsDe: Record<string, string> = {
   "products.draft.features.reviewSteps.desc":
     "Du behältst die Kontrolle: prüfen, anpassen, freigeben",
 
-  "products.draft.howItWorks.title": "So beruhigt es dein Schreiben",
+  "products.draft.howItWorks.title": "So reduziert Draft Kommunikationsrisiken",
   "products.draft.howItWorks.step1.title": "Notizen reinkopieren",
   "products.draft.howItWorks.step1.desc":
     "Starte mit Stichpunkten oder einem groben Entwurf – kein Feinschliff nötig",
-  "products.draft.howItWorks.step2.title": "Ton wählen",
+  "products.draft.howItWorks.step2.title": "Ton wählen (abgesichert)",
   "products.draft.howItWorks.step2.desc":
-    "Unterstützend, formell, prägnant – mit Sicherheitsleitplanken als Standard",
-  "products.draft.howItWorks.step3.title": "Prüfen & senden",
+    "Unterstützend, formell, prägnant – mit abgesicherten Leitplanken als Standard",
+  "products.draft.howItWorks.step3.title": "Prüfen (klar, sachlich) & senden",
   "products.draft.howItWorks.step3.desc":
-    "Kurz bearbeiten, kopieren und teilen, wenn es sich richtig anfühlt",
+    "Kurz bearbeiten, kopieren und senden, wenn es klar und professionell klingt",
   "products.draft.insights.heading": "Insights & Fortschritt",
   "products.draft.insights.body":
     "Draft zeichnet Zeitersparnis, erstellte Entwürfe, Streaks und eine Qualitätsbewertung auf, damit du das Wachstum feiern kannst, das du mit jedem durchdachten Elternbrief bewirkst, und gleichzeitig unsere lehrerzentrierte Beta mitgestaltest.",
