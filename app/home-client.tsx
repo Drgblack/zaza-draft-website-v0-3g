@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { SignupModal } from "@/components/signup-modal";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { track } from "@/lib/analytics";
@@ -24,12 +24,6 @@ const Check = ({ className }: { className?: string }) => (
       strokeWidth={2}
       d="M5 13l4 4L19 7"
     />
-  </svg>
-);
-
-const Star = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
   </svg>
 );
 
@@ -132,45 +126,26 @@ const CheckCircleIcon = ({ className }: { className?: string }) => (
 export function HomePageClient() {
   const { t, language } = useLanguage();
   const [signupOpen, setSignupOpen] = useState(false);
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const [showHallucinationTooltip, setShowHallucinationTooltip] =
     useState(false);
   const prefersReducedMotion = useReducedMotion();
-
-  useEffect(() => {
-    if (isPaused || prefersReducedMotion) return;
-    const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % 3);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, [isPaused, prefersReducedMotion]);
+  const earlyAccessHref =
+    language === "de" ? "/de/early-access" : "/early-access";
+  const betaFeedbackHeading =
+    language === "de"
+      ? "Feedback aus der Beta folgt"
+      : "Beta feedback is coming";
+  const betaFeedbackBody =
+    language === "de"
+      ? "Wir onboarden gerade die erste Gruppe Lehrkräfte. Echte Zitate erscheinen hier, sobald wir sie gesammelt haben. Wenn du Draft mitgestalten möchtest, tritt dem Early Access bei."
+      : "We are onboarding our first cohort of teachers now. Real quotes will appear here as soon as they are collected. If you would like to shape Draft, join early access.";
+  const betaFeedbackCta =
+    language === "de" ? "Early Access" : "Join Early Access";
 
   const scrollToDemo = () => {
     track("cta_click_home_see_examples", { language });
     document.getElementById("demo")?.scrollIntoView({ behavior: "smooth" });
   };
-
-  const testimonials = [
-    {
-      quote: t("testimonials.quote1.text"),
-      author: t("testimonials.quote1.author"),
-      name: t("testimonials.quote1.name"),
-      image: "/testimonials/teacher-1.jpg",
-    },
-    {
-      quote: t("testimonials.quote2.text"),
-      author: t("testimonials.quote2.author"),
-      name: t("testimonials.quote2.name"),
-      image: "/images/marcus-johnson.png",
-    },
-    {
-      quote: t("testimonials.quote3.text"),
-      author: t("testimonials.quote3.author"),
-      name: t("testimonials.quote3.name"),
-      image: "/testimonials/teacher-3.jpg",
-    },
-  ];
 
   return (
     <>
@@ -236,7 +211,7 @@ export function HomePageClient() {
                   className="w-full sm:w-auto inline-flex items-center justify-center bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-transform transition-shadow duration-200 hover:scale-[1.03] hover:shadow-xl hover:shadow-purple-500/30 active:scale-[0.98]"
                 >
                   <Link
-                    href="/early-access"
+                    href={earlyAccessHref}
                     onClick={() =>
                       track("cta_click_home_get_started", { language })
                     }
@@ -945,46 +920,21 @@ export function HomePageClient() {
           >
             {t("testimonials.heading")}
           </motion.h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="bg-white rounded-xl p-10 shadow-[0_8px_20px_rgba(0,0,0,0.1)]"
-              >
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="relative w-16 h-16 rounded-full overflow-hidden border-3 border-[#8B5CF6] flex-shrink-0">
-                    <Image
-                      src={testimonial.image || "/placeholder.svg"}
-                      alt={testimonial.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="text-left">
-                    <p className="text-base font-bold text-[#1E293B] mb-1">
-                      {testimonial.name}
-                    </p>
-                    <p className="text-sm font-semibold text-[#64748B]">
-                      {testimonial.author}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-1 mb-5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-[#FCD34D]" />
-                  ))}
-                </div>
-                <p className="text-lg text-[#1E293B] italic leading-relaxed mb-6">
-                  {testimonial.quote}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5 }}
+            className="mx-auto max-w-3xl rounded-xl border border-[#334155] bg-[#1E293B] p-8 text-center"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              {betaFeedbackHeading}
+            </h3>
+            <p className="text-[#CBD5E1] mb-6">{betaFeedbackBody}</p>
+            <Button asChild className="gradient-primary text-white rounded-xl">
+              <Link href={earlyAccessHref}>{betaFeedbackCta}</Link>
+            </Button>
+          </motion.div>
         </div>
       </section>
 

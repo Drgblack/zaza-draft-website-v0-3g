@@ -12,6 +12,7 @@ type ScenarioId = "parent" | "report" | "grading";
 export type DraftDemoProps = {
   language: "en" | "de";
   onTryItYourself?: () => void;
+  sectionId?: string;
 };
 
 type DemoVariant = {
@@ -189,7 +190,11 @@ const pronounLabels: Record<PronounOption, { en: string; de: string }> = {
   they: { en: "They", de: "Sie (Plural)" },
 };
 
-export function DraftDemo({ language, onTryItYourself }: DraftDemoProps) {
+export function DraftDemo({
+  language,
+  onTryItYourself,
+  sectionId,
+}: DraftDemoProps) {
   const [scenario, setScenario] = useState<ScenarioId>("parent");
   const [tone, setTone] = useState<Tone>("supportive");
   const [pronounSelection, setPronounSelection] =
@@ -249,7 +254,7 @@ export function DraftDemo({ language, onTryItYourself }: DraftDemoProps) {
   };
 
   return (
-    <section id="examples" className="py-16 bg-[#111827]">
+    <section id={sectionId} className="py-16 bg-[#111827]">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white">{title}</h2>

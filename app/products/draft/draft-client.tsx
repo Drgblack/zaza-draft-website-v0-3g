@@ -14,10 +14,30 @@ import { DraftDemo } from "@/components/draft-demo";
 export default function DraftClient() {
   const { t, language } = useLanguage();
   const [demoOpen, setDemoOpen] = useState(false);
-  const heroFrictionLine =
+  const earlyAccessHref =
+    language === "de" ? "/de/early-access" : "/early-access";
+  const aboutFounderHref =
+    language === "de" ? "/de/about/founder" : "/about/founder";
+  const heroContextLine =
     language === "de"
-      ? "Early Access in unter einer Minute. Keine Karte erforderlich."
-      : "Join early access in under a minute. No card required.";
+      ? "Du siehst Zaza Draft - den Co-Writer für Eltern- und Schul-E-Mails."
+      : "You are viewing Zaza Draft - the parent and school email co-writer.";
+  const commitmentLine =
+    language === "de"
+      ? "Early Access ist kostenlos. Erhalte deinen ersten Entwurf in Minuten. Keine Karte erforderlich."
+      : "Early access is free. Get your first draft in minutes. No card required.";
+  const nextSteps =
+    language === "de"
+      ? [
+          "Teile kurz deinen Kontext (30 Sekunden)",
+          "Erhalte deinen ersten Draft-Entwurf",
+          "Wir laden dich in die Beta-Kohorte ein",
+        ]
+      : [
+          "Tell us your school context (30 seconds)",
+          "Get your first Draft output",
+          "We invite you into the beta cohort",
+        ];
   const betaFeedbackHeading =
     language === "de"
       ? "Feedback aus der Beta folgt"
@@ -28,11 +48,16 @@ export default function DraftClient() {
       : "We are onboarding our first cohort of teachers now. Real quotes will appear here as soon as they are collected. If you would like to shape Draft, join early access.";
   const betaFeedbackCta =
     language === "de" ? "Early Access" : "Join Early Access";
-  const founderTrustLine =
+  const founderHeading =
     language === "de"
-      ? "Entwickelt von Dr Greg Blackburn (PhD in Professional Education), damit Lehrkräfte ruhig und sicher kommunizieren können."
-      : "Built by Dr Greg Blackburn (PhD in Professional Education) to help teachers write calm, defensible messages.";
-  const aboutLabel = language === "de" ? "Über uns" : "About";
+      ? "Entwickelt mit Lernwissenschaft - nicht mit generischer KI"
+      : "Built with learning science, not generic AI";
+  const founderBody =
+    language === "de"
+      ? "Zaza Draft wurde von Dr Greg Blackburn (PhD, Professional Education) entwickelt - mit 20 Jahren Erfahrung in Learning und Education Technology. Ziel ist klar: Lehrkräften helfen, auch unter Druck sicher, ruhig und professionell zu kommunizieren."
+      : "Zaza Draft is built by Dr Greg Blackburn (PhD, Professional Education) with 20 years in learning and education technology. The goal is simple - help teachers communicate safely, calmly, and professionally, even under pressure.";
+  const founderLinkLabel =
+    language === "de" ? "Zum Gründer" : "Meet the founder";
 
   const features = [
     {
@@ -103,6 +128,7 @@ export default function DraftClient() {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#F9FAFB] leading-tight">
                   {t("products.draft.hero.title")}
                 </h1>
+                <p className="text-sm text-[#94A3B8]">{heroContextLine}</p>
                 <p className="text-lg md:text-xl text-[#D1D5DB] leading-relaxed">
                   {t("products.draft.hero.subtitle")}
                 </p>
@@ -125,11 +151,16 @@ export default function DraftClient() {
                         })
                       }
                     >
-                      <Link href="/pricing#draft">
+                      <Link href={earlyAccessHref}>
                         {t("products.draft.hero.cta.primary")}
                       </Link>
                     </Button>
-                    <p className="text-xs text-[#9CA3AF]">{heroFrictionLine}</p>
+                    <p className="text-xs text-[#9CA3AF]">{commitmentLine}</p>
+                    <ol className="list-decimal pl-4 space-y-1 text-xs text-[#94A3B8]">
+                      {nextSteps.map((step) => (
+                        <li key={step}>{step}</li>
+                      ))}
+                    </ol>
                   </div>
                   <Button
                     asChild
@@ -340,6 +371,7 @@ export default function DraftClient() {
 
         <DraftDemo
           language={language}
+          sectionId="examples"
           onTryItYourself={() => {
             track("cta_click_draft_demo_try", { language });
             setDemoOpen(true);
@@ -395,8 +427,9 @@ export default function DraftClient() {
                 asChild
                 className="gradient-primary text-white rounded-xl"
               >
-                <Link href="/pricing#draft">{betaFeedbackCta}</Link>
+                <Link href={earlyAccessHref}>{betaFeedbackCta}</Link>
               </Button>
+              <p className="text-xs text-[#9CA3AF] mt-3">{commitmentLine}</p>
             </Card>
           </div>
         </section>
@@ -416,7 +449,7 @@ export default function DraftClient() {
                 size="lg"
                 className="bg-white text-[#7C3AED] hover:bg-gray-100 font-medium rounded-xl"
               >
-                <Link href="/pricing#draft">
+                <Link href={earlyAccessHref}>
                   {t("products.draft.cta.primary")}
                 </Link>
               </Button>
@@ -429,22 +462,29 @@ export default function DraftClient() {
                 {t("products.draft.cta.secondary")}
               </Button>
             </div>
+            <p className="text-xs text-white/85 mt-4">{commitmentLine}</p>
           </div>
         </section>
 
-        {/* Founder trust strip */}
+        {/* Founder trust card */}
         <section className="py-8 border-t border-[#1F2937] bg-[#0B1220]">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
-            <Card className="bg-[#111827] border-[#1F2937] p-5 text-center">
-              <p className="text-sm text-[#CBD5E1]">
-                {founderTrustLine}{" "}
-                <Link
-                  href="/about"
-                  className="text-[#A78BFA] hover:text-[#C4B5FD]"
-                >
-                  {aboutLabel}
-                </Link>
+            <Card className="bg-[#111827] border-[#1F2937] p-6 text-center">
+              <div className="mx-auto w-12 h-12 rounded-full bg-[#1F2937] border border-[#374151] text-[#C4B5FD] font-semibold flex items-center justify-center mb-4">
+                GB
+              </div>
+              <h3 className="text-xl font-semibold text-[#F9FAFB] mb-3">
+                {founderHeading}
+              </h3>
+              <p className="text-sm text-[#CBD5E1] max-w-2xl mx-auto">
+                {founderBody}
               </p>
+              <Link
+                href={aboutFounderHref}
+                className="inline-block mt-4 text-sm text-[#A78BFA] hover:text-[#C4B5FD]"
+              >
+                {founderLinkLabel}
+              </Link>
             </Card>
           </div>
         </section>
