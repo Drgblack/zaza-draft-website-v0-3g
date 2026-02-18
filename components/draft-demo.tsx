@@ -1,24 +1,24 @@
-"use client"
+"use client";
 
-import { useMemo, useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
+import { useMemo, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 
-type Tone = "supportive" | "formal" | "concise"
-type Pronoun = "he" | "she" | "they"
-type PronounOption = Pronoun | "auto"
-type ScenarioId = "parent" | "report" | "grading"
+type Tone = "supportive" | "formal" | "concise";
+type Pronoun = "he" | "she" | "they";
+type PronounOption = Pronoun | "auto";
+type ScenarioId = "parent" | "report" | "grading";
 
 export type DraftDemoProps = {
-  language: "en" | "de"
-  onTryItYourself?: () => void
-}
+  language: "en" | "de";
+  onTryItYourself?: () => void;
+};
 
 type DemoVariant = {
-  before: { en: string; de: string }
-  after: Record<Tone, Record<Pronoun, { en: string; de: string }>>
-  label: { en: string; de: string }
-}
+  before: { en: string; de: string };
+  after: Record<Tone, Record<Pronoun, { en: string; de: string }>>;
+  label: { en: string; de: string };
+};
 
 const DEMOS: Record<ScenarioId, DemoVariant> = {
   parent: {
@@ -174,74 +174,82 @@ const DEMOS: Record<ScenarioId, DemoVariant> = {
       },
     },
   },
-}
+};
 
 const toneLabels: Record<Tone, { en: string; de: string }> = {
   supportive: { en: "Supportive", de: "Unterstützend" },
   formal: { en: "Formal", de: "Formell" },
   concise: { en: "Concise", de: "Prägnant" },
-}
+};
 
 const pronounLabels: Record<PronounOption, { en: string; de: string }> = {
   auto: { en: "Auto", de: "Auto" },
   he: { en: "He", de: "Er" },
   she: { en: "She", de: "Sie" },
   they: { en: "They", de: "Sie (Plural)" },
-}
+};
 
 export function DraftDemo({ language, onTryItYourself }: DraftDemoProps) {
-  const [scenario, setScenario] = useState<ScenarioId>("parent")
-  const [tone, setTone] = useState<Tone>("supportive")
-  const [pronounSelection, setPronounSelection] = useState<PronounOption>("auto")
-  const [animateKey, setAnimateKey] = useState(0)
+  const [scenario, setScenario] = useState<ScenarioId>("parent");
+  const [tone, setTone] = useState<Tone>("supportive");
+  const [pronounSelection, setPronounSelection] =
+    useState<PronounOption>("auto");
+  const [animateKey, setAnimateKey] = useState(0);
 
-  const autoPronoun: Pronoun = language === "de" ? "they" : "they"
-  const activePronoun: Pronoun = pronounSelection === "auto" ? autoPronoun : pronounSelection
+  const autoPronoun: Pronoun = language === "de" ? "they" : "they";
+  const activePronoun: Pronoun =
+    pronounSelection === "auto" ? autoPronoun : pronounSelection;
 
-  const activeDemo = DEMOS[scenario]
+  const activeDemo = DEMOS[scenario];
 
   const afterText = useMemo(() => {
-    return activeDemo.after[tone][activePronoun][language]
-  }, [activeDemo, tone, activePronoun, language])
+    return activeDemo.after[tone][activePronoun][language];
+  }, [activeDemo, tone, activePronoun, language]);
 
-  const beforeText = activeDemo.before[language]
+  const beforeText = activeDemo.before[language];
 
   const handleRewrite = () => {
-    setAnimateKey((prev) => prev + 1)
-  }
+    setAnimateKey((prev) => prev + 1);
+  };
 
-  const title = language === "de" ? "So arbeitet Draft in der Praxis" : "See Draft in Action"
+  const title =
+    language === "de" ? "Draft in der Praxis" : "See Draft in Action";
   const desc =
     language === "de"
       ? "Reale Beispiele auf Basis echter Lehrersprache - keine Registrierung nötig."
-      : "Realistic examples based on teacher language - no signup needed."
-  const beforeLabel = language === "de" ? "Vorher (dein Entwurf)" : "Before (your draft)"
-  const afterLabel = language === "de" ? "Nachher (Draft-Version)" : "After (Draft's version)"
-  const helper = language === "de" ? "Demo-Beispieltext" : "Demo example text"
-  const rewriteLabel = language === "de" ? "Notiz verfeinern" : "Polish my note"
-  const tryLabel = language === "de" ? "Selbst ausprobieren" : "Try it yourself"
+      : "Realistic examples based on teacher language - no signup needed.";
+  const beforeLabel =
+    language === "de" ? "Vorher (dein Entwurf)" : "Before (your draft)";
+  const afterLabel =
+    language === "de" ? "Nachher (Draft-Version)" : "After (Draft's version)";
+  const helper = language === "de" ? "Demo-Beispieltext" : "Demo example text";
+  const rewriteLabel =
+    language === "de" ? "Notiz verfeinern" : "Polish my note";
+  const tryLabel =
+    language === "de" ? "Selbst ausprobieren" : "Try it yourself";
   const disclaimer =
     language === "de"
       ? "Diese Demo zeigt Beispieltexte. Die vollständige App passt Nachrichten an deine Schüler:innen und deinen Unterrichtsstil an."
-      : "This demo shows example text. The full app personalises messages to your students and your teaching style."
+      : "This demo shows example text. The full app personalises messages to your students and your teaching style.";
 
-  const scenarioOrder: ScenarioId[] = ["parent", "report", "grading"]
+  const scenarioOrder: ScenarioId[] = ["parent", "report", "grading"];
 
   const handleTry = () => {
     if (onTryItYourself) {
-      onTryItYourself()
-      return
+      onTryItYourself();
+      return;
     }
-    const target = document.getElementById("get-started") || document.getElementById("top")
+    const target =
+      document.getElementById("get-started") || document.getElementById("top");
     if (target) {
-      target.scrollIntoView({ behavior: "smooth" })
+      target.scrollIntoView({ behavior: "smooth" });
     } else {
-      window.location.href = "#"
+      window.location.href = "#";
     }
-  }
+  };
 
   return (
-    <section className="py-16 bg-[#111827]">
+    <section id="examples" className="py-16 bg-[#111827]">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white">{title}</h2>
@@ -282,7 +290,7 @@ export function DraftDemo({ language, onTryItYourself }: DraftDemoProps) {
               <h3 className="text-lg font-semibold">{afterLabel}</h3>
               <div className="flex flex-wrap items-center gap-2">
                 {(Object.keys(toneLabels) as Tone[]).map((t) => {
-                  const selected = tone === t
+                  const selected = tone === t;
                   return (
                     <button
                       key={t}
@@ -297,15 +305,15 @@ export function DraftDemo({ language, onTryItYourself }: DraftDemoProps) {
                     >
                       {toneLabels[t][language]}
                     </button>
-                  )
+                  );
                 })}
               </div>
             </div>
 
             <div className="flex flex-wrap gap-2 mb-4">
               {(["auto", "he", "she", "they"] as PronounOption[]).map((p) => {
-                const resolved = p === "auto" ? autoPronoun : p
-                const selected = p === pronounSelection
+                const resolved = p === "auto" ? autoPronoun : p;
+                const selected = p === pronounSelection;
                 return (
                   <button
                     key={p}
@@ -320,7 +328,7 @@ export function DraftDemo({ language, onTryItYourself }: DraftDemoProps) {
                   >
                     {pronounLabels[p][language]}
                   </button>
-                )
+                );
               })}
             </div>
 
@@ -354,5 +362,5 @@ export function DraftDemo({ language, onTryItYourself }: DraftDemoProps) {
         <p className="text-xs text-[#94A3B8] mt-6 text-center">{disclaimer}</p>
       </div>
     </section>
-  )
+  );
 }

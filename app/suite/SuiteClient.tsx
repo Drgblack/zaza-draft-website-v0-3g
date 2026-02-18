@@ -38,7 +38,17 @@ function Card({
 }
 
 export default function SuiteClient() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const betaFeedbackHeading =
+    language === "de"
+      ? "Feedback aus der Beta folgt"
+      : "Beta feedback is coming";
+  const betaFeedbackBody =
+    language === "de"
+      ? "Wir onboarden gerade die erste Gruppe Lehrkräfte. Echte Zitate erscheinen hier, sobald wir sie gesammelt haben. Wenn du Draft mitgestalten möchtest, tritt dem Early Access bei."
+      : "We are onboarding our first cohort of teachers now. Real quotes will appear here as soon as they are collected. If you would like to shape Draft, join early access.";
+  const betaFeedbackCta =
+    language === "de" ? "Early Access" : "Join Early Access";
 
   useEffect(() => {
     if (process.env.NODE_ENV !== "development") return;
@@ -277,67 +287,17 @@ export default function SuiteClient() {
           <h2 className="text-center text-3xl md:text-4xl font-bold text-white mb-10">
             {t("suite.testimonials.title")}
           </h2>
-          <div className="grid gap-6 sm:grid-cols-3">
-            <div className="rounded-2xl border border-[#334155] bg-[#0F172A] p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <img
-                  src="/images/testimonials/sarah-mitchell.jpg"
-                  alt="Sarah Mitchell"
-                  className="w-10 h-10 rounded-full object-cover"
-                />
-                <div>
-                  <div className="text-white font-semibold">
-                    {t("suite.testimonials.1.author")}
-                  </div>
-                  <div className="text-xs text-[#94A3B8]">
-                    {t("suite.testimonials.1.role")}
-                  </div>
-                </div>
-              </div>
-              <p className="text-[#CBD5E1] italic">
-                "{t("suite.testimonials.1.quote")}"
-              </p>
-            </div>
-            <div className="rounded-2xl border border-[#334155] bg-[#0F172A] p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <img
-                  src="/images/testimonials/michael-brown.jpg"
-                  alt="Michael Brown"
-                  className="w-10 h-10 rounded-full object-cover"
-                />
-                <div>
-                  <div className="text-white font-semibold">
-                    {t("suite.testimonials.2.author")}
-                  </div>
-                  <div className="text-xs text-[#94A3B8]">
-                    {t("suite.testimonials.2.role")}
-                  </div>
-                </div>
-              </div>
-              <p className="text-[#CBD5E1] italic">
-                "{t("suite.testimonials.2.quote")}"
-              </p>
-            </div>
-            <div className="rounded-2xl border border-[#334155] bg-[#0F172A] p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <img
-                  src="/images/testimonials/emma-rodriguez.jpg"
-                  alt="Emma Rodriguez"
-                  className="w-10 h-10 rounded-full object-cover"
-                />
-                <div>
-                  <div className="text-white font-semibold">
-                    {t("suite.testimonials.3.author")}
-                  </div>
-                  <div className="text-xs text-[#94A3B8]">
-                    {t("suite.testimonials.3.role")}
-                  </div>
-                </div>
-              </div>
-              <p className="text-[#CBD5E1] italic">
-                "{t("suite.testimonials.3.quote")}"
-              </p>
-            </div>
+          <div className="mx-auto max-w-3xl rounded-2xl border border-[#334155] bg-[#0F172A] p-8 text-center">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              {betaFeedbackHeading}
+            </h3>
+            <p className="text-[#CBD5E1] mb-6">{betaFeedbackBody}</p>
+            <Link
+              href="/pricing#draft"
+              className="inline-flex h-11 items-center justify-center rounded-xl border-2 border-[#8B5CF6] bg-transparent text-[#A78BFA] px-6 font-semibold hover:bg-[#8B5CF6]/10 transition-all"
+            >
+              {betaFeedbackCta}
+            </Link>
           </div>
         </div>
       </section>

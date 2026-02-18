@@ -14,6 +14,25 @@ import { DraftDemo } from "@/components/draft-demo";
 export default function DraftClient() {
   const { t, language } = useLanguage();
   const [demoOpen, setDemoOpen] = useState(false);
+  const heroFrictionLine =
+    language === "de"
+      ? "Early Access in unter einer Minute. Keine Karte erforderlich."
+      : "Join early access in under a minute. No card required.";
+  const betaFeedbackHeading =
+    language === "de"
+      ? "Feedback aus der Beta folgt"
+      : "Beta feedback is coming";
+  const betaFeedbackBody =
+    language === "de"
+      ? "Wir onboarden gerade die erste Gruppe Lehrkräfte. Echte Zitate erscheinen hier, sobald wir sie gesammelt haben. Wenn du Draft mitgestalten möchtest, tritt dem Early Access bei."
+      : "We are onboarding our first cohort of teachers now. Real quotes will appear here as soon as they are collected. If you would like to shape Draft, join early access.";
+  const betaFeedbackCta =
+    language === "de" ? "Early Access" : "Join Early Access";
+  const founderTrustLine =
+    language === "de"
+      ? "Entwickelt von Dr Greg Blackburn (PhD in Professional Education), damit Lehrkräfte ruhig und sicher kommunizieren können."
+      : "Built by Dr Greg Blackburn (PhD in Professional Education) to help teachers write calm, defensible messages.";
+  const aboutLabel = language === "de" ? "Über uns" : "About";
 
   const features = [
     {
@@ -93,35 +112,42 @@ export default function DraftClient() {
                 <p className="text-sm text-[#9CA3AF]">
                   {t("products.draft.hero.supporting")}
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <div className="flex flex-col sm:flex-row gap-4 pt-4 sm:items-start">
+                  <div className="space-y-2">
+                    <Button
+                      asChild
+                      size="lg"
+                      className="gradient-primary text-white font-medium rounded-xl"
+                      onClick={() =>
+                        track("cta_click_draft_start_free", {
+                          language,
+                          source: "hero",
+                        })
+                      }
+                    >
+                      <Link href="/pricing#draft">
+                        {t("products.draft.hero.cta.primary")}
+                      </Link>
+                    </Button>
+                    <p className="text-xs text-[#9CA3AF]">{heroFrictionLine}</p>
+                  </div>
                   <Button
                     asChild
-                    size="lg"
-                    className="gradient-primary text-white font-medium rounded-xl"
-                    onClick={() =>
-                      track("cta_click_draft_start_free", {
-                        language,
-                        source: "hero",
-                      })
-                    }
-                  >
-                    <Link href="/pricing#draft">
-                      {t("products.draft.hero.cta.primary")}
-                    </Link>
-                  </Button>
-                  <Button
-                    onClick={() => {
-                      track("cta_click_draft_see_examples", {
-                        language,
-                        source: "hero",
-                      });
-                      setDemoOpen(true);
-                    }}
                     size="lg"
                     variant="outline"
                     className="border-[#374151] bg-transparent text-[#F9FAFB] hover:bg-[#1F2937] rounded-xl"
                   >
-                    {t("products.draft.hero.cta.secondary")}
+                    <Link
+                      href="#examples"
+                      onClick={() =>
+                        track("cta_click_draft_see_examples", {
+                          language,
+                          source: "hero",
+                        })
+                      }
+                    >
+                      {t("products.draft.hero.cta.secondary")}
+                    </Link>
                   </Button>
                 </div>
                 <p className="text-sm text-[#9CA3AF]">
@@ -355,50 +381,23 @@ export default function DraftClient() {
           </div>
         </section>
 
-        {/* Social Proof section */}
+        {/* Beta feedback placeholder */}
         <section className="py-16">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#F9FAFB] text-center mb-12">
-              {t("products.draft.social.title")}
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="bg-[#111827] border-[#1F2937] p-6 flex flex-col md:flex-row md:items-center gap-4">
-                <div className="relative w-16 h-16 rounded-full overflow-hidden bg-[#1F2937] flex-shrink-0">
-                  <Image
-                    src="/testimonials/sarah-mitchell-teacher.jpg"
-                    alt="Sarah Mitchell - Year 5 teacher"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <p className="text-[#D1D5DB] italic mb-3 md:mb-2">
-                    "{t("products.draft.social.quote1")}"
-                  </p>
-                  <p className="text-sm text-[#9CA3AF]">
-                    - {t("products.draft.social.author1")}
-                  </p>
-                </div>
-              </Card>
-              <Card className="bg-[#111827] border-[#1F2937] p-6 flex flex-col md:flex-row md:items-center gap-4">
-                <div className="relative w-16 h-16 rounded-full overflow-hidden bg-[#1F2937] flex-shrink-0">
-                  <Image
-                    src="/testimonials/james-Rodrigues-teacher.jpg"
-                    alt="James Rodriguez - middle school teacher"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <p className="text-[#D1D5DB] italic mb-3 md:mb-2">
-                    "{t("products.draft.social.quote2")}"
-                  </p>
-                  <p className="text-sm text-[#9CA3AF]">
-                    - {t("products.draft.social.author2")}
-                  </p>
-                </div>
-              </Card>
-            </div>
+            <Card className="bg-[#111827] border-[#1F2937] p-8 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#F9FAFB] mb-4">
+                {betaFeedbackHeading}
+              </h2>
+              <p className="text-[#D1D5DB] max-w-2xl mx-auto mb-6">
+                {betaFeedbackBody}
+              </p>
+              <Button
+                asChild
+                className="gradient-primary text-white rounded-xl"
+              >
+                <Link href="/pricing#draft">{betaFeedbackCta}</Link>
+              </Button>
+            </Card>
           </div>
         </section>
 
@@ -430,6 +429,23 @@ export default function DraftClient() {
                 {t("products.draft.cta.secondary")}
               </Button>
             </div>
+          </div>
+        </section>
+
+        {/* Founder trust strip */}
+        <section className="py-8 border-t border-[#1F2937] bg-[#0B1220]">
+          <div className="mx-auto max-w-4xl px-6 lg:px-8">
+            <Card className="bg-[#111827] border-[#1F2937] p-5 text-center">
+              <p className="text-sm text-[#CBD5E1]">
+                {founderTrustLine}{" "}
+                <Link
+                  href="/about"
+                  className="text-[#A78BFA] hover:text-[#C4B5FD]"
+                >
+                  {aboutLabel}
+                </Link>
+              </p>
+            </Card>
           </div>
         </section>
       </div>

@@ -44,9 +44,94 @@ export default function Footer() {
     /^\/de(\/|$)/i.test(pathname) ||
     // <html lang="de">
     (htmlLang || "").toLowerCase().startsWith("de");
+  const isDraftLanding = /^\/(de\/)?products\/draft\/?$/i.test(pathname);
+  const localPath = (path: string) => (isDE ? `/de${path}` : path);
 
   const tagline =
     "The writing partner for teachers. Save hours. Protect wellbeing. Bring joy back to teaching.";
+
+  if (isDraftLanding) {
+    return (
+      <footer className="border-t border-white/10 bg-slate-950 text-slate-300">
+        <div className="mx-auto max-w-7xl px-6 py-12">
+          <div className="grid gap-8 md:grid-cols-2 md:items-start">
+            <div>
+              <div className="flex items-center gap-2">
+                <div className="h-7 w-7 rounded-lg bg-gradient-to-tr from-fuchsia-500 to-violet-500 text-white grid place-items-center text-sm font-bold">
+                  Z
+                </div>
+                <span className="text-slate-50 font-semibold">Zaza Draft</span>
+              </div>
+              <p className="mt-3 text-sm leading-6 text-slate-400">{tagline}</p>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold text-slate-200">
+                {isDE ? "Schnellzugriffe" : "Quick links"}
+              </h3>
+              <ul className="mt-3 space-y-2 text-sm">
+                <li>
+                  <Link
+                    href={localPath("/products/draft")}
+                    className="hover:text-white"
+                  >
+                    Draft
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={localPath("/pricing")}
+                    className="hover:text-white"
+                  >
+                    {isDE ? "Preise" : "Pricing"}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={localPath("/privacy")}
+                    className="hover:text-white"
+                  >
+                    {isDE ? "Datenschutz" : "Privacy"}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={localPath("/contact")}
+                    className="hover:text-white"
+                  >
+                    {isDE ? "Support / Kontakt" : "Support / Contact"}
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="https://www.zazatechnologies.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white"
+                  >
+                    Zaza Technologies
+                  </a>
+                </li>
+              </ul>
+              <p className="mt-4 text-sm text-slate-400">
+                {isDE
+                  ? "Weitere Zaza Apps folgen bald."
+                  : "Other Zaza apps are coming soon."}{" "}
+                <Link
+                  href={localPath("/suite")}
+                  className="text-slate-200 hover:text-white"
+                >
+                  {isDE ? "Zur Suite" : "See Suite"}
+                </Link>
+              </p>
+            </div>
+          </div>
+          <div className="mt-8 border-t border-white/10 pt-5 text-xs text-slate-400">
+            {"\u00A9"} {new Date().getFullYear()} Zaza Technologies
+          </div>
+        </div>
+      </footer>
+    );
+  }
 
   return (
     <footer className="border-t border-white/10 bg-slate-950 text-slate-300">
