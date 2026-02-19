@@ -24,8 +24,7 @@ export function BlogClient({ posts, language }: BlogClientProps) {
 
   // Tags are based only on the posts we were given (already EN/DE filtered)
   const allTags = useMemo(
-    () =>
-      Array.from(new Set(posts.flatMap((p) => p.tags ?? []))).slice(0, 12),
+    () => Array.from(new Set(posts.flatMap((p) => p.tags ?? []))).slice(0, 12),
     [posts],
   );
 
@@ -66,7 +65,7 @@ export function BlogClient({ posts, language }: BlogClientProps) {
 
   const getImageForPost = (post: BlogPost) => {
     // Prefer explicit images if present, fall back to static /public/blog path
-    // @ts-expect-error – BlogPost may not declare these, but they exist at runtime
+    // @ts-expect-error - BlogPost may not declare these, but they exist at runtime
     if (post.coverImage) return (post as any).coverImage;
     if (post.ogImage) return post.ogImage;
     return `/blog/${post.slug}.jpeg`;
@@ -88,8 +87,8 @@ export function BlogClient({ posts, language }: BlogClientProps) {
               </h1>
               <p className="max-w-2xl text-sm sm:text-base text-slate-400 leading-relaxed">
                 {language === "de"
-                  ? "Praktische Tipps, Vorlagen und Strategien, damit KI dir Zeit zurückgibt – nicht noch mehr Stress."
-                  : "Practical tips, templates, and strategies so AI gives you time back – not more stress."}
+                  ? "Praktische Tipps, Vorlagen und Strategien, damit KI dir Zeit zurückgibt - nicht noch mehr Stress."
+                  : "Practical tips, templates, and strategies so AI gives you time back - not more stress."}
               </p>
             </div>
 
@@ -181,19 +180,19 @@ export function BlogClient({ posts, language }: BlogClientProps) {
                         />
                       </div>
                     </div>
-                  <div className="py-3 pr-4 flex flex-col justify-center">
-                    <p className="text-[11px] uppercase tracking-[0.18em] text-slate-500 mb-1">
-                      {formatDate(post.publishedAt)}
-                    </p>
-                    <h3 className="text-sm sm:text-base font-semibold text-slate-50 group-hover:text-fuchsia-300 line-clamp-2">
-                      {post.title}
-                    </h3>
-                    <p className="mt-1 text-xs text-slate-400 leading-relaxed line-clamp-2">
-                      {post.excerpt}
-                    </p>
-                  </div>
-                </Card>
-              </Link>
+                    <div className="py-3 pr-4 flex flex-col justify-center">
+                      <p className="text-[11px] uppercase tracking-[0.18em] text-slate-500 mb-1">
+                        {formatDate(post.publishedAt)}
+                      </p>
+                      <h3 className="text-sm sm:text-base font-semibold text-slate-50 group-hover:text-fuchsia-300 line-clamp-2">
+                        {post.title}
+                      </h3>
+                      <p className="mt-1 text-xs text-slate-400 leading-relaxed line-clamp-2">
+                        {post.excerpt}
+                      </p>
+                    </div>
+                  </Card>
+                </Link>
               ))}
             </div>
           </Link>
@@ -254,4 +253,3 @@ export function BlogClient({ posts, language }: BlogClientProps) {
     </div>
   );
 }
-

@@ -82,7 +82,7 @@ export default function FounderStoryPage() {
 
           <p className="text-base sm:text-lg text-[rgba(255,255,255,0.8)] max-w-3xl">
             Das ist die längere Version der Geschichte, wie ich von einer Lehre
-            in einer tasmanischen Lackfabrik zu Zaza Technologies gekommen bin –
+            in einer tasmanischen Lackfabrik zu Zaza Technologies gekommen bin -
             einer Suite von lehrerzentrierten KI-Tools, die Lehrkräften Zeit und
             Kopfkapazität zurückgeben sollen.
           </p>
@@ -108,7 +108,7 @@ export default function FounderStoryPage() {
               <p className="text-sm text-[rgba(226,232,240,0.9)]">
                 Meine berufliche Reise begann in Hobart, Tasmanien, mit einer
                 berufsvorbereitenden Ausbildung an der TAFE und einer
-                vierjährigen Malerlehre in der Cascade-Brauerei – harte Arbeit
+                vierjährigen Malerlehre in der Cascade-Brauerei - harte Arbeit
                 in einem rauen Umfeld, die mir Durchhaltevermögen beigebracht
                 hat, aber auch den Wunsch nach einer anderen Zukunft.
               </p>
@@ -142,7 +142,7 @@ export default function FounderStoryPage() {
 
               <p className="text-sm text-[rgba(226,232,240,0.9)]">
                 Umzug nach Brisbane, sechs Jahre bei Telstra und ein MBA an der
-                University of Queensland – der Wechsel von operativen Aufgaben
+                University of Queensland - der Wechsel von operativen Aufgaben
                 hin zu strategischer Arbeit, Leadership und den ersten
                 Veröffentlichungen.
               </p>
@@ -161,7 +161,7 @@ export default function FounderStoryPage() {
                 Promotion in Professional Education an der City, University of
                 London, Schwerpunkt kritisches Denken und Problemlösen in
                 studentenzentriertem E-Learning. Später Chief Learning Officer
-                bei Communardo – an der Schnittstelle von Technologie, Lernen
+                bei Communardo - an der Schnittstelle von Technologie, Lernen
                 und Veränderung.
               </p>
             </Card>
@@ -179,7 +179,7 @@ export default function FounderStoryPage() {
                 Nach vielen Jahren im Learning & Development, in denen ich
                 Lehrkräften von langen Abenden mit Korrekturen, Berichten und
                 Elternkommunikation zugehört habe, gründete ich 2025 Zaza
-                Technologies – mit dem Ziel, menschliche, lehrerzentrierte
+                Technologies - mit dem Ziel, menschliche, lehrerzentrierte
                 KI-Tools zu bauen, die Zeit zurückgeben, ohne professionelle
                 Urteilsfähigkeit zu ersetzen.
               </p>
@@ -199,7 +199,7 @@ export default function FounderStoryPage() {
               Ich bin nicht mit dem Plan aufgewachsen, einmal in Bildung oder
               Technologie zu arbeiten. Mein Berufsleben begann mit einem Pinsel
               in der Hand in Hobart, Tasmanien. Die Malerlehre und die Arbeit in
-              der Brauerei haben mir Disziplin beigebracht – aber auch deutlich
+              der Brauerei haben mir Disziplin beigebracht - aber auch deutlich
               gemacht, dass ich mir ein anderes Berufsleben wünsche.
             </p>
 
@@ -227,14 +227,14 @@ export default function FounderStoryPage() {
               In diesen Jahren wurden auch meine beiden Töchter, Viola und
               Solara, geboren. Vater zu werden hat alles verschoben. Erfolg
               bedeutete plötzlich nicht mehr nur Titel und Beförderungen,
-              sondern Arbeit, die eines Tages auch für sie Sinn ergibt – und
+              sondern Arbeit, die eines Tages auch für sie Sinn ergibt - und
               genug Zeit und emotionale Energie, um für die Familie da zu sein.
             </p>
 
             <p>
               Getrieben von Neugier habe ich später eine Promotion in
               Professional Education an der City, University of London
-              abgeschlossen – auf Basis von Publikationen. Meine Forschung
+              abgeschlossen - auf Basis von Publikationen. Meine Forschung
               drehte sich um kritisches Denken und Problemlösen in
               studentenzentriertem E-Learning. Im Laufe der Jahre habe ich
               hunderte Mitarbeitende geschult und bin schließlich Chief Learning
@@ -245,7 +245,7 @@ export default function FounderStoryPage() {
 
             <p>
               Gleichzeitig habe ich immer wieder den Alltag von Lehrkräften und
-              Learning-Professionals gehört – besonders in Schulen: Abende mit
+              Learning-Professionals gehört - besonders in Schulen: Abende mit
               Korrekturen, Sonntage mit Zeugnissen und die emotionale Last
               ständiger Kommunikation mit Eltern, oftmals mit wenig
               struktureller Unterstützung. Erste KI-Tools kamen zwar auf,
@@ -255,7 +255,7 @@ export default function FounderStoryPage() {
 
             <p>
               Daraus entstand eine Frage: Was wäre, wenn KI-Tools speziell für
-              Lehrkräfte gestaltet würden – verankert in Didaktik, respektvoll
+              Lehrkräfte gestaltet würden - verankert in Didaktik, respektvoll
               gegenüber professionellem Urteil und mit dem Ziel, Arbeitslast
               wirklich zu senken? Was wäre, wenn Lehrkräfte jede Woche ein paar
               Stunden zurückgewinnen könnten, ohne die Qualität ihrer
@@ -270,7 +270,7 @@ export default function FounderStoryPage() {
               mit Eltern und Erziehungsberechtigten. Von dort aus wächst die
               Zaza-Suite in Richtung Unterrichtsplanung, Bewertungsunterstützung
               und weitere Tools, die im Hintergrund bleiben, damit Lehrkräfte
-              das tun können, was nur sie können – unterrichten, begleiten und
+              das tun können, was nur sie können - unterrichten, begleiten und
               Vertrauen aufbauen.
             </p>
 
@@ -298,7 +298,7 @@ export default function FounderStoryPage() {
               <p className="text-sm sm:text-base text-[rgba(226,232,240,0.9)] max-w-xl">
                 Wenn dich diese Geschichte anspricht, freue ich mich, wenn du
                 Zaza Draft ausprobierst und schaust, wie es deine eigene Arbeit
-                unterstützen kann. Und wenn du Rückmeldungen oder Ideen hast –
+                unterstützen kann. Und wenn du Rückmeldungen oder Ideen hast -
                 meine Tür ist offen.
               </p>
             </div>

@@ -1,4 +1,4 @@
-﻿# CLAUDE.md — Zaza Draft Monorepo Brief
+﻿# CLAUDE.md - Zaza Draft Monorepo Brief
 
 ## Purpose
 This repo hosts **Zaza Draft – Marketing Website** (Next.js 15, App Router, Tailwind v4).
@@ -55,4 +55,5 @@ When generating code or copy, protect teacher time and student privacy. Tone: cl
 - Local: pnpm dev  → http://localhost:3000
 - Type/lint: pnpm typecheck and pnpm lint
 - Commit to a feature branch and open PR; Vercel previews on PR branches.
+
 

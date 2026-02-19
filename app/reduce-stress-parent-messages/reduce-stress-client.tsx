@@ -349,7 +349,7 @@ export default function ReduceStressClient() {
         },
       ],
       research_stats: [
-        "Lehrer verbringen durchschnittlich 7–10 Stunden pro Woche mit Elternkommunikation.",
+        "Lehrer verbringen durchschnittlich 7-10 Stunden pro Woche mit Elternkommunikation.",
         "67 % der Lehrer geben an, dass die Elternkommunikation eine der größten Stressquellen im Job ist.",
         "Kommunikationsstress ist ein Hauptfaktor für die Fluktuation von Lehrern.",
       ],
@@ -368,7 +368,7 @@ export default function ReduceStressClient() {
           step: 2,
           title: "Erstellen Sie eine Vorlagenbibliothek",
           description:
-            "Erstellen Sie Vorlagen für die 10–15 häufigsten Nachrichtentypen. Personalisieren Sie jede, beginnen Sie jedoch mit einer bewährten Struktur.",
+            "Erstellen Sie Vorlagen für die 10-15 häufigsten Nachrichtentypen. Personalisieren Sie jede, beginnen Sie jedoch mit einer bewährten Struktur.",
           categories: [
             "Abwesenheits-Follow-up",
             "Hausaufgaben-Bedenken",
@@ -406,7 +406,7 @@ export default function ReduceStressClient() {
 
       ai_load_title: "Wie KI die mentale Belastung reduziert",
       ai_load_subtitle:
-        "KI-Tools wie Zaza Shield ersetzen nicht Ihr Urteilsvermögen – sie reduzieren die kognitive Belastung beim Verfassen von Antworten, sodass Sie sich auf die Beziehung und nicht auf die Formulierung konzentrieren können.",
+        "KI-Tools wie Zaza Shield ersetzen nicht Ihr Urteilsvermögen - sie reduzieren die kognitive Belastung beim Verfassen von Antworten, sodass Sie sich auf die Beziehung und nicht auf die Formulierung konzentrieren können.",
 
       comparison: {
         without_title: "Ohne KI",
@@ -415,15 +415,15 @@ export default function ReduceStressClient() {
           "Mehrfach entwerfen, löschen, neu entwerfen",
           "Sich um Tonfall und Formulierung sorgen",
           "Sich nach dem Senden selbst in Frage stellen",
-          "Gesamtzeit: 15–20 Minuten pro Nachricht",
+          "Gesamtzeit: 15-20 Minuten pro Nachricht",
         ],
         with_title: "Mit KI (Zaza Shield)",
         with_points: [
           "Kontext in 30 Sekunden eingeben",
           "KI generiert sofort einen professionellen Entwurf",
-          "Überprüfen und personalisieren (1–2 Minuten)",
+          "Überprüfen und personalisieren (1-2 Minuten)",
           "Mit Zuversicht senden",
-          "Gesamtzeit: 3–4 Minuten pro Nachricht",
+          "Gesamtzeit: 3-4 Minuten pro Nachricht",
         ],
       },
 
@@ -451,7 +451,7 @@ export default function ReduceStressClient() {
           week: 2,
           title: "Vorlagen erstellen",
           points: [
-            "Überprüfen Sie Ihre letzten 20 Elternnachrichten – identifizieren Sie die 5 häufigsten Typen",
+            "Überprüfen Sie Ihre letzten 20 Elternnachrichten - identifizieren Sie die 5 häufigsten Typen",
             "Erstellen Sie Vorlagen für diese 5 Nachrichtentypen",
             "Speichern Sie Vorlagen in einem leicht zugänglichen Dokument oder Tool",
             "Verwenden Sie diese Woche Vorlagen für mindestens 50 % Ihrer Antworten",
@@ -471,8 +471,8 @@ export default function ReduceStressClient() {
           week: 4,
           title: "Optimieren und erweitern",
           points: [
-            "Überprüfen Sie, was funktioniert – passen Sie Grenzen oder Vorlagen nach Bedarf an",
-            "Erweitern Sie die KI-Nutzung auf 2–3 weitere Nachrichtentypen",
+            "Überprüfen Sie, was funktioniert - passen Sie Grenzen oder Vorlagen nach Bedarf an",
+            "Erweitern Sie die KI-Nutzung auf 2-3 weitere Nachrichtentypen",
             "Starten Sie das Verfolgen von Mustern zur proaktiven Vorbeugung",
             "Feiern Sie Ihren reduzierten Stress und Ihre wiedergewonnene Zeit!",
           ],
