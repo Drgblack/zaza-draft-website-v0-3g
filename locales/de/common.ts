@@ -26,7 +26,7 @@ export default {
       heading: "Was du als Beta-Partner erhältst",
       shaping: {
         title: "Produkt gestalten",
-        body: "Teile, was wichtig ist – Tonleitplanken, Modus-Umschalter und Insights, die deinen Unterricht widerspiegeln.",
+        body: "Teile, was wichtig ist - Tonleitplanken, Modus-Umschalter und Insights, die deinen Unterricht widerspiegeln.",
       },
       saving: {
         title: "Wöchentlich Stunden gewinnen",
@@ -70,7 +70,7 @@ export default {
       privacy: {
         question: "Sind meine Texte privat?",
         answer:
-          "Ja. Alles bleibt privat, verschlüsselt und unterliegt unseren GDPR-ready Richtlinien – keine öffentliche Veröffentlichung und kein Teilen ohne deine Zustimmung.",
+          "Ja. Alles bleibt privat, verschlüsselt und unterliegt unseren GDPR-ready Richtlinien - keine öffentliche Veröffentlichung und kein Teilen ohne deine Zustimmung.",
       },
       afterBeta: {
         question: "Was passiert nach der Beta?",

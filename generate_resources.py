@@ -589,7 +589,7 @@ def create_getting_started_en():
     
     content = """
     <h2>What is AI?</h2>
-    <p><strong>Artificial Intelligence (AI)</strong> refers to computer systems that can perform tasks that typically require human intelligence—like understanding language, recognizing patterns, and solving problems.</p>
+    <p><strong>Artificial Intelligence (AI)</strong> refers to computer systems that can perform tasks that typically require human intelligence - like understanding language, recognizing patterns, and solving problems.</p>
     
     <h2>Why Use AI in the Classroom?</h2>
     <ul>
@@ -628,7 +628,7 @@ def create_getting_started_de():
     
     content = """
     <h2>Was ist KI?</h2>
-    <p><strong>Künstliche Intelligenz (KI)</strong> bezeichnet Computersysteme, die Aufgaben ausführen können, die normalerweise menschliche Intelligenz erfordern—wie Sprache verstehen, Muster erkennen und Probleme lösen.</p>
+    <p><strong>Künstliche Intelligenz (KI)</strong> bezeichnet Computersysteme, die Aufgaben ausführen können, die normalerweise menschliche Intelligenz erfordern - wie Sprache verstehen, Muster erkennen und Probleme lösen.</p>
     
     <h2>Warum KI im Unterricht einsetzen?</h2>
     <ul>

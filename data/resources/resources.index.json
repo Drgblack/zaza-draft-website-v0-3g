@@ -197,7 +197,7 @@
       "category": "Planning",
       "tags": ["planning", "templates"],
       "title": {
-        "en": "Lesson Plan Template — Primary",
+        "en": "Lesson Plan Template - Primary",
         "de": "Unterrichtsplan-Vorlage für Primarstufe"
       },
       "description": {
@@ -356,7 +356,7 @@
       "tags": ["planning", "templates"],
       "title": {
         "en": "Secondary Lesson Plan Template",
-        "de": "Sekundarstufe — Unterrichtsplan-Vorlage"
+        "de": "Sekundarstufe - Unterrichtsplan-Vorlage"
       },
       "description": {
         "en": "A full-period planner that scaffolds objectives, checks for understanding, and exit tickets.",

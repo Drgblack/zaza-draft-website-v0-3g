@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import DraftClient from "./draft-client";
 
 const ogImage = "/images/draft-interface.png";
@@ -7,7 +7,7 @@ const canonicalUrl = "https://zazadraft.com/products/draft";
 export const metadata: Metadata = {
   title: "Zaza Draft | Teacher-first AI for calm parent communication",
   description:
-    "Teacher-built Zaza Draft calms Sunday night messaging with guided tone guardrails and insights on time saved, streaks, and quality—join early access to help shape the beta.",
+    "Teacher-built Zaza Draft calms Sunday night messaging with guided tone guardrails and insights on time saved, streaks, and qualityâ€”join early access to help shape the beta.",
   openGraph: {
     title: "Zaza Draft | Teacher-first AI for calm parent communication",
     description:
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Zaza Draft | Teacher-first early access",
     description:
-      "Guided drafts, tone guardrails, and metrics on time saved, streaks, and quality—join early access to help shape the private beta.",
+      "Guided drafts, tone guardrails, and metrics on time saved, streaks, and qualityâ€”join early access to help shape the private beta.",
     images: [ogImage],
   },
   alternates: {

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
 
@@ -58,7 +58,7 @@ export default function FounderStoryPage() {
           </h1>
           <p className="text-base sm:text-lg text-[rgba(255,255,255,0.8)] max-w-3xl">
             This is the longer version of how I went from an apprenticeship in a
-            Tasmanian Brewery to building Zaza Technologies – a suite of
+            Tasmanian Brewery to building Zaza Technologies - a suite of
             teacher-first AI tools designed to give educators their time back.
           </p>
         </header>
@@ -79,7 +79,7 @@ export default function FounderStoryPage() {
               <p className="text-sm text-[rgba(226,232,240,0.9)]">
                 Apprenticeship as a painter and decorator in Hobart, a
                 pre-vocational TAFE course, and a four year apprenticeship at
-                Cascade Brewery. Learned the value of hard work – and that I
+                Cascade Brewery. Learned the value of hard work - and that I
                 wanted more from education and career.
               </p>
             </Card>
@@ -107,7 +107,7 @@ export default function FounderStoryPage() {
               </h3>
               <p className="text-sm text-[rgba(226,232,240,0.9)]">
                 Moved to Brisbane, worked six years at Telstra, and completed an
-                MBA at the University of Queensland – shifting from operations
+                MBA at the University of Queensland - shifting from operations
                 into strategy and leadership, and starting to publish early
                 research.
               </p>
@@ -160,7 +160,7 @@ export default function FounderStoryPage() {
               Tasmania. I completed a pre-vocational course at TAFE and a four
               year apprenticeship at Cascade Brewery, learning how to turn up,
               do the work and navigate tough environments. Those years taught me
-              resilience – but they also made it clear that I wanted more from
+              resilience - but they also made it clear that I wanted more from
               my working life.
             </p>
 
@@ -169,7 +169,7 @@ export default function FounderStoryPage() {
               first-hand how education can unlock new paths. Returning to
               Tasmania, I studied Administration, Information Systems and German
               at the University of Tasmania. Graduating with First Class Honours
-              wasn&apos;t just a line on a CV – it was proof that, despite
+              wasn&apos;t just a line on a CV - it was proof that, despite
               earlier doubts and family tensions, I could succeed academically
               and build a new trajectory for myself.
             </p>
@@ -188,7 +188,7 @@ export default function FounderStoryPage() {
               Around this time my two daughters, Viola and Solara, were born.
               Fatherhood reframed everything. Success stopped being just about
               titles or promotions and became about creating work that would one
-              day mean something to them – work that left time and emotional
+              day mean something to them - work that left time and emotional
               space for family, not just endless hustle.
             </p>
 
@@ -205,7 +205,7 @@ export default function FounderStoryPage() {
 
             <p>
               Yet alongside all of this, I was listening to the struggles of
-              teachers and learning professionals – especially those in schools.
+              teachers and learning professionals - especially those in schools.
               I heard about late-night marking, Sunday spent writing reports,
               and the emotional toll of constant communication with very little
               support. AI tools were starting to appear, but most felt generic
@@ -215,7 +215,7 @@ export default function FounderStoryPage() {
 
             <p>
               That gap planted a seed. What if AI tools could be designed
-              specifically for teachers – grounded in pedagogy, respectful of
+              specifically for teachers - grounded in pedagogy, respectful of
               professional judgement and built to reduce workload rather than
               increase it? What if they could help teachers reclaim a few hours
               each week without sacrificing the quality of their teaching or
@@ -228,7 +228,7 @@ export default function FounderStoryPage() {
               parts of a teacher&apos;s job: written communication with parents
               and carers. From there, the wider Zaza suite is growing into
               lesson planning, grading support and other tools that quietly sit
-              in the background while teachers do what only they can do – teach,
+              in the background while teachers do what only they can do - teach,
               care and build trust.
             </p>
 

@@ -1,34 +1,57 @@
-const fs = require("fs");
+/**
+ * Fix common mojibake/encoding corruptions (often UTF-8 decoded as Latin-1/Windows-1252).
+ * This script is intentionally simple and safe: it only applies known string replacements.
+ *
+ * Usage (example):
+ *   node fix-encoding.js "content"
+ */
 
-// Read the file
-let content = fs.readFileSync("./lib/i18n/language-context.tsx", "utf8");
-
-// Fix common encoding corruptions
 const fixes = {
-  ü: "ü",
-  Ãœ: "Ü",
-  ö: "ö",
-  "Ã–": "Ö",
+  // German umlauts and ß
   ä: "ä",
   "Ã„": "Ä",
+  ö: "ö",
+  "Ã-": "Ö",
+  ü: "ü",
+  Ãœ: "Ü",
   ÃŸ: "ß",
-  über: "über",
-  Ãœber: "Über",
-  für: "für",
-  gröÃŸ: "größ",
-  mö: "mö",
-  kö: "kö",
-  Lehrkräfte: "Lehrkräfte",
-  Gründer: "Gründer",
-  Künstliche: "Künstliche",
+
+  // Smart quotes / punctuation (common mojibake)
+  "â€ž": "„",
+  "â€œ": "“",
+  "â€": "”",
+  "â€˜": "‘",
+  "'": "’",
+  "...": "…",
+
+  // Dashes (keep as-is if your project later normalises)
+  "-": "-",
+  "-": "-",
+
+  // Bullet / misc
+  "â€¢": "•",
+  "Â ": " ", // non-breaking space artefact
 };
 
-// Apply all fixes
-for (const [broken, fixed] of Object.entries(fixes)) {
-  content = content.split(broken).join(fixed);
+function applyFixes(input) {
+  let out = input;
+  for (const [from, to] of Object.entries(fixes)) {
+    out = out.split(from).join(to);
+  }
+  return out;
 }
 
-// Write back
-fs.writeFileSync("./lib/i18n/language-context.tsx", content, "utf8");
+function main() {
+  const input = process.argv.slice(2).join(" ");
+  if (!input) {
+    console.error("Provide a string to fix.");
+    process.exit(1);
+  }
+  process.stdout.write(applyFixes(input));
+}
 
-console.log("✅ Encoding fixed!");
+if (require.main === module) {
+  main();
+}
+
+module.exports = { applyFixes, fixes };

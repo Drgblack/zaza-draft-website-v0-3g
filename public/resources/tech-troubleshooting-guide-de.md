@@ -1,6 +1,6 @@
-# Technik-Troubleshooting-Guide für Lehrkräfte
+# Technik-Troubleshooting-Guide fÃ¼r LehrkrÃ¤fte
 
-_Kurze Lösungen für häufige Technikprobleme im Klassenz Zimmer + Vorbeugungsstrategien._ [file:1]
+_Kurze LÃ¶sungen fÃ¼r hÃ¤ufige Technikprobleme im Klassenz Zimmer + Vorbeugungsstrategien._ [file:1]
 
 ---
 
@@ -9,19 +9,19 @@ _Kurze Lösungen für häufige Technikprobleme im Klassenz Zimmer + Vorbeugungss
 ### So nutzt du diesen Guide
 
 1. **Finde dein Problem** im Inhaltsverzeichnis unten
-2. **Probiere zuerst die Schnelllösung** (dauert meist unter 2 Minuten)
-3. **Wenn das nicht hilft**, gehe zu den detaillierten Lösungen
+2. **Probiere zuerst die SchnelllÃ¶sung** (dauert meist unter 2 Minuten)
+3. **Wenn das nicht hilft**, gehe zu den detaillierten LÃ¶sungen
 4. **Vorbeugungs-Tipps** helfen dir, Probleme in Zukunft zu vermeiden
-5. **Halte diesen Guide griffbereit** - als Lesezeichen oder ausgedruckt für schnellen Zugriff im Unterricht [file:1]
+5. **Halte diesen Guide griffbereit** - als Lesezeichen oder ausgedruckt fÃ¼r schnellen Zugriff im Unterricht [file:1]
 
 ### Bevor du mit dem Troubleshooting beginnst
 
-- ☐ Hast du das Gerät schon aus- und wieder eingeschaltet? (Ernsthaft, das klappt bei 60% der Probleme)
-- ☐ Sind alle Kabel richtig angeschlossen?
-- ☐ Ist das Gerät aufgeladen oder eingesteckt?
-- ☐ Hast du geprüft, ob andere Geräte dasselbe Problem haben? [file:1]
+- â˜ Hast du das GerÃ¤t schon aus- und wieder eingeschaltet? (Ernsthaft, das klappt bei 60% der Probleme)
+- â˜ Sind alle Kabel richtig angeschlossen?
+- â˜ Ist das GerÃ¤t aufgeladen oder eingesteckt?
+- â˜ Hast du geprÃ¼ft, ob andere GerÃ¤te dasselbe Problem haben? [file:1]
 
-> **Notfall-Backup-Plan:** Halte immer eine nicht-technische Alternative bereit (ausgedruckte Arbeitsblätter, Tafelarbeit, Diskussionsaktivität) [file:1]
+> **Notfall-Backup-Plan:** Halte immer eine nicht-technische Alternative bereit (ausgedruckte ArbeitsblÃ¤tter, Tafelarbeit, DiskussionsaktivitÃ¤t) [file:1]
 
 ---
 
@@ -31,7 +31,7 @@ _Kurze Lösungen für häufige Technikprobleme im Klassenz Zimmer + Vorbeugungss
 **B. Interaktives Whiteboard / Smartboard-Probleme**  
 **C. Projektor- & Anzeigeprobleme**  
 **D. Audio- & Soundprobleme**  
-**E. Schülergeräte-Probleme (Tablets, Laptops, Chromebooks)**  
+**E. SchÃ¼lergerÃ¤te-Probleme (Tablets, Laptops, Chromebooks)**  
 **F. Login- & Passwortprobleme**  
 **G. Druckprobleme**  
 **H. Videokonferenz-Probleme**  
@@ -44,30 +44,30 @@ _Kurze Lösungen für häufige Technikprobleme im Klassenz Zimmer + Vorbeugungss
 
 ### Problem: Keine Internetverbindung / Seiten laden nicht
 
-**Schnelllösung (30 Sekunden):**
+**SchnelllÃ¶sung (30 Sekunden):**
 
-1. Prüfe das WLAN-Symbol auf deinem Gerät - bist du verbunden?
-2. Versuche eine andere Webseite zu öffnen (vielleicht ist nur eine Seite ausgefallen)
-3. Frag deine Schüler, ob sie dasselbe Problem haben (hilft zu erkennen, ob es dein Gerät oder das Netzwerk ist) [file:1]
+1. PrÃ¼fe das WLAN-Symbol auf deinem GerÃ¤t - bist du verbunden?
+2. Versuche eine andere Webseite zu Ã¶ffnen (vielleicht ist nur eine Seite ausgefallen)
+3. Frag deine SchÃ¼ler, ob sie dasselbe Problem haben (hilft zu erkennen, ob es dein GerÃ¤t oder das Netzwerk ist) [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-**Wenn nur dein Gerät betroffen ist:**
+**Wenn nur dein GerÃ¤t betroffen ist:**
 
 - Schalte WLAN in den Einstellungen aus und wieder ein
-- Lösche das Netzwerk und verbinde dich neu (Einstellungen → WLAN → Netzwerk wählen → „Vergessen“)
-- Starte dein Gerät neu
-- Prüfe, ob du mit dem richtigen Netzwerk verbunden bist (Schulnetzwerk, nicht Gastzugang) [file:1]
+- LÃ¶sche das Netzwerk und verbinde dich neu (Einstellungen â†’ WLAN â†’ Netzwerk wÃ¤hlen â†’ â€žVergessenâ€œ)
+- Starte dein GerÃ¤t neu
+- PrÃ¼fe, ob du mit dem richtigen Netzwerk verbunden bist (Schulnetzwerk, nicht Gastzugang) [file:1]
 
-**Wenn mehrere Geräte betroffen sind:**
+**Wenn mehrere GerÃ¤te betroffen sind:**
 
-- Prüfe, ob andere Klassenräume Internet haben (könnte schulweit sein)
+- PrÃ¼fe, ob andere KlassenrÃ¤ume Internet haben (kÃ¶nnte schulweit sein)
 - Starte den Klassenraum-Router neu, falls du Zugriff hast (30 Sekunden stromlos)
 - Kontaktiere den IT-Support - wahrscheinlich ein Netzwerkproblem jenseits des Klassenraums [file:1]
 
-**Häufige Ursachen:**
+**HÃ¤ufige Ursachen:**
 
-- Zu viele Geräte an einem Zugangspunkt
+- Zu viele GerÃ¤te an einem Zugangspunkt
 - Router braucht Neustart
 - Geplante Wartung oder Updates
 - Probleme beim Internetanbieter [file:1]
@@ -76,33 +76,33 @@ _Kurze Lösungen für häufige Technikprobleme im Klassenz Zimmer + Vorbeugungss
 
 - Kenne die IT-Support-Kontaktdaten
 - Lade wichtige Materialien am Vorabend herunter
-- Halte Offline-Aktivitäten als Backup bereit
+- Halte Offline-AktivitÃ¤ten als Backup bereit
 - Teste die Internetverbindung vor Unterrichtsbeginn [file:1]
 
 ---
 
 ### Problem: Internet ist sehr langsam
 
-**Schnelllösung (1 Minute):**
+**SchnelllÃ¶sung (1 Minute):**
 
-1. Schließe unnötige Tabs und Programme
-2. Bitte Schüler, ungenutzte Apps zu schließen
+1. SchlieÃŸe unnÃ¶tige Tabs und Programme
+2. Bitte SchÃ¼ler, ungenutzte Apps zu schlieÃŸen
 3. Pausiere Downloads oder Updates [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-- Trenne nicht benötigte Geräte
-- Prüfe, ob jemand Videos streamt - das verbraucht enorme Bandbreite
-- Rücke näher an den WLAN-Router (bei Laptops)
-- Nutze ein Netzwerkkabel, falls verfügbar (schneller und stabiler)
+- Trenne nicht benÃ¶tigte GerÃ¤te
+- PrÃ¼fe, ob jemand Videos streamt - das verbraucht enorme Bandbreite
+- RÃ¼cke nÃ¤her an den WLAN-Router (bei Laptops)
+- Nutze ein Netzwerkkabel, falls verfÃ¼gbar (schneller und stabiler)
 - Lade Videos vor dem Unterricht herunter statt streamen [file:1]
 
 **Vorbeugung:**
 
-- Begrenze gleichzeitige Geräteverbindungen
-- Plane Downloads für Stoßzeiten-frei
-- Nutze Videos in niedrigerer Auflösung
-- Cache oder lade häufig genutzte Ressourcen [file:1]
+- Begrenze gleichzeitige GerÃ¤teverbindungen
+- Plane Downloads fÃ¼r StoÃŸzeiten-frei
+- Nutze Videos in niedrigerer AuflÃ¶sung
+- Cache oder lade hÃ¤ufig genutzte Ressourcen [file:1]
 
 ---
 
@@ -110,21 +110,21 @@ _Kurze Lösungen für häufige Technikprobleme im Klassenz Zimmer + Vorbeugungss
 
 ### Problem: Touch funktioniert nicht / Board reagiert nicht
 
-**Schnelllösung (2 Minuten):**
+**SchnelllÃ¶sung (2 Minuten):**
 
-1. Prüfe die USB-Kabelverbindung an beiden Enden (Board und Computer)
+1. PrÃ¼fe die USB-Kabelverbindung an beiden Enden (Board und Computer)
 2. Suche nach einer blinkenden Lampe am Board (zeigt Strom an)
-3. Starte den Computer neu, während das Board verbunden bleibt [file:1]
+3. Starte den Computer neu, wÃ¤hrend das Board verbunden bleibt [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
 - **Kalibriere das Board neu:**
-  - Öffne die Smartboard-Software (SMART Notebook, Promethean etc.)
-  - Suche nach „Orientieren“ oder „Kalibrieren“ in den Einstellungen
-  - Folge den Bildschirmanweisungen und berühre die Zielpunkte
+  - Ã-ffne die Smartboard-Software (SMART Notebook, Promethean etc.)
+  - Suche nach â€žOrientierenâ€œ oder â€žKalibrierenâ€œ in den Einstellungen
+  - Folge den Bildschirmanweisungen und berÃ¼hre die Zielpunkte
   - Das behebt meist 90% der Touch-Probleme [file:1]
 
-- **Prüfe Verbindungen:**
+- **PrÃ¼fe Verbindungen:**
   - USB-Kabel fest angeschlossen
   - Stromkabel eingesteckt (falls Board separates Stromkabel hat)
   - Probiere einen anderen USB-Anschluss am Computer [file:1]
@@ -132,118 +132,118 @@ _Kurze Lösungen für häufige Technikprobleme im Klassenz Zimmer + Vorbeugungss
 - **Software-Probleme:**
   - Aktualisiere Board-Software/Treiber
   - Installiere Board-Software neu bei anhaltenden Problemen
-  - Prüfe, ob die Software läuft (Symbol in der Taskleiste suchen) [file:1]
+  - PrÃ¼fe, ob die Software lÃ¤uft (Symbol in der Taskleiste suchen) [file:1]
 
 **Vorbeugung:**
 
-- Kalibriere das Board wöchentlich
-- Lass Kabel nicht herunterhängen, wo sie gezogen werden können
-- Reinige die Board-Oberfläche regelmäßig (entfernt staubbedingte Touch-Störungen)
-- Schul deine Schüler, sanft zu berühren, nicht fest zu drücken [file:1]
+- Kalibriere das Board wÃ¶chentlich
+- Lass Kabel nicht herunterhÃ¤ngen, wo sie gezogen werden kÃ¶nnen
+- Reinige die Board-OberflÃ¤che regelmÃ¤ÃŸig (entfernt staubbedingte Touch-StÃ¶rungen)
+- Schul deine SchÃ¼ler, sanft zu berÃ¼hren, nicht fest zu drÃ¼cken [file:1]
 
 ---
 
 ### Problem: Board-Bild ist unscharf oder verzerrt
 
-**Schnelllösung:**
+**SchnelllÃ¶sung:**
 
 - Stelle den Projektor-Fokusring ein
-- Prüfe, ob die Projektorlinse schmutzig ist [file:1]
+- PrÃ¼fe, ob die Projektorlinse schmutzig ist [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
 - Reinige die Projektorlinse mit einem Mikrofasertuch
 - Stelle die Projektorposition neu ein, falls bewegt
-- Prüfe, ob Projektor-Auflösung zum Board passt
+- PrÃ¼fe, ob Projektor-AuflÃ¶sung zum Board passt
 - Tausche die Projektorlampe aus, falls Bild zu dunkel ist (IT kontaktieren) [file:1]
 
 ---
 
 ### Problem: Finde die Board-Software nicht
 
-**Schnelllösung:**
+**SchnelllÃ¶sung:**
 
-- Prüfe das System-Tray (unten rechts bei Windows, oben rechts bei Mac)
-- Suche nach „SMART“ oder „Promethean“ im Startmenü [file:1]
+- PrÃ¼fe das System-Tray (unten rechts bei Windows, oben rechts bei Mac)
+- Suche nach â€žSMARTâ€œ oder â€žPrometheanâ€œ im StartmenÃ¼ [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
 - Installiere die Software aus schulinternen IT-Ressourcen neu
-- Prüfe, ob Software-Updates nötig sind
-- Vergewissere dich, dass du die richtige Software für dein Board-Modell hast [file:1]
+- PrÃ¼fe, ob Software-Updates nÃ¶tig sind
+- Vergewissere dich, dass du die richtige Software fÃ¼r dein Board-Modell hast [file:1]
 
 ---
 
 ## C. Projektor- & Anzeigeprobleme
 
-### Problem: Projektor zeigt „No Signal“
+### Problem: Projektor zeigt â€žNo Signalâ€œ
 
-**Schnelllösung (1 Minute):**
+**SchnelllÃ¶sung (1 Minute):**
 
-1. Prüfe das Kabel zwischen Computer und Projektor (HDMI oder VGA)
-2. Drücke die Eingangs-/Source-Taste auf der Projektor-Fernbedienung
+1. PrÃ¼fe das Kabel zwischen Computer und Projektor (HDMI oder VGA)
+2. DrÃ¼cke die Eingangs-/Source-Taste auf der Projektor-Fernbedienung
 3. Probiere die Display-Umschalt-Taste am Laptop (meist Fn + F4, F5 oder F8) [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-**Für Laptops:**
+**FÃ¼r Laptops:**
 
-- **Windows:** Windows-Taste + P drücken, „Duplizieren“ oder „Erweitern“ wählen
-- **Mac:** Systemeinstellungen → Bildschirme → Anordnung → Bildschirme spiegeln
-- Kabel vor dem Einschalten des Projektors anschließen
+- **Windows:** Windows-Taste + P drÃ¼cken, â€žDuplizierenâ€œ oder â€žErweiternâ€œ wÃ¤hlen
+- **Mac:** Systemeinstellungen â†’ Bildschirme â†’ Anordnung â†’ Bildschirme spiegeln
+- Kabel vor dem Einschalten des Projektors anschlieÃŸen
 - Laptop mit angeschlossenem Projektorkabel neu starten [file:1]
 
-**Verbindungen prüfen:**
+**Verbindungen prÃ¼fen:**
 
 - HDMI/VGA-Kabel fest an beiden Enden
-- Probiere ein anderes Kabel (Kabel versagen überraschend oft)
-- Prüfe den richtigen Eingangsanschluss
+- Probiere ein anderes Kabel (Kabel versagen Ã¼berraschend oft)
+- PrÃ¼fe den richtigen Eingangsanschluss
 - Stelle sicher, dass Adapter richtig angeschlossen sind (USB-C zu HDMI etc.) [file:1]
 
 **Projektor-Einstellungen:**
 
 - Wechsle mit Fernbedienung durch Eingangsquellen (HDMI 1, HDMI 2, VGA etc.)
-- Prüfe, ob Projektor im Standby-Modus ist
+- PrÃ¼fe, ob Projektor im Standby-Modus ist
 - Stelle sicher, dass Projektor aufgeheizt ist (kann 30-60 Sekunden dauern) [file:1]
 
 **Vorbeugung:**
 
-- Beschreibe Kabel, damit du weißt, welchen Eingang zu wählen
+- Beschreibe Kabel, damit du weiÃŸt, welchen Eingang zu wÃ¤hlen
 - Halte Ersatzkabel im Klassenraum
 - Teste vor Unterrichtsbeginn
-- Kenne die richtigen Display-Umschalt-Tasten für deinen Laptop [file:1]
+- Kenne die richtigen Display-Umschalt-Tasten fÃ¼r deinen Laptop [file:1]
 
 ---
 
 ### Problem: Projektorbild steht auf dem Kopf oder ist gespiegelt
 
-**Schnelllösung:**
+**SchnelllÃ¶sung:**
 
 - Finde die Projektor-Fernbedienung
-- Suche „Menü“ → „Projektion“ → auf „Front“ stellen [file:1]
+- Suche â€žMenÃ¼â€œ â†’ â€žProjektionâ€œ â†’ auf â€žFrontâ€œ stellen [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-- Greife über Fernbedienung oder Projektor-Tasten ins Projektor-Menü zu
-- Navigiere zu „Projektionsmodus“ oder „Installation“
-- Wähle: Front, Hinten, Decke Front oder Decke Hinten je nach Setup
+- Greife Ã¼ber Fernbedienung oder Projektor-Tasten ins Projektor-MenÃ¼ zu
+- Navigiere zu â€žProjektionsmodusâ€œ oder â€žInstallationâ€œ
+- WÃ¤hle: Front, Hinten, Decke Front oder Decke Hinten je nach Setup
 - Speichere Einstellungen [file:1]
 
 ---
 
-### Problem: Projektorfarben sind falsch (violett, grüner Stich etc.)
+### Problem: Projektorfarben sind falsch (violett, grÃ¼ner Stich etc.)
 
-**Schnelllösung:**
+**SchnelllÃ¶sung:**
 
-- Prüfe, ob VGA-Kabelstecker verbogen oder beschädigt sind
+- PrÃ¼fe, ob VGA-Kabelstecker verbogen oder beschÃ¤digt sind
 - Probiere ein anderes Kabel [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-- Untersuche Kabelstecker sorgfältig
-- Ersetze VGA-Kabel (HDMI-Kabel sind weniger anfällig)
-- Setze Projektor bei anhaltendem Problem auf Werkseinstellungen zurück
-- Prüfe, ob Kabel irgendwo gequetscht oder beschädigt ist [file:1]
+- Untersuche Kabelstecker sorgfÃ¤ltig
+- Ersetze VGA-Kabel (HDMI-Kabel sind weniger anfÃ¤llig)
+- Setze Projektor bei anhaltendem Problem auf Werkseinstellungen zurÃ¼ck
+- PrÃ¼fe, ob Kabel irgendwo gequetscht oder beschÃ¤digt ist [file:1]
 
 ---
 
@@ -251,75 +251,75 @@ _Kurze Lösungen für häufige Technikprobleme im Klassenz Zimmer + Vorbeugungss
 
 ### Problem: Kein Ton aus den Lautsprechern
 
-**Schnelllösung (30 Sekunden):**
+**SchnelllÃ¶sung (30 Sekunden):**
 
-1. Prüfe, ob Lautstärke nicht stummgeschaltet ist (Computer und Lautsprecher)
-2. Erhöhe Lautstärke an Computer und Lautsprechern
-3. Prüfe, ob das grüne Audiokabel im richtigen Anschluss steckt (meist grüner Anschluss am Computer) [file:1]
+1. PrÃ¼fe, ob LautstÃ¤rke nicht stummgeschaltet ist (Computer und Lautsprecher)
+2. ErhÃ¶he LautstÃ¤rke an Computer und Lautsprechern
+3. PrÃ¼fe, ob das grÃ¼ne Audiokabel im richtigen Anschluss steckt (meist grÃ¼ner Anschluss am Computer) [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-**Verbindungen prüfen:**
+**Verbindungen prÃ¼fen:**
 
-- Audiokabel fest im Computer-Kopfhöreranschluss (meist grüner Anschluss)
+- Audiokabel fest im Computer-KopfhÃ¶reranschluss (meist grÃ¼ner Anschluss)
 - Lautsprecher an Strom angeschlossen
-- Lautsprecher eingeschaltet (Stromleuchte prüfen) [file:1]
+- Lautsprecher eingeschaltet (Stromleuchte prÃ¼fen) [file:1]
 
 **Computer-Einstellungen:**
 
-- **Windows:** Rechtsklick auf Lautsprecher-Symbol → Soundeinstellungen öffnen → Ausgabegerät prüfen
-- **Mac:** Systemeinstellungen → Ton → Ausgang → Richtiges Gerät wählen
-- Stelle sicher, dass nichts im Kopfhöreranschluss steckt (deaktiviert meist Lautsprecher) [file:1]
+- **Windows:** Rechtsklick auf Lautsprecher-Symbol â†’ Soundeinstellungen Ã¶ffnen â†’ AusgabegerÃ¤t prÃ¼fen
+- **Mac:** Systemeinstellungen â†’ Ton â†’ Ausgang â†’ Richtiges GerÃ¤t wÃ¤hlen
+- Stelle sicher, dass nichts im KopfhÃ¶reranschluss steckt (deaktiviert meist Lautsprecher) [file:1]
 
 **Audio testen:**
 
 - Probiere anderes Video oder Audiofile
 - Teste mit YouTube-Video (bekannter funktionierender Ton)
-- Probiere Kopfhörer, um zu unterscheiden, ob Lautsprecher- oder Computerproblem [file:1]
+- Probiere KopfhÃ¶rer, um zu unterscheiden, ob Lautsprecher- oder Computerproblem [file:1]
 
-**Häufige Ursachen:**
+**HÃ¤ufige Ursachen:**
 
-- Falsches Ausgabegerät gewählt
+- Falsches AusgabegerÃ¤t gewÃ¤hlt
 - In Software stummgeschaltet (z.B. Videoplayer) statt System
 - Lautsprecher nicht eingeschaltet
 - Kabel im falschen Anschluss (Mikrofon statt Lautsprecher) [file:1]
 
 **Vorbeugung:**
 
-- Beschreibe Audiokabel und -anschlüsse
+- Beschreibe Audiokabel und -anschlÃ¼sse
 - Halte Ersatzlautsprecher bereit
 - Teste Audio vor Unterricht
-- Kenne schnelle Umschaltung von Audioausgabegeräten [file:1]
+- Kenne schnelle Umschaltung von AudioausgabegerÃ¤ten [file:1]
 
 ---
 
-### Problem: Ton ist zu leise trotz maximaler Lautstärke
+### Problem: Ton ist zu leise trotz maximaler LautstÃ¤rke
 
-**Schnelllösung:**
+**SchnelllÃ¶sung:**
 
-- Prüfe Lautstärke im Videoplayer/App selbst (separat von Systemlautstärke)
-- Rücke Lautsprecher näher an Schüler [file:1]
+- PrÃ¼fe LautstÃ¤rke im Videoplayer/App selbst (separat von SystemlautstÃ¤rke)
+- RÃ¼cke Lautsprecher nÃ¤her an SchÃ¼ler [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-- Prüfe Windows/Mac-Systemlautstärke UND Applautstärke (beide müssen hoch)
+- PrÃ¼fe Windows/Mac-SystemlautstÃ¤rke UND ApplautstÃ¤rke (beide mÃ¼ssen hoch)
 - Probiere andere Lautsprecher oder verbinde mit besserem Soundsystem
-- Nutze Audio-Verbesserungssoftware, falls verfügbar
+- Nutze Audio-Verbesserungssoftware, falls verfÃ¼gbar
 - Verbinde mit Klassen-PA-System, falls vorhanden
-- Prüfe „Ton“-Einstellungen auf Begrenzungsoptionen (z.B. „Lautstärkebegrenzung“) [file:1]
+- PrÃ¼fe â€žTonâ€œ-Einstellungen auf Begrenzungsoptionen (z.B. â€žLautstÃ¤rkebegrenzungâ€œ) [file:1]
 
 ---
 
 ### Problem: Audio ist nicht synchron mit Video
 
-**Schnelllösung:**
+**SchnelllÃ¶sung:**
 
 - Pausiere und starte Video neu
-- Schließe andere Programme [file:1]
+- SchlieÃŸe andere Programme [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-- Prüfe Internetgeschwindigkeit (Buffering verursacht Synchronisationsprobleme)
+- PrÃ¼fe Internetgeschwindigkeit (Buffering verursacht Synchronisationsprobleme)
 - Lade Video herunter statt streamen
 - Probiere anderen Browser
 - Starte Computer neu
@@ -327,108 +327,108 @@ _Kurze Lösungen für häufige Technikprobleme im Klassenz Zimmer + Vorbeugungss
 
 ---
 
-## E. Schülergeräte-Probleme (Tablets, Laptops, Chromebooks)
+## E. SchÃ¼lergerÃ¤te-Probleme (Tablets, Laptops, Chromebooks)
 
-### Problem: Gerät geht nicht an
+### Problem: GerÃ¤t geht nicht an
 
-**Schnelllösung (1 Minute):**
+**SchnelllÃ¶sung (1 Minute):**
 
-1. Prüfe Ladestatus - stecke es für 5 Minuten ans Ladegerät
-2. Halte Power-Taste 10-15 Sekunden gedrückt (erzwungener Neustart)
-3. Prüfe Ladekabel und -anschluss auf Beschädigungen [file:1]
+1. PrÃ¼fe Ladestatus - stecke es fÃ¼r 5 Minuten ans LadegerÃ¤t
+2. Halte Power-Taste 10-15 Sekunden gedrÃ¼ckt (erzwungener Neustart)
+3. PrÃ¼fe Ladekabel und -anschluss auf BeschÃ¤digungen [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
 - Probiere anderes Ladekabel und -adapter
-- Prüfe Ladeanschluss auf Schmutz (vorsichtig mit trockenem Tuch reinigen)
-- 30 Minuten am Ladegerät lassen, dann erneut versuchen
-- Bei mehreren Geräten: Prüfe, ob Ladewagen funktioniert
-- Akku kann komplett leer sein - braucht länger zum Aufladen vor Einschalten [file:1]
+- PrÃ¼fe Ladeanschluss auf Schmutz (vorsichtig mit trockenem Tuch reinigen)
+- 30 Minuten am LadegerÃ¤t lassen, dann erneut versuchen
+- Bei mehreren GerÃ¤ten: PrÃ¼fe, ob Ladewagen funktioniert
+- Akku kann komplett leer sein - braucht lÃ¤nger zum Aufladen vor Einschalten [file:1]
 
 **Vorbeugung:**
 
-- Etabliere klare Laderoutine (Schüler stecken am Unterrichtsende ein)
-- Prüfe regelmäßig Ladewagen-Verbindungen
+- Etabliere klare Laderoutine (SchÃ¼ler stecken am Unterrichtsende ein)
+- PrÃ¼fe regelmÃ¤ÃŸig Ladewagen-Verbindungen
 - Beschreibe Ladekabel gegen Verwechslungen
-- Schul Schüler, niedrigen Akku früh zu melden [file:1]
+- Schul SchÃ¼ler, niedrigen Akku frÃ¼h zu melden [file:1]
 
 ---
 
 ### Problem: Touchscreen reagiert nicht
 
-**Schnelllösung:**
+**SchnelllÃ¶sung:**
 
-- Gerät neu starten
-- Bildschirm reinigen (Fingerabdrücke und Schmutz beeinträchtigen Touch) [file:1]
+- GerÃ¤t neu starten
+- Bildschirm reinigen (FingerabdrÃ¼cke und Schmutz beeintrÃ¤chtigen Touch) [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-- Entferne jeglichen Bildschirmschutz (kann beschädigt sein)
-- Prüfe auf Risse oder Schäden
+- Entferne jeglichen Bildschirmschutz (kann beschÃ¤digt sein)
+- PrÃ¼fe auf Risse oder SchÃ¤den
 - Verbinde Maus (bei anhaltendem Problem Hardwaredefekt)
 - Werksreset als letzter Ausweg (Daten vorher sichern) [file:1]
 
 ---
 
-### Problem: Gerät ist eingefroren / Reagiert nicht
+### Problem: GerÃ¤t ist eingefroren / Reagiert nicht
 
-**Schnelllösung (2 Minuten):**
+**SchnelllÃ¶sung (2 Minuten):**
 
 1. Warte 30 Sekunden (manchmal nur langsam)
-2. Schließe problematische App, falls möglich
+2. SchlieÃŸe problematische App, falls mÃ¶glich
 3. Erzwungener Neustart:
    - **iPad:** Power- und Home-Taste (oder Leiser-Taste bei neueren Modellen) 10 Sekunden halten
    - **Chromebook:** Power-Taste 10 Sekunden halten
    - **Windows-Laptop:** Power-Taste 5 Sekunden halten [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-- Prüfe, ob Speicher voll ist (Einstellungen → Speicher)
-- Schließe alle Apps und starte neu
+- PrÃ¼fe, ob Speicher voll ist (Einstellungen â†’ Speicher)
+- SchlieÃŸe alle Apps und starte neu
 - Suche nach Software-Updates
-- Scanne auf Malware, falls verfügbar
+- Scanne auf Malware, falls verfÃ¼gbar
 - Sichere Daten und mache Werksreset bei anhaltendem Problem [file:1]
 
 ---
 
 ### Problem: Chromebook-Tastatur funktioniert nicht
 
-**Schnelllösung:**
+**SchnelllÃ¶sung:**
 
 - Chromebook neu starten
-- Prüfe, ob externe Tastatur funktioniert (hilft Hardwaredefekt einzugrenzen) [file:1]
+- PrÃ¼fe, ob externe Tastatur funktioniert (hilft Hardwaredefekt einzugrenzen) [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-- Prüfe auf Krümel oder Schmutz unter Tasten
-- Nutze Bildschirmtastatur vorübergehend (Einstellungen → Bedienhilfen)
+- PrÃ¼fe auf KrÃ¼mel oder Schmutz unter Tasten
+- Nutze Bildschirmtastatur vorÃ¼bergehend (Einstellungen â†’ Bedienhilfen)
 - Probiere Powerwash (Reset) bei Softwareproblem
-- Melde für Hardware-Reparatur, wenn Tasten physisch beschädigt [file:1]
+- Melde fÃ¼r Hardware-Reparatur, wenn Tasten physisch beschÃ¤digt [file:1]
 
 ---
 
 ## F. Login- & Passwortprobleme
 
-### Problem: Schüler erinnert sich nicht an Passwort
+### Problem: SchÃ¼ler erinnert sich nicht an Passwort
 
-**Schnelllösung (1 Minute):**
+**SchnelllÃ¶sung (1 Minute):**
 
-1. Prüfe, ob „Passwort vergessen“-Link vorhanden
-2. Probiere gängige Variationen, die Schüler nutzen
+1. PrÃ¼fe, ob â€žPasswort vergessenâ€œ-Link vorhanden
+2. Probiere gÃ¤ngige Variationen, die SchÃ¼ler nutzen
 3. Nutze Klassenpasswortliste, falls vorhanden (sicher aufbewahrt) [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-- Reset über E-Mail (falls Schüler E-Mailzugriff hat)
-- IT-Support für Passwort-Reset kontaktieren
-- Temporäres Konto nutzen, falls verfügbar
-- Schüler mit funktionierendem Gerät zusammenarbeiten lassen [file:1]
+- Reset Ã¼ber E-Mail (falls SchÃ¼ler E-Mailzugriff hat)
+- IT-Support fÃ¼r Passwort-Reset kontaktieren
+- TemporÃ¤res Konto nutzen, falls verfÃ¼gbar
+- SchÃ¼ler mit funktionierendem GerÃ¤t zusammenarbeiten lassen [file:1]
 
 **Vorbeugung:**
 
-- Sichere Aufzeichnung der Schüler-Benutzernamen führen
-- Passworterinnerungssystem erstellen (ohne tatsächliche Passwörter zu speichern)
-- Schul Schüler, Passwörter sicher aufzuschreiben
+- Sichere Aufzeichnung der SchÃ¼ler-Benutzernamen fÃ¼hren
+- Passworterinnerungssystem erstellen (ohne tatsÃ¤chliche PasswÃ¶rter zu speichern)
+- Schul SchÃ¼ler, PasswÃ¶rter sicher aufzuschreiben
 - Passwort-Manager nutzen, falls Schulrichtlinie erlaubt
 - Sicherheitfragen bei erstem Login einrichten [file:1]
 
@@ -436,114 +436,114 @@ _Kurze Lösungen für häufige Technikprobleme im Klassenz Zimmer + Vorbeugungss
 
 ### Problem: Konto ist gesperrt
 
-**Schnelllösung:**
+**SchnelllÃ¶sung:**
 
-- Prüfe Fehlermeldung (zu viele Loginversuche? Abgelaufenes Passwort?)
+- PrÃ¼fe Fehlermeldung (zu viele Loginversuche? Abgelaufenes Passwort?)
 - IT-Support kontaktieren [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
 - IT-Support muss Konto entsperren
 - IT-Kontaktdaten griffbereit halten
-- Temporäres Gastkonto für dringenden Zugriff bereithalten
-- Schüler mit Partner arbeiten lassen [file:1]
+- TemporÃ¤res Gastkonto fÃ¼r dringenden Zugriff bereithalten
+- SchÃ¼ler mit Partner arbeiten lassen [file:1]
 
 **Vorbeugung:**
 
-- Schul Schüler, vorsichtig mit Passwortversuchen zu sein
-- Regelmäßige Passwortaktualisierungen vor Ablauf
-- Klare Kommunikation über Passwortrichtlinien [file:1]
+- Schul SchÃ¼ler, vorsichtig mit Passwortversuchen zu sein
+- RegelmÃ¤ÃŸige Passwortaktualisierungen vor Ablauf
+- Klare Kommunikation Ã¼ber Passwortrichtlinien [file:1]
 
 ---
 
-### Problem: System meldet falsches Passwort (Schüler besteht auf Richtigkeit)
+### Problem: System meldet falsches Passwort (SchÃ¼ler besteht auf Richtigkeit)
 
-**Schnelllösung:**
+**SchnelllÃ¶sung:**
 
-- Prüfe, ob Feststelltaste nicht aktiviert
-- Prüfe Numtastatur (manche Passwörter enthalten Zahlen)
-- Tippe Passwort in sichtbarem Feld (z.B. Suchleiste) zur Überprüfung [file:1]
+- PrÃ¼fe, ob Feststelltaste nicht aktiviert
+- PrÃ¼fe Numtastatur (manche PasswÃ¶rter enthalten Zahlen)
+- Tippe Passwort in sichtbarem Feld (z.B. Suchleiste) zur ÃœberprÃ¼fung [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-- Prüfe Tastaturspracheinstellungen (UK vs. US-Layouts)
+- PrÃ¼fe Tastaturspracheinstellungen (UK vs. US-Layouts)
 - Verifiziere Benutzername (oft das eigentliche Problem)
 - Achte auf Sonderzeichen, die auf Tastatur anders aussehen
-- Probiere Passwort auf anderem Gerät, um Tastaturproblem auszuschließen [file:1]
+- Probiere Passwort auf anderem GerÃ¤t, um Tastaturproblem auszuschlieÃŸen [file:1]
 
 ---
 
 ## G. Druckprobleme
 
-### Problem: Drucker druckt nicht / Druckauftrag hängt
+### Problem: Drucker druckt nicht / Druckauftrag hÃ¤ngt
 
-**Schnelllösung (1 Minute):**
+**SchnelllÃ¶sung (1 Minute):**
 
-1. Prüfe, ob Drucker eingeschaltet und mit Papier versehen ist
-2. Prüfe Fehlermeldungen am Drucker-Display
-3. Lösche alle Druckaufträge und versuche erneut [file:1]
+1. PrÃ¼fe, ob Drucker eingeschaltet und mit Papier versehen ist
+2. PrÃ¼fe Fehlermeldungen am Drucker-Display
+3. LÃ¶sche alle DruckauftrÃ¤ge und versuche erneut [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-**Grundlagen prüfen:**
+**Grundlagen prÃ¼fen:**
 
 - Papier korrekt im Fach geladen
-- Kein Papierstau (alle Fächer prüfen)
-- Tinte/Toner nicht leer (Stände prüfen)
+- Kein Papierstau (alle FÃ¤cher prÃ¼fen)
+- Tinte/Toner nicht leer (StÃ¤nde prÃ¼fen)
 - Drucker-Kabel angeschlossen (USB und Strom)
 - Drucker mit Netzwerk verbunden (bei drahtlosen Druckern) [file:1]
 
 **Druckwarteschlange leeren:**
 
-- **Windows:** Einstellungen → Geräte → Drucker → Druckwarteschlange öffnen → Alle löschen
-- **Mac:** Systemeinstellungen → Drucker → Druckwarteschlange öffnen → Stehende Aufträge löschen
-- Manchmal Print Spooler-Dienst neu starten nötig (IT-Support kann helfen) [file:1]
+- **Windows:** Einstellungen â†’ GerÃ¤te â†’ Drucker â†’ Druckwarteschlange Ã¶ffnen â†’ Alle lÃ¶schen
+- **Mac:** Systemeinstellungen â†’ Drucker â†’ Druckwarteschlange Ã¶ffnen â†’ Stehende AuftrÃ¤ge lÃ¶schen
+- Manchmal Print Spooler-Dienst neu starten nÃ¶tig (IT-Support kann helfen) [file:1]
 
 **Drucker neu verbinden:**
 
-- Drucker in Einstellungen entfernen und neu hinzufügen
+- Drucker in Einstellungen entfernen und neu hinzufÃ¼gen
 - Drucker-Treiber aktualisieren
 - Computer und Drucker neu starten [file:1]
 
 **Vorbeugung:**
 
-- Testseite wöchentlich drucken
-- Tinten-/Tonerstände regelmäßig prüfen
+- Testseite wÃ¶chentlich drucken
+- Tinten-/TonerstÃ¤nde regelmÃ¤ÃŸig prÃ¼fen
 - Ersatzpapier bereithalten
-- Drucker warten (regelmäßig reinigen)
-- IT-Support-Kontakt für Druckerprobleme kennen [file:1]
+- Drucker warten (regelmÃ¤ÃŸig reinigen)
+- IT-Support-Kontakt fÃ¼r Druckerprobleme kennen [file:1]
 
 ---
 
 ### Problem: Drucker druckt leere Seiten
 
-**Schnelllösung:**
+**SchnelllÃ¶sung:**
 
-- Prüfe, ob Tinten-/Tonerkassetten nicht leer sind
+- PrÃ¼fe, ob Tinten-/Tonerkassetten nicht leer sind
 - Starte Drucker-Reinigungszyklus [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-- Ersetze oder schüttle Tonerkassette
-- Prüfe, ob Schutzfolie von neuen Kassetten entfernt
-- Reinige Druckköpfe (Druckermenü)
-- Prüfe richtigen Papierteil ausgewählt
+- Ersetze oder schÃ¼ttle Tonerkassette
+- PrÃ¼fe, ob Schutzfolie von neuen Kassetten entfernt
+- Reinige DruckkÃ¶pfe (DruckermenÃ¼)
+- PrÃ¼fe richtigen Papierteil ausgewÃ¤hlt
 - Stelle sicher, dass Dokument Inhalt hat (Vorschau vor Druck) [file:1]
 
 ---
 
 ### Problem: Druck ist verblasst oder streifig
 
-**Schnelllösung:**
+**SchnelllÃ¶sung:**
 
-- Starte Reinigungszyklus aus Drucker-Menü
-- Prüfe Tinten-/Tonerstände [file:1]
+- Starte Reinigungszyklus aus Drucker-MenÃ¼
+- PrÃ¼fe Tinten-/TonerstÃ¤nde [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
 - Ersetze niedrige Tinten-/Tonerkassetten
-- Reinige Druckköpfe mehrmals
-- Prüfe, ob Papierteil zu Druckereinstellungen passt
+- Reinige DruckkÃ¶pfe mehrmals
+- PrÃ¼fe, ob Papierteil zu Druckereinstellungen passt
 - Ersetze Trommel, falls vorhanden
 - IT bei schwerwiegenderen Hardwareproblemen kontaktieren [file:1]
 
@@ -553,29 +553,29 @@ _Kurze Lösungen für häufige Technikprobleme im Klassenz Zimmer + Vorbeugungss
 
 ### Problem: Kamera funktioniert nicht in Zoom/Teams/Meet
 
-**Schnelllösung (1 Minute):**
+**SchnelllÃ¶sung (1 Minute):**
 
-1. Prüfe, ob Kamera nicht verdeckt oder blockiert ist
+1. PrÃ¼fe, ob Kamera nicht verdeckt oder blockiert ist
 2. Klicke Kamera-Symbol im Meeting an, um es einzuschalten
-3. Prüfe Berechtigungs-Popup („Zulassen“ klicken) [file:1]
+3. PrÃ¼fe Berechtigungs-Popup (â€žZulassenâ€œ klicken) [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-**Berechtigungen prüfen:**
+**Berechtigungen prÃ¼fen:**
 
-- **Windows:** Einstellungen → Datenschutz → Kamera → Apps Zugriff erlauben
-- **Mac:** Systemeinstellungen → Sicherheit & Datenschutz → Kamera → Für spezifische App erlauben
-- Browser braucht evtl. auch Berechtigung (Adressleiste nach Kamera-Symbol prüfen) [file:1]
+- **Windows:** Einstellungen â†’ Datenschutz â†’ Kamera â†’ Apps Zugriff erlauben
+- **Mac:** Systemeinstellungen â†’ Sicherheit & Datenschutz â†’ Kamera â†’ FÃ¼r spezifische App erlauben
+- Browser braucht evtl. auch Berechtigung (Adressleiste nach Kamera-Symbol prÃ¼fen) [file:1]
 
-**Kamerawahl prüfen:**
+**Kamerawahl prÃ¼fen:**
 
 - In Meeting-Einstellungen Kamera-Dropdown anklicken
-- Richtige Kamera wählen (falls Laptop mehrere hat)
-- Andere Kamera probieren, falls verfügbar [file:1]
+- Richtige Kamera wÃ¤hlen (falls Laptop mehrere hat)
+- Andere Kamera probieren, falls verfÃ¼gbar [file:1]
 
 **Anwendungsprobleme:**
 
-- Andere Apps schließen, die Kamera nutzen könnten
+- Andere Apps schlieÃŸen, die Kamera nutzen kÃ¶nnten
 - Videokonferenz-App neu starten
 - App auf neueste Version aktualisieren
 - Browser-Version probieren, falls Desktop-App genutzt (oder umgekehrt) [file:1]
@@ -585,86 +585,86 @@ _Kurze Lösungen für häufige Technikprobleme im Klassenz Zimmer + Vorbeugungss
 - Kamera vor geplanten Calls testen
 - Videokonferenz-Software aktuell halten
 - Schnellen Einstellungszugriff kennen
-- Backup-Gerät für wichtige Meetings bereithalten [file:1]
+- Backup-GerÃ¤t fÃ¼r wichtige Meetings bereithalten [file:1]
 
 ---
 
 ### Problem: Mikrofon funktioniert nicht
 
-**Schnelllösung (30 Sekunden):**
+**SchnelllÃ¶sung (30 Sekunden):**
 
-1. Prüfe Stummtaste (in App und an Tastatur)
-2. Prüfe Mikrofon-Berechtigungs-Popup
-3. Stelle sicher, richtiges Mikrofon in Einstellungen gewählt [file:1]
+1. PrÃ¼fe Stummtaste (in App und an Tastatur)
+2. PrÃ¼fe Mikrofon-Berechtigungs-Popup
+3. Stelle sicher, richtiges Mikrofon in Einstellungen gewÃ¤hlt [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-**Einstellungen prüfen:**
+**Einstellungen prÃ¼fen:**
 
-- **Windows:** Einstellungen → System → Ton → Eingang → Mikrofon wählen
-- **Mac:** Systemeinstellungen → Ton → Eingang → Mikrofon wählen
-- In Konferenz-App: Einstellungen → Audio → Richtiges Eingabegerät wählen [file:1]
+- **Windows:** Einstellungen â†’ System â†’ Ton â†’ Eingang â†’ Mikrofon wÃ¤hlen
+- **Mac:** Systemeinstellungen â†’ Ton â†’ Eingang â†’ Mikrofon wÃ¤hlen
+- In Konferenz-App: Einstellungen â†’ Audio â†’ Richtiges EingabegerÃ¤t wÃ¤hlen [file:1]
 
 **Mikrofon testen:**
 
 - Integrierten Test in App-Einstellungen nutzen
 - Anderes Mikrofon probieren (externes USB-Mikrofon, Headset)
-- Prüfe, ob Pegel bei Sprechen ausschlägt [file:1]
+- PrÃ¼fe, ob Pegel bei Sprechen ausschlÃ¤gt [file:1]
 
-**Häufige Probleme:**
+**HÃ¤ufige Probleme:**
 
 - Mikrofon an mehreren Stellen stummgeschaltet (System, App, Tastatur)
-- Falsches Eingabegerät gewählt
+- Falsches EingabegerÃ¤t gewÃ¤hlt
 - Mikrofon braucht Systemberechtigung
-- Hintergrundrauschunterdrückung zu aggressiv [file:1]
+- HintergrundrauschunterdrÃ¼ckung zu aggressiv [file:1]
 
 **Vorbeugung:**
 
-- Headset für bessere Audioqualität nutzen
+- Headset fÃ¼r bessere AudioqualitÃ¤t nutzen
 - Vor Call-Beitritt testen
-- Tastaturkürzel für Stummschalten/Entstummschalten kennen
+- TastaturkÃ¼rzel fÃ¼r Stummschalten/Entstummschalten kennen
 - Backup-Headset bereithalten [file:1]
 
 ---
 
-### Problem: Echo oder Rückkopplung während Anruf
+### Problem: Echo oder RÃ¼ckkopplung wÃ¤hrend Anruf
 
-**Schnelllösung:**
+**SchnelllÃ¶sung:**
 
 - Stummschalten, wenn nicht gesprochen wird
-- Lautsprecherlautstärke reduzieren
+- LautsprecherlautstÃ¤rke reduzieren
 - Von Lautsprechern wegbewegen [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-- Kopfhörer statt Lautsprecher nutzen (eliminiert meist Echo)
+- KopfhÃ¶rer statt Lautsprecher nutzen (eliminiert meist Echo)
 - Stelle sicher, nur eine Person im Raum hat Lautsprecher an
-- Prüfe, Mikrofon nicht zu nah an Lautsprechern
-- Lautsprecher eines Geräts ausschalten bei mehreren Geräten
-- Echounterdrückung in Audioeinstellungen aktivieren [file:1]
+- PrÃ¼fe, Mikrofon nicht zu nah an Lautsprechern
+- Lautsprecher eines GerÃ¤ts ausschalten bei mehreren GerÃ¤ten
+- EchounterdrÃ¼ckung in Audioeinstellungen aktivieren [file:1]
 
 **Vorbeugung:**
 
-- Alle nutzen Kopfhörer
+- Alle nutzen KopfhÃ¶rer
 - Stummschalten, wenn nicht gesprochen
-- Keine mehreren Geräte im Raum stummfrei nutzen [file:1]
+- Keine mehreren GerÃ¤te im Raum stummfrei nutzen [file:1]
 
 ---
 
-### Problem: Schlechte Videoqualität / Einfrierendes Video
+### Problem: Schlechte VideoqualitÃ¤t / Einfrierendes Video
 
-**Schnelllösung:**
+**SchnelllÃ¶sung:**
 
 - Schalte dein Video aus zur Verbesserung der Verbindung
 - Bitte andere, Video auszuschalten
-- Schließe andere Programme und Browser-Tabs [file:1]
+- SchlieÃŸe andere Programme und Browser-Tabs [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-- Prüfe Internetgeschwindigkeit (Speedtest durchführen)
-- Verbinde über Ethernet statt WLAN, falls möglich
-- Hintergrundprogramme mit Internetnutzung schließen
-- Videoqualität in Call-Einstellungen reduzieren
+- PrÃ¼fe Internetgeschwindigkeit (Speedtest durchfÃ¼hren)
+- Verbinde Ã¼ber Ethernet statt WLAN, falls mÃ¶glich
+- Hintergrundprogramme mit Internetnutzung schlieÃŸen
+- VideoqualitÃ¤t in Call-Einstellungen reduzieren
 - Bitte Teilnehmer, bei Nichtsprechen zu stummschalten (Audio verbraucht Bandbreite)
 - Call in weniger belasteter Netzwerkzeit planen [file:1]
 
@@ -672,138 +672,138 @@ _Kurze Lösungen für häufige Technikprobleme im Klassenz Zimmer + Vorbeugungss
 
 ## I. Software- & App-Probleme
 
-### Problem: App öffnet nicht / Stürzt ständig ab
+### Problem: App Ã¶ffnet nicht / StÃ¼rzt stÃ¤ndig ab
 
-**Schnelllösung (1 Minute):**
+**SchnelllÃ¶sung (1 Minute):**
 
-1. App komplett schließen und neu öffnen
-2. Gerät neu starten
+1. App komplett schlieÃŸen und neu Ã¶ffnen
+2. GerÃ¤t neu starten
 3. Nach Updates suchen [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-- App ordnungsgemäß beenden
-- Speicherplatz prüfen (unnötige Dateien löschen bei Volllauf)
+- App ordnungsgemÃ¤ÃŸ beenden
+- Speicherplatz prÃ¼fen (unnÃ¶tige Dateien lÃ¶schen bei Volllauf)
 - App auf neueste Version aktualisieren
-- App-Cache/Daten leeren (Einstellungen → Apps → App wählen → Cache leeren)
+- App-Cache/Daten leeren (Einstellungen â†’ Apps â†’ App wÃ¤hlen â†’ Cache leeren)
 - Bei anhaltendem Problem deinstallieren und neu installieren
-- Systemanforderungen prüfen (evtl. nicht kompatibel) [file:1]
+- Systemanforderungen prÃ¼fen (evtl. nicht kompatibel) [file:1]
 
 **Vorbeugung:**
 
-- Apps regelmäßig aktualisieren
-- Speicherplatz regelmäßig freimachen
+- Apps regelmÃ¤ÃŸig aktualisieren
+- Speicherplatz regelmÃ¤ÃŸig freimachen
 - Nicht zu viele Apps gleichzeitig laufen lassen
-- Apps ordnungsgemäß schließen statt nur minimieren [file:1]
+- Apps ordnungsgemÃ¤ÃŸ schlieÃŸen statt nur minimieren [file:1]
 
 ---
 
-### Problem: App lässt sich nicht installieren oder aktualisieren
+### Problem: App lÃ¤sst sich nicht installieren oder aktualisieren
 
-**Schnelllösung:**
+**SchnelllÃ¶sung:**
 
-- Internetverbindung prüfen
-- Gerät neu starten und erneut versuchen
-- Verfügbaren Speicherplatz prüfen [file:1]
+- Internetverbindung prÃ¼fen
+- GerÃ¤t neu starten und erneut versuchen
+- VerfÃ¼gbaren Speicherplatz prÃ¼fen [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-- Speicher freimachen (meist mind. 1GB frei nötig)
-- Prüfe App-Kompatibilität mit Gerät/Betriebssystemversion
+- Speicher freimachen (meist mind. 1GB frei nÃ¶tig)
+- PrÃ¼fe App-KompatibilitÃ¤t mit GerÃ¤t/Betriebssystemversion
 - Verifiziere Installationsberechtigung (IT-Richtlinie)
 - Verschiedene Installationsmethode probieren (App Store vs. Browser-Download)
 - IT-Support kontaktieren bei Schulrichtlinienblockade
-- Datum/Zeit-Einstellungen prüfen (kann Downloads verhindern) [file:1]
+- Datum/Zeit-Einstellungen prÃ¼fen (kann Downloads verhindern) [file:1]
 
 ---
 
 ### Problem: App ist in falscher Sprache
 
-**Schnelllösung:**
+**SchnelllÃ¶sung:**
 
 - Sprach-Einstellungen in der App suchen
-- Gerätesprach-Einstellungen ändern [file:1]
+- GerÃ¤tesprach-Einstellungen Ã¤ndern [file:1]
 
-**Detaillierte Lösungen:**
+**Detaillierte LÃ¶sungen:**
 
-- **Windows:** Einstellungen → Zeit & Sprache → Sprache
-- **Mac:** Systemeinstellungen → Sprache & Region
-- **iOS/iPad:** Einstellungen → Allgemein → Sprache & Region
-- **Android:** Einstellungen → System → Sprachen
-- Manche Apps müssen nach Sprachwechsel neu gestartet werden
+- **Windows:** Einstellungen â†’ Zeit & Sprache â†’ Sprache
+- **Mac:** Systemeinstellungen â†’ Sprache & Region
+- **iOS/iPad:** Einstellungen â†’ Allgemein â†’ Sprache & Region
+- **Android:** Einstellungen â†’ System â†’ Sprachen
+- Manche Apps mÃ¼ssen nach Sprachwechsel neu gestartet werden
 - App neu installieren, wenn Sprache falsch bleibt [file:1]
 
 ---
 
 ## J. Vorbeugung & Wartung
 
-### Tägliche Routinen (5 Minuten)
+### TÃ¤gliche Routinen (5 Minuten)
 
 **Zu Tagesbeginn:**
 
-- ☐ Alle Klassenraum-Technik einschalten (Projektor, Computer, Lautsprecher)
-- ☐ Internetverbindung testen
-- ☐ Heutige Unterrichtsstunden auf Technikbedarf prüfen
-- ☐ Videos oder Webseiten testen, die du nutzen wirst
-- ☐ Schülergeräte aufladen [file:1]
+- â˜ Alle Klassenraum-Technik einschalten (Projektor, Computer, Lautsprecher)
+- â˜ Internetverbindung testen
+- â˜ Heutige Unterrichtsstunden auf Technikbedarf prÃ¼fen
+- â˜ Videos oder Webseiten testen, die du nutzen wirst
+- â˜ SchÃ¼lergerÃ¤te aufladen [file:1]
 
 **Zu Tagesende:**
 
-- ☐ Projektor korrekt ausschalten (Fernbedienung nutzen, nicht einfach aus Steckdose)
-- ☐ Schülergeräte zum Aufladen einstecken
-- ☐ Alle Programme am Klassenraum-Computer schließen
-- ☐ Klassenraum-Computer sperren oder herunterfahren
-- ☐ Kabel ordentlich aufwickeln (verhindert Beschädigungen) [file:1]
+- â˜ Projektor korrekt ausschalten (Fernbedienung nutzen, nicht einfach aus Steckdose)
+- â˜ SchÃ¼lergerÃ¤te zum Aufladen einstecken
+- â˜ Alle Programme am Klassenraum-Computer schlieÃŸen
+- â˜ Klassenraum-Computer sperren oder herunterfahren
+- â˜ Kabel ordentlich aufwickeln (verhindert BeschÃ¤digungen) [file:1]
 
 ---
 
-### Wöchentliche Wartung (10 Minuten)
+### WÃ¶chentliche Wartung (10 Minuten)
 
-- ☐ Interaktives Whiteboard-Oberfläche reinigen
-- ☐ Projektorlinse reinigen
-- ☐ Alle Kabel prüfen (sicher und unbeschädigt)
-- ☐ Software bei ausstehenden Updates aktualisieren
-- ☐ Computer-Desktop und Download-Ordner aufräumen
-- ☐ Alle Schülergeräte testen
-- ☐ Drucker-Papier- und Tintenstände prüfen
-- ☐ Drahtlose Geräte aufladen (Mäuse, Tastaturen, Fernbedienungen) [file:1]
+- â˜ Interaktives Whiteboard-OberflÃ¤che reinigen
+- â˜ Projektorlinse reinigen
+- â˜ Alle Kabel prÃ¼fen (sicher und unbeschÃ¤digt)
+- â˜ Software bei ausstehenden Updates aktualisieren
+- â˜ Computer-Desktop und Download-Ordner aufrÃ¤umen
+- â˜ Alle SchÃ¼lergerÃ¤te testen
+- â˜ Drucker-Papier- und TintenstÃ¤nde prÃ¼fen
+- â˜ Drahtlose GerÃ¤te aufladen (MÃ¤use, Tastaturen, Fernbedienungen) [file:1]
 
 ---
 
 ### Monatliche Aufgaben (20 Minuten)
 
-- ☐ Alle Geräte gründlich reinigen (Tastaturen, Mäuse, Bildschirme)
-- ☐ Nach Software-Updates suchen
-- ☐ Kabel neu organisieren und beschriften
-- ☐ Backup-Geräte testen
-- ☐ IT-Support-Kontaktinformationen prüfen/aktualisieren
-- ☐ Garantie/Support-Daten aller Geräte prüfen
-- ☐ Anhaltende Probleme an IT melden
-- ☐ Wichtige Klassenraum-Dateien sichern [file:1]
+- â˜ Alle GerÃ¤te grÃ¼ndlich reinigen (Tastaturen, MÃ¤use, Bildschirme)
+- â˜ Nach Software-Updates suchen
+- â˜ Kabel neu organisieren und beschriften
+- â˜ Backup-GerÃ¤te testen
+- â˜ IT-Support-Kontaktinformationen prÃ¼fen/aktualisieren
+- â˜ Garantie/Support-Daten aller GerÃ¤te prÃ¼fen
+- â˜ Anhaltende Probleme an IT melden
+- â˜ Wichtige Klassenraum-Dateien sichern [file:1]
 
 ---
 
-### Wichtige Utensilien für den Klassenraum
+### Wichtige Utensilien fÃ¼r den Klassenraum
 
 **Kabel & Adapter:**
 
 - Ersatz-HDMI-Kabel
 - Ersatz-USB-Kabel (verschiedene Typen)
-- USB-C zu HDMI-Adapter (für moderne Laptops)
-- VGA zu HDMI-Adapter (für ältere Geräte)
-- Verlängerungskabel [file:1]
+- USB-C zu HDMI-Adapter (fÃ¼r moderne Laptops)
+- VGA zu HDMI-Adapter (fÃ¼r Ã¤ltere GerÃ¤te)
+- VerlÃ¤ngerungskabel [file:1]
 
 **Werkzeuge:**
 
-- Mikrofasertücher
-- Kabelbinder oder Klettbänder
-- Kleine Taschenlampe (für Anschlussprüfung)
-- Ersatzbatterien (für Fernbedienungen)
-- Etikettiergerät oder Etiketten [file:1]
+- MikrofasertÃ¼cher
+- Kabelbinder oder KlettbÃ¤nder
+- Kleine Taschenlampe (fÃ¼r AnschlussprÃ¼fung)
+- Ersatzbatterien (fÃ¼r Fernbedienungen)
+- EtikettiergerÃ¤t oder Etiketten [file:1]
 
 **Backup-Artikel:**
 
-- Ersatz-Stylus für interaktives Board
+- Ersatz-Stylus fÃ¼r interaktives Board
 - Ersatz-Whiteboardmarker
 - Backup-USB-Stick mit Unterrichtsmaterialien
 - Ausgedruckte Versionen wichtiger Ressourcen [file:1]
@@ -816,58 +816,58 @@ _Kurze Lösungen für häufige Technikprobleme im Klassenz Zimmer + Vorbeugungss
 
 **IT-Support-Kontakt:**
 
-- E-Mail: ************\_\_\_************
-- Telefon: ************\_\_\_************
-- Durchwahl: ************\_\_\_************
-- Helpdesk-Standort: ************\_\_\_************ [file:1]
+- E-Mail: ****\*\*\*\*****\_\_\_****\*\*\*\*****
+- Telefon: ****\*\*\*\*****\_\_\_****\*\*\*\*****
+- Durchwahl: ****\*\*\*\*****\_\_\_****\*\*\*\*****
+- Helpdesk-Standort: ****\*\*\*\*****\_\_\_****\*\*\*\***** [file:1]
 
 **Was bei Problemmeldung angeben:**
 
-1. Betroffenes Gerät (Modell/Raumnummer)
-2. Genaue Fehlermeldung (Screenshot falls möglich)
+1. Betroffenes GerÃ¤t (Modell/Raumnummer)
+2. Genaue Fehlermeldung (Screenshot falls mÃ¶glich)
 3. Was du gerade gemacht hast, als Problem auftrat
 4. Was du schon ausprobiert hast
 5. Dringlichkeitsgrad (beeinflusst aktuellen Unterricht vs. kann warten) [file:1]
 
 **Notfallkontakte:**
 
-- Standortleiter: ************\_\_\_************
-- Fachbereichsleiter: ************\_\_\_************
-- Vertretungslehrer: ************\_\_\_************ [file:1]
+- Standortleiter: ****\*\*\*\*****\_\_\_****\*\*\*\*****
+- Fachbereichsleiter: ****\*\*\*\*****\_\_\_****\*\*\*\*****
+- Vertretungslehrer: ****\*\*\*\*****\_\_\_****\*\*\*\***** [file:1]
 
 ---
 
-### Schüler-Tech-Helfer-Programm
+### SchÃ¼ler-Tech-Helfer-Programm
 
-**Schüler-Support-System einrichten:**
+**SchÃ¼ler-Support-System einrichten:**
 
-**Tech-Monitore benennen (wöchentlich rotieren):**
+**Tech-Monitore benennen (wÃ¶chentlich rotieren):**
 
-- **Verbindungs-Monitor:** Prüft Kabel und Verbindungen
-- **Geräte-Monitor:** Hilft bei Schülergeräte-Problemen
-- **Audio-Monitor:** Verwaltet Lautstärke und Lautsprecherverbindungen
-- **App-Monitor:** Hilft Schülern bei Softwareproblemen [file:1]
+- **Verbindungs-Monitor:** PrÃ¼ft Kabel und Verbindungen
+- **GerÃ¤te-Monitor:** Hilft bei SchÃ¼lergerÃ¤te-Problemen
+- **Audio-Monitor:** Verwaltet LautstÃ¤rke und Lautsprecherverbindungen
+- **App-Monitor:** Hilft SchÃ¼lern bei Softwareproblemen [file:1]
 
-**Schüler-Helfer schulen in:**
+**SchÃ¼ler-Helfer schulen in:**
 
-- Häufige Probleme erkennen
+- HÃ¤ufige Probleme erkennen
 - Troubleshooting-Schritte befolgen
 - Wann an Lehrer weiterleiten
-- Geräte sicher zurücksetzen/neu starten
-- Geräte richtig anschließen/trennen [file:1]
+- GerÃ¤te sicher zurÃ¼cksetzen/neu starten
+- GerÃ¤te richtig anschlieÃŸen/trennen [file:1]
 
 **Vorteile:**
 
-- Schnellere Problemlösung
-- Weniger Unterrichtsstörungen
-- Schüler lernen wertvolle Fähigkeiten
+- Schnellere ProblemlÃ¶sung
+- Weniger UnterrichtsstÃ¶rungen
+- SchÃ¼ler lernen wertvolle FÃ¤higkeiten
 - Lehrer kann sich auf Unterrichten konzentrieren [file:1]
 
 ---
 
 ### Dein Klassenraum-Tech-Notfallkit erstellen
 
-**Essentieller Gegenstände-Kasten:**
+**Essentieller GegenstÃ¤nde-Kasten:**
 
 - Dieser Troubleshooting-Guide (ausgedruckt)
 - IT-Support-Kontaktdaten
@@ -875,15 +875,15 @@ _Kurze Lösungen für häufige Technikprobleme im Klassenz Zimmer + Vorbeugungss
 - Ersatzkabel (nach Typ beschriftet)
 - Reinigungsmittel
 - Backup-USB mit Unterrichtsmaterialien
-- Stift und Papier für nicht-technische Aktivitäten [file:1]
+- Stift und Papier fÃ¼r nicht-technische AktivitÃ¤ten [file:1]
 
 **Digitales Backup:**
 
 - Cloud-Speicher mit Unterrichtsmaterialien
 - Offline-Kopien essenzieller Ressourcen
-- Schüler-Login-Informationen (gesichert)
-- Geräte-Handbücher (PDFs)
-- Arbeitsblätter aus Vorperioden [file:1]
+- SchÃ¼ler-Login-Informationen (gesichert)
+- GerÃ¤te-HandbÃ¼cher (PDFs)
+- ArbeitsblÃ¤tter aus Vorperioden [file:1]
 
 ---
 
@@ -891,36 +891,36 @@ _Kurze Lösungen für häufige Technikprobleme im Klassenz Zimmer + Vorbeugungss
 
 **Ruhig und systematisch bleiben:**
 
-1. **Nicht in Panik geraten** - die meisten Probleme haben einfache Lösungen
-2. **Einfach anfangen** - zuerst Offensichtliches prüfen (Strom, Verbindungen)
-3. **Nur eine Sache ändern** - hilft zu erkennen, was wirklich hilft
-4. **Notiere, was funktioniert** - für nächstes Mal dokumentieren
-5. **Hilfe holen** - IT-Support ist für dich da
-6. **Backup-Pläne haben** - Technik versagt manchmal, das ist normal [file:1]
+1. **Nicht in Panik geraten** - die meisten Probleme haben einfache LÃ¶sungen
+2. **Einfach anfangen** - zuerst Offensichtliches prÃ¼fen (Strom, Verbindungen)
+3. **Nur eine Sache Ã¤ndern** - hilft zu erkennen, was wirklich hilft
+4. **Notiere, was funktioniert** - fÃ¼r nÃ¤chstes Mal dokumentieren
+5. **Hilfe holen** - IT-Support ist fÃ¼r dich da
+6. **Backup-PlÃ¤ne haben** - Technik versagt manchmal, das ist normal [file:1]
 
 **Merke:**
 
 - Du musst kein IT-Experte sein
 - Jeder Lehrer hat Technikprobleme
-- Schüler sind oft verständnisvoller als erwartet
+- SchÃ¼ler sind oft verstÃ¤ndnisvoller als erwartet
 - Dein Unterrichten ist wichtiger als perfekte Technik [file:1]
 
 ---
 
 ## Schnell-Problem-Finder
 
-**Kein Bild/Anzeige → Abschnitt C (Projektor-Probleme)**  
-**Kein Ton → Abschnitt D (Audio-Probleme)**  
-**Kein Internet → Abschnitt A (WLAN-Probleme)**  
-**Schülergeräte-Probleme → Abschnitt E (Geräte-Probleme)**  
-**Kann nicht einloggen → Abschnitt F (Passwort-Probleme)**  
-**Video-Call-Probleme → Abschnitt H (Videokonferenz)**  
-**App funktioniert nicht → Abschnitt I (Software-Probleme)** [file:1]
+**Kein Bild/Anzeige â†’ Abschnitt C (Projektor-Probleme)**  
+**Kein Ton â†’ Abschnitt D (Audio-Probleme)**  
+**Kein Internet â†’ Abschnitt A (WLAN-Probleme)**  
+**SchÃ¼lergerÃ¤te-Probleme â†’ Abschnitt E (GerÃ¤te-Probleme)**  
+**Kann nicht einloggen â†’ Abschnitt F (Passwort-Probleme)**  
+**Video-Call-Probleme â†’ Abschnitt H (Videokonferenz)**  
+**App funktioniert nicht â†’ Abschnitt I (Software-Probleme)** [file:1]
 
 ---
 
-_Merke: Technologie ist ein Werkzeug zur Verbesserung des Lernens, nicht sein Kern. Wenn Technik versagt, zählen deine Unterrichtsfähigkeiten und Backup-Pläne am meisten._ [file:1]
+_Merke: Technologie ist ein Werkzeug zur Verbesserung des Lernens, nicht sein Kern. Wenn Technik versagt, zÃ¤hlen deine UnterrichtsfÃ¤higkeiten und Backup-PlÃ¤ne am meisten._ [file:1]
 
 ---
 
-**© Zaza Technologies — Kostenloses Material für Pädagogen. Innerhalb deiner Schule teilen. Nicht für kommerziellen Weiterverkauf.** [file:1]
+**Â© Zaza Technologies â€” Kostenloses Material fÃ¼r PÃ¤dagogen. Innerhalb deiner Schule teilen. Nicht fÃ¼r kommerziellen Weiterverkauf.** [file:1]

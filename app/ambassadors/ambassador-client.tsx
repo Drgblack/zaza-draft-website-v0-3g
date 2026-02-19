@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import type React from "react";
 
@@ -879,19 +879,19 @@ const contentDE = {
     badge: "Was wir erwarten",
     title: "Botschafter-Aufgaben",
     description:
-      "Wir bitten um 3–5 Stunden pro Monat. Einige Aktivitäten sind verpflichtend, andere sind optional – je nach Ihren Interessen.",
+      "Wir bitten um 3-5 Stunden pro Monat. Einige Aktivitäten sind verpflichtend, andere sind optional - je nach Ihren Interessen.",
     items: [
       {
         title: "Teilen Sie Ihre Geschichte",
         description:
-          "Posten Sie 2–3 Mal pro Monat über Zaza Draft in Ihren bevorzugten sozialen Netzwerken.",
-        commitment: "2–3 Std./Monat",
+          "Posten Sie 2-3 Mal pro Monat über Zaza Draft in Ihren bevorzugten sozialen Netzwerken.",
+        commitment: "2-3 Std./Monat",
       },
       {
         title: "Feedback geben",
         description:
           "Testen Sie neue Funktionen und geben Sie unserem Team ehrliches, praxisnahes Feedback.",
-        commitment: "1–2 Std./Monat",
+        commitment: "1-2 Std./Monat",
       },
       {
         title: "Inhalte erstellen",
@@ -921,7 +921,7 @@ const contentDE = {
     authenticity: {
       title: "Wir schätzen Authentizität mehr als Perfektion",
       description:
-        "Sie müssen keine Social-Media-Expertin oder kein Social-Media-Experte sein und keine perfekt gestalteten Inhalte liefern. Uns ist Ihre ehrliche Stimme und echte Erfahrung aus dem Klassenraum wichtig. Teilen Sie, was funktioniert – und was nicht – und helfen Sie uns, ein Tool zu bauen, das Lehrkräfte wirklich lieben.",
+        "Sie müssen keine Social-Media-Expertin oder kein Social-Media-Experte sein und keine perfekt gestalteten Inhalte liefern. Uns ist Ihre ehrliche Stimme und echte Erfahrung aus dem Klassenraum wichtig. Teilen Sie, was funktioniert - und was nicht - und helfen Sie uns, ein Tool zu bauen, das Lehrkräfte wirklich lieben.",
     },
   },
   ambassadors: {
@@ -957,7 +957,7 @@ const contentDE = {
         role: "Sonderpädagogik",
         location: "Miami, FL",
         quote:
-          "Ich bin beigetreten, um KI-Tools für die Sonderpädagogik zugänglicher zu machen. Das Team hört zu und setzt unser Feedback um – es fühlt sich wirklich kollaborativ an.",
+          "Ich bin beigetreten, um KI-Tools für die Sonderpädagogik zugänglicher zu machen. Das Team hört zu und setzt unser Feedback um - es fühlt sich wirklich kollaborativ an.",
         image: "/professional-teacher-headshot-woman-latina.jpg",
         joined: "Februar 2025",
         contributions: "15 Tutorials, 38 Social-Media-Posts",
@@ -983,7 +983,7 @@ const contentDE = {
       social: "Social-Media-Profile (X, LinkedIn, Instagram, etc.)",
       socialPlaceholder: "@lehrerin_anna auf X",
       why: "Warum möchten Sie Zaza Draft-Botschafter werden?",
-      whyLength: "(200–300 Wörter)",
+      whyLength: "(200-300 Wörter)",
       whyPlaceholder:
         "Erzählen Sie uns von Ihrer Leidenschaft für KI in der Bildung, was Sie an Zaza Draft schätzen und wie Sie beitragen möchten...",
       submit: "Bewerbung absenden",
@@ -1009,17 +1009,17 @@ const contentDE = {
       {
         question: "Wer kann Botschafter werden?",
         answer:
-          "Wir suchen engagierte Pädagoginnen und Pädagogen, die Zaza Draft aktiv nutzen, eine – auch kleine – Social-Media-Präsenz haben und die Zukunft von KI in der Bildung mitgestalten möchten. Alle Klassenstufen und Fächer sind willkommen.",
+          "Wir suchen engagierte Pädagoginnen und Pädagogen, die Zaza Draft aktiv nutzen, eine - auch kleine - Social-Media-Präsenz haben und die Zukunft von KI in der Bildung mitgestalten möchten. Alle Klassenstufen und Fächer sind willkommen.",
       },
       {
         question: "Wie hoch ist der Zeitaufwand?",
         answer:
-          "Wir bitten um mindestens 3–5 Stunden pro Monat: 2–3 Social-Media-Posts, ein monatlicher Community-Call und gelegentliche Feedback-Sessions. Zusätzliche Aktivitäten wie Content-Erstellung oder Vorträge sind optional, aber willkommen.",
+          "Wir bitten um mindestens 3-5 Stunden pro Monat: 2-3 Social-Media-Posts, ein monatlicher Community-Call und gelegentliche Feedback-Sessions. Zusätzliche Aktivitäten wie Content-Erstellung oder Vorträge sind optional, aber willkommen.",
       },
       {
         question: "Muss ich ein Social-Media-Influencer sein?",
         answer:
-          "Nein. Wir schätzen authentische Stimmen mehr als Follower-Zahlen. Ob Sie 100 oder 10.000 Follower haben – wenn Sie für KI in der Bildung brennen, möchten wir von Ihnen hören.",
+          "Nein. Wir schätzen authentische Stimmen mehr als Follower-Zahlen. Ob Sie 100 oder 10.000 Follower haben - wenn Sie für KI in der Bildung brennen, möchten wir von Ihnen hören.",
       },
       {
         question: "Wie lang ist die Botschafter-Laufzeit?",
@@ -1029,7 +1029,7 @@ const contentDE = {
       {
         question: "Was ist, wenn ich meine Aufgaben nicht erfüllen kann?",
         answer:
-          "Das Leben ist voll – wir wissen, wie viel Lehrkräfte leisten. Sprechen Sie einfach mit uns. Wir sind flexibel und können Erwartungen anpassen oder Ihre Botschafter-Rolle bei Bedarf pausieren.",
+          "Das Leben ist voll - wir wissen, wie viel Lehrkräfte leisten. Sprechen Sie einfach mit uns. Wir sind flexibel und können Erwartungen anpassen oder Ihre Botschafter-Rolle bei Bedarf pausieren.",
       },
       {
         question:

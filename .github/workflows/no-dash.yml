@@ -1,14 +1,152 @@
 ﻿name: no-smart-dashes
-on: [push, pull_request]
+
+on:
+  push:
+  pull_request:
+
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Fail if smart dashes exist
+        with:
+          fetch-depth: 0
+
+      - name: Fail if smart dashes exist (excluding backups)
+        shell: bash
         run: |
-          if git grep -n -I -E $'[\\u2014\\u2013\\u2011]' -- . ; then
-            echo "Ã¢ÂÅ’ Disallowed dash found (- / - / -). Use '-'."
+          set -euo pipefail
+
+          # Build a tracked-file list, excluding common binary dirs and backup/scratch patterns.
+          # Then scan only those files for U+2014 (em dash), U+2013 (en dash), U+2011 (non-breaking hyphen).
+          mapfile -t files < <(
+            git ls-files -z \
+              ':!**/*.bak' \
+              ':!**/*.backup' \
+              ':!**/*.backup.*' \
+              ':!**/*.my-broken-clean*' \
+              ':!**/*.tmp' \
+              ':!**/*.swp' \
+              ':!**/*~' \
+              ':!**/.DS_Store' \
+              ':!public/**' \
+              ':!**/*.png' \
+              ':!**/*.jpg' \
+              ':!**/*.jpeg' \
+              ':!**/*.gif' \
+              ':!**/*.webp' \
+              ':!**/*.pdf' \
+              ':!**/*.zip' \
+              ':!**/*.ico' \
+              ':!**/*.mp4' \
+              ':!**/*.mov' \
+              ':!**/*.webm' \
+              ':!**/*.woff' \
+              ':!**/*.woff2' \
+              ':!**/*.ttf' \
+              ':!**/*.eot' \
+              | tr '\0' '\n'
+          )
+
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "No files to scan."
+            exit 0
+          fi
+
+          # Use git grep over the explicit file list. -I ignores binary, -n line numbers.
+          # The $'..' string enables \uXXXX escapes in bash.
+          if git grep -n -I -E $'[\u2014\u2013\u2011]' -- "${files[@]}"; then
+            echo "Disallowed dash found (U+2014/U+2013/U+2011). Replace with '-'"
             exit 1
           fi
 
+          echo "OK: no smart dashes found (excluding backups)."
+
+      - name: Validate changed public JPG and PNG files
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          else
+            BASE_SHA="${{ github.event.before }}"
+          fi
+          HEAD_SHA="${{ github.sha }}"
+
+          if [ -z "${BASE_SHA:-}" ] || [ "$BASE_SHA" = "0000000000000000000000000000000000000000" ]; then
+            echo "No base commit SHA available. Skipping image integrity check."
+            exit 0
+          fi
+
+          mapfile -t changed_images < <(
+            git diff --name-only "$BASE_SHA" "$HEAD_SHA" -- \
+              "public/**/*.jpg" "public/**/*.jpeg" "public/**/*.png"
+          )
+
+          if [ "${#changed_images[@]}" -eq 0 ]; then
+            echo "No changed public JPG/PNG files."
+            exit 0
+          fi
+
+          CHANGED_IMAGES="$(printf '%s\n' "${changed_images[@]}")"
+          export CHANGED_IMAGES
+
+          node <<'NODE'
+          const fs = require("fs");
+
+          const imageExts = new Set([".jpg", ".jpeg", ".png"]);
+          const changedImages = (process.env.CHANGED_IMAGES || "")
+            .split(/\r?\n/)
+            .map((entry) => entry.trim())
+            .filter(Boolean);
+
+          const invalidFiles = [];
+          const pngSignature = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+
+          for (const filePath of changedImages) {
+            const dot = filePath.lastIndexOf(".");
+            const ext = dot >= 0 ? filePath.slice(dot).toLowerCase() : "";
+            if (!imageExts.has(ext)) continue;
+
+            if (!fs.existsSync(filePath)) {
+              // If it was deleted/renamed, skip.
+              continue;
+            }
+
+            const bytes = fs.readFileSync(filePath);
+            let isValid = false;
+
+            if (ext === ".png") {
+              const hasPngSignature =
+                bytes.length >= pngSignature.length &&
+                bytes.subarray(0, pngSignature.length).equals(pngSignature);
+
+              // Minimal PNG sanity: last chunk type should be IEND.
+              const hasIendChunk =
+                bytes.length >= 12 &&
+                bytes.subarray(bytes.length - 12, bytes.length - 8).toString("ascii") === "IEND";
+
+              isValid = hasPngSignature && hasIendChunk;
+            } else {
+              // Minimal JPEG sanity: SOI (FFD8) at start and EOI (FFD9) at end.
+              const hasJpegStart = bytes.length >= 2 && bytes[0] === 0xff && bytes[1] === 0xd8;
+              const hasJpegEnd =
+                bytes.length >= 2 &&
+                bytes[bytes.length - 2] === 0xff &&
+                bytes[bytes.length - 1] === 0xd9;
+
+              isValid = hasJpegStart && hasJpegEnd;
+            }
+
+            if (!isValid) invalidFiles.push(filePath);
+          }
+
+          if (invalidFiles.length > 0) {
+            console.error("Invalid JPG/PNG files found:");
+            for (const file of invalidFiles) console.error(` - ${file}`);
+            process.exit(1);
+          }
+
+          console.log("Changed public JPG/PNG integrity check passed.");
+          NODE

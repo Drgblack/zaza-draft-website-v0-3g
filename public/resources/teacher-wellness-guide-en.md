@@ -1,5 +1,5 @@
 ---
-title: Teacher Wellness Guide – Sustainable Strategies for Managing Stress and Burnout
+title: Teacher Wellness Guide - Sustainable Strategies for Managing Stress and Burnout
 date: 2024-12-15
 tags:
   - Teacher wellbeing
@@ -21,7 +21,7 @@ _Sustainable strategies for managing stress, preventing burnout, and maintaining
 2. **Try the Quick Wins** first (usually take under 5 minutes).
 3. **Explore the Detailed Strategies** for long-term success.
 4. **Prevention Tips** help you avoid stress traps in the future.
-5. **Keep this handy** – use it as a reminder and motivator.
+5. **Keep this handy** - use it as a reminder and motivator.
 
 ### Before you shift into stress mode
 
@@ -47,13 +47,13 @@ _Sustainable strategies for managing stress, preventing burnout, and maintaining
 
 ## A. Reducing Mental Load
 
-### Problem: Mind is full – constantly brooding over tasks
+### Problem: Mind is full - constantly brooding over tasks
 
 **Quick Win (3 minutes):**
 
 1. Do a **Brain Dump**: Write down everything running through your head (marking, parents' evening admin, resources).
 2. Triage the list: Decide what needs to be tackled **today** and what can wait.
-3. Put the list away – your brain knows the information is safe.
+3. Put the list away - your brain knows the information is safe.
 
 **Detailed Strategies:**
 
@@ -85,18 +85,18 @@ _Sustainable strategies for managing stress, preventing burnout, and maintaining
 **Detailed Strategies:**
 
 - **Prioritise: Less is More:** Reduce the complexity of your resources. _Does_ the worksheet really need to be in colour? _Do_ all slides need to be perfectly designed?
-- **Recycling:** Reuse your materials from last year – without over-analysing them! Save your perfection for emergencies.
+- **Recycling:** Reuse your materials from last year - without over-analysing them! Save your perfection for emergencies.
 - **The 80/20 Rule (Pareto Principle):** 80% of the results come from 20% of your effort. Identify the 20% (core message, clear structure) and stop when reached.
 
 ---
 
 ## B. Embedding Self-Care into the School Day
 
-### Problem: No time for breaks – constantly working through
+### Problem: No time for breaks - constantly working through
 
 **Quick Win (5 minutes):**
 
-1. Set a timer to remind you to **stand up** every 60–90 minutes.
+1. Set a timer to remind you to **stand up** every 60-90 minutes.
 2. Step outside briefly or stretch.
 
 **Detailed Strategies:**
@@ -107,7 +107,7 @@ _Sustainable strategies for managing stress, preventing burnout, and maintaining
 
 **Prevention:**
 
-- Commit to only two cups of coffee and drink water instead – dehydration exacerbates exhaustion.
+- Commit to only two cups of coffee and drink water instead - dehydration exacerbates exhaustion.
 - Book firm **Self-Care appointments** in your diary (e.g., exercise, reading) and treat them like a staff meeting.
 
 ---
@@ -176,14 +176,14 @@ _Sustainable strategies for managing stress, preventing burnout, and maintaining
 
 **Quick Win (1 minute):**
 
-- Think about the biggest success of the past week – a student 'Aha!' moment, a successful lesson. Write it down.
+- Think about the biggest success of the past week - a student 'Aha!' moment, a successful lesson. Write it down.
 
 **Detailed Strategies:**
 
 - **What am I here for?** Write down your **three core values** that motivated you to teach (e.g., _Imparting knowledge, building relationships, fostering creativity_). Review weekly whether your work reflects these values.
 - **Small Experiments:** Incorporate a new, small element into the lesson (a new method, a game, a short story) that you enjoy.
 - **Networking:** Regularly exchange ideas with positive, supportive colleagues (Seek out **motivators** instead of **complainers**).
-- **Celebrate Successes:** Acknowledge your own efforts. The end of every **unit of work** or **grade submission** is a success – celebrate it, even alone.
+- **Celebrate Successes:** Acknowledge your own efforts. The end of every **unit of work** or **grade submission** is a success - celebrate it, even alone.
 
 ---
 

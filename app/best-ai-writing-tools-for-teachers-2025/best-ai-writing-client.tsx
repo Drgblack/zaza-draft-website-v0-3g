@@ -212,7 +212,7 @@ export default function BestAIWritingClient() {
 
       why_title: "Warum KI-Schreibwerkzeuge im Jahr 2025 wichtig sind",
       why_p1:
-        "Lehrer verbringen durchschnittlich 11 Stunden pro Woche mit schriftlicher Kommunikation – Eltern-E-Mails, Feedback, Berichten und Dokumentation. KI-Schreibwerkzeuge können dies um 60–70 % reduzieren und gleichzeitig Qualität und Konsistenz verbessern.",
+        "Lehrer verbringen durchschnittlich 11 Stunden pro Woche mit schriftlicher Kommunikation - Eltern-E-Mails, Feedback, Berichten und Dokumentation. KI-Schreibwerkzeuge können dies um 60-70 % reduzieren und gleichzeitig Qualität und Konsistenz verbessern.",
       why_p2:
         "Aber nicht alle KI-Werkzeuge sind gleich. Generischen Tools wie ChatGPT fehlt es an lehrerspezifischen Funktionen. Marketing-Tools wie Jasper sind überdimensioniert. Und viele Tools werfen Datenschutzbedenken hinsichtlich Schülerdaten auf.",
       why_p3:
@@ -359,7 +359,7 @@ export default function BestAIWritingClient() {
         {
           question: "Wird KI das Schreiben von Lehrern ersetzen?",
           answer:
-            "Nein. KI ist ein Entwurfswerkzeug, kein Ersatz. Lehrer liefern weiterhin das Fachwissen, das Urteilsvermögen und die persönliche Note. Betrachten Sie es als Rechtschreibprüfung – es hilft, aber Sie sind immer noch der Verfasser.",
+            "Nein. KI ist ein Entwurfswerkzeug, kein Ersatz. Lehrer liefern weiterhin das Fachwissen, das Urteilsvermögen und die persönliche Note. Betrachten Sie es als Rechtschreibprüfung - es hilft, aber Sie sind immer noch der Verfasser.",
         },
         {
           question:
@@ -804,7 +804,7 @@ export default function BestAIWritingClient() {
                       ? "Schrittweise erweitern"
                       : "Expand Gradually",
                     description: isGerman
-                      ? "Sobald Sie sich wohl fühlen, fügen Sie weitere Anwendungsfälle hinzu. Die meisten Lehrer sparen innerhalb eines Monats konstanter Nutzung 5–8 Stunden pro Woche."
+                      ? "Sobald Sie sich wohl fühlen, fügen Sie weitere Anwendungsfälle hinzu. Die meisten Lehrer sparen innerhalb eines Monats konstanter Nutzung 5-8 Stunden pro Woche."
                       : "Once comfortable, add more use cases. Most teachers save 5-8 hours per week within a month of consistent use.",
                   },
                 ].map((item) => (
@@ -847,7 +847,7 @@ export default function BestAIWritingClient() {
                   },
                   {
                     quote: isGerman
-                      ? "Ich nutze ChatGPT für die Unterrichtsplanung und Zaza Draft für die Elternkommunikation. Zusammen sparen sie mir 6–7 Stunden pro Woche. Ein Wendepunkt für die Work-Life-Balance."
+                      ? "Ich nutze ChatGPT für die Unterrichtsplanung und Zaza Draft für die Elternkommunikation. Zusammen sparen sie mir 6-7 Stunden pro Woche. Ein Wendepunkt für die Work-Life-Balance."
                       : "I use ChatGPT for lesson planning and Zaza Draft for parent communication. Together they save me 6-7 hours per week. Game changer for work-life balance.",
                     name: "Michael T.",
                     imageSrc: "/testimonials/pricing-teacher-2.jpg",
