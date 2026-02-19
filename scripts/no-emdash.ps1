@@ -1,15 +1,41 @@
-﻿$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Stop"
 
 $repoRoot = (git rev-parse --show-toplevel) 2>$null
 if (-not $repoRoot) { throw "Not a git repo (git rev-parse failed)." }
 Set-Location $repoRoot
 
+function ContainsForbiddenDash {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Text
+  )
+
+  # Detect only em dash (U+2014). Do not flag normal hyphen-minus (-).
+  return $Text.IndexOf([char]0x2014) -ge 0
+}
+
+function Invoke-SelfTest {
+  $tests = @(
+    @{ Name = "hyphen-minus"; Text = "alpha-beta"; Expected = $false },
+    @{ Name = "em-dash"; Text = ("alpha" + [char]0x2014 + "beta"); Expected = $true }
+  )
+
+  foreach ($t in $tests) {
+    $actual = ContainsForbiddenDash -Text $t.Text
+    if ($actual -ne $t.Expected) {
+      throw "Self-test failed: $($t.Name) expected $($t.Expected) but got $actual"
+    }
+  }
+}
+
+Invoke-SelfTest
+
 # Only check tracked files, and only text-ish extensions.
 # This prevents scanning binaries (jpg/pdf), backups, and generated artefacts.
 $allowedExt = @(
-  ".ts",".tsx",".js",".jsx",".mjs",".cjs",
-  ".json",".md",".mdx",".txt",".html",".css",
-  ".yml",".yaml",".ps1",".py",".toml",".ini"
+  ".ts", ".tsx", ".js", ".jsx", ".mjs", ".cjs",
+  ".json", ".md", ".mdx", ".txt", ".html", ".css",
+  ".yml", ".yaml", ".ps1", ".py", ".toml", ".ini"
 )
 
 $files = git ls-files
@@ -25,7 +51,7 @@ foreach ($f in $files) {
   try { $raw = Get-Content -LiteralPath $f -Raw -ErrorAction Stop } catch { continue }
   if ($null -eq $raw) { continue }
 
-  if ($raw.Contains("-")) {
+  if (ContainsForbiddenDash -Text $raw) {
     $offenders += (Join-Path $repoRoot $f)
   }
 }
@@ -41,4 +67,3 @@ if ($offenders.Count -gt 0) {
 
 Write-Host "OK: no em dashes found in tracked text files."
 exit 0
-

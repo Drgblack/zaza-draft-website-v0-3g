@@ -370,7 +370,7 @@ class ReportGenerator:
         intro_text = """
         Artificial Intelligence has moved from experimental technology to everyday classroom tool. 
         This report, based on comprehensive surveys of over 15,000 K-12 educators across all 50 states, 
-        reveals how teachers are integrating AI into their daily practice—and what support they need to 
+        reveals how teachers are integrating AI into their daily practice - and what support they need to 
         maximize its potential while navigating challenges around equity, privacy, and pedagogy.
         """
         self.story.append(Paragraph(intro_text, self.styles['ReportBody']))
@@ -381,7 +381,7 @@ class ReportGenerator:
         self.story.append(Spacer(1, 0.1*inch))
         
         takeaways = [
-            "<b>Rapid Adoption:</b> AI usage has grown 2.5x year-over-year, with 87% of teachers now using AI tools weekly—up from just 34% in 2024.",
+            "<b>Rapid Adoption:</b> AI usage has grown 2.5x year-over-year, with 87% of teachers now using AI tools weekly - up from just 34% in 2024.",
             "<b>Time Liberation:</b> Teachers report an average of 6.2 hours saved weekly through AI assistance with lesson planning, grading feedback, and parent communication.",
             "<b>Training Gap:</b> Despite high adoption, 68% of teachers desire more professional development, indicating a critical need for structured AI literacy programs.",
             "<b>Equity Concerns:</b> Access disparities persist, with rural and under-resourced schools reporting 23% lower AI tool availability than suburban districts.",
@@ -448,7 +448,7 @@ class ReportGenerator:
         body_text = """
         The 2024-2025 school year marks a watershed moment in educational technology adoption. Our data reveals 
         that AI tools have transitioned from novel experiments used by early adopters to mainstream resources 
-        integrated into daily teaching practice. The 87% weekly usage rate represents more than just a statistic—it 
+        integrated into daily teaching practice. The 87% weekly usage rate represents more than just a statistic - it 
         signals a fundamental shift in how teachers approach lesson design, student feedback, and administrative tasks.
         """
         self.story.append(Paragraph(body_text, self.styles['ReportBody']))
@@ -475,7 +475,7 @@ class ReportGenerator:
             self.styles['TeacherQuote']
         )
         self.story.append(quote)
-        self.story.append(Paragraph("— Maria Hernandez, 5th Grade Teacher, Texas", 
+        self.story.append(Paragraph("- Maria Hernandez, 5th Grade Teacher, Texas", 
                                    ParagraphStyle(name='QuoteAttribution', parent=self.styles['Normal'],
                                                 fontSize=10, textColor=COLORS['slate'], 
                                                 alignment=TA_CENTER, fontName='Helvetica-Oblique')))
@@ -593,7 +593,7 @@ class ReportGenerator:
         
         # Introduction
         intro_text = """
-        Teachers are not using AI as a replacement for pedagogy—they're using it as a powerful amplifier 
+        Teachers are not using AI as a replacement for pedagogy - they're using it as a powerful amplifier 
         of their expertise. From reducing administrative burden to personalizing learning at scale, AI 
         tools are enabling teachers to focus more energy on what matters most: meaningful human interaction 
         with students. This chapter explores the most common use cases and their measurable impact on both 
@@ -638,7 +638,7 @@ class ReportGenerator:
         76% of teachers use AI for lesson planning, making it the most common application. Teachers report 
         that AI excels at generating initial frameworks, suggesting differentiation strategies, and providing 
         fresh approaches to familiar content. The average teacher saves 2.3 hours per week on lesson planning 
-        alone. However, teachers emphasize that AI serves as a starting point—they universally customize and 
+        alone. However, teachers emphasize that AI serves as a starting point - they universally customize and 
         enhance AI-generated plans with their professional judgment and knowledge of their specific students.
         """
         self.story.append(Paragraph(lesson_planning_text, self.styles['ReportBody']))
@@ -652,7 +652,7 @@ class ReportGenerator:
             self.styles['TeacherQuote']
         )
         self.story.append(quote)
-        self.story.append(Paragraph("— James Wu, 8th Grade Science Teacher, California",
+        self.story.append(Paragraph("- James Wu, 8th Grade Science Teacher, California",
                                    ParagraphStyle(name='QuoteAttribution2', parent=self.styles['Normal'],
                                                 fontSize=10, textColor=COLORS['slate'],
                                                 alignment=TA_CENTER, fontName='Helvetica-Oblique')))
@@ -709,7 +709,7 @@ class ReportGenerator:
         
         time_text = """
         Perhaps the most significant impact of AI in education is time savings. Regular AI users report an 
-        average of 6.2 hours saved per week—time that can be redirected to instruction, collaboration, and 
+        average of 6.2 hours saved per week - time that can be redirected to instruction, collaboration, and 
         student support. When we break down where these time savings come from, a clear pattern emerges: AI 
         is most effective at reducing time spent on administrative and routine cognitive tasks, freeing 
         teachers to focus on the complex, relational work that defines great teaching.
@@ -849,7 +849,7 @@ class ReportGenerator:
             self.styles['TeacherQuote']
         )
         self.story.append(quote)
-        self.story.append(Paragraph("— DeShawn Parker, High School English Teacher, Mississippi",
+        self.story.append(Paragraph("- DeShawn Parker, High School English Teacher, Mississippi",
                                    ParagraphStyle(name='QuoteAttribution3', parent=self.styles['Normal'],
                                                 fontSize=10, textColor=COLORS['slate'],
                                                 alignment=TA_CENTER, fontName='Helvetica-Oblique')))
@@ -915,7 +915,7 @@ class ReportGenerator:
         
         prediction1_text = """
         Within 3 years, AI will be seamlessly embedded in learning management systems, assessment platforms, 
-        and communication tools. Teachers won't "use AI"—they'll simply use their existing tools, which will 
+        and communication tools. Teachers won't "use AI" - they'll simply use their existing tools, which will 
         be AI-enhanced. This invisibility will reduce adoption friction but also requires proactive attention 
         to transparency, data governance, and algorithmic literacy.
         """
@@ -929,7 +929,7 @@ class ReportGenerator:
         prediction2_text = """
         AI's ability to analyze student work and adapt instruction in real-time will mature significantly. 
         We'll see AI systems that can generate truly personalized learning paths, adjust difficulty dynamically, 
-        and provide targeted scaffolding—all while keeping teachers in the decision-making loop. 82% of teachers 
+        and provide targeted scaffolding - all while keeping teachers in the decision-making loop. 82% of teachers 
         express excitement about this possibility, viewing it as a way to finally deliver on the promise of 
         differentiation without overwhelming workload.
         """
@@ -1013,7 +1013,7 @@ class ReportGenerator:
         
         intro_text = """
         This chapter distills insights from educators and schools that are using AI most effectively. These 
-        aren't theoretical frameworks—they're practical approaches refined through real classroom experience. 
+        aren't theoretical frameworks - they're practical approaches refined through real classroom experience. 
         We've identified patterns across high-performing implementations and translated them into actionable 
         guidance for teachers, instructional coaches, and school leaders.
         """
@@ -1092,7 +1092,7 @@ class ReportGenerator:
             self.styles['TeacherQuote']
         )
         self.story.append(quote)
-        self.story.append(Paragraph("— Rachel Kim, 11th Grade History Teacher, Washington",
+        self.story.append(Paragraph("- Rachel Kim, 11th Grade History Teacher, Washington",
                                    ParagraphStyle(name='QuoteAttribution4', parent=self.styles['Normal'],
                                                 fontSize=10, textColor=COLORS['slate'],
                                                 alignment=TA_CENTER, fontName='Helvetica-Oblique')))
@@ -1129,12 +1129,12 @@ class ReportGenerator:
         self.story.append(Spacer(1, 0.3*inch))
         
         conclusion_text = """
-        We stand at a pivotal moment in education. AI is not a distant future—it's here, in classrooms 
+        We stand at a pivotal moment in education. AI is not a distant future - it's here, in classrooms 
         across America, being used by 87% of teachers to enhance their practice. This report has documented 
         both the remarkable potential and the serious challenges of this technology.
         
         The data is clear: when implemented thoughtfully, AI reduces administrative burden, enables 
-        personalization at scale, and gives teachers back time for what matters most—meaningful human 
+        personalization at scale, and gives teachers back time for what matters most - meaningful human 
         connection with students. Teachers are not being replaced by AI; they're being empowered by it.
         
         But this optimistic future is not guaranteed. It will only emerge if we act intentionally on three fronts:
@@ -1150,7 +1150,7 @@ class ReportGenerator:
             "it. This requires ongoing professional development, collaborative learning, and a commitment to "
             "student-centered practice.",
             
-            "<b>Ethics:</b> We must address AI's implications honestly—questions of privacy, bias, transparency, "
+            "<b>Ethics:</b> We must address AI's implications honestly - questions of privacy, bias, transparency, "
             "and the changing nature of knowledge work. We owe it to our students to prepare them for a world "
             "where AI is ubiquitous."
         ]
@@ -1164,7 +1164,7 @@ class ReportGenerator:
         
         final_text = """
         To the teachers reading this: You are the key to AI's success in education. Your professional judgment, 
-        your knowledge of students, your pedagogical expertise—these are irreplaceable. AI is a tool that 
+        your knowledge of students, your pedagogical expertise - these are irreplaceable. AI is a tool that 
         extends your capabilities; it will never replace your humanity.
         
         To the administrators and policymakers: Your teachers are ready. 68% want more training. 87% are already 
