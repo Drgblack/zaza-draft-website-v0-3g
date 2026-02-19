@@ -15,6 +15,6 @@ jobs:
         run: |
           # U+2014 em dash, U+2013 en dash, U+2011 non-breaking hyphen
           if git grep -n -I -E $'[\u2014\u2013\u2011]' -- . ; then
-            echo "Disallowed dash found (— / – / -). Replace with '-'"
+            echo "Disallowed dash found (U+2014/U+2013/U+2011). Replace with '-'"
             exit 1
           fi
