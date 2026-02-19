@@ -1,55 +1,55 @@
 ﻿{
-    "glossary":  {
-                     "title":  "glossary.title",
-                     "subtitle":  "glossary.subtitle",
-                     "allCategories":  "All Categories"
-                 },
-    "founder":  {
-                    "hero":  {
-                                 "headline":  "Meet your fellow educator",
-                                 "subheading":  "From paint brushes to PhD – a journey shaped by education.",
-                                 "label":  "Founder \u0026 CEO",
-                                 "name":  "Dr Greg Blackburn",
-                                 "tagline":  "Learning scientist and founder of Zaza Technologies, building teacher-first AI tools that give educators their time back."
-                             },
-                    "journey":  {
-                                    "title":  "A journey shaped by education",
-                                    "quote":  "The work was tough, the environment tougher – but those years taught me resilience.",
-                                    "p1":  "My working life started in Hobart, Tasmania, with a paintbrush in hand, apprenticing as a painter and decorator while my father ran a small paint factory. After a pre-vocational course at TAFE and a four-year apprenticeship at Cascade Brewery, I realised I wanted more from my work and my education.",
-                                    "p2":  "Travel opened my eyes to how big the world really is and how far education can take you. I lived abroad, studied German, and eventually returned to Tasmania to study Administration, Information Systems and German at the University of Tasmania. Graduating with First Class Honours proved I could excel academically despite early doubts and family tensions.",
-                                    "p3":  "My career then took me to Brisbane, where I spent six years at Telstra and completed an MBA at the University of Queensland. That MBA opened doors into management roles at UQ, where I became a Business Manager and began publishing research into how people learn, solve problems and think critically in their work.",
-                                    "p4":  "It was also in Brisbane that my two daughters, Viola and Solara, were born. Fatherhood reframed everything. Success no longer meant just climbing the next rung of the ladder – it meant building a future where work left more time for people, for families and for life. Over time, that desire to create something lasting grew into what would become Zaza Technologies."
-                                },
-                    "mission":  {
-                                    "quote":  "Our mission is simple: help teachers thrive by giving them their time back.",
-                                    "attribution":  "Zaza Technologies was created to turn decades of insight into human-friendly, AI-powered tools for educators."
-                                },
-                    "whyZaza":  {
-                                    "title":  "Why I founded Zaza Technologies",
-                                    "subtitle":  "Turning a career in learning and development into teacher-first AI tools.",
-                                    "card1":  {
-                                                  "title":  "For teachers",
-                                                  "body":  "Zaza tools are designed to give teachers back hours each week by reducing repetitive writing, planning and admin, so they can focus on teaching and relationships."
-                                              },
-                                    "card2":  {
-                                                  "title":  "Built on learning science",
-                                                  "body":  "With a PhD in Professional Education and decades in learning and development, I build AI tools that respect professional judgement instead of trying to replace it."
-                                              },
-                                    "card3":  {
-                                                  "title":  "A legacy for my daughters",
-                                                  "body":  "Zaza is also a personal project – a way to turn hard-won experience into something meaningful, creating a future where time and wellbeing are valued as much as achievement."
-                                              }
-                                },
-                    "personal":  {
-                                     "title":  "A personal note from Greg",
-                                     "message1":  "Alongside my professional journey, I have listened closely to the struggles of teachers and learning professionals – late-night marking, endless report writing, and evenings swallowed by admin. AI, used well, can ease that load without sacrificing quality or care.",
-                                     "message2":  "Zaza Technologies brings together my corporate career, academic research and family life into one mission: to build humane, trustworthy AI assistants that sit quietly in the background while teachers do what they do best.",
-                                     "message3":  "If there is one lesson I hope to pass on, it is the value of betting on yourself. With perseverance, vision and education, it is possible to build work that serves both the people you teach and the people you love.",
-                                     "title2":  "Dr Greg Blackburn",
-                                     "company":  "Founder \u0026 CEO, Zaza Technologies",
-                                     "cta":  "Get in touch with our team"
-                                 }
-                },
-    "founder.personal.fullStoryIntro":  "Want the longer version of the story?",
-    "founder.personal.fullStoryLink":  "Read the full founder story"
+  "glossary": {
+    "title": "glossary.title",
+    "subtitle": "glossary.subtitle",
+    "allCategories": "All Categories"
+  },
+  "founder": {
+    "hero": {
+      "headline": "Meet your fellow educator",
+      "subheading": "From paint brushes to PhD  -  a journey shaped by education.",
+      "label": "Founder \u0026 CEO",
+      "name": "Dr Greg Blackburn",
+      "tagline": "Learning scientist and founder of Zaza Technologies, building teacher-first AI tools that give educators their time back."
+    },
+    "journey": {
+      "title": "A journey shaped by education",
+      "quote": "The work was tough, the environment tougher  -  but those years taught me resilience.",
+      "p1": "My working life started in Hobart, Tasmania, with a paintbrush in hand, apprenticing as a painter and decorator while my father ran a small paint factory. After a pre-vocational course at TAFE and a four-year apprenticeship at Cascade Brewery, I realised I wanted more from my work and my education.",
+      "p2": "Travel opened my eyes to how big the world really is and how far education can take you. I lived abroad, studied German, and eventually returned to Tasmania to study Administration, Information Systems and German at the University of Tasmania. Graduating with First Class Honours proved I could excel academically despite early doubts and family tensions.",
+      "p3": "My career then took me to Brisbane, where I spent six years at Telstra and completed an MBA at the University of Queensland. That MBA opened doors into management roles at UQ, where I became a Business Manager and began publishing research into how people learn, solve problems and think critically in their work.",
+      "p4": "It was also in Brisbane that my two daughters, Viola and Solara, were born. Fatherhood reframed everything. Success no longer meant just climbing the next rung of the ladder  -  it meant building a future where work left more time for people, for families and for life. Over time, that desire to create something lasting grew into what would become Zaza Technologies."
+    },
+    "mission": {
+      "quote": "Our mission is simple: help teachers thrive by giving them their time back.",
+      "attribution": "Zaza Technologies was created to turn decades of insight into human-friendly, AI-powered tools for educators."
+    },
+    "whyZaza": {
+      "title": "Why I founded Zaza Technologies",
+      "subtitle": "Turning a career in learning and development into teacher-first AI tools.",
+      "card1": {
+        "title": "For teachers",
+        "body": "Zaza tools are designed to give teachers back hours each week by reducing repetitive writing, planning and admin, so they can focus on teaching and relationships."
+      },
+      "card2": {
+        "title": "Built on learning science",
+        "body": "With a PhD in Professional Education and decades in learning and development, I build AI tools that respect professional judgement instead of trying to replace it."
+      },
+      "card3": {
+        "title": "A legacy for my daughters",
+        "body": "Zaza is also a personal project  -  a way to turn hard-won experience into something meaningful, creating a future where time and wellbeing are valued as much as achievement."
+      }
+    },
+    "personal": {
+      "title": "A personal note from Greg",
+      "message1": "Alongside my professional journey, I have listened closely to the struggles of teachers and learning professionals  -  late-night marking, endless report writing, and evenings swallowed by admin. AI, used well, can ease that load without sacrificing quality or care.",
+      "message2": "Zaza Technologies brings together my corporate career, academic research and family life into one mission: to build humane, trustworthy AI assistants that sit quietly in the background while teachers do what they do best.",
+      "message3": "If there is one lesson I hope to pass on, it is the value of betting on yourself. With perseverance, vision and education, it is possible to build work that serves both the people you teach and the people you love.",
+      "title2": "Dr Greg Blackburn",
+      "company": "Founder \u0026 CEO, Zaza Technologies",
+      "cta": "Get in touch with our team"
+    }
+  },
+  "founder.personal.fullStoryIntro": "Want the longer version of the story?",
+  "founder.personal.fullStoryLink": "Read the full founder story"
 }

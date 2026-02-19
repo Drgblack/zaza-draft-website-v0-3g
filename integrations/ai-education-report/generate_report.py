@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 Enhanced State of AI in Education 2025 Report Generator
 Supports multiple output formats: PDF, DOCX, HTML
@@ -30,7 +30,7 @@ def convert_pdf_to_docx(pdf_path, docx_path):
         cv = Converter(pdf_path)
         cv.convert(docx_path)
         cv.close()
-        print(f"✓ DOCX conversion complete: {docx_path}")
+        print(f"âœ“ DOCX conversion complete: {docx_path}")
         return True
     except ImportError:
         print("Error: pdf2docx not installed.")
@@ -208,7 +208,7 @@ def convert_pdf_to_html(pdf_path, html_path):
         with open(html_path, 'w', encoding='utf-8') as f:
             f.write(''.join(html_parts))
         
-        print(f"✓ HTML conversion complete: {html_path}")
+        print(f"âœ“ HTML conversion complete: {html_path}")
         return True
         
     except ImportError:
@@ -264,47 +264,48 @@ Examples:
     print("=" * 60)
     print("State of AI in Education 2025 - Report Generator")
     print("=" * 60)
-    print(f"\n📄 Generating PDF report...")
+    print(f"\nðŸ“„ Generating PDF report...")
     
     try:
         generator = ReportGenerator()
         generator.generate_report(str(pdf_path))
-        print(f"✓ PDF generated successfully: {pdf_path}")
+        print(f"âœ“ PDF generated successfully: {pdf_path}")
     except Exception as e:
-        print(f"✗ Error generating PDF: {e}")
+        print(f"âœ- Error generating PDF: {e}")
         import traceback
         traceback.print_exc()
         return 1
     
     # Convert to requested format if needed
     if args.format == 'docx':
-        print(f"\n📝 Converting to Microsoft Word format...")
+        print(f"\nðŸ“ Converting to Microsoft Word format...")
         if convert_pdf_to_docx(str(pdf_path), str(output_path)):
             # Clean up temp PDF
             if pdf_path != output_path:
                 pdf_path.unlink()
         else:
-            print("✗ DOCX conversion failed")
+            print("âœ- DOCX conversion failed")
             return 1
     
     elif args.format == 'html':
-        print(f"\n🌐 Converting to HTML format...")
+        print(f"\nðŸŒ Converting to HTML format...")
         if convert_pdf_to_html(str(pdf_path), str(output_path)):
             # Clean up temp PDF
             if pdf_path != output_path:
                 pdf_path.unlink()
         else:
-            print("✗ HTML conversion failed")
+            print("âœ- HTML conversion failed")
             return 1
     
     print("\n" + "=" * 60)
-    print("✓ Report generation complete!")
+    print("âœ“ Report generation complete!")
     print("=" * 60)
-    print(f"\n📍 Output file: {output_path.absolute()}")
-    print(f"📊 Format: {args.format.upper()}")
+    print(f"\nðŸ“ Output file: {output_path.absolute()}")
+    print(f"ðŸ“Š Format: {args.format.upper()}")
     print()
     
     return 0
 
 if __name__ == "__main__":
     sys.exit(main())
+

@@ -1,43 +1,44 @@
-﻿Param(
-  [string]$Root = "."
+﻿$ErrorActionPreference = "Stop"
+
+$repoRoot = (git rev-parse --show-toplevel) 2>$null
+if (-not $repoRoot) { throw "Not a git repo (git rev-parse failed)." }
+Set-Location $repoRoot
+
+# Only check tracked files, and only text-ish extensions.
+# This prevents scanning binaries (jpg/pdf), backups, and generated artefacts.
+$allowedExt = @(
+  ".ts",".tsx",".js",".jsx",".mjs",".cjs",
+  ".json",".md",".mdx",".txt",".html",".css",
+  ".yml",".yaml",".ps1",".py",".toml",".ini"
 )
 
-$exclude = @(
-  "\node_modules\",
-  "\.next\",
-  "\out\",
-  "\dist\",
-  "\build\",
-  "\.git\"
-)
+$files = git ls-files
+if (-not $files) { Write-Host "No tracked files found."; exit 0 }
 
-$files = Get-ChildItem -Path $Root -Recurse -File -Force -ErrorAction SilentlyContinue | Where-Object {
-  $p = $_.FullName
-  ($exclude | ForEach-Object { $p -like "*$_*" } | Where-Object { $_ } | Measure-Object).Count -eq 0
-}
-
-$bad = @()
+$offenders = @()
 
 foreach ($f in $files) {
-  try {
-    $raw = Get-Content -LiteralPath $f.FullName -Raw -ErrorAction Stop
-    if ($raw -match " - ") {
-      $bad += $f.FullName
-    }
-  } catch {
-    # Ignore unreadable files
+  $ext = [System.IO.Path]::GetExtension($f).ToLowerInvariant()
+  if ($allowedExt -notcontains $ext) { continue }
+
+  $raw = $null
+  try { $raw = Get-Content -LiteralPath $f -Raw -ErrorAction Stop } catch { continue }
+  if ($null -eq $raw) { continue }
+
+  if ($raw.Contains("-")) {
+    $offenders += (Join-Path $repoRoot $f)
   }
 }
 
-if ($bad.Count -gt 0) {
+if ($offenders.Count -gt 0) {
   Write-Host ""
-  Write-Host "Found em dashes in these files:"
-  $bad | ForEach-Object { Write-Host " - $_" }
+  Write-Host "Found em dashes in these tracked text files:"
+  $offenders | Sort-Object | ForEach-Object { Write-Host " - $_" }
   Write-Host ""
   Write-Host "Tip: replace with a hyphen (-)."
   exit 1
 }
 
-Write-Host "OK: no em dashes found."
+Write-Host "OK: no em dashes found in tracked text files."
 exit 0
 

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import {
@@ -41,7 +41,7 @@ const content = {
     why_stress_cards: [
       {
         title: "Finding the Right Words",
-        body: "It’s hard to find the right words to be both honest and encouraging at the same time. The pressure to get the tone right causes major delays.",
+        body: "Itâ€™s hard to find the right words to be both honest and encouraging at the same time. The pressure to get the tone right causes major delays.",
       },
       {
         title: "Breaking Consistency",
@@ -81,38 +81,38 @@ const content = {
       rows: [
         {
           feature: "Teacher Templates",
-          zaza: "✔",
-          chatgpt: "✖",
-          claude: "✖",
-          grammarly: "✖",
+          zaza: "âœ”",
+          chatgpt: "âœ - ",
+          claude: "âœ - ",
+          grammarly: "âœ - ",
         },
         {
           feature: "FERPA Compliant",
-          zaza: "✔",
-          chatgpt: "✖",
-          claude: "✖",
-          grammarly: "✖",
+          zaza: "âœ”",
+          chatgpt: "âœ - ",
+          claude: "âœ - ",
+          grammarly: "âœ - ",
         },
         {
           feature: "Tone Control",
-          zaza: "✔",
+          zaza: "âœ”",
           chatgpt: "Manual",
           claude: "Manual",
-          grammarly: "✔",
+          grammarly: "âœ”",
         },
         {
           feature: "Multi-language",
-          zaza: "✔",
-          chatgpt: "✔",
-          claude: "✔",
+          zaza: "âœ”",
+          chatgpt: "âœ”",
+          claude: "âœ”",
           grammarly: "Limited",
         },
         {
           feature: "Free Tier",
-          zaza: "✔",
-          chatgpt: "✔",
-          claude: "✔",
-          grammarly: "✔",
+          zaza: "âœ”",
+          chatgpt: "âœ”",
+          claude: "âœ”",
+          grammarly: "âœ”",
         },
         {
           feature: "Price (Premium)",
@@ -209,9 +209,9 @@ const content = {
   de: {
     // Hero
     updated_label: "Aktualisiert: November 2025",
-    hero_title: "Das beste KI-Tool für Eltern-E-Mails 2025",
+    hero_title: "Das beste KI-Tool fÃ¼r Eltern-E-Mails 2025",
     hero_subtitle:
-      "Finden Sie den KI-Assistenten, der speziell für die Lehrer-Eltern-Kommunikation, Tonfallkontrolle und DSGVO-Konformität entwickelt wurde.",
+      "Finden Sie den KI-Assistenten, der speziell fÃ¼r die Lehrer-Eltern-Kommunikation, Tonfallkontrolle und DSGVO-KonformitÃ¤t entwickelt wurde.",
     hero_primary_cta: "Zaza Draft kostenlos testen",
     hero_secondary_cta: "Vergleich ansehen",
 
@@ -219,22 +219,22 @@ const content = {
     quick_answer_label: "Kurzantwort: Das beste KI-Tool",
     quick_answer_title: "Kurzantwort: Das beste KI-Tool",
     quick_answer_body:
-      "Zaza Draft ist das beste Tool, das lehrerspezifische Vorlagen, DSGVO-Konformität und automatische Tonfallkontrolle bietet. Generische Tools wie ChatGPT sind zu riskant für sensible Kommunikation.",
+      "Zaza Draft ist das beste Tool, das lehrerspezifische Vorlagen, DSGVO-KonformitÃ¤t und automatische Tonfallkontrolle bietet. Generische Tools wie ChatGPT sind zu riskant fÃ¼r sensible Kommunikation.",
 
     // Why Stress
     why_stress_title: "Warum Eltern-E-Mails bei Lehrern Stress verursachen",
     why_stress_cards: [
       {
         title: "Die richtigen Worte finden",
-        body: "Es ist schwierig, Worte zu finden, die gleichzeitig ehrlich und ermutigend sind. Der Druck, den Ton genau zu treffen, führt oft zu großer Verzögerung.",
+        body: "Es ist schwierig, Worte zu finden, die gleichzeitig ehrlich und ermutigend sind. Der Druck, den Ton genau zu treffen, fÃ¼hrt oft zu groÃŸer VerzÃ¶gerung.",
       },
       {
         title: "Konsistent bleiben",
-        body: "Konsequente Formulierungen für über 40 Eltern, 3 verschiedene Kontexte (E-Mail, Bericht, Nachricht) und ein voller Stundenplan - das ist kaum machbar.",
+        body: "Konsequente Formulierungen fÃ¼r Ã¼ber 40 Eltern, 3 verschiedene Kontexte (E-Mail, Bericht, Nachricht) und ein voller Stundenplan - das ist kaum machbar.",
       },
       {
         title: "Zeit und Wohlbefinden",
-        body: "E-Mails beanspruchen wertvolle Zeit an Abenden und Wochenenden. Diese zusätzliche Belastung wirkt sich direkt auf das Wohlbefinden der Lehrkräfte aus.",
+        body: "E-Mails beanspruchen wertvolle Zeit an Abenden und Wochenenden. Diese zusÃ¤tzliche Belastung wirkt sich direkt auf das Wohlbefinden der LehrkrÃ¤fte aus.",
       },
     ],
 
@@ -242,16 +242,16 @@ const content = {
     how_ai_title: "Wie KI hilft, klare, empathische Nachrichten zu verfassen",
     how_ai_cards: [
       {
-        title: "Sofortige Entwürfe",
-        body: "Erstellt sofort klare, professionelle E-Mail-Entwürfe aus wenigen Stichpunkten und spart so 60-70 % der Schreibzeit.",
+        title: "Sofortige EntwÃ¼rfe",
+        body: "Erstellt sofort klare, professionelle E-Mail-EntwÃ¼rfe aus wenigen Stichpunkten und spart so 60-70 % der Schreibzeit.",
       },
       {
         title: "Tonfallkontrolle",
-        body: "Bietet exakte Kontrolle über Formalität, Wärme und Direktheit, damit die Nachricht so ankommt, wie Sie es meinen.",
+        body: "Bietet exakte Kontrolle Ã¼ber FormalitÃ¤t, WÃ¤rme und Direktheit, damit die Nachricht so ankommt, wie Sie es meinen.",
       },
       {
         title: "Spart Zeit",
-        body: "Spart 60-70 % der Zeit, die normalerweise für das Verfassen, Überarbeiten und Zweifeln an Elternkommunikation draufgeht.",
+        body: "Spart 60-70 % der Zeit, die normalerweise fÃ¼r das Verfassen, Ãœberarbeiten und Zweifeln an Elternkommunikation draufgeht.",
       },
     ],
 
@@ -266,64 +266,64 @@ const content = {
       rows: [
         {
           feature: "Lehrer-Vorlagen",
-          zaza: "✔",
-          chatgpt: "✖",
-          claude: "✖",
-          grammarly: "✖",
+          zaza: "âœ”",
+          chatgpt: "âœ - ",
+          claude: "âœ - ",
+          grammarly: "âœ - ",
         },
         {
           feature: "DSGVO-konform",
-          zaza: "✔",
-          chatgpt: "✖",
-          claude: "✖",
-          grammarly: "✖",
+          zaza: "âœ”",
+          chatgpt: "âœ - ",
+          claude: "âœ - ",
+          grammarly: "âœ - ",
         },
         {
           feature: "Tonfallkontrolle",
-          zaza: "✔",
+          zaza: "âœ”",
           chatgpt: "Manuell",
           claude: "Manuell",
-          grammarly: "✔",
+          grammarly: "âœ”",
         },
         {
           feature: "Mehrsprachig",
-          zaza: "✔",
-          chatgpt: "✔",
-          claude: "✔",
+          zaza: "âœ”",
+          chatgpt: "âœ”",
+          claude: "âœ”",
           grammarly: "Begrenzt",
         },
         {
           feature: "Kostenlose Stufe",
-          zaza: "✔",
-          chatgpt: "✔",
-          claude: "✔",
-          grammarly: "✔",
+          zaza: "âœ”",
+          chatgpt: "âœ”",
+          claude: "âœ”",
+          grammarly: "âœ”",
         },
         {
           feature: "Preis (Premium)",
-          zaza: "≈ 14,99€/Monat",
-          chatgpt: "≈ 20€/Monat",
-          claude: "≈ 20€/Monat",
-          grammarly: "≈ 30€/Monat",
+          zaza: "â‰ˆ 14,99â‚¬/Monat",
+          chatgpt: "â‰ˆ 20â‚¬/Monat",
+          claude: "â‰ˆ 20â‚¬/Monat",
+          grammarly: "â‰ˆ 30â‚¬/Monat",
         },
       ],
     },
 
     // Safeguards
     safeguards_title:
-      "Schutzmaßnahmen für Tonfall, Klarheit und Professionalität",
+      "SchutzmaÃŸnahmen fÃ¼r Tonfall, Klarheit und ProfessionalitÃ¤t",
     safeguards_items: [
       {
         title: "Tonfallkalibrierung",
-        body: "Passt Formalität, Wärme und Direktheit automatisch an, um sicherzustellen, dass die E-Mail wie beabsichtigt ankommt.",
+        body: "Passt FormalitÃ¤t, WÃ¤rme und Direktheit automatisch an, um sicherzustellen, dass die E-Mail wie beabsichtigt ankommt.",
       },
       {
         title: "Klarheit und Struktur",
-        body: "Strukturiert Stichpunkte in klare, professionelle Absätze mit passenden Zwischenüberschriften und Abschlussformeln.",
+        body: "Strukturiert Stichpunkte in klare, professionelle AbsÃ¤tze mit passenden ZwischenÃ¼berschriften und Abschlussformeln.",
       },
       {
-        title: "Mehrsprachige Entwürfe",
-        body: "Erstellt Entwürfe und Antworten in über 10 Sprachen unter Beibehaltung des angegebenen Tons und der Struktur.",
+        title: "Mehrsprachige EntwÃ¼rfe",
+        body: "Erstellt EntwÃ¼rfe und Antworten in Ã¼ber 10 Sprachen unter Beibehaltung des angegebenen Tons und der Struktur.",
       },
     ],
 
@@ -332,45 +332,45 @@ const content = {
     testimonials: [
       {
         quote:
-          "Mit Zaza Draft habe ich meine Eltern-E-Mails von 2 Stunden auf 30 Minuten pro Woche reduziert. Die Vorlagen verstehen unsere Lehrersprache und die Tonfallkontrolle ist perfekt für sensible Situationen.",
+          "Mit Zaza Draft habe ich meine Eltern-E-Mails von 2 Stunden auf 30 Minuten pro Woche reduziert. Die Vorlagen verstehen unsere Lehrersprache und die Tonfallkontrolle ist perfekt fÃ¼r sensible Situationen.",
         name: "Sarah M.",
         role: "Lehrerin 4. Klasse, Texas",
       },
       {
         quote:
-          "Ich nutze Zaza Draft für die Elternkommunikation und ChatGPT für die Unterrichtsplanung. Zusammen sparen sie mir 6-7 Stunden pro Woche. Eine Wende für die Work-Life-Balance.",
+          "Ich nutze Zaza Draft fÃ¼r die Elternkommunikation und ChatGPT fÃ¼r die Unterrichtsplanung. Zusammen sparen sie mir 6-7 Stunden pro Woche. Eine Wende fÃ¼r die Work-Life-Balance.",
         name: "Jessica T.",
         role: "Englischlehrerin Oberstufe, Kalifornien",
       },
     ],
 
     // FAQ
-    faq_title: "Häufig gestellte Fragen",
+    faq_title: "HÃ¤ufig gestellte Fragen",
     faq: [
       {
         question: "Ist Zaza Draft DSGVO-konform?",
         answer:
-          "Ja. Zaza Draft ist für DSGVO-konforme Verarbeitung von Schülerdaten und sensibler Kommunikation ausgelegt.",
+          "Ja. Zaza Draft ist fÃ¼r DSGVO-konforme Verarbeitung von SchÃ¼lerdaten und sensibler Kommunikation ausgelegt.",
       },
       {
         question: "Wie viel Zeit kann ich realistisch sparen?",
         answer:
-          "Die meisten Lehrkräfte berichten, dass sie 60-70 % der bisherigen Zeit für das Verfassen, Überarbeiten und Kontrolllesen von Eltern-E-Mails einsparen.",
+          "Die meisten LehrkrÃ¤fte berichten, dass sie 60-70 % der bisherigen Zeit fÃ¼r das Verfassen, Ãœberarbeiten und Kontrolllesen von Eltern-E-Mails einsparen.",
       },
       {
         question: "Funktioniert es in meiner Muttersprache?",
         answer:
-          "Zaza Draft unterstützt Entwürfe in über 10 Sprachen und kann Ton und Formulierungen an unterschiedliche kulturelle Erwartungen anpassen.",
+          "Zaza Draft unterstÃ¼tzt EntwÃ¼rfe in Ã¼ber 10 Sprachen und kann Ton und Formulierungen an unterschiedliche kulturelle Erwartungen anpassen.",
       },
       {
-        question: "Kann ich es für Zeugnisse verwenden?",
+        question: "Kann ich es fÃ¼r Zeugnisse verwenden?",
         answer:
-          "Ja. Viele Lehrkräfte verfassen zuerst Berichtskommentare mit Zaza Draft und passen sie anschließend für Eltern-E-Mails oder offizielle Systeme an.",
+          "Ja. Viele LehrkrÃ¤fte verfassen zuerst Berichtskommentare mit Zaza Draft und passen sie anschlieÃŸend fÃ¼r Eltern-E-Mails oder offizielle Systeme an.",
       },
     ],
 
     // CTA
-    cta_title: "Schreiben Sie bessere Eltern-E-Mails in kürzerer Zeit",
+    cta_title: "Schreiben Sie bessere Eltern-E-Mails in kÃ¼rzerer Zeit",
     cta_subtitle:
       "Starten Sie noch heute Ihre kostenlose Testversion. Keine Kreditkarte erforderlich.",
     cta_button: "Kostenlose Testversion starten",
@@ -383,11 +383,11 @@ const content = {
     sidebar_how_ai_saves: "Wie KI 60-70 % Schreibzeit spart",
     sidebar_comparison: "Vergleich: Zaza Draft vs. andere Tools",
     sidebar_safeguards:
-      "Schutzmaßnahmen für Tonfall, Klarheit und Professionalität",
+      "SchutzmaÃŸnahmen fÃ¼r Tonfall, Klarheit und ProfessionalitÃ¤t",
     sidebar_testimonials: "Echte Lehrerstimmen",
-    sidebar_faq: "Häufig gestellte Fragen",
+    sidebar_faq: "HÃ¤ufig gestellte Fragen",
     sidebar_reduce_stress: "Stress mit KI-Nachrichten reduzieren",
-    sidebar_student_reports: "KI für Schülerberichte",
+    sidebar_student_reports: "KI fÃ¼r SchÃ¼lerberichte",
     sidebar_learning_centre: "Gesamtes Lernzentrum",
 
     // Breadcrumb
@@ -423,7 +423,7 @@ export default function BestAIToolParentEmailsClient() {
     { label: text.breadcrumb_label, href: "/learning-centre" },
     {
       label: isGerman
-        ? "Bestes KI-Tool für Eltern-E-Mails 2025"
+        ? "Bestes KI-Tool fÃ¼r Eltern-E-Mails 2025"
         : "Best AI Tool for Parent Emails in 2025",
       href: "/best-ai-tool-parent-emails",
     },
@@ -459,7 +459,7 @@ export default function BestAIToolParentEmailsClient() {
                 <li className="text-slate-500">/</li>
                 <li className="text-slate-300">
                   {isGerman
-                    ? "Bestes KI-Tool für Eltern-E-Mails 2025"
+                    ? "Bestes KI-Tool fÃ¼r Eltern-E-Mails 2025"
                     : "Best AI Tool for Parent Emails in 2025"}
                 </li>
               </ol>
@@ -580,7 +580,7 @@ export default function BestAIToolParentEmailsClient() {
                 <CheckCircle2 className="mt-0.5 h-4 w-4 text-emerald-400" />
                 <span>
                   {isGerman
-                    ? "Vorlagen speziell für Lehrer-Eltern-Kommunikation, nicht für allgemeine E-Mails."
+                    ? "Vorlagen speziell fÃ¼r Lehrer-Eltern-Kommunikation, nicht fÃ¼r allgemeine E-Mails."
                     : "Templates purpose-built for teacher-parent communication, not generic email writing."}
                 </span>
               </li>
@@ -588,7 +588,7 @@ export default function BestAIToolParentEmailsClient() {
                 <CheckCircle2 className="mt-0.5 h-4 w-4 text-emerald-400" />
                 <span>
                   {isGerman
-                    ? "DSGVO-/FERPA-orientierte Behandlung sensibler Schülerdaten."
+                    ? "DSGVO-/FERPA-orientierte Behandlung sensibler SchÃ¼lerdaten."
                     : "FERPA/GDPR-aware handling of sensitive student information."}
                 </span>
               </li>
@@ -746,11 +746,11 @@ export default function BestAIToolParentEmailsClient() {
                   <Star className="h-4 w-4 fill-yellow-400" />
                 </div>
                 <blockquote className="mb-3 text-sm text-slate-100">
-                  “{t.quote}”
+                  â€œ{t.quote}â€
                 </blockquote>
                 <figcaption className="text-xs text-slate-400">
                   <span className="font-semibold text-slate-200">{t.name}</span>
-                  {" • "}
+                  {" â€¢ "}
                   <span>{t.role}</span>
                 </figcaption>
               </figure>
