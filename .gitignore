@@ -40,3 +40,6 @@ fix_*.mjs
 fix-*.mjs
 add_keys.py
 remove_duplicates.py
+
+.vercel
+.env*.local
