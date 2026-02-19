@@ -43,3 +43,9 @@ remove_duplicates.py
 
 .vercel
 .env*.local
+
+# Local scratch files
+_draft*.html
+.tmp.eslint.json
+tmp-*.md
+
