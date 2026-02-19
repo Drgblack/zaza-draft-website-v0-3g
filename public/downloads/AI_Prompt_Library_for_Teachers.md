@@ -7,7 +7,7 @@ _Making great teaching easier, every day_
 
 ---
 
-## ðŸ“– What's Inside
+## ðŸ“- What's Inside
 
 This library gives you ready-to-use AI prompts for every common teaching task. Each prompt is tested, teacher-approved, and designed to give you ship-ready content in minutes.
 

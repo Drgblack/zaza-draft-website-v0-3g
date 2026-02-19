@@ -26,7 +26,7 @@ export default {
       heading: "What you unlock as a beta partner",
       shaping: {
         title: "Shape the product",
-        body: "Share what matters—tone guardrails, mode toggles, and insights that reflect your classroom.",
+        body: "Share what matters-tone guardrails, mode toggles, and insights that reflect your classroom.",
       },
       saving: {
         title: "Save hours each week",
@@ -70,7 +70,7 @@ export default {
       privacy: {
         question: "Is my writing private?",
         answer:
-          "Yes. Everything stays private, encrypted, and covered by our GDPR-ready policies—no public posting and no data sharing without consent.",
+          "Yes. Everything stays private, encrypted, and covered by our GDPR-ready policies-no public posting and no data sharing without consent.",
       },
       afterBeta: {
         question: "What happens after the beta?",

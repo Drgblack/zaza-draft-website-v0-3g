@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Fix common mojibake/encoding corruptions (often UTF-8 decoded as Latin-1/Windows-1252).
  * This script is intentionally simple and safe: it only applies known string replacements.
  *
@@ -11,7 +11,7 @@ const fixes = {
   "Ã¤": "ä",
   "Ã„": "Ä",
   "Ã¶": "ö",
-  "Ã–": "Ö",
+  "Ã-": "Ö",
   "Ã¼": "ü",
   Ãœ: "Ü",
   ÃŸ: "ß",
@@ -25,8 +25,8 @@ const fixes = {
   "â€¦": "…",
 
   // Dashes (keep as-is if your project later normalises)
-  "â€“": "–",
-  "â€”": "—",
+  "â€“": "-",
+  "â€”": "-",
 
   // Bullet / misc
   "â€¢": "•",

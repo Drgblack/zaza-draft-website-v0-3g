@@ -379,7 +379,7 @@ _Reusable, reliable prompts + a quick "why this works" guide._
 > - Action items template
 > - Desired outcome
 >
-> Keep focused and practical—no filler content.
+> Keep focused and practical-no filler content.
 
 ---
 
@@ -538,7 +538,7 @@ Before using any AI-generated content, check:
 
 ---
 
-_Remember: AI doesn't replace teachers—it amplifies great teaching by handling time-consuming tasks so you can focus on what matters: your students._
+_Remember: AI doesn't replace teachers-it amplifies great teaching by handling time-consuming tasks so you can focus on what matters: your students._
 
 ---
 

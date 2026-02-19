@@ -1,4 +1,4 @@
-﻿# Comprehensive UTF-8 Encoding Fix Script
+# Comprehensive UTF-8 Encoding Fix Script
 $filePath = "lib\i18n\language-context.tsx"
 
 Write-Host "=== COMPREHENSIVE UTF-8 ENCODING FIX ===" -ForegroundColor Cyan
@@ -25,7 +25,7 @@ $content = $content -replace 'ÃƒÂ¤', 'ä'
 $content = $content -replace 'ÃƒÂ¶', 'ö'
 $content = $content -replace 'ÃƒÅ¸', 'ß'
 $content = $content -replace 'ÃƒÂ„', 'Ä'
-$content = $content -replace 'ÃƒÂ–', 'Ö'
+$content = $content -replace 'ÃƒÂ-', 'Ö'
 $content = $content -replace 'ÃƒÅ"', 'Ü'
 
 # Double-encoded patterns (Ã)
@@ -34,14 +34,14 @@ $content = $content -replace 'Ã¤', 'ä'
 $content = $content -replace 'Ã¶', 'ö'
 $content = $content -replace 'ÃŸ', 'ß'
 $content = $content -replace 'Ã„', 'Ä'
-$content = $content -replace 'Ã–', 'Ö'
+$content = $content -replace 'Ã-', 'Ö'
 $content = $content -replace 'Ãœ', 'Ü'
 
 # Additional corruption patterns
 $content = $content -replace 'â€ž', '„'
 $content = $content -replace 'â€œ', '"'
 $content = $content -replace 'â€™', '''
-$content = $content -replace 'â€"', '–'
+$content = $content -replace 'â€"', '-'
 $content = $content -replace 'â€"', ' - '
 
 # Save with proper UTF-8 encoding

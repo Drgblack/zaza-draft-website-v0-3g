@@ -379,7 +379,7 @@ _Wiederverwendbare, verlässliche Prompts + eine kurze "Warum das funktioniert"-
 > - Aktionspunkte-Vorlage
 > - Gewünschtes Ergebnis
 >
-> Bleibe fokussiert und praktisch—kein Füllinhalt.
+> Bleibe fokussiert und praktisch-kein Füllinhalt.
 
 ---
 
@@ -538,7 +538,7 @@ Bevor du von der KI generierte Inhalte verwendest, überprüfe:
 
 ---
 
-_Denk daran: KI ersetzt keine Lehrkräfte—sie verstärkt großartiges Unterrichten, indem sie zeitaufwändige Aufgaben übernimmt, damit du dich auf das Wesentliche konzentrieren kannst: deine Schüler._
+_Denk daran: KI ersetzt keine Lehrkräfte-sie verstärkt großartiges Unterrichten, indem sie zeitaufwändige Aufgaben übernimmt, damit du dich auf das Wesentliche konzentrieren kannst: deine Schüler._
 
 ---
 

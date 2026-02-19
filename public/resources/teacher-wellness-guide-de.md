@@ -1,5 +1,5 @@
 ---
-title: Leitfaden für Lehrkräfte-Wohlbefinden – Nachhaltige Strategien gegen Stress und Burnout
+title: Leitfaden für Lehrkräfte-Wohlbefinden - Nachhaltige Strategien gegen Stress und Burnout
 date: 2024-12-15
 tags:
   - Lehrer-Wohlbefinden
@@ -21,7 +21,7 @@ _Nachhaltige Strategien, um Stress zu bewältigen, Burnout vorzubeugen und die F
 2. **Probiere die Quick Wins** aus (dauern meist unter 5 Minuten).
 3. **Vertiefe die Strategien** für langfristigen Erfolg.
 4. **Präventionstipps** helfen dir, Stressfallen zukünftig zu umgehen.
-5. **Halte diesen Leitfaden griffbereit** – nutze ihn als Erinnerung und Motivation.
+5. **Halte diesen Leitfaden griffbereit** - nutze ihn als Erinnerung und Motivation.
 
 ### Bevor du in den Stress-Modus schaltest
 
@@ -47,13 +47,13 @@ _Nachhaltige Strategien, um Stress zu bewältigen, Burnout vorzubeugen und die F
 
 ## A. Die mentale Last reduzieren (Mental Load)
 
-### Problem: Der Kopf ist voll – ständiges Grübeln über Aufgaben
+### Problem: Der Kopf ist voll - ständiges Grübeln über Aufgaben
 
 **Quick Win (3 Minuten):**
 
 1. Mache einen **Brain Dump**: Schreibe alles auf, was dir durch den Kopf geht (Korrigieren, Elternabende, Materialien).
 2. Ordne die Liste danach, was du **heute** angehen musst und was warten kann.
-3. Lege die Liste weg – dein Gehirn weiß, dass die Informationen sicher sind.
+3. Lege die Liste weg - dein Gehirn weiß, dass die Informationen sicher sind.
 
 **Detaillierte Strategien:**
 
@@ -85,18 +85,18 @@ _Nachhaltige Strategien, um Stress zu bewältigen, Burnout vorzubeugen und die F
 **Detaillierte Strategien:**
 
 - **Priorisiere: Weniger ist mehr:** Reduziere die Komplexität deiner Materialien. _Muss_ das Arbeitsblatt wirklich in Farbe sein? _Müssen_ alle Folien perfekt gestaltet sein?
-- **Recycling:** Nutze deine Materialien aus dem letzten Jahr wieder – ungeprüft! Spare die Perfektion für Notfälle auf.
+- **Recycling:** Nutze deine Materialien aus dem letzten Jahr wieder - ungeprüft! Spare die Perfektion für Notfälle auf.
 - **Die 80/20-Regel (Pareto-Prinzip):** 80 % der Ergebnisse kommen von 20 % deines Aufwands. Identifiziere die 20 % (Kernbotschaft, klare Struktur) und stoppe, wenn sie erreicht sind.
 
 ---
 
 ## B. Selbstfürsorge im Schulalltag verankern
 
-### Problem: Keine Zeit für Pausen – ständiges Durcharbeiten
+### Problem: Keine Zeit für Pausen - ständiges Durcharbeiten
 
 **Quick Win (5 Minuten):**
 
-1. Stelle einen Timer, der dich alle 60–90 Minuten daran erinnert, **aufzustehen**.
+1. Stelle einen Timer, der dich alle 60-90 Minuten daran erinnert, **aufzustehen**.
 2. Gehe kurz an die frische Luft oder strecke dich.
 
 **Detaillierte Strategien:**
@@ -107,7 +107,7 @@ _Nachhaltige Strategien, um Stress zu bewältigen, Burnout vorzubeugen und die F
 
 **Prävention:**
 
-- Nimm dir fest vor, nur zwei Tassen Kaffee zu trinken und stattdessen Wasser zu trinken – Dehydrierung verstärkt Erschöpfung.
+- Nimm dir fest vor, nur zwei Tassen Kaffee zu trinken und stattdessen Wasser zu trinken - Dehydrierung verstärkt Erschöpfung.
 - Lege feste **Selbstfürsorge-Termine** in deinen Kalender (z. B. Sport, Lesen) und behandle sie wie eine Dienstbesprechung.
 
 ---
@@ -176,14 +176,14 @@ _Nachhaltige Strategien, um Stress zu bewältigen, Burnout vorzubeugen und die F
 
 **Quick Win (1 Minute):**
 
-- Denke an den größten Erfolg der letzten Woche – ein Schüler-Aha-Erlebnis, eine gelungene Stunde. Schreibe es auf.
+- Denke an den größten Erfolg der letzten Woche - ein Schüler-Aha-Erlebnis, eine gelungene Stunde. Schreibe es auf.
 
 **Detaillierte Strategien:**
 
 - **Wofür bin ich hier?** Schreibe deine **drei Hauptwerte** auf, die dich zum Unterrichten motiviert haben (z. B. _Wissensvermittlung, Beziehungen aufbauen, Kreativität fördern_). Überprüfe wöchentlich, ob deine Arbeit diese Werte widerspiegelt.
 - **Kleine Experimente:** Baue ein neues, kleines Element in den Unterricht ein (eine neue Methode, ein Spiel, eine kurze Erzählung), das dir Spaß macht.
 - **Netzwerken:** Tausche dich regelmäßig mit positiven, unterstützenden Kolleginnen und Kollegen aus (Suche dir **Mut-Macher** statt **Jammer-Kollegen**).
-- **Feiere Erfolge:** Erkenne deine eigenen Anstrengungen an. Jedes Ende einer **Themenreihe** oder die **Notenbekanntgabe** ist ein Erfolg – zelebriere es, auch allein.
+- **Feiere Erfolge:** Erkenne deine eigenen Anstrengungen an. Jedes Ende einer **Themenreihe** oder die **Notenbekanntgabe** ist ein Erfolg - zelebriere es, auch allein.
 
 ---
 
