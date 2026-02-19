@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import {
@@ -58,7 +58,7 @@ const content = {
     how_ai_cards: [
       {
         title: "Instant Drafts",
-        body: "Instantly drafts clear, professional emails from a few bullet points, saving 60–70% of the writing time.",
+        body: "Instantly drafts clear, professional emails from a few bullet points, saving 60-70% of the writing time.",
       },
       {
         title: "Tone Control",
@@ -66,7 +66,7 @@ const content = {
       },
       {
         title: "Saves Time",
-        body: "Saves 60–70% of the time usually spent drafting, reviewing, and worrying about parent communication.",
+        body: "Saves 60-70% of the time usually spent drafting, reviewing, and worrying about parent communication.",
       },
     ],
 
@@ -152,7 +152,7 @@ const content = {
       },
       {
         quote:
-          "I use Zaza Draft for parent communication and ChatGPT for lesson planning. Together they save me 6–7 hours per week. Game changer for work-life balance.",
+          "I use Zaza Draft for parent communication and ChatGPT for lesson planning. Together they save me 6-7 hours per week. Game changer for work-life balance.",
         name: "Jessica T.",
         role: "High School English, California",
       },
@@ -169,7 +169,7 @@ const content = {
       {
         question: "How much time can I save?",
         answer:
-          "Most teachers report saving 60–70% of the time they previously spent drafting, revising, and editing parent emails.",
+          "Most teachers report saving 60-70% of the time they previously spent drafting, revising, and editing parent emails.",
       },
       {
         question: "Does it work in my native language?",
@@ -193,7 +193,7 @@ const content = {
     sidebar_continue_learning: "Continue Learning",
     sidebar_quick_answer: "Quick Answer",
     sidebar_why_stress: "Why Parent Emails Cause Teacher Stress",
-    sidebar_how_ai_saves: "How AI Saves 60–70% of Writing Time",
+    sidebar_how_ai_saves: "How AI Saves 60-70% of Writing Time",
     sidebar_comparison: "Comparison: Zaza Draft vs. other tools",
     sidebar_safeguards: "Safeguards for tone, clarity, and professionalism",
     sidebar_testimonials: "Real teacher testimonials",
@@ -230,7 +230,7 @@ const content = {
       },
       {
         title: "Konsistent bleiben",
-        body: "Konsequente Formulierungen für über 40 Eltern, 3 verschiedene Kontexte (E-Mail, Bericht, Nachricht) und ein voller Stundenplan – das ist kaum machbar.",
+        body: "Konsequente Formulierungen für über 40 Eltern, 3 verschiedene Kontexte (E-Mail, Bericht, Nachricht) und ein voller Stundenplan - das ist kaum machbar.",
       },
       {
         title: "Zeit und Wohlbefinden",
@@ -243,7 +243,7 @@ const content = {
     how_ai_cards: [
       {
         title: "Sofortige Entwürfe",
-        body: "Erstellt sofort klare, professionelle E-Mail-Entwürfe aus wenigen Stichpunkten und spart so 60–70 % der Schreibzeit.",
+        body: "Erstellt sofort klare, professionelle E-Mail-Entwürfe aus wenigen Stichpunkten und spart so 60-70 % der Schreibzeit.",
       },
       {
         title: "Tonfallkontrolle",
@@ -251,7 +251,7 @@ const content = {
       },
       {
         title: "Spart Zeit",
-        body: "Spart 60–70 % der Zeit, die normalerweise für das Verfassen, Überarbeiten und Zweifeln an Elternkommunikation draufgeht.",
+        body: "Spart 60-70 % der Zeit, die normalerweise für das Verfassen, Überarbeiten und Zweifeln an Elternkommunikation draufgeht.",
       },
     ],
 
@@ -338,7 +338,7 @@ const content = {
       },
       {
         quote:
-          "Ich nutze Zaza Draft für die Elternkommunikation und ChatGPT für die Unterrichtsplanung. Zusammen sparen sie mir 6–7 Stunden pro Woche. Eine Wende für die Work-Life-Balance.",
+          "Ich nutze Zaza Draft für die Elternkommunikation und ChatGPT für die Unterrichtsplanung. Zusammen sparen sie mir 6-7 Stunden pro Woche. Eine Wende für die Work-Life-Balance.",
         name: "Jessica T.",
         role: "Englischlehrerin Oberstufe, Kalifornien",
       },
@@ -355,7 +355,7 @@ const content = {
       {
         question: "Wie viel Zeit kann ich realistisch sparen?",
         answer:
-          "Die meisten Lehrkräfte berichten, dass sie 60–70 % der bisherigen Zeit für das Verfassen, Überarbeiten und Kontrolllesen von Eltern-E-Mails einsparen.",
+          "Die meisten Lehrkräfte berichten, dass sie 60-70 % der bisherigen Zeit für das Verfassen, Überarbeiten und Kontrolllesen von Eltern-E-Mails einsparen.",
       },
       {
         question: "Funktioniert es in meiner Muttersprache?",
@@ -380,7 +380,7 @@ const content = {
     sidebar_continue_learning: "Weiter lernen",
     sidebar_quick_answer: "Kurzantwort",
     sidebar_why_stress: "Warum Eltern-E-Mails Stress verursachen",
-    sidebar_how_ai_saves: "Wie KI 60–70 % Schreibzeit spart",
+    sidebar_how_ai_saves: "Wie KI 60-70 % Schreibzeit spart",
     sidebar_comparison: "Vergleich: Zaza Draft vs. andere Tools",
     sidebar_safeguards:
       "Schutzmaßnahmen für Tonfall, Klarheit und Professionalität",
@@ -581,7 +581,7 @@ export default function BestAIToolParentEmailsClient() {
                 <span>
                   {isGerman
                     ? "Vorlagen speziell für Lehrer-Eltern-Kommunikation, nicht für allgemeine E-Mails."
-                    : "Templates purpose-built for teacher–parent communication, not generic email writing."}
+                    : "Templates purpose-built for teacher-parent communication, not generic email writing."}
                 </span>
               </li>
               <li className="flex gap-2">

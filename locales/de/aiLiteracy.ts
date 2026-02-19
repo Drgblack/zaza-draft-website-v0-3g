@@ -1,4 +1,4 @@
-﻿const aiLiteracy = {
+const aiLiteracy = {
   title: "KI für Bildung meistern",
   subtitle:
     "Bauen Sie Ihre KI-Expertise mit umfassenden Kursen auf, die Ihnen helfen, KI in Ihren Unterricht zu integrieren.",
@@ -17,7 +17,7 @@
   advancedDesc: "Tiefes Eintauchen in fortgeschrittene KI-Konzepte",
   coursesTitle: "Alle Kurse",
   coursesSubtitle:
-    "Vom Grundverständnis bis zur Meisterschaft – strukturierte Lernpfade für jeden Lehrertyp",
+    "Vom Grundverständnis bis zur Meisterschaft - strukturierte Lernpfade für jeden Lehrertyp",
   certificationTitle: "KI-Bildungszertifizierung",
   certificationSubtitle:
     "Erwerben Sie anerkannte Qualifikationen, die Ihre KI-Kompetenz und pädagogische Expertise nachweisen",
