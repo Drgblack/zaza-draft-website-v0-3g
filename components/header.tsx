@@ -6,12 +6,10 @@ import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
-import { SignupModal } from "@/components/signup-modal";
 import { track } from "@/lib/analytics";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [signupOpen, setSignupOpen] = useState(false);
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const [learningCentreDropdownOpen, setLearningCentreDropdownOpen] =
@@ -27,6 +25,10 @@ export function Header() {
   });
   const { language, setLanguage, t } = useLanguage();
   const L = (de: string, en: string) => (language === "de" ? de : en);
+  const headerCtaHref =
+    language === "de" ? "/de/early-access" : "/early-access";
+  const headerCtaLabel =
+    language === "de" ? "Early Access" : "Join Early Access";
 
   useEffect(() => {
     if (!mobileMenuOpen) return;
@@ -337,15 +339,22 @@ export function Header() {
               </button>
             </div>
 
-            {/* Desktop Get Started CTA */}
+            {/* Desktop early access CTA */}
             <Button
-              onClick={() => {
-                track("cta_click", { location: "header", id: "get_started" });
-                setSignupOpen(true);
-              }}
+              asChild
               className="ml-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-purple-500/25"
             >
-              {t("nav.getStarted")}
+              <Link
+                href={headerCtaHref}
+                onClick={() =>
+                  track("cta_click", {
+                    location: "header",
+                    id: "join_early_access",
+                  })
+                }
+              >
+                {headerCtaLabel}
+              </Link>
             </Button>
           </div>
         </nav>
@@ -456,17 +465,21 @@ export function Header() {
               <div className="border-t border-white/10 px-4 py-6">
                 <div className="space-y-3">
                   <Button
-                    onClick={() => {
-                      track("cta_click", {
-                        location: "header",
-                        id: "mobile_get_started",
-                      });
-                      setSignupOpen(true);
-                      setMobileMenuOpen(false);
-                    }}
+                    asChild
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium py-3 rounded-full shadow-lg shadow-purple-500/25"
                   >
-                    {t("nav.getStarted")}
+                    <Link
+                      href={headerCtaHref}
+                      onClick={() => {
+                        track("cta_click", {
+                          location: "header",
+                          id: "mobile_join_early_access",
+                        });
+                        setMobileMenuOpen(false);
+                      }}
+                    >
+                      {headerCtaLabel}
+                    </Link>
                   </Button>
                 </div>
                 <div className="mt-6 space-y-2">
@@ -490,8 +503,6 @@ export function Header() {
           </div>
         )}
       </header>
-
-      <SignupModal open={signupOpen} onOpenChange={setSignupOpen} />
     </>
   );
 }

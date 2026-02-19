@@ -49,6 +49,14 @@ export default function SuiteClient() {
       : "We are onboarding our first cohort of teachers now. Real quotes will appear here as soon as they are collected. If you would like to shape Draft, join early access.";
   const betaFeedbackCta =
     language === "de" ? "Early Access" : "Join Early Access";
+  const neutralEndorsementLine =
+    language === "de"
+      ? "Entwickelt mit Lehrkräften. Echtes Feedback erscheint hier, sobald unsere Beta wächst."
+      : "Built with teacher input. Real feedback will appear here as our beta cohort grows.";
+  const draftFirstLine =
+    language === "de"
+      ? "Mit Draft starten Sie am schnellsten. Weitere Apps folgen bald."
+      : "Draft is the quickest way to start. Other apps are coming soon.";
 
   useEffect(() => {
     if (process.env.NODE_ENV !== "development") return;
@@ -95,29 +103,12 @@ export default function SuiteClient() {
         </div>
       </section>
 
-      {/* LOGOS STRIP */}
+      {/* Neutral trust strip */}
       <section className="py-8">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
-          <p className="text-center text-sm text-[#64748B] mb-4">
-            {t("suite.logos.title")}
+          <p className="text-center text-sm text-[#94A3B8]">
+            {neutralEndorsementLine}
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[#94A3B8]">
-            <span className="text-sm sm:text-base font-medium opacity-80">
-              {t("suite.logos.item1")}
-            </span>
-            <span className="text-sm sm:text-base font-medium opacity-80">
-              {t("suite.logos.item2")}
-            </span>
-            <span className="text-sm sm:text-base font-medium opacity-80">
-              {t("suite.logos.item3")}
-            </span>
-            <span className="text-sm sm:text-base font-medium opacity-80">
-              {t("suite.logos.item4")}
-            </span>
-            <span className="text-sm sm:text-base font-medium opacity-80">
-              {t("suite.logos.item5")}
-            </span>
-          </div>
         </div>
       </section>
 
@@ -172,23 +163,6 @@ export default function SuiteClient() {
             {t("suite.coreApps.title")}
           </h2>
           <div className="grid gap-6 md:gap-8">
-            <Card title="Zaza Teach">
-              <p>{t("suite.teach.body")}</p>
-              <ul className="mt-4 list-disc pl-6 space-y-2 text-[#94A3B8]">
-                <li>{t("suite.teach.li1")}</li>
-                <li>{t("suite.teach.li2")}</li>
-                <li>{t("suite.teach.li3")}</li>
-              </ul>
-              <div className="mt-6">
-                <Link
-                  href="/products/teach"
-                  className="inline-flex h-11 items-center justify-center rounded-xl border-2 border-[#8B5CF6] bg-transparent text-[#A78BFA] px-6 font-semibold hover:bg-[#8B5CF6]/10 transition-all"
-                >
-                  {t("suite.teach.cta")}
-                </Link>
-              </div>
-            </Card>
-
             <Card title="Zaza Draft">
               <p>{t("suite.draft.body")}</p>
               <ul className="mt-4 list-disc pl-6 space-y-2 text-[#94A3B8]">
@@ -202,6 +176,23 @@ export default function SuiteClient() {
                   className="inline-flex h-11 items-center justify-center rounded-xl border-2 border-[#8B5CF6] bg-transparent text-[#A78BFA] px-6 font-semibold hover:bg-[#8B5CF6]/10 transition-all"
                 >
                   {t("suite.draft.cta")}
+                </Link>
+              </div>
+            </Card>
+
+            <Card title="Zaza Teach">
+              <p>{t("suite.teach.body")}</p>
+              <ul className="mt-4 list-disc pl-6 space-y-2 text-[#94A3B8]">
+                <li>{t("suite.teach.li1")}</li>
+                <li>{t("suite.teach.li2")}</li>
+                <li>{t("suite.teach.li3")}</li>
+              </ul>
+              <div className="mt-6">
+                <Link
+                  href="/products/teach"
+                  className="inline-flex h-11 items-center justify-center rounded-xl border-2 border-[#8B5CF6] bg-transparent text-[#A78BFA] px-6 font-semibold hover:bg-[#8B5CF6]/10 transition-all"
+                >
+                  {t("suite.teach.cta")}
                 </Link>
               </div>
             </Card>
@@ -443,6 +434,7 @@ export default function SuiteClient() {
               {t("suite.cta.secondary")}
             </Link>
           </div>
+          <p className="mt-4 text-sm text-white/80">{draftFirstLine}</p>
         </div>
       </section>
     </main>

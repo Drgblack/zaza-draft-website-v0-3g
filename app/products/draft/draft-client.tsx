@@ -22,6 +22,22 @@ export default function DraftClient() {
     language === "de"
       ? "Du siehst Zaza Draft - den ruhigen, sicheren E-Mail-Co-Writer für Lehrkräfte."
       : "You're viewing Zaza Draft - the calm, safe email co-writer for teachers.";
+  const heroExamplesLabel =
+    language === "de" ? "Beispiele ansehen" : "See examples";
+  const protectionHeading =
+    language === "de" ? "Wie Draft Sie schützt" : "How Draft protects you";
+  const protectionBullets =
+    language === "de"
+      ? [
+          "Keine erfundenen Details - Draft erfindet keine Informationen zu Schülern oder Elternkontakten.",
+          "Sie behalten die Kontrolle - Sie prüfen und bearbeiten jede Nachricht vor dem Senden.",
+          "Schultauglich als Standard - Leitplanken halten Ton und Sprache professionell und passend.",
+        ]
+      : [
+          "No invented details - Draft does not make up student information or parent interactions.",
+          "You stay in control - You approve and edit every message before sending.",
+          "School-safe by default - Tone guardrails keep language professional and appropriate.",
+        ];
   const nextStepsHeading =
     language === "de" ? "Wie geht es weiter" : "What happens next";
   const commitmentLine =
@@ -184,7 +200,7 @@ export default function DraftClient() {
                         })
                       }
                     >
-                      {t("products.draft.hero.cta.secondary")}
+                      {heroExamplesLabel}
                     </Link>
                   </Button>
                 </div>
@@ -204,6 +220,27 @@ export default function DraftClient() {
                 />
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Protection micro section */}
+        <section className="py-6">
+          <div className="mx-auto max-w-4xl px-6 lg:px-8">
+            <Card className="bg-[#111827] border-[#1F2937] p-5">
+              <h2 className="text-lg md:text-xl font-semibold text-[#F9FAFB] mb-3">
+                {protectionHeading}
+              </h2>
+              <ul className="space-y-2">
+                {protectionBullets.map((bullet) => (
+                  <li
+                    key={bullet}
+                    className="text-sm text-[#CBD5E1] leading-relaxed"
+                  >
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            </Card>
           </div>
         </section>
 
