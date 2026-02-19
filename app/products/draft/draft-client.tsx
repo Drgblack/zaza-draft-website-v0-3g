@@ -17,11 +17,13 @@ export default function DraftClient() {
   const earlyAccessHref =
     language === "de" ? "/de/early-access" : "/early-access";
   const aboutFounderHref =
-    language === "de" ? "/de/about/founder" : "/about/founder";
+    language === "de" ? "/de/about/founder-story" : "/about/founder-story";
   const heroContextLine =
     language === "de"
-      ? "Du siehst Zaza Draft - den Co-Writer für Eltern- und Schul-E-Mails."
-      : "You are viewing Zaza Draft - the parent and school email co-writer.";
+      ? "Du siehst Zaza Draft - den ruhigen, sicheren E-Mail-Co-Writer für Lehrkräfte."
+      : "You're viewing Zaza Draft - the calm, safe email co-writer for teachers.";
+  const nextStepsHeading =
+    language === "de" ? "Wie geht es weiter" : "What happens next";
   const commitmentLine =
     language === "de"
       ? "Early Access ist kostenlos. Erhalte deinen ersten Entwurf in Minuten. Keine Karte erforderlich."
@@ -29,14 +31,14 @@ export default function DraftClient() {
   const nextSteps =
     language === "de"
       ? [
-          "Teile kurz deinen Kontext (30 Sekunden)",
-          "Erhalte deinen ersten Draft-Entwurf",
-          "Wir laden dich in die Beta-Kohorte ein",
+          "Early Access beitreten (30 Sekunden)",
+          "Wir senden dir eine Einladung, sobald dein Zugang bereit ist",
+          "Ersten Entwurf kostenlos testen - keine Karte erforderlich",
         ]
       : [
-          "Tell us your school context (30 seconds)",
-          "Get your first Draft output",
-          "We invite you into the beta cohort",
+          "Join early access (30 seconds)",
+          "We email you an invite when your access is ready",
+          "Try your first draft free - no card required",
         ];
   const betaFeedbackHeading =
     language === "de"
@@ -50,14 +52,14 @@ export default function DraftClient() {
     language === "de" ? "Early Access" : "Join Early Access";
   const founderHeading =
     language === "de"
-      ? "Entwickelt mit Lernwissenschaft - nicht mit generischer KI"
-      : "Built with learning science, not generic AI";
+      ? "Von einem Bildungsexperten entwickelt"
+      : "Built by a learning expert";
   const founderBody =
     language === "de"
-      ? "Zaza Draft wurde von Dr Greg Blackburn (PhD, Professional Education) entwickelt - mit 20 Jahren Erfahrung in Learning und Education Technology. Ziel ist klar: Lehrkräften helfen, auch unter Druck sicher, ruhig und professionell zu kommunizieren."
-      : "Zaza Draft is built by Dr Greg Blackburn (PhD, Professional Education) with 20 years in learning and education technology. The goal is simple - help teachers communicate safely, calmly, and professionally, even under pressure.";
+      ? "Hallo, ich bin Dr Greg Blackburn (PhD Professional Education). Seit 20 Jahren arbeite ich in Learning und EdTech - nah an Lehrkräften. Draft hilft, anspruchsvolle Schulkommunikation ruhig, sicher und professionell zu formulieren."
+      : "Hi, I'm Dr Greg Blackburn (PhD Professional Education). I've spent 20 years in learning and education technology, working closely with teachers. Draft exists to make high-stakes school communication feel safe and calm.";
   const founderLinkLabel =
-    language === "de" ? "Zum Gründer" : "Meet the founder";
+    language === "de" ? "Gründerstory lesen" : "Read the founder story";
 
   const features = [
     {
@@ -140,6 +142,16 @@ export default function DraftClient() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4 sm:items-start">
                   <div className="space-y-2">
+                    <div className="rounded-xl border border-[#374151] bg-[#111827]/60 p-3 text-left">
+                      <p className="text-xs font-semibold text-[#E5E7EB] mb-2">
+                        {nextStepsHeading}
+                      </p>
+                      <ol className="list-decimal pl-4 space-y-1 text-xs text-[#94A3B8]">
+                        {nextSteps.map((step) => (
+                          <li key={step}>{step}</li>
+                        ))}
+                      </ol>
+                    </div>
                     <Button
                       asChild
                       size="lg"
@@ -156,11 +168,6 @@ export default function DraftClient() {
                       </Link>
                     </Button>
                     <p className="text-xs text-[#9CA3AF]">{commitmentLine}</p>
-                    <ol className="list-decimal pl-4 space-y-1 text-xs text-[#94A3B8]">
-                      {nextSteps.map((step) => (
-                        <li key={step}>{step}</li>
-                      ))}
-                    </ol>
                   </div>
                   <Button
                     asChild
@@ -481,7 +488,7 @@ export default function DraftClient() {
               </p>
               <Link
                 href={aboutFounderHref}
-                className="inline-block mt-4 text-sm text-[#A78BFA] hover:text-[#C4B5FD]"
+                className="inline-flex mt-4 h-10 items-center justify-center rounded-xl border border-[#A78BFA]/50 px-4 text-sm text-[#A78BFA] hover:bg-[#A78BFA]/10 hover:text-[#C4B5FD]"
               >
                 {founderLinkLabel}
               </Link>
