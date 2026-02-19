@@ -564,15 +564,19 @@ const translationsEn: Record<string, string> = {
   "hero.headline": "Write emails that are",
   "hero.headlineAccent": "safe to send.",
   "hero.subheading":
-    "Draft helps teachers produce clear, measured wording for parent and admin communication—written as though it could be forwarded, screenshot, or read out of context. Defensible wording, a clean paper trail, and a professional co-writer—not a replacement. Less rewriting. Less exposure. More headspace.",
+    "Stop agonising over every word. Draft helps teachers write calm, defensible messages for parent and school communication, even when the thread is under pressure.",
   "hero.ctaPrimary": "Join Early Access",
-  "hero.ctaSecondary": "See Examples",
+  "hero.ctaSecondary": "See examples",
+  "hero.earlyAccessLine": "Free during early access. No card required.",
   "hero.privacyLine": "No student names needed. Not trained on your inputs.",
   "hero.trustIndicators.hallucinationSafe": "No invented student facts",
   "hero.trustIndicators.ferpaCompliant": "FERPA-ready",
   "hero.trustIndicators.teachers": "Built with teachers",
   "hero.trustClarifier":
     "Draft rewrites teacher-provided text. Schools remain the data controller; Draft is built for privacy-first handling of communication drafts.",
+  "hero.founderLine":
+    "Built by Dr Greg Blackburn (PhD, Professional Education) for teacher-first communication safety.",
+  "hero.founderLink": "Read the founder story",
   "situations.title": "Situations you'll recognise",
   "situations.items.gradeDispute": "A grade dispute with admin CC'd.",
   "situations.items.accidentalCC": 'An "accidental" CC/BCC or wrong recipient.',
@@ -644,10 +648,16 @@ const translationsEn: Record<string, string> = {
     "Parent emails, grading comments, and reports still need care and precision. Draft helps you finish them with less mental strain so your energy stays with students.",
   "problem.stats.parentEmails.value": "Weekly",
   "problem.stats.parentEmails.label": "Parent Emails",
+  "problem.stats.parentEmails.note":
+    "A single unclear sentence can become a parent complaint by Monday morning.",
   "problem.stats.reportCards.value": "Each term",
   "problem.stats.reportCards.label": "Report Cards",
+  "problem.stats.reportCards.note":
+    "Comments need to stay fair and defensible when families or leaders review them later.",
   "problem.stats.gradingFeedback.value": "Ongoing",
   "problem.stats.gradingFeedback.label": "Grading Feedback",
+  "problem.stats.gradingFeedback.note":
+    "Fast feedback still needs the tone and wording that protect professional judgement.",
 
   // Solution/Mission Section
   "solution.heading":
@@ -741,7 +751,7 @@ const translationsEn: Record<string, string> = {
     "Criterion-based comments, rubric feedback",
   "useCases.cards.schoolCommunications.title": "School Communications",
   "useCases.cards.schoolCommunications.description":
-    "Draft newsletters and announcements professionally",
+    "Draft newsletters and family updates with tone checks across languages",
   "useCases.cards.schoolCommunications.examples":
     "Updates, event notices, policy communications",
   "useCases.cards.referenceLetters.title": "Reference Letters",
@@ -814,9 +824,9 @@ const translationsEn: Record<string, string> = {
   "whyChoose.benefits.saveTime.description":
     "Less rewriting and second-guessing in sensitive moments",
   "whyChoose.benefits.breakBarriers.title":
-    "Communicate clearly across languages",
+    "Hold boundaries in difficult threads",
   "whyChoose.benefits.breakBarriers.description":
-    "Translate family communication while keeping professional tone",
+    "Keep communication calm and professional when pressure is high",
 
   // Testimonials Section
   "testimonials.heading": "What teachers say",
@@ -975,16 +985,23 @@ const translationsEn: Record<string, string> = {
   "products.draft.interface.heading": "Guided Drafting Interface",
   "products.draft.interface.body":
     "Tone guardrails, channel-aware modes, and language settings live together in an intuitive workspace so every draft sounds calm and confident while you help steer the early access programme.",
-  "products.draft.insights.imageAlt": "Zaza Draft insights dashboard",
-  "products.draft.interface.imageAlt": "Zaza Draft guided drafting interface",
+  "products.draft.insights.imageAlt":
+    "Product screenshot of the Draft insights dashboard",
+  "products.draft.interface.imageAlt":
+    "Product screenshot of the Draft writing interface",
 
   "products.draft.whoItsFor.title": "Perfect for",
   "products.draft.whoItsFor.item1":
-    "Teachers juggling parent communications after hours",
+    "Secondary teachers managing grade disputes after hours",
   "products.draft.whoItsFor.item2":
-    "Educators turning quick notes into human report comments",
+    "Primary teachers handling behaviour escalations and parent complaints",
   "products.draft.whoItsFor.item3":
-    "School staff who need respectful, concise messages without stress",
+    "School leaders and coordinators who need defensible wording fast",
+  // TODO: add citation/source URL
+  "products.draft.situations.statLine":
+    "43% of teachers report significant weekly time spent on parent communication.",
+  "products.draft.situations.proofLine":
+    "Research suggests a large share of teachers spend significant time each week on parent communication. We are building Draft to reduce that load.",
 
   "products.draft.change.title": "What changes with Draft",
   "products.draft.change.step1":
@@ -2109,9 +2126,11 @@ const translationsDe: Record<string, string> = {
   "hero.headline": "Schreibe E-Mails, die",
   "hero.headlineAccent": "du sicher senden kannst.",
   "hero.subheading":
-    "Draft hilft dir, klare, sachliche Formulierungen für Eltern- und Schulleitungskommunikation zu erstellen – so geschrieben, als könnten sie weitergeleitet, gescreenshotet oder später geprüft werden. Abgesicherte Formulierungen, eine saubere Dokumentationsspur und ein professioneller Co-Writer – kein Ersatz. Weniger Umschreiben. Weniger Risiko. Mehr Kopf frei.",
+    "Hör auf, jedes Wort zu zerdenken. Draft hilft dir, ruhige und belastbare Nachrichten für Eltern- und Schulkommunikation zu schreiben, auch wenn der Austausch unter Druck steht.",
   "hero.ctaPrimary": "Early Access beitreten",
   "hero.ctaSecondary": "Beispiele ansehen",
+  "hero.earlyAccessLine":
+    "Kostenlos im Early Access. Keine Karte erforderlich.",
   "hero.privacyLine":
     "Keine Schülernamen nötig. Nicht auf deinen Eingaben trainiert.",
   "hero.trustIndicators.hallucinationSafe":
@@ -2120,6 +2139,9 @@ const translationsDe: Record<string, string> = {
   "hero.trustIndicators.teachers": "Mit Lehrkräften entwickelt",
   "hero.trustClarifier":
     "Draft überarbeitet von Lehrkräften bereitgestellten Text. Schulen bleiben Datenverantwortliche; Draft ist für den datenschutzorientierten Umgang mit Kommunikationsentwürfen entwickelt.",
+  "hero.founderLine":
+    "Entwickelt von Dr Greg Blackburn (PhD, Professional Education) für sichere Kommunikation aus Lehrkraft-Perspektive.",
+  "hero.founderLink": "Gründerstory lesen",
   "situations.title": "Situationen, die du kennen wirst",
   "situations.items.gradeDispute": "Notenstreit mit Schulleitung im CC.",
   "situations.items.accidentalCC":
@@ -2193,10 +2215,16 @@ const translationsDe: Record<string, string> = {
     "Elternmails, Feedback und Berichte brauchen weiterhin Sorgfalt und Präzision. Draft hilft dir, sie mit weniger mentaler Belastung zu erledigen, damit mehr Energie für Schülerinnen und Schüler bleibt.",
   "problem.stats.parentEmails.value": "Wöchentlich",
   "problem.stats.parentEmails.label": "Eltern-E-Mails",
+  "problem.stats.parentEmails.note":
+    "Ein unklarer Satz kann bis Montagmorgen schnell zur Beschwerde werden.",
   "problem.stats.reportCards.value": "Je Quartal",
   "problem.stats.reportCards.label": "Zeugnisse",
+  "problem.stats.reportCards.note":
+    "Kommentare müssen fair und belastbar bleiben, wenn Familien oder Schulleitung sie später prüfen.",
   "problem.stats.gradingFeedback.value": "Laufend",
   "problem.stats.gradingFeedback.label": "Bewertungs-Feedback",
+  "problem.stats.gradingFeedback.note":
+    "Schnelles Feedback braucht trotzdem Ton und Formulierungen, die professionell absichern.",
 
   // Solution/Mission Section
   "solution.heading":
@@ -2297,7 +2325,7 @@ const translationsDe: Record<string, string> = {
     "Kriteriumsbasierte Kommentare, Rubrik-Feedback",
   "useCases.cards.schoolCommunications.title": "Schulkommunikation",
   "useCases.cards.schoolCommunications.description":
-    "Newsletter und Ankündigungen professionell entwerfen",
+    "Newsletter und Elterninfos mit Tonprüfung über Sprachen hinweg verfassen",
   "useCases.cards.schoolCommunications.examples":
     "Updates, Veranstaltungsankündigungen, Richtlinien-Kommunikation",
   "useCases.cards.referenceLetters.title": "Empfehlungsschreiben",
@@ -2373,9 +2401,9 @@ const translationsDe: Record<string, string> = {
   "whyChoose.benefits.saveTime.description":
     "Weniger Umschreiben und Grübeln in sensiblen Momenten",
   "whyChoose.benefits.breakBarriers.title":
-    "Über Sprachgrenzen klar kommunizieren",
+    "Grenzen in schwierigen Mailverläufen halten",
   "whyChoose.benefits.breakBarriers.description":
-    "Familienkommunikation übersetzen und professionellen Ton behalten",
+    "Auch unter Druck ruhig und professionell formulieren",
 
   // Testimonials Section
   "testimonials.heading": "Was Lehrkräfte sagen",
@@ -2538,16 +2566,23 @@ const translationsDe: Record<string, string> = {
   "products.draft.interface.heading": "Geführte Entwurfsoberfläche",
   "products.draft.interface.body":
     "Tonleitplanken, kanalbezogene Modi und Spracheinstellungen vereinen sich in einem intuitiven Workspace, damit jeder Entwurf ruhig und professionell klingt, während du das Early-Access-Programm weiterentwickelst.",
-  "products.draft.insights.imageAlt": "Zaza Draft Insights-Dashboard",
-  "products.draft.interface.imageAlt": "Zaza Draft geführte Schreiboberfläche",
+  "products.draft.insights.imageAlt":
+    "Produkt-Screenshot des Draft-Insights-Dashboards",
+  "products.draft.interface.imageAlt":
+    "Produkt-Screenshot der Draft-Schreiboberfläche",
 
   "products.draft.whoItsFor.title": "Perfekt für",
   "products.draft.whoItsFor.item1":
-    "Lehrkräfte, die Elternkommunikation nach Feierabend jonglieren",
+    "Lehrkräfte der Sekundarstufe bei Notenkonflikten nach Unterrichtsschluss",
   "products.draft.whoItsFor.item2":
-    "Pädagog:innen, die aus Stichpunkten menschliche Berichtskommentare machen",
+    "Lehrkräfte der Primarstufe bei Eskalationen zu Verhalten und Elternbeschwerden",
   "products.draft.whoItsFor.item3":
-    "Schulteams, die respektvolle, prägnante Nachrichten ohne Stress brauchen",
+    "Schulleitungen und Koordinatoren, die schnell belastbare Formulierungen brauchen",
+  // TODO: add citation/source URL
+  "products.draft.situations.statLine":
+    "43% der Lehrkräfte berichten von erheblichem wöchentlichem Aufwand für Elternkommunikation.",
+  "products.draft.situations.proofLine":
+    "Studien deuten darauf hin, dass ein grosser Teil der Lehrkräfte jede Woche viel Zeit für Elternkommunikation aufwendet. Draft wird entwickelt, um diese Last zu senken.",
 
   "products.draft.change.title": "Was sich mit Draft ändert",
   "products.draft.change.step1":

@@ -32,6 +32,8 @@ export default function DraftClient() {
     language === "de"
       ? "Situationen, die Sie kennen"
       : "Situations you'll recognise";
+  const situationsProofLine = t("products.draft.situations.proofLine");
+  const situationsStatLine = t("products.draft.situations.statLine");
   const situationsBullets =
     language === "de"
       ? [
@@ -127,6 +129,14 @@ export default function DraftClient() {
       ? "Ihre Texte bleiben Ihre Texte. Draft trainiert nicht auf Ihren Nachrichten. Sie entscheiden, was Sie einfügen und senden."
       : "Your text stays yours. Draft does not train on your messages. You control what you paste and what you send.";
   const privacyLinkLabel = language === "de" ? "Privacy" : "Privacy";
+  const screenshotCaption =
+    language === "de"
+      ? "Produkt-Screenshot - Early-Access-UI"
+      : "Product screenshot - early access UI";
+  const screenshotHonestyLine =
+    language === "de"
+      ? "Die Early-Access-UI entwickelt sich mit Feedback von Lehrkräften weiter."
+      : "Early access UI is evolving with teacher feedback.";
 
   const features = [
     {
@@ -140,24 +150,6 @@ export default function DraftClient() {
     {
       title: t("products.draft.features.reviewSteps.title"),
       description: t("products.draft.features.reviewSteps.desc"),
-    },
-  ];
-
-  const steps = [
-    {
-      number: "1",
-      title: t("products.draft.howItWorks.step1.title"),
-      description: t("products.draft.howItWorks.step1.desc"),
-    },
-    {
-      number: "2",
-      title: t("products.draft.howItWorks.step2.title"),
-      description: t("products.draft.howItWorks.step2.desc"),
-    },
-    {
-      number: "3",
-      title: t("products.draft.howItWorks.step3.title"),
-      description: t("products.draft.howItWorks.step3.desc"),
     },
   ];
 
@@ -311,6 +303,14 @@ export default function DraftClient() {
                 </li>
               ))}
             </ul>
+            <div className="mt-6 rounded-xl border border-[#374151] bg-[#0B1220] p-4">
+              <p className="text-sm font-semibold text-[#E5E7EB]">
+                {situationsStatLine}
+              </p>
+              <p className="text-sm text-[#9CA3AF] mt-1">
+                {situationsProofLine}
+              </p>
+            </div>
           </div>
         </section>
 
@@ -370,73 +370,6 @@ export default function DraftClient() {
           </div>
         </section>
 
-        {/* How it works */}
-        <section className="py-16 bg-[#111827]">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#F9FAFB] text-center mb-12">
-              {t("products.draft.howItWorks.title")}
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {steps.map((step) => (
-                <div key={step.number} className="text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full gradient-primary text-white font-bold text-xl mb-4">
-                    {step.number}
-                  </div>
-                  <h3 className="text-xl font-semibold text-[#F9FAFB] mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-[#D1D5DB]">{step.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Insights & Interface showcase */}
-        <section className="py-16 bg-gradient-to-r from-[#111827] via-[#0B1220] to-[#050A16]">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8 space-y-12">
-            <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-              <div className="relative w-full min-h-[280px] overflow-hidden rounded-3xl border border-white/10 bg-[#070B16]">
-                <Image
-                  src="/images/insights-dashboard.png"
-                  alt={t("products.draft.insights.imageAlt")}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 55vw"
-                />
-              </div>
-              <div className="space-y-4 text-white">
-                <h3 className="text-3xl font-bold">
-                  {t("products.draft.insights.heading")}
-                </h3>
-                <p className="text-lg text-white/80">
-                  {t("products.draft.insights.body")}
-                </p>
-              </div>
-            </div>
-
-            <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-              <div className="relative w-full min-h-[280px] overflow-hidden rounded-3xl border border-white/10 bg-[#070B16] order-1 lg:order-2">
-                <Image
-                  src="/images/draft-interface.png"
-                  alt={t("products.draft.interface.imageAlt")}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 55vw"
-                />
-              </div>
-              <div className="space-y-4 text-white order-2 lg:order-1">
-                <h3 className="text-3xl font-bold">
-                  {t("products.draft.interface.heading")}
-                </h3>
-                <p className="text-lg text-white/80">
-                  {t("products.draft.interface.body")}
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Who it's for */}
         <section className="py-16">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
@@ -488,6 +421,64 @@ export default function DraftClient() {
                   <p className="text-[#D1D5DB]">{step}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Insights & Interface showcase */}
+        <section className="py-16 bg-gradient-to-r from-[#111827] via-[#0B1220] to-[#050A16]">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8 space-y-12">
+            <p className="text-sm text-[#9CA3AF] text-center">
+              {screenshotHonestyLine}
+            </p>
+            <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+              <div>
+                <div className="relative w-full min-h-[280px] overflow-hidden rounded-3xl border border-white/10 bg-[#070B16]">
+                  <Image
+                    src="/images/insights-dashboard.png"
+                    alt={t("products.draft.insights.imageAlt")}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 55vw"
+                  />
+                </div>
+                <p className="mt-3 text-xs text-[#9CA3AF]">
+                  {screenshotCaption}
+                </p>
+              </div>
+              <div className="space-y-4 text-white">
+                <h3 className="text-3xl font-bold">
+                  {t("products.draft.insights.heading")}
+                </h3>
+                <p className="text-lg text-white/80">
+                  {t("products.draft.insights.body")}
+                </p>
+              </div>
+            </div>
+
+            <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+              <div className="order-1 lg:order-2">
+                <div className="relative w-full min-h-[280px] overflow-hidden rounded-3xl border border-white/10 bg-[#070B16]">
+                  <Image
+                    src="/images/draft-interface.png"
+                    alt={t("products.draft.interface.imageAlt")}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 55vw"
+                  />
+                </div>
+                <p className="mt-3 text-xs text-[#9CA3AF]">
+                  {screenshotCaption}
+                </p>
+              </div>
+              <div className="space-y-4 text-white order-2 lg:order-1">
+                <h3 className="text-3xl font-bold">
+                  {t("products.draft.interface.heading")}
+                </h3>
+                <p className="text-lg text-white/80">
+                  {t("products.draft.interface.body")}
+                </p>
+              </div>
             </div>
           </div>
         </section>
