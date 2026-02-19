@@ -1,10 +1,10 @@
-﻿export default {
+export default {
   hero: {
-    badge: "25.000+ aktive LehrkrÃ¤fte",
+    badge: "25.000+ aktive Lehrkräfte",
     titlePrefix: "Treten Sie der",
     titleHighlight: "Lehrercommunity bei",
     subtitle:
-      "Vernetzen Sie sich weltweit mit LehrkrÃ¤ften. Teilen Sie Strategien, stellen Sie Fragen und lernen Sie von erfolgreichen Praxisbeispielen zum Einsatz von KI im Unterricht.",
+      "Vernetzen Sie sich weltweit mit Lehrkräften. Teilen Sie Strategien, stellen Sie Fragen und lernen Sie von erfolgreichen Praxisbeispielen zum Einsatz von KI im Unterricht.",
   },
   search: {
     placeholder: "Diskussionen durchsuchen...",
@@ -12,16 +12,16 @@
   stats: {
     members: "Mitglieder",
     discussions: "Diskussionen",
-    posts: "BeitrÃ¤ge",
+    posts: "Beiträge",
     active: "Aktiv",
   },
   guidelines: {
     title: "Community-Richtlinien",
-    li1: "Respektvoll und unterstÃ¼tzend sein",
+    li1: "Respektvoll und unterstützend sein",
     li2: "Praktische, umsetzbare Tipps teilen",
-    li3: "SchÃ¼lerdatenschutz wahren",
+    li3: "Schülerdatenschutz wahren",
     li4: "Urheberschaft anerkennen",
-    read: "VollstÃ¤ndige Richtlinien lesen",
+    read: "Vollständige Richtlinien lesen",
   },
   related: {
     title: "Wissen erweitern",
@@ -42,9 +42,9 @@
   cta: {
     titlePrefix: "Bereit,",
     titleHighlight: "an der Diskussion teilzunehmen?",
-    body: "Erstellen Sie kostenlos ein Konto und vernetzen Sie sich mit Tausenden LehrkrÃ¤ften, die KI im Unterricht einsetzen.",
+    body: "Erstellen Sie kostenlos ein Konto und vernetzen Sie sich mit Tausenden Lehrkräften, die KI im Unterricht einsetzen.",
     primary: "Kostenloses Konto erstellen",
-    secondary: "Als Gast stÃ¶bern",
+    secondary: "Als Gast stöbern",
   },
   categoriesTitle: "Diskussionskategorien",
   categories: {
@@ -54,23 +54,23 @@
     },
     "prompt-engineering": {
       name: "Prompt-Engineering",
-      desc: "Teilen und diskutieren Sie wirksame Prompts fÃ¼r unterschiedliche Unterrichtsszenarien.",
+      desc: "Teilen und diskutieren Sie wirksame Prompts für unterschiedliche Unterrichtsszenarien.",
     },
     "lesson-planning": {
       name: "Unterrichtsplanung",
-      desc: "Gemeinsam KI-gestÃ¼tzte Unterrichts- und Einheitenplanung erarbeiten.",
+      desc: "Gemeinsam KI-gestützte Unterrichts- und Einheitenplanung erarbeiten.",
     },
     "parent-communication": {
       name: "Elternkommunikation",
-      desc: "Tipps fÃ¼r den KIÃ¢â‚¬â€˜Einsatz zur Verbesserung der Eltern-Lehrer-Kommunikation.",
+      desc: "Tipps für den KIÃ¢â‚¬â€˜Einsatz zur Verbesserung der Eltern-Lehrer-Kommunikation.",
     },
     "assessment-feedback": {
       name: "Bewertung & Feedback",
-      desc: "KI-Tools fÃ¼r Korrektur, Feedback und formative Beurteilung diskutieren.",
+      desc: "KI-Tools für Korrektur, Feedback und formative Beurteilung diskutieren.",
     },
     differentiation: {
-      name: "Differenzierung & FÃ¶rderplÃ¤ne",
-      desc: "Mit KI vielfÃ¤ltige Lernende unterstÃ¼tzen und Nachteilsausgleiche erstellen.",
+      name: "Differenzierung & Förderpläne",
+      desc: "Mit KI vielfältige Lernende unterstützen und Nachteilsausgleiche erstellen.",
     },
     "ethics-policy": {
       name: "Ethik & Richtlinien",
@@ -116,4 +116,3 @@
     },
   },
 };
-

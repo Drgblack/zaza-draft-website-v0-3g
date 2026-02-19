@@ -1,7 +1,8 @@
-﻿# The Homework Success Toolkit: Study Skills & Self-Directed Learning
+# The Homework Success Toolkit: Study Skills & Self-Directed Learning
+
 ## A Complete Guide for Teachers + Printable Student Resources
 
-*Homework shouldn't be a battle. This toolkit gives you strategies to assign meaningful homework, teach study skills, and help students develop self-directed learning habits - plus a printable "Homework Survival Guide" for students.*
+_Homework shouldn't be a battle. This toolkit gives you strategies to assign meaningful homework, teach study skills, and help students develop self-directed learning habits - plus a printable "Homework Survival Guide" for students._
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
@@ -15,6 +16,7 @@ You assign homework. Half the class doesn't do it. The other half rushes through
 Here's the problem: **We assign homework, but we rarely teach students HOW to do homework effectively.**
 
 This toolkit gives you:
+
 - **The 5 principles** of effective homework design
 - **Study skills strategies** you can teach in 10-15 minutes
 - **A printable "Homework Survival Guide"** for students (ready to share)
@@ -33,12 +35,14 @@ This toolkit gives you:
 **The Fix:** Every homework assignment should have a clear purpose.
 
 **Valid Purposes:**
+
 - **Practice** - Reinforce a skill taught in class
 - **Preparation** - Preview content for tomorrow's lesson
 - **Extension** - Apply learning to a new context
 - **Review** - Spiral back to earlier concepts
 
 **Invalid Purposes:**
+
 - Busy work (completing 50 problems when 10 would do)
 - Punishment (extra homework for behavior issues)
 - Teaching new content (if you didn't teach it, don't assign it)
@@ -50,6 +54,7 @@ This toolkit gives you:
 ### Principle 2: The 10-Minute Rule
 
 **The Guideline:** Homework should take roughly 10 minutes per grade level.
+
 - 1st grade: 10 minutes
 - 5th grade: 50 minutes
 - 10th grade: 100 minutes (across ALL classes)
@@ -67,6 +72,7 @@ This toolkit gives you:
 **The Fix:** Explicitly teach study skills.
 
 **What to Teach (10-15 minute mini-lessons):**
+
 - How to read a textbook (skimming, highlighting, note-taking)
 - How to study for different types of tests (multiple choice vs. essay)
 - How to break big projects into small steps
@@ -84,6 +90,7 @@ This toolkit gives you:
 **The Fix:** Have a clear late work policy that balances accountability with grace.
 
 **Example Policy:**
+
 ```
 LATE WORK POLICY:
 
@@ -104,6 +111,7 @@ Life happens. If you're struggling, TALK TO ME. We'll figure it out together.
 **The Fix:** Design homework that students see value in.
 
 **Examples of Meaningful Homework:**
+
 - Interview a family member about [topic]
 - Find 3 examples of [concept] in real life (take photos, write reflections)
 - Watch a documentary and write 3 discussion questions
@@ -120,22 +128,27 @@ Life happens. If you're struggling, TALK TO ME. We'll figure it out together.
 **Teach students this framework:**
 
 **Step 1: PREVIEW** (before class)
+
 - Skim the chapter, read headers, look at pictures
 - Time: 5-10 minutes
 
 **Step 2: ATTEND** (during class)
+
 - Take notes, ask questions, engage
 - Time: Class period
 
 **Step 3: REVIEW** (same day as class)
+
 - Rewrite notes, quiz yourself, summarize
 - Time: 10-15 minutes
 
 **Step 4: STUDY** (before the test)
+
 - Practice problems, flashcards, teach someone else
 - Time: 30-60 minutes (spread over several days)
 
 **Step 5: ASSESS** (after the test)
+
 - What did I get wrong? Why? What will I do differently next time?
 - Time: 5-10 minutes
 
@@ -158,6 +171,7 @@ Life happens. If you're struggling, TALK TO ME. We'll figure it out together.
 5. **Review** - Go back to your highlights and notes. Quiz yourself.
 
 **Give students a bookmark template:**
+
 ```
 ACTIVE READING CHECKLIST:
 â˜ Skimmed the chapter first
@@ -175,16 +189,19 @@ ACTIVE READING CHECKLIST:
 **Teach students this priority system:**
 
 **Do FIRST (The Frog):**
+
 - Hardest assignment
 - Due soonest
 - Worth the most points
 
 **Do SECOND:**
+
 - Medium difficulty
 - Due this week
 - Practice or review work
 
 **Do LAST (Or Skip):**
+
 - Easy tasks
 - Due later
 - Low-stakes or optional
@@ -206,6 +223,7 @@ ACTIVE READING CHECKLIST:
 **Step 4:** Do ONE part at a time (don't try to do it all in one night)
 
 **Example Timeline:**
+
 - Week 1: Research and gather sources
 - Week 2: Outline or plan
 - Week 3: First draft
@@ -232,7 +250,8 @@ ACTIVE READING CHECKLIST:
 
 ---
 
-### **HOMEWORK SURVIVAL GUIDE**  
+### **HOMEWORK SURVIVAL GUIDE**
+
 **Study Smart. Stress Less. Succeed More.**
 
 ---
@@ -279,13 +298,14 @@ ACTIVE READING CHECKLIST:
 6. Come to office hours or ask before school.
 
 **Good Email Example:**
+
 ```
 Subject: Question about Math Homework - Problem 7
 
 Hi [Teacher Name],
 
-I'm working on tonight's homework and I'm stuck on problem 7. 
-I understand how to set up the equation, but I'm not sure what 
+I'm working on tonight's homework and I'm stuck on problem 7.
+I understand how to set up the equation, but I'm not sure what
 to do after I combine like terms. Can you help?
 
 Thanks,
@@ -297,24 +317,28 @@ Thanks,
 #### **PART 4: Study Strategies That Actually Work**
 
 **For Reading Assignments:**
+
 - Skim first (read headers, bold words, pictures)
 - Highlight key ideas (not entire paragraphs!)
 - Summarize each section in your own words
 - Quiz yourself: "What are the 3 main ideas?"
 
 **For Math/Science:**
+
 - Do practice problems (don't just read examples)
 - Show your work (helps you catch errors)
 - Check your answers (if the textbook has an answer key)
 - Redo problems you got wrong
 
 **For Memorization (vocab, dates, formulas):**
+
 - Make flashcards (physical or digital)
 - Use mnemonic devices (silly sentences or acronyms)
 - Quiz yourself or have someone quiz you
 - Study in short bursts (15 min at a time) instead of cramming
 
 **For Essays/Projects:**
+
 - Start early (don't wait until the night before!)
 - Break it into steps (research, outline, draft, revise)
 - Set mini-deadlines for each step
@@ -334,6 +358,7 @@ If a task takes less than 2 minutes (checking the assignment, sending an email),
 Every Sunday (or Monday morning), write down all assignments for the week. Cross them off as you go.
 
 **Example Weekly Planner:**
+
 ```
 MONDAY:
 â˜ Math worksheet (20 min)
@@ -371,19 +396,23 @@ WEDNESDAY:
 #### **PART 7: How to Study for Tests**
 
 **1 Week Before:**
+
 - Review your notes (rewrite them or make a study guide)
 - Start making flashcards
 
 **3 Days Before:**
+
 - Do practice problems or quizzes
 - Identify weak spots (what don't you understand yet?)
 
 **1 Day Before:**
+
 - Quiz yourself or have someone quiz you
 - Review your flashcards
 - Get a good night's sleep (seriously - sleep helps memory!)
 
 **The Morning Of:**
+
 - Eat breakfast (your brain needs fuel!)
 - Review notes one last time (don't cram new stuff)
 - Take a deep breath. You've got this.
@@ -400,9 +429,10 @@ WEDNESDAY:
 âœ“ Help them break down big projects  
 âœ“ Encourage breaks and healthy habits  
 âœ- Don't do the work for them  
-âœ- Don't hover or micromanage  
+âœ- Don't hover or micromanage
 
 **When to Get Involved:**
+
 - If your student is consistently overwhelmed (talk to the teacher)
 - If they're stuck and you can explain a concept
 - If they need help organizing or planning (teach them systems, don't do it for them)
@@ -410,6 +440,7 @@ WEDNESDAY:
 ---
 
 **Remember:**
+
 - Homework is practice, not perfection.
 - It's okay to ask for help.
 - You're building skills that will help you for life.
@@ -477,11 +508,13 @@ Integrate it. Spend 5-10 minutes at the start of a unit teaching ONE study strat
 ## Your Next Steps
 
 ### This Week:
+
 1. Share the "Homework Survival Guide" with students (print it or post it digitally)
 2. Teach ONE study skill in a 10-minute mini-lesson
 3. Send the homework expectations template to parents
 
 ### This Month:
+
 - Review your current homework assignments - do they follow the 5 principles?
 - Have a class discussion: "What makes homework helpful vs. stressful?"
 - Check in with struggling students individually about homework challenges
@@ -501,6 +534,4 @@ Your students want to succeed. Sometimes, they just need to be taught HOW.
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
-
-
+_© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact._

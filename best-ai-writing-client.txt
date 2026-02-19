@@ -541,19 +541,19 @@ export default function BestAIWritingClient() {
                   href="/best-ai-tool-parent-emails"
                   className="block text-sm text-[#A78BFA] hover:text-[#8B5CF6] transition-colors"
                 >
-                  Ã¢â€ â€™ Best AI Tool for Parent Emails
+                  Ã¢â€ ' Best AI Tool for Parent Emails
                 </Link>
                 <Link
                   href="/reduce-stress-parent-messages"
                   className="block text-sm text-[#A78BFA] hover:text-[#8B5CF6] transition-colors"
                 >
-                  Ã¢â€ â€™ Reduce Stress with AI Messages
+                  Ã¢â€ ' Reduce Stress with AI Messages
                 </Link>
                 <Link
                   href="/ai-for-student-reports"
                   className="block text-sm text-[#A78BFA] hover:text-[#8B5CF6] transition-colors"
                 >
-                  Ã¢â€ â€™ AI for Student Reports
+                  Ã¢â€ ' AI for Student Reports
                 </Link>
               </div>
             </div>

@@ -1,27 +1,26 @@
-﻿# Kommentar-Baukasten: Zeugnisberichte
+# Kommentar-Baukasten: Zeugnisberichte
 
 _Individuell, ausgewogen, schnell._
 
 ## Aufbau (Sandwich)
 
-1. **StÃ¤rke** mit Beleg
-2. **Entwicklungspunkt** (eine FÃ¤higkeit)
-3. **NÃ¤chster Schritt** + zuversichtlicher Abschluss
+1. **Stärke** mit Beleg
+2. **Entwicklungspunkt** (eine Fähigkeit)
+3. **Nächster Schritt** + zuversichtlicher Abschluss
 
 ## Formulierungen
 
-**StÃ¤rken**
+**Stärken**
 
 - Zeigt Neugier in **[Thema]** und stellt kluge Fragen.
-- Arbeitet konstruktiv im Team und stÃ¤rkt Ergebnisse.
+- Arbeitet konstruktiv im Team und stärkt Ergebnisse.
 
 **Entwicklung**
 
-- BenÃ¶tigt Strategien, um mehrschrittige Aufgaben zu strukturieren.
-- NÃ¤chster Schritt: Belege konsequent anfÃ¼hren.
+- Benötigt Strategien, um mehrschrittige Aufgaben zu strukturieren.
+- Nächster Schritt: Belege konsequent anführen.
 
 **Abschluss**
 
-- Ich freue mich darauf, wie **[Name]** dies nÃ¤chstes Halbjahr nutzt.
-- Es war schÃ¶n, das wachsende Selbstvertrauen zu sehen.
-
+- Ich freue mich darauf, wie **[Name]** dies nächstes Halbjahr nutzt.
+- Es war schön, das wachsende Selbstvertrauen zu sehen.

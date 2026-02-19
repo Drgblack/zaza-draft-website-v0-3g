@@ -1,7 +1,8 @@
-﻿# Der Flexible Unterrichtsplan-Designer
+# Der Flexible Unterrichtsplan-Designer
+
 ## 5 bewährte Unterrichtsplan-Vorlagen für jeden Unterrichtsstil und jedes Lernziel
 
-*Hören Sie auf, jedes Mal von vorne zu beginnen, wenn Sie eine Unterrichtsstunde planen. Diese 5 editierbaren Vorlagen geben Ihnen strukturierte Frameworks für Engagement, Differenzierung und Bewertung - egal was Sie unterrichten.*
+_Hören Sie auf, jedes Mal von vorne zu beginnen, wenn Sie eine Unterrichtsstunde planen. Diese 5 editierbaren Vorlagen geben Ihnen strukturierte Frameworks für Engagement, Differenzierung und Bewertung - egal was Sie unterrichten._
 
 **Autor:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
@@ -17,6 +18,7 @@ Gute Unterrichtsplanung sollte nicht zwei Stunden pro Unterrichtsstunde dauern. 
 **Die Lösung:** Flexible Vorlagen basierend auf bewährten Unterrichtsmodellen - damit Sie effizient planen können, während Sie Qualität beibehalten.
 
 Dieser Leitfaden gibt Ihnen:
+
 - **5 Unterrichtsplan-Vorlagen** für verschiedene Unterrichtsansätze
 - **Integrierte Differenzierung** (kein nachträglicher Gedanke)
 - **Bewertungs-Checkpoints** (formativ + summativ)
@@ -31,13 +33,13 @@ Dieser Leitfaden gibt Ihnen:
 
 Verschiedene Unterrichtsstunden brauchen verschiedene Strukturen. So entscheiden Sie:
 
-| Wenn Ihr Unterrichtsziel ist... | Verwenden Sie diese Vorlage |
-|--------------------------------|----------------------------|
-| **Ein neues Konzept einführen** | 5E-Modell (Engage, Explore, Explain, Elaborate, Evaluate) |
-| **Eine komplexe Fähigkeit durch Übung aufbauen** | Workshop-Modell (Mini-Lektion, Übung, Teilen) |
-| **Ein klares Verfahren oder faktenbasierte Inhalte unterrichten** | Direkter Unterricht (Ich zeige, Wir machen, Du machst) |
-| **Diskussion und kritisches Denken fördern** | Sokratisches Seminar-Modell (Vorbereitung, Start, Diskussion, Nachbesprechung) |
-| **Schülergesteuerte Forschung erleichtern** | Problembasiertes Lernen (Frage, Untersuchen, Erstellen, Präsentieren) |
+| Wenn Ihr Unterrichtsziel ist...                                   | Verwenden Sie diese Vorlage                                                    |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| **Ein neues Konzept einführen**                                   | 5E-Modell (Engage, Explore, Explain, Elaborate, Evaluate)                      |
+| **Eine komplexe Fähigkeit durch Übung aufbauen**                  | Workshop-Modell (Mini-Lektion, Übung, Teilen)                                  |
+| **Ein klares Verfahren oder faktenbasierte Inhalte unterrichten** | Direkter Unterricht (Ich zeige, Wir machen, Du machst)                         |
+| **Diskussion und kritisches Denken fördern**                      | Sokratisches Seminar-Modell (Vorbereitung, Start, Diskussion, Nachbesprechung) |
+| **Schülergesteuerte Forschung erleichtern**                       | Problembasiertes Lernen (Frage, Untersuchen, Erstellen, Präsentieren)          |
 
 > **Profi-Tipp:** Sie müssen nicht jeden Tag dieselbe Vorlage verwenden. Mischen und kombinieren Sie basierend auf Ihren Lernzielen. Vielfalt hält Schüler engagiert und ehrt verschiedene Lernstile.
 
@@ -61,141 +63,156 @@ Verschiedene Unterrichtsstunden brauchen verschiedene Strukturen. So entscheiden
 
 ### Unterrichtsplan-Vorlage: 5E-Modell
 
-**Fach:** ________________  
-**Klassenstufe:** ________________  
-**Thema:** ________________  
-**Lernziel:** Die Schüler werden in der Lage sein, ________________
+**Fach:** ******\_\_\_\_******  
+**Klassenstufe:** ******\_\_\_\_******  
+**Thema:** ******\_\_\_\_******  
+**Lernziel:** Die Schüler werden in der Lage sein, ******\_\_\_\_******
 
 **Benötigte Materialien:**
-- 
-- 
-- 
 
-**Behandelte Standards:** ________________
+-
+-
+-
+
+**Behandelte Standards:** ******\_\_\_\_******
 
 ---
 
-#### ENGAGE (_____ Minuten)
+#### ENGAGE (**\_** Minuten)
 
 **Zweck:** Interesse wecken und Vorwissen aufdecken
 
 **Aktivität:**  
-Beschreiben Sie den Einstieg (Demo, Video, Frage, Phänomen usw.):  
+Beschreiben Sie den Einstieg (Demo, Video, Frage, Phänomen usw.):
 
-**Lehreraktionen:**  
-- 
-- 
+**Lehreraktionen:**
 
-**Schüleraktionen:**  
-- 
-- 
+-
+-
 
-**Schlüsselfragen:**  
-- 
-- 
+**Schüleraktionen:**
 
-**Differenzierung:**  
-- Für kämpfende Lerner:  
-- Für fortgeschrittene Lerner:  
+-
+-
+
+**Schlüsselfragen:**
+
+-
+-
+
+**Differenzierung:**
+
+- Für kämpfende Lerner:
+- Für fortgeschrittene Lerner:
 
 ---
 
-#### EXPLORE (_____ Minuten)
+#### EXPLORE (**\_** Minuten)
 
 **Zweck:** Schüler entdecken durch praktische Erfahrung
 
 **Aktivität:**  
-Beschreiben Sie die Erkundung (Experiment, Simulation, Forschung):  
+Beschreiben Sie die Erkundung (Experiment, Simulation, Forschung):
 
-**Lehreraktionen:**  
+**Lehreraktionen:**
+
 - Zirkulieren und beobachten
-- Offene Fragen stellen:  
-  - 
-  - 
+- Offene Fragen stellen:
+  -
+  -
 
-**Schüleraktionen:**  
-- 
-- 
+**Schüleraktionen:**
 
-**Materialien:**  
-- 
+-
+-
 
-**Sicherheitsüberlegungen (falls zutreffend):**  
+**Materialien:**
+
+-
+
+**Sicherheitsüberlegungen (falls zutreffend):**
 
 **Beobachtungs-Checkpoints:**  
-Wonach achten Sie bei zirkulierenden Schülern?  
+Wonach achten Sie bei zirkulierenden Schülern?
 
 ---
 
-#### EXPLAIN (_____ Minuten)
+#### EXPLAIN (**\_** Minuten)
 
 **Zweck:** Konzepte klären und Verständnis festigen
 
 **Direkte Anweisung:**  
-Worauf müssen Schüler achten? (Fachbegriffe, Konzepte, Zusammenhänge)  
+Worauf müssen Schüler achten? (Fachbegriffe, Konzepte, Zusammenhänge)
 
 **Schülerbeiträge:**  
-Wie werden Sie Schüler bitten, ihre Erkenntnisse aus der Erkundung zu teilen?  
+Wie werden Sie Schüler bitten, ihre Erkenntnisse aus der Erkundung zu teilen?
 
 **Visuelle Hilfsmittel:**  
-(Diagramme, Modelle, Grafiken zum Zeigen)  
+(Diagramme, Modelle, Grafiken zum Zeigen)
 
 **Überprüfung des Verständnisses:**  
-(Stellen Sie Fragen, um das Verständnis zu überprüfen)  
-- 
-- 
+(Stellen Sie Fragen, um das Verständnis zu überprüfen)
 
-**Differenzierung:**  
-- Für kämpfende Lerner: (Grafische Organizer, vereinfachte Notizen bereitstellen)  
-- Für fortgeschrittene Lerner: (Tiefere Fragen stellen)  
+-
+-
+
+**Differenzierung:**
+
+- Für kämpfende Lerner: (Grafische Organizer, vereinfachte Notizen bereitstellen)
+- Für fortgeschrittene Lerner: (Tiefere Fragen stellen)
 
 ---
 
-#### ELABORATE (_____ Minuten)
+#### ELABORATE (**\_** Minuten)
 
 **Zweck:** Wissen auf neue Situationen anwenden
 
 **Aktivität:**  
 Wie werden Schüler ihr Lernen erweitern?  
-(Problem lösen, neuen Fall analysieren, reale Anwendung)  
+(Problem lösen, neuen Fall analysieren, reale Anwendung)
 
-**Lehreraktionen:**  
+**Lehreraktionen:**
+
 - Scaffolding bereitstellen bei Bedarf
-- Zu kritischem Denken ermutigen:  
-  - 
-  - 
+- Zu kritischem Denken ermutigen:
+  -
+  -
 
-**Schüleraktionen:**  
-- 
+**Schüleraktionen:**
+
+-
 
 **Erfolgsmerkmale:**  
-Woran erkennen Sie, dass Schüler das Konzept anwenden?  
+Woran erkennen Sie, dass Schüler das Konzept anwenden?
 
 ---
 
-#### EVALUATE (_____ Minuten)
+#### EVALUATE (**\_** Minuten)
 
 **Zweck:** Lernen bewerten
 
 **Bewertungsmethode:**  
-(Exit-Ticket, Quiz, Präsentation, Portfolio)  
+(Exit-Ticket, Quiz, Präsentation, Portfolio)
 
-**Bewertungsfragen/-aufgaben:**  
-- 
-- 
+**Bewertungsfragen/-aufgaben:**
+
+-
+-
 
 **Erfolgsmerkmale:**  
-Schüler sollten in der Lage sein:  
-- 
-- 
+Schüler sollten in der Lage sein:
 
-**Nächste Schritte:**  
-- Wenn Schüler es gemeistert haben:  
-- Wenn Schüler mehr Übung brauchen:  
+-
+-
+
+**Nächste Schritte:**
+
+- Wenn Schüler es gemeistert haben:
+- Wenn Schüler mehr Übung brauchen:
 
 ---
 
-**Notizen/Anpassungen:**  
+**Notizen/Anpassungen:**
 
 ---
 
@@ -215,72 +232,77 @@ Schüler sollten in der Lage sein:
 
 ### Unterrichtsplan-Vorlage: Workshop-Modell
 
-**Fach:** ________________  
-**Klassenstufe:** ________________  
-**Thema/Fähigkeit:** ________________  
-**Lernziel:** Die Schüler werden in der Lage sein, ________________
+**Fach:** ******\_\_\_\_******  
+**Klassenstufe:** ******\_\_\_\_******  
+**Thema/Fähigkeit:** ******\_\_\_\_******  
+**Lernziel:** Die Schüler werden in der Lage sein, ******\_\_\_\_******
 
 **Benötigte Materialien:**
-- 
-- 
 
-**Behandelte Standards:** ________________
+-
+-
+
+**Behandelte Standards:** ******\_\_\_\_******
 
 ---
 
-#### MINI-LEKTION (_____ Minuten)
+#### MINI-LEKTION (**\_** Minuten)
 
-**Verbindung:** (Wie verbindet sich die heutige Fähigkeit mit früherem Lernen?)  
+**Verbindung:** (Wie verbindet sich die heutige Fähigkeit mit früherem Lernen?)
 
 **Lehrschwerpunkt:**  
-"Heute werde ich euch beibringen ________________"
+"Heute werde ich euch beibringen ******\_\_\_\_******"
 
 **Demonstrieren (Ich zeige):**  
-Modellieren Sie die Fähigkeit mit einem klaren Beispiel:  
+Modellieren Sie die Fähigkeit mit einem klaren Beispiel:
 
 **Geführte Übung (Wir machen):**  
-Schüler probieren die Fähigkeit mit Unterstützung:  
+Schüler probieren die Fähigkeit mit Unterstützung:
 
 **Verbindung:**  
-"Wenn ihr heute arbeitet, denkt daran ________________"
+"Wenn ihr heute arbeitet, denkt daran ******\_\_\_\_******"
 
 **Erfolgsmerkmale:**  
-Schüler wissen, dass sie erfolgreich waren, wenn sie können:  
-- 
-- 
+Schüler wissen, dass sie erfolgreich waren, wenn sie können:
+
+-
+-
 
 ---
 
-#### SELBSTSTÄNDIGE ÜBUNG (_____ Minuten)
+#### SELBSTSTÄNDIGE ÜBUNG (**\_** Minuten)
 
 **Schülerarbeitszeit:**  
-Woran werden Schüler arbeiten?  
+Woran werden Schüler arbeiten?
 
-**Differenzierung:**  
+**Differenzierung:**
+
 - Für kämpfende Lerner:  
-  (Satzanfänge, grafische Organizer, Kleingruppenunterstützung)  
-- Für Lerner auf Niveau:  
+  (Satzanfänge, grafische Organizer, Kleingruppenunterstützung)
+- Für Lerner auf Niveau:
 - Für fortgeschrittene Lerner:  
-  (Erweiterungsaufgabe, Herausforderungsproblem)  
+  (Erweiterungsaufgabe, Herausforderungsproblem)
 
-**Lehreraktionen (Beraten):**  
-- Zirkulieren und bei _____ Schülern nachfragen
+**Lehreraktionen (Beraten):**
+
+- Zirkulieren und bei **\_** Schülern nachfragen
 - Kleingruppe für Nachunterricht ziehen: (Schüler auflisten, die zusätzliche Unterstützung brauchen)
 - Diese Schüler genau beobachten: (Schüler mit Verhaltens-/Fokusbedürfnissen auflisten)
 
 **Checkpoints:**  
-Wie werden Sie den Fortschritt auf halbem Weg überprüfen?  
+Wie werden Sie den Fortschritt auf halbem Weg überprüfen?
 
 ---
 
-#### TEILEN (_____ Minuten)
+#### TEILEN (**\_** Minuten)
 
 **Zweck:** Schüler reflektieren über ihr Lernen und feiern Fortschritt
 
 **Aktivität:**  
-Wie werden Schüler teilen? (Zu zweit sprechen, Galeriegang, Autorenstuhl usw.)  
+Wie werden Schüler teilen? (Zu zweit sprechen, Galeriegang, Autorenstuhl usw.)
 
-**Reflexionsfragen:**  
+**Reflexionsfragen:**
+
 - Was hast du heute gelernt?
 - Was war herausfordernd?
 - Wie hast du die Strategie verwendet, die wir gelernt haben?
@@ -290,7 +312,7 @@ Kurzer Abschluss und Vorschau auf die morgige Stunde.
 
 ---
 
-**Notizen/Anpassungen:**  
+**Notizen/Anpassungen:**
 
 ---
 
@@ -311,100 +333,107 @@ Kurzer Abschluss und Vorschau auf die morgige Stunde.
 
 ### Unterrichtsplan-Vorlage: Direkter Unterricht
 
-**Fach:** ________________  
-**Klassenstufe:** ________________  
-**Thema/Fähigkeit:** ________________  
-**Lernziel:** Die Schüler werden in der Lage sein, ________________
+**Fach:** ******\_\_\_\_******  
+**Klassenstufe:** ******\_\_\_\_******  
+**Thema/Fähigkeit:** ******\_\_\_\_******  
+**Lernziel:** Die Schüler werden in der Lage sein, ******\_\_\_\_******
 
 **Benötigte Materialien:**
-- 
-- 
 
-**Behandelte Standards:** ________________
+-
+-
+
+**Behandelte Standards:** ******\_\_\_\_******
 
 ---
 
-#### ICH ZEIGE: LEHRERMODELLIERUNG (_____ Minuten)
+#### ICH ZEIGE: LEHRERMODELLIERUNG (**\_** Minuten)
 
 **Zweck:** Schülern genau zeigen, was zu tun ist
 
 **Vorwissen aktivieren:**  
-Was wissen Schüler bereits, das mit dieser Fähigkeit verbunden ist?  
+Was wissen Schüler bereits, das mit dieser Fähigkeit verbunden ist?
 
 **Fähigkeit einführen:**  
-"Heute lernen wir ________________"
+"Heute lernen wir ******\_\_\_\_******"
 
 **Prozess modellieren:**  
 (Laut denken während Sie demonstrieren)  
 Schritt 1:  
 Schritt 2:  
-Schritt 3:  
+Schritt 3:
 
 **Nicht-Beispiele:**  
-Zeigen Sie, was NICHT zu tun ist (häufige Fehler):  
+Zeigen Sie, was NICHT zu tun ist (häufige Fehler):
 
 **Überprüfung des Verständnisses:**  
-Fragen Sie: "Was habt ihr bemerkt, das ich zuerst getan habe?"  
+Fragen Sie: "Was habt ihr bemerkt, das ich zuerst getan habe?"
 
 ---
 
-#### WIR MACHEN: GEFÜHRTE ÜBUNG (_____ Minuten)
+#### WIR MACHEN: GEFÜHRTE ÜBUNG (**\_** Minuten)
 
 **Zweck:** Gemeinsam mit Unterstützung üben
 
 **Aktivität:**  
-Schüler probieren die Fähigkeit mit Lehreranleitung:  
+Schüler probieren die Fähigkeit mit Lehreranleitung:
 
-**Wie Scaffolding erfolgt:**  
+**Wie Scaffolding erfolgt:**
+
 - Satzanfänge oder visuelle Prompts verwenden
 - Mehrere Schüler zum Beitragen aufrufen
 - Fehler sanft und sofort korrigieren
 
-**Zu stellende Fragen:**  
-- 
-- 
+**Zu stellende Fragen:**
+
+-
+-
 
 **Überprüfung des Verständnisses:**  
-(Daumen hoch/runter, Whiteboards, Exit-Slip)  
+(Daumen hoch/runter, Whiteboards, Exit-Slip)
 
 ---
 
-#### DU MACHST: SELBSTSTÄNDIGE ÜBUNG (_____ Minuten)
+#### DU MACHST: SELBSTSTÄNDIGE ÜBUNG (**\_** Minuten)
 
 **Zweck:** Schüler demonstrieren Meisterschaft selbstständig
 
 **Aktivität:**  
-Was werden Schüler alleine tun?  
+Was werden Schüler alleine tun?
 
-**Differenzierung:**  
+**Differenzierung:**
+
 - Für Schüler, die mehr Unterstützung brauchen:  
-  (Teilweise ausgefülltes Beispiel bereitstellen, Verwendung von Notizen erlauben)  
+  (Teilweise ausgefülltes Beispiel bereitstellen, Verwendung von Notizen erlauben)
 - Für Schüler, die bereit sind:  
-  (Herausforderungsprobleme, reale Anwendungen)  
+  (Herausforderungsprobleme, reale Anwendungen)
 
-**Zirkulieren und Beobachten:**  
-- Wer braucht Nachunterricht?  
-- Wer ist bereit weiterzugehen?  
+**Zirkulieren und Beobachten:**
+
+- Wer braucht Nachunterricht?
+- Wer ist bereit weiterzugehen?
 
 ---
 
-#### BEWERTEN (_____ Minuten)
+#### BEWERTEN (**\_** Minuten)
 
 **Exit-Ticket oder Schnellprüfung:**  
-Woher wissen Sie, ob Schüler die Fähigkeit gelernt haben?  
+Woher wissen Sie, ob Schüler die Fähigkeit gelernt haben?
 
 **Erfolgsmerkmale:**  
-Schüler sollten in der Lage sein:  
-- 
-- 
+Schüler sollten in der Lage sein:
 
-**Nächste Schritte:**  
-- Wenn Schüler es gemeistert haben:  
-- Wenn Schüler mehr Übung brauchen:  
+-
+-
+
+**Nächste Schritte:**
+
+- Wenn Schüler es gemeistert haben:
+- Wenn Schüler mehr Übung brauchen:
 
 ---
 
-**Notizen/Anpassungen:**  
+**Notizen/Anpassungen:**
 
 ---
 
@@ -425,89 +454,98 @@ Schüler sollten in der Lage sein:
 
 ### Unterrichtsplan-Vorlage: Sokratisches Seminar
 
-**Fach:** ________________  
-**Klassenstufe:** ________________  
-**Text/Thema:** ________________  
-**Diskussionsfrage:** ________________
+**Fach:** ******\_\_\_\_******  
+**Klassenstufe:** ******\_\_\_\_******  
+**Text/Thema:** ******\_\_\_\_******  
+**Diskussionsfrage:** ******\_\_\_\_******
 
 **Benötigte Materialien:**
+
 - Text/Artikel/Fallstudie
 - Diskussionsprotokolle (optional)
 - Bewertungsrubrik
 
-**Behandelte Standards:** ________________
+**Behandelte Standards:** ******\_\_\_\_******
 
 ---
 
 #### VORBEREITUNG (vor der Diskussion)
 
 **Text/Materialien:**  
-Was werden Schüler lesen oder überprüfen?  
+Was werden Schüler lesen oder überprüfen?
 
-**Vorbereitungsaufgabe:**  
-- Annotieren Sie den Text für:  
+**Vorbereitungsaufgabe:**
+
+- Annotieren Sie den Text für:
   - Schlüsselzitate
   - Fragen
   - Verbindungen
 - Bereiten Sie 2-3 Diskussionsfragen vor
 
-**Hausaufgabe (falls zutreffend):**  
+**Hausaufgabe (falls zutreffend):**
 
 ---
 
-#### START (_____ Minuten)
+#### START (**\_** Minuten)
 
 **Sitzordnung:**  
-(Innen-/Außenkreis, Fischmuster usw.)  
+(Innen-/Außenkreis, Fischmuster usw.)
 
-**Diskussionsnormen überprüfen:**  
+**Diskussionsnormen überprüfen:**
+
 - Respektvoll zuhören
 - Auf Ideen aufbauen, nicht nur eigene teilen
 - Textbelege verwenden
 - Fragen stellen, wenn unklar
 
 **Eröffnungsfrage:**  
-Stellen Sie eine offene Frage, um die Diskussion zu starten:  
+Stellen Sie eine offene Frage, um die Diskussion zu starten:
 
-**Rolle der Lehrkraft:**  
+**Rolle der Lehrkraft:**
+
 - Beobachten und Notizen machen
 - Nur eingreifen, um zu klären oder umzulenken
 - Lassen Sie Schüler die Diskussion führen
 
 ---
 
-#### DISKUSSION (_____ Minuten)
+#### DISKUSSION (**\_** Minuten)
 
-**Innenkreis diskutiert; Außenkreis beobachtet** (15-20 Minuten)  
+**Innenkreis diskutiert; Außenkreis beobachtet** (15-20 Minuten)
 
 **Diskussionspfade:**  
-Lassen Sie das Gespräch organisch fließen, aber seien Sie bereit einzugreifen mit:  
+Lassen Sie das Gespräch organisch fließen, aber seien Sie bereit einzugreifen mit:
+
 - Klärende Fragen
 - Probefragen ("Was meinen Sie mit...?")
 - Textreferenzen ("Wo sehen Sie das im Text?")
 
-**Außenkreis-Beobachtungsprotokoll:**  
+**Außenkreis-Beobachtungsprotokoll:**
+
 - Wer sprach?
 - Welche Beweise wurden verwendet?
 - Welche Fragen entstanden?
 
-**Kreise wechseln** (15-20 Minuten)  
+**Kreise wechseln** (15-20 Minuten)
 
-**Lehreraktionen:**  
+**Lehreraktionen:**
+
 - Beitrag verfolgen
 - Schüler notieren, die noch nicht gesprochen haben
 - Qualität der Argumentation bewerten
 
 ---
 
-#### NACHBESPRECHUNG (_____ Minuten)
+#### NACHBESPRECHUNG (**\_** Minuten)
 
-**Prozessreflexion:**  
+**Prozessreflexion:**
+
 - Was lief gut in unserer Diskussion?
 - Was könnten wir beim nächsten Mal verbessern?
 - Haben wir respektvoll zugehört und auf Ideen aufgebaut?
 
-**Inhaltsreflexion:**  
+**Inhaltsreflexion:**
+
 - Welche neuen Einsichten haben Sie gewonnen?
 - Welche Fragen bleiben offen?
 - Wie hat sich Ihr Denken verändert?
@@ -519,9 +557,9 @@ Schüler schreiben 1-2 Absätze über ihr Lernen
 
 **Bewertung:**  
 Wie werden Sie die Teilnahme bewerten?  
-(Rubrik, Beobachtungsnotizen, Selbstbewertung)  
+(Rubrik, Beobachtungsnotizen, Selbstbewertung)
 
-**Notizen/Anpassungen:**  
+**Notizen/Anpassungen:**
 
 ---
 
@@ -542,15 +580,15 @@ Wie werden Sie die Teilnahme bewerten?
 
 ### Unterrichtsplan-Vorlage: Problembasiertes Lernen
 
-**Projektthema:** ________________  
-**Klassenstufe:** ________________  
-**Dauer:** _____ Tage/Wochen  
-**Leitende Frage:** ________________
+**Projektthema:** ******\_\_\_\_******  
+**Klassenstufe:** ******\_\_\_\_******  
+**Dauer:** **\_** Tage/Wochen  
+**Leitende Frage:** ******\_\_\_\_******
 
 **Endprodukt:**  
-Was werden Schüler erstellen? (Prototyp, Präsentation, Lösung, Kampagne)  
+Was werden Schüler erstellen? (Prototyp, Präsentation, Lösung, Kampagne)
 
-**Behandelte Standards:** ________________
+**Behandelte Standards:** ******\_\_\_\_******
 
 ---
 
@@ -558,19 +596,20 @@ Was werden Schüler erstellen? (Prototyp, Präsentation, Lösung, Kampagne)
 
 **Einstieg:**  
 Wie werden Sie das Problem oder die Herausforderung einführen?  
-(Video, Fallstudie, Gastredner, reales Szenario)  
+(Video, Fallstudie, Gastredner, reales Szenario)
 
 **Leitende Frage:**  
-Stellen Sie eine offene, komplexe Frage, die Forschung erfordert:  
+Stellen Sie eine offene, komplexe Frage, die Forschung erfordert:
 
-**Brainstorming:**  
+**Brainstorming:**
+
 - Was wissen wir bereits?
 - Was müssen wir herausfinden?
 - Wo können wir Informationen finden?
 
 **Gruppen zuweisen (falls zutreffend):**  
-Gruppengröße: _____  
-Rollen: _____  
+Gruppengröße: **\_**  
+Rollen: **\_**
 
 **Projekt-Briefing:**  
 Überprüfen Sie Erwartungen, Zeitplan, Bewertung
@@ -579,23 +618,27 @@ Rollen: _____
 
 #### PHASE 2: UNTERSUCHEN (Tage 2-4)
 
-**Forschungsaktivitäten:**  
+**Forschungsaktivitäten:**
+
 - Bibliotheks-/Online-Forschung
 - Experimente oder Tests
 - Interviews oder Umfragen
 - Feldbesuche
 
-**Lehrerunterstützung:**  
+**Lehrerunterstützung:**
+
 - Ressourcen bereitstellen
 - Mit Gruppen nachfragen
 - Forschungsfähigkeiten unterrichten (Zitieren, Bewerten von Quellen)
 
-**Checkpoints:**  
+**Checkpoints:**
+
 - Tag 2: Forschungsplan genehmigen lassen
 - Tag 3: Erste Ergebnisse teilen
 - Tag 4: Forschung abschließen
 
-**Differenzierung:**  
+**Differenzierung:**
+
 - Für kämpfende Gruppen: (Ressourcenliste bereitstellen, Aufgabe vereinfachen)
 - Für fortgeschrittene Gruppen: (Tiefere Forschung fördern)
 
@@ -604,21 +647,25 @@ Rollen: _____
 #### PHASE 3: ERSTELLEN (Tage 5-7)
 
 **Prototyping/Erstellung:**  
-Was werden Schüler bauen, entwerfen oder erstellen?  
+Was werden Schüler bauen, entwerfen oder erstellen?
 
-**Benötigte Materialien:**  
-- 
+**Benötigte Materialien:**
+
+-
 
 **Erfolgsmerkmale:**  
-Das Endprodukt sollte:  
-- 
-- 
+Das Endprodukt sollte:
 
-**Peer-Feedback-Runden:**  
+-
+-
+
+**Peer-Feedback-Runden:**
+
 - Tag 6: Entwürfe teilen und Feedback erhalten
 - Tag 7: Überarbeiten basierend auf Feedback
 
-**Lehreraktionen:**  
+**Lehreraktionen:**
+
 - Zirkulieren und beraten
 - Prüfen auf Verständnis und Fortschritt
 - Bereiten Sie Gruppen auf Präsentation vor
@@ -628,30 +675,32 @@ Das Endprodukt sollte:
 #### PHASE 4: PRÄSENTIEREN (Tag 8)
 
 **Präsentationsformat:**  
-(Mündliche Präsentation, Poster-Session, Video, Website)  
+(Mündliche Präsentation, Poster-Session, Video, Website)
 
-**Zeitlimit pro Gruppe:** _____
+**Zeitlimit pro Gruppe:** **\_**
 
 **Publikum:**  
-(Mitschüler, Eltern, Community-Mitglieder, Experten)  
+(Mitschüler, Eltern, Community-Mitglieder, Experten)
 
-**Bewertung:**  
+**Bewertung:**
+
 - Rubrik: (Inhalt, Präsentation, Kreativität, Teamarbeit)
 - Peer-Bewertung
 - Selbstbewertung
 
 **Feiern:**  
-Wie werden Sie harte Arbeit anerkennen?  
+Wie werden Sie harte Arbeit anerkennen?
 
 ---
 
 **Reflexion:**  
-Schüler schreiben über:  
+Schüler schreiben über:
+
 - Was haben Sie gelernt?
 - Was war herausfordernd?
 - Was würden Sie beim nächsten Mal anders machen?
 
-**Notizen/Anpassungen:**  
+**Notizen/Anpassungen:**
 
 ---
 
@@ -660,6 +709,7 @@ Schüler schreiben über:
 Verwenden Sie dies, um sicherzustellen, dass Ihre Unterrichtspläne vollständig sind:
 
 ### Vor der Unterrichtsstunde:
+
 - [ ] Lernziel ist klar und messbar
 - [ ] Materialien sind vorbereitet und getestet
 - [ ] Differenzierung geplant für alle Lerner
@@ -667,6 +717,7 @@ Verwenden Sie dies, um sicherzustellen, dass Ihre Unterrichtspläne vollständig
 - [ ] Bewertungsmethode identifiziert
 
 ### Während der Unterrichtsstunde:
+
 - [ ] Einstieg weckt Interesse und aktiviert Vorwissen
 - [ ] Direkte Anweisung ist klar und prägnant
 - [ ] Schüler haben Zeit zum Üben
@@ -674,6 +725,7 @@ Verwenden Sie dies, um sicherzustellen, dass Ihre Unterrichtspläne vollständig
 - [ ] Abschluss fasst Lernen zusammen
 
 ### Nach der Unterrichtsstunde:
+
 - [ ] Überprüfen Sie Bewertungsdaten
 - [ ] Notieren Sie, was funktionierte/was nicht
 - [ ] Passen Sie für nächstes Mal an
@@ -684,18 +736,21 @@ Verwenden Sie dies, um sicherzustellen, dass Ihre Unterrichtspläne vollständig
 ## Ihre nächsten Schritte
 
 ### Diese Woche (30-Minuten-Start):
+
 1. **Wählen Sie eine Vorlage**, die zu Ihrer nächsten Unterrichtsstunde passt
 2. **Füllen Sie die Hauptabschnitte aus** (Ziel, Aktivitäten, Bewertung)
 3. **Fügen Sie eine Differenzierungsstrategie hinzu** für jede Phase
 4. **Unterrichten Sie die Stunde** und notieren Sie Anpassungen
 
 ### Diesen Monat (Bauen Sie Ihre Bibliothek auf):
+
 - Erstellen Sie eine Vorlage für jeden Ihren häufigsten Unterrichtstypen
 - Speichern Sie ausgefüllte Pläne zur zukünftigen Anpassung
 - Teilen Sie Vorlagen mit Ihrer Abteilung
 - Bitten Sie Kollegen um Feedback zu Ihren Plänen
 
 ### Dieses Jahr (Meistern Sie effiziente Planung):
+
 - Planen Sie in Einheiten, nicht einzelne Stunden
 - Überprüfen und verfeinern Sie Vorlagen vierteljährlich
 - Erstellen Sie eine "größte Erfolge"-Datei von Lieblingsstunden
@@ -734,5 +789,4 @@ Wählen Sie eine Vorlage. Probieren Sie sie aus. Passen Sie sie an. Machen Sie s
 **Autor:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*Â© 2025 Zaza Technologies. Diese Ressource ist kostenlos für Lehrkräfte. Teilen Sie sie mit Ihrem Team, aber bitte behalten Sie die Quellenangabe bei.*
-
+_© 2025 Zaza Technologies. Diese Ressource ist kostenlos für Lehrkräfte. Teilen Sie sie mit Ihrem Team, aber bitte behalten Sie die Quellenangabe bei._

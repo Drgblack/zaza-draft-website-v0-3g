@@ -1,31 +1,31 @@
-﻿export default {
+export default {
   hero: {
     preheadline: "TRANSPARENTE PREISE",
     headline:
-      "Preise, die die Zeit und das Wohlbefinden von LehrkrÃ¤ften respektieren",
+      "Preise, die die Zeit und das Wohlbefinden von Lehrkräften respektieren",
     subheadline:
       "Sparen Sie jede Woche Stunden, reduzieren Sie Stress nach Feierabend und schreiben Sie mit Zuversicht - mit Preisen, die einfach und fair sind.",
   },
   trust: {
-    teachers: "Vertraut von fÃ¼rsorglichen LehrkrÃ¤ften",
+    teachers: "Vertraut von fürsorglichen Lehrkräften",
     ferpa: "FERPA-orientiert",
-    cancel: "Jederzeit kÃ¼ndbar",
+    cancel: "Jederzeit kündbar",
   },
   identity: {
-    title: "Dies ist fÃ¼r LehrkrÃ¤fte, die...",
+    title: "Dies ist für Lehrkräfte, die...",
     point1:
-      "weniger Zeit mit Schreiben und mehr Zeit mit Unterrichten verbringen mÃ¶chten",
+      "weniger Zeit mit Schreiben und mehr Zeit mit Unterrichten verbringen möchten",
     point2:
-      "vertrauenswÃ¼rdige SprachunterstÃ¼tzung benÃ¶tigen, ohne ihre Stimme zu verlieren",
-    point3: "sich um Grenzen, Zuversicht und Ruhe in ihrer Woche kÃ¼mmern",
+      "vertrauenswürdige Sprachunterstützung benötigen, ohne ihre Stimme zu verlieren",
+    point3: "sich um Grenzen, Zuversicht und Ruhe in ihrer Woche kümmern",
   },
   toggle: {
     monthly: "Monatlich",
-    annual: "JÃ¤hrlich",
+    annual: "Jährlich",
     save: "2 Monate sparen",
   },
   outcome: {
-    text: "Die meisten LehrkrÃ¤fte verbringen 3-5 Stunden pro Woche mit Nachrichten und Kommentaren. Draft reduziert dies um 50-70 %, wÃ¤hrend Ihr Ton und Ihre Absicht erhalten bleiben.",
+    text: "Die meisten Lehrkräfte verbringen 3-5 Stunden pro Woche mit Nachrichten und Kommentaren. Draft reduziert dies um 50-70 %, während Ihr Ton und Ihre Absicht erhalten bleiben.",
   },
   free: {
     badge: "KOSTENLOS",
@@ -33,7 +33,7 @@
     description:
       "Alles, was Sie brauchen, um Draft auszuprobieren und Ihre ersten Stunden zu sparen.",
     cta: "Kostenlos starten",
-    feature1: "5 EntwÃ¼rfe pro Monat",
+    feature1: "5 Entwürfe pro Monat",
     feature2: "Basisvorlagen",
     feature3: "Speichern & Kopieren",
     feature4: "Community-Support",
@@ -43,13 +43,13 @@
     title: "Teacher",
     description:
       "Unbegrenzte Schreibunterstuetzung ohne erfundene Schuelerinformationen und ohne Lock-ins.",
-    period: "Jederzeit kÃ¼ndbar",
+    period: "Jederzeit kündbar",
     savingsAnnual: "2 Monate kostenlos sparen",
     cta: "7-Tage-Testversion starten",
     trial: "Keine Kreditkarte erforderlich",
-    guarantee: "30-Tage-Geld-zurÃ¼ck-Garantie",
-    feature1: "Unbegrenzte EntwÃ¼rfe & Ãœberarbeitungen",
-    feature2: "Ton-Tutor, Ãœbersetzungen, Kontext-GedÃ¤chtnis",
+    guarantee: "30-Tage-Geld-zurück-Garantie",
+    feature1: "Unbegrenzte Entwürfe & Ãœberarbeitungen",
+    feature2: "Ton-Tutor, Ãœbersetzungen, Kontext-Gedächtnis",
     feature3: "Eigene Vorlagen & Kommentarbanken",
     feature4: "Gespeicherter Verlauf & Export",
     feature5: "Zaras sanfte Wohlbefinden-Hinweise",
@@ -60,20 +60,20 @@
     badge: "TEAMS",
     title: "Department",
     description:
-      "Kollaboratives Schreiben mit gemeinsamer QualitÃ¤t und Konsistenz.",
+      "Kollaboratives Schreiben mit gemeinsamer Qualität und Konsistenz.",
     perTeacher: "/Lehrkraft",
-    billing: "JÃ¤hrliche Abrechnung â€¢ 5-50 PlÃ¤tze",
+    billing: "Jährliche Abrechnung â€¢ 5-50 Plätze",
     cta: "Mit Vertrieb sprechen",
     includes: "Alles in Teacher, plus:",
     feature1: "Team-Bibliotheken, gemeinsame Vorlagen",
     feature2: "Rollenbasierter Zugriff",
-    feature3: "ÃœberprÃ¼fung & Freigabe",
+    feature3: "Ãœberprüfung & Freigabe",
     feature4: "Priorisiertes Onboarding & Erfolg",
   },
   enterprise: {
     badge: "ENTERPRISE",
     title: "Schulen & Bezirke",
-    description: "Alles fÃ¼r groÃŸflÃ¤chige Bereitstellungen.",
+    description: "Alles für groÃŸflächige Bereitstellungen.",
     price: "Individuell",
     cta: "Vertrieb kontaktieren",
     includes: "Alles in Department, plus:",
@@ -88,16 +88,16 @@
       "Ein Ort zum Planen, Schreiben und Kommunizieren - mit lehrerorientierten Wohlbefinden im Mittelpunkt.",
     perMonth: "/Monat",
     perYear: "/Jahr",
-    savings: "Sparen Sie gegenÃ¼ber dem separaten Kauf",
+    savings: "Sparen Sie gegenüber dem separaten Kauf",
     cta: "Bundle holen",
   },
   testimonials: {
-    title: "Was LehrkrÃ¤fte Ã¼ber Preise sagen",
+    title: "Was Lehrkräfte über Preise sagen",
     "1": {
       name: "Sarah L.",
       role: "Mittelschullehrerin",
       quote:
-        "Draft gab mir meine Abende zurÃ¼ck. Ich verlasse jetzt die Schule pÃ¼nktlich - und Eltern sagen, meine Nachrichten fÃ¼hlen sich wÃ¤rmer an.",
+        "Draft gab mir meine Abende zurück. Ich verlasse jetzt die Schule pünktlich - und Eltern sagen, meine Nachrichten fühlen sich wärmer an.",
     },
     "2": {
       name: "Mark R.",
@@ -109,31 +109,31 @@
       name: "Emma K.",
       role: "Grundschullehrerin",
       quote:
-        "Die Preisgestaltung ist transparent und fair. Keine versteckten GebÃ¼hren, keine Lock-ins. Funktioniert einfach.",
+        "Die Preisgestaltung ist transparent und fair. Keine versteckten Gebühren, keine Lock-ins. Funktioniert einfach.",
     },
   },
   metric: {
-    text: "Ãœber 90 Tage berichten LehrkrÃ¤fte von 38 % weniger Nachrichten nach Feierabend und +24 % Zuversicht in der Elternkommunikation.",
+    text: "Ãœber 90 Tage berichten Lehrkräfte von 38 % weniger Nachrichten nach Feierabend und +24 % Zuversicht in der Elternkommunikation.",
   },
   faq: {
     title: "Preis- und Abrechnungs-FAQs",
     q1: "Gibt es einen kostenlosen Plan?",
-    a1: "Ja - beginnen Sie mit 5 EntwÃ¼rfen pro Monat, um den Unterschied zu spÃ¼ren. Keine Kreditkarte erforderlich.",
+    a1: "Ja - beginnen Sie mit 5 Entwürfen pro Monat, um den Unterschied zu spüren. Keine Kreditkarte erforderlich.",
     q2: "Was passiert mit meiner Stimme?",
     a2: "Draft bewahrt Ihren Ton und Ihre Sprache; Sie haben immer die Kontrolle. Unser Ton-Tutor lernt Ihren Stil.",
     q3: "Sind meine Nachrichten privat?",
-    a3: "Ja. Wir verwenden Ihre Inhalte nicht, um Ã¶ffentliche Modelle zu trainieren. Weitere Details finden Sie auf unserer Datenschutzseite.",
-    q4: "Kann ich jederzeit kÃ¼ndigen?",
-    a4: "Absolut - keine Lock-ins. KÃ¼ndigen Sie mit einem Klick in Ihren Kontoeinstellungen.",
-    q5: "UnterstÃ¼tzen Sie Schulen?",
-    a5: "Ja - Mengenpreise, SSO, DPA/SCCs und SLAs fÃ¼r Bezirke. Kontakt: sales@zazadraft.com",
-    q6: "Bieten Sie RÃ¼ckerstattungen an?",
-    a6: "Ja - 30-Tage-Geld-zurÃ¼ck-Garantie auf alle kostenpflichtigen PlÃ¤ne. Keine Fragen gestellt.",
+    a3: "Ja. Wir verwenden Ihre Inhalte nicht, um öffentliche Modelle zu trainieren. Weitere Details finden Sie auf unserer Datenschutzseite.",
+    q4: "Kann ich jederzeit kündigen?",
+    a4: "Absolut - keine Lock-ins. Kündigen Sie mit einem Klick in Ihren Kontoeinstellungen.",
+    q5: "Unterstützen Sie Schulen?",
+    a5: "Ja - Mengenpreise, SSO, DPA/SCCs und SLAs für Bezirke. Kontakt: sales@zazadraft.com",
+    q6: "Bieten Sie Rückerstattungen an?",
+    a6: "Ja - 30-Tage-Geld-zurück-Garantie auf alle kostenpflichtigen Pläne. Keine Fragen gestellt.",
   },
   cta: {
     title: "Bereit, jede Woche Stunden zu sparen?",
     subtitle:
-      "Heute kostenlos starten â€¢ Keine Kreditkarte erforderlich â€¢ Jederzeit kÃ¼ndbar",
+      "Heute kostenlos starten â€¢ Keine Kreditkarte erforderlich â€¢ Jederzeit kündbar",
     primary: "Kostenlose Testversion starten",
     secondary: "Mit Vertrieb sprechen",
   },

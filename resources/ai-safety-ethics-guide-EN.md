@@ -1,4 +1,4 @@
-﻿# The AI Safety & Ethics Quick Guide for Teachers
+# The AI Safety & Ethics Quick Guide for Teachers
 
 ## When and How to Use AI Responsibly in Your Classroom
 
@@ -353,4 +353,4 @@ The students who learn to use AI responsibly will have a massive advantage in co
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-_Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact._
+_© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact._

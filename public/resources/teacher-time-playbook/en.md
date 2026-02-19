@@ -1,11 +1,11 @@
-﻿# The Batch & Automate Playbook for Teachers
+# The Batch & Automate Playbook for Teachers
 
 _Reclaim 5+ hours per week with small systems._
 
 ## Weekly batching
 
 - **Mon - Planning:** outline next week; generate hooks/resources.
-- **Tue - Grading:** 25-min sprints; use 3 comment stems + â€œNext Stepâ€.
+- **Tue - Grading:** 25-min sprints; use 3 comment stems + "Next Step".
 - **Wed - Parent comms:** 30-min window; use templates.
 - **Thu - Prep/Photocopy:** build bins by lesson.
 - **Fri - Reflection:** 10-min note â†’ wins & carry-overs.
@@ -24,4 +24,3 @@ _Reclaim 5+ hours per week with small systems._
 ## AI tasks to delegate
 
 - Draft newsletter blurbs, retrieval questions, comment banks.
-

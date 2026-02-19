@@ -1,7 +1,8 @@
-﻿# Der KI-Sicherheit & Ethik Schnellleitfaden für Lehrkräfte
+# Der KI-Sicherheit & Ethik Schnellleitfaden für Lehrkräfte
+
 ## Wann und wie Sie KI verantwortungsvoll in Ihrem Klassenzimmer einsetzen
 
-*KI ist hier, um zu bleiben - aber das bedeutet nicht, dass alles erlaubt ist. Dieser Leitfaden gibt Ihnen 5 unverzichtbare Regeln für verantwortungsvollen KI-Einsatz, Richtlinien zum Datenschutz von Schülern und Gesprächseinstiege, um Schülern KI-Ethik und akademische Integrität beizubringen.*
+_KI ist hier, um zu bleiben - aber das bedeutet nicht, dass alles erlaubt ist. Dieser Leitfaden gibt Ihnen 5 unverzichtbare Regeln für verantwortungsvollen KI-Einsatz, Richtlinien zum Datenschutz von Schülern und Gesprächseinstiege, um Schülern KI-Ethik und akademische Integrität beizubringen._
 
 **Autor:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
@@ -13,6 +14,7 @@
 Ihre Schüler nutzen bereits KI. ChatGPT, Gemini, Claude und Dutzende andere Tools sind in ihren Taschen. Die Frage ist nicht "Sollten Schüler KI nutzen?" - sie tun es bereits. Die Frage ist: **"Wie bringen wir ihnen bei, sie ethisch, sicher und effektiv zu nutzen?"**
 
 Hier ist, was dieser Leitfaden abdeckt:
+
 - **5 unverzichtbare Regeln** für KI-Einsatz in der Bildung
 - **Datenschutz von Schülern** - Grundlagen (was Sie niemals in KI eingeben sollten)
 - **Akademische Integrität** - Richtlinien (der Unterschied zwischen KI-Nutzung und Betrug)
@@ -30,6 +32,7 @@ Hier ist, was dieser Leitfaden abdeckt:
 **Das Risiko:** Die meisten KI-Tools sind nicht DSGVO-konform. Alles, was Sie in ChatGPT, Gemini oder ähnliche Tools eingeben, kann gespeichert und zum Training zukünftiger Modelle verwendet werden.
 
 **Was NICHT in KI eingeben:**
+
 - Schülernamen, IDs oder E-Mail-Adressen
 - Noteninformationen oder Bewertungsergebnisse
 - Förderpläne oder Anpassungsinformationen
@@ -38,17 +41,19 @@ Hier ist, was dieser Leitfaden abdeckt:
 - Schülerarbeiten mit identifizierenden Informationen (es sei denn, sie sind anonymisiert)
 
 **Sichere Alternative:**
+
 - Verwenden Sie generische Platzhalter: "Schüler A," "ein Siebtklässler," "meine Klasse"
 - Entfernen Sie alle identifizierenden Details, bevor Sie Schülerarbeiten eingeben
 - Verwenden Sie von der Schule genehmigte, DSGVO-konforme KI-Tools, falls verfügbar
 
 **Beispiel:**
+
 ```
-âŒ SCHLECHT: "Schreibe Feedback für Max Mustermanns Aufsatz über Klimawandel. 
+âŒ SCHLECHT: "Schreibe Feedback für Max Mustermanns Aufsatz über Klimawandel.
 Er ist ein Achtklässler mit einem Förderplan für ADHS."
 
-âœ… GUT: "Schreibe Feedback für einen Achtklässler-Aufsatz über Klimawandel. 
-Der Schüler hat Schwierigkeiten mit Organisation und würde von strukturiertem 
+âœ… GUT: "Schreibe Feedback für einen Achtklässler-Aufsatz über Klimawandel.
+Der Schüler hat Schwierigkeiten mit Organisation und würde von strukturiertem
 Feedback profitieren."
 ```
 
@@ -59,6 +64,7 @@ Feedback profitieren."
 **Das Prinzip:** KI ist ein Werkzeug zum Brainstorming, Entwerfen und für Effizienz - NICHT für endgültige Entscheidungen über Schüler.
 
 **Was das bedeutet:**
+
 - âœ… Verwenden Sie KI, um Feedback-Entwürfe zu generieren → SIE personalisieren und finalisieren
 - âœ… Verwenden Sie KI, um Aufgabenideen zu erstellen → SIE passen sie für Ihre Schüler an
 - âœ… Verwenden Sie KI, um Muster zu analysieren → SIE interpretieren und handeln
@@ -75,6 +81,7 @@ Feedback profitieren."
 **Das Prinzip:** Wenn Sie KI verwenden, sagen Sie es Schülern (und Eltern).
 
 **Warum Transparenz wichtig ist:**
+
 - Schafft Vertrauen bei Schülern und Familien
 - Modelliert ethischen KI-Einsatz
 - Ermöglicht Schülern, sich abzumelden, wenn sie sich unwohl fühlen
@@ -83,29 +90,31 @@ Feedback profitieren."
 **Wie Sie transparent sein können:**
 
 **Option 1: Kursrichtlinien-Erklärung**
+
 ```
-"In dieser Klasse kann ich KI-Tools (wie ChatGPT oder Grammarly) verwenden, 
+"In dieser Klasse kann ich KI-Tools (wie ChatGPT oder Grammarly) verwenden,
 um mir bei der Erstellung von Ressourcen, der Bereitstellung von Feedback-
-Entwürfen oder der Generierung von Diskussionsanstößen zu helfen. Alle 
-KI-generierten Inhalte werden von mir überprüft und personalisiert, bevor 
-ich sie mit Schülern teile. Bei Fragen oder Bedenken zum KI-Einsatz 
+Entwürfen oder der Generierung von Diskussionsanstößen zu helfen. Alle
+KI-generierten Inhalte werden von mir überprüft und personalisiert, bevor
+ich sie mit Schülern teile. Bei Fragen oder Bedenken zum KI-Einsatz
 kontaktieren Sie mich bitte."
 ```
 
 **Option 2: E-Mail/Newsletter an Eltern**
+
 ```
 Betreff: Wie wir KI als Lernwerkzeug in diesem Jahr einsetzen
 
 Liebe Familien,
 
-dieses Jahr erkunde ich KI-Tools, um effizienter zu arbeiten - was mehr 
+dieses Jahr erkunde ich KI-Tools, um effizienter zu arbeiten - was mehr
 Zeit für Ihre Schüler bedeutet. So setze ich sie ein:
 - Generierung erster Entwürfe von Feedback (ich personalisiere jeden Kommentar)
 - Erstellung differenzierter Ressourcen für verschiedene Lernniveaus
 - Brainstorming kreativer Unterrichtsideen
 
-Ich gebe niemals Schülernamen, Noten oder persönliche Informationen in KI ein. 
-Alle endgültigen Entscheidungen über das Lernen Ihres Kindes treffe ich, 
+Ich gebe niemals Schülernamen, Noten oder persönliche Informationen in KI ein.
+Alle endgültigen Entscheidungen über das Lernen Ihres Kindes treffe ich,
 nicht eine Maschine. Fragen? Ich freue mich auf Gespräche!
 ```
 
@@ -119,14 +128,15 @@ nicht eine Maschine. Fragen? Ich freue mich auf Gespräche!
 
 **KI-Nutzungsspektrum (Mit Schülern teilen):**
 
-| âœ… ERLAUBT | âš ï¸ ZUERST FRAGEN | âŒ NICHT ERLAUBT |
-|------------|------------------|------------------|
-| Ideen brainstormen | Feedback zu Entwürfen erhalten | Die gesamte Arbeit von KI schreiben lassen |
-| Grammatik/Rechtschreibung prüfen | KI bitten, ein Konzept zu erklären | KI-generierten Text ohne Quellenangabe kopieren |
-| Struktur planen | KI verwenden, um einen Lernleitfaden zu erstellen | KI während Tests/Prüfungen verwenden (außer genehmigt) |
-| Vokabeln übersetzen | KI bitten, komplexen Text zu vereinfachen | KI-Arbeit als eigene ausgeben |
+| âœ… ERLAUBT                      | âš ï¸ ZUERST FRAGEN                               | âŒ NICHT ERLAUBT                                       |
+| -------------------------------- | ------------------------------------------------- | ------------------------------------------------------ |
+| Ideen brainstormen               | Feedback zu Entwürfen erhalten                    | Die gesamte Arbeit von KI schreiben lassen             |
+| Grammatik/Rechtschreibung prüfen | KI bitten, ein Konzept zu erklären                | KI-generierten Text ohne Quellenangabe kopieren        |
+| Struktur planen                  | KI verwenden, um einen Lernleitfaden zu erstellen | KI während Tests/Prüfungen verwenden (außer genehmigt) |
+| Vokabeln übersetzen              | KI bitten, komplexen Text zu vereinfachen         | KI-Arbeit als eigene ausgeben                          |
 
 **Klassenraum-Richtlinienvorlage:**
+
 ```
 KI-RICHTLINIE FÜR [IHRE KLASSE]
 
@@ -134,7 +144,7 @@ KI-RICHTLINIE FÜR [IHRE KLASSE]
 2. Du darfst NICHT KI verwenden, um Aufgaben für dich zu schreiben.
 3. Wenn du KI für eine Aufgabe verwendest, musst du:
    - Eine "KI-Nutzungserklärung" abgeben, die erklärt, WIE du sie verwendet hast
-   - Beispiel: "Ich habe ChatGPT verwendet, um 3 Thesenideen zu brainstormen. 
+   - Beispiel: "Ich habe ChatGPT verwendet, um 3 Thesenideen zu brainstormen.
      Ich habe eine gewählt und den Aufsatz selbst geschrieben."
 4. Wenn du unsicher bist, ob deine KI-Nutzung in Ordnung ist, FRAGE ZUERST.
 5. Verstoß = Verstoß gegen akademische Integrität (wie Plagiat).
@@ -147,6 +157,7 @@ KI-RICHTLINIE FÜR [IHRE KLASSE]
 **Die Realität:** KI wird mit Internetdaten trainiert - die Voreingenommenheit, Fehlinformation und veraltete Informationen enthalten.
 
 **Was Schüler wissen müssen:**
+
 - KI kann selbstbewusst und gleichzeitig falsch sein
 - KI spiegelt Voreingenommenheiten aus ihren Trainingsdaten wider (rassisch, geschlechtsspezifisch, kulturell)
 - KI zitiert nicht immer Quellen oder liefert genaue Informationen
@@ -155,11 +166,13 @@ KI-RICHTLINIE FÜR [IHRE KLASSE]
 **Wie Sie das lehren:**
 
 **Aktivität 1: Die KI-Faktencheck-Herausforderung**
+
 - Lassen Sie Schüler KI eine sachliche Frage in Ihrem Fachgebiet stellen
 - Schüler überprüfen die KI-Antwort mit glaubwürdigen Quellen
 - Diskutieren Sie: Wann war KI genau? Wann hat sie halluziniert oder in die Irre geführt?
 
 **Aktivität 2: Voreingenommenheitserkennung**
+
 - Bitten Sie KI, "einen erfolgreichen Wissenschaftler" oder "eine großartige Führungskraft" zu beschreiben
 - Analysieren Sie die Antwort: Welche Annahmen hat KI gemacht? Was fehlt?
 - Diskutieren Sie: Wie können wir KI-Voreingenommenheit erkennen und hinterfragen?
@@ -171,15 +184,18 @@ KI-RICHTLINIE FÜR [IHRE KLASSE]
 Bevor Sie irgendein KI-Tool verwenden, fragen Sie sich:
 
 **DSGVO-Konformität:**
+
 - â˜ Ist dieses Tool von meinem Bezirk genehmigt?
 - â˜ Hat das Tool eine Datenschutzrichtlinie?
 - â˜ Anonymisiere ich alle Schülerinformationen?
 
 **Schutz minderjähriger Schüler (unter 13 Jahren):**
+
 - â˜ Erfordert dieses Tool elterliche Zustimmung?
 - â˜ Teile ich Schülerarbeiten ohne Kennungen?
 
 **Ihr beruflicher Schutz:**
+
 - â˜ Habe ich dokumentiert, wie ich KI verwende?
 - â˜ Habe ich Schulleitung/Eltern über meine KI-Nutzung informiert?
 - â˜ Befolge ich die Bezirksrichtlinien zu Bildungstechnologie?
@@ -195,6 +211,7 @@ Bevor Sie irgendein KI-Tool verwenden, fragen Sie sich:
 **Der Aufhänger:** "Würden Sie einem Arzt vertrauen, der sich durch die Medizinschule betrogen hat?"
 
 **Wichtige Punkte:**
+
 - Integrität baut echte Fähigkeiten auf (Sie brauchen diese Fähigkeiten im echten Leben)
 - Ihr Ruf zählt (Hochschulen, Arbeitgeber, Referenzen)
 - Lernen ist das Ziel, nicht die Note
@@ -211,6 +228,7 @@ Bevor Sie irgendein KI-Tool verwenden, fragen Sie sich:
 **Die Realitätsprüfung:** "Wir können erkennen, wenn Sie KI verwenden."
 
 **Wie Lehrkräfte KI erkennen:**
+
 - Stimme ändert sich plötzlich (Ihr Schreiben hat Persönlichkeit - KI nicht)
 - Vokabular, das für Ihr Niveau zu fortgeschritten oder formell ist
 - Generischer Inhalt ohne persönliche Beispiele
@@ -230,14 +248,17 @@ Bevor Sie irgendein KI-Tool verwenden, fragen Sie sich:
 **Beispiele für verantwortungsvolle KI-Nutzung:**
 
 **Szenario 1: Sie stecken bei einem Thema fest**
+
 - âŒ KI bitten, den Aufsatz zu schreiben
 - âœ… KI bitten, 5 mögliche Blickwinkel zum Thema zu brainstormen, dann wählen und entwickeln SIE einen
 
 **Szenario 2: Sie verstehen die Aufgabe nicht**
+
 - âŒ KI-Erklärung kopieren und einreichen
 - âœ… KI bitten, es in einfacheren Worten zu erklären, dann Ihren Lehrer fragen, ob Sie richtig verstanden haben
 
 **Szenario 3: Sie bearbeiten Ihre Arbeit**
+
 - âŒ KI Ihre Sätze umschreiben lassen
 - âœ… KI bitten, schwache Stellen zu identifizieren, dann verbessern SIE sie in Ihrer eigenen Stimme
 
@@ -250,8 +271,8 @@ Bevor Sie irgendein KI-Tool verwenden, fragen Sie sich:
 ```
 KI-NUTZUNGSRICHTLINIE FÜR [KLASSENNAME]
 
-Als Ihre Lehrkraft glaube ich, dass KI ein Werkzeug ist, das Ihnen beim 
-Lernen helfen kann - wenn es verantwortungsvoll genutzt wird. Hier ist 
+Als Ihre Lehrkraft glaube ich, dass KI ein Werkzeug ist, das Ihnen beim
+Lernen helfen kann - wenn es verantwortungsvoll genutzt wird. Hier ist
 unsere Klassenrichtlinie:
 
 WANN SIE KI VERWENDEN KÖNNEN:
@@ -270,17 +291,17 @@ WANN SIE KI NICHT VERWENDEN KÖNNEN:
 ERFORDERLICH: KI-NUTZUNGSERKLÄRUNG
 Wenn Sie KI für eine Aufgabe verwenden, müssen Sie eine Erklärung wie diese abgeben:
 
-"Ich habe [KI-Tool-Name] verwendet, um [spezifische Aufgabe]. Ich habe die 
-Ausgabe überprüft und meine eigenen Entscheidungen darüber getroffen, wie 
+"Ich habe [KI-Tool-Name] verwendet, um [spezifische Aufgabe]. Ich habe die
+Ausgabe überprüft und meine eigenen Entscheidungen darüber getroffen, wie
 ich sie verwende."
 
 KONSEQUENZEN:
-Die Verwendung von KI ohne Offenlegung oder ihre Verwendung zum Erledigen 
-von Arbeiten für Sie wird als Verstoß gegen akademische Integrität behandelt 
+Die Verwendung von KI ohne Offenlegung oder ihre Verwendung zum Erledigen
+von Arbeiten für Sie wird als Verstoß gegen akademische Integrität behandelt
 (wie Plagiat).
 
 FRAGEN?
-Wenn Sie nicht sicher sind, ob Ihre KI-Nutzung in Ordnung ist, fragen Sie 
+Wenn Sie nicht sicher sind, ob Ihre KI-Nutzung in Ordnung ist, fragen Sie
 mich ZUERST. Ich beantworte lieber 100 Fragen, als dass Sie einen Fehler machen.
 ```
 
@@ -308,11 +329,13 @@ Unterstützende Technologie (wie Text-zu-Sprache, Sprache-zu-Text oder Grammarly
 ## Ihre nächsten Schritte
 
 ### Diese Woche:
+
 1. Überprüfen Sie Ihre aktuelle KI-Nutzung - befolgen Sie die 5 Regeln?
 2. Entwerfen Sie eine KI-Richtlinie für Ihre Klasse (verwenden Sie die Vorlage)
 3. Führen Sie ein 10-Minuten-Gespräch mit Schülern über KI-Ethik
 
 ### Diesen Monat:
+
 - Teilen Sie Ihre KI-Richtlinie mit Eltern (per E-Mail oder Newsletter)
 - Prüfen Sie mit Ihrem Bezirk über genehmigte KI-Tools
 - Probieren Sie eine KI-Verantwortungsaktivität mit Ihrer Klasse aus (Faktencheck-Herausforderung oder Voreingenommenheitserkennung)
@@ -334,6 +357,4 @@ Die Schüler, die lernen, KI verantwortungsvoll zu nutzen, werden einen massiven
 **Autor:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*Â© 2025 Zaza Technologies. Diese Ressource ist kostenlos für Lehrkräfte. Teilen Sie sie mit Ihrem Team, aber bitte behalten Sie die Urhebernennung bei.*
-
-
+_© 2025 Zaza Technologies. Diese Ressource ist kostenlos für Lehrkräfte. Teilen Sie sie mit Ihrem Team, aber bitte behalten Sie die Urhebernennung bei._

@@ -1,7 +1,7 @@
-﻿export default {
-  heading: "Was LehrkrÃ¤fte sagen",
+export default {
+  heading: "Was Lehrkräfte sagen",
   quote1: {
-    text: "Ich habe meinen Sonntag zurÃ¼ckbekommen. Draft verwandelt Stunden in Minuten.",
+    text: "Ich habe meinen Sonntag zurückbekommen. Draft verwandelt Stunden in Minuten.",
     name: "Sarah Mitchell",
     author: "Grundschullehrerin, UK",
   },
@@ -16,4 +16,3 @@
     author: "Fachbereichsleitung, DE",
   },
 };
-

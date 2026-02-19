@@ -1,7 +1,8 @@
-﻿# The Batch & Automate Playbook for Teachers
+# The Batch & Automate Playbook for Teachers
+
 ## Reclaim 5+ Hours Per Week with Smart Batching and Simple Automation
 
-*Stop doing everything one task at a time. This playbook shows you how to batch similar tasks, automate repetitive work, and protect your time - without fancy tools or complicated systems.*
+_Stop doing everything one task at a time. This playbook shows you how to batch similar tasks, automate repetitive work, and protect your time - without fancy tools or complicated systems._
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
@@ -19,6 +20,7 @@ Sound familiar?
 **The solution:** Batching (grouping similar tasks together) and automation (letting technology handle repetitive work) so you can work more efficiently and reclaim your time.
 
 This playbook gives you:
+
 - **A weekly batching template** (when to do what)
 - **Task-specific batching strategies** (emails, grading, planning, parent communication)
 - **10 automation ideas** (no tech degree required)
@@ -36,6 +38,7 @@ This playbook gives you:
 **Batching** means doing similar tasks together in one focused time block instead of spreading them throughout the day.
 
 **Example:**
+
 - **Bouncing:** Check email 15 times today, respond one at a time
 - **Batching:** Check email 3 times today (morning, lunch, end of day), respond to all at once
 
@@ -44,6 +47,7 @@ This playbook gives you:
 Every time you switch tasks, your brain needs time to refocus. This is called "switching cost," and it can waste 20-40% of your productive time.
 
 When you batch tasks:
+
 - You enter a "flow state" faster
 - You work more efficiently (muscle memory kicks in)
 - You finish tasks in less total time
@@ -60,6 +64,7 @@ Use this framework to batch your most common teaching tasks:
 
 **Time Block:** 1 hour after school  
 **Tasks:**
+
 - Review the week's lessons
 - Pull/prep materials for the week
 - Identify any gaps or changes needed
@@ -76,6 +81,7 @@ Don't plan lessons day-by-day. Plan Monday-Friday in one sitting.
 
 **Time Block:** 30 minutes after school  
 **Tasks:**
+
 - Process all parent emails from Monday-Tuesday
 - Send any positive updates you've been meaning to send
 - Update your class newsletter or communication platform
@@ -92,6 +98,7 @@ Use templates (see "Parent Communication Toolkit") to speed up email responses.
 
 **Time Block:** 45-60 minutes  
 **Tasks:**
+
 - Grade all quizzes, homework, or short assignments from the week so far
 - Enter grades into gradebook
 - Identify students who need follow-up
@@ -108,6 +115,7 @@ Grade one assignment type at a time (all math quizzes, then all reading response
 
 **Time Block:** 30 minutes  
 **Tasks:**
+
 - Create or finalize assessments for next week
 - Print/prep materials
 - Prep answer keys or rubrics
@@ -124,6 +132,7 @@ Reuse assessments from last year with minor tweaks (don't reinvent the wheel).
 
 **Time Block:** 30 minutes after school  
 **Tasks:**
+
 - Finalize grades for the week
 - Send home any student work or communication
 - Do a quick "brain dump" of what worked / what didn't
@@ -146,11 +155,13 @@ Keep a running "wins and adjustments" doc so you can improve over time.
 **The Solution:** Check email 3 times per day only.
 
 **Batching Schedule:**
+
 - **Morning (7:30 AM):** Scan for urgent issues only. Respond to 1-2 critical emails.
 - **Lunch (12:00 PM):** Process all new emails. Respond, delegate, or delete.
 - **End of Day (3:30 PM):** Final sweep. Archive everything processed. Leave inbox empty.
 
 **Inbox Zero Rules:**
+
 1. **Delete** (spam, irrelevant)
 2. **Delegate** (forward to admin, counselor, etc.)
 3. **Defer** (move to "To-Do" folder if it takes more than 5 minutes)
@@ -167,12 +178,14 @@ Keep a running "wins and adjustments" doc so you can improve over time.
 **The Solution:** Collect all work on the same day. Grade all at once using a rubric or comment bank.
 
 **Batching Strategy:**
+
 - **Step 1:** Grade all of one question/section at a time (not one full paper at a time).
   - Why? You get faster because you're looking for the same thing repeatedly.
 - **Step 2:** Use a rubric or comment bank (see "Comment Bank Builder") to speed up feedback.
 - **Step 3:** Set a timer. Aim for 2-3 minutes per paper for short assignments.
 
 **Examples:**
+
 - Grade all "Question 1" responses across 30 papers, then move to Question 2.
 - Grade all thesis statements first, then all body paragraphs, then conclusions.
 
@@ -187,6 +200,7 @@ Keep a running "wins and adjustments" doc so you can improve over time.
 **The Solution:** Plan a full unit (2-4 weeks) at once, then review weekly to adjust.
 
 **Batching Strategy:**
+
 - **Phase 1 (Start of Unit):** Map out the full unit arc.
   - Learning objectives for each lesson
   - Assessments (formative + summative)
@@ -206,11 +220,13 @@ Keep a running "wins and adjustments" doc so you can improve over time.
 **The Solution:** Batch all parent communication into one 30-minute block per week.
 
 **Batching Strategy:**
+
 - **Monday/Tuesday:** Collect notes on students (observations, wins, concerns)
 - **Wednesday:** Draft all emails in one sitting using templates
 - **Thursday:** Review and send
 
 **Types to Batch:**
+
 - Positive updates (aim for 3-5 per week)
 - Missing assignment follow-ups (send to all at once)
 - Conference requests (batch-send to families who need check-ins)
@@ -228,6 +244,7 @@ You don't need to be a tech expert to automate repetitive tasks. Here are 10 sim
 **What it does:** Students take a quiz in Google Forms, and it grades itself instantly.
 
 **How to set it up:**
+
 1. Create a quiz in Google Forms
 2. Mark correct answers in the "Answer Key" section
 3. Students get instant feedback; you get a gradebook
@@ -241,6 +258,7 @@ You don't need to be a tech expert to automate repetitive tasks. Here are 10 sim
 **What it does:** Save frequently used emails as templates you can insert in 2 clicks.
 
 **How to set it up (Gmail):**
+
 1. Settings > Advanced > Enable "Templates"
 2. Compose your email
 3. Click three dots > Templates > Save as template
@@ -254,6 +272,7 @@ You don't need to be a tech expert to automate repetitive tasks. Here are 10 sim
 **What it does:** Auto-send reminders to students before assignments are due.
 
 **How to set it up:**
+
 1. Create a Google Calendar for your class
 2. Add assignment due dates as events
 3. Set automatic email reminders (1 day before, 1 hour before)
@@ -267,6 +286,7 @@ You don't need to be a tech expert to automate repetitive tasks. Here are 10 sim
 **What it does:** Students scan a QR code to mark attendance; data auto-populates in a spreadsheet.
 
 **How to set it up:**
+
 1. Create a Google Form with "Name" and "Date" fields
 2. Generate a QR code for the form (use qr-code-generator.com)
 3. Post the QR code. Students scan daily.
@@ -280,6 +300,7 @@ You don't need to be a tech expert to automate repetitive tasks. Here are 10 sim
 **What it does:** Pre-write and auto-send your weekly parent newsletter.
 
 **How to set it up:**
+
 1. Use a tool like Smore or Mailchimp
 2. Set up a weekly template with sections (upcoming events, homework, celebrations)
 3. Fill it in once per week and schedule it to send Friday afternoons
@@ -293,6 +314,7 @@ You don't need to be a tech expert to automate repetitive tasks. Here are 10 sim
 **What it does:** Students submit work via Google Classroom or Forms, and it auto-organizes by student in your Drive.
 
 **How to set it up:**
+
 1. Create assignments in Google Classroom
 2. All student work auto-saves to a folder by assignment
 
@@ -305,6 +327,7 @@ You don't need to be a tech expert to automate repetitive tasks. Here are 10 sim
 **What it does:** Visual timer projects on your screen so students know how much time is left.
 
 **How to set it up:**
+
 1. Use a free tool like ClassroomScreen.com or Online-Stopwatch.com
 2. Set the timer and project it during work time or transitions
 
@@ -317,6 +340,7 @@ You don't need to be a tech expert to automate repetitive tasks. Here are 10 sim
 **What it does:** Insert rubric feedback into student docs with one click.
 
 **How to set it up:**
+
 1. Create a rubric in a Google Doc
 2. Use Text Blaze or Snippets extension to save common feedback phrases
 3. Type a shortcut (e.g., ".thesis") and it expands to full feedback
@@ -330,6 +354,7 @@ You don't need to be a tech expert to automate repetitive tasks. Here are 10 sim
 **What it does:** Log behavior incidents quickly on your phone or computer; data auto-organizes in a spreadsheet.
 
 **How to set it up:**
+
 1. Create a Google Form with fields: Student Name, Date, Behavior, Action Taken
 2. Bookmark the form on your phone
 3. Fill it out in 30 seconds whenever an incident happens
@@ -343,6 +368,7 @@ You don't need to be a tech expert to automate repetitive tasks. Here are 10 sim
 **What it does:** Pre-write class updates and schedule them to post automatically.
 
 **How to set it up:**
+
 1. Use free tools like Buffer or Later
 2. Write your updates for the week (celebrations, reminders, photos)
 3. Schedule them to post at optimal times (e.g., 7 PM when parents are online)
@@ -356,6 +382,7 @@ You don't need to be a tech expert to automate repetitive tasks. Here are 10 sim
 ### Step 1: Set Up Email Folders
 
 Create these 4 folders:
+
 - **To-Do:** Emails that need action (but not right now)
 - **Waiting:** Emails where you're waiting for a response
 - **Archive:** Processed emails you might need later
@@ -364,14 +391,17 @@ Create these 4 folders:
 ### Step 2: Process Email 3x/Day
 
 **Morning Check (5 minutes):**
+
 - Scan for emergencies only
 - Move urgent items to "To-Do"
 
 **Lunch Check (15 minutes):**
+
 - Process all new emails using the 4 Ds: Delete, Delegate, Defer, Do
 - Move processed emails to Archive
 
 **End-of-Day Check (10 minutes):**
+
 - Final sweep
 - Archive everything
 - Your inbox should be EMPTY
@@ -386,27 +416,27 @@ Every Friday, review your "To-Do" and "Waiting" folders. Anything sitting there 
 
 ### Template 1: Typical School Day Block
 
-| Time | Activity | Batching Strategy |
-|------|----------|------------------|
+| Time         | Activity                   | Batching Strategy           |
+| ------------ | -------------------------- | --------------------------- |
 | 7:00-7:30 AM | Prep + Morning Email Check | Scan for urgent issues only |
-| 7:30-3:00 PM | Teaching | Focus on teaching; no email |
-| 3:00-3:45 PM | Grading Sprint | Grade one assignment type |
-| 3:45-4:15 PM | Planning | Preview tomorrow's lessons |
-| 4:15-4:30 PM | Final Email Check | Archive everything |
+| 7:30-3:00 PM | Teaching                   | Focus on teaching; no email |
+| 3:00-3:45 PM | Grading Sprint             | Grade one assignment type   |
+| 3:45-4:15 PM | Planning                   | Preview tomorrow's lessons  |
+| 4:15-4:30 PM | Final Email Check          | Archive everything          |
 
 ---
 
 ### Template 2: Non-Teaching Day Block
 
-| Time | Activity |
-|------|----------|
-| 8:00-9:30 AM | Deep Work (Lesson Planning) |
-| 9:30-10:00 AM | Break |
-| 10:00-11:30 AM | Grading Block |
-| 11:30-12:00 PM | Email Processing |
-| 12:00-12:30 PM | Lunch |
-| 12:30-1:30 PM | Admin Tasks (enter grades, update newsletter) |
-| 1:30-2:00 PM | Next week prep |
+| Time           | Activity                                      |
+| -------------- | --------------------------------------------- |
+| 8:00-9:30 AM   | Deep Work (Lesson Planning)                   |
+| 9:30-10:00 AM  | Break                                         |
+| 10:00-11:30 AM | Grading Block                                 |
+| 11:30-12:00 PM | Email Processing                              |
+| 12:00-12:30 PM | Lunch                                         |
+| 12:30-1:30 PM  | Admin Tasks (enter grades, update newsletter) |
+| 1:30-2:00 PM   | Next week prep                                |
 
 ---
 
@@ -458,16 +488,19 @@ Batching and automation help you work MORE efficiently, not less. You're not bei
 ## Your Next Steps
 
 ### This Week (30-Minute Start):
+
 1. **Identify your biggest time drain** (email? grading? planning?)
 2. **Pick ONE batching strategy** from this guide
 3. **Try it for 3 days** and track the time saved
 
 ### This Month (Build Your System):
+
 - Implement 2-3 batching strategies
 - Set up at least ONE automation (start with email templates)
 - Block out your weekly planning time on your calendar
 
 ### This Year (Master Efficiency):
+
 - Audit your time: What tasks take the longest? Can you batch them?
 - Share your batching system with a colleague
 - Reflect: Are you reclaiming your evenings and weekends?
@@ -504,5 +537,4 @@ Start small. Batch one thing this week. Automate one repetitive task. Notice how
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
-
+_© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact._

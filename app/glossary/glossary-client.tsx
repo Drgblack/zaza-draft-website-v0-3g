@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useLanguage } from "@/lib/i18n/language-context";
 import { useState } from "react";
@@ -168,8 +168,8 @@ const glossaryTerms: BilingualGlossaryTerm[] = [
       de: "Die Fähigkeit der KI, Emotionen und Einstellungen in Texten zu erkennen und festzustellen, ob ein Text positiv, negativ oder neutral ist.",
     },
     example: {
-      en: "Sentiment analysis helps ensure your parent emails strike the right toneâ€”supportive rather than critical.",
-      de: "Sentimentanalyse hilft sicherzustellen, dass Ihre Eltern-E-Mails den richtigen Ton treffenâ€”unterstützend statt kritisch.",
+      en: "Sentiment analysis helps ensure your parent emails strike the right tone-supportive rather than critical.",
+      de: "Sentimentanalyse hilft sicherzustellen, dass Ihre Eltern-E-Mails den richtigen Ton treffen-unterstützend statt kritisch.",
     },
     category: {
       en: "Natural Language Processing",
@@ -181,8 +181,8 @@ const glossaryTerms: BilingualGlossaryTerm[] = [
     id: "generative-ai",
     term: { en: "Generative AI", de: "Generative KI" },
     definition: {
-      en: "AI systems that can create new contentâ€”text, images, code, or other mediaâ€”based on patterns learned from training data.",
-      de: "KI-Systeme, die neue Inhalte erstellen könnenâ€”Text, Bilder, Code oder andere Medienâ€”basierend auf Mustern, die aus Trainingsdaten gelernt wurden.",
+      en: "AI systems that can create new content-text, images, code, or other media-based on patterns learned from training data.",
+      de: "KI-Systeme, die neue Inhalte erstellen können-Text, Bilder, Code oder andere Medien-basierend auf Mustern, die aus Trainingsdaten gelernt wurden.",
     },
     example: {
       en: "When Zaza Draft helps you write a parent email from scratch, it's using generative AI to create original, contextually appropriate text.",
@@ -491,8 +491,8 @@ const glossaryTerms: BilingualGlossaryTerm[] = [
       de: "Hypothetische KI, die Wissen in jedem Bereich verstehen, lernen und anwenden kann, wie menschliche Intelligenz. Dies existiert noch nicht.",
     },
     example: {
-      en: "Current AI tools like Zaza Draft are 'narrow AI'â€”excellent at specific tasks but not capable of general human-like reasoning.",
-      de: "Aktuelle KI-Tools wie Zaza Draft sind 'enge KI'â€”hervorragend in spezifischen Aufgaben, aber nicht zu allgemeinem menschenähnlichem Denken fähig.",
+      en: "Current AI tools like Zaza Draft are 'narrow AI'-excellent at specific tasks but not capable of general human-like reasoning.",
+      de: "Aktuelle KI-Tools wie Zaza Draft sind 'enge KI'-hervorragend in spezifischen Aufgaben, aber nicht zu allgemeinem menschenähnlichem Denken fähig.",
     },
     category: { en: "Future of AI", de: "Zukunft der KI" },
     relatedTerms: ["Artificial Intelligence (AI)", "Narrow AI"],
@@ -501,8 +501,8 @@ const glossaryTerms: BilingualGlossaryTerm[] = [
     id: "multimodal-ai",
     term: { en: "Multimodal AI", de: "Multimodale KI" },
     definition: {
-      en: "AI systems that can process and generate multiple types of contentâ€”text, images, audio, and videoâ€”simultaneously.",
-      de: "KI-Systeme, die mehrere Arten von Inhaltenâ€”Text, Bilder, Audio und Videoâ€”gleichzeitig verarbeiten und generieren können.",
+      en: "AI systems that can process and generate multiple types of content-text, images, audio, and video-simultaneously.",
+      de: "KI-Systeme, die mehrere Arten von Inhalten-Text, Bilder, Audio und Video-gleichzeitig verarbeiten und generieren können.",
     },
     example: {
       en: "Future versions of AI writing tools might analyze student work samples, hear your voice notes, and generate comprehensive reports.",

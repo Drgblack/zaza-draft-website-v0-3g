@@ -1,11 +1,11 @@
-﻿# Differentiated Rubric Kit for Common Assignments
+# Differentiated Rubric Kit for Common Assignments
 
 _Editable, fair, and learner-friendly rubrics you can adapt in minutes._
 
 ## How to use this kit
 
 - Pick the rubric, adjust criteria to your standards, paste examples, and share with students **before** work begins.
-- Use the **student-friendly level language** and add a quick â€œNext Stepâ€ line during feedback.
+- Use the **student-friendly level language** and add a quick "Next Step" line during feedback.
 
 ## Differentiation built in
 
@@ -23,7 +23,7 @@ _Editable, fair, and learner-friendly rubrics you can adapt in minutes._
 | **Organisation** | Cohesive flow                 | Clear structure      | Some lapses              | Disorganised       |
 | **Conventions**  | Virtually error-free          | Minor errors         | Repeated errors          | Frequent errors    |
 
-**Quick supports:** stems for reasoning â†’ _â€œThis showsâ€¦ becauseâ€¦â€_, _â€œA consequence is â€¦â€_.
+**Quick supports:** stems for reasoning â†’ _"This shows... because..."_, _"A consequence is ..."_.
 
 ## Oral Presentation Rubric (Any Subject)
 
@@ -45,17 +45,16 @@ _Editable, fair, and learner-friendly rubrics you can adapt in minutes._
 
 **Self-check prompts**
 
-- â€œMy most helpful contribution this week was â€¦â€
-- â€œOne thing I will do differently next time is â€¦â€
+- "My most helpful contribution this week was ..."
+- "One thing I will do differently next time is ..."
 
 ## Adapting rubrics fast
 
 - Swap criteria (e.g., **Use of Sources**, **Design Quality**) to match task.
-- Keep level descriptors **student-facing** (â€œclear,â€ â€œpreciseâ€).
+- Keep level descriptors **student-facing** ("clear," "precise").
 - Add **exemplars**: 1 short strong paragraph, 1 developing paragraph.
 
 ## Feedback shortcut
 
-Add a â€œ**Next Step**â€ line under each criterion and circle 1 prompt.  
-Examples: _â€œAdd a direct quote and explain how it proves your point.â€_, _â€œGroup: decide roles before starting.â€_
-
+Add a "**Next Step**" line under each criterion and circle 1 prompt.  
+Examples: _"Add a direct quote and explain how it proves your point."_, _"Group: decide roles before starting."_

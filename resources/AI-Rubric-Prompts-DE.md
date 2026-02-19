@@ -1,10 +1,11 @@
-﻿# AI Rubrik-Prompts: Erstellen Sie bessere Rubriken in kürzerer Zeit
+# AI Rubrik-Prompts: Erstellen Sie bessere Rubriken in kürzerer Zeit
+
 ## Der vollständige Leitfaden zum Generieren, Verfeinern und Schülerfreundlich-Machen von Bewertungsinstrumenten
 
 **Von Dr. Greg Blackburn**  
 *www.zazadraft.com*
 
-*Hören Sie auf, Stunden damit zu verbringen, Rubriken von Grund auf neu zu schreiben. Verwenden Sie diese bewährten Prompts, um klare, spezifische, schülerfreundliche Rubriken in Minuten statt Stunden zu erstellen.*
+_Hören Sie auf, Stunden damit zu verbringen, Rubriken von Grund auf neu zu schreiben. Verwenden Sie diese bewährten Prompts, um klare, spezifische, schülerfreundliche Rubriken in Minuten statt Stunden zu erstellen._
 
 ---
 
@@ -13,6 +14,7 @@
 Sie wissen, dass Rubriken für faires Benoten und klare Erwartungen unerlässlich sind. Aber sie zu erstellen? Das sind 2-3 Stunden Ihres Wochenendes, weg. Und selbst nach all dieser Arbeit fragen Schüler immer noch: "Was bedeutet 'kompetent' wirklich?"
 
 Dieser Leitfaden zeigt Ihnen, wie Sie KI verwenden, um:
+
 - **Rubrik-Entwürfe zu generieren** in unter 5 Minuten
 - **Lehrersprache zu übersetzen** in schülerfreundliche Sprache
 - **Rubriken anzupassen** für verschiedene Lerner
@@ -28,6 +30,7 @@ Dieser Leitfaden zeigt Ihnen, wie Sie KI verwenden, um:
 
 **Schritt 1: Definieren Sie Ihre Aufgabe**  
 Bevor Sie prompten, seien Sie kristallklar über:
+
 - Was ist das Endprodukt? (Aufsatz? Poster? Video?)
 - Welche Fähigkeiten bewerten Sie? (These-Klarheit? Datenanalyse? Kreativität?)
 - Wie sieht Erfolg aus?
@@ -50,6 +53,7 @@ Konvertieren Sie Lehrersprache in "Ich kann..."-Aussagen (siehe Teil 3).
 **Verwenden, wenn:** Sie von Grund auf bei jeder Aufgabe beginnen.
 
 **Prompt-Vorlage:**
+
 ```
 Erstelle eine 4-Stufen-Rubrik für diese Aufgabe:
 
@@ -68,6 +72,7 @@ Format: Tabelle mit Kriterien in Zeilen, Stufen in Spalten
 ```
 
 **Beispiel:**
+
 ```
 Erstelle eine 4-Stufen-Rubrik für diese Aufgabe:
 
@@ -87,13 +92,13 @@ Format: Tabelle
 
 **Beispiel-Ausgabe:**
 
-| Kriterium | Hervorragend (25 Pkt) | Kompetent (20 Pkt) | Entwickelnd (15 Pkt) | Beginnend (10 Pkt) |
-|-----------|----------------------|-------------------|--------------------|--------------------|
-| **Forschungsqualität** | Verwendet 5+ glaubwürdige Quellen; zitiert wissenschaftlich geprüfte Studien oder Regierungsdaten | Verwendet 4 glaubwürdige Quellen; Mischung aus Typen (Artikel, Websites, Bücher) | Verwendet 2-3 Quellen; einige mangeln an Glaubwürdigkeit oder Aktualität | Verwendet 1 Quelle oder verlässt sich auf unzuverlässige Websites |
-| **Datengenauigkeit** | Alle Fakten sind korrekt und zitiert; enthält aktuelle Statistiken (innerhalb 2 Jahre) | Fakten sind meist korrekt mit kleineren Fehlern; meiste Daten sind aktuell | Mehrere sachliche Fehler; veraltete Daten (3+ Jahre alt) | Viele Ungenauigkeiten; keine Datenüberprüfung |
-| **Visuelle Organisation** | Layout ist klar, auffallend und leicht zu folgen; effektive Nutzung von Diagrammen/Bildern | Layout ist organisiert und lesbar; enthält relevante Visuals | Layout ist unübersichtlich oder schwer zu folgen; wenige Visuals | Unorganisiert; keine visuellen Hilfen oder schlecht gewählte Bilder |
-| **Zitierungen** | Alle Quellen korrekt im APA-Format zitiert; enthält Inline-Zitierungen | Meiste Quellen zitiert; kleinere Formatierungsfehler | Einige Quellen zitiert; inkonsistentes Format | Wenige oder keine Zitierungen; keine Bibliographie |
-| **Präsentationsklarheit** | Erklärt Inhalt selbstbewusst; beantwortet Fragen mit Tiefe | Erklärt Inhalt klar; beantwortet die meisten Fragen | Liest vom Poster ab; kämpft mit einigen Fragen | Kann Inhalt nicht erklären; keine Vorbereitung erkennbar |
+| Kriterium                 | Hervorragend (25 Pkt)                                                                             | Kompetent (20 Pkt)                                                               | Entwickelnd (15 Pkt)                                                     | Beginnend (10 Pkt)                                                  |
+| ------------------------- | ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------- |
+| **Forschungsqualität**    | Verwendet 5+ glaubwürdige Quellen; zitiert wissenschaftlich geprüfte Studien oder Regierungsdaten | Verwendet 4 glaubwürdige Quellen; Mischung aus Typen (Artikel, Websites, Bücher) | Verwendet 2-3 Quellen; einige mangeln an Glaubwürdigkeit oder Aktualität | Verwendet 1 Quelle oder verlässt sich auf unzuverlässige Websites   |
+| **Datengenauigkeit**      | Alle Fakten sind korrekt und zitiert; enthält aktuelle Statistiken (innerhalb 2 Jahre)            | Fakten sind meist korrekt mit kleineren Fehlern; meiste Daten sind aktuell       | Mehrere sachliche Fehler; veraltete Daten (3+ Jahre alt)                 | Viele Ungenauigkeiten; keine Datenüberprüfung                       |
+| **Visuelle Organisation** | Layout ist klar, auffallend und leicht zu folgen; effektive Nutzung von Diagrammen/Bildern        | Layout ist organisiert und lesbar; enthält relevante Visuals                     | Layout ist unübersichtlich oder schwer zu folgen; wenige Visuals         | Unorganisiert; keine visuellen Hilfen oder schlecht gewählte Bilder |
+| **Zitierungen**           | Alle Quellen korrekt im APA-Format zitiert; enthält Inline-Zitierungen                            | Meiste Quellen zitiert; kleinere Formatierungsfehler                             | Einige Quellen zitiert; inkonsistentes Format                            | Wenige oder keine Zitierungen; keine Bibliographie                  |
+| **Präsentationsklarheit** | Erklärt Inhalt selbstbewusst; beantwortet Fragen mit Tiefe                                        | Erklärt Inhalt klar; beantwortet die meisten Fragen                              | Liest vom Poster ab; kämpft mit einigen Fragen                           | Kann Inhalt nicht erklären; keine Vorbereitung erkennbar            |
 
 ---
 
@@ -102,6 +107,7 @@ Format: Tabelle
 **Verwenden, wenn:** Sie eine spezifische Fähigkeit mit Nuancen bewerten möchten (z.B. These-Aussagen in Aufsätzen).
 
 **Prompt-Vorlage:**
+
 ```
 Erstelle eine detaillierte 5-Stufen-Rubrik zur Bewertung von [SPEZIFISCHE FÄHIGKEIT] in einer [KLASSENSTUFE] [AUFGABENTYP].
 
@@ -138,6 +144,7 @@ Häufiges Problem: Könnte spezifischer sein, wie oder warum.
 **Verwenden, wenn:** Sie Ihre Rubrik an spezifische Curriculumstandards binden müssen.
 
 **Prompt-Vorlage:**
+
 ```
 Erstelle eine Rubrik, die an diese Standards ausgerichtet ist:
 
@@ -160,6 +167,7 @@ Format: Tabelle
 **Verwenden, wenn:** Sie online eine Rubrik gefunden haben, aber sie ist zu vage oder passt nicht zu Ihren Bedürfnissen.
 
 **Prompt-Vorlage:**
+
 ```
 Verbessere diese Rubrik, indem du sie spezifischer und umsetzbarer machst:
 
@@ -182,6 +190,7 @@ Behalte das gleiche Format und Struktur.
 ### 3.1 In "Ich kann..."-Aussagen konvertieren
 
 **Prompt-Vorlage:**
+
 ```
 Schreibe diese Rubrik mit schülerfreundlichen "Ich kann..."-Aussagen um.
 
@@ -199,8 +208,8 @@ Format: Behalte die gleiche Tabellenstruktur
 
 **Beispiel-Ausgabe:**
 
-| Kriterium | Hervorragend | Kompetent | Entwickelnd |
-|-----------|--------------|-----------|-------------|
+| Kriterium     | Hervorragend                                                                                           | Kompetent                                                                                     | Entwickelnd                                                                            |
+| ------------- | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | **Forschung** | Ich kann 5+ vertrauenswürdige Quellen wie Regierungs-Websites oder Forschungsstudien finden und nutzen | Ich kann 4 gute Quellen aus verschiedenen Typen (Artikel, Bücher, Websites) finden und nutzen | Ich kann 2-3 Quellen finden, aber einige sind möglicherweise nicht die zuverlässigsten |
 
 ---
@@ -208,6 +217,7 @@ Format: Behalte die gleiche Tabellenstruktur
 ### 3.2 Selbstbewertungsfragen hinzufügen
 
 **Prompt-Vorlage:**
+
 ```
 Für diese Rubrik [Rubrik einfügen], füge eine Selbstbewertungsfrage für jedes Kriterium hinzu.
 
@@ -228,6 +238,7 @@ Selbstcheck: "Kann jemand, der mit mir nicht übereinstimmt, genau verstehen, wo
 **Verwenden, wenn:** Sie möchten, dass Schüler sich selbst bewerten, bevor sie einreichen.
 
 **Prompt-Vorlage:**
+
 ```
 Konvertiere diese Rubrik in eine Einreichungs-Checkliste für Schüler:
 
@@ -250,6 +261,7 @@ Länge: 8-12 Punkte
 ### 4.1 Gestufte Rubriken erstellen
 
 **Prompt-Vorlage:**
+
 ```
 Erstelle 3 Versionen dieser Rubrik für unterschiedliche Lernstufen:
 
@@ -275,6 +287,7 @@ Behalte die gleichen Kernkriterien über alle 3.
 ### 4.2 Gestufte Erfolgskriterien hinzufügen
 
 **Prompt-Vorlage:**
+
 ```
 Für diese Rubrik [Rubrik einfügen], füge gestufte Unterstützungen hinzu:
 
@@ -293,6 +306,7 @@ Format: Füge eine "Scaffolds"-Spalte zur Rubrik hinzu
 ### 5.1 Eine Kommentarbank aus Ihrer Rubrik generieren
 
 **Prompt-Vorlage:**
+
 ```
 Basierend auf dieser Rubrik [Rubrik einfügen], erstelle eine Kommentarbank mit 5 Kommentaren für jede Leistungsstufe.
 
@@ -308,6 +322,7 @@ Format: Organisiert nach Stufe, dann nach Kriterium
 **Beispiel-Ausgabe:**
 
 **Kompetent - Forschungsqualität:**
+
 1. "Deine Verwendung von 4 glaubwürdigen Quellen stärkt dein Argument. Erwäge, eine wissenschaftlich geprüfte Studie hinzuzufügen, um hervorragend zu werden."
 2. "Ich schätzte die Mischung aus Artikeln und Büchern in deiner Forschung. Zitiere nächstes Mal wenn möglich eine Primärquelle."
 3. "Deine Quellen sind zuverlässig und relevant. Um deine Arbeit zu vertiefen, suche nach aktuelleren Daten (innerhalb des letzten Jahres)."
@@ -317,6 +332,7 @@ Format: Organisiert nach Stufe, dann nach Kriterium
 ### 5.2 Rubrik-zu-Feedback-Formular-Generator
 
 **Prompt-Vorlage:**
+
 ```
 Erstelle ein Feedback-Formular basierend auf dieser Rubrik:
 
@@ -337,6 +353,7 @@ Format: Druckbares Formular oder digitale Checkliste
 **Verwenden, wenn:** Sie einen Stapel Aufgaben bewerten und schnellere Entscheidungsfindung benötigen.
 
 **Prompt-Vorlage:**
+
 ```
 Erstelle einen "Schnellbewertungs"-Entscheidungsbaum basierend auf dieser Rubrik:
 
@@ -348,7 +365,7 @@ Format:
 - Dauert unter 60 Sekunden pro Aufgabe
 
 Beispiel:
-"Nimmt die These eine klare, diskutierbare Haltung ein?" 
+"Nimmt die These eine klare, diskutierbare Haltung ein?"
 → Ja → Zur nächsten Frage übergehen
 → Nein → "Entwickelnd" ankreuzen und Feedback notieren
 ```
@@ -360,6 +377,7 @@ Beispiel:
 ### 6.1 Kollaborative/Gruppenarbeits-Rubrik
 
 **Prompt-Vorlage:**
+
 ```
 Erstelle eine Rubrik zur Bewertung individueller Beiträge zur Gruppenarbeit.
 
@@ -379,6 +397,7 @@ Format: Duale Rubrik (Gruppe + individuell)
 ### 6.2 Prozessbasierte Rubrik (Nicht nur Produkt)
 
 **Prompt-Vorlage:**
+
 ```
 Erstelle eine Rubrik, die den Prozess bewertet, nicht nur das Endprodukt:
 
@@ -397,6 +416,7 @@ Gewichtung: 60% Prozess, 40% Produkt
 ### 6.3 Portfolio- oder kumulative Bewertungsrubrik
 
 **Prompt-Vorlage:**
+
 ```
 Erstelle eine Rubrik zur Bewertung von Wachstum über Zeit:
 
@@ -421,6 +441,7 @@ Format: Holistisch + analytisch
 
 **Problem:** "Schüler demonstriert Verständnis des Themas"  
 **Fix-Prompt:**
+
 ```
 Mache dieses Rubrik-Kriterium spezifischer:
 [Vages Kriterium einfügen]
@@ -437,6 +458,7 @@ Hinzufügen:
 
 **Problem:** 8+ Kriterien, Schüler überfordert  
 **Fix-Prompt:**
+
 ```
 Vereinfache diese Rubrik auf 4-5 wesentliche Kriterien:
 [Lange Rubrik einfügen]
@@ -453,6 +475,7 @@ Behalte nur die Kriterien, die:
 
 **Problem:** "Kompetent" und "Hervorragend" klingen zu ähnlich  
 **Fix-Prompt:**
+
 ```
 Kläre die Unterschiede zwischen Leistungsstufen in dieser Rubrik:
 [Rubrik einfügen]
@@ -470,16 +493,19 @@ Für jedes Kriterium:
 Wenn Sie Zaza Draft verwenden, können Sie so Ihren Rubrik-Workflow verbessern:
 
 **Rubriken erstellen:**
+
 1. Verwenden Sie obige Prompts, um einen Entwurf zu generieren
 2. In Draft's "Verfeinern"-Modus einfügen
 3. Draft passt Ton an und entfernt KI-Füllwörter
 
 **Rubriken zur Bewertung verwenden:**
+
 1. Laden Sie Ihre Rubrik + Schülerarbeit hoch
 2. Fragen: "Bewerte diese Arbeit anhand der Rubrik. Gib spezifisches Feedback für jedes Kriterium."
 3. Draft stellt sicher, dass Feedback evidenzbasiert ist (keine Halluzinationen)
 
 **In Schülerfreundlich konvertieren:**
+
 1. Fügen Sie Ihre Rubrik ein
 2. Prompt: "Schreibe dies in schülerfreundlicher Sprache um, Leseniveau [Klasse]"
 3. Überprüfen und anpassen
@@ -489,6 +515,7 @@ Wenn Sie Zaza Draft verwenden, können Sie so Ihren Rubrik-Workflow verbessern:
 ## Ihre nächsten Schritte
 
 ### Beginnen Sie hier (10-Minuten-Schnellgewinn):
+
 1. Wählen Sie eine kommende Aufgabe
 2. Verwenden Sie den universellen Rubrik-Generator (Abschnitt 2.1)
 3. Füllen Sie die Lücken mit Ihren Aufgabendetails aus
@@ -496,12 +523,14 @@ Wenn Sie Zaza Draft verwenden, können Sie so Ihren Rubrik-Workflow verbessern:
 5. Teilen Sie mit Schülern **bevor** sie mit der Arbeit beginnen
 
 ### Bauen Sie Ihre Rubrik-Bibliothek auf:
+
 - Speichern Sie Ihre besten Rubriken in einem gemeinsamen Laufwerk
 - Kennzeichnen Sie nach Fach, Klassenstufe und Aufgabentyp
 - Laden Sie Kollegen ein beizutragen
 - Verfeinern Sie basierend darauf, wonach Schüler am meisten fragen
 
 ### Steigern Sie sich:
+
 - Experimentieren Sie mit schülerfreundlichen Versionen (Teil 3)
 - Versuchen Sie, Kommentarbanken zu erstellen (Teil 5.1)
 - Teilen Sie Ihre Rubriken mit Ihrer Abteilung
@@ -539,5 +568,4 @@ Sie schaffen das. ðŸŽ¯
 **Autor:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*Â© 2025 Zaza Technologies. Diese Ressource ist kostenlos für Lehrkräfte. Teilen Sie sie mit Ihrem Team, aber bitte behalten Sie die Quellenangabe bei.*
-
+_© 2025 Zaza Technologies. Diese Ressource ist kostenlos für Lehrkräfte. Teilen Sie sie mit Ihrem Team, aber bitte behalten Sie die Quellenangabe bei._

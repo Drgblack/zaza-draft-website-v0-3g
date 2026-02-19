@@ -1,6 +1,6 @@
-﻿# State of AI in Education 2025 Report - Complete Integration Guide
+# State of AI in Education 2025 Report - Complete Integration Guide
 
-## Ã°Å¸â€œÂ¦ Package Contents
+## Ã°Å¸"Â¦ Package Contents
 
 You now have everything needed to integrate the report generation into your website:
 
@@ -50,7 +50,7 @@ python generate_report.py --format docx --output test_report.docx
 python generate_report.py --format html --output test_report.html
 ```
 
-## Ã°Å¸â€Å’ Website Integration Options
+## Ã°Å¸"Å’ Website Integration Options
 
 ### Option 1: Simple Download Link (Easiest)
 
@@ -262,8 +262,8 @@ export default function ReportDownloadForm() {
           onChange={(e) => setFormData({ ...formData, format: e.target.value })}
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
         >
-          <option value="pdf">Ã°Å¸â€œâ€ž PDF (Recommended)</option>
-          <option value="docx">Ã°Å¸â€œÂ Word Document (Editable)</option>
+          <option value="pdf">Ã°Å¸"â€ž PDF (Recommended)</option>
+          <option value="docx">Ã°Å¸"Â Word Document (Editable)</option>
           <option value="html">Ã°Å¸Å’Â HTML (Web View)</option>
         </select>
       </div>
@@ -305,7 +305,7 @@ async function sendReportEmail(email, filePath, filename) {
       name: "Zaza Draft",
     },
     to: [{ email: email }],
-    subject: "Ã°Å¸â€œÅ  Your State of AI in Education 2025 Report",
+    subject: "Ã°Å¸"Å  Your State of AI in Education 2025 Report",
     htmlContent: `
       <!DOCTYPE html>
       <html>
@@ -315,12 +315,12 @@ async function sendReportEmail(email, filePath, filename) {
           .container { max-width: 600px; margin: 0 auto; padding: 20px; }
           .header { background: #8B5CF6; color: white; padding: 30px; text-align: center; }
           .content { padding: 30px; background: #f8f9fa; }
-          .button { 
-            display: inline-block; 
-            padding: 12px 30px; 
-            background: #8B5CF6; 
-            color: white; 
-            text-decoration: none; 
+          .button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #8B5CF6;
+            color: white;
+            text-decoration: none;
             border-radius: 5px;
             margin: 20px 0;
           }
@@ -329,13 +329,13 @@ async function sendReportEmail(email, filePath, filename) {
       <body>
         <div class="container">
           <div class="header">
-            <h1>Ã°Å¸Å½â€œ State of AI in Education 2025</h1>
+            <h1>Ã°Å¸Å½" State of AI in Education 2025</h1>
           </div>
           <div class="content">
             <h2>Thank you for downloading our report!</h2>
             <p>Your comprehensive 26-page report is attached to this email.</p>
-            
-            <h3>Ã°Å¸â€œÅ  What's Inside:</h3>
+
+            <h3>Ã°Å¸"Å  What's Inside:</h3>
             <ul>
               <li>Key findings from 15,000+ teachers</li>
               <li>Adoption trends across grade levels and subjects</li>
@@ -343,11 +343,11 @@ async function sendReportEmail(email, filePath, filename) {
               <li>Challenges, solutions, and best practices</li>
               <li>Future outlook and strategic recommendations</li>
             </ul>
-            
+
             <p>We hope this report provides valuable insights for your educational journey.</p>
-            
+
             <p><strong>Questions or feedback?</strong> Reply to this email - we'd love to hear from you!</p>
-            
+
             <p>Best regards,<br>The Zaza Draft Team</p>
           </div>
         </div>
@@ -371,7 +371,7 @@ if (email) {
 }
 ```
 
-## Ã°Å¸â€â€™ Security & Performance
+## Ã°Å¸"' Security & Performance
 
 ### 1. Rate Limiting
 
@@ -433,7 +433,7 @@ cron.schedule("0 * * * *", async () => {
 });
 ```
 
-## Ã°Å¸â€œÅ  Analytics Integration
+## Ã°Å¸"Å  Analytics Integration
 
 Track report downloads:
 
@@ -506,7 +506,7 @@ mkdir -p public/downloads
 chmod 755 public/downloads
 ```
 
-## Ã°Å¸â€œÂ Environment Variables
+## Ã°Å¸"Â Environment Variables
 
 Add to your `.env` file:
 
@@ -551,7 +551,7 @@ crontab -e
 tail -f /var/log/app.log
 ```
 
-## Ã°Å¸â€œ- Additional Resources
+## Ã°Å¸"- Additional Resources
 
 - ReportLab docs: https://www.reportlab.com/docs/
 - Matplotlib docs: https://matplotlib.org/
@@ -570,4 +570,3 @@ For questions or issues:
 ---
 
 **Ready to integrate?** Start with Option 1 (simple download) and upgrade to Option 2 (dynamic generation) when needed!
-

@@ -1,7 +1,8 @@
-﻿# The 5-Minute Professional Tone Checklist
+# The 5-Minute Professional Tone Checklist
+
 ## Your Quick Audit Tool for Parent Emails Before You Hit Send
 
-*Stop second-guessing your parent emails. This checklist helps you review tone, clarity, and professionalism in under 5 minutes - so you can send with confidence.*
+_Stop second-guessing your parent emails. This checklist helps you review tone, clarity, and professionalism in under 5 minutes - so you can send with confidence._
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
@@ -12,9 +13,9 @@
 
 You've written the email. Your finger hovers over "Send." But then the doubt creeps in:
 
-- *Is this too harsh?*
-- *Did I sound defensive?*
-- *Will they understand what I'm asking them to do?*
+- _Is this too harsh?_
+- _Did I sound defensive?_
+- _Will they understand what I'm asking them to do?_
 
 So you reread it. Rewrite it. Overthink it. Twenty minutes later, you're still staring at the same email.
 
@@ -23,6 +24,7 @@ So you reread it. Rewrite it. Overthink it. Twenty minutes later, you're still s
 **The solution:** A quick, reliable checklist that tells you exactly what to look for before sending any parent communication.
 
 This guide gives you:
+
 - **The 5-Minute Tone Audit** (a simple checklist)
 - **Subject line bank** (50+ proven subject lines)
 - **Tone red flags** (words and phrases to avoid)
@@ -42,17 +44,17 @@ Use this checklist BEFORE hitting send on any parent email.
 **Ask yourself:**
 
 - [ ] **Is my purpose clear in the first sentence?**  
-  Can they tell within 5 seconds why I'm emailing?
+      Can they tell within 5 seconds why I'm emailing?
 
 - [ ] **Did I use specific details (not vague language)?**  
-  Example: Ã¢Å“â€¦ "Alex missed 3 homework assignments this week"  
-  Example: Ã¢Å’ "Alex isn't doing well"
+      Example: Ã¢Å“... "Alex missed 3 homework assignments this week"  
+      Example: Ã¢Å’ "Alex isn't doing well"
 
 - [ ] **Is there a clear action step?**  
-  Do they know what I'm asking them to do (if anything)?
+      Do they know what I'm asking them to do (if anything)?
 
 - [ ] **Is it short enough?**  
-  Can they read it in under 2 minutes? (Aim for 80-150 words for routine emails)
+      Can they read it in under 2 minutes? (Aim for 80-150 words for routine emails)
 
 > **Quick Fix:** If you can't summarize your email in one sentence, it's too long or unfocused. Start over.
 
@@ -63,26 +65,26 @@ Use this checklist BEFORE hitting send on any parent email.
 **Ask yourself:**
 
 - [ ] **Did I start with something positive or empathetic?**  
-  Even for difficult emails, lead with care:  
-  Ã¢Å“â€¦ "I've enjoyed having Maya in class"  
-  Ã¢Å“â€¦ "I know this week has been tough for your family"
+      Even for difficult emails, lead with care:  
+      Ã¢Å“... "I've enjoyed having Maya in class"  
+      Ã¢Å“... "I know this week has been tough for your family"
 
 - [ ] **Am I describing behavior (not judging character)?**  
-  Ã¢Å“â€¦ "Jamie left his seat 5 times during the lesson"  
-  Ã¢Å’ "Jamie is disrespectful and lazy"
+      Ã¢Å“... "Jamie left his seat 5 times during the lesson"  
+      Ã¢Å’ "Jamie is disrespectful and lazy"
 
 - [ ] **Did I use "I" statements (not "you" accusations)?**  
-  Ã¢Å“â€¦ "I noticed..."  
-  Ã¢Å“â€¦ "I'm concerned about..."  
-  Ã¢Å’ "You need to..."  
-  Ã¢Å’ "You're not doing your job as a parent"
+      Ã¢Å“... "I noticed..."  
+      Ã¢Å“... "I'm concerned about..."  
+      Ã¢Å’ "You need to..."  
+      Ã¢Å’ "You're not doing your job as a parent"
 
 - [ ] **Is my tone collaborative (not commanding)?**  
-  Ã¢Å“â€¦ "Could we work together on a plan?"  
-  Ã¢Å’ "You need to fix this immediately."
+      Ã¢Å“... "Could we work together on a plan?"  
+      Ã¢Å’ "You need to fix this immediately."
 
 - [ ] **Would I be okay receiving this email?**  
-  Read it as if you're the parent. Does it feel respectful?
+      Read it as if you're the parent. Does it feel respectful?
 
 > **Quick Fix:** If the email feels accusatory, add a buffer phrase: "I'm reaching out because I care about [student] and want to support [him/her/them]."
 
@@ -93,23 +95,23 @@ Use this checklist BEFORE hitting send on any parent email.
 **Ask yourself:**
 
 - [ ] **Did I use a professional greeting and closing?**  
-  Ã¢Å“â€¦ "Dear [Name]," / "Hi [Name],"  
-  Ã¢Å“â€¦ "Best regards," / "Sincerely," / "Thank you,"  
-  Ã¢Å’ "Hey" / "Later" / No greeting at all
+      Ã¢Å“... "Dear [Name]," / "Hi [Name],"  
+      Ã¢Å“... "Best regards," / "Sincerely," / "Thank you,"  
+      Ã¢Å’ "Hey" / "Later" / No greeting at all
 
 - [ ] **Did I spell the parent's name correctly?**  
-  Double-check. This matters.
+      Double-check. This matters.
 
 - [ ] **Did I proofread for typos and grammar errors?**  
-  Read it out loud or use a tool like Grammarly.
+      Read it out loud or use a tool like Grammarly.
 
 - [ ] **Did I avoid jargon or acronyms without explaining them?**  
-  Ã¢Å“â€¦ "Individualized Education Program (IEP)"  
-  Ã¢Å’ "We need to discuss the 504"
+      Ã¢Å“... "Individualized Education Program (IEP)"  
+      Ã¢Å’ "We need to discuss the 504"
 
 - [ ] **Did I avoid using ALL CAPS or excessive punctuation?**  
-  Ã¢Å“â€¦ "This is important."  
-  Ã¢Å’ "THIS IS URGENT!!!"
+      Ã¢Å“... "This is important."  
+      Ã¢Å’ "THIS IS URGENT!!!"
 
 > **Quick Fix:** If you're unsure about a word or phrase, look it up or rephrase it. Better safe than embarrassed.
 
@@ -120,19 +122,19 @@ Use this checklist BEFORE hitting send on any parent email.
 **Ask yourself:**
 
 - [ ] **Did I acknowledge the parent's perspective or concerns?**  
-  Ã¢Å“â€¦ "I understand this is frustrating"  
-  Ã¢Å“â€¦ "I appreciate you sharing that with me"
+      Ã¢Å“... "I understand this is frustrating"  
+      Ã¢Å“... "I appreciate you sharing that with me"
 
 - [ ] **Did I offer support (not just criticism)?**  
-  Ã¢Å“â€¦ "Here's what I'm doing to help..."  
-  Ã¢Å“â€¦ "Let's work on this together"
+      Ã¢Å“... "Here's what I'm doing to help..."  
+      Ã¢Å“... "Let's work on this together"
 
 - [ ] **Did I end on a positive or hopeful note?**  
-  Ã¢Å“â€¦ "I'm confident we can turn this around"  
-  Ã¢Å“â€¦ "Thank you for your partnership"
+      Ã¢Å“... "I'm confident we can turn this around"  
+      Ã¢Å“... "Thank you for your partnership"
 
 - [ ] **Would this email strengthen or weaken our relationship?**  
-  If it might weaken it, revise or request an in-person conversation instead.
+      If it might weaken it, revise or request an in-person conversation instead.
 
 > **Quick Fix:** Always end with gratitude or optimism: "Thank you for your partnership" or "I'm here to support [student]."
 
@@ -197,60 +199,64 @@ Some words and phrases trigger defensiveness in parents. Avoid these:
 
 ### JUDGMENTAL LANGUAGE
 
-- Ã¢Å’ "disrespectful"  
-- Ã¢Å’ "lazy"  
-- Ã¢Å’ "bad attitude"  
-- Ã¢Å’ "doesn't care"  
+- Ã¢Å’ "disrespectful"
+- Ã¢Å’ "lazy"
+- Ã¢Å’ "bad attitude"
+- Ã¢Å’ "doesn't care"
 - Ã¢Å’ "disruptive"
 
 **Better alternatives:**
-- Ã¢Å“â€¦ "struggling to follow directions"
-- Ã¢Å“â€¦ "not completing work consistently"
-- Ã¢Å“â€¦ "having trouble staying engaged"
-- Ã¢Å“â€¦ "needs support with focus"
+
+- Ã¢Å“... "struggling to follow directions"
+- Ã¢Å“... "not completing work consistently"
+- Ã¢Å“... "having trouble staying engaged"
+- Ã¢Å“... "needs support with focus"
 
 ---
 
 ### BLAMING LANGUAGE
 
-- Ã¢Å’ "You're not doing your job"  
-- Ã¢Å’ "This is your fault"  
-- Ã¢Å’ "You need to make [student] do..."  
+- Ã¢Å’ "You're not doing your job"
+- Ã¢Å’ "This is your fault"
+- Ã¢Å’ "You need to make [student] do..."
 - Ã¢Å’ "Why haven't you...?"
 
 **Better alternatives:**
-- Ã¢Å“â€¦ "Let's work together on..."
-- Ã¢Å“â€¦ "Could you help by...?"
-- Ã¢Å“â€¦ "I'd love your support with..."
+
+- Ã¢Å“... "Let's work together on..."
+- Ã¢Å“... "Could you help by...?"
+- Ã¢Å“... "I'd love your support with..."
 
 ---
 
 ### VAGUE LANGUAGE
 
-- Ã¢Å’ "doing poorly"  
-- Ã¢Å’ "having trouble"  
-- Ã¢Å’ "needs improvement"  
+- Ã¢Å’ "doing poorly"
+- Ã¢Å’ "having trouble"
+- Ã¢Å’ "needs improvement"
 - Ã¢Å’ "not meeting expectations"
 
 **Better alternatives:**
-- Ã¢Å“â€¦ "scored 60% on the last quiz"
-- Ã¢Å“â€¦ "struggling with [specific skill]"
-- Ã¢Å“â€¦ "needs to work on [specific behavior]"
-- Ã¢Å“â€¦ "currently at [specific level] instead of [expected level]"
+
+- Ã¢Å“... "scored 60% on the last quiz"
+- Ã¢Å“... "struggling with [specific skill]"
+- Ã¢Å“... "needs to work on [specific behavior]"
+- Ã¢Å“... "currently at [specific level] instead of [expected level]"
 
 ---
 
 ### ABSOLUTE LANGUAGE
 
-- Ã¢Å’ "always"  
-- Ã¢Å’ "never"  
-- Ã¢Å’ "every time"  
+- Ã¢Å’ "always"
+- Ã¢Å’ "never"
+- Ã¢Å’ "every time"
 - Ã¢Å’ "constantly"
 
 **Better alternatives:**
-- Ã¢Å“â€¦ "frequently"
-- Ã¢Å“â€¦ "often"
-- Ã¢Å“â€¦ "has been [behavior] for the past [timeframe]"
+
+- Ã¢Å“... "frequently"
+- Ã¢Å“... "often"
+- Ã¢Å“... "has been [behavior] for the past [timeframe]"
 
 ---
 
@@ -259,19 +265,22 @@ Some words and phrases trigger defensiveness in parents. Avoid these:
 ### Example 1: Missing Homework
 
 **BEFORE (Harsh Tone):**
+
 > Subject: Alex's homework problem
 >
 > Alex never does his homework. He's falling behind and you need to make sure he completes it every night. This is unacceptable and if it continues, he will fail.
 
 **AFTER (Professional Tone):**
+
 > Subject: Let's partner on Alex's homework completion
 >
 > Hi Mr. and Mrs. Johnson,
 >
 > I'm reaching out because Alex has not turned in 4 of 6 homework assignments over the past two weeks. I know he's capable of the work, as he participates well in class.
 >
-> To support Alex, could we work together on these steps?  
-> 1. At home: Help Alex set aside 20 minutes after dinner for homework.  
+> To support Alex, could we work together on these steps?
+>
+> 1. At home: Help Alex set aside 20 minutes after dinner for homework.
 > 2. At school: I'll check in with him at the start of each class to confirm he understands the assignment.
 >
 > Would you be available for a brief phone call this week to discuss?
@@ -280,6 +289,7 @@ Some words and phrases trigger defensiveness in parents. Avoid these:
 > Ms. Thompson
 
 **What changed:**
+
 - Specific details (4 of 6 assignments, 2 weeks)
 - Acknowledged a strength (participates well)
 - Collaborative tone (work together)
@@ -290,11 +300,13 @@ Some words and phrases trigger defensiveness in parents. Avoid these:
 ### Example 2: Behavior Incident
 
 **BEFORE (Defensive Tone):**
+
 > Subject: Jamie's behavior
 >
 > Jamie was completely out of control today. He refused to follow directions and was disrespectful to me in front of the class. You need to talk to him about his attitude.
 
 **AFTER (Objective Tone):**
+
 > Subject: Checking in after today's class
 >
 > Dear Ms. Rodriguez,
@@ -311,6 +323,7 @@ Some words and phrases trigger defensiveness in parents. Avoid these:
 > Mr. Davis
 
 **What changed:**
+
 - Objective description (what happened, not character judgment)
 - Specific quotes and timing
 - What you did in response
@@ -381,12 +394,14 @@ Print this and keep it at your desk:
 ### BEFORE YOU HIT SEND:
 
 **CLARITY:**
+
 - [ ] Purpose is clear in first sentence
 - [ ] Specific details (not vague)
 - [ ] Clear action step
 - [ ] Short enough (80-150 words)
 
 **TONE:**
+
 - [ ] Started with positive/empathetic statement
 - [ ] Described behavior (not character)
 - [ ] Used "I" statements
@@ -394,6 +409,7 @@ Print this and keep it at your desk:
 - [ ] Would I be okay receiving this?
 
 **PROFESSIONALISM:**
+
 - [ ] Professional greeting/closing
 - [ ] Spelled name correctly
 - [ ] No typos or grammar errors
@@ -401,6 +417,7 @@ Print this and keep it at your desk:
 - [ ] No ALL CAPS or excessive punctuation
 
 **RELATIONSHIP:**
+
 - [ ] Acknowledged parent's perspective
 - [ ] Offered support
 - [ ] Ended positively
@@ -430,16 +447,19 @@ Don't send it. Save as draft, walk away, and apply the "Sleep on It" rule.
 ## Your Next Steps
 
 ### This Week (5-Minute Start):
+
 1. **Print the one-page checklist** and keep it at your desk
 2. **Before sending your next parent email**, run it through the checklist
 3. **Notice:** Did the checklist catch anything you would have missed?
 
 ### This Month (Build the Habit):
+
 - Use the checklist for every parent email this week
 - Track which part of the checklist helps you most (clarity? tone?)
 - Share the checklist with a colleague
 
 ### This Year (Master Parent Communication):
+
 - Internalize the checklist so it becomes automatic
 - Build a "subject line bank" doc with your most-used lines
 - Reflect: Are parents responding more positively to your emails?
@@ -472,5 +492,4 @@ Use it every time. Over time, it'll become second nature.
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
-
+_© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact._

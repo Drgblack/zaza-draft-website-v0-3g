@@ -1,4 +1,4 @@
-﻿# Zaza Draft - Marketing Website
+# Zaza Draft - Marketing Website
 
 A production-ready multi-page marketing site for Zaza Draft, an AI-powered tool that helps teachers write better parent messages.
 
@@ -24,14 +24,14 @@ A production-ready multi-page marketing site for Zaza Draft, an AI-powered tool 
 ## Getting Started
 
 1. Install dependencies:
-\`\`\`bash
-npm install
-\`\`\`
+   \`\`\`bash
+   npm install
+   \`\`\`
 
 2. Run the development server:
-\`\`\`bash
-npm run dev
-\`\`\`
+   \`\`\`bash
+   npm run dev
+   \`\`\`
 
 3. Open [http://localhost:3000](http://localhost:3000)
 
@@ -40,17 +40,21 @@ npm run dev
 Create a `.env.local` file with the following variables:
 
 \`\`\`env
+
 # Brevo Email Integration (optional)
+
 NEXT_PUBLIC_BREVO_API_KEY=your_brevo_api_key
 NEXT_PUBLIC_BREVO_ENDPOINT=https://api.brevo.com/v3/contacts
 
 # Google Analytics (optional)
+
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 
 # Stripe (optional - for future payment integration)
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
-STRIPE_SECRET_KEY=sk_test_...
-STRIPE_PRICE_ID=price_...
+
+NEXT*PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test*...
+STRIPE*SECRET_KEY=sk_test*...
+STRIPE*PRICE_ID=price*...
 \`\`\`
 
 If environment variables are not set, the app will use mock endpoints and display console warnings.
@@ -71,7 +75,6 @@ If environment variables are not set, the app will use mock endpoints and displa
 5. Update the language switcher in `components/header.tsx`
 
 Example files for ES/FR/IT are already created in `lib/i18n/` with TODO comments.
-
 
 ### Translation Keys
 
@@ -94,16 +97,16 @@ Edit `lib/cms/posts.ts` and add a new post to the `posts` array:
 
 \`\`\`typescript
 {
-  slug: "your-post-slug",
-  title: "Your Post Title",
-  excerpt: "Brief description...",
-  coverImage: "/path-to-image.jpg",
-  body: `Full post content in markdown...`,
-  tags: ["Tag1", "Tag2"],
-  authorName: "Author Name",
-  authorAvatar: "/author-avatar.png",
-  publishedAt: "2024-01-15",
-  language: "en"
+slug: "your-post-slug",
+title: "Your Post Title",
+excerpt: "Brief description...",
+coverImage: "/path-to-image.jpg",
+body: `Full post content in markdown...`,
+tags: ["Tag1", "Tag2"],
+authorName: "Author Name",
+authorAvatar: "/author-avatar.png",
+publishedAt: "2024-01-15",
+language: "en"
 }
 \`\`\`
 
@@ -113,14 +116,14 @@ Edit `lib/cms/resources.ts` and add a new resource to the `resources` array:
 
 \`\`\`typescript
 {
-  slug: "your-resource-slug",
-  title: "Resource Title",
-  type: "Guide" | "Template" | "Checklist",
-  excerpt: "Brief description...",
-  heroImage: "/path-to-image.jpg",
-  body: `Full resource content...`,
-  downloadUrl: "/optional-download-link.pdf", // optional
-  language: "en"
+slug: "your-resource-slug",
+title: "Resource Title",
+type: "Guide" | "Template" | "Checklist",
+excerpt: "Brief description...",
+heroImage: "/path-to-image.jpg",
+body: `Full resource content...`,
+downloadUrl: "/optional-download-link.pdf", // optional
+language: "en"
 }
 \`\`\`
 
@@ -190,9 +193,4 @@ For questions or issues:
 
 ## License
 
-Â© Zaza Technologies. All rights reserved.
-
-
-
-
-
+© Zaza Technologies. All rights reserved.

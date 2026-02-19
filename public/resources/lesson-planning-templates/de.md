@@ -1,17 +1,16 @@
-﻿# Flexible Unterrichtsplan-Vorlagen
+# Flexible Unterrichtsplan-Vorlagen
 
-_Vier anpassbare Word-Templates mit Differenzierung & ÃœberprÃ¼fung._
+_Vier anpassbare Word-Templates mit Differenzierung & Ãœberprüfung._
 
 ## Enthalten
 
-- **5E-Modell** (Engage â€¦ Evaluate)
-- **Workshop-Modell** (Mini-Input, Arbeitsphase, Coaching, PrÃ¤sentation)
-- **Direkte Instruktion** (Vormachen/Anleiten/SelbststÃ¤ndig + Lernstandscheck)
-- **Quick-Plan (TagesÃ¼berblick)**
+- **5E-Modell** (Engage ... Evaluate)
+- **Workshop-Modell** (Mini-Input, Arbeitsphase, Coaching, Präsentation)
+- **Direkte Instruktion** (Vormachen/Anleiten/Selbstständig + Lernstandscheck)
+- **Quick-Plan (Tagesüberblick)**
 
 ## Hinweise
 
-- **Lernziel** als KÃ¶nnen-Satz: â€žIch kann â€¦ erklÃ¤ren.â€œ
-- Alle 8-10 Min **ÃœberprÃ¼fung** einplanen.
-- **UnterstÃ¼tzung** und **Erweiterung** vorab notieren.
-
+- **Lernziel** als Können-Satz: â€žIch kann ... erklären."
+- Alle 8-10 Min **Ãœberprüfung** einplanen.
+- **Unterstützung** und **Erweiterung** vorab notieren.

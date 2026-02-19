@@ -1,7 +1,8 @@
-﻿# The Student Feedback Framework: Fast, Fair, and Effective
+# The Student Feedback Framework: Fast, Fair, and Effective
+
 ## Templates and Methods for Essays, Projects, Tests, and Presentations
 
-*Give meaningful feedback in half the time. This framework includes 6 proven feedback methods (3+1, Glow-Grow, Two Stars and a Wish, Comment Codes), ready-to-use templates, and strategies for scaling feedback across 100+ students.*
+_Give meaningful feedback in half the time. This framework includes 6 proven feedback methods (3+1, Glow-Grow, Two Stars and a Wish, Comment Codes), ready-to-use templates, and strategies for scaling feedback across 100+ students._
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
@@ -13,12 +14,14 @@
 You spend 30 minutes writing detailed comments on an essay. The student glances at the grade, ignores your feedback, and never improves. Sound familiar?
 
 Here's the problem: **Most feedback is too long, too vague, or too late.** Students need feedback that is:
+
 - **Specific** (not "good job" or "needs work")
 - **Actionable** (tells them exactly what to do next)
 - **Timely** (within 48-72 hours while the work is still fresh)
 - **Balanced** (celebrates strengths, identifies one clear improvement)
 
 This framework gives you:
+
 - **6 feedback methods** that work across content areas
 - **Templates for essays, projects, tests, and presentations**
 - **Time-saving strategies** for giving feedback faster without cutting quality
@@ -35,12 +38,14 @@ This framework gives you:
 **Best for:** Essays, research projects, creative writing, lab reports
 
 **How it works:**
+
 - Identify **3 specific strengths** (what they did well)
 - Identify **1 concrete next step** (what to improve and how)
 
 **Why it works:** Students hear positive feedback first (so they keep reading), and get one clear action item (not 10 overwhelming suggestions).
 
 **Template:**
+
 ```
 STRENGTHS:
 1. [Specific strength with example]
@@ -52,6 +57,7 @@ NEXT STEP:
 ```
 
 **Example (Essay Feedback):**
+
 ```
 STRENGTHS:
 1. Your thesis in paragraph 1 is crystal clear: "Social media harms teen mental health." That sets up your argument perfectly.
@@ -69,12 +75,14 @@ Add a counterargument in paragraph 3. Try: "Some might say social media helps te
 **Best for:** Projects, presentations, performances, artwork
 
 **How it works:**
+
 - **GLOW:** What's shining? What did they do really well?
 - **GROW:** Where's the growth opportunity? What's one area to develop?
 
 **Why it works:** Kid-friendly language that celebrates effort and frames improvement as growth (not failure).
 
 **Template:**
+
 ```
 ✨ GLOW (What's Shining):
 [2-3 specific strengths]
@@ -84,6 +92,7 @@ Add a counterargument in paragraph 3. Try: "Some might say social media helps te
 ```
 
 **Example (Science Fair Project):**
+
 ```
 ✨ GLOW (What's Shining):
 - Your hypothesis was clearly stated and testable
@@ -101,6 +110,7 @@ Next time, include more trials (you did 3, but 5-10 would make your data more re
 **Best for:** Quick feedback on homework, exit tickets, formative assessments
 
 **How it works:**
+
 - â­ **Star 1:** One specific strength
 - â­ **Star 2:** Another specific strength
 - ðŸ’« **Wish:** One thing you wish they'd improve or try next time
@@ -108,6 +118,7 @@ Next time, include more trials (you did 3, but 5-10 would make your data more re
 **Why it works:** Fast to write (under 60 seconds per student), easy to remember, and gives balanced feedback.
 
 **Template:**
+
 ```
 â­ [Specific strength]
 â­ [Specific strength]
@@ -115,6 +126,7 @@ Next time, include more trials (you did 3, but 5-10 would make your data more re
 ```
 
 **Example (Math Homework):**
+
 ```
 â­ You correctly set up the equation for problem 3
 â­ Your work is organized and easy to follow
@@ -128,6 +140,7 @@ Next time, include more trials (you did 3, but 5-10 would make your data more re
 **Best for:** High-volume grading (100+ papers), recurring errors, when you need speed
 
 **How it works:**
+
 - Create a master list of common feedback comments
 - Assign each a code (e.g., "T" = thesis unclear, "E" = need more evidence)
 - Mark papers with codes
@@ -147,6 +160,7 @@ Next time, include more trials (you did 3, but 5-10 would make your data more re
 
 **Example Use:**
 Instead of writing "Your thesis is unclear and you need more evidence in paragraph 2," you write:
+
 ```
 Â¶1: T
 Â¶2: E, E
@@ -163,11 +177,13 @@ Students refer to the code bank, revise, and resubmit.
 **Best for:** Formative assessments, drafts, when you want students to think critically
 
 **How it works:**
+
 - Instead of telling students what to fix, ask questions that guide them to discover it
 
 **Why it works:** Builds metacognition. Students become better self-editors.
 
 **Template:**
+
 ```
 ðŸ’­ Questions to Consider:
 1. [Question about content]
@@ -178,6 +194,7 @@ Next draft goal: [One specific focus area]
 ```
 
 **Example (Research Project Draft):**
+
 ```
 ðŸ’­ Questions to Consider:
 1. What's the strongest piece of evidence you found? Could you move that to paragraph 2 to hook readers early?
@@ -194,12 +211,14 @@ Next draft goal: Add one counterargument with your rebuttal.
 **Best for:** Major projects, final drafts, summative assessments
 
 **How it works:**
+
 - Use a rubric for scoring (quick, objective)
 - Add a 3-5 sentence narrative highlighting strengths and next steps
 
 **Why it works:** Rubric provides clear criteria, narrative adds the personal touch students need.
 
 **Template:**
+
 ```
 [Rubric with scores]
 
@@ -211,6 +230,7 @@ OVERALL FEEDBACK:
 ```
 
 **Example (Final Essay):**
+
 ```
 [Rubric: Content 3/4, Organization 4/4, Evidence 3/4, Mechanics 4/4]
 
@@ -225,6 +245,7 @@ Your organization was excellent - the flow from intro to body to conclusion was 
 ### Template Set 1: Essays (Any Subject)
 
 **For Strong Essays (A/B):**
+
 ```
 Strengths:
 âœ“ [Specific thesis or argument quality]
@@ -238,6 +259,7 @@ Keep challenging yourself!
 ```
 
 **For Developing Essays (C/D):**
+
 ```
 What's Working:
 [1-2 genuine strengths - find them!]
@@ -256,12 +278,14 @@ Let's revise this together. See me during office hours.
 ### Template Set 2: Math/Science Problem Sets
 
 **For Correct Work:**
+
 ```
 âœ“ Correct! Your process: [briefly describe their method]
 ðŸ’¡ Pro Tip: [One efficiency trick or alternative method]
 ```
 
 **For Incorrect Work:**
+
 ```
 âŒ Error on line [X]: [identify where the mistake happened]
 âœ“ What you did well: [note correct steps]
@@ -274,6 +298,7 @@ Try this problem again and show me tomorrow.
 ### Template Set 3: Presentations/Speeches
 
 **Live Feedback Form (Fill out during presentation):**
+
 ```
 CONTENT:
 âœ“ Clear thesis/main idea: Yes / Needs work
@@ -295,6 +320,7 @@ GROW: [One specific improvement for next time]
 ### Template Set 4: Creative Projects (Art, Video, Design)
 
 **Feedback Structure:**
+
 ```
 CREATIVE VISION:
 [What was their goal? Did they achieve it?]
@@ -314,11 +340,13 @@ NEXT LEVEL:
 ## Time-Saving Feedback Strategies
 
 ### Strategy 1: The 5-Minute Cap
+
 Set a timer for 5 minutes per paper. When it buzzes, move on. This forces you to focus on the most important feedback.
 
 ---
 
 ### Strategy 2: Audio Feedback
+
 Record 60-90 second voice comments instead of typing. Tools: Mote (Chrome extension), Kaizena, or your phone's voice recorder.
 
 **Why it works:** You talk faster than you type. Students hear your tone (encouraging, not harsh). More personal.
@@ -326,7 +354,9 @@ Record 60-90 second voice comments instead of typing. Tools: Mote (Chrome extens
 ---
 
 ### Strategy 3: Whole-Class Feedback First
+
 Before grading individually:
+
 1. Identify the top 3 strengths you saw across all papers
 2. Identify the top 3 errors you saw across all papers
 3. Share these with the class in a 5-minute mini-lesson
@@ -337,23 +367,28 @@ Before grading individually:
 ---
 
 ### Strategy 4: Tiered Feedback
+
 Not every assignment needs detailed feedback.
 
 **Tier 1 (Formative/Practice):**
+
 - Use comment codes or 2 stars + 1 wish
 - 1-2 minutes per student
 
 **Tier 2 (Drafts):**
+
 - Use 3+1 or Glow-Grow
 - 3-5 minutes per student
 
 **Tier 3 (Summative/Final):**
+
 - Use rubric + narrative
 - 5-10 minutes per student
 
 ---
 
 ### Strategy 5: Peer Feedback First, Teacher Feedback Second
+
 Have students give each other feedback using a structured protocol (like 2 Stars and a Wish). You grade the revised version, which is easier and faster to evaluate.
 
 ---
@@ -414,6 +449,7 @@ My action plan:
 ## Common Feedback Pitfalls (And How to Avoid Them)
 
 ### Pitfall #1: Vague Praise
+
 **What it sounds like:** "Good job!" "Nice work!" "Keep it up!"
 
 **Why it fails:** Student has no idea what they did well or how to replicate it.
@@ -423,6 +459,7 @@ My action plan:
 ---
 
 ### Pitfall #2: Overwhelming Criticism
+
 **What it sounds like:** 15 comments highlighting every single error.
 
 **Why it fails:** Student feels defeated and doesn't know where to start.
@@ -432,6 +469,7 @@ My action plan:
 ---
 
 ### Pitfall #3: Directive Feedback (Doing the Work for Them)
+
 **What it sounds like:** "Change this sentence to: 'The water cycle includes evaporation, condensation, and precipitation.'"
 
 **Why it fails:** Student copies your words but doesn't learn to revise on their own.
@@ -441,6 +479,7 @@ My action plan:
 ---
 
 ### Pitfall #4: Late Feedback
+
 **What it sounds like:** Handing back papers 3 weeks after submission.
 
 **Why it fails:** Student has moved on mentally and doesn't care anymore.
@@ -452,7 +491,9 @@ My action plan:
 ## Scaling Feedback: Grading 100+ Papers Without Losing Your Mind
 
 ### Step 1: Grade in Batches by Rubric Criterion
+
 Instead of grading Paper 1 fully, then Paper 2 fully:
+
 - Grade "Thesis" for all 100 papers
 - Grade "Evidence" for all 100 papers
 - Grade "Organization" for all 100 papers
@@ -462,9 +503,11 @@ Instead of grading Paper 1 fully, then Paper 2 fully:
 ---
 
 ### Step 2: Use a Comment Bank
+
 Create a document with 20-30 pre-written comments. Copy-paste as needed, personalizing with student names or specific examples.
 
 **Sample Comment Bank:**
+
 - "Your thesis is clear and arguable - nice work."
 - "You need at least one more piece of evidence in paragraph 2. Consider adding a quote or statistic."
 - "This paragraph lacks a topic sentence. Start with the main idea, then support it."
@@ -472,7 +515,9 @@ Create a document with 20-30 pre-written comments. Copy-paste as needed, persona
 ---
 
 ### Step 3: Leverage AI (Wisely)
+
 Tools like Zaza Draft or ChatGPT can:
+
 - Generate initial feedback drafts (you review and personalize)
 - Identify patterns across multiple papers (saves you analysis time)
 - Create comment banks based on your rubric
@@ -482,7 +527,9 @@ Tools like Zaza Draft or ChatGPT can:
 ---
 
 ### Step 4: Strategically Skip Low-Impact Feedback
+
 Ask yourself: "Will commenting on this change student learning?"
+
 - Comma splice on page 3? Probably not worth a comment unless it's a pattern.
 - Misunderstanding of the thesis? Absolutely worth a comment.
 
@@ -509,11 +556,13 @@ There's always something. "You turned it in on time" or "You attempted problem 3
 ## Your Next Steps
 
 ### This Week:
+
 1. Pick ONE feedback method from this guide (try 3+1 for your next essay or Glow-Grow for your next project)
 2. Create a comment code bank for your most common feedback phrases
 3. Set a timer for 5 minutes when grading - see how focused you can be
 
 ### This Month:
+
 - Introduce students to self-assessment (use the pre-submission checklist)
 - Experiment with audio feedback for one assignment
 - Track how much time you spend grading - set a goal to reduce it by 20%
@@ -531,5 +580,4 @@ Feedback isn't about catching every error. It's about helping students see their
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
-
+_© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact._

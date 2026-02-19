@@ -1,4 +1,4 @@
-﻿# â€œThis Week In Our Classâ€ Newsletter Starter Kit
+# "This Week In Our Class" Newsletter Starter Kit
 
 _Three editable layouts + a content bank._
 
@@ -11,9 +11,8 @@ _Three editable layouts + a content bank._
 
 ## Content idea bank
 
-- â€œAsk your child aboutâ€¦â€ starters
+- "Ask your child about..." starters
 - 3 retrieval questions for families
 - Spotlight a student strategy (e.g., colour-coding)
 
 **Templates provided:** Primary (bright), Middle (structured), High School (sleek).
-

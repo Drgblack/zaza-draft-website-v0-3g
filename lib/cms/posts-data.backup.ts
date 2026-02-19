@@ -1,4 +1,4 @@
-﻿import type { BlogPost } from "./inbox-transform";
+import type { BlogPost } from "./inbox-transform";
 
 export const blogPosts: BlogPost[] = [
   {
@@ -2833,7 +2833,7 @@ Ich melde mich bis [Datum]. Vielen Dank.
     <p>FÃƒÂ¼gen Sie diese als zweite Zeile hinzu, wenn Sie die Heimatsprache kennen und Ihre Schule es erlaubt. Halten Sie es einfach und paaren Sie es mit einer deutschen Version.</p>
     <ul>
       <li><strong>Spanisch:</strong> Pongo esta nota en alemÃƒÂ¡n y espaÃƒÂ±ol para ayudar. Si prefiere una llamada, con gusto.</li>
-      <li><strong>FranzÃƒÂ¶sisch:</strong> Je vous ÃƒÂ©cris pour vous tenir informÃƒÂ©. Si vous prÃƒÂ©fÃƒÂ©rez un appel, dites-le moi.</li>
+      <li><strong>FranzÃƒÂ¶sisch:</strong> Je vous Ãƒ©cris pour vous tenir informÃƒ©. Si vous prÃƒ©fÃƒ©rez un appel, dites-le moi.</li>
       <li><strong>Englisch:</strong> I'm writing to keep you informed. A quick call is also possible.</li>
     </ul>
     <p>Befolgen Sie immer die Richtlinien Ihrer Schule zur ÃƒÅ“bersetzungsunterstÃƒÂ¼tzung.</p>
@@ -2887,6 +2887,3 @@ Ich melde mich bis [Datum]. Vielen Dank.
 ];
 
 export default blogPosts;
-
-
-

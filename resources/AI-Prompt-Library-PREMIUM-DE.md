@@ -1,7 +1,8 @@
-﻿# Die KI-Prompt-Bibliothek für Lehrkräfte
+# Die KI-Prompt-Bibliothek für Lehrkräfte
+
 ## Ihr vollständiger Leitfaden für effektive KI-Prompts für jeden Unterrichtsmoment
 
-*Sparen Sie wöchentlich über 5 Stunden mit Prompts, die tatsächlich funktionieren. Enthält über 25 sofort einsetzbare Vorlagen, echte Beispiele und ein Schritt-für-Schritt-Framework zum Schreiben Ihrer eigenen.*
+_Sparen Sie wöchentlich über 5 Stunden mit Prompts, die tatsächlich funktionieren. Enthält über 25 sofort einsetzbare Vorlagen, echte Beispiele und ein Schritt-für-Schritt-Framework zum Schreiben Ihrer eigenen._
 
 ---
 
@@ -10,6 +11,7 @@
 Sie haben gehört, dass KI Lehrkräften helfen kann. Aber wenn Sie es versuchen, erhalten Sie allgemeine Antworten, die nicht zu Ihren Schülern, Ihrer Stimme oder Ihrer Situation passen. Der Unterschied zwischen Frustration und Transformation? **Wie Sie fragen.**
 
 Diese Bibliothek gibt Ihnen kampferprobte Prompts, die:
+
 - Antworten in **unter 30 Sekunden** generieren (nicht 30 Minuten Trial-and-Error)
 - Ihrem **Unterrichtsstil und Ihrer Stimme** entsprechen
 - **Sofort einsatzbereit sind** (einfach die Lücken ausfüllen)
@@ -26,18 +28,22 @@ Bevor wir uns in Vorlagen vertiefen, hier ist das Framework, das Prompts funktio
 ### Die 4-Teile-Formel
 
 **1. ROLLE** - Sagen Sie der KI, als wer sie agieren soll
+
 - âœ… "Agiere als 7.-Klasse-Naturwissenschaftslehrkraft mit 10 Jahren Erfahrung"
 - âŒ "Du bist eine Lehrkraft"
 
 **2. AUFGABE** - Geben Sie genau an, was Sie wollen
+
 - âœ… "Entwerfe eine 150-Wort-E-Mail an Eltern über fehlende Hausaufgaben"
 - âŒ "Schreibe etwas über Hausaufgaben"
 
 **3. EINSCHRÄNKUNGEN** - Setzen Sie Grenzen (Ton, Länge, Leseniveau)
+
 - âœ… "Halte es unter 180 Wörtern, professionell aber warm, Leseniveau: 8. Klasse"
 - âŒ "Mach es gut"
 
 **4. EINGABEN** - Geben Sie Kontext (Schülerarbeit, Rubrik oder Details einfügen)
+
 - âœ… "Kontext: Schüler hat 4/6 Aufgaben versäumt, beteiligt sich aber gut im Unterricht"
 - âŒ Kein Kontext gegeben
 
@@ -46,9 +52,11 @@ Bevor wir uns in Vorlagen vertiefen, hier ist das Framework, das Prompts funktio
 ### Schnelles Beispiel
 
 **Schlechter Prompt:**
+
 > "Schreibe eine E-Mail an Eltern"
 
 **Guter Prompt:**
+
 > "Agiere als 5.-Klasse-Lehrkraft. Entwerfe eine ruhige, professionelle E-Mail (unter 150 Wörtern) an Eltern darüber, dass ihr Kind diese Woche 3 Hausaufgaben versäumt hat. Einschließen: 1) was versäumt wurde, 2) zwei spezifische nächste Schritte, und 3) eine ermutigende Aussage über die Teilnahme des Schülers im Unterricht. Halte den Ton kollaborativ, nicht anklagend."
 
 **Warum es funktioniert:** Die KI weiß, wer Sie sind, was Sie brauchen, wie lang es sein sollte, was einzuschließen ist und welchen Ton zu verwenden ist.
@@ -62,6 +70,7 @@ Bevor wir uns in Vorlagen vertiefen, hier ist das Framework, das Prompts funktio
 **Verwenden, wenn:** Ein Schüler kämpft akademisch oder versäumt Arbeit, und Sie möchten mit Eltern zusammenarbeiten, ohne anklagend zu klingen.
 
 **Prompt-Vorlage:**
+
 ```
 Agiere als [Klassenstufe] [Fach] Lehrkraft. Entwerfe eine ruhige, unterstützende E-Mail an Eltern über [Schülername] [spezifisches Problem: fehlende Aufgaben / Schwierigkeiten mit Konzept / Verhaltensänderung].
 
@@ -76,6 +85,7 @@ Länge: 120-180 Wörter
 ```
 
 **Lücken-ausfüllen-Version:**
+
 ```
 Agiere als [7.-Klasse-Mathematik] Lehrkraft. Entwerfe eine ruhige, unterstützende E-Mail an Eltern über [Alex] [4 Hausaufgaben in den letzten 2 Wochen versäumt].
 
@@ -90,11 +100,13 @@ Länge: 120-180 Wörter
 ```
 
 **Beispiel-Ausgabe:**
+
 > Liebe Familie Johnson,
 >
 > Ich melde mich bezüglich Alex' jüngster Hausaufgabenerledigung. In den letzten zwei Wochen hat Alex 4 der 6 zugewiesenen Übungsaufgaben nicht eingereicht, was es schwieriger macht, die Konzepte zu meistern, auf die wir hinarbeiten.
 >
 > Um Alex zu unterstützen, könnten wir gemeinsam an diesen Schritten arbeiten?
+>
 > 1. **Zu Hause:** Helfen Sie Alex, nach dem Abendessen 20 Minuten für Hausaufgaben einzuplanen, selbst wenn es nur das Durchsehen von Notizen ist.
 > 2. **In der Schule:** Ich werde zu Beginn jeder Stunde bei Alex nachfragen, um zu bestätigen, dass die Aufgabe verstanden wurde.
 >
@@ -112,6 +124,7 @@ Länge: 120-180 Wörter
 **Verwenden, wenn:** Sie müssen einen Klassenvorfall sachlich dokumentieren und Elternpartnerschaft einladen.
 
 **Prompt-Vorlage:**
+
 ```
 Agiere als [Klassenstufe] Lehrkraft. Schreibe eine objektive Vorfallsnotiz für [Datum/Uhrzeit].
 
@@ -127,6 +140,7 @@ Länge: 100-150 Wörter
 ```
 
 **Beispiel:**
+
 ```
 Agiere als 4.-Klasse-Lehrkraft. Schreibe eine objektive Vorfallsnotiz für 15. Oktober, 14:15 Uhr.
 
@@ -150,6 +164,7 @@ Länge: 100-150 Wörter
 **Verwenden, wenn:** Ein Schüler hat etwas getan, das es wert ist, gefeiert zu werden - teilen Sie es mit Eltern.
 
 **Prompt-Vorlage:**
+
 ```
 Agiere als [Klasse/Fach] Lehrkraft. Schreibe eine kurze positive E-Mail an Eltern über [Schülername]s [spezifische Leistung/Verhalten/Wachstum].
 
@@ -163,6 +178,7 @@ Länge: 60-100 Wörter
 ```
 
 **Beispiel-Ausgabe:**
+
 > Hallo Frau Chen,
 >
 > Ich wollte mitteilen, dass Mia heute während unseres Naturwissenschaftslabors die Führung in ihrer Gruppe übernommen und den Wasserkreislauf ihren Mitschülern mit solcher Klarheit erklärt hat, dass selbst ich etwas Neues gelernt habe! Ihr Selbstvertrauen beim Präsentieren ist dieses Semester enorm gewachsen.
@@ -181,6 +197,7 @@ Länge: 60-100 Wörter
 **Verwenden, wenn:** Sie müssen schnell bedeutungsvolles Feedback zu Schülertexten geben.
 
 **Prompt-Vorlage:**
+
 ```
 Gebe Feedback zu diesem [Klassenstufe] [Aufsatztyp: argumentativ/narrativ/informativ] unter Verwendung der 3+1-Methode:
 
@@ -199,7 +216,9 @@ Länge: 80-120 Wörter gesamt
 ```
 
 **Beispiel-Ausgabe:**
+
 > **Stärken:**
+>
 > 1. Deine These in Absatz 1 ist kristallklar: "Soziale Medien schaden der psychischen Gesundheit von Teenagern." Das ist ein starker Start.
 > 2. Du hast die Pew Research-Statistik effektiv verwendet, um deine Behauptung über Bildschirmzeit zu unterstützen.
 > 3. Dein Schluss kommt schön zu deiner Eröffnungsfrage zurück.
@@ -214,6 +233,7 @@ Länge: 80-120 Wörter gesamt
 ### 2.2 Mathematikproblem-Feedback
 
 **Prompt-Vorlage:**
+
 ```
 Überprüfe diese [Klassenstufe] Mathematikproblem-Lösung.
 
@@ -234,6 +254,7 @@ Länge: 60-80 Wörter
 **Verwenden, wenn:** Sie müssen Feedback zu einem mehrteiligen Projekt oder einer Präsentation geben.
 
 **Prompt-Vorlage:**
+
 ```
 Gebe Feedback zu diesem [Klassenstufe] [Projekttyp: Poster/Präsentation/Forschungsprojekt].
 
@@ -254,6 +275,7 @@ Länge: 100-150 Wörter
 ### 3.1 Ansprechende Unterrichtseinstiege
 
 **Prompt-Vorlage:**
+
 ```
 Generiere 3 ansprechende Einstiege für eine [Klassenstufe] [Fach] Unterrichtsstunde über [Thema].
 
@@ -269,6 +291,7 @@ Ton: Schülerzentriert, ansprechend
 ```
 
 **Beispiel:**
+
 ```
 Generiere 3 ansprechende Einstiege für eine 7.-Klasse-Naturwissenschafts-Unterrichtsstunde über den Wasserkreislauf.
 
@@ -286,6 +309,7 @@ Mindestens ein Einstieg sollte praktisch/kinästhetisch sein.
 ### 3.2 Differenzierungsunterstützung
 
 **Prompt-Vorlage:**
+
 ```
 Für dieses Lernziel: [dein Ziel einfügen]
 
@@ -312,6 +336,7 @@ Ton: Praktisch, lehrerfertig
 ### 3.3 Exit-Ticket-Fragen
 
 **Prompt-Vorlage:**
+
 ```
 Basierend auf dieser Unterrichtsstunde: [Unterrichtsstunde beschreiben oder Unterrichtsplan einfügen]
 
@@ -330,6 +355,7 @@ Format: Multiple Choice ODER Kurzantwort (gebe an, welche du bevorzugst)
 ### 4.1 Schülerfreundliche Rubrik
 
 **Prompt-Vorlage:**
+
 ```
 Schreibe diese Rubrik in schülerfreundliche "Ich kann..."-Aussagen um.
 
@@ -350,6 +376,7 @@ Ton: Klar, ermutigend
 **Verwenden, wenn:** Sie schnelle, abwechslungsreiche Kommentare für Zeugnisse oder Bewertungen benötigen.
 
 **Prompt-Vorlage:**
+
 ```
 Erstelle eine Kommentarbank für [Fach/Klassenstufe] basierend auf dieser Rubrik: [Rubrik einfügen]
 
@@ -375,6 +402,7 @@ Ton: Professionell, konstruktiv
 ### 5.1 Anweisungen vereinfachen
 
 **Prompt:**
+
 ```
 Verwandle diese Anweisungen in eine 3-Schritt-Schüler-Checkliste:
 
@@ -388,6 +416,7 @@ Format: Nummerierte Liste, Aktionsverben, unter 30 Wörter gesamt
 ### 5.2 Abrufübungsfragen
 
 **Prompt:**
+
 ```
 Basierend auf der gestrigen Unterrichtsstunde über [Thema], generiere 6 Abrufübungsfragen:
 - 2 einfach (Erinnerung)
@@ -402,6 +431,7 @@ Format: Kurzantwort
 ### 5.3 Newsletter-Absatz-Generator
 
 **Prompt:**
+
 ```
 Schreibe einen 3-Satz-Absatz für unseren wöchentlichen Klassen-Newsletter über das Lernen dieser Woche:
 
@@ -418,18 +448,22 @@ Einschließen: Eine spezifische Art, wie Eltern zu Hause unterstützen können
 ### Wie man Ausgaben iteriert und verbessert
 
 **Wenn die Ausgabe zu allgemein ist:**
+
 - Einschränkungen hinzufügen: "Verwende spezifische Beispiele aus dem 5.-Klasse-Lehrplan"
 - Kontext bereitstellen: "Diese Klasse kämpft mit Übergängen"
 - Stimme spezifizieren: "Schreibe, als würdest du mit einem Kollegen sprechen, nicht einem Lehrbuch"
 
 **Wenn die Ausgabe zu förmlich ist:**
+
 - Hinzufügen: "Verwende Kontraktionen und konversationelle Sprache"
 - Spezifizieren: "Ton: freundlich, wie mit einem Nachbarn sprechen"
 
 **Wenn die Ausgabe zu lang ist:**
+
 - Hinzufügen: "Maximum 150 Wörter" oder "Nur 3 Sätze"
 
 **Wenn Sie mehrere Optionen möchten:**
+
 - Hinzufügen: "Gib mir 3 Versionen: förmlich, neutral und warm"
 
 ---
@@ -439,16 +473,19 @@ Einschließen: Eine spezifische Art, wie Eltern zu Hause unterstützen können
 Wenn Sie Zaza Draft verwenden, können Sie diese Prompts verbessern:
 
 **Für Eltern-E-Mails:**
+
 ```
 Fügen Sie Ihre groben Notizen + Schülerkontext in Draft ein. Verwenden Sie die "professioneller Ton"-Einstellung. Überprüfen und senden.
 ```
 
 **Für Schülerfeedback:**
+
 ```
 Fügen Sie Schülerarbeit + Ihre Rubrik ein. Fragen Sie nach "2 Stärken + 1 nächster Schritt". Draft vermeidet Halluzinationen und hält sich an das, was tatsächlich in der Schülerarbeit ist.
 ```
 
 **Für Zeugniskommentare:**
+
 ```
 Laden Sie Ihre Rubrik und Noten hoch. Fragen Sie nach abwechslungsreichen Kommentaren. Draft stellt sicher, dass kein KI-"Füllstoff" - nur spezifisches, evidenzbasiertes Feedback.
 ```
@@ -458,6 +495,7 @@ Laden Sie Ihre Rubrik und Noten hoch. Fragen Sie nach abwechslungsreichen Kommen
 ## Ihre nächsten Schritte
 
 ### Beginnen Sie hier (5-Minuten-Schnellgewinn):
+
 1. Wählen Sie EINEN Prompt aus Teil 1 (Elternkommunikation)
 2. Füllen Sie die Lücken mit einer echten Situation aus, der Sie gegenüberstehen
 3. Führen Sie ihn durch Ihr KI-Tool aus (ChatGPT, Claude oder Zaza Draft)
@@ -465,12 +503,14 @@ Laden Sie Ihre Rubrik und Noten hoch. Fragen Sie nach abwechslungsreichen Kommen
 5. Senden Sie die E-Mail und sparen Sie 20 Minuten
 
 ### Bauen Sie Ihre Prompt-Sammlung auf:
+
 - Setzen Sie ein Lesezeichen für diese Ressource
 - Kopieren Sie 3-5 Prompts, die Sie am häufigsten verwenden
 - Bewahren Sie sie in einem Dokument auf, auf das Sie schnell zugreifen können
 - Passen Sie sie im Laufe der Zeit basierend darauf an, was funktioniert
 
 ### Steigern Sie sich:
+
 - Experimentieren Sie mit dem Hinzufügen der Stimme/Werte Ihrer Schule
 - Erstellen Sie fachspezifische Versionen
 - Teilen Sie Ihre besten Prompts mit Ihrem Team
@@ -503,5 +543,4 @@ Beginnen Sie klein. Testen Sie diese Woche einen Prompt. Verfeinern Sie ihn. Dan
 
 ---
 
-*Â© 2025 Zaza Technologies. Diese Ressource ist kostenlos für Lehrkräfte. Teilen Sie sie mit Ihrem Team, aber bitte behalten Sie die Quellenangabe bei.*
-
+_© 2025 Zaza Technologies. Diese Ressource ist kostenlos für Lehrkräfte. Teilen Sie sie mit Ihrem Team, aber bitte behalten Sie die Quellenangabe bei._

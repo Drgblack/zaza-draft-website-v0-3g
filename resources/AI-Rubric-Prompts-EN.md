@@ -1,10 +1,11 @@
-﻿# AI Rubric Prompts: Create Better Rubrics in Less Time
+# AI Rubric Prompts: Create Better Rubrics in Less Time
+
 ## The Complete Guide to Generating, Refining, and Student-ifying Assessment Tools
 
 **By Dr. Greg Blackburn**  
 *www.zazadraft.com*
 
-*Stop spending hours writing rubrics from scratch. Use these proven prompts to create clear, specific, student-friendly rubrics in minutes, not hours.*
+_Stop spending hours writing rubrics from scratch. Use these proven prompts to create clear, specific, student-friendly rubrics in minutes, not hours._
 
 ---
 
@@ -13,6 +14,7 @@
 You know rubrics are essential for fair grading and clear expectations. But creating them? That's 2-3 hours of your weekend, gone. And even after all that work, students still ask: "What does 'proficient' really mean?"
 
 This guide shows you how to use AI to:
+
 - **Generate rubric drafts** in under 5 minutes
 - **Translate teacher-speak** into student-friendly language
 - **Customize rubrics** for different learners
@@ -28,6 +30,7 @@ This guide shows you how to use AI to:
 
 **Step 1: Define Your Assignment**  
 Before you prompt, be crystal clear on:
+
 - What's the final product? (Essay? Poster? Video?)
 - What skills are you assessing? (Thesis clarity? Data analysis? Creativity?)
 - What does success look like?
@@ -50,6 +53,7 @@ Convert teacher language to "I can..." statements (see Part 3).
 **Use when:** Starting from scratch on any assignment.
 
 **Prompt Template:**
+
 ```
 Create a 4-level rubric for this assignment:
 
@@ -68,6 +72,7 @@ Format: Table with criteria in rows, levels in columns
 ```
 
 **Example:**
+
 ```
 Create a 4-level rubric for this assignment:
 
@@ -87,13 +92,13 @@ Format: Table
 
 **Sample Output:**
 
-| Criteria | Exemplary (25 pts) | Proficient (20 pts) | Developing (15 pts) | Beginning (10 pts) |
-|----------|-------------------|-------------------|-------------------|-------------------|
-| **Research Quality** | Uses 5+ credible sources; cites peer-reviewed studies or government data | Uses 4 credible sources; mix of types (articles, websites, books) | Uses 2-3 sources; some lack credibility or currency | Uses 1 source or relies on unreliable websites |
-| **Data Accuracy** | All facts are accurate and cited; includes current statistics (within 2 years) | Facts are mostly accurate with minor errors; most data is current | Several factual errors; outdated data (3+ years old) | Many inaccuracies; no data verification |
-| **Visual Organization** | Layout is clear, eye-catching, and easy to follow; effective use of charts/images | Layout is organized and readable; includes relevant visuals | Layout is cluttered or hard to follow; few visuals | Disorganized; no visual aids or poorly chosen images |
-| **Citations** | All sources cited correctly in APA format; includes in-text citations | Most sources cited; minor formatting errors | Some sources cited; inconsistent format | Few or no citations; no bibliography |
-| **Presentation Clarity** | Explains content confidently; answers questions with depth | Explains content clearly; answers most questions | Reads from poster; struggles with some questions | Cannot explain content; no preparation evident |
+| Criteria                 | Exemplary (25 pts)                                                                | Proficient (20 pts)                                               | Developing (15 pts)                                  | Beginning (10 pts)                                   |
+| ------------------------ | --------------------------------------------------------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
+| **Research Quality**     | Uses 5+ credible sources; cites peer-reviewed studies or government data          | Uses 4 credible sources; mix of types (articles, websites, books) | Uses 2-3 sources; some lack credibility or currency  | Uses 1 source or relies on unreliable websites       |
+| **Data Accuracy**        | All facts are accurate and cited; includes current statistics (within 2 years)    | Facts are mostly accurate with minor errors; most data is current | Several factual errors; outdated data (3+ years old) | Many inaccuracies; no data verification              |
+| **Visual Organization**  | Layout is clear, eye-catching, and easy to follow; effective use of charts/images | Layout is organized and readable; includes relevant visuals       | Layout is cluttered or hard to follow; few visuals   | Disorganized; no visual aids or poorly chosen images |
+| **Citations**            | All sources cited correctly in APA format; includes in-text citations             | Most sources cited; minor formatting errors                       | Some sources cited; inconsistent format              | Few or no citations; no bibliography                 |
+| **Presentation Clarity** | Explains content confidently; answers questions with depth                        | Explains content clearly; answers most questions                  | Reads from poster; struggles with some questions     | Cannot explain content; no preparation evident       |
 
 ---
 
@@ -102,6 +107,7 @@ Format: Table
 **Use when:** You want to assess one specific skill with nuance (e.g., thesis statements in essays).
 
 **Prompt Template:**
+
 ```
 Create a detailed 5-level rubric for assessing [SPECIFIC SKILL] in a [GRADE LEVEL] [ASSIGNMENT TYPE].
 
@@ -138,6 +144,7 @@ Common issue: Could be more specific about how or why.
 **Use when:** You need to tie your rubric to specific curriculum standards.
 
 **Prompt Template:**
+
 ```
 Create a rubric aligned to these standards:
 
@@ -160,6 +167,7 @@ Format: Table
 **Use when:** You found a rubric online but it's too vague or doesn't fit your needs.
 
 **Prompt Template:**
+
 ```
 Improve this rubric by making it more specific and actionable:
 
@@ -182,6 +190,7 @@ Keep the same format and structure.
 ### 3.1 Convert to "I Can..." Statements
 
 **Prompt Template:**
+
 ```
 Rewrite this rubric using student-friendly "I can..." statements.
 
@@ -199,8 +208,8 @@ Format: Keep the same table structure
 
 **Example Output:**
 
-| Criteria | Exemplary | Proficient | Developing |
-|----------|-----------|-----------|------------|
+| Criteria     | Exemplary                                                                              | Proficient                                                                         | Developing                                                      |
+| ------------ | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------- |
 | **Research** | I can find and use 5+ trustworthy sources like government websites or research studies | I can find and use 4 good sources from different types (articles, books, websites) | I can find 2-3 sources, but some might not be the most reliable |
 
 ---
@@ -208,6 +217,7 @@ Format: Keep the same table structure
 ### 3.2 Add Self-Assessment Questions
 
 **Prompt Template:**
+
 ```
 For this rubric [paste rubric], add a self-assessment question for each criterion.
 
@@ -228,6 +238,7 @@ Self-check: "Can someone who disagrees with me understand exactly what I'm argui
 **Use when:** You want students to self-assess before submitting.
 
 **Prompt Template:**
+
 ```
 Convert this rubric into a submission checklist for students:
 
@@ -250,6 +261,7 @@ Length: 8-12 items
 ### 4.1 Create Tiered Rubrics
 
 **Prompt Template:**
+
 ```
 Create 3 versions of this rubric for different learner levels:
 
@@ -275,6 +287,7 @@ Keep the same core criteria across all 3.
 ### 4.2 Add Scaffolded Success Criteria
 
 **Prompt Template:**
+
 ```
 For this rubric [paste rubric], add scaffolded supports:
 
@@ -293,6 +306,7 @@ Format: Add a "Scaffolds" column to the rubric
 ### 5.1 Generate a Comment Bank from Your Rubric
 
 **Prompt Template:**
+
 ```
 Based on this rubric [paste rubric], create a comment bank with 5 comments for each performance level.
 
@@ -308,6 +322,7 @@ Format: Organized by level, then by criterion
 **Sample Output:**
 
 **Proficient - Research Quality:**
+
 1. "Your use of 4 credible sources strengthens your argument. Consider adding one peer-reviewed study to reach exemplary."
 2. "I appreciated the mix of articles and books in your research. Next time, cite a primary source if possible."
 3. "Your sources are reliable and relevant. To deepen your work, look for more recent data (within the last year)."
@@ -317,6 +332,7 @@ Format: Organized by level, then by criterion
 ### 5.2 Rubric-to-Feedback-Form Generator
 
 **Prompt Template:**
+
 ```
 Create a feedback form based on this rubric:
 
@@ -337,6 +353,7 @@ Format: Printable form or digital checklist
 **Use when:** You're grading a stack of assignments and need faster decision-making.
 
 **Prompt Template:**
+
 ```
 Create a "quick grade" decision tree based on this rubric:
 
@@ -348,7 +365,7 @@ Format:
 - Takes under 60 seconds per assignment
 
 Example:
-"Does the thesis take a clear, arguable stance?" 
+"Does the thesis take a clear, arguable stance?"
 → Yes → Move to next question
 → No → Check "Developing" and note feedback
 ```
@@ -360,6 +377,7 @@ Example:
 ### 6.1 Collaborative/Group Work Rubric
 
 **Prompt Template:**
+
 ```
 Create a rubric for assessing individual contributions to group work.
 
@@ -379,6 +397,7 @@ Format: Dual rubric (group + individual)
 ### 6.2 Process-Based Rubric (Not Just Product)
 
 **Prompt Template:**
+
 ```
 Create a rubric that assesses the process, not just the final product:
 
@@ -397,6 +416,7 @@ Weight: 60% process, 40% product
 ### 6.3 Portfolio or Cumulative Assessment Rubric
 
 **Prompt Template:**
+
 ```
 Create a rubric for assessing growth over time:
 
@@ -421,6 +441,7 @@ Format: Holistic + analytic
 
 **Problem:** "Student demonstrates understanding of the topic"  
 **Fix Prompt:**
+
 ```
 Make this rubric criterion more specific:
 [Paste vague criterion]
@@ -437,6 +458,7 @@ Add:
 
 **Problem:** 8+ criteria, students overwhelmed  
 **Fix Prompt:**
+
 ```
 Simplify this rubric to 4-5 essential criteria:
 [Paste long rubric]
@@ -453,6 +475,7 @@ Keep only the criteria that:
 
 **Problem:** "Proficient" and "Exemplary" sound too similar  
 **Fix Prompt:**
+
 ```
 Clarify the distinctions between performance levels in this rubric:
 [Paste rubric]
@@ -470,16 +493,19 @@ For each criterion:
 If you're using Zaza Draft, here's how to supercharge your rubric workflow:
 
 **Creating Rubrics:**
+
 1. Use prompts above to generate a draft
 2. Paste into Draft's "Refine" mode
 3. Draft adjusts tone and removes AI fluff
 
 **Using Rubrics for Grading:**
+
 1. Upload your rubric + student work
 2. Ask: "Grade this work using the rubric. Give specific feedback for each criterion."
 3. Draft ensures feedback is evidence-based (no hallucinations)
 
 **Converting to Student-Friendly:**
+
 1. Paste your rubric
 2. Prompt: "Rewrite this in student-friendly language, reading level [grade]"
 3. Review and adjust
@@ -489,6 +515,7 @@ If you're using Zaza Draft, here's how to supercharge your rubric workflow:
 ## Your Next Steps
 
 ### Start Here (10-Minute Quick Win):
+
 1. Pick one upcoming assignment
 2. Use the Universal Rubric Generator (Section 2.1)
 3. Fill in the blanks with your assignment details
@@ -496,12 +523,14 @@ If you're using Zaza Draft, here's how to supercharge your rubric workflow:
 5. Share with students **before** they start work
 
 ### Build Your Rubric Library:
+
 - Save your best rubrics in a shared drive
 - Label by subject, grade, and assignment type
 - Invite colleagues to contribute
 - Refine based on what students ask about most
 
 ### Level Up:
+
 - Experiment with student-friendly versions (Part 3)
 - Try creating comment banks (Part 5.1)
 - Share your rubrics with your department
@@ -539,5 +568,4 @@ You've got this. ðŸŽ¯
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
-
+_© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact._

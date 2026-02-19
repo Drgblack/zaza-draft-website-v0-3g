@@ -1,7 +1,8 @@
-﻿# The Teacher Wellness Quick-Start Guide
+# The Teacher Wellness Quick-Start Guide
+
 ## Burnout Prevention, Boundary-Setting, and Self-Care Strategies for Teachers
 
-*You can't pour from an empty cup. This guide includes 5-minute daily wellness routines, scripts for saying "no" professionally, and research-backed strategies to prevent burnout before it happens.*
+_You can't pour from an empty cup. This guide includes 5-minute daily wellness routines, scripts for saying "no" professionally, and research-backed strategies to prevent burnout before it happens._
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
@@ -15,6 +16,7 @@ You've heard it before: "Put your oxygen mask on first." But when you're drownin
 Here's the truth: **Teacher wellness isn't about bubble baths and meditation apps.** It's about sustainable systems that let you teach effectively without sacrificing your health, relationships, or sanity.
 
 This guide gives you:
+
 - **5-minute daily routines** you can actually stick to
 - **Boundary-setting scripts** for saying "no" without guilt
 - **Burnout warning signs** (so you catch it early)
@@ -31,17 +33,20 @@ This guide gives you:
 Burnout isn't just being tired. It's a specific pattern:
 
 **Physical Signs:**
+
 - Constant fatigue (even after a full night's sleep)
 - Frequent headaches, stomach issues, or getting sick often
 - Trouble sleeping (racing thoughts at night)
 
 **Emotional Signs:**
+
 - Feeling cynical or detached from students
 - Dreading work on Sunday nights
 - Irritability or short temper (at school and at home)
 - Feeling like nothing you do makes a difference
 
 **Behavioral Signs:**
+
 - Avoiding parent emails or putting off grading
 - Calling in sick more often
 - Counting down to breaks or retirement
@@ -54,6 +59,7 @@ Burnout isn't just being tired. It's a specific pattern:
 ## The 3 Pillars of Teacher Wellness
 
 ### Pillar 1: TIME (Protect Your Hours)
+
 **The Problem:** Teaching expands to fill all available time. Without boundaries, you'll work 60-70 hours per week forever.
 
 **The Solution:** Time boundaries and batching systems.
@@ -61,6 +67,7 @@ Burnout isn't just being tired. It's a specific pattern:
 ---
 
 ### Pillar 2: ENERGY (Conserve Your Mental Load)
+
 **The Problem:** Decision fatigue and emotional labor drain you faster than the work itself.
 
 **The Solution:** Routines, automation, and emotional boundaries.
@@ -68,6 +75,7 @@ Burnout isn't just being tired. It's a specific pattern:
 ---
 
 ### Pillar 3: CONNECTION (Combat Isolation)
+
 **The Problem:** Teaching is isolating. You spend all day with kids but rarely connect meaningfully with adults.
 
 **The Solution:** Strategic relationships and community-building.
@@ -189,11 +197,13 @@ Burnout isn't just being tired. It's a specific pattern:
 When someone asks for your time, run it through this filter:
 
 ### Step 1: Pause Before Responding
+
 Don't say "yes" immediately. Say: "Let me check my schedule and get back to you by [specific time]."
 
 ---
 
 ### Step 2: Ask Yourself:
+
 - Does this align with my core priorities (students, my well-being, my family)?
 - Will saying yes cost me time I don't have?
 - Am I saying yes out of obligation/guilt or genuine desire?
@@ -201,6 +211,7 @@ Don't say "yes" immediately. Say: "Let me check my schedule and get back to you 
 ---
 
 ### Step 3: If It's a No:
+
 - Be direct and kind: "I can't take this on right now."
 - Don't over-explain or apologize excessively
 - Offer an alternative (if you genuinely want to help): "I can't do X, but I can do Y."
@@ -208,6 +219,7 @@ Don't say "yes" immediately. Say: "Let me check my schedule and get back to you 
 ---
 
 ### Step 4: If It's a Yes:
+
 - Clarify scope: "I can help with [specific part], but not [other part]."
 - Set a time limit: "I have 30 minutes on Thursday to discuss this."
 - Don't overcommit: "I can do this by [realistic deadline]."
@@ -223,6 +235,7 @@ Don't say "yes" immediately. Say: "Let me check my schedule and get back to you 
 **The Solution:** Automate low-stakes decisions.
 
 **Examples:**
+
 - Wear the same 5 outfits on rotation (you're not a fashion show)
 - Eat the same breakfast every day (one less choice)
 - Have a set planning routine (Mondays = grade, Tuesdays = plan, etc.)
@@ -236,6 +249,7 @@ Don't say "yes" immediately. Say: "Let me check my schedule and get back to you 
 **The Solution:** Compassion without absorption.
 
 **Practice:**
+
 - After a tough interaction, physically reset (wash your hands, stretch, take 3 breaths). Signal to your brain: "That's not mine to carry."
 - Use the phrase: "I care about this, but I can't fix it." (Some problems aren't yours to solve.)
 - Limit "venting sessions" with colleagues. Set a 5-minute timer. Vent, then move to solutions or change topics.
@@ -249,6 +263,7 @@ Don't say "yes" immediately. Say: "Let me check my schedule and get back to you 
 **The Solution:** A 30-minute Sunday routine that sets you up for the week.
 
 **Routine:**
+
 - **10 minutes:** Lay out 5 outfits (or choose a weekly "uniform")
 - **10 minutes:** Prep lunches/snacks for the week
 - **10 minutes:** Review Monday's lesson plans and gather materials
@@ -264,11 +279,13 @@ Don't say "yes" immediately. Say: "Let me check my schedule and get back to you 
 **What:** One colleague who "gets it" - not a venting partner, but a problem-solving partner.
 
 **How to find them:**
+
 - Look for someone who's positive but realistic (not toxic positivity, not constant complaining)
 - Someone in a similar phase of career (new teachers need new teacher friends, veterans need veteran friends)
 - Someone you genuinely like (not just proximity convenience)
 
 **What to do together:**
+
 - Weekly check-ins (10 minutes, before or after school)
 - Share wins and challenges
 - Collaborate on lessons or resources
@@ -280,11 +297,13 @@ Don't say "yes" immediately. Say: "Let me check my schedule and get back to you 
 **What:** A structured, time-bound group where teachers share strategies and support each other.
 
 **Format:**
+
 - Meet monthly (in-person or virtual)
 - 60-minute format: 15 min check-ins, 30 min topic discussion, 15 min action planning
 - Topics: classroom management, work-life balance, curriculum planning, etc.
 
 **Where to find:**
+
 - Your school (propose it to admin)
 - Online (Facebook groups, Reddit r/Teachers, teacher Discord servers)
 - Locally (check Meetup or Eventbrite for teacher groups)
@@ -298,6 +317,7 @@ Don't say "yes" immediately. Say: "Let me check my schedule and get back to you 
 **The Solution:** Micro-connections.
 
 **Examples:**
+
 - 10-minute phone call with a friend while commuting
 - Text a friend one funny thing that happened that day
 - Join a non-teaching hobby group (book club, running club, game night)
@@ -319,6 +339,7 @@ If you're experiencing ANY of these, reach out to a professional (therapist, doc
 - Physical symptoms (chest pain, severe insomnia, unexplained pain)
 
 **Resources:**
+
 - Your school's Employee Assistance Program (EAP) - free, confidential counseling
 - National Suicide Prevention Lifeline: 988
 - SAMHSA's National Helpline: 1-800-662-HELP (4357)
@@ -331,6 +352,7 @@ If you're experiencing ANY of these, reach out to a professional (therapist, doc
 ## Part 7: Micro Self-Care (When You Have No Time)
 
 ### 1-Minute Resets:
+
 - Stretch at your desk (neck rolls, shoulder shrugs)
 - Look out a window (20-20-20 rule: every 20 min, look 20 feet away for 20 seconds)
 - Splash cold water on your face
@@ -339,6 +361,7 @@ If you're experiencing ANY of these, reach out to a professional (therapist, doc
 ---
 
 ### 5-Minute Resets:
+
 - Take a lap around the building
 - Listen to one favorite song
 - Do a quick meditation (use Calm, Headspace, or YouTube)
@@ -347,6 +370,7 @@ If you're experiencing ANY of these, reach out to a professional (therapist, doc
 ---
 
 ### 10-Minute Resets:
+
 - Call a friend
 - Read a chapter of a book (not teaching-related!)
 - Do a quick workout (YouTube has 10-min options)
@@ -359,6 +383,7 @@ If you're experiencing ANY of these, reach out to a professional (therapist, doc
 ### Set Quarterly Check-Ins
 
 **Every 10-12 weeks, ask yourself:**
+
 - Am I still enjoying teaching? (It's okay if the answer is "not always," but "never" is a red flag.)
 - What's working in my routine? What needs to change?
 - Am I protecting my boundaries, or am I slipping?
@@ -371,14 +396,17 @@ If you're experiencing ANY of these, reach out to a professional (therapist, doc
 **When you hit a breaking point, you need a pre-planned escape hatch:**
 
 **Option 1: The Mental Health Day**
+
 - Use a personal/sick day when you're emotionally spent (not just physically sick)
 - Plan it in advance when possible (mark 1-2 days per semester as "buffer days")
 
 **Option 2: The Reset Weekend**
+
 - One weekend per quarter, do ZERO school work
 - Focus on rest, fun, or family
 
 **Option 3: The Micro-Sabbatical**
+
 - If your district allows, take an unpaid leave or sabbatical every 5-7 years
 - Recharge fully before burnout becomes permanent
 
@@ -403,11 +431,13 @@ If wellness strategies don't help, if you dread work more days than not, and if 
 ## Your Next Steps
 
 ### This Week:
+
 1. Choose ONE 5-minute daily routine and commit to it for 7 days
 2. Practice one "no" script (even if it's just in your head)
 3. Identify one colleague you'd like to connect with - reach out for coffee or a quick chat
 
 ### This Month:
+
 - Schedule a quarterly check-in with yourself (put it in your calendar now)
 - Set up one auto-boundary (email auto-reply, office hours, etc.)
 - Plan one "no school work" weekend
@@ -429,5 +459,4 @@ Start small. Pick one strategy from this guide. Practice it for two weeks. Then 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
-
+_© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact._

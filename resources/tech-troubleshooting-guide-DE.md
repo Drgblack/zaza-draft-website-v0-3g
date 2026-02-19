@@ -1,7 +1,8 @@
-﻿# Der Lehrkräfte-Tech-Fehlerbehebungsleitfaden
+# Der Lehrkräfte-Tech-Fehlerbehebungsleitfaden
+
 ## Schnelle Lösungen für Klassenzimmer-Tech-Krisen (Beamer, WLAN, LMS und mehr)
 
-*Wenn Technik während einer Unterrichtsstunde ausfällt, brauchen Sie schnelle Lösungen. Dieser Leitfaden gibt Ihnen ein 1-Seiten-Fehlerbehebungs-Flussdiagramm, schnelle Lösungen für häufige Probleme und Vorlagen, um schnell Hilfe von der IT zu bekommen, ohne Tage zu warten.*
+_Wenn Technik während einer Unterrichtsstunde ausfällt, brauchen Sie schnelle Lösungen. Dieser Leitfaden gibt Ihnen ein 1-Seiten-Fehlerbehebungs-Flussdiagramm, schnelle Lösungen für häufige Probleme und Vorlagen, um schnell Hilfe von der IT zu bekommen, ohne Tage zu warten._
 
 **Autor:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
@@ -15,6 +16,7 @@ Es ist 8:03 Uhr. Ihre Schüler setzen sich. Sie sind dabei, Ihre sorgfältig gep
 Tech-Ausfälle sind unvermeidlich. Aber Panik muss es nicht sein.
 
 Dieser Leitfaden gibt Ihnen:
+
 - **Schnelle Lösungen** für die 10 häufigsten Klassenzimmer-Tech-Probleme
 - **Ein 1-Seiten-Fehlerbehebungs-Flussdiagramm** zur schnellen Diagnose von Problemen
 - **Backup-Pläne**, damit Sie nie eine Lektion wegen Tech-Ausfall verlieren
@@ -31,6 +33,7 @@ Dieser Leitfaden gibt Ihnen:
 Jede technikbasierte Lektion sollte ein Nicht-Tech-Backup haben. Punkt.
 
 **Beispiele:**
+
 - Digitale Präsentation? Drucken Sie Schlüsselfolien.
 - Online-Aktivität? Haben Sie eine papierbasierte Version.
 - Video-Lektion? Haben Sie Diskussionsfragen bereit.
@@ -57,6 +60,7 @@ Jede technikbasierte Lektion sollte ein Nicht-Tech-Backup haben. Punkt.
 4. **Lampe prüfen** - Wenn der Beamer alt ist, könnte die Birne tot sein. Suchen Sie nach blinkendem rotem Licht (bedeutet oft Lampenausfall).
 
 **Wenn nichts funktioniert:**
+
 - Verwenden Sie Ihren Backup-Plan (gedruckte Folien, Whiteboard, Dokumentenkamera)
 - IT-Ticket einreichen: "Beamer in Raum [X] schaltet sich nicht ein. Stromkabel und manuelle Taste geprüft. Brauche Ersatzbirne oder Service."
 
@@ -77,6 +81,7 @@ Jede technikbasierte Lektion sollte ein Nicht-Tech-Backup haben. Punkt.
 4. **Anderes Kabel versuchen** - Wenn Sie ein Ersatz-HDMI- oder VGA-Kabel haben, tauschen Sie es aus.
 
 **Wenn nichts funktioniert:**
+
 - Verwenden Sie Ihren Backup-Plan
 - IT-Ticket: "Beamer in Raum [X] zeigt kein Bild. Eingangsquelle und Kabel geprüft. Laptop-Anzeigeeinstellungen korrekt. Brauche Fehlerbehebung."
 
@@ -97,6 +102,7 @@ Jede technikbasierte Lektion sollte ein Nicht-Tech-Backup haben. Punkt.
 4. **Gerät neu starten** - Klassische Lösung. Ausschalten, 10 Sekunden warten, einschalten.
 
 **Wenn nichts funktioniert:**
+
 - Zu Offline-Aktivitäten wechseln (PDFs, heruntergeladene Videos, papierbasierte Aufgaben)
 - IT-Ticket: "Keine WLAN-Verbindung in Raum [X]. Gerät neu gestartet und mit Netzwerk neu verbunden. Auch Schüler betroffen. Brauche Netzwerk-Check."
 
@@ -117,6 +123,7 @@ Jede technikbasierte Lektion sollte ein Nicht-Tech-Backup haben. Punkt.
 4. **Anderes Gerät versuchen** - Wenn sich ein Gerät nicht verbindet, aber andere schon, ist es ein Geräteproblem (nicht netzwerkweit).
 
 **Wenn nichts funktioniert:**
+
 - Paaren Sie schwächelnde Schüler mit denen, die funktionierende Geräte haben
 - IT-Ticket: "Mehrere Schülergeräte in Raum [X] können sich nicht mit WLAN verbinden. Netzwerk ist [Name]. Geräte neu gestartet und im richtigen Netzwerk. Brauche Unterstützung."
 
@@ -137,6 +144,7 @@ Jede technikbasierte Lektion sollte ein Nicht-Tech-Backup haben. Punkt.
 4. **Abmelden und neu anmelden** - Manchmal läuft Ihre Sitzung ab. Abmelden, Browser schließen, neu öffnen und neu anmelden.
 
 **Wenn nichts funktioniert:**
+
 - E-Mail oder Google Drive verwenden, um Ressourcen temporär zu teilen
 - IT-Ticket: "LMS [Name] lädt in Raum [X] nicht. Cache geleert, anderen Browser versucht und ab-/angemeldet. Brauche Hilfe."
 
@@ -157,6 +165,7 @@ Jede technikbasierte Lektion sollte ein Nicht-Tech-Backup haben. Punkt.
 4. **Audiokabel neu verbinden** - Wenn separates Audiokabel verwendet wird (3,5mm-Klinke), ausstecken und neu einstecken.
 
 **Wenn nichts funktioniert:**
+
 - Untertitel/Closed Captions verwenden, falls verfügbar
 - IT-Ticket: "Kein Audio-Ausgang in Raum [X]. Lautstärke, Ausgabeeinstellungen und Kabel geprüft. Brauche Lautsprecher/Audio-Fehlerbehebung."
 
@@ -177,6 +186,7 @@ Jede technikbasierte Lektion sollte ein Nicht-Tech-Backup haben. Punkt.
 4. **Druckerverbindung prüfen** - Wenn es ein Netzwerkdrucker ist, sicherstellen, dass er mit WLAN verbunden ist. Wenn USB, Kabel prüfen.
 
 **Wenn nichts funktioniert:**
+
 - An anderem Ort drucken (Hauptbüro, Bibliothek)
 - IT-Ticket: "Drucker in Raum [X] reagiert nicht. Drucker neu gestartet und Auftrag neu gesendet. Brauche Service."
 
@@ -197,6 +207,7 @@ Jede technikbasierte Lektion sollte ein Nicht-Tech-Backup haben. Punkt.
 4. **Video vorher herunterladen** - Wenn Sie wissen, dass WLAN langsam ist, laden Sie Videos vor der Klasse herunter (YouTube Premium, Vimeo oder Bildschirmaufnahme).
 
 **Wenn nichts funktioniert:**
+
 - Zu Lese- oder Diskussionsaktivität wechseln
 - IT-Ticket: "Video-Wiedergabeprobleme in Raum [X]. Verschiedene Browser versucht und Qualität gesenkt. WLAN-Verbindung scheint langsam. Brauche Netzwerk-Check."
 
@@ -217,6 +228,7 @@ Jede technikbasierte Lektion sollte ein Nicht-Tech-Backup haben. Punkt.
 4. **Laptop neu starten** - Manchmal verliert der Laptop Verbindung zum Board.
 
 **Wenn nichts funktioniert:**
+
 - Board als regulären Beamer verwenden (zeigt noch Bilder, nur keine Touch-Funktionen)
 - IT-Ticket: "Smart Board in Raum [X] reagiert nicht auf Berührung. Neu kalibriert, USB geprüft und Software neu gestartet. Brauche Fehlerbehebung."
 
@@ -235,6 +247,7 @@ Jede technikbasierte Lektion sollte ein Nicht-Tech-Backup haben. Punkt.
 3. **Andere Schüleranmeldung versuchen** - Wenn das Profil eines Schülers Probleme verursacht, sie sich auf einem anderen Gerät anmelden lassen, um zu sehen, ob das Problem weiterbesteht.
 
 **Wenn nichts funktioniert:**
+
 - Schüler Gerät mit Partner teilen lassen
 - IT-Ticket: "Schülergerät [ID oder Asset-Nummer] eingefroren in Raum [X]. Mehrmals Neustart erzwungen. Brauche Gerätetausch oder Reparatur."
 
@@ -273,6 +286,7 @@ SCHRITT 4: IT-Ticket einreichen (siehe Vorlage unten)
 **Betreff:** [Kurze Beschreibung] - Raum [X] - [Ihr Name]
 
 **Text:**
+
 ```
 Problem: [Beschreiben Sie das Problem in 1-2 Sätzen]
 
@@ -294,10 +308,11 @@ Vielen Dank!
 ```
 
 **Beispiel:**
+
 ```
 Betreff: Beamer schaltet sich nicht ein - Raum 204 - Frau Müller
 
-Problem: Beamer in Raum 204 schaltet sich nicht ein. Kein Licht, keine 
+Problem: Beamer in Raum 204 schaltet sich nicht ein. Kein Licht, keine
 Reaktion von Fernbedienung oder manueller Taste.
 
 Was ich versucht habe:
@@ -305,7 +320,7 @@ Was ich versucht habe:
 - Manuelle Ein/Aus-Taste am Beamer versucht
 - 5 Minuten gewartet und nochmal versucht
 
-Dringlichkeit: Hoch - Ich habe Präsentationen für die nächsten 3 Tage 
+Dringlichkeit: Hoch - Ich habe Präsentationen für die nächsten 3 Tage
 geplant und keinen Ersatzbeamer verfügbar.
 
 Raumnummer: 204
@@ -320,6 +335,7 @@ Frau Müller
 ## Vorbeugende Wartung (Probleme vermeiden, bevor sie entstehen)
 
 ### Wöchentliche Checks:
+
 - **Beamer testen** Montagmorgen vor Schülerankunft
 - **Schlüsselvideos herunterladen** im Voraus (nicht auf WLAN verlassen)
 - **Alle Geräte aufladen** (Laptop, Dokumentenkamera, Clicker) übers Wochenende
@@ -327,6 +343,7 @@ Frau Müller
 ---
 
 ### Monatliche Checks:
+
 - **Laptop aktualisieren** - Software-Updates während Planungszeiten ausführen (nicht während der Klasse!)
 - **Technik reinigen** - Tastatur, Maus und Beamer-Fernbedienung abwischen
 - **Kabel prüfen** - Nach Ausfransungen oder lockeren Verbindungen suchen
@@ -334,6 +351,7 @@ Frau Müller
 ---
 
 ### Jahresbeginn:
+
 - **Präventives IT-Ticket einreichen** - IT bitten, alle Ausrüstung in Ihrem Raum vor Schulbeginn zu prüfen
 - **Ersatzausrüstung anfragen** - Nach Ersatz-HDMI-Kabel, VGA-Adapter oder Verlängerungskabel für Ihr Zimmer fragen
 
@@ -354,12 +372,14 @@ Behalten Sie diese Ideen in der Hinterhand:
 ## Wann Hilfe rufen (vs. selbst beheben)
 
 ### Selbst machen:
+
 - Lockere Kabel
 - Lautstärkeprobleme
 - Anzeige-Eingangseinstellungen
 - Einfache Neustarts
 
 ### IT rufen:
+
 - Netzwerkausfälle
 - Kaputte Hardware (gebrochener Bildschirm, leerer Akku)
 - Software-Installations-/Lizenzierungsprobleme
@@ -388,11 +408,13 @@ Das werden Sie nicht. Kabel ausstecken, Gerät neu starten oder Einstellungen pr
 ## Ihre nächsten Schritte
 
 ### Diese Woche:
+
 1. Testen Sie Montag morgens alle Ihre Technik (5 Minuten vor Schülerankunft)
 2. Erstellen Sie ein "Tech-Ausfall-Toolkit" (gedruckte Backup-Aktivitäten, Ersatzkabel)
 3. Lesezeichen Sie diesen Leitfaden auf Ihrem Laptop für einfachen Zugriff
 
 ### Diesen Monat:
+
 - Reichen Sie ein IT-Ticket für jede Ausrüstung ein, die "irgendwie funktioniert, aber nicht großartig"
 - Laden Sie 3-5 Schlüsselvideos herunter, die Sie oft verwenden (damit Sie nicht von WLAN abhängig sind)
 - Beschriften Sie alle Kabel in Ihrem Raum (damit Sie wissen, was wohin verbindet)
@@ -412,5 +434,4 @@ Technik ist großartig, wenn sie funktioniert - und frustrierend, wenn nicht. Ab
 **Autor:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*Â© 2025 Zaza Technologies. Diese Ressource ist kostenlos für Lehrkräfte. Teilen Sie sie mit Ihrem Team, aber bitte behalten Sie die Urhebernennung bei.*
-
+_© 2025 Zaza Technologies. Diese Ressource ist kostenlos für Lehrkräfte. Teilen Sie sie mit Ihrem Team, aber bitte behalten Sie die Urhebernennung bei._

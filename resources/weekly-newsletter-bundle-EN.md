@@ -1,7 +1,8 @@
-﻿# "This Week in Our Class" Newsletter Starter Kit
+# "This Week in Our Class" Newsletter Starter Kit
+
 ## Weekly Parent Update Templates That Actually Get Read
 
-*Stop stressing about weekly newsletters. This kit includes 3 ready-to-use templates (elementary, middle, and high school), a content bank with 50+ pre-written sections, and a 10-minute production system.*
+_Stop stressing about weekly newsletters. This kit includes 3 ready-to-use templates (elementary, middle, and high school), a content bank with 50+ pre-written sections, and a 10-minute production system._
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
@@ -18,6 +19,7 @@ You know parent communication matters. But long emails get ignored, and individu
 - **Prevents "I didn't know" excuses** at conference time
 
 This kit gives you:
+
 - **3 template formats** designed for different grade levels
 - **A content bank** with 50+ pre-written sections you can copy-paste
 - **A 10-minute system** for producing newsletters without burning out
@@ -34,6 +36,7 @@ This kit gives you:
 **Best for:** Visual learners (parents and kids), classes with lots of hands-on activities, younger students who can't always communicate what happened at school.
 
 **Format:**
+
 ```
 Subject: This Week in [Grade/Class] - [Date Range]
 
@@ -57,6 +60,7 @@ REMINDERS:
 ```
 
 **Sample:**
+
 ```
 Subject: This Week in 3rd Grade - November 6-10
 
@@ -90,6 +94,7 @@ REMINDERS:
 **Best for:** Content-heavy classes, multiple sections/periods, students who need structure and accountability.
 
 **Format:**
+
 ```
 Subject: [Subject] Update - Week of [Date]
 
@@ -111,11 +116,12 @@ WHAT TO REVIEW AT HOME:
 UPCOMING DATES:
 [Calendar items]
 
-HAVE QUESTIONS? 
+HAVE QUESTIONS?
 [Office hours, email, or contact info]
 ```
 
 **Sample:**
+
 ```
 Subject: 7th Grade Math - Week of November 6
 
@@ -155,6 +161,7 @@ Email me or drop by room 204 during office hours (Tuesday/Thursday, 3-3:30 PM).
 **Best for:** Older students, AP/honors classes, content that requires independence and self-advocacy.
 
 **Format:**
+
 ```
 Subject: [Course Name] - Weekly Update [Date]
 
@@ -175,6 +182,7 @@ ACCOUNTABILITY CHECK:
 ```
 
 **Sample:**
+
 ```
 Subject: AP Biology - Weekly Update (Nov 6-10)
 
@@ -207,33 +215,39 @@ A few reminders:
 Use these pre-written sections when you're short on time:
 
 ### Learning Highlights (Pick 1-2):
+
 - "This week, we explored [topic] by [activity]. Students practiced [skill] and learned [key takeaway]."
 - "We dove deep into [concept]. Ask your student to explain [specific example] - they might surprise you with how much they know!"
 - "Students worked collaboratively on [project]. The focus was on [skill like teamwork, critical thinking, creativity]."
 
 ### Student Celebrations (Pick 1-2):
+
 - "[Student name] demonstrated excellent [skill/behavior] when they [specific example]."
 - "Shout-out to [student name] for [improvement/achievement]. Keep it up!"
 - "This week's class MVP: [Student name] for [reason]."
 - "Our class showed amazing growth in [area]. I'm proud of the effort everyone is putting in."
 
 ### How You Can Help at Home:
+
 - "Practice [skill] for 10 minutes, 3 times this week. Here's how: [specific method]."
 - "Ask your child to teach you about [topic]. Teaching is one of the best ways to solidify learning!"
 - "Review [specific content] together. Your child has access to [resource] on [platform]."
 - "Encourage your child to complete [assignment] in small chunks (15 minutes per day) instead of all at once."
 
 ### Assessment Alerts:
+
 - "Heads up: [Assessment type] on [date] covering [topics]. Study guide available on [platform]."
 - "[Project name] is due [date]. Rubric and instructions are posted on [platform]. Remind your child to start early!"
 - "Unit test next [day]. Students should review [specific materials]."
 
 ### Reminders:
+
 - "Don't forget: [Event] on [date]."
 - "Mark your calendars: [Upcoming event with details]."
 - "Quick reminder: [Library day/PE clothes/Field trip permission slips/etc.]"
 
 ### Encouraging Closes:
+
 - "Thank you for your partnership in your child's learning. Reach out anytime!"
 - "I'm excited about what we're learning together. Let me know if you have questions!"
 - "Your support makes all the difference. Have a great week!"
@@ -246,20 +260,24 @@ Use these pre-written sections when you're short on time:
 ### Sunday Night Routine (10 minutes total):
 
 **Minutes 1-3: Gather Content**
+
 - Open your lesson plans or planner
 - List 3 topics you covered this week
 - Note 1-2 upcoming dates or deadlines
 
 **Minutes 4-6: Choose Template & Fill**
+
 - Pick your grade-level template
 - Copy-paste from the content bank (don't write from scratch!)
 - Plug in specific details (student names, dates, topics)
 
 **Minutes 7-9: Review & Customize**
+
 - Read through once (catch typos, check tone)
 - Add 1 personal touch (a specific student moment or your own tip)
 
 **Minute 10: Send & Celebrate**
+
 - Send to your email list or post to your LMS
 - Done!
 
@@ -270,21 +288,25 @@ Use these pre-written sections when you're short on time:
 ## Subject Lines That Get Opened
 
 ### For Elementary:
+
 - "This Week in [Grade] - [Date Range]"
 - "[Teacher Name]'s Class Update - [Week of Date]"
 - "What We Learned This Week + Upcoming Fun!"
 
 ### For Middle School:
+
 - "[Subject] Update - Week of [Date]"
 - "This Week in [Subject]: [Catchy Topic]"
 - "[Course Name] - Weekly Snapshot"
 
 ### For High School:
+
 - "[Course Name] Weekly Update [Date]"
 - "What's Happening in [Subject] - [Week of Date]"
 - "[Course] This Week: [Big Topic or Assessment]"
 
 **Avoid:**
+
 - Generic subject lines ("Update" or "Newsletter")
 - All caps ("IMPORTANT UPDATE!")
 - Overly long subject lines (keep under 50 characters)
@@ -294,11 +316,13 @@ Use these pre-written sections when you're short on time:
 ## When to Send Your Newsletter
 
 ### Best Days:
+
 - **Sunday evening (6-8 PM):** Parents are planning the week ahead
 - **Monday morning (6-7 AM):** Lands in inbox before the work rush
 - **Friday afternoon (3-5 PM):** Wraps up the week, gives weekend review time
 
 ### Worst Days:
+
 - **Wednesday/Thursday:** Mid-week chaos, easy to miss
 - **Late Friday evening:** Gets buried in weekend emails
 - **Monday evening:** Competes with after-school rush
@@ -310,6 +334,7 @@ Use these pre-written sections when you're short on time:
 ## Common Newsletter Mistakes (And How to Avoid Them)
 
 ### Mistake #1: Too Long
+
 **Problem:** Parents don't read past paragraph 2.
 
 **Fix:** Keep it under 300 words. If you can't, break it into sections with headers.
@@ -317,6 +342,7 @@ Use these pre-written sections when you're short on time:
 ---
 
 ### Mistake #2: Too Vague
+
 **Problem:** "We learned about science this week" doesn't tell parents anything useful.
 
 **Fix:** Be specific. "We explored states of matter by freezing water, melting ice, and observing evaporation."
@@ -324,6 +350,7 @@ Use these pre-written sections when you're short on time:
 ---
 
 ### Mistake #3: All Reminders, No Learning
+
 **Problem:** Newsletter reads like an admin memo (no celebration of learning).
 
 **Fix:** Follow the 70-30 rule: 70% learning highlights, 30% logistics.
@@ -331,6 +358,7 @@ Use these pre-written sections when you're short on time:
 ---
 
 ### Mistake #4: No Personality
+
 **Problem:** Newsletter sounds like a robot wrote it.
 
 **Fix:** Add one personal touch each week: a funny student quote, a teaching moment, or a quick reflection.
@@ -340,16 +368,19 @@ Use these pre-written sections when you're short on time:
 ## Customization Ideas
 
 ### Add Photos (Elementary):
+
 - Include 1-2 classroom activity photos
 - Use a tool like Canva to create a simple photo collage
 - Always get photo permission first (check your school's policy)
 
 ### Add Student Work Samples (Middle School):
+
 - Feature 1-2 exemplary assignments (with student permission)
 - Include a brief "Why this is excellent" caption
 - Rotate which students are featured
 
 ### Add Study Resources (High School):
+
 - Link to review videos, study guides, or practice quizzes
 - Embed a Google Doc with "Top 10 Study Tips for [Upcoming Test]"
 - Share a student-created study tool (flashcards, Quizlet set, etc.)
@@ -377,6 +408,7 @@ Highlight classroom culture, inside jokes, or a team-building moment. Remind par
 When you don't have 10 minutes:
 
 ### Option 1: The 3-Bullet Email
+
 ```
 Subject: Quick Update - [Date]
 
@@ -391,9 +423,11 @@ Have a great week!
 ```
 
 ### Option 2: The Google Classroom Announcement
+
 Post a brief update directly to your LMS (parents get notified automatically).
 
 ### Option 3: The Seesaw/ClassDojo Message
+
 Use your class app to share a quick photo + caption.
 
 > ðŸ’¡ **Pro Tip:** It's better to send something short than to skip a week. Consistency builds trust.
@@ -404,6 +438,7 @@ Use your class app to share a quick photo + caption.
 
 **Q: What if parents don't read my newsletters?**  
 Try these strategies:
+
 - Use a catchy subject line
 - Keep it under 250 words
 - Send at a consistent time
@@ -423,12 +458,14 @@ Yes! Tools like Mailchimp, Google Forms + Sheets, or Zaza Draft can help you cre
 ## Your Next Steps
 
 ### This Week:
+
 1. Choose your template (elementary, middle, or high school)
 2. Set a recurring Sunday night reminder (or pick your send day)
 3. Draft your first newsletter using the content bank
 4. Send it and track your open rate
 
 ### This Month:
+
 - Stick to your send schedule for 4 consecutive weeks
 - Gather parent feedback: "Is this newsletter helpful? What would make it better?"
 - Refine your template based on what works
@@ -446,5 +483,4 @@ Parent communication doesn't have to be a time suck. With the right template, a 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
-
+_© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact._

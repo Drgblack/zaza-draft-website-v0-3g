@@ -1,7 +1,8 @@
-﻿# The Comment Bank Builder: End-of-Term Reports
+# The Comment Bank Builder: End-of-Term Reports
+
 ## 50+ Customizable Comment Templates for Every Subject and Achievement Level
 
-*Write better report cards in half the time. Stop staring at blank comment boxes. These templates give you specific, varied, professional language that honors each student's journey - and saves you hours of stress.*
+_Write better report cards in half the time. Stop staring at blank comment boxes. These templates give you specific, varied, professional language that honors each student's journey - and saves you hours of stress._
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
@@ -19,6 +20,7 @@ You want to write something meaningful - not generic. But you also don't have 6 
 **The solution:** A comment bank - pre-written templates you can mix, match, and customize in seconds.
 
 This guide gives you:
+
 - **50+ comment stems** organized by subject and achievement level
 - **Mix-and-match templates** (strength + growth + next step)
 - **Tone variations** (encouraging, direct, celebratory, concerned)
@@ -36,15 +38,18 @@ Before you grab a template, here's what makes a comment valuable to parents and 
 ### The 3-Part Formula
 
 **1. SPECIFIC OBSERVATION** (Not "working hard" - what are they actually doing?)
-- Ã¢Å“â€¦ "Maya consistently contributes thoughtful ideas during class discussions"
+
+- Ã¢Å“... "Maya consistently contributes thoughtful ideas during class discussions"
 - Ã¢Å’ "Maya is a good student"
 
 **2. EVIDENCE OR CONTEXT** (What skill or growth does this show?)
-- Ã¢Å“â€¦ "demonstrating strong comprehension of complex texts"
+
+- Ã¢Å“... "demonstrating strong comprehension of complex texts"
 - Ã¢Å’ "she tries hard"
 
 **3. NEXT STEP** (Where are they going? What's the focus?)
-- Ã¢Å“â€¦ "To continue growing, Maya should work on supporting her claims with direct textual evidence."
+
+- Ã¢Å“... "To continue growing, Maya should work on supporting her claims with direct textual evidence."
 - Ã¢Å’ "Keep up the good work!"
 
 > **Pro Tip:** Parents can tell when you're copy-pasting. Vary your language. Use different sentence structures. Add one specific detail per student (a project, a moment, a strength).
@@ -54,25 +59,30 @@ Before you grab a template, here's what makes a comment valuable to parents and 
 ## How to Use This Comment Bank
 
 ### Step 1: Identify the Achievement Level
+
 Choose the section that matches the student's performance:
+
 - **Exceeding Expectations:** Student is working above grade level
 - **Meeting Expectations:** Student is on track
 - **Approaching Expectations:** Student is making progress but needs support
 - **Below Expectations:** Student needs significant intervention
 
 ### Step 2: Pick Your Template Type
+
 - **Strength + Growth:** Highlight what's going well, then name the next step
 - **Concern + Support:** Name the challenge and what you're doing to help
 - **Celebration:** Pure positive (for strong performers or end-of-year wrap-ups)
 - **Targeted Growth:** Focus entirely on skill development
 
 ### Step 3: Customize
+
 - Add the student's name
 - Insert a specific example (project, test, discussion moment)
 - Adjust pronouns (he/she/they)
 - Add one personal touch
 
 ### Step 4: Vary Your Language
+
 Don't use the same stem for every student. Mix and match. Use synonyms. Change the structure.
 
 ---
@@ -82,12 +92,15 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### Exceeding Expectations
 
 **Reading Comprehension:**
+
 > "[Name] demonstrates exceptional reading comprehension, analyzing complex texts with insight and making sophisticated connections between ideas. [He/She/They] consistently goes beyond surface-level understanding to explore themes, symbolism, and author's craft. To continue growing, [Name] should challenge [himself/herself/themselves] with texts outside [his/her/their] comfort zone, particularly in [genre or style]."
 
 **Writing:**
+
 > "[Name] is a skilled writer who crafts well-organized, engaging pieces with a clear voice. [His/Her/Their] use of varied sentence structures and precise vocabulary strengthens [his/her/their] work. To reach the next level, [Name] should focus on [specific skill: integrating textual evidence / developing counterarguments / refining transitions]."
 
 **Class Participation:**
+
 > "[Name] is a thoughtful contributor to class discussions, asking questions that deepen everyone's thinking. [He/She/They] listens actively and builds on peers' ideas. Encourage [Name] to continue taking intellectual risks by exploring multiple perspectives on challenging topics."
 
 ---
@@ -95,15 +108,19 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### Meeting Expectations
 
 **Reading Comprehension:**
+
 > "[Name] is making solid progress in reading comprehension. [He/She/They] accurately identifies main ideas and key details in grade-level texts. To strengthen [his/her/their] skills, [Name] should practice making inferences and supporting conclusions with evidence from the text."
 
 **Writing:**
+
 > "[Name] communicates ideas clearly in writing and follows the structure of assignments. [His/Her/Their] next step is to add more detail and development to [his/her/their] ideas, particularly in [body paragraphs / introductions / conclusions]."
 
 **Vocabulary:**
+
 > "[Name] is building grade-level vocabulary and uses context clues effectively. To continue growing, [Name] should practice using new vocabulary in [his/her/their] own writing and speaking."
 
 **Fluency:**
+
 > "[Name] reads grade-level texts with appropriate pacing and expression. Encourage [him/her/them] to practice reading aloud at home to build confidence and fluency."
 
 ---
@@ -111,12 +128,15 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### Approaching Expectations
 
 **Reading Comprehension:**
+
 > "[Name] is working hard to improve [his/her/their] reading comprehension. [He/She/They] benefits from graphic organizers and guided questions to support understanding. At home, encourage [Name] to read for 15-20 minutes daily and discuss what [he/she/they] read to strengthen [his/her/their] skills."
 
 **Writing:**
+
 > "[Name] shows effort in [his/her/their] writing but would benefit from additional practice with [organization / sentence structure / grammar]. We're working together on [specific strategy: using sentence starters / planning before drafting / revising with a checklist]. Continued practice at home will help [him/her/them] build confidence."
 
 **Participation:**
+
 > "[Name] is building confidence in sharing [his/her/their] ideas during class. Encourage [him/her/them] to participate in small-group discussions first, as this helps [him/her/them] feel comfortable before contributing to whole-class conversations."
 
 ---
@@ -124,9 +144,11 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### Below Expectations
 
 **Reading Comprehension:**
+
 > "[Name] is currently reading below grade level and requires significant support to access grade-level texts. We are working closely together using [specific intervention: guided reading / audiobooks / reading strategies]. Please ensure [Name] reads at [his/her/their] independent level for 20 minutes daily at home and discusses the reading with an adult to build comprehension."
 
 **Writing:**
+
 > "[Name] struggles with [specific challenge: organizing ideas / writing complete sentences / spelling]. We are implementing targeted supports including [graphic organizers / word banks / one-on-one conferences]. Continued reinforcement at home with [specific activity] will be essential for [his/her/their] progress."
 
 ---
@@ -136,9 +158,11 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### Exceeding Expectations
 
 **Problem Solving:**
+
 > "[Name] demonstrates exceptional mathematical thinking, solving multi-step problems with accuracy and efficiency. [He/She/They] understands underlying concepts deeply and can apply strategies flexibly. To continue growing, [Name] should explore math enrichment opportunities such as [logic puzzles / math competitions / advanced problem sets]."
 
 **Number Sense:**
+
 > "[Name] shows strong number sense and computational fluency across all operations. [He/She/They] recognizes patterns, estimates accurately, and checks [his/her/their] work strategically. Encourage [Name] to tackle real-world math challenges to apply [his/her/their] skills in authentic contexts."
 
 ---
@@ -146,12 +170,15 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### Meeting Expectations
 
 **Computation:**
+
 > "[Name] is meeting grade-level expectations in math computation. [He/She/They] accurately solves problems involving [addition/subtraction/multiplication/division/fractions] and is building fluency with [specific skill]. To strengthen [his/her/their] skills, [Name] should continue practicing [facts/multi-step problems] at home."
 
 **Problem Solving:**
+
 > "[Name] is developing strong problem-solving skills and approaches challenges thoughtfully. [He/She/They] would benefit from slowing down to read problems carefully and check [his/her/their] work before submitting."
 
 **Concepts:**
+
 > "[Name] understands key mathematical concepts including [fractions/decimals/geometry/algebra]. [His/Her/Their] next step is to apply these concepts to word problems and real-world scenarios."
 
 ---
@@ -159,9 +186,11 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### Approaching Expectations
 
 **Computation:**
+
 > "[Name] is working to build computational fluency with [specific operation]. We're using [manipulatives/visual models/practice games] to strengthen [his/her/their] understanding. Daily practice with math facts at home will help [Name] build speed and confidence."
 
 **Problem Solving:**
+
 > "[Name] struggles with multi-step problems and benefits from breaking problems into smaller parts. We're working together on [underlining key information/drawing models/checking work]. Encourage [Name] to explain [his/her/their] thinking out loud when solving problems at home."
 
 ---
@@ -169,6 +198,7 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### Below Expectations
 
 **Foundational Skills:**
+
 > "[Name] requires significant support with foundational math skills including [number sense/basic operations/place value]. We are providing intensive intervention using [specific program/manipulatives/strategies]. Please work with [Name] at home on [specific skill] for 10-15 minutes daily using the resources I've shared."
 
 ---
@@ -178,9 +208,11 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### Exceeding Expectations
 
 **Scientific Thinking:**
+
 > "[Name] demonstrates exceptional scientific curiosity and critical thinking. [He/She/They] asks probing questions, designs thoughtful investigations, and draws evidence-based conclusions. [Name] consistently goes beyond the curriculum to explore topics independently. Encourage [him/her/them] to pursue [science fair/citizen science projects/STEM clubs]."
 
 **Lab Skills:**
+
 > "[Name] is a meticulous scientist who follows procedures carefully, records detailed observations, and analyzes data thoughtfully. [His/Her/Their] lab reports show strong understanding of the scientific process."
 
 ---
@@ -188,9 +220,11 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### Meeting Expectations
 
 **Content Knowledge:**
+
 > "[Name] is meeting expectations in science, demonstrating solid understanding of key concepts including [specific topic]. [He/She/They] participates actively in labs and discussions. To deepen [his/her/their] learning, [Name] should focus on explaining the 'why' behind scientific phenomena."
 
 **Scientific Process:**
+
 > "[Name] follows lab procedures accurately and records observations clearly. [He/She/They] is developing skills in data analysis and drawing conclusions from evidence."
 
 ---
@@ -198,6 +232,7 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### Approaching Expectations
 
 **Content Knowledge:**
+
 > "[Name] is working to build understanding of grade-level science concepts. [He/She/They] benefits from hands-on activities and visual models. Encourage [Name] to review notes and vocabulary regularly, as this will help [him/her/them] connect ideas across topics."
 
 ---
@@ -207,9 +242,11 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### Exceeding Expectations
 
 **Critical Thinking:**
+
 > "[Name] analyzes historical events and current issues with remarkable depth and maturity. [He/She/They] considers multiple perspectives, questions sources, and makes connections across time periods. [Name]'s contributions to class discussions consistently elevate everyone's thinking."
 
 **Research Skills:**
+
 > "[Name] conducts thorough research using diverse, credible sources. [He/She/They] synthesizes information effectively and presents findings with clarity and sophistication."
 
 ---
@@ -217,6 +254,7 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### Meeting Expectations
 
 **Content Knowledge:**
+
 > "[Name] is meeting expectations in social studies, demonstrating solid understanding of [historical periods/geography/government/economics]. [He/She/They] completes assignments thoughtfully and participates in class discussions. To continue growing, [Name] should work on [analyzing primary sources/making connections to current events]."
 
 ---
@@ -224,6 +262,7 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### Approaching Expectations
 
 **Content Knowledge:**
+
 > "[Name] is building understanding of key social studies concepts and benefits from graphic organizers and study guides. Reviewing notes after each lesson and discussing current events at home will help [Name] make stronger connections to the material."
 
 ---
@@ -233,12 +272,15 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### Positive Work Habits
 
 **Organization:**
+
 > "[Name] is exceptionally organized, keeping [his/her/their] materials tidy and submitting work on time. [His/Her/Their] planning skills set a strong example for peers."
 
 **Effort:**
+
 > "[Name] approaches challenges with a growth mindset and persists even when tasks are difficult. [His/Her/Their] willingness to revise and improve [his/her/their] work shows maturity."
 
 **Collaboration:**
+
 > "[Name] is a valuable team member who listens to others' ideas, contributes fairly, and helps resolve conflicts constructively."
 
 ---
@@ -246,12 +288,15 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### Areas for Growth (Work Habits)
 
 **Organization:**
+
 > "[Name] would benefit from developing stronger organizational systems. We're working together on [using a planner/organizing materials/breaking tasks into steps]. Please support [Name] at home by checking [his/her/their] backpack and planner weekly."
 
 **Assignment Completion:**
+
 > "[Name] struggles to complete work on time, which impacts [his/her/their] learning. We've set up a system where [Name] checks in with me daily about assignments. Please help [him/her/them] create a homework routine at home."
 
 **Focus:**
+
 > "[Name] is easily distracted and needs frequent reminders to stay on task. We're working on strategies including [movement breaks/preferential seating/self-monitoring checklists]. Limiting distractions during homework time at home will also help [Name] build focus."
 
 ---
@@ -259,12 +304,15 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### Social-Emotional Strengths
 
 **Kindness:**
+
 > "[Name] is a kind, empathetic student who makes everyone feel included. [He/She/They] notices when peers need support and offers help generously."
 
 **Leadership:**
+
 > "[Name] demonstrates strong leadership skills, taking initiative and encouraging peers to do their best."
 
 **Resilience:**
+
 > "[Name] handles setbacks with maturity and uses mistakes as opportunities to learn and grow."
 
 ---
@@ -272,9 +320,11 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### Social-Emotional Areas for Growth
 
 **Self-Regulation:**
+
 > "[Name] is learning to manage big emotions and uses our classroom reset strategies when feeling overwhelmed. We're working on [deep breathing/asking for breaks/using words to express feelings]. Practicing these strategies at home will help [Name] build emotional awareness."
 
 **Peer Interactions:**
+
 > "[Name] is working on [listening to others/sharing/resolving conflicts respectfully]. We're practicing these skills through [role-play/social stories/peer mediation]. Please reinforce these skills at home by [specific suggestion]."
 
 ---
@@ -284,9 +334,11 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### ELL Students
 
 **Beginning Level:**
+
 > "[Name] is making strong progress in English language development. [He/She/They] is building vocabulary and beginning to [express needs/participate in simple conversations/read basic texts]. To support [Name]'s growth, encourage [him/her/them] to practice English at home through [reading bilingual books/labeling objects/watching educational videos with subtitles]."
 
 **Intermediate Level:**
+
 > "[Name] communicates effectively in social situations and is developing academic language skills. [He/She/They] benefits from sentence frames and vocabulary support for content area learning. Continue encouraging [Name] to read in English and discuss what [he/she/they] learns."
 
 ---
@@ -294,9 +346,11 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### Special Education Students (IEP/504)
 
 **Positive Progress:**
+
 > "[Name] is making meaningful progress toward [his/her/their] IEP goals. [He/She/They] demonstrates growth in [specific skill] and uses [accommodations/modifications] effectively. We're proud of [Name]'s effort and persistence."
 
 **Ongoing Support Needs:**
+
 > "[Name] continues to require significant support in [academic area]. We are implementing [specific strategies/interventions] and will monitor progress closely. Please continue to collaborate with us and [Name]'s support team to ensure [his/her/their] success."
 
 ---
@@ -304,6 +358,7 @@ Don't use the same stem for every student. Mix and match. Use synonyms. Change t
 ### Gifted/Advanced Learners
 
 **Challenge + Growth:**
+
 > "[Name] thrives on academic challenge and demonstrates advanced abilities in [subject area]. To keep [him/her/them] engaged, we've been providing enrichment through [extension projects/leadership roles/independent research]. Encourage [Name] to explore [specific topic or opportunity] to deepen [his/her/their] passion for learning."
 
 ---
@@ -366,13 +421,15 @@ Each comment should:
 ## Section 8: Dos and Don'ts
 
 ### Do:
-- Ã¢Å“â€¦ Be specific (name a project, a skill, a moment)
-- Ã¢Å“â€¦ Vary your language across students
-- Ã¢Å“â€¦ Use positive framing even for challenges ("working to improve" vs. "struggles with")
-- Ã¢Å“â€¦ Include a next step or action item
-- Ã¢Å“â€¦ Proofread for errors (parents notice!)
+
+- Ã¢Å“... Be specific (name a project, a skill, a moment)
+- Ã¢Å“... Vary your language across students
+- Ã¢Å“... Use positive framing even for challenges ("working to improve" vs. "struggles with")
+- Ã¢Å“... Include a next step or action item
+- Ã¢Å“... Proofread for errors (parents notice!)
 
 ### Don't:
+
 - Ã¢Å’ Use the same comment for multiple students
 - Ã¢Å’ Be vague ("doing well," "needs improvement")
 - Ã¢Å’ Compare students to each other
@@ -384,17 +441,20 @@ Each comment should:
 ## Your Next Steps
 
 ### This Week (Save 2+ Hours):
+
 1. **Pick 5 students** you're struggling to write comments for
 2. **Choose a template** from this guide that matches their performance level
 3. **Customize** with one specific detail per student
 4. **Copy, paste, adjust** - done!
 
 ### This Report Card Cycle:
+
 - Create your own "favorites" folder with 10 go-to templates
 - Use AI prompts to draft comments, then personalize
 - Track which templates you use most - refine them for next time
 
 ### Long-Term:
+
 - Build a personal comment bank in a Google Doc or Word file
 - Share your best comments with colleagues (they'll thank you!)
 - Reflect: Are your comments helping parents support their kids at home?
@@ -447,5 +507,4 @@ Start with a few templates. Adjust them to fit your voice. Before you know it, y
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
-
+_© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact._

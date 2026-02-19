@@ -1,26 +1,26 @@
-﻿const fs = require('fs');
+const fs = require("fs");
 
 // Read the file
-let content = fs.readFileSync('./lib/i18n/language-context.tsx', 'utf8');
+let content = fs.readFileSync("./lib/i18n/language-context.tsx", "utf8");
 
 // Fix common encoding corruptions
 const fixes = {
-  'Ã¼': 'ü',
-  'Ãœ': 'Ü', 
-  'Ã¶': 'ö',
-  'Ã–': 'Ö',
-  'Ã¤': 'ä',
-  'Ã„': 'Ä',
-  'ÃŸ': 'ß',
-  'Ã¼ber': 'über',
-  'Ãœber': 'Über',
-  'fÃ¼r': 'für',
-  'grÃ¶ÃŸ': 'größ',
-  'mÃ¶': 'mö',
-  'kÃ¶': 'kö',
-  'LehrkrÃ¤fte': 'Lehrkräfte',
-  'GrÃ¼nder': 'Gründer',
-  'KÃ¼nstliche': 'Künstliche'
+  ü: "ü",
+  Ãœ: "Ü",
+  ö: "ö",
+  "Ã–": "Ö",
+  ä: "ä",
+  "Ã„": "Ä",
+  ÃŸ: "ß",
+  über: "über",
+  Ãœber: "Über",
+  für: "für",
+  gröÃŸ: "größ",
+  mö: "mö",
+  kö: "kö",
+  Lehrkräfte: "Lehrkräfte",
+  Gründer: "Gründer",
+  Künstliche: "Künstliche",
 };
 
 // Apply all fixes
@@ -29,6 +29,6 @@ for (const [broken, fixed] of Object.entries(fixes)) {
 }
 
 // Write back
-fs.writeFileSync('./lib/i18n/language-context.tsx', content, 'utf8');
+fs.writeFileSync("./lib/i18n/language-context.tsx", content, "utf8");
 
-console.log('✅ Encoding fixed!');
+console.log("✅ Encoding fixed!");

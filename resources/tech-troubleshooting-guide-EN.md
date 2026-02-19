@@ -1,7 +1,8 @@
-﻿# The Teacher's Tech Troubleshooting Guide
+# The Teacher's Tech Troubleshooting Guide
+
 ## Quick Fixes for Classroom Tech Crises (Projector, WiFi, LMS, and More)
 
-*When tech breaks during a lesson, you need solutions - fast. This guide gives you a 1-page troubleshooting flowchart, quick fixes for common issues, and templates for getting help from IT without waiting days.*
+_When tech breaks during a lesson, you need solutions - fast. This guide gives you a 1-page troubleshooting flowchart, quick fixes for common issues, and templates for getting help from IT without waiting days._
 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
@@ -15,6 +16,7 @@ It's 8:03 AM. Your students are settling in. You're about to start your meticulo
 Tech failures are inevitable. But panic doesn't have to be.
 
 This guide gives you:
+
 - **Quick fixes** for the 10 most common classroom tech problems
 - **A 1-page troubleshooting flowchart** to diagnose issues fast
 - **Backup plans** so you never lose a lesson to tech failure
@@ -31,6 +33,7 @@ This guide gives you:
 Every tech-based lesson should have a non-tech backup. Period.
 
 **Examples:**
+
 - Digital presentation? Print key slides.
 - Online activity? Have a paper-based version.
 - Video lesson? Have discussion questions ready.
@@ -57,6 +60,7 @@ Every tech-based lesson should have a non-tech backup. Period.
 4. **Check the lamp** - If the projector is old, the bulb might be dead. Look for a flashing red light (often means lamp failure).
 
 **If none of this works:**
+
 - Use your backup plan (printed slides, whiteboard, document camera)
 - Submit IT ticket: "Projector in Room [X] not powering on. Checked power cable and manual button. Need replacement bulb or service."
 
@@ -77,6 +81,7 @@ Every tech-based lesson should have a non-tech backup. Period.
 4. **Try a different cable** - If you have a spare HDMI or VGA cable, swap it out.
 
 **If none of this works:**
+
 - Use your backup plan
 - IT ticket: "Projector in Room [X] not displaying image. Checked input source and cables. Laptop display settings correct. Need troubleshooting."
 
@@ -97,6 +102,7 @@ Every tech-based lesson should have a non-tech backup. Period.
 4. **Restart your device** - Classic fix. Turn it off, wait 10 seconds, turn it back on.
 
 **If none of this works:**
+
 - Switch to offline activities (PDFs, downloaded videos, paper-based tasks)
 - IT ticket: "No WiFi connection in Room [X]. Restarted device and reconnected to network. Students also affected. Need network check."
 
@@ -117,6 +123,7 @@ Every tech-based lesson should have a non-tech backup. Period.
 4. **Try a different device** - If one device won't connect but others do, it's a device issue (not network-wide).
 
 **If none of this works:**
+
 - Pair struggling students with those who have working devices
 - IT ticket: "Multiple student devices in Room [X] can't connect to WiFi. Network is [name]. Devices restarted and on correct network. Need support."
 
@@ -137,6 +144,7 @@ Every tech-based lesson should have a non-tech backup. Period.
 4. **Log out and log back in** - Sometimes your session expires. Log out, close the browser, open it again, and log back in.
 
 **If none of this works:**
+
 - Use email or Google Drive to share resources temporarily
 - IT ticket: "LMS [name] not loading in Room [X]. Cleared cache, tried different browser, and logged out/in. Need assistance."
 
@@ -157,6 +165,7 @@ Every tech-based lesson should have a non-tech backup. Period.
 4. **Reconnect the audio cable** - If using a separate audio cable (3.5mm jack), unplug and replug it.
 
 **If none of this works:**
+
 - Use subtitles/closed captions if available
 - IT ticket: "No audio output in Room [X]. Checked volume, output settings, and cables. Need speaker/audio troubleshooting."
 
@@ -177,6 +186,7 @@ Every tech-based lesson should have a non-tech backup. Period.
 4. **Check printer connection** - If it's a network printer, make sure it's connected to WiFi. If it's USB, check the cable.
 
 **If none of this works:**
+
 - Print at a different location (main office, library)
 - IT ticket: "Printer in Room [X] not responding. Restarted printer and resent job. Need service."
 
@@ -197,6 +207,7 @@ Every tech-based lesson should have a non-tech backup. Period.
 4. **Download the video ahead of time** - If you know WiFi is spotty, download videos before class (YouTube Premium, Vimeo, or screen record them).
 
 **If none of this works:**
+
 - Switch to a reading or discussion activity
 - IT ticket: "Video playback issues in Room [X]. Tried different browsers and lowered quality. WiFi connection seems slow. Need network check."
 
@@ -217,6 +228,7 @@ Every tech-based lesson should have a non-tech backup. Period.
 4. **Restart your laptop** - Sometimes the laptop loses connection to the board.
 
 **If none of this works:**
+
 - Use the board as a regular projector (still displays images, just no touch features)
 - IT ticket: "Smart Board in Room [X] not responding to touch. Recalibrated, checked USB, and restarted software. Need troubleshooting."
 
@@ -235,6 +247,7 @@ Every tech-based lesson should have a non-tech backup. Period.
 3. **Try a different student login** - If one student's profile is causing issues, have them log in on a different device to see if the problem persists.
 
 **If none of this works:**
+
 - Have the student share a device with a partner
 - IT ticket: "Student device [ID or asset number] frozen in Room [X]. Force restarted multiple times. Need device swap or repair."
 
@@ -273,6 +286,7 @@ STEP 4: Submit IT Ticket (see template below)
 **Subject:** [Brief description] - Room [X] - [Your Name]
 
 **Body:**
+
 ```
 Issue: [Describe the problem in 1-2 sentences]
 
@@ -294,6 +308,7 @@ Thank you!
 ```
 
 **Example:**
+
 ```
 Subject: Projector Not Turning On - Room 204 - Ms. Johnson
 
@@ -318,6 +333,7 @@ Ms. Johnson
 ## Preventative Maintenance (Avoid Problems Before They Start)
 
 ### Weekly Checks:
+
 - **Test your projector** on Monday morning before students arrive
 - **Download key videos** ahead of time (don't rely on WiFi)
 - **Charge all devices** (laptop, document camera, clicker) over the weekend
@@ -325,6 +341,7 @@ Ms. Johnson
 ---
 
 ### Monthly Checks:
+
 - **Update your laptop** - Run software updates during planning periods (not during class!)
 - **Clean your tech** - Wipe down your keyboard, mouse, and projector remote
 - **Check cables** - Look for fraying or loose connections
@@ -332,6 +349,7 @@ Ms. Johnson
 ---
 
 ### Start of Year:
+
 - **Submit a preemptive IT ticket** - Ask IT to check all equipment in your room before school starts
 - **Request backup equipment** - Ask for a spare HDMI cable, VGA adapter, or extension cord to keep in your room
 
@@ -352,12 +370,14 @@ Keep these ideas in your back pocket:
 ## When to Call for Help (vs. Troubleshoot Yourself)
 
 ### DIY It:
+
 - Loose cables
 - Volume issues
 - Display input settings
 - Simple restarts
 
 ### Call IT:
+
 - Network outages
 - Broken hardware (cracked screen, dead battery)
 - Software installation/licensing issues
@@ -386,11 +406,13 @@ You won't. Unplugging a cable, restarting a device, or checking settings won't c
 ## Your Next Steps
 
 ### This Week:
+
 1. Test all your tech on Monday morning (5 minutes before students arrive)
 2. Create a "Tech Fail Toolkit" (printed backup activities, spare cables)
 3. Bookmark this guide on your laptop for easy access
 
 ### This Month:
+
 - Submit an IT ticket for any equipment that's "kind of working but not great"
 - Download 3-5 key videos you use often (so you're not dependent on WiFi)
 - Label all cables in your room (so you know what connects to what)
@@ -410,5 +432,4 @@ Tech is amazing when it works - and infuriating when it doesn't. But you're not 
 **Author:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact.*
-
+_© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact._

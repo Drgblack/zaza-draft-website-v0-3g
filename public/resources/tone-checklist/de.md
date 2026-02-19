@@ -1,16 +1,15 @@
-﻿# 5-Minuten-Checkliste: Professioneller Ton
+# 5-Minuten-Checkliste: Professioneller Ton
 
-Vor dem Senden kurz prÃ¼fen:
+Vor dem Senden kurz prüfen:
 
-- **Klarheit:** Zweck in den ersten 2 SÃ¤tzen? Betreff eindeutig?
+- **Klarheit:** Zweck in den ersten 2 Sätzen? Betreff eindeutig?
 - **Ton:** Neutral, respektvoll, partnerschaftlich?
 - **Fakten:** Beobachtbar/konkret (3 von 5) statt Etiketten.
-- **Aktion:** NÃ¤chster Schritt + Wer macht bis wann was?
-- **Feinschliff:** Namen korrekt, Korrektur gelesen, < 180 WÃ¶rter.
+- **Aktion:** Nächster Schritt + Wer macht bis wann was?
+- **Feinschliff:** Namen korrekt, Korrektur gelesen, < 180 Wörter.
 
 **Betreff-Ideen**
 
-- â€žKurzes Update zu **[Name]**â€œ
-- â€žFehlende **[Aufgabe]** - nÃ¤chste Schritteâ€œ
-- â€žFortschritt in **[Thema]** feiernâ€œ
-
+- â€žKurzes Update zu **[Name]**"
+- â€žFehlende **[Aufgabe]** - nächste Schritte"
+- â€žFortschritt in **[Thema]** feiern"

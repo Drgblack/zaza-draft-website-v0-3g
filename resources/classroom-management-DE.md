@@ -1,7 +1,8 @@
-﻿# Die Reset-Routine: Ein proaktiver Leitfaden für Classroom Management
+# Die Reset-Routine: Ein proaktiver Leitfaden für Classroom Management
+
 ## Deeskalationsstrategien und Reset-Protokolle, die den Lernfluss aufrechterhalten
 
-*Verwandeln Sie Unterrichtsstörungen von Machtkämpfen in Lernmomente. Enthält Schritt-für-Schritt-Skripte, Präventionssysteme und Reparaturstrategien, die Beziehungen bewahren und gleichzeitig Grenzen setzen.*
+_Verwandeln Sie Unterrichtsstörungen von Machtkämpfen in Lernmomente. Enthält Schritt-für-Schritt-Skripte, Präventionssysteme und Reparaturstrategien, die Beziehungen bewahren und gleichzeitig Grenzen setzen._
 
 **Autor:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
@@ -17,6 +18,7 @@ Jede Lehrkraft kennt den Moment: Ein Schüler ist unkonzentriert, eskaliert oder
 **Die Lösung:** Reset-Routinen - strukturierte, ruhige Wege, die Schülern helfen, sich zu regulieren, zu reparieren und wieder einzusteigen, ohne Drama oder verlorene Unterrichtszeit.
 
 Dieser Leitfaden gibt Ihnen:
+
 - **Das Reset-Framework** - ein 3-Schritte-System für den proaktiven Umgang mit Störungen
 - **Präventionsstrategien** - wie Sie Probleme stoppen, bevor sie beginnen
 - **Deeskalations-Skripte** - was Sie im Moment sagen (und nicht sagen) sollten
@@ -36,11 +38,13 @@ Anstatt jedes Mal anders zu reagieren, wenn ein Schüler vom Kurs abkommt, verwe
 **Ziel:** Das Verhalten bemerken, ohne einen Machtkampf zu erzeugen.
 
 **Wie es aussieht:**
+
 - Nonverbale Umleitung (Nähe, Blickkontakt, Geste)
 - Kurze, private Erinnerung ("Überprüfe deinen Fokus")
 - Das Beste annehmen ("Ich weiß, du schaffst das")
 
 **Was zu vermeiden ist:**
+
 - Öffentliche Ansprachen ("Warum bist du immer unkonzentriert?")
 - Sarkasmus oder Frustration im Ton
 - Den Unterricht stoppen, um einen Schüler anzusprechen
@@ -54,11 +58,13 @@ Anstatt jedes Mal anders zu reagieren, wenn ein Schüler vom Kurs abkommt, verwe
 **Ziel:** Dem Schüler Raum geben, sich zu regulieren, bevor er zum Lernen zurückkehrt.
 
 **Wie es aussieht:**
+
 - Ein festgelegter "Reset-Ort" im Raum (ruhige Ecke, Schreibtisch hinten, Flur mit Aufgabe)
 - Eine schnelle, niedrigschwellige Aufgabe (Atemübung, Journal-Prompt, Dehnung)
 - Ein klares Rückkehrsignal ("Wenn du bereit bist, komm zurück")
 
 **Was zu vermeiden ist:**
+
 - Es "Auszeit" oder "Strafe" zu nennen
 - Den Schüler nur an die Wand starren lassen
 - Ihn zu vergessen (nach 3-5 Minuten nachsehen)
@@ -72,11 +78,13 @@ Anstatt jedes Mal anders zu reagieren, wenn ein Schüler vom Kurs abkommt, verwe
 **Ziel:** Die Beziehung wieder aufbauen und Erwartungen für die Zukunft klären.
 
 **Wie es aussieht:**
+
 - Ein kurzes, privates Gespräch (30-60 Sekunden)
 - Anerkennung der Perspektive des Schülers ("Ich habe bemerkt, dass du frustriert warst")
 - Klarer nächster Schritt ("Beim nächsten Mal benutze unser Signal, wenn du eine Pause brauchst")
 
 **Was zu vermeiden ist:**
+
 - Lange Vorträge oder "Warum"-Verhöre
 - Eine Entschuldigung erzwingen, wenn sie nicht bereit sind
 - Einen Groll hegen oder sie kalt behandeln
@@ -92,6 +100,7 @@ Das beste Classroom Management ist das, das Sie nicht anwenden müssen, weil St�
 ### 1. Die Reset-Routine explizit lehren
 
 **Erste Schulwoche (oder heute):**
+
 - Stellen Sie den Reset-Ort vor: "Das ist ein Ort, um eine Pause zu machen, wenn du frustriert, abgelenkt bist oder dich beruhigen musst."
 - Modellieren Sie es: "Schau mich an. Ich bin gestresst wegen der Korrektur. Ich mache jetzt einen 2-Minuten-Reset." (Gehen Sie zum Ort, atmen Sie, kommen Sie zurück.)
 - Üben Sie es: "Alle, überlegt euch eine Zeit, wann ihr einen Reset brauchen könntet. Probiert es jetzt."
@@ -106,12 +115,14 @@ Das beste Classroom Management ist das, das Sie nicht anwenden müssen, weil St�
 **Warum das funktioniert:** Viele Störungen kommen von Schülern, die sich bewegen müssen, nicht von Schülern, die sich schlecht benehmen wollen.
 
 **Schnelle Gehirnpausen (1-3 Minuten):**
+
 - **Aufstehen und dehnen:** "Alle stehen auf. Greift zur Decke. Jetzt berührt eure Zehen. Schüttelt euch aus."
 - **30-Sekunden-Tanzparty:** Spielt ein Lied, lasst sie sich bewegen, dann zurück zur Arbeit.
 - **Stiller Ball:** Werft einen weichen Ball durch den Raum. Wenn er fällt oder jemand Geräusche macht, von vorne.
 - **Denken-Paaren-Teilen:** "Wendet euch einem Partner zu. Ihr habt 60 Sekunden, um eine Sache zu teilen, die ihr heute gelernt habt."
 
 **Wann sie verwendet werden:**
+
 - Nach 20-30 Minuten Sitzarbeit
 - Wenn Sie mehrere Schüler sehen, die abdriften
 - Nach einem Test oder einer hochkonzentrierten Aufgabe
@@ -124,6 +135,7 @@ Das beste Classroom Management ist das, das Sie nicht anwenden müssen, weil St�
 **Anstatt:** Einen Schüler von der anderen Seite des Raums anzurufen ("Jamie, hör auf zu reden!")
 
 **Versuchen Sie:**
+
 - In ihre Nähe gehen und pausieren (Proximity)
 - Blickkontakt herstellen und ans Ohr tippen (Signal für "hören")
 - Sanft auf ihre Arbeit zeigen (Refokussierungshinweis)
@@ -137,12 +149,12 @@ Das beste Classroom Management ist das, das Sie nicht anwenden müssen, weil St�
 
 Lehren Sie Schüler, wie sie Bedürfnisse kommunizieren, ohne zu unterbrechen:
 
-| Bedürfnis | Signal | Beispiel |
-|-----------|--------|----------|
-| **Toilette** | Handzeichen (Peace-Zeichen) | Schüler zeigt Signal, Sie nicken oder formen "ja" mit dem Mund |
-| **Ich brauche Hilfe** | Farbiger Becher auf Schreibtisch (rot = feststeckend, gelb = Frage, grün = gut) | Sie gehen zuerst zu roten/gelben Bechern |
-| **Ich brauche einen Reset** | Hand aufs Herz | Schüler zeigt Signal, geht zum Reset-Ort (kein Fragen) |
-| **Ich verstehe nicht** | Haftnotiz an Schreibtischecke | Sie überprüfen Haftnotizen während der Arbeitszeit |
+| Bedürfnis                   | Signal                                                                          | Beispiel                                                       |
+| --------------------------- | ------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| **Toilette**                | Handzeichen (Peace-Zeichen)                                                     | Schüler zeigt Signal, Sie nicken oder formen "ja" mit dem Mund |
+| **Ich brauche Hilfe**       | Farbiger Becher auf Schreibtisch (rot = feststeckend, gelb = Frage, grün = gut) | Sie gehen zuerst zu roten/gelben Bechern                       |
+| **Ich brauche einen Reset** | Hand aufs Herz                                                                  | Schüler zeigt Signal, geht zum Reset-Ort (kein Fragen)         |
+| **Ich verstehe nicht**      | Haftnotiz an Schreibtischecke                                                   | Sie überprüfen Haftnotizen während der Arbeitszeit             |
 
 **Warum das funktioniert:** Schüler bekommen, was sie brauchen, ohne die Lektion zu entgleisen.
 
@@ -157,11 +169,13 @@ Wenn ein Schüler eskaliert (argumentiert, sich weigert, zusammenbricht), sind I
 **Situation:** Schüler kritzelt, plaudert oder driftet ab.
 
 **Was zu sagen ist:**
+
 > "[Name], überprüfe deinen Fokus. Ich brauche dich bei [Aufgabe]."
 
 **Dann:** Gehen Sie weg. Warten Sie nicht auf eine Antwort. Vertrauen Sie darauf, dass sie sich fügen.
 
 **Wenn sie argumentieren:**
+
 > "Ich höre dich. Lass uns nach dem Unterricht reden. Gerade jetzt brauche ich dich bei [Aufgabe]."
 
 **Warum das funktioniert:** Es ist ruhig, klar und gibt der Resistenz keine Aufmerksamkeit.
@@ -173,14 +187,17 @@ Wenn ein Schüler eskaliert (argumentiert, sich weigert, zusammenbricht), sind I
 **Situation:** Schüler weigert sich, Arbeit zu machen, ihren Platz zu verlassen oder einer Anweisung zu folgen.
 
 **Was zu sagen ist:**
+
 > "[Name], du hast zwei Wahlmöglichkeiten: [Option A] oder [Option B]. Was funktioniert für dich?"
 
 **Beispiel:**
+
 > "Du kannst diese Seite jetzt fertigstellen, oder du kannst sie in der Pause fertigstellen. Deine Wahl."
 
 **Dann:** Gehen Sie weg. Geben Sie ihnen 10-15 Sekunden zum Entscheiden.
 
 **Wenn sie sich immer noch weigern:**
+
 > "Ich sehe, du wählst [Konsequenz]. Das ist okay. Lass uns nach dem Unterricht darüber reden, was du brauchst."
 
 **Warum das funktioniert:** Es gibt ihnen Kontrolle, während Sie Ihre Grenze aufrechterhalten.
@@ -192,11 +209,13 @@ Wenn ein Schüler eskaliert (argumentiert, sich weigert, zusammenbricht), sind I
 **Situation:** Schüler weint, ist wütend oder überwältigt.
 
 **Was zu sagen ist:**
+
 > "Ich sehe, dass du [frustriert/verärgert/überwältigt] bist. Das ist schwer. Brauchst du eine Minute am Reset-Ort, oder möchtest du mit mir im Flur sprechen?"
 
 **Dann:** Ehren Sie ihre Wahl. Wenn sie zum Reset-Ort gehen, schauen Sie nach 3 Minuten nach.
 
 **Wenn sie weiter eskalieren:**
+
 > "Ich sorge mich um dich, und ich sehe, dass du einen schwierigen Moment hast. Ich werde [den Schulpsychologen anrufen / dir Raum geben]. Wir werden das zusammen herausfinden."
 
 **Warum das funktioniert:** Sie erkennen ihre Gefühle an, ohne bei den Erwartungen nachzugeben.
@@ -208,11 +227,13 @@ Wenn ein Schüler eskaliert (argumentiert, sich weigert, zusammenbricht), sind I
 **Situation:** Schüler rollt mit den Augen, seufzt oder macht unhöfliche Kommentare.
 
 **Was zu sagen ist:**
+
 > "Ich behandle dich mit Respekt. Ich brauche das Gleiche von dir. Lass uns einen Neustart machen."
 
 **Dann:** Geben Sie ihnen 5 Sekunden, um zu antworten. Wenn sie nicht antworten, weitermachen und später folgen.
 
 **Wenn es anhält:**
+
 > "Wir müssen nach dem Unterricht reden. Gerade jetzt kehre zu [Aufgabe] zurück."
 
 **Warum das funktioniert:** Sie setzen eine Grenze, ohne defensiv oder strafend zu sein.
@@ -234,18 +255,23 @@ Reparatur ist nicht optional. Es ist der wichtigste Teil des Reset-Prozesses.
 **Das Skript:**
 
 **Schritt 1: Bestätigen Sie, was passiert ist**
+
 > "Hey, ich wollte über früher sprechen, als [spezifisches Verhalten]."
 
 **Schritt 2: Erkennen Sie ihre Perspektive an**
+
 > "Ich weiß, du warst [frustriert/müde/überwältigt]. Ich verstehe."
 
 **Schritt 3: Klären Sie die Erwartung**
+
 > "Wenn das wieder passiert, hier ist, was du stattdessen tun kannst: [spezifischer Ersatz]."
 
 **Schritt 4: Bestätigen Sie und weitermachen**
+
 > "Wir sind gut. Lass uns einen frischen Start haben. Was brauchst du von mir?"
 
 **Beispiel:**
+
 > "Hey, ich wollte über früher sprechen, als du den Bleistift geworfen hast. Ich weiß, du warst frustriert über das Mathe-Problem. Ich verstehe. Wenn das wieder passiert, nutze unser Signal und ich komme vorbei, um zu helfen. Wir sind gut. Lass uns einen frischen Start haben. Was brauchst du von mir?"
 
 ---
@@ -267,17 +293,20 @@ Einige Verhaltensweisen erfordern Verstärkung. Wissen Sie, wann Sie Unterstütz
 ### Rufen Sie Admin/Schulpsychologen-Unterstützung, wenn:
 
 **Unmittelbare Sicherheitsbedenken:**
+
 - Körperliche Aggression (Schlagen, Werfen von Gegenständen auf Menschen)
 - Selbstverletzungssprache oder -handlungen
 - Das Klassenzimmer/Gebäude verlassen
 - Zerstörung von Eigentum
 
 **Chronische Muster:**
+
 - Schüler hatte 5+ Resets in einer Woche ohne Verbesserung
 - Verhalten beeinträchtigt das Lernen der ganzen Klasse
 - Sie haben Reparaturgespräche versucht und die Beziehung ist immer noch gebrochen
 
 **Was zu tun ist:**
+
 1. Verwenden Sie das Notfallprotokoll Ihrer Schule (Rufknopf, Funk, Schüler als Läufer schicken)
 2. Bleiben Sie ruhig. Eskalieren Sie nicht durch Schreien oder körperliches Eingreifen, es sei denn, es ist notwendig.
 3. Dokumentieren Sie: Datum, Zeit, Verhalten, was Sie gesagt/getan haben, Ergebnis
@@ -287,16 +316,17 @@ Einige Verhaltensweisen erfordern Verstärkung. Wissen Sie, wann Sie Unterstütz
 ## Dokumentation: Muster verfolgen, nicht nur Vorfälle
 
 **Warum dokumentieren?**
+
 - Hilft Ihnen, Muster zu sehen (z.B. "Jamie hat jeden Dienstag nach dem Mittagessen Probleme")
 - Liefert Daten, wenn Sie Eltern, Schulpsychologen oder IEP-Teams einbeziehen müssen
 - Schützt Sie, wenn ein Elternteil oder Admin Ihren Ansatz in Frage stellt
 
 ### Was zu verfolgen ist
 
-| Datum | Zeit | Schüler | Verhalten | Was ich getan habe | Ergebnis |
-|-------|------|---------|-----------|-------------------|----------|
-| 3.11. | 10:15 | Jamie | Weigerte sich, Aufgabe zu beginnen, sagte "das ist dumm" | Bot Wahl an: jetzt beginnen oder während der Pause. Ging weg. | Wählte während der Pause zu beginnen. Erledigte es. |
-| 4.11. | 9:00 | Alex | Weinte am Schreibtisch, wollte nicht sprechen | Bot Reset-Ort an. Nach 5 Min. nachgesehen. | Nahm Reset. Kehrte nach 10 Min. zurück, entschuldigte sich, machte weiter. |
+| Datum | Zeit  | Schüler | Verhalten                                                | Was ich getan habe                                            | Ergebnis                                                                   |
+| ----- | ----- | ------- | -------------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| 3.11. | 10:15 | Jamie   | Weigerte sich, Aufgabe zu beginnen, sagte "das ist dumm" | Bot Wahl an: jetzt beginnen oder während der Pause. Ging weg. | Wählte während der Pause zu beginnen. Erledigte es.                        |
+| 4.11. | 9:00  | Alex    | Weinte am Schreibtisch, wollte nicht sprechen            | Bot Reset-Ort an. Nach 5 Min. nachgesehen.                    | Nahm Reset. Kehrte nach 10 Min. zurück, entschuldigte sich, machte weiter. |
 
 **Wie oft?** Dokumentieren Sie nur Muster oder Vorfälle, an die Sie sich nächste Woche erinnern möchten.
 
@@ -309,11 +339,13 @@ Einige Verhaltensweisen erfordern Verstärkung. Wissen Sie, wann Sie Unterstütz
 ### Szenario 1: Schüler verlässt den Unterricht
 
 **Im Moment:**
+
 - Jagen Sie sie nicht. Schicken Sie einen anderen Erwachsenen (nahegelegene Lehrkraft, Admin), um nach ihnen zu sehen.
 - Sagen Sie der Klasse ruhig: "Ich werde nach [Name] in einer Minute sehen. Alle arbeiten weiter."
 - Unterrichten Sie weiter (oder haben Sie eine Ersatzaufgabe bereit).
 
 **Wenn sie zurückkehren:**
+
 - Privates Gespräch: "Ich bin froh, dass du zurück bist. Rauszugehen ist nicht sicher. Wenn du gehen musst, nutze nächstes Mal unser Signal, damit ich weiß, dass du okay bist."
 
 ---
@@ -321,11 +353,13 @@ Einige Verhaltensweisen erfordern Verstärkung. Wissen Sie, wann Sie Unterstütz
 ### Szenario 2: Schüler sagt "Ich hasse dich" oder "Diese Klasse ist scheiße"
 
 **Im Moment:**
+
 - Nehmen Sie es nicht persönlich. Es geht nicht um Sie.
 - Antworten Sie ruhig: "Ich höre, dass du frustriert bist. Wir können später darüber reden."
 - Machen Sie mit dem Unterricht weiter.
 
 **Nach dem Unterricht:**
+
 - "Hey, ich habe dich früher [X] sagen hören. Ich weiß, du warst verärgert. Sprich mit mir darüber, was wirklich los ist."
 - Hören Sie zu. Validieren Sie. Machen Sie es nicht um Sie.
 
@@ -334,11 +368,13 @@ Einige Verhaltensweisen erfordern Verstärkung. Wissen Sie, wann Sie Unterstütz
 ### Szenario 3: Zwei Schüler kämpfen (verbal oder körperlich)
 
 **Im Moment:**
+
 - Trennen Sie sie sofort (stellen Sie sich zwischen sie, berühren Sie sie nicht, es sei denn, es ist notwendig).
 - Feste Stimme: "Stopp. Beide, tretet zurück."
 - Schicken Sie einen zum Reset-Ort, einen in den Flur (oder rufen Sie Verstärkung, wenn körperlich).
 
 **Nachdem sie ruhig sind:**
+
 - Zuerst individuelle Gespräche (hören Sie beide Seiten separat).
 - Dann (wenn angemessen), moderiertes Gespräch zusammen: "Was ist passiert? Was braucht jeder von euch, um voranzukommen?"
 
@@ -351,6 +387,7 @@ Einige Verhaltensweisen erfordern Verstärkung. Wissen Sie, wann Sie Unterstütz
 Wenn ein Schüler ständig Resets braucht, erstellen Sie einen proaktiven Plan:
 
 **Einbeziehen:**
+
 - **Auslöser:** Was bringt sie normalerweise auf? (Übergänge, Gruppenarbeit, bestimmte Fächer)
 - **Präventive Unterstützungen:** Was hilft? (bevorzugter Sitzplatz, Bewegungspausen, Check-ins)
 - **Reset-Protokoll:** Was ist ihr personalisierter Reset? (Flur gehen, zeichnen, zappeln)
@@ -363,6 +400,7 @@ Wenn ein Schüler ständig Resets braucht, erstellen Sie einen proaktiven Plan:
 ### 2. Die 2x10-Strategie (Beziehungsaufbau)
 
 **Wie es funktioniert:**
+
 - Wählen Sie einen herausfordernden Schüler.
 - Verbringen Sie 2 Minuten pro Tag für 10 Tage damit, mit ihnen über alles Nicht-Akademische zu sprechen.
 - Fragen Sie nach ihrem Leben, Hobbys, Interessen. Hören Sie zu.
@@ -376,6 +414,7 @@ Wenn ein Schüler ständig Resets braucht, erstellen Sie einen proaktiven Plan:
 Anstatt nur ein Verhalten zu stoppen, lehren Sie einen Ersatz.
 
 **Beispiel:**
+
 - **Problemverhalten:** Schüler ruft Antworten raus, anstatt die Hand zu heben.
 - **Ersatz:** "Wenn du eine Antwort hast, schreibe sie auf dein Whiteboard und halte es hoch."
 - **Üben Sie es:** Rollenspiel in einem ruhigen Moment.
@@ -406,16 +445,19 @@ Versuchen Sie dies: "Ich möchte zuerst einige proaktive Strategien versuchen. W
 ## Ihre nächsten Schritte
 
 ### Diese Woche (10-Minuten-Start):
+
 1. **Legen Sie einen Reset-Ort fest** in Ihrem Klassenzimmer (Stuhl, Ecke, Schreibtisch)
 2. **Lehren Sie die Reset-Routine** Ihren Schülern (auch wenn es Mitte des Jahres ist)
 3. **Wählen Sie ein Deeskalations-Skript** zum Auswendiglernen und Verwenden diese Woche
 
 ### Diesen Monat (Bauen Sie Ihr System auf):
+
 - Führen Sie eine Präventionsstrategie ein (Bewegungspausen, Signale oder Nähe-Umleitungen)
 - Dokumentieren Sie 2-3 Verhaltensmuster, die Sie bemerken
 - Führen Sie ein Reparaturgespräch mit einem herausfordernden Schüler
 
 ### Dieses Jahr (Vertiefen Sie Ihre Praxis):
+
 - Erstellen Sie einen Verhaltensunterstützungsplan für einen Schüler mit hohem Bedarf
 - Verfolgen Sie Ihre Klassenverweise - nehmen sie ab?
 - Teilen Sie die Reset-Routine mit einem Kollegen und verfeinern Sie sie gemeinsam
@@ -425,12 +467,14 @@ Versuchen Sie dies: "Ich möchte zuerst einige proaktive Strategien versuchen. W
 ## Bonus: Ideen für die Einrichtung des Reset-Orts
 
 **Was einzubeziehen ist:**
+
 - Bequeme Sitzgelegenheit (Sitzsack, Stuhl, Kissen)
 - Beruhigungswerkzeuge (Stressball, Fidget, Atemposter)
 - Timer (damit Schüler wissen, wann 3-5 Minuten vorbei sind)
 - Optional: Reflexionsaufforderung ("Zeichne, wie du dich fühlst" oder "Was brauchst du gerade?")
 
 **Was NICHT einzubeziehen ist:**
+
 - Spielzeug oder Ablenkungen (das ist keine Belohnung)
 - Eine "Böser-Stuhl"-Atmosphäre (kein Wandzugewandtes oder Isolationskabine)
 
@@ -455,5 +499,4 @@ Und denken Sie daran: Die Schüler, die Sie am meisten herausfordern, sind oft d
 **Autor:** Dr. Greg Blackburn  
 **Website:** www.zazadraft.com
 
-*Â© 2025 Zaza Technologies. Diese Ressource ist kostenlos für Lehrkräfte. Teilen Sie sie mit Ihrem Team, aber bitte behalten Sie die Quellenangabe bei.*
-
+_© 2025 Zaza Technologies. Diese Ressource ist kostenlos für Lehrkräfte. Teilen Sie sie mit Ihrem Team, aber bitte behalten Sie die Quellenangabe bei._

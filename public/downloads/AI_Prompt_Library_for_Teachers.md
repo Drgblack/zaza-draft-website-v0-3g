@@ -1,4 +1,4 @@
-﻿# AI Prompt Library for Teachers
+# AI Prompt Library for Teachers
 
 ## Copy-Paste Prompts That Save Hours Every Week
 
@@ -1401,7 +1401,6 @@ _Building AI tools teachers actually want to use_
 
 ---
 
-_Â© 2025 Zaza Technologies. Free for educational use.  
+_© 2025 Zaza Technologies. Free for educational use.  
 Share with colleagues. Adapt for your classroom.  
 All we ask: Keep this footer so others can find us._
-

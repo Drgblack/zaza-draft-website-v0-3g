@@ -1,4 +1,4 @@
-﻿# The Teacher's AI Prompt Library
+# The Teacher's AI Prompt Library
 
 ## Your Complete Guide to Effective AI Prompts for Every Teaching Moment
 
@@ -543,5 +543,4 @@ Start small. Test one prompt this week. Refine it. Then add another. Before you 
 
 ---
 
-_Â© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact._
-
+_© 2025 Zaza Technologies. This resource is free for teachers. Share with your team, but please keep the attribution intact._

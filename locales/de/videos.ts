@@ -1,4 +1,4 @@
-﻿export default {
+export default {
   hero: {
     title: "Video-Tutorials und Demos",
   },
@@ -9,12 +9,11 @@
     all: "Alle Videos",
     "getting-started": "Erste Schritte",
     advanced: "Erweiterte Funktionen",
-    "use-cases": "AnwendungsfÃ¤lle",
-    "best-practices": "BewÃ¤hrte Methoden",
+    "use-cases": "Anwendungsfälle",
+    "best-practices": "Bewährte Methoden",
     "tips-tricks": "Tipps & Tricks",
   },
   section: {
     all: "Alle Videos",
   },
 };
-

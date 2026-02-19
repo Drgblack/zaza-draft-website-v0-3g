@@ -1,15 +1,14 @@
-﻿# KI-Rubrik-Prompts (sofort nutzbar)
+# KI-Rubrik-Prompts (sofort nutzbar)
 
-_Prompts fÃ¼r klare, schÃ¼lernahe Rubriken in Minuten._
+_Prompts für klare, schülernahe Rubriken in Minuten._
 
 ## Grundrahmen
 
 > Handle als erfahrene\*r **[Fach/Klasse]**-Lehrkraft. Erstelle eine Rubrik zu **[Aufgabe]**, passend zu **[Standards]**.  
-> Vier Stufen (**Ãœbertrifft/Erreicht/Auf dem Weg/Beginnend**), schÃ¼lerfreundlich.  
-> Ausgabe als Markdown-Tabelle mit **[Kriterien]** + je 1 â€žNext Stepâ€œ.
+> Vier Stufen (**Ãœbertrifft/Erreicht/Auf dem Weg/Beginnend**), schülerfreundlich.  
+> Ausgabe als Markdown-Tabelle mit **[Kriterien]** + je 1 â€žNext Step".
 
 ## Schnell anpassen
 
-- **Gewichtungen** (%), **Beispiele**, **Barrierearmut** (Audio/Video Belege mÃ¶glich).
-- **SelbsteinschÃ¤tzung**: 6 Zeilen mit SatzanfÃ¤ngen.
-
+- **Gewichtungen** (%), **Beispiele**, **Barrierearmut** (Audio/Video Belege möglich).
+- **Selbsteinschätzung**: 6 Zeilen mit Satzanfängen.
