@@ -1,19 +1,43 @@
-param(
-  [Parameter(ValueFromRemainingArguments = $true)]
-  [string[]] $Files
+﻿Param(
+  [string]$Root = "."
 )
 
+$exclude = @(
+  "\node_modules\",
+  "\.next\",
+  "\out\",
+  "\dist\",
+  "\build\",
+  "\.git\"
+)
+
+$files = Get-ChildItem -Path $Root -Recurse -File -Force -ErrorAction SilentlyContinue | Where-Object {
+  $p = $_.FullName
+  ($exclude | ForEach-Object { $p -like "*$_*" } | Where-Object { $_ } | Measure-Object).Count -eq 0
+}
+
 $bad = @()
-foreach ($f in $Files) {
-  if (-not (Test-Path -LiteralPath $f)) { continue }
-  $text = [IO.File]::ReadAllText($f)
-  if ($text.IndexOf([char]0x2014) -ge 0) { $bad += $f }
+
+foreach ($f in $files) {
+  try {
+    $raw = Get-Content -LiteralPath $f.FullName -Raw -ErrorAction Stop
+    if ($raw -match " - ") {
+      $bad += $f.FullName
+    }
+  } catch {
+    # Ignore unreadable files
+  }
 }
 
 if ($bad.Count -gt 0) {
-  Write-Error ("❌ Em dash (—) found in:`n" + ($bad -join "`n"))
+  Write-Host ""
+  Write-Host "Found em dashes in these files:"
+  $bad | ForEach-Object { Write-Host " - $_" }
+  Write-Host ""
   Write-Host "Tip: replace with a hyphen (-)."
   exit 1
 }
 
+Write-Host "OK: no em dashes found."
 exit 0
+

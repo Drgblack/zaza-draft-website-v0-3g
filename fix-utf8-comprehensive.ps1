@@ -42,7 +42,7 @@ $content = $content -replace 'â€ž', '„'
 $content = $content -replace 'â€œ', '"'
 $content = $content -replace 'â€™', '''
 $content = $content -replace 'â€"', '–'
-$content = $content -replace 'â€"', '—'
+$content = $content -replace 'â€"', ' - '
 
 # Save with proper UTF-8 encoding
 Write-Host "Saving fixed file..." -ForegroundColor Yellow
@@ -61,3 +61,4 @@ Write-Host "($issuesBefore - $issuesAfter)" -ForegroundColor Green
 Write-Host ""
 Write-Host "✅ Comprehensive UTF-8 fix complete!" -ForegroundColor Green
 Write-Host "Backup saved as: $filePath.backup-before-utf8-fix" -ForegroundColor Gray
+
