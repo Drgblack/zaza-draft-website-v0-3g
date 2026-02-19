@@ -54,7 +54,7 @@ export default function Footer() {
     return (
       <footer className="border-t border-white/10 bg-slate-950 text-slate-300">
         <div className="mx-auto max-w-7xl px-6 py-12">
-          <div className="grid gap-8 md:grid-cols-2 md:items-start">
+          <div className="grid gap-8 md:grid-cols-3 md:items-start">
             <div>
               <div className="flex items-center gap-2">
                 <div className="h-7 w-7 rounded-lg bg-gradient-to-tr from-fuchsia-500 to-violet-500 text-white grid place-items-center text-sm font-bold">
@@ -94,6 +94,19 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link href={localPath("/terms")} className="hover:text-white">
+                    {isDE ? "Nutzungsbedingungen" : "Terms"}
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={isDE ? "/de/impressum" : "/impressum"}
+                    className="hover:text-white"
+                  >
+                    Impressum
+                  </Link>
+                </li>
+                <li>
                   <Link
                     href={localPath("/contact")}
                     className="hover:text-white"
@@ -101,6 +114,18 @@ export default function Footer() {
                     {isDE ? "Support / Kontakt" : "Support / Contact"}
                   </Link>
                 </li>
+              </ul>
+              <p className="mt-4 text-sm text-slate-400">
+                {isDE
+                  ? "Weitere Zaza Apps sind in Entwicklung."
+                  : "Other Zaza apps are in development."}
+              </p>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold text-slate-200">
+                {isDE ? "Unternehmen" : "Company"}
+              </h3>
+              <ul className="mt-3 space-y-2 text-sm">
                 <li>
                   <a
                     href="https://www.zazatechnologies.com"
@@ -112,17 +137,6 @@ export default function Footer() {
                   </a>
                 </li>
               </ul>
-              <p className="mt-4 text-sm text-slate-400">
-                {isDE
-                  ? "Weitere Zaza Apps folgen bald."
-                  : "Other Zaza apps are coming soon."}{" "}
-                <Link
-                  href={localPath("/suite")}
-                  className="text-slate-200 hover:text-white"
-                >
-                  {isDE ? "Zur Suite" : "See Suite"}
-                </Link>
-              </p>
             </div>
           </div>
           <div className="mt-8 border-t border-white/10 pt-5 text-xs text-slate-400">
