@@ -756,7 +756,7 @@ const translationsEn: Record<string, string> = {
     "IEP documentation, parent conferences",
 
   // Comparison Section
-  "comparison.heading": "Why Zaza Draft feels different from generic AI",
+  "comparison.heading": "Why Zaza Draft is built differently from generic AI",
   "comparison.subheading":
     "Defensible wording matters more than fluent wording. Draft is built for paper-trail communication and written as if it could be forwarded, screenshot, or read out of context.",
   "comparison.clarifier":
@@ -2312,8 +2312,7 @@ const translationsDe: Record<string, string> = {
     "IEP-Dokumentation, Elternkonferenzen",
 
   // Comparison Section
-  "comparison.heading":
-    "Warum Zaza Draft sich anders anfühlt als generische KI",
+  "comparison.heading": "Warum Zaza Draft anders gebaut ist als generische KI",
   "comparison.subheading":
     "Abgesicherte Formulierungen sind wichtiger als flüssiger Text. Draft ist für schriftliche Nachvollziehbarkeit gebaut und so formuliert, als könnte es weitergeleitet, gescreenshotet oder aus dem Kontext gelesen werden.",
   "comparison.clarifier":

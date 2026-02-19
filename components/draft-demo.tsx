@@ -25,50 +25,50 @@ const DEMOS: Record<ScenarioId, DemoVariant> = {
   parent: {
     label: { en: "Parent Email", de: "Elternnachricht" },
     before: {
-      en: "Tom is lazy in class and never pays attention.",
-      de: "Tom ist im Unterricht faul und passt nie auf.",
+      en: "Your marking is unfair and I am escalating this to senior leadership.",
+      de: "Ihre Bewertung ist unfair, ich leite das an die Schulleitung weiter.",
     },
     after: {
       supportive: {
         he: {
-          en: "I've noticed Tom has been finding it harder to stay engaged in class lately. I'm supporting him with smaller check-ins and positive cues during lessons. A quick reminder at home about staying focused would really help him stay on track.",
-          de: "Mir fällt auf, dass Tom sich im Unterricht gerade schwer tut, dranzubleiben. Ich unterstütze ihn mit kurzen Check-ins und positiven Hinweisen. Eine kleine Erinnerung von zu Hause, aufmerksam zu bleiben, würde ihn sehr stärken.",
+          en: "Thank you for raising your concern about the grade. I understand this feels important. I will review the work against the published criteria and follow up with a clear summary so we can agree next steps.",
+          de: "Danke, dass Sie Ihre Sorge zur Bewertung teilen. Ich verstehe, dass das wichtig ist. Ich prüfe die Arbeit anhand der veröffentlichten Kriterien und sende eine klare Zusammenfassung, damit wir die nächsten Schritte abstimmen können.",
         },
         she: {
-          en: "I've noticed she has a hard time staying engaged in class lately. I'm helping her with smaller check-ins and positive cues. A quick note from home about staying focused would really support her.",
-          de: "Mir fällt auf, dass sie sich im Unterricht gerade schwer tut, dranzubleiben. Ich unterstütze sie mit kurzen Check-ins und positiven Hinweisen. Eine kleine Erinnerung von zu Hause, aufmerksam zu bleiben, würde sie sehr stärken.",
+          en: "Thank you for raising your concern about the grade. I understand this feels important. I will review the work against the published criteria and follow up with a clear summary so we can agree next steps.",
+          de: "Danke, dass Sie Ihre Sorge zur Bewertung teilen. Ich verstehe, dass das wichtig ist. Ich prüfe die Arbeit anhand der veröffentlichten Kriterien und sende eine klare Zusammenfassung, damit wir die nächsten Schritte abstimmen können.",
         },
         they: {
-          en: "I've noticed they have a hard time staying engaged in class lately. I'm helping them with smaller check-ins and positive cues. A quick note from home about staying focused would really support them.",
-          de: "Mir fällt auf, dass sie sich im Unterricht gerade schwer tun, dranzubleiben. Ich unterstütze sie mit kurzen Check-ins und positiven Hinweisen. Eine kleine Erinnerung von zu Hause, aufmerksam zu bleiben, würde sie sehr stärken.",
+          en: "Thank you for raising your concern about the grade. I understand this feels important. I will review the work against the published criteria and follow up with a clear summary so we can agree next steps.",
+          de: "Danke, dass Sie Ihre Sorge zur Bewertung teilen. Ich verstehe, dass das wichtig ist. Ich prüfe die Arbeit anhand der veröffentlichten Kriterien und sende eine klare Zusammenfassung, damit wir die nächsten Schritte abstimmen können.",
         },
       },
       formal: {
         he: {
-          en: "Tom has had difficulty sustaining attention in recent lessons. I am providing structured prompts and short check-ins. Your partnership in encouraging focus at home would be appreciated.",
-          de: "Tom hat in den letzten Stunden Schwierigkeiten, seine Aufmerksamkeit zu halten. Ich setze klare Impulse und kurze Check-ins ein. Ihre Unterstützung zu Hause, den Fokus zu stärken, ist sehr hilfreich.",
+          en: "Thank you for your message regarding the grade. I will review the submitted work against the published assessment criteria and provide a written response with the evidence used. If helpful, we can arrange a follow-up meeting with leadership present.",
+          de: "Danke für Ihre Nachricht zur Bewertung. Ich prüfe die eingereichte Arbeit anhand der veröffentlichten Bewertungskriterien und antworte schriftlich mit der zugrunde liegenden Evidenz. Bei Bedarf können wir ein Folgetreffen mit der Schulleitung vereinbaren.",
         },
         she: {
-          en: "She has had difficulty sustaining attention in recent lessons. I am providing structured prompts and short check-ins. Your partnership in encouraging focus at home would be appreciated.",
-          de: "Sie hat in den letzten Stunden Schwierigkeiten, ihre Aufmerksamkeit zu halten. Ich setze klare Impulse und kurze Check-ins ein. Ihre Unterstützung zu Hause, den Fokus zu stärken, ist sehr hilfreich.",
+          en: "Thank you for your message regarding the grade. I will review the submitted work against the published assessment criteria and provide a written response with the evidence used. If helpful, we can arrange a follow-up meeting with leadership present.",
+          de: "Danke für Ihre Nachricht zur Bewertung. Ich prüfe die eingereichte Arbeit anhand der veröffentlichten Bewertungskriterien und antworte schriftlich mit der zugrunde liegenden Evidenz. Bei Bedarf können wir ein Folgetreffen mit der Schulleitung vereinbaren.",
         },
         they: {
-          en: "They have had difficulty sustaining attention in recent lessons. I am providing structured prompts and short check-ins. Your partnership in encouraging focus at home would be appreciated.",
-          de: "Sie haben in den letzten Stunden Schwierigkeiten, ihre Aufmerksamkeit zu halten. Ich setze klare Impulse und kurze Check-ins ein. Ihre Unterstützung zu Hause, den Fokus zu stärken, ist sehr hilfreich.",
+          en: "Thank you for your message regarding the grade. I will review the submitted work against the published assessment criteria and provide a written response with the evidence used. If helpful, we can arrange a follow-up meeting with leadership present.",
+          de: "Danke für Ihre Nachricht zur Bewertung. Ich prüfe die eingereichte Arbeit anhand der veröffentlichten Bewertungskriterien und antworte schriftlich mit der zugrunde liegenden Evidenz. Bei Bedarf können wir ein Folgetreffen mit der Schulleitung vereinbaren.",
         },
       },
       concise: {
         he: {
-          en: "Tom is struggling to stay focused. I'm using short prompts and check-ins. A reminder at home about paying attention will help.",
-          de: "Tom hat Mühe, konzentriert zu bleiben. Ich arbeite mit kurzen Impulsen und Check-ins. Eine Erinnerung zu Hause zum Aufpassen hilft sehr.",
+          en: "Thanks for raising this. I will review the work against the grading criteria and send a clear written summary of next steps.",
+          de: "Danke für den Hinweis. Ich prüfe die Arbeit anhand der Bewertungskriterien und sende eine klare schriftliche Zusammenfassung der nächsten Schritte.",
         },
         she: {
-          en: "She is struggling to stay focused. I'm using short prompts and check-ins. A reminder at home about paying attention will help.",
-          de: "Sie hat Mühe, konzentriert zu bleiben. Ich arbeite mit kurzen Impulsen und Check-ins. Eine Erinnerung zu Hause zum Aufpassen hilft sehr.",
+          en: "Thanks for raising this. I will review the work against the grading criteria and send a clear written summary of next steps.",
+          de: "Danke für den Hinweis. Ich prüfe die Arbeit anhand der Bewertungskriterien und sende eine klare schriftliche Zusammenfassung der nächsten Schritte.",
         },
         they: {
-          en: "They are struggling to stay focused. I'm using short prompts and check-ins. A reminder at home about paying attention will help.",
-          de: "Sie haben Mühe, konzentriert zu bleiben. Ich arbeite mit kurzen Impulsen und Check-ins. Eine Erinnerung zu Hause zum Aufpassen hilft sehr.",
+          en: "Thanks for raising this. I will review the work against the grading criteria and send a clear written summary of next steps.",
+          de: "Danke für den Hinweis. Ich prüfe die Arbeit anhand der Bewertungskriterien und sende eine klare schriftliche Zusammenfassung der nächsten Schritte.",
         },
       },
     },

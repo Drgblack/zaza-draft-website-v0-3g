@@ -18,12 +18,34 @@ export default function DraftClient() {
     language === "de" ? "/de/early-access" : "/early-access";
   const aboutFounderHref =
     language === "de" ? "/de/about/founder-story" : "/about/founder-story";
+  const heroSubheadline =
+    language === "de"
+      ? "Hören Sie auf, jedes Wort zu zerdenken. Draft hilft Ihnen, ruhige, belastbare Nachrichten zu schreiben, die Sie mit Sicherheit senden können."
+      : "Stop agonising over every word. Draft helps you write calm, defensible messages you can send with confidence.";
   const heroContextLine =
     language === "de"
       ? "Du siehst Zaza Draft - den ruhigen, sicheren E-Mail-Co-Writer für Lehrkräfte."
       : "You're viewing Zaza Draft - the calm, safe email co-writer for teachers.";
   const heroExamplesLabel =
     language === "de" ? "Beispiele ansehen" : "See examples";
+  const situationsHeading =
+    language === "de"
+      ? "Situationen, die Sie kennen"
+      : "Situations you'll recognise";
+  const situationsBullets =
+    language === "de"
+      ? [
+          "Ein Elternteil stellt eine Note infrage und setzt die Schulleitung in CC.",
+          "Ein Verhaltenshinweis könnte ausserhalb des ursprünglichen Gesprächs weitergeleitet werden.",
+          "Der Ton in der Mail eskaliert und Sie müssen trotzdem ruhig bleiben.",
+          "Sie brauchen Formulierungen, die Beziehungen und Ihre Professionalität schützen.",
+        ]
+      : [
+          "A parent disputes a grade and copies in senior leadership.",
+          "A behaviour update could be forwarded beyond the original thread.",
+          "The email tone is escalating and you still need to stay calm.",
+          "You need wording that protects relationships and your professional judgement.",
+        ];
   const protectionHeading =
     language === "de" ? "Wie Draft Sie schützt" : "How Draft protects you";
   const protectionBullets =
@@ -44,6 +66,14 @@ export default function DraftClient() {
     language === "de"
       ? "Early Access ist kostenlos. Erhalte deinen ersten Entwurf in Minuten. Keine Karte erforderlich."
       : "Early access is free. Get your first draft in minutes. No card required.";
+  const inviteLine =
+    language === "de"
+      ? "Wir senden Ihnen eine E-Mail, wenn Ihre Einladung bereit ist - meist innerhalb weniger Tage."
+      : "We'll email you when your invite is ready - usually within a few days.";
+  const urgencyLine =
+    language === "de"
+      ? "Early-Access-Mitglieder gestalten das Produkt mit und behalten ihren Startpreis zum Launch."
+      : "Early access members shape the product and keep their rate when we launch.";
   const nextSteps =
     language === "de"
       ? [
@@ -66,16 +96,37 @@ export default function DraftClient() {
       : "We are onboarding our first cohort of teachers now. Real quotes will appear here as soon as they are collected. If you would like to shape Draft, join early access.";
   const betaFeedbackCta =
     language === "de" ? "Early Access" : "Join Early Access";
-  const founderHeading =
+  const restoreHeading =
     language === "de"
-      ? "Von einem Bildungsexperten entwickelt"
-      : "Built by a learning expert";
-  const founderBody =
+      ? "So stellt Draft Klarheit wieder her"
+      : "How Draft restores clarity";
+  const restoreSteps =
     language === "de"
-      ? "Hallo, ich bin Dr Greg Blackburn (PhD Professional Education). Seit 20 Jahren arbeite ich in Learning und EdTech - nah an Lehrkräften. Draft hilft, anspruchsvolle Schulkommunikation ruhig, sicher und professionell zu formulieren."
-      : "Hi, I'm Dr Greg Blackburn (PhD Professional Education). I've spent 20 years in learning and education technology, working closely with teachers. Draft exists to make high-stakes school communication feel safe and calm.";
-  const founderLinkLabel =
+      ? [
+          "Sie fügen einen angespannten Entwurf ein - zum Beispiel bei einer Notenbeschwerde mit Schulleitung in CC.",
+          "Draft entfernt vorwurfsvolle Formulierungen, ordnet die Fakten und hält den Ton professionell.",
+          "Sie senden eine Nachricht, die Sie, den Schüler und die Beziehung zur Familie schützt.",
+        ]
+      : [
+          "You paste a tense draft - for example, a grade dispute email with senior leadership CC'd.",
+          "Draft removes blame language, keeps facts clear, and sets a professional tone.",
+          "You send a message that protects you, the student, and the school relationship.",
+        ];
+  const founderTopLine =
+    language === "de"
+      ? "Entwickelt von Dr Greg Blackburn (PhD, Professional Education) in Deutschland."
+      : "Built by Dr Greg Blackburn (PhD, Professional Education) in Germany.";
+  const founderTopBody =
+    language === "de"
+      ? "Draft wurde entwickelt, um Sunday-night E-Mail-Stress zu reduzieren und Lehrkräften zu helfen, Nachrichten zu schreiben, die auch ausserhalb des Kontexts standhalten."
+      : "Draft exists to reduce Sunday-night email stress and help teachers write messages that hold up out of context.";
+  const founderTopLink =
     language === "de" ? "Gründerstory lesen" : "Read the founder story";
+  const gdprLine =
+    language === "de"
+      ? "Ihre Texte bleiben Ihre Texte. Draft trainiert nicht auf Ihren Nachrichten. Sie entscheiden, was Sie einfügen und senden."
+      : "Your text stays yours. Draft does not train on your messages. You control what you paste and what you send.";
+  const privacyLinkLabel = language === "de" ? "Privacy" : "Privacy";
 
   const features = [
     {
@@ -148,7 +199,7 @@ export default function DraftClient() {
                 </h1>
                 <p className="text-sm text-[#94A3B8]">{heroContextLine}</p>
                 <p className="text-lg md:text-xl text-[#D1D5DB] leading-relaxed">
-                  {t("products.draft.hero.subtitle")}
+                  {heroSubheadline}
                 </p>
                 <p className="text-base text-[#CBD5E1] leading-relaxed">
                   {t("products.draft.hero.assumption")}
@@ -184,6 +235,8 @@ export default function DraftClient() {
                       </Link>
                     </Button>
                     <p className="text-xs text-[#9CA3AF]">{commitmentLine}</p>
+                    <p className="text-xs text-[#9CA3AF]">{inviteLine}</p>
+                    <p className="text-xs text-[#9CA3AF]">{urgencyLine}</p>
                   </div>
                   <Button
                     asChild
@@ -193,6 +246,7 @@ export default function DraftClient() {
                   >
                     <Link
                       href="#examples"
+                      className="inline-flex items-center gap-2"
                       onClick={() =>
                         track("cta_click_draft_see_examples", {
                           language,
@@ -201,11 +255,21 @@ export default function DraftClient() {
                       }
                     >
                       {heroExamplesLabel}
+                      <span aria-hidden="true">↓</span>
                     </Link>
                   </Button>
                 </div>
                 <p className="text-sm text-[#9CA3AF]">
                   {t("products.draft.hero.privacyLine")}
+                </p>
+                <p className="text-sm text-[#9CA3AF]">
+                  {gdprLine}{" "}
+                  <Link
+                    href={language === "de" ? "/de/privacy" : "/privacy"}
+                    className="text-[#A78BFA] hover:text-[#C4B5FD]"
+                  >
+                    {privacyLinkLabel}
+                  </Link>
                 </p>
               </div>
 
@@ -220,6 +284,49 @@ export default function DraftClient() {
                 />
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Situations */}
+        <section className="py-12 bg-[#111827]">
+          <div className="mx-auto max-w-4xl px-6 lg:px-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#F9FAFB] mb-6">
+              {situationsHeading}
+            </h2>
+            <ul className="space-y-4">
+              {situationsBullets.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <svg
+                    className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  <span className="text-lg text-[#D1D5DB]">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* Founder note */}
+        <section className="py-6">
+          <div className="mx-auto max-w-4xl px-6 lg:px-8">
+            <Card className="bg-[#111827] border-[#1F2937] p-5">
+              <p className="text-sm text-[#CBD5E1]">{founderTopLine}</p>
+              <p className="text-sm text-[#CBD5E1] mt-2">{founderTopBody}</p>
+              <Link
+                href={aboutFounderHref}
+                className="inline-block mt-3 text-sm text-[#A78BFA] hover:text-[#C4B5FD]"
+              >
+                {founderTopLink}
+              </Link>
+            </Card>
           </div>
         </section>
 
@@ -241,62 +348,6 @@ export default function DraftClient() {
                 ))}
               </ul>
             </Card>
-          </div>
-        </section>
-
-        {/* Turn section to agitate the problem */}
-        <section className="py-12 bg-[#111827]">
-          <div className="mx-auto max-w-4xl px-6 lg:px-8">
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <svg
-                  className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <span className="text-lg text-[#D1D5DB]">
-                  {t("products.draft.turn.pain1")}
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <svg
-                  className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <span className="text-lg text-[#D1D5DB]">
-                  {t("products.draft.turn.pain2")}
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <svg
-                  className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <span className="text-lg text-[#D1D5DB]">
-                  {t("products.draft.turn.pain3")}
-                </span>
-              </li>
-            </ul>
           </div>
         </section>
 
@@ -422,21 +473,19 @@ export default function DraftClient() {
           }}
         />
 
-        {/* Change section to introduce solution */}
+        {/* High-stakes 3-step section */}
         <section className="py-16">
           <div className="mx-auto max-w-4xl px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-[#F9FAFB] text-center mb-12">
-              {t("products.draft.change.title")}
+              {restoreHeading}
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {[1, 2, 3, 4].map((num) => (
-                <div key={num} className="flex items-start gap-4">
+            <div className="grid md:grid-cols-3 gap-6">
+              {restoreSteps.map((step, index) => (
+                <div key={step} className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-8 h-8 rounded-full gradient-primary flex items-center justify-center text-white font-bold">
-                    {num}
+                    {index + 1}
                   </div>
-                  <p className="text-[#D1D5DB]">
-                    {t(`products.draft.change.step${num}`)}
-                  </p>
+                  <p className="text-[#D1D5DB]">{step}</p>
                 </div>
               ))}
             </div>
@@ -474,6 +523,8 @@ export default function DraftClient() {
                 <Link href={earlyAccessHref}>{betaFeedbackCta}</Link>
               </Button>
               <p className="text-xs text-[#9CA3AF] mt-3">{commitmentLine}</p>
+              <p className="text-xs text-[#9CA3AF] mt-1">{inviteLine}</p>
+              <p className="text-xs text-[#9CA3AF] mt-1">{urgencyLine}</p>
             </Card>
           </div>
         </section>
@@ -507,29 +558,8 @@ export default function DraftClient() {
               </Button>
             </div>
             <p className="text-xs text-white/85 mt-4">{commitmentLine}</p>
-          </div>
-        </section>
-
-        {/* Founder trust card */}
-        <section className="py-8 border-t border-[#1F2937] bg-[#0B1220]">
-          <div className="mx-auto max-w-4xl px-6 lg:px-8">
-            <Card className="bg-[#111827] border-[#1F2937] p-6 text-center">
-              <div className="mx-auto w-12 h-12 rounded-full bg-[#1F2937] border border-[#374151] text-[#C4B5FD] font-semibold flex items-center justify-center mb-4">
-                GB
-              </div>
-              <h3 className="text-xl font-semibold text-[#F9FAFB] mb-3">
-                {founderHeading}
-              </h3>
-              <p className="text-sm text-[#CBD5E1] max-w-2xl mx-auto">
-                {founderBody}
-              </p>
-              <Link
-                href={aboutFounderHref}
-                className="inline-flex mt-4 h-10 items-center justify-center rounded-xl border border-[#A78BFA]/50 px-4 text-sm text-[#A78BFA] hover:bg-[#A78BFA]/10 hover:text-[#C4B5FD]"
-              >
-                {founderLinkLabel}
-              </Link>
-            </Card>
+            <p className="text-xs text-white/85 mt-1">{inviteLine}</p>
+            <p className="text-xs text-white/85 mt-1">{urgencyLine}</p>
           </div>
         </section>
       </div>
