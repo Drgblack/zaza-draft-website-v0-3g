@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Fail if smart dashes exist
         shell: bash
@@ -18,3 +20,78 @@ jobs:
             echo "Disallowed dash found (U+2014/U+2013/U+2011). Replace with '-'"
             exit 1
           fi
+
+      - name: Validate changed public JPG and PNG files
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          else
+            BASE_SHA="${{ github.event.before }}"
+          fi
+          HEAD_SHA="${{ github.sha }}"
+
+          if [ -z "$BASE_SHA" ] || [ "$BASE_SHA" = "0000000000000000000000000000000000000000" ]; then
+            echo "No base commit SHA available. Skipping image integrity check."
+            exit 0
+          fi
+
+          mapfile -t changed_images < <(git diff --name-only "$BASE_SHA" "$HEAD_SHA" -- "public/**/*.jpg" "public/**/*.jpeg" "public/**/*.png")
+
+          if [ "${#changed_images[@]}" -eq 0 ]; then
+            echo "No changed public JPG/PNG files."
+            exit 0
+          fi
+
+          CHANGED_IMAGES="$(printf '%s\n' "${changed_images[@]}")"
+          export CHANGED_IMAGES
+
+          node <<'NODE'
+          const fs = require("fs");
+          const imageExts = new Set([".jpg", ".jpeg", ".png"]);
+          const changedImages = (process.env.CHANGED_IMAGES || "")
+            .split(/\r?\n/)
+            .map((entry) => entry.trim())
+            .filter(Boolean);
+          const invalidFiles = [];
+
+          const pngSignature = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+          for (const filePath of changedImages) {
+            const ext = filePath.slice(filePath.lastIndexOf(".")).toLowerCase();
+            if (!imageExts.has(ext)) continue;
+
+            if (!fs.existsSync(filePath)) continue;
+
+            const bytes = fs.readFileSync(filePath);
+            let isValid = false;
+
+            if (ext === ".png") {
+              const hasPngSignature =
+                bytes.length >= pngSignature.length &&
+                bytes.subarray(0, pngSignature.length).equals(pngSignature);
+              const hasIendChunk =
+                bytes.length >= 12 &&
+                bytes.subarray(bytes.length - 12, bytes.length - 8).toString("ascii") === "IEND";
+              isValid = hasPngSignature && hasIendChunk;
+            } else {
+              const hasJpegStart = bytes.length >= 2 && bytes[0] === 0xff && bytes[1] === 0xd8;
+              const hasJpegEnd =
+                bytes.length >= 2 &&
+                bytes[bytes.length - 2] === 0xff &&
+                bytes[bytes.length - 1] === 0xd9;
+              isValid = hasJpegStart && hasJpegEnd;
+            }
+
+            if (!isValid) invalidFiles.push(filePath);
+          }
+
+          if (invalidFiles.length > 0) {
+            console.error("Invalid JPG/PNG files found:");
+            for (const file of invalidFiles) {
+              console.error(` - ${file}`);
+            }
+            process.exit(1);
+          }
+
+          console.log("Changed public JPG/PNG integrity check passed.");
+          NODE
