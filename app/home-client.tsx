@@ -131,6 +131,12 @@ export function HomePageClient() {
   const prefersReducedMotion = useReducedMotion();
   const earlyAccessHref =
     language === "de" ? "/de/early-access" : "/early-access";
+  const founderStoryHref =
+    language === "de" ? "/de/about/founder-story" : "/about/founder-story";
+  const heroImageAlt =
+    language === "de"
+      ? "Lehrkraft prüft eine E-Mail an Eltern am Schreibtisch."
+      : "Teacher reviewing a parent email at her desk.";
   const betaFeedbackHeading =
     language === "de"
       ? "Feedback aus der Beta folgt"
@@ -229,6 +235,14 @@ export function HomePageClient() {
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </motion.div>
+              <motion.p
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.44, ease: "easeOut" }}
+                className="text-sm text-[#CBD5E1] leading-relaxed max-w-[600px] mx-auto lg:mx-0"
+              >
+                {t("hero.earlyAccessLine")}
+              </motion.p>
 
               <motion.p
                 initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
@@ -293,6 +307,20 @@ export function HomePageClient() {
               >
                 {t("hero.trustClarifier")}
               </motion.p>
+              <motion.p
+                initial={prefersReducedMotion ? {} : { opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.48, ease: "easeOut" }}
+                className="text-xs text-gray-400 leading-relaxed max-w-[640px] mx-auto lg:mx-0"
+              >
+                {t("hero.founderLine")}{" "}
+                <Link
+                  href={founderStoryHref}
+                  className="text-[#A78BFA] hover:text-[#C4B5FD]"
+                >
+                  {t("hero.founderLink")}
+                </Link>
+              </motion.p>
             </div>
 
             <motion.div
@@ -327,7 +355,7 @@ export function HomePageClient() {
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-purple-500/20 h-full">
                   <Image
                     src="/professional-high-resolution-stock-photo-of-a-real.jpg"
-                    alt="Strikingly attractive professional female teacher in modern classroom"
+                    alt={heroImageAlt}
                     width={520}
                     height={600}
                     priority
@@ -419,14 +447,17 @@ export function HomePageClient() {
               {
                 value: t("problem.stats.parentEmails.value"),
                 label: t("problem.stats.parentEmails.label"),
+                note: t("problem.stats.parentEmails.note"),
               },
               {
                 value: t("problem.stats.reportCards.value"),
                 label: t("problem.stats.reportCards.label"),
+                note: t("problem.stats.reportCards.note"),
               },
               {
                 value: t("problem.stats.gradingFeedback.value"),
                 label: t("problem.stats.gradingFeedback.label"),
+                note: t("problem.stats.gradingFeedback.note"),
               },
             ].map((stat, index) => (
               <motion.div
@@ -441,6 +472,9 @@ export function HomePageClient() {
                   {stat.value}
                 </div>
                 <div className="text-sm text-gray-400">{stat.label}</div>
+                <div className="text-xs text-gray-500 mt-2 leading-relaxed">
+                  {stat.note}
+                </div>
               </motion.div>
             ))}
           </div>
