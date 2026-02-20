@@ -132,7 +132,7 @@ export function HomePageClient() {
   const earlyAccessHref =
     language === "de" ? "/de/early-access" : "/early-access";
   const founderStoryHref =
-    language === "de" ? "/de/about/founder-story" : "/about/founder-story";
+    language === "de" ? "/de/about/founder" : "/about/founder";
   const heroImageAlt =
     language === "de"
       ? "Lehrkraft prüft eine E-Mail an Eltern am Schreibtisch."

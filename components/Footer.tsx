@@ -33,7 +33,7 @@ export default function Footer() {
     },
     {
       label: isDE ? "Gründerstory" : "Founder story",
-      href: localPath("/about/founder-story"),
+      href: localPath("/about/founder"),
     },
   ];
 
