@@ -10,7 +10,8 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function AboutPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const manifestoHref = language === "de" ? "/de/manifesto" : "/manifesto";
 
   const values = [
     {
@@ -80,6 +81,33 @@ export default function AboutPage() {
               </p>
               <p className="mt-6 text-base text-[#9CA3AF] leading-relaxed max-w-3xl">
                 {t("about.overview.hero.context")}
+              </p>
+              <p className="mt-4 text-base text-[#9CA3AF] leading-relaxed max-w-3xl">
+                {language === "de" ? (
+                  <>
+                    Unser{" "}
+                    <Link
+                      href={manifestoHref}
+                      className="text-[#C4B5FD] underline underline-offset-4 hover:text-[#DDD6FE]"
+                    >
+                      Manifesto
+                    </Link>{" "}
+                    beschreibt, wie Zaza KI mit Fokus auf Vertrauen, Denken und
+                    Wohlbefinden entwickelt.
+                  </>
+                ) : (
+                  <>
+                    Our{" "}
+                    <Link
+                      href={manifestoHref}
+                      className="text-[#C4B5FD] underline underline-offset-4 hover:text-[#DDD6FE]"
+                    >
+                      Manifesto
+                    </Link>{" "}
+                    explains how Zaza builds AI with trust, thinking, and
+                    wellbeing as non-negotiables.
+                  </>
+                )}
               </p>
             </div>
 

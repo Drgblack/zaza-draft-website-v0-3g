@@ -43,6 +43,7 @@ export default function Footer() {
       label: isDE ? "Nutzungsbedingungen" : "Terms",
       href: localPath("/terms"),
     },
+    { label: "Manifesto", href: localPath("/manifesto") },
     { label: "Impressum", href: localPath("/impressum") },
     {
       label: isDE ? "Support / Kontakt" : "Support / Contact",

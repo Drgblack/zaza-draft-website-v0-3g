@@ -372,6 +372,40 @@ export function HomePageClient() {
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-purple-600/5 rounded-full blur-3xl -z-10"></div>
       </section>
 
+      <section className="bg-slate-50 py-16 md:py-20 border-t border-slate-200">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
+          <div className="rounded-2xl border border-slate-200 bg-white p-8 md:p-10">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
+              AI you can trust with real conversations
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-slate-700">
+              Zaza Draft is designed for the moments that matter — parent
+              emails, sensitive updates, and professional communication where
+              tone, clarity, and trust are critical. It does not replace your
+              judgment. It supports it, helping you write with confidence rather
+              than second-guessing yourself.
+            </p>
+            <ul className="mt-8 space-y-3 list-disc pl-6 text-base leading-7 text-slate-800">
+              <li>Human review is always required before anything is sent</li>
+              <li>
+                Gentle tone-softening is applied only when risk is detected
+              </li>
+              <li>No auto-send, no hidden automation, no surprises</li>
+              <li>
+                Built to reduce anxiety, not create new professional risks
+              </li>
+              <li>
+                Designed specifically for teachers and real school contexts
+              </li>
+            </ul>
+            <p className="mt-8 text-sm leading-6 text-slate-500">
+              Zaza Draft is part of the Zaza ecosystem, built on principles of
+              trust, wellbeing, and thoughtful AI.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Situations Section */}
       <section className="bg-[#0F172A] py-16 md:py-20">
         <div className="mx-auto max-w-5xl px-6 lg:px-8">

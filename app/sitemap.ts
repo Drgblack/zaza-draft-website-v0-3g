@@ -27,6 +27,7 @@ const marketingPages = [
   { path: "/success-stories", priority: 0.65 },
   { path: "/teacher-stories", priority: 0.6 },
   { path: "/about/company", priority: 0.6 },
+  { path: "/manifesto", priority: 0.6 },
   { path: "/about/founder", priority: 0.6 },
   { path: "/about/press", priority: 0.55 },
   { path: "/contact", priority: 0.6 },

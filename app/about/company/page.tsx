@@ -2,15 +2,17 @@
 
 import { useLanguage } from "@/lib/i18n/language-context";
 import { CheckCircle2, Globe, Clock, Users, Zap } from "lucide-react";
+import Link from "next/link";
 
 export default function CompanyPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const manifestoHref = language === "de" ? "/de/manifesto" : "/manifesto";
 
   return (
     // Ensure the main container has the full site gradient
     <div className="min-h-screen bg-gradient-to-b from-[#0F172A] via-[#1E293B] to-[#0F172A]">
       {/* Hero Section - FINAL FIX: Negative Margin Override (mt-[-8rem]) */}
-      <section className="mt-[-8rem] pb-10 px-6"> 
+      <section className="mt-[-8rem] pb-10 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-purple-400 text-sm font-semibold mb-4 tracking-wider">
             {t("about.company.hero.eyebrow")}
@@ -21,6 +23,33 @@ export default function CompanyPage() {
           <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
             {t("about.company.hero.subtitle")}
           </p>
+          <p className="mt-6 text-base text-gray-400 leading-relaxed max-w-3xl mx-auto">
+            {language === "de" ? (
+              <>
+                Unser{" "}
+                <Link
+                  href={manifestoHref}
+                  className="text-white underline underline-offset-4 hover:text-purple-300"
+                >
+                  Manifesto
+                </Link>{" "}
+                beschreibt die Prinzipien zu Vertrauen, Denken und Wohlbefinden,
+                die jedes Zaza-Produkt leiten.
+              </>
+            ) : (
+              <>
+                Read our{" "}
+                <Link
+                  href={manifestoHref}
+                  className="text-white underline underline-offset-4 hover:text-purple-300"
+                >
+                  Manifesto
+                </Link>{" "}
+                to see the trust, thinking, and wellbeing principles that guide
+                every Zaza product.
+              </>
+            )}
+          </p>
         </div>
       </section>
 
@@ -28,8 +57,8 @@ export default function CompanyPage() {
       <section className="py-16 px-6">
         <div className="max-w-3xl mx-auto p-10 bg-white/5 border border-white/10 rounded-xl shadow-lg shadow-black/30">
           <h2 className="text-xl font-semibold text-purple-400 mb-6 flex items-center gap-2">
-             <Zap className="w-5 h-5"/>
-             {t("company.origin.title")}
+            <Zap className="w-5 h-5" />
+            {t("company.origin.title")}
           </h2>
           <div className="space-y-6 text-gray-300 leading-relaxed">
             <p className="text-lg">{t("company.origin.body.p1")}</p>
@@ -55,26 +84,36 @@ export default function CompanyPage() {
           <blockquote className="text-3xl md:text-4xl font-extrabold text-white leading-tight italic max-w-3xl mx-auto">
             "{t("company.philosophy.intro")}"
           </blockquote>
-          
+
           <div className="mt-8 space-y-6 text-left max-w-lg mx-auto">
             <div className="flex items-start gap-4">
               <CheckCircle2 className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
-              <p className="text-lg text-gray-300">{t("company.philosophy.principle1")}</p>
+              <p className="text-lg text-gray-300">
+                {t("company.philosophy.principle1")}
+              </p>
             </div>
             <div className="flex items-start gap-4">
               <CheckCircle2 className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
-              <p className="text-lg text-gray-300">{t("company.philosophy.principle2")}</p>
+              <p className="text-lg text-gray-300">
+                {t("company.philosophy.principle2")}
+              </p>
             </div>
             <div className="flex items-start gap-4">
               <CheckCircle2 className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
-              <p className="text-lg text-gray-300">{t("company.philosophy.principle3")}</p>
+              <p className="text-lg text-gray-300">
+                {t("company.philosophy.principle3")}
+              </p>
             </div>
-             <div className="flex items-start gap-4">
+            <div className="flex items-start gap-4">
               <CheckCircle2 className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
-              <p className="text-lg text-gray-300">{t("company.philosophy.principle4")}</p>
+              <p className="text-lg text-gray-300">
+                {t("company.philosophy.principle4")}
+              </p>
             </div>
           </div>
-          <p className="text-lg text-gray-400 mt-6 italic max-w-3xl mx-auto">- {t("company.philosophy.closing")}</p>
+          <p className="text-lg text-gray-400 mt-6 italic max-w-3xl mx-auto">
+            - {t("company.philosophy.closing")}
+          </p>
         </div>
       </section>
 
@@ -95,15 +134,21 @@ export default function CompanyPage() {
           <div className="space-y-6">
             <div className="flex items-start gap-4">
               <CheckCircle2 className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
-              <p className="text-lg text-gray-300">{t("company.boutique.point1")}</p>
+              <p className="text-lg text-gray-300">
+                {t("company.boutique.point1")}
+              </p>
             </div>
             <div className="flex items-start gap-4">
               <CheckCircle2 className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
-              <p className="text-lg text-gray-300">{t("company.boutique.point2")}</p>
+              <p className="text-lg text-gray-300">
+                {t("company.boutique.point2")}
+              </p>
             </div>
             <div className="flex items-start gap-4">
               <CheckCircle2 className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
-              <p className="text-lg text-gray-300">{t("company.boutique.point3")}</p>
+              <p className="text-lg text-gray-300">
+                {t("company.boutique.point3")}
+              </p>
             </div>
           </div>
 
@@ -167,4 +212,3 @@ export default function CompanyPage() {
     </div>
   );
 }
-
