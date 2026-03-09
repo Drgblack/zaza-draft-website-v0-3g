@@ -6662,6 +6662,1046 @@ export const teacherWritingPages = {
       secondaryHref: "/products/draft",
     },
   },
+  "teacher-parent-communication-hub": {
+    slug: "teacher-parent-communication-hub",
+    shortTitle: "Parent Communication Hub",
+    keyword: "teacher parent communication hub",
+    intent: "How-to/problem intent",
+    title:
+      "Teacher Parent Communication Hub | Calm Email Help for Teachers | Zaza Draft",
+    metaDescription:
+      "Teacher parent communication hub with practical help for angry parent replies, behaviour emails, contact logs, parents' evening follow-up, and sensitive school wording.",
+    h1: "Teacher Parent Communication Hub",
+    description:
+      "A central hub for teachers who need calmer parent-email wording, clearer report language, and lower-stress school communication.",
+    ogImage: "/parent-teacher-communication.jpg",
+    heroEyebrow: "Hub page",
+    heroDescription: [
+      "Teacher parent communication hub pages only help if they reflect the real moments teachers are actually searching from. You are not looking for generic communication theory at 9.40pm. You are usually looking for the one line that keeps a difficult email professional, the one structure that makes a behaviour message feel safe to send, or the one report comment that does not sound harsh.",
+      "This hub brings the strongest Zaza Draft parent-communication pages into one place so teachers can move quickly from the pain they are feeling to the wording help they actually need.",
+    ],
+    heroBullets: [
+      "Find help by pain point, not by marketing category",
+      "Move from angry replies to calmer follow-up and contact logs",
+      "Keep teacher judgement and approval over every word",
+    ],
+    featuredSnippet:
+      "A useful teacher parent communication hub should group support by the moments teachers actually face: angry parent emails, behaviour messages home, follow-up after parents' evening, contact logs, and balanced report wording that will still hold up later.",
+    sections: [
+      {
+        id: "why-hub",
+        title: "Why parent communication feels bigger than the message itself",
+        body: [
+          "Teachers rarely dread the email because typing is hard. They dread it because parent communication carries emotional labour, reputational risk, and admin follow-up all at once. One short message can affect the next conversation, the next log entry, and the next day in school.",
+          "That is why this hub is organised around practical pain points. It is meant to help when you know the issue but need steadier wording, not when you need another vague article about communication being important.",
+        ],
+      },
+      {
+        id: "choose-by-pain",
+        title: "Choose the page that matches the problem in front of you",
+        body: [
+          "If the issue is an upset parent, go straight to the angry-parent pages. If the issue is behaviour, use the behaviour email and follow-up pages. If the issue is progress or report wording, use the report cluster instead of trying to force one parent-email template to do every job.",
+          "Teachers save more time when they start from the right page. That is often the difference between one clean draft and thirty minutes of rewriting.",
+        ],
+        bullets: [
+          "Angry email from a parent: start with the reply pages",
+          "No reply from home: use the follow-up and documentation pages",
+          "Parents' evening aftermath: use the script and follow-up templates",
+          "Report pressure: move into the balanced-comment pages",
+        ],
+      },
+      xPainParentSection,
+      xPainAdminLogSection,
+      {
+        id: "how-zaza-fits",
+        title: "How Zaza Draft fits into the workflow",
+        body: [
+          "Zaza Draft is not there to replace the teacher's judgement. It is there to reduce the stress of starting from a blank page when the wording feels risky, repetitive, or emotionally loaded.",
+          "That means calmer first drafts for parent emails, more balanced report language, and cleaner notes for follow-up. You still decide what is true, what matters, and what gets sent.",
+        ],
+      },
+    ],
+    trustBlock: {
+      title:
+        "Built for teachers who need calm wording across the whole home-school workflow",
+      items: [
+        {
+          title: "Teacher-first pages",
+          body: "This hub is organised around real teacher pain points such as angry replies, behaviour follow-up, contact logs, and report wording.",
+        },
+        {
+          title: "Low-risk tone support",
+          body: "The focus stays on measured, professional wording that preserves relationships and still reads appropriately in school context.",
+        },
+        {
+          title: "Control stays with you",
+          body: "Zaza Draft remains a co-writer. Teachers edit and approve every line before anything is sent or recorded.",
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "Where should I start if the parent is already angry?",
+        answer:
+          "Start with the angry-parent reply pages first. They are designed for situations where the emotional temperature is already high and the wording needs to lower the risk, not add more detail for its own sake.",
+      },
+      {
+        question:
+          "What if the issue is behaviour and I also need a clean contact log?",
+        answer:
+          "Use the behaviour pages together with the documentation page. In many schools the email and the record are linked, so it helps to think about both at the same time.",
+      },
+      {
+        question: "Can this hub help during report season as well?",
+        answer:
+          "Yes. The report cluster is linked throughout this hub because report wording often leads to later parent conversations and follow-up questions.",
+      },
+      {
+        question: "Is this written for UK teachers only?",
+        answer:
+          "The hub is useful more broadly, but the tone and examples are especially aligned with UK school language and teacher pain points.",
+      },
+      {
+        question: "How does Zaza Draft fit into these pages?",
+        answer:
+          "Each page is designed to help on its own, but Zaza Draft is the tool behind the calmer drafting workflow if you want help turning rough notes into more professional wording.",
+      },
+    ],
+    internalLinks: [
+      {
+        href: "/how-to-reply-to-an-angry-parent-email",
+        label: "Reply to an angry parent email",
+        description:
+          "Start here if the stress is coming from a hostile or escalating parent message.",
+      },
+      {
+        href: "/how-to-write-a-behaviour-email-to-parents",
+        label: "Write a behaviour email to parents",
+        description:
+          "Use this for behaviour concerns that need factual wording and a workable tone.",
+      },
+      {
+        href: "/how-to-document-parent-contact-without-losing-your-mind",
+        label: "Document parent contact without losing your mind",
+        description:
+          "Go here when the admin log is becoming as stressful as the communication itself.",
+      },
+      {
+        href: "/uk/how-to-reply-to-angry-parent-email",
+        label: "UK guide to angry parent emails",
+        description:
+          "Use the UK-focused page if you want wording that leans more directly into British school context.",
+      },
+      sharedFooterLinks.product,
+    ],
+    relatedSlugs: [
+      "how-to-reply-to-an-angry-parent-email",
+      "how-to-write-a-behaviour-email-to-parents",
+      "how-to-document-parent-contact-without-losing-your-mind",
+      "positive-but-honest-report-card-comments-for-struggling-students",
+      "teacher-guide-to-sensitive-parent-emails",
+      "parents-evening-follow-up-email-template",
+    ],
+    structuredDataTypes: ["WebPage", "BreadcrumbList", "Article", "FAQPage"],
+    testimonials: [
+      {
+        quotePrompt:
+          "Placeholder testimonial about using the hub as a starting point for difficult parent communication.",
+        attributionPrompt:
+          "Replace with a verified quote from a class teacher or head of year.",
+      },
+      {
+        quotePrompt:
+          "Placeholder testimonial about moving from one hub page to another instead of starting from a blank page each time.",
+        attributionPrompt:
+          "Replace with a verified quote from a pastoral lead or SENCO.",
+      },
+    ],
+    cta: {
+      title: "Start with the page that matches tonight's problem",
+      body: "Use Zaza Draft if you want a calm co-writer behind these pages so you can move from rough notes to more professional wording without losing your voice.",
+      primaryLabel: "Try Zaza Draft",
+      primaryHref: "/early-access",
+      secondaryLabel: "See the product",
+      secondaryHref: "/products/draft",
+    },
+  },
+  "pastoral-email-to-parents-template": {
+    slug: "pastoral-email-to-parents-template",
+    shortTitle: "Pastoral Email Template",
+    keyword: "pastoral email to parents template",
+    intent: "Template intent",
+    title:
+      "Pastoral Email to Parents Template | Calm, Professional School Wording | Zaza Draft",
+    metaDescription:
+      "Pastoral email to parents template for teachers and school staff who need calm, professional wording for support concerns, follow-up, and sensitive home-school communication.",
+    h1: "Pastoral Email to Parents Template",
+    description:
+      "A calm starting point for pastoral emails that need warmth, boundaries, and school-appropriate wording.",
+    ogImage: "/parent-teacher-communication-templates.jpg",
+    heroEyebrow: "Template intent",
+    heroDescription: [
+      "A pastoral email to parents template is usually searched when the issue feels delicate enough that you do not want to improvise. You need wording that sounds human, supportive, and professional without drifting into vagueness or accidental escalation.",
+      "Zaza Draft helps teachers and pastoral staff start from a safer structure, then adapt the final message to the family, concern, and next step.",
+    ],
+    heroBullets: [
+      "Start from a calm structure rather than a blank page",
+      "Use wording that feels measured and respectful",
+      "Edit every line so it still sounds like you",
+    ],
+    featuredSnippet:
+      "A strong pastoral email to parents should explain why you are writing, stay factual about what has been noticed in school, show the support already in place, and offer one clear next step without sounding punitive or overly vague.",
+    sections: [
+      {
+        id: "why-pastoral-emails-take-time",
+        title: "Why pastoral emails take longer than they should",
+        body: [
+          "Pastoral messages often sit in the uncomfortable middle. They are not casual updates, but they may not be formal behaviour or safeguarding emails either. That makes tone harder because you are trying to sound caring without underplaying the concern.",
+          "Teachers and pastoral staff often lose time rewriting these messages because each line has to carry empathy, professionalism, and clarity at the same time.",
+        ],
+      },
+      {
+        id: "template-structure",
+        title:
+          "A pastoral email to parents template that keeps the message steady",
+        body: [
+          "A useful structure is simple: explain why you are writing, describe what has been noticed, mention any support already in place, and give one realistic next step. That keeps the message manageable for families and easier for school staff to stand behind later.",
+          "The best templates do not try to do all the emotional work for you. They give you a professional shape that you can then adapt with your own judgement.",
+        ],
+        exampleLabel: "Template example",
+        exampleBody:
+          "Dear [Parent/Carer],\n\nI wanted to get in touch to share a concern that has come up in school this week. We have noticed that [student] has been finding [issue] more difficult recently, and I wanted to make sure you were aware.\n\nIn school, we are supporting this by [support already in place]. I would value the chance to work together on the best next steps and would be happy to speak further if helpful.\n\nKind regards,\n[Name]",
+      },
+      xPainParentSection,
+      {
+        id: "common-mistakes",
+        title: "Common mistakes in pastoral parent emails",
+        body: [
+          "Pastoral messages often become harder to read when they try to explain too much in one go. Long emotional paragraphs, over-reassuring language, or unclear next steps can leave parents more anxious rather than less.",
+          "It is usually better to stay proportionate. Name the concern, keep the support visible, and let the next conversation do the deeper work if it needs to.",
+        ],
+        bullets: [
+          "Do not soften the concern so much that the message becomes unclear",
+          "Do not stack too many issues into one email",
+          "Do not end without a next step",
+          "Do not write in a tone you would not want quoted back later",
+        ],
+      },
+      {
+        id: "how-zaza-helps",
+        title: "How Zaza helps without replacing your pastoral judgement",
+        body: [
+          "Zaza Draft is useful when you know what you need to communicate but want help finding calmer wording. It can turn rough pastoral notes into a more professional first draft that still leaves the teacher or pastoral lead in charge.",
+          "That matters when the issue is emotionally difficult and the email may later lead to meetings, records, or ongoing support conversations.",
+        ],
+      },
+    ],
+    comparisonBlock: {
+      title:
+        "Comparison block: fixed pastoral templates vs teacher-first drafting support",
+      intro:
+        "A fixed template can help you start. A focused co-writer helps you adapt that structure to the student, family, and tone of the actual situation.",
+      alternativeLabel: "Fixed template only",
+      rows: [
+        {
+          label: "Starting point",
+          zaza: "Template plus tailored wording support",
+          alternative: "Static sample text",
+        },
+        {
+          label: "Tone control",
+          zaza: "Built for sensitive school communication",
+          alternative: "Needs more manual reshaping",
+        },
+        {
+          label: "Follow-up readiness",
+          zaza: "Useful when the email may lead to later meetings or logs",
+          alternative: "Less tailored to ongoing school context",
+        },
+      ],
+      note: "If you want a calm starting point that still adapts to the real situation, Zaza Draft is the more useful option.",
+    },
+    trustBlock: {
+      title:
+        "Built for teachers and pastoral staff handling sensitive home-school messages",
+      items: [
+        {
+          title: "Supportive tone",
+          body: "Useful when the message needs warmth and professionalism at the same time.",
+        },
+        {
+          title: "Teacher control",
+          body: "You still choose the facts, the emphasis, and the final wording before anything is sent.",
+        },
+        {
+          title: "School-ready language",
+          body: "Designed for the kinds of pastoral messages that may later be revisited in meetings or records.",
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "What counts as a pastoral email to parents?",
+        answer:
+          "Usually it is a message about wellbeing, behaviour, emotional concerns, support needs, attendance patterns, or another issue where the tone needs to stay calm and relationship-focused.",
+      },
+      {
+        question: "Should a pastoral email sound warm or formal?",
+        answer:
+          "Usually both. It should sound human and respectful, but still clear enough that the purpose and next step are obvious.",
+      },
+      {
+        question: "Can I use the same template every time?",
+        answer:
+          "It is better to reuse a structure rather than the same exact wording. The message should still reflect the actual context, level of concern, and family relationship.",
+      },
+      {
+        question: "What if the issue may become more serious later?",
+        answer:
+          "Keep the wording factual and proportionate so the message still works if it later becomes part of a wider record or follow-up conversation.",
+      },
+      {
+        question:
+          "Can Zaza Draft help me personalise this without sounding generic?",
+        answer:
+          "Yes. Zaza Draft is designed to help teachers and school staff turn rough notes into calmer, more tailored wording while they keep full editorial control.",
+      },
+    ],
+    internalLinks: [
+      {
+        href: "/teacher-guide-to-sensitive-parent-emails",
+        label: "Teacher Guide to Sensitive Parent Emails",
+        description:
+          "Use the broader guide if the message feels emotionally difficult but does not fit one neat category.",
+      },
+      {
+        href: "/difficult-conversation-with-parents-script-email",
+        label: "Difficult Conversation With Parents Script Email",
+        description:
+          "Go here if the email is really a follow-up to an awkward meeting or conversation.",
+      },
+      {
+        href: "/uk/parents-evening-email-template-for-teachers",
+        label: "UK Parents' Evening Email Template",
+        description:
+          "Use the UK page for a more British school context around meetings and follow-up wording.",
+      },
+      sharedFooterLinks.parentStress,
+    ],
+    relatedSlugs: [
+      "teacher-guide-to-sensitive-parent-emails",
+      "difficult-conversation-with-parents-script-email",
+      "how-to-communicate-concerns-to-parents-professionally",
+      "parents-evening-follow-up-email-template",
+      "supportive-email-to-parents-of-struggling-learner",
+      "teacher-parent-communication-hub",
+    ],
+    structuredDataTypes: ["WebPage", "BreadcrumbList", "Article", "FAQPage"],
+    testimonials: [
+      {
+        quotePrompt:
+          "Placeholder testimonial about using the pastoral template for calmer family communication.",
+        attributionPrompt:
+          "Replace with a verified quote from a pastoral lead or SENCO.",
+      },
+      {
+        quotePrompt:
+          "Placeholder testimonial about reducing rewriting on emotionally difficult parent emails.",
+        attributionPrompt:
+          "Replace with a verified quote from a head of year or class teacher.",
+      },
+    ],
+    cta: {
+      title: "Draft pastoral emails more calmly",
+      body: "Try Zaza Draft if you want a teacher-first co-writer that helps with supportive, professional parent emails while keeping every final word in your hands.",
+      primaryLabel: "Try Zaza Draft",
+      primaryHref: "/early-access",
+      secondaryLabel: "See how it works",
+      secondaryHref: "/products/draft",
+    },
+  },
+  "parents-evening-follow-up-email-template": {
+    slug: "parents-evening-follow-up-email-template",
+    shortTitle: "Parents' Evening Follow-Up",
+    keyword: "parents evening follow up email template",
+    intent: "Template intent",
+    title:
+      "Parents' Evening Follow-Up Email Template for Teachers | Zaza Draft",
+    metaDescription:
+      "Parents' evening follow up email template for teachers with calm wording for difficult conversations, agreed next steps, and school-ready documentation.",
+    h1: "Parents' Evening Follow-Up Email Template",
+    description:
+      "A calmer follow-up template for teachers who need to summarise parents' evening clearly and professionally.",
+    ogImage: "/parent-teacher-communication-templates.jpg",
+    heroEyebrow: "Template intent",
+    heroDescription: [
+      "A parents evening follow up email template becomes useful the moment the meeting is over and you realise the hard part is still ahead. You need to summarise the conversation, keep the relationship workable, and leave a clear school-ready record without reopening the whole meeting in writing.",
+      "Zaza Draft helps teachers shape that follow-up more calmly, especially when the conversation was awkward, emotional, or likely to need another step afterwards.",
+    ],
+    heroBullets: [
+      "Summarise the meeting without writing a transcript",
+      "Confirm the next step clearly",
+      "Keep a calmer tone even after a difficult conversation",
+    ],
+    featuredSnippet:
+      "A strong parents' evening follow-up email should thank the parent for meeting, summarise the main concern or agreement briefly, confirm the next step, and keep the tone clear enough for school records without sounding cold.",
+    sections: [
+      {
+        id: "why-follow-up-matters",
+        title: "Why the follow-up often matters more than the meeting",
+        body: [
+          "Parents' evening conversations are often fast, emotional, and full of half-finished thoughts. The follow-up email is where the message becomes clearer, more stable, and easier for everyone to refer back to later.",
+          "That is why the wording matters. A good follow-up lowers confusion, reduces later back-and-forth, and gives the teacher something more solid than memory alone.",
+        ],
+      },
+      {
+        id: "simple-structure",
+        title:
+          "A parents evening follow up email template that does not overdo it",
+        body: [
+          "The safest structure is brief. Thank them for attending. State the main point discussed. Confirm any agreed action or next step. Stop there unless something genuinely needs more explanation.",
+          "Teachers often create more stress by trying to write everything that was said. A short, accurate follow-up is usually stronger than a long defensive one.",
+        ],
+        exampleLabel: "Follow-up template example",
+        exampleBody:
+          "Dear [Parent/Carer],\n\nThank you for meeting with me this evening. It was helpful to discuss [student] and the areas we talked about together.\n\nAs discussed, the main next step will be [next step]. In school, we will continue to support this through [brief support]. Please do let me know if a further conversation would be helpful.\n\nKind regards,\n[Name]",
+      },
+      xPainParentSection,
+      {
+        id: "difficult-conversation",
+        title: "If the meeting felt tense, keep the email even calmer",
+        body: [
+          "After a difficult parents' evening conversation, the temptation is often to clarify every point by email. That usually makes the message heavier and can restart the tension.",
+          "A better approach is to keep the email factual, proportionate, and forward-looking. Acknowledge the meeting, confirm what matters next, and let any larger disagreement move into the right school process if needed.",
+        ],
+      },
+      xPainAdminLogSection,
+    ],
+    comparisonBlock: {
+      title:
+        "Comparison block: quick follow-up template vs calmer drafting support",
+      intro:
+        "A simple template is helpful. A teacher-first co-writer is more helpful when the conversation was difficult and the wording needs extra care.",
+      alternativeLabel: "Template only",
+      rows: [
+        {
+          label: "After a straightforward meeting",
+          zaza: "Works quickly from rough notes",
+          alternative: "Usually enough",
+        },
+        {
+          label: "After a tense meeting",
+          zaza: "More support with tone and structure",
+          alternative: "Needs more manual rewriting",
+        },
+        {
+          label: "School-record suitability",
+          zaza: "Designed for wording you can stand behind later",
+          alternative: "Depends more heavily on manual editing",
+        },
+      ],
+    },
+    trustBlock: {
+      title:
+        "Built for the part of parents' evening teachers still have to do at home",
+      items: [
+        {
+          title: "Meeting-ready wording",
+          body: "Useful when the follow-up needs to sound calm even if the meeting itself did not feel calm.",
+        },
+        {
+          title: "Clear next steps",
+          body: "Designed to make the action and support visible without turning the email into a transcript.",
+        },
+        {
+          title: "Teachers stay in control",
+          body: "You choose what to confirm, what to leave out, and what happens next.",
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "Should I always send a parents' evening follow-up email?",
+        answer:
+          "Not always, but it is especially useful after difficult conversations, where there are agreed actions, or where you want a clear written summary for later reference.",
+      },
+      {
+        question: "How long should the follow-up be?",
+        answer:
+          "Usually shorter than teachers think. Brief, accurate, and clear on the next step is usually more helpful than a long recap.",
+      },
+      {
+        question: "What if the parent disagreed during the meeting?",
+        answer:
+          "Keep the email factual and forward-looking. Confirm what was discussed and the next step rather than trying to resolve the disagreement in writing.",
+      },
+      {
+        question: "Can this email also help with school records?",
+        answer:
+          "Yes. A calm, concise follow-up often becomes a useful written record as well as a communication to the parent.",
+      },
+      {
+        question:
+          "Can Zaza Draft help with the wording after a difficult meeting?",
+        answer:
+          "Yes. Zaza Draft is designed to help teachers shape lower-stress, more professional follow-up messages while staying fully in control of the final draft.",
+      },
+    ],
+    internalLinks: [
+      {
+        href: "/difficult-conversation-with-parents-script-email",
+        label: "Difficult Conversation With Parents Script Email",
+        description:
+          "Use this if you need help with the conversation itself as well as the follow-up.",
+      },
+      {
+        href: "/teacher-guide-to-sensitive-parent-emails",
+        label: "Teacher Guide to Sensitive Parent Emails",
+        description:
+          "Go here for the broader cluster of emotionally difficult parent communication.",
+      },
+      {
+        href: "/uk/parents-evening-email-template-for-teachers",
+        label: "UK Parents' Evening Email Template",
+        description:
+          "Use the UK-specific page if you want more British school-language context around parents' evening.",
+      },
+      sharedFooterLinks.parentStress,
+    ],
+    relatedSlugs: [
+      "difficult-conversation-with-parents-script-email",
+      "teacher-guide-to-sensitive-parent-emails",
+      "parent-email-template-for-teachers",
+      "pastoral-email-to-parents-template",
+      "teacher-parent-communication-hub",
+      "how-to-communicate-concerns-to-parents-professionally",
+    ],
+    structuredDataTypes: ["WebPage", "BreadcrumbList", "Article", "FAQPage"],
+    testimonials: [
+      {
+        quotePrompt:
+          "Placeholder testimonial about writing calmer parents' evening follow-up emails.",
+        attributionPrompt:
+          "Replace with a verified quote from a class teacher or head of year.",
+      },
+      {
+        quotePrompt:
+          "Placeholder testimonial about reducing after-hours rewriting after parent meetings.",
+        attributionPrompt:
+          "Replace with a verified quote from a subject teacher or pastoral lead.",
+      },
+    ],
+    cta: {
+      title:
+        "Write the follow-up before the meeting starts living in your head all night",
+      body: "Try Zaza Draft if you want calmer, clearer wording for parents' evening follow-up emails while keeping the final judgement and tone under your control.",
+      primaryLabel: "Try Zaza Draft",
+      primaryHref: "/early-access",
+      secondaryLabel: "See how it works",
+      secondaryHref: "/products/draft",
+    },
+  },
+  "year-6-report-comments-examples": {
+    slug: "year-6-report-comments-examples",
+    shortTitle: "Year 6 Report Comments",
+    keyword: "year 6 report comments examples",
+    intent: "Template intent",
+    title:
+      "Year 6 Report Comments Examples | Balanced UK School Wording | Zaza Draft",
+    metaDescription:
+      "Year 6 report comments examples for teachers who need balanced, professional wording on effort, attainment, confidence, readiness, and next steps.",
+    h1: "Year 6 Report Comments Examples",
+    description:
+      "Balanced report-comment examples for Year 6 teachers who need honest wording that still feels fair and school-ready.",
+    ogImage: "/report-card-grades.jpg",
+    heroEyebrow: "Template intent",
+    heroDescription: [
+      "Year 6 report comments examples are usually searched when report season collides with SATs pressure, transition talk, and the strange feeling that every sentence now carries more weight. Teachers need wording that sounds balanced, specific, and kind without drifting into vague reassurance.",
+      "Zaza Draft helps with that first draft so you can keep the honesty, context, and professional judgement while spending less time reopening the same sentence.",
+    ],
+    heroBullets: [
+      "Examples for attainment, resilience, and readiness",
+      "UK school tone without sounding formulaic",
+      "Customise every comment to the pupil in front of you",
+    ],
+    featuredSnippet:
+      "A balanced Year 6 report comment should describe current attainment or effort clearly, mention a genuine strength or response to support, and end with a realistic next step so the comment feels honest, useful, and fair.",
+    sections: [
+      {
+        id: "why-year-6-is-different",
+        title: "Why Year 6 comments feel heavier than other reports",
+        body: [
+          "Year 6 comments often sit alongside transition worries, SATs-related pressure, and wider conversations about readiness for secondary school. That gives the wording more emotional weight for both families and teachers.",
+          "A generic comment bank can feel especially thin here. Teachers are often trying to write something that is accurate, hopeful, and robust enough to stand behind later.",
+        ],
+      },
+      {
+        id: "example-areas",
+        title: "Useful Year 6 report comments examples by theme",
+        body: [
+          "The strongest examples are usually the ones that balance evidence with tone. They say what the pupil is doing now, recognise something real, and avoid making the child sound fixed in one difficulty.",
+          "This is especially important for pupils whose confidence, independence, or consistency has fluctuated during the year.",
+        ],
+        bullets: [
+          "Attainment and progress",
+          "Resilience and response to challenge",
+          "Independence and organisation",
+          "Readiness for transition and next steps",
+        ],
+        exampleLabel: "Balanced Year 6 example",
+        exampleBody:
+          "[Student] has made steady progress this year and is increasingly able to apply taught strategies with more independence. At times, greater consistency is still needed, particularly when tasks feel unfamiliar, but [student] responds well to guidance and is well placed to continue building confidence in Year 7.",
+      },
+      xPainReportSeasonSection,
+      {
+        id: "avoid-common-problems",
+        title: "What to avoid in Year 6 report wording",
+        body: [
+          "Comments become less useful when they lean too heavily on empty praise, overstate readiness, or sound harsher than the teacher really intends. Families often read Year 6 reports closely, so vague phrases can create as much stress as blunt ones.",
+          "It usually helps to avoid generic lines such as 'needs to try harder' and replace them with more specific language about habits, confidence, or consistency.",
+        ],
+      },
+      xPainReportRecordSection,
+    ],
+    trustBlock: {
+      title:
+        "Built for Year 6 teachers trying to sound fair under report pressure",
+      items: [
+        {
+          title: "Balanced example language",
+          body: "Useful when transition, attainment, and confidence all need to be reflected in one short comment.",
+        },
+        {
+          title: "Professional UK tone",
+          body: "Designed around report wording that sounds school-ready rather than generic or over-polished.",
+        },
+        {
+          title: "Teacher judgement preserved",
+          body: "You still choose the final message and make sure it fits the pupil, family, and school context.",
+        },
+      ],
+    },
+    faq: [
+      {
+        question:
+          "Should Year 6 report comments mention readiness for secondary school?",
+        answer:
+          "Only when it is relevant and proportionate. It is usually better to describe habits, confidence, or independence clearly rather than making sweeping statements about transition.",
+      },
+      {
+        question: "How do I stay honest without sounding bleak?",
+        answer:
+          "Name the real challenge, include a genuine response to support or strength, and make the next step realistic rather than dramatic.",
+      },
+      {
+        question:
+          "Can I use these examples for pupils who are still below expected standard?",
+        answer:
+          "Yes, but they should be customised. The structure is helpful, but the final wording needs to reflect the pupil's actual profile and support.",
+      },
+      {
+        question: "Why do Year 6 comments seem to take longer?",
+        answer:
+          "Because the comments often carry more emotional and practical weight for families. Teachers also know these reports may shape later conversations more directly.",
+      },
+      {
+        question: "Can Zaza Draft help me avoid repetitive Year 6 comments?",
+        answer:
+          "Yes. Zaza Draft helps teachers generate more balanced, varied starting points for report comments while keeping the final edit fully in teacher hands.",
+      },
+    ],
+    internalLinks: [
+      {
+        href: "/positive-but-honest-report-card-comments-for-struggling-students",
+        label:
+          "Positive but Honest Report Card Comments for Struggling Students",
+        description:
+          "Use this if the main challenge is finding a balanced tone for pupils who have found the year hard.",
+      },
+      {
+        href: "/how-to-write-report-comments-for-low-attainment-pupils",
+        label: "How to Write Report Comments for Low Attainment Pupils",
+        description:
+          "Go here if the report challenge is mainly about lower attainment rather than transition wording.",
+      },
+      {
+        href: "/uk/ofsted-friendly-report-comments",
+        label: "UK Ofsted-Friendly Report Comments",
+        description:
+          "Use the UK page for more evidence-based, school-ready phrasing.",
+      },
+      sharedFooterLinks.reports,
+    ],
+    relatedSlugs: [
+      "positive-but-honest-report-card-comments-for-struggling-students",
+      "report-comments-for-struggling-students",
+      "how-to-write-report-comments-for-low-attainment-pupils",
+      "report-card-comments-for-anxious-students",
+      "sen-report-comments-examples",
+      "teacher-parent-communication-hub",
+    ],
+    structuredDataTypes: ["WebPage", "BreadcrumbList", "Article", "FAQPage"],
+    testimonials: [
+      {
+        quotePrompt:
+          "Placeholder testimonial about writing more balanced Year 6 comments under pressure.",
+        attributionPrompt:
+          "Replace with a verified quote from a Year 6 teacher or phase leader.",
+      },
+      {
+        quotePrompt:
+          "Placeholder testimonial about reducing repetitive report wording while keeping comments personalised.",
+        attributionPrompt:
+          "Replace with a verified quote from a primary teacher.",
+      },
+    ],
+    cta: {
+      title: "Write Year 6 comments that feel fair, clear, and usable",
+      body: "Try Zaza Draft if you want help shaping honest Year 6 report comments without losing your own voice or professional judgement.",
+      primaryLabel: "Try Zaza Draft",
+      primaryHref: "/early-access",
+      secondaryLabel: "See report-writing support",
+      secondaryHref: "/ai-for-student-reports",
+    },
+  },
+  "alternative-to-chatgpt-for-teachers": {
+    slug: "alternative-to-chatgpt-for-teachers",
+    shortTitle: "Alternative to ChatGPT",
+    keyword: "alternative to chatgpt for teachers",
+    intent: "Alternative/comparison intent",
+    title:
+      "Alternative to ChatGPT for Teachers | A More Focused Writing Co-Writer | Zaza Draft",
+    metaDescription:
+      "Looking for an alternative to ChatGPT for teachers? Zaza Draft is a more focused co-writer for parent emails, report comments, and sensitive school writing where tone matters.",
+    h1: "Alternative to ChatGPT for Teachers",
+    description:
+      "A fair comparison for teachers who want calmer, more focused writing support than a broad general-purpose AI tool.",
+    ogImage: "/teacher-working-at-desk-with-laptop.jpg",
+    heroEyebrow: "Alternative/comparison intent",
+    heroDescription: [
+      "Teachers searching for an alternative to ChatGPT for teachers are often not looking for more power. They are looking for less risk, less clutter, and better wording for the small number of school tasks that keep swallowing their evenings. Parent emails, report comments, and difficult follow-up messages usually need a steadier workflow than a blank chat box.",
+      "ChatGPT is broad. Zaza Draft is more focused. It is built for teacher writing tasks where tone, emotional intelligence, and professional judgement matter most.",
+    ],
+    heroBullets: [
+      "More focused on parent communication and report writing",
+      "Calmer workflow for teacher-specific wording tasks",
+      "Teachers stay in control of every final line",
+    ],
+    featuredSnippet:
+      "If you want an alternative to ChatGPT for teachers, the main reason to choose Zaza Draft is focus. ChatGPT is broad and flexible. Zaza Draft is designed specifically for teacher writing tasks where tone, sensitivity, and school-appropriate wording matter more than endless general-purpose options.",
+    sections: [
+      {
+        id: "fair-comparison",
+        title: "ChatGPT is broader. Zaza Draft is more focused.",
+        body: [
+          "This is not a claim that one tool is universally better. It is about fit. ChatGPT can help with many different kinds of work, including teaching tasks. Zaza Draft is designed specifically for the narrower set of writing moments where teachers most need safer, calmer, school-ready wording.",
+          "If your pain point is parent communication, report comments, or emotionally difficult school messages, focus matters. The calmer the workflow, the easier it is to keep your judgement at the centre.",
+        ],
+      },
+      {
+        id: "where-zaza-fits-better",
+        title: "Where a focused teacher writing tool can fit better",
+        body: [
+          "Broad AI chat tools are useful when you want open-ended ideation. A focused tool is often more useful when the job is highly repetitive, tone-sensitive, and professionally risky.",
+          "That is why many teachers want something narrower for parent complaints, difficult replies, report comments, and contact logs.",
+        ],
+        bullets: [
+          "Parent emails where one wrong sentence can escalate things",
+          "Report comments that need balance rather than fluency alone",
+          "Behaviour wording that must stay factual and relationship-aware",
+          "School records and follow-up notes that need cleaner phrasing",
+        ],
+      },
+      xPainParentSection,
+      xPainReportSeasonSection,
+      {
+        id: "control-and-judgement",
+        title: "Why teacher control still matters whichever tool you use",
+        body: [
+          "Teachers should stay fully in control of the final wording. That matters whether you use Zaza Draft, ChatGPT, or any other tool. The core question is whether the workflow helps you review more clearly or just generates more text to clean up.",
+          "Zaza Draft is designed around review-led drafting rather than generic output. That is a better fit for teachers who want help with wording, not a replacement for professional judgement.",
+        ],
+      },
+    ],
+    comparisonBlock: {
+      title: "Comparison block: ChatGPT and Zaza Draft",
+      intro:
+        "This comparison stays fair and factual. ChatGPT is a broad, flexible AI tool. Zaza Draft is a specialised writing co-writer for teachers.",
+      alternativeLabel: "ChatGPT",
+      rows: [
+        {
+          label: "Product scope",
+          zaza: "Focused on teacher writing tasks where tone matters",
+          alternative: "Broad general-purpose AI assistant",
+        },
+        {
+          label: "Parent communication workflow",
+          zaza: "Built around calmer, school-appropriate drafting",
+          alternative: "Flexible but more open-ended",
+        },
+        {
+          label: "Report comments",
+          zaza: "Designed for balanced teacher-facing comment support",
+          alternative: "Can help, but not specialised for this workflow",
+        },
+        {
+          label: "Clarity of experience",
+          zaza: "More boutique and writing-first",
+          alternative: "Broader and more multi-purpose",
+        },
+      ],
+      note: "If you want a dedicated writing co-pilot for parent emails and report comments, Zaza Draft is the more focused option.",
+    },
+    trustBlock: {
+      title:
+        "Built for teachers who want less clutter and more trust in the wording",
+      items: [
+        {
+          title: "Teacher-specific support",
+          body: "Designed around parent emails, report comments, and school writing rather than every possible AI task.",
+        },
+        {
+          title: "Calm workflow",
+          body: "Useful when the issue is not generating text but finding wording you are comfortable sending.",
+        },
+        {
+          title: "Teacher judgement preserved",
+          body: "Zaza Draft supports drafting. It does not remove your review or professional decision-making.",
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "Is Zaza Draft better than ChatGPT for every teaching task?",
+        answer:
+          "No. ChatGPT is broader. Zaza Draft is better positioned for teachers who mainly want focused help with parent emails, report comments, and sensitive school writing.",
+      },
+      {
+        question:
+          "Why would a teacher choose a focused tool instead of a broad one?",
+        answer:
+          "Because broad flexibility can also mean more clutter and more manual shaping. A focused writing tool can feel calmer when the task is repetitive and tone-sensitive.",
+      },
+      {
+        question: "Can ChatGPT still be useful for teachers?",
+        answer:
+          "Yes. Many teachers use it successfully. This page is for teachers who want something more tailored to emotionally difficult writing where wording quality matters a lot.",
+      },
+      {
+        question: "Does Zaza Draft replace teacher judgement?",
+        answer:
+          "No. It is a co-writer, not a replacement. Teachers stay in control of the final content and approve every word.",
+      },
+      ...xComparisonFaqAdditions,
+    ],
+    internalLinks: [
+      {
+        href: "/ai-parent-email-generator-for-teachers",
+        label: "AI Parent Email Generator for Teachers",
+        description:
+          "See the focused tool-intent page if parent communication is your main reason for looking beyond ChatGPT.",
+      },
+      {
+        href: "/report-comment-generator-for-teachers",
+        label: "Report Comment Generator for Teachers",
+        description:
+          "Use the report page if your pain point is report wording rather than general AI usage.",
+      },
+      {
+        href: "/teacher-parent-communication-hub",
+        label: "Teacher Parent Communication Hub",
+        description:
+          "Browse the wider parent-communication cluster if the real issue is a specific email situation rather than the platform comparison itself.",
+      },
+      sharedFooterLinks.product,
+    ],
+    relatedSlugs: [
+      "alternative-to-magicschool-ai",
+      "alternative-to-teachmate-ai",
+      "ai-parent-email-generator-for-teachers",
+      "report-comment-generator-for-teachers",
+      "teacher-email-writer",
+      "teacher-parent-communication-hub",
+    ],
+    structuredDataTypes: ["WebPage", "BreadcrumbList", "Article", "FAQPage"],
+    testimonials: [
+      {
+        quotePrompt:
+          "Placeholder testimonial about preferring a more focused writing workflow than a broad AI chat tool.",
+        attributionPrompt:
+          "Replace with a verified quote from a classroom teacher or pastoral lead.",
+      },
+      {
+        quotePrompt:
+          "Placeholder testimonial about calmer parent-email drafting compared with a more open-ended tool.",
+        attributionPrompt:
+          "Replace with a verified quote from a head of year or SENCO.",
+      },
+    ],
+    cta: {
+      title: "Try a more focused teacher writing workflow",
+      body: "Try Zaza Draft if you want a dedicated writing co-pilot for parent emails, report comments, and sensitive teacher communication rather than a broad general-purpose AI experience.",
+      primaryLabel: "Try Zaza Draft",
+      primaryHref: "/early-access",
+      secondaryLabel: "Compare the product",
+      secondaryHref: "/products/draft",
+    },
+  },
+  "sen-report-comments-examples": {
+    slug: "sen-report-comments-examples",
+    shortTitle: "SEN Report Comments",
+    keyword: "sen report comments examples",
+    intent: "Template intent",
+    title:
+      "SEN Report Comments Examples | Balanced, Respectful School Wording | Zaza Draft",
+    metaDescription:
+      "SEN report comments examples for teachers who need balanced, respectful wording about support, progress, confidence, and next steps without sounding vague or harsh.",
+    h1: "SEN Report Comments Examples",
+    description:
+      "Respectful, balanced report-comment examples for teachers writing about pupils with SEN in a school-ready tone.",
+    ogImage: "/report-card-grades.jpg",
+    heroEyebrow: "Template intent",
+    heroDescription: [
+      "SEN report comments examples are usually needed when teachers want to be precise, respectful, and genuinely useful without letting the language become either too clinical or too vague. The wording has to recognise support, progress, and individual context without reducing the pupil to a label.",
+      "Zaza Draft helps teachers shape calmer first drafts for SEN-related report comments while keeping the final judgement, language, and nuance in teacher hands.",
+    ],
+    heroBullets: [
+      "Use respectful language around support and progress",
+      "Keep comments balanced and evidence-based",
+      "Adapt examples to the pupil rather than copying generic lines",
+    ],
+    featuredSnippet:
+      "A strong SEN report comment should describe what the pupil is able to do, explain the support or structure that helps, and identify the next realistic area for development in language that stays respectful, specific, and proportionate.",
+    sections: [
+      {
+        id: "why-sen-comments-are-hard",
+        title: "Why SEN report comments need more care than generic examples",
+        body: [
+          "These comments often have to do several things at once. They need to describe progress honestly, reflect support appropriately, and avoid wording that sounds reductive, fixed, or overly clinical.",
+          "Teachers often spend longer on these comments because they are trying to get the balance right. That is a sign of care, but it can also become a real workload drain.",
+        ],
+      },
+      {
+        id: "better-language",
+        title: "What more respectful SEN report comment language sounds like",
+        body: [
+          "Better language usually focuses on observed learning, support that is helpful, and realistic next steps. It avoids framing the pupil as the problem and instead describes the learning profile more thoughtfully.",
+          "That can make the comment more helpful for families and easier for staff to stand behind later.",
+        ],
+        exampleLabel: "Balanced SEN example",
+        exampleBody:
+          "[Student] continues to make progress when tasks are carefully structured and supported with clear routines. [Student] responds positively to encouragement and is becoming more confident in contributing ideas, particularly when given time to process and prepare. The next step is to continue building independence in familiar tasks while maintaining the support strategies that help [student] succeed.",
+      },
+      xPainReportSeasonSection,
+      {
+        id: "avoid-harmful-phrases",
+        title: "What to avoid in SEN report wording",
+        body: [
+          "Avoid language that defines the pupil only by difficulty, sounds diagnostic when it is not your role to diagnose, or implies low expectations in a fixed way. Families notice those choices quickly, and they can undermine trust.",
+          "It is usually better to stay with observed classroom learning, the support context, and the next step that feels proportionate and real.",
+        ],
+      },
+      xPainReportRecordSection,
+    ],
+    trustBlock: {
+      title:
+        "Built for teachers who want respectful wording as well as clear reporting",
+      items: [
+        {
+          title: "Respectful language",
+          body: "Designed to help teachers describe progress and support without flattening the pupil into a label.",
+        },
+        {
+          title: "School-ready tone",
+          body: "Useful when the comment may later be revisited in meetings, records, or wider conversations with families.",
+        },
+        {
+          title: "Teachers stay responsible for the final wording",
+          body: "Zaza Draft supports the draft. It does not replace your judgement or knowledge of the pupil.",
+        },
+      ],
+    },
+    faq: [
+      {
+        question:
+          "Should SEN report comments mention the support a pupil needs?",
+        answer:
+          "Yes, where it is relevant and helpful. Support context often makes the comment more accurate and more useful for families.",
+      },
+      {
+        question: "How do I avoid sounding too clinical?",
+        answer:
+          "Stay with what you observe in learning and classroom participation rather than drifting into diagnostic or overly formal language.",
+      },
+      {
+        question: "Can I still mention areas of difficulty clearly?",
+        answer:
+          "Yes. The key is to describe the difficulty proportionately and alongside support, progress, or realistic next steps rather than making the whole comment about deficit.",
+      },
+      {
+        question: "Why do these comments take so long to write well?",
+        answer:
+          "Because the wording needs to be careful, respectful, and useful all at once. Many teachers are trying to protect both clarity and dignity in a small amount of space.",
+      },
+      {
+        question: "Can Zaza Draft help me write more respectful SEN comments?",
+        answer:
+          "Yes. Zaza Draft is designed to help teachers draft more balanced, school-ready wording for report comments while keeping the teacher in full control of the final version.",
+      },
+    ],
+    internalLinks: [
+      {
+        href: "/report-card-comments-for-anxious-students",
+        label: "Report Card Comments for Anxious Students",
+        description:
+          "Use this page for wording around confidence, reassurance, and emotionally sensitive progress comments.",
+      },
+      {
+        href: "/report-comments-for-struggling-students",
+        label: "Report Comments for Struggling Students",
+        description:
+          "Go here if the issue is broader report tone for pupils who are finding learning difficult.",
+      },
+      {
+        href: "/uk/ofsted-friendly-report-comments",
+        label: "UK Ofsted-Friendly Report Comments",
+        description:
+          "Use the UK page for more evidence-based report phrasing that still sounds measured.",
+      },
+      sharedFooterLinks.reports,
+    ],
+    relatedSlugs: [
+      "report-card-comments-for-anxious-students",
+      "report-comments-for-struggling-students",
+      "positive-but-honest-report-card-comments-for-struggling-students",
+      "year-6-report-comments-examples",
+      "teacher-parent-communication-hub",
+      "report-comment-generator-for-teachers",
+    ],
+    structuredDataTypes: ["WebPage", "BreadcrumbList", "Article", "FAQPage"],
+    testimonials: [
+      {
+        quotePrompt:
+          "Placeholder testimonial about finding more respectful SEN report wording.",
+        attributionPrompt:
+          "Replace with a verified quote from a SENCO or class teacher.",
+      },
+      {
+        quotePrompt:
+          "Placeholder testimonial about using the examples as a safer starting point during report season.",
+        attributionPrompt:
+          "Replace with a verified quote from a primary or secondary teacher.",
+      },
+    ],
+    cta: {
+      title: "Write SEN report comments with more care and less rewriting",
+      body: "Try Zaza Draft if you want help shaping respectful, balanced report comments while keeping every final line under your professional control.",
+      primaryLabel: "Try Zaza Draft",
+      primaryHref: "/early-access",
+      secondaryLabel: "See report-writing support",
+      secondaryHref: "/ai-for-student-reports",
+    },
+  },
 } satisfies Record<string, TeacherWritingPage>;
 
 export type TeacherWritingSlug = keyof typeof teacherWritingPages;

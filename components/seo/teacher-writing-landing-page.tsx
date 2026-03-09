@@ -10,6 +10,7 @@ import {
 
 interface TeacherWritingLandingPageProps {
   page: TeacherWritingPage;
+  jsonLd?: Record<string, unknown>[];
 }
 
 function SectionCard({
@@ -282,8 +283,9 @@ function CTASection({ page }: { page: TeacherWritingPage }) {
 
 export function TeacherWritingLandingPage({
   page,
+  jsonLd: providedJsonLd,
 }: TeacherWritingLandingPageProps) {
-  const jsonLd = buildTeacherWritingJsonLd(page);
+  const jsonLd = providedJsonLd ?? buildTeacherWritingJsonLd(page);
 
   return (
     <>
