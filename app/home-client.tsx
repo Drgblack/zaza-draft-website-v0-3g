@@ -379,7 +379,7 @@ export function HomePageClient() {
               AI you can trust with real conversations
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-700">
-              Zaza Draft is designed for the moments that matter — parent
+              Zaza Draft is designed for the moments that matter - parent
               emails, sensitive updates, and professional communication where
               tone, clarity, and trust are critical. It does not replace your
               judgment. It supports it, helping you write with confidence rather

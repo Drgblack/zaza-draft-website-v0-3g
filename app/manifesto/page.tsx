@@ -51,7 +51,7 @@ export default function ManifestoPage() {
 
           <section className="space-y-4">
             <h2 className="text-2xl font-semibold text-slate-100">
-              We believe AI should make people more human — not less.
+              We believe AI should make people more human - not less.
             </h2>
             <p className="text-lg leading-8 text-slate-300">
               Technology should not replace thinking.
@@ -66,7 +66,7 @@ export default function ManifestoPage() {
               Progress should not be impressive if it isn’t ethical.
             </p>
             <p className="text-lg leading-8 text-slate-300">
-              At Zaza, we believe AI has a responsibility — not just a
+              At Zaza, we believe AI has a responsibility - not just a
               capability.
             </p>
           </section>
@@ -95,7 +95,7 @@ export default function ManifestoPage() {
             </ul>
             <p className="text-lg leading-8 text-slate-300">
               Whether you are a student, a teacher, a parent, a professional, or
-              a creator — Zaza is built to help you think better, not think
+              a creator - Zaza is built to help you think better, not think
               less.
             </p>
           </section>
@@ -144,7 +144,7 @@ export default function ManifestoPage() {
               <br />
               Parents are confused.
               <br />
-              Institutions are cautious — and rightly so.
+              Institutions are cautious - and rightly so.
             </p>
             <p className="text-lg leading-8 text-slate-300">
               Zaza builds tools that:
@@ -182,7 +182,7 @@ export default function ManifestoPage() {
               <li>Celebrate progress, not perfection</li>
             </ul>
             <p className="text-lg leading-8 text-slate-300">
-              We believe the best tools feel supportive — not demanding.
+              We believe the best tools feel supportive - not demanding.
             </p>
           </section>
 
@@ -221,7 +221,7 @@ export default function ManifestoPage() {
               We grow through value, not manipulation.
             </h2>
             <p className="text-lg leading-8 text-slate-300">
-              We believe in virality — but not dark patterns.
+              We believe in virality - but not dark patterns.
             </p>
             <p className="text-lg leading-8 text-slate-300">
               Zaza grows when people:
@@ -255,7 +255,7 @@ export default function ManifestoPage() {
               It is built for classrooms, careers, families, and futures.
             </p>
             <p className="text-lg leading-8 text-slate-300">
-              We expect AI to change everything —
+              We expect AI to change everything -
               <br />
               which is exactly why how we build matters.
             </p>
@@ -263,7 +263,7 @@ export default function ManifestoPage() {
               Our guiding question is simple:
             </p>
             <p className="text-lg leading-8 text-slate-300">
-              “Does this help someone think, grow, or feel supported — or does
+              “Does this help someone think, grow, or feel supported - or does
               it just look clever?”
             </p>
             <p className="text-lg leading-8 text-slate-300">
@@ -287,7 +287,7 @@ export default function ManifestoPage() {
               Trust without compromise.
             </p>
             <p className="text-lg leading-8 text-slate-300">
-              We are building tools people can rely on —
+              We are building tools people can rely on -
               <br />
               not just today, but years from now.
             </p>
