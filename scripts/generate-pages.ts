@@ -812,7 +812,7 @@ function applyHouseStyle(content: string): string {
     nextContent = nextContent.replace(pattern, replacement);
   }
 
-  nextContent = nextContent.replace(/—/g, "-");
+  nextContent = nextContent.replace(/\u2014/g, "-");
   return nextContent;
 }
 
