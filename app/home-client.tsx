@@ -203,7 +203,7 @@ export function HomePageClient() {
                 className="space-y-4"
               >
                 <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1]">
-                  <span className="text-white">{t("hero.headline")}</span>
+                  <span className="text-red-500">{t("hero.headline")}</span>
                   <br />
                   <span className="bg-gradient-to-r from-purple-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                     {t("hero.headlineAccent")}
