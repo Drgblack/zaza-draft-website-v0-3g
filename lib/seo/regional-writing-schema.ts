@@ -5,14 +5,38 @@ import type {
   TeacherWritingPage,
 } from "@/lib/seo/teacher-writing-pages";
 import type { RegionalTeacherWritingRegion } from "@/lib/seo/regional-writing-pages";
+import {
+  drGregBlackburnBio,
+  zazaDraftEntityDefinition,
+  zazaDraftEntityKeywords,
+} from "@/lib/seo/entity-definitions";
 
 const baseUrl = "https://zazadraft.com";
 const brandName = "Zaza Draft";
-const softwareDescription =
-  "Teacher-first AI writing support for parent communication, reports, and school writing where tone and professional judgement matter.";
+const organizationId = `${baseUrl}/#organization`;
+const softwareId = `${baseUrl}/products/draft#software`;
 
 function buildRegionalUrl(region: RegionalTeacherWritingRegion, slug: string) {
   return `${baseUrl}/${region}/${slug}`;
+}
+
+function buildRegionPlace(region: RegionalTeacherWritingRegion) {
+  if (region === "uk") {
+    return {
+      "@type": "Country",
+      name: "United Kingdom",
+      sameAs: "https://www.wikidata.org/wiki/Q145",
+    };
+  }
+
+  return {
+    "@type": "AdministrativeArea",
+    name: "England",
+    containedInPlace: {
+      "@type": "Country",
+      name: "United Kingdom",
+    },
+  };
 }
 
 function buildFaqSchema(faq: FAQItem[]) {
@@ -20,6 +44,9 @@ function buildFaqSchema(faq: FAQItem[]) {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     inLanguage: "en-GB",
+    about: {
+      "@id": organizationId,
+    },
     mainEntity: faq.map((item) => ({
       "@type": "Question",
       name: item.question,
@@ -72,23 +99,41 @@ function buildWebPageSchema(
     description: page.metaDescription,
     url: buildRegionalUrl(region, page.slug),
     inLanguage: "en-GB",
-    about: page.keyword,
+    about: [
+      {
+        "@id": organizationId,
+      },
+      {
+        "@id": softwareId,
+      },
+      {
+        "@type": "Thing",
+        name: page.keyword,
+      },
+    ],
     audience: {
-      "@type": "Audience",
+      "@type": "EducationalAudience",
       audienceType:
         region === "uk"
           ? "Teachers and school staff in the United Kingdom"
           : "Teachers and school staff in England",
+      educationalRole: "teacher",
     },
+    areaServed: buildRegionPlace(region),
+    contentLocation: buildRegionPlace(region),
     isPartOf: {
       "@type": "WebSite",
       name: brandName,
       url: baseUrl,
     },
+    keywords: [page.keyword, ...zazaDraftEntityKeywords],
   };
 }
 
-function buildSoftwareApplicationSchema(page: TeacherWritingPage) {
+function buildSoftwareApplicationSchema(
+  region: RegionalTeacherWritingRegion,
+  page: TeacherWritingPage,
+) {
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -103,7 +148,20 @@ function buildSoftwareApplicationSchema(page: TeacherWritingPage) {
       "Professional tone guidance",
       "Review-led co-writer workflow",
     ],
-    description: `${softwareDescription} This page targets the query "${page.keyword}".`,
+    description: `${zazaDraftEntityDefinition} This page targets the query "${page.keyword}" for ${region === "uk" ? "teachers and school staff in the United Kingdom" : "teachers and school staff in England"}.`,
+    creator: {
+      "@id": organizationId,
+    },
+    publisher: {
+      "@id": organizationId,
+    },
+    audience: {
+      "@type": "EducationalAudience",
+      educationalRole: "teacher",
+    },
+    areaServed: buildRegionPlace(region),
+    keywords: [page.keyword, ...zazaDraftEntityKeywords],
+    isAccessibleForFree: true,
   };
 }
 
@@ -118,21 +176,33 @@ function buildArticleSchema(
     description: page.metaDescription,
     mainEntityOfPage: buildRegionalUrl(region, page.slug),
     author: {
-      "@type": "Organization",
-      name: brandName,
+      "@type": "Person",
+      name: "Dr Greg Blackburn",
+      honorificSuffix: "PhD",
+      description: drGregBlackburnBio,
     },
     publisher: {
-      "@type": "Organization",
-      name: brandName,
-      logo: {
-        "@type": "ImageObject",
-        url: `${baseUrl}/z-logo.png`,
-      },
+      "@id": organizationId,
     },
     image: `${baseUrl}${page.ogImage}`,
     datePublished: "2026-03-09",
     dateModified: "2026-03-09",
     inLanguage: "en-GB",
+    audience: {
+      "@type": "EducationalAudience",
+      educationalRole: "teacher",
+    },
+    contentLocation: buildRegionPlace(region),
+    about: [
+      {
+        "@id": organizationId,
+      },
+      {
+        "@id": softwareId,
+      },
+      buildRegionPlace(region),
+    ],
+    keywords: [page.keyword, ...zazaDraftEntityKeywords],
   };
 }
 
@@ -146,7 +216,7 @@ const builders: Record<
   WebPage: buildWebPageSchema,
   BreadcrumbList: buildBreadcrumbSchema,
   FAQPage: (_region, page) => buildFaqSchema(page.faq),
-  SoftwareApplication: (_region, page) => buildSoftwareApplicationSchema(page),
+  SoftwareApplication: buildSoftwareApplicationSchema,
   Article: buildArticleSchema,
 };
 

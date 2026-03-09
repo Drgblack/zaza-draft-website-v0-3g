@@ -1,4 +1,4 @@
-﻿import type { MetadataRoute } from "next"
+﻿import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/admin/", "/_next/"],
       },
     ],
+    host: "https://zazadraft.com",
     sitemap: "https://zazadraft.com/sitemap.xml",
-  }
+  };
 }
-

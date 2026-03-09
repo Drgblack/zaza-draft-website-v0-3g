@@ -1,243 +1,416 @@
-﻿"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { useLanguage } from "@/lib/i18n/language-context"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Calculator, Clock, DollarSign, TrendingUp, Users, ArrowRight, Sparkles } from "lucide-react"
+import { useState } from "react";
+import Link from "next/link";
+import {
+  ArrowRight,
+  Calculator,
+  Clock3,
+  Mail,
+  FileText,
+  PoundSterling,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { trackRoiCalculated, trackTrialStart } from "@/lib/analytics";
+
+const WORKING_WEEKS_PER_YEAR = 39;
+const WEEKS_PER_TERM = 13;
 
 export function ROICalculatorClient() {
-  const { language } = useLanguage()
-  const lang = language === "de" ? "de" : "en"
+  const [reportCommentsPerWeek, setReportCommentsPerWeek] = useState(35);
+  const [parentEmailsPerWeek, setParentEmailsPerWeek] = useState(8);
+  const [minutesPerReportComment, setMinutesPerReportComment] = useState(4);
+  const [minutesPerParentEmail, setMinutesPerParentEmail] = useState(12);
+  const [hourlyValue, setHourlyValue] = useState(38);
+  const [reportTimeSavedPercent, setReportTimeSavedPercent] = useState(45);
+  const [emailTimeSavedPercent, setEmailTimeSavedPercent] = useState(40);
+  const [hasCalculated, setHasCalculated] = useState(false);
 
-  // --- STATE ---
-  const [numTeachers, setNumTeachers] = useState(50)
-  const [hourlyRate, setHourlyRate] = useState(45)
-  const [hoursPerWeek, setHoursPerWeek] = useState(10) // Admin hours per week per teacher
+  const weeklyReportMinutesSaved =
+    reportCommentsPerWeek *
+    minutesPerReportComment *
+    (reportTimeSavedPercent / 100);
+  const weeklyEmailMinutesSaved =
+    parentEmailsPerWeek * minutesPerParentEmail * (emailTimeSavedPercent / 100);
+  const weeklyMinutesSaved = weeklyReportMinutesSaved + weeklyEmailMinutesSaved;
+  const weeklyHoursSaved = weeklyMinutesSaved / 60;
+  const termHoursSaved = weeklyHoursSaved * WEEKS_PER_TERM;
+  const yearlyHoursSaved = weeklyHoursSaved * WORKING_WEEKS_PER_YEAR;
+  const yearlyValueSaved = yearlyHoursSaved * hourlyValue;
+  const eveningsRecovered = yearlyHoursSaved / 2.5;
 
-  // --- CONSTANTS ---
-  const WEEKS_PER_YEAR = 36
-  const SAVINGS_PERCENTAGE = 0.70 // 70% savings based on Zaza metrics
+  const formatNumber = (value: number, digits = 1) =>
+    new Intl.NumberFormat("en-GB", {
+      maximumFractionDigits: digits,
+      minimumFractionDigits: digits,
+    }).format(value);
 
-  // --- CALCULATIONS ---
-  const totalHoursCurrent = numTeachers * hoursPerWeek * WEEKS_PER_YEAR
-  const totalCostCurrent = totalHoursCurrent * hourlyRate
-  
-  const hoursSaved = Math.round(totalHoursCurrent * SAVINGS_PERCENTAGE)
-  const moneySaved = Math.round(totalCostCurrent * SAVINGS_PERCENTAGE)
-  const hoursSavedPerTeacher = Math.round((hoursSaved / numTeachers) / WEEKS_PER_YEAR * 10) / 10
+  const formatCurrency = (value: number) =>
+    new Intl.NumberFormat("en-GB", {
+      style: "currency",
+      currency: "GBP",
+      maximumFractionDigits: 0,
+    }).format(value);
 
-  // --- CONTENT ---
-  const content = {
-    en: {
-      hero: {
-        badge: "ROI Calculator",
-        title: "Calculate Your Potential Savings",
-        subtitle: "See how much time and money your school could save by reducing administrative workload with Zaza Draft."
-      },
-      inputs: {
-        teachers: "Number of Teachers",
-        rate: "Avg. Hourly Rate ($)",
-        hours: "Weekly Admin Hours (per teacher)"
-      },
-      results: {
-        annualMoney: "Annual Money Saved",
-        annualHours: "Annual Hours Reclaimed",
-        perTeacher: "Hours Saved / Teacher / Week"
-      },
-      cta: {
-        title: "Ready to realize these savings?",
-        primary: "See Pricing",
-        secondary: "Contact Sales"
-      },
-      explanation: "Calculations are based on an average 36-week school year and a conservative 70% reduction in time spent on emails and reports using Zaza Draft."
-    },
-    de: {
-      hero: {
-        badge: "ROI-Rechner",
-        title: "Berechnen Sie Ihre potenziellen Einsparungen",
-        subtitle: "Sehen Sie, wie viel Zeit und Geld Ihre Schule durch die Reduzierung des Verwaltungsaufwands mit Zaza Draft sparen könnte."
-      },
-      inputs: {
-        teachers: "Anzahl der Lehrkräfte",
-        rate: "Durchschn. Stundensatz (€)",
-        hours: "Wöchentliche Admin-Stunden (pro Lehrer)"
-      },
-      results: {
-        annualMoney: "Jährliche Gelenersparnis",
-        annualHours: "Jährlich zurückgewonnene Stunden",
-        perTeacher: "Gesparte Stunden / Lehrer / Woche"
-      },
-      cta: {
-        title: "Bereit, diese Einsparungen zu realisieren?",
-        primary: "Preise ansehen",
-        secondary: "Vertrieb kontaktieren"
-      },
-      explanation: "Die Berechnungen basieren auf einem durchschnittlichen Schuljahr von 36 Wochen und einer konservativen Reduzierung der Zeit für E-Mails und Berichte um 70 % bei Verwendung von Zaza Draft."
-    }
-  }
+  const handleCalculate = () => {
+    setHasCalculated(true);
+    trackRoiCalculated({
+      reportsPerWeek: reportCommentsPerWeek,
+      parentEmailsPerWeek,
+      yearlyHoursSaved: Math.round(yearlyHoursSaved),
+      yearlyValueSaved: Math.round(yearlyValueSaved),
+    });
+  };
 
-  const text = content[lang]
-  const currencySymbol = lang === "de" ? "€" : "$"
-
-  const formatNumber = (num: number) => {
-    return new Intl.NumberFormat(lang === "de" ? "de-DE" : "en-US").format(num)
-  }
+  const handleTrialClick = (placement: string, ctaVariant: string) => {
+    trackTrialStart({
+      placement,
+      ctaVariant,
+      sourcePage: "/roi-calculator",
+    });
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0F172A] via-[#1E293B] to-[#0F172A]">
-      {/* Hero */}
-      <section className="pt-32 pb-12 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <Badge className="mb-6 bg-purple-500/10 text-purple-300 border-purple-500/20 px-4 py-1.5">
-            <Calculator className="w-3 h-3 mr-2" />
-            {text.hero.badge}
-          </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 text-balance">
-            {text.hero.title}
-          </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            {text.hero.subtitle}
+    <div className="min-h-screen bg-slate-950 text-slate-100">
+      <section className="border-b border-white/10 bg-[radial-gradient(circle_at_top,_rgba(45,212,191,0.14),_transparent_30%),radial-gradient(circle_at_right,_rgba(251,191,36,0.08),_transparent_28%)]">
+        <div className="mx-auto max-w-6xl px-6 pb-16 pt-28 lg:px-8 lg:pb-20">
+          <div className="max-w-4xl space-y-6">
+            <p className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.2em] text-slate-200">
+              <Calculator className="mr-2 h-3.5 w-3.5" />
+              Tool intent
+            </p>
+            <h1 className="text-balance text-4xl font-semibold tracking-tight text-white md:text-6xl">
+              Teacher ROI calculator for report comments and parent emails
+            </h1>
+            <p className="max-w-3xl text-lg leading-8 text-slate-300">
+              Use this teacher ROI calculator to estimate how much time Zaza
+              Draft could save on report comments and parent emails each week.
+              It is a practical planning tool for schools, heads of department,
+              and teachers who want a calmer writing workflow, not inflated
+              promises.
+            </p>
+            <div className="grid gap-3 md:grid-cols-3">
+              <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm text-slate-200">
+                Built around report comments and parent communication
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm text-slate-200">
+                Uses editable assumptions rather than hard sales claims
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm text-slate-200">
+                Teachers stay in control of every draft and every decision
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <main className="mx-auto max-w-6xl space-y-14 px-6 py-14 lg:px-8 lg:py-20">
+        <section className="grid gap-6 lg:grid-cols-[1fr,1.1fr]">
+          <div className="rounded-[28px] border border-white/10 bg-white/5 p-6 md:p-8">
+            <h2 className="text-2xl font-semibold text-white">
+              Interactive placeholder
+            </h2>
+            <p className="mt-4 text-base leading-8 text-slate-300">
+              Adjust the inputs below to model a typical teacher or team. The
+              calculator estimates weekly, termly, and yearly time recovered
+              from drafting report comments and parent emails more efficiently.
+            </p>
+
+            <div className="mt-8 space-y-6">
+              <label className="block">
+                <span className="text-sm font-medium text-slate-200">
+                  Report comments drafted per week
+                </span>
+                <input
+                  type="number"
+                  min={0}
+                  value={reportCommentsPerWeek}
+                  onChange={(event) =>
+                    setReportCommentsPerWeek(Number(event.target.value) || 0)
+                  }
+                  className="mt-2 w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none ring-0 transition focus:border-teal-200/40"
+                />
+              </label>
+
+              <label className="block">
+                <span className="text-sm font-medium text-slate-200">
+                  Parent emails drafted per week
+                </span>
+                <input
+                  type="number"
+                  min={0}
+                  value={parentEmailsPerWeek}
+                  onChange={(event) =>
+                    setParentEmailsPerWeek(Number(event.target.value) || 0)
+                  }
+                  className="mt-2 w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none ring-0 transition focus:border-teal-200/40"
+                />
+              </label>
+
+              <div className="grid gap-6 md:grid-cols-2">
+                <label className="block">
+                  <span className="text-sm font-medium text-slate-200">
+                    Minutes per report comment now
+                  </span>
+                  <input
+                    type="number"
+                    min={1}
+                    value={minutesPerReportComment}
+                    onChange={(event) =>
+                      setMinutesPerReportComment(
+                        Number(event.target.value) || 1,
+                      )
+                    }
+                    className="mt-2 w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none ring-0 transition focus:border-teal-200/40"
+                  />
+                </label>
+
+                <label className="block">
+                  <span className="text-sm font-medium text-slate-200">
+                    Minutes per parent email now
+                  </span>
+                  <input
+                    type="number"
+                    min={1}
+                    value={minutesPerParentEmail}
+                    onChange={(event) =>
+                      setMinutesPerParentEmail(Number(event.target.value) || 1)
+                    }
+                    className="mt-2 w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none ring-0 transition focus:border-teal-200/40"
+                  />
+                </label>
+              </div>
+
+              <div className="grid gap-6 md:grid-cols-2">
+                <label className="block">
+                  <span className="text-sm font-medium text-slate-200">
+                    Estimated report-comment time saved %
+                  </span>
+                  <input
+                    type="number"
+                    min={0}
+                    max={100}
+                    value={reportTimeSavedPercent}
+                    onChange={(event) =>
+                      setReportTimeSavedPercent(Number(event.target.value) || 0)
+                    }
+                    className="mt-2 w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none ring-0 transition focus:border-teal-200/40"
+                  />
+                </label>
+
+                <label className="block">
+                  <span className="text-sm font-medium text-slate-200">
+                    Estimated parent-email time saved %
+                  </span>
+                  <input
+                    type="number"
+                    min={0}
+                    max={100}
+                    value={emailTimeSavedPercent}
+                    onChange={(event) =>
+                      setEmailTimeSavedPercent(Number(event.target.value) || 0)
+                    }
+                    className="mt-2 w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none ring-0 transition focus:border-teal-200/40"
+                  />
+                </label>
+              </div>
+
+              <label className="block">
+                <span className="text-sm font-medium text-slate-200">
+                  Hourly value of teacher time in GBP
+                </span>
+                <input
+                  type="number"
+                  min={1}
+                  value={hourlyValue}
+                  onChange={(event) =>
+                    setHourlyValue(Number(event.target.value) || 1)
+                  }
+                  className="mt-2 w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none ring-0 transition focus:border-teal-200/40"
+                />
+              </label>
+
+              <Button
+                className="bg-teal-200 text-slate-950 hover:bg-teal-100"
+                onClick={handleCalculate}
+              >
+                Calculate savings
+              </Button>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="rounded-[28px] border border-teal-200/20 bg-teal-200/10 p-6 md:p-8">
+              <p className="text-sm uppercase tracking-[0.2em] text-teal-50/80">
+                Featured result
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold text-white md:text-4xl">
+                {formatNumber(yearlyHoursSaved)} hours recovered per year
+              </h2>
+              <p className="mt-4 max-w-3xl text-base leading-8 text-teal-50">
+                Based on your current inputs, Zaza Draft could help recover
+                around {formatNumber(termHoursSaved)} hours each term and{" "}
+                {formatCurrency(yearlyValueSaved)} of staff-time value each
+                school year. This is a planning estimate using your own
+                assumptions, not a promise of automatic savings.
+              </p>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-2">
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+                <div className="flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-slate-400">
+                  <Clock3 className="h-4 w-4" />
+                  Weekly
+                </div>
+                <p className="mt-4 text-3xl font-semibold text-white">
+                  {formatNumber(weeklyHoursSaved)} hours
+                </p>
+                <p className="mt-3 text-sm leading-7 text-slate-300">
+                  Time recovered each working week from report comments and
+                  parent communication alone.
+                </p>
+              </div>
+
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+                <div className="flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-slate-400">
+                  <PoundSterling className="h-4 w-4" />
+                  Yearly value
+                </div>
+                <p className="mt-4 text-3xl font-semibold text-white">
+                  {formatCurrency(yearlyValueSaved)}
+                </p>
+                <p className="mt-3 text-sm leading-7 text-slate-300">
+                  Estimated staff-cost value based on your chosen hourly rate.
+                </p>
+              </div>
+
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+                <div className="flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-slate-400">
+                  <FileText className="h-4 w-4" />
+                  Report comments
+                </div>
+                <p className="mt-4 text-3xl font-semibold text-white">
+                  {formatNumber(weeklyReportMinutesSaved / 60)} hours
+                </p>
+                <p className="mt-3 text-sm leading-7 text-slate-300">
+                  Weekly time recovered from report writing and comment
+                  drafting.
+                </p>
+              </div>
+
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+                <div className="flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-slate-400">
+                  <Mail className="h-4 w-4" />
+                  Parent emails
+                </div>
+                <p className="mt-4 text-3xl font-semibold text-white">
+                  {formatNumber(weeklyEmailMinutesSaved / 60)} hours
+                </p>
+                <p className="mt-3 text-sm leading-7 text-slate-300">
+                  Weekly time recovered from clearer parent communication
+                  drafting.
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+              <h2 className="text-2xl font-semibold text-white">
+                What this calculator is really showing
+              </h2>
+              <p className="mt-4 text-base leading-8 text-slate-300">
+                The result is not just about hours. It is about fewer Sunday
+                evening rewrites, fewer late-night parent emails, and less time
+                spent searching for wording you can safely send. At the current
+                estimate, that is roughly {formatNumber(eveningsRecovered)} calm
+                evenings recovered across a school year if you measure one
+                evening as 2.5 working hours.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="grid gap-6 md:grid-cols-3">
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h2 className="text-2xl font-semibold text-white">
+              How this ROI calculator works
+            </h2>
+            <p className="mt-4 text-base leading-8 text-slate-300">
+              It multiplies your weekly writing volume by your current drafting
+              time, then applies your own time-saved assumptions. That makes it
+              more useful for planning than a single hard-coded claim.
+            </p>
+          </div>
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h2 className="text-2xl font-semibold text-white">
+              What is counted
+            </h2>
+            <p className="mt-4 text-base leading-8 text-slate-300">
+              The placeholder focuses on report comments and parent emails
+              because those are two of Zaza Draft&apos;s clearest high-intent
+              use cases. You can adapt the assumptions for heads of year,
+              tutors, and school leaders.
+            </p>
+          </div>
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+            <h2 className="text-2xl font-semibold text-white">Trust block</h2>
+            <p className="mt-4 text-base leading-8 text-slate-300">
+              Zaza Draft is a teacher-first co-writer, not an auto-send system.
+              It is built for calm drafting support, no invented student facts,
+              and professional teacher review before anything is used.
+            </p>
+          </div>
+        </section>
+
+        <section className="rounded-[32px] border border-teal-200/20 bg-gradient-to-br from-teal-300/10 via-white/5 to-amber-200/10 p-8 md:p-10">
+          <h2 className="max-w-3xl text-3xl font-semibold tracking-tight text-white md:text-4xl">
+            Try Zaza Draft after calculating the time you want back
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-8 text-slate-200">
+            If your biggest drag is report comments or parent communication,
+            Zaza Draft is designed for exactly those teacher writing tasks where
+            tone matters and time disappears.
           </p>
-        </div>
-      </section>
-
-      {/* Calculator Section */}
-      <section className="pb-20 px-6">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-8">
-          
-          {/* Inputs Panel */}
-          <div className="lg:col-span-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 h-fit">
-            <h3 className="text-xl font-bold text-white mb-8 flex items-center">
-              <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
-              Configuration
-            </h3>
-            
-            <div className="space-y-8">
-              {/* Teacher Count Slider */}
-              <div>
-                <div className="flex justify-between text-sm mb-4">
-                  <label className="text-gray-300 font-medium">{text.inputs.teachers}</label>
-                  <span className="text-purple-300 font-bold bg-purple-500/10 px-2 py-0.5 rounded">{numTeachers}</span>
-                </div>
-                <input 
-                  type="range" 
-                  min="5" max="1000" step="5"
-                  value={numTeachers}
-                  onChange={(e) => setNumTeachers(parseInt(e.target.value))}
-                  className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-purple-500 hover:accent-purple-400"
-                />
-              </div>
-
-              {/* Hourly Rate Slider */}
-              <div>
-                <div className="flex justify-between text-sm mb-4">
-                  <label className="text-gray-300 font-medium">{text.inputs.rate}</label>
-                  <span className="text-blue-300 font-bold bg-blue-500/10 px-2 py-0.5 rounded">{currencySymbol}{hourlyRate}</span>
-                </div>
-                <input 
-                  type="range" 
-                  min="15" max="150" step="1"
-                  value={hourlyRate}
-                  onChange={(e) => setHourlyRate(parseInt(e.target.value))}
-                  className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-blue-500 hover:accent-blue-400"
-                />
-              </div>
-
-              {/* Admin Hours Slider */}
-              <div>
-                <div className="flex justify-between text-sm mb-4">
-                  <label className="text-gray-300 font-medium">{text.inputs.hours}</label>
-                  <span className="text-green-300 font-bold bg-green-500/10 px-2 py-0.5 rounded">{hoursPerWeek} h</span>
-                </div>
-                <input 
-                  type="range" 
-                  min="1" max="40" step="1"
-                  value={hoursPerWeek}
-                  onChange={(e) => setHoursPerWeek(parseInt(e.target.value))}
-                  className="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-green-500 hover:accent-green-400"
-                />
-              </div>
-            </div>
-
-            <div className="mt-8 pt-6 border-t border-white/10 text-xs text-gray-500 leading-relaxed">
-              {text.explanation}
-            </div>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Button
+              asChild
+              className="bg-teal-200 text-slate-950 hover:bg-teal-100"
+            >
+              <Link
+                href="/early-access"
+                onClick={() =>
+                  handleTrialClick("roi-calculator-cta", "start-free-trial")
+                }
+              >
+                Start free trial
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="border-white/20 bg-transparent text-white hover:bg-white/10"
+            >
+              <Link
+                href="/products/draft"
+                onClick={() =>
+                  handleTrialClick(
+                    "roi-calculator-secondary",
+                    "see-how-it-works",
+                  )
+                }
+              >
+                See how it works
+              </Link>
+            </Button>
           </div>
-
-          {/* Results Panel */}
-          <div className="lg:col-span-8 space-y-6">
-            
-            {/* Main Money Card */}
-            <div className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 border border-purple-500/30 rounded-2xl p-8 relative overflow-hidden group">
-              <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                <DollarSign className="w-32 h-32 text-white" />
-              </div>
-              <div className="relative z-10">
-                <div className="text-purple-300 font-medium mb-2 flex items-center gap-2">
-                  <TrendingUp className="w-5 h-5" />
-                  {text.results.annualMoney}
-                </div>
-                <div className="text-5xl md:text-7xl font-bold text-white mb-2 tracking-tight">
-                  {currencySymbol}{formatNumber(moneySaved)}
-                </div>
-                <div className="text-gray-400 text-sm">
-                  {lang === "de" ? "pro Schuljahr gespart" : "saved per school year"}
-                </div>
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              {/* Hours Card */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-green-500/30 transition-colors">
-                <div className="text-green-300 font-medium mb-2 flex items-center gap-2">
-                  <Clock className="w-5 h-5" />
-                  {text.results.annualHours}
-                </div>
-                <div className="text-4xl font-bold text-white mb-1">
-                  {formatNumber(hoursSaved)} h
-                </div>
-                <div className="text-gray-400 text-sm">
-                  {lang === "de" ? "entspricht" : "equivalent to"} <span className="text-white font-bold">{formatNumber(Math.round(hoursSaved / 8))}</span> {lang === "de" ? "Arbeitstagen" : "work days"}
-                </div>
-              </div>
-
-              {/* Per Teacher Card */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-colors">
-                <div className="text-blue-300 font-medium mb-2 flex items-center gap-2">
-                  <Users className="w-5 h-5" />
-                  {text.results.perTeacher}
-                </div>
-                <div className="text-4xl font-bold text-white mb-1">
-                  {hoursSavedPerTeacher} h
-                </div>
-                <div className="text-gray-400 text-sm">
-                   {lang === "de" ? "mehr Zeit für Schüler" : "more time for students"}
-                </div>
-              </div>
-            </div>
-
-            {/* CTA Box */}
-            <div className="bg-[#0F172A] border border-white/10 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-              <div>
-                <h3 className="text-xl font-bold text-white mb-1">{text.cta.title}</h3>
-                <p className="text-gray-400 text-sm">{text.hero.subtitle}</p>
-              </div>
-              <div className="flex gap-3">
-                <Button asChild className="bg-white text-purple-900 hover:bg-gray-100">
-                   <Link href="/pricing">{text.cta.primary}</Link>
-                </Button>
-                <Button asChild variant="outline" className="border-white/20 text-white hover:bg-white/10 bg-transparent">
-                   <Link href="/contact">{text.cta.secondary}</Link>
-                </Button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+          {!hasCalculated ? (
+            <p className="mt-4 text-sm leading-7 text-slate-400">
+              Run the calculator first if you want a quick estimate to take into
+              a department or school discussion.
+            </p>
+          ) : null}
+        </section>
+      </main>
     </div>
-  )
+  );
 }
-

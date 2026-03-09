@@ -133,6 +133,10 @@ export function HomePageClient() {
     language === "de" ? "/de/early-access" : "/early-access";
   const founderStoryHref =
     language === "de" ? "/de/about/founder" : "/about/founder";
+  const heroEntityLine =
+    language === "de"
+      ? "Zaza Draft ist ein KI-Co-Writer für Lehrkräfte. Du prüfst, bearbeitest und freigibst jede Formulierung selbst."
+      : "Zaza Draft is a teacher-first AI co-writer. You review, edit, and approve every word before it is used.";
   const heroImageAlt =
     language === "de"
       ? "Lehrkraft prüft eine E-Mail an Eltern am Schreibtisch."
@@ -203,6 +207,14 @@ export function HomePageClient() {
                 className="text-lg lg:text-xl text-[#CBD5E1] leading-relaxed max-w-[600px] mx-auto lg:mx-0"
               >
                 {t("hero.subheading")}
+              </motion.p>
+              <motion.p
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.34, ease: "easeOut" }}
+                className="text-base text-[#94A3B8] leading-relaxed max-w-[600px] mx-auto lg:mx-0"
+              >
+                {heroEntityLine}
               </motion.p>
 
               <motion.div

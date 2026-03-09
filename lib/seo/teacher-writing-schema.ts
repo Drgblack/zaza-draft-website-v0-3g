@@ -4,16 +4,32 @@ import type {
   StructuredDataType,
   TeacherWritingPage,
 } from "@/lib/seo/teacher-writing-pages";
+import {
+  drGregBlackburnBio,
+  zazaDraftEntityDefinition,
+  zazaDraftEntityKeywords,
+} from "@/lib/seo/entity-definitions";
 
 const baseUrl = "https://zazadraft.com";
 const brandName = "Zaza Draft";
-const softwareDescription =
-  "Teacher-first AI writing support for parent communication, reports, and school writing where tone and professional judgement matter.";
+const organizationId = `${baseUrl}/#organization`;
+const softwareId = `${baseUrl}/products/draft#software`;
+
+function buildAboutEntities(page: TeacherWritingPage) {
+  return [
+    { "@id": organizationId },
+    { "@id": softwareId },
+    { "@type": "Thing", name: page.keyword },
+  ];
+}
 
 function buildFaqSchema(faq: FAQItem[]) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    about: {
+      "@id": organizationId,
+    },
     mainEntity: faq.map((item) => ({
       "@type": "Question",
       name: item.question,
@@ -54,7 +70,8 @@ function buildWebPageSchema(page: TeacherWritingPage) {
     description: page.metaDescription,
     url: `${baseUrl}/${page.slug}`,
     inLanguage: "en-GB",
-    about: page.keyword,
+    about: buildAboutEntities(page),
+    keywords: [page.keyword, ...zazaDraftEntityKeywords],
     isPartOf: {
       "@type": "WebSite",
       name: brandName,
@@ -78,7 +95,15 @@ function buildSoftwareApplicationSchema(page: TeacherWritingPage) {
       "Professional tone guidance",
       "Review-led co-writer workflow",
     ],
-    description: `${softwareDescription} This page targets the query "${page.keyword}".`,
+    description: `${zazaDraftEntityDefinition} This page targets the query "${page.keyword}".`,
+    creator: {
+      "@id": organizationId,
+    },
+    publisher: {
+      "@id": organizationId,
+    },
+    keywords: [page.keyword, ...zazaDraftEntityKeywords],
+    isAccessibleForFree: true,
   };
 }
 
@@ -90,21 +115,20 @@ function buildArticleSchema(page: TeacherWritingPage) {
     description: page.metaDescription,
     mainEntityOfPage: `${baseUrl}/${page.slug}`,
     author: {
-      "@type": "Organization",
-      name: brandName,
+      "@type": "Person",
+      name: "Dr Greg Blackburn",
+      honorificSuffix: "PhD",
+      description: drGregBlackburnBio,
     },
     publisher: {
-      "@type": "Organization",
-      name: brandName,
-      logo: {
-        "@type": "ImageObject",
-        url: `${baseUrl}/z-logo.png`,
-      },
+      "@id": organizationId,
     },
     image: `${baseUrl}${page.ogImage}`,
     datePublished: "2026-03-08",
     dateModified: "2026-03-08",
     inLanguage: "en-GB",
+    about: buildAboutEntities(page),
+    keywords: [page.keyword, ...zazaDraftEntityKeywords],
   };
 }
 

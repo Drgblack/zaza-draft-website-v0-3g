@@ -1,28 +1,18 @@
-import type { Metadata } from "next"
+import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo/site-metadata";
 
-const pageUrl = "https://zazadraft.com/support"
-
-export const metadata: Metadata = {
-  title: "Support | Zaza Draft",
-  description: "Contact Zaza Draft for help with onboarding, reports, billing, or account questions.",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Support for Teacher AI Writing Accounts and Billing | Zaza Draft",
+  description:
+    "Contact Zaza Draft for help with onboarding, billing, privacy questions, or teacher account support for parent communication and report writing workflows.",
+  path: "/support",
   alternates: {
-    canonical: pageUrl,
-    languages: {
-      en: pageUrl,
-      de: "https://zazadraft.com/de/support",
-    },
+    en: "https://zazadraft.com/support",
+    de: "https://zazadraft.com/de/support",
   },
-  openGraph: {
-    title: "Support | Zaza Draft",
-    description: "Contact Zaza Draft for help with onboarding, reports, billing, or account questions.",
-    url: pageUrl,
-    type: "website",
-    siteName: "Zaza Draft",
-    locale: "en_GB",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Support | Zaza Draft",
-    description: "Contact Zaza Draft for help with onboarding, reports, billing, or account questions.",
-  },
-}
+  keywords: [
+    "teacher AI support",
+    "Zaza Draft support",
+    "AI parent email tool support",
+  ],
+});

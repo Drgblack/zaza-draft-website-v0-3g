@@ -564,14 +564,15 @@ const translationsEn: Record<string, string> = {
   "hero.headline": "Write emails that are",
   "hero.headlineAccent": "safe to send.",
   "hero.subheading":
-    "Stop agonising over every word. Draft helps teachers write calm, defensible messages for parent and school communication, even when the thread is under pressure.",
+    "Teacher-first AI writing help for parent emails, report comments, and school messages. Draft helps teachers write calm, defensible communication when the thread is under pressure.",
   "hero.ctaPrimary": "Join Early Access",
   "hero.ctaSecondary": "See examples",
   "hero.earlyAccessLine": "Free during early access. No card required.",
-  "hero.privacyLine": "No student names needed. Not trained on your inputs.",
+  "hero.privacyLine":
+    "No student names needed. GDPR-ready and not trained on your inputs.",
   "hero.trustIndicators.hallucinationSafe": "No invented student facts",
-  "hero.trustIndicators.ferpaCompliant": "FERPA-ready",
-  "hero.trustIndicators.teachers": "Built with teachers",
+  "hero.trustIndicators.ferpaCompliant": "GDPR-ready",
+  "hero.trustIndicators.teachers": "Teacher-first co-writer",
   "hero.trustClarifier":
     "Draft rewrites teacher-provided text. Schools remain the data controller; Draft is built for privacy-first handling of communication drafts.",
   "hero.founderLine":
@@ -2132,11 +2133,11 @@ const translationsDe: Record<string, string> = {
   "hero.earlyAccessLine":
     "Kostenlos im Early Access. Keine Karte erforderlich.",
   "hero.privacyLine":
-    "Keine Schülernamen nötig. Nicht auf deinen Eingaben trainiert.",
+    "Keine Schülernamen nötig. DSGVO-orientiert und nicht auf deinen Eingaben trainiert.",
   "hero.trustIndicators.hallucinationSafe":
     "Keine erfundenen Schülerinformationen",
-  "hero.trustIndicators.ferpaCompliant": "FERPA-ready",
-  "hero.trustIndicators.teachers": "Mit Lehrkräften entwickelt",
+  "hero.trustIndicators.ferpaCompliant": "DSGVO-orientiert",
+  "hero.trustIndicators.teachers": "Lehrkraft-zentrierter Co-Writer",
   "hero.trustClarifier":
     "Draft überarbeitet von Lehrkräften bereitgestellten Text. Schulen bleiben Datenverantwortliche; Draft ist für den datenschutzorientierten Umgang mit Kommunikationsentwürfen entwickelt.",
   "hero.founderLine":

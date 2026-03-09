@@ -177,7 +177,7 @@ export default async function UkRegionalPage({ params }: PageProps) {
 Use `/uk/` for broad UK-intent phrases:
 
 - `/uk/how-to-reply-to-angry-parent-email`
-- `/uk/parents-evening-email-template-for-teachers`
+- `/uk/parents-evening-email-templates`
 - `/uk/ofsted-friendly-report-comments`
 - `/uk/behaviour-letter-home-primary-school`
 
@@ -284,7 +284,7 @@ Internal links:
 CTA:
 `Draft your next difficult reply more calmly with Zaza Draft`
 
-### 2. `/uk/parents-evening-email-template-for-teachers`
+### 2. `/uk/parents-evening-email-templates`
 
 Intent: `Template`
 
@@ -506,7 +506,7 @@ Core pages:
 - `/teacher-guide-to-sensitive-parent-emails`
 - `/how-to-communicate-concerns-to-parents-professionally`
 - `/how-to-tell-parents-their-child-is-falling-behind`
-- `/uk/parents-evening-email-template-for-teachers`
+- `/uk/parents-evening-email-templates`
 
 Linking rules:
 
@@ -553,7 +553,7 @@ Use this same block on the root hub:
 
 - [Reply to angry or difficult parent emails](/how-to-reply-to-an-angry-parent-email)
 - [Write behaviour emails and document contact clearly](/how-to-write-a-behaviour-email-to-parents)
-- [Handle parents' evening and sensitive follow-up calmly](/uk/parents-evening-email-template-for-teachers)
+- [Handle parents' evening and sensitive follow-up calmly](/uk/parents-evening-email-templates)
 - [Write balanced report comments for struggling pupils](/positive-but-honest-report-card-comments-for-struggling-students)
 - [See UK-specific teacher wording guides](/uk)
 ```
@@ -714,7 +714,7 @@ Trust items:
 
 1. `/teacher-parent-communication-hub`
 2. `/uk/how-to-reply-to-angry-parent-email`
-3. `/uk/parents-evening-email-template-for-teachers`
+3. `/uk/parents-evening-email-templates`
 4. `/uk/ofsted-friendly-report-comments`
 5. `/uk/behaviour-letter-home-primary-school`
 6. `/uk`

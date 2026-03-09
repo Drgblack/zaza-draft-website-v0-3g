@@ -3,6 +3,7 @@ import { readdirSync } from "fs";
 import { join } from "path";
 import { teacherWritingPageSlugs } from "@/lib/seo/teacher-writing-pages";
 import { getRegionalTeacherWritingSlugs } from "@/lib/seo/regional-writing-pages";
+import { clusterSpokes } from "@/lib/seo/teacher-safe-ai-cluster";
 
 const baseUrl = "https://zazadraft.com";
 const currentDate = new Date();
@@ -62,6 +63,46 @@ function buildTeacherWritingPages() {
   }));
 }
 
+function buildStandaloneEnglishPages() {
+  return [
+    {
+      url: `${baseUrl}/how-to-reply-to-an-angry-parent-email`,
+      lastModified: currentDate,
+      priority: 0.84,
+    },
+    {
+      url: `${baseUrl}/teacher-parent-communication-hub`,
+      lastModified: currentDate,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/uk`,
+      lastModified: currentDate,
+      priority: 0.82,
+    },
+    {
+      url: `${baseUrl}/england`,
+      lastModified: currentDate,
+      priority: 0.76,
+    },
+    {
+      url: `${baseUrl}/uk/teacher-communication-resources`,
+      lastModified: currentDate,
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/free-resources`,
+      lastModified: currentDate,
+      priority: 0.78,
+    },
+    ...clusterSpokes.map((page) => ({
+      url: `${baseUrl}/${page.slug}`,
+      lastModified: currentDate,
+      priority: 0.74,
+    })),
+  ];
+}
+
 function buildRegionalTeacherWritingPages() {
   const ukPages = getRegionalTeacherWritingSlugs("uk").map((slug) => ({
     url: `${baseUrl}/uk/${slug}`,
@@ -119,6 +160,7 @@ function getBlogSlugs() {
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...buildLocalizedPages(),
+    ...buildStandaloneEnglishPages(),
     ...buildTeacherWritingPages(),
     ...buildRegionalTeacherWritingPages(),
     ...getBlogSlugs(),

@@ -2512,7 +2512,7 @@ export const teacherWritingPages = {
       "Set out the next step professionally",
     ],
     featuredSnippet:
-      "To write a behaviour email to parents, describe the behaviour factually, explain its impact on learning or safety, state the school response, and outline the next step. Keep the tone calm, specific, and professional, and avoid judgemental wording.",
+      "To write a behaviour email to parents, describe the behaviour factually, explain its impact on learning, safety, or classroom routines, state what action was taken in school, and set out one clear next step. Keep the tone calm and professional rather than moralising or emotional. Avoid sweeping phrases such as 'always disruptive' or guesses about motive because they are more likely to trigger defensiveness and harder to stand behind later in school records. A good behaviour email should be brief, specific, and easy to understand on a phone. Zaza Draft can suggest safer wording, while teachers still review, edit, and approve every line.",
     sections: [
       {
         id: "why-behaviour-emails-are-hard",
@@ -2614,12 +2614,12 @@ export const teacherWritingPages = {
     },
     faq: [
       {
-        question: "Should I email home about behaviour straight away?",
+        question: "Should I email home about behaviour straight away or wait?",
         answer:
           "That depends on the severity and your school's behaviour systems. When you do email, calm and early communication is often better than writing only after frustration has built up.",
       },
       {
-        question: "How much detail should I include?",
+        question: "How much detail should I include in the behaviour email?",
         answer:
           "Enough to explain the concern clearly, but not so much that the email becomes a long incident report. Keep it factual and proportionate.",
       },
@@ -2629,9 +2629,21 @@ export const teacherWritingPages = {
           "Focus on observable behaviour, its impact, and the next step. Avoid loaded language, assumptions about motives, and sweeping statements.",
       },
       {
-        question: "Should I mention school action in the email?",
+        question: "Should I mention what we already did in school?",
         answer:
           "Usually yes, briefly. Parents often want to know that the issue was addressed and what will happen next.",
+      },
+      {
+        question:
+          "What if I need the email to be suitable for SLT or pastoral records as well?",
+        answer:
+          "Use short factual sentences, avoid speculation, and explain the next step clearly. That makes the email easier to stand behind if it is later reviewed by colleagues.",
+      },
+      {
+        question:
+          "Should I copy in the head of year on the first behaviour email?",
+        answer:
+          "Follow your school's policy. If the concern is low-level and early, a direct email home may be enough. If the issue is repeated, serious, or already escalated, copying in the relevant colleague can make sense.",
       },
       {
         question: "Can Zaza Draft help with behaviour emails?",
@@ -4256,6 +4268,11 @@ export const teacherWritingPages = {
           "Be clear enough that the concern is understood, but keep the wording calm and specific. Families need honesty, not bluntness.",
       },
       {
+        question: "Should I say 'falling behind' directly in the email?",
+        answer:
+          "You can, if you explain what that means in concrete terms. The phrase works best when it is followed by a brief explanation of the learning gap and the next step.",
+      },
+      {
         question: "Should I offer support ideas in the email?",
         answer:
           "Yes, where appropriate. Even a simple next step can make the message feel more constructive and less bleak.",
@@ -4264,6 +4281,16 @@ export const teacherWritingPages = {
         question: "What if there may be a wider issue affecting progress?",
         answer:
           "Keep the message within what you know and what you have observed. If more support is needed, invite a conversation or involve the relevant staff member.",
+      },
+      {
+        question: "How do I avoid making parents feel blamed?",
+        answer:
+          "Focus on the pupil's current learning position, what you have observed in school, and what support may help next. Avoid implying that home is at fault unless you have a specific reason and school guidance for doing so.",
+      },
+      {
+        question: "What if this email may lead to a difficult meeting later?",
+        answer:
+          "That is a reason to keep the email especially balanced and factual. Clear wording now is easier to stand behind later in parents' evening discussions or follow-up meetings.",
       },
       {
         question: "Can Zaza Draft help me phrase this more carefully?",
@@ -5682,7 +5709,7 @@ export const teacherWritingPages = {
       "Save your energy while staying in control",
     ],
     featuredSnippet:
-      "To reply to an angry parent email, pause before sending anything, acknowledge the concern without mirroring the tone, clarify the key facts briefly, and offer a practical next step such as a call or meeting. Keep the wording short, professional, and review-led.",
+      "To reply to an angry parent email calmly, pause before answering and separate the feeling from the facts. A strong teacher reply usually does four things: acknowledges the concern, states only the key verified facts, explains what has already happened in school, and offers one clear next step such as a call, meeting, or follow-up after checking with a colleague. Avoid matching the parent's tone, rebutting every accusation, or adding fresh emotional language. Keep it short enough to reread once before sending. Zaza Draft can suggest calmer wording for difficult parent communication, but teachers stay in control, edit the draft, and approve every word before it is used.",
     sections: [
       {
         id: "why-this-query-happens-late",
@@ -5803,9 +5830,27 @@ export const teacherWritingPages = {
       },
       {
         question:
+          "What if the parent is wrong and I want to correct every point?",
+        answer:
+          "Correct the key facts you can verify, but do not let the reply become a point-by-point argument. A short factual response with a next step is usually more effective than a detailed defence.",
+      },
+      {
+        question:
+          "How do I sound calm without sounding weak or apologising for the wrong thing?",
+        answer:
+          "Acknowledge the concern, not necessarily the parent's version of events. Calm wording can still be clear, bounded, and professionally firm.",
+      },
+      {
+        question:
           "Can Zaza Draft help me sound calmer without sounding robotic?",
         answer:
           "Yes. Zaza Draft is designed to produce more careful first drafts that you then edit into your own voice, rather than generic copy-and-paste responses.",
+      },
+      {
+        question:
+          "What if I am replying late at night and do not trust my tone any more?",
+        answer:
+          "That is exactly when a short structure helps. Start from the core concern, keep the facts brief, and review the draft once before sending rather than trying to write the perfect reply from scratch.",
       },
     ],
     internalLinks: [
@@ -5883,7 +5928,7 @@ export const teacherWritingPages = {
       "Customised to your voice, not generic",
     ],
     featuredSnippet:
-      "A balanced example is: '[Student] has found parts of the term challenging and still needs support to stay focused and complete tasks consistently. They do, however, respond well to clear guidance and show encouraging progress when work is carefully structured.'",
+      "To write positive but honest report card comments for struggling students, describe the real challenge clearly, add one genuine strength or positive response to support, and end with a practical next step. The aim is not to hide the struggle or soften it into vague praise. It is to write something accurate, balanced, and professionally kind. Strong comments stay specific about focus, confidence, progress, behaviour, or attainment rather than making sweeping statements about the child. They should also be safe to stand behind at parents' evening or in later follow-up. Zaza Draft helps teachers shape report comments faster, but the teacher still checks the facts, adjusts the tone, and approves the final wording.",
     sections: [
       {
         id: "why-this-is-so-hard",
@@ -6002,9 +6047,25 @@ export const teacherWritingPages = {
           "That is exactly where a calmer first draft helps. It reduces repetition while still letting you review each comment properly.",
       },
       {
+        question: "How do I say a pupil is behind without sounding cruel?",
+        answer:
+          "Describe the area of difficulty and the kind of support that helps rather than making the pupil sound fixed in that struggle. Specific wording usually feels fairer than blunt labels.",
+      },
+      {
+        question:
+          "Can I mention SEN, confidence, or emotional factors in a report comment?",
+        answer:
+          "Only if that fits your school's approach, your role, and what is appropriate to share in the report. Where needed, keep the wording proportionate and grounded in observed learning.",
+      },
+      {
         question: "Should these examples be copied directly?",
         answer:
           "No. They work best as models for customised wording that still sounds like you and fits the pupil accurately.",
+      },
+      {
+        question: "What if there has been very little progress this term?",
+        answer:
+          "Be honest about that, but keep the wording measured and constructive. You can state that progress remains limited while still naming the support, routines, or next steps that may help.",
       },
       {
         question:
@@ -6398,6 +6459,12 @@ export const teacherWritingPages = {
           "Detailed enough to be useful later, but not so detailed that it becomes another essay. Focus on facts, not every emotional detail.",
       },
       {
+        question:
+          "What do I actually write after a missed phone call or no reply?",
+        answer:
+          "Record the date, time, method attempted, and what you did next. A simple factual note is enough, such as that a call was attempted and a follow-up email was sent.",
+      },
+      {
         question: "Should my contact notes sound formal?",
         answer:
           "They should sound professional and factual. Brevity is often more useful than heavy formal wording.",
@@ -6406,6 +6473,17 @@ export const teacherWritingPages = {
         question: "Can the same note be adapted for email and school records?",
         answer:
           "Yes. A strong core summary can usually be reshaped into a parent email, internal log, and follow-up note with lighter editing.",
+      },
+      {
+        question:
+          "How do I keep my notes usable for SLT, safeguarding, or pastoral follow-up?",
+        answer:
+          "Stick to observable facts, the communication method, and the agreed next step. Notes are usually strongest when they avoid speculation and emotional commentary.",
+      },
+      {
+        question: "How do I stop this admin work swallowing the whole evening?",
+        answer:
+          "Use a repeatable structure and keep the note short. The point is to create a usable record, not to rewrite the whole incident in full prose every time.",
       },
       {
         question:
@@ -6981,7 +7059,7 @@ export const teacherWritingPages = {
           "Go here if the email is really a follow-up to an awkward meeting or conversation.",
       },
       {
-        href: "/uk/parents-evening-email-template-for-teachers",
+        href: "/uk/parents-evening-email-templates",
         label: "UK Parents' Evening Email Template",
         description:
           "Use the UK page for a more British school context around meetings and follow-up wording.",
@@ -7161,7 +7239,7 @@ export const teacherWritingPages = {
           "Go here for the broader cluster of emotionally difficult parent communication.",
       },
       {
-        href: "/uk/parents-evening-email-template-for-teachers",
+        href: "/uk/parents-evening-email-templates",
         label: "UK Parents' Evening Email Template",
         description:
           "Use the UK-specific page if you want more British school-language context around parents' evening.",
