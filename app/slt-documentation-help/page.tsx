@@ -1,7 +1,7 @@
-import { redirect } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 
 export default function SltDocumentationHelpRedirectPage() {
-  redirect(
+  permanentRedirect(
     "/diagnosis?issue=documentation-for-slt&studentContext=behaviour-issues&tone=professional-but-empathetic",
   );
 }

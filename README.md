@@ -175,6 +175,324 @@ Set the following in your Vercel project settings:
 - Robots.txt configured
 - Open Graph tags for social sharing
 
+## Diagnosis Tool
+
+The parent communication and report diagnosis experience lives at `/diagnosis`.
+
+Main files:
+
+- `app/diagnosis/page.tsx`
+- `components/CommunicationDiagnosis.tsx`
+- `components/DiagnosisResultCard.tsx`
+- `lib/diagnosis-rules.ts`
+
+How to add or change rules:
+
+1. Add or update a recommendation in `recommendationLibrary` inside `lib/diagnosis-rules.ts`.
+2. Add a new rule object to `diagnosisRules` with a stable `id`, a `priority`, a `matches` predicate, and one or more recommendation keys.
+3. Keep `why` bullets specific to the teacher context, for example `UK primary follow-up` or `Direct fit for de-escalation`.
+4. If the rule needs a new long-tail entry route, add a redirect page under `app/` that points into `/diagnosis` with prefilled query params.
+
+How to test the diagnosis flow:
+
+```bash
+pnpm run lint
+pnpm run build
+```
+
+Manual checks:
+
+1. Open `/diagnosis` and submit an angry parent case with `de-escalate`.
+2. Open `/how-to-reply-angry-parent` and confirm it permanently redirects to `/diagnosis?issue=angry-parent-email&tone=de-escalate`.
+3. Confirm `/sitemap.xml` includes `/diagnosis` and the helper redirect routes.
+4. In the browser, verify diagnosis events appear through the existing analytics wiring.
+
+Structured data integration:
+
+- `app/diagnosis/page.tsx` already renders `Article`, `SoftwareApplication`, `FAQPage`, `HowTo`, and `BreadcrumbList` through `components/StructuredData.tsx`.
+- Keep the canonical path as `/diagnosis` when adding schema.
+- Add new FAQ items to `diagnosisFaqs` in `lib/diagnosis-rules.ts` so the UI and JSON-LD stay aligned.
+
+Expansion ideas:
+
+- Add more subject-specific report-comment recommendations as new programmatic pages go live.
+- Add more redirect helper routes for high-intent teacher searches.
+- Add server-side storage later if you want anonymised diagnosis trends beyond client analytics.
+
+## Matrix Programmatic Pages
+
+The new matrix-driven pain and scenario expansion lives in:
+
+- `lib/matrix.ts`
+- `components/ScenarioPage.tsx`
+- `app/scenario/[phase]/[issue]/[year-group]/page.tsx`
+- `app/report-comments/[student-type]/[subject]/[phase]/page.tsx`
+
+Current matrix scale:
+
+- `207` scenario pages
+- `304` report-comment pages
+- `511` total new matrix combinations
+
+This keeps the current launch focused on valid, teacher-relevant combinations while taking the site comfortably past the previous page count. The report-comments route keeps the `[phase]` segment name, but it accepts both stage slugs such as `ks2` and year-specific slugs such as `year-5` so coverage can grow without a breaking route change.
+
+How to scale this to 2,000+ pages:
+
+1. Add more student types in `lib/matrix.ts`.
+2. Add more subject families beyond `english`, `maths`, `science`, and `all-subjects`.
+3. Add more issue families or school-context modifiers to the scenario matrix.
+4. Add region-specific variants once UK sub-clusters need separate wording.
+
+Quality checks for matrix pages:
+
+1. Keep rendered copy in the `900-1500` word range.
+2. Make sure the exact target keyword appears in the title, H1, hero copy, at least one H2, and the meta description.
+3. Keep UK English spelling and school context, including behaviour, parents' evening, Ofsted, SEN, safeguarding, and professional communication where relevant.
+4. Do not let pages drift into generic AI copy. Zaza Draft should remain a calm teacher-first co-writer with teachers in control.
+5. Keep examples conservative and editable. Do not imply automatic sending or invented pupil facts.
+
+Sitemap inclusion:
+
+- `app/sitemap.ts` now imports `getMatrixSitemapEntries()` from `lib/matrix.ts` so all generated scenario and report-comment URLs are included automatically.
+
+First 50 example slugs and titles:
+
+```text
+scenario/primary/behaviour/year-1 - Behaviour email help for Year 1 Primary teachers | Zaza Draft
+scenario/primary/missing-homework/year-1 - Missing homework email help for Year 1 Primary teachers | Zaza Draft
+scenario/primary/angry-parent/year-1 - Angry parent email reply help for Year 1 Primary teachers | Zaza Draft
+scenario/primary/sen-support/year-1 - SEN support email help for Year 1 Primary teachers | Zaza Draft
+scenario/primary/low-attainment/year-1 - Low attainment message help for Year 1 Primary teachers | Zaza Draft
+scenario/primary/anxiety/year-1 - Anxiety-sensitive email help for Year 1 Primary teachers | Zaza Draft
+scenario/primary/grade-complaint/year-1 - Grade complaint reply help for Year 1 Primary teachers | Zaza Draft
+scenario/primary/disorganisation/year-1 - Disorganisation message help for Year 1 Primary teachers | Zaza Draft
+scenario/primary/parents-evening/year-1 - Parents' evening follow-up help for Year 1 Primary teachers | Zaza Draft
+scenario/primary/behaviour/year-2 - Behaviour email help for Year 2 Primary teachers | Zaza Draft
+scenario/primary/missing-homework/year-2 - Missing homework email help for Year 2 Primary teachers | Zaza Draft
+scenario/primary/angry-parent/year-2 - Angry parent email reply help for Year 2 Primary teachers | Zaza Draft
+scenario/primary/sen-support/year-2 - SEN support email help for Year 2 Primary teachers | Zaza Draft
+scenario/primary/low-attainment/year-2 - Low attainment message help for Year 2 Primary teachers | Zaza Draft
+scenario/primary/anxiety/year-2 - Anxiety-sensitive email help for Year 2 Primary teachers | Zaza Draft
+scenario/primary/grade-complaint/year-2 - Grade complaint reply help for Year 2 Primary teachers | Zaza Draft
+scenario/primary/disorganisation/year-2 - Disorganisation message help for Year 2 Primary teachers | Zaza Draft
+scenario/primary/parents-evening/year-2 - Parents' evening follow-up help for Year 2 Primary teachers | Zaza Draft
+scenario/primary/behaviour/year-3 - Behaviour email help for Year 3 Primary teachers | Zaza Draft
+scenario/primary/missing-homework/year-3 - Missing homework email help for Year 3 Primary teachers | Zaza Draft
+scenario/primary/angry-parent/year-3 - Angry parent email reply help for Year 3 Primary teachers | Zaza Draft
+scenario/primary/sen-support/year-3 - SEN support email help for Year 3 Primary teachers | Zaza Draft
+scenario/primary/low-attainment/year-3 - Low attainment message help for Year 3 Primary teachers | Zaza Draft
+scenario/primary/anxiety/year-3 - Anxiety-sensitive email help for Year 3 Primary teachers | Zaza Draft
+scenario/primary/grade-complaint/year-3 - Grade complaint reply help for Year 3 Primary teachers | Zaza Draft
+scenario/primary/disorganisation/year-3 - Disorganisation message help for Year 3 Primary teachers | Zaza Draft
+scenario/primary/parents-evening/year-3 - Parents' evening follow-up help for Year 3 Primary teachers | Zaza Draft
+scenario/primary/behaviour/year-4 - Behaviour email help for Year 4 Primary teachers | Zaza Draft
+scenario/primary/missing-homework/year-4 - Missing homework email help for Year 4 Primary teachers | Zaza Draft
+scenario/primary/angry-parent/year-4 - Angry parent email reply help for Year 4 Primary teachers | Zaza Draft
+scenario/primary/sen-support/year-4 - SEN support email help for Year 4 Primary teachers | Zaza Draft
+scenario/primary/low-attainment/year-4 - Low attainment message help for Year 4 Primary teachers | Zaza Draft
+scenario/primary/anxiety/year-4 - Anxiety-sensitive email help for Year 4 Primary teachers | Zaza Draft
+scenario/primary/grade-complaint/year-4 - Grade complaint reply help for Year 4 Primary teachers | Zaza Draft
+scenario/primary/disorganisation/year-4 - Disorganisation message help for Year 4 Primary teachers | Zaza Draft
+scenario/primary/parents-evening/year-4 - Parents' evening follow-up help for Year 4 Primary teachers | Zaza Draft
+scenario/primary/behaviour/year-5 - Behaviour email help for Year 5 Primary teachers | Zaza Draft
+scenario/primary/missing-homework/year-5 - Missing homework email help for Year 5 Primary teachers | Zaza Draft
+scenario/primary/angry-parent/year-5 - Angry parent email reply help for Year 5 Primary teachers | Zaza Draft
+scenario/primary/sen-support/year-5 - SEN support email help for Year 5 Primary teachers | Zaza Draft
+scenario/primary/low-attainment/year-5 - Low attainment message help for Year 5 Primary teachers | Zaza Draft
+scenario/primary/anxiety/year-5 - Anxiety-sensitive email help for Year 5 Primary teachers | Zaza Draft
+scenario/primary/grade-complaint/year-5 - Grade complaint reply help for Year 5 Primary teachers | Zaza Draft
+scenario/primary/disorganisation/year-5 - Disorganisation message help for Year 5 Primary teachers | Zaza Draft
+scenario/primary/parents-evening/year-5 - Parents' evening follow-up help for Year 5 Primary teachers | Zaza Draft
+scenario/primary/behaviour/year-6 - Behaviour email help for Year 6 Primary teachers | Zaza Draft
+scenario/primary/missing-homework/year-6 - Missing homework email help for Year 6 Primary teachers | Zaza Draft
+scenario/primary/angry-parent/year-6 - Angry parent email reply help for Year 6 Primary teachers | Zaza Draft
+scenario/primary/sen-support/year-6 - SEN support email help for Year 6 Primary teachers | Zaza Draft
+scenario/primary/low-attainment/year-6 - Low attainment message help for Year 6 Primary teachers | Zaza Draft
+```
+
+## UK Cluster Pages
+
+The UK-specific cluster expansion lives in:
+
+- `lib/uk-matrix.ts`
+- `components/UkClusterPage.tsx`
+- `app/uk/parents-evening-email-templates/[phase]/page.tsx`
+- `app/uk/ofsted-friendly-report-comments/[subject]/page.tsx`
+- `app/uk/behaviour-letter-home/[year-group]/page.tsx`
+- `app/uk/sen-report-comments/[need]/page.tsx`
+
+What the UK matrix covers:
+
+- Parents' evening email templates by phase
+- Ofsted-friendly report comments by subject
+- Behaviour letters home by year group
+- SEN report comments by need
+
+How to add or update UK pages:
+
+1. Add or update the slug arrays in `lib/uk-matrix.ts`.
+2. Adjust the relevant page builder in `lib/uk-matrix.ts` so the title, H1, meta description, hero copy, examples, and FAQ stay aligned.
+3. Keep the target keyword in the title, H1, first body section, at least one H2, and the meta description.
+4. Check that internal links still point to live UK or core pages.
+
+Quality checks for UK pages:
+
+1. Keep British spelling throughout, including behaviour, personalised, organisation, and parents' evening.
+2. Treat "Ofsted-friendly" as a tone and evidence standard, not as a claim of approval.
+3. Keep GDPR-aware language and avoid unnecessary pupil detail in examples.
+4. Preserve the teacher-first positioning. Zaza Draft supports drafting, but teachers still edit and approve every word.
+5. Keep SEN wording person-centred and avoid diagnostic overreach.
+
+Mirroring `/de/` logic later:
+
+- Keep the route families the same and mirror the data-builder pattern rather than forking the component tree.
+- Reuse `components/UkClusterPage.tsx` only if the design stays shared. Put translated copy dictionaries and region-specific compliance notes in a separate matrix file.
+- Keep locale-specific schema copy, keywords, and trust text close to the matrix layer so UK and German variants can diverge safely without changing route logic.
+- `app/sitemap.ts` now imports `getUkClusterSitemapEntries()` so new UK matrix pages are included automatically once they are added to `lib/uk-matrix.ts`.
+
+## Expanded Blog Landings
+
+The blog-to-landing expansion flow lives in:
+
+- `scripts/expand-from-blog.ts`
+- `lib/expanded-pages.ts`
+- `components/ExpandedBlogLandingPage.tsx`
+- `app/expanded/[slug]/[variant]/page.tsx`
+
+What it does:
+
+- Reads the current English blog inventory through `lib/cms/posts.ts`
+- Detects qualifying seed posts around parent communication, report comments, safe AI, and workload reduction
+- Generates nested markdown pages in `expanded-pages/<blog-slug>/<variant>.md`
+- Writes a manifest to `expanded-pages/_meta/manifest.json`
+- Writes the current first 50 generated slugs to `expanded-pages/_meta/first-50.txt`
+
+How to run it:
+
+1. Run `pnpm exec tsx scripts/expand-from-blog.ts --clean` to rebuild the current expanded landing set from scratch.
+2. Add `--dry-run` if you want to inspect the planned output without writing files.
+3. Add `--print-first-50` if you want the first 50 generated slugs echoed in the terminal.
+
+Current expansion output:
+
+- `39` qualifying English blog seeds
+- `436` generated `/expanded/[slug]/[variant]` pages
+- generated word-count range: `1365` to `1428`
+
+Sitemap integration:
+
+- `app/sitemap.ts` now imports `getExpandedPageSitemapEntries()` from `lib/expanded-pages.ts`.
+- No manual sitemap editing is needed after generation. Once markdown files exist in `expanded-pages/`, the `/expanded/...` URLs are included automatically.
+
+Quality checks for expanded landings:
+
+1. Keep each page above `900` words. The current generator writes pages in the `1365-1428` range.
+2. Keep the seed keyword and variant keyword in the title, H1, hero copy, and meta description.
+3. Link back to both the source blog post and the relevant hub page.
+4. Keep the tone teacher-first, calm, and conservative. Do not let the expanded pages drift into broad AI-platform language.
+5. Keep the examples editable and low-risk. Teachers still review and approve every final word.
+
+First 50 generated slugs:
+
+- Stored in `expanded-pages/_meta/first-50.txt`
+- Full page manifest is in `expanded-pages/_meta/manifest.json`
+
+## Technical Multipliers
+
+Shared helpers:
+
+- `lib/seo-helpers.ts` now provides `PROGRAMMATIC_ISR_SECONDS`, `canonicalPath()`, `buildProgrammaticMetadata()`, and `buildProgrammaticNotFoundMetadata()`.
+- Use these helpers for dynamic and matrix-driven pages so canonicals, metadata shape, and weekly ISR stay consistent across scenario, comparison, diagnosis, UK, and expanded routes.
+
+Example `page.tsx` pattern:
+
+```tsx
+import { StructuredData } from "@/components/StructuredData";
+import { buildProgrammaticMetadata } from "@/lib/seo-helpers";
+
+export const revalidate = 604800;
+
+export const metadata = buildProgrammaticMetadata({
+  title:
+    "Parent Email and Report Problem Diagnosis - Teacher Help | Zaza Draft",
+  description:
+    "Diagnose your parent email, report comment, behaviour, or tone problem and get calmer Zaza Draft recommendations built for teachers.",
+  path: "/diagnosis",
+  keywords: [
+    "parent email diagnosis for teachers",
+    "report comment diagnosis",
+    "teacher communication help",
+  ],
+});
+
+export default function ExamplePage() {
+  return (
+    <>
+      <StructuredData
+        type="HowTo"
+        data={{
+          id: "example-howto-jsonld",
+          path: "/diagnosis",
+          title: "How to use the diagnosis tool",
+          description:
+            "Describe the issue, review matched pages, and draft calmly with teacher control.",
+          steps: [
+            { name: "Describe the issue", text: "Choose the closest inputs." },
+            { name: "Review matched pages", text: "Open the best-fit result." },
+          ],
+        }}
+      />
+      <StructuredData
+        type="FAQPage"
+        data={{
+          id: "example-faq-jsonld",
+          path: "/diagnosis",
+          title: "Diagnosis FAQ",
+          description: "Common questions about using the diagnosis flow.",
+          faqs: [
+            {
+              question: "Is this still teacher-controlled?",
+              answer: "Yes. Teachers review and approve every final word.",
+            },
+          ],
+        }}
+      />
+      <StructuredData
+        type="BreadcrumbList"
+        data={{
+          id: "example-breadcrumb-jsonld",
+          path: "/diagnosis",
+          title: "Diagnosis",
+          description: "Parent communication and report diagnosis",
+          breadcrumbs: {
+            "/diagnosis": "Diagnosis",
+          },
+        }}
+      />
+    </>
+  );
+}
+```
+
+ISR and on-demand revalidation:
+
+- Programmatic routes use `export const revalidate = 604800`.
+- Keep the weekly interval documented in `lib/seo-helpers.ts`, but note that Next.js route config exports must stay as literals, not imported constants.
+- On-demand revalidation runs through `app/api/revalidate-programmatic/route.ts`.
+- By default, that route now revalidates the core dynamic hubs and path families as well as the original programmatic seeds.
+- You can `POST` to `/api/revalidate-programmatic?secret=YOUR_SECRET` with:
+  - `{ "paths": ["/diagnosis", "/alternatives/chatgpt/parent-emails"] }`
+  - `{ "paths": ["/uk/ofsted-friendly-report-comments/english"], "includeDefaults": false }`
+
+Validation steps after changing programmatic routes:
+
+1. Run `pnpm run typecheck`.
+2. Run `pnpm run lint`.
+3. Run `pnpm run build`.
+4. Spot-check canonical output in page metadata for one route in each family.
+5. Spot-check JSON-LD coverage so each new route still has `HowTo`, `FAQPage`, and `BreadcrumbList` where expected.
+6. If diagnosis tracking changed, verify GA4 events in the browser for `diagnosis_page_viewed`, `diagnosis_completed`, `diagnosis_recommendation_clicked`, and `diagnosis_cta_clicked`.
+
 ## Accessibility
 
 - Semantic HTML throughout

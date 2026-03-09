@@ -6,6 +6,10 @@ import { teacherWritingPageSlugs } from "@/lib/seo/teacher-writing-pages";
 import { clusterSpokes } from "@/lib/seo/teacher-safe-ai-cluster";
 import { getRegionalTeacherWritingSlugs } from "@/lib/seo/regional-writing-pages";
 import { getProgrammaticSitemapEntries } from "@/lib/programmatic";
+import { getMatrixSitemapEntries } from "@/lib/matrix";
+import { getComparisonSitemapEntries } from "@/lib/comparison-matrix";
+import { getUkClusterSitemapEntries } from "@/lib/uk-matrix";
+import { getExpandedPageSitemapEntries } from "@/lib/expanded-pages";
 
 const BASE_URL = "https://zazadraft.com";
 
@@ -252,6 +256,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: now,
   }));
 
+  const dynamicProgrammaticEntries: MetadataRoute.Sitemap = [
+    ...getUkClusterSitemapEntries(now),
+    ...getExpandedPageSitemapEntries(now),
+    ...getComparisonSitemapEntries(now),
+    ...getMatrixSitemapEntries(now),
+    ...getProgrammaticSitemapEntries(now),
+    ...getGeneratedPageSitemapEntries(now),
+  ];
+
   return dedupeEntries([
     ...primaryEntries.map(toSitemapEntry),
     ...coreMarketingEntries.map(toSitemapEntry),
@@ -260,8 +273,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...topicalClusterEntries.map(toSitemapEntry),
     ...ukEntries.map(toSitemapEntry),
     ...englandEntries.map(toSitemapEntry),
-    ...getProgrammaticSitemapEntries(now),
-    ...getGeneratedPageSitemapEntries(now),
+    ...dynamicProgrammaticEntries,
     ...getBlogEntries(),
   ]);
 }

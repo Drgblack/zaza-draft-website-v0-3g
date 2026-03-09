@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 
 export default function HowToReplyAngryParentRedirectPage() {
-  redirect("/diagnosis?issue=angry-parent-email&tone=de-escalate");
+  permanentRedirect("/diagnosis?issue=angry-parent-email&tone=de-escalate");
 }

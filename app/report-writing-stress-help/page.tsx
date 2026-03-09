@@ -1,7 +1,7 @@
-import { redirect } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 
 export default function ReportWritingStressRedirectPage() {
-  redirect(
+  permanentRedirect(
     "/diagnosis?issue=report-writing-stress&studentContext=struggling-academically&tone=detailed-report&phase=ks2",
   );
 }

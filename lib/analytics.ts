@@ -12,15 +12,37 @@ type AnalyticsNamespace = {
   watchRecording: (id: string | number, title?: string) => void;
 };
 
+function toTrackProps(props?: TrackProps): TrackProps | undefined {
+  if (!props) {
+    return undefined;
+  }
+
+  const entries = Object.entries(props).filter(
+    ([, value]) =>
+      value !== undefined &&
+      (typeof value === "string" ||
+        typeof value === "number" ||
+        typeof value === "boolean"),
+  );
+
+  return entries.length ? Object.fromEntries(entries) : undefined;
+}
+
 const baseTrack = (event: string, props?: TrackProps) => {
   if (typeof window === "undefined") return;
+  const cleanProps = toTrackProps(props);
   try {
-    window.plausible?.(event, props as PlausibleProps);
+    window.plausible?.(event, cleanProps as PlausibleProps);
   } catch {
     // no-op
   }
   try {
-    (window as any)?.analytics?.track?.(event, props);
+    (window as any)?.analytics?.track?.(event, cleanProps);
+  } catch {
+    // no-op
+  }
+  try {
+    window.gtag?.("event", event, cleanProps);
   } catch {
     // no-op
   }
@@ -52,6 +74,54 @@ export const track = (event: string, props?: Record<string, any>) =>
   baseTrack(event, props);
 export const trackEvent = (event: string, props?: Record<string, any>) =>
   baseTrack(event, props);
+
+type DiagnosisEventProps = {
+  issue?: string;
+  phase?: string;
+  studentContexts?: string[];
+  toneNeeds?: string[];
+  recommendations?: number;
+  topRecommendation?: string;
+  pageSlug?: string;
+  trigger?: "manual" | "prefilled";
+};
+
+function toDiagnosisProps(props: DiagnosisEventProps = {}) {
+  return {
+    issue: props.issue,
+    phase: props.phase,
+    student_contexts: props.studentContexts?.join(",") || undefined,
+    tone_needs: props.toneNeeds?.join(",") || undefined,
+    recommendations: props.recommendations,
+    top_recommendation: props.topRecommendation,
+    page_slug: props.pageSlug,
+    trigger: props.trigger,
+  };
+}
+
+export const trackDiagnosisPageViewed = (props: DiagnosisEventProps = {}) =>
+  baseTrack("diagnosis_page_viewed", toDiagnosisProps(props));
+
+export const trackDiagnosisRun = (props: DiagnosisEventProps = {}) =>
+  baseTrack(
+    props.trigger === "prefilled"
+      ? "diagnosis_prefilled_run"
+      : "diagnosis_completed",
+    toDiagnosisProps(props),
+  );
+
+export const trackDiagnosisReset = (props: DiagnosisEventProps = {}) =>
+  baseTrack("diagnosis_reset_clicked", toDiagnosisProps(props));
+
+export const trackDiagnosisFormCleared = () =>
+  baseTrack("diagnosis_form_cleared");
+
+export const trackDiagnosisRecommendationClick = (
+  props: DiagnosisEventProps = {},
+) => baseTrack("diagnosis_recommendation_clicked", toDiagnosisProps(props));
+
+export const trackDiagnosisCtaClick = (props: DiagnosisEventProps = {}) =>
+  baseTrack("diagnosis_cta_clicked", toDiagnosisProps(props));
 
 export const trackTrialStart = ({
   placement,

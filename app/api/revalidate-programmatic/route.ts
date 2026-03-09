@@ -4,8 +4,11 @@ import {
   PROGRAMMATIC_REVALIDATE_TAG,
   getProgrammaticSeedPaths,
 } from "@/lib/programmatic";
+import { getDefaultRevalidationPaths } from "@/lib/seo-helpers";
 
-const DEFAULT_PATHS = getProgrammaticSeedPaths();
+const DEFAULT_PATHS = Array.from(
+  new Set([...getDefaultRevalidationPaths(), ...getProgrammaticSeedPaths()]),
+);
 
 export async function POST(request: NextRequest) {
   const secret = request.nextUrl.searchParams.get("secret");
@@ -19,10 +22,11 @@ export async function POST(request: NextRequest) {
   }
 
   const body = await request.json().catch(() => ({}));
-  const paths =
-    Array.isArray(body?.paths) && body.paths.length
-      ? body.paths
-      : DEFAULT_PATHS;
+  const requestedPaths = Array.isArray(body?.paths) ? body.paths : [];
+  const includeDefaults = body?.includeDefaults !== false;
+  const paths = Array.from(
+    new Set([...(includeDefaults ? DEFAULT_PATHS : []), ...requestedPaths]),
+  );
 
   for (const path of paths) {
     if (typeof path === "string" && path.startsWith("/")) {

@@ -1,19 +1,24 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { ProgrammaticPage } from "@/components/ProgrammaticPage";
+import { ComparisonPage } from "@/components/ComparisonPage";
 import {
-  generateMetadata as buildProgrammaticMetadata,
-  seedAlternativeParams,
-  slugToProps,
-} from "@/lib/programmatic-seo";
+  buildComparisonPageData,
+  getComparisonParams,
+  type Competitor,
+  type UseCase,
+} from "@/lib/comparison-matrix";
+import {
+  buildProgrammaticMetadata,
+  buildProgrammaticNotFoundMetadata,
+} from "@/lib/seo-helpers";
 
 export const revalidate = 604800;
 export const dynamicParams = true;
 
 export function generateStaticParams() {
-  return seedAlternativeParams.map(([competitor, useCase]) => ({
+  return getComparisonParams().map(({ competitor, usecase }) => ({
     competitor,
-    useCase,
+    useCase: usecase,
   }));
 }
 
@@ -22,11 +27,34 @@ export function generateMetadata({
 }: {
   params: { competitor: string; useCase: string };
 }): Metadata {
-  return buildProgrammaticMetadata([
-    "alternatives",
-    params.competitor,
-    params.useCase,
-  ]);
+  const page = buildComparisonPageData(
+    params.competitor as Competitor,
+    params.useCase as UseCase,
+  );
+
+  if (!page) {
+    return buildProgrammaticNotFoundMetadata(
+      "Comparison page not found | Zaza Draft",
+      "The requested comparison page could not be found.",
+    );
+  }
+
+  return buildProgrammaticMetadata({
+    title: page.title,
+    description: page.metaDescription,
+    path: page.path,
+    type: "article",
+    keywords: [
+      page.keyword,
+      "alternative to teacher ai tool",
+      "teacher writing support",
+      "parent communication",
+      "report comments",
+      "tone safety",
+      "professional communication",
+      "teacher-first AI",
+    ],
+  });
 }
 
 export default function AlternativesProgrammaticPage({
@@ -34,11 +62,14 @@ export default function AlternativesProgrammaticPage({
 }: {
   params: { competitor: string; useCase: string };
 }) {
-  const page = slugToProps(["alternatives", params.competitor, params.useCase]);
+  const page = buildComparisonPageData(
+    params.competitor as Competitor,
+    params.useCase as UseCase,
+  );
 
   if (!page) {
     notFound();
   }
 
-  return <ProgrammaticPage page={page} />;
+  return <ComparisonPage page={page} />;
 }

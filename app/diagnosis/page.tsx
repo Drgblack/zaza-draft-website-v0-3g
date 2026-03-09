@@ -6,7 +6,7 @@ import {
   diagnosisInternalLinks,
   type DiagnosisInputs,
 } from "@/lib/diagnosis-rules";
-import { defaultMetadata } from "@/lib/metadata";
+import { buildProgrammaticMetadata } from "@/lib/seo-helpers";
 
 export const revalidate = 604800;
 
@@ -66,7 +66,7 @@ function getInitialValues(
   };
 }
 
-export const metadata = defaultMetadata({
+export const metadata = buildProgrammaticMetadata({
   title,
   description,
   path: "/diagnosis",
@@ -91,6 +91,15 @@ export default function DiagnosisPage({ searchParams }: DiagnosisPageProps) {
         type="Article"
         data={{
           id: "diagnosis-article-jsonld",
+          path: "/diagnosis",
+          title,
+          description,
+        }}
+      />
+      <StructuredData
+        type="SoftwareApplication"
+        data={{
+          id: "diagnosis-software-jsonld",
           path: "/diagnosis",
           title,
           description,

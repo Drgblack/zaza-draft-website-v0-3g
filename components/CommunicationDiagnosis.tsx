@@ -2,8 +2,16 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { track } from "@/lib/analytics";
 import {
+  trackDiagnosisCtaClick,
+  trackDiagnosisFormCleared,
+  trackDiagnosisPageViewed,
+  trackDiagnosisRecommendationClick,
+  trackDiagnosisReset,
+  trackDiagnosisRun,
+} from "@/lib/analytics";
+import {
+  broadDiagnosisPageSlugs,
   diagnose,
   emptyDiagnosisInputs,
   mainIssueOptions,
@@ -73,10 +81,13 @@ function MultiSelectChips<T extends string>({
 export function CommunicationDiagnosis({
   initialValues,
 }: CommunicationDiagnosisProps) {
-  const hydratedInitialValues = normaliseDiagnosisInputs({
-    ...emptyDiagnosisInputs(),
-    ...initialValues,
-  });
+  const initialValuesRef = useRef(
+    normaliseDiagnosisInputs({
+      ...emptyDiagnosisInputs(),
+      ...initialValues,
+    }),
+  );
+  const hydratedInitialValues = initialValuesRef.current;
   const [formState, setFormState] = useState<DiagnosisInputs>(
     hydratedInitialValues,
   );
@@ -85,7 +96,7 @@ export function CommunicationDiagnosis({
   const autoSubmitted = useRef(false);
 
   useEffect(() => {
-    track("diagnosis_page_viewed", {
+    trackDiagnosisPageViewed({
       issue: hydratedInitialValues.issue || undefined,
       phase: hydratedInitialValues.phase || undefined,
     });
@@ -110,10 +121,14 @@ export function CommunicationDiagnosis({
     const nextResults = diagnose(hydratedInitialValues);
     setResults(nextResults);
     setHasSubmitted(true);
-    track("diagnosis_prefilled_run", {
+    trackDiagnosisRun({
       issue: hydratedInitialValues.issue || undefined,
       phase: hydratedInitialValues.phase || undefined,
+      studentContexts: hydratedInitialValues.studentContexts,
+      toneNeeds: hydratedInitialValues.toneNeeds,
       recommendations: nextResults.length,
+      topRecommendation: nextResults[0]?.pageSlug,
+      trigger: "prefilled",
     });
   }, [hydratedInitialValues]);
 
@@ -122,31 +137,46 @@ export function CommunicationDiagnosis({
     const nextResults = diagnose(formState);
     setResults(nextResults);
     setHasSubmitted(true);
-    track("diagnosis_completed", {
+    trackDiagnosisRun({
       issue: formState.issue || undefined,
       phase: formState.phase || undefined,
-      student_contexts: formState.studentContexts.join(",") || undefined,
-      tone_needs: formState.toneNeeds.join(",") || undefined,
+      studentContexts: formState.studentContexts,
+      toneNeeds: formState.toneNeeds,
       recommendations: nextResults.length,
-      top_recommendation: nextResults[0]?.pageSlug,
+      topRecommendation: nextResults[0]?.pageSlug,
+      trigger: "manual",
     });
   };
 
   const handleReset = () => {
     setHasSubmitted(false);
     setResults([]);
-    track("diagnosis_reset_clicked", {
+    trackDiagnosisReset({
       issue: formState.issue || undefined,
     });
   };
 
+  const handleClearForm = () => {
+    setFormState(emptyDiagnosisInputs());
+    setHasSubmitted(false);
+    setResults([]);
+    trackDiagnosisFormCleared();
+  };
+
   const handleRecommendationOpen = (recommendation: Recommendation) => {
-    track("diagnosis_recommendation_clicked", {
-      page_slug: recommendation.pageSlug,
+    trackDiagnosisRecommendationClick({
+      pageSlug: recommendation.pageSlug,
       issue: formState.issue || undefined,
       phase: formState.phase || undefined,
+      studentContexts: formState.studentContexts,
+      toneNeeds: formState.toneNeeds,
     });
   };
+
+  const shouldSuggestMoreDetail =
+    hasSubmitted &&
+    (!formState.issue ||
+      broadDiagnosisPageSlugs.includes(results[0]?.pageSlug ?? ""));
 
   return (
     <section className="space-y-8">
@@ -267,7 +297,7 @@ export function CommunicationDiagnosis({
             </button>
             <button
               type="button"
-              onClick={() => setFormState(emptyDiagnosisInputs())}
+              onClick={handleClearForm}
               className="inline-flex items-center rounded-full border border-[#d2c8bb] bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-[#faf6f0]"
             >
               Clear form
@@ -338,6 +368,23 @@ export function CommunicationDiagnosis({
             ))}
           </div>
 
+          {shouldSuggestMoreDetail ? (
+            <div className="rounded-[28px] border border-[#d8cdbf] bg-[#fcfaf6] p-6">
+              <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
+                Need a tighter match?
+              </p>
+              <h3 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">
+                Try describing more
+              </h3>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-700">
+                Add details such as the year group, whether the parent is angry
+                or silent, whether behaviour or SEN is involved, and whether you
+                need to de-escalate or write a detailed report. The closer the
+                description, the more precise the diagnosis becomes.
+              </p>
+            </div>
+          ) : null}
+
           <section className="rounded-[32px] border border-[#d8cdbf] bg-[linear-gradient(135deg,_#123f34_0%,_#1f5b4a_100%)] p-8 text-white md:p-10">
             <p className="text-xs uppercase tracking-[0.2em] text-emerald-100/80">
               Final step
@@ -354,9 +401,12 @@ export function CommunicationDiagnosis({
               <Link
                 href="/early-access"
                 onClick={() =>
-                  track("diagnosis_cta_clicked", {
+                  trackDiagnosisCtaClick({
                     issue: formState.issue || undefined,
                     phase: formState.phase || undefined,
+                    studentContexts: formState.studentContexts,
+                    toneNeeds: formState.toneNeeds,
+                    topRecommendation: results[0]?.pageSlug,
                   })
                 }
                 className="inline-flex items-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#123f34] transition hover:bg-[#f3efe7]"

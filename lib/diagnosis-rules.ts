@@ -60,11 +60,17 @@ type RecommendationKey =
   | "angry-parent-reply-year-6"
   | "behaviour-email-guide"
   | "behaviour-scenario-primary"
+  | "document-parent-contact-guide"
+  | "gdpr-report-writer"
+  | "ofsted-friendly-parent-email"
   | "parent-ignore-reply"
+  | "parents-evening-templates"
+  | "positive-honest-sen-comments"
   | "homework-complaint-reply"
   | "grade-complaint-reply"
   | "slt-documentation-reply"
   | "report-comments-struggling"
+  | "report-comments-struggling-behaviour"
   | "report-comments-anxious-eal"
   | "report-comments-high-attaining"
   | "report-comments-sen-maths"
@@ -132,12 +138,47 @@ const recommendationLibrary: Record<RecommendationKey, RecommendationTemplate> =
         "A concrete behaviour scenario page for primary teachers who need wording that is calm, proportionate, and easy for parents to understand and respond to constructively.",
       url: "/scenario/behaviour-issue/year-5-primary",
     },
+    "document-parent-contact-guide": {
+      pageSlug: "how-to-document-parent-contact-for-slt-without-stress",
+      title: "How to Document Parent Contact for SLT Without Stress",
+      description:
+        "A calmer guide for teachers who need factual, professional documentation without spending too long trying to sound precise. Useful when behaviour, safeguarding, or repeated parent contact needs a clear written record.",
+      url: "/how-to-document-parent-contact-for-slt-without-stress",
+    },
+    "gdpr-report-writer": {
+      pageSlug: "gdpr-compliant-ai-report-writer-uk-teachers",
+      title: "GDPR Compliant AI Report Writer for UK Teachers",
+      description:
+        "A trust-first page for teachers who need report-writing help that still feels school-safe. It focuses on careful wording, teacher control, and a lower-risk drafting workflow for UK school contexts.",
+      url: "/gdpr-compliant-ai-report-writer-uk-teachers",
+    },
+    "ofsted-friendly-parent-email": {
+      pageSlug: "ofsted-friendly-parent-email-examples",
+      title: "Ofsted-Friendly Parent Email Examples for Teachers",
+      description:
+        "Helpful when the wording needs to feel calm, professional, and record-safe. This page is useful for teachers who want examples that sound appropriate in a UK school context without becoming stiff or impersonal.",
+      url: "/ofsted-friendly-parent-email-examples",
+    },
     "parent-ignore-reply": {
       pageSlug: "how-to-reply/parents-dont-respond-to-behaviour-email",
       title: "How to Reply When Parents Do Not Respond to a Behaviour Email",
       description:
         "Useful when the first message has gone quiet and you need a measured follow-up that keeps the tone professional, reduces friction, and creates a clear next step.",
       url: "/how-to-reply/parents-dont-respond-to-behaviour-email",
+    },
+    "parents-evening-templates": {
+      pageSlug: "parents-evening-email-templates-uk",
+      title: "Parents' Evening Email Templates UK",
+      description:
+        "A practical page for teachers who need calm, professional wording before or after parents' evening. Useful for reminders, follow-up messages, and conversations where tone matters as much as the information itself.",
+      url: "/parents-evening-email-templates-uk",
+    },
+    "positive-honest-sen-comments": {
+      pageSlug: "positive-honest-report-comments-sen-students",
+      title: "Positive Honest Report Comments for SEN Students",
+      description:
+        "A report-writing page for teachers who need supportive but accurate wording around SEN needs, classroom progress, and next steps. Useful when the tone needs to stay careful, clear, and grounded.",
+      url: "/positive-honest-report-comments-sen-students",
     },
     "homework-complaint-reply": {
       pageSlug: "reply/parent-complaint/homework-not-done",
@@ -168,6 +209,13 @@ const recommendationLibrary: Record<RecommendationKey, RecommendationTemplate> =
       description:
         "A teacher-first report writing page that helps you sound balanced, accurate, and kind when a pupil is finding learning difficult. Useful when honesty matters but you do not want the wording to land badly.",
       url: "/positive-but-honest-report-card-comments-for-struggling-students",
+    },
+    "report-comments-struggling-behaviour": {
+      pageSlug: "report-comments/struggling-student-behaviour/english/year-5",
+      title: "Report Comments for a Struggling Student with Behaviour Concerns",
+      description:
+        "A more specific report-comment page for teachers who need wording that covers both academic struggle and behaviour concerns without sounding punitive or vague. Useful when the comment has to stay honest, professional, and kind.",
+      url: "/report-comments/struggling-student-behaviour/english/year-5",
     },
     "report-comments-anxious-eal": {
       pageSlug: "report-comments/anxious-eal-pupil/maths/year-4",
@@ -425,6 +473,10 @@ export const diagnosisInternalLinks: Recommendation[] = [
     why: ["Balanced report wording for lower attainment"],
   },
   {
+    ...recommendationLibrary["report-comments-struggling-behaviour"],
+    why: ["Specific support when reports also need behaviour wording"],
+  },
+  {
     ...recommendationLibrary["behaviour-scenario-primary"],
     why: ["Primary behaviour scenario support"],
   },
@@ -436,6 +488,25 @@ export const diagnosisInternalLinks: Recommendation[] = [
     ...recommendationLibrary["uk-communication-hub"],
     why: ["UK-specific communication templates and examples"],
   },
+  {
+    ...recommendationLibrary["parents-evening-templates"],
+    why: ["Useful for parents' evening reminders and follow-up"],
+  },
+  {
+    ...recommendationLibrary["document-parent-contact-guide"],
+    why: ["Good fit for SLT documentation pressure"],
+  },
+];
+
+export const broadDiagnosisPageSlugs = [
+  recommendationLibrary["teacher-hub"].pageSlug,
+  recommendationLibrary["communication-problems-hub"].pageSlug,
+  recommendationLibrary["reply-hub"].pageSlug,
+  recommendationLibrary["report-hub"].pageSlug,
+  recommendationLibrary["report-builder-hub"].pageSlug,
+  recommendationLibrary["parent-email-scenarios-hub"].pageSlug,
+  recommendationLibrary["scenario-combinations"].pageSlug,
+  recommendationLibrary["draft-product"].pageSlug,
 ];
 
 const hasPhase = (input: DiagnosisInputs, ...phases: SchoolPhase[]) =>
@@ -555,6 +626,26 @@ const diagnosisRules: DiagnosisRule[] = [
     ],
   },
   {
+    id: "parent-ignore-behaviour-primary",
+    priority: 94,
+    matches: (input) =>
+      hasIssue(input, "parent-ignores-email") &&
+      hasContext(input, "behaviour-issues") &&
+      hasPhase(input, "primary", "ks1", "ks2"),
+    recommendations: [
+      {
+        key: "behaviour-email-guide",
+        why: [
+          "Useful for UK primary behaviour wording when follow-up is needed",
+        ],
+      },
+      {
+        key: "behaviour-scenario-primary",
+        why: ["Closer fit for a primary parent follow-up about behaviour"],
+      },
+    ],
+  },
+  {
     id: "behaviour-primary",
     priority: 97,
     matches: (input) =>
@@ -568,6 +659,10 @@ const diagnosisRules: DiagnosisRule[] = [
       {
         key: "behaviour-scenario-primary",
         why: ["Primary-specific scenario language for a behaviour concern"],
+      },
+      {
+        key: "ofsted-friendly-parent-email",
+        why: ["Useful when the wording needs to feel record-safe and measured"],
       },
     ],
   },
@@ -587,6 +682,10 @@ const diagnosisRules: DiagnosisRule[] = [
       {
         key: "slt-documentation-reply",
         why: ["Useful if behaviour communication is edging into documentation"],
+      },
+      {
+        key: "document-parent-contact-guide",
+        why: ["Supports clearer records when the thread keeps escalating"],
       },
     ],
   },
@@ -608,6 +707,10 @@ const diagnosisRules: DiagnosisRule[] = [
         why: [
           "Helpful if the documentation needs to be paired with parent wording",
         ],
+      },
+      {
+        key: "document-parent-contact-guide",
+        why: ["Useful when you need a calmer record before escalating further"],
       },
     ],
   },
@@ -663,6 +766,10 @@ const diagnosisRules: DiagnosisRule[] = [
           "Useful comparison point if support needs are also part of the picture",
         ],
       },
+      {
+        key: "report-comments-struggling-behaviour",
+        why: ["Helpful when academic struggle overlaps with conduct concerns"],
+      },
     ],
   },
   {
@@ -679,6 +786,43 @@ const diagnosisRules: DiagnosisRule[] = [
       {
         key: "struggling-reader-scenario",
         why: ["Useful if reading progress is part of the report concern"],
+      },
+    ],
+  },
+  {
+    id: "report-stress-ks2-struggling",
+    priority: 96,
+    matches: (input) =>
+      hasIssue(input, "report-writing-stress") &&
+      hasPhase(input, "primary", "ks2") &&
+      hasContext(input, "struggling-academically"),
+    recommendations: [
+      {
+        key: "report-comments-struggling",
+        why: ["Direct fit for KS2 report writing about low attainment"],
+      },
+      {
+        key: "report-comments-struggling-behaviour",
+        why: [
+          "Useful if the report also needs a behaviour note handled gently",
+        ],
+      },
+    ],
+  },
+  {
+    id: "report-stress-behaviour-context",
+    priority: 92,
+    matches: (input) =>
+      hasIssue(input, "report-writing-stress") &&
+      hasContext(input, "behaviour-issues"),
+    recommendations: [
+      {
+        key: "report-comments-struggling-behaviour",
+        why: ["Closest match when report fatigue includes behaviour wording"],
+      },
+      {
+        key: "report-builder-hub",
+        why: ["Useful if you need a more exact student-profile combination"],
       },
     ],
   },
@@ -731,6 +875,12 @@ const diagnosisRules: DiagnosisRule[] = [
       {
         key: "report-comments-sen-maths",
         why: ["Useful if the SEN wording problem is more report-focused"],
+      },
+      {
+        key: "positive-honest-sen-comments",
+        why: [
+          "Helpful when the SEN wording needs to stay balanced and careful",
+        ],
       },
     ],
   },
@@ -826,6 +976,10 @@ const diagnosisRules: DiagnosisRule[] = [
           "Helpful if homework, assessment pressure, or subject tension overlap",
         ],
       },
+      {
+        key: "ofsted-friendly-parent-email",
+        why: ["Useful when you want a professional tone before replying"],
+      },
     ],
   },
   {
@@ -848,6 +1002,40 @@ const diagnosisRules: DiagnosisRule[] = [
     ],
   },
   {
+    id: "parents-evening-primary",
+    priority: 92,
+    matches: (input) =>
+      hasIssue(input, "parents-evening") &&
+      hasPhase(input, "primary", "ks1", "ks2"),
+    recommendations: [
+      {
+        key: "parents-evening-templates",
+        why: ["Direct fit for UK primary parents' evening wording"],
+      },
+      {
+        key: "uk-communication-hub",
+        why: ["Useful if you need broader UK school communication examples"],
+      },
+    ],
+  },
+  {
+    id: "parents-evening-follow-up-tone",
+    priority: 89,
+    matches: (input) =>
+      hasIssue(input, "parents-evening") &&
+      hasTone(input, "professional-but-empathetic", "quick-reply"),
+    recommendations: [
+      {
+        key: "parents-evening-templates",
+        why: ["Useful for calm follow-up after a difficult or rushed meeting"],
+      },
+      {
+        key: "ofsted-friendly-parent-email",
+        why: ["Helpful if the message needs to read cleanly on record"],
+      },
+    ],
+  },
+  {
     id: "documentation-slt-core",
     priority: 96,
     matches: (input) => hasIssue(input, "documentation-for-slt"),
@@ -861,6 +1049,25 @@ const diagnosisRules: DiagnosisRule[] = [
         why: [
           "Useful when documentation overlaps with parent communication and behaviour",
         ],
+      },
+    ],
+  },
+  {
+    id: "documentation-slt-professional-tone",
+    priority: 95,
+    matches: (input) =>
+      hasIssue(input, "documentation-for-slt") &&
+      hasTone(input, "professional-but-empathetic", "quick-reply"),
+    recommendations: [
+      {
+        key: "document-parent-contact-guide",
+        why: [
+          "Best fit when you want a record-safe summary without sounding cold",
+        ],
+      },
+      {
+        key: "slt-documentation-reply",
+        why: ["Useful when the next step may be an escalation summary for SLT"],
       },
     ],
   },
@@ -882,6 +1089,23 @@ const diagnosisRules: DiagnosisRule[] = [
     ],
   },
   {
+    id: "report-trust-gdpr-keywords",
+    priority: 88,
+    matches: (input, freeText) =>
+      hasIssue(input, "report-writing-stress", "documentation-for-slt") &&
+      textHas(freeText, "gdpr", "data", "ofsted", "privacy", "safeguarding"),
+    recommendations: [
+      {
+        key: "gdpr-report-writer",
+        why: ["Matches trust and compliance concerns around report wording"],
+      },
+      {
+        key: "document-parent-contact-guide",
+        why: ["Helpful if the pressure is partly about safer written records"],
+      },
+    ],
+  },
+  {
     id: "weekend-drain-keywords",
     priority: 84,
     matches: (_input, freeText) =>
@@ -898,6 +1122,31 @@ const diagnosisRules: DiagnosisRule[] = [
         why: [
           "Useful if the goal is to shorten drafting time without losing control",
         ],
+      },
+    ],
+  },
+  {
+    id: "free-text-ignored-parent",
+    priority: 86,
+    matches: (_input, freeText) =>
+      textHas(
+        freeText,
+        "ignored",
+        "no response",
+        "no reply",
+        "not replying",
+        "never replied",
+      ),
+    recommendations: [
+      {
+        key: "parent-ignore-reply",
+        why: [
+          "The free-text sounds like a follow-up problem, not a first email",
+        ],
+      },
+      {
+        key: "reply-hub",
+        why: ["Useful if the silence is part of a wider communication issue"],
       },
     ],
   },
@@ -937,6 +1186,30 @@ const diagnosisRules: DiagnosisRule[] = [
         why: [
           "Lets you narrow by pupil context once you need something more specific",
         ],
+      },
+    ],
+  },
+  {
+    id: "free-text-parents-evening",
+    priority: 87,
+    matches: (_input, freeText) =>
+      textHas(
+        freeText,
+        "parents' evening",
+        "parents evening",
+        "meeting tonight",
+        "follow up after meeting",
+      ),
+    recommendations: [
+      {
+        key: "parents-evening-templates",
+        why: [
+          "The free-text sounds like a parents' evening follow-up or reminder",
+        ],
+      },
+      {
+        key: "uk-communication-hub",
+        why: ["Useful if you want more UK-specific school wording options"],
       },
     ],
   },
@@ -1002,7 +1275,7 @@ export function diagnose(raw: Partial<DiagnosisInputs>): Recommendation[] {
         score: key === "teacher-hub" ? 30 : 10,
         why: new Set([
           key === "teacher-hub"
-            ? "Useful starting point if your situation overlaps several concerns"
+            ? "Useful starting point if your situation overlaps several concerns. Try describing more for a tighter match."
             : "Helpful fallback if you want to keep exploring from a broader page",
         ]),
       });
