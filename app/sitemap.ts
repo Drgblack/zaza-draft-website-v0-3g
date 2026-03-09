@@ -164,6 +164,228 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
+  const productEntries: SitemapEntryConfig[] = [
+    {
+      path: "/suite",
+      priority: 0.75,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/products/teach",
+      priority: 0.8,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/products/gradeflow",
+      priority: 0.75,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/products/shield",
+      priority: 0.75,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+  ];
+
+  const contentHubEntries: SitemapEntryConfig[] = [
+    {
+      path: "/resources",
+      priority: 0.8,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/ai-literacy",
+      priority: 0.8,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/videos",
+      priority: 0.8,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/webinars",
+      priority: 0.8,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/success-stories",
+      priority: 0.8,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/teacher-stories",
+      priority: 0.75,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/compare",
+      priority: 0.8,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/alternatives",
+      priority: 0.78,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/integrations",
+      priority: 0.72,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/community",
+      priority: 0.72,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/glossary",
+      priority: 0.72,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/learning-centre",
+      priority: 0.7,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/state-of-ai-education",
+      priority: 0.75,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+  ];
+
+  const campaignAndToolEntries: SitemapEntryConfig[] = [
+    {
+      path: "/best-ai-tool-parent-emails",
+      priority: 0.85,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/best-ai-writing-tools-for-teachers-2025",
+      priority: 0.85,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/ai-for-student-reports",
+      priority: 0.85,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/early-access",
+      priority: 0.7,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/contact",
+      priority: 0.6,
+      changeFrequency: "monthly",
+      lastModified: now,
+    },
+    {
+      path: "/support",
+      priority: 0.6,
+      changeFrequency: "monthly",
+      lastModified: now,
+    },
+    {
+      path: "/faq",
+      priority: 0.65,
+      changeFrequency: "monthly",
+      lastModified: now,
+    },
+    {
+      path: "/ambassadors",
+      priority: 0.6,
+      changeFrequency: "monthly",
+      lastModified: now,
+    },
+    {
+      path: "/manifesto",
+      priority: 0.6,
+      changeFrequency: "monthly",
+      lastModified: now,
+    },
+  ];
+
+  const programmaticHubEntries: SitemapEntryConfig[] = [
+    {
+      path: "/how-to-reply",
+      priority: 0.8,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/reply-scenarios",
+      priority: 0.8,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/parent-email-scenarios",
+      priority: 0.82,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/parent-communication-problems",
+      priority: 0.82,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/report-comments",
+      priority: 0.85,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/report-comment-builder",
+      priority: 0.85,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/scenario-builder",
+      priority: 0.85,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/scenario-combinations",
+      priority: 0.82,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/uk-school-communication",
+      priority: 0.85,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+  ];
+
   const painEntries: SitemapEntryConfig[] = [
     {
       path: "/diagnosis",
@@ -268,6 +490,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return dedupeEntries([
     ...primaryEntries.map(toSitemapEntry),
     ...coreMarketingEntries.map(toSitemapEntry),
+    ...productEntries.map(toSitemapEntry),
+    ...contentHubEntries.map(toSitemapEntry),
+    ...campaignAndToolEntries.map(toSitemapEntry),
+    ...programmaticHubEntries.map(toSitemapEntry),
     ...painEntries.map(toSitemapEntry),
     ...teacherWritingEntries.map(toSitemapEntry),
     ...topicalClusterEntries.map(toSitemapEntry),
