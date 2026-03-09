@@ -4,13 +4,13 @@ import EarlyAccessClient from "./early-access-client";
 const canonicalUrl = "https://zazadraft.com/early-access";
 
 export const metadata: Metadata = {
-  title: "Zaza Draft Early Access | Shape the teacher-first AI",
+  title: "Join the Zaza Draft Waitlist | Teacher-first AI writing",
   description:
-    "Join the Zaza Draft Early-Access Programme to guide our teacher-first writing assistant, try guided drafts, and explore insights before anyone else.",
+    "Join the Zaza Draft waitlist to hear when teacher access opens. Get launch updates, product news, and early access for calmer school writing support.",
   openGraph: {
-    title: "Zaza Draft Early Access | Shape the teacher-first AI",
+    title: "Join the Zaza Draft Waitlist",
     description:
-      "Help co-design guided drafts, tone guardrails, and insights dashboards by joining the private beta for Zaza Draft.",
+      "Be first to hear when Zaza Draft opens to teachers. Join the waitlist for launch updates and early access.",
     url: canonicalUrl,
     type: "website",
     siteName: "Zaza Draft",
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Join Zaza Draft Early Access",
+    title: "Join the Zaza Draft Waitlist",
     description:
-      "Help shape teacher-first guided drafts, tone guardrails, and progress insights in the private beta.",
+      "Join the waitlist for launch updates, early access, and product news from Zaza Draft.",
     images: ["/images/draft-interface.png"],
   },
   alternates: {

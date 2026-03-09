@@ -66,38 +66,38 @@ export default function DraftClient() {
     language === "de" ? "Wie geht es weiter" : "What happens next";
   const commitmentLine =
     language === "de"
-      ? "Early Access ist kostenlos. Erhalte deinen ersten Entwurf in Minuten. Keine Karte erforderlich."
-      : "Early access is free. Get your first draft in minutes. No card required.";
+      ? "Der kostenlose Tarif enthaelt 10 Nachrichten pro Monat, sobald der Zugang oeffnet. Keine Karte erforderlich."
+      : "The free plan includes 10 messages each month when access opens. No card required.";
   const inviteLine =
     language === "de"
-      ? "Wir senden Ihnen eine E-Mail, wenn Ihre Einladung bereit ist - meist innerhalb weniger Tage."
-      : "We'll email you when your invite is ready - usually within a few days.";
+      ? "Wir senden Ihnen eine E-Mail, sobald der Zugang fuer Lehrkraefte oeffnet."
+      : "We'll email you as soon as teacher access opens.";
   const urgencyLine =
     language === "de"
-      ? "Early-Access-Mitglieder gestalten das Produkt mit und behalten ihren Startpreis zum Launch."
-      : "Early access members shape the product and keep their rate when we launch.";
+      ? "Trag dich in die Warteliste ein und wir sagen dir Bescheid, sobald Lehrkraft-Zugaenge offen sind."
+      : "Join the waitlist and we'll let you know as soon as teacher access opens.";
   const nextSteps =
     language === "de"
       ? [
-          "Early Access beitreten (30 Sekunden)",
-          "Wir senden dir eine Einladung, sobald dein Zugang bereit ist",
+          "Zur Warteliste (30 Sekunden)",
+          "Wir schreiben dir, sobald der Zugang fuer Lehrkraefte offen ist",
           "Ersten Entwurf kostenlos testen - keine Karte erforderlich",
         ]
       : [
-          "Join early access (30 seconds)",
-          "We email you an invite when your access is ready",
+          "Join the waitlist (30 seconds)",
+          "We email you when teacher access opens",
           "Try your first draft free - no card required",
         ];
   const betaFeedbackHeading =
     language === "de"
-      ? "Feedback aus der Beta folgt"
-      : "Beta feedback is coming";
+      ? "Feedback von Lehrkraeften folgt"
+      : "Teacher feedback is coming";
   const betaFeedbackBody =
     language === "de"
-      ? "Wir onboarden gerade die erste Gruppe Lehrkräfte. Echte Zitate erscheinen hier, sobald wir sie gesammelt haben. Wenn du Draft mitgestalten möchtest, tritt dem Early Access bei."
-      : "We are onboarding our first cohort of teachers now. Real quotes will appear here as soon as they are collected. If you would like to shape Draft, join early access.";
+      ? "Wir sammeln gerade die ersten Rueckmeldungen. Echte Zitate erscheinen hier, sobald wir sie gesammelt haben. Trag dich in die Warteliste ein, wenn du zum Launch benachrichtigt werden moechtest."
+      : "We are collecting our first round of teacher feedback now. Real quotes will appear here as soon as they are collected. Join the waitlist if you want to be notified at launch.";
   const betaFeedbackCta =
-    language === "de" ? "Early Access" : "Join Early Access";
+    language === "de" ? "Zur Warteliste" : "Join the waitlist";
   const restoreHeading =
     language === "de"
       ? "So stellt Draft Klarheit wieder her"
@@ -131,12 +131,12 @@ export default function DraftClient() {
   const privacyLinkLabel = language === "de" ? "Privacy" : "Privacy";
   const screenshotCaption =
     language === "de"
-      ? "Produkt-Screenshot - Early-Access-UI"
-      : "Product screenshot - early access UI";
+      ? "Produktvorschau - Draft Arbeitsbereich"
+      : "Product preview - Draft workspace";
   const screenshotHonestyLine =
     language === "de"
-      ? "Die Early-Access-UI entwickelt sich mit Feedback von Lehrkräften weiter."
-      : "Early access UI is evolving with teacher feedback.";
+      ? "Die gezeigte Produktvorschau entwickelt sich weiter, waehrend der Zugang schrittweise oeffnet."
+      : "The product preview is evolving as access opens in stages.";
 
   const features = [
     {

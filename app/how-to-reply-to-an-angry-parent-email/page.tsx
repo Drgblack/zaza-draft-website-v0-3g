@@ -359,7 +359,7 @@ export default function HowToReplyToAnAngryParentEmailPage() {
                 href="/early-access"
                 className="inline-flex items-center rounded-full bg-teal-200 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-teal-100"
               >
-                Start early access
+                Join the waitlist
               </Link>
               <Link
                 href="/contact"

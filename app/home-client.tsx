@@ -122,6 +122,22 @@ const CheckCircleIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const ShieldIcon = ({ className }: { className?: string }) => (
+  <svg
+    className={className}
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"
+    />
+  </svg>
+);
+
 export function HomePageClient() {
   const { t, language } = useLanguage();
   const [signupOpen, setSignupOpen] = useState(false);
@@ -240,42 +256,68 @@ export function HomePageClient() {
         ];
   const betaFeedbackHeading =
     language === "de"
-      ? "Feedback aus der Beta folgt"
-      : "Beta feedback is coming";
+      ? "Feedback von Lehrkraeften folgt"
+      : "Teacher feedback is coming";
   const betaFeedbackBody =
     language === "de"
-      ? "Wir onboarden gerade die erste Gruppe Lehrkräfte. Echte Zitate erscheinen hier, sobald wir sie gesammelt haben. Wenn du Draft mitgestalten möchtest, tritt dem Early Access bei."
-      : "We are onboarding our first cohort of teachers now. Real quotes will appear here as soon as they are collected. If you would like to shape Draft, join early access.";
+      ? "Wir sammeln gerade die ersten Rueckmeldungen. Echte Zitate erscheinen hier, sobald wir sie gesammelt haben. Trag dich in die Warteliste ein, wenn du zum Launch benachrichtigt werden moechtest."
+      : "We are collecting our first round of teacher feedback now. Real quotes will appear here as soon as they are collected. Join the waitlist if you want to be notified at launch.";
   const betaFeedbackCta =
-    language === "de" ? "Early Access" : "Join Early Access";
+    language === "de" ? "Zur Warteliste" : "Join the waitlist";
   const trustPanelHeading =
     language === "de"
-      ? "Vertrauen fuer echte Schulkommunikation"
-      : "Trust for real school communication";
-  const trustPanelBody =
+      ? "KI, der du bei echter Schulkommunikation vertrauen kannst"
+      : "AI you can trust with real school communication";
+  const trustPanelSubtext =
     language === "de"
-      ? "Zaza Draft ist fuer die Momente gebaut, in denen Ton, Klarheit und professionelle Sorgfalt zaehlen, von E-Mails an Eltern bis zu Zeugnisformulierungen und sensiblen Updates. Es ersetzt nicht dein Urteil. Es staerkt es."
-      : "Zaza Draft is built for the moments where tone, clarity, and professional care matter, from parent emails to report comments and sensitive updates. It does not replace your judgement. It strengthens it.";
-  const trustPanelPoints =
+      ? "Entwickelt fuer ruhige, professionelle Formulierungen in den Momenten, die Lehrkraefte am meisten zerdenken."
+      : "Built to support calm, professional writing in the moments teachers second-guess most.";
+  const trustPanelCards =
     language === "de"
       ? [
-          "Menschliche Pruefung ist immer erforderlich, bevor etwas gesendet wird",
-          "Ton wird nur dann vorsichtig entschaerft, wenn Risiko erkannt wird",
-          "Kein Auto-Senden, keine versteckte Automatisierung, keine Ueberraschungen",
-          "Darauf ausgelegt, Anspannung zu senken statt neue berufliche Risiken zu schaffen",
-          "Speziell fuer Lehrkraefte und echte Schulkontexte gestaltet",
+          {
+            title: "Du bleibst in Kontrolle",
+            body: "Pruefe jede Nachricht, bevor etwas gesendet wird.",
+            icon: SliderIcon,
+          },
+          {
+            title: "Fuer Lehrkraefte gebaut",
+            body: "Entwickelt fuer E-Mails an Eltern, Zeugnisformulierungen und sensible Schulkommunikation.",
+            icon: DocumentIcon,
+          },
+          {
+            title: "Ruhige Tonleitplanken",
+            body: "Hilft, Eskalation zu reduzieren und Formulierungen professionell zu halten.",
+            icon: CheckCircleIcon,
+          },
+          {
+            title: "Privacy-first gedacht",
+            body: "Gebaut fuer verantwortungsvollen Unterrichtseinsatz und sorgfaeltige Kommunikationsablaeufe.",
+            icon: ShieldIcon,
+          },
         ]
       : [
-          "Human review is always required before anything is sent",
-          "Gentle tone-softening is applied only when risk is detected",
-          "No auto-send, no hidden automation, no surprises",
-          "Built to reduce anxiety, not create new professional risks",
-          "Designed specifically for teachers and real school contexts",
+          {
+            title: "You stay in control",
+            body: "Review every message before anything is sent.",
+            icon: SliderIcon,
+          },
+          {
+            title: "Built for teachers",
+            body: "Designed for parent emails, report comments, and sensitive school communication.",
+            icon: DocumentIcon,
+          },
+          {
+            title: "Calm tone guardrails",
+            body: "Helps reduce escalation and keeps wording professional.",
+            icon: CheckCircleIcon,
+          },
+          {
+            title: "Privacy-first design",
+            body: "Built for responsible classroom use and careful communication workflows.",
+            icon: ShieldIcon,
+          },
         ];
-  const trustPanelFooter =
-    language === "de"
-      ? "Teil des Zaza Oekosystems, gebaut auf Vertrauen, Wohlbefinden und durchdachtem KI-Einsatz."
-      : "Part of the Zaza ecosystem, built on trust, wellbeing, and thoughtful AI.";
   const situationsItems =
     language === "de"
       ? [
@@ -652,24 +694,30 @@ export function HomePageClient() {
                 {trustPanelHeading}
               </h2>
               <p className="mt-6 max-w-3xl text-lg leading-8 text-[#CBD5E1]">
-                {trustPanelBody}
+                {trustPanelSubtext}
               </p>
-              <ul className="mt-8 grid gap-3 md:grid-cols-2">
-                {trustPanelPoints.map((point) => (
-                  <li
-                    key={point}
-                    className="flex items-start gap-3 rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-4 text-base leading-7 text-[#E2E8F0]"
-                  >
-                    <span className="mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-emerald-400/10 text-emerald-300">
-                      <Check className="h-3.5 w-3.5" />
-                    </span>
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-8 text-sm leading-6 text-[#94A3B8]">
-                {trustPanelFooter}
-              </p>
+              <div className="mt-8 grid gap-4 md:grid-cols-2">
+                {trustPanelCards.map((card) => {
+                  const Icon = card.icon;
+
+                  return (
+                    <article
+                      key={card.title}
+                      className="rounded-2xl border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] px-5 py-5 shadow-[0_18px_50px_-40px_rgba(168,85,247,0.45)]"
+                    >
+                      <div className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.05] text-[#C4B5FD]">
+                        <Icon className="h-5 w-5" />
+                      </div>
+                      <h3 className="mt-4 text-lg font-semibold text-white">
+                        {card.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-6 text-[#CBD5E1]">
+                        {card.body}
+                      </p>
+                    </article>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
