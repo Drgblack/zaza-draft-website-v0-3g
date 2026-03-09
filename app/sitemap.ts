@@ -10,6 +10,7 @@ import { getMatrixSitemapEntries } from "@/lib/matrix";
 import { getComparisonSitemapEntries } from "@/lib/comparison-matrix";
 import { getUkClusterSitemapEntries } from "@/lib/uk-matrix";
 import { getExpandedPageSitemapEntries } from "@/lib/expanded-pages";
+import howToKeywords from "@/data/how-to-keywords.json";
 
 const BASE_URL = "https://zazadraft.com";
 
@@ -22,6 +23,10 @@ type SitemapEntryConfig = {
   priority: number;
   changeFrequency: ChangeFrequency;
   lastModified?: Date;
+};
+
+type HowToKeywordEntry = {
+  slug: string;
 };
 
 function toSitemapEntry({
@@ -72,6 +77,7 @@ function getBlogEntries(): MetadataRoute.Sitemap {
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
+  const howToEntries = howToKeywords as HowToKeywordEntry[];
 
   const primaryEntries: SitemapEntryConfig[] = [
     { path: "/", priority: 1.0, changeFrequency: "daily", lastModified: now },
@@ -384,6 +390,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       lastModified: now,
     },
+    {
+      path: "/how-to",
+      priority: 0.82,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
   ];
 
   const painEntries: SitemapEntryConfig[] = [
@@ -485,6 +497,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...getMatrixSitemapEntries(now),
     ...getProgrammaticSitemapEntries(now),
     ...getGeneratedPageSitemapEntries(now),
+    ...howToEntries.map((entry) =>
+      toSitemapEntry({
+        path: `/how-to/${entry.slug}`,
+        priority: 0.78,
+        changeFrequency: "weekly",
+        lastModified: now,
+      }),
+    ),
   ];
 
   return dedupeEntries([
