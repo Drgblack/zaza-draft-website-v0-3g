@@ -10,7 +10,7 @@ Write a complete SEO article in UK English. Structure it exactly as follows:
 4. ## 10 Example Phrases to Use (a numbered list of 10 ready-to-use phrases)
 5. ## Tips for Writing Professional Comments (3-5 practical bullet points)
 6. ## Common Mistakes to Avoid (3-4 bullet points)
-7. ## How Zaza Draft Can Help (2 short paragraphs introducing Zaza Draft as an AI writing assistant — do not oversell, be helpful and honest)
+7. ## How Zaza Draft Can Help (2 short paragraphs introducing Zaza Draft as an AI writing assistant - do not oversell, be helpful and honest)
 8. ## Ready to Save Time on Your Reports? (short closing paragraph with a CTA to try Zaza Draft)
 
 Tone: Professional, calm, warm, and supportive toward teachers. Never condescending.
