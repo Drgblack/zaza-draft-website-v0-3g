@@ -218,6 +218,14 @@ export function HomePageClient() {
     language === "de"
       ? "Kein generischer KI-Schreiber, sondern ein lehrkraft-zentrierter Co-Writer fuer sensible Schulkommunikation."
       : "Not a generic AI writer, but a teacher-first co-writer for sensitive school communication.";
+  const heroCtaMicrocopy =
+    language === "de"
+      ? "Schreibe jeden Monat bis zu 10 Nachrichten kostenlos. Keine Verpflichtung."
+      : "Write up to 10 messages free each month. No commitment.";
+  const heroTeacherUsageLine =
+    language === "de"
+      ? "Entwickelt fuer Lehrkraefte, die E-Mails an Eltern, Zeugnisformulierungen und andere sensible Schulkommunikation schreiben."
+      : "Built for teachers writing parent emails, report comments, and other high-stakes school communication.";
   const heroTrustBarPoints =
     language === "de"
       ? [
@@ -240,6 +248,48 @@ export function HomePageClient() {
       : "We are onboarding our first cohort of teachers now. Real quotes will appear here as soon as they are collected. If you would like to shape Draft, join early access.";
   const betaFeedbackCta =
     language === "de" ? "Early Access" : "Join Early Access";
+  const trustPanelHeading =
+    language === "de"
+      ? "Vertrauen fuer echte Schulkommunikation"
+      : "Trust for real school communication";
+  const trustPanelBody =
+    language === "de"
+      ? "Zaza Draft ist fuer die Momente gebaut, in denen Ton, Klarheit und professionelle Sorgfalt zaehlen, von E-Mails an Eltern bis zu Zeugnisformulierungen und sensiblen Updates. Es ersetzt nicht dein Urteil. Es staerkt es."
+      : "Zaza Draft is built for the moments where tone, clarity, and professional care matter, from parent emails to report comments and sensitive updates. It does not replace your judgement. It strengthens it.";
+  const trustPanelPoints =
+    language === "de"
+      ? [
+          "Menschliche Pruefung ist immer erforderlich, bevor etwas gesendet wird",
+          "Ton wird nur dann vorsichtig entschaerft, wenn Risiko erkannt wird",
+          "Kein Auto-Senden, keine versteckte Automatisierung, keine Ueberraschungen",
+          "Darauf ausgelegt, Anspannung zu senken statt neue berufliche Risiken zu schaffen",
+          "Speziell fuer Lehrkraefte und echte Schulkontexte gestaltet",
+        ]
+      : [
+          "Human review is always required before anything is sent",
+          "Gentle tone-softening is applied only when risk is detected",
+          "No auto-send, no hidden automation, no surprises",
+          "Built to reduce anxiety, not create new professional risks",
+          "Designed specifically for teachers and real school contexts",
+        ];
+  const trustPanelFooter =
+    language === "de"
+      ? "Teil des Zaza Oekosystems, gebaut auf Vertrauen, Wohlbefinden und durchdachtem KI-Einsatz."
+      : "Part of the Zaza ecosystem, built on trust, wellbeing, and thoughtful AI.";
+  const situationsItems =
+    language === "de"
+      ? [
+          "Eine E-Mail an Eltern, die du schon dreimal umgeschrieben hast",
+          "Eine Zeugnisformulierung, die zu hart klingt",
+          "Eine Verhaltensnotiz, die bei falscher Formulierung eskalieren koennte",
+          "Eine Nachricht an die Schulleitung, die nicht missverstanden werden darf",
+        ]
+      : [
+          "A parent email you've rewritten three times",
+          "A report comment that sounds too harsh",
+          "A behaviour note that could escalate if phrased badly",
+          "A message to leadership you do not want misunderstood",
+        ];
 
   const scrollToDemo = () => {
     track("cta_click_home_see_examples", { language });
@@ -342,13 +392,30 @@ export function HomePageClient() {
                 transition={{ duration: 0.5, delay: 0.44, ease: "easeOut" }}
                 className="text-sm text-[#CBD5E1] leading-relaxed max-w-[600px] mx-auto lg:mx-0"
               >
+                {heroCtaMicrocopy}
+              </motion.p>
+              <motion.p
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.46, ease: "easeOut" }}
+                className="inline-flex max-w-[680px] items-start gap-3 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm leading-6 text-[#CBD5E1] mx-auto lg:mx-0"
+              >
+                <span className="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-emerald-300" />
+                <span>{heroTeacherUsageLine}</span>
+              </motion.p>
+              <motion.p
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.48, ease: "easeOut" }}
+                className="text-sm text-[#94A3B8] leading-relaxed max-w-[600px] mx-auto lg:mx-0"
+              >
                 {t("hero.earlyAccessLine")}
               </motion.p>
 
               <motion.div
                 initial={prefersReducedMotion ? {} : { opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.46, ease: "easeOut" }}
+                transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
                 className="max-w-[720px] rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 backdrop-blur-sm"
               >
                 <p className="text-sm leading-6 text-[#CBD5E1]">
@@ -375,7 +442,7 @@ export function HomePageClient() {
               <motion.p
                 initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.45, ease: "easeOut" }}
+                transition={{ duration: 0.5, delay: 0.52, ease: "easeOut" }}
                 className="text-sm text-[#94A3B8] leading-relaxed max-w-[600px] mx-auto lg:mx-0"
               >
                 {t("hero.privacyLine")}
@@ -568,36 +635,42 @@ export function HomePageClient() {
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-purple-600/5 rounded-full blur-3xl -z-10"></div>
       </section>
 
-      <section className="bg-slate-50 py-16 md:py-20 border-t border-slate-200">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8">
-          <div className="rounded-2xl border border-slate-200 bg-white p-8 md:p-10">
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
-              AI you can trust with real conversations
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-slate-700">
-              Zaza Draft is designed for the moments that matter - parent
-              emails, sensitive updates, and professional communication where
-              tone, clarity, and trust are critical. It does not replace your
-              judgment. It supports it, helping you write with confidence rather
-              than second-guessing yourself.
-            </p>
-            <ul className="mt-8 space-y-3 list-disc pl-6 text-base leading-7 text-slate-800">
-              <li>Human review is always required before anything is sent</li>
-              <li>
-                Gentle tone-softening is applied only when risk is detected
-              </li>
-              <li>No auto-send, no hidden automation, no surprises</li>
-              <li>
-                Built to reduce anxiety, not create new professional risks
-              </li>
-              <li>
-                Designed specifically for teachers and real school contexts
-              </li>
-            </ul>
-            <p className="mt-8 text-sm leading-6 text-slate-500">
-              Zaza Draft is part of the Zaza ecosystem, built on principles of
-              trust, wellbeing, and thoughtful AI.
-            </p>
+      <section className="relative overflow-hidden border-t border-white/5 bg-[#0F172A] py-16 md:py-20">
+        <div className="absolute inset-x-0 top-0 h-32 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.12),transparent_60%)]" />
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
+          <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(30,41,59,0.92),rgba(15,23,42,0.98))] p-8 shadow-[0_30px_80px_-48px_rgba(15,23,42,0.95)] ring-1 ring-white/5 md:p-10">
+            <div className="absolute -right-16 top-0 h-40 w-40 rounded-full bg-purple-500/10 blur-3xl" />
+            <div className="absolute -left-10 bottom-0 h-32 w-32 rounded-full bg-emerald-400/8 blur-3xl" />
+            <div className="relative">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-medium uppercase tracking-[0.24em] text-[#C4B5FD]">
+                <span className="h-2 w-2 rounded-full bg-emerald-300" />
+                <span>
+                  {language === "de" ? "Vertrauensrahmen" : "Trust framework"}
+                </span>
+              </div>
+              <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white md:text-4xl">
+                {trustPanelHeading}
+              </h2>
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-[#CBD5E1]">
+                {trustPanelBody}
+              </p>
+              <ul className="mt-8 grid gap-3 md:grid-cols-2">
+                {trustPanelPoints.map((point) => (
+                  <li
+                    key={point}
+                    className="flex items-start gap-3 rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-4 text-base leading-7 text-[#E2E8F0]"
+                  >
+                    <span className="mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-emerald-400/10 text-emerald-300">
+                      <Check className="h-3.5 w-3.5" />
+                    </span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-8 text-sm leading-6 text-[#94A3B8]">
+                {trustPanelFooter}
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -614,22 +687,20 @@ export function HomePageClient() {
           >
             {t("situations.title")}
           </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
-            {[
-              t("situations.items.gradeDispute"),
-              t("situations.items.accidentalCC"),
-              t("situations.items.escalation"),
-              t("situations.items.behaviorIncident"),
-              t("situations.items.toneAccusation"),
-              t("situations.items.sensitiveReport"),
-            ].map((item, index) => (
+          <div className="mx-auto mt-4 max-w-3xl text-center text-base leading-7 text-[#94A3B8]">
+            {language === "de"
+              ? "Ruhige Hilfe fuer genau die Formulierungen, die man zu leicht zu lange offen laesst."
+              : "Calm support for the drafts teachers are most likely to leave open too long."}
+          </div>
+          <div className="grid grid-cols-1 gap-5 mt-10 md:grid-cols-2">
+            {situationsItems.map((item, index) => (
               <motion.div
                 key={item}
                 initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="flex items-start gap-3 text-[#CBD5E1]"
+                className="flex items-start gap-3 rounded-2xl border border-white/8 bg-white/[0.03] px-5 py-5 text-[#CBD5E1] shadow-[0_20px_60px_-50px_rgba(15,23,42,0.95)]"
               >
                 <CheckCircleIcon className="w-5 h-5 text-[#A78BFA] mt-0.5 flex-shrink-0" />
                 <span className="text-base md:text-lg leading-7 text-[#E2E8F0]">

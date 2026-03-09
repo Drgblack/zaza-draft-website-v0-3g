@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { toLocalePath } from "@/lib/i18n/locale-routing";
 
 const DISMISS_STORAGE_KEY = "zaza.translationHelper.dismissed.v1";
@@ -12,38 +12,67 @@ function hasSupportedBrowserLanguage() {
     return true;
   }
 
-  const preferredLanguage =
-    window.navigator.languages?.[0] || window.navigator.language;
+  const preferredLanguages =
+    window.navigator.languages && window.navigator.languages.length > 0
+      ? window.navigator.languages
+      : window.navigator.language
+        ? [window.navigator.language]
+        : [];
 
-  if (!preferredLanguage) {
+  if (preferredLanguages.length === 0) {
     return true;
   }
 
-  const normalized = preferredLanguage.toLowerCase();
-  return (
-    normalized === "en" ||
-    normalized.startsWith("en-") ||
-    normalized === "de" ||
-    normalized.startsWith("de-")
-  );
+  return preferredLanguages.some((languageTag) => {
+    const normalized = languageTag.toLowerCase();
+    return (
+      normalized === "en" ||
+      normalized.startsWith("en-") ||
+      normalized === "de" ||
+      normalized.startsWith("de-")
+    );
+  });
+}
+
+function isCurrentRouteSupported(pathname: string) {
+  return pathname === "/" || pathname === "/de" || pathname.startsWith("/de/");
+}
+
+function getLocaleHref(pathname: string, locale: "en" | "de") {
+  if (!isCurrentRouteSupported(pathname)) {
+    return locale === "de" ? "/de" : "/";
+  }
+
+  return toLocalePath(pathname, locale);
+}
+
+function dismissNotice() {
+  if (typeof window !== "undefined") {
+    window.localStorage.setItem(DISMISS_STORAGE_KEY, "true");
+  }
+}
+
+function isDismissed() {
+  if (typeof window === "undefined") {
+    return false;
+  }
+
+  return window.localStorage.getItem(DISMISS_STORAGE_KEY) === "true";
 }
 
 export function TranslationHelperNotice() {
   const pathname = usePathname() || "/";
   const [isVisible, setIsVisible] = useState(false);
 
-  const englishHref = useMemo(() => toLocalePath(pathname, "en"), [pathname]);
-  const germanHref = useMemo(() => toLocalePath(pathname, "de"), [pathname]);
+  const englishHref = getLocaleHref(pathname, "en");
+  const germanHref = getLocaleHref(pathname, "de");
 
   useEffect(() => {
     if (typeof window === "undefined") {
       return;
     }
 
-    const isDismissed =
-      window.localStorage.getItem(DISMISS_STORAGE_KEY) === "true";
-
-    if (isDismissed || hasSupportedBrowserLanguage()) {
+    if (isDismissed() || hasSupportedBrowserLanguage()) {
       setIsVisible(false);
       return;
     }
@@ -51,11 +80,8 @@ export function TranslationHelperNotice() {
     setIsVisible(true);
   }, []);
 
-  const dismissNotice = () => {
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem(DISMISS_STORAGE_KEY, "true");
-    }
-
+  const handleDismiss = () => {
+    dismissNotice();
     setIsVisible(false);
   };
 
@@ -82,7 +108,7 @@ export function TranslationHelperNotice() {
           </div>
           <button
             type="button"
-            onClick={dismissNotice}
+            onClick={handleDismiss}
             className="inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition hover:bg-white/10 hover:text-white"
             aria-label="Dismiss language helper"
           >
@@ -93,21 +119,21 @@ export function TranslationHelperNotice() {
         <div className="mt-4 flex flex-col gap-3 sm:flex-row">
           <Link
             href={englishHref}
-            onClick={dismissNotice}
+            onClick={handleDismiss}
             className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-white/10"
           >
             English
           </Link>
           <Link
             href={germanHref}
-            onClick={dismissNotice}
+            onClick={handleDismiss}
             className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-white/10"
           >
             Deutsch
           </Link>
           <button
             type="button"
-            onClick={dismissNotice}
+            onClick={handleDismiss}
             className="inline-flex items-center justify-center rounded-xl border border-transparent px-4 py-2.5 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white"
           >
             Dismiss
