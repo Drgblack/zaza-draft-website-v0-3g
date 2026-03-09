@@ -17,6 +17,16 @@ type Frontmatter = {
   ogImage?: string;
   language?: "en" | "de";
   lang?: "en" | "de";
+  seo?: {
+    title?: string;
+    description?: string;
+    keywords?: string[];
+    canonicalUrl?: string;
+  };
+  faqs?: Array<{
+    question?: string;
+    answer?: string;
+  }>;
 };
 
 const BLOG_CONTENT_DIR = path.join(process.cwd(), "content", "blog");
@@ -103,6 +113,31 @@ function normalizeTags(tags: unknown): string[] {
   }
 
   return [];
+}
+
+function normalizeFaqs(
+  faqs: unknown,
+): Array<{ question: string; answer: string }> | undefined {
+  if (!Array.isArray(faqs)) return undefined;
+
+  const items = faqs
+    .map((item) => {
+      if (!item || typeof item !== "object") return null;
+
+      const question = String(
+        (item as { question?: unknown }).question ?? "",
+      ).trim();
+      const answer = String((item as { answer?: unknown }).answer ?? "").trim();
+
+      if (!question || !answer) return null;
+
+      return { question, answer };
+    })
+    .filter((item): item is { question: string; answer: string } =>
+      Boolean(item),
+    );
+
+  return items.length > 0 ? items : undefined;
 }
 
 /**
@@ -201,6 +236,15 @@ function readContentPosts(): BlogPost[] {
       tags: normalizeTags(fm.tags),
       ogImage: resolveOgImage(fm.ogImage, slug, availableImages),
       language: lang,
+      seoTitle:
+        typeof fm.seo?.title === "string" && fm.seo.title.trim()
+          ? fm.seo.title.trim()
+          : undefined,
+      seoDescription:
+        typeof fm.seo?.description === "string" && fm.seo.description.trim()
+          ? fm.seo.description.trim()
+          : undefined,
+      faqs: normalizeFaqs(fm.faqs),
     } as BlogPost;
   });
 }

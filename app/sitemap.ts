@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { readdirSync } from "fs";
 import { join } from "path";
+import { teacherWritingPageSlugs } from "@/lib/seo/teacher-writing-pages";
 
 const baseUrl = "https://zazadraft.com";
 const currentDate = new Date();
@@ -52,6 +53,14 @@ function buildLocalizedPages() {
   );
 }
 
+function buildTeacherWritingPages() {
+  return teacherWritingPageSlugs.map((slug) => ({
+    url: `${baseUrl}/${slug}`,
+    lastModified: currentDate,
+    priority: 0.82,
+  }));
+}
+
 function getBlogSlugs() {
   const blogDir = join(process.cwd(), "content", "blog");
   const files = readdirSync(blogDir, { withFileTypes: true });
@@ -89,5 +98,9 @@ function getBlogSlugs() {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [...buildLocalizedPages(), ...getBlogSlugs()];
+  return [
+    ...buildLocalizedPages(),
+    ...buildTeacherWritingPages(),
+    ...getBlogSlugs(),
+  ];
 }

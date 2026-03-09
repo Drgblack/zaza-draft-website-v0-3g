@@ -35,13 +35,15 @@ export async function generateMetadata({
 
   const image = post.ogImage ?? getPostImage(post.slug);
   const urlPath = `/de/blog/${post.slug}`;
+  const metadataTitle = post.seoTitle ?? `${post.title} | Zaza Draft`;
+  const metadataDescription = post.seoDescription ?? post.excerpt ?? "";
 
   return {
-    title: `${post.title} | Zaza Draft`,
-    description: post.excerpt ?? "",
+    title: metadataTitle,
+    description: metadataDescription,
     openGraph: {
-      title: `${post.title} | Zaza Draft`,
-      description: post.excerpt ?? "",
+      title: metadataTitle,
+      description: metadataDescription,
       type: "article",
       url: `https://zazadraft.com${urlPath}`,
       locale: "de_DE",
@@ -49,8 +51,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: image ? "summary_large_image" : "summary",
-      title: `${post.title} | Zaza Draft`,
-      description: post.excerpt ?? "",
+      title: metadataTitle,
+      description: metadataDescription,
       images: image ? [image] : [],
     },
     alternates: {
@@ -81,12 +83,13 @@ export default async function BlogPostPageDe({
   const relatedPosts = getRelatedPosts(slug, "de");
   const imageSrc = post.ogImage ?? getPostImage(post.slug);
   const urlPath = `/de/blog/${post.slug}`;
+  const description = post.seoDescription ?? post.excerpt ?? "";
 
   const blogPostSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
-    description: post.excerpt ?? "",
+    description,
     image: imageSrc ? [`https://zazadraft.com${imageSrc}`] : [],
     author: {
       "@type": "Person",
@@ -100,12 +103,34 @@ export default async function BlogPostPageDe({
     },
   };
 
+  const faqSchema =
+    post.faqs && post.faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: post.faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.answer,
+            },
+          })),
+        }
+      : null;
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
       <article className="mx-auto max-w-3xl px-4 pb-20 pt-24 sm:px-6 lg:px-0">
         {imageSrc && (
