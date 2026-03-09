@@ -1,9 +1,11 @@
 import type { MetadataRoute } from "next";
 import { readdirSync, statSync } from "fs";
 import { join } from "path";
+import { getGeneratedPageSitemapEntries } from "@/lib/generated-pages";
 import { teacherWritingPageSlugs } from "@/lib/seo/teacher-writing-pages";
 import { clusterSpokes } from "@/lib/seo/teacher-safe-ai-cluster";
 import { getRegionalTeacherWritingSlugs } from "@/lib/seo/regional-writing-pages";
+import { getProgrammaticSitemapEntries } from "@/lib/programmatic";
 
 const BASE_URL = "https://zazadraft.com";
 
@@ -160,6 +162,48 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const painEntries: SitemapEntryConfig[] = [
     {
+      path: "/diagnosis",
+      priority: 0.95,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/communication-diagnosis",
+      priority: 0.6,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/how-to-reply-angry-parent",
+      priority: 0.65,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/parent-ignores-email-help",
+      priority: 0.65,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/report-writing-stress-help",
+      priority: 0.65,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/behaviour-email-diagnosis",
+      priority: 0.65,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/slt-documentation-help",
+      priority: 0.65,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
       path: "/how-to-reply-to-an-angry-parent-email",
       priority: 0.9,
       changeFrequency: "daily",
@@ -216,6 +260,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...topicalClusterEntries.map(toSitemapEntry),
     ...ukEntries.map(toSitemapEntry),
     ...englandEntries.map(toSitemapEntry),
+    ...getProgrammaticSitemapEntries(now),
+    ...getGeneratedPageSitemapEntries(now),
     ...getBlogEntries(),
   ]);
 }

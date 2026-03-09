@@ -1,0 +1,18 @@
+{
+  "attempted": 5,
+  "generated": 5,
+  "skippedDuplicates": 0,
+  "skippedQuality": 0,
+  "totalWords": 6428,
+  "minWords": 1274,
+  "maxWords": 1303,
+  "sampleSlugs": [
+    "how-to-write-behaviour-email-to-parents-year-1-ks1",
+    "how-to-write-missing-homework-email-to-parents-year-1-ks1",
+    "how-to-write-angry-parent-reply-email-to-parents-year-1-ks1",
+    "how-to-write-grade-complaint-email-to-parents-year-1-ks1",
+    "how-to-write-behaviour-email-to-parents-year-2-ks1"
+  ],
+  "averageWords": 1286,
+  "createdAt": "2026-03-09T12:56:55.706Z"
+}
