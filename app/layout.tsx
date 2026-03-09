@@ -5,6 +5,7 @@ import React from "react";
 import { LanguageProvider } from "@/lib/i18n/language-context";
 import { Header } from "@/components/header";
 import Footer from "@/components/Footer";
+import { TranslationHelperNotice } from "@/components/translation-helper-notice";
 import { JsonLdCollection } from "@/components/seo/json-ld";
 import {
   createOrganizationJsonLd,
@@ -100,6 +101,7 @@ gtag('config', 'G-GFCNQYCHFK', {
         />
         <LanguageProvider>
           <Header />
+          <TranslationHelperNotice />
           <main className="pt-[92px] bg-slate-950">{children}</main>
           <Footer />
         </LanguageProvider>
