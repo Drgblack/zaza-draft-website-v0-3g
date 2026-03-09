@@ -1,18 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import howToKeywords from "@/data/how-to-keywords.json";
 import {
+  getHowToArticle,
+  getHowToKeyword,
+  getHowToKeywords,
   type GeneratedHowToArticle,
-  generateArticle,
   type HowToKeyword,
-} from "@/lib/generateArticle";
-
-const keywords = howToKeywords as HowToKeyword[];
-
-function findKeyword(slug: string) {
-  return keywords.find((item) => item.slug === slug) ?? null;
-}
+} from "@/lib/howToContent";
 
 function splitParagraphs(text: string) {
   return text
@@ -31,7 +26,7 @@ export const dynamic = "force-static";
 export const revalidate = false;
 
 export function generateStaticParams() {
-  return keywords.map((keyword) => ({ slug: keyword.slug }));
+  return getHowToKeywords().map((keyword) => ({ slug: keyword.slug }));
 }
 
 export function generateMetadata({
@@ -39,7 +34,7 @@ export function generateMetadata({
 }: {
   params: { slug: string };
 }): Metadata {
-  const keyword = findKeyword(params.slug);
+  const keyword = getHowToKeyword(params.slug);
 
   if (!keyword) {
     return {
@@ -115,8 +110,8 @@ function renderArticle(keyword: HowToKeyword, article: GeneratedHowToArticle) {
             <p className="max-w-3xl text-lg leading-8 text-slate-700">
               Built around {keyword.yearGroup} {keyword.subject} for{" "}
               {keyword.modifier.toLowerCase()} pupils. This static guide is
-              generated at build time from your keyword set and rendered as a
-              fully indexable article.
+              pre-generated and stored in the repo so it can be rendered as a
+              fully indexable article without live API calls during build.
             </p>
             <div className="flex flex-wrap gap-3">
               <span className="rounded-full bg-white/90 px-4 py-2 text-sm text-slate-700">
@@ -204,17 +199,22 @@ function renderArticle(keyword: HowToKeyword, article: GeneratedHowToArticle) {
   );
 }
 
-export default async function HowToKeywordPage({
+export default function HowToKeywordPage({
   params,
 }: {
   params: { slug: string };
 }) {
-  const keyword = findKeyword(params.slug);
+  const keyword = getHowToKeyword(params.slug);
 
   if (!keyword) {
     notFound();
   }
 
-  const article = await generateArticle(keyword);
+  const article = getHowToArticle(params.slug);
+
+  if (!article) {
+    notFound();
+  }
+
   return renderArticle(keyword, article);
 }

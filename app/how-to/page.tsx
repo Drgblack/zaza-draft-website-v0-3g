@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import howToKeywords from "@/data/how-to-keywords.json";
-import type { HowToKeyword } from "@/lib/generateArticle";
+import { getHowToKeywords } from "@/lib/howToContent";
 
-const keywords = howToKeywords as HowToKeyword[];
+const keywords = getHowToKeywords();
 
 export const metadata: Metadata = {
   title: "How-To Guides for Teachers | Zaza Draft",
   description:
-    "Static how-to guides for teacher report comments and parent communication, generated from Zaza Draft keyword data.",
+    "Static how-to guides for teacher report comments and parent communication, pre-generated from Zaza Draft keyword data.",
 };
 
 export default function HowToIndexPage() {
@@ -23,7 +22,7 @@ export default function HowToIndexPage() {
             How-to guides for teacher writing
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700">
-            These pages are generated from keyword data at build time and
+            These pages are built from checked-in keyword and article data and
             designed to give teachers practical, static guides for report
             comments and related writing tasks.
           </p>
