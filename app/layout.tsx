@@ -5,7 +5,6 @@ import React from "react";
 import { LanguageProvider } from "@/lib/i18n/language-context";
 import { Header } from "@/components/header";
 import Footer from "@/components/Footer";
-import { Analytics } from "@/components/analytics";
 import { JsonLdCollection } from "@/components/seo/json-ld";
 import {
   createOrganizationJsonLd,
@@ -13,6 +12,12 @@ import {
   createWebsiteJsonLd,
 } from "@/lib/seo/json-ld";
 import { siteConfig } from "@/lib/seo/site-config";
+
+const GA4_MEASUREMENT_ID = "G-GFCNQYCHFK";
+const shouldLoadGa =
+  process.env.NODE_ENV === "production" &&
+  process.env.VERCEL_ENV !== "preview" &&
+  process.env.VERCEL_ENV !== "development";
 
 export const metadata: Metadata = {
   title:
@@ -51,6 +56,24 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {shouldLoadGa ? (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-GFCNQYCHFK', {
+  anonymize_ip: true
+});`,
+              }}
+            />
+          </>
+        ) : null}
         <link rel="icon" href="/z-logo.png" sizes="any" />
       </head>
       <body className="bg-slate-950 text-slate-100">
@@ -76,7 +99,6 @@ export default function RootLayout({
           ]}
         />
         <LanguageProvider>
-          <Analytics />
           <Header />
           <main className="pt-[92px] bg-slate-950">{children}</main>
           <Footer />

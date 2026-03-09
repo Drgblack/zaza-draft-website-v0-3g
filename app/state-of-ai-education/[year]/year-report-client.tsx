@@ -1,12 +1,12 @@
 "use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Card } from "@/components/ui/card"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Card } from "@/components/ui/card";
 import {
   Download,
   Users,
@@ -17,49 +17,45 @@ import {
   CheckCircle2,
   ArrowRight,
   ArrowLeft,
-} from "lucide-react"
-import Link from "next/link"
+} from "lucide-react";
+import Link from "next/link";
 
 interface YearReportClientProps {
-  year: string
+  year: string;
 }
 
 export default function YearReportClient({ year }: YearReportClientProps) {
-  const [email, setEmail] = useState("")
-  const [role, setRole] = useState("")
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [error, setError] = useState("")
+  const [email, setEmail] = useState("");
+  const [role, setRole] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    e.preventDefault();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
-      setError("Please enter a valid email address.")
-      return
+      setError("Please enter a valid email address.");
+      return;
     }
-    setError("")
-    setIsSubmitting(true)
-
-    // Track download request
-    if (typeof window !== "undefined" && (window as any).gtag) {
-      ;(window as any).gtag("event", "report_download_request", {
-        event_category: "Lead Generation",
-        event_label: `State of AI Report ${year}`,
-      })
-    }
+    setError("");
+    setIsSubmitting(true);
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500))
-      console.log("TODO: connect historical report download to Brevo", { email, role, year })
-      setIsSubmitted(true)
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      console.log("TODO: connect historical report download to Brevo", {
+        email,
+        role,
+        year,
+      });
+      setIsSubmitted(true);
     } catch (err) {
-      console.error("[year-report] submission failed", err)
-      setError("Something went wrong. Please try again.")
+      console.error("[year-report] submission failed", err);
+      setError("Something went wrong. Please try again.");
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   // Year-specific data
   const reportData: Record<string, any> = {
@@ -77,7 +73,8 @@ export default function YearReportClient({ year }: YearReportClientProps) {
         {
           stat: "4.8 hrs",
           label: "saved per week per teacher",
-          description: "Time savings for administrative tasks and communication",
+          description:
+            "Time savings for administrative tasks and communication",
           icon: Users,
         },
         {
@@ -174,9 +171,9 @@ export default function YearReportClient({ year }: YearReportClientProps) {
         "Predicted rapid growth in AI adoption over next 3-5 years",
       ],
     },
-  }
+  };
 
-  const data = reportData[year]
+  const data = reportData[year];
 
   return (
     <div className="min-h-screen bg-[#0F172A]">
@@ -198,7 +195,9 @@ export default function YearReportClient({ year }: YearReportClientProps) {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-block px-4 py-2 bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 rounded-full mb-6">
-              <span className="text-[#A78BFA] text-sm font-medium">Historical Report</span>
+              <span className="text-[#A78BFA] text-sm font-medium">
+                Historical Report
+              </span>
             </div>
 
             <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
@@ -207,8 +206,8 @@ export default function YearReportClient({ year }: YearReportClientProps) {
             </h1>
 
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Historical analysis of AI adoption in K-12 education. {data.pages} pages of insights from{" "}
-              {data.surveySize} teachers.
+              Historical analysis of AI adoption in K-12 education. {data.pages}{" "}
+              pages of insights from {data.surveySize} teachers.
             </p>
 
             <div className="flex flex-wrap justify-center gap-6 mb-8">
@@ -233,7 +232,9 @@ export default function YearReportClient({ year }: YearReportClientProps) {
       <section className="py-20 px-4 bg-[#1E293B]/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">{year} Key Findings</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              {year} Key Findings
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Snapshot of AI adoption in education during {year}
             </p>
@@ -241,18 +242,24 @@ export default function YearReportClient({ year }: YearReportClientProps) {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {data.keyFindings.map((finding: any, index: number) => {
-              const Icon = finding.icon
+              const Icon = finding.icon;
               return (
                 <Card
                   key={index}
                   className="bg-[#1E293B] border-[#8B5CF6]/20 p-6 hover:border-[#8B5CF6]/40 transition-all"
                 >
                   <Icon className="w-10 h-10 text-[#A78BFA] mb-4" />
-                  <div className="text-5xl font-bold text-white mb-2">{finding.stat}</div>
-                  <div className="text-lg font-semibold text-[#A78BFA] mb-3">{finding.label}</div>
-                  <p className="text-gray-400 text-sm leading-relaxed">{finding.description}</p>
+                  <div className="text-5xl font-bold text-white mb-2">
+                    {finding.stat}
+                  </div>
+                  <div className="text-lg font-semibold text-[#A78BFA] mb-3">
+                    {finding.label}
+                  </div>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {finding.description}
+                  </p>
                 </Card>
-              )
+              );
             })}
           </div>
         </div>
@@ -262,8 +269,12 @@ export default function YearReportClient({ year }: YearReportClientProps) {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Report Highlights</h2>
-            <p className="text-xl text-gray-300">Key insights and findings from the {year} report</p>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Report Highlights
+            </h2>
+            <p className="text-xl text-gray-300">
+              Key insights and findings from the {year} report
+            </p>
           </div>
 
           <Card className="bg-[#1E293B] border-[#8B5CF6]/20 p-8">
@@ -271,7 +282,9 @@ export default function YearReportClient({ year }: YearReportClientProps) {
               {data.highlights.map((highlight: string, index: number) => (
                 <li key={index} className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-[#A78BFA] flex-shrink-0 mt-1" />
-                  <span className="text-gray-300 text-lg leading-relaxed">{highlight}</span>
+                  <span className="text-gray-300 text-lg leading-relaxed">
+                    {highlight}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -287,8 +300,12 @@ export default function YearReportClient({ year }: YearReportClientProps) {
               <>
                 <div className="text-center mb-8">
                   <Download className="w-16 h-16 text-[#A78BFA] mx-auto mb-4" />
-                  <h2 className="text-3xl font-bold text-white mb-3">Download the {year} Report</h2>
-                  <p className="text-gray-300">Get instant access to the full {data.pages}-page report</p>
+                  <h2 className="text-3xl font-bold text-white mb-3">
+                    Download the {year} Report
+                  </h2>
+                  <p className="text-gray-300">
+                    Get instant access to the full {data.pages}-page report
+                  </p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -321,9 +338,15 @@ export default function YearReportClient({ year }: YearReportClientProps) {
                       <option value="">Select your role...</option>
                       <option value="teacher">Teacher</option>
                       <option value="administrator">Administrator</option>
-                      <option value="instructional-coach">Instructional Coach</option>
-                      <option value="curriculum-director">Curriculum Director</option>
-                      <option value="technology-coordinator">Technology Coordinator</option>
+                      <option value="instructional-coach">
+                        Instructional Coach
+                      </option>
+                      <option value="curriculum-director">
+                        Curriculum Director
+                      </option>
+                      <option value="technology-coordinator">
+                        Technology Coordinator
+                      </option>
                       <option value="other">Other</option>
                     </select>
                   </div>
@@ -350,12 +373,16 @@ export default function YearReportClient({ year }: YearReportClientProps) {
             ) : (
               <div className="text-center py-8">
                 <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-3">Check Your Email!</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  Check Your Email!
+                </h3>
                 <p className="text-gray-300 mb-4">
-                  This form is currently a preview. Please email hello@zazatechnologies.com and we will send the report.
+                  This form is currently a preview. Please email
+                  hello@zazatechnologies.com and we will send the report.
                 </p>
                 <p className="text-sm text-gray-400">
-                  We logged your request for <strong className="text-[#A78BFA]">{email}</strong>
+                  We logged your request for{" "}
+                  <strong className="text-[#A78BFA]">{email}</strong>
                 </p>
               </div>
             )}
@@ -367,8 +394,12 @@ export default function YearReportClient({ year }: YearReportClientProps) {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Explore Other Reports</h2>
-            <p className="text-xl text-gray-300">View our complete archive of State of AI reports</p>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Explore Other Reports
+            </h2>
+            <p className="text-xl text-gray-300">
+              View our complete archive of State of AI reports
+            </p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-4">
@@ -401,5 +432,5 @@ export default function YearReportClient({ year }: YearReportClientProps) {
         </div>
       </section>
     </div>
-  )
+  );
 }

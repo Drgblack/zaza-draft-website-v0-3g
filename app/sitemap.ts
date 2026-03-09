@@ -1,168 +1,221 @@
 import type { MetadataRoute } from "next";
-import { readdirSync } from "fs";
+import { readdirSync, statSync } from "fs";
 import { join } from "path";
 import { teacherWritingPageSlugs } from "@/lib/seo/teacher-writing-pages";
-import { getRegionalTeacherWritingSlugs } from "@/lib/seo/regional-writing-pages";
 import { clusterSpokes } from "@/lib/seo/teacher-safe-ai-cluster";
+import { getRegionalTeacherWritingSlugs } from "@/lib/seo/regional-writing-pages";
 
-const baseUrl = "https://zazadraft.com";
-const currentDate = new Date();
+const BASE_URL = "https://zazadraft.com";
 
-const marketingPages = [
-  { path: "", priority: 1.0 },
-  { path: "/features", priority: 0.9 },
-  { path: "/pricing", priority: 0.9 },
-  { path: "/products/draft", priority: 0.85 },
-  { path: "/products/teach", priority: 0.85 },
-  { path: "/products/shield", priority: 0.85 },
-  { path: "/products/gradeflow", priority: 0.75 },
-  { path: "/suite", priority: 0.7 },
-  { path: "/ai-literacy", priority: 0.8 },
-  { path: "/ai-for-student-reports", priority: 0.7 },
-  { path: "/glossary", priority: 0.7 },
-  { path: "/resources", priority: 0.7 },
-  { path: "/integrations", priority: 0.7 },
-  { path: "/community", priority: 0.7 },
-  { path: "/blog", priority: 0.8 },
-  { path: "/ambassadors", priority: 0.7 },
-  { path: "/reduce-stress-parent-messages", priority: 0.7 },
-  { path: "/state-of-ai-education", priority: 0.7 },
-  { path: "/success-stories", priority: 0.65 },
-  { path: "/teacher-stories", priority: 0.6 },
-  { path: "/about/company", priority: 0.6 },
-  { path: "/manifesto", priority: 0.6 },
-  { path: "/about/founder", priority: 0.6 },
-  { path: "/about/press", priority: 0.55 },
-  { path: "/contact", priority: 0.6 },
-  { path: "/support", priority: 0.6 },
-  { path: "/webinars", priority: 0.6 },
-  { path: "/videos", priority: 0.6 },
-  { path: "/roi-calculator", priority: 0.55 },
-  { path: "/faq", priority: 0.5 },
-  { path: "/privacy", priority: 0.3 },
-  { path: "/terms", priority: 0.3 },
-];
+type ChangeFrequency = NonNullable<
+  MetadataRoute.Sitemap[number]["changeFrequency"]
+>;
 
-const localePrefixes = ["", "/de"];
+type SitemapEntryConfig = {
+  path: string;
+  priority: number;
+  changeFrequency: ChangeFrequency;
+  lastModified?: Date;
+};
 
-function buildLocalizedPages() {
-  return marketingPages.flatMap((entry) =>
-    localePrefixes.map((prefix) => ({
-      url: `${baseUrl}${prefix}${entry.path}`,
-      lastModified: currentDate,
-      priority: entry.priority,
-    })),
+function toSitemapEntry({
+  path,
+  priority,
+  changeFrequency,
+  lastModified = new Date(),
+}: SitemapEntryConfig): MetadataRoute.Sitemap[number] {
+  return {
+    url: `${BASE_URL}${path}`,
+    lastModified,
+    changeFrequency,
+    priority,
+  };
+}
+
+function dedupeEntries(entries: MetadataRoute.Sitemap): MetadataRoute.Sitemap {
+  return Array.from(
+    new Map(entries.map((entry) => [entry.url, entry])).values(),
   );
 }
 
-function buildTeacherWritingPages() {
-  return teacherWritingPageSlugs.map((slug) => ({
-    url: `${baseUrl}/${slug}`,
-    lastModified: currentDate,
-    priority: 0.82,
-  }));
+function getBlogEntries(): MetadataRoute.Sitemap {
+  const blogDirectory = join(process.cwd(), "content", "blog");
+  const files = readdirSync(blogDirectory, { withFileTypes: true });
+
+  return files
+    .filter(
+      (file) =>
+        file.isFile() &&
+        !file.name.startsWith("_") &&
+        /\.(md|mdx)$/i.test(file.name) &&
+        !file.name.endsWith(".de.md") &&
+        !file.name.endsWith(".de.mdx"),
+    )
+    .map((file) => {
+      const fullPath = join(blogDirectory, file.name);
+      const slug = file.name.replace(/\.(md|mdx)$/i, "");
+
+      return toSitemapEntry({
+        path: `/blog/${slug}`,
+        priority: 0.8,
+        changeFrequency: "weekly",
+        lastModified: statSync(fullPath).mtime,
+      });
+    });
 }
 
-function buildStandaloneEnglishPages() {
-  return [
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const now = new Date();
+
+  const primaryEntries: SitemapEntryConfig[] = [
+    { path: "/", priority: 1.0, changeFrequency: "daily", lastModified: now },
     {
-      url: `${baseUrl}/how-to-reply-to-an-angry-parent-email`,
-      lastModified: currentDate,
-      priority: 0.84,
+      path: "/teacher-parent-communication-hub",
+      priority: 1.0,
+      changeFrequency: "daily",
+      lastModified: now,
     },
     {
-      url: `${baseUrl}/teacher-parent-communication-hub`,
-      lastModified: currentDate,
-      priority: 0.88,
+      path: "/uk/teacher-communication-resources",
+      priority: 1.0,
+      changeFrequency: "daily",
+      lastModified: now,
     },
-    {
-      url: `${baseUrl}/uk`,
-      lastModified: currentDate,
-      priority: 0.82,
-    },
-    {
-      url: `${baseUrl}/england`,
-      lastModified: currentDate,
-      priority: 0.76,
-    },
-    {
-      url: `${baseUrl}/uk/teacher-communication-resources`,
-      lastModified: currentDate,
-      priority: 0.86,
-    },
-    {
-      url: `${baseUrl}/free-resources`,
-      lastModified: currentDate,
-      priority: 0.78,
-    },
-    ...clusterSpokes.map((page) => ({
-      url: `${baseUrl}/${page.slug}`,
-      lastModified: currentDate,
-      priority: 0.74,
-    })),
   ];
-}
 
-function buildRegionalTeacherWritingPages() {
-  const ukPages = getRegionalTeacherWritingSlugs("uk").map((slug) => ({
-    url: `${baseUrl}/uk/${slug}`,
-    lastModified: currentDate,
-    priority: 0.8,
-  }));
+  const coreMarketingEntries: SitemapEntryConfig[] = [
+    {
+      path: "/features",
+      priority: 0.7,
+      changeFrequency: "monthly",
+      lastModified: now,
+    },
+    {
+      path: "/about",
+      priority: 0.7,
+      changeFrequency: "monthly",
+      lastModified: now,
+    },
+    {
+      path: "/about/company",
+      priority: 0.7,
+      changeFrequency: "monthly",
+      lastModified: now,
+    },
+    {
+      path: "/about/founder",
+      priority: 0.7,
+      changeFrequency: "monthly",
+      lastModified: now,
+    },
+    {
+      path: "/about/press",
+      priority: 0.7,
+      changeFrequency: "monthly",
+      lastModified: now,
+    },
+    {
+      path: "/pricing",
+      priority: 0.7,
+      changeFrequency: "monthly",
+      lastModified: now,
+    },
+    {
+      path: "/products/draft",
+      priority: 0.9,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/free-resources",
+      priority: 0.7,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/roi-calculator",
+      priority: 0.7,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/blog",
+      priority: 0.8,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/uk",
+      priority: 0.7,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/england",
+      priority: 0.7,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+  ];
 
-  const englandPages = getRegionalTeacherWritingSlugs("england").map(
-    (slug) => ({
-      url: `${baseUrl}/england/${slug}`,
-      lastModified: currentDate,
-      priority: 0.78,
+  const painEntries: SitemapEntryConfig[] = [
+    {
+      path: "/how-to-reply-to-an-angry-parent-email",
+      priority: 0.9,
+      changeFrequency: "daily",
+      lastModified: now,
+    },
+    {
+      path: "/reduce-stress-parent-messages",
+      priority: 0.9,
+      changeFrequency: "daily",
+      lastModified: now,
+    },
+  ];
+
+  const teacherWritingEntries: SitemapEntryConfig[] =
+    teacherWritingPageSlugs.map((slug) => ({
+      path: `/${slug}`,
+      priority: 0.9,
+      changeFrequency: "daily",
+      lastModified: now,
+    }));
+
+  const topicalClusterEntries: SitemapEntryConfig[] = clusterSpokes.map(
+    (page) => ({
+      path: `/${page.slug}`,
+      priority: 0.9,
+      changeFrequency: "daily",
+      lastModified: now,
     }),
   );
 
-  return [...ukPages, ...englandPages];
-}
-
-function getBlogSlugs() {
-  const blogDir = join(process.cwd(), "content", "blog");
-  const files = readdirSync(blogDir, { withFileTypes: true });
-  const englishSlugs = new Set<string>();
-  const germanSlugs = new Set<string>();
-
-  files.forEach((entry) => {
-    if (!entry.isFile()) {
-      return;
-    }
-    if (entry.name.startsWith("_")) {
-      return;
-    }
-    const slug = entry.name.replace(/\.(mdx|md)$/i, "");
-    if (slug.endsWith(".de")) {
-      germanSlugs.add(slug.replace(/\.de$/, ""));
-      return;
-    }
-    englishSlugs.add(slug);
-  });
-
-  const englishEntries = Array.from(englishSlugs).map((slug) => ({
-    url: `${baseUrl}/blog/${slug}`,
-    lastModified: currentDate,
-    priority: 0.6,
+  const ukEntries: SitemapEntryConfig[] = getRegionalTeacherWritingSlugs(
+    "uk",
+  ).map((slug) => ({
+    path: `/uk/${slug}`,
+    priority: 0.9,
+    changeFrequency: "daily",
+    lastModified: now,
   }));
 
-  const germanEntries = Array.from(germanSlugs).map((slug) => ({
-    url: `${baseUrl}/de/blog/${slug}`,
-    lastModified: currentDate,
-    priority: 0.6,
+  const englandEntries: SitemapEntryConfig[] = getRegionalTeacherWritingSlugs(
+    "england",
+  ).map((slug) => ({
+    path: `/england/${slug}`,
+    priority: 0.9,
+    changeFrequency: "daily",
+    lastModified: now,
   }));
 
-  return [...englishEntries, ...germanEntries];
-}
-
-export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    ...buildLocalizedPages(),
-    ...buildStandaloneEnglishPages(),
-    ...buildTeacherWritingPages(),
-    ...buildRegionalTeacherWritingPages(),
-    ...getBlogSlugs(),
-  ];
+  return dedupeEntries([
+    ...primaryEntries.map(toSitemapEntry),
+    ...coreMarketingEntries.map(toSitemapEntry),
+    ...painEntries.map(toSitemapEntry),
+    ...teacherWritingEntries.map(toSitemapEntry),
+    ...topicalClusterEntries.map(toSitemapEntry),
+    ...ukEntries.map(toSitemapEntry),
+    ...englandEntries.map(toSitemapEntry),
+    ...getBlogEntries(),
+  ]);
 }

@@ -207,9 +207,17 @@ function InternalLinksBlock({ page }: { page: TeacherWritingPage }) {
 }
 
 function RelatedPagesBlock({ page }: { page: TeacherWritingPage }) {
-  const relatedPages = page.relatedSlugs.map((slug) =>
-    getTeacherWritingPageOrThrow(slug),
-  );
+  const relatedPages = page.relatedSlugs.flatMap((slug) => {
+    try {
+      return [getTeacherWritingPageOrThrow(slug)];
+    } catch {
+      return [];
+    }
+  });
+
+  if (relatedPages.length === 0) {
+    return null;
+  }
 
   return (
     <section className="space-y-6">

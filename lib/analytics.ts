@@ -24,11 +24,6 @@ const baseTrack = (event: string, props?: TrackProps) => {
   } catch {
     // no-op
   }
-  try {
-    window.gtag?.("event", event, props);
-  } catch {
-    // no-op
-  }
 };
 
 const makeNamespace = (): AnalyticsNamespace => ({

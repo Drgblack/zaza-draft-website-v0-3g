@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { absoluteUrl, siteConfig } from "@/lib/seo/site-config";
+import { defaultMetadata } from "@/lib/metadata";
 
 interface BuildPageMetadataInput {
   title: string;
@@ -15,41 +15,25 @@ export function buildPageMetadata({
   title,
   description,
   path,
-  image = siteConfig.defaultOgImage,
+  image,
   type = "website",
   keywords,
   alternates,
 }: BuildPageMetadataInput): Metadata {
-  const canonical = absoluteUrl(path);
-  const imageUrl = absoluteUrl(image);
-
-  return {
+  const metadata = defaultMetadata({
     title,
     description,
+    path,
+    image,
+    type,
     keywords,
+  });
+
+  return {
+    ...metadata,
     alternates: {
-      canonical,
+      ...metadata.alternates,
       languages: alternates,
-    },
-    openGraph: {
-      title,
-      description,
-      url: canonical,
-      type,
-      siteName: siteConfig.name,
-      locale: "en_GB",
-      images: [
-        {
-          url: imageUrl,
-          alt: title,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [imageUrl],
     },
   };
 }
