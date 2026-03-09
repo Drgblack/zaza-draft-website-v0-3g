@@ -11,10 +11,6 @@ import { DraftDemo } from "@/components/draft-demo";
 import { CaseStudyCarousel } from "@/components/case-study-carousel";
 import { SocialProofBadges } from "@/components/social-proof-badges";
 
-// Temporary homepage banner for manual testing. Flip to false to hide it.
-const SHOW_TEST_BANNER = true;
-const TEST_BANNER_LABEL = "Test";
-
 const Check = ({ className }: { className?: string }) => (
   <svg
     className={className}
@@ -163,13 +159,6 @@ export function HomePageClient() {
 
   return (
     <>
-      {SHOW_TEST_BANNER ? (
-        <section className="sticky top-0 z-[60] border-b border-amber-300/30 bg-amber-400 text-slate-950">
-          <div className="mx-auto flex max-w-7xl items-center justify-center px-4 py-3 text-center text-sm font-semibold uppercase tracking-[0.35em] sm:px-6 lg:px-8">
-            {TEST_BANNER_LABEL}
-          </div>
-        </section>
-      ) : null}
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-[#0F172A] pt-32 lg:pt-40 pb-20 md:pb-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -203,7 +192,7 @@ export function HomePageClient() {
                 className="space-y-4"
               >
                 <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1]">
-                  <span className="text-red-500">{t("hero.headline")}</span>
+                  <span className="text-white">{t("hero.headline")}</span>
                   <br />
                   <span className="bg-gradient-to-r from-purple-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                     {t("hero.headlineAccent")}
