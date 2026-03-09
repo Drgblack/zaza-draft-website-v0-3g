@@ -6,6 +6,7 @@ import { defaultMetadata } from "@/lib/metadata";
 
 export type GeneratedPageFrontmatter = {
   title?: string;
+  seoTitle?: string;
   description?: string;
   slug?: string;
   keywords?: string | string[];
@@ -37,6 +38,7 @@ export type GeneratedPageSection = {
 export type GeneratedMarkdownPage = {
   slug: string;
   title: string;
+  seoTitle?: string;
   description: string;
   keywords: string[];
   category: string;
@@ -191,6 +193,10 @@ function parseGeneratedPage(filePath: string): GeneratedMarkdownPage | null {
   return {
     slug,
     title,
+    seoTitle:
+      typeof frontmatter.seoTitle === "string" && frontmatter.seoTitle.trim()
+        ? frontmatter.seoTitle.trim()
+        : undefined,
     description,
     keywords: normaliseKeywords(frontmatter.keywords),
     category: String(frontmatter.category ?? "generated").trim(),
@@ -245,7 +251,7 @@ export function getGeneratedPageMetadata(slug: string) {
   }
 
   return defaultMetadata({
-    title: page.title,
+    title: page.seoTitle ?? page.title,
     description: page.description,
     path: `/${page.slug}`,
     type: "article",
