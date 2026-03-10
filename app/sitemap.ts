@@ -29,6 +29,11 @@ type HowToKeywordEntry = {
   slug: string;
 };
 
+export type SitemapSourceGroup = {
+  source: string;
+  entries: MetadataRoute.Sitemap;
+};
+
 function toSitemapEntry({
   path,
   priority,
@@ -75,7 +80,7 @@ function getBlogEntries(): MetadataRoute.Sitemap {
     });
 }
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export async function getSitemapSourceGroups(): Promise<SitemapSourceGroup[]> {
   const now = new Date();
   const howToEntries = howToKeywords as HowToKeywordEntry[];
 
@@ -745,37 +750,99 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: now,
   }));
 
-  const dynamicProgrammaticEntries: MetadataRoute.Sitemap = [
-    ...getUkClusterSitemapEntries(now),
-    ...getExpandedPageSitemapEntries(now),
-    ...getComparisonSitemapEntries(now),
-    ...getMatrixSitemapEntries(now),
-    ...getProgrammaticSitemapEntries(now),
-    ...getGeneratedPageSitemapEntries(now),
-    ...howToEntries.map((entry) =>
-      toSitemapEntry({
-        path: `/how-to/${entry.slug}`,
-        priority: 0.78,
-        changeFrequency: "weekly",
-        lastModified: now,
-      }),
-    ),
+  return [
+    {
+      source: "primary_entries",
+      entries: primaryEntries.map(toSitemapEntry),
+    },
+    {
+      source: "core_marketing_entries",
+      entries: coreMarketingEntries.map(toSitemapEntry),
+    },
+    {
+      source: "locale_and_legal_entries",
+      entries: localeAndLegalEntries.map(toSitemapEntry),
+    },
+    {
+      source: "product_entries",
+      entries: productEntries.map(toSitemapEntry),
+    },
+    {
+      source: "content_hub_entries",
+      entries: contentHubEntries.map(toSitemapEntry),
+    },
+    {
+      source: "campaign_and_tool_entries",
+      entries: campaignAndToolEntries.map(toSitemapEntry),
+    },
+    {
+      source: "programmatic_hub_entries",
+      entries: programmaticHubEntries.map(toSitemapEntry),
+    },
+    {
+      source: "pain_entries",
+      entries: painEntries.map(toSitemapEntry),
+    },
+    {
+      source: "teacher_writing_entries",
+      entries: teacherWritingEntries.map(toSitemapEntry),
+    },
+    {
+      source: "topical_cluster_entries",
+      entries: topicalClusterEntries.map(toSitemapEntry),
+    },
+    {
+      source: "uk_regional_entries",
+      entries: ukEntries.map(toSitemapEntry),
+    },
+    {
+      source: "england_regional_entries",
+      entries: englandEntries.map(toSitemapEntry),
+    },
+    {
+      source: "uk_cluster_entries",
+      entries: getUkClusterSitemapEntries(now),
+    },
+    {
+      source: "expanded_page_entries",
+      entries: getExpandedPageSitemapEntries(now),
+    },
+    {
+      source: "comparison_entries",
+      entries: getComparisonSitemapEntries(now),
+    },
+    {
+      source: "matrix_entries",
+      entries: getMatrixSitemapEntries(now),
+    },
+    {
+      source: "programmatic_entries",
+      entries: getProgrammaticSitemapEntries(now),
+    },
+    {
+      source: "generated_page_entries",
+      entries: getGeneratedPageSitemapEntries(now),
+    },
+    {
+      source: "how_to_keyword_entries",
+      entries: howToEntries.map((entry) =>
+        toSitemapEntry({
+          path: `/how-to/${entry.slug}`,
+          priority: 0.78,
+          changeFrequency: "weekly",
+          lastModified: now,
+        }),
+      ),
+    },
+    {
+      source: "blog_entries",
+      entries: getBlogEntries(),
+    },
   ];
+}
 
-  return dedupeEntries([
-    ...primaryEntries.map(toSitemapEntry),
-    ...coreMarketingEntries.map(toSitemapEntry),
-    ...localeAndLegalEntries.map(toSitemapEntry),
-    ...productEntries.map(toSitemapEntry),
-    ...contentHubEntries.map(toSitemapEntry),
-    ...campaignAndToolEntries.map(toSitemapEntry),
-    ...programmaticHubEntries.map(toSitemapEntry),
-    ...painEntries.map(toSitemapEntry),
-    ...teacherWritingEntries.map(toSitemapEntry),
-    ...topicalClusterEntries.map(toSitemapEntry),
-    ...ukEntries.map(toSitemapEntry),
-    ...englandEntries.map(toSitemapEntry),
-    ...dynamicProgrammaticEntries,
-    ...getBlogEntries(),
-  ]);
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const sourceGroups = await getSitemapSourceGroups();
+
+  return dedupeEntries(sourceGroups.flatMap((group) => group.entries));
 }
