@@ -487,10 +487,10 @@ export function Header() {
                     Company
                   </p>
                   <div className="flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-gray-500">
-                    <Link href="/privacy-policy" className="hover:text-white">
+                    <Link href="/privacy" className="hover:text-white">
                       Privacy
                     </Link>
-                    <Link href="/terms-of-service" className="hover:text-white">
+                    <Link href="/terms" className="hover:text-white">
                       Terms
                     </Link>
                     <Link href="/impressum" className="hover:text-white">

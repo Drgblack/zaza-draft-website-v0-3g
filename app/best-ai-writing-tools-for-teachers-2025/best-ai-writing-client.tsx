@@ -410,7 +410,7 @@ export default function BestAIWritingClient() {
   const breadcrumbItems = [
     {
       label: isGerman ? "Lernzentrum" : "Learning Centre",
-      href: "/learning-centre",
+      href: "/ai-literacy",
     },
     { label: text.hero_title },
   ];

@@ -9,6 +9,7 @@ interface BuildPageMetadataInput {
   type?: "website" | "article";
   keywords?: string[];
   alternates?: Record<string, string>;
+  canonicalPath?: string;
 }
 
 export function buildPageMetadata({
@@ -19,6 +20,7 @@ export function buildPageMetadata({
   type = "website",
   keywords,
   alternates,
+  canonicalPath,
 }: BuildPageMetadataInput): Metadata {
   const metadata = defaultMetadata({
     title,
@@ -27,6 +29,7 @@ export function buildPageMetadata({
     image,
     type,
     keywords,
+    canonicalPath,
   });
 
   return {

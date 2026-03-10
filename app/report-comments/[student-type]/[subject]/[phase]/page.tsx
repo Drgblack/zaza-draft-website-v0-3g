@@ -12,6 +12,7 @@ import {
   buildProgrammaticMetadata,
   buildProgrammaticNotFoundMetadata,
 } from "@/lib/seo-helpers";
+import { getIndexControlDecision } from "@/lib/index-control";
 
 export const revalidate = 604800;
 export const dynamicParams = true;
@@ -42,22 +43,37 @@ export function generateMetadata({
     );
   }
 
-  return buildProgrammaticMetadata({
-    title: page.title,
-    description: page.metaDescription,
-    path: page.path,
-    type: "article",
-    keywords: [
-      page.keyword,
-      "report comments",
-      "report writing",
-      "teacher reports",
-      "parents' evening",
-      "SEN",
-      "professional communication",
-      "teacher-first AI",
-    ],
-  });
+  const indexDecision = getIndexControlDecision(page.path);
+
+  if (!indexDecision.indexable) {
+    console.info(
+      `[index-control] noindex ${page.path} :: ${indexDecision.reason} :: variation-signals=${indexDecision.variationSignalCount ?? "n/a"}`,
+    );
+  }
+
+  return {
+    ...buildProgrammaticMetadata({
+      title: page.title,
+      description: page.metaDescription,
+      path: page.path,
+      canonicalPath: "/report-comment-builder",
+      type: "article",
+      keywords: [
+        page.keyword,
+        "report comments",
+        "report writing",
+        "teacher reports",
+        "parents' evening",
+        "SEN",
+        "professional communication",
+        "teacher-first AI",
+      ],
+    }),
+    robots: {
+      index: indexDecision.indexable,
+      follow: true,
+    },
+  };
 }
 
 export default function ReportCommentsMatrixPage({

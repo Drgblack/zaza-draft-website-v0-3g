@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { absoluteUrl, siteConfig } from "@/lib/seo/site-config";
+import {
+  buildCanonicalAlternates,
+  resolveCanonicalUrl,
+} from "@/lib/seo-canonical";
 
 type MetadataInput = {
   title?: string;
@@ -8,6 +12,7 @@ type MetadataInput = {
   image?: string;
   type?: "website" | "article";
   keywords?: string[];
+  canonicalPath?: string;
 };
 
 export const metadataDefaults = {
@@ -32,7 +37,7 @@ export const metadataDefaults = {
 } as const;
 
 export function canonicalUrl(path = "/") {
-  return absoluteUrl(path);
+  return resolveCanonicalUrl(path);
 }
 
 export function buildOpenGraph({
@@ -82,6 +87,7 @@ export function defaultMetadata({
   image = metadataDefaults.defaultImage,
   type = "website",
   keywords = [],
+  canonicalPath,
 }: MetadataInput = {}): Metadata {
   const mergedKeywords = Array.from(
     new Set([...metadataDefaults.defaultKeywords, ...keywords]),
@@ -103,13 +109,11 @@ export function defaultMetadata({
       },
     ],
     keywords: mergedKeywords,
-    alternates: {
-      canonical: canonicalUrl(path),
-    },
+    alternates: buildCanonicalAlternates(canonicalPath ?? path),
     openGraph: buildOpenGraph({
       title: resolvedTitle,
       description: resolvedDescription,
-      path,
+      path: canonicalPath ?? path,
       image,
       type,
     }),

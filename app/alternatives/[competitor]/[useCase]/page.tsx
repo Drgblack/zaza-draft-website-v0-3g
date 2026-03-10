@@ -43,6 +43,7 @@ export function generateMetadata({
     title: page.title,
     description: page.metaDescription,
     path: page.path,
+    canonicalPath: "/alternatives",
     type: "article",
     keywords: [
       page.keyword,

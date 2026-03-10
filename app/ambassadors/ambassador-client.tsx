@@ -529,7 +529,7 @@ export default function AmbassadorClient() {
                 </Link>{" "}
                 {content.application.form.and}{" "}
                 <Link
-                  href="/legal/privacy"
+                  href="/privacy"
                   className="text-[#A78BFA] hover:underline"
                 >
                   {content.application.form.privacy}

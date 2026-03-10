@@ -5,6 +5,10 @@ import type {
   TeacherWritingPage,
 } from "@/lib/seo/teacher-writing-pages";
 import {
+  buildCanonicalAlternates,
+  resolveCanonicalUrl,
+} from "@/lib/seo-canonical";
+import {
   drGregBlackburnBio,
   zazaDraftEntityDefinition,
   zazaDraftEntityKeywords,
@@ -146,14 +150,12 @@ const builders: Record<
 export function buildTeacherWritingMetadata(
   page: TeacherWritingPage,
 ): Metadata {
-  const canonicalUrl = `${baseUrl}/${page.slug}`;
+  const canonicalUrl = resolveCanonicalUrl(`/${page.slug}`);
 
   return {
     title: page.title,
     description: page.metaDescription,
-    alternates: {
-      canonical: canonicalUrl,
-    },
+    alternates: buildCanonicalAlternates(`/${page.slug}`),
     openGraph: {
       title: page.title,
       description: page.metaDescription,

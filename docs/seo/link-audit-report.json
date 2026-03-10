@@ -1,0 +1,10 @@
+{
+  "generatedAt": "2026-03-10T06:37:35.623Z",
+  "scannedFiles": 793,
+  "findings": [],
+  "totals": {
+    "redirect-target": 0,
+    "missing-route": 0,
+    "low-confidence-programmatic": 0
+  }
+}

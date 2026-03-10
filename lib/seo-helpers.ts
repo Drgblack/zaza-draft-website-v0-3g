@@ -23,6 +23,7 @@ type ProgrammaticMetadataInput = {
   path: string;
   keywords?: string[];
   type?: "website" | "article";
+  canonicalPath?: string;
 };
 
 export function canonicalPath(path: string) {
@@ -39,11 +40,13 @@ export function buildProgrammaticMetadata({
   path,
   keywords = [],
   type = "article",
+  canonicalPath: canonicalOverride,
 }: ProgrammaticMetadataInput): Metadata {
   return defaultMetadata({
     title,
     description,
     path: canonicalPath(path),
+    canonicalPath: canonicalOverride,
     type,
     keywords,
   });

@@ -175,6 +175,43 @@ Set the following in your Vercel project settings:
 - Robots.txt configured
 - Open Graph tags for social sharing
 
+## Link Audit
+
+Internal-link auditing for stale, redirected, missing, or low-confidence targets lives in:
+
+- `scripts/link-audit.ts`
+
+What it checks:
+
+- links to redirect or alias routes such as `/learning-centre`, `/communication-diagnosis`, and old helper paths
+- links to removed or missing routes
+- links to low-confidence programmatic pages that are currently marked `noindex`
+
+What it writes:
+
+- `docs/seo/link-audit-report.json`
+- `docs/seo/link-audit-report.md`
+
+How to run it:
+
+```bash
+pnpm exec tsx scripts/link-audit.ts
+```
+
+If you prefer `ts-node`, the script is path-safe and can be run the same way once `ts-node` is available in your environment:
+
+```bash
+ts-node scripts/link-audit.ts
+```
+
+Optional auto-rewrite mode:
+
+```bash
+pnpm exec tsx scripts/link-audit.ts --write
+```
+
+Auto-rewrite only updates `.md` and `.mdx` files. It replaces flagged stale targets with the suggested stronger destination where the replacement is deterministic. It does not rewrite `.tsx` or `.ts` source files automatically.
+
 ## Diagnosis Tool
 
 The parent communication and report diagnosis experience lives at `/diagnosis`.
@@ -254,6 +291,53 @@ Quality checks for matrix pages:
 Sitemap inclusion:
 
 - `app/sitemap.ts` now imports `getMatrixSitemapEntries()` from `lib/matrix.ts` so all generated scenario and report-comment URLs are included automatically.
+
+## Index Control
+
+Initial low-confidence noindex control for programmatic pages lives in:
+
+- `lib/index-control.ts`
+- `app/report-comments/[student-type]/[subject]/[phase]/page.tsx`
+
+What it does now:
+
+- Keeps core commercial and hub pages indexable by default.
+- Starts with the weakest `report-comments` variants first.
+- Applies `noindex,follow` through Next metadata when a report-comment page is too broad to justify index priority.
+- Logs the decision server-side so you can review the current rule behaviour in local output or Vercel logs.
+
+Current initial rule set for `report-comments`:
+
+1. Parse the route as `/report-comments/{studentType}/{subject}/{stage}`.
+2. Count variation signals:
+   - `studentType` always contributes `1`
+   - specific subjects such as `english`, `maths`, or `science` contribute `1`
+   - specific stages such as `year-5` or `year-11` contribute `2`
+   - broader stages such as `ks2`, `ks3`, or `ks4` contribute `1`
+   - very broad stages such as `primary`, `secondary`, or `fe` contribute `0`
+3. Noindex the page if:
+   - it has fewer than `3` variation signals
+   - or it matches an explicitly low-confidence matrix cell such as `all-subjects` plus a very broad stage
+
+How to expand the rules as audit data comes in:
+
+1. Add new route-family logic in `getIndexControlDecision()` inside `lib/index-control.ts`.
+2. Start with clear path families such as:
+   - `/scenario/*`
+   - `/reply/*`
+   - `/problems/*`
+   - `/expanded/*`
+3. Prefer deterministic rules first:
+   - broad stage plus broad subject
+   - canonical-to-hub families
+   - weak cells identified in Search Console
+   - low-link, low-click, or duplicate-intent patterns from the SEO audit
+4. Only tighten rules after reviewing:
+   - impressions
+   - clicks
+   - internal-link support
+   - canonical target quality
+5. Keep route-level metadata as the control point for dynamic noindex decisions. That is more reliable for this app than static header rules.
 
 First 50 example slugs and titles:
 

@@ -12,6 +12,7 @@ import {
   createSoftwareApplicationJsonLd,
   createWebsiteJsonLd,
 } from "@/lib/seo/json-ld";
+import { buildCanonicalAlternates } from "@/lib/seo-canonical";
 import { siteConfig } from "@/lib/seo/site-config";
 
 const GA4_MEASUREMENT_ID = "G-GFCNQYCHFK";
@@ -20,27 +21,30 @@ const shouldLoadGa =
   process.env.VERCEL_ENV !== "preview" &&
   process.env.VERCEL_ENV !== "development";
 
-export const metadata: Metadata = {
-  title:
-    "Teacher-First AI Writing Help for Parent Emails and Reports | Zaza Draft",
-  description:
-    "Calm, professional AI writing help for teachers who need parent emails, report comments, and school messages drafted with care. Teachers stay in control of every word.",
-  metadataBase: new URL(siteConfig.url),
-  applicationName: siteConfig.name,
-  creator: siteConfig.legalName,
-  publisher: siteConfig.legalName,
-  authors: [{ name: siteConfig.founder.name }],
-  category: "Education",
-  robots: {
-    index: true,
-    follow: true,
-  },
-  icons: {
-    icon: "/z-logo.png",
-    shortcut: "/z-logo.png",
-    apple: "/z-logo.png",
-  },
-};
+export function generateMetadata(): Metadata {
+  return {
+    title:
+      "Teacher-First AI Writing Help for Parent Emails and Reports | Zaza Draft",
+    description:
+      "Calm, professional AI writing help for teachers who need parent emails, report comments, and school messages drafted with care. Teachers stay in control of every word.",
+    metadataBase: new URL(siteConfig.url),
+    applicationName: siteConfig.name,
+    creator: siteConfig.legalName,
+    publisher: siteConfig.legalName,
+    authors: [{ name: siteConfig.founder.name }],
+    category: "Education",
+    alternates: buildCanonicalAlternates("/"),
+    robots: {
+      index: true,
+      follow: true,
+    },
+    icons: {
+      icon: "/z-logo.png",
+      shortcut: "/z-logo.png",
+      apple: "/z-logo.png",
+    },
+  };
+}
 
 export const viewport: Viewport = {
   width: "device-width",

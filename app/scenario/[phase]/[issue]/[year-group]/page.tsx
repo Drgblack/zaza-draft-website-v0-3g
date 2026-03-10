@@ -46,6 +46,7 @@ export function generateMetadata({
     title: page.title,
     description: page.metaDescription,
     path: page.path,
+    canonicalPath: "/scenario-combinations",
     type: "article",
     keywords: [
       page.keyword,
