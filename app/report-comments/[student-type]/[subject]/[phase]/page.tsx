@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import type { Metadata } from "next";
 import { ScenarioPage } from "@/components/ScenarioPage";
 import {
@@ -13,6 +13,7 @@ import {
   buildProgrammaticNotFoundMetadata,
 } from "@/lib/seo-helpers";
 import { getIndexControlDecision } from "@/lib/index-control";
+import { getReportPruneDecision } from "@/lib/report-prune";
 
 export const revalidate = 604800;
 export const dynamicParams = true;
@@ -44,10 +45,11 @@ export function generateMetadata({
   }
 
   const indexDecision = getIndexControlDecision(page.path);
+  const pruneDecision = getReportPruneDecision(page.path);
 
-  if (!indexDecision.indexable) {
+  if (pruneDecision.action !== "keep") {
     console.info(
-      `[index-control] noindex ${page.path} :: ${indexDecision.reason} :: variation-signals=${indexDecision.variationSignalCount ?? "n/a"}`,
+      `[report-prune] ${pruneDecision.action} ${page.path} -> ${pruneDecision.redirectTo ?? page.path} :: ${pruneDecision.reason} :: keep-signals=${pruneDecision.keepSignalCount ?? "n/a"}`,
     );
   }
 
@@ -56,7 +58,6 @@ export function generateMetadata({
       title: page.title,
       description: page.metaDescription,
       path: page.path,
-      canonicalPath: "/report-comment-builder",
       type: "article",
       keywords: [
         page.keyword,
@@ -70,7 +71,7 @@ export function generateMetadata({
       ],
     }),
     robots: {
-      index: indexDecision.indexable,
+      index: indexDecision.indexable && pruneDecision.action === "keep",
       follow: true,
     },
   };
@@ -89,6 +90,15 @@ export default function ReportCommentsMatrixPage({
 
   if (!page) {
     notFound();
+  }
+
+  const pruneDecision = getReportPruneDecision(page.path);
+
+  if (pruneDecision.action === "redirect" && pruneDecision.redirectTo) {
+    console.info(
+      `[report-prune] redirect ${page.path} -> ${pruneDecision.redirectTo}`,
+    );
+    permanentRedirect(pruneDecision.redirectTo);
   }
 
   return (

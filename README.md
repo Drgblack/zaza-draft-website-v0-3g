@@ -172,8 +172,37 @@ Set the following in your Vercel project settings:
 
 - Each page has custom metadata
 - Sitemap available at `/sitemap.xml`
+- Longtail sitemap available at `/sitemap-longtail.xml`
 - Robots.txt configured
 - Open Graph tags for social sharing
+
+### Tiered Sitemaps
+
+The sitemap setup is intentionally split by quality:
+
+- `/sitemap.xml`
+  Main sitemap for core commercial pages, product pages, hubs, blog content, localised essentials, and the strongest programmatic URLs.
+- `/sitemap-longtail.xml`
+  Secondary sitemap for deeper longtail programmatic pages such as broader scenario, report-comment, alternatives, expanded, and related SEO variants.
+
+Quality logic lives in:
+
+- `app/sitemap.ts`
+- `app/sitemap-longtail.ts`
+
+How to submit in Google Search Console:
+
+1. Submit `https://zazadraft.com/sitemap.xml` as the main sitemap.
+2. Submit `https://zazadraft.com/sitemap-longtail.xml` as a separate secondary sitemap.
+3. Monitor the two sitemap submissions separately so the main sitemap stays a cleaner signal for canonical growth pages.
+
+What to monitor after changes:
+
+1. Coverage and indexing rate for `/sitemap.xml` versus `/sitemap-longtail.xml`.
+2. Whether promoted high-confidence `report-comments` and `scenario` URLs are being indexed faster than the deeper longtail set.
+3. Whether the longtail sitemap starts accumulating `Crawled - currently not indexed` or duplicate signals, which is a sign that the promoted slice is still too broad.
+4. Whether helper redirects or alias routes reappear in sitemap output after future route changes.
+5. Whether newly pruned `report-comments` and `scenario` pages stay out of both sitemap tiers once they are marked `noindex` or redirected at route level.
 
 ## Link Audit
 
@@ -184,6 +213,7 @@ Internal-link auditing for stale, redirected, missing, or low-confidence targets
 What it checks:
 
 - links to redirect or alias routes such as `/learning-centre`, `/communication-diagnosis`, and old helper paths
+- links to removed helper routes such as `/behaviour-email-diagnosis`, `/parent-ignores-email-help`, `/report-writing-stress-help`, and `/slt-documentation-help`
 - links to removed or missing routes
 - links to low-confidence programmatic pages that are currently marked `noindex`
 
@@ -198,6 +228,12 @@ How to run it:
 pnpm exec tsx scripts/link-audit.ts
 ```
 
+To scan only one subtree:
+
+```bash
+pnpm exec tsx scripts/link-audit.ts --path ./app --dry-run
+```
+
 If you prefer `ts-node`, the script is path-safe and can be run the same way once `ts-node` is available in your environment:
 
 ```bash
@@ -210,7 +246,43 @@ Optional auto-rewrite mode:
 pnpm exec tsx scripts/link-audit.ts --write
 ```
 
-Auto-rewrite only updates `.md` and `.mdx` files. It replaces flagged stale targets with the suggested stronger destination where the replacement is deterministic. It does not rewrite `.tsx` or `.ts` source files automatically.
+Auto-rewrite notes:
+
+- `--dry-run` reports findings without editing files.
+- `--write` updates deterministic replacements in scanned files.
+- Before editing a file, the script creates a sibling backup with the suffix `.link-audit.bak`.
+
+Example report shape:
+
+```json
+{
+  "generatedAt": "2026-03-10T08:00:00.000Z",
+  "scannedRoots": ["app"],
+  "scannedFiles": 214,
+  "findings": [
+    {
+      "file": "app/example/page.tsx",
+      "line": 42,
+      "column": 19,
+      "rawTarget": "/behaviour-email-diagnosis",
+      "normalizedTarget": "/behaviour-email-diagnosis",
+      "type": "removed-helper-route",
+      "suggestedReplacement": "/diagnosis?issue=behaviour-concern&phase=primary&studentContext=behaviour-issues&tone=professional-but-empathetic",
+      "autoFixable": true,
+      "reason": "Removed helper route. Update the link to the diagnosis target or a stronger canonical hub instead."
+    }
+  ],
+  "totals": {
+    "removed-helper-route": 1,
+    "redirect-target": 0,
+    "missing-route": 0,
+    "low-confidence-programmatic": 0
+  },
+  "dryRun": true,
+  "writeMode": false,
+  "backupsCreated": []
+}
+```
 
 ## Diagnosis Tool
 
@@ -241,7 +313,7 @@ Manual checks:
 
 1. Open `/diagnosis` and submit an angry parent case with `de-escalate`.
 2. Open `/how-to-reply-angry-parent` and confirm it permanently redirects to `/diagnosis?issue=angry-parent-email&tone=de-escalate`.
-3. Confirm `/sitemap.xml` includes `/diagnosis` and the helper redirect routes.
+3. Confirm `/sitemap.xml` includes `/diagnosis` but does not include redirect-only helper routes.
 4. In the browser, verify diagnosis events appear through the existing analytics wiring.
 
 Structured data integration:
@@ -297,38 +369,76 @@ Sitemap inclusion:
 Initial low-confidence noindex control for programmatic pages lives in:
 
 - `lib/index-control.ts`
+- `lib/report-prune.ts`
 - `app/report-comments/[student-type]/[subject]/[phase]/page.tsx`
+- `app/scenario/[phase]/[issue]/[year-group]/page.tsx`
+- `lib/seo-canonical.ts`
+- `next.config.mjs`
 
 What it does now:
 
 - Keeps core commercial and hub pages indexable by default.
-- Starts with the weakest `report-comments` variants first.
-- Applies `noindex,follow` through Next metadata when a report-comment page is too broad to justify index priority.
+- Applies the current rules to both `report-comments` and `scenario` matrix pages.
+- Applies `noindex,follow` through Next metadata when a matrix page is too broad to justify index priority.
 - Logs the decision server-side so you can review the current rule behaviour in local output or Vercel logs.
+- Self-canonicalises stronger matrix pages and canonicalises weaker overlapping variants back to the relevant hub.
 
-Current initial rule set for `report-comments`:
+Current rule set for `report-comments`:
 
 1. Parse the route as `/report-comments/{studentType}/{subject}/{stage}`.
-2. Count variation signals:
-   - `studentType` always contributes `1`
-   - specific subjects such as `english`, `maths`, or `science` contribute `1`
-   - specific stages such as `year-5` or `year-11` contribute `2`
-   - broader stages such as `ks2`, `ks3`, or `ks4` contribute `1`
-   - very broad stages such as `primary`, `secondary`, or `fe` contribute `0`
-3. Noindex the page if:
-   - it has fewer than `3` variation signals
-   - or it matches an explicitly low-confidence matrix cell such as `all-subjects` plus a very broad stage
+2. Redirect the broadest prune targets straight to `/report-comment-builder`:
+   - any `all-subjects` route
+   - `fe`
+   - `post-16`
+3. Keep the page indexable only if it matches all of the promoted criteria:
+   - preferred student type: `struggling`, `anxious-eal`, or `sen-needs`
+   - common subject: `english`, `maths`, or `science`
+   - popular phase or core year group:
+     - `primary`
+     - `ks2`
+     - `secondary`
+     - `year-3` through `year-11`
+4. Noindex the remaining report-comments tail so it stays accessible without competing for index coverage.
+
+Current rule set for `scenario`:
+
+1. Parse the route as `/scenario/{phase}/{issue}/{yearGroup}`.
+2. Promote only the current teacher-facing issue set:
+   - `behaviour`
+   - `angry-parent`
+   - `missing-homework`
+   - `parents-evening`
+   - `sen-support`
+3. Promote only the current phase and year-group cohorts:
+   - `primary:year-5`
+   - `primary:year-6`
+   - `ks1:year-2`
+   - `ks2:year-5`
+   - `ks2:year-6`
+   - `ks3:year-8`
+   - `ks3:year-9`
+   - `ks4:year-10`
+   - `ks4:year-11`
+4. Noindex the page if it falls outside those promoted issue and phase-year combinations.
+
+Canonical behaviour:
+
+1. Stronger matrix pages keep a self-canonical URL.
+2. Lower-confidence `report-comments` variants canonicalise to `/report-comment-builder`.
+3. Lower-confidence `scenario` variants canonicalise to `/scenario-combinations`.
+4. Other overlapping longtail families such as `/alternatives/*`, `/reply/*`, and `/problems/*` continue to canonicalise to their hub pages.
 
 How to expand the rules as audit data comes in:
 
 1. Add new route-family logic in `getIndexControlDecision()` inside `lib/index-control.ts`.
 2. Start with clear path families such as:
-   - `/scenario/*`
    - `/reply/*`
    - `/problems/*`
    - `/expanded/*`
 3. Prefer deterministic rules first:
    - broad stage plus broad subject
+   - promoted phase-year cohorts
+   - promoted issue cohorts
    - canonical-to-hub families
    - weak cells identified in Search Console
    - low-link, low-click, or duplicate-intent patterns from the SEO audit
@@ -338,6 +448,17 @@ How to expand the rules as audit data comes in:
    - internal-link support
    - canonical target quality
 5. Keep route-level metadata as the control point for dynamic noindex decisions. That is more reliable for this app than static header rules.
+6. If GSC shows a matrix page earning impressions, clicks, and stable indexing, move its cohort into the promoted sets in `lib/index-control.ts` and mirror the same cohort in the sitemap confidence rules in `app/sitemap.ts`.
+
+Report pruning monitoring after deploy:
+
+1. In Google Search Console, expect a mix of:
+   - `Page with redirect`
+   - `Excluded by 'noindex' tag`
+   - `Alternate page with proper canonical tag`
+2. Watch whether `/report-comment-builder` picks up the impressions previously spread across very broad report-comment combinations.
+3. Review whether any kept report-comment pages begin slipping into `Crawled - currently not indexed`. If they do, the promoted keep set may still be too broad.
+4. If a noindexed report-comment page starts earning meaningful impressions or internal links, move that cohort into the keep criteria in `lib/report-prune.ts`.
 
 First 50 example slugs and titles:
 

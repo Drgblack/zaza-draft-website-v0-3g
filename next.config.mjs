@@ -25,6 +25,21 @@ const nextConfig = {
         destination: '/uk/parents-evening-email-templates',
         permanent: true,
       },
+      {
+        source: '/report-comments/:studentType/all-subjects/:phase',
+        destination: '/report-comment-builder',
+        permanent: true,
+      },
+      {
+        source: '/report-comments/:studentType/:subject/fe',
+        destination: '/report-comment-builder',
+        permanent: true,
+      },
+      {
+        source: '/report-comments/:studentType/:subject/post-16',
+        destination: '/report-comment-builder',
+        permanent: true,
+      },
     ];
   },
   async headers() {

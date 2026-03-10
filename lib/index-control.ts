@@ -1,9 +1,9 @@
-import { normaliseCanonicalPath } from "@/lib/seo-canonical";
+import { getReportPruneDecision } from "@/lib/report-prune";
 
 export type IndexControlDecision = {
   indexable: boolean;
   normalizedPath: string;
-  family: "core" | "report-comments" | "other";
+  family: "core" | "report-comments" | "scenario" | "other";
   reason: string;
   variationSignalCount?: number;
 };
@@ -23,86 +23,99 @@ const CORE_INDEXABLE_PATHS = new Set([
   "/alternatives",
   "/diagnosis",
 ]);
-
-const KEY_STAGE_SLUGS = new Set(["ks1", "ks2", "ks3", "ks4"]);
-const BROAD_STAGE_SLUGS = new Set(["primary", "secondary", "fe"]);
-const LOW_CONFIDENCE_REPORT_CELLS = new Set([
-  "struggling:all-subjects:primary",
-  "struggling:all-subjects:secondary",
-  "struggling:all-subjects:fe",
-  "anxious-eal:all-subjects:primary",
-  "anxious-eal:all-subjects:secondary",
-  "anxious-eal:all-subjects:fe",
-  "sen-needs:all-subjects:primary",
-  "sen-needs:all-subjects:secondary",
-  "sen-needs:all-subjects:fe",
-  "high-attaining-disorganised:all-subjects:primary",
-  "high-attaining-disorganised:all-subjects:secondary",
-  "high-attaining-disorganised:all-subjects:fe",
+const HIGH_CONFIDENCE_SCENARIO_ISSUES = new Set([
+  "behaviour",
+  "angry-parent",
+  "missing-homework",
+  "parents-evening",
+  "sen-support",
+]);
+const HIGH_CONFIDENCE_SCENARIO_PHASE_YEAR_PAIRS = new Set([
+  "primary:year-5",
+  "primary:year-6",
+  "ks1:year-2",
+  "ks2:year-5",
+  "ks2:year-6",
+  "ks3:year-8",
+  "ks3:year-9",
+  "ks4:year-10",
+  "ks4:year-11",
 ]);
 
-function getStageSpecificityScore(stage: string) {
-  if (stage.startsWith("year-") || stage === "post-16") {
-    return 2;
+function normalisePath(input = "/") {
+  if (!input) {
+    return "/";
   }
 
-  if (KEY_STAGE_SLUGS.has(stage)) {
-    return 1;
+  let pathname = input.trim();
+
+  if (/^https?:\/\//i.test(pathname)) {
+    pathname = new URL(pathname).pathname;
   }
 
-  if (BROAD_STAGE_SLUGS.has(stage)) {
-    return 0;
+  const [pathOnly] = pathname.split(/[?#]/, 1);
+  const withLeadingSlash = pathOnly.startsWith("/") ? pathOnly : `/${pathOnly}`;
+  const collapsed = withLeadingSlash.replace(/\/{2,}/g, "/");
+
+  if (collapsed === "/") {
+    return collapsed;
   }
 
-  return 1;
-}
-
-function parseReportCommentsPath(pathname: string) {
-  const segments = pathname.split("/").filter(Boolean);
-
-  if (segments[0] !== "report-comments" || segments.length !== 4) {
-    return null;
-  }
-
-  const [, studentType, subject, stage] = segments;
-  return { studentType, subject, stage };
+  return collapsed.replace(/\/+$/, "");
 }
 
 function getReportCommentDecision(pathname: string): IndexControlDecision {
-  const parsed = parseReportCommentsPath(pathname);
+  const pruneDecision = getReportPruneDecision(pathname);
+
+  return {
+    indexable: pruneDecision.action === "keep",
+    normalizedPath: pruneDecision.normalizedPath,
+    family: "report-comments",
+    reason: pruneDecision.reason,
+    variationSignalCount: pruneDecision.keepSignalCount,
+  };
+}
+
+function parseScenarioPath(pathname: string) {
+  const segments = pathname.split("/").filter(Boolean);
+
+  if (segments[0] !== "scenario" || segments.length !== 4) {
+    return null;
+  }
+
+  const [, phase, issue, yearGroup] = segments;
+  return { phase, issue, yearGroup };
+}
+
+function getScenarioDecision(pathname: string): IndexControlDecision {
+  const parsed = parseScenarioPath(pathname);
 
   if (!parsed) {
     return {
       indexable: true,
       normalizedPath: pathname,
       family: "other",
-      reason: "No report-comments rule matched. Defaulting to indexable.",
+      reason: "No scenario rule matched. Defaulting to indexable.",
     };
   }
 
-  const subjectSpecificity = parsed.subject === "all-subjects" ? 0 : 1;
-  const stageSpecificity = getStageSpecificityScore(parsed.stage);
-  const variationSignalCount = 1 + subjectSpecificity + stageSpecificity;
-  const lowConfidenceKey = `${parsed.studentType}:${parsed.subject}:${parsed.stage}`;
+  const issueSpecificity = HIGH_CONFIDENCE_SCENARIO_ISSUES.has(parsed.issue)
+    ? 2
+    : 0;
+  const phaseYearSpecificity = HIGH_CONFIDENCE_SCENARIO_PHASE_YEAR_PAIRS.has(
+    `${parsed.phase}:${parsed.yearGroup}`,
+  )
+    ? 2
+    : 0;
+  const variationSignalCount = issueSpecificity + phaseYearSpecificity;
 
-  if (LOW_CONFIDENCE_REPORT_CELLS.has(lowConfidenceKey)) {
+  if (variationSignalCount < 4) {
     return {
       indexable: false,
       normalizedPath: pathname,
-      family: "report-comments",
+      family: "scenario",
       reason:
-        "Noindex: low-confidence report-comments matrix cell with broad stage and all-subjects overlap.",
-      variationSignalCount,
-    };
-  }
-
-  if (variationSignalCount < 3) {
-    return {
-      indexable: false,
-      normalizedPath: pathname,
-      family: "report-comments",
-      reason:
-        "Noindex: report-comments variant has fewer than 3 variation signals, so it is likely too broad or duplicative.",
+        "Noindex: scenario variant sits in the deeper tail and does not match the promoted phase, issue, and year-group combinations.",
       variationSignalCount,
     };
   }
@@ -110,15 +123,15 @@ function getReportCommentDecision(pathname: string): IndexControlDecision {
   return {
     indexable: true,
     normalizedPath: pathname,
-    family: "report-comments",
+    family: "scenario",
     reason:
-      "Indexable: report-comments variant has enough subject and stage specificity for the current threshold.",
+      "Indexable: scenario variant matches the promoted teacher-facing combinations for the current threshold.",
     variationSignalCount,
   };
 }
 
 export function getIndexControlDecision(slug: string): IndexControlDecision {
-  const normalizedPath = normaliseCanonicalPath(slug);
+  const normalizedPath = normalisePath(slug);
 
   if (CORE_INDEXABLE_PATHS.has(normalizedPath)) {
     return {
@@ -131,6 +144,10 @@ export function getIndexControlDecision(slug: string): IndexControlDecision {
 
   if (normalizedPath.startsWith("/report-comments/")) {
     return getReportCommentDecision(normalizedPath);
+  }
+
+  if (normalizedPath.startsWith("/scenario/")) {
+    return getScenarioDecision(normalizedPath);
   }
 
   return {

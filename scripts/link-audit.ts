@@ -7,6 +7,7 @@ import {
 } from "../lib/seo-canonical";
 
 type FindingType =
+  | "removed-helper-route"
   | "redirect-target"
   | "missing-route"
   | "low-confidence-programmatic";
@@ -31,9 +32,13 @@ type AuditFinding = {
 
 type AuditReport = {
   generatedAt: string;
+  scannedRoots: string[];
   scannedFiles: number;
   findings: AuditFinding[];
   totals: Record<FindingType, number>;
+  dryRun: boolean;
+  writeMode: boolean;
+  backupsCreated: string[];
 };
 
 type RoutePattern = {
@@ -44,7 +49,6 @@ type RoutePattern = {
 const REPO_ROOT = process.cwd();
 const SOURCE_ROOTS = ["app", "components", "content"] as const;
 const SCAN_EXTENSIONS = new Set([".ts", ".tsx", ".js", ".jsx", ".md", ".mdx"]);
-const AUTO_FIX_EXTENSIONS = new Set([".md", ".mdx"]);
 const SKIP_DIRECTORIES = new Set([
   ".git",
   ".next",
@@ -66,6 +70,15 @@ const REPORT_MD_PATH = path.join(
   "link-audit-report.md",
 );
 const NEXT_CONFIG_PATH = path.join(REPO_ROOT, "next.config.mjs");
+const BACKUP_SUFFIX = ".link-audit.bak";
+const REMOVED_HELPER_ROUTES = new Set([
+  "/communication-diagnosis",
+  "/how-to-reply-angry-parent",
+  "/behaviour-email-diagnosis",
+  "/parent-ignores-email-help",
+  "/report-writing-stress-help",
+  "/slt-documentation-help",
+]);
 
 const KNOWN_STALE_REPLACEMENTS: Record<string, string> = {
   "/learning-centre": "/ai-literacy",
@@ -99,7 +112,19 @@ function ensureDirectory(filePath: string) {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
 }
 
+function resolveCliPath(inputPath: string) {
+  const absolutePath = path.isAbsolute(inputPath)
+    ? inputPath
+    : path.join(REPO_ROOT, inputPath);
+
+  return path.normalize(absolutePath);
+}
+
 function walkFiles(directoryPath: string): string[] {
+  if (!fs.existsSync(directoryPath)) {
+    return [];
+  }
+
   return fs
     .readdirSync(directoryPath, { withFileTypes: true })
     .flatMap((entry) => {
@@ -290,7 +315,8 @@ function collectLinkMatches(content: string): LinkMatch[] {
 }
 
 function canAutoFix(filePath: string) {
-  return AUTO_FIX_EXTENSIONS.has(path.extname(filePath).toLowerCase());
+  const extension = path.extname(filePath).toLowerCase();
+  return SCAN_EXTENSIONS.has(extension);
 }
 
 function classifyTarget(
@@ -311,6 +337,17 @@ function classifyTarget(
     (resolveCanonicalPath(normalizedTarget) !== normalizedTarget
       ? resolveCanonicalPath(normalizedTarget)
       : undefined);
+
+  if (REMOVED_HELPER_ROUTES.has(normalizedTarget)) {
+    return {
+      type: "removed-helper-route",
+      normalizedTarget,
+      suggestedReplacement,
+      autoFixable: Boolean(suggestedReplacement),
+      reason:
+        "Removed helper route. Update the link to the diagnosis target or a stronger canonical hub instead.",
+    };
+  }
 
   if (redirectMap[normalizedTarget]) {
     return {
@@ -354,11 +391,15 @@ function buildMarkdownReport(report: AuditReport) {
     "# Link Audit Report",
     "",
     `Generated: ${report.generatedAt}`,
+    `Scanned roots: ${report.scannedRoots.join(", ")}`,
     `Scanned files: ${report.scannedFiles}`,
     `Findings: ${report.findings.length}`,
+    `Dry run: ${report.dryRun ? "yes" : "no"}`,
+    `Write mode: ${report.writeMode ? "yes" : "no"}`,
     "",
     "## Totals",
     "",
+    `- Removed helper routes: ${report.totals["removed-helper-route"]}`,
     `- Redirect targets: ${report.totals["redirect-target"]}`,
     `- Missing routes: ${report.totals["missing-route"]}`,
     `- Low-confidence programmatic: ${report.totals["low-confidence-programmatic"]}`,
@@ -387,7 +428,22 @@ function buildMarkdownReport(report: AuditReport) {
     );
   }
 
+  if (report.backupsCreated.length > 0) {
+    lines.push("", "## Backups", "");
+    for (const backup of report.backupsCreated) {
+      lines.push(`- \`${backup}\``);
+    }
+  }
+
   return lines.join("\n");
+}
+
+function createBackup(filePath: string) {
+  const backupPath = `${filePath}${BACKUP_SUFFIX}`;
+  if (!fs.existsSync(backupPath)) {
+    fs.copyFileSync(filePath, backupPath);
+  }
+  return backupPath;
 }
 
 function applyAutoFixes(findings: AuditFinding[]) {
@@ -407,8 +463,13 @@ function applyAutoFixes(findings: AuditFinding[]) {
     {},
   );
 
+  const backupsCreated: string[] = [];
+
   for (const [relativeFilePath, fileFindings] of Object.entries(byFile)) {
     const absolutePath = path.join(REPO_ROOT, relativeFilePath);
+    backupsCreated.push(
+      toPosixPath(path.relative(REPO_ROOT, createBackup(absolutePath))),
+    );
     let content = fs.readFileSync(absolutePath, "utf8");
 
     const replacements = new Map<string, string>();
@@ -427,21 +488,54 @@ function applyAutoFixes(findings: AuditFinding[]) {
 
     fs.writeFileSync(absolutePath, content, "utf8");
   }
+
+  return backupsCreated;
 }
 
 function parseArgs() {
+  const args = process.argv.slice(2);
+  const paths: string[] = [];
+
+  for (let index = 0; index < args.length; index += 1) {
+    const arg = args[index];
+
+    if (arg === "--path") {
+      const nextValue = args[index + 1];
+      if (nextValue) {
+        paths.push(nextValue);
+        index += 1;
+      }
+    }
+  }
+
   return {
-    write: process.argv.includes("--write"),
+    dryRun: args.includes("--dry-run"),
+    write: args.includes("--write"),
+    paths,
   };
 }
 
 function main() {
-  const { write } = parseArgs();
+  const { dryRun, write, paths } = parseArgs();
   const routePatterns = buildRoutePatterns();
   const redirectMap = buildRedirectMap();
-  const files = SOURCE_ROOTS.flatMap((root) =>
-    walkFiles(path.join(REPO_ROOT, root)),
-  );
+  const scanRoots =
+    paths.length > 0
+      ? paths.map(resolveCliPath)
+      : SOURCE_ROOTS.map(resolveCliPath);
+  const files = scanRoots.flatMap((root) => {
+    if (!fs.existsSync(root)) {
+      return [];
+    }
+
+    if (fs.statSync(root).isFile()) {
+      return SCAN_EXTENSIONS.has(path.extname(root).toLowerCase())
+        ? [root]
+        : [];
+    }
+
+    return walkFiles(root);
+  });
 
   const findings: AuditFinding[] = [];
 
@@ -487,15 +581,19 @@ function main() {
     return left.column - right.column;
   });
 
-  if (write) {
-    applyAutoFixes(findings);
-  }
+  const backupsCreated = write && !dryRun ? applyAutoFixes(findings) : [];
 
   const report: AuditReport = {
     generatedAt: new Date().toISOString(),
+    scannedRoots: scanRoots.map((root) =>
+      toPosixPath(path.relative(REPO_ROOT, root) || "."),
+    ),
     scannedFiles: files.length,
     findings,
     totals: {
+      "removed-helper-route": findings.filter(
+        (item) => item.type === "removed-helper-route",
+      ).length,
       "redirect-target": findings.filter(
         (item) => item.type === "redirect-target",
       ).length,
@@ -505,6 +603,9 @@ function main() {
         (item) => item.type === "low-confidence-programmatic",
       ).length,
     },
+    dryRun,
+    writeMode: write,
+    backupsCreated,
   };
 
   ensureDirectory(REPORT_JSON_PATH);
@@ -518,7 +619,9 @@ function main() {
         findings: report.findings.length,
         reportJson: path.relative(REPO_ROOT, REPORT_JSON_PATH),
         reportMarkdown: path.relative(REPO_ROOT, REPORT_MD_PATH),
+        dryRun,
         writeMode: write,
+        backupsCreated: report.backupsCreated.length,
       },
       null,
       2,

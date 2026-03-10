@@ -2,15 +2,13 @@ import type { MetadataRoute } from "next";
 import { readdirSync, statSync } from "fs";
 import { join } from "path";
 import { getGeneratedPageSitemapEntries } from "@/lib/generated-pages";
+import { getIndexControlDecision } from "@/lib/index-control";
+import { getReportPruneDecision } from "@/lib/report-prune";
 import { teacherWritingPageSlugs } from "@/lib/seo/teacher-writing-pages";
 import { clusterSpokes } from "@/lib/seo/teacher-safe-ai-cluster";
 import { getRegionalTeacherWritingSlugs } from "@/lib/seo/regional-writing-pages";
 import { getProgrammaticSitemapEntries } from "@/lib/programmatic";
-import {
-  getMatrixSitemapEntries,
-  studentTypes as matrixStudentTypes,
-  subjects as matrixSubjects,
-} from "@/lib/matrix";
+import { getMatrixSitemapEntries } from "@/lib/matrix";
 import { getComparisonSitemapEntries } from "@/lib/comparison-matrix";
 import { getUkClusterSitemapEntries } from "@/lib/uk-matrix";
 import { getExpandedPageSitemapEntries } from "@/lib/expanded-pages";
@@ -55,6 +53,7 @@ export type SitemapSourceGroup = {
 };
 
 export type SitemapTier = "main" | "longtail";
+type ConfidenceTier = "high" | "medium" | "low";
 
 const REDIRECT_ONLY_PATHS = new Set([
   "/learning-centre",
@@ -72,6 +71,7 @@ const REDIRECT_ONLY_PATHS = new Set([
 ]);
 
 const STALE_OR_PLACEHOLDER_PATHS = new Set(["/internal/seo-article-generator"]);
+const LONGTAIL_STATIC_LASTMOD = new Date("2026-01-15T00:00:00.000Z");
 
 const MAIN_SOURCE_GROUPS = new Set([
   "primary_entries",
@@ -102,20 +102,12 @@ const LONGTAIL_SOURCE_GROUPS = new Set([
   "generated_page_entries",
   "how_to_keyword_entries",
 ]);
-
-const HIGH_CONFIDENCE_REPORT_SUBJECTS = new Set<
-  (typeof matrixSubjects)[number]
->(["english", "maths", "science", "all-subjects"]);
-const HIGH_CONFIDENCE_REPORT_STAGES = new Set<string>([
-  "ks2",
-  "ks3",
-  "ks4",
-  "year-6",
-  "year-11",
+const MEDIUM_CONFIDENCE_SOURCE_GROUPS = new Set([
+  "uk_regional_entries",
+  "england_regional_entries",
+  "comparison_entries",
+  "how_to_keyword_entries",
 ]);
-const HIGH_CONFIDENCE_REPORT_STUDENT_TYPES = new Set<
-  (typeof matrixStudentTypes)[number]
->(["struggling", "anxious-eal", "sen-needs"]);
 
 function toSitemapEntry({
   path,
@@ -141,38 +133,41 @@ function getPathFromEntry(entry: MetadataRoute.Sitemap[number]) {
   return new URL(entry.url).pathname;
 }
 
-function isSelectedHighConfidenceReportComment(path: string) {
-  const segments = path.split("/").filter(Boolean);
-
-  if (segments[0] !== "report-comments" || segments.length !== 4) {
-    return false;
+function isHighConfidenceProgrammaticPath(path: string) {
+  if (path.startsWith("/report-comments/") || path.startsWith("/scenario/")) {
+    return getIndexControlDecision(path).indexable;
   }
 
-  const [, studentType, subject, stage] = segments;
-  return (
-    HIGH_CONFIDENCE_REPORT_STUDENT_TYPES.has(
-      studentType as (typeof matrixStudentTypes)[number],
-    ) &&
-    HIGH_CONFIDENCE_REPORT_SUBJECTS.has(
-      subject as (typeof matrixSubjects)[number],
-    ) &&
-    HIGH_CONFIDENCE_REPORT_STAGES.has(stage)
-  );
+  return false;
 }
 
-function isSelectedHighConfidenceProgrammaticPath(path: string) {
-  if (isSelectedHighConfidenceReportComment(path)) {
-    return true;
+function getConfidenceTier(source: string, path: string): ConfidenceTier {
+  if (MAIN_SOURCE_GROUPS.has(source)) {
+    return "high";
   }
 
-  // Keep the main sitemap conservative. Scenario, expanded, and keyword-led
-  // long-tail pages stay in the experimental sitemap unless promoted manually.
-  return false;
+  if (isHighConfidenceProgrammaticPath(path)) {
+    return "high";
+  }
+
+  if (MEDIUM_CONFIDENCE_SOURCE_GROUPS.has(source)) {
+    return "medium";
+  }
+
+  return "low";
 }
 
 function isExcludedPath(path: string) {
   if (!path || path.includes("?")) {
     return true;
+  }
+
+  if (path.startsWith("/report-comments/")) {
+    return getReportPruneDecision(path).action !== "keep";
+  }
+
+  if (path.startsWith("/scenario/")) {
+    return !getIndexControlDecision(path).indexable;
   }
 
   if (
@@ -192,22 +187,35 @@ function shouldIncludeInTier(
   tier: SitemapTier,
 ) {
   const path = getPathFromEntry(entry);
+  const confidence = getConfidenceTier(source, path);
 
   if (isExcludedPath(path)) {
     return false;
   }
 
   if (tier === "main") {
-    return (
-      MAIN_SOURCE_GROUPS.has(source) ||
-      isSelectedHighConfidenceProgrammaticPath(path)
-    );
+    return confidence === "high";
   }
 
-  return (
-    LONGTAIL_SOURCE_GROUPS.has(source) &&
-    !isSelectedHighConfidenceProgrammaticPath(path)
-  );
+  return LONGTAIL_SOURCE_GROUPS.has(source) && confidence !== "high";
+}
+
+function applyTierFreshness(
+  entry: MetadataRoute.Sitemap[number],
+  source: string,
+  tier: SitemapTier,
+  highConfidenceLastModified: Date,
+) {
+  const path = getPathFromEntry(entry);
+  const confidence = getConfidenceTier(source, path);
+
+  return {
+    ...entry,
+    lastModified:
+      tier === "main" || confidence === "high"
+        ? highConfidenceLastModified
+        : LONGTAIL_STATIC_LASTMOD,
+  };
 }
 
 function getBlogEntries(): MetadataRoute.Sitemap {
@@ -1044,17 +1052,25 @@ export async function getTieredSitemap(
   tier: SitemapTier,
 ): Promise<MetadataRoute.Sitemap> {
   const sourceGroups = await getSitemapSourceGroups();
+  const highConfidenceLastModified = new Date();
 
   // Tiering strategy:
-  // - main: canonical commercial pages, hubs, blog, and a small curated set of
-  //   high-confidence programmatic URLs
-  // - longtail: experimental long-tail families that remain crawlable and can
-  //   be submitted separately in GSC without inflating the main sitemap
+  // - main: core commercial pages, hubs, blog, localised essentials, and a
+  //   curated high-confidence slice of scenario/report-comment URLs
+  // - longtail: remaining programmatic inventory, comparisons, regional
+  //   expansions, and deeper long-tail pages submitted separately in GSC
   return dedupeEntries(
     sourceGroups.flatMap((group) =>
-      group.entries.filter((entry) =>
-        shouldIncludeInTier(group.source, entry, tier),
-      ),
+      group.entries
+        .filter((entry) => shouldIncludeInTier(group.source, entry, tier))
+        .map((entry) =>
+          applyTierFreshness(
+            entry,
+            group.source,
+            tier,
+            highConfidenceLastModified,
+          ),
+        ),
     ),
   );
 }

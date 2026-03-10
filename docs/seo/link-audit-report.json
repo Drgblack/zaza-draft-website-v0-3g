@@ -1,10 +1,15 @@
 {
-  "generatedAt": "2026-03-10T06:37:35.623Z",
-  "scannedFiles": 793,
+  "generatedAt": "2026-03-10T07:16:57.923Z",
+  "scannedRoots": ["app"],
+  "scannedFiles": 231,
   "findings": [],
   "totals": {
+    "removed-helper-route": 0,
     "redirect-target": 0,
     "missing-route": 0,
     "low-confidence-programmatic": 0
-  }
+  },
+  "dryRun": true,
+  "writeMode": false,
+  "backupsCreated": []
 }
