@@ -12,7 +12,7 @@ import {
   buildProgrammaticMetadata,
   buildProgrammaticNotFoundMetadata,
 } from "@/lib/seo-helpers";
-import { getIndexControlDecision } from "@/lib/index-control";
+import { getCanonicalPath, getIndexDecision, isIndexable } from "@/lib/seo";
 
 export const revalidate = 604800;
 export const dynamicParams = true;
@@ -43,9 +43,10 @@ export function generateMetadata({
     );
   }
 
-  const indexDecision = getIndexControlDecision(page.path);
+  const indexDecision = getIndexDecision(page.path);
+  const indexable = isIndexable(page.path);
 
-  if (!indexDecision.indexable) {
+  if (!indexable) {
     console.info(
       `[index-control] noindex ${page.path} :: ${indexDecision.reason} :: variation-signals=${indexDecision.variationSignalCount ?? "n/a"}`,
     );
@@ -67,9 +68,10 @@ export function generateMetadata({
         "safeguarding",
         "teacher-first AI",
       ],
+      canonicalPath: getCanonicalPath(page.path),
     }),
     robots: {
-      index: indexDecision.indexable,
+      index: indexable,
       follow: true,
     },
   };

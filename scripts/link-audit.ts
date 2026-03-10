@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { getIndexControlDecision } from "../lib/index-control";
+import { getReportPruneDecision } from "../lib/report-prune";
 import {
   normaliseCanonicalPath,
   resolveCanonicalPath,
@@ -79,6 +80,18 @@ const REMOVED_HELPER_ROUTES = new Set([
   "/report-writing-stress-help",
   "/slt-documentation-help",
 ]);
+const HELPER_ROUTE_REPLACEMENTS: Record<string, string> = {
+  "/communication-diagnosis": "/diagnosis",
+  "/how-to-reply-angry-parent":
+    "/diagnosis?issue=angry-parent-email&tone=de-escalate",
+  "/behaviour-email-diagnosis":
+    "/diagnosis?issue=behaviour-concern&tone=professional-but-empathetic",
+  "/parent-ignores-email-help":
+    "/diagnosis?issue=parent-non-response&tone=clear-and-professional",
+  "/report-writing-stress-help": "/report-comment-builder",
+  "/slt-documentation-help":
+    "/diagnosis?issue=slt-escalation&tone=factual-and-calm",
+};
 
 const KNOWN_STALE_REPLACEMENTS: Record<string, string> = {
   "/learning-centre": "/ai-literacy",
@@ -332,8 +345,19 @@ function classifyTarget(
   | "normalizedTarget"
 > | null {
   const normalizedTarget = normaliseCanonicalPath(target);
+  const reportPruneDecision = normalizedTarget.startsWith("/report-comments/")
+    ? getReportPruneDecision(normalizedTarget)
+    : null;
   const suggestedReplacement =
+    HELPER_ROUTE_REPLACEMENTS[normalizedTarget] ??
     redirectMap[normalizedTarget] ??
+    (reportPruneDecision?.action === "redirect" &&
+    reportPruneDecision.redirectTo
+      ? reportPruneDecision.redirectTo
+      : undefined) ??
+    (reportPruneDecision?.action === "noindex" && reportPruneDecision.redirectTo
+      ? reportPruneDecision.redirectTo
+      : undefined) ??
     (resolveCanonicalPath(normalizedTarget) !== normalizedTarget
       ? resolveCanonicalPath(normalizedTarget)
       : undefined);
@@ -373,13 +397,18 @@ function classifyTarget(
   const indexDecision = getIndexControlDecision(normalizedTarget);
 
   if (!indexDecision.indexable) {
+    const lowConfidenceReason =
+      reportPruneDecision?.action === "noindex"
+        ? "Low-value report-comments longtail. Link to the report-comment builder or a stronger kept combination instead."
+        : indexDecision.reason;
+
     return {
       type: "low-confidence-programmatic",
       normalizedTarget,
       suggestedReplacement:
         suggestedReplacement ?? resolveCanonicalPath(normalizedTarget),
       autoFixable: true,
-      reason: indexDecision.reason,
+      reason: lowConfidenceReason,
     };
   }
 
@@ -411,21 +440,27 @@ function buildMarkdownReport(report: AuditReport) {
     return lines.join("\n");
   }
 
-  lines.push(
-    "## Findings",
-    "",
-    "| Type | File | Line | Target | Suggested replacement | Reason |",
-    "| --- | --- | ---: | --- | --- | --- |",
-  );
+  lines.push("## Findings", "", "### File -> stale link -> suggested fix", "");
+
+  let currentFile = "";
 
   for (const finding of report.findings) {
+    if (finding.file !== currentFile) {
+      currentFile = finding.file;
+      lines.push(`#### ${finding.file}`, "");
+    }
+
+    lines.push(`- stale link: \`${finding.rawTarget}\` (${finding.type})`);
     lines.push(
-      `| ${finding.type} | ${finding.file} | ${finding.line} | \`${finding.rawTarget}\` | ${
+      `  suggested fix: ${
         finding.suggestedReplacement
           ? `\`${finding.suggestedReplacement}\``
-          : "-"
-      } | ${finding.reason} |`,
+          : "review manually"
+      }`,
     );
+    lines.push(`  reason: ${finding.reason}`);
+    lines.push(`  location: line ${finding.line}, column ${finding.column}`);
+    lines.push("");
   }
 
   if (report.backupsCreated.length > 0) {
@@ -510,7 +545,7 @@ function parseArgs() {
 
   return {
     dryRun: args.includes("--dry-run"),
-    write: args.includes("--write"),
+    write: args.includes("--write") || args.includes("--fix"),
     paths,
   };
 }

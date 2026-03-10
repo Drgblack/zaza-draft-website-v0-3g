@@ -194,7 +194,8 @@ How to submit in Google Search Console:
 
 1. Submit `https://zazadraft.com/sitemap.xml` as the main sitemap.
 2. Submit `https://zazadraft.com/sitemap-longtail.xml` as a separate secondary sitemap.
-3. Monitor the two sitemap submissions separately so the main sitemap stays a cleaner signal for canonical growth pages.
+3. Keep both sitemap lines in `app/robots.txt` so crawlers can discover the split sitemap setup automatically.
+4. Monitor the two sitemap submissions separately so the main sitemap stays a cleaner signal for canonical growth pages.
 
 What to monitor after changes:
 
@@ -203,6 +204,28 @@ What to monitor after changes:
 3. Whether the longtail sitemap starts accumulating `Crawled - currently not indexed` or duplicate signals, which is a sign that the promoted slice is still too broad.
 4. Whether helper redirects or alias routes reappear in sitemap output after future route changes.
 5. Whether newly pruned `report-comments` and `scenario` pages stay out of both sitemap tiers once they are marked `noindex` or redirected at route level.
+
+Current longtail quality filter:
+
+- Implemented in `app/sitemap.ts` through `LONGTAIL_QUALITY_CRITERIA` and `assessLongtailQuality()`.
+- Keeps the main sitemap unchanged.
+- Filters only the longtail sitemap with these heuristics:
+  - estimated word count must be at least `900`
+  - estimated unique examples must be at least `4`
+  - slug depth must stay at `4` segments or fewer
+  - matrix-style longtail pages must match a promoted cohort instead of entering by default
+- Current promoted matrix cohorts for longtail retention:
+  - report comments: `primary` or `ks2`, plus `english` or `maths`
+  - scenario pages: `primary` or `ks2`, plus `behaviour` or `low-attainment`, plus `year-5` or `year-6`
+- Excluded longtail URLs are logged from the sitemap generation step so they can be reviewed after deploy.
+
+How to tighten the longtail criteria further with GSC data:
+
+1. Reduce `maxSlugDepth` if deep expanded or regional paths stay unindexed.
+2. Raise `minimumEstimatedWordCount` if longtail pages keep landing in `Crawled - currently not indexed`.
+3. Raise `minimumUniqueExamples` if templated pages are clustering under duplicate or alternate signals.
+4. Narrow the promoted report-comment and scenario cohorts to only the cells with stable impressions and clicks.
+5. Mirror any cohort changes in both `LONGTAIL_QUALITY_CRITERIA` and the route-level index rules so sitemap policy and metadata stay aligned.
 
 ## Link Audit
 
@@ -215,7 +238,7 @@ What it checks:
 - links to redirect or alias routes such as `/learning-centre`, `/communication-diagnosis`, and old helper paths
 - links to removed helper routes such as `/behaviour-email-diagnosis`, `/parent-ignores-email-help`, `/report-writing-stress-help`, and `/slt-documentation-help`
 - links to removed or missing routes
-- links to low-confidence programmatic pages that are currently marked `noindex`
+- links to low-confidence programmatic pages that are currently marked `noindex`, especially deep `/report-comments/*` tail variants
 
 What it writes:
 
@@ -246,11 +269,19 @@ Optional auto-rewrite mode:
 pnpm exec tsx scripts/link-audit.ts --write
 ```
 
+`--fix` is supported as a clearer alias:
+
+```bash
+pnpm exec tsx scripts/link-audit.ts --fix
+```
+
 Auto-rewrite notes:
 
 - `--dry-run` reports findings without editing files.
-- `--write` updates deterministic replacements in scanned files.
+- `--write` or `--fix` updates deterministic replacements in scanned files.
 - Before editing a file, the script creates a sibling backup with the suffix `.link-audit.bak`.
+- Removed helper routes are rewritten to their diagnosis or hub replacement when a deterministic target exists.
+- Low-value `/report-comments/*` links are rewritten to `/report-comment-builder` when the prune rules mark them as `redirect` or `noindex`.
 
 Example report shape:
 
@@ -368,6 +399,7 @@ Sitemap inclusion:
 
 Initial low-confidence noindex control for programmatic pages lives in:
 
+- `lib/seo.ts`
 - `lib/index-control.ts`
 - `lib/report-prune.ts`
 - `app/report-comments/[student-type]/[subject]/[phase]/page.tsx`
@@ -378,6 +410,7 @@ Initial low-confidence noindex control for programmatic pages lives in:
 What it does now:
 
 - Keeps core commercial and hub pages indexable by default.
+- Exposes shared `isIndexable()` and `getCanonical()` helpers from `lib/seo.ts` so page metadata, canonical logic, and sitemap policy stay aligned.
 - Applies the current rules to both `report-comments` and `scenario` matrix pages.
 - Applies `noindex,follow` through Next metadata when a matrix page is too broad to justify index priority.
 - Logs the decision server-side so you can review the current rule behaviour in local output or Vercel logs.

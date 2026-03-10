@@ -1,8 +1,8 @@
 # Link Audit Report
 
-Generated: 2026-03-10T07:16:57.923Z
-Scanned roots: app
-Scanned files: 231
+Generated: 2026-03-10T08:00:42.042Z
+Scanned roots: app, components, content
+Scanned files: 793
 Findings: 0
 Dry run: yes
 Write mode: no

@@ -54,6 +54,19 @@ export type SitemapSourceGroup = {
 
 export type SitemapTier = "main" | "longtail";
 type ConfidenceTier = "high" | "medium" | "low";
+type LongtailQualityAssessment = {
+  include: boolean;
+  reason: string;
+  depth: number;
+  estimatedWordCount: number;
+  uniqueExamples: number;
+  matchesPopularMatrixCell: boolean;
+};
+type LongtailExclusionLog = {
+  source: string;
+  path: string;
+  reason: string;
+};
 
 const REDIRECT_ONLY_PATHS = new Set([
   "/learning-centre",
@@ -72,6 +85,57 @@ const REDIRECT_ONLY_PATHS = new Set([
 
 const STALE_OR_PLACEHOLDER_PATHS = new Set(["/internal/seo-article-generator"]);
 const LONGTAIL_STATIC_LASTMOD = new Date("2026-01-15T00:00:00.000Z");
+const LONGTAIL_EXCLUSION_LOG_LIMIT = 200;
+
+export const LONGTAIL_QUALITY_CRITERIA = {
+  minimumEstimatedWordCount: 900,
+  minimumUniqueExamples: 4,
+  maxSlugDepth: 4,
+  popularReportComments: {
+    phases: ["primary", "ks2"],
+    subjects: ["english", "maths"],
+    studentTypes: ["struggling", "anxious-eal", "sen-needs"],
+  },
+  popularScenario: {
+    phases: ["primary", "ks2"],
+    issues: ["behaviour", "low-attainment"],
+    yearGroups: ["year-5", "year-6"],
+  },
+  familyHeuristics: {
+    comparison_entries: {
+      estimatedWordCount: 1100,
+      uniqueExamples: 4,
+    },
+    england_regional_entries: {
+      estimatedWordCount: 1000,
+      uniqueExamples: 4,
+    },
+    expanded_page_entries: {
+      estimatedWordCount: 1365,
+      uniqueExamples: 4,
+    },
+    generated_page_entries: {
+      estimatedWordCount: 980,
+      uniqueExamples: 4,
+    },
+    how_to_keyword_entries: {
+      estimatedWordCount: 950,
+      uniqueExamples: 4,
+    },
+    matrix_entries: {
+      estimatedWordCount: 950,
+      uniqueExamples: 3,
+    },
+    programmatic_entries: {
+      estimatedWordCount: 920,
+      uniqueExamples: 4,
+    },
+    uk_regional_entries: {
+      estimatedWordCount: 1000,
+      uniqueExamples: 4,
+    },
+  },
+} as const;
 
 const MAIN_SOURCE_GROUPS = new Set([
   "primary_entries",
@@ -133,6 +197,134 @@ function getPathFromEntry(entry: MetadataRoute.Sitemap[number]) {
   return new URL(entry.url).pathname;
 }
 
+function getPathDepth(path: string) {
+  return path.split("/").filter(Boolean).length;
+}
+
+function getFamilyHeuristic(source: string) {
+  return (
+    LONGTAIL_QUALITY_CRITERIA.familyHeuristics[
+      source as keyof typeof LONGTAIL_QUALITY_CRITERIA.familyHeuristics
+    ] ?? {
+      estimatedWordCount: LONGTAIL_QUALITY_CRITERIA.minimumEstimatedWordCount,
+      uniqueExamples: LONGTAIL_QUALITY_CRITERIA.minimumUniqueExamples,
+    }
+  );
+}
+
+function matchesPopularLongtailMatrixCell(path: string) {
+  const segments = path.split("/").filter(Boolean);
+
+  if (segments[0] === "report-comments" && segments.length === 4) {
+    const [, studentType, subject, phase] = segments;
+
+    return (
+      LONGTAIL_QUALITY_CRITERIA.popularReportComments.studentTypes.includes(
+        studentType as (typeof LONGTAIL_QUALITY_CRITERIA.popularReportComments.studentTypes)[number],
+      ) &&
+      LONGTAIL_QUALITY_CRITERIA.popularReportComments.subjects.includes(
+        subject as (typeof LONGTAIL_QUALITY_CRITERIA.popularReportComments.subjects)[number],
+      ) &&
+      LONGTAIL_QUALITY_CRITERIA.popularReportComments.phases.includes(
+        phase as (typeof LONGTAIL_QUALITY_CRITERIA.popularReportComments.phases)[number],
+      )
+    );
+  }
+
+  if (segments[0] === "scenario" && segments.length === 4) {
+    const [, phase, issue, yearGroup] = segments;
+
+    return (
+      LONGTAIL_QUALITY_CRITERIA.popularScenario.phases.includes(
+        phase as (typeof LONGTAIL_QUALITY_CRITERIA.popularScenario.phases)[number],
+      ) &&
+      LONGTAIL_QUALITY_CRITERIA.popularScenario.issues.includes(
+        issue as (typeof LONGTAIL_QUALITY_CRITERIA.popularScenario.issues)[number],
+      ) &&
+      LONGTAIL_QUALITY_CRITERIA.popularScenario.yearGroups.includes(
+        yearGroup as (typeof LONGTAIL_QUALITY_CRITERIA.popularScenario.yearGroups)[number],
+      )
+    );
+  }
+
+  return false;
+}
+
+function assessLongtailQuality(
+  source: string,
+  path: string,
+): LongtailQualityAssessment {
+  const depth = getPathDepth(path);
+  const familyHeuristic = getFamilyHeuristic(source);
+  const matchesPopularMatrixCell = matchesPopularLongtailMatrixCell(path);
+  const isMatrixPath =
+    source === "matrix_entries" ||
+    path.startsWith("/report-comments/") ||
+    path.startsWith("/scenario/");
+  const estimatedWordCount = familyHeuristic.estimatedWordCount;
+  const uniqueExamples =
+    isMatrixPath && !matchesPopularMatrixCell
+      ? Math.min(familyHeuristic.uniqueExamples, 3)
+      : familyHeuristic.uniqueExamples;
+
+  if (depth > LONGTAIL_QUALITY_CRITERIA.maxSlugDepth) {
+    return {
+      include: false,
+      reason: `Excluded: slug depth ${depth} exceeds the longtail threshold of ${LONGTAIL_QUALITY_CRITERIA.maxSlugDepth}.`,
+      depth,
+      estimatedWordCount,
+      uniqueExamples,
+      matchesPopularMatrixCell,
+    };
+  }
+
+  if (
+    estimatedWordCount < LONGTAIL_QUALITY_CRITERIA.minimumEstimatedWordCount
+  ) {
+    return {
+      include: false,
+      reason: `Excluded: estimated word count ${estimatedWordCount} is below the ${LONGTAIL_QUALITY_CRITERIA.minimumEstimatedWordCount}-word threshold.`,
+      depth,
+      estimatedWordCount,
+      uniqueExamples,
+      matchesPopularMatrixCell,
+    };
+  }
+
+  if (uniqueExamples < LONGTAIL_QUALITY_CRITERIA.minimumUniqueExamples) {
+    return {
+      include: false,
+      reason: `Excluded: estimated unique examples ${uniqueExamples} is below the threshold of ${LONGTAIL_QUALITY_CRITERIA.minimumUniqueExamples}.`,
+      depth,
+      estimatedWordCount,
+      uniqueExamples,
+      matchesPopularMatrixCell,
+    };
+  }
+
+  if (isMatrixPath && !matchesPopularMatrixCell) {
+    return {
+      include: false,
+      reason:
+        "Excluded: matrix page does not match the promoted primary or ks2, english or maths, and behaviour or low-attainment cohorts for the longtail sitemap.",
+      depth,
+      estimatedWordCount,
+      uniqueExamples,
+      matchesPopularMatrixCell,
+    };
+  }
+
+  return {
+    include: true,
+    reason:
+      "Included: longtail URL meets the current depth, estimated content, and cohort heuristics.",
+    depth,
+    estimatedWordCount,
+    uniqueExamples,
+    matchesPopularMatrixCell,
+  };
+}
+
 function isHighConfidenceProgrammaticPath(path: string) {
   if (path.startsWith("/report-comments/") || path.startsWith("/scenario/")) {
     return getIndexControlDecision(path).indexable;
@@ -185,6 +377,7 @@ function shouldIncludeInTier(
   source: string,
   entry: MetadataRoute.Sitemap[number],
   tier: SitemapTier,
+  longtailExclusions?: LongtailExclusionLog[],
 ) {
   const path = getPathFromEntry(entry);
   const confidence = getConfidenceTier(source, path);
@@ -197,7 +390,21 @@ function shouldIncludeInTier(
     return confidence === "high";
   }
 
-  return LONGTAIL_SOURCE_GROUPS.has(source) && confidence !== "high";
+  if (!LONGTAIL_SOURCE_GROUPS.has(source) || confidence === "high") {
+    return false;
+  }
+
+  const qualityAssessment = assessLongtailQuality(source, path);
+
+  if (!qualityAssessment.include) {
+    longtailExclusions?.push({
+      source,
+      path,
+      reason: qualityAssessment.reason,
+    });
+  }
+
+  return qualityAssessment.include;
 }
 
 function applyTierFreshness(
@@ -216,6 +423,28 @@ function applyTierFreshness(
         ? highConfidenceLastModified
         : LONGTAIL_STATIC_LASTMOD,
   };
+}
+
+function logLongtailExclusions(exclusions: LongtailExclusionLog[]) {
+  if (exclusions.length === 0) {
+    return;
+  }
+
+  console.info(
+    `[sitemap-longtail] excluded ${exclusions.length} URLs with the current quality filter`,
+  );
+
+  for (const exclusion of exclusions.slice(0, LONGTAIL_EXCLUSION_LOG_LIMIT)) {
+    console.info(
+      `[sitemap-longtail] ${exclusion.path} :: ${exclusion.source} :: ${exclusion.reason}`,
+    );
+  }
+
+  if (exclusions.length > LONGTAIL_EXCLUSION_LOG_LIMIT) {
+    console.info(
+      `[sitemap-longtail] ${exclusions.length - LONGTAIL_EXCLUSION_LOG_LIMIT} additional exclusions truncated from log output`,
+    );
+  }
 }
 
 function getBlogEntries(): MetadataRoute.Sitemap {
@@ -1053,16 +1282,19 @@ export async function getTieredSitemap(
 ): Promise<MetadataRoute.Sitemap> {
   const sourceGroups = await getSitemapSourceGroups();
   const highConfidenceLastModified = new Date();
+  const longtailExclusions: LongtailExclusionLog[] = [];
 
   // Tiering strategy:
   // - main: core commercial pages, hubs, blog, localised essentials, and a
   //   curated high-confidence slice of scenario/report-comment URLs
   // - longtail: remaining programmatic inventory, comparisons, regional
   //   expansions, and deeper long-tail pages submitted separately in GSC
-  return dedupeEntries(
+  const sitemapEntries = dedupeEntries(
     sourceGroups.flatMap((group) =>
       group.entries
-        .filter((entry) => shouldIncludeInTier(group.source, entry, tier))
+        .filter((entry) =>
+          shouldIncludeInTier(group.source, entry, tier, longtailExclusions),
+        )
         .map((entry) =>
           applyTierFreshness(
             entry,
@@ -1073,6 +1305,12 @@ export async function getTieredSitemap(
         ),
     ),
   );
+
+  if (tier === "longtail") {
+    logLongtailExclusions(longtailExclusions);
+  }
+
+  return sitemapEntries;
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

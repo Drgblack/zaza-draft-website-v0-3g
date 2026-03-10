@@ -10,3 +10,4 @@ Disallow: /beta/
 Disallow: /internal/
 
 Sitemap: https://zazadraft.com/sitemap.xml
+Sitemap: https://zazadraft.com/sitemap-longtail.xml

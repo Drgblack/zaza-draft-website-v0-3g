@@ -12,8 +12,8 @@ import {
   buildProgrammaticMetadata,
   buildProgrammaticNotFoundMetadata,
 } from "@/lib/seo-helpers";
-import { getIndexControlDecision } from "@/lib/index-control";
 import { getReportPruneDecision } from "@/lib/report-prune";
+import { getCanonicalPath, getIndexDecision, isIndexable } from "@/lib/seo";
 
 export const revalidate = 604800;
 export const dynamicParams = true;
@@ -44,12 +44,13 @@ export function generateMetadata({
     );
   }
 
-  const indexDecision = getIndexControlDecision(page.path);
+  const indexDecision = getIndexDecision(page.path);
   const pruneDecision = getReportPruneDecision(page.path);
+  const indexable = isIndexable(page.path) && pruneDecision.action === "keep";
 
   if (pruneDecision.action !== "keep") {
     console.info(
-      `[report-prune] ${pruneDecision.action} ${page.path} -> ${pruneDecision.redirectTo ?? page.path} :: ${pruneDecision.reason} :: keep-signals=${pruneDecision.keepSignalCount ?? "n/a"}`,
+      `[report-prune] ${pruneDecision.action} ${page.path} -> ${pruneDecision.redirectTo ?? page.path} :: ${pruneDecision.reason} :: index=${indexDecision.reason} :: keep-signals=${pruneDecision.keepSignalCount ?? "n/a"}`,
     );
   }
 
@@ -69,9 +70,10 @@ export function generateMetadata({
         "professional communication",
         "teacher-first AI",
       ],
+      canonicalPath: getCanonicalPath(page.path),
     }),
     robots: {
-      index: indexDecision.indexable && pruneDecision.action === "keep",
+      index: indexable,
       follow: true,
     },
   };
