@@ -29,6 +29,22 @@ type HowToKeywordEntry = {
   slug: string;
 };
 
+const COMPARE_DETAIL_SLUGS = [
+  "zaza-draft-vs-magicschool",
+  "zaza-draft-vs-chatgpt",
+  "zaza-draft-vs-grammarly",
+] as const;
+
+const SUCCESS_STORY_SLUGS = [
+  "lincoln-elementary-parent-communication",
+  "riverside-unified-district-rollout",
+  "washington-middle-language-barriers",
+  "oakwood-special-education-reports",
+  "jefferson-new-teacher-confidence",
+] as const;
+
+const STATE_OF_AI_REPORT_YEARS = ["2022", "2023", "2024"] as const;
+
 export type SitemapSourceGroup = {
   source: string;
   entries: MetadataRoute.Sitemap;
@@ -73,6 +89,31 @@ function getBlogEntries(): MetadataRoute.Sitemap {
 
       return toSitemapEntry({
         path: `/blog/${slug}`,
+        priority: 0.8,
+        changeFrequency: "weekly",
+        lastModified: statSync(fullPath).mtime,
+      });
+    });
+}
+
+function getGermanBlogEntries(): MetadataRoute.Sitemap {
+  const blogDirectory = join(process.cwd(), "content", "blog");
+  const files = readdirSync(blogDirectory, { withFileTypes: true });
+
+  return files
+    .filter(
+      (file) =>
+        file.isFile() &&
+        !file.name.startsWith("_") &&
+        /\.(md|mdx)$/i.test(file.name) &&
+        (file.name.endsWith(".de.md") || file.name.endsWith(".de.mdx")),
+    )
+    .map((file) => {
+      const fullPath = join(blogDirectory, file.name);
+      const slug = file.name.replace(/\.de\.(md|mdx)$/i, "");
+
+      return toSitemapEntry({
+        path: `/de/blog/${slug}`,
         priority: 0.8,
         changeFrequency: "weekly",
         lastModified: statSync(fullPath).mtime,
@@ -339,19 +380,7 @@ export async function getSitemapSourceGroups(): Promise<SitemapSourceGroup[]> {
       lastModified: now,
     },
     {
-      path: "/de/state-of-ai-education",
-      priority: 0.75,
-      changeFrequency: "weekly",
-      lastModified: now,
-    },
-    {
       path: "/de/best-ai-tool-parent-emails",
-      priority: 0.85,
-      changeFrequency: "weekly",
-      lastModified: now,
-    },
-    {
-      path: "/de/best-ai-writing-tools-for-teachers-2025",
       priority: 0.85,
       changeFrequency: "weekly",
       lastModified: now,
@@ -525,12 +554,6 @@ export async function getSitemapSourceGroups(): Promise<SitemapSourceGroup[]> {
       lastModified: now,
     },
     {
-      path: "/learning-centre",
-      priority: 0.7,
-      changeFrequency: "weekly",
-      lastModified: now,
-    },
-    {
       path: "/state-of-ai-education",
       priority: 0.75,
       changeFrequency: "weekly",
@@ -666,18 +689,6 @@ export async function getSitemapSourceGroups(): Promise<SitemapSourceGroup[]> {
       lastModified: now,
     },
     {
-      path: "/communication-diagnosis",
-      priority: 0.6,
-      changeFrequency: "weekly",
-      lastModified: now,
-    },
-    {
-      path: "/how-to-reply-angry-parent",
-      priority: 0.65,
-      changeFrequency: "weekly",
-      lastModified: now,
-    },
-    {
       path: "/parent-ignores-email-help",
       priority: 0.65,
       changeFrequency: "weekly",
@@ -749,6 +760,38 @@ export async function getSitemapSourceGroups(): Promise<SitemapSourceGroup[]> {
     changeFrequency: "daily",
     lastModified: now,
   }));
+
+  const compareDetailEntries: SitemapEntryConfig[] =
+    COMPARE_DETAIL_SLUGS.flatMap((slug) => [
+      {
+        path: `/compare/${slug}`,
+        priority: 0.74,
+        changeFrequency: "monthly",
+        lastModified: now,
+      },
+      {
+        path: `/de/compare/${slug}`,
+        priority: 0.74,
+        changeFrequency: "monthly",
+        lastModified: now,
+      },
+    ]);
+
+  const successStoryDetailEntries: SitemapEntryConfig[] =
+    SUCCESS_STORY_SLUGS.map((slug) => ({
+      path: `/success-stories/${slug}`,
+      priority: 0.72,
+      changeFrequency: "monthly",
+      lastModified: now,
+    }));
+
+  const stateOfAiYearEntries: SitemapEntryConfig[] =
+    STATE_OF_AI_REPORT_YEARS.map((year) => ({
+      path: `/state-of-ai-education/${year}`,
+      priority: 0.68,
+      changeFrequency: "yearly",
+      lastModified: now,
+    }));
 
   return [
     {
@@ -837,6 +880,22 @@ export async function getSitemapSourceGroups(): Promise<SitemapSourceGroup[]> {
     {
       source: "blog_entries",
       entries: getBlogEntries(),
+    },
+    {
+      source: "de_blog_entries",
+      entries: getGermanBlogEntries(),
+    },
+    {
+      source: "compare_detail_entries",
+      entries: compareDetailEntries.map(toSitemapEntry),
+    },
+    {
+      source: "success_story_detail_entries",
+      entries: successStoryDetailEntries.map(toSitemapEntry),
+    },
+    {
+      source: "state_of_ai_year_entries",
+      entries: stateOfAiYearEntries.map(toSitemapEntry),
     },
   ];
 }
