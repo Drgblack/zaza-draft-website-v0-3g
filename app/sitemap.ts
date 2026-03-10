@@ -6,7 +6,11 @@ import { teacherWritingPageSlugs } from "@/lib/seo/teacher-writing-pages";
 import { clusterSpokes } from "@/lib/seo/teacher-safe-ai-cluster";
 import { getRegionalTeacherWritingSlugs } from "@/lib/seo/regional-writing-pages";
 import { getProgrammaticSitemapEntries } from "@/lib/programmatic";
-import { getMatrixSitemapEntries } from "@/lib/matrix";
+import {
+  getMatrixSitemapEntries,
+  studentTypes as matrixStudentTypes,
+  subjects as matrixSubjects,
+} from "@/lib/matrix";
 import { getComparisonSitemapEntries } from "@/lib/comparison-matrix";
 import { getUkClusterSitemapEntries } from "@/lib/uk-matrix";
 import { getExpandedPageSitemapEntries } from "@/lib/expanded-pages";
@@ -50,6 +54,64 @@ export type SitemapSourceGroup = {
   entries: MetadataRoute.Sitemap;
 };
 
+export type SitemapTier = "main" | "longtail";
+
+const REDIRECT_ONLY_PATHS = new Set([
+  "/learning-centre",
+  "/de/learning-centre",
+  "/communication-diagnosis",
+  "/how-to-reply-angry-parent",
+  "/de/ambassadors",
+  "/de/state-of-ai-education",
+  "/de/best-ai-writing-tools-for-teachers-2025",
+]);
+
+const STALE_OR_PLACEHOLDER_PATHS = new Set(["/internal/seo-article-generator"]);
+
+const MAIN_SOURCE_GROUPS = new Set([
+  "primary_entries",
+  "core_marketing_entries",
+  "locale_and_legal_entries",
+  "product_entries",
+  "content_hub_entries",
+  "campaign_and_tool_entries",
+  "programmatic_hub_entries",
+  "pain_entries",
+  "teacher_writing_entries",
+  "topical_cluster_entries",
+  "uk_cluster_entries",
+  "blog_entries",
+  "de_blog_entries",
+  "compare_detail_entries",
+  "success_story_detail_entries",
+  "state_of_ai_year_entries",
+]);
+
+const LONGTAIL_SOURCE_GROUPS = new Set([
+  "uk_regional_entries",
+  "england_regional_entries",
+  "expanded_page_entries",
+  "comparison_entries",
+  "matrix_entries",
+  "programmatic_entries",
+  "generated_page_entries",
+  "how_to_keyword_entries",
+]);
+
+const HIGH_CONFIDENCE_REPORT_SUBJECTS = new Set<
+  (typeof matrixSubjects)[number]
+>(["english", "maths", "science", "all-subjects"]);
+const HIGH_CONFIDENCE_REPORT_STAGES = new Set<string>([
+  "ks2",
+  "ks3",
+  "ks4",
+  "year-6",
+  "year-11",
+]);
+const HIGH_CONFIDENCE_REPORT_STUDENT_TYPES = new Set<
+  (typeof matrixStudentTypes)[number]
+>(["struggling", "anxious-eal", "sen-needs"]);
+
 function toSitemapEntry({
   path,
   priority,
@@ -67,6 +129,79 @@ function toSitemapEntry({
 function dedupeEntries(entries: MetadataRoute.Sitemap): MetadataRoute.Sitemap {
   return Array.from(
     new Map(entries.map((entry) => [entry.url, entry])).values(),
+  );
+}
+
+function getPathFromEntry(entry: MetadataRoute.Sitemap[number]) {
+  return new URL(entry.url).pathname;
+}
+
+function isSelectedHighConfidenceReportComment(path: string) {
+  const segments = path.split("/").filter(Boolean);
+
+  if (segments[0] !== "report-comments" || segments.length !== 4) {
+    return false;
+  }
+
+  const [, studentType, subject, stage] = segments;
+  return (
+    HIGH_CONFIDENCE_REPORT_STUDENT_TYPES.has(
+      studentType as (typeof matrixStudentTypes)[number],
+    ) &&
+    HIGH_CONFIDENCE_REPORT_SUBJECTS.has(
+      subject as (typeof matrixSubjects)[number],
+    ) &&
+    HIGH_CONFIDENCE_REPORT_STAGES.has(stage)
+  );
+}
+
+function isSelectedHighConfidenceProgrammaticPath(path: string) {
+  if (isSelectedHighConfidenceReportComment(path)) {
+    return true;
+  }
+
+  // Keep the main sitemap conservative. Scenario, expanded, and keyword-led
+  // long-tail pages stay in the experimental sitemap unless promoted manually.
+  return false;
+}
+
+function isExcludedPath(path: string) {
+  if (!path || path.includes("?")) {
+    return true;
+  }
+
+  if (
+    REDIRECT_ONLY_PATHS.has(path) ||
+    STALE_OR_PLACEHOLDER_PATHS.has(path) ||
+    path.startsWith("/internal/")
+  ) {
+    return true;
+  }
+
+  return false;
+}
+
+function shouldIncludeInTier(
+  source: string,
+  entry: MetadataRoute.Sitemap[number],
+  tier: SitemapTier,
+) {
+  const path = getPathFromEntry(entry);
+
+  if (isExcludedPath(path)) {
+    return false;
+  }
+
+  if (tier === "main") {
+    return (
+      MAIN_SOURCE_GROUPS.has(source) ||
+      isSelectedHighConfidenceProgrammaticPath(path)
+    );
+  }
+
+  return (
+    LONGTAIL_SOURCE_GROUPS.has(source) &&
+    !isSelectedHighConfidenceProgrammaticPath(path)
   );
 }
 
@@ -900,8 +1035,25 @@ export async function getSitemapSourceGroups(): Promise<SitemapSourceGroup[]> {
   ];
 }
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export async function getTieredSitemap(
+  tier: SitemapTier,
+): Promise<MetadataRoute.Sitemap> {
   const sourceGroups = await getSitemapSourceGroups();
 
-  return dedupeEntries(sourceGroups.flatMap((group) => group.entries));
+  // Tiering strategy:
+  // - main: canonical commercial pages, hubs, blog, and a small curated set of
+  //   high-confidence programmatic URLs
+  // - longtail: experimental long-tail families that remain crawlable and can
+  //   be submitted separately in GSC without inflating the main sitemap
+  return dedupeEntries(
+    sourceGroups.flatMap((group) =>
+      group.entries.filter((entry) =>
+        shouldIncludeInTier(group.source, entry, tier),
+      ),
+    ),
+  );
+}
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  return getTieredSitemap("main");
 }

@@ -48,6 +48,15 @@ const nextConfig = {
         ],
       },
       {
+        source: '/sitemap-longtail.xml',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=3600',
+          },
+        ],
+      },
+      {
         source: '/staging/:path*',
         headers: [
           {
