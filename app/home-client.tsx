@@ -177,13 +177,20 @@ export function HomePageClient() {
       : "Sensitive school communication, before and after Zaza Draft";
   const heroProofIntro =
     language === "de"
-      ? "Kurze Beispiele dafuer, wie rohe Formulierungen ruhiger, klarer und sendesicher werden."
-      : "Short examples of how rough wording becomes calmer, clearer, and easier to send.";
+      ? "Sieh, wie rohe Formulierungen klarer, ruhiger und sendesicher werden."
+      : "See how rough wording becomes clearer, calmer, and safer to send.";
+  const heroProofFrameLine =
+    language === "de"
+      ? "Gebaut fuer Nachrichten, die Lehrkraefte nur ungern absenden."
+      : "Built for the messages teachers hesitate to send.";
   const heroBeforeLabel = language === "de" ? "Vorher" : "Before";
   const heroAfterLabel = language === "de" ? "Nachher" : "After";
-  const heroBeforeMeta = language === "de" ? "Rohentwurf" : "Raw draft";
+  const heroBeforeMeta =
+    language === "de" ? "Riskanter Erstentwurf" : "Risky first draft";
   const heroAfterMeta =
-    language === "de" ? "Ruhiger Ton" : "Calm, sendable version";
+    language === "de"
+      ? "Ruhigere, belastbare Version"
+      : "Calmer, defensible version";
   const heroProofSections =
     language === "de"
       ? [
@@ -191,17 +198,25 @@ export function HomePageClient() {
             title: "E-Mail an Eltern",
             context: "Verhaltensvorfall",
             before:
-              "Hallo, ich muss mitteilen, dass Oliver heute den Unterricht mehrfach gestoert und mehrere Anweisungen ignoriert hat. Das ist inzwischen besorgniserregend und muss sich verbessern.",
+              "Oliver war heute erneut sehr stoerend und hat mehrere Anweisungen ignoriert. Dieses Verhalten ist nicht akzeptabel und muss sich verbessern.",
             after:
-              "Hallo, ich wollte Sie wissen lassen, dass es Oliver heute trotz mehrerer Erinnerungen schwerfiel, im Unterricht konzentriert zu bleiben. Ich wuerde mich ueber Ihre Unterstuetzung freuen, damit er morgen positiver in den Tag starten kann.",
+              "Ich wollte Sie wissen lassen, dass es Oliver heute trotz mehrerer Erinnerungen schwerfiel, waehrend des Unterrichts konzentriert zu bleiben. Wir unterstuetzen ihn weiter dabei, positive Unterrichtsgewohnheiten aufzubauen, und wuerden Ihre Partnerschaft sehr schaetzen, um diese Erwartungen auch zu Hause zu bestaerken.",
           },
           {
             title: "Zeugnisformulierung",
-            context: "Jahresbericht",
+            context: "Negative Formulierung entschaerft",
             before:
-              "Oliver versucht sich zu bemuehen, ist aber inkonsequent und arbeitet oft zu hastig, was die Qualitaet beeintraechtigt.",
+              "Oliver arbeitet zu hastig und die Qualitaet ist oft schwach.",
             after:
-              "Oliver ist faehig und beteiligt sich gut am Unterricht. Wenn er die Qualitaet seiner schriftlichen Arbeit noch etwas sorgfaeltiger im Blick behaelt, kann er staerkere Fortschritte machen.",
+              "Oliver ist faehig und beteiligt sich positiv am Unterricht. Wenn er seine Arbeit vor der Abgabe noch etwas sorgfaeltiger prueft, kann er Ergebnisse zeigen, die seinem Verstaendnis staerker entsprechen.",
+          },
+          {
+            title: "Sensible Mitteilung",
+            context: "Koerperlicher Vorfall",
+            before:
+              "Oliver hat heute einen anderen Schueler geschubst und sich geweigert, sich zu entschuldigen. Dieses Verhalten ist nicht akzeptabel und kann so nicht weitergehen.",
+            after:
+              "Ich wollte Sie ueber einen Vorfall aus dem heutigen Unterricht informieren, bei dem Oliver frustriert wurde und einen anderen Schueler schubste. Wir haben mit ihm ueber positive Entscheidungen gesprochen und er versteht, dass koerperliches Verhalten nicht angemessen ist. Wir werden ihn weiter dabei unterstuetzen, solche Momente besser zu regulieren, und waeren fuer Ihre Unterstuetzung zu Hause dankbar.",
           },
         ]
       : [
@@ -209,23 +224,34 @@ export function HomePageClient() {
             title: "Parent email",
             context: "Behaviour incident",
             before:
-              "Hi, I need to say that Oliver has continued to disrupt the class and ignored several instructions today. This is becoming a concern and needs to improve.",
+              "Oliver was very disruptive again today and ignored multiple instructions. This behaviour is becoming unacceptable and needs to improve.",
             after:
-              "Hello, I wanted to let you know that Oliver found it difficult to stay focused in class today despite several reminders. I'd really value your support in helping him approach tomorrow more positively.",
+              "I wanted to let you know that Oliver found it challenging to stay focused during today's lesson despite several reminders. We are continuing to support him in developing positive classroom habits and would really appreciate your partnership in reinforcing these expectations at home.",
           },
           {
             title: "Report comment",
-            context: "End-of-year report",
-            before:
-              "Oliver tries hard but is inconsistent and often rushes his work which affects the quality.",
+            context: "Honest but more defensible",
+            before: "Oliver rushes his work and the quality is often poor.",
             after:
-              "Oliver is capable and contributes well in class. Focusing a little more carefully on the quality of his written work would help him make stronger progress.",
+              "Oliver is capable and contributes positively in class. With a little more care in checking his work before submitting it, he will be able to produce work that more fully reflects his understanding.",
+          },
+          {
+            title: "Sensitive incident",
+            context: "Emotionally loaded follow-up",
+            before:
+              "Oliver pushed another student today and refused to apologise. This behaviour is unacceptable and cannot continue.",
+            after:
+              "I wanted to let you know about an incident during today's lesson where Oliver became frustrated and pushed another pupil. We spoke with him about making positive choices and he understands that physical behaviour is not appropriate. We will continue supporting him in managing these moments and would appreciate your reinforcement of this at home.",
           },
         ];
   const heroProofCaption =
     language === "de"
       ? "Vom angespannten Entwurf zur ruhigen, belastbaren Kommunikation."
       : "From tense draft to calm, defensible communication.";
+  const heroMentalLoadLine =
+    language === "de"
+      ? "Weniger Zweifeln, bevor du auf Senden drueckst."
+      : "Less second-guessing before you press send.";
   const heroTrustBarIntro =
     language === "de"
       ? "Lehrkraefte vertrauen Zaza Draft fuer ruhige, belastbare Kommunikation."
@@ -318,19 +344,27 @@ export function HomePageClient() {
             icon: ShieldIcon,
           },
         ];
+  const situationsHeading =
+    language === "de"
+      ? "Situationen, die Lehrkraefte nur ungern formulieren"
+      : "Situations teachers worry about writing";
   const situationsItems =
     language === "de"
       ? [
-          "Eine E-Mail an Eltern, die du schon dreimal umgeschrieben hast",
-          "Eine Zeugnisformulierung, die zu hart klingt",
-          "Eine Verhaltensnotiz, die bei falscher Formulierung eskalieren koennte",
-          "Eine Nachricht an die Schulleitung, die nicht missverstanden werden darf",
+          "Verhaltensvorfaelle",
+          "Beschwerden von Eltern",
+          "Sensible Zeugnisformulierungen",
+          "Schwierige Follow-up-E-Mails",
+          "Eskalationen an Familien",
+          "Emotional aufgeladene Nachrichten",
         ]
       : [
-          "A parent email you've rewritten three times",
-          "A report comment that sounds too harsh",
-          "A behaviour note that could escalate if phrased badly",
-          "A message to leadership you do not want misunderstood",
+          "Behaviour incidents",
+          "Parent complaints",
+          "Sensitive report comments",
+          "Difficult follow-up emails",
+          "Escalation to families",
+          "Emotionally charged messages",
         ];
 
   const scrollToDemo = () => {
@@ -599,6 +633,9 @@ export function HomePageClient() {
                         <h2 className="mt-2 text-lg font-semibold text-white sm:text-xl">
                           {heroProofLabel}
                         </h2>
+                        <p className="mt-2 text-xs uppercase tracking-[0.22em] text-[#A78BFA]">
+                          {heroProofFrameLine}
+                        </p>
                         <p className="mt-2 max-w-[440px] text-sm leading-6 text-[#94A3B8]">
                           {heroProofIntro}
                         </p>
@@ -666,6 +703,34 @@ export function HomePageClient() {
                     <p className="mt-4 text-sm text-[#94A3B8]">
                       {heroProofCaption}
                     </p>
+                    <p className="mt-2 text-sm text-[#CBD5E1]">
+                      {heroMentalLoadLine}
+                    </p>
+                    <div className="mt-5 rounded-[22px] border border-white/10 bg-white/[0.03] p-4">
+                      <div className="flex flex-wrap items-center justify-between gap-3">
+                        <div>
+                          <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-[#C4B5FD]">
+                            {situationsHeading}
+                          </h3>
+                          <p className="mt-2 text-sm leading-6 text-[#94A3B8]">
+                            {language === "de"
+                              ? "Genau fuer die Formulierungen, die man zu leicht zu lange offen laesst."
+                              : "For the drafts teachers are most likely to leave open too long."}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                        {situationsItems.map((item) => (
+                          <div
+                            key={item}
+                            className="flex items-start gap-3 rounded-2xl border border-white/8 bg-[#111827]/70 px-4 py-3 text-sm text-[#E2E8F0]"
+                          >
+                            <CheckCircleIcon className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#A78BFA]" />
+                            <span>{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -719,43 +784,6 @@ export function HomePageClient() {
                 })}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Situations Section */}
-      <section className="bg-[#0F172A] py-16 md:py-20">
-        <div className="mx-auto max-w-5xl px-6 lg:px-8">
-          <motion.h2
-            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center"
-          >
-            {t("situations.title")}
-          </motion.h2>
-          <div className="mx-auto mt-4 max-w-3xl text-center text-base leading-7 text-[#94A3B8]">
-            {language === "de"
-              ? "Ruhige Hilfe fuer genau die Formulierungen, die man zu leicht zu lange offen laesst."
-              : "Calm support for the drafts teachers are most likely to leave open too long."}
-          </div>
-          <div className="grid grid-cols-1 gap-5 mt-10 md:grid-cols-2">
-            {situationsItems.map((item, index) => (
-              <motion.div
-                key={item}
-                initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="flex items-start gap-3 rounded-2xl border border-white/8 bg-white/[0.03] px-5 py-5 text-[#CBD5E1] shadow-[0_20px_60px_-50px_rgba(15,23,42,0.95)]"
-              >
-                <CheckCircleIcon className="w-5 h-5 text-[#A78BFA] mt-0.5 flex-shrink-0" />
-                <span className="text-base md:text-lg leading-7 text-[#E2E8F0]">
-                  {item}
-                </span>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
