@@ -1,80 +1,52 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
+import { JsonLdCollection } from "@/components/seo/json-ld";
+import {
+  createBreadcrumbJsonLd,
+  createSoftwareApplicationJsonLd,
+} from "@/lib/seo/json-ld";
+import { buildPageMetadata } from "@/lib/seo/site-metadata";
 import DraftClient from "./draft-client";
 
 const ogImage = "/images/draft-interface.png";
-const canonicalUrl = "https://zazadraft.com/products/draft";
 
-export const metadata: Metadata = {
-  title: "Zaza Draft | Teacher-first AI for calm parent communication",
+export const metadata: Metadata = buildPageMetadata({
+  title:
+    "Teacher-First AI Co-Writer for Parent Emails and Reports | Zaza Draft",
   description:
-    "Teacher-built Zaza Draft calms Sunday night messaging with guided tone guardrails and insights on time saved, streaks, and qualityâ€”join early access to help shape the beta.",
-  openGraph: {
-    title: "Zaza Draft | Teacher-first AI for calm parent communication",
-    description:
-      "Zaza Draft pairs guided drafting modes with insights on time saved, streaks, and quality score so you can share calm, confident parent messages faster. Join early access to shape the teacher-first experience.",
-    url: canonicalUrl,
-    type: "website",
-    siteName: "Zaza Draft",
-    locale: "en_GB",
-    images: [
-      { url: ogImage, alt: "Zaza Draft writing interface" },
-      {
-        url: "/images/insights-dashboard.png",
-        alt: "Zaza Draft insights dashboard showing progress metrics",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Zaza Draft | Teacher-first early access",
-    description:
-      "Guided drafts, tone guardrails, and metrics on time saved, streaks, and qualityâ€”join early access to help shape the private beta.",
-    images: [ogImage],
-  },
+    "Explore Zaza Draft, the teacher-first AI co-writer for parent communication, report comments, and school messages where tone, trust, and teacher control matter.",
+  path: "/products/draft",
+  image: ogImage,
   alternates: {
-    canonical: canonicalUrl,
-    languages: {
-      en: canonicalUrl,
-      de: "https://zazadraft.com/de/products/draft",
-    },
+    en: "https://zazadraft.com/products/draft",
+    de: "https://zazadraft.com/de/products/draft",
   },
-};
+  keywords: [
+    "teacher-first AI co-writer",
+    "AI parent email tool for teachers",
+    "AI report writing for teachers",
+    "teacher communication software",
+  ],
+});
 
 export default function DraftPage() {
   return (
     <>
-      <DraftClient />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            name: "Zaza Draft",
-            applicationCategory: "EducationalApplication",
-            operatingSystem: "Web",
-            offers: {
-              "@type": "Offer",
-              price: "9.99",
-              priceCurrency: "GBP",
-              availability: "https://schema.org/InStock",
-              description:
-                "Private beta early access with guided drafts, tone guardrails, and insights for teachers.",
-            },
-            description:
-              "Teacher-built AI for calm parent communication. Guided drafts, tone guardrails, and insights on time saved, streaks, and quality score invite teachers to shape the private beta.",
-            image: [`${ogImage}`, "/images/insights-dashboard.png"],
-            featureList: [
-              "Teacher-first tone guardrails",
-              "Guided drafting modes for parents, reports, and languages",
-              "Insights dashboards that track time saved, streaks, and quality score",
-              "Translation checks for 50+ languages",
-              "Review steps and hallucination safeguards before sending",
-              "Early access to help shape the teacher-first private beta",
-            ],
-          }),
-        }}
+      <JsonLdCollection
+        entries={[
+          {
+            id: "draft-product-software-schema",
+            data: createSoftwareApplicationJsonLd(),
+          },
+          {
+            id: "draft-product-breadcrumb-schema",
+            data: createBreadcrumbJsonLd([
+              { name: "Home", path: "/" },
+              { name: "Zaza Draft", path: "/products/draft" },
+            ]),
+          },
+        ]}
       />
+      <DraftClient />
     </>
   );
 }

@@ -1,108 +1,48 @@
 import type { Metadata } from "next";
+import { JsonLdCollection } from "@/components/seo/json-ld";
+import {
+  createBreadcrumbJsonLd,
+  createSoftwareApplicationJsonLd,
+} from "@/lib/seo/json-ld";
+import { buildPageMetadata } from "@/lib/seo/site-metadata";
 import { HomePageClient } from "./home-client";
 
-const siteUrl = "https://zazadraft.com";
-const ogImage = "/hero/teacher.jpg";
-
-export const metadata: Metadata = {
-  title: "Zaza Draft | Zaza - Just Teach.",
+export const metadata: Metadata = buildPageMetadata({
+  title:
+    "Calm AI Parent Email and Report Writing Help for Teachers | Zaza Draft",
   description:
-    "Zaza helps teachers thrive. Draft reduces writing burden so teachers can focus on teaching with calm, professional communication support.",
-  openGraph: {
-    title: "Zaza Draft | Zaza - Just Teach.",
-    description:
-      "Zaza helps teachers thrive. Draft reduces cognitive load and supports clear, professional school communication.",
-    type: "website",
-    locale: "en_GB",
-    siteName: "Zaza Draft",
-    alternateLocale: ["de_DE"],
-    url: siteUrl,
-    images: [
-      {
-        url: ogImage,
-        alt: "Teacher using Zaza Draft to write a parent message",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Zaza Draft | Zaza - Just Teach.",
-    description:
-      "Draft removes writing burden so teachers can focus on teaching with calm, professional support.",
-    images: [ogImage],
-  },
+    "Teacher-first AI writing help for parent communication, report comments, and professional school messages. Zaza Draft is a calm co-writer that keeps teachers in control of every word.",
+  path: "/",
   alternates: {
-    canonical: siteUrl,
-    languages: {
-      en: siteUrl,
-      de: `${siteUrl}/de`,
-    },
+    en: "https://zazadraft.com",
+    de: "https://zazadraft.com/de",
   },
-};
+  keywords: [
+    "AI parent email help for teachers",
+    "AI report writing for teachers",
+    "teacher writing assistant",
+    "parent communication AI",
+    "teacher co-writer",
+  ],
+});
 
 export default function HomePage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "Zaza Technologies",
-            url: "https://zazatechnologies.com",
-            logo: `${siteUrl}/zaza-logo.png`,
-            description:
-              "Zaza helps teachers thrive with calm, professional tools that reduce cognitive load and protect teacher judgment.",
-            founder: {
-              "@type": "Person",
-              name: "Dr. Greg Blackburn",
-              jobTitle: "Founder & CEO",
+      <JsonLdCollection
+        entries={[
+          {
+            id: "home-software-schema",
+            data: createSoftwareApplicationJsonLd({
               description:
-                "PhD in Professional Education from City, University of London. Over 20 years experience in Learning & Development and educational technology.",
-            },
-            sameAs: [
-              "https://www.linkedin.com/company/zaza-technologies",
-              "https://x.com/zazateachapp",
-              "https://www.tiktok.com/@zazatechnologies",
-            ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            name: "Zaza Draft",
-            applicationCategory: "EducationalApplication",
-            operatingSystem: "Web",
-            offers: {
-              "@type": "Offer",
-              price: "0",
-              priceCurrency: "GBP",
-              description: "Free tier with 5 drafts per month",
-            },
-            description:
-              "Professional writing support for teachers that reduces cognitive load, protects tone, and keeps teacher judgment in control.",
-            featureList: [
-              "Hallucination prevention",
-              "School-appropriate tone guardrails",
-              "One-click translation to 50+ languages",
-              "GDPR-compliant data handling",
-              "Privacy-focused design",
-              "Hours saved each week",
-            ],
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "5",
-              ratingCount: "6",
-              bestRating: "5",
-              worstRating: "1",
-            },
-          }),
-        }}
+                "Zaza Draft is a teacher-first AI co-writer for parent communication, report comments, and school writing. It is built to help teachers sound calm, professional, and appropriate while keeping full editorial control.",
+            }),
+          },
+          {
+            id: "home-breadcrumb-schema",
+            data: createBreadcrumbJsonLd([{ name: "Home", path: "/" }]),
+          },
+        ]}
       />
       <HomePageClient />
     </>

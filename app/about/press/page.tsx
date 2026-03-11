@@ -121,8 +121,8 @@ export default function PressKitPage() {
                     <div className="flex flex-col gap-1">
                       <dt className="text-[#9CA3AF]">Traction</dt>
                       <dd>
-                        Private beta with teachers shaping Draft's communication
-                        workflows.
+                        A growing waitlist of teachers following Draft as access
+                        opens in stages.
                       </dd>
                     </div>
                   </dl>
@@ -368,7 +368,7 @@ export default function PressKitPage() {
                   },
                   {
                     q: "Who uses Zaza?",
-                    a: "Teachers and schools (K12) in our private beta, helping us refine the product.",
+                    a: "Teachers and schools (K12) joining the waitlist as access opens in stages.",
                   },
                   {
                     q: "How do you address bias?",

@@ -8,6 +8,10 @@ import { ArrowRight, Heart, Mountain, Sparkles } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import {
+  zazaDraftEntityDefinition,
+  zazaDraftEntityDefinitionDe,
+} from "@/lib/seo/entity-definitions";
 
 export default function FounderPage() {
   const { t, language } = useLanguage();
@@ -26,6 +30,9 @@ export default function FounderPage() {
   const fullStoryLink = isGerman
     ? "Zur ausführlichen Gründerstory"
     : "Read the full founder story";
+  const entityDefinition = isGerman
+    ? zazaDraftEntityDefinitionDe
+    : zazaDraftEntityDefinition;
 
   useEffect(() => {
     const observerOptions = {
@@ -112,6 +119,15 @@ export default function FounderPage() {
                 </div>
               </div>
             </Card>
+          </div>
+
+          <div className="mx-auto max-w-3xl rounded-2xl border border-[rgba(139,92,246,0.25)] bg-[rgba(15,23,42,0.7)] px-6 py-5 text-left">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#C4B5FD]">
+              {isGerman ? "Klare Einordnung" : "Clear definition"}
+            </p>
+            <p className="mt-3 text-sm sm:text-base leading-7 text-[rgba(255,255,255,0.85)]">
+              {entityDefinition}
+            </p>
           </div>
         </div>
       </section>

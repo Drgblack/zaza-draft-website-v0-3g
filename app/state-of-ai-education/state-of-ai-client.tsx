@@ -44,14 +44,6 @@ export default function StateOfAIClient() {
     setError("");
     setIsSubmitting(true);
 
-    // Track download request
-    if (typeof window !== "undefined" && (window as any).gtag) {
-      (window as any).gtag("event", "report_download_request", {
-        event_category: "Lead Generation",
-        event_label: "State of AI Report 2025",
-      });
-    }
-
     try {
       await new Promise((resolve) => setTimeout(resolve, 1500));
       console.log("TODO: connect to Brevo", {
@@ -794,28 +786,12 @@ export default function StateOfAIClient() {
             <Button
               variant="outline"
               className="border-[#8B5CF6]/30 text-white hover:bg-[#8B5CF6]/10 bg-transparent"
-              onClick={() => {
-                if (typeof window !== "undefined" && (window as any).gtag) {
-                  (window as any).gtag("event", "share", {
-                    method: "Twitter",
-                    content_type: "report",
-                  });
-                }
-              }}
             >
               {language === "de" ? "Auf Twitter teilen" : "Share on Twitter"}
             </Button>
             <Button
               variant="outline"
               className="border-[#8B5CF6]/30 text-white hover:bg-[#8B5CF6]/10 bg-transparent"
-              onClick={() => {
-                if (typeof window !== "undefined" && (window as any).gtag) {
-                  (window as any).gtag("event", "share", {
-                    method: "LinkedIn",
-                    content_type: "report",
-                  });
-                }
-              }}
             >
               {language === "de" ? "Auf LinkedIn teilen" : "Share on LinkedIn"}
             </Button>

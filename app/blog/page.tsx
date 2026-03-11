@@ -1,38 +1,28 @@
 import type { Metadata } from "next";
 import { getAllPostsByLanguage } from "@/lib/cms/posts";
+import { buildPageMetadata } from "@/lib/seo/site-metadata";
 import { BlogClient } from "./blog-client";
 
 const ogImage = "/blog/ai-lesson-planning-guide-2025.jpeg";
 
-export const metadata: Metadata = {
-  title: "Blog | Zaza Draft - teacher-first AI tips and updates",
+export const metadata: Metadata = buildPageMetadata({
+  title:
+    "Teacher Writing Guides for Parent Emails, Reports, and AI Safety | Zaza Draft",
   description:
-    "Guides on calmer parent emails, faster feedback, and safer AI for teachers. Stories from the Zaza Draft team and classroom community.",
-  openGraph: {
-    title: "Blog | Zaza Draft",
-    description:
-      "Teacher-first guides on AI writing, parent messages, and lesson workflows.",
-    url: "https://zazadraft.com/blog",
-    type: "website",
-    siteName: "Zaza Draft",
-    locale: "en_GB",
-    images: [{ url: ogImage, alt: "Zaza Draft blog hero article" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Zaza Draft Blog",
-    description:
-      "Teacher-first articles on AI writing support, parent communication, and lesson workflows.",
-    images: [ogImage],
-  },
+    "Explore teacher-first guides on parent communication, report comments, behaviour emails, safeguarding-sensitive wording, and calmer AI writing support for schools.",
+  path: "/blog",
+  image: ogImage,
   alternates: {
-    canonical: "https://zazadraft.com/blog",
-    languages: {
-      en: "https://zazadraft.com/blog",
-      de: "https://zazadraft.com/de/blog",
-    },
+    en: "https://zazadraft.com/blog",
+    de: "https://zazadraft.com/de/blog",
   },
-};
+  keywords: [
+    "teacher writing blog",
+    "parent email templates for teachers",
+    "report writing help for teachers",
+    "AI safety for teachers",
+  ],
+});
 
 export default function BlogPage() {
   const posts = getAllPostsByLanguage("en");

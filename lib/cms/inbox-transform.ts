@@ -14,6 +14,12 @@ export type BlogPost = {
   tags: string[];
   ogImage?: string;
   language?: "en" | "de";
+  seoTitle?: string;
+  seoDescription?: string;
+  faqs?: Array<{
+    question: string;
+    answer: string;
+  }>;
 };
 
 export function toBlogPosts(
@@ -54,4 +60,3 @@ export function toBlogPosts(
     };
   });
 }
-

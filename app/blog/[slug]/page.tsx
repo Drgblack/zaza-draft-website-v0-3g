@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-
+import { JsonLdCollection } from "@/components/seo/json-ld";
 import {
   getAllPostsByLanguage,
   getPostBySlugAndLanguage,
   getRelatedPosts,
   getPostImage,
 } from "@/lib/cms/posts";
+import {
+  createArticleJsonLd,
+  createBreadcrumbJsonLd,
+  createFAQPageJsonLd,
+} from "@/lib/seo/json-ld";
+import { buildPageMetadata } from "@/lib/seo/site-metadata";
 import { BlogPostClient } from "./blog-post-client";
 
 export async function generateStaticParams() {
@@ -33,24 +39,16 @@ export async function generateMetadata({
 
   const image = post.ogImage ?? getPostImage(post.slug);
   const urlPath = `/blog/${post.slug}`;
+  const metadataTitle = post.seoTitle ?? `${post.title} | Zaza Draft`;
+  const metadataDescription = post.seoDescription ?? post.excerpt ?? "";
 
-  return {
-    title: `${post.title} | Zaza Draft`,
-    description: post.excerpt ?? "",
-    openGraph: {
-      title: `${post.title} | Zaza Draft`,
-      description: post.excerpt ?? "",
-      type: "article",
-      url: `https://zazadraft.com${urlPath}`,
-      images: image ? [image] : [],
-    },
-    twitter: {
-      card: image ? "summary_large_image" : "summary",
-      title: `${post.title} | Zaza Draft`,
-      description: post.excerpt ?? "",
-      images: image ? [image] : [],
-    },
-  };
+  return buildPageMetadata({
+    title: metadataTitle,
+    description: metadataDescription,
+    path: urlPath,
+    image,
+    type: "article",
+  });
 }
 
 export default async function BlogPostPage({
@@ -69,29 +67,40 @@ export default async function BlogPostPage({
   const relatedPosts = getRelatedPosts(slug, "en");
   const imageSrc = post.ogImage ?? getPostImage(post.slug);
   const urlPath = `/blog/${post.slug}`;
-
-  const blogPostSchema = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.excerpt ?? "",
-    image: imageSrc ? [`https://zazadraft.com${imageSrc}`] : [],
-    author: {
-      "@type": "Person",
-      name: "Zaza Draft",
-    },
-    datePublished: post.publishedAt,
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://zazadraft.com${urlPath}`,
-    },
-  };
+  const description = post.seoDescription ?? post.excerpt ?? "";
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }}
+      <JsonLdCollection
+        entries={[
+          {
+            id: `${post.slug}-article-schema`,
+            data: createArticleJsonLd({
+              headline: post.title,
+              description,
+              path: urlPath,
+              image: imageSrc,
+              publishedTime: post.publishedAt,
+              modifiedTime: post.publishedAt,
+            }),
+          },
+          {
+            id: `${post.slug}-breadcrumb-schema`,
+            data: createBreadcrumbJsonLd([
+              { name: "Home", path: "/" },
+              { name: "Blog", path: "/blog" },
+              { name: post.title, path: urlPath },
+            ]),
+          },
+          ...(post.faqs && post.faqs.length > 0
+            ? [
+                {
+                  id: `${post.slug}-faq-schema`,
+                  data: createFAQPageJsonLd(post.faqs),
+                },
+              ]
+            : []),
+        ]}
       />
 
       <article className="mx-auto max-w-3xl px-4 pb-20 pt-24 sm:px-6 lg:px-0">
@@ -103,6 +112,7 @@ export default async function BlogPostPage({
               fill
               className="object-cover"
               priority
+              sizes="(min-width: 1024px) 768px, 100vw"
             />
           </div>
         )}

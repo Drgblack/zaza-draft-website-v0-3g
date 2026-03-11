@@ -22,6 +22,12 @@ import { useLanguage } from "@/lib/i18n/language-context";
 import { ShareBar } from "@/components/share-bar";
 import { sanitizeHtmlContent } from "@/lib/cms/sanitize";
 import type { JSX } from "react";
+import {
+  drGregBlackburnBio,
+  drGregBlackburnBioDe,
+  zazaDraftEntityDefinition,
+  zazaDraftEntityDefinitionDe,
+} from "@/lib/seo/entity-definitions";
 
 interface BlogPostClientProps {
   post: BlogPost;
@@ -34,6 +40,10 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [readingProgress, setReadingProgress] = useState(0);
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+  const authorBio =
+    language === "de" ? drGregBlackburnBioDe : drGregBlackburnBio;
+  const entityDefinition =
+    language === "de" ? zazaDraftEntityDefinitionDe : zazaDraftEntityDefinition;
 
   // Get content based on language
   const content =
@@ -434,6 +444,19 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
 
         {/* Main Content */}
         <div className="blog-content">{parseContent()}</div>
+
+        <div className="mt-12 rounded-3xl border border-[#D8E2E8] bg-white p-6 sm:p-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2D5B8F]">
+            {language === "de" ? "Autor" : "Author"}
+          </p>
+          <h2 className="mt-3 text-2xl font-bold text-[#2C3E50]">
+            Dr Greg Blackburn, PhD
+          </h2>
+          <p className="mt-3 text-base leading-8 text-[#5A6C7D]">{authorBio}</p>
+          <p className="mt-3 text-sm leading-7 text-[#5A6C7D]">
+            {entityDefinition}
+          </p>
+        </div>
 
         <ShareBar title={post.title} lang={language} />
 

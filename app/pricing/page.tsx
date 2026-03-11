@@ -1,36 +1,26 @@
-import type { Metadata } from "next"
-import PricingClient from "./PricingClient"
+import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo/site-metadata";
+import PricingClient from "./PricingClient";
 
-const ogImage = "/professional-female-teacher-in-modern-classroom.jpg"
-const siteUrl = "https://zazadraft.com/pricing"
+const ogImage = "/professional-female-teacher-in-modern-classroom.jpg";
 
-export const metadata: Metadata = {
-  title: "Pricing | Zaza Draft teacher plans",
-  description: "Transparent pricing for Zaza Draft and the Zaza Suite. Start free, then upgrade when you're ready.",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Teacher AI Writing Pricing - Parent Emails and Reports | Zaza Draft",
+  description:
+    "See Zaza Draft pricing for teacher-first AI writing support. Start free, then upgrade for calmer parent emails, report comments, and professional school communication.",
+  path: "/pricing",
+  image: ogImage,
   alternates: {
-    canonical: siteUrl,
-    languages: {
-      en: siteUrl,
-      de: "https://zazadraft.com/de/pricing",
-    },
+    en: "https://zazadraft.com/pricing",
+    de: "https://zazadraft.com/de/pricing",
   },
-  openGraph: {
-    title: "Pricing | Zaza Draft teacher plans",
-    description: "Start free. Unlock faster parent messages, calmer replies, and trusted guardrails when you upgrade.",
-    url: siteUrl,
-    type: "website",
-    siteName: "Zaza Draft",
-    locale: "en_GB",
-    images: [{ url: ogImage, alt: "Teacher reviewing pricing options for Zaza Draft" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Pricing | Zaza Draft teacher plans",
-    description: "Transparent plans for teacher-first AI writing support. Start free, upgrade anytime.",
-    images: [ogImage],
-  },
-}
+  keywords: [
+    "teacher AI pricing",
+    "AI parent email generator pricing",
+    "teacher writing assistant pricing",
+  ],
+});
 
 export default function PricingPage() {
-  return <PricingClient />
+  return <PricingClient />;
 }

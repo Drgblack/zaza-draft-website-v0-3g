@@ -420,7 +420,7 @@ export default function BestAIToolParentEmailsClient() {
   ];
 
   const breadcrumbItems = [
-    { label: text.breadcrumb_label, href: "/learning-centre" },
+    { label: text.breadcrumb_label, href: "/ai-literacy" },
     {
       label: isGerman
         ? "Bestes KI-Tool fÃ¼r Eltern-E-Mails 2025"
@@ -450,7 +450,7 @@ export default function BestAIToolParentEmailsClient() {
                 <li className="text-slate-500">/</li>
                 <li>
                   <Link
-                    href="/learning-centre"
+                    href="/ai-literacy"
                     className="hover:text-slate-100 transition-colors duration-150"
                   >
                     {text.breadcrumb_label}
@@ -492,7 +492,7 @@ export default function BestAIToolParentEmailsClient() {
               </Link>
 
               <Link
-                href="/compare-tools"
+                href="/compare"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-slate-900/60 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:bg-slate-800/60"
               >
                 <ArrowRight className="h-4 w-4" />
@@ -537,7 +537,7 @@ export default function BestAIToolParentEmailsClient() {
                 </Link>
 
                 <Link
-                  href="/learning-centre"
+                  href="/ai-literacy"
                   className="group flex items-center justify-between rounded-lg px-2 py-1 text-slate-200 hover:bg-slate-800/70"
                 >
                   <span className="flex items-center gap-2">

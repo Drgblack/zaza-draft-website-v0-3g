@@ -28,7 +28,7 @@ export function Header() {
   const headerCtaHref =
     language === "de" ? "/de/early-access" : "/early-access";
   const headerCtaLabel =
-    language === "de" ? "Early Access" : "Join Early Access";
+    language === "de" ? "Zur Warteliste" : "Join the waitlist";
 
   useEffect(() => {
     if (!mobileMenuOpen) return;
@@ -339,7 +339,7 @@ export function Header() {
               </button>
             </div>
 
-            {/* Desktop early access CTA */}
+            {/* Desktop waitlist CTA */}
             <Button
               asChild
               className="ml-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-purple-500/25"
@@ -473,7 +473,7 @@ export function Header() {
                       onClick={() => {
                         track("cta_click", {
                           location: "header",
-                          id: "mobile_join_early_access",
+                          id: "mobile_join_waitlist",
                         });
                         setMobileMenuOpen(false);
                       }}
@@ -487,10 +487,10 @@ export function Header() {
                     Company
                   </p>
                   <div className="flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-gray-500">
-                    <Link href="/privacy-policy" className="hover:text-white">
+                    <Link href="/privacy" className="hover:text-white">
                       Privacy
                     </Link>
-                    <Link href="/terms-of-service" className="hover:text-white">
+                    <Link href="/terms" className="hover:text-white">
                       Terms
                     </Link>
                     <Link href="/impressum" className="hover:text-white">

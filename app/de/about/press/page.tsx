@@ -125,7 +125,8 @@ export default function PressKitPage() {
                     <div className="flex flex-col gap-1">
                       <dt className="text-[#9CA3AF]">Traktion</dt>
                       <dd>
-                        Private Beta mit Lehrkräften, die Draft mitgestalten.
+                        Eine wachsende Warteliste von Lehrkraeften, die Draft
+                        verfolgen, waehrend der Zugang schrittweise oeffnet.
                       </dd>
                     </div>
                   </dl>

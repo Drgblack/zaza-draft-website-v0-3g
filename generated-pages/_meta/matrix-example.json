@@ -1,0 +1,61 @@
+{
+  "schoolPhases": ["primary", "secondary", "ks1", "ks2", "ks3", "ks4", "fe"],
+  "issues": [
+    "behaviour",
+    "missing-homework",
+    "low-attainment",
+    "anxiety",
+    "disorganisation",
+    "sen-support",
+    "angry-parent-reply",
+    "grade-complaint"
+  ],
+  "yearGroups": [
+    "year-1",
+    "year-2",
+    "year-3",
+    "year-4",
+    "year-5",
+    "year-6",
+    "year-7",
+    "year-8",
+    "year-9",
+    "year-10",
+    "year-11",
+    "post-16"
+  ],
+  "subjects": ["english", "maths", "science", "history", "all-subjects"],
+  "triggers": [
+    "ignore-email",
+    "escalating-behaviour",
+    "sat-prep",
+    "parents-evening",
+    "homework-complaint",
+    "attendance-concern"
+  ],
+  "replyContexts": [
+    "year-6-sat-prep",
+    "missing-homework",
+    "behaviour-follow-up",
+    "report-card-concern",
+    "sen-review",
+    "parents-evening-delay"
+  ],
+  "studentTypes": [
+    "anxious-eal-pupil",
+    "high-attaining-but-disorganised",
+    "low-attainment-with-behaviour-issues",
+    "sen-pupil",
+    "quiet-but-capable",
+    "inconsistent-homework"
+  ],
+  "comparisonTools": ["chatgpt", "magicschool-ai", "teachmate", "generic-ai"],
+  "comparisonUseCases": [
+    "parent-emails",
+    "report-comments",
+    "teacher-professional-tone",
+    "angry-parent-replies"
+  ],
+  "schoolTypes": ["primary-school-uk", "secondary-school", "fe-college"],
+  "csvRows": []
+}

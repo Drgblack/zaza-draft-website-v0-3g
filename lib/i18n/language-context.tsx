@@ -28,7 +28,7 @@ const translationsEn: Record<string, string> = {
   "pricing.hero.headline": "Pricing that respects teachers' time and wellbeing",
   "pricing.hero.subheadline":
     "Save hours every week, reduce after-hours stress, and write with confidence - with pricing that's simple and fair.",
-  "pricing.trust.teachers": "Teacher-first (early access)",
+  "pricing.trust.teachers": "Teacher-first",
   "pricing.trust.ferpa": "FERPA-minded",
   "pricing.trust.cancel": "Cancel anytime",
 
@@ -55,7 +55,7 @@ const translationsEn: Record<string, string> = {
   "pricing.free.title": "Starter",
   "pricing.free.description":
     "Everything you need to try Draft and save your first hours.",
-  "pricing.free.cta": "Join Early Access",
+  "pricing.free.cta": "Join the waitlist",
   "pricing.free.feature1": "5 drafts/month",
   "pricing.free.feature2": "Basic templates",
   "pricing.free.feature3": "Save & copy",
@@ -131,7 +131,7 @@ const translationsEn: Record<string, string> = {
 
   // Wellbeing Metric
   "pricing.metric.text":
-    "Early access is live. We're collecting real classroom feedback and will publish measurable results once we have a meaningful sample.",
+    "The waitlist is open. We'll publish measurable results once we have a meaningful sample from live teacher use.",
   "pricing.checkout.buyNow": "Upgrade now",
   "pricing.compare.title": "Compare: Zaza vs ChatGPT",
   "pricing.compare.caption":
@@ -196,7 +196,7 @@ const translationsEn: Record<string, string> = {
   "pricing.cta.title": "Ready to save hours every week?",
   "pricing.cta.subtitle":
     "Start free today â€¢ No credit card required â€¢ Cancel anytime",
-  "pricing.cta.primary": "Join Early Access",
+  "pricing.cta.primary": "Join the waitlist",
   "pricing.cta.secondary": "Talk to Sales",
 
   // Pricing - Decision Tool section
@@ -564,14 +564,16 @@ const translationsEn: Record<string, string> = {
   "hero.headline": "Write emails that are",
   "hero.headlineAccent": "safe to send.",
   "hero.subheading":
-    "Stop agonising over every word. Draft helps teachers write calm, defensible messages for parent and school communication, even when the thread is under pressure.",
-  "hero.ctaPrimary": "Join Early Access",
+    "Teacher-first AI writing help for parent emails, report comments, and school messages. Draft helps teachers write calm, defensible communication when the thread is under pressure.",
+  "hero.ctaPrimary": "Join the waitlist",
   "hero.ctaSecondary": "See examples",
-  "hero.earlyAccessLine": "Free during early access. No card required.",
-  "hero.privacyLine": "No student names needed. Not trained on your inputs.",
+  "hero.earlyAccessLine":
+    "Join the waitlist and we'll let you know when teacher access opens.",
+  "hero.privacyLine":
+    "No student names needed. GDPR-ready and not trained on your inputs.",
   "hero.trustIndicators.hallucinationSafe": "No invented student facts",
-  "hero.trustIndicators.ferpaCompliant": "FERPA-ready",
-  "hero.trustIndicators.teachers": "Built with teachers",
+  "hero.trustIndicators.ferpaCompliant": "GDPR-ready",
+  "hero.trustIndicators.teachers": "Teacher-first co-writer",
   "hero.trustClarifier":
     "Draft rewrites teacher-provided text. Schools remain the data controller; Draft is built for privacy-first handling of communication drafts.",
   "hero.founderLine":
@@ -590,49 +592,48 @@ const translationsEn: Record<string, string> = {
     "A sensitive report comment that needs a clean paper trail.",
 
   // Early Access Page
-  "earlyAccess.hero.title": "Join the Zaza Draft Early-Access Programme",
+  "earlyAccess.hero.title": "Join the Zaza Draft waitlist",
   "earlyAccess.hero.subtitle":
-    "Help us build the calm, teacher-first AI writing assistant you deserve.",
-  "earlyAccess.hero.cta": "Join Early Access",
-  "earlyAccess.overview.heading": "Why we run the private beta",
+    "Be first to hear when Zaza Draft opens to teachers.",
+  "earlyAccess.hero.cta": "Join the waitlist",
+  "earlyAccess.overview.heading": "Why join the waitlist",
   "earlyAccess.overview.body":
-    "We invite teachers who juggle parent emails, report comments, and feedback to shape the guardrails and priorities we launch with.",
-  "earlyAccess.benefits.title": "Beta perks",
-  "earlyAccess.benefits.heading": "What you unlock as a beta partner",
-  "earlyAccess.benefits.shaping.title": "Shape the product",
+    "Join for launch updates, access news, and product progress as Draft opens to more teachers.",
+  "earlyAccess.benefits.title": "What you'll get",
+  "earlyAccess.benefits.heading": "What you'll get when access opens",
+  "earlyAccess.benefits.shaping.title": "Launch updates",
   "earlyAccess.benefits.shaping.body":
-    "Share what matters-tone guardrails, mode toggles, and insights that reflect your classroom.",
-  "earlyAccess.benefits.saving.title": "Save hours each week",
+    "Receive product news and access updates by email.",
+  "earlyAccess.benefits.saving.title": "Early product access",
   "earlyAccess.benefits.saving.body":
-    "Experience calm, confident drafts while seeing how much time you reclaim from admin.",
-  "earlyAccess.benefits.perks.title": "Enjoy exclusive perks",
+    "Be among the first teachers to try Draft as access opens.",
+  "earlyAccess.benefits.perks.title": "Free plan included",
   "earlyAccess.benefits.perks.body":
-    "Get first access to post-launch resources, private webinars, and a teachers-only community.",
-  "earlyAccess.steps.title": "How the early-access programme works",
-  "earlyAccess.steps.step1.title": "Share your story",
-  "earlyAccess.steps.step1.body":
-    "Tell us about your teaching context, communication challenges, and why you want to help.",
-  "earlyAccess.steps.step2.title": "Receive confirmation",
+    "Accounts include 10 free messages each month when teacher access opens.",
+  "earlyAccess.steps.title": "What happens after you join",
+  "earlyAccess.steps.step1.title": "Join the waitlist",
+  "earlyAccess.steps.step1.body": "Add your email in under a minute.",
+  "earlyAccess.steps.step2.title": "Check your inbox",
   "earlyAccess.steps.step2.body":
-    "Watch for an email that outlines next steps, platform expectations, and when access opens.",
-  "earlyAccess.steps.step3.title": "Access for 30 days",
+    "You'll receive confirmation and occasional product updates.",
+  "earlyAccess.steps.step3.title": "Access opens in stages",
   "earlyAccess.steps.step3.body":
-    "Test guided drafts, tone selectors, and progress insights during a limited trial window.",
-  "earlyAccess.steps.step4.title": "Provide feedback",
+    "We'll email you as soon as teacher accounts are available.",
+  "earlyAccess.steps.step4.title": "Start with the free plan",
   "earlyAccess.steps.step4.body":
-    "Share insights through brief surveys or optional calls so we build with your voice.",
+    "Use up to 10 messages each month when your account is ready.",
   "earlyAccess.note.limited":
-    "Seats are limited and we close applications as soon as the classroom slots fill.",
+    "Join the waitlist and we'll let you know when teacher access opens.",
   "earlyAccess.faq.title": "FAQ",
-  "earlyAccess.faq.eligibility.question": "Who can join?",
+  "earlyAccess.faq.eligibility.question": "Who is the waitlist for?",
   "earlyAccess.faq.eligibility.answer":
-    "Primary, secondary, and administrative educators who handle parent communication are welcome to apply.",
-  "earlyAccess.faq.privacy.question": "Is my writing private?",
+    "Teachers and school staff who want calm, professional writing support for parent communication and report comments.",
+  "earlyAccess.faq.privacy.question": "What will I receive?",
   "earlyAccess.faq.privacy.answer":
-    "Yes. Everything stays private, encrypted, and covered by our GDPR-ready policies-no public posting and no data sharing without consent.",
-  "earlyAccess.faq.afterBeta.question": "What happens after the beta?",
+    "You'll receive launch updates and an email when teacher access opens.",
+  "earlyAccess.faq.afterBeta.question": "Will I need to attend anything?",
   "earlyAccess.faq.afterBeta.answer":
-    "You can stay in the community, get early notice for the launch, and keep shaping Zaza Draft before general availability.",
+    "No. Joining the waitlist simply means you'll be notified when access is available.",
 
   // Hallucination-Safe Tooltip
   "hallucinationSafe.tooltip.heading":
@@ -676,7 +677,7 @@ const translationsEn: Record<string, string> = {
   "stats.timeSaved.number": "Time back",
   "stats.timeSaved.label": "for teaching",
   "stats.subtitle":
-    "Built by teachers to relieve Sunday night stress - join our early access programme and help shape calm, professional communication with AI.",
+    "Built by teachers to reduce Sunday-night stress. Join the waitlist and we'll let you know when access opens.",
   "socialProof.badges.teacherFounded":
     "Teacher-founded, PhD in Professional Education",
   "socialProof.badges.gdprReady": "Built in Germany - GDPR-ready",
@@ -799,7 +800,7 @@ const translationsEn: Record<string, string> = {
   "comparison.rows.learningCurve.zaza": "Paste, select tone, done",
   "comparison.rows.community.feature": "Community",
   "comparison.rows.community.generic": "No teacher support",
-  "comparison.rows.community.zaza": "Educators shaping our private beta",
+  "comparison.rows.community.zaza": "Teachers already on the waitlist",
   "caseStudies.eyebrow": "Before / After",
   "caseStudies.heading": "Before / After from real teachers",
   "caseStudies.subheading":
@@ -844,8 +845,8 @@ const translationsEn: Record<string, string> = {
   // Final CTA Section
   "finalCTA.heading": "Zaza - Just Teach.",
   "finalCTA.subheading":
-    "Zaza helps teachers thrive. Join our private beta and use Draft as calm, professional writing support that gives teaching time back.",
-  "finalCTA.button": "Join Early Access",
+    "Zaza helps teachers thrive. Join the waitlist for calm, professional writing support that gives teaching time back.",
+  "finalCTA.button": "Join the waitlist",
 
   // Footer
   "footer.social.tiktok": "Follow us on TikTok @zazatechnologies",
@@ -934,7 +935,7 @@ const translationsEn: Record<string, string> = {
   "products.teach.cta.title": "Ready to Transform Your Planning?",
   "products.teach.cta.subtitle":
     "Join hundreds of teachers seeing hours saved each week",
-  "products.teach.cta.primary": "Join Early Access",
+  "products.teach.cta.primary": "Join the waitlist",
   "products.teach.cta.secondary": "Schedule Demo",
 
   // Products - Draft
@@ -945,7 +946,7 @@ const translationsEn: Record<string, string> = {
   "products.draft.hero.assumption":
     "Draft assumes messages may be read out of context - by parents, leadership, or administration - and helps you write accordingly.",
   "products.draft.hero.supporting": "Less Sunday dread, more headspace.",
-  "products.draft.hero.cta.primary": "Join Early Access",
+  "products.draft.hero.cta.primary": "Join the waitlist",
   "products.draft.hero.cta.secondary": "See Examples",
   "products.draft.hero.privacyLine":
     "No student names needed. Not trained on your inputs.",
@@ -981,10 +982,10 @@ const translationsEn: Record<string, string> = {
     "Edit quickly, copy, and send when it reads as clear and professional",
   "products.draft.insights.heading": "Insights & Progress",
   "products.draft.insights.body":
-    "Draft tracks time saved, drafts created, streaks, and a quality score so you can celebrate the growth you deliver while helping shape our teacher-first beta.",
+    "Draft tracks time saved, drafts created, streaks, and a quality score so you can see the progress your writing workflow is making.",
   "products.draft.interface.heading": "Guided Drafting Interface",
   "products.draft.interface.body":
-    "Tone guardrails, channel-aware modes, and language settings live together in an intuitive workspace so every draft sounds calm and confident while you help steer the early access programme.",
+    "Tone guardrails, channel-aware modes, and language settings live together in an intuitive workspace so every draft sounds calm and confident.",
   "products.draft.insights.imageAlt":
     "Product screenshot of the Draft insights dashboard",
   "products.draft.interface.imageAlt":
@@ -1025,8 +1026,8 @@ const translationsEn: Record<string, string> = {
 
   "products.draft.cta.title": "Get your time back",
   "products.draft.cta.subtitle":
-    "Join our private beta and help shape teacher-first AI writing support.",
-  "products.draft.cta.primary": "Join Early Access",
+    "Join the waitlist for teacher-first AI writing support.",
+  "products.draft.cta.primary": "Join the waitlist",
   "products.draft.cta.secondary": "See Examples",
 
   // Products - GradeFlow
@@ -1070,7 +1071,7 @@ const translationsEn: Record<string, string> = {
   "products.gradeflow.social.author2": "David Kim, Middle School Math",
 
   "products.gradeflow.cta.title": "Ready to Grade Smarter?",
-  "products.gradeflow.cta.button": "Join Early Access",
+  "products.gradeflow.cta.button": "Join the waitlist",
 
   // Products - Shield
   "shield.hero.eyebrow": "AI GOVERNANCE FOR SCHOOLS",
@@ -1434,15 +1435,15 @@ const translationsEn: Record<string, string> = {
 
   "company.today.title": "Where We Are Today",
   "company.today.p1":
-    "We're inviting a small group of teachers and schools into a private beta so every workflow is refined with real classroom feedback before launch.",
+    "We're opening access in stages and using the waitlist to notify teachers and schools as Draft becomes available more widely.",
   "company.today.p2":
     "Our long-term vision is to build a complete suite of AI tools that help teachers reclaim their time, protect their wellbeing, and stay connected to the heart of their work - their students.",
   "company.today.close": "Because when teachers thrive, students thrive.",
 
   "company.stats.teachers.number": "Teacher-built",
-  "company.stats.teachers.label": "Design & beta partners",
-  "company.stats.countries.number": "Private beta",
-  "company.stats.countries.label": "Early access programme",
+  "company.stats.teachers.label": "Built with teacher input",
+  "company.stats.countries.number": "Waitlist",
+  "company.stats.countries.label": "Open now",
   "company.stats.hours.number": "10+",
   "company.stats.hours.label": "Hours saved weekly",
 
@@ -1579,7 +1580,7 @@ const translationsDe: Record<string, string> = {
     "Preise, die die Zeit und das Wohlbefinden von Lehrkräften respektieren",
   "pricing.hero.subheadline":
     "Sparen Sie jede Woche Stunden, reduzieren Sie Stress nach Feierabend und schreiben Sie mit Zuversicht - mit Preisen, die einfach und fair sind.",
-  "pricing.trust.teachers": "Lehrerzentriert (Early Access)",
+  "pricing.trust.teachers": "Lehrkraft-zentriert",
   "pricing.trust.ferpa": "FERPA-orientiert",
   "pricing.trust.cancel": "Jederzeit kündbar",
 
@@ -1606,7 +1607,7 @@ const translationsDe: Record<string, string> = {
   "pricing.free.title": "Starter",
   "pricing.free.description":
     "Alles, was Sie brauchen, um Draft auszuprobieren und Ihre ersten Stunden zu sparen.",
-  "pricing.free.cta": "Early Access beitreten",
+  "pricing.free.cta": "Zur Warteliste",
   "pricing.free.feature1": "5 Entwürfe pro Monat",
   "pricing.free.feature2": "Basisvorlagen",
   "pricing.free.feature3": "Speichern & Kopieren",
@@ -1682,7 +1683,7 @@ const translationsDe: Record<string, string> = {
 
   // Wellbeing Metric
   "pricing.metric.text":
-    "Early Access läuft. Wir sammeln echtes Feedback aus Schulen und veröffentlichen messbare Ergebnisse, sobald wir eine belastbare Stichprobe haben.",
+    "Die Warteliste ist offen. Wir veröffentlichen messbare Ergebnisse, sobald wir eine belastbare Stichprobe aus der Live-Nutzung haben.",
 
   "pricing.checkout.buyNow": "Jetzt abonnieren",
   "pricing.compare.title": "Vergleich: Zaza vs. ChatGPT",
@@ -1747,7 +1748,7 @@ const translationsDe: Record<string, string> = {
   "pricing.cta.title": "Bereit, jede Woche Stunden zu sparen?",
   "pricing.cta.subtitle":
     "Heute kostenlos starten â€¢ Keine Kreditkarte erforderlich â€¢ Jederzeit kündbar",
-  "pricing.cta.primary": "Early Access beitreten",
+  "pricing.cta.primary": "Zur Warteliste",
   "pricing.cta.secondary": "Mit Vertrieb sprechen",
 
   // Pricing - Decision Tool section
@@ -2127,16 +2128,16 @@ const translationsDe: Record<string, string> = {
   "hero.headlineAccent": "du sicher senden kannst.",
   "hero.subheading":
     "Hör auf, jedes Wort zu zerdenken. Draft hilft dir, ruhige und belastbare Nachrichten für Eltern- und Schulkommunikation zu schreiben, auch wenn der Austausch unter Druck steht.",
-  "hero.ctaPrimary": "Early Access beitreten",
+  "hero.ctaPrimary": "Zur Warteliste",
   "hero.ctaSecondary": "Beispiele ansehen",
   "hero.earlyAccessLine":
-    "Kostenlos im Early Access. Keine Karte erforderlich.",
+    "Trag dich in die Warteliste ein und wir sagen dir Bescheid, sobald der Zugang fuer Lehrkraefte offen ist.",
   "hero.privacyLine":
-    "Keine Schülernamen nötig. Nicht auf deinen Eingaben trainiert.",
+    "Keine Schülernamen nötig. DSGVO-orientiert und nicht auf deinen Eingaben trainiert.",
   "hero.trustIndicators.hallucinationSafe":
     "Keine erfundenen Schülerinformationen",
-  "hero.trustIndicators.ferpaCompliant": "FERPA-ready",
-  "hero.trustIndicators.teachers": "Mit Lehrkräften entwickelt",
+  "hero.trustIndicators.ferpaCompliant": "DSGVO-orientiert",
+  "hero.trustIndicators.teachers": "Lehrkraft-zentrierter Co-Writer",
   "hero.trustClarifier":
     "Draft überarbeitet von Lehrkräften bereitgestellten Text. Schulen bleiben Datenverantwortliche; Draft ist für den datenschutzorientierten Umgang mit Kommunikationsentwürfen entwickelt.",
   "hero.founderLine":
@@ -2156,49 +2157,49 @@ const translationsDe: Record<string, string> = {
     "Sensibler Berichtskommentar mit Bedarf an sauberer Dokumentationsspur.",
 
   // Early Access Page
-  "earlyAccess.hero.title": "Tritt dem Zaza Draft Early-Access-Programm bei",
+  "earlyAccess.hero.title": "Zur Zaza Draft Warteliste",
   "earlyAccess.hero.subtitle":
-    "Hilf uns, die ruhige, lehrerzentrierte KI-Schreibassistenz zu bauen, die du verdienst.",
-  "earlyAccess.hero.cta": "Early Access beitreten",
-  "earlyAccess.overview.heading": "Warum wir die private Beta starten",
+    "Erfahre als Erste oder Erster, wenn Zaza Draft fuer Lehrkraefte geoeffnet wird.",
+  "earlyAccess.hero.cta": "Zur Warteliste",
+  "earlyAccess.overview.heading": "Warum die Warteliste sinnvoll ist",
   "earlyAccess.overview.body":
-    "Wir laden Lehrkräfte ein, die Elternmails, Zeugnisnoten und Feedback jonglieren, um Workflows, Leitplanken und Prioritäten mitzugestalten.",
-  "earlyAccess.benefits.title": "Beta-Vorteile",
-  "earlyAccess.benefits.heading": "Was du als Beta-Partner erhältst",
-  "earlyAccess.benefits.shaping.title": "Produkt gestalten",
+    "Trag dich fuer Launch-Updates, Zugangshinweise und Produktfortschritte ein, waehrend Draft fuer mehr Lehrkraefte geoeffnet wird.",
+  "earlyAccess.benefits.title": "Das bekommst du",
+  "earlyAccess.benefits.heading": "Was du bekommst, wenn der Zugang oeffnet",
+  "earlyAccess.benefits.shaping.title": "Launch-Updates",
   "earlyAccess.benefits.shaping.body":
-    "Teile, was wichtig ist - Tonleitplanken, Modus-Umschalter und Insights, die deinen Unterricht widerspiegeln.",
-  "earlyAccess.benefits.saving.title": "Wöchentlich Stunden gewinnen",
+    "Erhalte Produktneuigkeiten und Zugangsupdates per E-Mail.",
+  "earlyAccess.benefits.saving.title": "Frueher Produktzugang",
   "earlyAccess.benefits.saving.body":
-    "Erlebe ruhige, sichere Entwürfe und sieh, wie viel Zeit du zurückgewinnst.",
-  "earlyAccess.benefits.perks.title": "Exklusive Vorteile genieÃŸen",
+    "Sei unter den ersten Lehrkraeften, die Draft ausprobieren, sobald der Zugang oeffnet.",
+  "earlyAccess.benefits.perks.title": "Kostenloser Tarif dabei",
   "earlyAccess.benefits.perks.body":
-    "Erhalte Vorabzugang zu Post-Launch-Inhalten, privaten Webinaren und einer Lehrer:innen-Community.",
-  "earlyAccess.steps.title": "So funktioniert das Early-Access-Programm",
-  "earlyAccess.steps.step1.title": "Erzähl uns, wer du bist",
+    "Konten enthalten 10 kostenlose Nachrichten pro Monat, sobald der Zugang fuer Lehrkraefte oeffnet.",
+  "earlyAccess.steps.title": "Was nach dem Eintrag passiert",
+  "earlyAccess.steps.step1.title": "Zur Warteliste",
   "earlyAccess.steps.step1.body":
-    "Fülle ein kurzes Formular mit deiner Rolle, deinem Schulkontext und deinen Kommunikationsaufgaben aus.",
-  "earlyAccess.steps.step2.title": "Bestätigung erhalten",
+    "Trag deine E-Mail in weniger als einer Minute ein.",
+  "earlyAccess.steps.step2.title": "Postfach pruefen",
   "earlyAccess.steps.step2.body":
-    "Du bekommst eine E-Mail mit den nächsten Schritten, Erwartungen und dem Startzeitraum.",
-  "earlyAccess.steps.step3.title": "30 Tage Zugang",
+    "Du erhaeltst eine Bestaetigung und gelegentliche Produktupdates.",
+  "earlyAccess.steps.step3.title": "Zugang oeffnet schrittweise",
   "earlyAccess.steps.step3.body":
-    "Teste geführte Entwürfe, Tonoptionen und Fortschrittsmetriken für einen begrenzten Zeitraum.",
-  "earlyAccess.steps.step4.title": "Feedback geben",
+    "Wir schreiben dir, sobald Konten fuer Lehrkraefte verfuegbar sind.",
+  "earlyAccess.steps.step4.title": "Mit dem Gratistarif starten",
   "earlyAccess.steps.step4.body":
-    "Teile Eindrücke über kurze Umfragen oder optionale Gespräche, damit wir mit deiner Stimme bauen.",
+    "Nutze bis zu 10 Nachrichten pro Monat, sobald dein Konto bereit ist.",
   "earlyAccess.note.limited":
-    "Plätze sind begrenzt und wir schlieÃŸen Bewerbungen, sobald alle Slots vergeben sind.",
+    "Trag dich in die Warteliste ein und wir sagen dir Bescheid, sobald der Zugang fuer Lehrkraefte oeffnet.",
   "earlyAccess.faq.title": "FAQ",
-  "earlyAccess.faq.eligibility.question": "Wer darf mitmachen?",
+  "earlyAccess.faq.eligibility.question": "Fuer wen ist die Warteliste?",
   "earlyAccess.faq.eligibility.answer":
-    "Lehrkräfte, Schulleitungen und pädagogische Teams, die Elternkommunikation verantworten, dürfen sich bewerben.",
-  "earlyAccess.faq.privacy.question": "Sind meine Texte privat?",
+    "Fuer Lehrkraefte und schulische Mitarbeitende, die ruhige, professionelle Schreibunterstuetzung fuer Elternkommunikation und Zeugnisformulierungen moechten.",
+  "earlyAccess.faq.privacy.question": "Was erhaeltst du?",
   "earlyAccess.faq.privacy.answer":
-    "Ja. Alles bleibt privat, verschlüsselt und unterliegt unseren GDPR-ready Richtlinien - keine öffentliche Veröffentlichung und kein Teilen ohne deine Zustimmung.",
-  "earlyAccess.faq.afterBeta.question": "Was passiert nach der Beta?",
+    "Du erhaeltst Launch-Updates und eine E-Mail, sobald der Zugang fuer Lehrkraefte oeffnet.",
+  "earlyAccess.faq.afterBeta.question": "Musst du an etwas teilnehmen?",
   "earlyAccess.faq.afterBeta.answer":
-    "Du kannst Teil der Community bleiben, bekommst Launch-Infos und bleibst weiter im Gespräch, während wir Zaza Draft vor dem allgemeinen Release verbessern.",
+    "Nein. Die Warteliste bedeutet einfach, dass du benachrichtigt wirst, wenn der Zugang verfuegbar ist.",
 
   // Hallucination-Safe Tooltip
   "hallucinationSafe.tooltip.heading":
@@ -2243,7 +2244,7 @@ const translationsDe: Record<string, string> = {
   "stats.timeSaved.number": "Zeit zurück",
   "stats.timeSaved.label": "für den Unterricht",
   "stats.subtitle":
-    "Von Lehrkräften gebaut, um Sonntagnacht-Stress zu reduzieren - werde Teil unseres Early-Access-Programms und gestalte ruhige, professionelle Kommunikation mit KI mit.",
+    "Von Lehrkraeften gebaut, um Sonntagnacht-Stress zu reduzieren. Trag dich in die Warteliste ein und wir sagen dir Bescheid, sobald der Zugang offen ist.",
   "socialProof.badges.teacherFounded":
     "Von Lehrkräften gegründet - mit Doktortitel in Bildungswissenschaft",
   "socialProof.badges.gdprReady": "In Deutschland entwickelt - DSGVO-konform",
@@ -2375,8 +2376,7 @@ const translationsDe: Record<string, string> = {
   "comparison.rows.learningCurve.zaza": "Einfügen, Ton wählen, fertig",
   "comparison.rows.community.feature": "Community",
   "comparison.rows.community.generic": "Kein Lehrkräfte-Support",
-  "comparison.rows.community.zaza":
-    "Lehrkräfte gestalten unsere private Beta mit",
+  "comparison.rows.community.zaza": "Lehrkraefte auf der Warteliste",
   "caseStudies.eyebrow": "Vorher / Nachher",
   "caseStudies.heading": "Vorher / Nachher aus echten Klassenzimmern",
   "caseStudies.subheading":
@@ -2422,8 +2422,8 @@ const translationsDe: Record<string, string> = {
   // Final CTA Section
   "finalCTA.heading": "Zaza - Just Teach.",
   "finalCTA.subheading":
-    "Zaza hilft Lehrkräften, erfolgreich zu bleiben. Trete der privaten Beta bei und nutze Draft als ruhige, professionelle Schreibunterstützung, die Unterrichtszeit zurückgibt.",
-  "finalCTA.button": "Early Access beitreten",
+    "Zaza hilft Lehrkraeften, erfolgreich zu bleiben. Trag dich in die Warteliste fuer ruhige, professionelle Schreibunterstuetzung ein, die Unterrichtszeit zurueckgibt.",
+  "finalCTA.button": "Zur Warteliste",
 
   // Footer
   "footer.social.tiktok": "Folgen Sie uns auf TikTok @zazatechnologies",
@@ -2516,7 +2516,7 @@ const translationsDe: Record<string, string> = {
   "products.teach.cta.title": "Bereit, Ihre Planung zu transformieren?",
   "products.teach.cta.subtitle":
     "Schliessen Sie sich Hunderten von Lehrkraeften an, die eingesparte Stunden pro Woche sehen",
-  "products.teach.cta.primary": "Early Access beitreten",
+  "products.teach.cta.primary": "Zur Warteliste",
   "products.teach.cta.secondary": "Demo planen",
 
   // Products - Draft
@@ -2527,7 +2527,7 @@ const translationsDe: Record<string, string> = {
   "products.draft.hero.assumption":
     "Draft geht davon aus, dass Nachrichten aus dem Kontext gelesen werden können - von Eltern, Schulleitung oder Verwaltung - und unterstützt dich genau dafür.",
   "products.draft.hero.supporting": "Weniger Sonntagsdruck, mehr Kopf frei.",
-  "products.draft.hero.cta.primary": "Early Access beitreten",
+  "products.draft.hero.cta.primary": "Zur Warteliste",
   "products.draft.hero.cta.secondary": "Beispiele ansehen",
   "products.draft.hero.privacyLine":
     "Keine Schülernamen nötig. Nicht auf deinen Eingaben trainiert.",
@@ -2562,10 +2562,10 @@ const translationsDe: Record<string, string> = {
     "Kurz bearbeiten, kopieren und senden, wenn es klar und professionell klingt",
   "products.draft.insights.heading": "Insights & Fortschritt",
   "products.draft.insights.body":
-    "Draft zeichnet Zeitersparnis, erstellte Entwürfe, Streaks und eine Qualitätsbewertung auf, damit du das Wachstum feiern kannst, das du mit jedem durchdachten Elternbrief bewirkst, und gleichzeitig unsere lehrerzentrierte Beta mitgestaltest.",
+    "Draft zeichnet Zeitersparnis, erstellte Entwuerfe, Streaks und eine Qualitaetsbewertung auf, damit du den Fortschritt in deinem Schreibworkflow sehen kannst.",
   "products.draft.interface.heading": "Geführte Entwurfsoberfläche",
   "products.draft.interface.body":
-    "Tonleitplanken, kanalbezogene Modi und Spracheinstellungen vereinen sich in einem intuitiven Workspace, damit jeder Entwurf ruhig und professionell klingt, während du das Early-Access-Programm weiterentwickelst.",
+    "Tonleitplanken, kanalbezogene Modi und Spracheinstellungen vereinen sich in einem intuitiven Workspace, damit jeder Entwurf ruhig und professionell klingt.",
   "products.draft.insights.imageAlt":
     "Produkt-Screenshot des Draft-Insights-Dashboards",
   "products.draft.interface.imageAlt":
@@ -2607,8 +2607,8 @@ const translationsDe: Record<string, string> = {
 
   "products.draft.cta.title": "Hol dir deine Zeit zurück",
   "products.draft.cta.subtitle":
-    "Tritt unserer privaten Beta bei und gestalte lehrerzentrierte Kommunikation mit KI mit.",
-  "products.draft.cta.primary": "Early Access beitreten",
+    "Trag dich in die Warteliste fuer lehrkraft-zentrierte KI-Schreibhilfe ein.",
+  "products.draft.cta.primary": "Zur Warteliste",
   "products.draft.cta.secondary": "Beispiele ansehen",
 
   // Products - GradeFlow
@@ -2654,7 +2654,7 @@ const translationsDe: Record<string, string> = {
   "products.gradeflow.social.author2": "David Kim, Mittelschule Mathematik",
 
   "products.gradeflow.cta.title": "Bereit, smarter zu bewerten?",
-  "products.gradeflow.cta.button": "Early Access beitreten",
+  "products.gradeflow.cta.button": "Zur Warteliste",
 
   // Products - Shield
   "shield.hero.eyebrow": "KI-GOVERNANCE FÃœR SCHULEN",
@@ -3022,16 +3022,16 @@ const translationsDe: Record<string, string> = {
 
   "company.today.title": "Wo wir heute stehen",
   "company.today.p1":
-    "Wir arbeiten mit einer kleinen Gruppe von Lehrkräften und Schulen in einer privaten Beta, um jedes Feature mit echtem Klassenzimmer-Feedback vor dem Launch zu verfeinern.",
+    "Wir oeffnen den Zugang schrittweise und nutzen die Warteliste, um Lehrkraefte und Schulen zu informieren, sobald Draft breiter verfuegbar wird.",
   "company.today.p2":
     "Unsere langfristige Vision ist es, eine komplette Suite von KI-Tools zu bauen, die Lehrkräften helfen, ihre Zeit zurückzugewinnen, ihr Wohlbefinden zu schützen und mit dem Kern ihrer Arbeit - ihren Schülern - verbunden zu bleiben.",
   "company.today.close":
     "Denn wenn Lehrkräfte gedeihen, gedeihen auch Schüler.",
 
   "company.stats.teachers.number": "Lehrergebaut",
-  "company.stats.teachers.label": "Design- & Beta-Partner",
-  "company.stats.countries.number": "Private Beta",
-  "company.stats.countries.label": "Early Access-Programm",
+  "company.stats.teachers.label": "Mit Lehrkraeften entwickelt",
+  "company.stats.countries.number": "Warteliste",
+  "company.stats.countries.label": "Jetzt offen",
   "company.stats.hours.number": "10+",
   "company.stats.hours.label": "Wöchentlich gesparte Stunden",
 

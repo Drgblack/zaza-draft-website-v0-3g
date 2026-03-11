@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { SignupModal } from "@/components/signup-modal";
 import { useState } from "react";
-import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { track } from "@/lib/analytics";
 import { DraftDemo } from "@/components/draft-demo";
@@ -123,6 +122,22 @@ const CheckCircleIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const ShieldIcon = ({ className }: { className?: string }) => (
+  <svg
+    className={className}
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"
+    />
+  </svg>
+);
+
 export function HomePageClient() {
   const { t, language } = useLanguage();
   const [signupOpen, setSignupOpen] = useState(false);
@@ -132,21 +147,225 @@ export function HomePageClient() {
   const earlyAccessHref =
     language === "de" ? "/de/early-access" : "/early-access";
   const founderStoryHref =
-    language === "de" ? "/de/about/founder-story" : "/about/founder-story";
-  const heroImageAlt =
+    language === "de" ? "/de/about/founder" : "/about/founder";
+  const heroEyebrow = language === "de" ? "FUER LEHRKRAEFTE" : "FOR TEACHERS";
+  const heroBadge =
     language === "de"
-      ? "Lehrkraft prüft eine E-Mail an Eltern am Schreibtisch."
-      : "Teacher reviewing a parent email at her desk.";
+      ? "E-Mails an Eltern und Zeugnisformulierungen"
+      : "Parent emails and report comments";
+  const heroHeadline =
+    language === "de"
+      ? "Schreibe Schulkommunikation,"
+      : "Write school communication";
+  const heroHeadlineAccent =
+    language === "de"
+      ? "die sich sicher senden laesst."
+      : "that feels safe to send.";
+  const heroSubheading =
+    language === "de"
+      ? "Ruhige, professionelle Schreibunterstuetzung fuer die Momente, die Lehrkraefte am meisten zerdenken, von E-Mails an Eltern bis zu Zeugnisformulierungen."
+      : "Calm, professional writing support for the moments teachers overthink most, from parent emails to report comments.";
+  const heroEntityLine =
+    language === "de"
+      ? "Zaza Draft ist ein lehrkraft-zentrierter Co-Writer fuer sensible Schulkommunikation. Du pruefst, bearbeitest und gibst jede Formulierung selbst frei."
+      : "Zaza Draft is a teacher-first co-writer for sensitive school communication. You review, edit, and approve every word before it is used.";
+  const heroOutcomeLabel =
+    language === "de" ? "Sieh den Unterschied" : "See the difference";
+  const heroProofLabel =
+    language === "de"
+      ? "Sensible Schulkommunikation, vor und nach Zaza Draft"
+      : "Sensitive school communication, before and after Zaza Draft";
+  const heroProofIntro =
+    language === "de"
+      ? "Sieh, wie rohe Formulierungen klarer, ruhiger und sendesicher werden."
+      : "See how rough wording becomes clearer, calmer, and safer to send.";
+  const heroProofFrameLine =
+    language === "de"
+      ? "Gebaut fuer Nachrichten, die Lehrkraefte nur ungern absenden."
+      : "Built for the messages teachers hesitate to send.";
+  const heroBeforeLabel = language === "de" ? "Vorher" : "Before";
+  const heroAfterLabel = language === "de" ? "Nachher" : "After";
+  const heroBeforeMeta =
+    language === "de" ? "Riskanter Erstentwurf" : "Risky first draft";
+  const heroAfterMeta =
+    language === "de"
+      ? "Ruhigere, belastbare Version"
+      : "Calmer, defensible version";
+  const heroProofSections =
+    language === "de"
+      ? [
+          {
+            title: "E-Mail an Eltern",
+            context: "Verhaltensvorfall",
+            before:
+              "Oliver war heute erneut sehr stoerend und hat mehrere Anweisungen ignoriert. Dieses Verhalten ist nicht akzeptabel und muss sich verbessern.",
+            after:
+              "Ich wollte Sie wissen lassen, dass es Oliver heute trotz mehrerer Erinnerungen schwerfiel, waehrend des Unterrichts konzentriert zu bleiben. Wir unterstuetzen ihn weiter dabei, positive Unterrichtsgewohnheiten aufzubauen, und wuerden Ihre Partnerschaft sehr schaetzen, um diese Erwartungen auch zu Hause zu bestaerken.",
+          },
+          {
+            title: "Zeugnisformulierung",
+            context: "Negative Formulierung entschaerft",
+            before:
+              "Oliver arbeitet zu hastig und die Qualitaet ist oft schwach.",
+            after:
+              "Oliver ist faehig und beteiligt sich positiv am Unterricht. Wenn er seine Arbeit vor der Abgabe noch etwas sorgfaeltiger prueft, kann er Ergebnisse zeigen, die seinem Verstaendnis staerker entsprechen.",
+          },
+          {
+            title: "Sensible Mitteilung",
+            context: "Koerperlicher Vorfall",
+            before:
+              "Oliver hat heute einen anderen Schueler geschubst und sich geweigert, sich zu entschuldigen. Dieses Verhalten ist nicht akzeptabel und kann so nicht weitergehen.",
+            after:
+              "Ich wollte Sie ueber einen Vorfall aus dem heutigen Unterricht informieren, bei dem Oliver frustriert wurde und einen anderen Schueler schubste. Wir haben mit ihm ueber positive Entscheidungen gesprochen und er versteht, dass koerperliches Verhalten nicht angemessen ist. Wir werden ihn weiter dabei unterstuetzen, solche Momente besser zu regulieren, und waeren fuer Ihre Unterstuetzung zu Hause dankbar.",
+          },
+        ]
+      : [
+          {
+            title: "Parent email",
+            context: "Behaviour incident",
+            before:
+              "Oliver was very disruptive again today and ignored multiple instructions. This behaviour is becoming unacceptable and needs to improve.",
+            after:
+              "I wanted to let you know that Oliver found it challenging to stay focused during today's lesson despite several reminders. We are continuing to support him in developing positive classroom habits and would really appreciate your partnership in reinforcing these expectations at home.",
+          },
+          {
+            title: "Report comment",
+            context: "Honest but more defensible",
+            before: "Oliver rushes his work and the quality is often poor.",
+            after:
+              "Oliver is capable and contributes positively in class. With a little more care in checking his work before submitting it, he will be able to produce work that more fully reflects his understanding.",
+          },
+          {
+            title: "Sensitive incident",
+            context: "Emotionally loaded follow-up",
+            before:
+              "Oliver pushed another student today and refused to apologise. This behaviour is unacceptable and cannot continue.",
+            after:
+              "I wanted to let you know about an incident during today's lesson where Oliver became frustrated and pushed another pupil. We spoke with him about making positive choices and he understands that physical behaviour is not appropriate. We will continue supporting him in managing these moments and would appreciate your reinforcement of this at home.",
+          },
+        ];
+  const heroProofCaption =
+    language === "de"
+      ? "Vom angespannten Entwurf zur ruhigen, belastbaren Kommunikation."
+      : "From tense draft to calm, defensible communication.";
+  const heroMentalLoadLine =
+    language === "de"
+      ? "Weniger Zweifeln, bevor du auf Senden drueckst."
+      : "Less second-guessing before you press send.";
+  const heroTrustBarIntro =
+    language === "de"
+      ? "Lehrkraefte vertrauen Zaza Draft fuer ruhige, belastbare Kommunikation."
+      : "Trusted by teachers who want calm, defensible communication.";
+  const heroTrustBarDifferentiator =
+    language === "de"
+      ? "Kein generischer KI-Schreiber, sondern ein lehrkraft-zentrierter Co-Writer fuer sensible Schulkommunikation."
+      : "Not a generic AI writer, but a teacher-first co-writer for sensitive school communication.";
+  const heroCtaMicrocopy =
+    language === "de"
+      ? "Schreibe jeden Monat bis zu 10 Nachrichten kostenlos. Keine Verpflichtung."
+      : "Write up to 10 messages free each month. No commitment.";
+  const heroTeacherUsageLine =
+    language === "de"
+      ? "Entwickelt fuer Lehrkraefte, die E-Mails an Eltern, Zeugnisformulierungen und andere sensible Schulkommunikation schreiben."
+      : "Built for teachers writing parent emails, report comments, and other high-stakes school communication.";
+  const heroTrustBarPoints =
+    language === "de"
+      ? [
+          "Fuer Lehrkraefte entwickelt",
+          "Ruhiger, professioneller Ton",
+          "Du pruefst jede Nachricht vor dem Senden",
+        ]
+      : [
+          "Built for teachers",
+          "Calm, professional tone",
+          "You review every message before sending",
+        ];
   const betaFeedbackHeading =
     language === "de"
-      ? "Feedback aus der Beta folgt"
-      : "Beta feedback is coming";
+      ? "Feedback von Lehrkraeften folgt"
+      : "Teacher feedback is coming";
   const betaFeedbackBody =
     language === "de"
-      ? "Wir onboarden gerade die erste Gruppe Lehrkräfte. Echte Zitate erscheinen hier, sobald wir sie gesammelt haben. Wenn du Draft mitgestalten möchtest, tritt dem Early Access bei."
-      : "We are onboarding our first cohort of teachers now. Real quotes will appear here as soon as they are collected. If you would like to shape Draft, join early access.";
+      ? "Wir sammeln gerade die ersten Rueckmeldungen. Echte Zitate erscheinen hier, sobald wir sie gesammelt haben. Trag dich in die Warteliste ein, wenn du zum Launch benachrichtigt werden moechtest."
+      : "We are collecting our first round of teacher feedback now. Real quotes will appear here as soon as they are collected. Join the waitlist if you want to be notified at launch.";
   const betaFeedbackCta =
-    language === "de" ? "Early Access" : "Join Early Access";
+    language === "de" ? "Zur Warteliste" : "Join the waitlist";
+  const trustPanelHeading =
+    language === "de"
+      ? "KI, der du bei echter Schulkommunikation vertrauen kannst"
+      : "AI you can trust with real school communication";
+  const trustPanelSubtext =
+    language === "de"
+      ? "Entwickelt fuer ruhige, professionelle Formulierungen in den Momenten, die Lehrkraefte am meisten zerdenken."
+      : "Built to support calm, professional writing in the moments teachers second-guess most.";
+  const trustPanelCards =
+    language === "de"
+      ? [
+          {
+            title: "Du bleibst in Kontrolle",
+            body: "Pruefe jede Nachricht, bevor etwas gesendet wird.",
+            icon: SliderIcon,
+          },
+          {
+            title: "Fuer Lehrkraefte gebaut",
+            body: "Entwickelt fuer E-Mails an Eltern, Zeugnisformulierungen und sensible Schulkommunikation.",
+            icon: DocumentIcon,
+          },
+          {
+            title: "Ruhige Tonleitplanken",
+            body: "Hilft, Eskalation zu reduzieren und Formulierungen professionell zu halten.",
+            icon: CheckCircleIcon,
+          },
+          {
+            title: "Privacy-first gedacht",
+            body: "Gebaut fuer verantwortungsvollen Unterrichtseinsatz und sorgfaeltige Kommunikationsablaeufe.",
+            icon: ShieldIcon,
+          },
+        ]
+      : [
+          {
+            title: "You stay in control",
+            body: "Review every message before anything is sent.",
+            icon: SliderIcon,
+          },
+          {
+            title: "Built for teachers",
+            body: "Designed for parent emails, report comments, and sensitive school communication.",
+            icon: DocumentIcon,
+          },
+          {
+            title: "Calm tone guardrails",
+            body: "Helps reduce escalation and keeps wording professional.",
+            icon: CheckCircleIcon,
+          },
+          {
+            title: "Privacy-first design",
+            body: "Built for responsible classroom use and careful communication workflows.",
+            icon: ShieldIcon,
+          },
+        ];
+  const situationsHeading =
+    language === "de"
+      ? "Situationen, die Lehrkraefte nur ungern formulieren"
+      : "Situations teachers worry about writing";
+  const situationsItems =
+    language === "de"
+      ? [
+          "Verhaltensvorfaelle",
+          "Beschwerden von Eltern",
+          "Sensible Zeugnisformulierungen",
+          "Schwierige Follow-up-E-Mails",
+          "Eskalationen an Familien",
+          "Emotional aufgeladene Nachrichten",
+        ]
+      : [
+          "Behaviour incidents",
+          "Parent complaints",
+          "Sensitive report comments",
+          "Difficult follow-up emails",
+          "Escalation to families",
+          "Emotionally charged messages",
+        ];
 
   const scrollToDemo = () => {
     track("cta_click_home_see_examples", { language });
@@ -166,7 +385,7 @@ export function HomePageClient() {
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 className="text-xs uppercase tracking-[2px] text-[#A855F7] font-semibold mb-4"
               >
-                {t("hero.eyebrow")}
+                {heroEyebrow}
               </motion.div>
 
               <motion.div
@@ -178,7 +397,7 @@ export function HomePageClient() {
                 <span className="text-xl" aria-hidden="true">
                   ✦
                 </span>
-                <span>{t("hero.badge")}</span>
+                <span>{heroBadge}</span>
               </motion.div>
 
               <motion.div
@@ -188,10 +407,10 @@ export function HomePageClient() {
                 className="space-y-4"
               >
                 <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1]">
-                  <span className="text-white">{t("hero.headline")}</span>
+                  <span className="text-white">{heroHeadline}</span>
                   <br />
                   <span className="bg-gradient-to-r from-purple-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                    {t("hero.headlineAccent")}
+                    {heroHeadlineAccent}
                   </span>
                 </h1>
               </motion.div>
@@ -202,7 +421,15 @@ export function HomePageClient() {
                 transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
                 className="text-lg lg:text-xl text-[#CBD5E1] leading-relaxed max-w-[600px] mx-auto lg:mx-0"
               >
-                {t("hero.subheading")}
+                {heroSubheading}
+              </motion.p>
+              <motion.p
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.34, ease: "easeOut" }}
+                className="text-base text-[#94A3B8] leading-relaxed max-w-[600px] mx-auto lg:mx-0"
+              >
+                {heroEntityLine}
               </motion.p>
 
               <motion.div
@@ -241,13 +468,57 @@ export function HomePageClient() {
                 transition={{ duration: 0.5, delay: 0.44, ease: "easeOut" }}
                 className="text-sm text-[#CBD5E1] leading-relaxed max-w-[600px] mx-auto lg:mx-0"
               >
+                {heroCtaMicrocopy}
+              </motion.p>
+              <motion.p
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.46, ease: "easeOut" }}
+                className="inline-flex max-w-[680px] items-start gap-3 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm leading-6 text-[#CBD5E1] mx-auto lg:mx-0"
+              >
+                <span className="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-emerald-300" />
+                <span>{heroTeacherUsageLine}</span>
+              </motion.p>
+              <motion.p
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.48, ease: "easeOut" }}
+                className="text-sm text-[#94A3B8] leading-relaxed max-w-[600px] mx-auto lg:mx-0"
+              >
                 {t("hero.earlyAccessLine")}
               </motion.p>
+
+              <motion.div
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+                className="max-w-[720px] rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 backdrop-blur-sm"
+              >
+                <p className="text-sm leading-6 text-[#CBD5E1]">
+                  {heroTrustBarIntro}
+                </p>
+                <p className="mt-2 text-sm leading-6 text-[#A78BFA]">
+                  {heroTrustBarDifferentiator}
+                </p>
+                <ul className="mt-3 grid grid-cols-1 gap-3 text-sm text-[#94A3B8] sm:grid-cols-3">
+                  {heroTrustBarPoints.map((point) => (
+                    <li
+                      key={point}
+                      className="flex items-start gap-3 rounded-xl border border-white/8 bg-white/[0.02] px-3 py-3"
+                    >
+                      <span className="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-emerald-400/10 text-emerald-300">
+                        <Check className="h-3.5 w-3.5" />
+                      </span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
 
               <motion.p
                 initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.45, ease: "easeOut" }}
+                transition={{ duration: 0.5, delay: 0.52, ease: "easeOut" }}
                 className="text-sm text-[#94A3B8] leading-relaxed max-w-[600px] mx-auto lg:mx-0"
               >
                 {t("hero.privacyLine")}
@@ -350,18 +621,117 @@ export function HomePageClient() {
                     }
               }
             >
-              <div className="relative max-w-[520px] mx-auto h-full">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#A855F7] to-[#EC4899] rounded-2xl blur-[20px] opacity-60 -z-10" />
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-purple-500/20 h-full">
-                  <Image
-                    src="/professional-high-resolution-stock-photo-of-a-real.jpg"
-                    alt={heroImageAlt}
-                    width={520}
-                    height={600}
-                    priority
-                    className="w-full h-full rounded-2xl object-cover object-center"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#0F172A]/10"></div>
+              <div className="relative mx-auto flex h-full max-w-[540px] items-center">
+                <div className="absolute inset-x-8 inset-y-10 rounded-[32px] bg-gradient-to-br from-[#A855F7]/35 via-[#1E1B4B]/20 to-[#EC4899]/30 blur-3xl" />
+                <div className="relative w-full overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.045] p-4 shadow-[0_35px_120px_-45px_rgba(168,85,247,0.65)] backdrop-blur-xl sm:p-5">
+                  <div className="rounded-[24px] border border-white/10 bg-[#0B1120]/95 p-4 sm:p-5">
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                      <div>
+                        <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#A78BFA]">
+                          {heroOutcomeLabel}
+                        </p>
+                        <h2 className="mt-2 text-lg font-semibold text-white sm:text-xl">
+                          {heroProofLabel}
+                        </h2>
+                        <p className="mt-2 text-xs uppercase tracking-[0.22em] text-[#A78BFA]">
+                          {heroProofFrameLine}
+                        </p>
+                        <p className="mt-2 max-w-[440px] text-sm leading-6 text-[#94A3B8]">
+                          {heroProofIntro}
+                        </p>
+                      </div>
+                      <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-[#CBD5E1]">
+                        <CheckCircleIcon className="h-4 w-4 text-emerald-400" />
+                        <span>{heroAfterMeta}</span>
+                      </div>
+                    </div>
+
+                    <div className="mt-5 space-y-4">
+                      {heroProofSections.map((section) => (
+                        <section
+                          key={section.title}
+                          className="rounded-[22px] border border-white/10 bg-[#0F172A]/80 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
+                        >
+                          <div className="flex flex-wrap items-center justify-between gap-3">
+                            <div>
+                              <h3 className="text-sm font-semibold text-white sm:text-base">
+                                {section.title}
+                              </h3>
+                              <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[#64748B]">
+                                {section.context}
+                              </p>
+                            </div>
+                            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-[#CBD5E1]">
+                              <CheckCircleIcon className="h-4 w-4 text-emerald-400" />
+                              <span>{heroAfterMeta}</span>
+                            </div>
+                          </div>
+
+                          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                            <article className="rounded-[20px] border border-white/10 bg-[#111827] p-4">
+                              <div className="flex items-center justify-between gap-3">
+                                <div className="inline-flex items-center gap-2 rounded-full border border-rose-500/20 bg-rose-500/10 px-3 py-1 text-xs font-medium text-rose-200">
+                                  <span>{heroBeforeLabel}</span>
+                                </div>
+                                <span className="text-xs text-[#94A3B8]">
+                                  {heroBeforeMeta}
+                                </span>
+                              </div>
+                              <p className="mt-4 text-sm leading-7 text-[#CBD5E1] sm:text-[15px]">
+                                {section.before}
+                              </p>
+                            </article>
+
+                            <article className="rounded-[20px] border border-emerald-400/20 bg-[linear-gradient(180deg,rgba(17,24,39,0.98),rgba(15,23,42,0.94))] p-4 shadow-[0_24px_70px_-36px_rgba(16,185,129,0.35)] ring-1 ring-white/5">
+                              <div className="flex items-center justify-between gap-3">
+                                <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-200">
+                                  <span>{heroAfterLabel}</span>
+                                </div>
+                                <span className="text-xs text-[#C4B5FD]">
+                                  {heroAfterMeta}
+                                </span>
+                              </div>
+                              <p className="mt-4 text-sm leading-7 text-white sm:text-[15px]">
+                                {section.after}
+                              </p>
+                            </article>
+                          </div>
+                        </section>
+                      ))}
+                    </div>
+
+                    <p className="mt-4 text-sm text-[#94A3B8]">
+                      {heroProofCaption}
+                    </p>
+                    <p className="mt-2 text-sm text-[#CBD5E1]">
+                      {heroMentalLoadLine}
+                    </p>
+                    <div className="mt-5 rounded-[22px] border border-white/10 bg-white/[0.03] p-4">
+                      <div className="flex flex-wrap items-center justify-between gap-3">
+                        <div>
+                          <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-[#C4B5FD]">
+                            {situationsHeading}
+                          </h3>
+                          <p className="mt-2 text-sm leading-6 text-[#94A3B8]">
+                            {language === "de"
+                              ? "Genau fuer die Formulierungen, die man zu leicht zu lange offen laesst."
+                              : "For the drafts teachers are most likely to leave open too long."}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                        {situationsItems.map((item) => (
+                          <div
+                            key={item}
+                            className="flex items-start gap-3 rounded-2xl border border-white/8 bg-[#111827]/70 px-4 py-3 text-sm text-[#E2E8F0]"
+                          >
+                            <CheckCircleIcon className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#A78BFA]" />
+                            <span>{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -372,41 +742,48 @@ export function HomePageClient() {
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-purple-600/5 rounded-full blur-3xl -z-10"></div>
       </section>
 
-      {/* Situations Section */}
-      <section className="bg-[#0F172A] py-16 md:py-20">
+      <section className="relative overflow-hidden border-t border-white/5 bg-[#0F172A] py-16 md:py-20">
+        <div className="absolute inset-x-0 top-0 h-32 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.12),transparent_60%)]" />
         <div className="mx-auto max-w-5xl px-6 lg:px-8">
-          <motion.h2
-            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-2xl md:text-3xl lg:text-4xl font-bold text-white text-center"
-          >
-            {t("situations.title")}
-          </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
-            {[
-              t("situations.items.gradeDispute"),
-              t("situations.items.accidentalCC"),
-              t("situations.items.escalation"),
-              t("situations.items.behaviorIncident"),
-              t("situations.items.toneAccusation"),
-              t("situations.items.sensitiveReport"),
-            ].map((item, index) => (
-              <motion.div
-                key={item}
-                initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="flex items-start gap-3 text-[#CBD5E1]"
-              >
-                <CheckCircleIcon className="w-5 h-5 text-[#A78BFA] mt-0.5 flex-shrink-0" />
-                <span className="text-base md:text-lg leading-7 text-[#E2E8F0]">
-                  {item}
+          <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(30,41,59,0.92),rgba(15,23,42,0.98))] p-8 shadow-[0_30px_80px_-48px_rgba(15,23,42,0.95)] ring-1 ring-white/5 md:p-10">
+            <div className="absolute -right-16 top-0 h-40 w-40 rounded-full bg-purple-500/10 blur-3xl" />
+            <div className="absolute -left-10 bottom-0 h-32 w-32 rounded-full bg-emerald-400/8 blur-3xl" />
+            <div className="relative">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-medium uppercase tracking-[0.24em] text-[#C4B5FD]">
+                <span className="h-2 w-2 rounded-full bg-emerald-300" />
+                <span>
+                  {language === "de" ? "Vertrauensrahmen" : "Trust framework"}
                 </span>
-              </motion.div>
-            ))}
+              </div>
+              <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white md:text-4xl">
+                {trustPanelHeading}
+              </h2>
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-[#CBD5E1]">
+                {trustPanelSubtext}
+              </p>
+              <div className="mt-8 grid gap-4 md:grid-cols-2">
+                {trustPanelCards.map((card) => {
+                  const Icon = card.icon;
+
+                  return (
+                    <article
+                      key={card.title}
+                      className="rounded-2xl border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] px-5 py-5 shadow-[0_18px_50px_-40px_rgba(168,85,247,0.45)]"
+                    >
+                      <div className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.05] text-[#C4B5FD]">
+                        <Icon className="h-5 w-5" />
+                      </div>
+                      <h3 className="mt-4 text-lg font-semibold text-white">
+                        {card.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-6 text-[#CBD5E1]">
+                        {card.body}
+                      </p>
+                    </article>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </section>

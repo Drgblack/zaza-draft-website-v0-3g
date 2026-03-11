@@ -1,36 +1,51 @@
-import type { Metadata } from "next"
-import FeaturesClient from "./FeaturesClient"
+import type { Metadata } from "next";
+import { JsonLdCollection } from "@/components/seo/json-ld";
+import {
+  createBreadcrumbJsonLd,
+  createSoftwareApplicationJsonLd,
+} from "@/lib/seo/json-ld";
+import { buildPageMetadata } from "@/lib/seo/site-metadata";
+import FeaturesClient from "./FeaturesClient";
 
-const pageUrl = "https://zazadraft.com/features"
-
-export const metadata: Metadata = {
-  title: "Features | Zaza Draft",
+export const metadata: Metadata = buildPageMetadata({
+  title:
+    "Teacher Writing Features for Parent Emails and Report Comments | Zaza Draft",
   description:
-    "Explore the teacher-first AI features that help educators write clearer parent messages, contextual feedback, and polished materials with sensible guardrails.",
+    "Explore teacher-first AI features for parent communication, report comments, safeguarding-sensitive messages, and professional school writing where tone matters.",
+  path: "/features",
   alternates: {
-    canonical: pageUrl,
-    languages: {
-      en: pageUrl,
-      de: "https://zazadraft.com/de/features",
-    },
+    en: "https://zazadraft.com/features",
+    de: "https://zazadraft.com/de/features",
   },
-  openGraph: {
-    title: "Features | Zaza Draft",
-    description:
-      "Explore the teacher-first AI features that help educators write clearer parent messages, contextual feedback, and polished materials with sensible guardrails.",
-    url: pageUrl,
-    type: "website",
-    siteName: "Zaza Draft",
-    locale: "en_GB",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Features | Zaza Draft",
-    description:
-      "Explore the teacher-first AI features that help educators write clearer parent messages, contextual feedback, and polished materials with sensible guardrails.",
-  },
-}
+  keywords: [
+    "teacher writing features",
+    "AI parent email generator for teachers",
+    "AI report comments for teachers",
+    "teacher communication software",
+  ],
+});
 
 export default function FeaturesPage() {
-  return <FeaturesClient />
+  return (
+    <>
+      <JsonLdCollection
+        entries={[
+          {
+            id: "features-software-schema",
+            data: createSoftwareApplicationJsonLd({
+              path: "/features",
+            }),
+          },
+          {
+            id: "features-breadcrumb-schema",
+            data: createBreadcrumbJsonLd([
+              { name: "Home", path: "/" },
+              { name: "Features", path: "/features" },
+            ]),
+          },
+        ]}
+      />
+      <FeaturesClient />
+    </>
+  );
 }

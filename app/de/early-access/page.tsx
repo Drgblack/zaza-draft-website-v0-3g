@@ -4,13 +4,13 @@ import EarlyAccessClient from "@/app/early-access/early-access-client";
 const canonicalUrl = "https://zazadraft.com/de/early-access";
 
 export const metadata: Metadata = {
-  title: "Zaza Draft Early Access | Lehrerzentrierte Beta",
+  title: "Zaza Draft Warteliste | Lehrerzentrierte KI-Schreibhilfe",
   description:
-    "Tritt dem Zaza Draft Early-Access-Programm bei, teste geführte Entwürfe, Tonoptionen und Insights und gestalte die private Beta mit.",
+    "Trag dich in die Zaza Draft Warteliste ein und erfahre, sobald der Zugang fuer Lehrkraefte geoeffnet wird. Erhalte Produktupdates und Launch-News.",
   openGraph: {
-    title: "Zaza Draft Early Access | Lehrerzentrierte Beta",
+    title: "Zaza Draft Warteliste",
     description:
-      "Hilf mit, Tonleitplanken, geführte Modi und Fortschrittsmetriken für Zaza Draft zu formen, bevor wir für alle starten.",
+      "Erfahre als Erste oder Erster, wenn Zaza Draft fuer Lehrkraefte geoeffnet wird. Warteliste fuer Updates, Launch-News und fruehen Zugang.",
     url: canonicalUrl,
     type: "website",
     siteName: "Zaza Draft",
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Early Access für Zaza Draft",
+    title: "Zaza Draft Warteliste",
     description:
-      "Jetzt Beta-Partner: Gestalte geführte Entwürfe, Tonoptionen und Insights für Lehrkräfte mit.",
+      "Trag dich in die Warteliste ein und erhalte Produktupdates, Launch-News und fruehen Zugang.",
     images: ["/images/draft-interface.png"],
   },
   alternates: {

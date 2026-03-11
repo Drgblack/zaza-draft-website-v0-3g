@@ -408,7 +408,7 @@ export function AiForStudentReportsClient() {
   ];
 
   const breadcrumbItems = [
-    { label: text.breadcrumb_label, href: "/learning-centre" },
+    { label: text.breadcrumb_label, href: "/ai-literacy" },
     { label: text.hero_title },
   ];
 
@@ -729,7 +729,7 @@ export function AiForStudentReportsClient() {
                   </Link>
                 ))}
                 <Link
-                  href="/learning-centre"
+                  href="/ai-literacy"
                   className="block text-sm text-[#A78BFA] hover:text-[#8B5CF6] transition-colors"
                 >
                   → {text.sidebar_resource_full}

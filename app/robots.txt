@@ -1,0 +1,13 @@
+User-Agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/static/
+Disallow: /staging/
+Disallow: /preview/
+Disallow: /beta/
+Disallow: /internal/
+
+Sitemap: https://zazadraft.com/sitemap.xml
+Sitemap: https://zazadraft.com/sitemap-longtail.xml

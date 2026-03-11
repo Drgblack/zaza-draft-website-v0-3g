@@ -1,36 +1,25 @@
-import type { Metadata } from "next"
-import { FAQPageClient } from "./faq-client"
+import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo/site-metadata";
+import { FAQPageClient } from "./faq-client";
 
-const pageUrl = "https://zazadraft.com/faq"
-
-export const metadata: Metadata = {
-  title: "FAQ | Zaza Draft",
+export const metadata: Metadata = buildPageMetadata({
+  title:
+    "Teacher AI Writing FAQ - Safety, Privacy, and Parent Emails | Zaza Draft",
   description:
-    "Get answers to common questions about Zaza Draft, AI safety, privacy, pricing, and how it helps teachers save time.",
+    "Get clear answers about Zaza Draft, teacher-first AI writing, privacy, GDPR-ready workflows, parent emails, report comments, pricing, and school-safe use.",
+  path: "/faq",
   alternates: {
-    canonical: pageUrl,
-    languages: {
-      en: pageUrl,
-      de: "https://zazadraft.com/de/faq",
-    },
+    en: "https://zazadraft.com/faq",
+    de: "https://zazadraft.com/de/faq",
   },
-  openGraph: {
-    title: "FAQ | Zaza Draft",
-    description:
-      "Get answers to common questions about Zaza Draft, AI safety, privacy, pricing, and how it helps teachers save time.",
-    url: pageUrl,
-    type: "website",
-    siteName: "Zaza Draft",
-    locale: "en_GB",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "FAQ | Zaza Draft",
-    description:
-      "Get answers to common questions about Zaza Draft, AI safety, privacy, pricing, and how it helps teachers save time.",
-  },
-}
+  keywords: [
+    "teacher AI FAQ",
+    "AI parent email safety",
+    "GDPR-ready teacher AI",
+    "teacher report writing software FAQ",
+  ],
+});
 
 export default function FAQPage() {
-  return <FAQPageClient />
+  return <FAQPageClient />;
 }

@@ -2,6 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import {
+  zazaDraftEntityDefinition,
+  zazaDraftEntityDefinitionDe,
+} from "@/lib/seo/entity-definitions";
 
 export default function Footer() {
   const pathname = usePathname() || "";
@@ -23,17 +27,20 @@ export default function Footer() {
   const tagline = isDE
     ? "Ruhige, professionelle Schreibunterstützung für Lehrkräfte."
     : "Calm, professional writing support for teachers.";
+  const entityDefinition = isDE
+    ? zazaDraftEntityDefinitionDe
+    : zazaDraftEntityDefinition;
 
   const productLinks = [
     { label: "Draft", href: localPath("/products/draft") },
     { label: isDE ? "Preise" : "Pricing", href: localPath("/pricing") },
     {
-      label: isDE ? "Early Access" : "Join Early Access",
+      label: isDE ? "Warteliste" : "Join the waitlist",
       href: localPath("/early-access"),
     },
     {
       label: isDE ? "Gründerstory" : "Founder story",
-      href: localPath("/about/founder-story"),
+      href: localPath("/about/founder"),
     },
   ];
 
@@ -43,6 +50,7 @@ export default function Footer() {
       label: isDE ? "Nutzungsbedingungen" : "Terms",
       href: localPath("/terms"),
     },
+    { label: "Manifesto", href: localPath("/manifesto") },
     { label: "Impressum", href: localPath("/impressum") },
     {
       label: isDE ? "Support / Kontakt" : "Support / Contact",
@@ -70,6 +78,9 @@ export default function Footer() {
               <span className="text-slate-50 font-semibold">Zaza Draft</span>
             </div>
             <p className="mt-3 text-sm leading-6 text-slate-400">{tagline}</p>
+            <p className="mt-3 max-w-md text-xs leading-6 text-slate-500">
+              {entityDefinition}
+            </p>
           </div>
 
           <div>
