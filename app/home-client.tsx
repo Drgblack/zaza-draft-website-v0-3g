@@ -184,20 +184,23 @@ export function HomePageClient() {
     language === "de"
       ? "Die Nachrichten, die Lehrkraefte nur ungern absenden."
       : "The messages teachers hesitate to send.";
+  const heroProofBrowseLabel =
+    language === "de" ? "Weitere Beispiele" : "Browse examples";
   const heroBeforeLabel = language === "de" ? "Vorher" : "Before";
   const heroAfterLabel = language === "de" ? "Nachher" : "After";
   const heroBeforeMeta =
-    language === "de" ? "Riskanter Erstentwurf" : "Risky first draft";
+    language === "de" ? "Riskante Formulierung" : "Risky wording";
   const heroAfterMeta =
     language === "de"
-      ? "Ruhigere, belastbare Version"
-      : "Calmer, defensible version";
+      ? "Ruhigere, belastbare Formulierung"
+      : "Calmer, defensible wording";
   const heroProofSections =
     language === "de"
       ? [
           {
             title: "E-Mail an Eltern",
-            context: "Verhaltensvorfall",
+            context:
+              "Verhaltensvorfall nach einem schwierigen Unterrichtsmoment",
             before:
               "Oliver war heute erneut sehr stoerend und hat mehrere Anweisungen ignoriert. Dieses Verhalten ist nicht akzeptabel und muss sich verbessern.",
             after:
@@ -205,7 +208,7 @@ export function HomePageClient() {
           },
           {
             title: "Zeugnisformulierung",
-            context: "Negative Formulierung entschaerft",
+            context: "Ehrlich, aber belastbarer formuliert",
             before:
               "Oliver arbeitet zu hastig und die Qualitaet ist oft schwach.",
             after:
@@ -213,7 +216,7 @@ export function HomePageClient() {
           },
           {
             title: "Sensible Mitteilung",
-            context: "Koerperlicher Vorfall",
+            context: "Eine Nachricht, die man ungern absendet",
             before:
               "Oliver hat heute einen anderen Schueler geschubst und sich geweigert, sich zu entschuldigen. Dieses Verhalten ist nicht akzeptabel und kann so nicht weitergehen.",
             after:
@@ -223,7 +226,7 @@ export function HomePageClient() {
       : [
           {
             title: "Parent email",
-            context: "Behaviour incident",
+            context: "Behaviour incident after a difficult lesson",
             before:
               "Oliver was very disruptive again today and ignored multiple instructions. This behaviour is becoming unacceptable and needs to improve.",
             after:
@@ -231,14 +234,14 @@ export function HomePageClient() {
           },
           {
             title: "Report comment",
-            context: "Honest but more defensible",
+            context: "Honest, but more defensible",
             before: "Oliver rushes his work and the quality is often poor.",
             after:
               "Oliver is capable and contributes positively in class. With a little more care in checking his work before submitting it, he will be able to produce work that more fully reflects his understanding.",
           },
           {
             title: "Sensitive incident",
-            context: "Emotionally loaded follow-up",
+            context: "A message teachers hesitate to send",
             before:
               "Oliver pushed another student today and refused to apologise. This behaviour is unacceptable and cannot continue.",
             after:
@@ -267,8 +270,8 @@ export function HomePageClient() {
       : "Write up to 10 messages free each month. No commitment.";
   const heroCtaReassuranceLine =
     language === "de"
-      ? "Du pruefst und gibst jede Nachricht selbst frei."
-      : "You review and approve every message before it is sent.";
+      ? "Immer bearbeitbar. Du bleibst bei jedem Wort in Kontrolle."
+      : "Always editable. You stay in control of every word.";
   const heroTeacherUsageLine =
     language === "de"
       ? "Entwickelt fuer Lehrkraefte, die E-Mails an Eltern, Zeugnisformulierungen und andere sensible Schulkommunikation schreiben."
@@ -287,12 +290,12 @@ export function HomePageClient() {
         ];
   const betaFeedbackHeading =
     language === "de"
-      ? "Feedback von Lehrkraeften folgt"
-      : "Teacher feedback is coming";
+      ? "Erste Rueckmeldungen von Lehrkraeften folgen bald"
+      : "Early teacher feedback coming soon";
   const betaFeedbackBody =
     language === "de"
-      ? "Wir sammeln gerade die ersten Rueckmeldungen. Echte Zitate erscheinen hier, sobald wir sie gesammelt haben. Trag dich in die Warteliste ein, wenn du zum Launch benachrichtigt werden moechtest."
-      : "We are collecting our first round of teacher feedback now. Real quotes will appear here as soon as they are collected. Join the waitlist if you want to be notified at launch.";
+      ? "Wir sammeln gerade die ersten Rueckmeldungen aus dem Pilotkreis. Echte Zitate erscheinen hier, sobald sie freigegeben sind. Trag dich in die Warteliste ein, wenn du zum Launch benachrichtigt werden moechtest."
+      : "We are gathering our first round of pilot teacher feedback now. Real quotes will appear here as soon as they are ready. Join the waitlist if you want to hear when access opens.";
   const betaFeedbackCta =
     language === "de" ? "Zur Warteliste" : "Join the waitlist";
   const trustPanelHeading =
@@ -370,6 +373,22 @@ export function HomePageClient() {
           "Difficult follow-up emails",
           "Escalation to families",
           "Emotionally charged messages",
+        ];
+  const recognitionHeading =
+    language === "de"
+      ? "Entwickelt fuer Lehrkraefte, die..."
+      : "Built for teachers who...";
+  const recognitionItems =
+    language === "de"
+      ? [
+          "E-Mails an Eltern dreimal umschreiben, bevor sie abgesendet werden.",
+          "befuerchten, dass eine Formulierung zu hart klingt oder eskalieren koennte.",
+          "Unterstuetzung wollen, ohne dass KI ihre Stimme uebernimmt.",
+        ]
+      : [
+          "rewrite parent emails three times before sending.",
+          "worry a message could sound too harsh or escalate.",
+          "want support, not AI taking over their voice.",
         ];
   const activeProofSection = heroProofSections[activeProofIndex];
 
@@ -673,7 +692,7 @@ export function HomePageClient() {
                           <button
                             type="button"
                             onClick={showPreviousProof}
-                            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#A78BFA] focus:ring-offset-2 focus:ring-offset-[#0B1120]"
+                            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/12 text-white shadow-[0_10px_30px_-18px_rgba(168,85,247,0.55)] transition-colors hover:bg-white/18 focus:outline-none focus:ring-2 focus:ring-[#A78BFA] focus:ring-offset-2 focus:ring-offset-[#0B1120]"
                             aria-label={
                               language === "de"
                                 ? "Vorheriges Beispiel anzeigen"
@@ -686,7 +705,7 @@ export function HomePageClient() {
                           <button
                             type="button"
                             onClick={showNextProof}
-                            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#A78BFA] focus:ring-offset-2 focus:ring-offset-[#0B1120]"
+                            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/12 text-white shadow-[0_10px_30px_-18px_rgba(168,85,247,0.55)] transition-colors hover:bg-white/18 focus:outline-none focus:ring-2 focus:ring-[#A78BFA] focus:ring-offset-2 focus:ring-offset-[#0B1120]"
                             aria-label={
                               language === "de"
                                 ? "Naechstes Beispiel anzeigen"
@@ -702,7 +721,7 @@ export function HomePageClient() {
 
                     <section
                       id="hero-proof-slide"
-                      className="mt-5 rounded-[22px] border border-white/10 bg-[#0F172A]/80 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
+                      className="mt-5 min-h-[34rem] rounded-[22px] border border-white/10 bg-[#0F172A]/80 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:min-h-[31rem] lg:min-h-[24rem]"
                       aria-live="polite"
                     >
                       <div className="flex flex-wrap items-start justify-between gap-3">
@@ -724,10 +743,10 @@ export function HomePageClient() {
                       <div className="mt-4 grid gap-3 sm:grid-cols-2">
                         <article className="rounded-[18px] border border-white/10 bg-[#111827] p-3.5 sm:p-4">
                           <div className="flex items-center justify-between gap-3">
-                            <div className="inline-flex items-center gap-2 rounded-full border border-rose-500/20 bg-rose-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-rose-200">
+                            <div className="inline-flex items-center gap-2 rounded-full border border-rose-500/25 bg-rose-500/12 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-rose-100">
                               <span>{heroBeforeLabel}</span>
                             </div>
-                            <span className="text-[11px] font-medium uppercase tracking-[0.16em] text-[#94A3B8]">
+                            <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#CBD5E1]">
                               {heroBeforeMeta}
                             </span>
                           </div>
@@ -738,10 +757,10 @@ export function HomePageClient() {
 
                         <article className="rounded-[18px] border border-emerald-400/20 bg-[linear-gradient(180deg,rgba(17,24,39,0.98),rgba(15,23,42,0.94))] p-3.5 shadow-[0_24px_70px_-42px_rgba(16,185,129,0.35)] ring-1 ring-white/5 sm:p-4">
                           <div className="flex items-center justify-between gap-3">
-                            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-emerald-200">
+                            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/25 bg-emerald-400/12 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-emerald-100">
                               <span>{heroAfterLabel}</span>
                             </div>
-                            <span className="text-[11px] font-medium uppercase tracking-[0.16em] text-[#C4B5FD]">
+                            <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#E9D5FF]">
                               {heroAfterMeta}
                             </span>
                           </div>
@@ -760,22 +779,25 @@ export function HomePageClient() {
                         {heroProofCaption}
                       </p>
                       <div
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-3"
                         aria-label={
                           language === "de"
                             ? "Karussell-Paginierung"
                             : "Carousel pagination"
                         }
                       >
+                        <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#CBD5E1]">
+                          {heroProofBrowseLabel}
+                        </span>
                         {heroProofSections.map((section, index) => (
                           <button
                             key={section.title}
                             type="button"
                             onClick={() => setActiveProofIndex(index)}
-                            className={`h-2.5 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-[#A78BFA] focus:ring-offset-2 focus:ring-offset-[#0B1120] ${
+                            className={`h-3 rounded-full border transition-all focus:outline-none focus:ring-2 focus:ring-[#A78BFA] focus:ring-offset-2 focus:ring-offset-[#0B1120] ${
                               activeProofIndex === index
-                                ? "w-7 bg-[#A78BFA]"
-                                : "w-2.5 bg-white/20 hover:bg-white/35"
+                                ? "w-8 border-[#C4B5FD] bg-[#A78BFA] shadow-[0_0_18px_rgba(167,139,250,0.45)]"
+                                : "w-3 border-white/30 bg-white/20 hover:bg-white/35"
                             }`}
                             aria-label={
                               language === "de"
@@ -828,7 +850,7 @@ export function HomePageClient() {
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-purple-600/5 rounded-full blur-3xl -z-10"></div>
       </section>
 
-      <section className="relative overflow-hidden border-t border-white/5 bg-[#0F172A] py-16 md:py-20">
+      <section className="relative overflow-hidden border-t border-white/5 bg-[#0F172A] py-14 md:py-16">
         <div className="absolute inset-x-0 top-0 h-32 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.12),transparent_60%)]" />
         <div className="mx-auto max-w-5xl px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(30,41,59,0.92),rgba(15,23,42,0.98))] p-8 shadow-[0_30px_80px_-48px_rgba(15,23,42,0.95)] ring-1 ring-white/5 md:p-10">
@@ -874,7 +896,7 @@ export function HomePageClient() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#1E293B] py-20 md:py-28">
+      <section className="relative overflow-hidden bg-[#1E293B] py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
           <motion.p
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
@@ -946,7 +968,7 @@ export function HomePageClient() {
       </section>
 
       {/* Solution/Mission Statement Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E1B4B] to-[#0F172A] py-20 md:py-28">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E1B4B] to-[#0F172A] py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
           <motion.h2
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
@@ -981,7 +1003,7 @@ export function HomePageClient() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-[#0F172A] py-20">
+      <section className="bg-[#0F172A] py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
             {[
@@ -1028,7 +1050,7 @@ export function HomePageClient() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] py-24">
+      <section className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.h2
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
@@ -1148,6 +1170,33 @@ export function HomePageClient() {
         </div>
       </section>
 
+      <section className="bg-[#0F172A] py-14 md:py-16">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
+          <div className="rounded-[28px] border border-white/10 bg-white/[0.03] p-5 shadow-[0_24px_70px_-52px_rgba(15,23,42,0.95)] md:p-6">
+            <div className="max-w-2xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#A78BFA]">
+                {recognitionHeading}
+              </p>
+              <p className="mt-3 text-sm leading-6 text-[#94A3B8]">
+                {language === "de"
+                  ? "Zaza Draft ist fuer die Kommunikation gedacht, die zu oft im Entwurf stecken bleibt."
+                  : "Zaza Draft is for the communication that too often gets stuck in drafts."}
+              </p>
+            </div>
+            <div className="mt-5 grid gap-3 md:grid-cols-3">
+              {recognitionItems.map((item) => (
+                <article
+                  key={item}
+                  className="rounded-2xl border border-white/8 bg-[#111827]/70 px-4 py-4 text-sm leading-6 text-[#E2E8F0]"
+                >
+                  {item}
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Demo Section */}
       <section id="demo">
         <DraftDemo
@@ -1160,7 +1209,7 @@ export function HomePageClient() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] py-24">
+      <section className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.h2
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
@@ -1237,7 +1286,7 @@ export function HomePageClient() {
       <CaseStudyCarousel />
 
       {/* Comparison Section */}
-      <section className="bg-[#0F172A] py-24">
+      <section className="bg-[#0F172A] py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
@@ -1351,7 +1400,7 @@ export function HomePageClient() {
       </section>
 
       {/* Why Choose Zaza Section */}
-      <section className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] py-24">
+      <section className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.h2
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
@@ -1406,7 +1455,7 @@ export function HomePageClient() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-[#0F172A] py-24">
+      <section className="bg-[#0F172A] py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.h2
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
@@ -1436,7 +1485,7 @@ export function HomePageClient() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] py-24">
+      <section className="bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <motion.h2
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
