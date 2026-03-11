@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { SignupModal } from "@/components/signup-modal";
-import { useState } from "react";
+import { useState, type KeyboardEvent } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { track } from "@/lib/analytics";
 import { DraftDemo } from "@/components/draft-demo";
@@ -143,6 +143,7 @@ export function HomePageClient() {
   const [signupOpen, setSignupOpen] = useState(false);
   const [showHallucinationTooltip, setShowHallucinationTooltip] =
     useState(false);
+  const [activeProofIndex, setActiveProofIndex] = useState(0);
   const prefersReducedMotion = useReducedMotion();
   const earlyAccessHref =
     language === "de" ? "/de/early-access" : "/early-access";
@@ -181,8 +182,8 @@ export function HomePageClient() {
       : "See how rough wording becomes clearer, calmer, and safer to send.";
   const heroProofFrameLine =
     language === "de"
-      ? "Gebaut fuer Nachrichten, die Lehrkraefte nur ungern absenden."
-      : "Built for the messages teachers hesitate to send.";
+      ? "Die Nachrichten, die Lehrkraefte nur ungern absenden."
+      : "The messages teachers hesitate to send.";
   const heroBeforeLabel = language === "de" ? "Vorher" : "Before";
   const heroAfterLabel = language === "de" ? "Nachher" : "After";
   const heroBeforeMeta =
@@ -264,6 +265,10 @@ export function HomePageClient() {
     language === "de"
       ? "Schreibe jeden Monat bis zu 10 Nachrichten kostenlos. Keine Verpflichtung."
       : "Write up to 10 messages free each month. No commitment.";
+  const heroCtaReassuranceLine =
+    language === "de"
+      ? "Du pruefst und gibst jede Nachricht selbst frei."
+      : "You review and approve every message before it is sent.";
   const heroTeacherUsageLine =
     language === "de"
       ? "Entwickelt fuer Lehrkraefte, die E-Mails an Eltern, Zeugnisformulierungen und andere sensible Schulkommunikation schreiben."
@@ -366,6 +371,31 @@ export function HomePageClient() {
           "Escalation to families",
           "Emotionally charged messages",
         ];
+  const activeProofSection = heroProofSections[activeProofIndex];
+
+  const showPreviousProof = () => {
+    setActiveProofIndex((current) =>
+      current === 0 ? heroProofSections.length - 1 : current - 1,
+    );
+  };
+
+  const showNextProof = () => {
+    setActiveProofIndex((current) =>
+      current === heroProofSections.length - 1 ? 0 : current + 1,
+    );
+  };
+
+  const handleProofCarouselKeyDown = (event: KeyboardEvent<HTMLElement>) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showPreviousProof();
+    }
+
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showNextProof();
+    }
+  };
 
   const scrollToDemo = () => {
     track("cta_click_home_see_examples", { language });
@@ -375,9 +405,9 @@ export function HomePageClient() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[#0F172A] pt-32 lg:pt-40 pb-20 md:pb-28">
+      <section className="relative overflow-hidden bg-[#0F172A] pt-12 md:pt-16 lg:pt-20 pb-16 md:pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-8 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[57%_43%] lg:gap-12">
             <div className="text-center lg:text-left space-y-8">
               <motion.div
                 initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
@@ -485,7 +515,7 @@ export function HomePageClient() {
                 transition={{ duration: 0.5, delay: 0.48, ease: "easeOut" }}
                 className="text-sm text-[#94A3B8] leading-relaxed max-w-[600px] mx-auto lg:mx-0"
               >
-                {t("hero.earlyAccessLine")}
+                {heroCtaReassuranceLine}
               </motion.p>
 
               <motion.div
@@ -595,114 +625,170 @@ export function HomePageClient() {
             </div>
 
             <motion.div
-              className="w-full lg:h-[600px]"
+              className="w-full pt-4 md:pt-6 lg:pt-8"
               initial={prefersReducedMotion ? {} : { opacity: 0, x: 30 }}
-              animate={
-                prefersReducedMotion
-                  ? { opacity: 1 }
-                  : {
-                      opacity: 1,
-                      x: 0,
-                      y: [0, -6, 0],
-                    }
-              }
+              animate={{ opacity: 1, x: 0 }}
               transition={
                 prefersReducedMotion
                   ? { duration: 0.8, delay: 0.3 }
                   : {
                       opacity: { duration: 0.8, delay: 0.3, ease: "easeOut" },
                       x: { duration: 0.8, delay: 0.3, ease: "easeOut" },
-                      y: {
-                        duration: 6,
-                        repeat: Number.POSITIVE_INFINITY,
-                        ease: "easeInOut",
-                        delay: 1,
-                      },
                     }
               }
             >
-              <div className="relative mx-auto flex h-full max-w-[540px] items-center">
-                <div className="absolute inset-x-8 inset-y-10 rounded-[32px] bg-gradient-to-br from-[#A855F7]/35 via-[#1E1B4B]/20 to-[#EC4899]/30 blur-3xl" />
-                <div className="relative w-full overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.045] p-4 shadow-[0_35px_120px_-45px_rgba(168,85,247,0.65)] backdrop-blur-xl sm:p-5">
-                  <div className="rounded-[24px] border border-white/10 bg-[#0B1120]/95 p-4 sm:p-5">
-                    <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="relative mx-auto max-w-[500px] xl:max-w-[520px]">
+                <div className="absolute inset-x-8 inset-y-8 rounded-[28px] bg-gradient-to-br from-[#A855F7]/28 via-[#1E1B4B]/18 to-[#EC4899]/22 blur-3xl" />
+                <div className="relative w-full overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] p-3 shadow-[0_28px_90px_-50px_rgba(168,85,247,0.55)] backdrop-blur-xl sm:p-4">
+                  <section
+                    className="rounded-[22px] border border-white/10 bg-[#0B1120]/95 p-4 sm:p-5"
+                    role="region"
+                    aria-roledescription="carousel"
+                    aria-label={heroProofLabel}
+                    aria-describedby="hero-proof-caption"
+                    tabIndex={0}
+                    onKeyDown={handleProofCarouselKeyDown}
+                  >
+                    <div className="flex flex-wrap items-start justify-between gap-4">
                       <div>
                         <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#A78BFA]">
                           {heroOutcomeLabel}
                         </p>
-                        <h2 className="mt-2 text-lg font-semibold text-white sm:text-xl">
+                        <h2 className="mt-2 max-w-[420px] text-lg font-semibold text-white sm:text-xl">
                           {heroProofLabel}
                         </h2>
                         <p className="mt-2 text-xs uppercase tracking-[0.22em] text-[#A78BFA]">
                           {heroProofFrameLine}
                         </p>
-                        <p className="mt-2 max-w-[440px] text-sm leading-6 text-[#94A3B8]">
+                        <p className="mt-2 max-w-[420px] text-sm leading-6 text-[#94A3B8]">
                           {heroProofIntro}
                         </p>
                       </div>
-                      <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-[#CBD5E1]">
-                        <CheckCircleIcon className="h-4 w-4 text-emerald-400" />
-                        <span>{heroAfterMeta}</span>
+                      <div className="flex items-center gap-2">
+                        <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-[#CBD5E1]">
+                          <CheckCircleIcon className="h-4 w-4 text-emerald-400" />
+                          <span>{heroAfterMeta}</span>
+                        </div>
+                        <div className="inline-flex items-center gap-2">
+                          <button
+                            type="button"
+                            onClick={showPreviousProof}
+                            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#A78BFA] focus:ring-offset-2 focus:ring-offset-[#0B1120]"
+                            aria-label={
+                              language === "de"
+                                ? "Vorheriges Beispiel anzeigen"
+                                : "Show previous example"
+                            }
+                            aria-controls="hero-proof-slide"
+                          >
+                            <ArrowRight className="h-4 w-4 rotate-180" />
+                          </button>
+                          <button
+                            type="button"
+                            onClick={showNextProof}
+                            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#A78BFA] focus:ring-offset-2 focus:ring-offset-[#0B1120]"
+                            aria-label={
+                              language === "de"
+                                ? "Naechstes Beispiel anzeigen"
+                                : "Show next example"
+                            }
+                            aria-controls="hero-proof-slide"
+                          >
+                            <ArrowRight className="h-4 w-4" />
+                          </button>
+                        </div>
                       </div>
                     </div>
 
-                    <div className="mt-5 space-y-4">
-                      {heroProofSections.map((section) => (
-                        <section
-                          key={section.title}
-                          className="rounded-[22px] border border-white/10 bg-[#0F172A]/80 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
-                        >
-                          <div className="flex flex-wrap items-center justify-between gap-3">
-                            <div>
-                              <h3 className="text-sm font-semibold text-white sm:text-base">
-                                {section.title}
-                              </h3>
-                              <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[#64748B]">
-                                {section.context}
-                              </p>
-                            </div>
-                            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-[#CBD5E1]">
-                              <CheckCircleIcon className="h-4 w-4 text-emerald-400" />
-                              <span>{heroAfterMeta}</span>
-                            </div>
-                          </div>
+                    <section
+                      id="hero-proof-slide"
+                      className="mt-5 rounded-[22px] border border-white/10 bg-[#0F172A]/80 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
+                      aria-live="polite"
+                    >
+                      <div className="flex flex-wrap items-start justify-between gap-3">
+                        <div>
+                          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#C4B5FD]">
+                            {activeProofSection.title}
+                          </p>
+                          <h3 className="mt-2 text-base font-semibold text-white sm:text-lg">
+                            {activeProofSection.context}
+                          </h3>
+                        </div>
+                        <p className="text-xs text-[#94A3B8]">
+                          {language === "de"
+                            ? `Beispiel ${activeProofIndex + 1} von ${heroProofSections.length}`
+                            : `Example ${activeProofIndex + 1} of ${heroProofSections.length}`}
+                        </p>
+                      </div>
 
-                          <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                            <article className="rounded-[20px] border border-white/10 bg-[#111827] p-4">
-                              <div className="flex items-center justify-between gap-3">
-                                <div className="inline-flex items-center gap-2 rounded-full border border-rose-500/20 bg-rose-500/10 px-3 py-1 text-xs font-medium text-rose-200">
-                                  <span>{heroBeforeLabel}</span>
-                                </div>
-                                <span className="text-xs text-[#94A3B8]">
-                                  {heroBeforeMeta}
-                                </span>
-                              </div>
-                              <p className="mt-4 text-sm leading-7 text-[#CBD5E1] sm:text-[15px]">
-                                {section.before}
-                              </p>
-                            </article>
-
-                            <article className="rounded-[20px] border border-emerald-400/20 bg-[linear-gradient(180deg,rgba(17,24,39,0.98),rgba(15,23,42,0.94))] p-4 shadow-[0_24px_70px_-36px_rgba(16,185,129,0.35)] ring-1 ring-white/5">
-                              <div className="flex items-center justify-between gap-3">
-                                <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-200">
-                                  <span>{heroAfterLabel}</span>
-                                </div>
-                                <span className="text-xs text-[#C4B5FD]">
-                                  {heroAfterMeta}
-                                </span>
-                              </div>
-                              <p className="mt-4 text-sm leading-7 text-white sm:text-[15px]">
-                                {section.after}
-                              </p>
-                            </article>
+                      <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                        <article className="rounded-[18px] border border-white/10 bg-[#111827] p-3.5 sm:p-4">
+                          <div className="flex items-center justify-between gap-3">
+                            <div className="inline-flex items-center gap-2 rounded-full border border-rose-500/20 bg-rose-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-rose-200">
+                              <span>{heroBeforeLabel}</span>
+                            </div>
+                            <span className="text-[11px] font-medium uppercase tracking-[0.16em] text-[#94A3B8]">
+                              {heroBeforeMeta}
+                            </span>
                           </div>
-                        </section>
-                      ))}
+                          <p className="mt-3 text-sm leading-7 text-[#CBD5E1]">
+                            {activeProofSection.before}
+                          </p>
+                        </article>
+
+                        <article className="rounded-[18px] border border-emerald-400/20 bg-[linear-gradient(180deg,rgba(17,24,39,0.98),rgba(15,23,42,0.94))] p-3.5 shadow-[0_24px_70px_-42px_rgba(16,185,129,0.35)] ring-1 ring-white/5 sm:p-4">
+                          <div className="flex items-center justify-between gap-3">
+                            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-emerald-200">
+                              <span>{heroAfterLabel}</span>
+                            </div>
+                            <span className="text-[11px] font-medium uppercase tracking-[0.16em] text-[#C4B5FD]">
+                              {heroAfterMeta}
+                            </span>
+                          </div>
+                          <p className="mt-3 text-sm leading-7 text-white">
+                            {activeProofSection.after}
+                          </p>
+                        </article>
+                      </div>
+                    </section>
+
+                    <div className="mt-4 flex items-center justify-between gap-4">
+                      <p
+                        id="hero-proof-caption"
+                        className="text-sm text-[#94A3B8]"
+                      >
+                        {heroProofCaption}
+                      </p>
+                      <div
+                        className="flex items-center gap-2"
+                        aria-label={
+                          language === "de"
+                            ? "Karussell-Paginierung"
+                            : "Carousel pagination"
+                        }
+                      >
+                        {heroProofSections.map((section, index) => (
+                          <button
+                            key={section.title}
+                            type="button"
+                            onClick={() => setActiveProofIndex(index)}
+                            className={`h-2.5 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-[#A78BFA] focus:ring-offset-2 focus:ring-offset-[#0B1120] ${
+                              activeProofIndex === index
+                                ? "w-7 bg-[#A78BFA]"
+                                : "w-2.5 bg-white/20 hover:bg-white/35"
+                            }`}
+                            aria-label={
+                              language === "de"
+                                ? `Beispiel ${index + 1} anzeigen`
+                                : `Show example ${index + 1}`
+                            }
+                            aria-current={
+                              activeProofIndex === index ? "true" : "false"
+                            }
+                          />
+                        ))}
+                      </div>
                     </div>
-
-                    <p className="mt-4 text-sm text-[#94A3B8]">
-                      {heroProofCaption}
-                    </p>
                     <p className="mt-2 text-sm text-[#CBD5E1]">
                       {heroMentalLoadLine}
                     </p>
@@ -731,7 +817,7 @@ export function HomePageClient() {
                         ))}
                       </div>
                     </div>
-                  </div>
+                  </section>
                 </div>
               </div>
             </motion.div>
