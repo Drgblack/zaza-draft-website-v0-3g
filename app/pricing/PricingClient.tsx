@@ -1,14 +1,21 @@
 ﻿"use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { Check, ChevronDown, Star, ShieldCheck, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { SignupModal } from "@/components/signup-modal";
 import { motion, AnimatePresence } from "framer-motion";
 import { track } from "@/lib/analytics";
-
-type Currency = "EUR" | "USD" | "GBP";
+import {
+  buildStripeCheckoutPath,
+  departmentDisplayAmounts,
+  pricingConfig,
+  type PricingCurrency,
+  type SelfServeInterval,
+  SUPPORTED_CURRENCIES,
+} from "@/config/pricing";
 
 const currencySymbols = {
   EUR: "€",
@@ -16,30 +23,28 @@ const currencySymbols = {
   GBP: "£",
 };
 
-const prices = {
-  teacher: {
-    monthly: { EUR: "14.99", USD: "16", GBP: "13" },
-    annual: { EUR: "149", USD: "160", GBP: "130" },
-  },
-  department: {
-    monthly: { EUR: "8", USD: "9", GBP: "7" },
-  },
-  bundle: {
-    monthly: { EUR: "24.99", USD: "27", GBP: "22" },
-    annual: { EUR: "249", USD: "270", GBP: "220" },
-  },
-};
-
 export default function PricingClient() {
   const { t, language } = useLanguage();
-  const [billingPeriod, setBillingPeriod] = useState<"monthly" | "annual">(
-    "monthly",
-  );
-  const [currency, setCurrency] = useState<Currency>("EUR");
+  const pathname = usePathname();
+  const [billingInterval, setBillingInterval] =
+    useState<SelfServeInterval>("monthly");
+  const [currency, setCurrency] = useState<PricingCurrency>("EUR");
   const [signupOpen, setSignupOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const symbol = currencySymbols[currency];
+  const draftCheckoutHref = buildStripeCheckoutPath({
+    plan: "draft",
+    interval: billingInterval,
+    currency,
+    returnPath: pathname === "/de/pricing" ? pathname : "/pricing",
+  });
+  const bundleCheckoutHref = buildStripeCheckoutPath({
+    plan: "bundle",
+    interval: billingInterval,
+    currency,
+    returnPath: pathname === "/de/pricing" ? pathname : "/pricing",
+  });
   const comparisonRows = [
     {
       feature: t("pricing.compare.rows.purpose.feature"),
@@ -72,33 +77,12 @@ export default function PricingClient() {
       zaza: t("pricing.compare.rows.cost.zaza"),
     },
   ];
-  const teacherCheckoutUrl = process.env.NEXT_PUBLIC_CHECKOUT_URL_DRAFT_MONTHLY;
-  const bundleCheckoutUrl = process.env.NEXT_PUBLIC_CHECKOUT_URL_DRAFT_BUNDLE;
   const departmentCheckoutUrl =
     process.env.NEXT_PUBLIC_CHECKOUT_URL_DRAFT_DEPARTMENT;
   const enterpriseCheckoutUrl =
     process.env.NEXT_PUBLIC_CHECKOUT_URL_DRAFT_ENTERPRISE;
-
-  const buildCheckoutHref = (
-    url: string | undefined,
-    subject: string,
-    fallbackEmail = "help@zazatechnologies.com",
-  ) =>
-    url && url.trim().length > 0
-      ? url
-      : `mailto:${fallbackEmail}?subject=${encodeURIComponent(subject)}`;
-
-  const teacherCheckoutHref = buildCheckoutHref(
-    teacherCheckoutUrl,
-    language === "de"
-      ? "Zaza Draft Abonnement"
-      : "Zaza Draft subscription",
-  );
-  const bundleCheckoutHref = buildCheckoutHref(
-    bundleCheckoutUrl,
-    language === "de" ? "Zaza Draft Bundle" : "Zaza Draft bundle",
-  );
-  const salesMailto = "mailto:hello@zazatechnologies.com?subject=Zaza%20Draft%20-%20Sales%20Enquiry";
+  const salesMailto =
+    "mailto:hello@zazatechnologies.com?subject=Zaza%20Draft%20-%20Sales%20Enquiry";
   const departmentCheckoutHref = departmentCheckoutUrl || salesMailto;
   const enterpriseCheckoutHref = enterpriseCheckoutUrl || salesMailto;
   const trackPricingCTA = (id: string) =>
@@ -108,7 +92,7 @@ export default function PricingClient() {
     trackPricingCTA(`plan_${planId}`);
     track("cta_click_pricing_select_plan", {
       planId,
-      billingCycle: billingPeriod,
+      billingCycle: billingInterval,
       currency,
       language,
     });
@@ -197,7 +181,7 @@ export default function PricingClient() {
               {/* Currency Selector */}
               <div className="flex items-center gap-2 bg-[#1E293B] rounded-lg p-1">
                 <Globe className="w-4 h-4 text-[#94A3B8] ml-2" />
-                {(["EUR", "USD", "GBP"] as Currency[]).map((curr) => (
+                {SUPPORTED_CURRENCIES.map((curr) => (
                   <button
                     key={curr}
                     onClick={() => setCurrency(curr)}
@@ -215,9 +199,9 @@ export default function PricingClient() {
               {/* Billing Period Toggle */}
               <div className="flex items-center gap-2 bg-[#1E293B] rounded-lg p-1">
                 <button
-                  onClick={() => setBillingPeriod("monthly")}
+                  onClick={() => setBillingInterval("monthly")}
                   className={`px-6 py-2 rounded-md text-sm font-semibold transition-all ${
-                    billingPeriod === "monthly"
+                    billingInterval === "monthly"
                       ? "bg-[#8B5CF6] text-white"
                       : "text-[#94A3B8] hover:text-white"
                   }`}
@@ -225,15 +209,15 @@ export default function PricingClient() {
                   {t("pricing.toggle.monthly")}
                 </button>
                 <button
-                  onClick={() => setBillingPeriod("annual")}
+                  onClick={() => setBillingInterval("yearly")}
                   className={`px-6 py-2 rounded-md text-sm font-semibold transition-all relative ${
-                    billingPeriod === "annual"
+                    billingInterval === "yearly"
                       ? "bg-[#8B5CF6] text-white"
                       : "text-[#94A3B8] hover:text-white"
                   }`}
                 >
                   {t("pricing.toggle.annual")}
-                  {billingPeriod === "annual" && (
+                  {billingInterval === "yearly" && (
                     <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-xs bg-green-500 text-white px-2 py-0.5 rounded whitespace-nowrap">
                       {t("pricing.toggle.save")}
                     </span>
@@ -335,7 +319,7 @@ export default function PricingClient() {
 
               <AnimatePresence mode="wait">
                 <motion.div
-                  key={`${billingPeriod}-${currency}`}
+                  key={`${billingInterval}-${currency}`}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
@@ -343,42 +327,39 @@ export default function PricingClient() {
                 >
                   <span className="text-5xl font-bold text-white">
                     {symbol}
-                    {billingPeriod === "monthly"
-                      ? prices.teacher.monthly[currency]
-                      : prices.teacher.annual[currency]}
+                    {
+                      pricingConfig.draft.displayAmounts[billingInterval][
+                        currency
+                      ]
+                    }
                   </span>
                   <span className="text-[#94A3B8]">
-                    /{billingPeriod === "monthly" ? "mo" : "yr"}
+                    /{billingInterval === "monthly" ? "mo" : "yr"}
                   </span>
                 </motion.div>
               </AnimatePresence>
 
-              {billingPeriod === "annual" && (
+              {billingInterval === "yearly" && (
                 <p className="text-sm text-green-500 font-semibold mb-4">
                   {t("pricing.teacher.savingsAnnual")}
                 </p>
               )}
 
-                <Button
-                  asChild
-                  onClick={() => {
-                    trackPricingCTA("checkout_teacher");
-                    track("cta_click_pricing_checkout_teacher", {
-                      billingCycle: billingPeriod,
-                      currency,
-                      language,
-                      hasCheckoutUrl: Boolean(teacherCheckoutUrl),
-                    });
-                  }}
-                  className="w-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white hover:scale-105 py-6 text-lg font-semibold rounded-lg mb-3 shadow-lg shadow-[#8B5CF6]/40 transition-transform"
-                >
-                <a
-                  href={teacherCheckoutHref}
-                  target={teacherCheckoutUrl ? "_blank" : undefined}
-                  rel={teacherCheckoutUrl ? "noreferrer" : undefined}
-                >
-                  {t("pricing.checkout.buyNow")}
-                </a>
+              <Button
+                asChild
+                onClick={() => {
+                  trackPricingCTA("checkout_teacher");
+                  track("cta_click_pricing_checkout_teacher", {
+                    billingCycle: billingInterval,
+                    currency,
+                    language,
+                    stripePriceId:
+                      pricingConfig.draft.stripePriceIds[billingInterval],
+                  });
+                }}
+                className="w-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white hover:scale-105 py-6 text-lg font-semibold rounded-lg mb-3 shadow-lg shadow-[#8B5CF6]/40 transition-transform"
+              >
+                <a href={draftCheckoutHref}>{t("pricing.checkout.buyNow")}</a>
               </Button>
               <p className="text-center text-sm text-[#94A3B8] mb-4">
                 {t("pricing.teacher.trial")}
@@ -429,7 +410,7 @@ export default function PricingClient() {
               <div className="mb-2">
                 <span className="text-5xl font-bold text-white">
                   {symbol}
-                  {prices.department.monthly[currency]}
+                  {departmentDisplayAmounts.monthly[currency]}
                 </span>
                 <span className="text-[#94A3B8]">
                   {t("pricing.department.perTeacher")}
@@ -558,17 +539,19 @@ export default function PricingClient() {
                 <div className="flex items-baseline gap-3 mb-6">
                   <span className="text-6xl font-bold text-white">
                     {symbol}
-                    {billingPeriod === "monthly"
-                      ? prices.bundle.monthly[currency]
-                      : prices.bundle.annual[currency]}
+                    {
+                      pricingConfig.bundle.displayAmounts[billingInterval][
+                        currency
+                      ]
+                    }
                   </span>
                   <span className="text-white/80 text-xl">
-                    {billingPeriod === "monthly"
+                    {billingInterval === "monthly"
                       ? t("pricing.bundle.perMonth")
                       : t("pricing.bundle.perYear")}
                   </span>
                 </div>
-                {billingPeriod === "annual" && (
+                {billingInterval === "yearly" && (
                   <p className="text-white/90 mb-6">
                     {t("pricing.bundle.savings")}
                   </p>
@@ -578,19 +561,16 @@ export default function PricingClient() {
                   onClick={() => {
                     trackPricingCTA("checkout_bundle");
                     track("cta_click_pricing_checkout_bundle", {
-                      billingCycle: billingPeriod,
+                      billingCycle: billingInterval,
                       currency,
                       language,
-                      hasCheckoutUrl: Boolean(bundleCheckoutUrl),
+                      stripePriceId:
+                        pricingConfig.bundle.stripePriceIds[billingInterval],
                     });
                   }}
                   className="bg-white text-[#8B5CF6] hover:bg-white/90 py-6 px-8 text-lg font-semibold rounded-lg shadow-lg"
                 >
-                  <a
-                    href={bundleCheckoutHref}
-                    target={bundleCheckoutUrl ? "_blank" : undefined}
-                    rel={bundleCheckoutUrl ? "noreferrer" : undefined}
-                  >
+                  <a href={bundleCheckoutHref}>
                     {t("pricing.checkout.buyNow")}
                   </a>
                 </Button>
@@ -613,7 +593,9 @@ export default function PricingClient() {
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="bg-white/5 text-sm text-[#E2E8F0] uppercase tracking-wide">
-                    <th className="text-left px-6 py-4">{t("pricing.compare.column.generic")}</th>
+                    <th className="text-left px-6 py-4">
+                      {t("pricing.compare.column.generic")}
+                    </th>
                     <th className="text-left px-6 py-4 bg-[#8B5CF6]/10 text-[#C4B5FD]">
                       {t("pricing.compare.column.zaza")}
                     </th>
@@ -629,13 +611,17 @@ export default function PricingClient() {
                         <div className="text-xs font-semibold text-[#94A3B8] uppercase tracking-wide">
                           {row.feature}
                         </div>
-                        <div className="mt-2 text-sm text-[#E2E8F0]">{row.generic}</div>
+                        <div className="mt-2 text-sm text-[#E2E8F0]">
+                          {row.generic}
+                        </div>
                       </td>
                       <td className="px-6 py-5 align-top bg-[#0F172A]">
                         <div className="text-xs font-semibold text-[#C4B5FD] uppercase tracking-wide">
                           {row.feature}
                         </div>
-                        <div className="mt-2 text-sm text-white">{row.zaza}</div>
+                        <div className="mt-2 text-sm text-white">
+                          {row.zaza}
+                        </div>
                       </td>
                     </tr>
                   ))}
@@ -645,8 +631,13 @@ export default function PricingClient() {
 
             <div className="grid gap-4 md:hidden">
               {comparisonRows.map((row) => (
-                <div key={row.feature} className="rounded-xl border border-white/10 bg-[#0B1220] p-5 space-y-3">
-                  <div className="text-sm font-semibold text-[#E2E8F0]">{row.feature}</div>
+                <div
+                  key={row.feature}
+                  className="rounded-xl border border-white/10 bg-[#0B1220] p-5 space-y-3"
+                >
+                  <div className="text-sm font-semibold text-[#E2E8F0]">
+                    {row.feature}
+                  </div>
                   <div className="rounded-lg border border-white/5 bg-[#111827] p-3 text-sm text-[#CBD5E1]">
                     <span className="block text-xs font-semibold text-[#9CA3AF] mb-1">
                       {t("pricing.compare.column.generic")}
@@ -663,7 +654,9 @@ export default function PricingClient() {
               ))}
             </div>
 
-            <p className="mt-6 text-center text-sm text-[#94A3B8]">{t("pricing.compare.footer")}</p>
+            <p className="mt-6 text-center text-sm text-[#94A3B8]">
+              {t("pricing.compare.footer")}
+            </p>
           </div>
         </section>
 
@@ -756,9 +749,9 @@ export default function PricingClient() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   onClick={() => {
-                    trackPricingCTA("cta_primary")
-                    track("cta_click_pricing_cta_primary", { language })
-                    setSignupOpen(true)
+                    trackPricingCTA("cta_primary");
+                    track("cta_click_pricing_cta_primary", { language });
+                    setSignupOpen(true);
                   }}
                   className="bg-white text-[#8B5CF6] hover:bg-white/90 py-6 px-8 text-lg font-semibold rounded-lg shadow-lg"
                 >
