@@ -31,6 +31,8 @@ const salesLabels = {
   },
 } as const;
 
+const teacherCountOptions = ["1-5", "6-20", "21-50", "51-200", "200+"] as const;
+
 function buildSalesMessage(plan: keyof typeof salesLabels, isGerman: boolean) {
   const planLabel = isGerman ? salesLabels[plan].de : salesLabels[plan].en;
 
@@ -119,23 +121,23 @@ export function ContactClient() {
     salesPlanParam === "general"
       ? salesPlanParam
       : "general";
-  const isSalesInquiry = intent === "sales";
-  const contactTitle = isSalesInquiry
+  const isPricingSalesInquiry = intent === "sales" && topic === "pricing";
+  const contactTitle = isPricingSalesInquiry
     ? isGerman
-      ? "Mit dem Vertrieb sprechen"
-      : "Talk to Sales"
+      ? "Mit dem Vertrieb über Schulzugang sprechen"
+      : "Talk to sales about school access"
     : t.contact.title;
-  const contactSubtitle = isSalesInquiry
+  const contactSubtitle = isPricingSalesInquiry
     ? isGerman
-      ? "Teilen Sie uns kurz mit, woran Sie interessiert sind. Wir melden uns zu Preisen, Onboarding und Schul- oder Bezirksbereitstellung."
-      : "Tell us what you need and we will follow up on pricing, onboarding, and school or district rollout."
+      ? "Teilen Sie uns kurz etwas über Ihre Schule oder Ihr Team mit, und wir melden uns mit dem besten nächsten Schritt."
+      : "Tell us a little about your school or team and we’ll get back to you with the best next step."
     : t.contact.subtitle;
-  const formSubmitLabel = isSalesInquiry
+  const formSubmitLabel = isPricingSalesInquiry
     ? isGerman
       ? "Sales-Anfrage senden"
       : "Send sales inquiry"
     : t.contact.form.submit;
-  const successMessage = isSalesInquiry
+  const successMessage = isPricingSalesInquiry
     ? isGerman
       ? "Danke. Unser Team meldet sich bald zu Ihrer Sales-Anfrage."
       : "Thanks. Our team will follow up on your sales inquiry shortly."
@@ -146,7 +148,10 @@ export function ContactClient() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: isSalesInquiry ? buildSalesMessage(salesPlan, isGerman) : "",
+    teacherCount: "",
+    message: isPricingSalesInquiry
+      ? buildSalesMessage(salesPlan, isGerman)
+      : "",
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -163,14 +168,15 @@ export function ContactClient() {
     setError("");
 
     try {
-      const submissionSource = isSalesInquiry
+      const submissionSource = isPricingSalesInquiry
         ? `pricing_sales_${salesPlan}`
         : source;
 
       console.info("[contact] submitting form", {
-        intent: isSalesInquiry ? "sales" : "support",
-        plan: isSalesInquiry ? salesPlan : "none",
+        intent: isPricingSalesInquiry ? "sales" : "support",
+        plan: isPricingSalesInquiry ? salesPlan : "none",
         topic: topic || "general",
+        teacherCount: formData.teacherCount || "unspecified",
         source: submissionSource,
       });
 
@@ -179,25 +185,30 @@ export function ContactClient() {
         name: formData.name,
         attributes: {
           MESSAGE: formData.message,
-          INTENT: isSalesInquiry ? "sales" : "support",
+          INTENT: isPricingSalesInquiry ? "sales" : "support",
           TOPIC: topic || "general",
-          PLAN: isSalesInquiry ? salesPlan : "general",
+          PLAN: isPricingSalesInquiry ? salesPlan : "general",
+          TEACHER_COUNT_RANGE: formData.teacherCount || "unspecified",
           LANGUAGE: language.toUpperCase(),
         },
         source: submissionSource,
       });
       track("form_submit", {
-        form: isSalesInquiry ? "sales_contact_form" : "contact_form",
+        form: isPricingSalesInquiry ? "sales_contact_form" : "contact_form",
         language,
-        plan: isSalesInquiry ? salesPlan : undefined,
+        plan: isPricingSalesInquiry ? salesPlan : undefined,
         topic: topic || undefined,
+        teacher_count_range: formData.teacherCount || undefined,
         source: submissionSource,
       });
       setSuccess(true);
       setFormData({
         name: "",
         email: "",
-        message: isSalesInquiry ? buildSalesMessage(salesPlan, isGerman) : "",
+        teacherCount: "",
+        message: isPricingSalesInquiry
+          ? buildSalesMessage(salesPlan, isGerman)
+          : "",
       });
       setTimeout(() => setSuccess(false), 5000);
     } catch (err) {
@@ -250,7 +261,7 @@ export function ContactClient() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  {isSalesInquiry && (
+                  {isPricingSalesInquiry && (
                     <div className="rounded-xl border border-purple-500/20 bg-purple-500/10 px-4 py-3 text-sm text-purple-100">
                       {isGerman
                         ? `Sales-Anfrage fuer: ${salesLabels[salesPlan].de}`
@@ -295,6 +306,44 @@ export function ContactClient() {
                     />
                   </div>
 
+                  {isPricingSalesInquiry && (
+                    <div>
+                      <label
+                        htmlFor="teacher-count"
+                        className="block text-sm font-medium text-gray-300 mb-2"
+                      >
+                        {isGerman
+                          ? "Wie viele Lehrkraefte benoetigen Zugang?"
+                          : "How many teachers would need access?"}
+                      </label>
+                      <select
+                        id="teacher-count"
+                        value={formData.teacherCount}
+                        onChange={(e) =>
+                          setFormData({
+                            ...formData,
+                            teacherCount: e.target.value,
+                          })
+                        }
+                        required
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      >
+                        <option value="" disabled className="text-gray-500">
+                          {isGerman ? "Bitte auswaehlen" : "Please select"}
+                        </option>
+                        {teacherCountOptions.map((option) => (
+                          <option
+                            key={option}
+                            value={option}
+                            className="text-black"
+                          >
+                            {option}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  )}
+
                   <div>
                     <label
                       htmlFor="message"
@@ -325,6 +374,14 @@ export function ContactClient() {
                     {loading ? t.contact.form.sending : formSubmitLabel}
                   </Button>
 
+                  {isPricingSalesInquiry && (
+                    <p className="text-sm text-center text-[#CBD5E1]">
+                      {isGerman
+                        ? "Keine Zahlung noetig - wir melden uns mit der besten naechsten Option fuer Ihr Team."
+                        : "No payment needed - we’ll reply with the best next option for your team."}
+                    </p>
+                  )}
+
                   <p className="text-sm text-gray-400 text-center">
                     {t.contact.form.dataNote}
                   </p>
@@ -334,7 +391,7 @@ export function ContactClient() {
 
             {/* Contact Info */}
             <div className="space-y-6">
-              {!isSalesInquiry && (
+              {!isPricingSalesInquiry && (
                 <div>
                   <h2 className="text-2xl font-bold text-white mb-6">
                     {t.contact.direct.title}
