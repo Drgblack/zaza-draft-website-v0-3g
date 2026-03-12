@@ -4,6 +4,7 @@ import { join } from "path";
 import { getGeneratedPageSitemapEntries } from "@/lib/generated-pages";
 import { getIndexControlDecision } from "@/lib/index-control";
 import { getReportPruneDecision } from "@/lib/report-prune";
+import { resolveCanonicalPath } from "@/lib/seo-canonical";
 import { teacherWritingPageSlugs } from "@/lib/seo/teacher-writing-pages";
 import { clusterSpokes } from "@/lib/seo/teacher-safe-ai-cluster";
 import { getRegionalTeacherWritingSlugs } from "@/lib/seo/regional-writing-pages";
@@ -351,6 +352,10 @@ function getConfidenceTier(source: string, path: string): ConfidenceTier {
 
 function isExcludedPath(path: string) {
   if (!path || path.includes("?")) {
+    return true;
+  }
+
+  if (resolveCanonicalPath(path) !== path) {
     return true;
   }
 

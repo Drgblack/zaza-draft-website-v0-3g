@@ -48,7 +48,7 @@ type RoutePattern = {
 };
 
 const REPO_ROOT = process.cwd();
-const SOURCE_ROOTS = ["app", "components", "content"] as const;
+const SOURCE_ROOTS = ["app", "components", "content", "lib"] as const;
 const SCAN_EXTENSIONS = new Set([".ts", ".tsx", ".js", ".jsx", ".md", ".mdx"]);
 const SKIP_DIRECTORIES = new Set([
   ".git",
@@ -98,6 +98,7 @@ const KNOWN_STALE_REPLACEMENTS: Record<string, string> = {
   "/de/learning-centre": "/de/ai-literacy",
   "/communication-diagnosis": "/diagnosis",
   "/how-to-reply-angry-parent": "/diagnosis",
+  "/state-of-ai-report": "/state-of-ai-education",
   "/compare-tools": "/compare",
   "/privacy-policy": "/privacy",
   "/terms-of-service": "/terms",

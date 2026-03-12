@@ -1,5 +1,5 @@
-﻿import { redirect } from 'next/navigation';
+import { permanentRedirect } from "next/navigation";
 
 export default function DeShim() {
-  redirect("/best-ai-writing-tools-for-teachers-2025");
+  permanentRedirect("/best-ai-writing-tools-for-teachers-2025");
 }

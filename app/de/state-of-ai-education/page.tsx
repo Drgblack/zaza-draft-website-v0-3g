@@ -1,5 +1,5 @@
-﻿import { redirect } from 'next/navigation';
+import { permanentRedirect } from "next/navigation";
 
 export default function DeShim() {
-  redirect("/state-of-ai-education");
+  permanentRedirect("/state-of-ai-education");
 }

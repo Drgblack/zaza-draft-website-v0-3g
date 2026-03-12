@@ -21,6 +21,75 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/learning-centre',
+        destination: '/ai-literacy',
+        permanent: true,
+      },
+      {
+        source: '/de/learning-centre',
+        destination: '/de/ai-literacy',
+        permanent: true,
+      },
+      {
+        source: '/communication-diagnosis',
+        destination: '/diagnosis',
+        permanent: true,
+      },
+      {
+        source: '/how-to-reply-angry-parent',
+        destination: '/diagnosis?issue=angry-parent-email&tone=de-escalate',
+        permanent: true,
+      },
+      {
+        source: '/behaviour-email-diagnosis',
+        destination:
+          '/diagnosis?issue=behaviour-concern&phase=primary&studentContext=behaviour-issues&tone=professional-but-empathetic',
+        permanent: true,
+      },
+      {
+        source: '/parent-ignores-email-help',
+        destination:
+          '/diagnosis?issue=parent-ignores-email&studentContext=behaviour-issues&tone=quick-reply',
+        permanent: true,
+      },
+      {
+        source: '/report-writing-stress-help',
+        destination:
+          '/diagnosis?issue=report-writing-stress&studentContext=struggling-academically&tone=detailed-report&phase=ks2',
+        permanent: true,
+      },
+      {
+        source: '/slt-documentation-help',
+        destination:
+          '/diagnosis?issue=documentation-for-slt&studentContext=behaviour-issues&tone=professional-but-empathetic',
+        permanent: true,
+      },
+      {
+        source: '/legal/privacy',
+        destination: '/privacy',
+        permanent: true,
+      },
+      {
+        source: '/state-of-ai-report',
+        destination: '/state-of-ai-education',
+        permanent: true,
+      },
+      {
+        source: '/de/ambassadors',
+        destination: '/ambassadors',
+        permanent: true,
+      },
+      {
+        source: '/de/state-of-ai-education',
+        destination: '/state-of-ai-education',
+        permanent: true,
+      },
+      {
+        source: '/de/best-ai-writing-tools-for-teachers-2025',
+        destination: '/best-ai-writing-tools-for-teachers-2025',
+        permanent: true,
+      },
+      {
         source: '/uk/parents-evening-email-template-for-teachers',
         destination: '/uk/parents-evening-email-templates',
         permanent: true,

@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-03-10T08:00:42.042Z",
-  "scannedRoots": ["app", "components", "content"],
-  "scannedFiles": 793,
+  "generatedAt": "2026-03-12T06:35:14.292Z",
+  "scannedRoots": ["app", "components", "content", "lib"],
+  "scannedFiles": 845,
   "findings": [],
   "totals": {
     "removed-helper-route": 0,

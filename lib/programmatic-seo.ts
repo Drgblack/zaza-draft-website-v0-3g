@@ -424,25 +424,25 @@ const hubs: Record<string, HubDefinition> = {
     ],
     cards: [
       {
-        href: "/report-comments/struggling-student-behaviour/english/year-5",
+        href: "/report-comments/struggling/english/year-5",
         label: "Struggling student with behaviour concerns in English",
         description:
           "Balanced wording for progress, behaviour, and support in Year 5.",
       },
       {
-        href: "/report-comments/anxious-eal-pupil/maths/year-4",
+        href: "/report-comments/anxious-eal/maths/year-4",
         label: "Anxious EAL pupil in maths",
         description:
           "Careful language for confidence, communication, and progress.",
       },
       {
-        href: "/report-comments/high-attaining-but-disorganised/science/ks3",
+        href: "/report-comments/struggling/science/year-8",
         label: "High attaining but disorganised in science",
         description:
           "Comments that praise attainment while staying honest about habits.",
       },
       {
-        href: "/report-comments/sen-support-needs/maths/year-6",
+        href: "/report-comments/sen-needs/maths/year-6",
         label: "Pupil on SEN support in maths",
         description:
           "Respectful report comments with clear next-step language.",
@@ -1733,15 +1733,13 @@ function buildHubPage(hub: HubDefinition): ProgrammaticPageData {
       hub.keyword,
       "the wording itself has become the workload",
     ),
-    examples: hub.cards
-      .slice(0, 5)
-      .map((card) => ({
-        title: card.label,
-        intro:
-          "Use this path when the search problem feels closest to this situation.",
-        example: `${card.label}: ${card.description}`,
-        note: `Open ${card.href} when you want a more specific page with editable examples and a calmer workflow.`,
-      })),
+    examples: hub.cards.slice(0, 5).map((card) => ({
+      title: card.label,
+      intro:
+        "Use this path when the search problem feels closest to this situation.",
+      example: `${card.label}: ${card.description}`,
+      note: `Open ${card.href} when you want a more specific page with editable examples and a calmer workflow.`,
+    })),
     faq: buildFaqBlock(
       hub.keyword,
       "the wording itself has become the workload",

@@ -1,6 +1,7 @@
-import type { Metadata } from "next"
-import { notFound } from "next/navigation"
-import { CaseStudyDetailClient } from "./case-study-detail-client"
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { CaseStudyDetailClient } from "./case-study-detail-client";
+import { buildPageMetadata } from "@/lib/seo/site-metadata";
 
 const caseStudies = [
   {
@@ -13,7 +14,8 @@ const caseStudies = [
   },
   {
     slug: "riverside-unified-district-rollout",
-    title: "District-Wide AI Rollout: How Riverside Unified Trained 200 Teachers",
+    title:
+      "District-Wide AI Rollout: How Riverside Unified Trained 200 Teachers",
     school: "Riverside Unified",
     location: "California",
     students: "15,000 students",
@@ -43,40 +45,48 @@ const caseStudies = [
     students: "600 students",
     category: "elementary",
   },
-]
+];
 
 export async function generateStaticParams() {
   return caseStudies.map((study) => ({
     slug: study.slug,
-  }))
+  }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const study = caseStudies.find((s) => s.slug === params.slug)
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const study = caseStudies.find((s) => s.slug === params.slug);
 
   if (!study) {
     return {
       title: "Case Study Not Found | Zaza Draft",
-    }
+    };
   }
 
-  return {
+  return buildPageMetadata({
     title: `${study.title} | Zaza Draft Success Stories`,
     description: `See how ${study.school} in ${study.location} transformed their communication with Zaza Draft. Real results from ${study.students}.`,
-    openGraph: {
-      title: study.title,
-      description: `Success story from ${study.school}`,
-      type: "article",
+    path: `/success-stories/${params.slug}`,
+    type: "article",
+    alternates: {
+      en: `https://zazadraft.com/success-stories/${params.slug}`,
     },
-  }
+  });
 }
 
-export default function CaseStudyPage({ params }: { params: { slug: string } }) {
-  const study = caseStudies.find((s) => s.slug === params.slug)
+export default function CaseStudyPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const study = caseStudies.find((s) => s.slug === params.slug);
 
   if (!study) {
-    notFound()
+    notFound();
   }
 
-  return <CaseStudyDetailClient slug={params.slug} />
+  return <CaseStudyDetailClient slug={params.slug} />;
 }

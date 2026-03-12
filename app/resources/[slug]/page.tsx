@@ -1,23 +1,50 @@
-import Link from "next/link"
-import Image from "next/image"
-import { notFound } from "next/navigation"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { getResourceBySlug, getAllResources } from "@/lib/cms/resources"
-import { ArrowLeft, Download } from "lucide-react"
+import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
+import { notFound } from "next/navigation";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { getResourceBySlug, getAllResources } from "@/lib/cms/resources";
+import { buildPageMetadata } from "@/lib/seo/site-metadata";
+import { ArrowLeft, Download } from "lucide-react";
 
 export async function generateStaticParams() {
-  const resources = getAllResources()
+  const resources = getAllResources();
   return resources.map((resource) => ({
     slug: resource.slug,
-  }))
+  }));
+}
+
+export function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Metadata {
+  const resource = getResourceBySlug(params.slug);
+
+  if (!resource) {
+    return {
+      title: "Resource Not Found | Zaza Draft",
+    };
+  }
+
+  return buildPageMetadata({
+    title: `${resource.title} | Zaza Draft Resources`,
+    description: resource.excerpt ?? resource.title,
+    path: `/resources/${params.slug}`,
+    type: "article",
+    image: resource.heroImage || "/hero/teacher.jpg",
+    alternates: {
+      en: `https://zazadraft.com/resources/${params.slug}`,
+    },
+  });
 }
 
 export default function ResourcePage({ params }: { params: { slug: string } }) {
-  const resource = getResourceBySlug(params.slug)
+  const resource = getResourceBySlug(params.slug);
 
   if (!resource) {
-    notFound()
+    notFound();
   }
 
   return (
@@ -25,7 +52,10 @@ export default function ResourcePage({ params }: { params: { slug: string } }) {
       <div className="mx-auto max-w-4xl px-6 lg:px-8">
         {/* Back button */}
         <Link href="/resources">
-          <Button variant="ghost" className="mb-8 text-[#9CA3AF] hover:text-[#F9FAFB] hover:bg-[#1F2937]">
+          <Button
+            variant="ghost"
+            className="mb-8 text-[#9CA3AF] hover:text-[#F9FAFB] hover:bg-[#1F2937]"
+          >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to resources
           </Button>
@@ -33,16 +63,26 @@ export default function ResourcePage({ params }: { params: { slug: string } }) {
 
         {/* Hero image */}
         <div className="relative h-96 w-full rounded-2xl overflow-hidden mb-8 bg-[#0F172A]">
-          <Image src={resource.heroImage || "/placeholder.svg"} alt={resource.title} fill className="object-cover" />
+          <Image
+            src={resource.heroImage || "/placeholder.svg"}
+            alt={resource.title}
+            fill
+            className="object-cover"
+          />
         </div>
 
         {/* Type badge */}
-        <Badge variant="secondary" className="bg-[#7C3AED]/10 text-[#7C3AED] border-0 mb-4">
+        <Badge
+          variant="secondary"
+          className="bg-[#7C3AED]/10 text-[#7C3AED] border-0 mb-4"
+        >
           {resource.type}
         </Badge>
 
         {/* Title */}
-        <h1 className="text-4xl font-bold text-[#F9FAFB] sm:text-5xl mb-6 text-balance">{resource.title}</h1>
+        <h1 className="text-4xl font-bold text-[#F9FAFB] sm:text-5xl mb-6 text-balance">
+          {resource.title}
+        </h1>
 
         {/* Download button if available */}
         {resource.downloadUrl && (
@@ -60,10 +100,12 @@ export default function ResourcePage({ params }: { params: { slug: string } }) {
         <article className="prose prose-invert prose-lg max-w-none">
           <div
             className="text-[#D1D5DB] leading-relaxed space-y-6"
-            dangerouslySetInnerHTML={{ __html: resource.body.replace(/\n/g, "<br />") }}
+            dangerouslySetInnerHTML={{
+              __html: resource.body.replace(/\n/g, "<br />"),
+            }}
           />
         </article>
       </div>
     </div>
-  )
+  );
 }

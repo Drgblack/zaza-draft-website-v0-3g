@@ -1,6 +1,7 @@
-import type { Metadata } from "next"
-import { notFound } from "next/navigation"
-import WebinarDetailClient from "./webinar-detail-client"
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import WebinarDetailClient from "./webinar-detail-client";
+import { buildPageMetadata } from "@/lib/seo/site-metadata";
 
 // This would typically come from a database or CMS
 const allWebinars = [
@@ -28,19 +29,31 @@ const allWebinars = [
       "Troubleshooting common issues",
     ],
     agenda: [
-      { time: "0:00-0:10", topic: "Introduction and Setup", description: "Overview of advanced prompting concepts" },
+      {
+        time: "0:00-0:10",
+        topic: "Introduction and Setup",
+        description: "Overview of advanced prompting concepts",
+      },
       {
         time: "0:10-0:25",
         topic: "Chain-of-Thought Prompting",
         description: "Breaking down complex tasks into steps",
       },
-      { time: "0:25-0:40", topic: "Few-Shot Learning", description: "Using examples to guide AI responses" },
+      {
+        time: "0:25-0:40",
+        topic: "Few-Shot Learning",
+        description: "Using examples to guide AI responses",
+      },
       {
         time: "0:40-0:50",
         topic: "Subject-Specific Templates",
         description: "Ready-to-use prompts for your classroom",
       },
-      { time: "0:50-1:00", topic: "Q&A and Troubleshooting", description: "Live questions and problem-solving" },
+      {
+        time: "0:50-1:00",
+        topic: "Q&A and Troubleshooting",
+        description: "Live questions and problem-solving",
+      },
     ],
     certificateOffered: true,
     featured: true,
@@ -52,7 +65,10 @@ const allWebinars = [
       "Troubleshoot common AI response issues",
       "Adapt prompts for different AI platforms",
     ],
-    prerequisites: ["Basic familiarity with AI tools", "Completed 'AI Basics for Teachers' or equivalent experience"],
+    prerequisites: [
+      "Basic familiarity with AI tools",
+      "Completed 'AI Basics for Teachers' or equivalent experience",
+    ],
     materials: [
       "Prompt template library (PDF)",
       "Chain-of-thought examples workbook",
@@ -84,11 +100,31 @@ const allWebinars = [
       "Multilingual support strategies",
     ],
     agenda: [
-      { time: "0:00-0:05", topic: "Welcome and Overview", description: "Understanding differentiation with AI" },
-      { time: "0:05-0:15", topic: "Reading Level Adaptation", description: "Making texts accessible for all readers" },
-      { time: "0:15-0:25", topic: "Visual Supports", description: "Creating graphics and organizers" },
-      { time: "0:25-0:35", topic: "Scaffolding Strategies", description: "Breaking down complex concepts" },
-      { time: "0:35-0:45", topic: "Multilingual Support", description: "Supporting ELL students effectively" },
+      {
+        time: "0:00-0:05",
+        topic: "Welcome and Overview",
+        description: "Understanding differentiation with AI",
+      },
+      {
+        time: "0:05-0:15",
+        topic: "Reading Level Adaptation",
+        description: "Making texts accessible for all readers",
+      },
+      {
+        time: "0:15-0:25",
+        topic: "Visual Supports",
+        description: "Creating graphics and organizers",
+      },
+      {
+        time: "0:25-0:35",
+        topic: "Scaffolding Strategies",
+        description: "Breaking down complex concepts",
+      },
+      {
+        time: "0:35-0:45",
+        topic: "Multilingual Support",
+        description: "Supporting ELL students effectively",
+      },
     ],
     certificateOffered: true,
     featured: true,
@@ -100,7 +136,10 @@ const allWebinars = [
       "Provide multilingual materials for ELL students",
       "Develop differentiated assessments",
     ],
-    prerequisites: ["Basic understanding of differentiated instruction", "Access to AI tools"],
+    prerequisites: [
+      "Basic understanding of differentiated instruction",
+      "Access to AI tools",
+    ],
     materials: [
       "Differentiation prompt templates",
       "Visual support examples",
@@ -119,15 +158,37 @@ const allWebinars = [
       "Jennifer Martinez is an EdTech Coach who has helped hundreds of teachers integrate technology effectively. She specializes in making complex tech concepts accessible and practical for busy educators.",
     views: 12450,
     rating: 4.9,
-    description: "A beginner-friendly introduction to AI tools for education. No technical background required.",
+    description:
+      "A beginner-friendly introduction to AI tools for education. No technical background required.",
     longDescription:
       "New to AI? This webinar is your starting point. We'll demystify AI technology and show you practical, safe ways to use it in your teaching. You'll leave with confidence, clarity, and ready-to-use strategies for your classroom.",
-    topics: ["What is AI?", "Common AI tools for teachers", "Getting started safely", "Addressing student concerns"],
+    topics: [
+      "What is AI?",
+      "Common AI tools for teachers",
+      "Getting started safely",
+      "Addressing student concerns",
+    ],
     agenda: [
-      { time: "0:00-0:10", topic: "What is AI?", description: "Understanding AI in simple terms" },
-      { time: "0:10-0:25", topic: "AI Tools Overview", description: "Popular tools and their uses" },
-      { time: "0:25-0:35", topic: "Safety and Ethics", description: "Using AI responsibly" },
-      { time: "0:35-0:45", topic: "Getting Started", description: "Your first AI-powered lesson" },
+      {
+        time: "0:00-0:10",
+        topic: "What is AI?",
+        description: "Understanding AI in simple terms",
+      },
+      {
+        time: "0:10-0:25",
+        topic: "AI Tools Overview",
+        description: "Popular tools and their uses",
+      },
+      {
+        time: "0:25-0:35",
+        topic: "Safety and Ethics",
+        description: "Using AI responsibly",
+      },
+      {
+        time: "0:35-0:45",
+        topic: "Getting Started",
+        description: "Your first AI-powered lesson",
+      },
     ],
     certificateOffered: true,
     popular: true,
@@ -174,10 +235,26 @@ const allWebinars = [
         topic: "Communication Principles",
         description: "What makes parent communication effective",
       },
-      { time: "0:10-0:25", topic: "Email Templates", description: "Creating reusable, personalized templates" },
-      { time: "0:25-0:35", topic: "Multilingual Support", description: "Reaching all families in their language" },
-      { time: "0:35-0:45", topic: "Positive Messaging", description: "Framing challenges constructively" },
-      { time: "0:45-0:50", topic: "Conference Prep", description: "Preparing notes and talking points" },
+      {
+        time: "0:10-0:25",
+        topic: "Email Templates",
+        description: "Creating reusable, personalized templates",
+      },
+      {
+        time: "0:25-0:35",
+        topic: "Multilingual Support",
+        description: "Reaching all families in their language",
+      },
+      {
+        time: "0:35-0:45",
+        topic: "Positive Messaging",
+        description: "Framing challenges constructively",
+      },
+      {
+        time: "0:45-0:50",
+        topic: "Conference Prep",
+        description: "Preparing notes and talking points",
+      },
     ],
     certificateOffered: true,
     popular: true,
@@ -208,7 +285,8 @@ const allWebinars = [
       "Rachel Kim is a High School Teacher who has reduced her planning time by 60% using AI tools. She shares her proven workflows with teachers nationwide through workshops and online courses.",
     views: 11230,
     rating: 4.9,
-    description: "Discover workflows to plan engaging, standards-aligned lessons in a fraction of the time.",
+    description:
+      "Discover workflows to plan engaging, standards-aligned lessons in a fraction of the time.",
     longDescription:
       "Lesson planning doesn't have to consume your evenings and weekends. This webinar reveals the exact workflows used by thousands of teachers to create engaging, standards-aligned lessons in a fraction of the time. You'll learn how to plan units, create activities, and adapt materials for different grade levels efficiently.",
     topics: [
@@ -218,11 +296,31 @@ const allWebinars = [
       "Adapting for different grade levels",
     ],
     agenda: [
-      { time: "0:00-0:10", topic: "Planning Workflow Overview", description: "The efficient planning process" },
-      { time: "0:10-0:25", topic: "Unit Planning", description: "Creating comprehensive unit plans" },
-      { time: "0:25-0:40", topic: "Activity Creation", description: "Designing engaging learning activities" },
-      { time: "0:40-0:50", topic: "Standards Alignment", description: "Ensuring curriculum alignment" },
-      { time: "0:50-0:55", topic: "Adaptation Strategies", description: "Modifying for different contexts" },
+      {
+        time: "0:00-0:10",
+        topic: "Planning Workflow Overview",
+        description: "The efficient planning process",
+      },
+      {
+        time: "0:10-0:25",
+        topic: "Unit Planning",
+        description: "Creating comprehensive unit plans",
+      },
+      {
+        time: "0:25-0:40",
+        topic: "Activity Creation",
+        description: "Designing engaging learning activities",
+      },
+      {
+        time: "0:40-0:50",
+        topic: "Standards Alignment",
+        description: "Ensuring curriculum alignment",
+      },
+      {
+        time: "0:50-0:55",
+        topic: "Adaptation Strategies",
+        description: "Modifying for different contexts",
+      },
     ],
     certificateOffered: true,
     popular: true,
@@ -242,48 +340,42 @@ const allWebinars = [
       "Adaptation strategies guide",
     ],
   },
-]
+];
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const webinar = allWebinars.find((w) => w.id === params.slug)
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const webinar = allWebinars.find((w) => w.id === params.slug);
 
   if (!webinar) {
     return {
       title: "Webinar Not Found",
-    }
+    };
   }
 
-  return {
+  return buildPageMetadata({
     title: `${webinar.title} | Zaza Draft Webinars`,
     description: webinar.description,
-    openGraph: {
-      title: webinar.title,
-      description: webinar.description,
-      type: "website",
-      images: [
-        {
-          url: "/webinar-og-image.jpg",
-          width: 1200,
-          height: 630,
-          alt: webinar.title,
-        },
-      ],
+    path: `/webinars/${params.slug}`,
+    image: "/webinar-og-image.jpg",
+    alternates: {
+      en: `https://zazadraft.com/webinars/${params.slug}`,
     },
-    twitter: {
-      card: "summary_large_image",
-      title: webinar.title,
-      description: webinar.description,
-      images: ["/webinar-og-image.jpg"],
-    },
-  }
+  });
 }
 
-export default function WebinarDetailPage({ params }: { params: { slug: string } }) {
-  const webinar = allWebinars.find((w) => w.id === params.slug)
+export default function WebinarDetailPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const webinar = allWebinars.find((w) => w.id === params.slug);
 
   if (!webinar) {
-    notFound()
+    notFound();
   }
 
-  return <WebinarDetailClient webinar={webinar} />
+  return <WebinarDetailClient webinar={webinar} />;
 }

@@ -20,9 +20,18 @@
       { label: "Glossary", href: "/resources/glossary" },
       { label: "Webinars", href: "/resources/webinars" },
       { label: "Video Tutorials", href: "/resources/tutorials" },
-      { label: "Best AI Tool for Parent Emails", href: "/blog/best-ai-parent-emails" },
-      { label: "Reduce Stress Writing Parent Messages", href: "/blog/reduce-stress-parent-messages" },
-      { label: "Best AI Writing Tools for Teachers 2025", href: "/blog/best-ai-writing-tools-2025" },
+      {
+        label: "Best AI Tool for Parent Emails",
+        href: "/blog/best-ai-parent-emails",
+      },
+      {
+        label: "Reduce Stress Writing Parent Messages",
+        href: "/blog/reduce-stress-parent-messages",
+      },
+      {
+        label: "Best AI Writing Tools for Teachers 2025",
+        href: "/blog/best-ai-writing-tools-2025",
+      },
       { label: "AI for Student Reports", href: "/blog/ai-student-reports" },
     ],
     company: [
@@ -31,7 +40,7 @@
       { label: "Community", href: "/community" },
       { label: "Success Stories", href: "/success-stories" },
       { label: "Ambassador Program", href: "/ambassadors" },
-      { label: "State of AI Report", href: "/state-of-ai-report" },
+      { label: "State of AI Report", href: "/state-of-ai-education" },
       { label: "footer.teacherResources", href: "/resources" },
       { label: "footer.support", href: "/support" },
       { label: "footer.faq", href: "/faq" },
@@ -41,5 +50,4 @@
       { label: "footer.contact", href: "/contact" },
     ],
   },
-}
-
+};

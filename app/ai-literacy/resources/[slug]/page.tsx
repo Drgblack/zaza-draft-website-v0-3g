@@ -4,6 +4,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ResourceDetailClient from "./resource-detail-client";
+import { buildPageMetadata } from "@/lib/seo/site-metadata";
 import {
   getResourceBySlug,
   getAllResourceSlugs,
@@ -30,15 +31,15 @@ export async function generateMetadata({
     };
   }
 
-  return {
+  return buildPageMetadata({
     title: `${resource.title} | Zaza Draft AI Literacy`,
     description: resource.description,
-    openGraph: {
-      title: resource.title,
-      description: resource.description,
-      type: "website",
+    path: `/ai-literacy/resources/${slug}`,
+    alternates: {
+      en: `https://zazadraft.com/ai-literacy/resources/${slug}`,
+      de: `https://zazadraft.com/de/ai-literacy/resources/${slug}`,
     },
-  };
+  });
 }
 
 export default async function ResourceDetailPage({

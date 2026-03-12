@@ -1,6 +1,6 @@
-import type { Metadata } from "next"
-import { notFound } from "next/navigation"
-import CourseClient from "./course-client"
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import CourseClient from "./course-client";
 
 const courses = {
   "ai-basics-for-teachers": {
@@ -13,7 +13,8 @@ const courses = {
   },
   "prompt-engineering-fundamentals": {
     title: "Prompt Engineering Fundamentals",
-    description: "Learn to write effective prompts that get better results from AI tools like ChatGPT and Zaza Draft.",
+    description:
+      "Learn to write effective prompts that get better results from AI tools like ChatGPT and Zaza Draft.",
     level: "Beginner",
     duration: "3 hours",
     lessons: 10,
@@ -28,35 +29,40 @@ const courses = {
   },
   "ai-for-lesson-planning": {
     title: "AI for Lesson Planning",
-    description: "Design engaging, standards-aligned lessons faster with AI-powered planning tools and techniques.",
+    description:
+      "Design engaging, standards-aligned lessons faster with AI-powered planning tools and techniques.",
     level: "Intermediate",
     duration: "3 hours",
     lessons: 11,
   },
   "ai-for-assessment-feedback": {
     title: "AI for Assessment & Feedback",
-    description: "Provide personalized, actionable feedback to students efficiently using AI assistance.",
+    description:
+      "Provide personalized, actionable feedback to students efficiently using AI assistance.",
     level: "Intermediate",
     duration: "2.5 hours",
     lessons: 10,
   },
   "ethical-ai-use-in-education": {
     title: "Ethical AI Use in Education",
-    description: "Navigate the ethical considerations of AI in the classroom with confidence and integrity.",
+    description:
+      "Navigate the ethical considerations of AI in the classroom with confidence and integrity.",
     level: "Beginner",
     duration: "2 hours",
     lessons: 7,
   },
   "data-privacy-ferpa-compliance": {
     title: "Data Privacy & FERPA Compliance",
-    description: "Protect student data and maintain FERPA compliance when using AI tools in education.",
+    description:
+      "Protect student data and maintain FERPA compliance when using AI tools in education.",
     level: "Intermediate",
     duration: "2 hours",
     lessons: 8,
   },
   "ai-tools-comparison-selection": {
     title: "AI Tools Comparison & Selection",
-    description: "Evaluate and choose the right AI tools for your specific teaching needs and context.",
+    description:
+      "Evaluate and choose the right AI tools for your specific teaching needs and context.",
     level: "Intermediate",
     duration: "2.5 hours",
     lessons: 9,
@@ -71,39 +77,57 @@ const courses = {
   },
   "building-ai-workflows": {
     title: "Building AI Workflows",
-    description: "Create efficient, repeatable AI workflows that save hours every week on routine teaching tasks.",
+    description:
+      "Create efficient, repeatable AI workflows that save hours every week on routine teaching tasks.",
     level: "Advanced",
     duration: "3.5 hours",
     lessons: 13,
   },
-}
+};
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const course = courses[params.slug as keyof typeof courses]
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const course = courses[params.slug as keyof typeof courses];
 
   if (!course) {
     return {
       title: "Course Not Found",
-    }
+    };
   }
+
+  const canonical = `https://zazadraft.com/de/ai-literacy/courses/${params.slug}`;
+  const englishUrl = `https://zazadraft.com/ai-literacy/courses/${params.slug}`;
 
   return {
     title: `${course.title} | AI Literacy | Zaza Draft`,
     description: course.description,
+    alternates: {
+      canonical,
+      languages: {
+        en: englishUrl,
+        de: canonical,
+        "x-default": englishUrl,
+      },
+    },
     openGraph: {
       title: `${course.title} | AI Literacy`,
       description: course.description,
       type: "website",
+      url: canonical,
+      locale: "de_DE",
     },
-  }
+  };
 }
 
 export default function CoursePage({ params }: { params: { slug: string } }) {
-  const course = courses[params.slug as keyof typeof courses]
+  const course = courses[params.slug as keyof typeof courses];
 
   if (!course) {
-    notFound()
+    notFound();
   }
 
-  return <CourseClient slug={params.slug} course={course} />
+  return <CourseClient slug={params.slug} course={course} />;
 }

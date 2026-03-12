@@ -30,13 +30,26 @@ export async function generateMetadata({
     };
   }
 
+  const canonical = `https://zazadraft.com/de/ai-literacy/resources/${slug}`;
+  const englishUrl = `https://zazadraft.com/ai-literacy/resources/${slug}`;
+
   return {
     title: `${resource.title} | Zaza Draft AI Literacy`,
     description: resource.description,
+    alternates: {
+      canonical,
+      languages: {
+        en: englishUrl,
+        de: canonical,
+        "x-default": englishUrl,
+      },
+    },
     openGraph: {
       title: resource.title,
       description: resource.description,
       type: "website",
+      url: canonical,
+      locale: "de_DE",
     },
   };
 }
