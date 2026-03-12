@@ -1,11 +1,10 @@
 ﻿"use client";
 
 import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Check, ChevronDown, Star, ShieldCheck, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
-import { SignupModal } from "@/components/signup-modal";
 import { motion, AnimatePresence } from "framer-motion";
 import { track } from "@/lib/analytics";
 import {
@@ -26,25 +25,37 @@ const currencySymbols = {
 export default function PricingClient() {
   const { t, language } = useLanguage();
   const pathname = usePathname();
+  const router = useRouter();
   const [billingInterval, setBillingInterval] =
     useState<SelfServeInterval>("monthly");
   const [currency, setCurrency] = useState<PricingCurrency>("EUR");
-  const [signupOpen, setSignupOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
+  const isGermanPricingPage = pathname === "/de/pricing";
+  const waitlistHref = isGermanPricingPage
+    ? "/de/early-access?source=pricing_page&plan=starter"
+    : "/early-access?source=pricing_page&plan=starter";
+  const salesContactBasePath = isGermanPricingPage ? "/de/contact" : "/contact";
+  const buildSalesContactHref = (
+    plan: "department" | "enterprise" | "general",
+  ) =>
+    `${salesContactBasePath}?intent=sales&topic=pricing&plan=${plan}&source=pricing_page`;
   const symbol = currencySymbols[currency];
   const draftCheckoutHref = buildStripeCheckoutPath({
     plan: "draft",
     interval: billingInterval,
     currency,
-    returnPath: pathname === "/de/pricing" ? pathname : "/pricing",
+    returnPath: isGermanPricingPage ? pathname : "/pricing",
   });
   const bundleCheckoutHref = buildStripeCheckoutPath({
     plan: "bundle",
     interval: billingInterval,
     currency,
-    returnPath: pathname === "/de/pricing" ? pathname : "/pricing",
+    returnPath: isGermanPricingPage ? pathname : "/pricing",
   });
+  const departmentSalesHref = buildSalesContactHref("department");
+  const enterpriseSalesHref = buildSalesContactHref("enterprise");
+  const generalSalesHref = buildSalesContactHref("general");
   const comparisonRows = [
     {
       feature: t("pricing.compare.rows.purpose.feature"),
@@ -77,26 +88,74 @@ export default function PricingClient() {
       zaza: t("pricing.compare.rows.cost.zaza"),
     },
   ];
-  const departmentCheckoutUrl =
-    process.env.NEXT_PUBLIC_CHECKOUT_URL_DRAFT_DEPARTMENT;
-  const enterpriseCheckoutUrl =
-    process.env.NEXT_PUBLIC_CHECKOUT_URL_DRAFT_ENTERPRISE;
-  const salesMailto =
-    "mailto:hello@zazatechnologies.com?subject=Zaza%20Draft%20-%20Sales%20Enquiry";
-  const departmentCheckoutHref = departmentCheckoutUrl || salesMailto;
-  const enterpriseCheckoutHref = enterpriseCheckoutUrl || salesMailto;
   const trackPricingCTA = (id: string) =>
     track("cta_click", { location: "pricing", id });
 
-  const handlePlanClick = (planId: string) => {
-    trackPricingCTA(`plan_${planId}`);
-    track("cta_click_pricing_select_plan", {
-      planId,
+  const logPricingAction = (
+    action: string,
+    details: Record<string, string | boolean>,
+  ) => {
+    console.info("[pricing-cta]", { action, ...details });
+  };
+
+  const openFreeSignupFlow = () => {
+    trackPricingCTA("plan_free");
+    track("cta_click_pricing_free_signup", {
+      destination: waitlistHref,
+      language,
+      sourcePage: pathname,
+    });
+    logPricingAction("free_signup", {
+      destination: waitlistHref,
+      flow: "waitlist_page",
+      sourcePage: pathname,
+    });
+    router.push(waitlistHref);
+  };
+
+  const openSalesFlow = (
+    ctaId: string,
+    destination: string,
+    plan: "department" | "enterprise" | "general",
+  ) => {
+    trackPricingCTA(ctaId);
+    track(`cta_click_pricing_${ctaId}`, {
+      destination,
+      currency,
+      language,
+      plan,
+    });
+    logPricingAction(ctaId, {
+      destination,
+      plan,
+      sourcePage: pathname,
+    });
+    router.push(destination);
+  };
+
+  const launchStripeCheckout = (
+    ctaId: "checkout_teacher" | "checkout_bundle",
+    destination: string,
+    plan: "draft" | "bundle",
+  ) => {
+    const stripePriceId = pricingConfig[plan].stripePriceIds[billingInterval];
+
+    trackPricingCTA(ctaId);
+    track(`cta_click_pricing_${ctaId}`, {
       billingCycle: billingInterval,
       currency,
       language,
+      stripePriceId,
+      destination,
     });
-    setSignupOpen(true);
+    logPricingAction(ctaId, {
+      destination,
+      stripePriceId,
+      billingInterval,
+      currency,
+    });
+
+    window.location.assign(destination);
   };
 
   return (
@@ -264,7 +323,8 @@ export default function PricingClient() {
               </div>
 
               <Button
-                onClick={() => handlePlanClick("free")}
+                type="button"
+                onClick={openFreeSignupFlow}
                 className="w-full bg-transparent border-2 border-[#8B5CF6] text-[#8B5CF6] hover:bg-[#8B5CF6]/10 py-5 text-base font-semibold rounded-lg mb-6"
               >
                 {t("pricing.free.cta")}
@@ -346,20 +406,17 @@ export default function PricingClient() {
               )}
 
               <Button
-                asChild
-                onClick={() => {
-                  trackPricingCTA("checkout_teacher");
-                  track("cta_click_pricing_checkout_teacher", {
-                    billingCycle: billingInterval,
-                    currency,
-                    language,
-                    stripePriceId:
-                      pricingConfig.draft.stripePriceIds[billingInterval],
-                  });
-                }}
+                type="button"
+                onClick={() =>
+                  launchStripeCheckout(
+                    "checkout_teacher",
+                    draftCheckoutHref,
+                    "draft",
+                  )
+                }
                 className="w-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white hover:scale-105 py-6 text-lg font-semibold rounded-lg mb-3 shadow-lg shadow-[#8B5CF6]/40 transition-transform"
               >
-                <a href={draftCheckoutHref}>{t("pricing.checkout.buyNow")}</a>
+                {t("pricing.checkout.buyNow")}
               </Button>
               <p className="text-center text-sm text-[#94A3B8] mb-4">
                 {t("pricing.teacher.trial")}
@@ -421,24 +478,17 @@ export default function PricingClient() {
               </p>
 
               <Button
-                asChild
-                onClick={() => {
-                  trackPricingCTA("checkout_department");
-                  track("cta_click_pricing_checkout_department", {
-                    currency,
-                    language,
-                    hasCheckoutUrl: Boolean(departmentCheckoutUrl),
-                  });
-                }}
+                type="button"
+                onClick={() =>
+                  openSalesFlow(
+                    "checkout_department",
+                    departmentSalesHref,
+                    "department",
+                  )
+                }
                 className="w-full bg-transparent border-2 border-[#FB923C] text-[#FB923C] hover:bg-[#FB923C]/10 py-5 text-base font-semibold rounded-lg mb-6"
               >
-                <a
-                  href={departmentCheckoutHref}
-                  target={departmentCheckoutUrl ? "_blank" : undefined}
-                  rel={departmentCheckoutUrl ? "noreferrer" : undefined}
-                >
-                  {t("pricing.department.cta")}
-                </a>
+                {t("pricing.department.cta")}
               </Button>
 
               <div className="space-y-3 mb-4">
@@ -480,24 +530,17 @@ export default function PricingClient() {
               </div>
 
               <Button
-                asChild
-                onClick={() => {
-                  trackPricingCTA("checkout_enterprise");
-                  track("cta_click_pricing_checkout_enterprise", {
-                    currency,
-                    language,
-                    hasCheckoutUrl: Boolean(enterpriseCheckoutUrl),
-                  });
-                }}
+                type="button"
+                onClick={() =>
+                  openSalesFlow(
+                    "checkout_enterprise",
+                    enterpriseSalesHref,
+                    "enterprise",
+                  )
+                }
                 className="w-full bg-transparent border-2 border-[#FB923C] text-[#FB923C] hover:bg-[#FB923C]/10 py-5 text-base font-semibold rounded-lg mb-6"
               >
-                <a
-                  href={enterpriseCheckoutHref}
-                  target={enterpriseCheckoutUrl ? "_blank" : undefined}
-                  rel={enterpriseCheckoutUrl ? "noreferrer" : undefined}
-                >
-                  {t("pricing.enterprise.cta")}
-                </a>
+                {t("pricing.enterprise.cta")}
               </Button>
 
               <div className="space-y-3">
@@ -557,22 +600,17 @@ export default function PricingClient() {
                   </p>
                 )}
                 <Button
-                  asChild
-                  onClick={() => {
-                    trackPricingCTA("checkout_bundle");
-                    track("cta_click_pricing_checkout_bundle", {
-                      billingCycle: billingInterval,
-                      currency,
-                      language,
-                      stripePriceId:
-                        pricingConfig.bundle.stripePriceIds[billingInterval],
-                    });
-                  }}
+                  type="button"
+                  onClick={() =>
+                    launchStripeCheckout(
+                      "checkout_bundle",
+                      bundleCheckoutHref,
+                      "bundle",
+                    )
+                  }
                   className="bg-white text-[#8B5CF6] hover:bg-white/90 py-6 px-8 text-lg font-semibold rounded-lg shadow-lg"
                 >
-                  <a href={bundleCheckoutHref}>
-                    {t("pricing.checkout.buyNow")}
-                  </a>
+                  {t("pricing.checkout.buyNow")}
                 </Button>
               </div>
             </motion.div>
@@ -748,30 +786,41 @@ export default function PricingClient() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
+                  type="button"
                   onClick={() => {
                     trackPricingCTA("cta_primary");
-                    track("cta_click_pricing_cta_primary", { language });
-                    setSignupOpen(true);
+                    track("cta_click_pricing_cta_primary", {
+                      destination: waitlistHref,
+                      language,
+                    });
+                    logPricingAction("cta_primary", {
+                      destination: waitlistHref,
+                      flow: "waitlist_page",
+                    });
+                    router.push(waitlistHref);
                   }}
                   className="bg-white text-[#8B5CF6] hover:bg-white/90 py-6 px-8 text-lg font-semibold rounded-lg shadow-lg"
                 >
                   {t("pricing.cta.primary")}
                 </Button>
                 <Button
-                  asChild
+                  type="button"
+                  onClick={() =>
+                    openSalesFlow(
+                      "cta_secondary_sales",
+                      generalSalesHref,
+                      "general",
+                    )
+                  }
                   className="bg-transparent border-2 border-white text-white hover:bg-white/10 py-6 px-8 text-lg font-semibold rounded-lg"
                 >
-                  <a href="mailto:sales@zazadraft.com">
-                    {t("pricing.cta.secondary")}
-                  </a>
+                  {t("pricing.cta.secondary")}
                 </Button>
               </div>
             </div>
           </div>
         </section>
       </div>
-
-      <SignupModal open={signupOpen} onOpenChange={setSignupOpen} />
     </>
   );
 }

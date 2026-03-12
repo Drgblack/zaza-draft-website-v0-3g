@@ -18,17 +18,30 @@ export async function POST(request: Request) {
         : {};
     const source = typeof body.source === "string" ? body.source.trim() : "";
     const isWaitlistSource = source.startsWith("waitlist_page");
+    const isSalesSource =
+      source.startsWith("pricing_sales_") ||
+      source.startsWith("contact_sales_");
     const configuredListId = isWaitlistSource
       ? (process.env.BREVO_WAITLIST_LIST_ID ??
         process.env.BREVO_LIST_ID_WAITLIST ??
         process.env.BREVO_DRAFT_LIST_ID ??
         process.env.BREVO_LIST_ID_DRAFT_SIGNUPS)
-      : (process.env.BREVO_DRAFT_LIST_ID ??
-        process.env.BREVO_LIST_ID_DRAFT_SIGNUPS);
+      : isSalesSource
+        ? (process.env.BREVO_SALES_LIST_ID ??
+          process.env.BREVO_LIST_ID_SALES ??
+          process.env.BREVO_DRAFT_LIST_ID ??
+          process.env.BREVO_LIST_ID_DRAFT_SIGNUPS)
+        : (process.env.BREVO_DRAFT_LIST_ID ??
+          process.env.BREVO_LIST_ID_DRAFT_SIGNUPS);
     const listIdInput = body.listId ?? configuredListId;
 
     console.info("[brevo] /api/brevo/subscribe hit", {
       hasListId: Boolean(listIdInput),
+      sourceType: isWaitlistSource
+        ? "waitlist"
+        : isSalesSource
+          ? "sales"
+          : "default",
     });
 
     if (!emailRegex.test(email)) {

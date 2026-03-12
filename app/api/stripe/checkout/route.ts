@@ -58,6 +58,13 @@ export async function GET(request: NextRequest) {
   try {
     const stripe = new Stripe(stripeSecretKey);
     const priceId = getStripePriceId(plan, interval);
+    console.info("[stripe-checkout] Creating session", {
+      plan,
+      interval,
+      currency,
+      priceId,
+      returnPath: returnPath ?? "/pricing",
+    });
     const session = await stripe.checkout.sessions.create({
       mode: "subscription",
       line_items: [{ price: priceId, quantity: 1 }],

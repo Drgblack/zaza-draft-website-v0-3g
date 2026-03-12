@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { useLanguage } from "../../src/contexts/LanguageContext";
 import Link from "next/link";
 import {
@@ -12,7 +13,31 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { track } from "@/lib/analytics";
 import { describeBrevoError, submitBrevoContact } from "@/lib/brevo-client";
+
+const salesLabels = {
+  department: {
+    en: "Department",
+    de: "Department",
+  },
+  enterprise: {
+    en: "Schools & Districts",
+    de: "Schulen & Bezirke",
+  },
+  general: {
+    en: "Pricing",
+    de: "Preise",
+  },
+} as const;
+
+function buildSalesMessage(plan: keyof typeof salesLabels, isGerman: boolean) {
+  const planLabel = isGerman ? salesLabels[plan].de : salesLabels[plan].en;
+
+  return isGerman
+    ? `Ich interessiere mich für ${planLabel}. Bitte kontaktieren Sie mich zu Preisen, Onboarding und Verfügbarkeit.`
+    : `I am interested in ${planLabel}. Please contact me about pricing, onboarding, and availability.`;
+}
 
 const content = {
   en: {
@@ -81,13 +106,47 @@ const content = {
 
 export function ContactClient() {
   const { language } = useLanguage();
+  const searchParams = useSearchParams();
   const isGerman = language === "de";
   const t = isGerman ? content.de : content.en;
+  const intent = searchParams.get("intent");
+  const topic = searchParams.get("topic") ?? "";
+  const source = searchParams.get("source") ?? "contact_page";
+  const salesPlanParam = searchParams.get("plan");
+  const salesPlan =
+    salesPlanParam === "department" ||
+    salesPlanParam === "enterprise" ||
+    salesPlanParam === "general"
+      ? salesPlanParam
+      : "general";
+  const isSalesInquiry = intent === "sales";
+  const contactTitle = isSalesInquiry
+    ? isGerman
+      ? "Mit dem Vertrieb sprechen"
+      : "Talk to Sales"
+    : t.contact.title;
+  const contactSubtitle = isSalesInquiry
+    ? isGerman
+      ? "Teilen Sie uns kurz mit, woran Sie interessiert sind. Wir melden uns zu Preisen, Onboarding und Schul- oder Bezirksbereitstellung."
+      : "Tell us what you need and we will follow up on pricing, onboarding, and school or district rollout."
+    : t.contact.subtitle;
+  const formSubmitLabel = isSalesInquiry
+    ? isGerman
+      ? "Sales-Anfrage senden"
+      : "Send sales inquiry"
+    : t.contact.form.submit;
+  const successMessage = isSalesInquiry
+    ? isGerman
+      ? "Danke. Unser Team meldet sich bald zu Ihrer Sales-Anfrage."
+      : "Thanks. Our team will follow up on your sales inquiry shortly."
+    : language === "de"
+      ? "Danke für Ihre Nachricht! Wir melden uns in Kürze."
+      : "Thanks for your message! We'll reply shortly.";
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
+    message: isSalesInquiry ? buildSalesMessage(salesPlan, isGerman) : "",
   });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -104,14 +163,42 @@ export function ContactClient() {
     setError("");
 
     try {
+      const submissionSource = isSalesInquiry
+        ? `pricing_sales_${salesPlan}`
+        : source;
+
+      console.info("[contact] submitting form", {
+        intent: isSalesInquiry ? "sales" : "support",
+        plan: isSalesInquiry ? salesPlan : "none",
+        topic: topic || "general",
+        source: submissionSource,
+      });
+
       await submitBrevoContact({
         email: formData.email,
         name: formData.name,
-        attributes: { MESSAGE: formData.message },
-        source: "contact_page",
+        attributes: {
+          MESSAGE: formData.message,
+          INTENT: isSalesInquiry ? "sales" : "support",
+          TOPIC: topic || "general",
+          PLAN: isSalesInquiry ? salesPlan : "general",
+          LANGUAGE: language.toUpperCase(),
+        },
+        source: submissionSource,
+      });
+      track("form_submit", {
+        form: isSalesInquiry ? "sales_contact_form" : "contact_form",
+        language,
+        plan: isSalesInquiry ? salesPlan : undefined,
+        topic: topic || undefined,
+        source: submissionSource,
       });
       setSuccess(true);
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({
+        name: "",
+        email: "",
+        message: isSalesInquiry ? buildSalesMessage(salesPlan, isGerman) : "",
+      });
       setTimeout(() => setSuccess(false), 5000);
     } catch (err) {
       const message = describeBrevoError(err, t.contact.form.error);
@@ -135,7 +222,7 @@ export function ContactClient() {
               {t.nav.home}
             </Link>
             <ChevronRight className="h-4 w-4 text-gray-600" />
-            <span className="text-white">{t.contact.title}</span>
+            <span className="text-white">{contactTitle}</span>
           </nav>
         </div>
       </div>
@@ -146,9 +233,9 @@ export function ContactClient() {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-              {t.contact.title}
+              {contactTitle}
             </h1>
-            <p className="text-xl text-gray-300">{t.contact.subtitle}</p>
+            <p className="text-xl text-gray-300">{contactSubtitle}</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
@@ -159,14 +246,17 @@ export function ContactClient() {
                   <div className="mx-auto w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mb-4">
                     <Send className="h-8 w-8 text-green-500" />
                   </div>
-                  <p className="text-lg text-white">
-                    {language === "de"
-                      ? "Danke für Ihre Nachricht! Wir melden uns in Kürze."
-                      : "Thanks for your message! We'll reply shortly."}
-                  </p>
+                  <p className="text-lg text-white">{successMessage}</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {isSalesInquiry && (
+                    <div className="rounded-xl border border-purple-500/20 bg-purple-500/10 px-4 py-3 text-sm text-purple-100">
+                      {isGerman
+                        ? `Sales-Anfrage fuer: ${salesLabels[salesPlan].de}`
+                        : `Sales inquiry for: ${salesLabels[salesPlan].en}`}
+                    </div>
+                  )}
                   <div>
                     <label
                       htmlFor="name"
@@ -225,18 +315,14 @@ export function ContactClient() {
                     />
                   </div>
 
-                  {error && (
-                    <p className="text-sm text-red-400">
-                      {error}
-                    </p>
-                  )}
+                  {error && <p className="text-sm text-red-400">{error}</p>}
 
                   <Button
                     type="submit"
                     disabled={loading}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium"
                   >
-                    {loading ? t.contact.form.sending : t.contact.form.submit}
+                    {loading ? t.contact.form.sending : formSubmitLabel}
                   </Button>
 
                   <p className="text-sm text-gray-400 text-center">
@@ -248,32 +334,34 @@ export function ContactClient() {
 
             {/* Contact Info */}
             <div className="space-y-6">
-              <div>
-                <h2 className="text-2xl font-bold text-white mb-6">
-                  {t.contact.direct.title}
-                </h2>
-                <Card className="bg-white/5 border-white/10 p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0">
-                      <Mail className="h-8 w-8 text-purple-400" />
+              {!isSalesInquiry && (
+                <div>
+                  <h2 className="text-2xl font-bold text-white mb-6">
+                    {t.contact.direct.title}
+                  </h2>
+                  <Card className="bg-white/5 border-white/10 p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0">
+                        <Mail className="h-8 w-8 text-purple-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white mb-2">
+                          {t.contact.direct.email}
+                        </h3>
+                        <a
+                          href="mailto:help@zazatechnologies.com"
+                          className="text-lg text-purple-400 hover:text-purple-300 transition-colors"
+                        >
+                          help@zazatechnologies.com
+                        </a>
+                        <p className="text-sm text-gray-400 mt-3">
+                          {t.contact.direct.response}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-white mb-2">
-                        {t.contact.direct.email}
-                      </h3>
-                      <a
-                        href="mailto:help@zazatechnologies.com"
-                        className="text-lg text-purple-400 hover:text-purple-300 transition-colors"
-                      >
-                        help@zazatechnologies.com
-                      </a>
-                      <p className="text-sm text-gray-400 mt-3">
-                        {t.contact.direct.response}
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-              </div>
+                  </Card>
+                </div>
+              )}
 
               <div className="bg-gradient-to-br from-purple-600/10 to-blue-600/10 border border-purple-500/20 rounded-xl p-6">
                 <h3 className="font-semibold text-white mb-2">
