@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { defaultMetadata } from "@/lib/metadata";
+import { absoluteUrl } from "@/lib/seo/site-config";
 
 interface BuildPageMetadataInput {
   title: string;
@@ -10,6 +11,26 @@ interface BuildPageMetadataInput {
   keywords?: string[];
   alternates?: Record<string, string>;
   canonicalPath?: string;
+}
+
+function deriveXDefaultAlternate(
+  path: string,
+  alternates?: Record<string, string>,
+) {
+  if (!alternates) {
+    return undefined;
+  }
+
+  if (alternates.en) {
+    return alternates.en;
+  }
+
+  if (alternates["en-GB"]) {
+    return alternates["en-GB"];
+  }
+
+  const fallbackPath = path.replace(/^\/de(?=\/|$)/, "") || "/";
+  return absoluteUrl(fallbackPath);
 }
 
 export function buildPageMetadata({
@@ -32,11 +53,20 @@ export function buildPageMetadata({
     canonicalPath,
   });
 
+  const xDefault = deriveXDefaultAlternate(path, alternates);
+
   return {
     ...metadata,
     alternates: {
       ...metadata.alternates,
-      languages: alternates,
+      ...(alternates
+        ? {
+            languages: {
+              ...alternates,
+              ...(xDefault ? { "x-default": xDefault } : {}),
+            },
+          }
+        : {}),
     },
   };
 }

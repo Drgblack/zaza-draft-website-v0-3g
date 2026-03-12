@@ -1,9 +1,9 @@
-import type { Metadata } from "next"
+import type { Metadata } from "next";
 
-const baseUrl = "https://zazadraft.com/de"
-const pageTitle = "Zaza Draft | Lehrerzentrierte KI-Schreibhilfe"
+const baseUrl = "https://zazadraft.com/de";
+const pageTitle = "Zaza Draft | Lehrerzentrierte KI-Schreibhilfe";
 const pageDescription =
-  "Zaza Draft entlastet Lehrkräfte bei Elternkommunikation, Feedback und Berichten mit sicheren KI-Entwürfen und Tonalitätstransparenz."
+  "Zaza Draft entlastet Lehrkräfte bei Elternkommunikation, Feedback und Berichten mit sicheren KI-Entwürfen und Tonalitätstransparenz.";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -15,7 +15,9 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Zaza Draft",
     locale: "de_DE",
-    images: [{ url: "/hero/teacher.jpg", alt: "Lehrkraft schreibt mit Zaza Draft" }],
+    images: [
+      { url: "/hero/teacher.jpg", alt: "Lehrkraft schreibt mit Zaza Draft" },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -28,6 +30,7 @@ export const metadata: Metadata = {
     languages: {
       en: "https://zazadraft.com",
       de: baseUrl,
+      "x-default": "https://zazadraft.com",
     },
   },
-}
+};
