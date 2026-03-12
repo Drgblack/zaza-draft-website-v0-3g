@@ -1,6 +1,18 @@
 import { NextResponse } from "next/server";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const DEFAULT_LIST_ID =
+  process.env.BREVO_LIST_ID ??
+  process.env.BREVO_DRAFT_LIST_ID ??
+  process.env.BREVO_LIST_ID_DRAFT_SIGNUPS;
+const WAITLIST_LIST_ID =
+  process.env.BREVO_WAITLIST_LIST_ID ??
+  process.env.BREVO_LIST_ID_WAITLIST ??
+  DEFAULT_LIST_ID;
+// BREVO_SALES_LIST_ID is used for pricing page sales enquiries
+// This keeps sales leads separate from early-access signups
+const SALES_LIST_ID =
+  process.env.BREVO_SALES_LIST_ID ?? process.env.BREVO_LIST_ID_SALES;
 
 const truncate = (value: string, limit = 256) => {
   if (!value) return "";
@@ -21,19 +33,32 @@ export async function POST(request: Request) {
     const isSalesSource =
       source.startsWith("pricing_sales_") ||
       source.startsWith("contact_sales_");
-    const configuredListId = isWaitlistSource
-      ? (process.env.BREVO_WAITLIST_LIST_ID ??
-        process.env.BREVO_LIST_ID_WAITLIST ??
-        process.env.BREVO_DRAFT_LIST_ID ??
-        process.env.BREVO_LIST_ID_DRAFT_SIGNUPS)
-      : isSalesSource
-        ? (process.env.BREVO_SALES_LIST_ID ??
-          process.env.BREVO_LIST_ID_SALES ??
-          process.env.BREVO_DRAFT_LIST_ID ??
-          process.env.BREVO_LIST_ID_DRAFT_SIGNUPS)
-        : (process.env.BREVO_DRAFT_LIST_ID ??
-          process.env.BREVO_LIST_ID_DRAFT_SIGNUPS);
-    const listIdInput = body.listId ?? configuredListId;
+    let listIdInput: unknown;
+
+    if (isSalesSource) {
+      const resolvedSalesListId = SALES_LIST_ID ?? DEFAULT_LIST_ID;
+
+      console.info(
+        `[BREVO] Sales lead received: ${email || "(missing email)"}`,
+      );
+
+      if (!SALES_LIST_ID) {
+        console.warn(
+          "[BREVO] BREVO_SALES_LIST_ID not set. Falling back to default list.",
+        );
+      }
+
+      console.info(
+        `[BREVO] Adding to Brevo list ID: ${resolvedSalesListId ?? "none"}`,
+      );
+
+      listIdInput = resolvedSalesListId;
+    } else {
+      const configuredListId = isWaitlistSource
+        ? WAITLIST_LIST_ID
+        : DEFAULT_LIST_ID;
+      listIdInput = body.listId ?? configuredListId;
+    }
 
     console.info("[brevo] /api/brevo/subscribe hit", {
       hasListId: Boolean(listIdInput),
@@ -71,7 +96,14 @@ export async function POST(request: Request) {
     }
 
     const listIds: number[] = [];
-    if (listIdInput) {
+    if (isSalesSource) {
+      if (listIdInput) {
+        const parsedSalesListId = Number(listIdInput);
+        if (!Number.isNaN(parsedSalesListId)) {
+          listIds.push(Number(listIdInput));
+        }
+      }
+    } else if (listIdInput) {
       const parsed = Number(listIdInput);
       if (!Number.isNaN(parsed)) {
         listIds.push(parsed);
