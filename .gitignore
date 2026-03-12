@@ -18,6 +18,7 @@ yarn-error.log*
 
 # env files
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -48,4 +49,3 @@ remove_duplicates.py
 _draft*.html
 .tmp.eslint.json
 tmp-*.md
-

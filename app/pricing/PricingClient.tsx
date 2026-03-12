@@ -8,6 +8,11 @@ import { useLanguage } from "@/lib/i18n/language-context";
 import { motion, AnimatePresence } from "framer-motion";
 import { track } from "@/lib/analytics";
 import {
+  DRAFT_SALES_ENABLED,
+  getDraftPrelaunchCtaLabel,
+  getDraftPrelaunchHelperLine,
+} from "@/lib/draft-sales";
+import {
   buildStripeCheckoutPath,
   departmentDisplayAmounts,
   pricingConfig,
@@ -32,9 +37,16 @@ export default function PricingClient() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const isGermanPricingPage = pathname === "/de/pricing";
-  const waitlistHref = isGermanPricingPage
-    ? "/de/early-access?source=pricing_page&plan=starter"
-    : "/early-access?source=pricing_page&plan=starter";
+  const prelaunchCtaLabel = getDraftPrelaunchCtaLabel(language);
+  const prelaunchHelperLine = getDraftPrelaunchHelperLine(language);
+  const waitlistBasePath = isGermanPricingPage
+    ? "/de/early-access"
+    : "/early-access";
+  const buildWaitlistHref = (plan: "starter" | "teacher" | "bundle") =>
+    `${waitlistBasePath}?source=pricing_page&plan=${plan}`;
+  const starterWaitlistHref = buildWaitlistHref("starter");
+  const teacherWaitlistHref = buildWaitlistHref("teacher");
+  const bundleWaitlistHref = buildWaitlistHref("bundle");
   const salesContactBasePath = isGermanPricingPage ? "/de/contact" : "/contact";
   const buildSalesContactHref = (
     plan: "department" | "enterprise" | "general",
@@ -101,16 +113,37 @@ export default function PricingClient() {
   const openFreeSignupFlow = () => {
     trackPricingCTA("plan_free");
     track("cta_click_pricing_free_signup", {
-      destination: waitlistHref,
+      destination: starterWaitlistHref,
       language,
       sourcePage: pathname,
     });
     logPricingAction("free_signup", {
-      destination: waitlistHref,
+      destination: starterWaitlistHref,
       flow: "waitlist_page",
       sourcePage: pathname,
     });
-    router.push(waitlistHref);
+    router.push(starterWaitlistHref);
+  };
+
+  const openEarlyAccessFlow = (
+    ctaId: "waitlist_teacher" | "waitlist_bundle",
+    destination: string,
+    plan: "teacher" | "bundle",
+  ) => {
+    trackPricingCTA(ctaId);
+    track(`cta_click_pricing_${ctaId}`, {
+      destination,
+      language,
+      plan,
+      sourcePage: pathname,
+    });
+    logPricingAction(ctaId, {
+      destination,
+      flow: "waitlist_page",
+      plan,
+      sourcePage: pathname,
+    });
+    router.push(destination);
   };
 
   const openSalesFlow = (
@@ -300,263 +333,283 @@ export default function PricingClient() {
 
         {/* Pricing Cards */}
         <section className="pb-20 px-6">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
-            {/* Free Plan */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="bg-[#1E293B] rounded-2xl p-8 border-2 border-transparent hover:border-[#8B5CF6] transition-all"
-            >
-              <div className="inline-block bg-[#8B5CF6]/20 text-[#A78BFA] px-3 py-1.5 rounded-lg text-sm font-semibold mb-4">
-                {t("pricing.free.badge")}
+          <div className="max-w-7xl mx-auto">
+            {!DRAFT_SALES_ENABLED ? (
+              <div className="mx-auto mb-8 max-w-3xl rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-center text-sm leading-relaxed text-[#CBD5E1] sm:text-base">
+                {prelaunchHelperLine}
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">
-                {t("pricing.free.title")}
-              </h3>
-              <p className="text-[#94A3B8] mb-6 text-sm">
-                {t("pricing.free.description")}
-              </p>
-
-              <div className="mb-6">
-                <span className="text-5xl font-bold text-white">{symbol}0</span>
-              </div>
-
-              <Button
-                type="button"
-                onClick={openFreeSignupFlow}
-                className="w-full bg-transparent border-2 border-[#8B5CF6] text-[#8B5CF6] hover:bg-[#8B5CF6]/10 py-5 text-base font-semibold rounded-lg mb-6"
+            ) : null}
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
+              {/* Free Plan */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="bg-[#1E293B] rounded-2xl p-8 border-2 border-transparent hover:border-[#8B5CF6] transition-all"
               >
-                {t("pricing.free.cta")}
-              </Button>
+                <div className="inline-block bg-[#8B5CF6]/20 text-[#A78BFA] px-3 py-1.5 rounded-lg text-sm font-semibold mb-4">
+                  {t("pricing.free.badge")}
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  {t("pricing.free.title")}
+                </h3>
+                <p className="text-[#94A3B8] mb-6 text-sm">
+                  {t("pricing.free.description")}
+                </p>
 
-              <div className="space-y-3">
-                <div className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" />
-                  <span className="text-[#94A3B8] text-sm">
-                    {t("pricing.free.feature1")}
+                <div className="mb-6">
+                  <span className="text-5xl font-bold text-white">
+                    {symbol}0
                   </span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" />
-                  <span className="text-[#94A3B8] text-sm">
-                    {t("pricing.free.feature2")}
-                  </span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" />
-                  <span className="text-[#94A3B8] text-sm">
-                    {t("pricing.free.feature3")}
-                  </span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" />
-                  <span className="text-[#94A3B8] text-sm">
-                    {t("pricing.free.feature4")}
-                  </span>
-                </div>
-              </div>
-            </motion.div>
 
-            {/* Teacher (Premium) Plan - Featured */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="bg-[#1E293B] rounded-2xl p-8 border-2 border-[#8B5CF6] relative lg:scale-105 shadow-2xl shadow-[#8B5CF6]/30"
-            >
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white px-6 py-2 rounded-full font-semibold text-sm shadow-lg flex items-center gap-2">
-                <Star className="w-4 h-4 fill-current" />
-                {t("pricing.teacher.badge")}
-              </div>
-
-              <h3 className="text-3xl font-bold text-white mb-2 mt-4">
-                {t("pricing.teacher.title")}
-              </h3>
-              <p className="text-[#E2E8F0] mb-6">
-                {t("pricing.teacher.description")}
-              </p>
-
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={`${billingInterval}-${currency}`}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  className="mb-2"
+                <Button
+                  type="button"
+                  onClick={openFreeSignupFlow}
+                  className="w-full bg-transparent border-2 border-[#8B5CF6] text-[#8B5CF6] hover:bg-[#8B5CF6]/10 py-5 text-base font-semibold rounded-lg mb-6"
                 >
+                  {t("pricing.free.cta")}
+                </Button>
+
+                <div className="space-y-3">
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" />
+                    <span className="text-[#94A3B8] text-sm">
+                      {t("pricing.free.feature1")}
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" />
+                    <span className="text-[#94A3B8] text-sm">
+                      {t("pricing.free.feature2")}
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" />
+                    <span className="text-[#94A3B8] text-sm">
+                      {t("pricing.free.feature3")}
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" />
+                    <span className="text-[#94A3B8] text-sm">
+                      {t("pricing.free.feature4")}
+                    </span>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Teacher (Premium) Plan - Featured */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="bg-[#1E293B] rounded-2xl p-8 border-2 border-[#8B5CF6] relative lg:scale-105 shadow-2xl shadow-[#8B5CF6]/30"
+              >
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white px-6 py-2 rounded-full font-semibold text-sm shadow-lg flex items-center gap-2">
+                  <Star className="w-4 h-4 fill-current" />
+                  {t("pricing.teacher.badge")}
+                </div>
+
+                <h3 className="text-3xl font-bold text-white mb-2 mt-4">
+                  {t("pricing.teacher.title")}
+                </h3>
+                <p className="text-[#E2E8F0] mb-6">
+                  {t("pricing.teacher.description")}
+                </p>
+
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={`${billingInterval}-${currency}`}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="mb-2"
+                  >
+                    <span className="text-5xl font-bold text-white">
+                      {symbol}
+                      {
+                        pricingConfig.draft.displayAmounts[billingInterval][
+                          currency
+                        ]
+                      }
+                    </span>
+                    <span className="text-[#94A3B8]">
+                      /{billingInterval === "monthly" ? "mo" : "yr"}
+                    </span>
+                  </motion.div>
+                </AnimatePresence>
+
+                {billingInterval === "yearly" && (
+                  <p className="text-sm text-green-500 font-semibold mb-4">
+                    {t("pricing.teacher.savingsAnnual")}
+                  </p>
+                )}
+
+                <Button
+                  type="button"
+                  onClick={() => {
+                    if (DRAFT_SALES_ENABLED) {
+                      launchStripeCheckout(
+                        "checkout_teacher",
+                        draftCheckoutHref,
+                        "draft",
+                      );
+                      return;
+                    }
+
+                    openEarlyAccessFlow(
+                      "waitlist_teacher",
+                      teacherWaitlistHref,
+                      "teacher",
+                    );
+                  }}
+                  className="w-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white hover:scale-105 py-6 text-lg font-semibold rounded-lg mb-3 shadow-lg shadow-[#8B5CF6]/40 transition-transform"
+                >
+                  {DRAFT_SALES_ENABLED
+                    ? t("pricing.checkout.buyNow")
+                    : prelaunchCtaLabel}
+                </Button>
+                <p className="text-center text-sm text-[#94A3B8] mb-4">
+                  {t("pricing.teacher.trial")}
+                </p>
+
+                <div className="flex items-center justify-center gap-2 bg-[rgba(16,185,129,0.1)] border border-[rgba(16,185,129,0.3)] rounded-lg px-4 py-2 mb-6">
+                  <ShieldCheck className="w-4 h-4 text-[#10B981]" />
+                  <span className="text-sm text-[#10B981] font-semibold">
+                    {t("pricing.teacher.guarantee")}
+                  </span>
+                </div>
+
+                <div className="space-y-3 mb-6">
+                  {[1, 2, 3, 4, 5, 6].map((i) => (
+                    <div key={i} className="flex items-start gap-2">
+                      <Star className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" />
+                      <span className="text-white text-sm font-medium">
+                        {t(`pricing.teacher.feature${i}`)}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="p-4 bg-[#8B5CF6]/15 rounded-xl">
+                  <p className="text-[#E2E8F0] text-sm">
+                    {t("pricing.teacher.timeSaved")}
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Department Plan */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="bg-[#1E293B] rounded-2xl p-8 border-2 border-transparent hover:border-[#FB923C] transition-all"
+              >
+                <div className="inline-block bg-[#FB923C]/20 text-[#FB923C] px-3 py-1.5 rounded-lg text-sm font-semibold mb-4">
+                  {t("pricing.department.badge")}
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  {t("pricing.department.title")}
+                </h3>
+                <p className="text-[#94A3B8] mb-6 text-sm">
+                  {t("pricing.department.description")}
+                </p>
+
+                <div className="mb-2">
                   <span className="text-5xl font-bold text-white">
                     {symbol}
-                    {
-                      pricingConfig.draft.displayAmounts[billingInterval][
-                        currency
-                      ]
-                    }
+                    {departmentDisplayAmounts.monthly[currency]}
                   </span>
                   <span className="text-[#94A3B8]">
-                    /{billingInterval === "monthly" ? "mo" : "yr"}
+                    {t("pricing.department.perTeacher")}
                   </span>
-                </motion.div>
-              </AnimatePresence>
-
-              {billingInterval === "yearly" && (
-                <p className="text-sm text-green-500 font-semibold mb-4">
-                  {t("pricing.teacher.savingsAnnual")}
+                </div>
+                <p className="text-sm text-[#94A3B8] mb-6">
+                  {t("pricing.department.billing")}
                 </p>
-              )}
 
-              <Button
-                type="button"
-                onClick={() =>
-                  launchStripeCheckout(
-                    "checkout_teacher",
-                    draftCheckoutHref,
-                    "draft",
-                  )
-                }
-                className="w-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white hover:scale-105 py-6 text-lg font-semibold rounded-lg mb-3 shadow-lg shadow-[#8B5CF6]/40 transition-transform"
+                <Button
+                  type="button"
+                  onClick={() =>
+                    openSalesFlow(
+                      "checkout_department",
+                      departmentSalesHref,
+                      "department",
+                    )
+                  }
+                  className="w-full bg-transparent border-2 border-[#FB923C] text-[#FB923C] hover:bg-[#FB923C]/10 py-5 text-base font-semibold rounded-lg mb-6"
+                >
+                  {t("pricing.department.cta")}
+                </Button>
+
+                <div className="space-y-3 mb-4">
+                  <p className="text-sm font-semibold text-white">
+                    {t("pricing.department.includes")}
+                  </p>
+                  {[1, 2, 3, 4].map((i) => (
+                    <div key={i} className="flex items-start gap-2">
+                      <Check className="w-5 h-5 text-[#FB923C] flex-shrink-0 mt-0.5" />
+                      <span className="text-[#94A3B8] text-sm">
+                        {t(`pricing.department.feature${i}`)}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Schools & Districts */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="bg-[#1E293B] rounded-2xl p-8 border-2 border-transparent hover:border-[#FB923C] transition-all"
               >
-                {t("pricing.checkout.buyNow")}
-              </Button>
-              <p className="text-center text-sm text-[#94A3B8] mb-4">
-                {t("pricing.teacher.trial")}
-              </p>
-
-              <div className="flex items-center justify-center gap-2 bg-[rgba(16,185,129,0.1)] border border-[rgba(16,185,129,0.3)] rounded-lg px-4 py-2 mb-6">
-                <ShieldCheck className="w-4 h-4 text-[#10B981]" />
-                <span className="text-sm text-[#10B981] font-semibold">
-                  {t("pricing.teacher.guarantee")}
-                </span>
-              </div>
-
-              <div className="space-y-3 mb-6">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <Star className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" />
-                    <span className="text-white text-sm font-medium">
-                      {t(`pricing.teacher.feature${i}`)}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="p-4 bg-[#8B5CF6]/15 rounded-xl">
-                <p className="text-[#E2E8F0] text-sm">
-                  {t("pricing.teacher.timeSaved")}
+                <div className="inline-block bg-[#FB923C]/20 text-[#FB923C] px-3 py-1.5 rounded-lg text-sm font-semibold mb-4">
+                  {t("pricing.enterprise.badge")}
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  {t("pricing.enterprise.title")}
+                </h3>
+                <p className="text-[#94A3B8] mb-6 text-sm">
+                  {t("pricing.enterprise.description")}
                 </p>
-              </div>
-            </motion.div>
 
-            {/* Department Plan */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="bg-[#1E293B] rounded-2xl p-8 border-2 border-transparent hover:border-[#FB923C] transition-all"
-            >
-              <div className="inline-block bg-[#FB923C]/20 text-[#FB923C] px-3 py-1.5 rounded-lg text-sm font-semibold mb-4">
-                {t("pricing.department.badge")}
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">
-                {t("pricing.department.title")}
-              </h3>
-              <p className="text-[#94A3B8] mb-6 text-sm">
-                {t("pricing.department.description")}
-              </p>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold text-white">
+                    {t("pricing.enterprise.price")}
+                  </span>
+                </div>
 
-              <div className="mb-2">
-                <span className="text-5xl font-bold text-white">
-                  {symbol}
-                  {departmentDisplayAmounts.monthly[currency]}
-                </span>
-                <span className="text-[#94A3B8]">
-                  {t("pricing.department.perTeacher")}
-                </span>
-              </div>
-              <p className="text-sm text-[#94A3B8] mb-6">
-                {t("pricing.department.billing")}
-              </p>
+                <Button
+                  type="button"
+                  onClick={() =>
+                    openSalesFlow(
+                      "checkout_enterprise",
+                      enterpriseSalesHref,
+                      "enterprise",
+                    )
+                  }
+                  className="w-full bg-transparent border-2 border-[#FB923C] text-[#FB923C] hover:bg-[#FB923C]/10 py-5 text-base font-semibold rounded-lg mb-6"
+                >
+                  {t("pricing.enterprise.cta")}
+                </Button>
 
-              <Button
-                type="button"
-                onClick={() =>
-                  openSalesFlow(
-                    "checkout_department",
-                    departmentSalesHref,
-                    "department",
-                  )
-                }
-                className="w-full bg-transparent border-2 border-[#FB923C] text-[#FB923C] hover:bg-[#FB923C]/10 py-5 text-base font-semibold rounded-lg mb-6"
-              >
-                {t("pricing.department.cta")}
-              </Button>
-
-              <div className="space-y-3 mb-4">
-                <p className="text-sm font-semibold text-white">
-                  {t("pricing.department.includes")}
-                </p>
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-[#FB923C] flex-shrink-0 mt-0.5" />
-                    <span className="text-[#94A3B8] text-sm">
-                      {t(`pricing.department.feature${i}`)}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Schools & Districts */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="bg-[#1E293B] rounded-2xl p-8 border-2 border-transparent hover:border-[#FB923C] transition-all"
-            >
-              <div className="inline-block bg-[#FB923C]/20 text-[#FB923C] px-3 py-1.5 rounded-lg text-sm font-semibold mb-4">
-                {t("pricing.enterprise.badge")}
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">
-                {t("pricing.enterprise.title")}
-              </h3>
-              <p className="text-[#94A3B8] mb-6 text-sm">
-                {t("pricing.enterprise.description")}
-              </p>
-
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-white">
-                  {t("pricing.enterprise.price")}
-                </span>
-              </div>
-
-              <Button
-                type="button"
-                onClick={() =>
-                  openSalesFlow(
-                    "checkout_enterprise",
-                    enterpriseSalesHref,
-                    "enterprise",
-                  )
-                }
-                className="w-full bg-transparent border-2 border-[#FB923C] text-[#FB923C] hover:bg-[#FB923C]/10 py-5 text-base font-semibold rounded-lg mb-6"
-              >
-                {t("pricing.enterprise.cta")}
-              </Button>
-
-              <div className="space-y-3">
-                <p className="text-sm font-semibold text-white">
-                  {t("pricing.enterprise.includes")}
-                </p>
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-[#FB923C] flex-shrink-0 mt-0.5" />
-                    <span className="text-[#94A3B8] text-sm">
-                      {t(`pricing.enterprise.feature${i}`)}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
+                <div className="space-y-3">
+                  <p className="text-sm font-semibold text-white">
+                    {t("pricing.enterprise.includes")}
+                  </p>
+                  {[1, 2, 3].map((i) => (
+                    <div key={i} className="flex items-start gap-2">
+                      <Check className="w-5 h-5 text-[#FB923C] flex-shrink-0 mt-0.5" />
+                      <span className="text-[#94A3B8] text-sm">
+                        {t(`pricing.enterprise.feature${i}`)}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
 
@@ -601,16 +654,27 @@ export default function PricingClient() {
                 )}
                 <Button
                   type="button"
-                  onClick={() =>
-                    launchStripeCheckout(
-                      "checkout_bundle",
-                      bundleCheckoutHref,
+                  onClick={() => {
+                    if (DRAFT_SALES_ENABLED) {
+                      launchStripeCheckout(
+                        "checkout_bundle",
+                        bundleCheckoutHref,
+                        "bundle",
+                      );
+                      return;
+                    }
+
+                    openEarlyAccessFlow(
+                      "waitlist_bundle",
+                      bundleWaitlistHref,
                       "bundle",
-                    )
-                  }
+                    );
+                  }}
                   className="bg-white text-[#8B5CF6] hover:bg-white/90 py-6 px-8 text-lg font-semibold rounded-lg shadow-lg"
                 >
-                  {t("pricing.checkout.buyNow")}
+                  {DRAFT_SALES_ENABLED
+                    ? t("pricing.checkout.buyNow")
+                    : prelaunchCtaLabel}
                 </Button>
               </div>
             </motion.div>
@@ -790,14 +854,14 @@ export default function PricingClient() {
                   onClick={() => {
                     trackPricingCTA("cta_primary");
                     track("cta_click_pricing_cta_primary", {
-                      destination: waitlistHref,
+                      destination: starterWaitlistHref,
                       language,
                     });
                     logPricingAction("cta_primary", {
-                      destination: waitlistHref,
+                      destination: starterWaitlistHref,
                       flow: "waitlist_page",
                     });
-                    router.push(waitlistHref);
+                    router.push(starterWaitlistHref);
                   }}
                   className="bg-white text-[#8B5CF6] hover:bg-white/90 py-6 px-8 text-lg font-semibold rounded-lg shadow-lg"
                 >
