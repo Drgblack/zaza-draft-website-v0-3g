@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useLanguage } from "../../src/contexts/LanguageContext";
 import Link from "next/link";
@@ -121,7 +121,10 @@ export function ContactClient() {
     salesPlanParam === "general"
       ? salesPlanParam
       : "general";
-  const isPricingSalesInquiry = intent === "sales" && topic === "pricing";
+  const isPricingSalesPlan =
+    salesPlan === "department" || salesPlan === "enterprise";
+  const isPricingSalesInquiry =
+    intent === "sales" && topic === "pricing" && isPricingSalesPlan;
   const contactTitle = isPricingSalesInquiry
     ? isGerman
       ? "Mit dem Vertrieb über Schulzugang sprechen"
@@ -156,6 +159,30 @@ export function ContactClient() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    console.info("[contact] received query params", {
+      intent: intent ?? "none",
+      topic: topic || "none",
+      plan: salesPlan,
+      source: source || "none",
+    });
+    console.info("[contact] selected form variant", {
+      variant: isPricingSalesInquiry ? "pricing_sales" : "default_contact",
+      trigger: {
+        intentIsSales: intent === "sales",
+        topicIsPricing: topic === "pricing",
+        planIsSupported: isPricingSalesPlan,
+      },
+    });
+  }, [
+    intent,
+    isPricingSalesInquiry,
+    isPricingSalesPlan,
+    salesPlan,
+    source,
+    topic,
+  ]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
