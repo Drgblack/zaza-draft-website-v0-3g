@@ -152,24 +152,22 @@ export function HomePageClient() {
   const heroEyebrow = language === "de" ? "FUER LEHRKRAEFTE" : "FOR TEACHERS";
   const heroBadge =
     language === "de"
-      ? "E-Mails an Eltern und Zeugnisformulierungen"
-      : "Parent emails and report comments";
+      ? "Sensible Schulkommunikation mit Sicherheitsleitplanken"
+      : "High-stakes school messages with safety guardrails";
   const heroHeadline =
-    language === "de"
-      ? "Schreibe Schulkommunikation,"
-      : "Write school communication";
+    language === "de" ? "Schreibe Schulnachrichten," : "Write school messages";
   const heroHeadlineAccent =
     language === "de"
-      ? "die sich sicher senden laesst."
-      : "that feels safe to send.";
+      ? "ohne zu fuerchten, dass du das Falsche schreibst."
+      : "without worrying you will say the wrong thing.";
   const heroSubheading =
     language === "de"
-      ? "Ruhige, professionelle Schreibunterstuetzung fuer die Momente, die Lehrkraefte am meisten zerdenken, von E-Mails an Eltern bis zu Zeugnisformulierungen."
-      : "Calm, professional writing support for the moments teachers overthink most, from parent emails to report comments.";
+      ? "Zaza Draft hilft Lehrkraeften, riskante Formulierungen zu erkennen, sensible Nachrichten sicherer umzuschreiben und mit mehr Ruhe auf Senden zu druecken."
+      : "Zaza Draft helps teachers spot risky wording, rewrite sensitive messages more safely, and press send with more confidence.";
   const heroEntityLine =
     language === "de"
-      ? "Zaza Draft ist ein lehrkraft-zentrierter Co-Writer fuer sensible Schulkommunikation. Du pruefst, bearbeitest und gibst jede Formulierung selbst frei."
-      : "Zaza Draft is a teacher-first co-writer for sensitive school communication. You review, edit, and approve every word before it is used.";
+      ? "Es ist kein generischer KI-Schreiber. Es ist ein lehrkraft-zentrierter Sicherheits- und Schreibassistent fuer Elternkommunikation, Zeugnisse und schriftliche Dokumentation, bei der jede Formulierung zaehlt."
+      : "It is not a generic AI writer. It is a teacher-first safety and writing assistant for parent communication, report comments, and written documentation where wording carries professional risk.";
   const heroOutcomeLabel =
     language === "de" ? "Sieh den Unterschied" : "See the difference";
   const heroProofLabel =
@@ -350,6 +348,114 @@ export function HomePageClient() {
             title: "Privacy-first design",
             body: "Built for responsible classroom use and careful communication workflows.",
             icon: ShieldIcon,
+          },
+        ];
+  const protectionHeading =
+    language === "de"
+      ? "Gebaut, um Lehrkraefte zu schuetzen"
+      : "Built to protect teachers";
+  const protectionSubheading =
+    language === "de"
+      ? "Draft wurde fuer Kommunikation entwickelt, die weitergeleitet, gescreenshotet oder spaeter geprueft werden kann. Es hilft nicht nur beim Schreiben, sondern dabei, professionelles Risiko zu senken."
+      : "Draft is built for communication that may be forwarded, screenshot, or reviewed later. It does not just help you write faster - it helps reduce professional risk.";
+  const protectionFeatures =
+    language === "de"
+      ? [
+          {
+            title: "Riskante Formulierungen erkennen",
+            body: "Markiert Wendungen, die zu hart, zu vage oder zu eskalierend wirken koennten, bevor du sendest.",
+            icon: InfoIcon,
+          },
+          {
+            title: "Sensible Nachrichten sicherer umschreiben",
+            body: "Hilft, schwierige Botschaften ruhiger, klarer und belastbarer zu formulieren, ohne kuenstlich zu klingen.",
+            icon: CheckCircleIcon,
+          },
+          {
+            title: "Elternreaktionen besser antizipieren",
+            body: "Zeigt, wie eine Formulierung wahrscheinlich ankommt, damit du Missverstaendnisse frueher abfangen kannst.",
+            icon: ShieldIcon,
+          },
+          {
+            title: "In den Dokumentationsmodus wechseln",
+            body: "Wenn ein Vorfall sauber festgehalten werden muss, stuetzt Draft sachlichere, nachvollziehbare Formulierungen.",
+            icon: DocumentIcon,
+          },
+        ]
+      : [
+          {
+            title: "Detect risky wording",
+            body: "Flags phrasing that may read as too sharp, too vague, or too escalatory before you send it.",
+            icon: InfoIcon,
+          },
+          {
+            title: "Rewrite sensitive messages more safely",
+            body: "Helps turn difficult drafts into calmer, clearer wording without sounding robotic or evasive.",
+            icon: CheckCircleIcon,
+          },
+          {
+            title: "Anticipate parent reactions",
+            body: "Shows how wording may land with families so you can reduce friction before it starts.",
+            icon: ShieldIcon,
+          },
+          {
+            title: "Switch into documentation mode",
+            body: "When a situation needs a cleaner paper trail, Draft supports more factual, defensible wording.",
+            icon: DocumentIcon,
+          },
+        ];
+  const protectionVisualHeading =
+    language === "de"
+      ? "Platz fuer kuenftige Feature-Crops"
+      : "Ready for future feature crops";
+  const protectionVisualSubheading =
+    language === "de"
+      ? "Ein visueller Slot pro Nutzenversprechen. Finales Produktmaterial kann spaeter direkt hier eingesetzt werden."
+      : "One visual slot per benefit. Final product crops can drop into this structure later without redesigning the page.";
+  const protectionVisuals =
+    language === "de"
+      ? [
+          {
+            title: "Trigger-Erkennung",
+            badge: "Crop 01",
+            body: "Warnsignale fuer heikle Formulierungen oder moegliche Eskalations-Trigger.",
+          },
+          {
+            title: "Professional-Risk-Alert",
+            badge: "Crop 02",
+            body: "Ein klarer Hinweis, wenn eine Nachricht beruflich angreifbar wirken koennte.",
+          },
+          {
+            title: "Sicherere Ueberarbeitung",
+            badge: "Crop 03",
+            body: "Vorher-nachher-Ausschnitt einer ruhigeren, belastbareren Formulierung.",
+          },
+          {
+            title: "Dokumentationsmodus",
+            badge: "Crop 04",
+            body: "Beispiel fuer sachliche, nachvollziehbare Formulierungen bei Vorfaellen.",
+          },
+        ]
+      : [
+          {
+            title: "Trigger detection",
+            badge: "Crop 01",
+            body: "A focused crop showing flagged phrasing or escalation triggers.",
+          },
+          {
+            title: "Professional-risk alert",
+            badge: "Crop 02",
+            body: "A callout that warns when wording may create avoidable professional exposure.",
+          },
+          {
+            title: "Safer rewrite",
+            badge: "Crop 03",
+            body: "A before-and-after crop showing calmer, more defensible wording.",
+          },
+          {
+            title: "Documentation mode",
+            badge: "Crop 04",
+            body: "A factual writing view for incident notes and paper-trail communication.",
           },
         ];
   const situationsHeading =
@@ -892,6 +998,100 @@ export function HomePageClient() {
                 })}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/5 bg-[#08111F] py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#8B5CF6]/25 bg-[#8B5CF6]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#C4B5FD]">
+                <ShieldIcon className="h-4 w-4" />
+                <span>{protectionHeading}</span>
+              </div>
+              <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white md:text-4xl">
+                {protectionHeading}
+              </h2>
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-[#CBD5E1]">
+                {protectionSubheading}
+              </p>
+              <div className="mt-8 grid gap-4">
+                {protectionFeatures.map((feature) => {
+                  const Icon = feature.icon;
+
+                  return (
+                    <article
+                      key={feature.title}
+                      className="rounded-2xl border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] px-5 py-5 shadow-[0_18px_50px_-42px_rgba(15,23,42,0.95)]"
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.05] text-[#C4B5FD]">
+                          <Icon className="h-5 w-5" />
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-semibold text-white">
+                            {feature.title}
+                          </h3>
+                          <p className="mt-2 text-sm leading-6 text-[#CBD5E1]">
+                            {feature.body}
+                          </p>
+                        </div>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+            </div>
+
+            <aside className="rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(30,41,59,0.9),rgba(15,23,42,0.98))] p-6 shadow-[0_30px_90px_-48px_rgba(15,23,42,0.95)] ring-1 ring-white/5 md:p-7">
+              <div className="flex items-center justify-between gap-3">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#A78BFA]">
+                    {protectionVisualHeading}
+                  </p>
+                  <p className="mt-3 text-sm leading-6 text-[#94A3B8]">
+                    {protectionVisualSubheading}
+                  </p>
+                </div>
+                <div className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#CBD5E1]">
+                  UI slots
+                </div>
+              </div>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                {protectionVisuals.map((visual) => (
+                  <article
+                    key={visual.title}
+                    className="rounded-2xl border border-white/8 bg-[#0B1220]/85 p-4"
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <p className="text-sm font-semibold text-white">
+                        {visual.title}
+                      </p>
+                      <span className="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#A78BFA]">
+                        {visual.badge}
+                      </span>
+                    </div>
+                    <div className="mt-4 rounded-2xl border border-dashed border-[#8B5CF6]/35 bg-[linear-gradient(180deg,rgba(139,92,246,0.12),rgba(15,23,42,0.12))] p-4">
+                      <div className="flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-[#C4B5FD]">
+                        <span className="h-2 w-2 rounded-full bg-[#A78BFA]" />
+                        <span>Screenshot crop placeholder</span>
+                      </div>
+                      <div className="mt-4 space-y-2">
+                        <div className="h-2.5 w-4/5 rounded-full bg-white/15" />
+                        <div className="h-2.5 w-3/5 rounded-full bg-white/10" />
+                        <div className="rounded-xl border border-white/8 bg-white/[0.04] px-3 py-2 text-xs text-[#E2E8F0]">
+                          {visual.title}
+                        </div>
+                      </div>
+                    </div>
+                    <p className="mt-4 text-sm leading-6 text-[#CBD5E1]">
+                      {visual.body}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </aside>
           </div>
         </div>
       </section>

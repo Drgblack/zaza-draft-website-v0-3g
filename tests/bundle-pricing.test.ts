@@ -78,3 +78,26 @@ test("server-side guard also blocks direct bundle price ID requests when disable
     "https://zazadraft.com/de/early-access?source=bundle_checkout_guard&plan=bundle",
   );
 });
+
+test("draft checkout is not blocked by the bundle guard when the bundle is disabled", async () => {
+  process.env.NEXT_PUBLIC_DRAFT_TEACH_BUNDLE_ENABLED = "false";
+
+  const request = new NextRequest(
+    "https://zazadraft.com/api/stripe/checkout?plan=draft&interval=monthly&currency=EUR&returnPath=/pricing",
+  );
+
+  const response = await GET(request);
+  const location = response.headers.get("location");
+
+  if (response.status === 303) {
+    assert.ok(location);
+    assert.ok(location.startsWith("https://checkout.stripe.com/"));
+    assert.ok(!location.includes("/early-access"));
+    return;
+  }
+
+  const payload = await response.json();
+  assert.equal(response.status, 500);
+  assert.equal(payload.error, "Stripe checkout is not configured.");
+  assert.equal(location, null);
+});

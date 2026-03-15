@@ -110,7 +110,70 @@ export default function PricingClient() {
       generic: t("pricing.compare.rows.cost.generic"),
       zaza: t("pricing.compare.rows.cost.zaza"),
     },
+    ...(language === "de"
+      ? [
+          {
+            feature: "Professional-Risk-Check",
+            generic:
+              "Keine eingebaute Warnung, wenn eine Formulierung unnötig hart, unklar oder angreifbar wirkt.",
+            zaza: "Hebt riskante Formulierungen hervor und unterstützt sicherere Alternativen, bevor du sendest.",
+          },
+          {
+            feature: "Elternreaktion antizipieren",
+            generic:
+              "Hilft beim Schreiben, aber nicht dabei, wie eine Nachricht wahrscheinlich aufgenommen wird.",
+            zaza: "Hilft Lehrkräften zu prüfen, wie Botschaften bei Familien landen könnten, bevor Missverständnisse entstehen.",
+          },
+          {
+            feature: "Dokumentationsmodus",
+            generic:
+              "Glatte Formulierungen, aber keine klare Unterstützung für sachliche, nachvollziehbare Vorfallsnotizen.",
+            zaza: "Kann in einen nüchterneren, dokumentationsfreundlichen Stil wechseln, wenn ein sauberer Schriftverlauf zählt.",
+          },
+        ]
+      : [
+          {
+            feature: "Professional-risk check",
+            generic:
+              "No built-in warning when phrasing feels unnecessarily sharp, vague, or professionally exposed.",
+            zaza: "Flags risky wording and supports safer alternatives before the message leaves your draft.",
+          },
+          {
+            feature: "Parent reaction forecast",
+            generic:
+              "Helps generate text, but not how that text is likely to land with families.",
+            zaza: "Helps teachers sense how wording may be received so they can reduce friction earlier.",
+          },
+          {
+            feature: "Documentation mode",
+            generic:
+              "Fluent writing, but weak support for factual, defensible incident notes and paper-trail communication.",
+            zaza: "Can shift into a more factual documentation style when clarity and record-keeping matter most.",
+          },
+        ]),
   ];
+  const pricingProtectionHeading =
+    language === "de"
+      ? "Gebaut, um Lehrkraefte zu schuetzen"
+      : "Built to protect teachers";
+  const pricingProtectionSubheading =
+    language === "de"
+      ? "Draft ist fuer sensible Kommunikation gedacht, die weitergeleitet, gescreenshotet oder spaeter geprueft werden kann. Es hilft nicht nur beim Schreiben, sondern beim Senken professioneller Risiken."
+      : "Draft is built for sensitive communication that may be forwarded, screenshot, or reviewed later. It is not just about fluent copy - it is about lowering professional risk.";
+  const pricingProtectionCards =
+    language === "de"
+      ? [
+          "Erkennt riskante Formulierungen frueher.",
+          "Schlaegt ruhigere, belastbarere Ueberarbeitungen vor.",
+          "Hilft einzuschaetzen, wie Nachrichten bei Eltern ankommen koennten.",
+          "Unterstuetzt einen sachlicheren Dokumentationsmodus, wenn ein sauberer Schriftverlauf wichtig ist.",
+        ]
+      : [
+          "Spots risky wording earlier.",
+          "Suggests calmer, more defensible rewrites.",
+          "Helps you gauge how a message may land with parents.",
+          "Supports a more factual documentation mode when the paper trail matters.",
+        ];
   const trackPricingCTA = (id: string) =>
     track("cta_click", { location: "pricing", id });
 
@@ -338,6 +401,36 @@ export default function PricingClient() {
               <p className="text-lg text-[#E2E8F0]">
                 {t("pricing.outcome.text")}
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="pb-12 px-6">
+          <div className="mx-auto max-w-5xl rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(30,41,59,0.92),rgba(15,23,42,0.98))] p-8 shadow-[0_30px_80px_-48px_rgba(15,23,42,0.95)] ring-1 ring-white/5 md:p-10">
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#8B5CF6]/25 bg-[#8B5CF6]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#C4B5FD]">
+                <ShieldCheck className="h-4 w-4" />
+                <span>{pricingProtectionHeading}</span>
+              </div>
+              <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white md:text-4xl">
+                {pricingProtectionHeading}
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-[#CBD5E1]">
+                {pricingProtectionSubheading}
+              </p>
+            </div>
+            <div className="mt-8 grid gap-4 md:grid-cols-2">
+              {pricingProtectionCards.map((card) => (
+                <article
+                  key={card}
+                  className="rounded-2xl border border-white/8 bg-[#0B1220]/80 px-5 py-5"
+                >
+                  <div className="flex items-start gap-3">
+                    <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#A78BFA]" />
+                    <p className="text-sm leading-6 text-[#E2E8F0]">{card}</p>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </section>
