@@ -7,6 +7,7 @@
     "dev": "next dev",
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --max-warnings=0",
+    "test": "node --import tsx --test tests/bundle-pricing.test.ts",
     "validate-posts": "tsx src/data/validate-posts.ts",
     "validate-content": "tsx scripts/validate-content.ts",
     "test:locale-routing": "tsx scripts/test-locale-routing.ts",

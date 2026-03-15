@@ -8,6 +8,11 @@ import { useLanguage } from "@/lib/i18n/language-context";
 import { motion, AnimatePresence } from "framer-motion";
 import { track } from "@/lib/analytics";
 import {
+  DRAFT_TEACH_BUNDLE_ENABLED,
+  getDraftTeachBundlePricingAction,
+  getDraftTeachBundleWaitlistCtaLabel,
+} from "@/lib/bundle-sales";
+import {
   DRAFT_SALES_ENABLED,
   getDraftPrelaunchCtaLabel,
   getDraftPrelaunchHelperLine,
@@ -64,6 +69,12 @@ export default function PricingClient() {
     interval: billingInterval,
     currency,
     returnPath: isGermanPricingPage ? pathname : "/pricing",
+  });
+  const bundlePricingAction = getDraftTeachBundlePricingAction({
+    language,
+    checkoutHref: bundleCheckoutHref,
+    waitlistHref: bundleWaitlistHref,
+    checkoutEnabled: DRAFT_TEACH_BUNDLE_ENABLED,
   });
   const departmentSalesHref = buildSalesContactHref("department");
   const enterpriseSalesHref = buildSalesContactHref("enterprise");
@@ -655,10 +666,10 @@ export default function PricingClient() {
                 <Button
                   type="button"
                   onClick={() => {
-                    if (DRAFT_SALES_ENABLED) {
+                    if (bundlePricingAction.kind === "checkout") {
                       launchStripeCheckout(
                         "checkout_bundle",
-                        bundleCheckoutHref,
+                        bundlePricingAction.href,
                         "bundle",
                       );
                       return;
@@ -666,16 +677,21 @@ export default function PricingClient() {
 
                     openEarlyAccessFlow(
                       "waitlist_bundle",
-                      bundleWaitlistHref,
+                      bundlePricingAction.href,
                       "bundle",
                     );
                   }}
                   className="bg-white text-[#8B5CF6] hover:bg-white/90 py-6 px-8 text-lg font-semibold rounded-lg shadow-lg"
                 >
-                  {DRAFT_SALES_ENABLED
+                  {bundlePricingAction.kind === "checkout"
                     ? t("pricing.checkout.buyNow")
-                    : prelaunchCtaLabel}
+                    : getDraftTeachBundleWaitlistCtaLabel(language)}
                 </Button>
+                {bundlePricingAction.helperText ? (
+                  <p className="mt-3 text-sm text-white/90">
+                    {bundlePricingAction.helperText}
+                  </p>
+                ) : null}
               </div>
             </motion.div>
           </div>

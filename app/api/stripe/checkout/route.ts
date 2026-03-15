@@ -1,6 +1,11 @@
 import Stripe from "stripe";
 import { NextRequest, NextResponse } from "next/server";
 import {
+  buildDraftTeachBundleWaitlistPath,
+  isDraftTeachBundleCheckoutRequest,
+  isDraftTeachBundleEnabled,
+} from "@/lib/bundle-sales";
+import {
   getStripePriceId,
   isPricingCurrency,
   isSelfServeInterval,
@@ -32,9 +37,29 @@ function buildReturnUrl(
 
 export async function GET(request: NextRequest) {
   const plan = request.nextUrl.searchParams.get("plan");
+  const requestedPriceId = request.nextUrl.searchParams.get("priceId");
   const interval = request.nextUrl.searchParams.get("interval");
   const currency = request.nextUrl.searchParams.get("currency");
   const returnPath = request.nextUrl.searchParams.get("returnPath");
+
+  if (
+    !isDraftTeachBundleEnabled() &&
+    isDraftTeachBundleCheckoutRequest(plan, requestedPriceId)
+  ) {
+    const redirectUrl = new URL(
+      buildDraftTeachBundleWaitlistPath(returnPath),
+      request.nextUrl.origin,
+    );
+
+    console.info("[stripe-checkout] Bundle checkout blocked", {
+      plan: plan ?? "unknown",
+      requestedPriceId: requestedPriceId ?? "none",
+      redirectUrl: redirectUrl.toString(),
+      returnPath: returnPath ?? "/pricing",
+    });
+
+    return NextResponse.redirect(redirectUrl, { status: 303 });
+  }
 
   if (
     !isSelfServePlan(plan) ||
