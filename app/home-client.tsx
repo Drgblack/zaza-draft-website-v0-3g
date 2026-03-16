@@ -600,8 +600,8 @@ export function HomePageClient() {
       : "Built by a PhD in Professional Education.";
   const saferMessageSectionHeading =
     language === "de"
-      ? "Sieh, wie Draft Lehrkraeften hilft, sicherere Nachrichten zu schreiben."
-      : "See how Draft helps teachers write safer messages.";
+      ? "Die E-Mail, ueber die Lehrkraefte sich Sorgen machen"
+      : "The email teachers worry about";
   const saferMessageBeforeTitle =
     language === "de" ? "Lehrkraft-Entwurf (vorher)" : "Teacher draft (before)";
   const saferMessageAfterTitle =
@@ -649,7 +649,9 @@ Mr Smith`;
       ? "Ueberarbeitet mit Zaza Draft."
       : "Rewritten using Zaza Draft.";
   const saferMessageCtaLabel =
-    language === "de" ? "Sicher schreiben starten" : "Start writing safely";
+    language === "de"
+      ? "Mit Draft sicher schreiben"
+      : "Write safely with Draft";
   const situationsHeading =
     language === "de"
       ? "Wenn eine Nachricht leicht zu einer Beschwerde werden koennte"
