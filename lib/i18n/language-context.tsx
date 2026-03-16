@@ -273,7 +273,7 @@ const translationsEn: Record<string, string> = {
   "demoModal.successMessage": "Thanks - we'll be in touch shortly.",
 
   // Suite Page Hero (EN)
-  "suite.hero.title": "AI tools built for teachers — not generic chatbots",
+  "suite.hero.title": "AI tools built for teachers - not generic chatbots",
   "suite.hero.subhead":
     "Zaza apps help teachers plan lessons, write parent messages, and manage school communication safely.",
 
