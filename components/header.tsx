@@ -25,10 +25,9 @@ export function Header() {
   });
   const { language, setLanguage, t } = useLanguage();
   const L = (de: string, en: string) => (language === "de" ? de : en);
-  const headerCtaHref =
-    language === "de" ? "/de/early-access" : "/early-access";
+  const headerCtaHref = language === "de" ? "/de/signup" : "/signup";
   const headerCtaLabel =
-    language === "de" ? "Zur Warteliste" : "Join the waitlist";
+    language === "de" ? "Kostenloses Konto erstellen" : "Create free account";
 
   useEffect(() => {
     if (!mobileMenuOpen) return;

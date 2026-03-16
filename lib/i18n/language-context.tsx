@@ -55,7 +55,7 @@ const translationsEn: Record<string, string> = {
   "pricing.free.title": "Starter",
   "pricing.free.description":
     "Everything you need to try Draft and save your first hours.",
-  "pricing.free.cta": "Join the waitlist",
+  "pricing.free.cta": "Create free account",
   "pricing.free.feature1": "5 drafts/month",
   "pricing.free.feature2": "Basic templates",
   "pricing.free.feature3": "Save & copy",
@@ -68,8 +68,8 @@ const translationsEn: Record<string, string> = {
     "Unlimited writing support with no invented student facts and no lock-ins.",
   "pricing.teacher.period": "Cancel anytime",
   "pricing.teacher.savingsAnnual": "Save 2 months free",
-  "pricing.teacher.cta": "Start 7-day free trial",
-  "pricing.teacher.trial": "No credit card required",
+  "pricing.teacher.cta": "Start unlimited drafts",
+  "pricing.teacher.trial": "Secure checkout with Stripe",
   "pricing.teacher.guarantee": "30-day money-back guarantee",
   "pricing.teacher.feature1": "Unlimited drafts & revisions",
   "pricing.teacher.feature2": "Tone Tutor, translations, context memory",
@@ -196,7 +196,7 @@ const translationsEn: Record<string, string> = {
   "pricing.cta.title": "Ready to save hours every week?",
   "pricing.cta.subtitle":
     "Start free today â€¢ No credit card required â€¢ Cancel anytime",
-  "pricing.cta.primary": "Join the waitlist",
+  "pricing.cta.primary": "Create free account",
   "pricing.cta.secondary": "Talk to Sales",
 
   // Pricing - Decision Tool section
@@ -565,7 +565,7 @@ const translationsEn: Record<string, string> = {
   "hero.headlineAccent": "safe to send.",
   "hero.subheading":
     "Teacher-first AI writing help for parent emails, report comments, and school messages. Draft helps teachers write calm, defensible communication when the thread is under pressure.",
-  "hero.ctaPrimary": "Join the waitlist",
+  "hero.ctaPrimary": "Create free account",
   "hero.ctaSecondary": "See examples",
   "hero.earlyAccessLine":
     "Join the waitlist and we'll let you know when teacher access opens.",
@@ -846,7 +846,7 @@ const translationsEn: Record<string, string> = {
   "finalCTA.heading": "Zaza - Just Teach.",
   "finalCTA.subheading":
     "Zaza helps teachers thrive. Join the waitlist for calm, professional writing support that gives teaching time back.",
-  "finalCTA.button": "Join the waitlist",
+  "finalCTA.button": "Create free account",
 
   // Footer
   "footer.social.tiktok": "Follow us on TikTok @zazatechnologies",
@@ -946,7 +946,7 @@ const translationsEn: Record<string, string> = {
   "products.draft.hero.assumption":
     "Draft assumes messages may be read out of context - by parents, leadership, or administration - and helps you write accordingly.",
   "products.draft.hero.supporting": "Less Sunday dread, more headspace.",
-  "products.draft.hero.cta.primary": "Join the waitlist",
+  "products.draft.hero.cta.primary": "Start using Zaza Draft",
   "products.draft.hero.cta.secondary": "See Examples",
   "products.draft.hero.privacyLine":
     "No student names needed. Not trained on your inputs.",
@@ -1027,7 +1027,7 @@ const translationsEn: Record<string, string> = {
   "products.draft.cta.title": "Get your time back",
   "products.draft.cta.subtitle":
     "Join the waitlist for teacher-first AI writing support.",
-  "products.draft.cta.primary": "Join the waitlist",
+  "products.draft.cta.primary": "Start using Zaza Draft",
   "products.draft.cta.secondary": "See Examples",
 
   // Products - GradeFlow
@@ -1607,7 +1607,7 @@ const translationsDe: Record<string, string> = {
   "pricing.free.title": "Starter",
   "pricing.free.description":
     "Alles, was Sie brauchen, um Draft auszuprobieren und Ihre ersten Stunden zu sparen.",
-  "pricing.free.cta": "Zur Warteliste",
+  "pricing.free.cta": "Kostenloses Konto erstellen",
   "pricing.free.feature1": "5 Entwürfe pro Monat",
   "pricing.free.feature2": "Basisvorlagen",
   "pricing.free.feature3": "Speichern & Kopieren",
@@ -1620,8 +1620,8 @@ const translationsDe: Record<string, string> = {
     "Unbegrenzte Schreibunterstuetzung ohne erfundene Schuelerinformationen und ohne Lock-ins.",
   "pricing.teacher.period": "Jederzeit kündbar",
   "pricing.teacher.savingsAnnual": "2 Monate kostenlos sparen",
-  "pricing.teacher.cta": "7-Tage-Testversion starten",
-  "pricing.teacher.trial": "Keine Kreditkarte erforderlich",
+  "pricing.teacher.cta": "Unbegrenzte Entwuerfe starten",
+  "pricing.teacher.trial": "Sicherer Checkout mit Stripe",
   "pricing.teacher.guarantee": "30-Tage-Geld-zurück-Garantie",
   "pricing.teacher.feature1": "Unbegrenzte Entwürfe & Ãœberarbeitungen",
   "pricing.teacher.feature2": "Ton-Tutor, Ãœbersetzungen, Kontext-Gedächtnis",
@@ -1748,7 +1748,7 @@ const translationsDe: Record<string, string> = {
   "pricing.cta.title": "Bereit, jede Woche Stunden zu sparen?",
   "pricing.cta.subtitle":
     "Heute kostenlos starten â€¢ Keine Kreditkarte erforderlich â€¢ Jederzeit kündbar",
-  "pricing.cta.primary": "Zur Warteliste",
+  "pricing.cta.primary": "Kostenloses Konto erstellen",
   "pricing.cta.secondary": "Mit Vertrieb sprechen",
 
   // Pricing - Decision Tool section
@@ -2128,7 +2128,7 @@ const translationsDe: Record<string, string> = {
   "hero.headlineAccent": "du sicher senden kannst.",
   "hero.subheading":
     "Hör auf, jedes Wort zu zerdenken. Draft hilft dir, ruhige und belastbare Nachrichten für Eltern- und Schulkommunikation zu schreiben, auch wenn der Austausch unter Druck steht.",
-  "hero.ctaPrimary": "Zur Warteliste",
+  "hero.ctaPrimary": "Kostenloses Konto erstellen",
   "hero.ctaSecondary": "Beispiele ansehen",
   "hero.earlyAccessLine":
     "Trag dich in die Warteliste ein und wir sagen dir Bescheid, sobald der Zugang fuer Lehrkraefte offen ist.",
@@ -2423,7 +2423,7 @@ const translationsDe: Record<string, string> = {
   "finalCTA.heading": "Zaza - Just Teach.",
   "finalCTA.subheading":
     "Zaza hilft Lehrkraeften, erfolgreich zu bleiben. Trag dich in die Warteliste fuer ruhige, professionelle Schreibunterstuetzung ein, die Unterrichtszeit zurueckgibt.",
-  "finalCTA.button": "Zur Warteliste",
+  "finalCTA.button": "Kostenloses Konto erstellen",
 
   // Footer
   "footer.social.tiktok": "Folgen Sie uns auf TikTok @zazatechnologies",
@@ -2527,7 +2527,7 @@ const translationsDe: Record<string, string> = {
   "products.draft.hero.assumption":
     "Draft geht davon aus, dass Nachrichten aus dem Kontext gelesen werden können - von Eltern, Schulleitung oder Verwaltung - und unterstützt dich genau dafür.",
   "products.draft.hero.supporting": "Weniger Sonntagsdruck, mehr Kopf frei.",
-  "products.draft.hero.cta.primary": "Zur Warteliste",
+  "products.draft.hero.cta.primary": "Mit Zaza Draft starten",
   "products.draft.hero.cta.secondary": "Beispiele ansehen",
   "products.draft.hero.privacyLine":
     "Keine Schülernamen nötig. Nicht auf deinen Eingaben trainiert.",
@@ -2608,7 +2608,7 @@ const translationsDe: Record<string, string> = {
   "products.draft.cta.title": "Hol dir deine Zeit zurück",
   "products.draft.cta.subtitle":
     "Trag dich in die Warteliste fuer lehrkraft-zentrierte KI-Schreibhilfe ein.",
-  "products.draft.cta.primary": "Zur Warteliste",
+  "products.draft.cta.primary": "Mit Zaza Draft starten",
   "products.draft.cta.secondary": "Beispiele ansehen",
 
   // Products - GradeFlow

@@ -13,11 +13,6 @@ import {
   getDraftTeachBundleWaitlistCtaLabel,
 } from "@/lib/bundle-sales";
 import {
-  DRAFT_SALES_ENABLED,
-  getDraftPrelaunchCtaLabel,
-  getDraftPrelaunchHelperLine,
-} from "@/lib/draft-sales";
-import {
   buildStripeCheckoutPath,
   departmentDisplayAmounts,
   pricingConfig,
@@ -42,15 +37,12 @@ export default function PricingClient() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const isGermanPricingPage = pathname === "/de/pricing";
-  const prelaunchCtaLabel = getDraftPrelaunchCtaLabel(language);
-  const prelaunchHelperLine = getDraftPrelaunchHelperLine(language);
+  const signupBasePath = isGermanPricingPage ? "/de/signup" : "/signup";
   const waitlistBasePath = isGermanPricingPage
     ? "/de/early-access"
     : "/early-access";
   const buildWaitlistHref = (plan: "starter" | "teacher" | "bundle") =>
     `${waitlistBasePath}?source=pricing_page&plan=${plan}`;
-  const starterWaitlistHref = buildWaitlistHref("starter");
-  const teacherWaitlistHref = buildWaitlistHref("teacher");
   const bundleWaitlistHref = buildWaitlistHref("bundle");
   const salesContactBasePath = isGermanPricingPage ? "/de/contact" : "/contact";
   const buildSalesContactHref = (
@@ -184,19 +176,23 @@ export default function PricingClient() {
     console.info("[pricing-cta]", { action, ...details });
   };
 
+  const buildSignupHref = (plan: "starter" | "general") =>
+    `${signupBasePath}?source=pricing_page&plan=${plan}`;
+
   const openFreeSignupFlow = () => {
+    const destination = buildSignupHref("starter");
     trackPricingCTA("plan_free");
     track("cta_click_pricing_free_signup", {
-      destination: starterWaitlistHref,
+      destination,
       language,
       sourcePage: pathname,
     });
     logPricingAction("free_signup", {
-      destination: starterWaitlistHref,
-      flow: "waitlist_page",
+      destination,
+      flow: "signup_page",
       sourcePage: pathname,
     });
-    router.push(starterWaitlistHref);
+    router.push(destination);
   };
 
   const openEarlyAccessFlow = (
@@ -438,11 +434,6 @@ export default function PricingClient() {
         {/* Pricing Cards */}
         <section className="pb-20 px-6">
           <div className="max-w-7xl mx-auto">
-            {!DRAFT_SALES_ENABLED ? (
-              <div className="mx-auto mb-8 max-w-3xl rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-center text-sm leading-relaxed text-[#CBD5E1] sm:text-base">
-                {prelaunchHelperLine}
-              </div>
-            ) : null}
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
               {/* Free Plan */}
               <motion.div
@@ -553,26 +544,15 @@ export default function PricingClient() {
                 <Button
                   type="button"
                   onClick={() => {
-                    if (DRAFT_SALES_ENABLED) {
-                      launchStripeCheckout(
-                        "checkout_teacher",
-                        draftCheckoutHref,
-                        "draft",
-                      );
-                      return;
-                    }
-
-                    openEarlyAccessFlow(
-                      "waitlist_teacher",
-                      teacherWaitlistHref,
-                      "teacher",
+                    launchStripeCheckout(
+                      "checkout_teacher",
+                      draftCheckoutHref,
+                      "draft",
                     );
                   }}
                   className="w-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white hover:scale-105 py-6 text-lg font-semibold rounded-lg mb-3 shadow-lg shadow-[#8B5CF6]/40 transition-transform"
                 >
-                  {DRAFT_SALES_ENABLED
-                    ? t("pricing.checkout.buyNow")
-                    : prelaunchCtaLabel}
+                  {t("pricing.teacher.cta")}
                 </Button>
                 <p className="text-center text-sm text-[#94A3B8] mb-4">
                   {t("pricing.teacher.trial")}
@@ -961,16 +941,17 @@ export default function PricingClient() {
                 <Button
                   type="button"
                   onClick={() => {
+                    const destination = buildSignupHref("general");
                     trackPricingCTA("cta_primary");
                     track("cta_click_pricing_cta_primary", {
-                      destination: starterWaitlistHref,
+                      destination,
                       language,
                     });
                     logPricingAction("cta_primary", {
-                      destination: starterWaitlistHref,
-                      flow: "waitlist_page",
+                      destination,
+                      flow: "signup_page",
                     });
-                    router.push(starterWaitlistHref);
+                    router.push(destination);
                   }}
                   className="bg-white text-[#8B5CF6] hover:bg-white/90 py-6 px-8 text-lg font-semibold rounded-lg shadow-lg"
                 >

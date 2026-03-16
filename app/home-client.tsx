@@ -145,8 +145,7 @@ export function HomePageClient() {
     useState(false);
   const [activeProofIndex, setActiveProofIndex] = useState(0);
   const prefersReducedMotion = useReducedMotion();
-  const earlyAccessHref =
-    language === "de" ? "/de/early-access" : "/early-access";
+  const signupHref = language === "de" ? "/de/signup" : "/signup";
   const founderStoryHref =
     language === "de" ? "/de/about/founder" : "/about/founder";
   const heroEyebrow = language === "de" ? "FUER LEHRKRAEFTE" : "FOR TEACHERS";
@@ -264,8 +263,8 @@ export function HomePageClient() {
       : "Not a generic AI writer, but teacher-first support for safer school communication.";
   const heroCtaMicrocopy =
     language === "de"
-      ? "Schreibe jeden Monat bis zu 10 Nachrichten kostenlos. Keine Verpflichtung."
-      : "Write up to 10 messages free each month. No commitment.";
+      ? "Der kostenlose Tarif enthaelt 10 Entwuerfe pro Monat. Keine Kreditkarte erforderlich."
+      : "The free plan includes 10 drafts each month. No credit card required.";
   const heroCtaReassuranceLine =
     language === "de"
       ? "Immer bearbeitbar. Du bleibst bei jedem Wort in Kontrolle."
@@ -292,10 +291,10 @@ export function HomePageClient() {
       : "Early teacher feedback coming soon";
   const betaFeedbackBody =
     language === "de"
-      ? "Wir sammeln gerade die ersten Rueckmeldungen aus dem Pilotkreis. Echte Zitate erscheinen hier, sobald sie freigegeben sind. Trag dich in die Warteliste ein, wenn du zum Launch benachrichtigt werden moechtest."
-      : "We are gathering our first round of pilot teacher feedback now. Real quotes will appear here as soon as they are ready. Join the waitlist if you want to hear when access opens.";
+      ? "Wir sammeln gerade die ersten Rueckmeldungen von Lehrkraeften im Live-Einsatz. Echte Zitate erscheinen hier, sobald sie freigegeben sind."
+      : "We are gathering our first round of teacher feedback from live use now. Real quotes will appear here as soon as they are ready.";
   const betaFeedbackCta =
-    language === "de" ? "Zur Warteliste" : "Join the waitlist";
+    language === "de" ? "Kostenloses Konto erstellen" : "Create free account";
   const trustPanelHeading =
     language === "de"
       ? "Lehrkraft-zentrierte Unterstuetzung fuer echte Schulkommunikation"
@@ -719,7 +718,7 @@ export function HomePageClient() {
                   className="w-full sm:w-auto inline-flex items-center justify-center bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-transform transition-shadow duration-200 hover:scale-[1.03] hover:shadow-xl hover:shadow-purple-500/30 active:scale-[0.98]"
                 >
                   <Link
-                    href={earlyAccessHref}
+                    href={signupHref}
                     onClick={() =>
                       track("cta_click_home_get_started", { language })
                     }
@@ -1765,7 +1764,7 @@ export function HomePageClient() {
             </h3>
             <p className="text-[#CBD5E1] mb-6">{betaFeedbackBody}</p>
             <Button asChild className="gradient-primary text-white rounded-xl">
-              <Link href={earlyAccessHref}>{betaFeedbackCta}</Link>
+              <Link href={signupHref}>{betaFeedbackCta}</Link>
             </Button>
           </motion.div>
         </div>

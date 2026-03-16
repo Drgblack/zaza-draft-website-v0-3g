@@ -96,7 +96,7 @@ function buildSchema(
   const title = data.title ?? siteConfig.name;
   const description =
     data.description ??
-    "Zaza Draft is a UK-based, teacher-built, GDPR compliant AI co-writer for parent communication, report comments, and school writing. Teachers stay in control of every draft, and the workflow is designed to avoid invented student facts.";
+    "Zaza Draft is a teacher-built, hallucination-safe AI co-writer for parent communication and report comments. Teachers stay in control of every draft, and the workflow is designed to avoid invented student facts.";
   const image = absoluteUrl(data.image ?? siteConfig.defaultOgImage);
 
   switch (type) {

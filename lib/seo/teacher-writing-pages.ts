@@ -100,10 +100,10 @@ const sharedFooterLinks = {
       "Visit the product page for the calmer, teacher-first writing workflow behind these pages.",
   },
   earlyAccess: {
-    href: "/early-access",
-    label: "Join the waitlist",
+    href: "/signup",
+    label: "Create free account",
     description:
-      "Get early access if you want a dedicated writing co-writer rather than another general AI tool.",
+      "Start with the free plan if you want a dedicated writing co-writer rather than another general AI tool.",
   },
   pricing: {
     href: "/pricing",
