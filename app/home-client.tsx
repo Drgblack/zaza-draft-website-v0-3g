@@ -1,4 +1,5 @@
 ﻿"use client";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
@@ -314,6 +315,44 @@ export function HomePageClient() {
       : "We are gathering our first round of teacher feedback from live use now. Real quotes will appear here as soon as they are ready.";
   const betaFeedbackCta =
     language === "de" ? "Kostenloses Konto erstellen" : "Create free account";
+  const recognitionMomentsHeading =
+    language === "de"
+      ? "Wenn Lehrkraefte Draft am ehesten nutzen"
+      : "When teachers use Draft most";
+  const recognitionMomentsIntro =
+    language === "de"
+      ? "Keine grossen Szenarien. Eher die Momente, in denen eine Nachricht offen bleibt, weil der Ton noch nicht ganz stimmt."
+      : "Not dramatic edge cases. More often the moments when a message stays open because the wording still does not feel quite right.";
+  const recognitionMoments =
+    language === "de"
+      ? [
+          {
+            title: "Sonntagabend",
+            body: "Eine Eltern-E-Mail, die Sie schon zum dritten Mal ueberarbeiten, weil sie ruhig klingen soll, aber trotzdem klar bleiben muss.",
+          },
+          {
+            title: "Nach einem schwierigen Unterrichtsmoment",
+            body: "Sie muessen nachfassen, ohne dass die Nachricht schaerfer wirkt oder die Situation unnoetig weiter eskaliert.",
+          },
+          {
+            title: "In der Zeugniswoche",
+            body: "Sie brauchen Formulierungen, die professionell, ruhig und sofort einsatzbereit sind, auch wenn die Zeit knapp wird.",
+          },
+        ]
+      : [
+          {
+            title: "Sunday evening",
+            body: "A parent email you keep rewriting because it needs to sound calm, but still be clear.",
+          },
+          {
+            title: "After a difficult lesson",
+            body: "You need to follow up without making the tone sharper or turning the situation into something bigger.",
+          },
+          {
+            title: "Report deadline week",
+            body: "You need wording that feels calm, professional, and ready to use, even when time is tight.",
+          },
+        ];
   const trustPanelHeading =
     language === "de"
       ? "Lehrkraft-zentrierte Unterstuetzung fuer echte Schulkommunikation"
@@ -428,8 +467,8 @@ export function HomePageClient() {
       : "How the safety system shows up in the product";
   const protectionVisualSubheading =
     language === "de"
-      ? "Ein visueller Slot pro Schutzmechanismus. Finale Feature-Crops koennen spaeter direkt hier eingesetzt werden, ohne die Seite neu zu bauen."
-      : "One visual slot per safeguard. Final feature crops can drop into this structure later without redesigning the page.";
+      ? "Jeder Schutzmechanismus wird mit einem eigenen Produktausschnitt gezeigt, damit Lehrkraefte schnell sehen koennen, wie Draft im echten Schreibmoment hilft."
+      : "Each safeguard is shown with its own product view so teachers can quickly see how Draft helps in real writing moments.";
   const protectionVisuals =
     language === "de"
       ? [
@@ -437,26 +476,43 @@ export function HomePageClient() {
             title: "Trigger-Erkennung",
             badge: "Crop 01",
             body: "Warnsignale fuer heikle Formulierungen oder moegliche Eskalations-Trigger.",
+            imageSrc: "/images/product/draft-trigger-detection.png",
+            alt: "Screenshot of Zaza Draft highlighting trigger detection in a teacher message.",
           },
           {
             title: "Professional-Risk-Alert",
             badge: "Crop 02",
             body: "Ein klarer Hinweis, wenn eine Nachricht beruflich angreifbar wirken koennte.",
+            imageSrc: "/images/product/draft-professional-risk-alert.png",
+            alt: "Screenshot of Zaza Draft showing a professional risk alert for school communication.",
           },
           {
             title: "Sicherere Ueberarbeitung",
             badge: "Crop 03",
             body: "Vorher-nachher-Ausschnitt einer ruhigeren, belastbareren Formulierung.",
+            imageSrc: "/images/product/draft-safer-rewrite.png",
+            alt: "Screenshot of Zaza Draft suggesting a safer rewrite for a teacher message.",
+          },
+          {
+            title: "Ueberarbeitung erklaert",
+            badge: "Crop 04",
+            body: "Eine kurze Erklaerung, warum die ueberarbeitete Version ruhiger, klarer und defensibler klingt.",
+            imageSrc: "/images/product/draft-safer-rewrite-explain.png",
+            alt: "Screenshot of Zaza Draft explaining why a safer rewrite is recommended.",
           },
           {
             title: "Elternreaktions-Vorschau",
-            badge: "Crop 04",
+            badge: "Crop 05",
             body: "Ein enger Ausschnitt, der zeigt, wie eine Nachricht wahrscheinlich auf Familien wirkt.",
+            imageSrc: "/images/product/draft-parent-reaction-forecast.png",
+            alt: "Screenshot of Zaza Draft forecasting how a parent may react to a message.",
           },
           {
             title: "Dokumentationsmodus",
-            badge: "Crop 05",
+            badge: "Crop 06",
             body: "Beispiel fuer sachliche, nachvollziehbare Formulierungen bei Vorfaellen.",
+            imageSrc: "/images/product/draft-documentation-mode.png",
+            alt: "Screenshot of Zaza Draft in documentation mode for a factual school record.",
           },
         ]
       : [
@@ -464,26 +520,43 @@ export function HomePageClient() {
             title: "Trigger detection",
             badge: "Crop 01",
             body: "A focused crop showing flagged phrasing or escalation triggers.",
+            imageSrc: "/images/product/draft-trigger-detection.png",
+            alt: "Screenshot of Zaza Draft highlighting trigger detection in a teacher message.",
           },
           {
             title: "Professional-risk alert",
             badge: "Crop 02",
             body: "A callout that warns when wording may create avoidable professional exposure.",
+            imageSrc: "/images/product/draft-professional-risk-alert.png",
+            alt: "Screenshot of Zaza Draft showing a professional risk alert for school communication.",
           },
           {
             title: "Safer rewrite",
             badge: "Crop 03",
             body: "A before-and-after crop showing calmer, more defensible wording.",
+            imageSrc: "/images/product/draft-safer-rewrite.png",
+            alt: "Screenshot of Zaza Draft suggesting a safer rewrite for a teacher message.",
+          },
+          {
+            title: "Rewrite explained",
+            badge: "Crop 04",
+            body: "A short explanation of why the revised version sounds calmer, clearer, and easier to stand behind.",
+            imageSrc: "/images/product/draft-safer-rewrite-explain.png",
+            alt: "Screenshot of Zaza Draft explaining why a safer rewrite is recommended.",
           },
           {
             title: "Parent reaction forecast",
-            badge: "Crop 04",
+            badge: "Crop 05",
             body: "A tight crop showing how wording may land with families before it escalates.",
+            imageSrc: "/images/product/draft-parent-reaction-forecast.png",
+            alt: "Screenshot of Zaza Draft forecasting how a parent may react to a message.",
           },
           {
             title: "Documentation mode",
-            badge: "Crop 05",
+            badge: "Crop 06",
             body: "A factual writing view for incident notes and paper-trail communication.",
+            imageSrc: "/images/product/draft-documentation-mode.png",
+            alt: "Screenshot of Zaza Draft in documentation mode for a factual school record.",
           },
         ];
   const situationsHeading =
@@ -1101,6 +1174,36 @@ export function HomePageClient() {
       </section>
 
       <section className="relative overflow-hidden border-t border-white/5 bg-[#0F172A] py-14 md:py-16">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="mb-14 rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(17,24,39,0.92),rgba(11,18,32,0.98))] p-8 shadow-[0_24px_70px_-48px_rgba(15,23,42,0.95)] ring-1 ring-white/5 md:p-10">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#C4B5FD]">
+                {recognitionMomentsHeading}
+              </p>
+              <h2 className="mt-4 text-2xl font-semibold tracking-tight text-white md:text-3xl">
+                {recognitionMomentsHeading}
+              </h2>
+              <p className="mt-4 text-base leading-7 text-[#CBD5E1]">
+                {recognitionMomentsIntro}
+              </p>
+            </div>
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              {recognitionMoments.map((moment) => (
+                <article
+                  key={moment.title}
+                  className="rounded-2xl border border-white/8 bg-white/[0.03] px-5 py-5"
+                >
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#A78BFA]">
+                    {moment.title}
+                  </p>
+                  <p className="mt-3 text-sm leading-6 text-[#CBD5E1]">
+                    {moment.body}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
         <div className="absolute inset-x-0 top-0 h-32 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.12),transparent_60%)]" />
         <div className="mx-auto max-w-5xl px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(30,41,59,0.92),rgba(15,23,42,0.98))] p-8 shadow-[0_30px_80px_-48px_rgba(15,23,42,0.95)] ring-1 ring-white/5 md:p-10">
@@ -1199,7 +1302,7 @@ export function HomePageClient() {
                   </p>
                 </div>
                 <div className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#CBD5E1]">
-                  UI slots
+                  {language === "de" ? "Produktansichten" : "Product views"}
                 </div>
               </div>
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -1216,17 +1319,15 @@ export function HomePageClient() {
                         {visual.badge}
                       </span>
                     </div>
-                    <div className="mt-4 rounded-2xl border border-dashed border-[#8B5CF6]/35 bg-[linear-gradient(180deg,rgba(139,92,246,0.12),rgba(15,23,42,0.12))] p-4">
-                      <div className="flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-[#C4B5FD]">
-                        <span className="h-2 w-2 rounded-full bg-[#A78BFA]" />
-                        <span>Screenshot crop placeholder</span>
-                      </div>
-                      <div className="mt-4 space-y-2">
-                        <div className="h-2.5 w-4/5 rounded-full bg-white/15" />
-                        <div className="h-2.5 w-3/5 rounded-full bg-white/10" />
-                        <div className="rounded-xl border border-white/8 bg-white/[0.04] px-3 py-2 text-xs text-[#E2E8F0]">
-                          {visual.title}
-                        </div>
+                    <div className="mt-4 overflow-hidden rounded-2xl border border-white/10 bg-[#060B16]">
+                      <div className="relative aspect-[4/3] w-full">
+                        <Image
+                          src={visual.imageSrc}
+                          alt={visual.alt}
+                          fill
+                          className="object-contain"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 280px"
+                        />
                       </div>
                     </div>
                     <p className="mt-4 text-sm leading-6 text-[#CBD5E1]">
