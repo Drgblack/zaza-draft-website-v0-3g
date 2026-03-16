@@ -712,7 +712,7 @@ export default function GlossaryClient() {
                         )}
                       </div>
                       <span className="text-gray-400 text-sm">
-                        {isExpanded ? "âˆ’" : "+"}
+                        {isExpanded ? "-" : "+"}
                       </span>
                     </button>
 

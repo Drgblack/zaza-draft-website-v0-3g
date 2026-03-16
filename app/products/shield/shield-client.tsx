@@ -1,10 +1,10 @@
 ﻿"use client";
 
-import { useLanguage } from "@/lib/i18n/language-context"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import Image from "next/image"
-import Link from "next/link"
+import { useLanguage } from "@/lib/i18n/language-context";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import Image from "next/image";
+import Link from "next/link";
 import {
   Shield,
   Lock,
@@ -18,10 +18,10 @@ import {
   BookOpen,
   Check,
   X,
-} from "lucide-react"
+} from "lucide-react";
 
 export default function ShieldClient() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   return (
     <div className="min-h-screen bg-[#0F172A]">
@@ -33,8 +33,12 @@ export default function ShieldClient() {
             <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-purple-400">
               {t("shield.hero.eyebrow")}
             </p>
-            <h1 className="mb-6 text-4xl font-bold leading-tight text-white lg:text-6xl">{t("shield.hero.title")}</h1>
-            <p className="mb-8 text-lg leading-relaxed text-gray-300 lg:text-xl">{t("shield.hero.subtitle")}</p>
+            <h1 className="mb-6 text-4xl font-bold leading-tight text-white lg:text-6xl">
+              {t("shield.hero.title")}
+            </h1>
+            <p className="mb-8 text-lg leading-relaxed text-gray-300 lg:text-xl">
+              {t("shield.hero.subtitle")}
+            </p>
 
             {/* CTA Group */}
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -57,7 +61,9 @@ export default function ShieldClient() {
                 variant="outline"
                 className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400/10 font-semibold px-8 py-6 text-lg rounded-full bg-transparent"
               >
-                <Link href="/contact?topic=shield">{t("shield.hero.cta.secondary")}</Link>
+                <Link href="/contact?topic=shield">
+                  {t("shield.hero.cta.secondary")}
+                </Link>
               </Button>
             </div>
 
@@ -97,7 +103,9 @@ export default function ShieldClient() {
       <section className="py-20 bg-[#1E293B]">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-16">
-            <h2 className="text-3xl font-bold text-white lg:text-4xl mb-4">{t("shield.problem.title")}</h2>
+            <h2 className="text-3xl font-bold text-white lg:text-4xl mb-4">
+              {t("shield.problem.title")}
+            </h2>
           </div>
 
           <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
@@ -105,24 +113,36 @@ export default function ShieldClient() {
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10">
                 <Lock className="h-6 w-6 text-purple-400" />
               </div>
-              <h3 className="mb-3 text-xl font-semibold text-white">{t("shield.problem.card1.title")}</h3>
-              <p className="text-gray-400 leading-relaxed">{t("shield.problem.card1.description")}</p>
+              <h3 className="mb-3 text-xl font-semibold text-white">
+                {t("shield.problem.card1.title")}
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                {t("shield.problem.card1.description")}
+              </p>
             </Card>
 
             <Card className="bg-[#0F172A] border-white/10 p-8 hover:border-purple-500/50 transition-colors">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10">
                 <AlertTriangle className="h-6 w-6 text-purple-400" />
               </div>
-              <h3 className="mb-3 text-xl font-semibold text-white">{t("shield.problem.card2.title")}</h3>
-              <p className="text-gray-400 leading-relaxed">{t("shield.problem.card2.description")}</p>
+              <h3 className="mb-3 text-xl font-semibold text-white">
+                {t("shield.problem.card2.title")}
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                {t("shield.problem.card2.description")}
+              </p>
             </Card>
 
             <Card className="bg-[#0F172A] border-white/10 p-8 hover:border-purple-500/50 transition-colors">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10">
                 <FileCheck className="h-6 w-6 text-purple-400" />
               </div>
-              <h3 className="mb-3 text-xl font-semibold text-white">{t("shield.problem.card3.title")}</h3>
-              <p className="text-gray-400 leading-relaxed">{t("shield.problem.card3.description")}</p>
+              <h3 className="mb-3 text-xl font-semibold text-white">
+                {t("shield.problem.card3.title")}
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                {t("shield.problem.card3.description")}
+              </p>
             </Card>
           </div>
         </div>
@@ -132,8 +152,12 @@ export default function ShieldClient() {
       <section className="py-20">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-16">
-            <h2 className="text-3xl font-bold text-white lg:text-4xl mb-4">{t("shield.solution.title")}</h2>
-            <p className="text-lg text-gray-300">{t("shield.solution.subtitle")}</p>
+            <h2 className="text-3xl font-bold text-white lg:text-4xl mb-4">
+              {t("shield.solution.title")}
+            </h2>
+            <p className="text-lg text-gray-300">
+              {t("shield.solution.subtitle")}
+            </p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto mb-12">
@@ -141,32 +165,48 @@ export default function ShieldClient() {
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10">
                 <Shield className="h-6 w-6 text-purple-400" />
               </div>
-              <h3 className="mb-3 text-xl font-semibold text-white">{t("shield.solution.card1.title")}</h3>
-              <p className="text-gray-400 leading-relaxed">{t("shield.solution.card1.description")}</p>
+              <h3 className="mb-3 text-xl font-semibold text-white">
+                {t("shield.solution.card1.title")}
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                {t("shield.solution.card1.description")}
+              </p>
             </Card>
 
             <Card className="bg-[#1E293B] border-white/10 p-8">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10">
                 <FileText className="h-6 w-6 text-purple-400" />
               </div>
-              <h3 className="mb-3 text-xl font-semibold text-white">{t("shield.solution.card2.title")}</h3>
-              <p className="text-gray-400 leading-relaxed">{t("shield.solution.card2.description")}</p>
+              <h3 className="mb-3 text-xl font-semibold text-white">
+                {t("shield.solution.card2.title")}
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                {t("shield.solution.card2.description")}
+              </p>
             </Card>
 
             <Card className="bg-[#1E293B] border-white/10 p-8">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10">
                 <Lock className="h-6 w-6 text-purple-400" />
               </div>
-              <h3 className="mb-3 text-xl font-semibold text-white">{t("shield.solution.card3.title")}</h3>
-              <p className="text-gray-400 leading-relaxed">{t("shield.solution.card3.description")}</p>
+              <h3 className="mb-3 text-xl font-semibold text-white">
+                {t("shield.solution.card3.title")}
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                {t("shield.solution.card3.description")}
+              </p>
             </Card>
 
             <Card className="bg-[#1E293B] border-white/10 p-8">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10">
                 <Settings className="h-6 w-6 text-purple-400" />
               </div>
-              <h3 className="mb-3 text-xl font-semibold text-white">{t("shield.solution.card4.title")}</h3>
-              <p className="text-gray-400 leading-relaxed">{t("shield.solution.card4.description")}</p>
+              <h3 className="mb-3 text-xl font-semibold text-white">
+                {t("shield.solution.card4.title")}
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                {t("shield.solution.card4.description")}
+              </p>
             </Card>
           </div>
 
@@ -177,7 +217,7 @@ export default function ShieldClient() {
               rel="noopener noreferrer"
               className="text-purple-400 hover:text-purple-300 font-semibold inline-flex items-center gap-2 transition-colors"
             >
-              {t("shield.solution.cta")} Ã¢â€ ’
+              {t("shield.solution.cta")} →
             </a>
           </div>
         </div>
@@ -187,7 +227,9 @@ export default function ShieldClient() {
       <section className="py-20 bg-[#1E293B]">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-16">
-            <h2 className="text-3xl font-bold text-white lg:text-4xl mb-4">{t("shield.howItWorks.title")}</h2>
+            <h2 className="text-3xl font-bold text-white lg:text-4xl mb-4">
+              {t("shield.howItWorks.title")}
+            </h2>
           </div>
 
           <div className="grid gap-8 md:grid-cols-3 max-w-5xl mx-auto mb-12">
@@ -199,8 +241,12 @@ export default function ShieldClient() {
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10">
                   <Plug className="h-6 w-6 text-purple-400" />
                 </div>
-                <h3 className="mb-3 text-xl font-semibold text-white">{t("shield.howItWorks.step1.title")}</h3>
-                <p className="text-gray-400 leading-relaxed">{t("shield.howItWorks.step1.description")}</p>
+                <h3 className="mb-3 text-xl font-semibold text-white">
+                  {t("shield.howItWorks.step1.title")}
+                </h3>
+                <p className="text-gray-400 leading-relaxed">
+                  {t("shield.howItWorks.step1.description")}
+                </p>
               </div>
             </div>
 
@@ -212,8 +258,12 @@ export default function ShieldClient() {
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10">
                   <Settings className="h-6 w-6 text-purple-400" />
                 </div>
-                <h3 className="mb-3 text-xl font-semibold text-white">{t("shield.howItWorks.step2.title")}</h3>
-                <p className="text-gray-400 leading-relaxed">{t("shield.howItWorks.step2.description")}</p>
+                <h3 className="mb-3 text-xl font-semibold text-white">
+                  {t("shield.howItWorks.step2.title")}
+                </h3>
+                <p className="text-gray-400 leading-relaxed">
+                  {t("shield.howItWorks.step2.description")}
+                </p>
               </div>
             </div>
 
@@ -225,8 +275,12 @@ export default function ShieldClient() {
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10">
                   <BarChart3 className="h-6 w-6 text-purple-400" />
                 </div>
-                <h3 className="mb-3 text-xl font-semibold text-white">{t("shield.howItWorks.step3.title")}</h3>
-                <p className="text-gray-400 leading-relaxed">{t("shield.howItWorks.step3.description")}</p>
+                <h3 className="mb-3 text-xl font-semibold text-white">
+                  {t("shield.howItWorks.step3.title")}
+                </h3>
+                <p className="text-gray-400 leading-relaxed">
+                  {t("shield.howItWorks.step3.description")}
+                </p>
               </div>
             </div>
           </div>
@@ -253,15 +307,21 @@ export default function ShieldClient() {
       <section className="py-20">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-12">
-            <h2 className="text-3xl font-bold text-white lg:text-4xl mb-4">{t("shield.socialProof.title")}</h2>
+            <h2 className="text-3xl font-bold text-white lg:text-4xl mb-4">
+              {t("shield.socialProof.title")}
+            </h2>
           </div>
 
           <Card className="bg-[#1E293B] border-white/10 p-12 max-w-4xl mx-auto">
             <div className="grid md:grid-cols-[1fr_auto] gap-8 md:items-center">
               <blockquote className="text-left">
-                <p className="text-xl text-gray-300 leading-relaxed mb-6 italic">"{t("shield.socialProof.quote")}"</p>
+                <p className="text-xl text-gray-300 leading-relaxed mb-6 italic">
+                  "{t("shield.socialProof.quote")}"
+                </p>
                 <footer className="text-gray-400">
-                  <p className="font-semibold text-white">{t("shield.socialProof.attribution")}</p>
+                  <p className="font-semibold text-white">
+                    {t("shield.socialProof.attribution")}
+                  </p>
                   <p className="text-sm">{t("shield.socialProof.role")}</p>
                 </footer>
               </blockquote>
@@ -282,7 +342,9 @@ export default function ShieldClient() {
       <section className="py-20 bg-[#1E293B]">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-16">
-            <h2 className="text-3xl font-bold text-white lg:text-4xl mb-4">{t("shield.useCases.title")}</h2>
+            <h2 className="text-3xl font-bold text-white lg:text-4xl mb-4">
+              {t("shield.useCases.title")}
+            </h2>
           </div>
 
           <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
@@ -290,24 +352,36 @@ export default function ShieldClient() {
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10">
                 <MessageSquare className="h-6 w-6 text-purple-400" />
               </div>
-              <h3 className="mb-3 text-xl font-semibold text-white">{t("shield.useCases.card1.title")}</h3>
-              <p className="text-gray-400 leading-relaxed">{t("shield.useCases.card1.description")}</p>
+              <h3 className="mb-3 text-xl font-semibold text-white">
+                {t("shield.useCases.card1.title")}
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                {t("shield.useCases.card1.description")}
+              </p>
             </Card>
 
             <Card className="bg-[#0F172A] border-white/10 p-8">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10">
                 <FileText className="h-6 w-6 text-purple-400" />
               </div>
-              <h3 className="mb-3 text-xl font-semibold text-white">{t("shield.useCases.card2.title")}</h3>
-              <p className="text-gray-400 leading-relaxed">{t("shield.useCases.card2.description")}</p>
+              <h3 className="mb-3 text-xl font-semibold text-white">
+                {t("shield.useCases.card2.title")}
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                {t("shield.useCases.card2.description")}
+              </p>
             </Card>
 
             <Card className="bg-[#0F172A] border-white/10 p-8">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/10">
                 <BookOpen className="h-6 w-6 text-purple-400" />
               </div>
-              <h3 className="mb-3 text-xl font-semibold text-white">{t("shield.useCases.card3.title")}</h3>
-              <p className="text-gray-400 leading-relaxed">{t("shield.useCases.card3.description")}</p>
+              <h3 className="mb-3 text-xl font-semibold text-white">
+                {t("shield.useCases.card3.title")}
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                {t("shield.useCases.card3.description")}
+              </p>
             </Card>
           </div>
         </div>
@@ -317,7 +391,9 @@ export default function ShieldClient() {
       <section className="py-20">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-16">
-            <h2 className="text-3xl font-bold text-white lg:text-4xl mb-4">{t("shield.comparison.title")}</h2>
+            <h2 className="text-3xl font-bold text-white lg:text-4xl mb-4">
+              {t("shield.comparison.title")}
+            </h2>
           </div>
 
           <div className="max-w-4xl mx-auto">
@@ -325,54 +401,78 @@ export default function ShieldClient() {
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="border-b border-white/10">
-                    <th className="py-4 px-6 text-left text-white font-semibold">{t("shield.comparison.feature")}</th>
-                    <th className="py-4 px-6 text-center text-white font-semibold">{t("shield.comparison.shield")}</th>
-                    <th className="py-4 px-6 text-center text-white font-semibold">{t("shield.comparison.manual")}</th>
+                    <th className="py-4 px-6 text-left text-white font-semibold">
+                      {t("shield.comparison.feature")}
+                    </th>
+                    <th className="py-4 px-6 text-center text-white font-semibold">
+                      {t("shield.comparison.shield")}
+                    </th>
+                    <th className="py-4 px-6 text-center text-white font-semibold">
+                      {t("shield.comparison.manual")}
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="text-gray-300">
                   <tr className="border-b border-white/10">
-                    <td className="py-4 px-6">{t("shield.comparison.row1.feature")}</td>
+                    <td className="py-4 px-6">
+                      {t("shield.comparison.row1.feature")}
+                    </td>
                     <td className="py-4 px-6 text-center">
                       <div className="flex items-center justify-center gap-2">
                         <Check className="h-5 w-5 text-green-400" />
-                        <span className="text-sm">{t("shield.comparison.row1.shield")}</span>
+                        <span className="text-sm">
+                          {t("shield.comparison.row1.shield")}
+                        </span>
                       </div>
                     </td>
                     <td className="py-4 px-6 text-center">
                       <div className="flex items-center justify-center gap-2">
                         <X className="h-5 w-5 text-red-400" />
-                        <span className="text-sm">{t("shield.comparison.row1.manual")}</span>
+                        <span className="text-sm">
+                          {t("shield.comparison.row1.manual")}
+                        </span>
                       </div>
                     </td>
                   </tr>
                   <tr className="border-b border-white/10">
-                    <td className="py-4 px-6">{t("shield.comparison.row2.feature")}</td>
+                    <td className="py-4 px-6">
+                      {t("shield.comparison.row2.feature")}
+                    </td>
                     <td className="py-4 px-6 text-center">
                       <div className="flex items-center justify-center gap-2">
                         <Check className="h-5 w-5 text-green-400" />
-                        <span className="text-sm">{t("shield.comparison.row2.shield")}</span>
+                        <span className="text-sm">
+                          {t("shield.comparison.row2.shield")}
+                        </span>
                       </div>
                     </td>
                     <td className="py-4 px-6 text-center">
                       <div className="flex items-center justify-center gap-2">
                         <X className="h-5 w-5 text-red-400" />
-                        <span className="text-sm">{t("shield.comparison.row2.manual")}</span>
+                        <span className="text-sm">
+                          {t("shield.comparison.row2.manual")}
+                        </span>
                       </div>
                     </td>
                   </tr>
                   <tr className="border-b border-white/10">
-                    <td className="py-4 px-6">{t("shield.comparison.row3.feature")}</td>
+                    <td className="py-4 px-6">
+                      {t("shield.comparison.row3.feature")}
+                    </td>
                     <td className="py-4 px-6 text-center">
                       <div className="flex items-center justify-center gap-2">
                         <Check className="h-5 w-5 text-green-400" />
-                        <span className="text-sm">{t("shield.comparison.row3.shield")}</span>
+                        <span className="text-sm">
+                          {t("shield.comparison.row3.shield")}
+                        </span>
                       </div>
                     </td>
                     <td className="py-4 px-6 text-center">
                       <div className="flex items-center justify-center gap-2">
                         <X className="h-5 w-5 text-red-400" />
-                        <span className="text-sm">{t("shield.comparison.row3.manual")}</span>
+                        <span className="text-sm">
+                          {t("shield.comparison.row3.manual")}
+                        </span>
                       </div>
                     </td>
                   </tr>
@@ -387,8 +487,12 @@ export default function ShieldClient() {
       <section className="py-20 bg-[#1E293B]">
         <div className="container mx-auto px-6 lg:px-8">
           <Card className="bg-[#0F172A] border-white/10 p-12 max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">{t("shield.pricing.title")}</h2>
-            <p className="text-lg text-gray-300 mb-8">{t("shield.pricing.description")}</p>
+            <h2 className="text-3xl font-bold text-white mb-4">
+              {t("shield.pricing.title")}
+            </h2>
+            <p className="text-lg text-gray-300 mb-8">
+              {t("shield.pricing.description")}
+            </p>
             <Button
               asChild
               size="lg"
@@ -410,8 +514,12 @@ export default function ShieldClient() {
       <section className="py-20">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-4xl font-bold text-white lg:text-5xl mb-6">{t("shield.finalCta.title")}</h2>
-            <p className="text-lg text-gray-300 mb-8">{t("shield.finalCta.subtitle")}</p>
+            <h2 className="text-4xl font-bold text-white lg:text-5xl mb-6">
+              {t("shield.finalCta.title")}
+            </h2>
+            <p className="text-lg text-gray-300 mb-8">
+              {t("shield.finalCta.subtitle")}
+            </p>
 
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row mb-8">
               <Button
@@ -433,7 +541,9 @@ export default function ShieldClient() {
                 variant="outline"
                 className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400/10 font-semibold px-8 py-6 text-lg rounded-full bg-transparent"
               >
-                <Link href="/contact?topic=shield">{t("shield.finalCta.secondary")}</Link>
+                <Link href="/contact?topic=shield">
+                  {t("shield.finalCta.secondary")}
+                </Link>
               </Button>
             </div>
 
@@ -442,6 +552,5 @@ export default function ShieldClient() {
         </div>
       </section>
     </div>
-  )
+  );
 }
-

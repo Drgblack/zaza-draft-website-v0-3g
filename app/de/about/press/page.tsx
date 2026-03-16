@@ -235,7 +235,7 @@ export default function PressKitPage() {
                 Produkt-Screenshots
               </h2>
               <p className="text-sm text-[#CBD5E1] max-w-3xl mb-4">
-                Produkt-Screenshots sind auf Anfrage erh�ltlich.
+                Produkt-Screenshots sind auf Anfrage erhältlich.
               </p>
               <Button
                 asChild
@@ -352,8 +352,8 @@ export default function PressKitPage() {
               <ExpandableBio
                 shortLabel="Kurz-Bio"
                 longLabel="Ausführliche Bio"
-                shortBio="Greg Blackburn ist Gründer von Zaza Technologies. Mit einem PhD in Professional Education und über 20 Jahren in Learning & Development arbeitet Greg an der Schnittstelle von Bildung, KI und Technologie. Er gründete Zaza, um Lehrkräften Zeit zurückzugeben, Stress zu reduzieren und den Fokus auf das Wesentliche zu legen: unterrichten. Der Gr�nder lebt im Saarland, Deutschland."
-                longBio="Dr. Harvey Gregory Scott Blackburn (Greg) ist Gründer von Zaza Technologies, einem KI-gestützten EdTech-Unternehmen mit Sitz in Deutschland. Greg begann seine Laufbahn im Learning & Development nach einem Diplom in Germanistik und einem MBA an der University of Queensland und promovierte anschlie├ƒend in Professional Education an der City, University of London. Seine Forschung konzentrierte sich auf kritisches Denken und Probleml├Âsen im studierendenzentrierten E-Learning. ├£ber zwei Jahrzehnte leitete er gro├ƒe Lerninitiativen in Hochschule und Wirtschaft, zuletzt als Group Director of Learning bei Communardo. Zaza Technologies spiegelt Gregs Vision wider, sichere, lehrerzentrierte KI-Tools zu bauen, die fundierte Pädagogik mit moderner KI verbinden. Greg lebt in Deutschland und m├Âchte Lehrkräfte weltweit stärken. Der Gr�nder lebt im Saarland, Deutschland."
+                shortBio="Greg Blackburn ist Gründer von Zaza Technologies. Mit einem PhD in Professional Education und über 20 Jahren in Learning & Development arbeitet Greg an der Schnittstelle von Bildung, KI und Technologie. Er gründete Zaza, um Lehrkräften Zeit zurückzugeben, Stress zu reduzieren und den Fokus auf das Wesentliche zu legen: unterrichten. Der Gründer lebt im Saarland, Deutschland."
+                longBio="Dr. Harvey Gregory Scott Blackburn (Greg) ist Gründer von Zaza Technologies, einem KI-gestützten EdTech-Unternehmen mit Sitz in Deutschland. Greg begann seine Laufbahn im Learning & Development nach einem Diplom in Germanistik und einem MBA an der University of Queensland und promovierte anschließend in Professional Education an der City, University of London. Seine Forschung konzentrierte sich auf kritisches Denken und Problemlösen im studierendenzentrierten E-Learning. Über zwei Jahrzehnte leitete er große Lerninitiativen in Hochschule und Wirtschaft, zuletzt als Group Director of Learning bei Communardo. Zaza Technologies spiegelt Gregs Vision wider, sichere, lehrerzentrierte KI-Tools zu bauen, die fundierte Pädagogik mit moderner KI verbinden. Greg lebt in Deutschland und möchte Lehrkräfte weltweit stärken. Der Gründer lebt im Saarland, Deutschland."
               />
             </section>
 
