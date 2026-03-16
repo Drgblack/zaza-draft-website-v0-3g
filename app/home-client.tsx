@@ -559,6 +559,32 @@ export function HomePageClient() {
             alt: "Screenshot of Zaza Draft in documentation mode for a factual school record.",
           },
         ];
+  const insightsFeatureBadge =
+    language === "de" ? "Draft Insights" : "Draft Insights";
+  const insightsFeatureHeading =
+    language === "de"
+      ? "Einblicke, die dir helfen, klueger zu arbeiten"
+      : "Insights that help you work smarter";
+  const insightsFeatureBody =
+    language === "de"
+      ? "Draft lernt unaufdringlich aus deinen Schreibmustern und zeigt, wann und wie du am besten kommunizierst. So lassen sich Arbeit nach Feierabend reduzieren und Formulierungen mit der Zeit klarer machen."
+      : "Draft quietly learns from your writing patterns and shows when and how you communicate best - helping reduce after-hours work and improve clarity over time.";
+  const insightsFeaturePoints =
+    language === "de"
+      ? [
+          "Zeigt, wann deine ruhigsten und produktivsten Schreibzeiten liegen.",
+          "Macht Muster sichtbar, die zu klarerer Elternkommunikation fuehren.",
+          "Hilft, Arbeit am Abend bewusster zu begrenzen.",
+        ]
+      : [
+          "Shows when your calmest, most productive writing windows happen.",
+          "Highlights patterns that lead to clearer parent communication.",
+          "Helps you reduce unnecessary after-hours drafting over time.",
+        ];
+  const insightsFeatureAlt =
+    language === "de"
+      ? "Screenshot des Zaza-Draft-Insights-Dashboards mit Heatmap der produktivsten Schreibzeiten."
+      : "Screenshot of the Zaza Draft Insights dashboard heatmap showing a teacher's strongest drafting times.";
   const situationsHeading =
     language === "de"
       ? "Situationen, die Lehrkraefte nur ungern formulieren"
@@ -1337,6 +1363,61 @@ export function HomePageClient() {
                 ))}
               </div>
             </aside>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/5 bg-[#0B1220] py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+            <motion.div
+              initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.55 }}
+              className="max-w-2xl"
+            >
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#8B5CF6]/20 bg-[#8B5CF6]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#C4B5FD]">
+                <ShieldIcon className="h-4 w-4" />
+                <span>{insightsFeatureBadge}</span>
+              </div>
+              <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white md:text-4xl">
+                {insightsFeatureHeading}
+              </h2>
+              <p className="mt-5 text-lg leading-8 text-[#CBD5E1]">
+                {insightsFeatureBody}
+              </p>
+              <div className="mt-8 grid gap-3">
+                {insightsFeaturePoints.map((point) => (
+                  <div
+                    key={point}
+                    className="rounded-2xl border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] px-4 py-4 text-sm leading-6 text-[#CBD5E1] shadow-[0_18px_50px_-42px_rgba(15,23,42,0.95)]"
+                  >
+                    {point}
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={prefersReducedMotion ? {} : { opacity: 0, x: 24 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6 }}
+              className="rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(30,41,59,0.9),rgba(15,23,42,0.98))] p-5 shadow-[0_30px_90px_-48px_rgba(15,23,42,0.95)] ring-1 ring-white/5 md:p-7"
+            >
+              <div className="overflow-hidden rounded-[22px] border border-white/10 bg-[#060B16]">
+                <div className="relative aspect-[4/3] w-full">
+                  <Image
+                    src="/images/product/draft-insights-heatmap.png"
+                    alt={insightsFeatureAlt}
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 1024px) 100vw, 560px"
+                  />
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
