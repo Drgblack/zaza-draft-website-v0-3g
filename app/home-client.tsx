@@ -474,42 +474,36 @@ export function HomePageClient() {
       ? [
           {
             title: "Trigger-Erkennung",
-            badge: "Crop 01",
             body: "Warnsignale fuer heikle Formulierungen oder moegliche Eskalations-Trigger.",
             imageSrc: "/images/product/draft-trigger-detection.png",
             alt: "Screenshot of Zaza Draft highlighting trigger detection in a teacher message.",
           },
           {
             title: "Professional-Risk-Alert",
-            badge: "Crop 02",
             body: "Ein klarer Hinweis, wenn eine Nachricht beruflich angreifbar wirken koennte.",
             imageSrc: "/images/product/draft-professional-risk-alert.png",
             alt: "Screenshot of Zaza Draft showing a professional risk alert for school communication.",
           },
           {
             title: "Sicherere Ueberarbeitung",
-            badge: "Crop 03",
             body: "Vorher-nachher-Ausschnitt einer ruhigeren, belastbareren Formulierung.",
             imageSrc: "/images/product/draft-safer-rewrite.png",
             alt: "Screenshot of Zaza Draft suggesting a safer rewrite for a teacher message.",
           },
           {
             title: "Ueberarbeitung erklaert",
-            badge: "Crop 04",
             body: "Eine kurze Erklaerung, warum die ueberarbeitete Version ruhiger, klarer und defensibler klingt.",
             imageSrc: "/images/product/draft-safer-rewrite-explain.png",
             alt: "Screenshot of Zaza Draft explaining why a safer rewrite is recommended.",
           },
           {
             title: "Elternreaktions-Vorschau",
-            badge: "Crop 05",
             body: "Ein enger Ausschnitt, der zeigt, wie eine Nachricht wahrscheinlich auf Familien wirkt.",
             imageSrc: "/images/product/draft-parent-reaction-forecast.png",
             alt: "Screenshot of Zaza Draft forecasting how a parent may react to a message.",
           },
           {
             title: "Dokumentationsmodus",
-            badge: "Crop 06",
             body: "Beispiel fuer sachliche, nachvollziehbare Formulierungen bei Vorfaellen.",
             imageSrc: "/images/product/draft-documentation-mode.png",
             alt: "Screenshot of Zaza Draft in documentation mode for a factual school record.",
@@ -518,42 +512,36 @@ export function HomePageClient() {
       : [
           {
             title: "Trigger detection",
-            badge: "Crop 01",
             body: "A focused crop showing flagged phrasing or escalation triggers.",
             imageSrc: "/images/product/draft-trigger-detection.png",
             alt: "Screenshot of Zaza Draft highlighting trigger detection in a teacher message.",
           },
           {
             title: "Professional-risk alert",
-            badge: "Crop 02",
             body: "A callout that warns when wording may create avoidable professional exposure.",
             imageSrc: "/images/product/draft-professional-risk-alert.png",
             alt: "Screenshot of Zaza Draft showing a professional risk alert for school communication.",
           },
           {
             title: "Safer rewrite",
-            badge: "Crop 03",
             body: "A before-and-after crop showing calmer, more defensible wording.",
             imageSrc: "/images/product/draft-safer-rewrite.png",
             alt: "Screenshot of Zaza Draft suggesting a safer rewrite for a teacher message.",
           },
           {
             title: "Rewrite explained",
-            badge: "Crop 04",
             body: "A short explanation of why the revised version sounds calmer, clearer, and easier to stand behind.",
             imageSrc: "/images/product/draft-safer-rewrite-explain.png",
             alt: "Screenshot of Zaza Draft explaining why a safer rewrite is recommended.",
           },
           {
             title: "Parent reaction forecast",
-            badge: "Crop 05",
             body: "A tight crop showing how wording may land with families before it escalates.",
             imageSrc: "/images/product/draft-parent-reaction-forecast.png",
             alt: "Screenshot of Zaza Draft forecasting how a parent may react to a message.",
           },
           {
             title: "Documentation mode",
-            badge: "Crop 06",
             body: "A factual writing view for incident notes and paper-trail communication.",
             imageSrc: "/images/product/draft-documentation-mode.png",
             alt: "Screenshot of Zaza Draft in documentation mode for a factual school record.",
@@ -585,6 +573,22 @@ export function HomePageClient() {
     language === "de"
       ? "Screenshot des Zaza-Draft-Insights-Dashboards mit Heatmap der produktivsten Schreibzeiten."
       : "Screenshot of the Zaza Draft Insights dashboard heatmap showing a teacher's strongest drafting times.";
+  const heroProofBarHeadline =
+    language === "de"
+      ? "Lehrkraefte in der ersten Nutzungsphase haben mit Draft bereits 70+ sicherere Schulnachrichten geschrieben."
+      : "Early teachers using Draft have already written 70+ safer school messages.";
+  const heroProofBarPoints =
+    language === "de"
+      ? [
+          "Sicherere Elternkommunikation",
+          "Stunden an Schreiben nach Schulschluss gespart",
+          "Speziell fuer Lehrkraefte entwickelt",
+        ]
+      : [
+          "Safer parent communication",
+          "Hours of after-school writing saved",
+          "Built specifically for teachers",
+        ];
   const situationsHeading =
     language === "de"
       ? "Situationen, die Lehrkraefte nur ungern formulieren"
@@ -1199,6 +1203,31 @@ export function HomePageClient() {
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-purple-600/5 rounded-full blur-3xl -z-10"></div>
       </section>
 
+      <section className="border-t border-white/5 bg-[#0B1220] py-5 md:py-6">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-4 shadow-[0_18px_50px_-42px_rgba(15,23,42,0.95)] backdrop-blur-sm md:px-5">
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+              <p className="max-w-2xl text-sm font-medium leading-6 text-[#E2E8F0]">
+                {heroProofBarHeadline}
+              </p>
+              <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 lg:justify-end">
+                {heroProofBarPoints.map((point) => (
+                  <div
+                    key={point}
+                    className="inline-flex items-center gap-2 rounded-full border border-white/8 bg-white/[0.02] px-3 py-2 text-sm text-[#CBD5E1]"
+                  >
+                    <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-400/10 text-emerald-300">
+                      <Check className="h-3.5 w-3.5" />
+                    </span>
+                    <span>{point}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="relative overflow-hidden border-t border-white/5 bg-[#0F172A] py-14 md:py-16">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <div className="mb-14 rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(17,24,39,0.92),rgba(11,18,32,0.98))] p-8 shadow-[0_24px_70px_-48px_rgba(15,23,42,0.95)] ring-1 ring-white/5 md:p-10">
@@ -1337,14 +1366,9 @@ export function HomePageClient() {
                     key={visual.title}
                     className="rounded-2xl border border-white/8 bg-[#0B1220]/85 p-4"
                   >
-                    <div className="flex items-center justify-between gap-3">
-                      <p className="text-sm font-semibold text-white">
-                        {visual.title}
-                      </p>
-                      <span className="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#A78BFA]">
-                        {visual.badge}
-                      </span>
-                    </div>
+                    <p className="text-sm font-semibold text-white">
+                      {visual.title}
+                    </p>
                     <div className="mt-4 overflow-hidden rounded-2xl border border-white/10 bg-[#060B16]">
                       <div className="relative aspect-[4/3] w-full">
                         <Image

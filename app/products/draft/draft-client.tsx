@@ -179,39 +179,32 @@ export default function DraftClient() {
     language === "de"
       ? "Draft wird am klarsten, wenn jede Schutzfunktion ihren eigenen Fokus bekommt. Diese Sequenz ist fuer enge Feature-Crops gedacht und funktioniert bis dahin auch mit ruhigen Platzhalteransichten."
       : "Draft is easiest to understand when each safeguard gets its own focus. This sequence is built for tight feature crops and still reads cleanly while final assets are being prepared.";
-  const visualFrameLabel =
-    language === "de" ? "FEATURE-ANSICHT" : "FEATURE VIEW";
   const visualSlots =
     language === "de"
       ? [
           {
             title: "Trigger erkennen",
             body: "Macht Formulierungen sichtbar, die schnell schaerfer, defensiver oder vorwurfsvoll wirken koennten.",
-            chip: "Risikoerkennung",
             imageSrc: null,
           },
           {
             title: "Berufsrisiko markieren",
             body: "Hebt Stellen hervor, die bei Beschwerden oder spaeterer Weiterleitung unnoetigen professionellen Druck erzeugen koennen.",
-            chip: "Professional-Risk-Check",
             imageSrc: null,
           },
           {
             title: "Nachrichten sicherer umschreiben",
             body: "Fuehrt von einer emotionalen Erstfassung zu ruhigerer, defensiblerer Sprache, ohne die Fakten zu verlieren.",
-            chip: "Sicherere Umformulierung",
             imageSrc: null,
           },
           {
             title: "Elternreaktion vorausahnen",
             body: "Hilft einzuschaetzen, wie Ton und Formulierungen bei Eltern ankommen koennten, bevor etwas eskaliert.",
-            chip: "Reaktionsvorschau",
             imageSrc: null,
           },
           {
             title: "In den Dokumentationsmodus wechseln",
             body: "Unterstuetzt einen sachlicheren Modus, wenn ein Fall klarer festgehalten werden muss.",
-            chip: "Dokumentationsmodus",
             imageSrc: null,
           },
         ]
@@ -219,31 +212,26 @@ export default function DraftClient() {
           {
             title: "Detect trigger language",
             body: "Surface wording that could quickly read as sharp, defensive, or accusatory.",
-            chip: "Risk detection",
             imageSrc: null,
           },
           {
             title: "Flag professional-risk alerts",
             body: "Highlight phrases that could create complaint or leadership risk when a message is read out of context.",
-            chip: "Professional-risk check",
             imageSrc: null,
           },
           {
             title: "Rewrite messages safely",
             body: "Move from an emotional first draft to calmer, more defensible wording without losing the facts.",
-            chip: "Safer rewrite",
             imageSrc: null,
           },
           {
             title: "See how a parent may react",
             body: "Pressure-test likely parent interpretation before you send something that may escalate.",
-            chip: "Parent reaction",
             imageSrc: null,
           },
           {
             title: "Switch to documentation mode",
             body: "Move into a clearer factual record when a situation needs documentation instead of softer phrasing.",
-            chip: "Documentation mode",
             imageSrc: null,
           },
         ];
@@ -640,15 +628,7 @@ export default function DraftClient() {
                       ) : (
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(167,139,250,0.18),transparent_38%),radial-gradient(circle_at_bottom_right,_rgba(59,130,246,0.14),transparent_42%)]" />
                       )}
-                      <div className="relative flex h-full flex-col justify-between p-4">
-                        <div className="flex items-center justify-between gap-3">
-                          <span className="rounded-full border border-white/10 bg-white/8 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/70">
-                            {slot.chip}
-                          </span>
-                          <span className="text-[10px] uppercase tracking-[0.18em] text-white/35">
-                            {visualFrameLabel}
-                          </span>
-                        </div>
+                      <div className="relative flex h-full flex-col justify-end p-4">
                         <div className="space-y-3">
                           <div className="flex items-center gap-2">
                             <span className="h-2.5 w-2.5 rounded-full bg-[#F59E0B]" />
