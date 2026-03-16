@@ -172,7 +172,7 @@ export function HomePageClient() {
   const heroHeadlineAccent =
     language === "de"
       ? "ohne zu befuerchten, dass du Eltern gegenueber das Falsche schreibst."
-      : "without worrying you will say the wrong thing to a parent.";
+      : "without worrying you'll say the wrong thing.";
   const heroPrimaryCtaLabel =
     language === "de"
       ? "Unbegrenzte Entwuerfe starten"
@@ -1065,9 +1065,10 @@ Mr Smith`;
                     }
               }
             >
-              <div className="relative mx-auto max-w-[500px] xl:max-w-[520px]">
-                <div className="absolute inset-x-8 inset-y-8 rounded-[28px] bg-gradient-to-br from-[#A855F7]/28 via-[#1E1B4B]/18 to-[#EC4899]/22 blur-3xl" />
-                <div className="relative w-full overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] p-3 shadow-[0_28px_90px_-50px_rgba(168,85,247,0.55)] backdrop-blur-xl sm:p-4">
+              <div className="group relative mx-auto max-w-[500px] xl:max-w-[520px]">
+                <div className="absolute inset-[-8%] rounded-[40px] bg-[radial-gradient(circle_at_center,rgba(120,80,255,0.25),transparent_60%)]" />
+                <div className="absolute inset-x-8 inset-y-8 rounded-[28px] bg-gradient-to-br from-[#A855F7]/22 via-[#1E1B4B]/16 to-[#EC4899]/18 blur-3xl" />
+                <div className="relative w-full overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] p-3 shadow-[0_40px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl transition-transform duration-300 group-hover:-translate-y-1.5 group-hover:scale-[1.01] sm:p-4">
                   <section
                     className="rounded-[22px] border border-white/10 bg-[#0B1120]/95 p-4 sm:p-5"
                     role="region"

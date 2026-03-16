@@ -198,54 +198,74 @@ export default function DraftClient() {
           {
             title: "Trigger erkennen",
             body: "Macht Formulierungen sichtbar, die schnell schaerfer, defensiver oder vorwurfsvoll wirken koennten.",
-            imageSrc: null,
+            imageSrc: "/images/product/draft-trigger-detection.png",
+            imageAlt:
+              "Screenshot aus dem Zaza Draft Editor mit dem Bereich fuer erkannte Trigger-Formulierungen.",
           },
           {
             title: "Berufsrisiko markieren",
             body: "Hebt Stellen hervor, die bei Beschwerden oder spaeterer Weiterleitung unnoetigen professionellen Druck erzeugen koennen.",
-            imageSrc: null,
+            imageSrc: "/images/product/draft-professional-risk-alert.png",
+            imageAlt:
+              "Screenshot aus dem Zaza Draft Editor mit einem hohen Kommunikationsrisiko-Hinweis.",
           },
           {
             title: "Nachrichten sicherer umschreiben",
             body: "Fuehrt von einer emotionalen Erstfassung zu ruhigerer, defensiblerer Sprache, ohne die Fakten zu verlieren.",
-            imageSrc: null,
+            imageSrc: "/images/product/draft-safer-rewrite.png",
+            imageAlt:
+              "Screenshot aus dem Zaza Draft Editor mit einer sichereren umgeschriebenen Nachricht.",
           },
           {
             title: "Elternreaktion vorausahnen",
             body: "Hilft einzuschaetzen, wie Ton und Formulierungen bei Eltern ankommen koennten, bevor etwas eskaliert.",
-            imageSrc: null,
+            imageSrc: "/images/product/draft-parent-reaction-forecast.png",
+            imageAlt:
+              "Screenshot aus dem Zaza Draft Editor mit einer Vorschau auf moegliche Elternreaktionen.",
           },
           {
             title: "In den Dokumentationsmodus wechseln",
             body: "Unterstuetzt einen sachlicheren Modus, wenn ein Fall klarer festgehalten werden muss.",
-            imageSrc: null,
+            imageSrc: "/images/product/draft-documentation-mode.png",
+            imageAlt:
+              "Screenshot aus dem Zaza Draft Editor im Dokumentationsmodus mit strukturierter Vorfallsdarstellung.",
           },
         ]
       : [
           {
             title: "Detect trigger language",
             body: "Surface wording that could quickly read as sharp, defensive, or accusatory.",
-            imageSrc: null,
+            imageSrc: "/images/product/draft-trigger-detection.png",
+            imageAlt:
+              "Screenshot from the Zaza Draft editor showing the triggers detected panel.",
           },
           {
             title: "Flag professional-risk alerts",
             body: "Highlight phrases that could create complaint or leadership risk when a message is read out of context.",
-            imageSrc: null,
+            imageSrc: "/images/product/draft-professional-risk-alert.png",
+            imageAlt:
+              "Screenshot from the Zaza Draft editor showing a high communication-risk alert.",
           },
           {
             title: "Rewrite messages safely",
             body: "Move from an emotional first draft to calmer, more defensible wording without losing the facts.",
-            imageSrc: null,
+            imageSrc: "/images/product/draft-safer-rewrite.png",
+            imageAlt:
+              "Screenshot from the Zaza Draft editor showing a rewritten safer message.",
           },
           {
             title: "See how a parent may react",
             body: "Pressure-test likely parent interpretation before you send something that may escalate.",
-            imageSrc: null,
+            imageSrc: "/images/product/draft-parent-reaction-forecast.png",
+            imageAlt:
+              "Screenshot from the Zaza Draft editor showing the parent reaction forecast chart.",
           },
           {
             title: "Switch to documentation mode",
             body: "Move into a clearer factual record when a situation needs documentation instead of softer phrasing.",
-            imageSrc: null,
+            imageSrc: "/images/product/draft-documentation-mode.png",
+            imageAlt:
+              "Screenshot from the Zaza Draft editor showing documentation mode with structured incident output.",
           },
         ];
 
@@ -632,40 +652,17 @@ export default function DraftClient() {
               {visualSlots.map((slot) => (
                 <Card
                   key={slot.title}
-                  className="border-white/10 bg-white/[0.04] p-4 backdrop-blur-sm"
+                  className="group border-white/10 bg-white/[0.04] p-4 backdrop-blur-sm transition-transform duration-300 hover:scale-[1.02]"
                 >
                   <div className="space-y-4">
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-[#070B16]">
-                      {slot.imageSrc ? (
-                        <Image
-                          src={slot.imageSrc}
-                          alt={slot.title}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 20vw"
-                        />
-                      ) : (
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(167,139,250,0.18),transparent_38%),radial-gradient(circle_at_bottom_right,_rgba(59,130,246,0.14),transparent_42%)]" />
-                      )}
-                      <div className="relative flex h-full flex-col justify-end p-4">
-                        <div className="space-y-3">
-                          <div className="flex items-center gap-2">
-                            <span className="h-2.5 w-2.5 rounded-full bg-[#F59E0B]" />
-                            <span className="h-2.5 w-2.5 rounded-full bg-[#EF4444]" />
-                            <span className="h-2.5 w-2.5 rounded-full bg-[#22C55E]" />
-                          </div>
-                          <div className="rounded-2xl border border-white/10 bg-white/5 p-3">
-                            <div className="h-2 rounded-full bg-white/20" />
-                            <div className="mt-2 h-2 w-4/5 rounded-full bg-white/10" />
-                            <div className="mt-2 h-2 w-3/5 rounded-full bg-white/10" />
-                          </div>
-                          <div className="rounded-2xl border border-white/10 bg-black/20 p-3">
-                            <div className="text-sm font-medium text-white/80">
-                              {slot.title}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-[#070B16] shadow-[0_20px_55px_-38px_rgba(2,6,23,0.95)] ring-1 ring-white/6">
+                      <Image
+                        src={slot.imageSrc}
+                        alt={slot.imageAlt}
+                        fill
+                        className="object-cover scale-[1.02] transition-transform duration-300 group-hover:scale-[1.04]"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 20vw"
+                      />
                     </div>
                     <div className="space-y-2">
                       <h3 className="text-lg font-semibold text-white">
