@@ -473,76 +473,76 @@ export function HomePageClient() {
     language === "de"
       ? [
           {
-            title: "Trigger-Erkennung",
-            body: "Warnsignale fuer heikle Formulierungen oder moegliche Eskalations-Trigger.",
+            title: "Riskante Formulierungen frueh erkennen",
+            body: "Draft markiert Sprache, die ein Elterngespraech schneller eskalieren lassen koennte.",
             imageSrc: "/images/product/draft-trigger-detection.png",
             alt: "Screenshot of Zaza Draft highlighting trigger detection in a teacher message.",
           },
           {
-            title: "Professional-Risk-Alert",
-            body: "Ein klarer Hinweis, wenn eine Nachricht beruflich angreifbar wirken koennte.",
+            title: "Beschwerdeanfaellige Sprache vermeiden",
+            body: "Draft hebt Formulierungen hervor, die leicht zu Missverstaendnissen fuehren koennten.",
             imageSrc: "/images/product/draft-professional-risk-alert.png",
             alt: "Screenshot of Zaza Draft showing a professional risk alert for school communication.",
           },
           {
-            title: "Sicherere Ueberarbeitung",
-            body: "Vorher-nachher-Ausschnitt einer ruhigeren, belastbareren Formulierung.",
+            title: "Nachrichten sicherer umschreiben",
+            body: "Draft verwandelt schwierige Nachrichten in klare, professionelle Kommunikation.",
             imageSrc: "/images/product/draft-safer-rewrite.png",
             alt: "Screenshot of Zaza Draft suggesting a safer rewrite for a teacher message.",
           },
           {
-            title: "Ueberarbeitung erklaert",
-            body: "Eine kurze Erklaerung, warum die ueberarbeitete Version ruhiger, klarer und defensibler klingt.",
+            title: "Verstehen, warum sich Formulierungen aendern",
+            body: "Draft erklaert seine Aenderungen, damit Lehrkraefte die Kontrolle ueber die Nachricht behalten.",
             imageSrc: "/images/product/draft-safer-rewrite-explain.png",
             alt: "Screenshot of Zaza Draft explaining why a safer rewrite is recommended.",
           },
           {
-            title: "Elternreaktions-Vorschau",
-            body: "Ein enger Ausschnitt, der zeigt, wie eine Nachricht wahrscheinlich auf Familien wirkt.",
+            title: "Sehen, wie Eltern reagieren koennten",
+            body: "Draft zeigt moegliche Reaktionen, damit Konflikte frueher abgefangen werden koennen.",
             imageSrc: "/images/product/draft-parent-reaction-forecast.png",
             alt: "Screenshot of Zaza Draft forecasting how a parent may react to a message.",
           },
           {
-            title: "Dokumentationsmodus",
-            body: "Beispiel fuer sachliche, nachvollziehbare Formulierungen bei Vorfaellen.",
+            title: "Belastbare Dokumentation erstellen",
+            body: "Draft verwandelt Beobachtungen in neutrale, professionelle Dokumentation.",
             imageSrc: "/images/product/draft-documentation-mode.png",
             alt: "Screenshot of Zaza Draft in documentation mode for a factual school record.",
           },
         ]
       : [
           {
-            title: "Trigger detection",
-            body: "A focused crop showing flagged phrasing or escalation triggers.",
+            title: "Spot risky wording early",
+            body: "Draft flags language that could escalate a parent conversation.",
             imageSrc: "/images/product/draft-trigger-detection.png",
             alt: "Screenshot of Zaza Draft highlighting trigger detection in a teacher message.",
           },
           {
-            title: "Professional-risk alert",
-            body: "A callout that warns when wording may create avoidable professional exposure.",
+            title: "Avoid complaint-prone language",
+            body: "Draft highlights wording that could lead to misunderstandings.",
             imageSrc: "/images/product/draft-professional-risk-alert.png",
             alt: "Screenshot of Zaza Draft showing a professional risk alert for school communication.",
           },
           {
-            title: "Safer rewrite",
-            body: "A before-and-after crop showing calmer, more defensible wording.",
+            title: "Rewrite messages safely",
+            body: "Draft turns difficult messages into clear, professional communication.",
             imageSrc: "/images/product/draft-safer-rewrite.png",
             alt: "Screenshot of Zaza Draft suggesting a safer rewrite for a teacher message.",
           },
           {
-            title: "Rewrite explained",
-            body: "A short explanation of why the revised version sounds calmer, clearer, and easier to stand behind.",
+            title: "Understand why wording changed",
+            body: "Draft explains edits so teachers stay in control of the message.",
             imageSrc: "/images/product/draft-safer-rewrite-explain.png",
             alt: "Screenshot of Zaza Draft explaining why a safer rewrite is recommended.",
           },
           {
-            title: "Parent reaction forecast",
-            body: "A tight crop showing how wording may land with families before it escalates.",
+            title: "See how a parent might react",
+            body: "Draft predicts possible reactions to help prevent conflict.",
             imageSrc: "/images/product/draft-parent-reaction-forecast.png",
             alt: "Screenshot of Zaza Draft forecasting how a parent may react to a message.",
           },
           {
-            title: "Documentation mode",
-            body: "A factual writing view for incident notes and paper-trail communication.",
+            title: "Create defensible records",
+            body: "Draft converts observations into neutral, professional documentation.",
             imageSrc: "/images/product/draft-documentation-mode.png",
             alt: "Screenshot of Zaza Draft in documentation mode for a factual school record.",
           },
@@ -551,12 +551,12 @@ export function HomePageClient() {
     language === "de" ? "Draft Insights" : "Draft Insights";
   const insightsFeatureHeading =
     language === "de"
-      ? "Einblicke, die dir helfen, klueger zu arbeiten"
-      : "Insights that help you work smarter";
+      ? "Deinen Kommunikationsstil besser verstehen"
+      : "Understand your communication style";
   const insightsFeatureBody =
     language === "de"
-      ? "Draft lernt unaufdringlich aus deinen Schreibmustern und zeigt, wann und wie du am besten kommunizierst. So lassen sich Arbeit nach Feierabend reduzieren und Formulierungen mit der Zeit klarer machen."
-      : "Draft quietly learns from your writing patterns and shows when and how you communicate best - helping reduce after-hours work and improve clarity over time.";
+      ? "Draft zeigt Muster in Tonfall und Nachrichtenstil, damit Lehrkraefte mit Eltern und Kolleginnen und Kollegen klarer kommunizieren koennen."
+      : "Draft shows patterns in your tone and messaging so you can communicate more clearly with parents and colleagues.";
   const insightsFeaturePoints =
     language === "de"
       ? [
@@ -571,8 +571,8 @@ export function HomePageClient() {
         ];
   const insightsFeatureAlt =
     language === "de"
-      ? "Screenshot des Zaza-Draft-Insights-Dashboards mit Heatmap der produktivsten Schreibzeiten."
-      : "Screenshot of the Zaza Draft Insights dashboard heatmap showing a teacher's strongest drafting times.";
+      ? "Screenshot des Zaza-Draft-Insights-Dashboards mit Stil- und Kommunikationsmustern."
+      : "Screenshot of the Zaza Draft Insights dashboard showing communication style patterns.";
   const heroProofBarHeadline =
     language === "de"
       ? "Lehrkraefte in der ersten Nutzungsphase haben mit Draft bereits 70+ sicherere Schulnachrichten geschrieben."
@@ -1433,7 +1433,7 @@ export function HomePageClient() {
               <div className="overflow-hidden rounded-[22px] border border-white/10 bg-[#060B16]">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
-                    src="/images/product/draft-insights-heatmap.png"
+                    src="/images/product/draft-insights-style.png"
                     alt={insightsFeatureAlt}
                     fill
                     className="object-contain"
