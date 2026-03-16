@@ -9,6 +9,7 @@ import { track } from "@/lib/analytics";
 import { DraftDemo } from "@/components/draft-demo";
 import { CaseStudyCarousel } from "@/components/case-study-carousel";
 import { SocialProofBadges } from "@/components/social-proof-badges";
+import { buildStripeCheckoutPath } from "@/config/pricing";
 
 const Check = ({ className }: { className?: string }) => (
   <svg
@@ -146,6 +147,16 @@ export function HomePageClient() {
   const [activeProofIndex, setActiveProofIndex] = useState(0);
   const prefersReducedMotion = useReducedMotion();
   const signupHref = language === "de" ? "/de/signup" : "/signup";
+  const starterSignupHref =
+    language === "de"
+      ? "https://www.zazadraft.com/de/signup?source=homepage&plan=starter"
+      : "https://www.zazadraft.com/signup?source=homepage&plan=starter";
+  const teacherCheckoutHref = buildStripeCheckoutPath({
+    plan: "draft",
+    interval: "monthly",
+    currency: "EUR",
+    returnPath: language === "de" ? "/de" : "/",
+  });
   const founderStoryHref =
     language === "de" ? "/de/about/founder" : "/about/founder";
   const heroEyebrow = language === "de" ? "FUER LEHRKRAEFTE" : "FOR TEACHERS";
@@ -154,11 +165,19 @@ export function HomePageClient() {
       ? "Sensible Schulkommunikation mit Sicherheitsleitplanken"
       : "High-stakes school messages with safety guardrails";
   const heroHeadline =
-    language === "de" ? "Schreibe Schulnachrichten," : "Write school messages";
+    language === "de"
+      ? "Schreibe Eltern-E-Mails und Zeugnisbemerkungen"
+      : "Write parent emails and report comments";
   const heroHeadlineAccent =
     language === "de"
       ? "ohne zu fuerchten, dass du das Falsche schreibst."
       : "without worrying you will say the wrong thing.";
+  const heroPrimaryCtaLabel =
+    language === "de" ? "Sicher schreiben starten" : "Start writing safely";
+  const heroSecondaryCtaLabel =
+    language === "de"
+      ? "Kostenlos testen (10 Entwuerfe/Monat)"
+      : "Try free (10 drafts/month)";
   const heroSubheading =
     language === "de"
       ? "Zaza Draft hilft Lehrkraeften, riskante Formulierungen zu erkennen, sensible Nachrichten sicherer umzuschreiben und mit mehr Ruhe auf Senden zu druecken."
@@ -263,8 +282,8 @@ export function HomePageClient() {
       : "Not a generic AI writer, but teacher-first support for safer school communication.";
   const heroCtaMicrocopy =
     language === "de"
-      ? "Der kostenlose Tarif enthaelt 10 Entwuerfe pro Monat. Keine Kreditkarte erforderlich."
-      : "The free plan includes 10 drafts each month. No credit card required.";
+      ? "10 Entwuerfe gratis pro Monat • Keine Kreditkarte erforderlich"
+      : "10 drafts free every month • No credit card required";
   const heroCtaReassuranceLine =
     language === "de"
       ? "Immer bearbeitbar. Du bleibst bei jedem Wort in Kontrolle."
@@ -718,22 +737,28 @@ export function HomePageClient() {
                   className="w-full sm:w-auto inline-flex items-center justify-center bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-transform transition-shadow duration-200 hover:scale-[1.03] hover:shadow-xl hover:shadow-purple-500/30 active:scale-[0.98]"
                 >
                   <Link
-                    href={signupHref}
+                    href={teacherCheckoutHref}
                     onClick={() =>
                       track("cta_click_home_get_started", { language })
                     }
                   >
-                    {t("hero.ctaPrimary")}
+                    {heroPrimaryCtaLabel}
                   </Link>
                 </Button>
                 <Button
-                  onClick={scrollToDemo}
+                  asChild
                   size="lg"
                   variant="outline"
                   className="w-full sm:w-auto inline-flex items-center justify-center bg-white/5 border border-white/10 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 backdrop-blur-sm transition-transform transition-shadow duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/10 group active:scale-[0.98]"
                 >
-                  {t("hero.ctaSecondary")}
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <Link
+                    href={starterSignupHref}
+                    onClick={() =>
+                      track("cta_click_home_try_free", { language })
+                    }
+                  >
+                    {heroSecondaryCtaLabel}
+                  </Link>
                 </Button>
               </motion.div>
               <motion.p

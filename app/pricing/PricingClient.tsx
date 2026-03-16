@@ -166,6 +166,14 @@ export default function PricingClient() {
           "Helps you gauge how a message may land with parents.",
           "Supports a more factual documentation mode when the paper trail matters.",
         ];
+  const teacherValueLine =
+    language === "de"
+      ? "Weniger als der Preis eines Kaffees pro Woche."
+      : "Less than the price of a coffee per week.";
+  const teacherTrustLine =
+    language === "de"
+      ? "30-Tage-Geld-zurueck-Garantie • Jederzeit kuendbar"
+      : "30-day money-back guarantee • Cancel anytime";
   const trackPricingCTA = (id: string) =>
     track("cta_click", { location: "pricing", id });
 
@@ -540,6 +548,9 @@ export default function PricingClient() {
                     {t("pricing.teacher.savingsAnnual")}
                   </p>
                 )}
+                <p className="mb-4 text-sm text-[#CBD5E1]">
+                  {teacherValueLine}
+                </p>
 
                 <Button
                   type="button"
@@ -555,7 +566,7 @@ export default function PricingClient() {
                   {t("pricing.teacher.cta")}
                 </Button>
                 <p className="text-center text-sm text-[#94A3B8] mb-4">
-                  {t("pricing.teacher.trial")}
+                  {teacherTrustLine}
                 </p>
 
                 <div className="flex items-center justify-center gap-2 bg-[rgba(16,185,129,0.1)] border border-[rgba(16,185,129,0.3)] rounded-lg px-4 py-2 mb-6">

@@ -54,7 +54,7 @@ const translationsEn: Record<string, string> = {
   "pricing.free.badge": "FREE",
   "pricing.free.title": "Starter",
   "pricing.free.description":
-    "Everything you need to try Draft and save your first hours.",
+    "Start with 10 drafts every month free. No credit card required.",
   "pricing.free.cta": "Create free account",
   "pricing.free.feature1": "5 drafts/month",
   "pricing.free.feature2": "Basic templates",
@@ -1606,7 +1606,7 @@ const translationsDe: Record<string, string> = {
   "pricing.free.badge": "KOSTENLOS",
   "pricing.free.title": "Starter",
   "pricing.free.description":
-    "Alles, was Sie brauchen, um Draft auszuprobieren und Ihre ersten Stunden zu sparen.",
+    "Starten Sie jeden Monat mit 10 kostenlosen Entwuerfen. Keine Kreditkarte erforderlich.",
   "pricing.free.cta": "Kostenloses Konto erstellen",
   "pricing.free.feature1": "5 Entwürfe pro Monat",
   "pricing.free.feature2": "Basisvorlagen",

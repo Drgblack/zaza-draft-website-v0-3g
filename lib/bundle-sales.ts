@@ -18,7 +18,7 @@ export const DRAFT_TEACH_BUNDLE_ENABLED = isDraftTeachBundleEnabled();
 export function getDraftTeachBundleWaitlistCtaLabel(
   language: BundleSalesLanguage,
 ) {
-  return language === "de" ? "Zur Warteliste" : "Join the waitlist";
+  return language === "de" ? "Spaeter in 2026" : "Coming later in 2026";
 }
 
 export function getDraftTeachBundleHelperLine(language: BundleSalesLanguage) {

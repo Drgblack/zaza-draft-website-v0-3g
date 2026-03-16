@@ -56,7 +56,9 @@ const LockIcon = ({ className }: { className?: string }) => (
 
 export default function SignupClient() {
   const { language } = useLanguage();
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
@@ -72,9 +74,14 @@ export default function SignupClient() {
           "Starten Sie mit 10 kostenlosen Entwuerfen pro Monat und wechseln Sie spaeter nur dann in den Teacher Tarif, wenn Sie mehr brauchen.",
         support:
           "Keine Kreditkarte erforderlich fuer den kostenlosen Tarif. Bezahlte Teacher Abos laufen separat ueber Stripe.",
+        nameLabel: "Vollstaendiger Name",
+        namePlaceholder: "Max Mustermann",
         formLabel: "E-Mail-Adresse",
         formPlaceholder: "du@schule.de",
+        passwordLabel: "Passwort",
+        passwordPlaceholder: "Mindestens 8 Zeichen",
         formButton: "Kostenloses Konto erstellen",
+        buttonSupport: "Keine Kreditkarte erforderlich.",
         helper:
           "Wir nutzen Ihre Angaben nur, um Ihr kostenloses Konto einzurichten und Ihnen relevante Produktupdates zu schicken.",
         success:
@@ -122,9 +129,14 @@ export default function SignupClient() {
           "Start with 10 free drafts each month and only upgrade to Teacher when you want more.",
         support:
           "No credit card required for the free plan. Paid Teacher subscriptions are handled separately through Stripe.",
+        nameLabel: "Full name",
+        namePlaceholder: "Jane Smith",
         formLabel: "Email address",
         formPlaceholder: "you@school.org",
+        passwordLabel: "Password",
+        passwordPlaceholder: "At least 8 characters",
         formButton: "Create free account",
+        buttonSupport: "No credit card required.",
         helper:
           "We will use your details to set up your free account request and send relevant product updates.",
         success:
@@ -167,16 +179,39 @@ export default function SignupClient() {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const trimmedName = name.trim();
+
+    if (!trimmedName) {
+      setError(
+        isGerman
+          ? "Bitte geben Sie Ihren Namen ein."
+          : "Please enter your full name.",
+      );
+      return;
+    }
+
+    if (password.trim().length < 8) {
+      setError(
+        isGerman
+          ? "Bitte waehlen Sie ein Passwort mit mindestens 8 Zeichen."
+          : "Please choose a password with at least 8 characters.",
+      );
+      return;
+    }
+
     setLoading(true);
     setError("");
 
     try {
       await submitBrevoContact({
+        name: trimmedName,
         email,
         source: isGerman ? "signup_page_de" : "signup_page_en",
         attributes: {
+          ACCOUNT_CREATION_REQUESTED: true,
           LANGUAGE: language.toUpperCase(),
           ENTRYPOINT: "SIGNUP_PAGE",
+          PLAN: "starter",
         },
       });
       setSuccess(true);
@@ -254,6 +289,24 @@ export default function SignupClient() {
                   <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
                     <div>
                       <label
+                        htmlFor="signup-name"
+                        className="mb-2 block text-sm font-medium text-[#E5E7EB]"
+                      >
+                        {copy.nameLabel}
+                      </label>
+                      <input
+                        id="signup-name"
+                        type="text"
+                        autoComplete="name"
+                        required
+                        value={name}
+                        onChange={(event) => setName(event.target.value)}
+                        placeholder={copy.namePlaceholder}
+                        className="min-h-[52px] w-full rounded-2xl border border-white/10 bg-[#0B1220] px-4 text-base text-white placeholder:text-[#6B7280] focus:border-[#A78BFA] focus:outline-none focus:ring-2 focus:ring-[#8B5CF6]/40"
+                      />
+                    </div>
+                    <div>
+                      <label
                         htmlFor="signup-email"
                         className="mb-2 block text-sm font-medium text-[#E5E7EB]"
                       >
@@ -268,6 +321,25 @@ export default function SignupClient() {
                         value={email}
                         onChange={(event) => setEmail(event.target.value)}
                         placeholder={copy.formPlaceholder}
+                        className="min-h-[52px] w-full rounded-2xl border border-white/10 bg-[#0B1220] px-4 text-base text-white placeholder:text-[#6B7280] focus:border-[#A78BFA] focus:outline-none focus:ring-2 focus:ring-[#8B5CF6]/40"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="signup-password"
+                        className="mb-2 block text-sm font-medium text-[#E5E7EB]"
+                      >
+                        {copy.passwordLabel}
+                      </label>
+                      <input
+                        id="signup-password"
+                        type="password"
+                        autoComplete="new-password"
+                        minLength={8}
+                        required
+                        value={password}
+                        onChange={(event) => setPassword(event.target.value)}
+                        placeholder={copy.passwordPlaceholder}
                         className="min-h-[52px] w-full rounded-2xl border border-white/10 bg-[#0B1220] px-4 text-base text-white placeholder:text-[#6B7280] focus:border-[#A78BFA] focus:outline-none focus:ring-2 focus:ring-[#8B5CF6]/40"
                       />
                     </div>
@@ -287,6 +359,9 @@ export default function SignupClient() {
                           : "Creating..."
                         : copy.formButton}
                     </Button>
+                    <p className="text-center text-xs leading-6 text-[#94A3B8]">
+                      {copy.buttonSupport}
+                    </p>
 
                     <p className="text-xs leading-6 text-[#94A3B8]">
                       {copy.privacy}{" "}
