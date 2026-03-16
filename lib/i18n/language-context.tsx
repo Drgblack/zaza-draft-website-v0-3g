@@ -1774,7 +1774,7 @@ const translationsDe: Record<string, string> = {
   "nav.learningCentre": "Lernzentrum",
   "nav.resources": "Ressourcen",
   "nav.faq": "FAQ",
-  "nav.about": "Ãœber uns",
+  "nav.about": "Über uns",
   "nav.getStarted": "Jetzt starten",
 
   // Forms & modal
@@ -2450,7 +2450,7 @@ const translationsDe: Record<string, string> = {
   "footer.teacherResources": "Ressourcen für Lehrkräfte",
   "footer.support": "Support",
   "footer.faq": "FAQ",
-  "footer.about": "Ãœber uns",
+  "footer.about": "Über uns",
   "footer.privacy": "Datenschutzrichtlinie",
   "footer.terms": "Nutzungsbedingungen",
   "footer.contact": "Kontakt",
