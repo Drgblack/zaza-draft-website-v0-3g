@@ -598,6 +598,58 @@ export function HomePageClient() {
     language === "de"
       ? "Entwickelt von einer Person mit Promotion in Professional Education."
       : "Built by a PhD in Professional Education.";
+  const saferMessageSectionHeading =
+    language === "de"
+      ? "Sieh, wie Draft Lehrkraeften hilft, sicherere Nachrichten zu schreiben."
+      : "See how Draft helps teachers write safer messages.";
+  const saferMessageBeforeTitle =
+    language === "de" ? "Lehrkraft-Entwurf (vorher)" : "Teacher draft (before)";
+  const saferMessageAfterTitle =
+    language === "de"
+      ? "Draft-Ueberarbeitung (sicherer)"
+      : "Draft rewrite (safer)";
+  const saferMessageBeforeBody =
+    language === "de"
+      ? `Hallo Frau Taylor,
+
+Oliver hat heute den Unterricht erneut gestoert und sich geweigert, den Anweisungen zu folgen.
+Dieses Verhalten wird zunehmend zum Problem und muss angesprochen werden.
+
+Herr Smith`
+      : `Hi Mrs Taylor,
+
+Oliver disrupted the class again today and refused to follow instructions.
+This behaviour is becoming a problem and needs to be addressed.
+
+Mr Smith`;
+  const saferMessageAfterBody =
+    language === "de"
+      ? `Hallo Frau Taylor,
+
+ich moechte eine Beobachtung zu Olivers Mitarbeit im Unterricht heute mit Ihnen teilen.
+
+Waehrend der Stunde fiel es ihm schwer, konzentriert zu bleiben, und zeitweise folgte er den Anweisungen fuer die Aufgabe nicht. Wir unterstuetzen ihn weiter dabei, Strategien zu entwickeln, um bei Lernaufgaben besser beteiligt zu bleiben.
+
+Melden Sie sich gern, wenn Sie besprechen moechten, wie wir ihn gemeinsam unterstuetzen koennen.
+
+Mit freundlichen Gruessen
+Herr Smith`
+      : `Hi Mrs Taylor,
+
+I wanted to share an observation about Oliver’s engagement in class today.
+
+During the lesson he found it difficult to stay focused and at times did not follow the instructions for the activity. We’re continuing to support him in developing strategies to remain engaged during learning tasks.
+
+Please feel free to reach out if you’d like to discuss how we can work together to support him.
+
+Kind regards,
+Mr Smith`;
+  const saferMessageCaption =
+    language === "de"
+      ? "Ueberarbeitet mit Zaza Draft."
+      : "Rewritten using Zaza Draft.";
+  const saferMessageCtaLabel =
+    language === "de" ? "Sicher schreiben starten" : "Start writing safely";
   const situationsHeading =
     language === "de"
       ? "Wenn eine Nachricht leicht zu einer Beschwerde werden koennte"
@@ -1232,6 +1284,55 @@ export function HomePageClient() {
             <p className="mt-3 text-sm leading-6 text-[#94A3B8]">
               {heroCredibilityHeadline}
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/5 bg-[#0F172A] py-14 md:py-16">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(17,24,39,0.92),rgba(11,18,32,0.98))] p-8 shadow-[0_24px_70px_-48px_rgba(15,23,42,0.95)] ring-1 ring-white/5 md:p-10">
+            <div className="max-w-3xl">
+              <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
+                {saferMessageSectionHeading}
+              </h2>
+            </div>
+            <div className="mt-8 grid gap-4 lg:grid-cols-2">
+              <article className="rounded-[24px] border border-white/8 bg-[#111827]/80 p-5 shadow-[0_18px_50px_-42px_rgba(15,23,42,0.95)]">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#FCA5A5]">
+                  {saferMessageBeforeTitle}
+                </p>
+                <pre className="mt-4 whitespace-pre-wrap text-sm leading-7 text-[#E5E7EB] [font-family:inherit]">
+                  {saferMessageBeforeBody}
+                </pre>
+              </article>
+              <article className="rounded-[24px] border border-emerald-400/20 bg-[linear-gradient(180deg,rgba(17,24,39,0.98),rgba(15,23,42,0.94))] p-5 shadow-[0_24px_70px_-42px_rgba(16,185,129,0.35)] ring-1 ring-white/5">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#A7F3D0]">
+                  {saferMessageAfterTitle}
+                </p>
+                <pre className="mt-4 whitespace-pre-wrap text-sm leading-7 text-white [font-family:inherit]">
+                  {saferMessageAfterBody}
+                </pre>
+                <p className="mt-4 text-sm text-[#CBD5E1]">
+                  {saferMessageCaption}
+                </p>
+              </article>
+            </div>
+            <div className="mt-8">
+              <Button
+                asChild
+                size="lg"
+                className="bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-transform transition-shadow duration-200 hover:scale-[1.03] hover:shadow-xl hover:shadow-purple-500/30 active:scale-[0.98]"
+              >
+                <Link
+                  href={teacherCheckoutHref}
+                  onClick={() =>
+                    track("cta_click_home_safer_message_section", { language })
+                  }
+                >
+                  {saferMessageCtaLabel}
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
