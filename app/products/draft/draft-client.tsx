@@ -17,6 +17,7 @@ export default function DraftClient() {
   const [demoOpen, setDemoOpen] = useState(false);
   const productPath =
     language === "de" ? "/de/products/draft" : "/products/draft";
+  const freeSignupHref = language === "de" ? "/de/signup" : "/signup";
   const teacherCheckoutHref = buildStripeCheckoutPath({
     plan: "draft",
     interval: "monthly",
@@ -49,12 +50,22 @@ export default function DraftClient() {
     language === "de"
       ? "Lehrkraft-zentrierte Sicherheitsunterstuetzung mit sichereren Umformulierungen, Elternreaktions-Vorschau und Dokumentationsmodus in einem Ablauf."
       : "Teacher-first communication safety support with safer rewrites, parent-reaction forecasting, and documentation mode in one workflow.";
+  const heroFreeStartLine =
+    language === "de"
+      ? "Keine Kreditkarte erforderlich, um kostenlos zu starten"
+      : "No credit card required to start free";
+  const heroSpeedLine =
+    language === "de"
+      ? "Sieh in unter 2 Minuten, wie Draft funktioniert"
+      : "See how Draft works in under 2 minutes";
+  const heroAfterHoursLine =
+    language === "de"
+      ? "Entwickelt fuer die Nachrichten, die nach Schulschluss im Kopf bleiben"
+      : "Built for the messages that stay in your head after the school day ends";
   const heroPrivacyLine =
     language === "de"
-      ? "Sie pruefen jede Nachricht selbst, bevor irgendetwas rausgeht. Draft stuetzt Ihr Urteil; es ersetzt es nicht."
-      : "You review every message before it goes anywhere. Draft supports your judgement; it does not replace it.";
-  const heroExamplesLabel =
-    language === "de" ? "Beispiele ansehen" : "See examples";
+      ? "Sie pruefen jede Nachricht, bevor irgendetwas gesendet wird. Draft stuetzt Ihr Urteil; es ersetzt es nicht."
+      : "You review every message before anything is sent. Draft supports your judgement; it does not replace it.";
   const situationsHeading =
     language === "de"
       ? "Wenn aus einer Nachricht schnell eine Beschwerde werden kann"
@@ -393,6 +404,13 @@ export default function DraftClient() {
                         {t("products.draft.hero.cta.primary")}
                       </Link>
                     </Button>
+                    <p className="text-xs text-[#D1D5DB]">
+                      {heroFreeStartLine}
+                    </p>
+                    <p className="text-xs text-[#9CA3AF]">{heroSpeedLine}</p>
+                    <p className="text-xs text-[#9CA3AF]">
+                      {heroAfterHoursLine}
+                    </p>
                     <p className="text-xs text-[#9CA3AF]">{commitmentLine}</p>
                     <p className="text-xs text-[#9CA3AF]">{inviteLine}</p>
                     <p className="text-xs text-[#9CA3AF]">{urgencyLine}</p>
@@ -404,17 +422,16 @@ export default function DraftClient() {
                     className="border-[#374151] bg-transparent text-[#F9FAFB] hover:bg-[#1F2937] rounded-xl"
                   >
                     <Link
-                      href="#examples"
+                      href={freeSignupHref}
                       className="inline-flex items-center gap-2"
                       onClick={() =>
-                        track("cta_click_draft_see_examples", {
+                        track("cta_click_draft_try_free_account", {
                           language,
                           source: "hero",
                         })
                       }
                     >
-                      {heroExamplesLabel}
-                      <span aria-hidden="true">↓</span>
+                      {t("products.draft.cta.secondary")}
                     </Link>
                   </Button>
                 </div>
@@ -716,12 +733,14 @@ export default function DraftClient() {
                 </Link>
               </Button>
               <Button
-                onClick={() => setDemoOpen(true)}
+                asChild
                 size="lg"
                 variant="outline"
                 className="border-white/60 bg-white/10 text-white hover:bg-white/20 rounded-xl"
               >
-                {t("products.draft.cta.secondary")}
+                <Link href={freeSignupHref}>
+                  {t("products.draft.cta.secondary")}
+                </Link>
               </Button>
             </div>
             <p className="text-xs text-white/85 mt-4">{commitmentLine}</p>

@@ -9,6 +9,100 @@ import { SetLanguage } from "@/components/set-language";
 
 const ogImage = "/press-kit/screenshot-hero-preview.jpg";
 const siteUrl = "https://zazadraft.com";
+const logoAssets = [
+  {
+    title: "Zaza Draft Logo - primäres PNG",
+    description:
+      "Primäres Voll-Logo für helle Hintergründe und allgemeine Presseverwendung.",
+    previewImage: "/press-kit/logo-light-preview.jpg",
+    downloadUrl: "/press-kit/zaza-draft-logo-primary.png",
+    downloadLabel: "PNG herunterladen",
+  },
+  {
+    title: "Zaza Draft Logo - dunkles PNG",
+    description:
+      "Voll-Logo für dunkle Hintergründe, auf denen die helle Version besser lesbar ist.",
+    previewImage: "/press-kit/logo-dark-preview.jpg",
+    downloadUrl: "/press-kit/zaza-draft-logo-dark.png",
+    downloadLabel: "PNG herunterladen",
+  },
+  {
+    title: "Zaza Draft Logo - monochromes SVG",
+    description:
+      "Monochromes Vektor-Logo für skalierbare Nutzung in Redaktion, Web und Print.",
+    previewImage: "/press-kit/logo-mono-preview.jpg",
+    downloadUrl: "/press-kit/zaza-draft-logo-mono.svg",
+    downloadLabel: "SVG herunterladen",
+  },
+  {
+    title: "Zaza Z Icon - farbiges PNG",
+    description:
+      "Eigenständiges Z-Icon für Avatare, Favicons und quadratische Markennutzung.",
+    previewImage: "/press-kit/brand/zaza-z-icon-1024.png",
+    downloadUrl: "/press-kit/brand/zaza-z-icon-1024.png",
+    downloadLabel: "PNG herunterladen",
+  },
+];
+const screenshotAssets = [
+  {
+    title: "Trigger-Erkennung",
+    description:
+      "Markiert Formulierungen, die ein Elterngespräch eskalieren könnten.",
+    previewImage: "/images/product/draft-trigger-detection.png",
+    downloadUrl: "/images/product/draft-trigger-detection.png",
+    downloadLabel: "PNG herunterladen",
+  },
+  {
+    title: "Hinweis auf professionelles Risiko",
+    description: "Zeigt beschwerdeanfällige Formulierungen vor dem Senden.",
+    previewImage: "/images/product/draft-professional-risk-alert.png",
+    downloadUrl: "/images/product/draft-professional-risk-alert.png",
+    downloadLabel: "PNG herunterladen",
+  },
+  {
+    title: "Sicherere Überarbeitung",
+    description:
+      "Schreibt schwierige Nachrichten in ruhigerem professionellem Ton um.",
+    previewImage: "/images/product/draft-safer-rewrite.png",
+    downloadUrl: "/images/product/draft-safer-rewrite.png",
+    downloadLabel: "PNG herunterladen",
+  },
+  {
+    title: "Erklärung der Überarbeitung",
+    description: "Erklärt Änderungen, damit Lehrkräfte die Kontrolle behalten.",
+    previewImage: "/images/product/draft-safer-rewrite-explain.png",
+    downloadUrl: "/images/product/draft-safer-rewrite-explain.png",
+    downloadLabel: "PNG herunterladen",
+  },
+  {
+    title: "Elternreaktion-Prognose",
+    description: "Zeigt mögliche Reaktionen von Eltern vor dem Senden.",
+    previewImage: "/images/product/draft-parent-reaction-forecast.png",
+    downloadUrl: "/images/product/draft-parent-reaction-forecast.png",
+    downloadLabel: "PNG herunterladen",
+  },
+  {
+    title: "Dokumentationsmodus",
+    description:
+      "Wandelt Beobachtungen in neutrale professionelle Dokumentation um.",
+    previewImage: "/images/product/draft-documentation-mode.png",
+    downloadUrl: "/images/product/draft-documentation-mode.png",
+    downloadLabel: "PNG herunterladen",
+  },
+  {
+    title: "Insights zum Kommunikationsstil",
+    description:
+      "Zeigt, wie sich Ton und Kommunikationsmuster im Zeitverlauf entwickeln.",
+    previewImage: "/images/product/draft-insights-style.png",
+    downloadUrl: "/images/product/draft-insights-style.png",
+    downloadLabel: "PNG herunterladen",
+  },
+];
+const screenshotsZipUrl = "/press-kit/zaza-draft-product-screenshots.zip";
+const productDescription =
+  "Zaza Draft ist ein lehrkraft-zentriertes KI-Schreibtool fuer Elternkommunikation, Zeugnisbemerkungen und andere sensible Schulnachrichten. Es hilft Lehrkraeften, ruhiger, klarer und professioneller zu kommunizieren und dabei beschwerdeanfaellige Sprache zu reduzieren.";
+const founderDescription =
+  "Zaza Draft wurde von Dr Greg Blackburn gegruendet. Er hat einen PhD in Professional Education und hat das Produkt gebaut, um ruhigere und sicherere Schulkommunikation zu unterstuetzen.";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -56,7 +150,7 @@ export default function PressKitPage() {
             <Breadcrumbs
               items={[
                 { label: "Startseite", href: "/de" },
-                { label: "├£ber uns", href: "/de/about" },
+                { label: "Über uns", href: "/de/about" },
                 { label: "Presse-Kit", href: "/de/about/press" },
               ]}
             />
@@ -75,6 +169,9 @@ export default function PressKitPage() {
                     Logos, Screenshots, Brand-Guidelines, Fact Sheet,
                     Gründer-Bio und Kontaktinformationen - aktuell, konsistent
                     und sofort nutzbar.
+                  </p>
+                  <p className="text-sm leading-7 text-[#D1D5DB] max-w-3xl">
+                    {productDescription}
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <Button
@@ -112,7 +209,7 @@ export default function PressKitPage() {
                     </div>
                     <div className="flex flex-col gap-1">
                       <dt className="text-[#9CA3AF]">Mission</dt>
-                      <dd>Lehrerzentrierte KI, die Zeit zurückgibt</dd>
+                      <dd>Sicherere Schulkommunikation fuer Lehrkraefte</dd>
                     </div>
                     <div className="flex flex-col gap-1">
                       <dt className="text-[#9CA3AF]">Zielgruppe</dt>
@@ -125,14 +222,55 @@ export default function PressKitPage() {
                     <div className="flex flex-col gap-1">
                       <dt className="text-[#9CA3AF]">Traktion</dt>
                       <dd>
-                        Eine wachsende Warteliste von Lehrkraeften, die Draft
-                        verfolgen, waehrend der Zugang schrittweise oeffnet.
+                        Live-Produkt fuer erste Lehrkraefte, die Elternmails,
+                        Zeugnisbemerkungen und schulische Dokumentation
+                        schreiben.
                       </dd>
                     </div>
                   </dl>
                 </div>
               </div>
             </div>
+
+            <section className="mb-16">
+              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">
+                Das Wichtigste fuer Medien
+              </h2>
+              <div className="grid gap-4 md:grid-cols-3">
+                <div className="bg-[#111827] border border-[#1F2937] rounded-2xl p-6">
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#A78BFA] mb-3">
+                    Produktbeschreibung
+                  </p>
+                  <p className="text-sm leading-7 text-[#D1D5DB]">
+                    {productDescription}
+                  </p>
+                </div>
+                <div className="bg-[#111827] border border-[#1F2937] rounded-2xl p-6">
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#A78BFA] mb-3">
+                    Gründerbeschreibung
+                  </p>
+                  <p className="text-sm leading-7 text-[#D1D5DB]">
+                    {founderDescription}
+                  </p>
+                </div>
+                <div className="bg-[#111827] border border-[#1F2937] rounded-2xl p-6">
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#A78BFA] mb-3">
+                    Pressekontakt
+                  </p>
+                  <p className="text-sm leading-7 text-[#D1D5DB]">
+                    Fuer Interviews, Statements oder weitere Assets schreiben
+                    Sie an{" "}
+                    <a
+                      href="mailto:press@zazatechnologies.com"
+                      className="text-[#C4B5FD] hover:underline"
+                    >
+                      press@zazatechnologies.com
+                    </a>
+                    .
+                  </p>
+                </div>
+              </div>
+            </section>
 
             {/* Outcomes at a glance */}
             <section className="mb-16">
@@ -187,36 +325,17 @@ export default function PressKitPage() {
                   bestimmt; halten Sie es unverändert.
                 </p>
               </div>
-              <div className="grid gap-6 md:grid-cols-1">
-                <div className="bg-[#1F2937] border border-[#374151] rounded-2xl p-5 space-y-4">
-                  <div className="rounded-xl border border-[#1F2937] bg-[#0F172A] p-3">
-                    <div className="relative h-32 w-full">
-                      <Image
-                        src="/press-kit/brand/zaza-z-icon-1024.png"
-                        alt="Zaza Z icon - colour"
-                        fill
-                        className="object-contain"
-                        sizes="(max-width: 768px) 80vw, 30vw"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-[#F9FAFB]">
-                      Zaza Z icon - colour
-                    </h3>
-                    <p className="text-sm text-[#CBD5E1] mt-1">
-                      Für helle oder neutrale Hintergründe, damit der
-                      Farbverlauf die Marke sichtbar macht.
-                    </p>
-                  </div>
-                  <a
-                    href="/press-kit/brand/zaza-z-icon-1024.png"
-                    download
-                    className="inline-flex items-center justify-center rounded-full border border-white/20 bg-gradient-to-r from-[#7C3AED] to-[#6366F1] px-3 py-2 text-sm font-semibold text-white transition-colors hover:from-[#6D28D9] hover:to-[#4F46E5]"
-                  >
-                    Download PNG
-                  </a>
-                </div>
+              <div className="grid gap-6 md:grid-cols-2">
+                {logoAssets.map((asset) => (
+                  <AssetCard
+                    key={asset.downloadUrl}
+                    title={asset.title}
+                    description={asset.description}
+                    previewImage={asset.previewImage}
+                    downloadUrl={asset.downloadUrl}
+                    downloadLabel={asset.downloadLabel}
+                  />
+                ))}
               </div>
               <div className="mt-6 rounded-2xl border border-dashed border-[#374151] bg-[#0F172A] p-4 text-sm text-[#CBD5E1]">
                 <p className="font-semibold text-white mb-2">
@@ -234,17 +353,41 @@ export default function PressKitPage() {
               <h2 className="text-2xl font-bold text-[#F9FAFB] mb-4">
                 Produkt-Screenshots
               </h2>
-              <p className="text-sm text-[#CBD5E1] max-w-3xl mb-4">
-                Produkt-Screenshots sind auf Anfrage erhältlich.
+              <p className="text-sm text-[#CBD5E1] max-w-3xl mb-6">
+                Laden Sie offizielle Zaza-Draft-Screenshots für Redaktion und
+                Presse herunter.
               </p>
-              <Button
-                asChild
-                className="rounded-full bg-gradient-to-r from-[#7C3AED] to-[#6366F1] text-white"
-              >
-                <a href="mailto:press@zazatechnologies.com">
-                  Screenshots anfordern
-                </a>
-              </Button>
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {screenshotAssets.map((asset) => (
+                  <AssetCard
+                    key={asset.downloadUrl}
+                    title={asset.title}
+                    description={asset.description}
+                    previewImage={asset.previewImage}
+                    downloadUrl={asset.downloadUrl}
+                    downloadLabel={asset.downloadLabel}
+                  />
+                ))}
+              </div>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Button
+                  asChild
+                  className="rounded-full bg-gradient-to-r from-[#7C3AED] to-[#6366F1] text-white"
+                >
+                  <a href={screenshotsZipUrl} download>
+                    Alle Screenshots als ZIP herunterladen
+                  </a>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="rounded-full border-white/20 text-white hover:bg-white/5"
+                >
+                  <a href="mailto:press@zazatechnologies.com">
+                    Weitere Visuals anfragen
+                  </a>
+                </Button>
+              </div>
             </section>
             {/* Brand Guidelines */}
             <section className="mb-16">
@@ -268,12 +411,12 @@ export default function PressKitPage() {
               </h2>
               <div className="bg-[#1F2937] rounded-2xl p-8 border border-[#374151]">
                 <p className="text-[#D1D5DB] leading-relaxed mb-4">
-                  Zaza Technologies baut sichere, empathische KI-Tools für
-                  Pädagog:innen. Unsere Haupt-App Zaza Draft hilft Lehrkräften,
-                  jede Woche Stunden bei Elternkommunikation zu sparen - mit
-                  halluzinationsbewusster KI. Mit Sitz in Deutschland ist Zaza
-                  lehrerzentriert, DSGVO-orientiert und wird weltweit von
-                  Schulen genutzt.
+                  Zaza Technologies baut lehrkraft-zentrierte KI-Tools fuer
+                  Schulkommunikation. Das Hauptprodukt Zaza Draft hilft
+                  Lehrkraeften, Elternmails, Zeugnisbemerkungen und andere
+                  sensible Schulnachrichten mit ruhigerer, klarerer und
+                  professionellerer Sprache zu schreiben und dabei
+                  beschwerdeanfaellige Formulierungen zu reduzieren.
                 </p>
                 <p className="text-[#9CA3AF] text-sm">
                   Für Presseanfragen oder Interviews kontaktieren Sie{" "}
@@ -352,7 +495,7 @@ export default function PressKitPage() {
               <ExpandableBio
                 shortLabel="Kurz-Bio"
                 longLabel="Ausführliche Bio"
-                shortBio="Greg Blackburn ist Gründer von Zaza Technologies. Mit einem PhD in Professional Education und über 20 Jahren in Learning & Development arbeitet Greg an der Schnittstelle von Bildung, KI und Technologie. Er gründete Zaza, um Lehrkräften Zeit zurückzugeben, Stress zu reduzieren und den Fokus auf das Wesentliche zu legen: unterrichten. Der Gründer lebt im Saarland, Deutschland."
+                shortBio="Zaza Draft wurde von Dr Greg Blackburn gegruendet. Er hat einen PhD in Professional Education und hat das Produkt gebaut, um ruhigere und sicherere Schulkommunikation zu unterstuetzen. Der Gruender lebt im Saarland, Deutschland."
                 longBio="Dr. Harvey Gregory Scott Blackburn (Greg) ist Gründer von Zaza Technologies, einem KI-gestützten EdTech-Unternehmen mit Sitz in Deutschland. Greg begann seine Laufbahn im Learning & Development nach einem Diplom in Germanistik und einem MBA an der University of Queensland und promovierte anschließend in Professional Education an der City, University of London. Seine Forschung konzentrierte sich auf kritisches Denken und Problemlösen im studierendenzentrierten E-Learning. Über zwei Jahrzehnte leitete er große Lerninitiativen in Hochschule und Wirtschaft, zuletzt als Group Director of Learning bei Communardo. Zaza Technologies spiegelt Gregs Vision wider, sichere, lehrerzentrierte KI-Tools zu bauen, die fundierte Pädagogik mit moderner KI verbinden. Greg lebt in Deutschland und möchte Lehrkräfte weltweit stärken. Der Gründer lebt im Saarland, Deutschland."
               />
             </section>

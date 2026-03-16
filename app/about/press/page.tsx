@@ -8,6 +8,96 @@ import { Button } from "@/components/ui/button";
 import { Mail, ExternalLink, Sparkles, Quote, Award } from "lucide-react";
 
 const ogImage = "/press-kit/screenshot-hero-preview.jpg";
+const logoAssets = [
+  {
+    title: "Zaza Draft logo - primary PNG",
+    description:
+      "Primary full logo for light backgrounds and general press use.",
+    previewImage: "/press-kit/logo-light-preview.jpg",
+    downloadUrl: "/press-kit/zaza-draft-logo-primary.png",
+    downloadLabel: "Download PNG",
+  },
+  {
+    title: "Zaza Draft logo - dark PNG",
+    description:
+      "Full logo for dark backgrounds where the light mark reads more clearly.",
+    previewImage: "/press-kit/logo-dark-preview.jpg",
+    downloadUrl: "/press-kit/zaza-draft-logo-dark.png",
+    downloadLabel: "Download PNG",
+  },
+  {
+    title: "Zaza Draft logo - mono SVG",
+    description:
+      "Monochrome vector logo for scalable editorial, web, and print use.",
+    previewImage: "/press-kit/logo-mono-preview.jpg",
+    downloadUrl: "/press-kit/zaza-draft-logo-mono.svg",
+    downloadLabel: "Download SVG",
+  },
+  {
+    title: "Zaza Z icon - colour PNG",
+    description:
+      "Standalone Z icon for avatar, favicon, and square brand placements.",
+    previewImage: "/press-kit/brand/zaza-z-icon-1024.png",
+    downloadUrl: "/press-kit/brand/zaza-z-icon-1024.png",
+    downloadLabel: "Download PNG",
+  },
+];
+const screenshotAssets = [
+  {
+    title: "Trigger detection",
+    description: "Flags wording that could escalate a parent conversation.",
+    previewImage: "/images/product/draft-trigger-detection.png",
+    downloadUrl: "/images/product/draft-trigger-detection.png",
+    downloadLabel: "Download PNG",
+  },
+  {
+    title: "Professional risk alert",
+    description: "Shows complaint-prone phrasing before a message is sent.",
+    previewImage: "/images/product/draft-professional-risk-alert.png",
+    downloadUrl: "/images/product/draft-professional-risk-alert.png",
+    downloadLabel: "Download PNG",
+  },
+  {
+    title: "Safer rewrite",
+    description: "Rewrites difficult messages in calmer professional language.",
+    previewImage: "/images/product/draft-safer-rewrite.png",
+    downloadUrl: "/images/product/draft-safer-rewrite.png",
+    downloadLabel: "Download PNG",
+  },
+  {
+    title: "Rewrite explanation",
+    description: "Explains why wording changed so teachers stay in control.",
+    previewImage: "/images/product/draft-safer-rewrite-explain.png",
+    downloadUrl: "/images/product/draft-safer-rewrite-explain.png",
+    downloadLabel: "Download PNG",
+  },
+  {
+    title: "Parent reaction forecast",
+    description: "Predicts likely parent reactions before a message is sent.",
+    previewImage: "/images/product/draft-parent-reaction-forecast.png",
+    downloadUrl: "/images/product/draft-parent-reaction-forecast.png",
+    downloadLabel: "Download PNG",
+  },
+  {
+    title: "Documentation mode",
+    description: "Converts observations into neutral professional records.",
+    previewImage: "/images/product/draft-documentation-mode.png",
+    downloadUrl: "/images/product/draft-documentation-mode.png",
+    downloadLabel: "Download PNG",
+  },
+  {
+    title: "Communication style Insights",
+    description: "Shows how tone and messaging patterns evolve over time.",
+    previewImage: "/images/product/draft-insights-style.png",
+    downloadUrl: "/images/product/draft-insights-style.png",
+    downloadLabel: "Download PNG",
+  },
+];
+const screenshotsZipUrl = "/press-kit/zaza-draft-product-screenshots.zip";
+const productDescription =
+  "Zaza Draft is a teacher-first AI writing tool designed for parent communication, report comments, and other high-stakes school messages. It helps teachers communicate calmly, clearly, and professionally while reducing complaint-risk language.";
+const founderDescription =
+  "Zaza Draft was founded by Dr Greg Blackburn, who holds a PhD in Professional Education and built the product to support safer, calmer school communication.";
 
 export const metadata: Metadata = {
   title: "Press Kit | Zaza Draft media resources",
@@ -72,6 +162,9 @@ export default function PressKitPage() {
                     Logos, screenshots, brand guidelines, fact sheet, founder
                     bio, and contact details-clean, current, and ready to use.
                   </p>
+                  <p className="text-sm leading-7 text-[#D1D5DB] max-w-3xl">
+                    {productDescription}
+                  </p>
                   <div className="flex flex-wrap gap-3">
                     <Button
                       asChild
@@ -108,7 +201,7 @@ export default function PressKitPage() {
                     </div>
                     <div className="flex flex-col gap-1">
                       <dt className="text-[#9CA3AF]">Mission</dt>
-                      <dd>Teacher-first AI that gives time back</dd>
+                      <dd>Safer school communication for teachers</dd>
                     </div>
                     <div className="flex flex-col gap-1">
                       <dt className="text-[#9CA3AF]">Audience</dt>
@@ -121,14 +214,53 @@ export default function PressKitPage() {
                     <div className="flex flex-col gap-1">
                       <dt className="text-[#9CA3AF]">Traction</dt>
                       <dd>
-                        A growing waitlist of teachers following Draft as access
-                        opens in stages.
+                        Live product used by early teachers writing parent
+                        emails, report comments, and school documentation.
                       </dd>
                     </div>
                   </dl>
                 </div>
               </div>
             </div>
+
+            <section className="mb-16">
+              <h2 className="text-2xl font-bold text-[#F9FAFB] mb-6">
+                Media kit essentials
+              </h2>
+              <div className="grid gap-4 md:grid-cols-3">
+                <div className="bg-[#111827] border border-[#1F2937] rounded-2xl p-6">
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#A78BFA] mb-3">
+                    Product description
+                  </p>
+                  <p className="text-sm leading-7 text-[#D1D5DB]">
+                    {productDescription}
+                  </p>
+                </div>
+                <div className="bg-[#111827] border border-[#1F2937] rounded-2xl p-6">
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#A78BFA] mb-3">
+                    Founder description
+                  </p>
+                  <p className="text-sm leading-7 text-[#D1D5DB]">
+                    {founderDescription}
+                  </p>
+                </div>
+                <div className="bg-[#111827] border border-[#1F2937] rounded-2xl p-6">
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#A78BFA] mb-3">
+                    Press contact
+                  </p>
+                  <p className="text-sm leading-7 text-[#D1D5DB]">
+                    For interviews, statements, or additional assets, contact{" "}
+                    <a
+                      href="mailto:press@zazatechnologies.com"
+                      className="text-[#C4B5FD] hover:underline"
+                    >
+                      press@zazatechnologies.com
+                    </a>
+                    .
+                  </p>
+                </div>
+              </div>
+            </section>
 
             {/* Outcomes at a glance */}
             <section className="mb-16">
@@ -183,36 +315,17 @@ export default function PressKitPage() {
                   brand.
                 </p>
               </div>
-              <div className="grid gap-6 md:grid-cols-1">
-                <div className="bg-[#1F2937] border border-[#374151] rounded-2xl p-5 space-y-4">
-                  <div className="rounded-xl border border-[#1F2937] bg-[#0F172A] p-3">
-                    <div className="relative h-32 w-full">
-                      <Image
-                        src="/press-kit/brand/zaza-z-icon-1024.png"
-                        alt="Zaza Z icon - colour"
-                        fill
-                        className="object-contain"
-                        sizes="(max-width: 768px) 80vw, 30vw"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-[#F9FAFB]">
-                      Zaza Z icon - colour
-                    </h3>
-                    <p className="text-sm text-[#CBD5E1] mt-1">
-                      For use on light or neutral backgrounds so the gradient
-                      retains the brand depth.
-                    </p>
-                  </div>
-                  <a
-                    href="/press-kit/brand/zaza-z-icon-1024.png"
-                    download
-                    className="inline-flex items-center justify-center rounded-full border border-white/20 bg-gradient-to-r from-[#7C3AED] to-[#6366F1] px-3 py-2 text-sm font-semibold text-white transition-colors hover:from-[#6D28D9] hover:to-[#4F46E5]"
-                  >
-                    Download PNG
-                  </a>
-                </div>
+              <div className="grid gap-6 md:grid-cols-2">
+                {logoAssets.map((asset) => (
+                  <AssetCard
+                    key={asset.downloadUrl}
+                    title={asset.title}
+                    description={asset.description}
+                    previewImage={asset.previewImage}
+                    downloadUrl={asset.downloadUrl}
+                    downloadLabel={asset.downloadLabel}
+                  />
+                ))}
               </div>
               <div className="mt-6 rounded-2xl border border-dashed border-[#374151] bg-[#0F172A] p-4 text-sm text-[#CBD5E1]">
                 <p className="font-semibold text-white mb-2">Usage note</p>
@@ -228,17 +341,41 @@ export default function PressKitPage() {
               <h2 className="text-2xl font-bold text-[#F9FAFB] mb-4">
                 Product screenshots
               </h2>
-              <p className="text-sm text-[#CBD5E1] max-w-3xl mb-4">
-                Product screenshots are available on request.
+              <p className="text-sm text-[#CBD5E1] max-w-3xl mb-6">
+                Download official Zaza Draft screenshots for editorial and press
+                use.
               </p>
-              <Button
-                asChild
-                className="rounded-full bg-gradient-to-r from-[#7C3AED] to-[#6366F1] text-white"
-              >
-                <a href="mailto:press@zazatechnologies.com">
-                  Request screenshots
-                </a>
-              </Button>
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {screenshotAssets.map((asset) => (
+                  <AssetCard
+                    key={asset.downloadUrl}
+                    title={asset.title}
+                    description={asset.description}
+                    previewImage={asset.previewImage}
+                    downloadUrl={asset.downloadUrl}
+                    downloadLabel={asset.downloadLabel}
+                  />
+                ))}
+              </div>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Button
+                  asChild
+                  className="rounded-full bg-gradient-to-r from-[#7C3AED] to-[#6366F1] text-white"
+                >
+                  <a href={screenshotsZipUrl} download>
+                    Download all screenshots ZIP
+                  </a>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="rounded-full border-white/20 text-white hover:bg-white/5"
+                >
+                  <a href="mailto:press@zazatechnologies.com">
+                    Request additional visuals
+                  </a>
+                </Button>
+              </div>
             </section>
 
             {/* Brand Guidelines */}
@@ -263,11 +400,11 @@ export default function PressKitPage() {
               </h2>
               <div className="bg-[#1F2937] rounded-2xl p-8 border border-[#374151]">
                 <p className="text-[#D1D5DB] leading-relaxed mb-4">
-                  Zaza Technologies builds safe, empathetic AI tools for
-                  educators. Our flagship app, Zaza Draft, helps teachers save
-                  hours each week on parent communications with
-                  hallucination-aware AI. Headquartered in Germany, Zaza is
-                  teacher-first, GDPR-ready, and trusted by schools worldwide.
+                  Zaza Technologies builds teacher-first AI tools for school
+                  communication. Its flagship product, Zaza Draft, helps
+                  teachers write parent emails, report comments, and other
+                  high-stakes school messages with calmer, clearer, more
+                  professional wording while reducing complaint-risk language.
                 </p>
                 <p className="text-[#9CA3AF] text-sm">
                   For media inquiries or interviews, contact{" "}
@@ -346,7 +483,7 @@ export default function PressKitPage() {
               <ExpandableBio
                 shortLabel="Short Bio"
                 longLabel="Long Bio"
-                shortBio="Greg Blackburn is the founder of Zaza Technologies. With a PhD in Professional Education and 20+ years in Learning & Development, Greg has worked at the intersection of education, AI, and technology. He founded Zaza to help teachers thrive by saving time, reducing stress, and focusing on what matters most: teaching. Founder based in Saarland, Germany."
+                shortBio="Zaza Draft was founded by Dr Greg Blackburn, who holds a PhD in Professional Education and built the product to support safer, calmer school communication. Founder based in Saarland, Germany."
                 longBio="Dr. Harvey Gregory Scott Blackburn (Greg) is the founder of Zaza Technologies, an AI-powered EdTech company based in Germany. Greg began his career in Learning & Development after completing a Diploma in German and an MBA from the University of Queensland, later earning a PhD in Professional Education from City, University of London. His research focused on critical thinking and problem-solving in student-centred eLearning. Over two decades, he has led major learning initiatives in both higher education and corporate environments, most recently as Group Director of Learning at Communardo. Zaza Technologies reflects Greg's vision of building safe, teacher-first AI tools that combine sound pedagogy with cutting-edge AI. Greg lives in Germany with his family and is passionate about empowering educators through technology. Founder based in Saarland, Germany."
               />
             </section>

@@ -287,16 +287,16 @@ export function HomePageClient() {
       : "Not a generic AI writer, but teacher-first support for safer school communication.";
   const heroCtaMicrocopy =
     language === "de"
-      ? "10 Entwuerfe gratis pro Monat • Keine Kreditkarte erforderlich"
-      : "10 drafts free every month • No credit card required";
+      ? "Keine Kreditkarte erforderlich, um kostenlos zu starten"
+      : "No credit card required to start free";
+  const heroSpeedLine =
+    language === "de"
+      ? "Sieh in unter 2 Minuten, wie Draft funktioniert"
+      : "See how Draft works in under 2 minutes";
   const heroCtaReassuranceLine =
     language === "de"
-      ? "Immer bearbeitbar. Du bleibst bei jedem Wort in Kontrolle."
-      : "Always editable. You stay in control of every word.";
-  const heroTeacherUsageLine =
-    language === "de"
-      ? "Entwickelt fuer Lehrkraefte, die E-Mails an Eltern, Zeugnisformulierungen und andere sensible Schulkommunikation schreiben."
-      : "Built for teachers writing parent emails, report comments, and other high-stakes school communication.";
+      ? "Du pruefst jede Nachricht, bevor irgendetwas gesendet wird"
+      : "You review every message before anything is sent";
   const heroTrustBarPoints =
     language === "de"
       ? [
@@ -598,6 +598,20 @@ export function HomePageClient() {
     language === "de"
       ? "Entwickelt fuer die Nachrichten, die nach Schulschluss im Kopf bleiben."
       : "Built for the messages that stay in your head after the school day ends.";
+  const heroCredibilityHeadline =
+    language === "de"
+      ? "Entwickelt von einer Person mit Promotion in Professional Education"
+      : "Built by a PhD in Professional Education";
+  const heroCredibilityPoints =
+    language === "de"
+      ? [
+          "Lehrkraft-zentriertes, schulsicheres Design",
+          "Gebaut, um berufliches Risiko in der Elternkommunikation zu senken",
+        ]
+      : [
+          "Teacher-first, school-safe design",
+          "Built to reduce professional risk in parent communication",
+        ];
   const situationsHeading =
     language === "de"
       ? "Wenn eine Nachricht leicht zu einer Beschwerde werden koennte"
@@ -884,7 +898,7 @@ export function HomePageClient() {
                 className="inline-flex max-w-[680px] items-start gap-3 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm leading-6 text-[#CBD5E1] mx-auto lg:mx-0"
               >
                 <span className="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-emerald-300" />
-                <span>{heroTeacherUsageLine}</span>
+                <span>{heroSpeedLine}</span>
               </motion.p>
               <motion.p
                 initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
@@ -1235,6 +1249,26 @@ export function HomePageClient() {
             <p className="mt-4 text-sm leading-6 text-[#94A3B8] md:max-w-3xl">
               {heroAfterHoursLine}
             </p>
+            <div className="mt-4 border-t border-white/8 pt-4">
+              <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+                <p className="max-w-2xl text-sm font-medium leading-6 text-[#E2E8F0]">
+                  {heroCredibilityHeadline}
+                </p>
+                <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3 lg:justify-end">
+                  {heroCredibilityPoints.map((point) => (
+                    <div
+                      key={point}
+                      className="inline-flex items-center gap-2 rounded-full border border-white/8 bg-white/[0.02] px-3 py-2 text-sm text-[#CBD5E1]"
+                    >
+                      <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#C4B5FD]/12 text-[#DDD6FE]">
+                        <ShieldIcon className="h-3.5 w-3.5" />
+                      </span>
+                      <span>{point}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -2050,6 +2084,9 @@ export function HomePageClient() {
             >
               {t("finalCTA.button")}
             </Button>
+            <p className="mt-4 text-sm font-medium text-white/90">
+              {heroCtaMicrocopy}
+            </p>
           </motion.div>
         </div>
       </section>

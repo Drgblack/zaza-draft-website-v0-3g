@@ -136,7 +136,7 @@ const translationsEn: Record<string, string> = {
   "pricing.metric.text":
     "The waitlist is open. We'll publish measurable results once we have a meaningful sample from live teacher use.",
   "pricing.checkout.buyNow": "Upgrade now",
-  "pricing.compare.title": "Compare: Zaza vs ChatGPT",
+  "pricing.compare.title": "Why teachers use Draft instead of generic AI",
   "pricing.compare.caption":
     "ChatGPT is brilliant - but it wasn't built for your classroom. Zaza Draft is.",
   "pricing.compare.column.generic": "Generic AI (e.g. ChatGPT)",
@@ -273,13 +273,13 @@ const translationsEn: Record<string, string> = {
   "demoModal.successMessage": "Thanks - we'll be in touch shortly.",
 
   // Suite Page Hero (EN)
-  "suite.hero.title":
-    "Zaza is a family of safe, teacher-first AI apps that work together to reduce workload and strengthen teacher efficiency and well-being.",
+  "suite.hero.title": "AI tools built for teachers — not generic chatbots",
   "suite.hero.subhead":
-    "Every app is powered by the Zaza KnowledgeCore platform for trusted, explainable AI and consistent, school-ready safeguards.",
+    "Zaza apps help teachers plan lessons, write parent messages, and manage school communication safely.",
 
   // Suite - Teacher First
-  "suite.teacherFirst.title": "Built for teachers",
+  "suite.teacherFirst.title":
+    "Built for real teachers and real school communication",
   "suite.teacherFirst.body":
     "Zaza gives time back and lets educators focus on teaching. Everything is designed with privacy, safeguarding and pedagogy at the core so schools can trust what they deploy.",
 
@@ -342,13 +342,11 @@ const translationsEn: Record<string, string> = {
   "suite.teach.li3": "Differentiation helpers and creative activity ideas",
   "suite.teach.cta": "Learn more about Teach",
 
-  "suite.draft.body":
-    "Comment and report writing without burnout - clear, kind communication grounded in teacher wellbeing research.",
-  "suite.draft.li1": "Report and comment templates you can personalize",
-  "suite.draft.li2":
-    "Tone guidance and bias checks for fair, supportive feedback",
-  "suite.draft.li3":
-    "Private by default; designed for professional, parent-ready copy",
+  "suite.draft.body": "Calm, defensible writing for school communication.",
+  "suite.draft.li1": "Detect complaint-risk language before sending",
+  "suite.draft.li2": "Rewrite messages with safer professional tone",
+  "suite.draft.li3": "Predict possible parent reactions",
+  "suite.draft.li4": "Convert observations into neutral documentation",
   "suite.draft.cta": "Learn more about Draft",
 
   "suite.gradeflow.body":
@@ -404,13 +402,13 @@ const translationsEn: Record<string, string> = {
 
   // Suite - How It Works (EN)
   "suite.hiw.title": "How the suite works",
-  "suite.hiw.step1.title": "Pick the right app",
+  "suite.hiw.step1.title": "Choose the task",
   "suite.hiw.step1.desc":
     "Teach for planning, Draft for writing, GradeFlow for grading, Shield for boundaries.",
   "suite.hiw.step2.title": "Add your context",
   "suite.hiw.step2.desc":
     "Curriculum, class details, rubrics and tone feed KnowledgeCore once, used everywhere.",
-  "suite.hiw.step3.title": "Get school-ready outputs",
+  "suite.hiw.step3.title": "Get school-safe writing",
   "suite.hiw.step3.desc":
     "Trusted, explainable results with consistent safeguards across every workflow.",
 
@@ -949,7 +947,7 @@ const translationsEn: Record<string, string> = {
   "products.draft.hero.assumption":
     "Draft assumes messages may be read out of context - by parents, leadership, or administration - and helps you write accordingly.",
   "products.draft.hero.supporting": "Less Sunday dread, more headspace.",
-  "products.draft.hero.cta.primary": "Start using Zaza Draft",
+  "products.draft.hero.cta.primary": "Start writing safely",
   "products.draft.hero.cta.secondary": "See Examples",
   "products.draft.hero.privacyLine":
     "No student names needed. Not trained on your inputs.",
@@ -1030,8 +1028,8 @@ const translationsEn: Record<string, string> = {
   "products.draft.cta.title": "Get your time back",
   "products.draft.cta.subtitle":
     "Join the waitlist for teacher-first AI writing support.",
-  "products.draft.cta.primary": "Start using Zaza Draft",
-  "products.draft.cta.secondary": "See Examples",
+  "products.draft.cta.primary": "Start writing safely",
+  "products.draft.cta.secondary": "Try the free account",
 
   // Products - GradeFlow
   "products.gradeflow.hero.title": "Grade Faster, Grade Fairer",
@@ -1830,13 +1828,13 @@ const translationsDe: Record<string, string> = {
   "demoModal.successMessage": "Danke - wir melden uns in Kürze bei dir.",
 
   // Suite Page Hero (DE)
-  "suite.hero.title":
-    "Zaza ist eine Familie sicherer, lehrerzentrierter KI-Apps, die zusammenarbeiten, um den Arbeitsaufwand zu reduzieren und die Effizienz sowie das Wohlbefinden von Lehrkräften zu stärken.",
+  "suite.hero.title": "KI-Tools für Lehrkräfte - keine generischen Chatbots",
   "suite.hero.subhead":
-    "Jede App wird von der Zaza KnowledgeCore Plattform betrieben und bietet vertrauenswürdige, erklärbare KI sowie konsistente, schulbereite Schutzmechanismen.",
+    "Zaza-Apps helfen Lehrkräften dabei, Unterricht zu planen, Elternnachrichten zu schreiben und Schulkommunikation sicher zu steuern.",
 
   // Suite - Teacher First (DE)
-  "suite.teacherFirst.title": "Für Lehrkräfte entwickelt",
+  "suite.teacherFirst.title":
+    "Für echte Lehrkräfte und echte Schulkommunikation gebaut",
   "suite.teacherFirst.body":
     "Zaza gibt Zeit zurück und lässt Pädagoginnen und Pädagogen sich aufs Unterrichten konzentrieren. Alles ist mit Datenschutz, Schutzkonzepten und Pädagogik im Kern gestaltet, sodass Schulen dem Einsatz vertrauen können.",
 
@@ -1906,13 +1904,12 @@ const translationsDe: Record<string, string> = {
   "suite.teach.cta": "Mehr über Teach erfahren",
 
   "suite.draft.body":
-    "Kommentare und Berichte ohne Burnout - klare, wertschätzende Kommunikation, fundiert in Forschung zum Wohlbefinden von Lehrkräften.",
-  "suite.draft.li1":
-    "Vorlagen für Berichte und Kommentare, die Sie anpassen können",
+    "Ruhige, belastbare Formulierungen für Schulkommunikation.",
+  "suite.draft.li1": "Beschwerderisiken vor dem Senden erkennen",
   "suite.draft.li2":
-    "Tonleitfäden und Bias-Prüfungen für faires, unterstützendes Feedback",
-  "suite.draft.li3":
-    "Standardmäßig privat; für professionelle, elternreife Texte entwickelt",
+    "Nachrichten in sichereren professionellen Ton umschreiben",
+  "suite.draft.li3": "Mögliche Reaktionen von Eltern voraussehen",
+  "suite.draft.li4": "Beobachtungen in neutrale Dokumentation umwandeln",
   "suite.draft.cta": "Mehr über Draft erfahren",
 
   "suite.gradeflow.body":
@@ -1970,13 +1967,13 @@ const translationsDe: Record<string, string> = {
 
   // Suite - How It Works (DE)
   "suite.hiw.title": "So funktioniert die Suite",
-  "suite.hiw.step1.title": "Passende App wählen",
+  "suite.hiw.step1.title": "Aufgabe wählen",
   "suite.hiw.step1.desc":
     "Teach fürs Planen, Draft fürs Schreiben, GradeFlow fürs Bewerten, Shield für Grenzen.",
   "suite.hiw.step2.title": "Eigenen Kontext hinzufügen",
   "suite.hiw.step2.desc":
     "Lehrplan, Klassendetails, Rubriken und Ton fließen einmal in KnowledgeCore ein und gelten überall.",
-  "suite.hiw.step3.title": "Schulreife Ergebnisse erhalten",
+  "suite.hiw.step3.title": "Schulsichere Formulierungen erhalten",
   "suite.hiw.step3.desc":
     "Vertrauenswürdige, erklärbare Resultate mit konsistenten Schutzmechanismen in jedem Workflow.",
 
@@ -2533,7 +2530,7 @@ const translationsDe: Record<string, string> = {
   "products.draft.hero.assumption":
     "Draft geht davon aus, dass Nachrichten aus dem Kontext gelesen werden können - von Eltern, Schulleitung oder Verwaltung - und unterstützt dich genau dafür.",
   "products.draft.hero.supporting": "Weniger Sonntagsdruck, mehr Kopf frei.",
-  "products.draft.hero.cta.primary": "Mit Zaza Draft starten",
+  "products.draft.hero.cta.primary": "Sicher schreiben starten",
   "products.draft.hero.cta.secondary": "Beispiele ansehen",
   "products.draft.hero.privacyLine":
     "Keine Schülernamen nötig. Nicht auf deinen Eingaben trainiert.",
@@ -2614,8 +2611,8 @@ const translationsDe: Record<string, string> = {
   "products.draft.cta.title": "Hol dir deine Zeit zurück",
   "products.draft.cta.subtitle":
     "Trag dich in die Warteliste fuer lehrkraft-zentrierte KI-Schreibhilfe ein.",
-  "products.draft.cta.primary": "Mit Zaza Draft starten",
-  "products.draft.cta.secondary": "Beispiele ansehen",
+  "products.draft.cta.primary": "Sicher schreiben starten",
+  "products.draft.cta.secondary": "Kostenloses Konto testen",
 
   // Products - GradeFlow
   "products.gradeflow.hero.title": "Grade Faster, Grade Fairer",

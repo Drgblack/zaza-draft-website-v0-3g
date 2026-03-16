@@ -169,6 +169,7 @@ export default function SuiteClient() {
                 <li>{t("suite.draft.li1")}</li>
                 <li>{t("suite.draft.li2")}</li>
                 <li>{t("suite.draft.li3")}</li>
+                <li>{t("suite.draft.li4")}</li>
               </ul>
               <div className="mt-6">
                 <Link

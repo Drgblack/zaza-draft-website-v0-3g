@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useLanguage } from "@/lib/i18n/language-context";
 import {
   zazaDraftEntityDefinition,
   zazaDraftEntityDefinitionDe,
@@ -9,18 +10,8 @@ import {
 
 export default function Footer() {
   const pathname = usePathname() || "";
-
-  const search = typeof window !== "undefined" ? window.location.search : "";
-  const cookies = typeof document !== "undefined" ? document.cookie : "";
-  const htmlLang =
-    typeof document !== "undefined" ? document.documentElement.lang : "";
-
-  const isDE =
-    /(^|;\s*)NEXT_LOCALE=de(;|$)/i.test(cookies) ||
-    /(^|;\s*)locale=de(;|$)/i.test(cookies) ||
-    /[?&](lang|locale)=de\b/i.test(search) ||
-    /^\/de(\/|$)/i.test(pathname) ||
-    (htmlLang || "").toLowerCase().startsWith("de");
+  const { language } = useLanguage();
+  const isDE = language === "de";
   const isDraftLanding = /^\/(de\/)?products\/draft\/?$/i.test(pathname);
   const localPath = (path: string) => (isDE ? `/de${path}` : path);
 
