@@ -55,8 +55,9 @@ const translationsEn: Record<string, string> = {
   "pricing.free.title": "Starter",
   "pricing.free.description":
     "Start with 10 drafts every month free. No credit card required.",
+  "pricing.free.support": "Perfect for trying Draft before upgrading.",
   "pricing.free.cta": "Create free account",
-  "pricing.free.feature1": "5 drafts/month",
+  "pricing.free.feature1": "10 drafts/month",
   "pricing.free.feature2": "Basic templates",
   "pricing.free.feature3": "Save & copy",
   "pricing.free.feature4": "Community support",
@@ -66,6 +67,8 @@ const translationsEn: Record<string, string> = {
   "pricing.teacher.title": "Teacher",
   "pricing.teacher.description":
     "Unlimited writing support with no invented student facts and no lock-ins.",
+  "pricing.teacher.support":
+    "Designed for teachers handling parent communication and reports.",
   "pricing.teacher.period": "Cancel anytime",
   "pricing.teacher.savingsAnnual": "Save 2 months free",
   "pricing.teacher.cta": "Start unlimited drafts",
@@ -1607,8 +1610,9 @@ const translationsDe: Record<string, string> = {
   "pricing.free.title": "Starter",
   "pricing.free.description":
     "Starten Sie jeden Monat mit 10 kostenlosen Entwuerfen. Keine Kreditkarte erforderlich.",
+  "pricing.free.support": "Ideal, um Draft vor einem Upgrade auszuprobieren.",
   "pricing.free.cta": "Kostenloses Konto erstellen",
-  "pricing.free.feature1": "5 Entwürfe pro Monat",
+  "pricing.free.feature1": "10 Entwürfe pro Monat",
   "pricing.free.feature2": "Basisvorlagen",
   "pricing.free.feature3": "Speichern & Kopieren",
   "pricing.free.feature4": "Community-Support",
@@ -1618,6 +1622,8 @@ const translationsDe: Record<string, string> = {
   "pricing.teacher.title": "Teacher",
   "pricing.teacher.description":
     "Unbegrenzte Schreibunterstuetzung ohne erfundene Schuelerinformationen und ohne Lock-ins.",
+  "pricing.teacher.support":
+    "Entwickelt fuer Lehrkraefte, die Elternkommunikation und Berichte schreiben.",
   "pricing.teacher.period": "Jederzeit kündbar",
   "pricing.teacher.savingsAnnual": "2 Monate kostenlos sparen",
   "pricing.teacher.cta": "Unbegrenzte Entwuerfe starten",

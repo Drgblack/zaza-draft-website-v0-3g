@@ -126,9 +126,9 @@ export default function SignupClient() {
         eyebrow: "FREE ACCOUNT",
         title: "Create your free Zaza Draft account",
         subtitle:
-          "Start with 10 free drafts each month and only upgrade to Teacher when you want more.",
+          "Start with 10 drafts every month free. No credit card required.",
         support:
-          "No credit card required for the free plan. Paid Teacher subscriptions are handled separately through Stripe.",
+          "Perfect for trying Draft before upgrading. Paid Teacher subscriptions are handled separately through Stripe.",
         nameLabel: "Full name",
         namePlaceholder: "Jane Smith",
         formLabel: "Email address",
@@ -142,8 +142,8 @@ export default function SignupClient() {
         success:
           "Your free account request is in. We will email you with the next step shortly.",
         reassurance: [
-          "10 free drafts each month",
-          "No credit card for the free plan",
+          "10 drafts every month free",
+          "No credit card required",
           "Upgrade to Teacher only when you need it",
         ],
         trustNote:
@@ -158,7 +158,7 @@ export default function SignupClient() {
           {
             question: "What is included?",
             answer:
-              "The free plan includes 10 drafts each month. If you need unlimited drafts, you can move to the Teacher plan later.",
+              "The free plan includes 10 drafts every month free. If you need unlimited drafts, you can move to the Teacher plan later.",
           },
           {
             question: "Do I need a credit card?",
@@ -167,7 +167,7 @@ export default function SignupClient() {
           {
             question: "How much will it cost?",
             answer:
-              "Zaza Draft includes a free tier with 10 drafts each month. The Teacher plan for unlimited drafts is purchased separately through Stripe.",
+              "Zaza Draft includes a free tier with 10 drafts every month free. The Teacher plan for unlimited drafts is purchased separately through Stripe.",
           },
         ],
         errorFallback:

@@ -459,6 +459,9 @@ export default function PricingClient() {
                 <p className="text-[#94A3B8] mb-6 text-sm">
                   {t("pricing.free.description")}
                 </p>
+                <p className="-mt-4 mb-6 text-sm text-[#CBD5E1]">
+                  {t("pricing.free.support")}
+                </p>
 
                 <div className="mb-6">
                   <span className="text-5xl font-bold text-white">
@@ -550,6 +553,9 @@ export default function PricingClient() {
                 )}
                 <p className="mb-4 text-sm text-[#CBD5E1]">
                   {teacherValueLine}
+                </p>
+                <p className="mb-4 text-sm text-[#CBD5E1]">
+                  {t("pricing.teacher.support")}
                 </p>
 
                 <Button

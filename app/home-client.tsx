@@ -171,8 +171,8 @@ export function HomePageClient() {
       : "Write parent emails and report comments";
   const heroHeadlineAccent =
     language === "de"
-      ? "ohne zu fuerchten, dass du das Falsche schreibst."
-      : "without worrying you will say the wrong thing.";
+      ? "ohne zu befuerchten, dass du Eltern gegenueber das Falsche schreibst."
+      : "without worrying you will say the wrong thing to a parent.";
   const heroPrimaryCtaLabel =
     language === "de" ? "Sicher schreiben starten" : "Start writing safely";
   const heroSecondaryCtaLabel =
@@ -181,8 +181,8 @@ export function HomePageClient() {
       : "Try free (10 drafts/month)";
   const heroSubheading =
     language === "de"
-      ? "Zaza Draft hilft Lehrkraeften, riskante Formulierungen zu erkennen, sensible Nachrichten sicherer umzuschreiben und mit mehr Ruhe auf Senden zu druecken."
-      : "Zaza Draft helps teachers spot risky wording, rewrite sensitive messages more safely, and press send with more confidence.";
+      ? "Draft hilft Lehrkraeften, Nachrichten zu schreiben, die spaeter weitergeleitet, gescreenshottet oder geprueft werden koennen - mit professioneller Formulierung und ruhigem Ton."
+      : "Draft helps teachers write messages that can be forwarded, screenshot, or reviewed later - with professional wording and calm tone.";
   const heroEntityLine =
     language === "de"
       ? "Es ist kein generischer KI-Schreiber. Es ist ein lehrkraft-zentriertes System fuer sicherere Schulkommunikation, das bei Elternkommunikation, Zeugnistexten und schriftlicher Dokumentation hilft, wenn Formulierungen berufliches Risiko tragen."
@@ -205,6 +205,10 @@ export function HomePageClient() {
     language === "de" ? "Weitere Beispiele" : "Browse examples";
   const heroBeforeLabel = language === "de" ? "Vorher" : "Before";
   const heroAfterLabel = language === "de" ? "Nachher" : "After";
+  const heroSuggestedMessageLabel =
+    language === "de"
+      ? "Vorgeschlagene sicherere Nachricht"
+      : "Suggested safer message";
   const heroBeforeMeta =
     language === "de" ? "Riskante Formulierung" : "Risky wording";
   const heroAfterMeta =
@@ -317,40 +321,41 @@ export function HomePageClient() {
     language === "de" ? "Kostenloses Konto erstellen" : "Create free account";
   const recognitionMomentsHeading =
     language === "de"
-      ? "Wenn Lehrkraefte Draft am ehesten nutzen"
-      : "When teachers use Draft most";
+      ? "Warum Lehrkraefte Draft nutzen"
+      : "Why teachers start using Draft";
   const recognitionMomentsIntro =
     language === "de"
-      ? "Keine grossen Szenarien. Eher die Momente, in denen eine Nachricht offen bleibt, weil der Ton noch nicht ganz stimmt."
-      : "Not dramatic edge cases. More often the moments when a message stays open because the wording still does not feel quite right.";
+      ? "Meistens, weil eines davon nach dem Schultag immer wieder passiert."
+      : "Usually because one of these keeps happening after the school day ends.";
   const recognitionMoments =
     language === "de"
       ? [
           {
-            title: "Sonntagabend",
-            body: "Eine Eltern-E-Mail, die Sie schon zum dritten Mal ueberarbeiten, weil sie ruhig klingen soll, aber trotzdem klar bleiben muss.",
+            title:
+              "Eine Nachricht an Eltern braucht besonders viel Fingerspitzengefuehl",
+            body: "Sie wollen klar, ruhig und professionell bleiben, ohne die Situation noch schwieriger zu machen.",
           },
           {
-            title: "Nach einem schwierigen Unterrichtsmoment",
-            body: "Sie muessen nachfassen, ohne dass die Nachricht schaerfer wirkt oder die Situation unnoetig weiter eskaliert.",
+            title: "Ein Zeugniskommentar kostet mehr Zeit als noetig",
+            body: "Sie wissen, was Sie sagen wollen, aber nicht, wie es schnell und gut formuliert werden soll.",
           },
           {
-            title: "In der Zeugniswoche",
-            body: "Sie brauchen Formulierungen, die professionell, ruhig und sofort einsatzbereit sind, auch wenn die Zeit knapp wird.",
+            title: "Sie schreiben dieselbe Nachricht dreimal um",
+            body: "Draft hilft dabei, schneller zu Formulierungen zu kommen, die sich sicher senden lassen.",
           },
         ]
       : [
           {
-            title: "Sunday evening",
-            body: "A parent email you keep rewriting because it needs to sound calm, but still be clear.",
+            title: "A parent message needs careful wording",
+            body: "You want to be clear, calm, and professional without making things worse.",
           },
           {
-            title: "After a difficult lesson",
-            body: "You need to follow up without making the tone sharper or turning the situation into something bigger.",
+            title: "A report comment is harder than it should be",
+            body: "You know what you want to say, but not how to say it quickly and well.",
           },
           {
-            title: "Report deadline week",
-            body: "You need wording that feels calm, professional, and ready to use, even when time is tight.",
+            title: "You rewrite the same message three times",
+            body: "Draft helps you get to wording that feels safe to send.",
           },
         ];
   const trustPanelHeading =
@@ -551,12 +556,12 @@ export function HomePageClient() {
     language === "de" ? "Draft Insights" : "Draft Insights";
   const insightsFeatureHeading =
     language === "de"
-      ? "Deinen Kommunikationsstil besser verstehen"
-      : "Understand your communication style";
+      ? "Einblicke, die dir helfen, mit der Zeit besser zu kommunizieren"
+      : "Insights that help you communicate better over time";
   const insightsFeatureBody =
     language === "de"
-      ? "Draft zeigt Muster in Tonfall und Nachrichtenstil, damit Lehrkraefte mit Eltern und Kolleginnen und Kollegen klarer kommunizieren koennen."
-      : "Draft shows patterns in your tone and messaging so you can communicate more clearly with parents and colleagues.";
+      ? "Draft lernt unaufdringlich aus deinen Kommunikationsmustern und zeigt, wie sich Ton, Klarheit und Schreibgewohnheiten entwickeln - damit du mit Eltern und Kolleginnen und Kollegen sicherer kommunizieren kannst."
+      : "Draft quietly learns from your communication patterns and shows how your tone, clarity, and writing habits evolve - helping you communicate more confidently with parents and colleagues.";
   const insightsFeaturePoints =
     language === "de"
       ? [
@@ -571,8 +576,8 @@ export function HomePageClient() {
         ];
   const insightsFeatureAlt =
     language === "de"
-      ? "Screenshot des Zaza-Draft-Insights-Dashboards mit Stil- und Kommunikationsmustern."
-      : "Screenshot of the Zaza Draft Insights dashboard showing communication style patterns.";
+      ? "Screenshot des Zaza-Draft-Insights-Dashboards mit Mustern zu Tonfall, Klarheit und Kommunikationsstil."
+      : "Screenshot of the Zaza Draft Insights dashboard showing tone, clarity, and communication style patterns.";
   const heroProofBarHeadline =
     language === "de"
       ? "Lehrkraefte in der ersten Nutzungsphase haben mit Draft bereits 70+ sicherere Schulnachrichten geschrieben."
@@ -589,27 +594,27 @@ export function HomePageClient() {
           "Hours of after-school writing saved",
           "Built specifically for teachers",
         ];
+  const heroAfterHoursLine =
+    language === "de"
+      ? "Entwickelt fuer die Nachrichten, die nach Schulschluss im Kopf bleiben."
+      : "Built for the messages that stay in your head after the school day ends.";
   const situationsHeading =
     language === "de"
-      ? "Situationen, die Lehrkraefte nur ungern formulieren"
-      : "Situations teachers worry about writing";
+      ? "Wenn eine Nachricht leicht zu einer Beschwerde werden koennte"
+      : "When a message could easily turn into a complaint";
   const situationsItems =
     language === "de"
       ? [
-          "Verhaltensvorfaelle",
-          "Beschwerden von Eltern",
-          "Sensible Zeugnisformulierungen",
-          "Schwierige Follow-up-E-Mails",
-          "Eskalationen an Familien",
-          "Emotional aufgeladene Nachrichten",
+          "Ein Elternteil bestreitet eine Note oder einen Verhaltensbericht",
+          "Ein Safeguarding-Update koennte ueber den urspruenglichen Verlauf hinaus weitergeleitet werden",
+          "Ton ist schriftlich schwer eindeutig zu transportieren",
+          "Sie brauchen Formulierungen, die Beziehungen und Professionalitaet schuetzen",
         ]
       : [
-          "Behaviour incidents",
-          "Parent complaints",
-          "Sensitive report comments",
-          "Difficult follow-up emails",
-          "Escalation to families",
-          "Emotionally charged messages",
+          "A parent disputes a grade or behaviour report",
+          "A safeguarding update could be forwarded beyond the original thread",
+          "Tone is difficult to convey clearly in writing",
+          "You need wording that protects relationships and professionalism",
         ];
   const recognitionHeading =
     language === "de"
@@ -630,7 +635,7 @@ export function HomePageClient() {
   const comparisonHeading =
     language === "de"
       ? "Warum Draft mehr ist als ein generischer Textgenerator"
-      : "Why Draft is more than a generic text generator";
+      : "Why Draft is built for school communication";
   const comparisonSubheading =
     language === "de"
       ? "Generische KI hilft beim Formulieren. Draft hilft Lehrkraeften, in echten Schulsituationen sicherer zu kommunizieren."
@@ -1109,6 +1114,9 @@ export function HomePageClient() {
                         </article>
 
                         <article className="rounded-[18px] border border-emerald-400/20 bg-[linear-gradient(180deg,rgba(17,24,39,0.98),rgba(15,23,42,0.94))] p-3.5 shadow-[0_24px_70px_-42px_rgba(16,185,129,0.35)] ring-1 ring-white/5 sm:p-4">
+                          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#A7F3D0]">
+                            {heroSuggestedMessageLabel}
+                          </p>
                           <div className="flex items-center justify-between gap-3">
                             <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/25 bg-emerald-400/12 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-emerald-100">
                               <span>{heroAfterLabel}</span>
@@ -1224,6 +1232,9 @@ export function HomePageClient() {
                 ))}
               </div>
             </div>
+            <p className="mt-4 text-sm leading-6 text-[#94A3B8] md:max-w-3xl">
+              {heroAfterHoursLine}
+            </p>
           </div>
         </div>
       </section>
@@ -1369,13 +1380,13 @@ export function HomePageClient() {
                     <p className="text-sm font-semibold text-white">
                       {visual.title}
                     </p>
-                    <div className="mt-4 overflow-hidden rounded-2xl border border-white/10 bg-[#060B16]">
+                    <div className="mt-4 overflow-hidden rounded-2xl border border-white/10 bg-[linear-gradient(180deg,#0B1220,#060B16)] shadow-[0_24px_60px_-34px_rgba(2,6,23,0.95)] ring-1 ring-white/6">
                       <div className="relative aspect-[4/3] w-full">
                         <Image
                           src={visual.imageSrc}
                           alt={visual.alt}
                           fill
-                          className="object-contain"
+                          className="object-contain contrast-[1.03] drop-shadow-[0_18px_30px_rgba(2,6,23,0.38)]"
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 280px"
                         />
                       </div>
@@ -1430,13 +1441,13 @@ export function HomePageClient() {
               transition={{ duration: 0.6 }}
               className="rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(30,41,59,0.9),rgba(15,23,42,0.98))] p-5 shadow-[0_30px_90px_-48px_rgba(15,23,42,0.95)] ring-1 ring-white/5 md:p-7"
             >
-              <div className="overflow-hidden rounded-[22px] border border-white/10 bg-[#060B16]">
+              <div className="overflow-hidden rounded-[22px] border border-white/10 bg-[linear-gradient(180deg,#0B1220,#060B16)] shadow-[0_24px_60px_-34px_rgba(2,6,23,0.95)] ring-1 ring-white/6">
                 <div className="relative aspect-[4/3] w-full">
                   <Image
                     src="/images/product/draft-insights-style.png"
                     alt={insightsFeatureAlt}
                     fill
-                    className="object-contain"
+                    className="object-contain contrast-[1.03] drop-shadow-[0_18px_30px_rgba(2,6,23,0.38)]"
                     sizes="(max-width: 1024px) 100vw, 560px"
                   />
                 </div>
