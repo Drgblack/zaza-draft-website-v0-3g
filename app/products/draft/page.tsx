@@ -11,9 +11,9 @@ const ogImage = "/images/draft-interface.png";
 
 export const metadata: Metadata = buildPageMetadata({
   title:
-    "Teacher-First AI Co-Writer for Parent Emails and Reports | Zaza Draft",
+    "Teacher Communication Safety Tool for High-Stakes School Messages | Zaza Draft",
   description:
-    "Explore Zaza Draft, the teacher-first AI co-writer for parent communication, report comments, and school messages where tone, trust, and teacher control matter.",
+    "Explore Zaza Draft, the teacher communication safety tool built to catch risky language, support safer rewrites, forecast parent reaction, and help create defensible school messages.",
   path: "/products/draft",
   image: ogImage,
   alternates: {
@@ -21,9 +21,10 @@ export const metadata: Metadata = buildPageMetadata({
     de: "https://zazadraft.com/de/products/draft",
   },
   keywords: [
-    "teacher-first AI co-writer",
+    "teacher communication safety tool",
+    "professional risk reduction for teachers",
     "AI parent email tool for teachers",
-    "AI report writing for teachers",
+    "school communication software",
     "teacher communication software",
   ],
 });

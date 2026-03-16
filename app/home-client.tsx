@@ -166,8 +166,8 @@ export function HomePageClient() {
       : "Zaza Draft helps teachers spot risky wording, rewrite sensitive messages more safely, and press send with more confidence.";
   const heroEntityLine =
     language === "de"
-      ? "Es ist kein generischer KI-Schreiber. Es ist ein lehrkraft-zentrierter Sicherheits- und Schreibassistent fuer Elternkommunikation, Zeugnisse und schriftliche Dokumentation, bei der jede Formulierung zaehlt."
-      : "It is not a generic AI writer. It is a teacher-first safety and writing assistant for parent communication, report comments, and written documentation where wording carries professional risk.";
+      ? "Es ist kein generischer KI-Schreiber. Es ist ein lehrkraft-zentriertes System fuer sicherere Schulkommunikation, das bei Elternkommunikation, Zeugnistexten und schriftlicher Dokumentation hilft, wenn Formulierungen berufliches Risiko tragen."
+      : "It is not a generic AI writer. It is a teacher-first communication safety system for parent communication, report comments, and written documentation where wording carries professional risk.";
   const heroOutcomeLabel =
     language === "de" ? "Sieh den Unterschied" : "See the difference";
   const heroProofLabel =
@@ -176,8 +176,8 @@ export function HomePageClient() {
       : "Sensitive school communication, before and after Zaza Draft";
   const heroProofIntro =
     language === "de"
-      ? "Sieh, wie rohe Formulierungen klarer, ruhiger und sendesicher werden."
-      : "See how rough wording becomes clearer, calmer, and safer to send.";
+      ? "Sieh, wie riskante Entwuerfe klarer, ruhiger und leichter zu vertreten werden."
+      : "See how risky drafts become clearer, calmer, and easier to stand behind.";
   const heroProofFrameLine =
     language === "de"
       ? "Die Nachrichten, die Lehrkraefte nur ungern absenden."
@@ -260,8 +260,8 @@ export function HomePageClient() {
       : "Trusted by teachers who want calm, defensible communication.";
   const heroTrustBarDifferentiator =
     language === "de"
-      ? "Kein generischer KI-Schreiber, sondern ein lehrkraft-zentrierter Co-Writer fuer sensible Schulkommunikation."
-      : "Not a generic AI writer, but a teacher-first co-writer for sensitive school communication.";
+      ? "Kein generischer KI-Schreiber, sondern lehrkraft-zentrierte Unterstuetzung fuer sicherere Schulkommunikation."
+      : "Not a generic AI writer, but teacher-first support for safer school communication.";
   const heroCtaMicrocopy =
     language === "de"
       ? "Schreibe jeden Monat bis zu 10 Nachrichten kostenlos. Keine Verpflichtung."
@@ -298,12 +298,12 @@ export function HomePageClient() {
     language === "de" ? "Zur Warteliste" : "Join the waitlist";
   const trustPanelHeading =
     language === "de"
-      ? "KI, der du bei echter Schulkommunikation vertrauen kannst"
-      : "AI you can trust with real school communication";
+      ? "Lehrkraft-zentrierte Unterstuetzung fuer echte Schulkommunikation"
+      : "Teacher-first support for real school communication";
   const trustPanelSubtext =
     language === "de"
-      ? "Entwickelt fuer ruhige, professionelle Formulierungen in den Momenten, die Lehrkraefte am meisten zerdenken."
-      : "Built to support calm, professional writing in the moments teachers second-guess most.";
+      ? "Entwickelt fuer ruhigere, professionellere Formulierungen in den Momenten, in denen Lehrkraefte am ehesten befuerchten, das Falsche zu schreiben."
+      : "Built for calmer, more professional wording in the moments teachers are most likely to worry they will say the wrong thing.";
   const trustPanelCards =
     language === "de"
       ? [
@@ -319,7 +319,7 @@ export function HomePageClient() {
           },
           {
             title: "Ruhige Tonleitplanken",
-            body: "Hilft, Eskalation zu reduzieren und Formulierungen professionell zu halten.",
+            body: "Hilft, Eskalation zu reduzieren und Formulierungen ruhiger und professioneller zu halten.",
             icon: CheckCircleIcon,
           },
           {
@@ -340,8 +340,8 @@ export function HomePageClient() {
             icon: DocumentIcon,
           },
           {
-            title: "Calm tone guardrails",
-            body: "Helps reduce escalation and keeps wording professional.",
+            title: "Safer wording guardrails",
+            body: "Helps reduce escalation and keeps wording calm and professional.",
             icon: CheckCircleIcon,
           },
           {
@@ -356,8 +356,8 @@ export function HomePageClient() {
       : "Built to protect teachers";
   const protectionSubheading =
     language === "de"
-      ? "Draft wurde fuer Kommunikation entwickelt, die weitergeleitet, gescreenshotet oder spaeter geprueft werden kann. Es hilft nicht nur beim Schreiben, sondern dabei, professionelles Risiko zu senken."
-      : "Draft is built for communication that may be forwarded, screenshot, or reviewed later. It does not just help you write faster - it helps reduce professional risk.";
+      ? "Draft wurde fuer Kommunikation entwickelt, die weitergeleitet, gescreenshottet oder spaeter geprueft werden kann. Es hilft nicht nur beim Schreiben, sondern dabei, sprachliches und berufliches Risiko zu senken."
+      : "Draft is built for communication that may be forwarded, screenshotted, or reviewed later. It does not just help you write faster - it helps reduce language risk and professional risk.";
   const protectionFeatures =
     language === "de"
       ? [
@@ -406,12 +406,12 @@ export function HomePageClient() {
         ];
   const protectionVisualHeading =
     language === "de"
-      ? "Platz fuer kuenftige Feature-Crops"
-      : "Ready for future feature crops";
+      ? "So zeigt sich das Schutzsystem im Produkt"
+      : "How the safety system shows up in the product";
   const protectionVisualSubheading =
     language === "de"
-      ? "Ein visueller Slot pro Nutzenversprechen. Finales Produktmaterial kann spaeter direkt hier eingesetzt werden."
-      : "One visual slot per benefit. Final product crops can drop into this structure later without redesigning the page.";
+      ? "Ein visueller Slot pro Schutzmechanismus. Finale Feature-Crops koennen spaeter direkt hier eingesetzt werden, ohne die Seite neu zu bauen."
+      : "One visual slot per safeguard. Final feature crops can drop into this structure later without redesigning the page.";
   const protectionVisuals =
     language === "de"
       ? [
@@ -431,8 +431,13 @@ export function HomePageClient() {
             body: "Vorher-nachher-Ausschnitt einer ruhigeren, belastbareren Formulierung.",
           },
           {
-            title: "Dokumentationsmodus",
+            title: "Elternreaktions-Vorschau",
             badge: "Crop 04",
+            body: "Ein enger Ausschnitt, der zeigt, wie eine Nachricht wahrscheinlich auf Familien wirkt.",
+          },
+          {
+            title: "Dokumentationsmodus",
+            badge: "Crop 05",
             body: "Beispiel fuer sachliche, nachvollziehbare Formulierungen bei Vorfaellen.",
           },
         ]
@@ -453,8 +458,13 @@ export function HomePageClient() {
             body: "A before-and-after crop showing calmer, more defensible wording.",
           },
           {
-            title: "Documentation mode",
+            title: "Parent reaction forecast",
             badge: "Crop 04",
+            body: "A tight crop showing how wording may land with families before it escalates.",
+          },
+          {
+            title: "Documentation mode",
+            badge: "Crop 05",
             body: "A factual writing view for incident notes and paper-trail communication.",
           },
         ];
@@ -482,8 +492,8 @@ export function HomePageClient() {
         ];
   const recognitionHeading =
     language === "de"
-      ? "Entwickelt fuer Lehrkraefte, die..."
-      : "Built for teachers who...";
+      ? "Fuer Lehrkraefte, die ohne Angst vor der falschen Formulierung schreiben wollen"
+      : "For teachers who want to write without worrying they will say the wrong thing";
   const recognitionItems =
     language === "de"
       ? [
@@ -495,6 +505,116 @@ export function HomePageClient() {
           "rewrite parent emails three times before sending.",
           "worry a message could sound too harsh or escalate.",
           "want support, not AI taking over their voice.",
+        ];
+  const comparisonHeading =
+    language === "de"
+      ? "Warum Draft mehr ist als ein generischer Textgenerator"
+      : "Why Draft is more than a generic text generator";
+  const comparisonSubheading =
+    language === "de"
+      ? "Generische KI hilft beim Formulieren. Draft hilft Lehrkraeften, in echten Schulsituationen sicherer zu kommunizieren."
+      : "Generic AI helps generate text. Draft helps teachers communicate more safely in real school situations.";
+  const comparisonClarifier =
+    language === "de"
+      ? "Der Unterschied liegt nicht nur im Ton. Draft ist fuer Elternkommunikation, Eskalationsrisiken und saubere Dokumentation im Schulalltag gebaut."
+      : "The difference is not just tone. Draft is built for parent communication, escalation risk, and defensible documentation in day-to-day school work.";
+  const comparisonProofPoints =
+    language === "de"
+      ? [
+          "Erkennt riskante Sprache, bevor sie gesendet wird.",
+          "Hilft, eskalationsanfaellige Formulierungen zu vermeiden.",
+          "Unterstuetzt einen Dokumentationsmodus fuer sensible Situationen.",
+          "Gebaut fuer echte Elternkommunikation statt generischer Prompt-Tricks.",
+        ]
+      : [
+          "Detects risky language before it is sent.",
+          "Helps avoid escalation-prone wording.",
+          "Supports a documentation mode for sensitive situations.",
+          "Built for real parent communication, not generic prompting.",
+        ];
+  const comparisonRows =
+    language === "de"
+      ? [
+          {
+            feature: t("comparison.rows.training.feature"),
+            generic: t("comparison.rows.training.generic"),
+            zaza: t("comparison.rows.training.zaza"),
+          },
+          {
+            feature: "Riskante Sprache erkennen",
+            generic:
+              "Generiert Text, markiert aber nicht verlässlich, wenn Formulierungen unnötig hart, vage oder angreifbar wirken.",
+            zaza: "Hebt problematische Formulierungen hervor, bevor eine Nachricht rausgeht.",
+          },
+          {
+            feature: "Eskalation vermeiden",
+            generic:
+              "Kann glatter schreiben, prueft aber nicht gezielt auf beschwerde- oder eskalationsanfaellige Sprache.",
+            zaza: "Hilft Lehrkräften, Formulierungen zu beruhigen und unnötige Reibung mit Familien zu verringern.",
+          },
+          {
+            feature: "Elternkommunikation",
+            generic:
+              "Hilft bei allgemeinen Prompts, aber nicht speziell bei realen schulischen Elternsituationen.",
+            zaza: "Fuer Elternmails, Verhaltenshinweise und sensible Follow-ups im Schulkontext gebaut.",
+          },
+          {
+            feature: "Dokumentationsmodus",
+            generic:
+              "Unterstuetzt eher glatte Sprache als sachliche, nachvollziehbare Vorfallsdokumentation.",
+            zaza: "Kann in eine klarere, dokumentationsfreundliche Schreibweise wechseln, wenn ein sauberer Schriftverlauf wichtig ist.",
+          },
+          {
+            feature: t("comparison.rows.useCases.feature"),
+            generic: t("comparison.rows.useCases.generic"),
+            zaza: t("comparison.rows.useCases.zaza"),
+          },
+          {
+            feature: t("comparison.rows.outputQuality.feature"),
+            generic: t("comparison.rows.outputQuality.generic"),
+            zaza: t("comparison.rows.outputQuality.zaza"),
+          },
+        ]
+      : [
+          {
+            feature: t("comparison.rows.training.feature"),
+            generic: t("comparison.rows.training.generic"),
+            zaza: t("comparison.rows.training.zaza"),
+          },
+          {
+            feature: "Risky language detection",
+            generic:
+              "Generates text, but does not reliably flag wording that feels unnecessarily sharp, vague, or exposed.",
+            zaza: "Highlights risky language before a message leaves your draft.",
+          },
+          {
+            feature: "Escalation-aware wording",
+            generic:
+              "Can sound smoother, but does not actively help you avoid complaint-prone phrasing.",
+            zaza: "Helps teachers reduce escalation-prone wording before it reaches families.",
+          },
+          {
+            feature: "Real parent communication",
+            generic:
+              "Useful for broad prompting, but not specifically built for day-to-day school communication with parents.",
+            zaza: "Built for parent emails, behaviour updates, and sensitive follow-up in school context.",
+          },
+          {
+            feature: "Documentation mode",
+            generic:
+              "More focused on fluent copy than factual, defensible record-keeping.",
+            zaza: "Can shift into a clearer documentation style when the paper trail matters.",
+          },
+          {
+            feature: t("comparison.rows.useCases.feature"),
+            generic: t("comparison.rows.useCases.generic"),
+            zaza: t("comparison.rows.useCases.zaza"),
+          },
+          {
+            feature: t("comparison.rows.outputQuality.feature"),
+            generic: t("comparison.rows.outputQuality.generic"),
+            zaza: t("comparison.rows.outputQuality.zaza"),
+          },
         ];
   const activeProofSection = heroProofSections[activeProofIndex];
 
@@ -1496,14 +1616,22 @@ export function HomePageClient() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-              {t("comparison.heading")}
+              {comparisonHeading}
             </h2>
-            <p className="text-lg text-[#CBD5E1]">
-              {t("comparison.subheading")}
-            </p>
+            <p className="text-lg text-[#CBD5E1]">{comparisonSubheading}</p>
             <p className="text-sm text-[#94A3B8] mt-3 max-w-3xl mx-auto">
-              {t("comparison.clarifier")}
+              {comparisonClarifier}
             </p>
+            <div className="mt-6 grid gap-3 text-left md:grid-cols-2">
+              {comparisonProofPoints.map((point) => (
+                <div
+                  key={point}
+                  className="rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 text-sm text-[#CBD5E1]"
+                >
+                  {point}
+                </div>
+              ))}
+            </div>
           </motion.div>
 
           <div className="max-w-5xl mx-auto">
@@ -1523,48 +1651,7 @@ export function HomePageClient() {
                   </tr>
                 </thead>
                 <tbody>
-                  {[
-                    {
-                      feature: t("comparison.rows.training.feature"),
-                      generic: t("comparison.rows.training.generic"),
-                      zaza: t("comparison.rows.training.zaza"),
-                    },
-                    {
-                      feature: t("comparison.rows.safety.feature"),
-                      generic: t("comparison.rows.safety.generic"),
-                      zaza: t("comparison.rows.safety.zaza"),
-                    },
-                    {
-                      feature: t("comparison.rows.toneControl.feature"),
-                      generic: t("comparison.rows.toneControl.generic"),
-                      zaza: t("comparison.rows.toneControl.zaza"),
-                    },
-                    {
-                      feature: t("comparison.rows.compliance.feature"),
-                      generic: t("comparison.rows.compliance.generic"),
-                      zaza: t("comparison.rows.compliance.zaza"),
-                    },
-                    {
-                      feature: t("comparison.rows.useCases.feature"),
-                      generic: t("comparison.rows.useCases.generic"),
-                      zaza: t("comparison.rows.useCases.zaza"),
-                    },
-                    {
-                      feature: t("comparison.rows.outputQuality.feature"),
-                      generic: t("comparison.rows.outputQuality.generic"),
-                      zaza: t("comparison.rows.outputQuality.zaza"),
-                    },
-                    {
-                      feature: t("comparison.rows.learningCurve.feature"),
-                      generic: t("comparison.rows.learningCurve.generic"),
-                      zaza: t("comparison.rows.learningCurve.zaza"),
-                    },
-                    {
-                      feature: t("comparison.rows.community.feature"),
-                      generic: t("comparison.rows.community.generic"),
-                      zaza: t("comparison.rows.community.zaza"),
-                    },
-                  ].map((row, index) => (
+                  {comparisonRows.map((row, index) => (
                     <motion.tr
                       key={index}
                       initial={

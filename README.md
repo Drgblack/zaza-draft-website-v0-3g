@@ -160,6 +160,14 @@ The site uses Inter font from Google Fonts. To change fonts:
 3. Add environment variables in Vercel dashboard
 4. Deploy
 
+For the intended branch and redeploy workflow, see [docs/DEPLOYMENT_WORKFLOW.md](./docs/DEPLOYMENT_WORKFLOW.md).
+
+Recommended default:
+
+- Use `main` as the only production branch.
+- Use feature branches for preview deployments and review.
+- Redeploy production after any environment-variable change, especially `NEXT_PUBLIC_*` values.
+
 ### Environment Variables in Production
 
 Set the following in your Vercel project settings:

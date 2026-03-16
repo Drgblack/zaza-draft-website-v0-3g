@@ -64,6 +64,7 @@ When generating code or copy, protect teacher time and student privacy. Tone: cl
 - Local: pnpm dev â†’ http://localhost:3000
 - Type/lint: pnpm typecheck and pnpm lint
 - Commit to a feature branch and open PR; Vercel previews on PR branches.
+- Production branch policy is documented in `docs/DEPLOYMENT_WORKFLOW.md`.
 
 ### Critical Blog Content Rules (Updated)
 
@@ -107,4 +108,3 @@ Each post must include:
 - Style: clear-but-kind, professional, no corporate jargon.
 - Protect teacher time and student privacy.
 - Avoid clichÃ©s, fluff, or academic padding.
-
