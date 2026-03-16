@@ -174,11 +174,11 @@ export function HomePageClient() {
       ? "ohne zu befuerchten, dass du Eltern gegenueber das Falsche schreibst."
       : "without worrying you will say the wrong thing to a parent.";
   const heroPrimaryCtaLabel =
-    language === "de" ? "Sicher schreiben starten" : "Start writing safely";
-  const heroSecondaryCtaLabel =
     language === "de"
-      ? "Kostenlos testen (10 Entwuerfe/Monat)"
-      : "Try free (10 drafts/month)";
+      ? "Unbegrenzte Entwuerfe starten"
+      : "Start unlimited drafts";
+  const heroSecondaryCtaLabel =
+    language === "de" ? "Kostenloses Konto erstellen" : "Create free account";
   const heroSubheading =
     language === "de"
       ? "Draft hilft Lehrkraeften, Nachrichten zu schreiben, die spaeter weitergeleitet, gescreenshottet oder geprueft werden koennen - mit professioneller Formulierung und ruhigem Ton."
@@ -311,12 +311,12 @@ export function HomePageClient() {
         ];
   const betaFeedbackHeading =
     language === "de"
-      ? "Erste Rueckmeldungen von Lehrkraeften folgen bald"
-      : "Early teacher feedback coming soon";
+      ? "Erste Rueckmeldungen von Lehrkraeften werden jetzt gesammelt"
+      : "Early teacher feedback is being collected now";
   const betaFeedbackBody =
     language === "de"
-      ? "Wir sammeln gerade die ersten Rueckmeldungen von Lehrkraeften im Live-Einsatz. Echte Zitate erscheinen hier, sobald sie freigegeben sind."
-      : "We are gathering our first round of teacher feedback from live use now. Real quotes will appear here as soon as they are ready.";
+      ? "Wir veroeffentlichen freigegebene Rueckmeldungen von Lehrkraeften hier, sobald sie vorliegen."
+      : "We'll publish approved teacher feedback here as it comes in.";
   const betaFeedbackCta =
     language === "de" ? "Kostenloses Konto erstellen" : "Create free account";
   const recognitionMomentsHeading =

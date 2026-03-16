@@ -89,7 +89,7 @@ const translationsEn: Record<string, string> = {
     "Collaborative writing with shared quality and consistency.",
   "pricing.department.perTeacher": " per teacher",
   "pricing.department.billing": "Billed annually • 5-50 seats",
-  "pricing.department.cta": "Talk to Sales",
+  "pricing.department.cta": "Talk to sales",
   "pricing.department.includes": "Everything in Teacher, plus:",
   "pricing.department.feature1": "Team libraries, shared templates",
   "pricing.department.feature2": "Role-based access",
@@ -101,7 +101,7 @@ const translationsEn: Record<string, string> = {
   "pricing.enterprise.title": "Schools & Districts",
   "pricing.enterprise.description": "Everything for large-scale deployments.",
   "pricing.enterprise.price": "Custom",
-  "pricing.enterprise.cta": "Contact Sales",
+  "pricing.enterprise.cta": "Talk to sales",
   "pricing.enterprise.includes": "Everything in Department, plus:",
   "pricing.enterprise.feature1": "SSO/SAML, DPA/SCCs",
   "pricing.enterprise.feature2": "SLA & dedicated success",
@@ -200,7 +200,7 @@ const translationsEn: Record<string, string> = {
   "pricing.cta.subtitle":
     "Start free today • No credit card required • Cancel anytime",
   "pricing.cta.primary": "Create free account",
-  "pricing.cta.secondary": "Talk to Sales",
+  "pricing.cta.secondary": "Talk to sales",
 
   // Pricing - Decision Tool section
   "pricing.decision.title": "Not Sure Which Plan to Choose?",
@@ -436,7 +436,8 @@ const translationsEn: Record<string, string> = {
   "suite.logos.item5": "Greenwood School",
 
   // Suite - Screenshots (EN)
-  "suite.screens.title": "Built for real teachers, in real classrooms",
+  "suite.screens.title":
+    "Built for real teachers and real school communication",
   "suite.screens.caption":
     "Calm, responsible AI designed around the realities of teaching - not generic software workflows.",
 
@@ -550,7 +551,7 @@ const translationsEn: Record<string, string> = {
   "community.cta.titleHighlight": "Join the Conversation?",
   "community.cta.body":
     "Create your free account and start connecting with thousands of teachers using AI in their classrooms.",
-  "community.cta.primary": "Create Free Account",
+  "community.cta.primary": "Create free account",
   "community.cta.secondary": "Browse as Guest",
 
   "about.nav.title": "About",
@@ -947,7 +948,7 @@ const translationsEn: Record<string, string> = {
   "products.draft.hero.assumption":
     "Draft assumes messages may be read out of context - by parents, leadership, or administration - and helps you write accordingly.",
   "products.draft.hero.supporting": "Less Sunday dread, more headspace.",
-  "products.draft.hero.cta.primary": "Start writing safely",
+  "products.draft.hero.cta.primary": "Start unlimited drafts",
   "products.draft.hero.cta.secondary": "See Examples",
   "products.draft.hero.privacyLine":
     "No student names needed. Not trained on your inputs.",
@@ -1028,8 +1029,8 @@ const translationsEn: Record<string, string> = {
   "products.draft.cta.title": "Get your time back",
   "products.draft.cta.subtitle":
     "Join the waitlist for teacher-first AI writing support.",
-  "products.draft.cta.primary": "Start writing safely",
-  "products.draft.cta.secondary": "Try the free account",
+  "products.draft.cta.primary": "Start unlimited drafts",
+  "products.draft.cta.secondary": "Create free account",
 
   // Products - GradeFlow
   "products.gradeflow.hero.title": "Grade Faster, Grade Fairer",
@@ -1080,7 +1081,7 @@ const translationsEn: Record<string, string> = {
   "shield.hero.subtitle":
     "Enterprise-grade AI governance platform that ensures safe, ethical, and compliant AI use across your entire school or district.",
   "shield.hero.cta.primary": "Learn More",
-  "shield.hero.cta.secondary": "Contact Sales",
+  "shield.hero.cta.secondary": "Talk to sales",
 
   "shield.trust.gdpr": "GDPR Compliant",
   "shield.trust.ferpa": "FERPA Compliant",
@@ -1167,7 +1168,7 @@ const translationsEn: Record<string, string> = {
   "shield.finalCta.subtitle":
     "Join forward-thinking schools using Shield to embrace AI safely",
   "shield.finalCta.primary": "Schedule Demo",
-  "shield.finalCta.secondary": "Contact Sales",
+  "shield.finalCta.secondary": "Talk to sales",
   "shield.finalCta.note": "Enterprise support and onboarding included",
 
   // FAQ Page
@@ -2001,7 +2002,8 @@ const translationsDe: Record<string, string> = {
   "suite.logos.item5": "Greenwood Schule",
 
   // Suite - Screenshots (DE)
-  "suite.screens.title": "Für echte Lehrkräfte in echten Klassenzimmern gebaut",
+  "suite.screens.title":
+    "Für echte Lehrkräfte und echte Schulkommunikation gebaut",
   "suite.screens.caption":
     "Ruhige, verantwortliche KI, die sich an die Realität des Unterrichtens anpasst - nicht an generische Software-Workflows.",
 
@@ -2530,7 +2532,7 @@ const translationsDe: Record<string, string> = {
   "products.draft.hero.assumption":
     "Draft geht davon aus, dass Nachrichten aus dem Kontext gelesen werden können - von Eltern, Schulleitung oder Verwaltung - und unterstützt dich genau dafür.",
   "products.draft.hero.supporting": "Weniger Sonntagsdruck, mehr Kopf frei.",
-  "products.draft.hero.cta.primary": "Sicher schreiben starten",
+  "products.draft.hero.cta.primary": "Unbegrenzte Entwürfe starten",
   "products.draft.hero.cta.secondary": "Beispiele ansehen",
   "products.draft.hero.privacyLine":
     "Keine Schülernamen nötig. Nicht auf deinen Eingaben trainiert.",
@@ -2611,8 +2613,8 @@ const translationsDe: Record<string, string> = {
   "products.draft.cta.title": "Hol dir deine Zeit zurück",
   "products.draft.cta.subtitle":
     "Trag dich in die Warteliste fuer lehrkraft-zentrierte KI-Schreibhilfe ein.",
-  "products.draft.cta.primary": "Sicher schreiben starten",
-  "products.draft.cta.secondary": "Kostenloses Konto testen",
+  "products.draft.cta.primary": "Unbegrenzte Entwürfe starten",
+  "products.draft.cta.secondary": "Kostenloses Konto erstellen",
 
   // Products - GradeFlow
   "products.gradeflow.hero.title": "Grade Faster, Grade Fairer",

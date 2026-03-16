@@ -144,14 +144,16 @@ export default function DraftClient() {
         ];
   const betaFeedbackHeading =
     language === "de"
-      ? "Feedback von Lehrkraeften folgt"
-      : "Teacher feedback is coming";
+      ? "Erste Rueckmeldungen von Lehrkraeften werden jetzt gesammelt"
+      : "Early teacher feedback is being collected now";
   const betaFeedbackBody =
     language === "de"
-      ? "Wir sammeln gerade die ersten Rueckmeldungen von Lehrkraeften im Live-Einsatz. Reale Zitate erscheinen hier, sobald sie freigegeben sind."
-      : "We are collecting our first round of feedback from live teacher use now. Real quotes will appear here as soon as they are approved.";
+      ? "Wir veroeffentlichen freigegebene Rueckmeldungen von Lehrkraeften hier, sobald sie vorliegen."
+      : "We'll publish approved teacher feedback here as it comes in.";
   const betaFeedbackCta =
-    language === "de" ? "Mit Zaza Draft starten" : "Start using Zaza Draft";
+    language === "de"
+      ? "Unbegrenzte Entwuerfe starten"
+      : "Start unlimited drafts";
   const restoreHeading =
     language === "de"
       ? "Vom angespannten Entwurf zur belastbaren Nachricht"

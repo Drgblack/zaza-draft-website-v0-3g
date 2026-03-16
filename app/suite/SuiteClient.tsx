@@ -41,12 +41,12 @@ export default function SuiteClient() {
   const { t, language } = useLanguage();
   const betaFeedbackHeading =
     language === "de"
-      ? "Feedback von Lehrkraeften folgt"
-      : "Teacher feedback is coming";
+      ? "Erste Rueckmeldungen von Lehrkraeften werden jetzt gesammelt"
+      : "Early teacher feedback is being collected now";
   const betaFeedbackBody =
     language === "de"
-      ? "Wir sammeln gerade die ersten Rueckmeldungen von Lehrkraeften im Live-Einsatz. Echte Zitate erscheinen hier, sobald sie freigegeben sind."
-      : "We are collecting our first round of teacher feedback from live use now. Real quotes will appear here as soon as they are approved.";
+      ? "Wir veroeffentlichen freigegebene Rueckmeldungen von Lehrkraeften hier, sobald sie vorliegen."
+      : "We'll publish approved teacher feedback here as it comes in.";
   const betaFeedbackCta =
     language === "de" ? "Kostenloses Konto erstellen" : "Create free account";
   const neutralEndorsementLine =
