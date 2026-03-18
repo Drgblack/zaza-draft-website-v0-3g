@@ -173,6 +173,10 @@ export function HomePageClient() {
     language === "de"
       ? "ohne zu befuerchten, dass du Eltern gegenueber das Falsche schreibst."
       : "without worrying you'll say the wrong thing.";
+  const heroCredibilityLine =
+    language === "de"
+      ? "Entwickelt von einer Person mit Promotion in Professional Education und 20 Jahren Learning Design."
+      : "Built by a PhD in Professional Education and 20 years in learning design.";
   const heroPrimaryCtaLabel =
     language === "de"
       ? "Unbegrenzte Entwuerfe starten"
@@ -289,6 +293,10 @@ export function HomePageClient() {
     language === "de"
       ? "Kostenloses Konto • 10 Nachrichten/Monat • Keine Kreditkarte erforderlich"
       : "Free account • 10 messages/month • No credit card required";
+  const finalCtaTrustLine =
+    language === "de"
+      ? "Kostenlos testbar • Keine Kreditkarte • Draft sendet nie Nachrichten fuer dich"
+      : "Free to try • No credit card • Draft never sends messages for you";
   const heroSpeedLine =
     language === "de"
       ? "Sieh in unter 2 Minuten, wie Draft funktioniert"
@@ -868,6 +876,9 @@ Mr Smith`;
                     {heroHeadlineAccent}
                   </span>
                 </h1>
+                <p className="text-xs font-medium tracking-[0.08em] text-[#9aa4b2] uppercase">
+                  {heroCredibilityLine}
+                </p>
               </motion.div>
 
               <motion.p
@@ -2151,8 +2162,8 @@ Mr Smith`;
             >
               {t("finalCTA.button")}
             </Button>
-            <p className="mt-4 text-sm font-medium text-white/90">
-              {heroCtaMicrocopy}
+            <p className="mx-auto mt-3 max-w-[22rem] text-center text-xs leading-5 text-[#9aa4b2] sm:text-[13px]">
+              {finalCtaTrustLine}
             </p>
           </motion.div>
         </div>
