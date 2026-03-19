@@ -55,7 +55,7 @@ const translationsEn: Record<string, string> = {
   "pricing.free.title": "Starter",
   "pricing.free.description":
     "Everything you need to try Draft and save your first hours.",
-  "pricing.free.cta": "Get started free",
+  "pricing.free.cta": "Start writing safely",
   "pricing.free.feature1": "5 drafts/month",
   "pricing.free.feature2": "Basic templates",
   "pricing.free.feature3": "Save & copy",
@@ -68,7 +68,7 @@ const translationsEn: Record<string, string> = {
     "Unlimited writing support with no invented student facts and no lock-ins.",
   "pricing.teacher.period": "Cancel anytime",
   "pricing.teacher.savingsAnnual": "Save 2 months free",
-  "pricing.teacher.cta": "Start 7-day free trial",
+  "pricing.teacher.cta": "Upgrade now",
   "pricing.teacher.trial": "Billed monthly • Cancel anytime",
   "pricing.teacher.guarantee": "30-day money-back guarantee",
   "pricing.teacher.feature1": "Unlimited drafts & revisions",
@@ -77,7 +77,7 @@ const translationsEn: Record<string, string> = {
   "pricing.teacher.feature4": "Saved history & export",
   "pricing.teacher.feature5": "Zara's gentle wellbeing nudges",
   "pricing.teacher.feature6": "Priority email support",
-  "pricing.teacher.timeSaved": "Typical time saved: 4-7 hours/week",
+  "pricing.teacher.timeSaved": "Teachers typically save 4-7 hours/week",
 
   // Department Plan
   "pricing.department.badge": "TEAMS",
@@ -85,10 +85,10 @@ const translationsEn: Record<string, string> = {
   "pricing.department.description":
     "Collaborative writing with shared quality and consistency.",
   "pricing.department.priceLine": "€480/year",
-  "pricing.department.billing": "Includes 5 teacher licences",
+  "pricing.department.billing": "Includes 5 teacher licences (annual plan)",
   "pricing.department.helper": "Billed annually",
   "pricing.department.contactHelper": "Additional teams? Contact sales",
-  "pricing.department.cta": "Start team checkout",
+  "pricing.department.cta": "Upgrade now",
   "pricing.department.includes": "Everything in Teacher, plus:",
   "pricing.department.feature1": "Team libraries, shared templates",
   "pricing.department.feature2": "Role-based access",
@@ -102,7 +102,7 @@ const translationsEn: Record<string, string> = {
     "Pricing tailored to school or district requirements.",
   "pricing.enterprise.price": "Custom",
   "pricing.enterprise.helper": "Custom pricing based on rollout size and needs",
-  "pricing.enterprise.cta": "Contact Sales",
+  "pricing.enterprise.cta": "Talk to Sales",
   "pricing.enterprise.includes": "Everything in Department, plus:",
   "pricing.enterprise.feature1": "SSO/SAML, DPA/SCCs",
   "pricing.enterprise.feature2": "SLA & dedicated success",
@@ -121,15 +121,15 @@ const translationsEn: Record<string, string> = {
   // Testimonials
   "pricing.testimonials.title": "What teachers say about pricing",
   "pricing.testimonials.1.name": "Sarah L.",
-  "pricing.testimonials.1.role": "Middle School Teacher",
+  "pricing.testimonials.1.role": "Secondary school teacher",
   "pricing.testimonials.1.quote":
     "Draft gave me back my evenings. I now leave school on time - and parents say my messages feel warmer.",
   "pricing.testimonials.2.name": "Mark R.",
-  "pricing.testimonials.2.role": "Department Head",
+  "pricing.testimonials.2.role": "Department head",
   "pricing.testimonials.2.quote":
     "Our department aligned tone and sped up feedback. Marking time dropped by a third.",
   "pricing.testimonials.3.name": "Emma K.",
-  "pricing.testimonials.3.role": "Primary Teacher",
+  "pricing.testimonials.3.role": "Primary teacher",
   "pricing.testimonials.3.quote":
     "The pricing is transparent and fair. No hidden fees, no lock-ins. Just works.",
 
@@ -1089,7 +1089,7 @@ const translationsEn: Record<string, string> = {
   "shield.hero.subtitle":
     "Enterprise-grade AI governance platform that ensures safe, ethical, and compliant AI use across your entire school or district.",
   "shield.hero.cta.primary": "Learn More",
-  "shield.hero.cta.secondary": "Contact Sales",
+  "shield.hero.cta.secondary": "Talk to Sales",
 
   "shield.trust.gdpr": "GDPR Compliant",
   "shield.trust.ferpa": "FERPA Compliant",
@@ -1176,7 +1176,7 @@ const translationsEn: Record<string, string> = {
   "shield.finalCta.subtitle":
     "Join forward-thinking schools using Shield to embrace AI safely",
   "shield.finalCta.primary": "Schedule Demo",
-  "shield.finalCta.secondary": "Contact Sales",
+  "shield.finalCta.secondary": "Talk to Sales",
   "shield.finalCta.note": "Enterprise support and onboarding included",
 
   // FAQ Page
@@ -1617,7 +1617,7 @@ const translationsDe: Record<string, string> = {
   "pricing.free.title": "Starter",
   "pricing.free.description":
     "Alles, was Sie brauchen, um Draft auszuprobieren und Ihre ersten Stunden zu sparen.",
-  "pricing.free.cta": "Jetzt kostenlos starten",
+  "pricing.free.cta": "Sicher schreiben starten",
   "pricing.free.feature1": "5 Entwürfe pro Monat",
   "pricing.free.feature2": "Basisvorlagen",
   "pricing.free.feature3": "Speichern & Kopieren",
@@ -1630,7 +1630,7 @@ const translationsDe: Record<string, string> = {
     "Unbegrenzte Schreibunterstuetzung ohne erfundene Schuelerinformationen und ohne Lock-ins.",
   "pricing.teacher.period": "Jederzeit kündbar",
   "pricing.teacher.savingsAnnual": "2 Monate kostenlos sparen",
-  "pricing.teacher.cta": "7-Tage-Testversion starten",
+  "pricing.teacher.cta": "Jetzt abonnieren",
   "pricing.teacher.trial": "Monatliche Abrechnung • Jederzeit kündbar",
   "pricing.teacher.guarantee": "30-Tage-Geld-zurück-Garantie",
   "pricing.teacher.feature1": "Unbegrenzte Entwürfe & Überarbeitungen",
@@ -1639,19 +1639,20 @@ const translationsDe: Record<string, string> = {
   "pricing.teacher.feature4": "Gespeicherter Verlauf & Export",
   "pricing.teacher.feature5": "Zaras sanfte Wohlbefinden-Hinweise",
   "pricing.teacher.feature6": "Priorisierter E-Mail-Support",
-  "pricing.teacher.timeSaved": "Typischerweise gespart: 4-7 Stunden pro Woche",
+  "pricing.teacher.timeSaved":
+    "Lehrkräfte sparen typischerweise 4-7 Stunden pro Woche",
 
   // Department Plan
   "pricing.department.badge": "TEAMS",
   "pricing.department.title": "Department",
   "pricing.department.description":
     "Kollaboratives Schreiben mit gemeinsamer Qualität und Konsistenz.",
-  "pricing.department.priceLine": "480 €/Jahr",
-  "pricing.department.billing": "Enthält 5 Lizenzen für Lehrkräfte",
+  "pricing.department.priceLine": "480 € / Jahr",
+  "pricing.department.billing": "Enthält 5 Lehrkraft-Lizenzen (Jahresplan)",
   "pricing.department.helper": "Jährliche Abrechnung",
   "pricing.department.contactHelper":
     "Zusätzliche Teams? Vertrieb kontaktieren",
-  "pricing.department.cta": "Team-Checkout starten",
+  "pricing.department.cta": "Jetzt abonnieren",
   "pricing.department.includes": "Alles in Teacher, plus:",
   "pricing.department.feature1": "Team-Bibliotheken, gemeinsame Vorlagen",
   "pricing.department.feature2": "Rollenbasierter Zugriff",
@@ -1666,7 +1667,7 @@ const translationsDe: Record<string, string> = {
   "pricing.enterprise.price": "Individuell",
   "pricing.enterprise.helper":
     "Individuelle Preise je nach Rollout-Größe und Anforderungen",
-  "pricing.enterprise.cta": "Vertrieb kontaktieren",
+  "pricing.enterprise.cta": "Mit Vertrieb sprechen",
   "pricing.enterprise.includes": "Alles in Department, plus:",
   "pricing.enterprise.feature1": "SSO/SAML, DPA/SCCs",
   "pricing.enterprise.feature2": "SLA & dedizierter Erfolg",
@@ -1680,20 +1681,20 @@ const translationsDe: Record<string, string> = {
   "pricing.bundle.perMonth": "/Monat",
   "pricing.bundle.perYear": "/Jahr",
   "pricing.bundle.savings": "Sparen Sie gegenüber dem separaten Kauf",
-  "pricing.bundle.cta": "Fruehzugang anfragen",
+  "pricing.bundle.cta": "Frühzugang anfragen",
 
   // Testimonials
   "pricing.testimonials.title": "Was Lehrkräfte über Preise sagen",
   "pricing.testimonials.1.name": "Sarah L.",
-  "pricing.testimonials.1.role": "Mittelschullehrerin",
+  "pricing.testimonials.1.role": "Lehrkraft an einer weiterführenden Schule",
   "pricing.testimonials.1.quote":
     "Draft gab mir meine Abende zurück. Ich verlasse jetzt die Schule pünktlich - und Eltern sagen, meine Nachrichten fühlen sich wärmer an.",
   "pricing.testimonials.2.name": "Mark R.",
-  "pricing.testimonials.2.role": "Abteilungsleiter",
+  "pricing.testimonials.2.role": "Abteilungsleitung",
   "pricing.testimonials.2.quote":
     "Unsere Abteilung hat Ton abgestimmt und Feedback beschleunigt. Die Benotungszeit sank um ein Drittel.",
   "pricing.testimonials.3.name": "Emma K.",
-  "pricing.testimonials.3.role": "Grundschullehrerin",
+  "pricing.testimonials.3.role": "Grundschullehrkraft",
   "pricing.testimonials.3.quote":
     "Die Preisgestaltung ist transparent und fair. Keine versteckten Gebühren, keine Lock-ins. Funktioniert einfach.",
 
@@ -2684,7 +2685,7 @@ const translationsDe: Record<string, string> = {
   "shield.hero.subtitle":
     "Enterprise-fähige KI-Governance-Plattform, die eine sichere, ethische und konforme KI-Nutzung in Ihrer gesamten Schule oder Ihrem Bezirk gewährleistet.",
   "shield.hero.cta.primary": "Mehr erfahren",
-  "shield.hero.cta.secondary": "Vertrieb kontaktieren",
+  "shield.hero.cta.secondary": "Mit Vertrieb sprechen",
 
   "shield.trust.gdpr": "GDPR-konform",
   "shield.trust.ferpa": "FERPA-ready",
@@ -2771,7 +2772,7 @@ const translationsDe: Record<string, string> = {
   "shield.finalCta.subtitle":
     "Schließen Sie sich zukunftsorientierten Schulen an, die Shield nutzen, um KI sicher einzusetzen",
   "shield.finalCta.primary": "Demo planen",
-  "shield.finalCta.secondary": "Vertrieb kontaktieren",
+  "shield.finalCta.secondary": "Mit Vertrieb sprechen",
   "shield.finalCta.note": "Enterprise-Support und Onboarding inbegriffen",
 
   // FAQ Page

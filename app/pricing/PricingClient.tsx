@@ -4,7 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Check, ChevronDown, Star, ShieldCheck, Globe } from "lucide-react";
+import {
+  Check,
+  ChevronDown,
+  Star,
+  ShieldCheck,
+  Globe,
+  UserRound,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { motion, AnimatePresence } from "framer-motion";
@@ -40,8 +47,32 @@ const prices = {
 const pricingTestimonialHeadshots = [
   "/testimonials/pricing-teacher-1.jpg",
   "/testimonials/pricing-teacher-2.jpg",
-  "/testimonials/pricing-teacher-3.jpg",
+  "/images/testimonials/emma-rodriguez.jpg",
 ] as const;
+
+function PricingTestimonialAvatar({ src, alt }: { src: string; alt: string }) {
+  const [hasError, setHasError] = useState(false);
+
+  return (
+    <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-white/10 bg-[#0F172A] shadow-[0_8px_20px_rgba(15,23,42,0.35)]">
+      {hasError ? (
+        <div className="flex h-full w-full items-center justify-center bg-slate-800 text-slate-300">
+          <UserRound className="h-6 w-6" aria-hidden="true" />
+          <span className="sr-only">{alt}</span>
+        </div>
+      ) : (
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="48px"
+          className="object-cover"
+          onError={() => setHasError(true)}
+        />
+      )}
+    </div>
+  );
+}
 
 export default function PricingClient() {
   const { t, language } = useLanguage();
@@ -283,7 +314,7 @@ export default function PricingClient() {
                     });
                   }}
                 >
-                  {t("form.submit")}
+                  {t("pricing.free.cta")}
                 </Link>
               </Button>
 
@@ -397,8 +428,8 @@ export default function PricingClient() {
                 ))}
               </div>
 
-              <div className="p-4 bg-[#8B5CF6]/15 rounded-xl">
-                <p className="text-[#E2E8F0] text-sm">
+              <div className="rounded-xl border border-[#8B5CF6]/25 bg-[#8B5CF6]/15 p-4">
+                <p className="text-sm font-medium leading-6 text-white">
                   {t("pricing.teacher.timeSaved")}
                 </p>
               </div>
@@ -681,15 +712,10 @@ export default function PricingClient() {
               {[1, 2, 3].map((i, index) => (
                 <div key={i} className="bg-[#1E293B] rounded-xl p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-white/10 bg-[#0F172A] shadow-[0_8px_20px_rgba(15,23,42,0.35)]">
-                      <Image
-                        src={pricingTestimonialHeadshots[index]}
-                        alt={t(`pricing.testimonials.${i}.name`)}
-                        fill
-                        sizes="48px"
-                        className="object-cover"
-                      />
-                    </div>
+                    <PricingTestimonialAvatar
+                      src={pricingTestimonialHeadshots[index]}
+                      alt={t(`pricing.testimonials.${i}.name`)}
+                    />
                     <div className="min-w-0">
                       <p className="font-semibold text-white">
                         {t(`pricing.testimonials.${i}.name`)}

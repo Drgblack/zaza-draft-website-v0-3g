@@ -219,6 +219,10 @@ export function DraftDemo({
 
   const title =
     language === "de" ? "Draft in der Praxis" : "See Draft in Action";
+  const microHeadline =
+    language === "de"
+      ? "Formulieren Sie schwierige Nachrichten sicher und klar, bevor Sie sie senden"
+      : "Soften difficult messages before you send them";
   const desc =
     language === "de"
       ? "Reale Beispiele auf Basis echter Lehrersprache - keine Registrierung nötig."
@@ -257,7 +261,10 @@ export function DraftDemo({
     <section id={sectionId} className="py-16 bg-[#111827]">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">{title}</h2>
+          <p className="text-sm text-[#C4B5FD]">{microHeadline}</p>
+          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-white">
+            {title}
+          </h2>
           <p className="text-[#CBD5E1] mt-3">{desc}</p>
         </div>
 

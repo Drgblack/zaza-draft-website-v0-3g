@@ -778,7 +778,9 @@ export default function GlossaryClient() {
               : "Now that you understand the terminology, see how Zaza Draft puts these AI concepts into practice."}
           </p>
           <button className="px-8 py-4 bg-[#A78BFA] hover:bg-[#8B5CF6] text-white text-lg rounded-lg transition-colors">
-            {language === "de" ? "Kostenlos loslegen" : "Start Free Trial"}
+            {language === "de"
+              ? "Sicher schreiben starten"
+              : "Start writing safely"}
           </button>
         </div>
       </section>

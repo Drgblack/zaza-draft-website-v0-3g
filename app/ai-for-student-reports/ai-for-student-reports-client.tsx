@@ -187,7 +187,7 @@ const content = {
     ],
     cta_final_title: "Ready to write reports faster?",
     cta_final_subtitle: "Create your first 5 reports for free today.",
-    cta_final_button: "Start Free Trial",
+    cta_final_button: "Start writing safely",
     breadcrumb_label: "Learning Centre",
     sidebar_resource_full: "Full Learning Centre",
   },
@@ -360,7 +360,7 @@ const content = {
     cta_final_title: "Bereit, Berichte schneller zu schreiben?",
     cta_final_subtitle:
       "Erstellen Sie noch heute Ihre ersten 5 Berichte kostenlos.",
-    cta_final_button: "Kostenlose Testversion starten",
+    cta_final_button: "Sicher schreiben starten",
     breadcrumb_label: "Lernzentrum",
     sidebar_resource_full: "Gesamtes Lernzentrum",
   },

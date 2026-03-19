@@ -139,7 +139,7 @@ export default function TeacherStoriesPage() {
                 size="lg"
                 className="bg-white text-purple-600 hover:bg-gray-100 font-semibold px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all"
               >
-                Start Free Trial
+                Start writing safely
               </Button>
               <Button
                 size="lg"

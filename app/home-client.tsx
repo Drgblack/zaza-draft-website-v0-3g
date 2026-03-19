@@ -266,10 +266,16 @@ export function HomePageClient() {
     language === "de"
       ? "Schreibe jeden Monat bis zu 10 Nachrichten kostenlos. Keine Kreditkarte erforderlich."
       : "Write up to 10 messages free each month. No credit card required.";
+  const heroSecondaryCta =
+    language === "de" ? "In Aktion sehen" : "See it in action";
   const heroTeacherUsageLine =
     language === "de"
       ? "Entwickelt fuer Lehrkraefte, die E-Mails an Eltern, Zeugnisformulierungen und andere sensible Schulkommunikation schreiben."
       : "Built for teachers writing parent emails, report comments, and other high-stakes school communication.";
+  const heroTrustContextLine =
+    language === "de"
+      ? "Eingesetzt von Lehrkraeften in Grundschulen, weiterfuehrenden Schulen und internationalen Schulen"
+      : "Used by teachers across primary, secondary, and international schools";
   const heroTrustBarPoints =
     language === "de"
       ? [
@@ -305,44 +311,44 @@ export function HomePageClient() {
       ? [
           {
             title: "Du bleibst in Kontrolle",
-            body: "Pruefe jede Nachricht, bevor etwas gesendet wird.",
+            body: "Sende mit mehr Sicherheit, wenn Formulierungen heikel wirken.",
             icon: SliderIcon,
           },
           {
             title: "Fuer Lehrkraefte gebaut",
-            body: "Entwickelt fuer E-Mails an Eltern, Zeugnisformulierungen und sensible Schulkommunikation.",
+            body: "Weniger Rueckfragen von Eltern durch klarere, professionellere Formulierungen.",
             icon: DocumentIcon,
           },
           {
             title: "Ruhige Tonleitplanken",
-            body: "Hilft, Eskalation zu reduzieren und Formulierungen professionell zu halten.",
+            body: "Missverstaendnisse vermeiden, bevor eine Nachricht weitergeleitet oder hinterfragt wird.",
             icon: CheckCircleIcon,
           },
           {
             title: "Privacy-first gedacht",
-            body: "Gebaut fuer verantwortungsvollen Unterrichtseinsatz und sorgfaeltige Kommunikationsablaeufe.",
+            body: "Sensibles Feedback ruhig und professionell in sorgfaeltigen Schulablaeufen formulieren.",
             icon: ShieldIcon,
           },
         ]
       : [
           {
             title: "You stay in control",
-            body: "Review every message before anything is sent.",
+            body: "Send with more confidence when wording feels high-stakes.",
             icon: SliderIcon,
           },
           {
             title: "Built for teachers",
-            body: "Built for parent emails, report comments, and documentation that may be forwarded, challenged, or reviewed later.",
+            body: "Reduce back-and-forth with parents through clearer, more professional wording.",
             icon: DocumentIcon,
           },
           {
             title: "Safer wording guardrails",
-            body: "Helps reduce tone risk, avoid escalation, and keep wording calm, clear, and appropriate.",
+            body: "Avoid escalation from unclear wording before a message is forwarded or challenged.",
             icon: CheckCircleIcon,
           },
           {
             title: "Privacy-first design",
-            body: "Designed for careful school workflows where professional judgement and data handling both matter.",
+            body: "Write sensitive feedback calmly and professionally within careful school workflows.",
             icon: ShieldIcon,
           },
         ];
@@ -440,7 +446,7 @@ export function HomePageClient() {
                   variant="outline"
                   className="w-full sm:w-auto inline-flex items-center justify-center bg-white/5 border border-white/10 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 backdrop-blur-sm transition-transform transition-shadow duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/10 group active:scale-[0.98]"
                 >
-                  {t("hero.ctaSecondary")}
+                  {heroSecondaryCta}
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </motion.div>
@@ -468,6 +474,14 @@ export function HomePageClient() {
                 className="text-sm text-[#94A3B8] leading-relaxed max-w-[600px] mx-auto lg:mx-0"
               >
                 {t("hero.earlyAccessLine")}
+              </motion.p>
+              <motion.p
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.49, ease: "easeOut" }}
+                className="text-xs leading-6 text-[#94A3B8] max-w-[720px] mx-auto lg:mx-0"
+              >
+                {heroTrustContextLine}
               </motion.p>
 
               <motion.div

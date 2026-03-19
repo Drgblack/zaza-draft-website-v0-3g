@@ -186,7 +186,7 @@ const content = {
     // CTA
     cta_title: "Write better parent emails in less time",
     cta_subtitle: "Start your free trial today. No credit card required.",
-    cta_button: "Start Free Trial",
+    cta_button: "Start writing safely",
 
     // Sidebar / Continued Learning
     sidebar_on_this_page: "On this page",
@@ -373,7 +373,7 @@ const content = {
     cta_title: "Schreiben Sie bessere Eltern-E-Mails in kürzerer Zeit",
     cta_subtitle:
       "Starten Sie noch heute Ihre kostenlose Testversion. Keine Kreditkarte erforderlich.",
-    cta_button: "Kostenlose Testversion starten",
+    cta_button: "Sicher schreiben starten",
 
     // Sidebar / Continued Learning
     sidebar_on_this_page: "Auf dieser Seite",

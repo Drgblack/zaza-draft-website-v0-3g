@@ -837,8 +837,8 @@ export default function StateOfAIClient() {
                 }}
               >
                 {language === "de"
-                  ? "Kostenlose Testversion starten"
-                  : "Start Free Trial"}
+                  ? "Sicher schreiben starten"
+                  : "Start writing safely"}
               </Button>
               <Button
                 size="lg"

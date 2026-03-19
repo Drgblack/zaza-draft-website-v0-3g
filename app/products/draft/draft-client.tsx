@@ -78,12 +78,12 @@ export default function DraftClient() {
   const nextSteps =
     language === "de"
       ? [
-          "Kostenlos starten (30 Sekunden)",
+          "Sicher schreiben starten (30 Sekunden)",
           "Zugang mit Name und E-Mail anlegen",
           "Ersten Entwurf kostenlos testen - keine Karte erforderlich",
         ]
       : [
-          "Get started free (30 seconds)",
+          "Start writing safely (30 seconds)",
           "Create access with your name and email",
           "Try your first draft free - no card required",
         ];

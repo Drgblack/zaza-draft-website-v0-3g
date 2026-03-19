@@ -48,7 +48,7 @@ export default function BestAIWritingClient() {
       cta_final_title: "Ready to Save 5+ Hours Per Week?",
       cta_final_subtitle:
         "Join 10,000+ teachers using Zaza Draft to write better parent emails, feedback, and reports in half the time.",
-      cta_start_trial: "Start Free Trial",
+      cta_start_trial: "Start writing safely",
       cta_email_guide: "See Parent Email Guide",
 
       // Sidebar
@@ -56,7 +56,7 @@ export default function BestAIWritingClient() {
       sidebar_cta_title: "Try Zaza Draft",
       sidebar_cta_text:
         "Purpose-built for teachers. FERPA-ready. Free to start.",
-      sidebar_cta_button: "Start Free",
+      sidebar_cta_button: "Start writing safely",
 
       // Tool Data (English hardcoded data)
       tools: [
@@ -227,7 +227,7 @@ export default function BestAIWritingClient() {
       cta_final_title: "Bereit, 5+ Stunden pro Woche zu sparen?",
       cta_final_subtitle:
         "Schließen Sie sich über 10.000 Lehrern an, die Zaza Draft nutzen, um bessere Eltern-E-Mails, Feedback und Berichte in der Hälfte der Zeit zu schreiben.",
-      cta_start_trial: "Kostenlose Testversion starten",
+      cta_start_trial: "Sicher schreiben starten",
       cta_email_guide: "Leitfaden für Eltern-E-Mails ansehen",
 
       // Sidebar
@@ -235,7 +235,7 @@ export default function BestAIWritingClient() {
       sidebar_cta_title: "Zaza Draft testen",
       sidebar_cta_text:
         "Speziell für Lehrer entwickelt. DSGVO-konform. Kostenlos starten.",
-      sidebar_cta_button: "Kostenlos starten",
+      sidebar_cta_button: "Sicher schreiben starten",
 
       // Tool Data (German hardcoded data)
       tools: [

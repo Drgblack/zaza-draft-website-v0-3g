@@ -1,18 +1,18 @@
-﻿"use client"
+﻿"use client";
 
-import { useState } from "react"
-import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Check, ArrowRight, ArrowLeft } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
+import { useState } from "react";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Check, ArrowRight, ArrowLeft } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface Question {
-  id: string
-  question: string
+  id: string;
+  question: string;
   options: {
-    text: string
-    value: string
-  }[]
+    text: string;
+    value: string;
+  }[];
 }
 
 const questions: Question[] = [
@@ -56,56 +56,57 @@ const questions: Question[] = [
       { text: "No", value: "no" },
     ],
   },
-]
+];
 
 interface Recommendation {
-  plan: "free" | "premium" | "team"
-  title: string
-  description: string
-  reasons: string[]
-  timeSavings: string
-  costBenefit: string
+  plan: "free" | "premium" | "team";
+  title: string;
+  description: string;
+  reasons: string[];
+  timeSavings: string;
+  costBenefit: string;
 }
 
 export function PricingDecisionTool() {
-  const [currentStep, setCurrentStep] = useState(0)
-  const [answers, setAnswers] = useState<Record<string, string>>({})
-  const [showResult, setShowResult] = useState(false)
+  const [currentStep, setCurrentStep] = useState(0);
+  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [showResult, setShowResult] = useState(false);
 
   const handleAnswer = (questionId: string, value: string) => {
-    setAnswers({ ...answers, [questionId]: value })
+    setAnswers({ ...answers, [questionId]: value });
 
     if (currentStep < questions.length - 1) {
-      setTimeout(() => setCurrentStep(currentStep + 1), 300)
+      setTimeout(() => setCurrentStep(currentStep + 1), 300);
     } else {
-      setTimeout(() => setShowResult(true), 300)
+      setTimeout(() => setShowResult(true), 300);
     }
-  }
+  };
 
   const handleBack = () => {
     if (currentStep > 0) {
-      setCurrentStep(currentStep - 1)
-      setShowResult(false)
+      setCurrentStep(currentStep - 1);
+      setShowResult(false);
     }
-  }
+  };
 
   const handleReset = () => {
-    setCurrentStep(0)
-    setAnswers({})
-    setShowResult(false)
-  }
+    setCurrentStep(0);
+    setAnswers({});
+    setShowResult(false);
+  };
 
   const getRecommendation = (): Recommendation => {
-    const role = answers.role
-    const volume = answers.volume
-    const languages = answers.languages
+    const role = answers.role;
+    const volume = answers.volume;
+    const languages = answers.languages;
 
     // Team plan recommendation
     if (role === "admin" || role === "district" || role === "department") {
       return {
         plan: "team",
         title: "Team Plan",
-        description: "Perfect for schools and departments looking to save time across multiple teachers",
+        description:
+          "Perfect for schools and departments looking to save time across multiple teachers",
         reasons: [
           "Centralized billing and management",
           "Volume discounts for multiple users",
@@ -115,15 +116,20 @@ export function PricingDecisionTool() {
         ],
         timeSavings: "Save 15-20 hours per week across your team",
         costBenefit: "ROI typically achieved within the first month",
-      }
+      };
     }
 
     // Premium plan recommendation
-    if (volume === "high" || volume === "very-high" || languages === "yes-frequent") {
+    if (
+      volume === "high" ||
+      volume === "very-high" ||
+      languages === "yes-frequent"
+    ) {
       return {
         plan: "premium",
         title: "Premium Plan",
-        description: "Best value for teachers who communicate frequently with parents",
+        description:
+          "Best value for teachers who communicate frequently with parents",
         reasons: [
           "Unlimited emails and report card comments",
           "Advanced translation for 40+ languages",
@@ -133,14 +139,15 @@ export function PricingDecisionTool() {
         ],
         timeSavings: "Save 5-8 hours per week on communication",
         costBenefit: "Pays for itself in saved time within 2 weeks",
-      }
+      };
     }
 
     // Free plan recommendation
     return {
       plan: "free",
       title: "Free Plan",
-      description: "Great starting point to experience Zaza Draft's capabilities",
+      description:
+        "Great starting point to experience Zaza Draft's capabilities",
       reasons: [
         "Try core features at no cost",
         "5 AI-generated emails per month",
@@ -150,16 +157,20 @@ export function PricingDecisionTool() {
       ],
       timeSavings: "Save 1-2 hours per week",
       costBenefit: "Start free, upgrade when you're ready",
-    }
-  }
+    };
+  };
 
-  const recommendation = showResult ? getRecommendation() : null
+  const recommendation = showResult ? getRecommendation() : null;
 
   return (
     <Card className="bg-[#1E293B] border-[#334155] p-8 max-w-3xl mx-auto">
       <div className="mb-8">
-        <h3 className="text-2xl font-bold text-white mb-2">Find Your Perfect Plan</h3>
-        <p className="text-gray-400">Answer a few quick questions to get a personalized recommendation</p>
+        <h3 className="text-2xl font-bold text-white mb-2">
+          Find Your Perfect Plan
+        </h3>
+        <p className="text-gray-400">
+          Answer a few quick questions to get a personalized recommendation
+        </p>
       </div>
 
       {/* Progress Bar */}
@@ -169,13 +180,17 @@ export function PricingDecisionTool() {
             <span className="text-sm text-gray-400">
               Question {currentStep + 1} of {questions.length}
             </span>
-            <span className="text-sm text-gray-400">{Math.round(((currentStep + 1) / questions.length) * 100)}%</span>
+            <span className="text-sm text-gray-400">
+              {Math.round(((currentStep + 1) / questions.length) * 100)}%
+            </span>
           </div>
           <div className="h-2 bg-[#0F172A] rounded-full overflow-hidden">
             <motion.div
               className="h-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA]"
               initial={{ width: 0 }}
-              animate={{ width: `${((currentStep + 1) / questions.length) * 100}%` }}
+              animate={{
+                width: `${((currentStep + 1) / questions.length) * 100}%`,
+              }}
               transition={{ duration: 0.3 }}
             />
           </div>
@@ -191,12 +206,16 @@ export function PricingDecisionTool() {
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.3 }}
           >
-            <h4 className="text-xl font-semibold text-white mb-6">{questions[currentStep].question}</h4>
+            <h4 className="text-xl font-semibold text-white mb-6">
+              {questions[currentStep].question}
+            </h4>
             <div className="space-y-3">
               {questions[currentStep].options.map((option) => (
                 <button
                   key={option.value}
-                  onClick={() => handleAnswer(questions[currentStep].id, option.value)}
+                  onClick={() =>
+                    handleAnswer(questions[currentStep].id, option.value)
+                  }
                   className="w-full p-4 bg-[#0F172A] hover:bg-[#8B5CF6]/20 border-2 border-[#334155] hover:border-[#8B5CF6] rounded-lg text-left text-white transition-all group"
                 >
                   <div className="flex items-center justify-between">
@@ -237,12 +256,18 @@ export function PricingDecisionTool() {
                   >
                     Recommended for You
                   </div>
-                  <h4 className="text-3xl font-bold text-white mb-2">{recommendation.title}</h4>
-                  <p className="text-gray-400 text-lg">{recommendation.description}</p>
+                  <h4 className="text-3xl font-bold text-white mb-2">
+                    {recommendation.title}
+                  </h4>
+                  <p className="text-gray-400 text-lg">
+                    {recommendation.description}
+                  </p>
                 </div>
 
                 <Card className="bg-[#0F172A] border-[#334155] p-6">
-                  <h5 className="text-lg font-semibold text-white mb-4">Why this plan is right for you:</h5>
+                  <h5 className="text-lg font-semibold text-white mb-4">
+                    Why this plan is right for you:
+                  </h5>
                   <ul className="space-y-3">
                     {recommendation.reasons.map((reason, index) => (
                       <li key={index} className="flex items-start gap-3">
@@ -255,12 +280,18 @@ export function PricingDecisionTool() {
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <Card className="bg-[#8B5CF6]/10 border-[#8B5CF6]/30 p-4">
-                    <p className="text-sm text-gray-400 mb-1">Estimated Time Savings</p>
-                    <p className="text-lg font-semibold text-white">{recommendation.timeSavings}</p>
+                    <p className="text-sm text-gray-400 mb-1">
+                      Estimated Time Savings
+                    </p>
+                    <p className="text-lg font-semibold text-white">
+                      {recommendation.timeSavings}
+                    </p>
                   </Card>
                   <Card className="bg-[#8B5CF6]/10 border-[#8B5CF6]/30 p-4">
                     <p className="text-sm text-gray-400 mb-1">Cost-Benefit</p>
-                    <p className="text-lg font-semibold text-white">{recommendation.costBenefit}</p>
+                    <p className="text-lg font-semibold text-white">
+                      {recommendation.costBenefit}
+                    </p>
                   </Card>
                 </div>
 
@@ -274,7 +305,9 @@ export function PricingDecisionTool() {
                           : "bg-[#8B5CF6] text-white hover:bg-[#8B5CF6]/90"
                     }`}
                   >
-                    {recommendation.plan === "team" ? "Contact Sales" : "Start Free Trial"}
+                    {recommendation.plan === "team"
+                      ? "Talk to Sales"
+                      : "Start writing safely"}
                   </Button>
                   <Button
                     onClick={handleReset}
@@ -290,6 +323,5 @@ export function PricingDecisionTool() {
         )}
       </AnimatePresence>
     </Card>
-  )
+  );
 }
-
