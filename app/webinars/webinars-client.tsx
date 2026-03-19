@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/lib/i18n/language-context";
@@ -668,8 +668,8 @@ export default function WebinarsClient() {
                     >
                       {webinar.attendees >= webinar.maxAttendees
                         ? lang === "de"
-                          ? "Warteliste voll"
-                          : "Waitlist Full"
+                          ? "Anmeldung voll"
+                          : "Registration full"
                         : lang === "de"
                           ? "Jetzt registrieren"
                           : "Register Now"}
@@ -951,4 +951,3 @@ export default function WebinarsClient() {
     </div>
   );
 }
-

@@ -102,8 +102,6 @@ export default function PressKitPage() {
                         Gumbertstraße 150
                         <br />
                         40229 Düsseldorf
-                        <br />
-                        Deutschland
                       </dd>
                     </div>
                     <div className="flex flex-col gap-1">
@@ -121,8 +119,7 @@ export default function PressKitPage() {
                     <div className="flex flex-col gap-1">
                       <dt className="text-[#9CA3AF]">Traction</dt>
                       <dd>
-                        A growing waitlist of teachers following Draft as access
-                        opens in stages.
+                        A growing group of teachers signing up to use Draft.
                       </dd>
                     </div>
                   </dl>
@@ -266,8 +263,8 @@ export default function PressKitPage() {
                   Zaza Technologies builds safe, empathetic AI tools for
                   educators. Our flagship app, Zaza Draft, helps teachers save
                   hours each week on parent communications with
-                  hallucination-aware AI. Headquartered in Germany, Zaza is
-                  teacher-first, GDPR-ready, and trusted by schools worldwide.
+                  hallucination-aware AI. Zaza is teacher-first, GDPR-ready, and
+                  built for high-stakes school communication.
                 </p>
                 <p className="text-[#9CA3AF] text-sm">
                   For media inquiries or interviews, contact{" "}
@@ -346,8 +343,8 @@ export default function PressKitPage() {
               <ExpandableBio
                 shortLabel="Short Bio"
                 longLabel="Long Bio"
-                shortBio="Greg Blackburn is the founder of Zaza Technologies. With a PhD in Professional Education and 20+ years in Learning & Development, Greg has worked at the intersection of education, AI, and technology. He founded Zaza to help teachers thrive by saving time, reducing stress, and focusing on what matters most: teaching. Founder based in Saarland, Germany."
-                longBio="Dr. Harvey Gregory Scott Blackburn (Greg) is the founder of Zaza Technologies, an AI-powered EdTech company based in Germany. Greg began his career in Learning & Development after completing a Diploma in German and an MBA from the University of Queensland, later earning a PhD in Professional Education from City, University of London. His research focused on critical thinking and problem-solving in student-centred eLearning. Over two decades, he has led major learning initiatives in both higher education and corporate environments, most recently as Group Director of Learning at Communardo. Zaza Technologies reflects Greg's vision of building safe, teacher-first AI tools that combine sound pedagogy with cutting-edge AI. Greg lives in Germany with his family and is passionate about empowering educators through technology. Founder based in Saarland, Germany."
+                shortBio="Greg Blackburn is the founder of Zaza Technologies. With a PhD in Professional Education and 20+ years in Learning & Development, Greg has worked at the intersection of education, AI, and technology. He founded Zaza to help teachers thrive by saving time, reducing stress, and focusing on what matters most: teaching."
+                longBio="Dr. Harvey Gregory Scott Blackburn (Greg) is the founder of Zaza Technologies, an AI-powered EdTech company. Greg began his career in Learning & Development after completing language study and an MBA, later earning a PhD in Professional Education. His research focused on critical thinking and problem-solving in student-centred eLearning. Over two decades, he has led major learning initiatives in both higher education and corporate environments, most recently as Group Director of Learning at Communardo. Zaza Technologies reflects Greg's vision of building safe, teacher-first AI tools that combine sound pedagogy with modern AI. Greg is passionate about empowering educators through technology."
               />
             </section>
 
@@ -368,7 +365,7 @@ export default function PressKitPage() {
                   },
                   {
                     q: "Who uses Zaza?",
-                    a: "Teachers and schools (K12) joining the waitlist as access opens in stages.",
+                    a: "Teachers and schools (K12) signing up to use Draft as access opens more broadly.",
                   },
                   {
                     q: "How do you address bias?",

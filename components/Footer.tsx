@@ -35,8 +35,8 @@ export default function Footer() {
     { label: "Draft", href: localPath("/products/draft") },
     { label: isDE ? "Preise" : "Pricing", href: localPath("/pricing") },
     {
-      label: isDE ? "Warteliste" : "Join the waitlist",
-      href: localPath("/early-access"),
+      label: isDE ? "Jetzt starten" : "Get started",
+      href: localPath("/get-started"),
     },
     {
       label: isDE ? "Gründerstory" : "Founder story",

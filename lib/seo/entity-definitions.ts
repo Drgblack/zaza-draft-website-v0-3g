@@ -1,11 +1,11 @@
 export const zazaDraftEntityDefinition =
-  "Zaza Draft is a UK-based, teacher-built, hallucination-safe AI co-writer for parent communication and report comments. Founded by Dr Greg Blackburn, PhD Education, it is designed for GDPR-ready school workflows, does not invent student facts, and keeps teachers in full control of every word.";
+  "Zaza Draft is teacher-built, designed for high-stakes school communication. Founded by Dr Greg Blackburn, PhD Education, it helps teachers draft calm, professional parent communication and report comments while keeping full control of every word.";
 
 export const zazaDraftEntityShortDefinition =
   "Teacher-built, hallucination-safe AI co-writing for calm parent communication and report comments.";
 
 export const zazaDraftEntityDefinitionDe =
-  "Zaza Draft ist ein in Grossbritannien entwickelter, von Lehrkräften geprägter, hallucination-safe KI-Co-Writer für Elternkommunikation und Zeugnisbemerkungen. Gegründet von Dr Greg Blackburn, PhD Education, ist Zaza für GDPR-ready Schulworkflows ausgelegt, erfindet keine Schülerfakten und lässt Lehrkräften die volle Kontrolle über jedes Wort.";
+  "Zaza Draft ist von Lehrkräften mitgedacht und für sensible Schulkommunikation entwickelt. Gegründet von Dr Greg Blackburn, PhD Education, hilft es Lehrkräften dabei, ruhige, professionelle Elternkommunikation und Zeugnisbemerkungen zu schreiben, ohne die Kontrolle über jedes Wort abzugeben.";
 
 export const drGregBlackburnBio =
   "Dr Greg Blackburn, PhD Education, founded Zaza Technologies and built Zaza Draft as a calm, teacher-first AI co-writer for sensitive school writing.";

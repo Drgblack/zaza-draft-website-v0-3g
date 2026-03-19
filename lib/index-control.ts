@@ -14,7 +14,6 @@ const CORE_INDEXABLE_PATHS = new Set([
   "/pricing",
   "/get-started",
   "/products/draft",
-  "/early-access",
   "/blog",
   "/resources",
   "/teacher-parent-communication-hub",

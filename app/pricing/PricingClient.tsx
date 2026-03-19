@@ -1,13 +1,18 @@
 ﻿"use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Check, ChevronDown, Star, ShieldCheck, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
-import { SignupModal } from "@/components/signup-modal";
 import { motion, AnimatePresence } from "framer-motion";
 import { track } from "@/lib/analytics";
+import {
+  buildStripeCheckoutHref,
+  STRIPE_LINK_DEPARTMENT,
+  STRIPE_LINK_TEACHER,
+} from "@/config/pricing";
 
 type Currency = "EUR" | "USD" | "GBP";
 
@@ -33,11 +38,11 @@ const prices = {
 
 export default function PricingClient() {
   const { t, language } = useLanguage();
+  const pathname = usePathname();
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "annual">(
     "monthly",
   );
   const [currency, setCurrency] = useState<Currency>("EUR");
-  const [signupOpen, setSignupOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const symbol = currencySymbols[currency];
@@ -73,21 +78,21 @@ export default function PricingClient() {
       zaza: t("pricing.compare.rows.cost.zaza"),
     },
   ];
-  const teacherCheckoutUrl = process.env.NEXT_PUBLIC_CHECKOUT_URL_DRAFT_MONTHLY;
-  const bundleCheckoutUrl = process.env.NEXT_PUBLIC_CHECKOUT_URL_DRAFT_BUNDLE;
-  const departmentCheckoutUrl =
-    process.env.NEXT_PUBLIC_CHECKOUT_URL_DRAFT_DEPARTMENT;
   const getStartedHref = language === "de" ? "/de/get-started" : "/get-started";
   const contactHref = language === "de" ? "/de/contact" : "/contact";
-  const contactPricingHref = `${contactHref}?topic=pricing`;
   const contactEnterpriseHref = `${contactHref}?topic=enterprise`;
-  const hasTeacherCheckoutUrl = Boolean(teacherCheckoutUrl?.trim());
-  const hasDepartmentCheckoutUrl = Boolean(departmentCheckoutUrl?.trim());
-  const hasBundleCheckoutUrl = Boolean(bundleCheckoutUrl?.trim());
-  const teacherCheckoutHref = teacherCheckoutUrl?.trim() || contactPricingHref;
-  const bundleCheckoutHref = bundleCheckoutUrl?.trim() || contactPricingHref;
-  const departmentCheckoutHref =
-    departmentCheckoutUrl?.trim() || contactPricingHref;
+  const pricingReturnPath = pathname === "/de/pricing" ? pathname : "/pricing";
+  const bundleInterestHref = `${getStartedHref}?interest=draft-teach-bundle&source=pricing_bundle`;
+  const teacherCheckoutHref = buildStripeCheckoutHref(STRIPE_LINK_TEACHER, {
+    interval: billingPeriod,
+    returnPath: pricingReturnPath,
+  });
+  const departmentCheckoutHref = buildStripeCheckoutHref(
+    STRIPE_LINK_DEPARTMENT,
+    {
+      returnPath: pricingReturnPath,
+    },
+  );
   const trackPricingCTA = (id: string) =>
     track("cta_click", { location: "pricing", id });
 
@@ -356,7 +361,7 @@ export default function PricingClient() {
                     billingCycle: billingPeriod,
                     currency,
                     language,
-                    hasCheckoutUrl: hasTeacherCheckoutUrl,
+                    destination: teacherCheckoutHref,
                   });
                 }}
                 className="w-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white hover:scale-105 py-6 text-lg font-semibold rounded-lg mb-3 shadow-lg shadow-[#8B5CF6]/40 transition-transform"
@@ -429,13 +434,13 @@ export default function PricingClient() {
                   track("cta_click_pricing_checkout_department", {
                     currency,
                     language,
-                    hasCheckoutUrl: hasDepartmentCheckoutUrl,
+                    destination: departmentCheckoutHref,
                   });
                 }}
                 className="w-full bg-transparent border-2 border-[#FB923C] text-[#FB923C] hover:bg-[#FB923C]/10 py-5 text-base font-semibold rounded-lg mb-6"
               >
                 <a href={departmentCheckoutHref}>
-                  {t("pricing.department.cta")}
+                  {t("pricing.checkout.buyNow")}
                 </a>
               </Button>
 
@@ -551,20 +556,23 @@ export default function PricingClient() {
                 <Button
                   asChild
                   onClick={() => {
-                    trackPricingCTA("checkout_bundle");
-                    track("cta_click_pricing_checkout_bundle", {
+                    trackPricingCTA("bundle_early_access");
+                    track("cta_click_pricing_bundle_early_access", {
                       billingCycle: billingPeriod,
                       currency,
                       language,
-                      hasCheckoutUrl: hasBundleCheckoutUrl,
+                      destination: bundleInterestHref,
                     });
                   }}
                   className="bg-white text-[#8B5CF6] hover:bg-white/90 py-6 px-8 text-lg font-semibold rounded-lg shadow-lg"
                 >
-                  <a href={bundleCheckoutHref}>
-                    {t("pricing.checkout.buyNow")}
-                  </a>
+                  <Link href={bundleInterestHref}>
+                    {t("pricing.bundle.cta")}
+                  </Link>
                 </Button>
+                <p className="mt-3 text-sm text-white/80">
+                  {language === "de" ? "Demnaechst verfuegbar" : "Coming soon"}
+                </p>
               </div>
             </motion.div>
           </div>
@@ -739,20 +747,24 @@ export default function PricingClient() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
-                  onClick={() => {
-                    trackPricingCTA("cta_primary");
-                    track("cta_click_pricing_cta_primary", { language });
-                    setSignupOpen(true);
-                  }}
+                  asChild
                   className="bg-white text-[#8B5CF6] hover:bg-white/90 py-6 px-8 text-lg font-semibold rounded-lg shadow-lg"
                 >
-                  {t("pricing.cta.primary")}
+                  <Link
+                    href={getStartedHref}
+                    onClick={() => {
+                      trackPricingCTA("cta_primary");
+                      track("cta_click_pricing_cta_primary", { language });
+                    }}
+                  >
+                    {t("pricing.cta.primary")}
+                  </Link>
                 </Button>
                 <Button
                   asChild
                   className="bg-transparent border-2 border-white text-white hover:bg-white/10 py-6 px-8 text-lg font-semibold rounded-lg"
                 >
-                  <Link href={contactPricingHref}>
+                  <Link href={contactEnterpriseHref}>
                     {t("pricing.cta.secondary")}
                   </Link>
                 </Button>
@@ -761,8 +773,6 @@ export default function PricingClient() {
           </div>
         </section>
       </div>
-
-      <SignupModal open={signupOpen} onOpenChange={setSignupOpen} />
     </>
   );
 }

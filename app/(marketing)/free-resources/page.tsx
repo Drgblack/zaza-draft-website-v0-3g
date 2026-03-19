@@ -115,7 +115,7 @@ export default function FreeResourcesPage() {
                 Return to the hub
               </Link>
               <Link
-                href="/early-access"
+                href="/get-started"
                 className="inline-flex items-center rounded-full bg-teal-200 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-teal-100"
               >
                 Try Zaza Draft

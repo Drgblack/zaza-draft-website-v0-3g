@@ -96,7 +96,7 @@ function buildSchema(
   const title = data.title ?? siteConfig.name;
   const description =
     data.description ??
-    "Zaza Draft is a UK-based, teacher-built, GDPR compliant AI co-writer for parent communication, report comments, and school writing. Teachers stay in control of every draft, and the workflow is designed to avoid invented student facts.";
+    "Zaza Draft is teacher-built, designed for high-stakes school communication. Teachers stay in control of every draft, and the workflow is designed to support calm, professional writing without invented student facts.";
   const image = absoluteUrl(data.image ?? siteConfig.defaultOgImage);
 
   switch (type) {
@@ -123,10 +123,7 @@ function buildSchema(
             "Dr Greg Blackburn, PhD, founded Zaza Technologies and built Zaza Draft as a calm, teacher-first writing co-writer for teachers and school staff.",
         },
         email: siteConfig.supportEmail,
-        areaServed: {
-          "@type": "Country",
-          name: "United Kingdom",
-        },
+        areaServed: "Worldwide",
         audience: {
           "@type": "EducationalAudience",
           educationalRole: "teacher",
@@ -156,10 +153,7 @@ function buildSchema(
           "@type": "EducationalAudience",
           educationalRole: "teacher",
         },
-        areaServed: {
-          "@type": "Country",
-          name: "United Kingdom",
-        },
+        areaServed: "Worldwide",
         creator: {
           "@id": `${siteConfig.url}/#organization`,
         },

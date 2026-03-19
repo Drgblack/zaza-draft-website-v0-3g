@@ -14,8 +14,7 @@ import { DraftDemo } from "@/components/draft-demo";
 export default function DraftClient() {
   const { t, language } = useLanguage();
   const [demoOpen, setDemoOpen] = useState(false);
-  const earlyAccessHref =
-    language === "de" ? "/de/early-access" : "/early-access";
+  const getStartedHref = language === "de" ? "/de/get-started" : "/get-started";
   const aboutFounderHref =
     language === "de" ? "/de/about/founder-story" : "/about/founder-story";
   const heroSubheadline =
@@ -66,26 +65,26 @@ export default function DraftClient() {
     language === "de" ? "Wie geht es weiter" : "What happens next";
   const commitmentLine =
     language === "de"
-      ? "Der kostenlose Tarif enthaelt 10 Nachrichten pro Monat, sobald der Zugang oeffnet. Keine Karte erforderlich."
-      : "The free plan includes 10 messages each month when access opens. No card required.";
+      ? "Der kostenlose Tarif enthaelt 10 Nachrichten pro Monat. Keine Karte erforderlich."
+      : "The free plan includes 10 messages each month. No card required.";
   const inviteLine =
     language === "de"
-      ? "Wir senden Ihnen eine E-Mail, sobald der Zugang fuer Lehrkraefte oeffnet."
-      : "We'll email you as soon as teacher access opens.";
+      ? "Lege deinen kostenlosen Zugang in weniger als einer Minute an."
+      : "Set up your free access in under a minute.";
   const urgencyLine =
     language === "de"
-      ? "Trag dich in die Warteliste ein und wir sagen dir Bescheid, sobald Lehrkraft-Zugaenge offen sind."
-      : "Join the waitlist and we'll let you know as soon as teacher access opens.";
+      ? "Starte jetzt und nutze Draft fuer ruhigere, professionellere Schulkommunikation."
+      : "Start now and use Draft for calmer, more professional school communication.";
   const nextSteps =
     language === "de"
       ? [
-          "Zur Warteliste (30 Sekunden)",
-          "Wir schreiben dir, sobald der Zugang fuer Lehrkraefte offen ist",
+          "Kostenlos starten (30 Sekunden)",
+          "Zugang mit Name und E-Mail anlegen",
           "Ersten Entwurf kostenlos testen - keine Karte erforderlich",
         ]
       : [
-          "Join the waitlist (30 seconds)",
-          "We email you when teacher access opens",
+          "Get started free (30 seconds)",
+          "Create access with your name and email",
           "Try your first draft free - no card required",
         ];
   const betaFeedbackHeading =
@@ -94,10 +93,10 @@ export default function DraftClient() {
       : "Teacher feedback is coming";
   const betaFeedbackBody =
     language === "de"
-      ? "Wir sammeln gerade die ersten Rueckmeldungen. Echte Zitate erscheinen hier, sobald wir sie gesammelt haben. Trag dich in die Warteliste ein, wenn du zum Launch benachrichtigt werden moechtest."
-      : "We are collecting our first round of teacher feedback now. Real quotes will appear here as soon as they are collected. Join the waitlist if you want to be notified at launch.";
+      ? "Wir sammeln gerade die ersten Rueckmeldungen. Echte Zitate erscheinen hier, sobald wir sie gesammelt und freigegeben haben."
+      : "We are collecting our first round of teacher feedback now. Real quotes will appear here as soon as they are collected and approved.";
   const betaFeedbackCta =
-    language === "de" ? "Zur Warteliste" : "Join the waitlist";
+    language === "de" ? "Sicher schreiben starten" : "Start writing safely";
   const restoreHeading =
     language === "de"
       ? "So stellt Draft Klarheit wieder her"
@@ -116,8 +115,8 @@ export default function DraftClient() {
         ];
   const founderTopLine =
     language === "de"
-      ? "Entwickelt von Dr Greg Blackburn (PhD, Professional Education) in Deutschland."
-      : "Built by Dr Greg Blackburn (PhD, Professional Education) in Germany.";
+      ? "Entwickelt von Dr Greg Blackburn (PhD, Professional Education)."
+      : "Built by Dr Greg Blackburn (PhD, Professional Education).";
   const founderTopBody =
     language === "de"
       ? "Draft wurde entwickelt, um Sunday-night E-Mail-Stress zu reduzieren und Lehrkräften zu helfen, Nachrichten zu schreiben, die auch ausserhalb des Kontexts standhalten."
@@ -222,7 +221,7 @@ export default function DraftClient() {
                         })
                       }
                     >
-                      <Link href={earlyAccessHref}>
+                      <Link href={getStartedHref}>
                         {t("products.draft.hero.cta.primary")}
                       </Link>
                     </Button>
@@ -511,7 +510,7 @@ export default function DraftClient() {
                 asChild
                 className="gradient-primary text-white rounded-xl"
               >
-                <Link href={earlyAccessHref}>{betaFeedbackCta}</Link>
+                <Link href={getStartedHref}>{betaFeedbackCta}</Link>
               </Button>
               <p className="text-xs text-[#9CA3AF] mt-3">{commitmentLine}</p>
               <p className="text-xs text-[#9CA3AF] mt-1">{inviteLine}</p>
@@ -535,7 +534,7 @@ export default function DraftClient() {
                 size="lg"
                 className="bg-white text-[#7C3AED] hover:bg-gray-100 font-medium rounded-xl"
               >
-                <Link href={earlyAccessHref}>
+                <Link href={getStartedHref}>
                   {t("products.draft.cta.primary")}
                 </Link>
               </Button>

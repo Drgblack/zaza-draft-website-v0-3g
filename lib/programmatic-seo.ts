@@ -1455,7 +1455,7 @@ function baseCta(theme: string) {
     title: "Draft your next message calmly - start free trial",
     body: `If ${theme} is what keeps swallowing the evening, try Zaza Draft as a focused co-writer for parent emails, report comments, and school writing where tone matters. You keep full control of every final line.`,
     primaryLabel: "Start free trial",
-    primaryHref: "/early-access",
+    primaryHref: "/get-started",
     secondaryLabel: "See how Zaza Draft works",
     secondaryHref: "/products/draft",
   };
@@ -1733,15 +1733,13 @@ function buildHubPage(hub: HubDefinition): ProgrammaticPageData {
       hub.keyword,
       "the wording itself has become the workload",
     ),
-    examples: hub.cards
-      .slice(0, 5)
-      .map((card) => ({
-        title: card.label,
-        intro:
-          "Use this path when the search problem feels closest to this situation.",
-        example: `${card.label}: ${card.description}`,
-        note: `Open ${card.href} when you want a more specific page with editable examples and a calmer workflow.`,
-      })),
+    examples: hub.cards.slice(0, 5).map((card) => ({
+      title: card.label,
+      intro:
+        "Use this path when the search problem feels closest to this situation.",
+      example: `${card.label}: ${card.description}`,
+      note: `Open ${card.href} when you want a more specific page with editable examples and a calmer workflow.`,
+    })),
     faq: buildFaqBlock(
       hub.keyword,
       "the wording itself has become the workload",

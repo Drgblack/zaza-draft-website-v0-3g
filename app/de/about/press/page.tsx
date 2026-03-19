@@ -106,8 +106,6 @@ export default function PressKitPage() {
                         Gumbertstraße 150
                         <br />
                         40229 Düsseldorf
-                        <br />
-                        Deutschland
                       </dd>
                     </div>
                     <div className="flex flex-col gap-1">
@@ -125,8 +123,8 @@ export default function PressKitPage() {
                     <div className="flex flex-col gap-1">
                       <dt className="text-[#9CA3AF]">Traktion</dt>
                       <dd>
-                        Eine wachsende Warteliste von Lehrkraeften, die Draft
-                        verfolgen, waehrend der Zugang schrittweise oeffnet.
+                        Eine wachsende Zahl von Lehrkraeften, die sich fuer
+                        Draft anmelden.
                       </dd>
                     </div>
                   </dl>
@@ -271,9 +269,9 @@ export default function PressKitPage() {
                   Zaza Technologies baut sichere, empathische KI-Tools für
                   Pädagog:innen. Unsere Haupt-App Zaza Draft hilft Lehrkräften,
                   jede Woche Stunden bei Elternkommunikation zu sparen - mit
-                  halluzinationsbewusster KI. Mit Sitz in Deutschland ist Zaza
-                  lehrerzentriert, DSGVO-orientiert und wird weltweit von
-                  Schulen genutzt.
+                  halluzinationsbewusster KI. Zaza ist lehrerzentriert,
+                  DSGVO-orientiert und für sensible Schulkommunikation
+                  entwickelt.
                 </p>
                 <p className="text-[#9CA3AF] text-sm">
                   Für Presseanfragen oder Interviews kontaktieren Sie{" "}
@@ -352,8 +350,8 @@ export default function PressKitPage() {
               <ExpandableBio
                 shortLabel="Kurz-Bio"
                 longLabel="Ausführliche Bio"
-                shortBio="Greg Blackburn ist Gründer von Zaza Technologies. Mit einem PhD in Professional Education und über 20 Jahren in Learning & Development arbeitet Greg an der Schnittstelle von Bildung, KI und Technologie. Er gründete Zaza, um Lehrkräften Zeit zurückzugeben, Stress zu reduzieren und den Fokus auf das Wesentliche zu legen: unterrichten. Der Gr�nder lebt im Saarland, Deutschland."
-                longBio="Dr. Harvey Gregory Scott Blackburn (Greg) ist Gründer von Zaza Technologies, einem KI-gestützten EdTech-Unternehmen mit Sitz in Deutschland. Greg begann seine Laufbahn im Learning & Development nach einem Diplom in Germanistik und einem MBA an der University of Queensland und promovierte anschlie├ƒend in Professional Education an der City, University of London. Seine Forschung konzentrierte sich auf kritisches Denken und Probleml├Âsen im studierendenzentrierten E-Learning. ├£ber zwei Jahrzehnte leitete er gro├ƒe Lerninitiativen in Hochschule und Wirtschaft, zuletzt als Group Director of Learning bei Communardo. Zaza Technologies spiegelt Gregs Vision wider, sichere, lehrerzentrierte KI-Tools zu bauen, die fundierte Pädagogik mit moderner KI verbinden. Greg lebt in Deutschland und m├Âchte Lehrkräfte weltweit stärken. Der Gr�nder lebt im Saarland, Deutschland."
+                shortBio="Greg Blackburn ist Gründer von Zaza Technologies. Mit einem PhD in Professional Education und über 20 Jahren in Learning & Development arbeitet Greg an der Schnittstelle von Bildung, KI und Technologie. Er gründete Zaza, um Lehrkräften Zeit zurückzugeben, Stress zu reduzieren und den Fokus auf das Wesentliche zu legen: unterrichten."
+                longBio="Dr. Harvey Gregory Scott Blackburn (Greg) ist Gründer von Zaza Technologies, einem KI-gestützten EdTech-Unternehmen. Greg begann seine Laufbahn im Learning & Development nach einem Sprachstudium und einem MBA und promovierte später in Professional Education. Seine Forschung konzentrierte sich auf kritisches Denken und Problemlösen im studierendenzentrierten E-Learning. Über zwei Jahrzehnte leitete er große Lerninitiativen in Hochschule und Wirtschaft, zuletzt als Group Director of Learning bei Communardo. Zaza Technologies spiegelt Gregs Vision wider, sichere, lehrerzentrierte KI-Tools zu bauen, die fundierte Pädagogik mit moderner KI verbinden. Greg möchte Lehrkräfte weltweit stärken."
               />
             </section>
 

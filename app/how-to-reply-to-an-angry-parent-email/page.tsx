@@ -156,7 +156,7 @@ export default function HowToReplyToAnAngryParentEmailPage() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
-                  href="/early-access"
+                  href="/get-started"
                   className="inline-flex items-center rounded-full bg-teal-200 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-teal-100"
                 >
                   Try Zaza Draft
@@ -356,10 +356,10 @@ export default function HowToReplyToAnAngryParentEmailPage() {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
-                href="/early-access"
+                href="/get-started"
                 className="inline-flex items-center rounded-full bg-teal-200 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-teal-100"
               >
-                Join the waitlist
+                Get started
               </Link>
               <Link
                 href="/contact"

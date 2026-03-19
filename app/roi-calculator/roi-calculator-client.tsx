@@ -376,7 +376,7 @@ export function ROICalculatorClient() {
               className="bg-teal-200 text-slate-950 hover:bg-teal-100"
             >
               <Link
-                href="/early-access"
+                href="/get-started"
                 onClick={() =>
                   handleTrialClick("roi-calculator-cta", "start-free-trial")
                 }

@@ -144,8 +144,7 @@ export function HomePageClient() {
   const [showHallucinationTooltip, setShowHallucinationTooltip] =
     useState(false);
   const prefersReducedMotion = useReducedMotion();
-  const earlyAccessHref =
-    language === "de" ? "/de/early-access" : "/early-access";
+  const getStartedHref = language === "de" ? "/de/get-started" : "/get-started";
   const founderStoryHref =
     language === "de" ? "/de/about/founder" : "/about/founder";
   const heroEyebrow = language === "de" ? "FUER LEHRKRAEFTE" : "FOR TEACHERS";
@@ -163,8 +162,8 @@ export function HomePageClient() {
       : "without worrying they will be taken the wrong way.";
   const heroSubheading =
     language === "de"
-      ? "Draft hilft Lehrkraeften, klare, professionelle Eltern-E-Mails und Zeugnisbemerkungen zu schreiben - mit integrierter Anleitung, um Tonrisiken zu senken, Missverstaendnisse zu vermeiden und Eskalationen vor dem Senden zu reduzieren."
-      : "Draft helps teachers write clear, professional parent emails and report comments with built-in guidance to reduce tone risk, avoid misinterpretation, and prevent unnecessary escalation before sending.";
+      ? "Draft hilft Lehrkraeften, Ton und Formulierungen vor dem Senden zu verfeinern, damit Eltern-E-Mails und Zeugnisbemerkungen klar, ruhig und professionell bleiben."
+      : "Draft helps teachers refine tone before sending, so parent emails and report comments stay clear, calm, and professional.";
   const heroEntityLine =
     language === "de"
       ? "Zaza Draft ist kein generischer KI-Schreiber. Es ist eine lehrkraft-zentrierte Sicherheitsebene fuer sensible Schulkommunikation. Du pruefst, bearbeitest und gibst jede Formulierung selbst frei."
@@ -295,7 +294,7 @@ export function HomePageClient() {
       ? "Sobald freigegebene Rueckmeldungen vorliegen, veroeffentlichen wir hier, wie Draft Lehrkraeften bei Elternmails, Zeugnisbemerkungen und sensiblen Nachrichten hilft."
       : "As approved feedback comes in, we'll publish how Draft is helping teachers with parent emails, report comments, and other high-stakes messages.";
   const betaFeedbackCta =
-    language === "de" ? "Zur Warteliste" : "Join the waitlist";
+    language === "de" ? "Sicher schreiben starten" : "Start writing safely";
   const trustPanelHeading =
     language === "de"
       ? "Lehrkraft-zentrierte Unterstuetzung fuer sensible Schulkommunikation"
@@ -453,7 +452,7 @@ export function HomePageClient() {
                   className="w-full sm:w-auto inline-flex items-center justify-center bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-transform transition-shadow duration-200 hover:scale-[1.03] hover:shadow-xl hover:shadow-purple-500/30 active:scale-[0.98]"
                 >
                   <Link
-                    href={earlyAccessHref}
+                    href={getStartedHref}
                     onClick={() =>
                       track("cta_click_home_get_started", { language })
                     }
@@ -1364,7 +1363,7 @@ export function HomePageClient() {
             </h3>
             <p className="text-[#CBD5E1] mb-6">{betaFeedbackBody}</p>
             <Button asChild className="gradient-primary text-white rounded-xl">
-              <Link href={earlyAccessHref}>{betaFeedbackCta}</Link>
+              <Link href={getStartedHref}>{betaFeedbackCta}</Link>
             </Button>
           </motion.div>
         </div>

@@ -10,6 +10,8 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  --site-header-height: 72px;
+  --site-scroll-offset: calc(var(--site-header-height) + 16px);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -103,6 +105,20 @@ body {
   font-feature-settings:
     "rlig" 1,
     "calt" 1;
+}
+
+html {
+  scroll-padding-top: var(--site-scroll-offset);
+}
+
+:where(section, article, main, aside, nav, div, h1, h2, h3, h4, h5, h6)[id] {
+  scroll-margin-top: var(--site-scroll-offset);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --site-scroll-offset: calc(var(--site-header-height) + 12px);
+  }
 }
 
 .gradient-primary {
@@ -1001,4 +1017,3 @@ img[src*="vusercontent.net"] {
 .blog-article h1:first-of-type {
   display: none;
 }
-
