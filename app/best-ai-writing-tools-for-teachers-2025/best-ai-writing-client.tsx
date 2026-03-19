@@ -464,7 +464,7 @@ export default function BestAIWritingClient() {
             {/* Quick answer box temporarily disabled until types are aligned */}
 
             {/* Why AI Writing Tools Matter */}
-            <section id="why-ai-writing" className="scroll-mt-20">
+            <section id="why-ai-writing">
               <h2 className="mb-6 text-3xl font-bold text-white flex items-center gap-3">
                 <Sparkles className="w-8 h-8 text-[#A78BFA]" />
                 {text.why_title}
@@ -477,7 +477,7 @@ export default function BestAIWritingClient() {
             </section>
 
             {/* Top 10 Tools */}
-            <section id="top-tools" className="scroll-mt-20">
+            <section id="top-tools">
               <h2 className="mb-8 text-3xl font-bold text-white">
                 {text.top_tools_title}
               </h2>
@@ -579,7 +579,7 @@ export default function BestAIWritingClient() {
             </section>
 
             {/* Comparison Table */}
-            <section id="comparison" className="scroll-mt-20">
+            <section id="comparison">
               <h2 className="mb-6 text-3xl font-bold text-white">
                 {text.feature_comparison_title}
               </h2>
@@ -709,7 +709,7 @@ export default function BestAIWritingClient() {
             </section>
 
             {/* Use Cases */}
-            <section id="use-cases" className="scroll-mt-20">
+            <section id="use-cases">
               <h2 className="mb-6 text-3xl font-bold text-white">
                 {text.use_cases_title}
               </h2>
@@ -755,7 +755,7 @@ export default function BestAIWritingClient() {
             </section>
 
             {/* Getting Started */}
-            <section id="getting-started" className="scroll-mt-20">
+            <section id="getting-started">
               <h2 className="mb-8 text-3xl font-bold text-white flex items-center gap-3">
                 <Zap className="w-8 h-8 text-[#A78BFA]" />
                 {text.get_started_title}
@@ -829,7 +829,7 @@ export default function BestAIWritingClient() {
             </section>
 
             {/* Testimonials */}
-            <section id="testimonials" className="scroll-mt-20">
+            <section id="testimonials">
               <h2 className="mb-6 text-3xl font-bold text-white">
                 {text.testimonials_title}
               </h2>

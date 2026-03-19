@@ -459,7 +459,7 @@ export function AiForStudentReportsClient() {
             {/* Example Notes Header */}
             <div
               id="example-notes"
-              className="scroll-mt-20 rounded-xl bg-[#1E293B] p-8 border border-white/10 shadow-lg"
+              className="rounded-xl bg-[#1E293B] p-8 border border-white/10 shadow-lg"
             >
               <h3 className="mb-4 text-xl font-semibold text-white">
                 {text.example_notes_title}
@@ -478,7 +478,7 @@ export function AiForStudentReportsClient() {
             </div>
 
             {/* Why Stress */}
-            <section id="why-stress" className="scroll-mt-20">
+            <section id="why-stress">
               <h2 className="mb-8 text-3xl font-bold text-white flex items-center gap-3">
                 <AlertTriangle className="w-8 h-8 text-red-500" />
                 {text.why_stress_title}
@@ -499,7 +499,7 @@ export function AiForStudentReportsClient() {
             </section>
 
             {/* How AI Helps */}
-            <section id="how-ai-helps" className="scroll-mt-20">
+            <section id="how-ai-helps">
               <h2 className="mb-8 text-3xl font-bold text-white flex items-center gap-3">
                 <Shield className="w-8 h-8 text-green-400" />
                 {text.ai_helps_title}
@@ -517,7 +517,7 @@ export function AiForStudentReportsClient() {
             </section>
 
             {/* Privacy & FERPA Compliance */}
-            <section id="privacy" className="scroll-mt-20">
+            <section id="privacy">
               <h2 className="mb-8 text-3xl font-bold text-white flex items-center gap-3">
                 <Lock className="w-8 h-8 text-[#A78BFA]" />
                 {text.privacy_title}
@@ -536,7 +536,7 @@ export function AiForStudentReportsClient() {
             </section>
 
             {/* Step-by-Step Process */}
-            <section id="steps" className="scroll-mt-20">
+            <section id="steps">
               <h2 className="mb-8 text-3xl font-bold text-white flex items-center gap-3">
                 <FileText className="w-8 h-8 text-[#A78BFA]" />
                 {text.steps_title}
@@ -564,7 +564,7 @@ export function AiForStudentReportsClient() {
             </section>
 
             {/* Templates by Grade Level */}
-            <section id="templates" className="scroll-mt-20">
+            <section id="templates">
               <h2 className="mb-8 text-3xl font-bold text-white">
                 {text.templates_title}
               </h2>
@@ -595,7 +595,7 @@ export function AiForStudentReportsClient() {
             </section>
 
             {/* Before & After Examples */}
-            <section id="before-after" className="scroll-mt-20">
+            <section id="before-after">
               <h2 className="mb-8 text-3xl font-bold text-white">
                 {text.before_after_title}
               </h2>
@@ -618,7 +618,7 @@ export function AiForStudentReportsClient() {
             </section>
 
             {/* Common Mistakes to Avoid */}
-            <section id="mistakes" className="scroll-mt-20">
+            <section id="mistakes">
               <h2 className="mb-8 text-3xl font-bold text-white">
                 {text.mistakes_title}
               </h2>
@@ -638,7 +638,7 @@ export function AiForStudentReportsClient() {
             </section>
 
             {/* Testimonials */}
-            <section id="testimonials" className="scroll-mt-20">
+            <section id="testimonials">
               <h2 className="mb-6 text-3xl font-bold text-white">
                 {text.testimonials_title}
               </h2>

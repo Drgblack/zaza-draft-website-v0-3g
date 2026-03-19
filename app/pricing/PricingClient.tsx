@@ -415,16 +415,15 @@ export default function PricingClient() {
               </p>
 
               <div className="mb-2">
-                <span className="text-5xl font-bold text-white">
-                  {symbol}
-                  {prices.department.monthly[currency]}
-                </span>
-                <span className="text-[#94A3B8]">
-                  {t("pricing.department.perTeacher")}
+                <span className="text-4xl font-bold text-white leading-tight sm:text-5xl">
+                  {t("pricing.department.priceLine")}
                 </span>
               </div>
-              <p className="text-sm text-[#94A3B8] mb-6">
+              <p className="text-sm text-[#94A3B8] mb-2">
                 {t("pricing.department.billing")}
+              </p>
+              <p className="text-xs text-[#64748B] mb-6">
+                {t("pricing.department.helper")}
               </p>
 
               <Button

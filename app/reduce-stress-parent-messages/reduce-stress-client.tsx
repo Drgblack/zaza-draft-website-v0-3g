@@ -613,7 +613,7 @@ export default function ReduceStressClient() {
             {/* Quick Answer (Simulating QuickAnswerBox structure) */}
             <div
               id="quick-answer"
-              className="scroll-mt-20 rounded-xl border border-[#8B5CF6]/30 bg-[#1E293B] p-6"
+              className="rounded-xl border border-[#8B5CF6]/30 bg-[#1E293B] p-6"
             >
               <h3 className="mb-3 text-xl font-bold text-white flex items-center gap-2">
                 <Star className="h-5 w-5 fill-[#A78BFA] text-[#A78BFA]" />
@@ -625,7 +625,7 @@ export default function ReduceStressClient() {
             </div>
 
             {/* Why Messages Cause Stress */}
-            <section id="why-stress" className="scroll-mt-20">
+            <section id="why-stress">
               <h2 className="mb-8 text-3xl font-bold text-white flex items-center gap-3">
                 <X className="w-8 h-8 text-red-500" />
                 {text.why_title}
@@ -649,7 +649,7 @@ export default function ReduceStressClient() {
             </section>
 
             {/* Hidden Cost */}
-            <section id="cost" className="scroll-mt-20">
+            <section id="cost">
               <h2 className="mb-8 text-3xl font-bold text-white flex items-center gap-3">
                 <TrendingUp className="w-8 h-8 text-red-500" />
                 {text.cost_title}
@@ -683,7 +683,7 @@ export default function ReduceStressClient() {
             </section>
 
             {/* 5 Strategies That Actually Work */}
-            <section id="strategies" className="scroll-mt-20">
+            <section id="strategies">
               <h2 className="mb-8 text-3xl font-bold text-white flex items-center gap-3">
                 <Check className="w-8 h-8 text-green-400" />
                 {text.strategies_title}
@@ -746,7 +746,7 @@ export default function ReduceStressClient() {
             </section>
 
             {/* How AI Reduces the Mental Load (Comparison) */}
-            <section id="how-ai-helps" className="scroll-mt-20">
+            <section id="how-ai-helps">
               <h2 className="mb-6 text-3xl font-bold text-white flex items-center gap-3">
                 <Zap className="w-8 h-8 text-[#A78BFA]" />
                 {text.ai_load_title}
@@ -804,7 +804,7 @@ export default function ReduceStressClient() {
             </section>
 
             {/* Implementation Guide */}
-            <section id="guide" className="scroll-mt-20">
+            <section id="guide">
               <h2 className="mb-8 text-3xl font-bold text-white flex items-center gap-3">
                 <Volume2 className="w-8 h-8 text-[#A78BFA]" />
                 {text.guide_title}
@@ -840,7 +840,7 @@ export default function ReduceStressClient() {
             </section>
 
             {/* Real Teacher Results (Testimonials) */}
-            <section id="results" className="scroll-mt-20">
+            <section id="results">
               <h2 className="mb-6 text-3xl font-bold text-white">
                 {isGerman ? "Echte Lehrer-Ergebnisse" : "Real Teacher Results"}
               </h2>

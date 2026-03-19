@@ -44,7 +44,7 @@ export function FAQSection({
   };
 
   return (
-    <section id={id} className="scroll-mt-20">
+    <section id={id}>
       {title && <h2 className="mb-6 text-3xl font-bold text-white">{title}</h2>}
 
       <div className="space-y-4">
@@ -105,4 +105,3 @@ export function FAQSection({
     </section>
   );
 }
-

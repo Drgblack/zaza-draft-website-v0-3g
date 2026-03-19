@@ -114,7 +114,7 @@ export default function AILiteracyClient() {
       : featuredCourses;
 
   // Resources data - uses translations with useMemo for SSR safety
-  
+
   // Resources data - uses translations with useMemo for SSR safety
   const resources = useMemo(
     () => [
@@ -307,7 +307,7 @@ export default function AILiteracyClient() {
           <div className="grid md:grid-cols-3 gap-8">
             {learningPaths.map((path) => {
               const Icon = path.icon;
-             
+
               return (
                 <div
                   key={path.id}
@@ -375,7 +375,7 @@ export default function AILiteracyClient() {
       </section>
 
       {/* Featured Courses */}
-      <section id="courses" className="py-20 bg-[#0B1220] scroll-mt-20">
+      <section id="courses" className="py-20 bg-[#0B1220]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
             <div>
@@ -517,12 +517,11 @@ export default function AILiteracyClient() {
                 </h3>
                 <div className="space-y-4">
                   {category.items.map((item) => (
-  <Link
-    key={item.id}
-    href={`/ai-literacy/resources/${item.id}`}
-    className="flex items-center justify-between p-4 bg-[#0F172A] rounded-lg hover:bg-[#8B5CF6]/10 transition-colors group"
-  >
-
+                    <Link
+                      key={item.id}
+                      href={`/ai-literacy/resources/${item.id}`}
+                      className="flex items-center justify-between p-4 bg-[#0F172A] rounded-lg hover:bg-[#8B5CF6]/10 transition-colors group"
+                    >
                       <div className="flex items-center gap-3">
                         <Download className="w-5 h-5 text-[#A78BFA]" />
                         <div>
@@ -579,7 +578,7 @@ export default function AILiteracyClient() {
       </section>
 
       {/* Certification Program */}
-      <section id="certification" className="py-20 bg-[#0B1220] scroll-mt-20">
+      <section id="certification" className="py-20 bg-[#0B1220]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 rounded-full px-4 py-2 mb-6">
@@ -768,4 +767,3 @@ export default function AILiteracyClient() {
   );
 }
 // Build trigger comment
-

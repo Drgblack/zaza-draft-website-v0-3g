@@ -371,8 +371,6 @@ export function HomePageClient() {
           "Escalation to families",
           "Emotionally charged messages",
         ];
-  const homeAnchorOffsetClassName = "scroll-mt-20";
-
   const scrollToDemo = () => {
     track("cta_click_home_see_examples", { language });
     document
@@ -1071,7 +1069,7 @@ export function HomePageClient() {
       </section>
 
       {/* Demo Section */}
-      <section id="demo" className={homeAnchorOffsetClassName}>
+      <section id="demo">
         <DraftDemo
           language={language}
           onTryItYourself={() => {
@@ -1084,7 +1082,7 @@ export function HomePageClient() {
       {/* Use Cases Section */}
       <section
         id="use-cases"
-        className={`bg-gradient-to-br from-[#1E293B] to-[#0F172A] py-24 ${homeAnchorOffsetClassName}`}
+        className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] py-24"
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.h2
@@ -1162,10 +1160,7 @@ export function HomePageClient() {
       <CaseStudyCarousel />
 
       {/* Comparison Section */}
-      <section
-        id="comparison"
-        className={`bg-[#0F172A] py-24 ${homeAnchorOffsetClassName}`}
-      >
+      <section id="comparison" className="bg-[#0F172A] py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
@@ -1281,7 +1276,7 @@ export function HomePageClient() {
       {/* Why Choose Zaza Section */}
       <section
         id="why-choose"
-        className={`bg-gradient-to-br from-[#1E293B] to-[#0F172A] py-24 ${homeAnchorOffsetClassName}`}
+        className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] py-24"
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.h2
@@ -1337,10 +1332,7 @@ export function HomePageClient() {
       </section>
 
       {/* Testimonials Section */}
-      <section
-        id="testimonials"
-        className={`bg-[#0F172A] py-24 ${homeAnchorOffsetClassName}`}
-      >
+      <section id="testimonials" className="bg-[#0F172A] py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.h2
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}

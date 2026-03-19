@@ -1,12 +1,12 @@
 ﻿"use client";
 
-import { useLanguage } from "@/lib/i18n/language-context"
+import { useLanguage } from "@/lib/i18n/language-context";
 
 export function PrivacyClient() {
-  const { language } = useLanguage()
-  const isGerman = language === "de"
+  const { language } = useLanguage();
+  const isGerman = language === "de";
 
-  const content = isGerman ? contentDE : contentEN
+  const content = isGerman ? contentDE : contentEN;
 
   return (
     <>
@@ -16,7 +16,9 @@ export function PrivacyClient() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: isGerman ? "Datenschutz | Zaza Draft" : "Privacy Policy | Zaza Draft",
+            name: isGerman
+              ? "Datenschutz | Zaza Draft"
+              : "Privacy Policy | Zaza Draft",
             description: isGerman
               ? "Wie Zaza Draft personenbezogene Daten verarbeitet und schützt. DSGVO-konforme Richtlinie für Lehrkräfte und Schulen."
               : "How Zaza Draft collects, uses, and protects your data. GDPR-ready policy for teachers, schools, and partners.",
@@ -29,9 +31,15 @@ export function PrivacyClient() {
         <section className="border-b border-white/5 bg-gradient-to-b from-[#0A0F1E] to-[#111827] pt-[max(5rem,calc(env(safe-area-inset-top)+3rem))] md:pt-20 lg:pt-24 pb-12 md:pb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">{content.hero.title}</h1>
-              <p className="text-lg text-[#D1D5DB] leading-relaxed mb-4">{content.hero.intro}</p>
-              <p className="text-sm text-[#9CA3AF]">{content.hero.lastUpdated}</p>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                {content.hero.title}
+              </h1>
+              <p className="text-lg text-[#D1D5DB] leading-relaxed mb-4">
+                {content.hero.intro}
+              </p>
+              <p className="text-sm text-[#9CA3AF]">
+                {content.hero.lastUpdated}
+              </p>
             </div>
           </div>
         </section>
@@ -43,7 +51,9 @@ export function PrivacyClient() {
             <aside className="lg:col-span-3">
               <div className="lg:sticky lg:top-24">
                 <nav className="bg-[#111827] border border-white/5 rounded-lg p-6">
-                  <h2 className="text-sm font-semibold text-white mb-4">{content.onThisPage}</h2>
+                  <h2 className="text-sm font-semibold text-white mb-4">
+                    {content.onThisPage}
+                  </h2>
                   <ul className="space-y-2">
                     {content.sections.map((section, i) => (
                       <li key={i}>
@@ -64,8 +74,10 @@ export function PrivacyClient() {
             <main className="lg:col-span-9">
               <div className="prose prose-invert prose-lg max-w-none">
                 {content.sections.map((section, i) => (
-                  <section key={i} id={`section-${i + 1}`} className="mb-12 scroll-mt-24">
-                    <h2 className="text-2xl font-bold text-white mb-4">{section.title}</h2>
+                  <section key={i} id={`section-${i + 1}`} className="mb-12">
+                    <h2 className="text-2xl font-bold text-white mb-4">
+                      {section.title}
+                    </h2>
                     <div className="text-[#D1D5DB] leading-relaxed space-y-4">
                       {section.content.map((paragraph, j) => (
                         <p key={j}>{paragraph}</p>
@@ -77,7 +89,9 @@ export function PrivacyClient() {
 
               {/* Contact CTA */}
               <div className="mt-12 p-6 bg-[#111827] border border-white/5 rounded-lg">
-                <h3 className="text-xl font-semibold text-white mb-2">{content.contactCta.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {content.contactCta.title}
+                </h3>
                 <p className="text-[#D1D5DB] mb-4">{content.contactCta.text}</p>
                 <a
                   href="mailto:help@zazatechnologies.com"
@@ -91,7 +105,7 @@ export function PrivacyClient() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
 // English Content
@@ -194,7 +208,9 @@ const contentEN = {
     },
     {
       title: "Changes to this policy",
-      content: ['We may update this policy. We will post changes here and adjust the "Last updated" date.'],
+      content: [
+        'We may update this policy. We will post changes here and adjust the "Last updated" date.',
+      ],
     },
     {
       title: "Contact us",
@@ -205,7 +221,7 @@ const contentEN = {
     title: "Questions about your data?",
     text: "Contact our team for any privacy-related questions or to exercise your rights.",
   },
-}
+};
 
 // German Content
 const contentDE = {
@@ -320,4 +336,4 @@ const contentDE = {
     title: "Fragen zu Ihren Daten?",
     text: "Kontaktieren Sie unser Team bei datenschutzbezogenen Fragen oder zur Ausübung Ihrer Rechte.",
   },
-}
+};
