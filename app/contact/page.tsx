@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { ContactClient } from "./contact-client";
 
 const pageUrl = "https://zazadraft.com/contact";
@@ -35,5 +36,9 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  return <ContactClient />;
+  return (
+    <Suspense fallback={null}>
+      <ContactClient />
+    </Suspense>
+  );
 }

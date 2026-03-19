@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { ContactClient } from "../../contact/contact-client";
 
 const pageUrl = "https://zazadraft.com/de/contact";
@@ -37,5 +38,9 @@ export const metadata: Metadata = {
 };
 
 export default function DeContactPage() {
-  return <ContactClient />;
+  return (
+    <Suspense fallback={null}>
+      <ContactClient />
+    </Suspense>
+  );
 }
