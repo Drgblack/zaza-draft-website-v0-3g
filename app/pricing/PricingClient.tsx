@@ -1,5 +1,6 @@
 ﻿"use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { Check, ChevronDown, Star, ShieldCheck, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -76,44 +77,19 @@ export default function PricingClient() {
   const bundleCheckoutUrl = process.env.NEXT_PUBLIC_CHECKOUT_URL_DRAFT_BUNDLE;
   const departmentCheckoutUrl =
     process.env.NEXT_PUBLIC_CHECKOUT_URL_DRAFT_DEPARTMENT;
-  const enterpriseCheckoutUrl =
-    process.env.NEXT_PUBLIC_CHECKOUT_URL_DRAFT_ENTERPRISE;
-
-  const buildCheckoutHref = (
-    url: string | undefined,
-    subject: string,
-    fallbackEmail = "help@zazatechnologies.com",
-  ) =>
-    url && url.trim().length > 0
-      ? url
-      : `mailto:${fallbackEmail}?subject=${encodeURIComponent(subject)}`;
-
-  const teacherCheckoutHref = buildCheckoutHref(
-    teacherCheckoutUrl,
-    language === "de"
-      ? "Zaza Draft Abonnement"
-      : "Zaza Draft subscription",
-  );
-  const bundleCheckoutHref = buildCheckoutHref(
-    bundleCheckoutUrl,
-    language === "de" ? "Zaza Draft Bundle" : "Zaza Draft bundle",
-  );
-  const salesMailto = "mailto:hello@zazatechnologies.com?subject=Zaza%20Draft%20-%20Sales%20Enquiry";
-  const departmentCheckoutHref = departmentCheckoutUrl || salesMailto;
-  const enterpriseCheckoutHref = enterpriseCheckoutUrl || salesMailto;
+  const getStartedHref = language === "de" ? "/de/get-started" : "/get-started";
+  const contactHref = language === "de" ? "/de/contact" : "/contact";
+  const contactPricingHref = `${contactHref}?topic=pricing`;
+  const contactEnterpriseHref = `${contactHref}?topic=enterprise`;
+  const hasTeacherCheckoutUrl = Boolean(teacherCheckoutUrl?.trim());
+  const hasDepartmentCheckoutUrl = Boolean(departmentCheckoutUrl?.trim());
+  const hasBundleCheckoutUrl = Boolean(bundleCheckoutUrl?.trim());
+  const teacherCheckoutHref = teacherCheckoutUrl?.trim() || contactPricingHref;
+  const bundleCheckoutHref = bundleCheckoutUrl?.trim() || contactPricingHref;
+  const departmentCheckoutHref =
+    departmentCheckoutUrl?.trim() || contactPricingHref;
   const trackPricingCTA = (id: string) =>
     track("cta_click", { location: "pricing", id });
-
-  const handlePlanClick = (planId: string) => {
-    trackPricingCTA(`plan_${planId}`);
-    track("cta_click_pricing_select_plan", {
-      planId,
-      billingCycle: billingPeriod,
-      currency,
-      language,
-    });
-    setSignupOpen(true);
-  };
 
   return (
     <>
@@ -280,10 +256,23 @@ export default function PricingClient() {
               </div>
 
               <Button
-                onClick={() => handlePlanClick("free")}
+                asChild
                 className="w-full bg-transparent border-2 border-[#8B5CF6] text-[#8B5CF6] hover:bg-[#8B5CF6]/10 py-5 text-base font-semibold rounded-lg mb-6"
               >
-                {t("pricing.free.cta")}
+                <Link
+                  href={getStartedHref}
+                  onClick={() => {
+                    trackPricingCTA("plan_free");
+                    track("cta_click_pricing_select_plan", {
+                      planId: "free",
+                      billingCycle: billingPeriod,
+                      currency,
+                      language,
+                    });
+                  }}
+                >
+                  {t("form.submit")}
+                </Link>
               </Button>
 
               <div className="space-y-3">
@@ -359,26 +348,20 @@ export default function PricingClient() {
                 </p>
               )}
 
-                <Button
-                  asChild
-                  onClick={() => {
-                    trackPricingCTA("checkout_teacher");
-                    track("cta_click_pricing_checkout_teacher", {
-                      billingCycle: billingPeriod,
-                      currency,
-                      language,
-                      hasCheckoutUrl: Boolean(teacherCheckoutUrl),
-                    });
-                  }}
-                  className="w-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white hover:scale-105 py-6 text-lg font-semibold rounded-lg mb-3 shadow-lg shadow-[#8B5CF6]/40 transition-transform"
-                >
-                <a
-                  href={teacherCheckoutHref}
-                  target={teacherCheckoutUrl ? "_blank" : undefined}
-                  rel={teacherCheckoutUrl ? "noreferrer" : undefined}
-                >
-                  {t("pricing.checkout.buyNow")}
-                </a>
+              <Button
+                asChild
+                onClick={() => {
+                  trackPricingCTA("checkout_teacher");
+                  track("cta_click_pricing_checkout_teacher", {
+                    billingCycle: billingPeriod,
+                    currency,
+                    language,
+                    hasCheckoutUrl: hasTeacherCheckoutUrl,
+                  });
+                }}
+                className="w-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white hover:scale-105 py-6 text-lg font-semibold rounded-lg mb-3 shadow-lg shadow-[#8B5CF6]/40 transition-transform"
+              >
+                <a href={teacherCheckoutHref}>{t("pricing.checkout.buyNow")}</a>
               </Button>
               <p className="text-center text-sm text-[#94A3B8] mb-4">
                 {t("pricing.teacher.trial")}
@@ -446,16 +429,12 @@ export default function PricingClient() {
                   track("cta_click_pricing_checkout_department", {
                     currency,
                     language,
-                    hasCheckoutUrl: Boolean(departmentCheckoutUrl),
+                    hasCheckoutUrl: hasDepartmentCheckoutUrl,
                   });
                 }}
                 className="w-full bg-transparent border-2 border-[#FB923C] text-[#FB923C] hover:bg-[#FB923C]/10 py-5 text-base font-semibold rounded-lg mb-6"
               >
-                <a
-                  href={departmentCheckoutHref}
-                  target={departmentCheckoutUrl ? "_blank" : undefined}
-                  rel={departmentCheckoutUrl ? "noreferrer" : undefined}
-                >
+                <a href={departmentCheckoutHref}>
                   {t("pricing.department.cta")}
                 </a>
               </Button>
@@ -501,22 +480,18 @@ export default function PricingClient() {
               <Button
                 asChild
                 onClick={() => {
-                  trackPricingCTA("checkout_enterprise");
+                  trackPricingCTA("contact_enterprise");
                   track("cta_click_pricing_checkout_enterprise", {
                     currency,
                     language,
-                    hasCheckoutUrl: Boolean(enterpriseCheckoutUrl),
+                    destination: contactEnterpriseHref,
                   });
                 }}
                 className="w-full bg-transparent border-2 border-[#FB923C] text-[#FB923C] hover:bg-[#FB923C]/10 py-5 text-base font-semibold rounded-lg mb-6"
               >
-                <a
-                  href={enterpriseCheckoutHref}
-                  target={enterpriseCheckoutUrl ? "_blank" : undefined}
-                  rel={enterpriseCheckoutUrl ? "noreferrer" : undefined}
-                >
+                <Link href={contactEnterpriseHref}>
                   {t("pricing.enterprise.cta")}
-                </a>
+                </Link>
               </Button>
 
               <div className="space-y-3">
@@ -581,16 +556,12 @@ export default function PricingClient() {
                       billingCycle: billingPeriod,
                       currency,
                       language,
-                      hasCheckoutUrl: Boolean(bundleCheckoutUrl),
+                      hasCheckoutUrl: hasBundleCheckoutUrl,
                     });
                   }}
                   className="bg-white text-[#8B5CF6] hover:bg-white/90 py-6 px-8 text-lg font-semibold rounded-lg shadow-lg"
                 >
-                  <a
-                    href={bundleCheckoutHref}
-                    target={bundleCheckoutUrl ? "_blank" : undefined}
-                    rel={bundleCheckoutUrl ? "noreferrer" : undefined}
-                  >
+                  <a href={bundleCheckoutHref}>
                     {t("pricing.checkout.buyNow")}
                   </a>
                 </Button>
@@ -613,7 +584,9 @@ export default function PricingClient() {
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="bg-white/5 text-sm text-[#E2E8F0] uppercase tracking-wide">
-                    <th className="text-left px-6 py-4">{t("pricing.compare.column.generic")}</th>
+                    <th className="text-left px-6 py-4">
+                      {t("pricing.compare.column.generic")}
+                    </th>
                     <th className="text-left px-6 py-4 bg-[#8B5CF6]/10 text-[#C4B5FD]">
                       {t("pricing.compare.column.zaza")}
                     </th>
@@ -629,13 +602,17 @@ export default function PricingClient() {
                         <div className="text-xs font-semibold text-[#94A3B8] uppercase tracking-wide">
                           {row.feature}
                         </div>
-                        <div className="mt-2 text-sm text-[#E2E8F0]">{row.generic}</div>
+                        <div className="mt-2 text-sm text-[#E2E8F0]">
+                          {row.generic}
+                        </div>
                       </td>
                       <td className="px-6 py-5 align-top bg-[#0F172A]">
                         <div className="text-xs font-semibold text-[#C4B5FD] uppercase tracking-wide">
                           {row.feature}
                         </div>
-                        <div className="mt-2 text-sm text-white">{row.zaza}</div>
+                        <div className="mt-2 text-sm text-white">
+                          {row.zaza}
+                        </div>
                       </td>
                     </tr>
                   ))}
@@ -645,8 +622,13 @@ export default function PricingClient() {
 
             <div className="grid gap-4 md:hidden">
               {comparisonRows.map((row) => (
-                <div key={row.feature} className="rounded-xl border border-white/10 bg-[#0B1220] p-5 space-y-3">
-                  <div className="text-sm font-semibold text-[#E2E8F0]">{row.feature}</div>
+                <div
+                  key={row.feature}
+                  className="rounded-xl border border-white/10 bg-[#0B1220] p-5 space-y-3"
+                >
+                  <div className="text-sm font-semibold text-[#E2E8F0]">
+                    {row.feature}
+                  </div>
                   <div className="rounded-lg border border-white/5 bg-[#111827] p-3 text-sm text-[#CBD5E1]">
                     <span className="block text-xs font-semibold text-[#9CA3AF] mb-1">
                       {t("pricing.compare.column.generic")}
@@ -663,7 +645,9 @@ export default function PricingClient() {
               ))}
             </div>
 
-            <p className="mt-6 text-center text-sm text-[#94A3B8]">{t("pricing.compare.footer")}</p>
+            <p className="mt-6 text-center text-sm text-[#94A3B8]">
+              {t("pricing.compare.footer")}
+            </p>
           </div>
         </section>
 
@@ -756,9 +740,9 @@ export default function PricingClient() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   onClick={() => {
-                    trackPricingCTA("cta_primary")
-                    track("cta_click_pricing_cta_primary", { language })
-                    setSignupOpen(true)
+                    trackPricingCTA("cta_primary");
+                    track("cta_click_pricing_cta_primary", { language });
+                    setSignupOpen(true);
                   }}
                   className="bg-white text-[#8B5CF6] hover:bg-white/90 py-6 px-8 text-lg font-semibold rounded-lg shadow-lg"
                 >
@@ -768,9 +752,9 @@ export default function PricingClient() {
                   asChild
                   className="bg-transparent border-2 border-white text-white hover:bg-white/10 py-6 px-8 text-lg font-semibold rounded-lg"
                 >
-                  <a href="mailto:sales@zazadraft.com">
+                  <Link href={contactPricingHref}>
                     {t("pricing.cta.secondary")}
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </div>
