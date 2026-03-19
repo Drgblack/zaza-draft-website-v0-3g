@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useLanguage } from "../../src/contexts/LanguageContext";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import {
   ChevronRight,
   Mail,
@@ -18,28 +19,45 @@ const content = {
   en: {
     nav: { home: "Home" },
     contact: {
-      title: "Contact Us",
+      title: "Talk to our team",
       subtitle:
-        "We are here to help. Send us a message and we will respond as soon as possible.",
+        "Tell us about your school or district and we'll help you find the right rollout option.",
       form: {
-        name: "Name",
-        email: "Email",
+        name: "Full name",
+        email: "Work email",
+        organization: "School or district name",
+        role: "Role / job title",
+        teacherCount: "Approximate number of teachers",
         message: "Message",
-        placeholder: "How can we help you?",
-        submit: "Send Message",
+        organizationPlaceholder: "Your school, trust, or district",
+        rolePlaceholder: "Headteacher, department lead, procurement, etc.",
+        teacherCountPlaceholder: "Select a range",
+        placeholder:
+          "What are you exploring, and what would a successful rollout need to support?",
+        submit: "Send enquiry",
         sending: "Sending...",
-        success: "Message sent successfully!",
+        success: "Enquiry sent successfully!",
         error: "Something went wrong. Please try again.",
-        dataNote: "We respect your privacy. Your data is never shared.",
+        dataNote:
+          "We respect your privacy. Your details are used only to follow up on this enquiry.",
+        options: {
+          under10: "1-10 teachers",
+          tenTo25: "11-25 teachers",
+          twentyFiveTo50: "26-50 teachers",
+          fiftyTo100: "51-100 teachers",
+          hundredTo250: "101-250 teachers",
+          over250: "250+ teachers",
+        },
       },
       direct: {
-        title: "Direct Contact",
-        email: "Email Support",
-        response: "Typical response time: 24 hours",
+        title: "Prefer to email us directly?",
+        email: "Sales & rollout enquiries",
+        response: "Typical response time: within 1 business day",
       },
       help: {
-        title: "Need Help?",
-        description: "Check our help resources for quick answers.",
+        title: "Need more detail first?",
+        description:
+          "Explore pricing and product support while you prepare your enquiry.",
         faq: "Read FAQ",
         support: "Visit Support Center",
       },
@@ -48,30 +66,45 @@ const content = {
   de: {
     nav: { home: "Startseite" },
     contact: {
-      title: "Kontakt",
+      title: "Mit unserem Team sprechen",
       subtitle:
-        "Wir sind hier, um zu helfen. Senden Sie uns eine Nachricht und wir werden so schnell wie möglich antworten.",
+        "Erzählen Sie uns von Ihrer Schule oder Ihrem Bezirk, und wir helfen Ihnen, die passende Rollout-Option zu finden.",
       form: {
-        name: "Name",
-        email: "E-Mail",
+        name: "Vollständiger Name",
+        email: "Geschäftliche E-Mail",
+        organization: "Name der Schule oder des Bezirks",
+        role: "Rolle / Jobtitel",
+        teacherCount: "Ungefähre Anzahl an Lehrkräften",
         message: "Nachricht",
-        placeholder: "Wie können wir Ihnen helfen?",
-        submit: "Nachricht senden",
+        organizationPlaceholder: "Ihre Schule, Ihr Träger oder Ihr Bezirk",
+        rolePlaceholder: "Schulleitung, Fachbereichsleitung, Einkauf usw.",
+        teacherCountPlaceholder: "Bereich auswählen",
+        placeholder:
+          "Was möchten Sie einführen, und was sollte ein erfolgreicher Rollout unterstützen?",
+        submit: "Anfrage senden",
         sending: "Wird gesendet...",
-        success: "Nachricht erfolgreich gesendet!",
+        success: "Anfrage erfolgreich gesendet!",
         error: "Etwas ist schief gelaufen. Bitte versuchen Sie es erneut.",
         dataNote:
-          "Wir respektieren Ihre Privatsphäre. Ihre Daten werden niemals weitergegeben.",
+          "Wir respektieren Ihre Privatsphäre. Ihre Angaben werden nur für die Bearbeitung dieser Anfrage genutzt.",
+        options: {
+          under10: "1-10 Lehrkräfte",
+          tenTo25: "11-25 Lehrkräfte",
+          twentyFiveTo50: "26-50 Lehrkräfte",
+          fiftyTo100: "51-100 Lehrkräfte",
+          hundredTo250: "101-250 Lehrkräfte",
+          over250: "250+ Lehrkräfte",
+        },
       },
       direct: {
-        title: "Direkter Kontakt",
-        email: "E-Mail-Support",
-        response: "Typische Antwortzeit: 24 Stunden",
+        title: "Sie möchten lieber direkt mailen?",
+        email: "Anfragen zu Vertrieb & Rollout",
+        response: "Typische Antwortzeit: innerhalb eines Werktags",
       },
       help: {
-        title: "Brauchen Sie Hilfe?",
+        title: "Möchten Sie sich zuerst informieren?",
         description:
-          "Überprüfen Sie unsere Hilferessourcen für schnelle Antworten.",
+          "Sehen Sie sich Preise und Support an, während Sie Ihre Anfrage vorbereiten.",
         faq: "FAQ lesen",
         support: "Support-Center besuchen",
       },
@@ -81,12 +114,17 @@ const content = {
 
 export function ContactClient() {
   const { language } = useLanguage();
+  const searchParams = useSearchParams();
   const isGerman = language === "de";
   const t = isGerman ? content.de : content.en;
+  const topic = searchParams?.get("topic")?.trim() || "general";
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    organization: "",
+    role: "",
+    teacherCount: "",
     message: "",
   });
   const [loading, setLoading] = useState(false);
@@ -107,11 +145,26 @@ export function ContactClient() {
       await submitBrevoContact({
         email: formData.email,
         name: formData.name,
-        attributes: { MESSAGE: formData.message },
-        source: "contact_page",
+        attributes: {
+          MESSAGE: formData.message,
+          SCHOOL_OR_DISTRICT: formData.organization,
+          ROLE_TITLE: formData.role,
+          TEACHER_COUNT: formData.teacherCount,
+          INQUIRY_TOPIC: topic,
+          LANGUAGE: language.toUpperCase(),
+        },
+        source:
+          topic === "enterprise" ? "contact_page_enterprise" : "contact_page",
       });
       setSuccess(true);
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({
+        name: "",
+        email: "",
+        organization: "",
+        role: "",
+        teacherCount: "",
+        message: "",
+      });
       setTimeout(() => setSuccess(false), 5000);
     } catch (err) {
       const message = describeBrevoError(err, t.contact.form.error);
@@ -161,8 +214,8 @@ export function ContactClient() {
                   </div>
                   <p className="text-lg text-white">
                     {language === "de"
-                      ? "Danke für Ihre Nachricht! Wir melden uns in Kürze."
-                      : "Thanks for your message! We'll reply shortly."}
+                      ? "Danke für Ihre Anfrage. Wir melden uns in Kürze mit den nächsten Schritten."
+                      : "Thanks for your enquiry. We'll follow up shortly with next steps."}
                   </p>
                 </div>
               ) : (
@@ -207,6 +260,98 @@ export function ContactClient() {
 
                   <div>
                     <label
+                      htmlFor="organization"
+                      className="block text-sm font-medium text-gray-300 mb-2"
+                    >
+                      {t.contact.form.organization}
+                    </label>
+                    <input
+                      type="text"
+                      id="organization"
+                      value={formData.organization}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          organization: e.target.value,
+                        })
+                      }
+                      required
+                      placeholder={t.contact.form.organizationPlaceholder}
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="role"
+                      className="block text-sm font-medium text-gray-300 mb-2"
+                    >
+                      {t.contact.form.role}
+                    </label>
+                    <input
+                      type="text"
+                      id="role"
+                      value={formData.role}
+                      onChange={(e) =>
+                        setFormData({ ...formData, role: e.target.value })
+                      }
+                      required
+                      placeholder={t.contact.form.rolePlaceholder}
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="teacherCount"
+                      className="block text-sm font-medium text-gray-300 mb-2"
+                    >
+                      {t.contact.form.teacherCount}
+                    </label>
+                    <select
+                      id="teacherCount"
+                      value={formData.teacherCount}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          teacherCount: e.target.value,
+                        })
+                      }
+                      required
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    >
+                      <option value="" className="bg-[#0B1220] text-gray-400">
+                        {t.contact.form.teacherCountPlaceholder}
+                      </option>
+                      <option value="1-10" className="bg-[#0B1220] text-white">
+                        {t.contact.form.options.under10}
+                      </option>
+                      <option value="11-25" className="bg-[#0B1220] text-white">
+                        {t.contact.form.options.tenTo25}
+                      </option>
+                      <option value="26-50" className="bg-[#0B1220] text-white">
+                        {t.contact.form.options.twentyFiveTo50}
+                      </option>
+                      <option
+                        value="51-100"
+                        className="bg-[#0B1220] text-white"
+                      >
+                        {t.contact.form.options.fiftyTo100}
+                      </option>
+                      <option
+                        value="101-250"
+                        className="bg-[#0B1220] text-white"
+                      >
+                        {t.contact.form.options.hundredTo250}
+                      </option>
+                      <option value="250+" className="bg-[#0B1220] text-white">
+                        {t.contact.form.options.over250}
+                      </option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label
                       htmlFor="message"
                       className="block text-sm font-medium text-gray-300 mb-2"
                     >
@@ -225,11 +370,7 @@ export function ContactClient() {
                     />
                   </div>
 
-                  {error && (
-                    <p className="text-sm text-red-400">
-                      {error}
-                    </p>
-                  )}
+                  {error && <p className="text-sm text-red-400">{error}</p>}
 
                   <Button
                     type="submit"

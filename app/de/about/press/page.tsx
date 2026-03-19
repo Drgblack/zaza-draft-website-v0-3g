@@ -233,7 +233,7 @@ export default function PressKitPage() {
                 Produkt-Screenshots
               </h2>
               <p className="text-sm text-[#CBD5E1] max-w-3xl mb-4">
-                Produkt-Screenshots sind auf Anfrage erh�ltlich.
+                Produkt-Screenshots sind auf Anfrage erhältlich.
               </p>
               <Button
                 asChild

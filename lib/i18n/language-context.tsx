@@ -69,7 +69,7 @@ const translationsEn: Record<string, string> = {
   "pricing.teacher.period": "Cancel anytime",
   "pricing.teacher.savingsAnnual": "Save 2 months free",
   "pricing.teacher.cta": "Start 7-day free trial",
-  "pricing.teacher.trial": "Secure Stripe checkout",
+  "pricing.teacher.trial": "Billed monthly • Cancel anytime",
   "pricing.teacher.guarantee": "30-day money-back guarantee",
   "pricing.teacher.feature1": "Unlimited drafts & revisions",
   "pricing.teacher.feature2": "Tone Tutor, translations, context memory",
@@ -98,8 +98,10 @@ const translationsEn: Record<string, string> = {
   // Schools & Districts
   "pricing.enterprise.badge": "ENTERPRISE",
   "pricing.enterprise.title": "Schools & Districts",
-  "pricing.enterprise.description": "Everything for large-scale deployments.",
+  "pricing.enterprise.description":
+    "Pricing tailored to school or district requirements.",
   "pricing.enterprise.price": "Custom",
+  "pricing.enterprise.helper": "Custom pricing based on rollout size and needs",
   "pricing.enterprise.cta": "Contact Sales",
   "pricing.enterprise.includes": "Everything in Department, plus:",
   "pricing.enterprise.feature1": "SSO/SAML, DPA/SCCs",
@@ -197,7 +199,7 @@ const translationsEn: Record<string, string> = {
   // CTA Section
   "pricing.cta.title": "Ready to save hours every week?",
   "pricing.cta.subtitle":
-    "Start free today â€¢ No credit card required â€¢ Cancel anytime",
+    "Start free today • No credit card required • Cancel anytime",
   "pricing.cta.primary": "Start writing safely",
   "pricing.cta.secondary": "Talk to Sales",
 
@@ -1629,7 +1631,7 @@ const translationsDe: Record<string, string> = {
   "pricing.teacher.period": "Jederzeit kündbar",
   "pricing.teacher.savingsAnnual": "2 Monate kostenlos sparen",
   "pricing.teacher.cta": "7-Tage-Testversion starten",
-  "pricing.teacher.trial": "Sicherer Stripe-Checkout",
+  "pricing.teacher.trial": "Monatliche Abrechnung • Jederzeit kündbar",
   "pricing.teacher.guarantee": "30-Tage-Geld-zurück-Garantie",
   "pricing.teacher.feature1": "Unbegrenzte Entwürfe & Überarbeitungen",
   "pricing.teacher.feature2": "Ton-Tutor, Übersetzungen, Kontext-Gedächtnis",
@@ -1658,8 +1660,11 @@ const translationsDe: Record<string, string> = {
   // Schools & Districts
   "pricing.enterprise.badge": "ENTERPRISE",
   "pricing.enterprise.title": "Schulen & Bezirke",
-  "pricing.enterprise.description": "Alles für großflächige Bereitstellungen.",
+  "pricing.enterprise.description":
+    "Preise passend zu Anforderungen von Schule oder Bezirk.",
   "pricing.enterprise.price": "Individuell",
+  "pricing.enterprise.helper":
+    "Individuelle Preise je nach Rollout-Größe und Anforderungen",
   "pricing.enterprise.cta": "Vertrieb kontaktieren",
   "pricing.enterprise.includes": "Alles in Department, plus:",
   "pricing.enterprise.feature1": "SSO/SAML, DPA/SCCs",
@@ -1757,7 +1762,7 @@ const translationsDe: Record<string, string> = {
   // CTA Section
   "pricing.cta.title": "Bereit, jede Woche Stunden zu sparen?",
   "pricing.cta.subtitle":
-    "Heute kostenlos starten â€¢ Keine Kreditkarte erforderlich â€¢ Jederzeit kündbar",
+    "Heute kostenlos starten • Keine Kreditkarte erforderlich • Jederzeit kündbar",
   "pricing.cta.primary": "Sicher schreiben starten",
   "pricing.cta.secondary": "Mit Vertrieb sprechen",
 
@@ -1795,7 +1800,7 @@ const translationsDe: Record<string, string> = {
   "form.placeholder.name": "Dein Name",
   "form.placeholder.email": "du@example.com",
   "form.submitting": "Wird gesendet...",
-  "form.close": "SchlieÃŸen",
+  "form.close": "Schließen",
   "form.successNote":
     "Wir haben dir das Material geschickt. Schau ggf. auch im Spam nach oder schreibe uns.",
 
@@ -1916,7 +1921,7 @@ const translationsDe: Record<string, string> = {
   "suite.draft.li2":
     "Tonleitfäden und Bias-Prüfungen für faires, unterstützendes Feedback",
   "suite.draft.li3":
-    "StandardmäÃŸig privat; für professionelle, elternreife Texte entwickelt",
+    "Standardmäßig privat; für professionelle, elternreife Texte entwickelt",
   "suite.draft.cta": "Mehr über Draft erfahren",
 
   "suite.gradeflow.body":
@@ -1951,7 +1956,7 @@ const translationsDe: Record<string, string> = {
   "suite.why.retention":
     "Bindung unterstützt: Weniger Stress und gerechtere Arbeitslast.",
   "suite.why.safety":
-    "Sicher und konform: Datenschutz und Schutz standardmäÃŸig.",
+    "Sicher und konform: Datenschutz und Schutz standardmäßig.",
   "suite.why.evidence":
     "Evidenzbasiert: Pädagogik und Nachvollziehbarkeit, nicht nur Tempo.",
 
@@ -1979,7 +1984,7 @@ const translationsDe: Record<string, string> = {
     "Teach fürs Planen, Draft fürs Schreiben, GradeFlow fürs Bewerten, Shield für Grenzen.",
   "suite.hiw.step2.title": "Eigenen Kontext hinzufügen",
   "suite.hiw.step2.desc":
-    "Lehrplan, Klassendetails, Rubriken und Ton flieÃŸen einmal in KnowledgeCore ein und gelten überall.",
+    "Lehrplan, Klassendetails, Rubriken und Ton fließen einmal in KnowledgeCore ein und gelten überall.",
   "suite.hiw.step3.title": "Schulreife Ergebnisse erhalten",
   "suite.hiw.step3.desc":
     "Vertrauenswürdige, erklärbare Resultate mit konsistenten Schutzmechanismen in jedem Workflow.",
@@ -2037,7 +2042,7 @@ const translationsDe: Record<string, string> = {
   "webinars.buttons.waitlistFull": "Anmeldung voll",
   "webinars.empty": "Keine Webinare passend zu Ihrer Suche gefunden.",
   "webinars.cta.body":
-    "SchlieÃŸen Sie sich Tausenden von Lehrkräften an, die ihre Praxis mit KI transformieren. Registrieren Sie sich noch heute für Ihr erstes Webinar.",
+    "Schließen Sie sich Tausenden von Lehrkräften an, die ihre Praxis mit KI transformieren. Registrieren Sie sich noch heute für Ihr erstes Webinar.",
   "webinars.cta.browseUpcoming": "Bevorstehende Webinare ansehen",
 
   // Community (DE)
@@ -2072,7 +2077,7 @@ const translationsDe: Record<string, string> = {
     "Einsatz von KI zur Unterstützung unterschiedlicher Lernender und Erstellung von Anpassungen.",
   "community.categories.ethics-policy.name": "Ethik & Richtlinien",
   "community.categories.ethics-policy.desc":
-    "Diskutieren Sie ethische Ãœberlegungen, Richtlinien und bewährte Verfahren.",
+    "Diskutieren Sie ethische Überlegungen, Richtlinien und bewährte Verfahren.",
   "community.categories.tool-reviews.name": "Tool-Bewertungen & Vergleiche",
   "community.categories.tool-reviews.desc":
     "Teilen Sie Erfahrungen mit verschiedenen KI-Tools und Plattformen.",
@@ -2125,7 +2130,7 @@ const translationsDe: Record<string, string> = {
   "community.cta.primary": "Kostenloses Konto erstellen",
   "community.cta.secondary": "Als Gast stöbern",
 
-  "about.nav.title": "Ãœber",
+  "about.nav.title": "Über",
   "about.nav.company": "Unternehmen",
   "about.nav.founder": "Gründer",
   "about.nav.press": "Presse-Kit",
@@ -2311,11 +2316,11 @@ const translationsDe: Record<string, string> = {
   "demo.report.before":
     "Guter Schüler, bemüht sich sehr, muss sich mehr beteiligen.",
   "demo.report.after":
-    "Sam zeigt durchweg groÃŸe Anstrengung und eine positive Einstellung zum Lernen. Er zeigt ein starkes Verständnis für Kernkonzepte und bearbeitet Aufgaben sorgfältig. Um seine Fähigkeiten weiterzuentwickeln, ermutige ich Sam, seine Ideen häufiger in Klassendiskussionen zu teilen, da seine Einsichten unserer Lerngemeinschaft sehr zugute kommen würden.",
+    "Sam zeigt durchweg große Anstrengung und eine positive Einstellung zum Lernen. Er zeigt ein starkes Verständnis für Kernkonzepte und bearbeitet Aufgaben sorgfältig. Um seine Fähigkeiten weiterzuentwickeln, ermutige ich Sam, seine Ideen häufiger in Klassendiskussionen zu teilen, da seine Einsichten unserer Lerngemeinschaft sehr zugute kommen würden.",
   "demo.grading.before":
     "Aufsatz ist in Ordnung, braucht aber Arbeit an der These und den Beweisen.",
   "demo.grading.after":
-    "Ihr Aufsatz zeigt ein gutes Verständnis für das Thema und enthält relevante Beispiele. Um Ihr Argument zu stärken, sollten Sie in Ihrer Einleitung eine spezifischere These entwickeln. Versuchen Sie auÃŸerdem, direkte Zitate aus dem Text einzubauen, um Ihre Analyse zu untermauern. Ich würde gerne sehen, wie Sie Ihre Ideen im dritten Absatz erweitern. GroÃŸartiger Anfang!",
+    "Ihr Aufsatz zeigt ein gutes Verständnis für das Thema und enthält relevante Beispiele. Um Ihr Argument zu stärken, sollten Sie in Ihrer Einleitung eine spezifischere These entwickeln. Versuchen Sie außerdem, direkte Zitate aus dem Text einzubauen, um Ihre Analyse zu untermauern. Ich würde gerne sehen, wie Sie Ihre Ideen im dritten Absatz erweitern. Großartiger Anfang!",
 
   // Use Cases Section
   "useCases.heading":
@@ -2445,7 +2450,7 @@ const translationsDe: Record<string, string> = {
   "footer.social.tiktok": "Folgen Sie uns auf TikTok @zazatechnologies",
   "footer.social.twitter": "Folgen Sie uns auf X (Twitter) @zazateachapp",
   "footer.social.linkedin": "Vernetzen Sie sich mit uns auf LinkedIn",
-  "footer.productEcosystem": "Produkt & Ã - kosystem",
+  "footer.productEcosystem": "Produkt & Ökosystem",
   "footer.learningResources": "Lernen & Ressourcen",
   "footer.company": "Unternehmen",
   "footer.features": "Funktionen",
@@ -2481,7 +2486,7 @@ const translationsDe: Record<string, string> = {
     "Zeit durch administrative Aufgaben verlieren, anstatt zu unterrichten",
 
   "products.teach.features.title":
-    "Alles, was Sie zum Planen groÃŸartiger Lektionen benötigen",
+    "Alles, was Sie zum Planen großartiger Lektionen benötigen",
   "products.teach.features.autoplanner.title": "Auto-Planer",
   "products.teach.features.autoplanner.desc":
     "Generieren Sie vollständige, auf Ihre Lehrplanstandards abgestimmte Unterrichtspläne in Minuten",
@@ -2536,7 +2541,7 @@ const translationsDe: Record<string, string> = {
   "products.teach.cta.secondary": "Demo planen",
 
   // Products - Draft
-  "products.draft.hero.eyebrow": "KI-SCHREIBASSISTENT FÃœR LEHRKRÃ„FTE",
+  "products.draft.hero.eyebrow": "KI-SCHREIBASSISTENT FÜR LEHRKRÄFTE",
   "products.draft.hero.title": "Elternmails, die du sicher senden kannst",
   "products.draft.hero.subtitle":
     "Draft macht aus Stichpunkten ruhige, professionelle Elternnachrichten, Berichtskommentare und Bewertungsfeedback - so formuliert, als könnten sie weitergeleitet, gescreenshotet oder später geprüft werden. Entwickelt für sensible Schulkommunikation, nicht für generische KI-Texte.",
@@ -2559,10 +2564,10 @@ const translationsDe: Record<string, string> = {
   "products.draft.features.toneGuardrails.title": "Ton-Leitplanken",
   "products.draft.features.toneGuardrails.desc":
     "Hält Nachrichten ruhig, wertschätzend und deeskalierend, wenn es brennt",
-  "products.draft.features.translationChecks.title": "Ãœbersetzungsprüfungen",
+  "products.draft.features.translationChecks.title": "Übersetzungsprüfungen",
   "products.draft.features.translationChecks.desc":
     "Sicherstellen, dass Ton und Absicht in jeder Sprache respektvoll bleiben",
-  "products.draft.features.reviewSteps.title": "Ãœberprüfungsschritte",
+  "products.draft.features.reviewSteps.title": "Überprüfungsschritte",
   "products.draft.features.reviewSteps.desc":
     "Du behältst die Kontrolle: prüfen, anpassen, freigeben",
 
@@ -2673,7 +2678,7 @@ const translationsDe: Record<string, string> = {
   "products.gradeflow.cta.button": "Zur Warteliste",
 
   // Products - Shield
-  "shield.hero.eyebrow": "KI-GOVERNANCE FÃœR SCHULEN",
+  "shield.hero.eyebrow": "KI-GOVERNANCE FÜR SCHULEN",
   "shield.hero.title": "Sichere, konforme KI für Ihre Schule",
   "shield.hero.subtitle":
     "Enterprise-fähige KI-Governance-Plattform, die eine sichere, ethische und konforme KI-Nutzung in Ihrer gesamten Schule oder Ihrem Bezirk gewährleistet.",
@@ -2697,7 +2702,7 @@ const translationsDe: Record<string, string> = {
 
   "shield.solution.title": "Vollständige KI-Governance in einer Plattform",
   "shield.solution.subtitle":
-    "Ãœberwachen, steuern und prüfen Sie die gesamte KI-Nutzung in Ihrer Schule",
+    "Überwachen, steuern und prüfen Sie die gesamte KI-Nutzung in Ihrer Schule",
   "shield.solution.card1.title": "Zentrale Steuerung",
   "shield.solution.card1.description":
     "Legen Sie schulweite Richtlinien für die KI-Nutzung mit granularer Berechtigung fest",
@@ -2719,7 +2724,7 @@ const translationsDe: Record<string, string> = {
   "shield.howItWorks.step2.title": "Richtlinien festlegen",
   "shield.howItWorks.step2.description":
     "Definieren Sie Regeln für die KI-Nutzung, Datenverarbeitung und Compliance",
-  "shield.howItWorks.step3.title": "Ãœberwachen & Prüfen",
+  "shield.howItWorks.step3.title": "Überwachen & Prüfen",
   "shield.howItWorks.step3.description":
     "Nutzung verfolgen, Protokolle überprüfen und Compliance sicherstellen",
   "shield.howItWorks.cta": "Jetzt starten",
@@ -2754,32 +2759,32 @@ const translationsDe: Record<string, string> = {
   "comparison.row2.manual": "Unvollständige Aufzeichnungen",
   "comparison.row3.feature": "PII-Schutz",
   "comparison.row3.shield": "Automatisch",
-  "comparison.row3.manual": "Manuelle Ãœberprüfung",
+  "comparison.row3.manual": "Manuelle Überprüfung",
 
   "shield.pricing.title": "Enterprise-Preise",
   "shield.pricing.description":
-    "Individuelle Preise basierend auf Ihrer SchulgröÃŸe und Ihren Bedürfnissen. Kontaktieren Sie uns für ein Angebot.",
+    "Individuelle Preise basierend auf Ihrer Schulgröße und Ihren Bedürfnissen. Kontaktieren Sie uns für ein Angebot.",
   "shield.pricing.cta": "Preise erhalten",
 
   "shield.finalCta.title": "Bereit, die KI Ihrer Schule zu sichern?",
   "shield.finalCta.subtitle":
-    "SchlieÃŸen Sie sich zukunftsorientierten Schulen an, die Shield nutzen, um KI sicher einzusetzen",
+    "Schließen Sie sich zukunftsorientierten Schulen an, die Shield nutzen, um KI sicher einzusetzen",
   "shield.finalCta.primary": "Demo planen",
   "shield.finalCta.secondary": "Vertrieb kontaktieren",
   "shield.finalCta.note": "Enterprise-Support und Onboarding inbegriffen",
 
   // FAQ Page
-  "faq.hero.eyebrow": "HÃ„UFIG GESTELLTE FRAGEN",
+  "faq.hero.eyebrow": "HÄUFIG GESTELLTE FRAGEN",
   "faq.hero.title": "Wie können wir Ihnen helfen?",
   "faq.hero.subtitle":
     "Finden Sie Antworten auf häufige Fragen zu Zaza Draft und unseren KI-Tools für Lehrkräfte.",
 
   // FAQ Categories
-  "faq.category.about.title": "Ãœber Zaza Draft",
+  "faq.category.about.title": "Über Zaza Draft",
   "faq.category.safety.title": "Sicherheit & Datenschutz",
   "faq.category.features.title": "Funktionen & Merkmale",
   "faq.category.pricing.title": "Preise & Pläne",
-  "faq.category.languages.title": "Sprachen & Ãœbersetzung",
+  "faq.category.languages.title": "Sprachen & Übersetzung",
   "faq.category.schools.title": "Für Schulen & Bezirke",
 
   // About Questions
@@ -2820,7 +2825,7 @@ const translationsDe: Record<string, string> = {
 
   "faq.about.q9": "Funktioniert Zaza Draft in meinem Land?",
   "faq.about.a9":
-    "Ja! Zaza Draft ist weltweit verfügbar und unterstützt Kommunikation in 20+ Sprachen. Egal ob Sie in den USA, GroÃŸbritannien, Kanada, Australien oder anderswo sind, Draft kann Ihnen helfen, effektiv zu kommunizieren.",
+    "Ja! Zaza Draft ist weltweit verfügbar und unterstützt Kommunikation in 20+ Sprachen. Egal ob Sie in den USA, Großbritannien, Kanada, Australien oder anderswo sind, Draft kann Ihnen helfen, effektiv zu kommunizieren.",
 
   "faq.about.q10": "Was ist das Zaza-Produktökosystem?",
   "faq.about.a10":
@@ -2841,7 +2846,7 @@ const translationsDe: Record<string, string> = {
 
   "faq.safety.q3": "Ist Zaza Draft FERPA-ready?",
   "faq.safety.a3":
-    "Ja. Zaza Draft ist auf FERPA-Compliance ausgelegt. Wir implementieren angemessene SchutzmaÃŸnahmen, um die Privatsphäre der Schüler und Bildungsunterlagen zu schützen, und wir teilen oder verkaufen niemals Schülerdaten.",
+    "Ja. Zaza Draft ist auf FERPA-Compliance ausgelegt. Wir implementieren angemessene Schutzmaßnahmen, um die Privatsphäre der Schüler und Bildungsunterlagen zu schützen, und wir teilen oder verkaufen niemals Schülerdaten.",
 
   "faq.safety.q4": "Kann ich Schülernamen in meinen Entwürfen nennen?",
   "faq.safety.a4":
@@ -2854,7 +2859,7 @@ const translationsDe: Record<string, string> = {
 
   "faq.safety.q6": "Ist Zaza Draft GDPR-konform?",
   "faq.safety.a6":
-    "Ja. Wir halten die GDPR-Anforderungen für Datenschutz und Privatsphäre ein. Benutzer haben die volle Kontrolle über ihre Daten, einschlieÃŸlich des Rechts auf Zugang, Korrektur und Löschung ihrer Informationen.",
+    "Ja. Wir halten die GDPR-Anforderungen für Datenschutz und Privatsphäre ein. Benutzer haben die volle Kontrolle über ihre Daten, einschließlich des Rechts auf Zugang, Korrektur und Löschung ihrer Informationen.",
   "faq.safety.q7": "Erfindet Zaza Draft manchmal Dinge?",
   "faq.safety.a7":
     "Nein. Zaza Draft ist so aufgebaut, dass es keine unbelegten Details hinzufügt. Es arbeitet nur mit den Informationen, die du eingibst, und konzentriert sich darauf, daraus eine professionelle Nachricht zu formulieren. Lies vor dem Senden trotzdem kurz gegen.",
@@ -2872,7 +2877,7 @@ const translationsDe: Record<string, string> = {
 
   "faq.features.q2": "Kann Draft meine Nachrichten übersetzen?",
   "faq.features.a2":
-    "Ja! Draft kann Ihre Kommunikation in 20+ Sprachen übersetzen, was die Verbindung mit Familien, die unterschiedliche Sprachen sprechen, erleichtert. Ãœbersetzungen behalten den angemessenen Ton und den pädagogischen Kontext bei.",
+    "Ja! Draft kann Ihre Kommunikation in 20+ Sprachen übersetzen, was die Verbindung mit Familien, die unterschiedliche Sprachen sprechen, erleichtert. Übersetzungen behalten den angemessenen Ton und den pädagogischen Kontext bei.",
 
   "faq.features.q3": "Funktioniert Draft mit den Systemen meiner Schule?",
   "faq.features.a3":
@@ -2902,7 +2907,7 @@ const translationsDe: Record<string, string> = {
 
   "faq.pricing.q3": "Bieten Sie Preise für Schulen oder Bezirke an?",
   "faq.pricing.a3":
-    "Ja! Wir bieten spezielle Preise für Schulen und Bezirke an, einschlieÃŸlich Mengenrabatten, zentraler Abrechnung und zusätzlichen Funktionen wie Team-Kollaboration und Admin-Steuerung. Kontaktieren Sie unser Vertriebsteam für ein individuelles Angebot.",
+    "Ja! Wir bieten spezielle Preise für Schulen und Bezirke an, einschließlich Mengenrabatten, zentraler Abrechnung und zusätzlichen Funktionen wie Team-Kollaboration und Admin-Steuerung. Kontaktieren Sie unser Vertriebsteam für ein individuelles Angebot.",
 
   "faq.pricing.q4": "Kann ich jederzeit kündigen?",
   "faq.pricing.a4":
@@ -2913,9 +2918,9 @@ const translationsDe: Record<string, string> = {
   "faq.languages.a1":
     "Draft unterstützt Kommunikation in 20+ Sprachen, darunter Spanisch, Französisch, Deutsch, Mandarin, Arabisch, Portugiesisch und viele mehr. Sie können auf Englisch schreiben und in jede unterstützte Sprache übersetzen oder direkt in Ihrer bevorzugten Sprache schreiben.",
 
-  "faq.languages.q2": "Wie genau sind die Ãœbersetzungen?",
+  "faq.languages.q2": "Wie genau sind die Übersetzungen?",
   "faq.languages.a2":
-    "Unsere Ãœbersetzungen sind speziell auf pädagogische Kontexte kalibriert und behalten den angemessenen Ton und die Formalität bei. Obwohl wir für kritische Kommunikationen empfehlen, die Ãœbersetzungen von Muttersprachlern überprüfen zu lassen, sind unsere Ãœbersetzungen sehr genau und kontextuell angemessen.",
+    "Unsere Übersetzungen sind speziell auf pädagogische Kontexte kalibriert und behalten den angemessenen Ton und die Formalität bei. Obwohl wir für kritische Kommunikationen empfehlen, die Übersetzungen von Muttersprachlern überprüfen zu lassen, sind unsere Übersetzungen sehr genau und kontextuell angemessen.",
 
   "faq.languages.q3":
     "Kann Draft mir bei der Kommunikation mit mehrsprachigen Familien helfen?",
@@ -2945,7 +2950,7 @@ const translationsDe: Record<string, string> = {
   "faq.cta.button": "Support kontaktieren",
 
   // About Overview Page
-  "about.overview.hero.eyebrow": "ÃœBER ZAZA",
+  "about.overview.hero.eyebrow": "ÜBER ZAZA",
   "about.overview.hero.title":
     "Wir bauen Technologie, die Lehrkräfte erfolgreich unterstützt",
   "about.overview.hero.subtitle":
@@ -2999,7 +3004,7 @@ const translationsDe: Record<string, string> = {
     "Wir sind ein kleines, spezialisiertes Team aus Lerndesigner, Ingenieuren und Bildungsforschern, das Technologie entwickelt, die Lehrkräften hilft, aufzublühen.",
   "company.origin.title": "UNSER UNTERNEHMEN",
   "company.origin.body.p1":
-    "Zaza Technologies wurde 2025 mit einer klaren Ãœberzeugung gegründet: Bildung verdient KI-Tools, die mit echtem pädagogischem Verständnis entwickelt werden, nicht neu aufbereitete Unternehmens-KI-Modelle. Wir bauen Technologie, die das Wohlbefinden von Lehrkräften schützt.",
+    "Zaza Technologies wurde 2025 mit einer klaren Überzeugung gegründet: Bildung verdient KI-Tools, die mit echtem pädagogischem Verständnis entwickelt werden, nicht neu aufbereitete Unternehmens-KI-Modelle. Wir bauen Technologie, die das Wohlbefinden von Lehrkräften schützt.",
   "company.origin.body.p2": "Daher haben wir einen anderen Ansatz gewählt.",
   "company.origin.body.p3":
     "Wir entwickeln Tools, die auf echter Pädagogik trainiert, mit Pädagogen entwickelt und durch den Einsatz im Klassenzimmer verfeinert werden. Tools, die die Nuance des Lehrerurteils, das emotionale Gewicht der Elterninteraktion und die Bedeutung von konstruktivem Feedback verstehen. Tools, die genau, zuverlässig und sicher für Bildungseinrichtungen sind.",
@@ -3024,7 +3029,7 @@ const translationsDe: Record<string, string> = {
 
   "company.boutique.title": "Ein Boutique-Ansatz",
   "company.boutique.intro":
-    "Wir sind bewusst kein groÃŸes Technologieunternehmen. Wir sind ein fokussiertes Team, das nur für eine Zielgruppe entwickelt - Lehrkräfte.",
+    "Wir sind bewusst kein großes Technologieunternehmen. Wir sind ein fokussiertes Team, das nur für eine Zielgruppe entwickelt - Lehrkräfte.",
   "company.boutique.means": "Das bedeutet:",
   "company.boutique.point1":
     "Wir arbeiten eng mit Pädagogen aus verschiedenen Regionen und Kontexten zusammen.",
@@ -3056,7 +3061,7 @@ const translationsDe: Record<string, string> = {
     "Lerne den Gründer kennen, der KI für Lehrkräfte entwickelt",
   "founder.hero.subheading":
     "Dr. Greg Blackburn arbeitet seit über 20 Jahren in Learning & Development und gründete Zaza - eine Suite von KI-Tools, die Lehrkräften Zeit und Kopfkapazität zurückgeben, ohne ihre professionelle Urteilsfähigkeit zu ersetzen.",
-  "founder.hero.label": "GRÃœNDER & CEO",
+  "founder.hero.label": "GRÜNDER & CEO",
   "founder.hero.name": "Dr. Greg Blackburn",
   "founder.hero.tagline":
     "Lernforscher, EdTech-Gründer und Vater, der KI-Werkzeuge speziell für Lehrkräfte baut.",
@@ -3072,7 +3077,7 @@ const translationsDe: Record<string, string> = {
   "founder.journey.p3":
     "Der nächste Schritt führte mich nach Brisbane zu Telstra, wo ich sechs Jahre gearbeitet habe, während ich parallel ein MBA-Studium an der University of Queensland absolvierte. Das MBA öffnete mir die Tür ins Management an der UQ, wo ich als Business Manager gearbeitet habe. Dort begann ich, Forschung darüber zu veröffentlichen, wie Menschen lernen, Probleme lösen und in komplexen Organisationen denken.",
   "founder.journey.p4":
-    "Später habe ich eine Promotion in Professional Education an der City, University of London, abgeschlossen - auf Basis von Publikationen - und bin schlieÃŸlich Chief Learning Officer bei Communardo geworden. Parallel dazu habe ich Lehrkräften und Learning-Professionals zugehört: Berichte, Korrekturen, Elternkommunikation bis spät in die Nacht. Viele KI-Tools fühlten sich generisch an, ignorierten Kontext und erzeugten zusätzliche Kontrollarbeit. Aus dieser Lücke heraus ist Zaza entstanden: KI-Tools, die speziell für Lehrkräfte entwickelt wurden, ihre Urteilsfähigkeit respektieren und ihnen Zeit zurückgeben.",
+    "Später habe ich eine Promotion in Professional Education an der City, University of London, abgeschlossen - auf Basis von Publikationen - und bin schließlich Chief Learning Officer bei Communardo geworden. Parallel dazu habe ich Lehrkräften und Learning-Professionals zugehört: Berichte, Korrekturen, Elternkommunikation bis spät in die Nacht. Viele KI-Tools fühlten sich generisch an, ignorierten Kontext und erzeugten zusätzliche Kontrollarbeit. Aus dieser Lücke heraus ist Zaza entstanden: KI-Tools, die speziell für Lehrkräfte entwickelt wurden, ihre Urteilsfähigkeit respektieren und ihnen Zeit zurückgeben.",
   "founder.mission.quote":
     "Jede Lehrkraft verdient Werkzeuge, die ihre Expertise respektieren, ihre Schülerinnen und Schüler schützen und Zeit fürs Unterrichten schaffen.",
   "founder.mission.attribution": "Dr. Greg Blackburn, Gründer & CEO",
@@ -3153,7 +3158,7 @@ const translationsDe: Record<string, string> = {
     "Die Dienste nicht stören, testen oder umgehen (z. B. Scraping, Reverse Engineering, automatisierte Angriffe).",
   "terms.s4.title": "4. Datenschutz & Sicherheit",
   "terms.s4.content":
-    "Die Verarbeitung personenbezogener Daten richtet sich nach der Datenschutzrichtlinie. Wir setzen SchutzmaÃŸnahmen ein, können aber keine absolute Sicherheit garantieren.",
+    "Die Verarbeitung personenbezogener Daten richtet sich nach der Datenschutzrichtlinie. Wir setzen Schutzmaßnahmen ein, können aber keine absolute Sicherheit garantieren.",
   "terms.s5.title": "5. Geistiges Eigentum",
   "terms.s5.content":
     "Dienste, Marken und Inhalte bleiben Eigentum von Zaza. Nutze sie wie vorgesehen und erstelle ohne Zustimmung keine abgeleiteten Werke.",

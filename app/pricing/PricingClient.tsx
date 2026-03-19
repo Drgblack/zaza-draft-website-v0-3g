@@ -1,5 +1,6 @@
 ﻿"use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -35,6 +36,12 @@ const prices = {
     annual: { EUR: "249", USD: "270", GBP: "220" },
   },
 };
+
+const pricingTestimonialHeadshots = [
+  "/testimonials/pricing-teacher-1.jpg",
+  "/testimonials/pricing-teacher-2.jpg",
+  "/testimonials/pricing-teacher-3.jpg",
+] as const;
 
 export default function PricingClient() {
   const { t, language } = useLanguage();
@@ -479,6 +486,9 @@ export default function PricingClient() {
                 <span className="text-4xl font-bold text-white">
                   {t("pricing.enterprise.price")}
                 </span>
+                <p className="mt-2 text-xs text-[#64748B]">
+                  {t("pricing.enterprise.helper")}
+                </p>
               </div>
 
               <Button
@@ -665,16 +675,19 @@ export default function PricingClient() {
               {t("pricing.testimonials.title")}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[1, 2, 3].map((i) => (
+              {[1, 2, 3].map((i, index) => (
                 <div key={i} className="bg-[#1E293B] rounded-xl p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-[#8B5CF6] rounded-full flex items-center justify-center text-white font-bold">
-                      {t(`pricing.testimonials.${i}.name`)
-                        .split(" ")
-                        .map((n) => n[0])
-                        .join("")}
+                    <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-white/10 bg-[#0F172A] shadow-[0_8px_20px_rgba(15,23,42,0.35)]">
+                      <Image
+                        src={pricingTestimonialHeadshots[index]}
+                        alt={t(`pricing.testimonials.${i}.name`)}
+                        fill
+                        sizes="48px"
+                        className="object-cover"
+                      />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <p className="font-semibold text-white">
                         {t(`pricing.testimonials.${i}.name`)}
                       </p>

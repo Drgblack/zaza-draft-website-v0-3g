@@ -4,8 +4,14 @@ export const zazaDraftEntityDefinition =
 export const zazaDraftEntityShortDefinition =
   "Teacher-built, hallucination-safe AI co-writing for calm parent communication and report comments.";
 
+export const zazaDraftEntityFooterDefinition =
+  "Teacher-built for calm, professional school communication.";
+
 export const zazaDraftEntityDefinitionDe =
   "Zaza Draft ist von Lehrkräften mitgedacht und für sensible Schulkommunikation entwickelt. Gegründet von Dr Greg Blackburn, PhD Education, hilft es Lehrkräften dabei, ruhige, professionelle Elternkommunikation und Zeugnisbemerkungen zu schreiben, ohne die Kontrolle über jedes Wort abzugeben.";
+
+export const zazaDraftEntityFooterDefinitionDe =
+  "Von Lehrkräften mitgedacht für ruhige, professionelle Schulkommunikation.";
 
 export const drGregBlackburnBio =
   "Dr Greg Blackburn, PhD Education, founded Zaza Technologies and built Zaza Draft as a calm, teacher-first AI co-writer for sensitive school writing.";

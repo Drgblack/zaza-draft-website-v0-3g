@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  zazaDraftEntityDefinition,
-  zazaDraftEntityDefinitionDe,
+  zazaDraftEntityFooterDefinition,
+  zazaDraftEntityFooterDefinitionDe,
 } from "@/lib/seo/entity-definitions";
 
 export default function Footer() {
@@ -28,8 +28,8 @@ export default function Footer() {
     ? "Ruhige, professionelle Schreibunterstützung für Lehrkräfte."
     : "Calm, professional writing support for teachers.";
   const entityDefinition = isDE
-    ? zazaDraftEntityDefinitionDe
-    : zazaDraftEntityDefinition;
+    ? zazaDraftEntityFooterDefinitionDe
+    : zazaDraftEntityFooterDefinition;
 
   const productLinks = [
     { label: "Draft", href: localPath("/products/draft") },

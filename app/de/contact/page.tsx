@@ -1,13 +1,13 @@
-import type { Metadata } from "next"
-import { ContactClient } from "../../contact/contact-client"
+import type { Metadata } from "next";
+import { ContactClient } from "../../contact/contact-client";
 
-const pageUrl = "https://zazadraft.com/de/contact"
-const ogImage = "/hero/teacher.jpg"
+const pageUrl = "https://zazadraft.com/de/contact";
+const ogImage = "/hero/teacher.jpg";
 
 export const metadata: Metadata = {
-  title: "Kontakt | Zaza Draft Hilfe & Support",
+  title: "Kontakt | Zaza Draft für Schulen & Bezirke",
   description:
-    "Kontaktieren Sie das Zaza Draft Team. Wir sind hier, um Lehrkräften bei Fragen, Support und Feedback zu helfen.",
+    "Erzählen Sie dem Zaza Draft Team von Ihrer Schule oder Ihrem Bezirk und wir helfen bei der passenden Rollout-Option.",
   alternates: {
     canonical: pageUrl,
     languages: {
@@ -16,24 +16,26 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Kontakt | Zaza Draft Hilfe & Support",
+    title: "Kontakt | Zaza Draft für Schulen & Bezirke",
     description:
-      "Nehmen Sie Kontakt zum Zaza Draft Team auf, wenn Sie Fragen zu Produkten oder Supportwünsche haben.",
+      "Nehmen Sie Kontakt zum Zaza Draft Team auf, wenn Sie eine Rollout-Option für Schule oder Bezirk prüfen möchten.",
     url: pageUrl,
     type: "website",
     siteName: "Zaza Draft",
     locale: "de_DE",
-    images: [{ url: ogImage, alt: "Lehrkraft kontaktiert den Zaza Draft Support" }],
+    images: [
+      { url: ogImage, alt: "Lehrkraft kontaktiert den Zaza Draft Support" },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kontakt | Zaza Draft Hilfe & Support",
+    title: "Kontakt | Zaza Draft für Schulen & Bezirke",
     description:
-      "Nehmen Sie Kontakt zum Zaza Draft Team auf, wenn Sie Fragen zu Produkten oder Supportwünsche haben.",
+      "Nehmen Sie Kontakt zum Zaza Draft Team auf, wenn Sie eine Rollout-Option für Schule oder Bezirk prüfen möchten.",
     images: [ogImage],
   },
-}
+};
 
 export default function DeContactPage() {
-  return <ContactClient />
+  return <ContactClient />;
 }

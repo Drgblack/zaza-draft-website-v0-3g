@@ -1,13 +1,13 @@
-import type { Metadata } from "next"
-import { ContactClient } from "./contact-client"
+import type { Metadata } from "next";
+import { ContactClient } from "./contact-client";
 
-const pageUrl = "https://zazadraft.com/contact"
-const ogImage = "/hero/teacher.jpg"
+const pageUrl = "https://zazadraft.com/contact";
+const ogImage = "/hero/teacher.jpg";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Zaza Draft Support",
+  title: "Contact Sales | Zaza Draft for Schools & Districts",
   description:
-    "Get in touch with the Zaza Draft team. We are here to help teachers with support, questions, and feedback.",
+    "Tell the Zaza Draft team about your school or district and get guidance on the right rollout option.",
   alternates: {
     canonical: pageUrl,
     languages: {
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Contact Us | Zaza Draft Support",
+    title: "Contact Sales | Zaza Draft for Schools & Districts",
     description:
-      "Connect with the Zaza Draft team to get help with onboarding, feedback, or product questions.",
+      "Connect with the Zaza Draft team about rollout options for your school or district.",
     url: pageUrl,
     type: "website",
     siteName: "Zaza Draft",
@@ -27,13 +27,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Us | Zaza Draft Support",
+    title: "Contact Sales | Zaza Draft for Schools & Districts",
     description:
-      "Connect with the Zaza Draft team to get help with onboarding, feedback, or product questions.",
+      "Connect with the Zaza Draft team about rollout options for your school or district.",
     images: [ogImage],
   },
-}
+};
 
 export default function ContactPage() {
-  return <ContactClient />
+  return <ContactClient />;
 }
