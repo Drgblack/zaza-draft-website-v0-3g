@@ -415,7 +415,7 @@ export default function PricingClient() {
               </p>
 
               <div className="mb-2">
-                <span className="text-4xl font-bold text-white leading-tight sm:text-5xl">
+                <span className="text-5xl font-bold text-white">
                   {t("pricing.department.priceLine")}
                 </span>
               </div>

@@ -1160,7 +1160,10 @@ export function HomePageClient() {
       <CaseStudyCarousel />
 
       {/* Comparison Section */}
-      <section id="comparison" className="bg-[#0F172A] py-24">
+      <section
+        id="comparison"
+        className="scroll-mt-28 bg-[#0F172A] py-24 md:scroll-mt-32"
+      >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
