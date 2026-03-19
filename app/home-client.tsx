@@ -151,46 +151,52 @@ export function HomePageClient() {
   const heroEyebrow = language === "de" ? "FUER LEHRKRAEFTE" : "FOR TEACHERS";
   const heroBadge =
     language === "de"
-      ? "E-Mails an Eltern und Zeugnisformulierungen"
-      : "Parent emails and report comments";
+      ? "Sensible Schulkommunikation mit integrierter Sicherheitsebene"
+      : "High-stakes school messages with a built-in safety layer";
   const heroHeadline =
     language === "de"
-      ? "Schreibe Schulkommunikation,"
-      : "Write school communication";
+      ? "Schreibe Eltern-E-Mails und Zeugnisbemerkungen"
+      : "Write parent emails and report comments";
   const heroHeadlineAccent =
     language === "de"
-      ? "die sich sicher senden laesst."
-      : "that feels safe to send.";
+      ? "ohne Sorge, dass sie falsch aufgefasst werden."
+      : "without worrying they will be taken the wrong way.";
   const heroSubheading =
     language === "de"
-      ? "Ruhige, professionelle Schreibunterstuetzung fuer die Momente, die Lehrkraefte am meisten zerdenken, von E-Mails an Eltern bis zu Zeugnisformulierungen."
-      : "Calm, professional writing support for the moments teachers overthink most, from parent emails to report comments.";
+      ? "Draft hilft Lehrkraeften, klare, professionelle Eltern-E-Mails und Zeugnisbemerkungen zu schreiben - mit integrierter Anleitung, um Tonrisiken zu senken, Missverstaendnisse zu vermeiden und Eskalationen vor dem Senden zu reduzieren."
+      : "Draft helps teachers write clear, professional parent emails and report comments with built-in guidance to reduce tone risk, avoid misinterpretation, and prevent unnecessary escalation before sending.";
   const heroEntityLine =
     language === "de"
-      ? "Zaza Draft ist ein lehrkraft-zentrierter Co-Writer fuer sensible Schulkommunikation. Du pruefst, bearbeitest und gibst jede Formulierung selbst frei."
-      : "Zaza Draft is a teacher-first co-writer for sensitive school communication. You review, edit, and approve every word before it is used.";
+      ? "Zaza Draft ist kein generischer KI-Schreiber. Es ist eine lehrkraft-zentrierte Sicherheitsebene fuer sensible Schulkommunikation. Du pruefst, bearbeitest und gibst jede Formulierung selbst frei."
+      : "Zaza Draft is not a generic AI writer. It is a teacher-first safety layer for high-stakes school communication. You review, edit, and approve every word before it is used.";
   const heroOutcomeLabel =
-    language === "de" ? "Sieh den Unterschied" : "See the difference";
+    language === "de" ? "Vorher und nachher" : "Before and after";
+  const heroProofHeading =
+    language === "de"
+      ? "Von riskant zu professionell in Sekunden"
+      : "From risky to professional in seconds";
   const heroProofLabel =
     language === "de"
       ? "Sensible Schulkommunikation, vor und nach Zaza Draft"
       : "Sensitive school communication, before and after Zaza Draft";
   const heroProofIntro =
     language === "de"
-      ? "Sieh, wie rohe Formulierungen klarer, ruhiger und sendesicher werden."
-      : "See how rough wording becomes clearer, calmer, and safer to send.";
+      ? "Sieh, wie Draft Formulierungen vor dem Senden ruhiger, klarer und professioneller macht."
+      : "See how Draft helps refine wording before you send.";
   const heroProofFrameLine =
     language === "de"
-      ? "Gebaut fuer Nachrichten, die Lehrkraefte nur ungern absenden."
-      : "Built for the messages teachers hesitate to send.";
+      ? "Wie sensible Nachrichten ruhiger und verteidigbarer werden."
+      : "How Draft turns risky wording into calm, professional school communication.";
   const heroBeforeLabel = language === "de" ? "Vorher" : "Before";
   const heroAfterLabel = language === "de" ? "Nachher" : "After";
   const heroBeforeMeta =
-    language === "de" ? "Riskanter Erstentwurf" : "Risky first draft";
+    language === "de"
+      ? "Zu hart oder eskalationsanfaellig"
+      : "Too sharp or escalation-prone";
   const heroAfterMeta =
     language === "de"
-      ? "Ruhigere, belastbare Version"
-      : "Calmer, defensible version";
+      ? "Ruhig, klar und professionell"
+      : "Calm, clear, and professional";
   const heroProofSections =
     language === "de"
       ? [
@@ -222,7 +228,7 @@ export function HomePageClient() {
       : [
           {
             title: "Parent email",
-            context: "Behaviour incident",
+            context: "Behaviour update to a parent",
             before:
               "Oliver was very disruptive again today and ignored multiple instructions. This behaviour is becoming unacceptable and needs to improve.",
             after:
@@ -246,24 +252,24 @@ export function HomePageClient() {
         ];
   const heroProofCaption =
     language === "de"
-      ? "Vom angespannten Entwurf zur ruhigen, belastbaren Kommunikation."
-      : "From tense draft to calm, defensible communication.";
+      ? "Eine klare Tonverbesserung, ohne die eigentliche Botschaft zu verlieren."
+      : "A clearer tone shift without losing the core message.";
   const heroMentalLoadLine =
     language === "de"
       ? "Weniger Zweifeln, bevor du auf Senden drueckst."
       : "Less second-guessing before you press send.";
   const heroTrustBarIntro =
     language === "de"
-      ? "Lehrkraefte vertrauen Zaza Draft fuer ruhige, belastbare Kommunikation."
-      : "Trusted by teachers who want calm, defensible communication.";
+      ? "Fuer Lehrkraefte, die Kommunikation ruhig, klar und belastbar halten muessen."
+      : "Built for teachers who need communication to stay calm, clear, and defensible.";
   const heroTrustBarDifferentiator =
     language === "de"
-      ? "Kein generischer KI-Schreiber, sondern ein lehrkraft-zentrierter Co-Writer fuer sensible Schulkommunikation."
-      : "Not a generic AI writer, but a teacher-first co-writer for sensitive school communication.";
+      ? "Draft fuegt Eltern-E-Mails, Zeugnisbemerkungen und anderen sensiblen Schulnachrichten eine Schutzebene hinzu, bevor sie rausgehen."
+      : "Draft adds a protective layer before parent emails, report comments, and other sensitive school messages go out.";
   const heroCtaMicrocopy =
     language === "de"
-      ? "Schreibe jeden Monat bis zu 10 Nachrichten kostenlos. Keine Verpflichtung."
-      : "Write up to 10 messages free each month. No commitment.";
+      ? "Schreibe jeden Monat bis zu 10 Nachrichten kostenlos. Keine Kreditkarte erforderlich."
+      : "Write up to 10 messages free each month. No credit card required.";
   const heroTeacherUsageLine =
     language === "de"
       ? "Entwickelt fuer Lehrkraefte, die E-Mails an Eltern, Zeugnisformulierungen und andere sensible Schulkommunikation schreiben."
@@ -272,32 +278,32 @@ export function HomePageClient() {
     language === "de"
       ? [
           "Fuer Lehrkraefte entwickelt",
-          "Ruhiger, professioneller Ton",
+          "Reduziert Ton- und Eskalationsrisiko",
           "Du pruefst jede Nachricht vor dem Senden",
         ]
       : [
           "Built for teachers",
-          "Calm, professional tone",
+          "Reduces tone and escalation risk",
           "You review every message before sending",
         ];
   const betaFeedbackHeading =
     language === "de"
-      ? "Feedback von Lehrkraeften folgt"
-      : "Teacher feedback is coming";
+      ? "Rueckmeldungen zu echter Schulkommunikation kommen jetzt rein"
+      : "Teacher feedback from real school communication is starting to come in";
   const betaFeedbackBody =
     language === "de"
-      ? "Wir sammeln gerade die ersten Rueckmeldungen. Echte Zitate erscheinen hier, sobald wir sie gesammelt haben. Trag dich in die Warteliste ein, wenn du zum Launch benachrichtigt werden moechtest."
-      : "We are collecting our first round of teacher feedback now. Real quotes will appear here as soon as they are collected. Join the waitlist if you want to be notified at launch.";
+      ? "Sobald freigegebene Rueckmeldungen vorliegen, veroeffentlichen wir hier, wie Draft Lehrkraeften bei Elternmails, Zeugnisbemerkungen und sensiblen Nachrichten hilft."
+      : "As approved feedback comes in, we'll publish how Draft is helping teachers with parent emails, report comments, and other high-stakes messages.";
   const betaFeedbackCta =
     language === "de" ? "Zur Warteliste" : "Join the waitlist";
   const trustPanelHeading =
     language === "de"
-      ? "KI, der du bei echter Schulkommunikation vertrauen kannst"
-      : "AI you can trust with real school communication";
+      ? "Lehrkraft-zentrierte Unterstuetzung fuer sensible Schulkommunikation"
+      : "Teacher-first support for high-stakes school communication";
   const trustPanelSubtext =
     language === "de"
-      ? "Entwickelt fuer ruhige, professionelle Formulierungen in den Momenten, die Lehrkraefte am meisten zerdenken."
-      : "Built to support calm, professional writing in the moments teachers second-guess most.";
+      ? "Draft ist als zweite Instanz vor dem Senden gedacht - fuer die Momente, in denen Ton, Klarheit und Professionalitaet besonders viel Gewicht tragen."
+      : "Draft is designed as a second pair of eyes before sending, for the moments when tone, clarity, and professionalism carry the most weight.";
   const trustPanelCards =
     language === "de"
       ? [
@@ -330,17 +336,17 @@ export function HomePageClient() {
           },
           {
             title: "Built for teachers",
-            body: "Designed for parent emails, report comments, and sensitive school communication.",
+            body: "Built for parent emails, report comments, and documentation that may be forwarded, challenged, or reviewed later.",
             icon: DocumentIcon,
           },
           {
-            title: "Calm tone guardrails",
-            body: "Helps reduce escalation and keeps wording professional.",
+            title: "Safer wording guardrails",
+            body: "Helps reduce tone risk, avoid escalation, and keep wording calm, clear, and appropriate.",
             icon: CheckCircleIcon,
           },
           {
             title: "Privacy-first design",
-            body: "Built for responsible classroom use and careful communication workflows.",
+            body: "Designed for careful school workflows where professional judgement and data handling both matter.",
             icon: ShieldIcon,
           },
         ];
@@ -631,7 +637,7 @@ export function HomePageClient() {
                           {heroOutcomeLabel}
                         </p>
                         <h2 className="mt-2 text-lg font-semibold text-white sm:text-xl">
-                          {heroProofLabel}
+                          {heroProofHeading}
                         </h2>
                         <p className="mt-2 text-xs uppercase tracking-[0.22em] text-[#A78BFA]">
                           {heroProofFrameLine}

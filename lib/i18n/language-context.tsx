@@ -575,7 +575,7 @@ const translationsEn: Record<string, string> = {
   "hero.trustIndicators.ferpaCompliant": "GDPR-ready",
   "hero.trustIndicators.teachers": "Teacher-first co-writer",
   "hero.trustClarifier":
-    "Draft rewrites teacher-provided text. Schools remain the data controller; Draft is built for privacy-first handling of communication drafts.",
+    "Draft works as a second pair of eyes on teacher-provided text. Schools remain the data controller; Draft is built for privacy-first handling of communication drafts.",
   "hero.founderLine":
     "Built by Dr Greg Blackburn (PhD, Professional Education) for teacher-first communication safety.",
   "hero.founderLink": "Read the founder story",
@@ -690,10 +690,10 @@ const translationsEn: Record<string, string> = {
   "howItWorks.diagram.step1.description": "Rough notes or bullet points",
   "howItWorks.diagram.step1.example": "Sam is not paying attention in class.",
   "howItWorks.diagram.step2.title": "Tone Selection",
-  "howItWorks.diagram.step2.description": "Choose your voice",
+  "howItWorks.diagram.step2.description": "Choose your tone and risk posture",
   "howItWorks.diagram.step2.example": "Supportive, Formal, Concise, or Neutral",
-  "howItWorks.diagram.step3.title": "Polished Output",
-  "howItWorks.diagram.step3.description": "Teacher-ready communication",
+  "howItWorks.diagram.step3.title": "Calmer Draft",
+  "howItWorks.diagram.step3.description": "Clear, school-appropriate wording",
   "howItWorks.diagram.step3.example":
     "I wanted to reach out regarding Sam's recent focus challenges...",
   "howItWorks.steps.step1.number": "1",
@@ -701,13 +701,14 @@ const translationsEn: Record<string, string> = {
   "howItWorks.steps.step1.description":
     "Start with rough notes, bullet points, or a full draft",
   "howItWorks.steps.step2.number": "2",
-  "howItWorks.steps.step2.title": "Choose your tone and watch Draft refine it",
+  "howItWorks.steps.step2.title":
+    "Choose your tone and let Draft pressure-test the wording",
   "howItWorks.steps.step2.description":
-    "Supportive, formal, concise, or neutral - always editable",
+    "Reduce tone risk and keep the message calm, clear, and editable",
   "howItWorks.steps.step3.number": "3",
-  "howItWorks.steps.step3.title": "Export & share",
+  "howItWorks.steps.step3.title": "Review before sending",
   "howItWorks.steps.step3.description":
-    "Copy, download, or share to your school tools with one click",
+    "You keep control of every word before anything leaves your inbox",
 
   // Demo Section
   "demo.heading": "See Draft in Action",
@@ -734,35 +735,36 @@ const translationsEn: Record<string, string> = {
     "Your essay shows good understanding of the topic and includes relevant examples. To strengthen your argument, consider developing a more specific thesis statement in your introduction. Additionally, try incorporating direct quotes from the text to support your analysis. I'd like to see you expand on your ideas in the third paragraph. Great start!",
 
   // Use Cases Section
-  "useCases.heading": "Built for the writing that pulls you away from teaching",
+  "useCases.heading":
+    "Built for the high-stakes writing that pulls you away from teaching",
   "useCases.cards.parentMessages.title": "Parent Messages",
   "useCases.cards.parentMessages.description":
-    "Draft calm, clear replies that de-escalate",
+    "Write clear, professional parent emails with less tone risk",
   "useCases.cards.parentMessages.examples":
     "Behavior concerns, progress updates, attendance issues",
   "useCases.cards.reportCards.title": "Report Cards",
   "useCases.cards.reportCards.description":
-    "Turn quick notes into human report comments",
+    "Turn bullet points into clear, appropriate report comments",
   "useCases.cards.reportCards.examples":
     "Term reports, progress summaries, intervention plans",
   "useCases.cards.gradingComments.title": "Grading Comments",
   "useCases.cards.gradingComments.description":
-    "Faster, kinder feedback with your voice intact",
+    "Give calm, specific feedback without sounding blunt or vague",
   "useCases.cards.gradingComments.examples":
     "Criterion-based comments, rubric feedback",
   "useCases.cards.schoolCommunications.title": "School Communications",
   "useCases.cards.schoolCommunications.description":
-    "Draft newsletters and family updates with tone checks across languages",
+    "Draft family updates and notices that stay clear across languages and contexts",
   "useCases.cards.schoolCommunications.examples":
     "Updates, event notices, policy communications",
   "useCases.cards.referenceLetters.title": "Reference Letters",
   "useCases.cards.referenceLetters.description":
-    "Write compelling recommendations confidently",
+    "Write thoughtful references in a clear, professional voice",
   "useCases.cards.referenceLetters.examples":
     "College references, job recommendations",
   "useCases.cards.documentation.title": "Documentation",
   "useCases.cards.documentation.description":
-    "Create clear records and meeting notes",
+    "Create factual records and meeting notes that stay calm and defensible",
   "useCases.cards.documentation.examples":
     "IEP documentation, parent conferences",
 
@@ -778,29 +780,34 @@ const translationsEn: Record<string, string> = {
   "comparison.rows.training.feature": "Training",
   "comparison.rows.training.generic": "General knowledge, business-focused",
   "comparison.rows.training.zaza":
-    "Built with teacher design partners and education-specific workflows",
+    "Built with teacher design partners around real school communication workflows",
   "comparison.rows.safety.feature": "Safety",
   "comparison.rows.safety.generic": "May invent student details or scenarios",
   "comparison.rows.safety.zaza":
     "Does not invent student-specific claims - rewrites only what you provide",
   "comparison.rows.toneControl.feature": "Tone Control",
   "comparison.rows.toneControl.generic": "Limited or inconsistent",
-  "comparison.rows.toneControl.zaza": "4+ education-specific tones",
+  "comparison.rows.toneControl.zaza":
+    "Education-specific tone guidance for calm, appropriate wording",
   "comparison.rows.compliance.feature": "Compliance",
   "comparison.rows.compliance.generic": "Not FERPA-designed",
   "comparison.rows.compliance.zaza": "FERPA-ready by design",
   "comparison.rows.useCases.feature": "Use Cases",
   "comparison.rows.useCases.generic": "Generic writing tasks",
-  "comparison.rows.useCases.zaza": "6 specialized teacher workflows",
+  "comparison.rows.useCases.zaza":
+    "Parent emails, report comments, and documentation for school context",
   "comparison.rows.outputQuality.feature": "Output Quality",
   "comparison.rows.outputQuality.generic": "Requires heavy editing",
-  "comparison.rows.outputQuality.zaza": "Defensible, teacher-ready wording",
+  "comparison.rows.outputQuality.zaza":
+    "Clearer, more defensible wording with less rewriting",
   "comparison.rows.learningCurve.feature": "Learning Curve",
   "comparison.rows.learningCurve.generic": "Complex prompting needed",
-  "comparison.rows.learningCurve.zaza": "Paste, select tone, done",
+  "comparison.rows.learningCurve.zaza":
+    "Paste context, review tone, send when ready",
   "comparison.rows.community.feature": "Community",
   "comparison.rows.community.generic": "No teacher support",
-  "comparison.rows.community.zaza": "Teachers already on the waitlist",
+  "comparison.rows.community.zaza":
+    "Shaped by teacher feedback from real school communication",
   "caseStudies.eyebrow": "Before / After",
   "caseStudies.heading": "Before / After from real teachers",
   "caseStudies.subheading":
@@ -812,22 +819,22 @@ const translationsEn: Record<string, string> = {
   "caseStudies.next": "Next",
 
   // Why Choose Section
-  "whyChoose.heading":
-    "Why teachers choose Draft for calm, confident communication",
-  "whyChoose.benefits.beatWritersBlock.title": "Restore focus quickly",
+  "whyChoose.heading": "Why teachers use Draft as a second pair of eyes",
+  "whyChoose.benefits.beatWritersBlock.title":
+    "Start from what happened, not a blank page",
   "whyChoose.benefits.beatWritersBlock.description":
-    "Turn rough notes into clear drafts without mental overload",
+    "Turn rough notes into clear drafts without losing professional judgement",
   "whyChoose.benefits.writeWithConfidence.title":
-    "Protect professional confidence",
+    "Reduce tone risk before sending",
   "whyChoose.benefits.writeWithConfidence.description":
-    "Stay clear, calm, and school-appropriate in every message",
-  "whyChoose.benefits.saveTime.title": "Reduce cognitive load daily",
+    "Catch wording that could sound too sharp, vague, or easy to misread",
+  "whyChoose.benefits.saveTime.title": "Spend less time rewriting",
   "whyChoose.benefits.saveTime.description":
-    "Less rewriting and second-guessing in sensitive moments",
+    "Less second-guessing in parent emails, report comments, and follow-up notes",
   "whyChoose.benefits.breakBarriers.title":
-    "Hold boundaries in difficult threads",
+    "Stay calm when a thread is under pressure",
   "whyChoose.benefits.breakBarriers.description":
-    "Keep communication calm and professional when pressure is high",
+    "Keep wording clear, appropriate, and less likely to escalate",
 
   // Testimonials Section
   "testimonials.heading": "What teachers say",
@@ -845,7 +852,7 @@ const translationsEn: Record<string, string> = {
   // Final CTA Section
   "finalCTA.heading": "Zaza - Just Teach.",
   "finalCTA.subheading":
-    "Zaza helps teachers thrive. Join the waitlist for calm, professional writing support that gives teaching time back.",
+    "Join the waitlist for teacher-first writing support that helps keep high-stakes school communication calm, clear, and appropriate.",
   "finalCTA.button": "Join the waitlist",
 
   // Footer
@@ -2258,12 +2265,13 @@ const translationsDe: Record<string, string> = {
   "howItWorks.diagram.step1.title": "Ihre Eingabe",
   "howItWorks.diagram.step1.description": "Grobe Notizen oder Stichpunkte",
   "howItWorks.diagram.step1.example": "Sam passt im Unterricht nicht auf.",
-  "howItWorks.diagram.step2.title": "Tonauswahl",
-  "howItWorks.diagram.step2.description": "Wählen Sie Ihre Stimme",
+  "howItWorks.diagram.step2.title": "Ton- und Risiko-Prüfung",
+  "howItWorks.diagram.step2.description":
+    "Wählen Sie Ton und kommunikative Richtung",
   "howItWorks.diagram.step2.example":
     "Unterstützend, Formell, Prägnant oder Neutral",
-  "howItWorks.diagram.step3.title": "Ãœberarbeitete Ausgabe",
-  "howItWorks.diagram.step3.description": "Lehrerbereite Kommunikation",
+  "howItWorks.diagram.step3.title": "Ruhigerer Entwurf",
+  "howItWorks.diagram.step3.description": "Klare, schulgeeignete Formulierung",
   "howItWorks.diagram.step3.example":
     "Ich wollte mich wegen Sams jüngsten Konzentrationsschwierigkeiten melden...",
   "howItWorks.steps.step1.number": "1",
@@ -2273,13 +2281,13 @@ const translationsDe: Record<string, string> = {
     "Beginnen Sie mit groben Notizen, Stichpunkten oder einem vollständigen Entwurf",
   "howItWorks.steps.step2.number": "2",
   "howItWorks.steps.step2.title":
-    "Wählen Sie Ihren Ton und sehen Sie zu, wie Draft ihn verfeinert",
+    "Wählen Sie Ihren Ton und lassen Sie Draft die Formulierung prüfen",
   "howItWorks.steps.step2.description":
-    "Unterstützend, formell, prägnant oder neutral - immer bearbeitbar",
+    "Tonrisiko senken und die Nachricht ruhig, klar und bearbeitbar halten",
   "howItWorks.steps.step3.number": "3",
-  "howItWorks.steps.step3.title": "Exportieren & teilen",
+  "howItWorks.steps.step3.title": "Vor dem Senden prüfen",
   "howItWorks.steps.step3.description":
-    "Kopieren, herunterladen oder mit einem Klick in Ihre Schul-Tools teilen",
+    "Sie behalten jedes Wort unter Kontrolle, bevor etwas Ihr Postfach verlässt",
 
   // Demo Section
   "demo.heading": "Draft in Aktion erleben",
@@ -2308,35 +2316,36 @@ const translationsDe: Record<string, string> = {
     "Ihr Aufsatz zeigt ein gutes Verständnis für das Thema und enthält relevante Beispiele. Um Ihr Argument zu stärken, sollten Sie in Ihrer Einleitung eine spezifischere These entwickeln. Versuchen Sie auÃŸerdem, direkte Zitate aus dem Text einzubauen, um Ihre Analyse zu untermauern. Ich würde gerne sehen, wie Sie Ihre Ideen im dritten Absatz erweitern. GroÃŸartiger Anfang!",
 
   // Use Cases Section
-  "useCases.heading": "Für Schreiben, das dich vom Unterrichten abhält",
+  "useCases.heading":
+    "Für sensible Schreibarbeit, die dich vom Unterrichten abhält",
   "useCases.cards.parentMessages.title": "Elternnachrichten",
   "useCases.cards.parentMessages.description":
-    "Ruhige, klare Antworten, die deeskalieren",
+    "Klare, professionelle Elternmails mit weniger Tonrisiko",
   "useCases.cards.parentMessages.examples":
     "Verhaltensbedenken, Fortschritts-Updates, Anwesenheitsprobleme",
   "useCases.cards.reportCards.title": "Zeugnisse",
   "useCases.cards.reportCards.description":
-    "Aus Stichpunkten werden menschliche Berichtskommentare",
+    "Aus Stichpunkten werden klare, angemessene Zeugnisbemerkungen",
   "useCases.cards.reportCards.examples":
     "Quartalsberichte, Fortschritts-Zusammenfassungen, Interventionspläne",
   "useCases.cards.gradingComments.title": "Bewertungs-Kommentare",
   "useCases.cards.gradingComments.description":
-    "Schnelleres, wärmeres Feedback in deiner Stimme",
+    "Ruhiges, konkretes Feedback ohne harsch oder vage zu wirken",
   "useCases.cards.gradingComments.examples":
     "Kriteriumsbasierte Kommentare, Rubrik-Feedback",
   "useCases.cards.schoolCommunications.title": "Schulkommunikation",
   "useCases.cards.schoolCommunications.description":
-    "Newsletter und Elterninfos mit Tonprüfung über Sprachen hinweg verfassen",
+    "Elterninfos und Mitteilungen klar über Sprachen und Kontexte hinweg formulieren",
   "useCases.cards.schoolCommunications.examples":
     "Updates, Veranstaltungsankündigungen, Richtlinien-Kommunikation",
   "useCases.cards.referenceLetters.title": "Empfehlungsschreiben",
   "useCases.cards.referenceLetters.description":
-    "Ãœberzeugende Empfehlungen selbstbewusst schreiben",
+    "Durchdachte Empfehlungen in klarer, professioneller Sprache schreiben",
   "useCases.cards.referenceLetters.examples":
     "Hochschulempfehlungen, Arbeitszeugnisse",
   "useCases.cards.documentation.title": "Dokumentation",
   "useCases.cards.documentation.description":
-    "Klare Aufzeichnungen und Besprechungsnotizen erstellen",
+    "Sachliche Aufzeichnungen und Besprechungsnotizen ruhig und belastbar formulieren",
   "useCases.cards.documentation.examples":
     "IEP-Dokumentation, Elternkonferenzen",
 
@@ -2352,7 +2361,7 @@ const translationsDe: Record<string, string> = {
   "comparison.rows.training.feature": "Training",
   "comparison.rows.training.generic": "Allgemeinwissen, geschäftsorientiert",
   "comparison.rows.training.zaza":
-    "Mit Lehrkräfte-Designpartnern und bildungsspezifischen Workflows entwickelt",
+    "Mit Lehrkräfte-Designpartnern für echte schulische Kommunikationsabläufe entwickelt",
   "comparison.rows.safety.feature": "Sicherheit",
   "comparison.rows.safety.generic":
     "Kann Schülerdetails oder Szenarien erfinden",
@@ -2360,23 +2369,27 @@ const translationsDe: Record<string, string> = {
     "Erfindet keine schülerbezogenen Aussagen - überarbeitet nur das, was du vorgibst",
   "comparison.rows.toneControl.feature": "Tonkontrolle",
   "comparison.rows.toneControl.generic": "Begrenzt oder inkonsistent",
-  "comparison.rows.toneControl.zaza": "4+ bildungsspezifische Töne",
+  "comparison.rows.toneControl.zaza":
+    "Bildungsspezifische Tonführung für ruhige, angemessene Formulierungen",
   "comparison.rows.compliance.feature": "Compliance",
   "comparison.rows.compliance.generic": "Nicht FERPA-konzipiert",
   "comparison.rows.compliance.zaza": "FERPA-ready von Grund auf",
   "comparison.rows.useCases.feature": "Anwendungsfälle",
   "comparison.rows.useCases.generic": "Generische Schreibaufgaben",
-  "comparison.rows.useCases.zaza": "6 spezialisierte Lehrer-Workflows",
+  "comparison.rows.useCases.zaza":
+    "Elternmails, Zeugnisbemerkungen und Dokumentation im Schulkontext",
   "comparison.rows.outputQuality.feature": "Ausgabequalität",
   "comparison.rows.outputQuality.generic": "Erfordert starke Bearbeitung",
   "comparison.rows.outputQuality.zaza":
-    "Abgesicherte, lehrerbereite Formulierungen",
+    "Klarere, belastbarere Formulierungen mit weniger Nachbearbeitung",
   "comparison.rows.learningCurve.feature": "Lernkurve",
   "comparison.rows.learningCurve.generic": "Komplexe Prompts erforderlich",
-  "comparison.rows.learningCurve.zaza": "Einfügen, Ton wählen, fertig",
+  "comparison.rows.learningCurve.zaza":
+    "Kontext einfügen, Ton prüfen, senden wenn bereit",
   "comparison.rows.community.feature": "Community",
   "comparison.rows.community.generic": "Kein Lehrkräfte-Support",
-  "comparison.rows.community.zaza": "Lehrkraefte auf der Warteliste",
+  "comparison.rows.community.zaza":
+    "Geprägt durch Lehrkräfte-Feedback aus echter Schulkommunikation",
   "caseStudies.eyebrow": "Vorher / Nachher",
   "caseStudies.heading": "Vorher / Nachher aus echten Klassenzimmern",
   "caseStudies.subheading":
@@ -2388,22 +2401,23 @@ const translationsDe: Record<string, string> = {
   "caseStudies.next": "Weiter",
 
   // Why Choose Section
-  "whyChoose.heading":
-    "Warum Lehrkräfte Draft für ruhige, sichere Kommunikation wählen",
-  "whyChoose.benefits.beatWritersBlock.title": "Fokus schnell zurückgewinnen",
+  "whyChoose.heading": "Warum Lehrkräfte Draft als zweite Instanz nutzen",
+  "whyChoose.benefits.beatWritersBlock.title":
+    "Vom Vorfall ausgehen, nicht von einer leeren Seite",
   "whyChoose.benefits.beatWritersBlock.description":
-    "Aus Rohnotizen werden klare Entwürfe ohne mentale Ãœberlastung",
+    "Aus Rohnotizen werden klare Entwürfe, ohne professionelles Urteil zu verlieren",
   "whyChoose.benefits.writeWithConfidence.title":
-    "Professionelle Sicherheit stärken",
+    "Tonrisiko vor dem Senden reduzieren",
   "whyChoose.benefits.writeWithConfidence.description":
-    "Klar, ruhig und schulgeeignet in jeder Nachricht",
-  "whyChoose.benefits.saveTime.title": "Kognitive Last täglich senken",
+    "Formulierungen erkennen, die zu harsch, zu vage oder leicht missverständlich wirken könnten",
+  "whyChoose.benefits.saveTime.title":
+    "Weniger Zeit mit Umschreiben verbringen",
   "whyChoose.benefits.saveTime.description":
-    "Weniger Umschreiben und Grübeln in sensiblen Momenten",
+    "Weniger Grübeln bei Elternmails, Zeugnisbemerkungen und Follow-up-Nachrichten",
   "whyChoose.benefits.breakBarriers.title":
-    "Grenzen in schwierigen Mailverläufen halten",
+    "Ruhig bleiben, wenn ein Verlauf unter Druck steht",
   "whyChoose.benefits.breakBarriers.description":
-    "Auch unter Druck ruhig und professionell formulieren",
+    "Formulierungen klar, angemessen und weniger eskalationsanfällig halten",
 
   // Testimonials Section
   "testimonials.heading": "Was Lehrkräfte sagen",
@@ -2422,7 +2436,7 @@ const translationsDe: Record<string, string> = {
   // Final CTA Section
   "finalCTA.heading": "Zaza - Just Teach.",
   "finalCTA.subheading":
-    "Zaza hilft Lehrkraeften, erfolgreich zu bleiben. Trag dich in die Warteliste fuer ruhige, professionelle Schreibunterstuetzung ein, die Unterrichtszeit zurueckgibt.",
+    "Trag dich in die Warteliste fuer lehrkraft-zentrierte Schreibunterstuetzung ein, die sensible Schulkommunikation ruhig, klar und angemessen haelt.",
   "finalCTA.button": "Zur Warteliste",
 
   // Footer
