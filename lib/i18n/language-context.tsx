@@ -86,8 +86,8 @@ const translationsEn: Record<string, string> = {
     "Collaborative writing with shared quality and consistency.",
   "pricing.department.priceLine": "€480/year",
   "pricing.department.billing": "Includes 5 teacher licences",
-  "pricing.department.helper":
-    "Equivalent to €8 per teacher/month, billed annually",
+  "pricing.department.helper": "Billed annually",
+  "pricing.department.contactHelper": "Additional teams? Contact sales",
   "pricing.department.cta": "Start team checkout",
   "pricing.department.includes": "Everything in Teacher, plus:",
   "pricing.department.feature1": "Team libraries, shared templates",
@@ -1648,8 +1648,9 @@ const translationsDe: Record<string, string> = {
     "Kollaboratives Schreiben mit gemeinsamer Qualität und Konsistenz.",
   "pricing.department.priceLine": "480 €/Jahr",
   "pricing.department.billing": "Enthält 5 Lizenzen für Lehrkräfte",
-  "pricing.department.helper":
-    "Entspricht 8 € pro Lehrkraft/Monat bei jährlicher Abrechnung",
+  "pricing.department.helper": "Jährliche Abrechnung",
+  "pricing.department.contactHelper":
+    "Zusätzliche Teams? Vertrieb kontaktieren",
   "pricing.department.cta": "Team-Checkout starten",
   "pricing.department.includes": "Alles in Teacher, plus:",
   "pricing.department.feature1": "Team-Bibliotheken, gemeinsame Vorlagen",

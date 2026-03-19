@@ -429,8 +429,11 @@ export default function PricingClient() {
               <p className="text-sm text-[#94A3B8] mb-2">
                 {t("pricing.department.billing")}
               </p>
-              <p className="text-xs text-[#64748B] mb-6">
+              <p className="text-sm text-[#94A3B8] mb-2">
                 {t("pricing.department.helper")}
+              </p>
+              <p className="text-xs text-[#64748B] mb-6">
+                {t("pricing.department.contactHelper")}
               </p>
 
               <Button

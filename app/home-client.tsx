@@ -156,11 +156,11 @@ export function HomePageClient() {
   const heroHeadline =
     language === "de"
       ? "Schreibe Eltern-E-Mails und Zeugnisbemerkungen"
-      : "Write parent emails and report comments";
+      : "Write parent emails and reports";
   const heroHeadlineAccent =
     language === "de"
       ? "ohne Sorge, dass sie falsch aufgefasst werden."
-      : "without worrying they will be taken the wrong way.";
+      : "without them being taken the wrong way.";
   const heroSubheading =
     language === "de"
       ? "Draft hilft Lehrkraeften, Ton und Formulierungen vor dem Senden zu verfeinern, damit Eltern-E-Mails und Zeugnisbemerkungen klar, ruhig und professionell bleiben."
