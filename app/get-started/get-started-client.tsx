@@ -33,6 +33,9 @@ export default function GetStartedClient() {
 
   const isGerman = language === "de";
   const privacyHref = isGerman ? "/de/privacy" : "/privacy";
+  const draftAppLoginBaseUrl =
+    process.env.NEXT_PUBLIC_DRAFT_APP_LOGIN_URL ??
+    "https://app.zazadraft.com/login";
 
   const copy = isGerman
     ? {
@@ -82,13 +85,14 @@ export default function GetStartedClient() {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const submittedEmail = email.trim();
     setLoading(true);
     setError("");
 
     try {
       await submitBrevoContact({
         name,
-        email,
+        email: submittedEmail,
         source: isGerman ? "get_started_page_de" : "get_started_page_en",
         attributes: {
           ENTRYPOINT: "GET_STARTED_PAGE",
@@ -96,12 +100,19 @@ export default function GetStartedClient() {
           LANGUAGE: language.toUpperCase(),
         },
       });
-      setSuccess(true);
+
+      const redirectUrl = new URL(draftAppLoginBaseUrl);
+      redirectUrl.searchParams.set("email", submittedEmail);
+      redirectUrl.searchParams.set("sendLink", "1");
+
       track("form_submit", {
         form: "get_started_page",
         plan: "free",
         language,
+        redirectDestination: redirectUrl.toString(),
       });
+      window.location.assign(redirectUrl.toString());
+      return;
     } catch (submissionError) {
       console.error("[get-started] Brevo submission failed", submissionError);
       setError(describeBrevoError(submissionError, copy.errorFallback));
