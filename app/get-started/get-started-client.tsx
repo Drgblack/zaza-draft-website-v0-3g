@@ -39,19 +39,19 @@ export default function GetStartedClient() {
         eyebrow: "KOSTENLOS STARTEN",
         title: "Starte mit dem kostenlosen Draft Tarif",
         subtitle:
-          "Erstelle dein kostenloses Konto fuer ruhigere, professionellere Schulkommunikation mit einer zweiten Instanz vor dem Senden.",
+          "Gib deinen Namen und deine E-Mail ein, und wir senden dir einen sicheren Anmeldelink per E-Mail. Kein Passwort erforderlich.",
         nameLabel: "Name",
         namePlaceholder: "Dein Name",
         emailLabel: "E-Mail-Adresse",
         emailPlaceholder: "du@schule.de",
         cta: "Sicher schreiben starten",
         loading: "Wird gesendet...",
-        reassurance: "Keine Kreditkarte. Dauert 30 Sekunden.",
+        reassurance: "Kein Passwort erforderlich. Dauert 30 Sekunden.",
         helper:
-          "Wir nutzen deine Angaben, um deinen kostenlosen Zugang vorzubereiten und dir die naechsten Schritte zu schicken.",
-        successTitle: "Du bist drin.",
+          "Wir nutzen deine Angaben, um dir deinen sicheren Anmeldelink und die ersten Zugangsschritte zu senden.",
+        successTitle: "Bitte pruefe deinen Posteingang.",
         successBody:
-          "Wir haben deine Angaben gespeichert und melden uns mit den naechsten Schritten fuer den kostenlosen Zugang.",
+          "Wir senden dir einen sicheren Anmeldelink per E-Mail, damit du ohne Passwort in Draft einsteigen kannst.",
         errorFallback:
           "Das Formular konnte gerade nicht gesendet werden. Bitte versuche es erneut.",
         privacyLead: "Mit dem Absenden stimmst du unserer",
@@ -61,19 +61,19 @@ export default function GetStartedClient() {
         eyebrow: "GET STARTED",
         title: "Start with the free Draft plan",
         subtitle:
-          "Create your free account for calmer, more professional school communication with a second pair of eyes before sending.",
+          "Enter your name and email and we'll send you a secure login link by email. No password required.",
         nameLabel: "Name",
         namePlaceholder: "Your name",
         emailLabel: "Email",
         emailPlaceholder: "you@school.org",
         cta: "Start writing safely",
         loading: "Submitting...",
-        reassurance: "No credit card. Takes 30 seconds.",
+        reassurance: "No password required. Takes 30 seconds.",
         helper:
-          "We use your details to prepare your free access and send the next steps.",
-        successTitle: "You’re in.",
+          "We use your details to send your secure login link and first access steps.",
+        successTitle: "Check your inbox.",
         successBody:
-          "We’ve saved your details and will follow up with next steps for free access.",
+          "We're sending you a secure sign-in link by email so you can get into Draft without a password.",
         errorFallback:
           "We could not submit the form just now. Please try again.",
         privacyLead: "By continuing, you agree to our",

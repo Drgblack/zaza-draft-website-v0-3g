@@ -232,13 +232,14 @@ const translationsEn: Record<string, string> = {
   "form.success": "Check your inbox",
   "form.error": "Something went wrong. Please try again.",
   "form.consentRequired": "Please accept the privacy policy to continue.",
-  "form.trialCopy": "Try 5 comments for free",
+  "form.trialCopy":
+    "Enter your email and we'll send you a secure sign-in link. No password required.",
   "form.placeholder.name": "Your name",
   "form.placeholder.email": "you@example.com",
   "form.submitting": "Submitting...",
   "form.close": "Close",
   "form.successNote":
-    "We've sent your resource. If it doesn't arrive, check your spam or write us.",
+    "We're sending you a secure sign-in link by email. If it doesn't arrive, check your spam or write us.",
 
   // Demo modal
   "demoModal.title": "Request a demo",
@@ -1798,13 +1799,14 @@ const translationsDe: Record<string, string> = {
   "form.error": "Etwas ist schiefgelaufen. Bitte versuche es noch einmal.",
   "form.consentRequired":
     "Bitte stimme der Datenschutzerklärung zu, um fortzufahren.",
-  "form.trialCopy": "Teste 5 Kommentare kostenlos",
+  "form.trialCopy":
+    "Gib deine E-Mail ein und wir senden dir einen sicheren Anmeldelink. Kein Passwort erforderlich.",
   "form.placeholder.name": "Dein Name",
   "form.placeholder.email": "du@example.com",
   "form.submitting": "Wird gesendet...",
   "form.close": "Schließen",
   "form.successNote":
-    "Wir haben dir das Material geschickt. Schau ggf. auch im Spam nach oder schreibe uns.",
+    "Wir senden dir einen sicheren Anmeldelink per E-Mail. Schau ggf. auch im Spam nach oder schreibe uns.",
 
   // Demo modal
   "demoModal.title": "Demo anfragen",

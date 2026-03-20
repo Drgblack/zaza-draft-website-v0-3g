@@ -5,7 +5,7 @@ import GetStartedClient from "@/app/get-started/get-started-client";
 export const metadata: Metadata = buildPageMetadata({
   title: "Kostenlos starten | Zaza Draft",
   description:
-    "Erstelle dein kostenloses Zaza Draft Konto fuer ruhigere, professionellere Schulkommunikation mit lehrkraft-zentrierter Unterstuetzung.",
+    "Gib deine E-Mail ein und erhalte einen sicheren Anmeldelink fuer Zaza Draft. Kein Passwort erforderlich.",
   path: "/de/get-started",
   image: "/images/draft-interface.png",
   alternates: {
