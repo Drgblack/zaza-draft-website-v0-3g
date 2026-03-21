@@ -17,8 +17,33 @@ export default function GetStartedClient() {
   const isGerman = language === "de";
   const privacyHref = isGerman ? "/de/privacy" : "/privacy";
   const draftAppLoginBaseUrl =
-    process.env.NEXT_PUBLIC_DRAFT_APP_LOGIN_URL ??
-    "https://app.zazadraft.com/login";
+    process.env.NEXT_PUBLIC_DRAFT_APP_LOGIN_URL ?? "https://app.zazadraft.com/";
+
+  const buildDraftAppRedirectUrl = (submittedEmail: string) => {
+    try {
+      const redirectUrl = new URL(draftAppLoginBaseUrl);
+
+      if (
+        redirectUrl.protocol !== "https:" &&
+        redirectUrl.protocol !== "http:"
+      ) {
+        throw new Error("Unsupported redirect protocol");
+      }
+
+      redirectUrl.searchParams.set("email", submittedEmail);
+      redirectUrl.searchParams.set("sendLink", "1");
+      return redirectUrl;
+    } catch (redirectError) {
+      console.error(
+        "[get-started] Invalid app login URL, falling back to app root",
+        redirectError,
+      );
+      const fallbackUrl = new URL("https://app.zazadraft.com/");
+      fallbackUrl.searchParams.set("email", submittedEmail);
+      fallbackUrl.searchParams.set("sendLink", "1");
+      return fallbackUrl;
+    }
+  };
 
   const copy = isGerman
     ? {
@@ -78,9 +103,7 @@ export default function GetStartedClient() {
         },
       });
 
-      const redirectUrl = new URL(draftAppLoginBaseUrl);
-      redirectUrl.searchParams.set("email", submittedEmail);
-      redirectUrl.searchParams.set("sendLink", "1");
+      const redirectUrl = buildDraftAppRedirectUrl(submittedEmail);
 
       track("form_submit", {
         form: "get_started_page",
