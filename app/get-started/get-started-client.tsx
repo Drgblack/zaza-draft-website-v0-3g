@@ -48,7 +48,7 @@ export default function GetStartedClient() {
   const copy = isGerman
     ? {
         eyebrow: "KOSTENLOS STARTEN",
-        title: "Starte mit dem kostenlosen Draft Tarif",
+        title: "Starte mit kostenlosem Zugang zu Draft",
         subtitle:
           "Gib deinen Namen und deine E-Mail ein, und wir senden dir einen sicheren Anmeldelink per E-Mail. Kein Passwort erforderlich.",
         nameLabel: "Name",
@@ -59,7 +59,7 @@ export default function GetStartedClient() {
         loading: "Weiterleitung...",
         reassurance: "Kein Passwort erforderlich. Dauert 30 Sekunden.",
         helper:
-          "Wir nutzen deine Angaben, um dir deinen sicheren Anmeldelink und die ersten Zugangsschritte zu senden.",
+          "Wir nutzen deine Angaben, um dir deinen sicheren Anmeldelink zu senden und deinen Zugang zu Draft vorzubereiten.",
         errorFallback:
           "Das Formular konnte gerade nicht gesendet werden. Bitte versuche es erneut.",
         privacyLead: "Mit dem Absenden stimmst du unserer",
@@ -67,7 +67,7 @@ export default function GetStartedClient() {
       }
     : {
         eyebrow: "GET STARTED",
-        title: "Start with the free Draft plan",
+        title: "Start with free access to Draft",
         subtitle:
           "Enter your name and email and we'll send you a secure login link by email. No password required.",
         nameLabel: "Name",
@@ -78,7 +78,7 @@ export default function GetStartedClient() {
         loading: "Redirecting...",
         reassurance: "No password required. Takes 30 seconds.",
         helper:
-          "We use your details to send your secure login link and first access steps.",
+          "We use your details to send your secure login link and prepare your access to Draft.",
         errorFallback:
           "We could not submit the form just now. Please try again.",
         privacyLead: "By continuing, you agree to our",

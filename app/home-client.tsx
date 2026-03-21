@@ -163,12 +163,12 @@ export function HomePageClient() {
       : "without them being taken the wrong way.";
   const heroSubheading =
     language === "de"
-      ? "Draft hilft Lehrkraeften, Ton und Formulierungen vor dem Senden zu verfeinern, damit Eltern-E-Mails und Zeugnisbemerkungen klar, ruhig und professionell bleiben."
-      : "Draft helps teachers refine tone before sending, so parent emails and report comments stay clear, calm, and professional.";
+      ? "Draft hilft Lehrkraeften, Ton und Formulierungen vor dem Senden zu verfeinern, damit sensible Eltern-E-Mails und Zeugnisbemerkungen klar, ruhig und professionell bleiben."
+      : "Draft helps teachers refine tone before sending, so sensitive parent emails and reports stay clear, calm, and professional.";
   const heroEntityLine =
     language === "de"
-      ? "Zaza Draft ist kein generischer KI-Schreiber. Es ist eine lehrkraft-zentrierte Sicherheitsebene fuer sensible Schulkommunikation. Du pruefst, bearbeitest und gibst jede Formulierung selbst frei."
-      : "Zaza Draft is not a generic AI writer. It is a teacher-first safety layer for high-stakes school communication. You review, edit, and approve every word before it is used.";
+      ? "Zaza Draft ist kein generischer KI-Schreiber. Es ist professionelle Schreibunterstuetzung fuer sensible Schulkommunikation, entwickelt, um die Urteilskraft von Lehrkraeften zu stuetzen, nicht zu ersetzen. Du pruefst, bearbeitest und gibst jede Formulierung selbst frei."
+      : "Zaza Draft is not a generic AI writer. It is professional writing support for sensitive teacher communication, built to support teacher judgement, not replace it. You review, edit, and approve every word before it is used.";
   const heroOutcomeLabel =
     language === "de" ? "Vorher und nachher" : "Before and after";
   const heroProofHeading =
@@ -270,8 +270,8 @@ export function HomePageClient() {
     language === "de" ? "In Aktion sehen" : "See it in action";
   const heroTeacherUsageLine =
     language === "de"
-      ? "Entwickelt fuer Lehrkraefte, die E-Mails an Eltern, Zeugnisformulierungen und andere sensible Schulkommunikation schreiben."
-      : "Built for teachers writing parent emails, report comments, and other high-stakes school communication.";
+      ? "Entwickelt fuer Lehrkraefte, die E-Mails an Eltern, Zeugnisformulierungen und andere sensible Schulkommunikation schreiben, wenn Ton wichtig ist."
+      : "Built for teachers writing parent emails, reports, and other sensitive school communication when tone matters.";
   const heroTrustContextLine =
     language === "de"
       ? "Eingesetzt von Lehrkraeften in Grundschulen, weiterfuehrenden Schulen und internationalen Schulen"
@@ -304,8 +304,8 @@ export function HomePageClient() {
       : "Teacher-first support for high-stakes school communication";
   const trustPanelSubtext =
     language === "de"
-      ? "Draft ist als zweite Instanz vor dem Senden gedacht - fuer die Momente, in denen Ton, Klarheit und Professionalitaet besonders viel Gewicht tragen."
-      : "Draft is designed as a second pair of eyes before sending, for the moments when tone, clarity, and professionalism carry the most weight.";
+      ? "Draft ist als zweite Instanz vor dem Senden gedacht - fuer die Momente, in denen ruhige Formulierungen, Klarheit und professionelle Urteilskraft besonders viel Gewicht tragen."
+      : "Draft is designed as a second pair of eyes before sending, for the moments when calm wording, clarity, and professional judgement carry the most weight.";
   const trustPanelCards =
     language === "de"
       ? [

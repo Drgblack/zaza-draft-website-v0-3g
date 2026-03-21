@@ -25,9 +25,10 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 const translationsEn: Record<string, string> = {
   // Pricing Page (EN) - Boutique Version
   "pricing.hero.preheadline": "TRANSPARENT PRICING",
-  "pricing.hero.headline": "Pricing that respects teachers' time and wellbeing",
+  "pricing.hero.headline":
+    "Pricing for professional writing support when tone matters",
   "pricing.hero.subheadline":
-    "Save hours every week, reduce after-hours stress, and write with confidence - with pricing that's simple and fair.",
+    "Choose the level of support you need for sensitive teacher communication, with calmer wording, less escalation risk, and your judgement staying in control.",
   "pricing.trust.teachers": "Teacher-first",
   "pricing.trust.ferpa": "FERPA-minded",
   "pricing.trust.cancel": "Cancel anytime",
@@ -35,11 +36,11 @@ const translationsEn: Record<string, string> = {
   // Identity Strip
   "pricing.identity.title": "This is for teachers who...",
   "pricing.identity.point1":
-    "want to spend less time writing and more time teaching",
+    "want calm, professional support for parent emails and reports",
   "pricing.identity.point2":
-    "need trusted language support without losing their voice",
+    "need professional writing support without losing their voice",
   "pricing.identity.point3":
-    "care about boundaries, confidence, and calm in their week",
+    "want calmer wording and less escalation risk when the message matters",
 
   // Currency & Billing Toggle
   "pricing.toggle.monthly": "Monthly",
@@ -48,13 +49,13 @@ const translationsEn: Record<string, string> = {
 
   // Outcome Proof
   "pricing.outcome.text":
-    "Many teachers lose hours each week to parent messages, behaviour notes, and report comments. Draft helps you write faster, with safer wording and less back-and-forth.",
+    "Many teachers lose hours each week to parent messages, behaviour notes, and report comments. Draft helps you write with calmer wording, less escalation risk, and support for your professional judgement.",
 
   // Free Plan
   "pricing.free.badge": "FREE",
   "pricing.free.title": "Starter",
   "pricing.free.description":
-    "Everything you need to try Draft and save your first hours.",
+    "A calm way to try Draft for sensitive teacher communication.",
   "pricing.free.cta": "Start writing safely",
   "pricing.free.feature1": "5 drafts/month",
   "pricing.free.feature2": "Basic templates",
@@ -65,7 +66,7 @@ const translationsEn: Record<string, string> = {
   "pricing.teacher.badge": "MOST POPULAR",
   "pricing.teacher.title": "Teacher",
   "pricing.teacher.description":
-    "Unlimited writing support with no invented student facts and no lock-ins.",
+    "Professional writing support for sensitive teacher communication, with calmer wording and less escalation risk.",
   "pricing.teacher.period": "Cancel anytime",
   "pricing.teacher.savingsAnnual": "Save 2 months free",
   "pricing.teacher.cta": "Upgrade now",
@@ -83,7 +84,7 @@ const translationsEn: Record<string, string> = {
   "pricing.department.badge": "TEAMS",
   "pricing.department.title": "Department",
   "pricing.department.description":
-    "Collaborative writing with shared quality and consistency.",
+    "Shared support for calm, consistent school communication across a team.",
   "pricing.department.priceLine": "€480/year",
   "pricing.department.billing": "Includes 5 teacher licences (annual plan)",
   "pricing.department.helper": "Billed annually",
@@ -197,9 +198,9 @@ const translationsEn: Record<string, string> = {
     "Yes - 30-day money-back guarantee on all paid plans. No questions asked.",
 
   // CTA Section
-  "pricing.cta.title": "Ready to save hours every week?",
+  "pricing.cta.title": "Ready for calmer, more professional communication?",
   "pricing.cta.subtitle":
-    "Start free today • No credit card required • Cancel anytime",
+    "Start free with professional writing support when tone matters",
   "pricing.cta.primary": "Start writing safely",
   "pricing.cta.secondary": "Talk to Sales",
 
@@ -1588,9 +1589,9 @@ const translationsDe: Record<string, string> = {
   // Pricing Page (DE) - Boutique Version
   "pricing.hero.preheadline": "TRANSPARENTE PREISE",
   "pricing.hero.headline":
-    "Preise, die die Zeit und das Wohlbefinden von Lehrkräften respektieren",
+    "Preise für professionelle Schreibunterstützung, wenn Ton wichtig ist",
   "pricing.hero.subheadline":
-    "Sparen Sie jede Woche Stunden, reduzieren Sie Stress nach Feierabend und schreiben Sie mit Zuversicht - mit Preisen, die einfach und fair sind.",
+    "Wählen Sie die Unterstützung, die Sie für sensible Schulkommunikation brauchen - mit ruhigeren Formulierungen, weniger Eskalationsrisiko und einer professionellen Urteilskraft, die die Kontrolle behält.",
   "pricing.trust.teachers": "Lehrkraft-zentriert",
   "pricing.trust.ferpa": "FERPA-orientiert",
   "pricing.trust.cancel": "Jederzeit kündbar",
@@ -1598,11 +1599,11 @@ const translationsDe: Record<string, string> = {
   // Identity Strip
   "pricing.identity.title": "Dies ist für Lehrkräfte, die...",
   "pricing.identity.point1":
-    "weniger Zeit mit Schreiben und mehr Zeit mit Unterrichten verbringen möchten",
+    "ruhige, professionelle Unterstützung für Eltern-E-Mails und Zeugnisse möchten",
   "pricing.identity.point2":
-    "vertrauenswürdige Sprachunterstützung benötigen, ohne ihre Stimme zu verlieren",
+    "professionelle Schreibunterstützung brauchen, ohne ihre Stimme zu verlieren",
   "pricing.identity.point3":
-    "sich um Grenzen, Zuversicht und Ruhe in ihrer Woche kümmern",
+    "ruhigere Formulierungen und weniger Eskalationsrisiko möchten, wenn es darauf ankommt",
 
   // Currency & Billing Toggle
   "pricing.toggle.monthly": "Monatlich",
@@ -1611,13 +1612,13 @@ const translationsDe: Record<string, string> = {
 
   // Outcome Proof
   "pricing.outcome.text":
-    "Viele Lehrkräfte verlieren jede Woche Stunden an Elternmails, Vorfallsdokumentation und Berichtskommentare. Draft hilft dir, schneller zu formulieren - mit abgesicherten Formulierungen und weniger Hin-und-her.",
+    "Viele Lehrkräfte verlieren jede Woche Stunden an Elternmails, Vorfallsdokumentation und Zeugnisbemerkungen. Draft hilft dir mit ruhigeren Formulierungen, weniger Eskalationsrisiko und Unterstützung für deine professionelle Urteilskraft.",
 
   // Free Plan
   "pricing.free.badge": "KOSTENLOS",
   "pricing.free.title": "Starter",
   "pricing.free.description":
-    "Alles, was Sie brauchen, um Draft auszuprobieren und Ihre ersten Stunden zu sparen.",
+    "Ein ruhiger Einstieg, um Draft für sensible Schulkommunikation auszuprobieren.",
   "pricing.free.cta": "Sicher schreiben starten",
   "pricing.free.feature1": "5 Entwürfe pro Monat",
   "pricing.free.feature2": "Basisvorlagen",
@@ -1628,7 +1629,7 @@ const translationsDe: Record<string, string> = {
   "pricing.teacher.badge": "AM BELIEBTESTEN",
   "pricing.teacher.title": "Teacher",
   "pricing.teacher.description":
-    "Unbegrenzte Schreibunterstuetzung ohne erfundene Schuelerinformationen und ohne Lock-ins.",
+    "Professionelle Schreibunterstützung für sensible Schulkommunikation, mit ruhigeren Formulierungen und weniger Eskalationsrisiko.",
   "pricing.teacher.period": "Jederzeit kündbar",
   "pricing.teacher.savingsAnnual": "2 Monate kostenlos sparen",
   "pricing.teacher.cta": "Jetzt abonnieren",
@@ -1647,7 +1648,7 @@ const translationsDe: Record<string, string> = {
   "pricing.department.badge": "TEAMS",
   "pricing.department.title": "Department",
   "pricing.department.description":
-    "Kollaboratives Schreiben mit gemeinsamer Qualität und Konsistenz.",
+    "Gemeinsame Unterstützung für ruhige, konsistente Schulkommunikation im Team.",
   "pricing.department.priceLine": "480 € / Jahr",
   "pricing.department.billing": "Enthält 5 Lehrkraft-Lizenzen (Jahresplan)",
   "pricing.department.helper": "Jährliche Abrechnung",
@@ -1763,9 +1764,9 @@ const translationsDe: Record<string, string> = {
     "Ja - 30-Tage-Geld-zurück-Garantie auf alle kostenpflichtigen Pläne. Keine Fragen gestellt.",
 
   // CTA Section
-  "pricing.cta.title": "Bereit, jede Woche Stunden zu sparen?",
+  "pricing.cta.title": "Bereit für ruhigere, professionellere Kommunikation?",
   "pricing.cta.subtitle":
-    "Heute kostenlos starten • Keine Kreditkarte erforderlich • Jederzeit kündbar",
+    "Kostenlos starten mit professioneller Schreibunterstützung, wenn Ton wichtig ist",
   "pricing.cta.primary": "Sicher schreiben starten",
   "pricing.cta.secondary": "Mit Vertrieb sprechen",
 
