@@ -4,14 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import {
-  Check,
-  ChevronDown,
-  Star,
-  ShieldCheck,
-  Globe,
-  UserRound,
-} from "lucide-react";
+import { Check, ChevronDown, Star, ShieldCheck, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { motion, AnimatePresence } from "framer-motion";
@@ -47,17 +40,25 @@ const prices = {
 const pricingTestimonialHeadshots = [
   "/testimonials/pricing-teacher-1.jpg",
   "/testimonials/pricing-teacher-2.jpg",
-  "/images/testimonials/emma-rodriguez.jpg",
+  "/testimonials/emma.png",
 ] as const;
 
 function PricingTestimonialAvatar({ src, alt }: { src: string; alt: string }) {
   const [hasError, setHasError] = useState(false);
+  const initials =
+    alt
+      .replace(/[^A-Za-zÀ-ÖØ-öø-ÿ\s]/g, "")
+      .split(/\s+/)
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((part) => part.charAt(0).toUpperCase())
+      .join(".") + ".";
 
   return (
     <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-white/10 bg-[#0F172A] shadow-[0_8px_20px_rgba(15,23,42,0.35)]">
       {hasError ? (
-        <div className="flex h-full w-full items-center justify-center bg-slate-800 text-slate-300">
-          <UserRound className="h-6 w-6" aria-hidden="true" />
+        <div className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.28),rgba(30,41,59,0.98)_62%)] text-[11px] font-semibold tracking-[0.18em] text-[#E9D5FF]">
+          <span aria-hidden="true">{initials}</span>
           <span className="sr-only">{alt}</span>
         </div>
       ) : (
