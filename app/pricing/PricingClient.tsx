@@ -1,5 +1,6 @@
 ﻿"use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { Check, ChevronDown, Star, ShieldCheck, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -30,6 +31,43 @@ const prices = {
   },
 };
 
+const pricingTestimonialHeadshots = [
+  "/testimonials/pricing-teacher-1.jpg",
+  "/testimonials/pricing-teacher-2.jpg",
+  "/testimonials/emma-k-generated.png",
+] as const;
+
+function PricingTestimonialAvatar({ src, alt }: { src: string; alt: string }) {
+  const [hasError, setHasError] = useState(false);
+  const initials =
+    alt
+      .replace(/[^A-Za-zÀ-ÖØ-öø-ÿ\s]/g, "")
+      .split(/\s+/)
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((part) => part.charAt(0).toUpperCase())
+      .join(".") + ".";
+
+  return (
+    <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-white/10 bg-[#0F172A] shadow-[0_8px_20px_rgba(15,23,42,0.35)]">
+      {hasError ? (
+        <div className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.28),rgba(30,41,59,0.98)_62%)] text-[11px] font-semibold tracking-[0.18em] text-[#E9D5FF]">
+          <span aria-hidden="true">{initials}</span>
+          <span className="sr-only">{alt}</span>
+        </div>
+      ) : (
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="48px"
+          className="object-cover"
+          onError={() => setHasError(true)}
+        />
+      )}
+    </div>
+  );
+}
 export default function PricingClient() {
   const { t, language } = useLanguage();
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "annual">(
@@ -90,15 +128,14 @@ export default function PricingClient() {
 
   const teacherCheckoutHref = buildCheckoutHref(
     teacherCheckoutUrl,
-    language === "de"
-      ? "Zaza Draft Abonnement"
-      : "Zaza Draft subscription",
+    language === "de" ? "Zaza Draft Abonnement" : "Zaza Draft subscription",
   );
   const bundleCheckoutHref = buildCheckoutHref(
     bundleCheckoutUrl,
     language === "de" ? "Zaza Draft Bundle" : "Zaza Draft bundle",
   );
-  const salesMailto = "mailto:hello@zazatechnologies.com?subject=Zaza%20Draft%20-%20Sales%20Enquiry";
+  const salesMailto =
+    "mailto:hello@zazatechnologies.com?subject=Zaza%20Draft%20-%20Sales%20Enquiry";
   const departmentCheckoutHref = departmentCheckoutUrl || salesMailto;
   const enterpriseCheckoutHref = enterpriseCheckoutUrl || salesMailto;
   const trackPricingCTA = (id: string) =>
@@ -359,19 +396,19 @@ export default function PricingClient() {
                 </p>
               )}
 
-                <Button
-                  asChild
-                  onClick={() => {
-                    trackPricingCTA("checkout_teacher");
-                    track("cta_click_pricing_checkout_teacher", {
-                      billingCycle: billingPeriod,
-                      currency,
-                      language,
-                      hasCheckoutUrl: Boolean(teacherCheckoutUrl),
-                    });
-                  }}
-                  className="w-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white hover:scale-105 py-6 text-lg font-semibold rounded-lg mb-3 shadow-lg shadow-[#8B5CF6]/40 transition-transform"
-                >
+              <Button
+                asChild
+                onClick={() => {
+                  trackPricingCTA("checkout_teacher");
+                  track("cta_click_pricing_checkout_teacher", {
+                    billingCycle: billingPeriod,
+                    currency,
+                    language,
+                    hasCheckoutUrl: Boolean(teacherCheckoutUrl),
+                  });
+                }}
+                className="w-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white hover:scale-105 py-6 text-lg font-semibold rounded-lg mb-3 shadow-lg shadow-[#8B5CF6]/40 transition-transform"
+              >
                 <a
                   href={teacherCheckoutHref}
                   target={teacherCheckoutUrl ? "_blank" : undefined}
@@ -613,7 +650,9 @@ export default function PricingClient() {
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="bg-white/5 text-sm text-[#E2E8F0] uppercase tracking-wide">
-                    <th className="text-left px-6 py-4">{t("pricing.compare.column.generic")}</th>
+                    <th className="text-left px-6 py-4">
+                      {t("pricing.compare.column.generic")}
+                    </th>
                     <th className="text-left px-6 py-4 bg-[#8B5CF6]/10 text-[#C4B5FD]">
                       {t("pricing.compare.column.zaza")}
                     </th>
@@ -629,13 +668,17 @@ export default function PricingClient() {
                         <div className="text-xs font-semibold text-[#94A3B8] uppercase tracking-wide">
                           {row.feature}
                         </div>
-                        <div className="mt-2 text-sm text-[#E2E8F0]">{row.generic}</div>
+                        <div className="mt-2 text-sm text-[#E2E8F0]">
+                          {row.generic}
+                        </div>
                       </td>
                       <td className="px-6 py-5 align-top bg-[#0F172A]">
                         <div className="text-xs font-semibold text-[#C4B5FD] uppercase tracking-wide">
                           {row.feature}
                         </div>
-                        <div className="mt-2 text-sm text-white">{row.zaza}</div>
+                        <div className="mt-2 text-sm text-white">
+                          {row.zaza}
+                        </div>
                       </td>
                     </tr>
                   ))}
@@ -645,8 +688,13 @@ export default function PricingClient() {
 
             <div className="grid gap-4 md:hidden">
               {comparisonRows.map((row) => (
-                <div key={row.feature} className="rounded-xl border border-white/10 bg-[#0B1220] p-5 space-y-3">
-                  <div className="text-sm font-semibold text-[#E2E8F0]">{row.feature}</div>
+                <div
+                  key={row.feature}
+                  className="rounded-xl border border-white/10 bg-[#0B1220] p-5 space-y-3"
+                >
+                  <div className="text-sm font-semibold text-[#E2E8F0]">
+                    {row.feature}
+                  </div>
                   <div className="rounded-lg border border-white/5 bg-[#111827] p-3 text-sm text-[#CBD5E1]">
                     <span className="block text-xs font-semibold text-[#9CA3AF] mb-1">
                       {t("pricing.compare.column.generic")}
@@ -663,7 +711,9 @@ export default function PricingClient() {
               ))}
             </div>
 
-            <p className="mt-6 text-center text-sm text-[#94A3B8]">{t("pricing.compare.footer")}</p>
+            <p className="mt-6 text-center text-sm text-[#94A3B8]">
+              {t("pricing.compare.footer")}
+            </p>
           </div>
         </section>
 
@@ -674,15 +724,13 @@ export default function PricingClient() {
               {t("pricing.testimonials.title")}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[1, 2, 3].map((i) => (
+              {[1, 2, 3].map((i, index) => (
                 <div key={i} className="bg-[#1E293B] rounded-xl p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-[#8B5CF6] rounded-full flex items-center justify-center text-white font-bold">
-                      {t(`pricing.testimonials.${i}.name`)
-                        .split(" ")
-                        .map((n) => n[0])
-                        .join("")}
-                    </div>
+                    <PricingTestimonialAvatar
+                      src={pricingTestimonialHeadshots[index]}
+                      alt={t(`pricing.testimonials.${i}.name`)}
+                    />
                     <div>
                       <p className="font-semibold text-white">
                         {t(`pricing.testimonials.${i}.name`)}
@@ -756,9 +804,9 @@ export default function PricingClient() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   onClick={() => {
-                    trackPricingCTA("cta_primary")
-                    track("cta_click_pricing_cta_primary", { language })
-                    setSignupOpen(true)
+                    trackPricingCTA("cta_primary");
+                    track("cta_click_pricing_cta_primary", { language });
+                    setSignupOpen(true);
                   }}
                   className="bg-white text-[#8B5CF6] hover:bg-white/90 py-6 px-8 text-lg font-semibold rounded-lg shadow-lg"
                 >
