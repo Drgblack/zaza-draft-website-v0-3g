@@ -40,7 +40,7 @@ const prices = {
 const pricingTestimonialHeadshots = [
   "/testimonials/pricing-teacher-1.jpg",
   "/testimonials/pricing-teacher-2.jpg",
-  "/testimonials/emma.png",
+  "/testimonials/emma-k-generated.png",
 ] as const;
 
 function PricingTestimonialAvatar({ src, alt }: { src: string; alt: string }) {
