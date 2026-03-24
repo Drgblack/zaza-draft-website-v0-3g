@@ -156,8 +156,8 @@ export default function BestAIWritingClient() {
               10 Best AI Writing Tools for Teachers in 2025
             </h1>
             <p className="mb-8 text-balance text-lg text-gray-300 sm:text-xl leading-relaxed">
-              Tested by 10,000+ educators. Compare features, pricing, and real classroom results to find the perfect AI
-              writing assistant for your teaching workflow.
+              Just launched in early access - feedback from real teachers is already coming in. Join 7 teachers shaping
+              it right now.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Button size="lg" asChild className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white">
@@ -510,8 +510,8 @@ export default function BestAIWritingClient() {
             <section className="rounded-xl border border-[#8B5CF6]/30 bg-gradient-to-br from-[#8B5CF6]/20 to-[#A78BFA]/10 p-8 text-center">
               <h2 className="mb-4 text-3xl font-bold text-white">Ready to Save 5+ Hours Per Week?</h2>
               <p className="mb-6 text-balance text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto">
-                Join 10,000+ teachers using Zaza Draft to write better parent emails, feedback, and reports in half the
-                time.
+                Just launched in early access - feedback from real teachers is already coming in. Join 7 teachers
+                shaping it right now.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <Button size="lg" asChild className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white">
@@ -572,5 +572,4 @@ export default function BestAIWritingClient() {
     </div>
   )
 }
-
 

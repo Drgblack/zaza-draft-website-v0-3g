@@ -252,7 +252,7 @@ export default function ReduceStressClient() {
 
       cta_final_title: "Ready to Reduce Your Communication Stress?",
       cta_final_subtitle:
-        "Join 10,000+ teachers who've reclaimed their time and peace of mind",
+        "Just launched in early access - feedback from real teachers is already coming in. Join 7 teachers shaping it right now.",
 
       faqs: [
         {
@@ -500,7 +500,7 @@ export default function ReduceStressClient() {
 
       cta_final_title: "Bereit, Ihren Kommunikationsstress zu reduzieren?",
       cta_final_subtitle:
-        "Schließen Sie sich über 10.000 Lehrern an, die ihre Zeit und ihre innere Ruhe zurückgewonnen haben",
+        "Gerade im Early Access gestartet - echtes Feedback von Lehrkräften kommt bereits rein. Machen Sie mit: 7 Lehrkräfte gestalten es gerade mit.",
 
       faqs: [
         {

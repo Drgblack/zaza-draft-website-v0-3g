@@ -1,54 +1,63 @@
 ﻿"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { useLanguage } from "@/lib/i18n/language-context"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Clock, Users, TrendingUp } from "lucide-react"
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { useLanguage } from "@/lib/i18n/language-context";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Clock, Users, TrendingUp } from "lucide-react";
 
-type Category = "all" | "elementary" | "middle" | "high" | "district" | "special-ed" | "multilingual"
+type Category =
+  | "all"
+  | "elementary"
+  | "middle"
+  | "high"
+  | "district"
+  | "special-ed"
+  | "multilingual";
 
 interface CaseStudy {
-  slug: string
-  title: string
-  school: string
-  location: string
-  students: string
-  category: Category
-  metric: string
-  metricValue: string
-  quote: string
-  thumbnail: string
+  slug: string;
+  title: string;
+  school: string;
+  location: string;
+  students: string;
+  category: Category;
+  metric: string;
+  metricValue: string;
+  quote: string;
+  thumbnail: string;
 }
 
 export function SuccessStoriesClient() {
-  const { language } = useLanguage()
-  const [selectedCategory, setSelectedCategory] = useState<Category>("all")
-  
+  const { language } = useLanguage();
+  const [selectedCategory, setSelectedCategory] = useState<Category>("all");
+
   // Use "de" if language is explicitly German, otherwise default to "en"
-  const lang = language === "de" ? "de" : "en"
+  const lang = language === "de" ? "de" : "en";
 
   // --- TRANSLATIONS ---
   const content = {
     en: {
       hero: {
-        badge: "Proven Results",
-        title: "See how teachers and schools transform communication with Zaza Draft",
-        subtitle: "Real stories from educators who've saved hundreds of hours and built stronger relationships with families."
+        badge: "Early Access",
+        title:
+          "See how teachers and schools transform communication with Zaza Draft",
+        subtitle:
+          "Just launched in early access - feedback from real teachers is already coming in. Join 7 teachers shaping it right now.",
       },
       metrics: {
-        teachers: "teachers trust Zaza",
-        emails: "parent emails sent",
-        savings: "average time savings"
+        teachers: "teachers shaping Zaza right now",
+        emails: "current launch stage",
+        savings: "feedback arriving now",
       },
       readStory: "Read Full Story",
       cta: {
-        title: "Join thousands of teachers",
-        subtitle: "Start transforming your communication today",
+        title: "Join the first teachers shaping Zaza Draft",
+        subtitle: "Start using it and help steer what comes next",
         primary: "Try Zaza Draft Free",
-        secondary: "Talk to Our Team"
+        secondary: "Talk to Our Team",
       },
       categories: [
         { id: "all" as Category, label: "All Stories" },
@@ -69,19 +78,22 @@ export function SuccessStoriesClient() {
           category: "elementary",
           metric: "Time Saved",
           metricValue: "12 hours/week",
-          quote: "I actually look forward to parent communication now. It's no longer a source of stress.",
+          quote:
+            "I actually look forward to parent communication now. It's no longer a source of stress.",
           thumbnail: "/elementary-school-classroom-teacher.jpg",
         },
         {
           slug: "riverside-unified-district-rollout",
-          title: "District-Wide AI Rollout: How Riverside Unified Trained 200 Teachers",
+          title:
+            "District-Wide AI Rollout: How Riverside Unified Trained 200 Teachers",
           school: "Riverside Unified",
           location: "California",
           students: "15,000 students",
           category: "district",
           metric: "Teachers Onboarded",
           metricValue: "200 teachers",
-          quote: "The professional development was seamless. Teachers were confident within days.",
+          quote:
+            "The professional development was seamless. Teachers were confident within days.",
           thumbnail: "/school-district-meeting-teachers.jpg",
         },
         {
@@ -93,7 +105,8 @@ export function SuccessStoriesClient() {
           category: "multilingual",
           metric: "Languages Supported",
           metricValue: "15 languages",
-          quote: "For the first time, every family gets messages in their language. The impact is profound.",
+          quote:
+            "For the first time, every family gets messages in their language. The impact is profound.",
           thumbnail: "/diverse-multilingual-classroom.jpg",
         },
         {
@@ -105,7 +118,8 @@ export function SuccessStoriesClient() {
           category: "special-ed",
           metric: "IEP Reports",
           metricValue: "40 reports in 1 day",
-          quote: "I can focus on the kids, not just the paperwork. Zaza Shield ensures compliance.",
+          quote:
+            "I can focus on the kids, not just the paperwork. Zaza Shield ensures compliance.",
           thumbnail: "/special-education-teacher.jpg",
         },
         {
@@ -117,28 +131,33 @@ export function SuccessStoriesClient() {
           category: "elementary",
           metric: "First Year Teacher",
           metricValue: "30 days to confidence",
-          quote: "My mentor teacher was impressed by my communication. Zaza gave me the confidence I needed.",
+          quote:
+            "My mentor teacher was impressed by my communication. Zaza gave me the confidence I needed.",
           thumbnail: "/young-teacher-confident-classroom.jpg",
         },
-      ]
+      ],
     },
     de: {
       hero: {
-        badge: "Bewiesene Ergebnisse",
-        title: "Erfahren Sie, wie Lehrkräfte und Schulen die Kommunikation mit Zaza Draft transformieren",
-        subtitle: "Echte Geschichten von Pädagogen, die hunderte Stunden gespart und stärkere Beziehungen zu Familien aufgebaut haben."
+        badge: "Early Access",
+        title:
+          "Erfahren Sie, wie Lehrkräfte und Schulen die Kommunikation mit Zaza Draft transformieren",
+        subtitle:
+          "Gerade im Early Access gestartet - echtes Feedback von Lehrkräften kommt bereits rein. Machen Sie mit: 7 Lehrkräfte gestalten es gerade mit.",
       },
       metrics: {
-        teachers: "Lehrkräfte vertrauen Zaza",
-        emails: "versendete Eltern-E-Mails",
-        savings: "durchschnittliche Zeitersparnis"
+        teachers: "Lehrkräfte gestalten Zaza gerade mit",
+        emails: "aktueller Launch-Status",
+        savings: "Feedback kommt gerade rein",
       },
       readStory: "Ganze Geschichte lesen",
       cta: {
-        title: "Schließen Sie sich tausenden Lehrkräften an",
-        subtitle: "Beginnen Sie noch heute mit der Transformation Ihrer Kommunikation",
+        title:
+          "Werden Sie Teil der ersten Lehrkräfte, die Zaza Draft mitgestalten",
+        subtitle:
+          "Nutzen Sie es jetzt und helfen Sie, die nächsten Schritte zu formen",
         primary: "Zaza Draft kostenlos testen",
-        secondary: "Kontaktieren Sie uns"
+        secondary: "Kontaktieren Sie uns",
       },
       categories: [
         { id: "all" as Category, label: "Alle Geschichten" },
@@ -152,38 +171,44 @@ export function SuccessStoriesClient() {
       caseStudies: [
         {
           slug: "lincoln-elementary-parent-communication",
-          title: "Wie die Lincoln Elementary die Zeit für Elternkommunikation um 75% reduzierte",
+          title:
+            "Wie die Lincoln Elementary die Zeit für Elternkommunikation um 75% reduzierte",
           school: "Lincoln Elementary",
           location: "Austin, TX",
           students: "450 Schüler",
           category: "elementary",
           metric: "Zeitersparnis",
           metricValue: "12 Std./Woche",
-          quote: "Ich freue mich jetzt tatsächlich auf die Elternkommunikation. Sie ist kein Stressfaktor mehr.",
+          quote:
+            "Ich freue mich jetzt tatsächlich auf die Elternkommunikation. Sie ist kein Stressfaktor mehr.",
           thumbnail: "/elementary-school-classroom-teacher.jpg",
         },
         {
           slug: "riverside-unified-district-rollout",
-          title: "Distriktweite KI-Einführung: Wie Riverside Unified 200 Lehrkräfte schulte",
+          title:
+            "Distriktweite KI-Einführung: Wie Riverside Unified 200 Lehrkräfte schulte",
           school: "Riverside Unified",
           location: "Kalifornien",
           students: "15.000 Schüler",
           category: "district",
           metric: "Lehrkräfte geschult",
           metricValue: "200 Lehrkräfte",
-          quote: "Die Fortbildung war nahtlos. Die Lehrkräfte waren innerhalb weniger Tage sicher im Umgang.",
+          quote:
+            "Die Fortbildung war nahtlos. Die Lehrkräfte waren innerhalb weniger Tage sicher im Umgang.",
           thumbnail: "/school-district-meeting-teachers.jpg",
         },
         {
           slug: "washington-middle-language-barriers",
-          title: "Sprachbarrieren überwinden: ESL-Erfolg an der Washington Middle",
+          title:
+            "Sprachbarrieren überwinden: ESL-Erfolg an der Washington Middle",
           school: "Washington Middle",
           location: "New York, NY",
           students: "800 Schüler",
           category: "multilingual",
           metric: "Unterstützte Sprachen",
           metricValue: "15 Sprachen",
-          quote: "Zum ersten Mal erhält jede Familie Nachrichten in ihrer Sprache. Die Wirkung ist enorm.",
+          quote:
+            "Zum ersten Mal erhält jede Familie Nachrichten in ihrer Sprache. Die Wirkung ist enorm.",
           thumbnail: "/diverse-multilingual-classroom.jpg",
         },
         {
@@ -195,31 +220,36 @@ export function SuccessStoriesClient() {
           category: "special-ed",
           metric: "Förderpläne",
           metricValue: "40 Berichte an 1 Tag",
-          quote: "Ich kann mich auf die Kinder konzentrieren, nicht nur auf den Papierkram. Zaza Shield sichert die Compliance.",
+          quote:
+            "Ich kann mich auf die Kinder konzentrieren, nicht nur auf den Papierkram. Zaza Shield sichert die Compliance.",
           thumbnail: "/special-education-teacher.jpg",
         },
         {
           slug: "jefferson-new-teacher-confidence",
-          title: "Selbstvertrauen neuer Lehrkräfte: Von ängstlich zu sicher in 30 Tagen",
+          title:
+            "Selbstvertrauen neuer Lehrkräfte: Von ängstlich zu sicher in 30 Tagen",
           school: "Jefferson Elementary",
           location: "Seattle, WA",
           students: "600 Schüler",
           category: "elementary",
           metric: "Berufseinsteiger",
           metricValue: "30 Tage bis zur Sicherheit",
-          quote: "Mein Mentor war beeindruckt von meiner Kommunikation. Zaza gab mir das nötige Selbstvertrauen.",
+          quote:
+            "Mein Mentor war beeindruckt von meiner Kommunikation. Zaza gab mir das nötige Selbstvertrauen.",
           thumbnail: "/young-teacher-confident-classroom.jpg",
         },
-      ]
-    }
-  }
+      ],
+    },
+  };
 
-  const text = content[lang]
-  const categories = text.categories
-  const caseStudies = text.caseStudies as CaseStudy[]
+  const text = content[lang];
+  const categories = text.categories;
+  const caseStudies = text.caseStudies as CaseStudy[];
 
   const filteredStudies =
-    selectedCategory === "all" ? caseStudies : caseStudies.filter((study) => study.category === selectedCategory)
+    selectedCategory === "all"
+      ? caseStudies
+      : caseStudies.filter((study) => study.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0F172A] via-[#1E293B] to-[#0F172A]">
@@ -240,17 +270,21 @@ export function SuccessStoriesClient() {
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
               <Users className="w-8 h-8 text-purple-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-white mb-1">10,000+</div>
+              <div className="text-3xl font-bold text-white mb-1">7</div>
               <div className="text-gray-400">{text.metrics.teachers}</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
               <TrendingUp className="w-8 h-8 text-blue-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-white mb-1">500,000+</div>
+              <div className="text-3xl font-bold text-white mb-1">
+                Early access
+              </div>
               <div className="text-gray-400">{text.metrics.emails}</div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
               <Clock className="w-8 h-8 text-green-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-white mb-1">70%</div>
+              <div className="text-3xl font-bold text-white mb-1">
+                Real feedback
+              </div>
               <div className="text-gray-400">{text.metrics.savings}</div>
             </div>
           </div>
@@ -310,11 +344,17 @@ export function SuccessStoriesClient() {
                   </div>
 
                   <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-4 mb-4">
-                    <div className="text-sm text-purple-300 mb-1">{study.metric}</div>
-                    <div className="text-2xl font-bold text-white">{study.metricValue}</div>
+                    <div className="text-sm text-purple-300 mb-1">
+                      {study.metric}
+                    </div>
+                    <div className="text-2xl font-bold text-white">
+                      {study.metricValue}
+                    </div>
                   </div>
 
-                  <blockquote className="text-gray-300 italic mb-4 line-clamp-2">"{study.quote}"</blockquote>
+                  <blockquote className="text-gray-300 italic mb-4 line-clamp-2">
+                    "{study.quote}"
+                  </blockquote>
 
                   <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors">
                     {text.readStory}
@@ -330,7 +370,9 @@ export function SuccessStoriesClient() {
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 rounded-3xl p-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{text.cta.title}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            {text.cta.title}
+          </h2>
           <p className="text-xl text-gray-300 mb-8">{text.cta.subtitle}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -346,7 +388,9 @@ export function SuccessStoriesClient() {
               variant="outline"
               className="border-white/20 text-white hover:bg-white/10 px-8 py-6 rounded-full bg-transparent"
             >
-              <Link href="/contact?topic=success-stories">{text.cta.secondary}</Link>
+              <Link href="/contact?topic=success-stories">
+                {text.cta.secondary}
+              </Link>
             </Button>
           </div>
         </div>
@@ -370,6 +414,5 @@ export function SuccessStoriesClient() {
         }}
       />
     </div>
-  )
+  );
 }
-

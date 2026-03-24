@@ -1,13 +1,13 @@
-const fs = require('fs');
+const fs = require("fs");
 
-console.log('🔧 Fixing language-context.tsx properly...\n');
+console.log("🔧 Fixing language-context.tsx properly...\n");
 
-let lc = fs.readFileSync('./lib/i18n/language-context.tsx', 'utf8');
+let lc = fs.readFileSync("./lib/i18n/language-context.tsx", "utf8");
 
 // Find the END of translationsEn (before "}")
-const enEnd = lc.indexOf('\n} as const\n\nconst translationsDe');
+const enEnd = lc.indexOf("\n} as const\n\nconst translationsDe");
 if (enEnd === -1) {
-  console.error('❌ Could not find translationsEn end');
+  console.error("❌ Could not find translationsEn end");
   process.exit(1);
 }
 
@@ -26,17 +26,17 @@ const enKeys = `
   "roi.title": "Calculate Your Time Savings with Zaza Draft",
   "roi.subtitle": "See exactly how many hours and money Zaza Draft saves.",
   "bestAiWriting.title": "10 Best AI Writing Tools for Teachers in 2025",
-  "bestAiWriting.subtitle": "Tested by educators. Compare features, pricing, and results.",
+  "bestAiWriting.subtitle": "Just launched in early access - feedback from real teachers is already coming in. Join 7 teachers shaping it right now.",
 `;
 
 // Insert before closing brace
 lc = lc.slice(0, enEnd) + enKeys + lc.slice(enEnd);
-console.log('✅ Added EN translations');
+console.log("✅ Added EN translations");
 
 // Find the END of translationsDe
-const deEnd = lc.indexOf('\n} as const\n\nexport function LanguageProvider');
+const deEnd = lc.indexOf("\n} as const\n\nexport function LanguageProvider");
 if (deEnd === -1) {
-  console.error('❌ Could not find translationsDe end');
+  console.error("❌ Could not find translationsDe end");
   process.exit(1);
 }
 
@@ -55,12 +55,12 @@ const deKeys = `
   "roi.title": "Ihre Zeitersparnis mit Zaza Draft berechnen",
   "roi.subtitle": "Sehen Sie genau, wie viele Stunden und Kosten Sie sparen.",
   "bestAiWriting.title": "Die 10 besten KI-Schreibtools für Lehrkräfte 2025",
-  "bestAiWriting.subtitle": "Von Lehrkräften getestet. Funktionen, Preise und Ergebnisse vergleichen.",
+  "bestAiWriting.subtitle": "Gerade im Early Access gestartet - echtes Feedback von Lehrkräften kommt bereits rein. Machen Sie mit: 7 Lehrkräfte gestalten es gerade mit.",
 `;
 
 // Insert before closing brace
 lc = lc.slice(0, deEnd) + deKeys + lc.slice(deEnd);
-console.log('✅ Added DE translations');
+console.log("✅ Added DE translations");
 
-fs.writeFileSync('./lib/i18n/language-context.tsx', lc, 'utf8');
-console.log('\n🎉 Translation keys added successfully!');
+fs.writeFileSync("./lib/i18n/language-context.tsx", lc, "utf8");
+console.log("\n🎉 Translation keys added successfully!");

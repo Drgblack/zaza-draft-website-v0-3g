@@ -23,7 +23,7 @@ export default function BestAIWritingClient() {
       meta_updated: "Updated January 2025",
       hero_title: "10 Best AI Writing Tools for Teachers in 2025",
       hero_subtitle:
-        "Tested by 10,000+ educators. Compare features, pricing, and real classroom results to find the perfect AI writing assistant for your teaching workflow.",
+        "Just launched in early access - feedback from real teachers is already coming in. Join 7 teachers shaping it right now.",
       cta_draft_free: "Try Zaza Draft Free",
       cta_compare: "Compare Tools",
 
@@ -47,8 +47,8 @@ export default function BestAIWritingClient() {
       faq_title: "Frequently Asked Questions",
       cta_final_title: "Ready to Save 5+ Hours Per Week?",
       cta_final_subtitle:
-        "Join 10,000+ teachers using Zaza Draft to write better parent emails, feedback, and reports in half the time.",
-      cta_start_trial: "Start Free Trial",
+        "Just launched in early access - feedback from real teachers is already coming in. Join 7 teachers shaping it right now.",
+      cta_start_trial: "Start writing safely",
       cta_email_guide: "See Parent Email Guide",
 
       // Sidebar
@@ -201,7 +201,7 @@ export default function BestAIWritingClient() {
       meta_updated: "Aktualisiert: Januar 2025",
       hero_title: "Die 10 besten KI-Schreibwerkzeuge für Lehrer im Jahr 2025",
       hero_subtitle:
-        "Von über 10.000 Pädagogen getestet. Vergleichen Sie Funktionen, Preise und Ergebnisse aus dem echten Klassenzimmer, um den perfekten KI-Schreibassistenten für Ihren Unterrichtsalltag zu finden.",
+        "Gerade im Early Access gestartet - echtes Feedback von Lehrkräften kommt bereits rein. Machen Sie mit: 7 Lehrkräfte gestalten es gerade mit.",
       cta_draft_free: "Zaza Draft kostenlos testen",
       cta_compare: "Werkzeuge vergleichen",
 
@@ -226,8 +226,8 @@ export default function BestAIWritingClient() {
       faq_title: "Häufig gestellte Fragen",
       cta_final_title: "Bereit, 5+ Stunden pro Woche zu sparen?",
       cta_final_subtitle:
-        "Schließen Sie sich über 10.000 Lehrern an, die Zaza Draft nutzen, um bessere Eltern-E-Mails, Feedback und Berichte in der Hälfte der Zeit zu schreiben.",
-      cta_start_trial: "Kostenlose Testversion starten",
+        "Gerade im Early Access gestartet - echtes Feedback von Lehrkräften kommt bereits rein. Machen Sie mit: 7 Lehrkräfte gestalten es gerade mit.",
+      cta_start_trial: "Sicher schreiben starten",
       cta_email_guide: "Leitfaden für Eltern-E-Mails ansehen",
 
       // Sidebar
