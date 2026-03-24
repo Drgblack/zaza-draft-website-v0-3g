@@ -141,6 +141,7 @@ const ShieldIcon = ({ className }: { className?: string }) => (
 export function HomePageClient() {
   const { t, language } = useLanguage();
   const [signupOpen, setSignupOpen] = useState(false);
+  const [heroProofIndex, setHeroProofIndex] = useState(0);
   const [showHallucinationTooltip, setShowHallucinationTooltip] =
     useState(false);
   const prefersReducedMotion = useReducedMotion();
@@ -250,6 +251,8 @@ export function HomePageClient() {
               "I wanted to let you know about an incident during today's lesson where Oliver became frustrated and pushed another pupil. We spoke with him about making positive choices and he understands that physical behaviour is not appropriate. We will continue supporting him in managing these moments and would appreciate your reinforcement of this at home.",
           },
         ];
+  const activeHeroProof =
+    heroProofSections[heroProofIndex] ?? heroProofSections[0];
   const heroProofCaption =
     language === "de"
       ? "Eine klare Tonverbesserung, ohne die eigentliche Botschaft zu verlieren."
@@ -258,6 +261,8 @@ export function HomePageClient() {
     language === "de"
       ? "Weniger Zweifeln, bevor du auf Senden drueckst."
       : "Less second-guessing before you press send.";
+  const heroPrevLabel = language === "de" ? "Zurueck" : "Previous";
+  const heroNextLabel = language === "de" ? "Weiter" : "Next";
   const heroTrustBarIntro =
     language === "de"
       ? "Fuer Lehrkraefte, die Kommunikation ruhig, klar und belastbar halten muessen."
@@ -639,6 +644,9 @@ export function HomePageClient() {
                         <h2 className="mt-2 text-lg font-semibold text-white sm:text-xl">
                           {heroProofHeading}
                         </h2>
+                        <p className="mt-2 text-xs uppercase tracking-[0.22em] text-[#C4B5FD]">
+                          {heroProofLabel}
+                        </p>
                         <p className="mt-2 text-xs uppercase tracking-[0.22em] text-[#A78BFA]">
                           {heroProofFrameLine}
                         </p>
@@ -652,58 +660,102 @@ export function HomePageClient() {
                       </div>
                     </div>
 
-                    <div className="mt-5 space-y-4">
-                      {heroProofSections.map((section) => (
-                        <section
-                          key={section.title}
-                          className="rounded-[22px] border border-white/10 bg-[#0F172A]/80 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]"
-                        >
-                          <div className="flex flex-wrap items-center justify-between gap-3">
-                            <div>
-                              <h3 className="text-sm font-semibold text-white sm:text-base">
-                                {section.title}
-                              </h3>
-                              <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[#64748B]">
-                                {section.context}
-                              </p>
-                            </div>
-                            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-[#CBD5E1]">
-                              <CheckCircleIcon className="h-4 w-4 text-emerald-400" />
-                              <span>{heroAfterMeta}</span>
-                            </div>
-                          </div>
+                    <div className="mt-5 rounded-[22px] border border-white/10 bg-[#0F172A]/80 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+                      <div className="flex flex-wrap items-center justify-between gap-3">
+                        <div>
+                          <h3 className="text-sm font-semibold text-white sm:text-base">
+                            {activeHeroProof.title}
+                          </h3>
+                          <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[#64748B]">
+                            {activeHeroProof.context}
+                          </p>
+                        </div>
+                        <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-[#CBD5E1]">
+                          <CheckCircleIcon className="h-4 w-4 text-emerald-400" />
+                          <span>{heroAfterMeta}</span>
+                        </div>
+                      </div>
 
-                          <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                            <article className="rounded-[20px] border border-white/10 bg-[#111827] p-4">
-                              <div className="flex items-center justify-between gap-3">
-                                <div className="inline-flex items-center gap-2 rounded-full border border-rose-500/20 bg-rose-500/10 px-3 py-1 text-xs font-medium text-rose-200">
-                                  <span>{heroBeforeLabel}</span>
-                                </div>
-                                <span className="text-xs text-[#94A3B8]">
-                                  {heroBeforeMeta}
-                                </span>
-                              </div>
-                              <p className="mt-4 text-sm leading-7 text-[#CBD5E1] sm:text-[15px]">
-                                {section.before}
-                              </p>
-                            </article>
-
-                            <article className="rounded-[20px] border border-emerald-400/20 bg-[linear-gradient(180deg,rgba(17,24,39,0.98),rgba(15,23,42,0.94))] p-4 shadow-[0_24px_70px_-36px_rgba(16,185,129,0.35)] ring-1 ring-white/5">
-                              <div className="flex items-center justify-between gap-3">
-                                <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-200">
-                                  <span>{heroAfterLabel}</span>
-                                </div>
-                                <span className="text-xs text-[#C4B5FD]">
-                                  {heroAfterMeta}
-                                </span>
-                              </div>
-                              <p className="mt-4 text-sm leading-7 text-white sm:text-[15px]">
-                                {section.after}
-                              </p>
-                            </article>
+                      <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                        <article className="rounded-[20px] border border-white/10 bg-[#111827] p-4">
+                          <div className="flex items-center justify-between gap-3">
+                            <div className="inline-flex items-center gap-2 rounded-full border border-rose-500/20 bg-rose-500/10 px-3 py-1 text-xs font-medium text-rose-200">
+                              <span>{heroBeforeLabel}</span>
+                            </div>
+                            <span className="text-xs text-[#94A3B8]">
+                              {heroBeforeMeta}
+                            </span>
                           </div>
-                        </section>
-                      ))}
+                          <p className="mt-4 text-sm leading-7 text-[#CBD5E1] sm:text-[15px]">
+                            {activeHeroProof.before}
+                          </p>
+                        </article>
+
+                        <article className="rounded-[20px] border border-emerald-400/20 bg-[linear-gradient(180deg,rgba(17,24,39,0.98),rgba(15,23,42,0.94))] p-4 shadow-[0_24px_70px_-36px_rgba(16,185,129,0.35)] ring-1 ring-white/5">
+                          <div className="flex items-center justify-between gap-3">
+                            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-200">
+                              <span>{heroAfterLabel}</span>
+                            </div>
+                            <span className="text-xs text-[#C4B5FD]">
+                              {heroAfterMeta}
+                            </span>
+                          </div>
+                          <p className="mt-4 text-sm leading-7 text-white sm:text-[15px]">
+                            {activeHeroProof.after}
+                          </p>
+                        </article>
+                      </div>
+
+                      <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
+                        <div className="flex items-center gap-2">
+                          {heroProofSections.map((section, index) => {
+                            const isActive = index === heroProofIndex;
+                            return (
+                              <button
+                                key={section.title}
+                                type="button"
+                                onClick={() => setHeroProofIndex(index)}
+                                aria-label={`${section.title} ${section.context}`}
+                                className={`h-2.5 rounded-full transition-all duration-150 ${
+                                  isActive
+                                    ? "w-8 bg-[#8B5CF6]"
+                                    : "w-2.5 bg-[#334155] hover:bg-[#64748B]"
+                                }`}
+                              />
+                            );
+                          })}
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Button
+                            type="button"
+                            size="sm"
+                            variant="outline"
+                            onClick={() =>
+                              setHeroProofIndex(
+                                (heroProofIndex -
+                                  1 +
+                                  heroProofSections.length) %
+                                  heroProofSections.length,
+                              )
+                            }
+                            className="border-white/10 bg-white/5 text-white hover:bg-white/10"
+                          >
+                            {heroPrevLabel}
+                          </Button>
+                          <Button
+                            type="button"
+                            size="sm"
+                            onClick={() =>
+                              setHeroProofIndex(
+                                (heroProofIndex + 1) % heroProofSections.length,
+                              )
+                            }
+                            className="bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white hover:opacity-95"
+                          >
+                            {heroNextLabel}
+                          </Button>
+                        </div>
+                      </div>
                     </div>
 
                     <p className="mt-4 text-sm text-[#94A3B8]">
@@ -713,27 +765,17 @@ export function HomePageClient() {
                       {heroMentalLoadLine}
                     </p>
                     <div className="mt-5 rounded-[22px] border border-white/10 bg-white/[0.03] p-4">
-                      <div className="flex flex-wrap items-center justify-between gap-3">
-                        <div>
-                          <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-[#C4B5FD]">
-                            {situationsHeading}
-                          </h3>
-                          <p className="mt-2 text-sm leading-6 text-[#94A3B8]">
-                            {language === "de"
-                              ? "Genau fuer die Formulierungen, die man zu leicht zu lange offen laesst."
-                              : "For the drafts teachers are most likely to leave open too long."}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                        {situationsItems.map((item) => (
-                          <div
+                      <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-[#C4B5FD]">
+                        {situationsHeading}
+                      </h3>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {situationsItems.slice(0, 4).map((item) => (
+                          <span
                             key={item}
-                            className="flex items-start gap-3 rounded-2xl border border-white/8 bg-[#111827]/70 px-4 py-3 text-sm text-[#E2E8F0]"
+                            className="rounded-full border border-white/8 bg-[#111827]/70 px-3 py-2 text-xs text-[#E2E8F0]"
                           >
-                            <CheckCircleIcon className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#A78BFA]" />
-                            <span>{item}</span>
-                          </div>
+                            {item}
+                          </span>
                         ))}
                       </div>
                     </div>
