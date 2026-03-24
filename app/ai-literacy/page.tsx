@@ -1,36 +1,25 @@
-﻿import type { Metadata } from "next"
-import AILiteracyClient from "./ai-literacy-client"
-import { CourseSchema, BreadcrumbSchema } from "@/lib/seo/schema"
+import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo/site-metadata";
+import { BreadcrumbSchema, CourseSchema } from "@/lib/seo/schema";
+import AILiteracyClient from "./ai-literacy-client";
 
-const siteUrl = "https://zazadraft.com/ai-literacy"
-
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "AI Literacy for Teachers | Free Courses & Certification | Zaza Draft",
   description:
     "Master AI tools for education with free courses, certification programs, and downloadable resources. Learn prompt engineering, ethical AI use, and practical classroom applications.",
-  keywords:
-    "AI literacy for teachers, AI education courses, teacher AI certification, prompt engineering for educators, AI tools training, FERPA compliance AI, ethical AI in education",
+  path: "/ai-literacy",
   alternates: {
-    canonical: siteUrl,
-    languages: {
-      en: siteUrl,
-      de: "https://zazadraft.com/de/ai-literacy",
-    },
+    en: "https://zazadraft.com/ai-literacy",
+    de: "https://zazadraft.com/de/ai-literacy",
   },
-  openGraph: {
-    title: "AI Literacy Resource Center for Teachers",
-    description: "Free courses, certification, and resources to help teachers confidently use AI in the classroom",
-    type: "website",
-    url: siteUrl,
-    siteName: "Zaza Draft",
-    locale: "en_GB",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "AI Literacy Resource Center for Teachers",
-    description: "Free courses, certification, and resources to help teachers confidently use AI in the classroom",
-  },
-}
+  keywords: [
+    "AI literacy for teachers",
+    "AI education courses",
+    "teacher AI certification",
+    "prompt engineering for educators",
+    "ethical AI in education",
+  ],
+});
 
 export default function AILiteracyPage() {
   return (
@@ -49,7 +38,5 @@ export default function AILiteracyPage() {
       />
       <AILiteracyClient />
     </>
-  )
+  );
 }
-// import type { Metadata } from "next"
-

@@ -1,50 +1,51 @@
-﻿import type { Metadata } from "next"
-import CommunityClient from "./community-client"
-import { BreadcrumbSchema } from "@/lib/seo/schema"
-import Script from "next/script"
+import type { Metadata } from "next";
+import { JsonLdCollection } from "@/components/seo/json-ld";
+import { createBreadcrumbJsonLd, createWebPageJsonLd } from "@/lib/seo/json-ld";
+import { buildPageMetadata } from "@/lib/seo/site-metadata";
+import CommunityClient from "./community-client";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Teacher Community Forum | Zaza Draft",
   description:
-    "Join 25,000+ teachers in our AI education community. Share strategies, ask questions, and connect with educators using AI tools.",
-  openGraph: {
-    title: "Teacher Community Forum | Zaza Draft",
-    description:
-      "Join 25,000+ teachers in our AI education community. Share strategies, ask questions, and connect with educators using AI tools.",
-    type: "website",
+    "Join the teacher community for practical AI discussion, classroom workflows, and safe school communication ideas.",
+  path: "/community",
+  alternates: {
+    en: "https://zazadraft.com/community",
+    de: "https://zazadraft.com/de/community",
   },
-}
+  keywords: [
+    "teacher community",
+    "AI community for teachers",
+    "teacher discussion forum",
+    "school communication community",
+  ],
+});
 
 export default function CommunityPage() {
   return (
     <>
-      <Script id="community-schema" type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "DiscussionForumPosting",
-          headline: "Teacher Community Forum",
-          description: "Connect with 25,000+ teachers using AI in education",
-          url: "https://zazadraft.com/community",
-          author: {
-            "@type": "Organization",
-            name: "Zaza Draft",
+      <JsonLdCollection
+        entries={[
+          {
+            id: "community-webpage-schema",
+            data: createWebPageJsonLd({
+              name: "Teacher Community Forum",
+              description:
+                "A teacher community for practical AI discussion, classroom workflows, and safe school communication ideas.",
+              path: "/community",
+              potentialActionName: "Join the teacher community",
+            }),
           },
-          interactionStatistic: {
-            "@type": "InteractionCounter",
-            interactionType: "https://schema.org/CommentAction",
-            userInteractionCount: 98000,
+          {
+            id: "community-breadcrumb-schema",
+            data: createBreadcrumbJsonLd([
+              { name: "Home", path: "/" },
+              { name: "Community", path: "/community" },
+            ]),
           },
-        })}
-      </Script>
-      <BreadcrumbSchema
-        items={[
-          { name: "Home", url: "https://zazadraft.com" },
-          { name: "Community", url: "https://zazadraft.com/community" },
         ]}
       />
       <CommunityClient />
     </>
-  )
+  );
 }
-
-

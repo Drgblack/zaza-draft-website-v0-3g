@@ -1,18 +1,25 @@
-﻿import type { Metadata } from "next"
-import IntegrationsClient from "./integrations-client"
-import { BreadcrumbSchema } from "@/lib/seo/schema"
-import Script from "next/script"
+import type { Metadata } from "next";
+import Script from "next/script";
+import { buildPageMetadata } from "@/lib/seo/site-metadata";
+import { BreadcrumbSchema } from "@/lib/seo/schema";
+import IntegrationsClient from "./integrations-client";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Integration Marketplace | Zaza Draft",
   description:
-    "Connect Zaza Draft with 50+ education tools including Google Classroom, Canvas, Schoology, PowerSchool, and more. Setup guides and documentation for seamless integration.",
-  openGraph: {
-    title: "Integration Marketplace | Zaza Draft",
-    description: "Connect Zaza Draft with 50+ education tools. Setup guides and documentation included.",
-    type: "website",
+    "Explore Zaza Draft integration guides for education tools including Google Classroom, Canvas, Schoology, and PowerSchool.",
+  path: "/integrations",
+  alternates: {
+    en: "https://zazadraft.com/integrations",
+    de: "https://zazadraft.com/de/integrations",
   },
-}
+  keywords: [
+    "teacher AI integrations",
+    "education tool integrations",
+    "Google Classroom AI integration",
+    "school software integrations",
+  ],
+});
 
 export default function IntegrationsPage() {
   return (
@@ -22,7 +29,8 @@ export default function IntegrationsPage() {
           "@context": "https://schema.org",
           "@type": "ItemList",
           name: "Zaza Draft Integrations",
-          description: "50+ education tool integrations for Zaza Draft",
+          description:
+            "Education tool integrations and setup guides for Zaza Draft",
           url: "https://zazadraft.com/integrations",
           numberOfItems: 52,
           itemListElement: [
@@ -55,8 +63,5 @@ export default function IntegrationsPage() {
       />
       <IntegrationsClient />
     </>
-  )
+  );
 }
-// duplicate Metadata import removed: import type { Metadata } from "next"
-
-
