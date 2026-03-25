@@ -1,7 +1,9 @@
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import React from "react";
+import { UtmCapture } from "@/components/analytics/utm-capture";
 import { LanguageProvider } from "@/lib/i18n/language-context";
 import { Header } from "@/components/header";
 import Footer from "@/components/Footer";
@@ -15,11 +17,14 @@ import {
 import { buildCanonicalAlternates } from "@/lib/seo-canonical";
 import { siteConfig } from "@/lib/seo/site-config";
 
-const GA4_MEASUREMENT_ID = "G-GFCNQYCHFK";
+const GA4_MEASUREMENT_ID =
+  process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID ??
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 const shouldLoadGa =
   process.env.NODE_ENV === "production" &&
   process.env.VERCEL_ENV !== "preview" &&
-  process.env.VERCEL_ENV !== "development";
+  process.env.VERCEL_ENV !== "development" &&
+  Boolean(GA4_MEASUREMENT_ID);
 
 export function generateMetadata(): Metadata {
   return {
@@ -61,24 +66,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {shouldLoadGa ? (
-          <>
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`}
-            />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-GFCNQYCHFK', {
-  anonymize_ip: true
-});`,
-              }}
-            />
-          </>
-        ) : null}
         <link rel="icon" href="/z-logo.png" sizes="any" />
       </head>
       <body className="bg-slate-950 text-slate-100">
@@ -87,6 +74,10 @@ gtag('config', 'G-GFCNQYCHFK', {
           data-domain="zazadraft.com"
           strategy="afterInteractive"
         />
+        {shouldLoadGa && GA4_MEASUREMENT_ID ? (
+          <GoogleAnalytics gaId={GA4_MEASUREMENT_ID} />
+        ) : null}
+        <UtmCapture />
         <JsonLdCollection
           entries={[
             {
