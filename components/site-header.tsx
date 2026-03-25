@@ -38,15 +38,15 @@ export default function SiteHeader() {
           </Link>
           <Link
             className="px-3 py-1 rounded-xl bg-pink-500 text-white"
-            href="/contact"
+            href="/pricing"
             onClick={() =>
               track("cta_click", {
                 location: "site_header",
-                id: "join_waitlist",
+                id: "start_now",
               })
             }
           >
-            Join Waitlist
+            Start now
           </Link>
         </div>
       </div>

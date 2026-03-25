@@ -121,8 +121,8 @@ export default function PressKitPage() {
                     <div className="flex flex-col gap-1">
                       <dt className="text-[#9CA3AF]">Traction</dt>
                       <dd>
-                        A growing waitlist of teachers following Draft as access
-                        opens in stages.
+                        A growing base of teachers and schools using Draft in
+                        live workflows.
                       </dd>
                     </div>
                   </dl>
@@ -368,7 +368,7 @@ export default function PressKitPage() {
                   },
                   {
                     q: "Who uses Zaza?",
-                    a: "Teachers and schools (K12) joining the waitlist as access opens in stages.",
+                    a: "Teachers and schools (K12) using Draft for parent communication, report writing, and school-facing writing workflows.",
                   },
                   {
                     q: "How do you address bias?",

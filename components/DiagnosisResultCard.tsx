@@ -48,7 +48,7 @@ export function DiagnosisResultCard({
           Open recommendation
         </Link>
         <Link
-          href="/early-access"
+          href="/pricing"
           className="inline-flex items-center rounded-full border border-[#d2c8bb] bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-[#faf6f0]"
         >
           Start free trial

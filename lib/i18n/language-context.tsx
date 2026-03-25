@@ -942,7 +942,7 @@ const translationsEn: Record<string, string> = {
   "products.teach.cta.title": "Ready to Transform Your Planning?",
   "products.teach.cta.subtitle":
     "Join hundreds of teachers seeing hours saved each week",
-  "products.teach.cta.primary": "Join the waitlist",
+  "products.teach.cta.primary": "See pricing",
   "products.teach.cta.secondary": "Schedule Demo",
 
   // Products - Draft
@@ -1078,7 +1078,7 @@ const translationsEn: Record<string, string> = {
   "products.gradeflow.social.author2": "David Kim, Middle School Math",
 
   "products.gradeflow.cta.title": "Ready to Grade Smarter?",
-  "products.gradeflow.cta.button": "Join the waitlist",
+  "products.gradeflow.cta.button": "See pricing",
 
   // Products - Shield
   "shield.hero.eyebrow": "AI GOVERNANCE FOR SCHOOLS",
@@ -1442,7 +1442,7 @@ const translationsEn: Record<string, string> = {
 
   "company.today.title": "Where We Are Today",
   "company.today.p1":
-    "We're opening access in stages and using the waitlist to notify teachers and schools as Draft becomes available more widely.",
+    "Teachers and schools are using Draft today, and we are expanding how the product supports writing workflows across more teams.",
   "company.today.p2":
     "Our long-term vision is to build a complete suite of AI tools that help teachers reclaim their time, protect their wellbeing, and stay connected to the heart of their work - their students.",
   "company.today.close": "Because when teachers thrive, students thrive.",
@@ -2530,7 +2530,7 @@ const translationsDe: Record<string, string> = {
   "products.teach.cta.title": "Bereit, Ihre Planung zu transformieren?",
   "products.teach.cta.subtitle":
     "Schliessen Sie sich Hunderten von Lehrkraeften an, die eingesparte Stunden pro Woche sehen",
-  "products.teach.cta.primary": "Zur Warteliste",
+  "products.teach.cta.primary": "Preise ansehen",
   "products.teach.cta.secondary": "Demo planen",
 
   // Products - Draft
@@ -2668,7 +2668,7 @@ const translationsDe: Record<string, string> = {
   "products.gradeflow.social.author2": "David Kim, Mittelschule Mathematik",
 
   "products.gradeflow.cta.title": "Bereit, smarter zu bewerten?",
-  "products.gradeflow.cta.button": "Zur Warteliste",
+  "products.gradeflow.cta.button": "Preise ansehen",
 
   // Products - Shield
   "shield.hero.eyebrow": "KI-GOVERNANCE FÃœR SCHULEN",
@@ -3036,7 +3036,7 @@ const translationsDe: Record<string, string> = {
 
   "company.today.title": "Wo wir heute stehen",
   "company.today.p1":
-    "Wir oeffnen den Zugang schrittweise und nutzen die Warteliste, um Lehrkraefte und Schulen zu informieren, sobald Draft breiter verfuegbar wird.",
+    "Lehrkraefte und Schulen nutzen Draft heute bereits, und wir erweitern laufend, wie das Produkt Schreibprozesse in Teams unterstuetzt.",
   "company.today.p2":
     "Unsere langfristige Vision ist es, eine komplette Suite von KI-Tools zu bauen, die Lehrkräften helfen, ihre Zeit zurückzugewinnen, ihr Wohlbefinden zu schützen und mit dem Kern ihrer Arbeit - ihren Schülern - verbunden zu bleiben.",
   "company.today.close":

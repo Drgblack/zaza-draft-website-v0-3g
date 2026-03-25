@@ -45,14 +45,13 @@ export default function SuiteClient() {
       : "Teacher feedback is coming";
   const betaFeedbackBody =
     language === "de"
-      ? "Wir sammeln gerade die ersten Rueckmeldungen. Echte Zitate erscheinen hier, sobald wir sie gesammelt haben. Trag dich in die Warteliste ein, wenn du zum Launch benachrichtigt werden moechtest."
-      : "We are collecting our first round of teacher feedback now. Real quotes will appear here as soon as they are collected. Join the waitlist if you want to be notified at launch.";
-  const betaFeedbackCta =
-    language === "de" ? "Zur Warteliste" : "Join the waitlist";
+      ? "Wir sammeln gerade die ersten Rueckmeldungen. Echte Zitate erscheinen hier, sobald wir sie gesammelt haben. Sobald neue Stimmen vorliegen, aktualisieren wir diese Seite."
+      : "We are collecting our first round of teacher feedback now. Real quotes will appear here as soon as they are collected, and we will update this page as they come in.";
+  const betaFeedbackCta = language === "de" ? "Preise ansehen" : "See pricing";
   const neutralEndorsementLine =
     language === "de"
-      ? "Entwickelt mit Lehrkraeften. Echtes Feedback erscheint hier, sobald mehr Lehrkraefte auf die Warteliste kommen."
-      : "Built with teacher input. Real feedback will appear here as more teachers join the waitlist.";
+      ? "Entwickelt mit Lehrkraeften. Echtes Feedback erscheint hier, sobald weitere Stimmen aus dem Unterricht vorliegen."
+      : "Built with teacher input. Real feedback will appear here as more teachers share how they use Draft.";
   const draftFirstLine =
     language === "de"
       ? "Mit Draft starten Sie am schnellsten. Weitere Apps folgen bald."

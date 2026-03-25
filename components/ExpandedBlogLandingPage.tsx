@@ -161,7 +161,7 @@ export function ExpandedBlogLandingPage({
                 ))}
                 <div className="flex flex-wrap gap-3">
                   <Link
-                    href="/early-access"
+                    href="/pricing"
                     className="inline-flex items-center rounded-full bg-[#164e3f] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#123f34]"
                   >
                     Start free trial
@@ -277,7 +277,7 @@ export function ExpandedBlogLandingPage({
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
                   <Link
-                    href="/early-access"
+                    href="/pricing"
                     className="inline-flex items-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#123f34] transition hover:bg-[#f3efe7]"
                   >
                     Start free trial

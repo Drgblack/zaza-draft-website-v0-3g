@@ -399,7 +399,7 @@ export function CommunicationDiagnosis({
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
-                href="/early-access"
+                href="/pricing"
                 onClick={() =>
                   trackDiagnosisCtaClick({
                     issue: formState.issue || undefined,
