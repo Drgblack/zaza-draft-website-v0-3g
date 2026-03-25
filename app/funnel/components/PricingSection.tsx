@@ -24,8 +24,13 @@ const PricingSection = ({
   onFreeAction,
   onProAction,
 }: PricingSectionProps) => {
+  const proCtaLabel = `Start Pro – ${proMonthlyPrice}`;
+
   return (
-    <section className="bg-gradient-to-br from-zaza-50/45 to-white/45 px-4 py-20">
+    <section
+      id="pricing"
+      className="bg-gradient-to-br from-zaza-50/45 to-white/45 px-4 py-20"
+    >
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">
           <h2 className="mb-6 text-3xl font-bold text-calm-800 md:text-4xl">
@@ -85,7 +90,7 @@ const PricingSection = ({
                 onClick={onFreeAction}
                 className="btn-secondary h-auto w-full rounded-2xl px-6 py-4 text-base font-semibold"
               >
-                Start Free - 5 Drafts/Month
+                Get Started Free
               </Button>
               <p className="mt-3 text-center text-xs text-calm-500">
                 Opens the free signup form. No credit card required.
@@ -102,9 +107,6 @@ const PricingSection = ({
                 <h3 className="mb-2 text-2xl font-bold text-calm-800">Pro</h3>
                 <div className="mb-2 text-4xl font-bold text-calm-800">
                   {proMonthlyPrice}
-                  <span className="text-lg font-normal text-calm-600">
-                    /month
-                  </span>
                 </div>
                 <p className="text-calm-600">
                   Unlimited drafts for individual teachers
@@ -139,13 +141,11 @@ const PricingSection = ({
                 }}
                 className="btn-primary h-auto w-full rounded-2xl px-6 py-4 text-base font-semibold"
               >
-                {proCheckoutAvailable
-                  ? `Upgrade to Pro - ${proMonthlyPrice}`
-                  : "USD checkout is not live yet"}
+                {proCtaLabel}
               </Button>
               <p className="mt-3 text-center text-xs text-calm-500">
                 {proCheckoutAvailable
-                  ? `Secure Stripe checkout. ${proMonthlyPrice}. Cancel anytime. Taxes may be calculated at checkout.`
+                  ? "Secure Stripe checkout. Cancel anytime. Taxes may be calculated at checkout."
                   : "USD prices are shown while USD checkout is being finalized. Switch to EUR to subscribe today."}
               </p>
             </CardContent>

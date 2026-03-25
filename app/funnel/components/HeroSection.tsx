@@ -4,9 +4,13 @@ const teacherHero = "/lovable-funnel/teacher-hero.jpg";
 
 type HeroSectionProps = {
   onPrimaryAction: () => void;
+  primaryCtaLabel: string;
 };
 
-const HeroSection = ({ onPrimaryAction }: HeroSectionProps) => {
+const HeroSection = ({
+  onPrimaryAction,
+  primaryCtaLabel,
+}: HeroSectionProps) => {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden px-4 py-16 lg:py-24">
       <div className="absolute inset-0 overflow-hidden">
@@ -58,10 +62,10 @@ const HeroSection = ({ onPrimaryAction }: HeroSectionProps) => {
               onClick={onPrimaryAction}
               className="btn-primary h-auto w-full rounded-2xl px-10 py-6 text-lg font-semibold lg:w-auto"
             >
-              Try Free - See How Fast It Writes for You
+              {primaryCtaLabel}
             </Button>
             <p className="text-center text-sm text-calm-500 lg:text-left">
-              No setup. No credit card. Just relief.
+              No credit card. No lock-in. Fully editable.
             </p>
           </div>
 

@@ -20,6 +20,11 @@ const faqs = [
       "No. Zaza Draft is designed as a co-writer, not a replacement. It helps you reduce risk, improve tone, and communicate more safely.",
   },
   {
+    question: "Will it sound like AI?",
+    answer:
+      "Zaza Draft is designed to write in a teacher-appropriate tone that you can edit before sending. You stay in control of the final wording.",
+  },
+  {
     question: "Can I use it for parent communication?",
     answer:
       "Yes. That is one of its main use cases. It is especially helpful when emotions are high, stakes are high, or wording needs to be careful.",

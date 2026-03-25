@@ -64,9 +64,31 @@ const HowItWorksSection = () => {
           <div className="order-2 lg:order-1">
             <Card className="glass-strong rounded-[2rem] p-10">
               <CardContent className="pt-0">
+                <div className="mb-5 inline-flex rounded-full border border-zaza-200/50 bg-white/75 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-zaza-700">
+                  Real time saved
+                </div>
                 <h3 className="mb-4 text-2xl font-bold text-calm-800">
                   From 3 hours to 30 minutes
                 </h3>
+                <div className="mb-6 grid grid-cols-[1fr_auto_1fr] items-center gap-3 text-center">
+                  <div className="rounded-[1.25rem] border border-white/40 bg-white/70 px-4 py-4 shadow-sm">
+                    <div className="text-xs font-semibold uppercase tracking-[0.22em] text-calm-500">
+                      Before
+                    </div>
+                    <div className="mt-2 text-2xl font-bold text-calm-800">
+                      3 hours
+                    </div>
+                  </div>
+                  <div className="text-2xl font-bold text-zaza-500">→</div>
+                  <div className="rounded-[1.25rem] border border-pink-200/60 bg-gradient-to-br from-pink-50 to-white px-4 py-4 shadow-sm">
+                    <div className="text-xs font-semibold uppercase tracking-[0.22em] text-zaza-600">
+                      After
+                    </div>
+                    <div className="mt-2 text-2xl font-bold text-calm-800">
+                      30 minutes
+                    </div>
+                  </div>
+                </div>
                 <p className="mb-6 text-lg text-calm-600">
                   What used to take your entire Sunday evening now fits into a
                   coffee break.

@@ -1,16 +1,21 @@
-﻿"use client";
+"use client";
 
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useLanguage } from "@/lib/i18n/language-context";
+import { resolveSelfServeCheckout } from "@/config/pricing";
+import { usePricingCurrency } from "@/hooks/use-pricing-currency";
 import { trackCtaClick } from "@/lib/analytics";
 import { getDraftPricingHref } from "@/lib/draft-cta";
+import { useLanguage } from "@/lib/i18n/language-context";
+import { formatPriceWithInterval } from "@/lib/pricing-currency";
+import { Button } from "@/components/ui/button";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [funnelCtaReady, setFunnelCtaReady] = useState(false);
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const [learningCentreDropdownOpen, setLearningCentreDropdownOpen] =
@@ -24,10 +29,31 @@ export function Header() {
     resources: true,
     about: true,
   });
+  const pathname = usePathname();
   const { language, setLanguage, t } = useLanguage();
+  const { currency } = usePricingCurrency();
+  const isStartFunnel = pathname === "/start";
   const L = (de: string, en: string) => (language === "de" ? de : en);
   const headerCtaHref = getDraftPricingHref(language);
   const headerCtaLabel = t("nav.getStarted");
+  const funnelCheckout = resolveSelfServeCheckout({
+    plan: "draft",
+    interval: "monthly",
+    currency,
+    returnPath: "/start",
+  });
+  const funnelPriceLabel = formatPriceWithInterval(
+    funnelCheckout.displayAmount,
+    currency,
+    "monthly",
+    "long",
+  );
+  const funnelHeaderCtaHref =
+    funnelCtaReady && funnelCheckout.isAvailable
+      ? funnelCheckout.href
+      : "/start#pricing";
+  const funnelHeaderCtaLabel =
+    funnelCtaReady && funnelCheckout.isAvailable ? "Start Pro" : "See plans";
 
   useEffect(() => {
     if (!mobileMenuOpen) return;
@@ -37,6 +63,16 @@ export function Header() {
       document.body.style.overflow = originalOverflow;
     };
   }, [mobileMenuOpen]);
+
+  useEffect(() => {
+    setFunnelCtaReady(true);
+  }, []);
+
+  useEffect(() => {
+    if (isStartFunnel && mobileMenuOpen) {
+      setMobileMenuOpen(false);
+    }
+  }, [isStartFunnel, mobileMenuOpen]);
 
   const navigation = [{ name: t("nav.pricing"), href: "/pricing" }];
   const toggleMobileAccordion = (id: string) =>
@@ -158,14 +194,39 @@ export function Header() {
     { id: "about", title: t("nav.about"), children: aboutMenuItems },
   ];
 
+  const languageToggle = (
+    <div className="flex items-center gap-2 rounded-lg bg-white/5 p-1">
+      <button
+        onClick={() => setLanguage("en")}
+        className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200 ${
+          language === "en"
+            ? "bg-[#8B5CF6] text-white"
+            : "text-gray-400 hover:text-white"
+        }`}
+      >
+        EN
+      </button>
+      <button
+        onClick={() => setLanguage("de")}
+        className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200 ${
+          language === "de"
+            ? "bg-[#8B5CF6] text-white"
+            : "text-gray-400 hover:text-white"
+        }`}
+      >
+        DE
+      </button>
+    </div>
+  );
+
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 bg-[#0B1220]/80 backdrop-blur-md shadow-lg shadow-black/5">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8 py-3 lg:py-4 min-h-[72px]">
+        <nav className="mx-auto flex min-h-[72px] max-w-7xl items-center justify-between px-6 py-3 lg:px-8 lg:py-4">
           <div className="flex lg:flex-1">
             <Link
               href="/"
-              className="-m-1.5 p-1.5 flex items-center gap-3 group hover:opacity-90 transition-opacity"
+              className="-m-1.5 flex items-center gap-3 p-1.5 transition-opacity hover:opacity-90 group"
             >
               <Image
                 src="/z-logo.png"
@@ -179,189 +240,191 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="flex lg:hidden">
-            <button
-              type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-300 hover:bg-white/5 transition-colors"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              <span className="sr-only">Toggle menu</span>
-              {mobileMenuOpen ? (
-                <X className="h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Menu className="h-6 w-6" aria-hidden="true" />
-              )}
-            </button>
-          </div>
-
-          <div className="hidden lg:flex lg:gap-x-8 lg:items-center">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-[15px] font-medium text-gray-300 hover:text-white transition-colors duration-200"
-                onClick={() => handleHeaderNavClick(item.href)}
+          {isStartFunnel ? (
+            <div className="flex items-center gap-3">
+              {languageToggle}
+              <Button
+                asChild
+                className="rounded-full bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-purple-500/25 hover:from-purple-700 hover:to-blue-700"
               >
-                {item.name}
-              </Link>
-            ))}
+                <a
+                  href={funnelHeaderCtaHref}
+                  onClick={() =>
+                    trackCtaClick({
+                      ctaText:
+                        funnelCtaReady && funnelCheckout.isAvailable
+                          ? `Start Pro – ${funnelPriceLabel}`
+                          : "See plans",
+                      ctaLocation: "header_funnel",
+                    })
+                  }
+                >
+                  {funnelHeaderCtaLabel}
+                </a>
+              </Button>
+            </div>
+          ) : (
+            <>
+              <div className="flex lg:hidden">
+                <button
+                  type="button"
+                  className="-m-2.5 inline-flex items-center justify-center rounded-xl p-2.5 text-gray-300 transition-colors hover:bg-white/5"
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                >
+                  <span className="sr-only">Toggle menu</span>
+                  {mobileMenuOpen ? (
+                    <X className="h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <Menu className="h-6 w-6" aria-hidden="true" />
+                  )}
+                </button>
+              </div>
 
-            <div
-              className="relative"
-              onMouseEnter={() => setProductsDropdownOpen(true)}
-              onMouseLeave={() => setProductsDropdownOpen(false)}
-            >
-              <button className="text-[15px] font-medium text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-1">
-                {t("nav.products")}
-                <ChevronDown className="h-4 w-4" />
-              </button>
+              <div className="hidden lg:flex lg:items-center lg:gap-x-8">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="text-[15px] font-medium text-gray-300 transition-colors duration-200 hover:text-white"
+                    onClick={() => handleHeaderNavClick(item.href)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
 
-              {productsDropdownOpen && (
-                <div className="absolute top-full left-0 pt-2 pb-2">
-                  <div className="w-48 rounded-xl bg-[#111827] border border-white/10 shadow-xl shadow-black/20 py-2">
-                    {productsMenuItems.map((item) => (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        className="block px-3 py-2 text-base text-gray-300 hover:bg-white/5 hover:text-white transition-colors rounded-md mx-1"
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                  </div>
+                <div
+                  className="relative"
+                  onMouseEnter={() => setProductsDropdownOpen(true)}
+                  onMouseLeave={() => setProductsDropdownOpen(false)}
+                >
+                  <button className="flex items-center gap-1 text-[15px] font-medium text-gray-300 transition-colors duration-200 hover:text-white">
+                    {t("nav.products")}
+                    <ChevronDown className="h-4 w-4" />
+                  </button>
+
+                  {productsDropdownOpen && (
+                    <div className="absolute top-full left-0 pt-2 pb-2">
+                      <div className="mx-1 w-48 rounded-xl border border-white/10 bg-[#111827] py-2 shadow-xl shadow-black/20">
+                        {productsMenuItems.map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className="block rounded-md px-3 py-2 text-base text-gray-300 transition-colors hover:bg-white/5 hover:text-white"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
 
-            <div
-              className="relative"
-              onMouseEnter={() => setLearningCentreDropdownOpen(true)}
-              onMouseLeave={() => setLearningCentreDropdownOpen(false)}
-            >
-              <button className="text-[15px] font-medium text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-1">
-                {t("nav.learningCentre")}
-                <ChevronDown className="h-4 w-4" />
-              </button>
+                <div
+                  className="relative"
+                  onMouseEnter={() => setLearningCentreDropdownOpen(true)}
+                  onMouseLeave={() => setLearningCentreDropdownOpen(false)}
+                >
+                  <button className="flex items-center gap-1 text-[15px] font-medium text-gray-300 transition-colors duration-200 hover:text-white">
+                    {t("nav.learningCentre")}
+                    <ChevronDown className="h-4 w-4" />
+                  </button>
 
-              {learningCentreDropdownOpen && (
-                <div className="absolute top-full left-0 pt-2 pb-2">
-                  <div className="w-72 rounded-xl bg-[#111827] border border-white/10 shadow-xl shadow-black/20 py-2">
-                    {learningCentreMenuItems.map((item) => (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        className="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                  </div>
+                  {learningCentreDropdownOpen && (
+                    <div className="absolute top-full left-0 pt-2 pb-2">
+                      <div className="w-72 rounded-xl border border-white/10 bg-[#111827] py-2 shadow-xl shadow-black/20">
+                        {learningCentreMenuItems.map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/5 hover:text-white"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
 
-            <div
-              className="relative"
-              onMouseEnter={() => setResourcesDropdownOpen(true)}
-              onMouseLeave={() => setResourcesDropdownOpen(false)}
-            >
-              <button className="text-[15px] font-medium text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-1">
-                {t("nav.resources")}
-                <ChevronDown className="h-4 w-4" />
-              </button>
+                <div
+                  className="relative"
+                  onMouseEnter={() => setResourcesDropdownOpen(true)}
+                  onMouseLeave={() => setResourcesDropdownOpen(false)}
+                >
+                  <button className="flex items-center gap-1 text-[15px] font-medium text-gray-300 transition-colors duration-200 hover:text-white">
+                    {t("nav.resources")}
+                    <ChevronDown className="h-4 w-4" />
+                  </button>
 
-              {resourcesDropdownOpen && (
-                <div className="absolute top-full left-0 pt-2 pb-2">
-                  <div className="w-56 rounded-xl bg-[#111827] border border-white/10 shadow-xl shadow-black/20 py-2">
-                    {resourcesMenuItems.map((item) => (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        className="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                  </div>
+                  {resourcesDropdownOpen && (
+                    <div className="absolute top-full left-0 pt-2 pb-2">
+                      <div className="w-56 rounded-xl border border-white/10 bg-[#111827] py-2 shadow-xl shadow-black/20">
+                        {resourcesMenuItems.map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/5 hover:text-white"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
 
-            <div
-              className="relative"
-              onMouseEnter={() => setAboutDropdownOpen(true)}
-              onMouseLeave={() => setAboutDropdownOpen(false)}
-            >
-              <button className="text-[15px] font-medium text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-1">
-                {t("nav.about")}
-                <ChevronDown className="h-4 w-4" />
-              </button>
+                <div
+                  className="relative"
+                  onMouseEnter={() => setAboutDropdownOpen(true)}
+                  onMouseLeave={() => setAboutDropdownOpen(false)}
+                >
+                  <button className="flex items-center gap-1 text-[15px] font-medium text-gray-300 transition-colors duration-200 hover:text-white">
+                    {t("nav.about")}
+                    <ChevronDown className="h-4 w-4" />
+                  </button>
 
-              {aboutDropdownOpen && (
-                <div className="absolute top-full left-0 pt-2 pb-2">
-                  <div className="w-56 rounded-xl bg-[#111827] border border-white/10 shadow-xl shadow-black/20 py-2">
-                    {aboutMenuItems.map((item) => (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        className="block px-4 py-2.5 text-sm text-gray-300 hover:bg-white/5 hover:text-white transition-colors"
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                  </div>
+                  {aboutDropdownOpen && (
+                    <div className="absolute top-full left-0 pt-2 pb-2">
+                      <div className="w-56 rounded-xl border border-white/10 bg-[#111827] py-2 shadow-xl shadow-black/20">
+                        {aboutMenuItems.map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/5 hover:text-white"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
-          </div>
+              </div>
 
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-6 items-center">
-            {/* EN / DE toggle */}
-            <div className="flex items-center gap-2 rounded-lg bg-white/5 p-1">
-              <button
-                onClick={() => setLanguage("en")}
-                className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200 ${
-                  language === "en"
-                    ? "bg-[#8B5CF6] text-white"
-                    : "text-gray-400 hover:text-white"
-                }`}
-              >
-                EN
-              </button>
-              <button
-                onClick={() => setLanguage("de")}
-                className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-200 ${
-                  language === "de"
-                    ? "bg-[#8B5CF6] text-white"
-                    : "text-gray-400 hover:text-white"
-                }`}
-              >
-                DE
-              </button>
-            </div>
-
-            {/* Desktop primary CTA */}
-            <Button
-              asChild
-              className="ml-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-purple-500/25"
-            >
-              <Link
-                href={headerCtaHref}
-                onClick={() =>
-                  trackCtaClick({
-                    ctaText: headerCtaLabel,
-                    ctaLocation: "header_primary",
-                  })
-                }
-              >
-                {headerCtaLabel}
-              </Link>
-            </Button>
-          </div>
+              <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:gap-x-6">
+                {languageToggle}
+                <Button
+                  asChild
+                  className="ml-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-purple-500/25 hover:from-purple-700 hover:to-blue-700"
+                >
+                  <Link
+                    href={headerCtaHref}
+                    onClick={() =>
+                      trackCtaClick({
+                        ctaText: headerCtaLabel,
+                        ctaLocation: "header_primary",
+                      })
+                    }
+                  >
+                    {headerCtaLabel}
+                  </Link>
+                </Button>
+              </div>
+            </>
+          )}
         </nav>
 
-        {mobileMenuOpen && (
+        {!isStartFunnel && mobileMenuOpen && (
           <div className="fixed inset-0 z-[60] flex lg:hidden">
             <div
               className="absolute inset-0 bg-black/60"
@@ -374,7 +437,7 @@ export function Header() {
                 </span>
                 <button
                   type="button"
-                  className="rounded-xl border border-white/10 px-3 py-2 text-gray-200 hover:bg-white/5 transition-colors"
+                  className="rounded-xl border border-white/10 px-3 py-2 text-gray-200 transition-colors hover:bg-white/5"
                   onClick={() => setMobileMenuOpen(false)}
                   aria-label="Close menu"
                 >
@@ -382,7 +445,7 @@ export function Header() {
                 </button>
               </div>
 
-              <nav className="flex-1 min-h-0 overflow-y-auto px-4 py-6">
+              <nav className="min-h-0 flex-1 overflow-y-auto px-4 py-6">
                 <div className="mb-6 flex w-fit gap-2 rounded-full bg-white/5 p-1">
                   <button
                     onClick={() => setLanguage("en")}
@@ -405,9 +468,11 @@ export function Header() {
                     DE
                   </button>
                 </div>
+
                 <div className="space-y-2">
                   {mobileSections.map((section) => {
                     const controlsId = `mobile-section-${section.id}`;
+
                     if (section.children) {
                       return (
                         <div
@@ -440,7 +505,7 @@ export function Header() {
                                   key={item.name}
                                   href={item.href}
                                   onClick={() => setMobileMenuOpen(false)}
-                                  className="block rounded-xl px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white transition-colors"
+                                  className="block rounded-xl px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:bg-white/10 hover:text-white"
                                 >
                                   {item.name}
                                 </Link>
@@ -450,12 +515,13 @@ export function Header() {
                         </div>
                       );
                     }
+
                     return (
                       <Link
                         key={section.id}
                         href={section.href || "#"}
                         onClick={() => setMobileMenuOpen(false)}
-                        className="block rounded-xl px-4 py-3 text-base font-medium text-gray-300 hover:bg-white/10 hover:text-white transition-colors"
+                        className="block rounded-xl px-4 py-3 text-base font-medium text-gray-300 transition-colors hover:bg-white/10 hover:text-white"
                       >
                         {section.title}
                       </Link>
@@ -468,7 +534,7 @@ export function Header() {
                 <div className="space-y-3">
                   <Button
                     asChild
-                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium py-3 rounded-full shadow-lg shadow-purple-500/25"
+                    className="w-full rounded-full bg-gradient-to-r from-purple-600 to-blue-600 py-3 font-medium text-white shadow-lg shadow-purple-500/25 hover:from-purple-700 hover:to-blue-700"
                   >
                     <Link
                       href={headerCtaHref}

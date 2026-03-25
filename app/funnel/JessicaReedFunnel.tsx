@@ -18,6 +18,7 @@ export default function JessicaReedFunnel() {
   const [signupOpen, setSignupOpen] = useState(false);
   const { currency, setCurrency } = usePricingCurrency();
   const checkoutReturnPath = "/start";
+  const freeCtaLabel = "Get Started Free";
   const proCheckout = resolveSelfServeCheckout({
     plan: "draft",
     interval: "monthly",
@@ -30,6 +31,7 @@ export default function JessicaReedFunnel() {
     "monthly",
     "long",
   );
+  const proCtaLabel = `Start Pro – ${proMonthlyPrice}`;
 
   const openFreeSignup = (ctaLocation: string, ctaText: string) => {
     trackCtaClick({ ctaText, ctaLocation });
@@ -44,12 +46,8 @@ export default function JessicaReedFunnel() {
     <div className="funnel-theme">
       <main className="funnel-main">
         <HeroSection
-          onPrimaryAction={() =>
-            openFreeSignup(
-              "funnel_hero",
-              "Try Free - See How Fast It Writes for You",
-            )
-          }
+          onPrimaryAction={() => openFreeSignup("funnel_hero", freeCtaLabel)}
+          primaryCtaLabel={freeCtaLabel}
         />
         <PainSection />
         <SolutionSection />
@@ -61,26 +59,18 @@ export default function JessicaReedFunnel() {
           proCheckoutHref={proCheckout.href}
           proCheckoutAvailable={proCheckout.isAvailable}
           onFreeAction={() =>
-            openFreeSignup(
-              "funnel_pricing_free",
-              "Start Free - 5 Drafts a Month",
-            )
+            openFreeSignup("funnel_pricing_free", freeCtaLabel)
           }
           onProAction={() =>
-            trackPaidPricingClick(
-              "funnel_pricing_pro",
-              `Upgrade to Pro - ${proMonthlyPrice}/month`,
-            )
+            trackPaidPricingClick("funnel_pricing_pro", proCtaLabel)
           }
         />
         <FAQSection />
         <FinalCTASection
           onPrimaryAction={() =>
-            openFreeSignup(
-              "funnel_final_cta",
-              "Try Free - See How Fast It Writes for You",
-            )
+            openFreeSignup("funnel_final_cta", freeCtaLabel)
           }
+          primaryCtaLabel={freeCtaLabel}
         />
       </main>
       <SignupModal open={signupOpen} onOpenChange={setSignupOpen} />

@@ -2,9 +2,13 @@ import { Button } from "@/components/ui/button";
 
 type FinalCTASectionProps = {
   onPrimaryAction: () => void;
+  primaryCtaLabel: string;
 };
 
-const FinalCTASection = ({ onPrimaryAction }: FinalCTASectionProps) => {
+const FinalCTASection = ({
+  onPrimaryAction,
+  primaryCtaLabel,
+}: FinalCTASectionProps) => {
   return (
     <>
       <section className="relative overflow-hidden bg-gradient-to-br from-pink-50/90 to-violet-50/80 px-4 py-20">
@@ -33,10 +37,10 @@ const FinalCTASection = ({ onPrimaryAction }: FinalCTASectionProps) => {
               onClick={onPrimaryAction}
               className="btn-primary h-auto rounded-2xl px-10 py-5 text-lg font-semibold shadow-xl hover:shadow-2xl"
             >
-              Try Free - See How Fast It Writes for You
+              {primaryCtaLabel}
             </Button>
             <p className="text-sm text-calm-500">
-              No setup. No credit card. Just relief.
+              No credit card. No lock-in. Fully editable.
             </p>
           </div>
 
@@ -65,7 +69,7 @@ const FinalCTASection = ({ onPrimaryAction }: FinalCTASectionProps) => {
           onClick={onPrimaryAction}
           className="btn-primary h-auto w-full rounded-2xl px-6 py-4 text-base font-semibold"
         >
-          Try Free - See How It Works
+          {primaryCtaLabel}
         </Button>
       </div>
     </>
