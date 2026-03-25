@@ -3,8 +3,12 @@
 import { useState } from "react";
 import { SignupModal } from "@/components/signup-modal";
 import { trackCtaClick } from "@/lib/analytics";
-import { useLanguage } from "@/lib/i18n/language-context";
-import { buildStripeCheckoutPath } from "@/config/pricing";
+import {
+  buildStripeCheckoutPath,
+  getLocalizedPlanAmount,
+} from "@/config/pricing";
+import { formatLocalizedPrice } from "@/lib/pricing-currency";
+import { usePricingCurrency } from "@/hooks/use-pricing-currency";
 import HeroSection from "./components/HeroSection";
 import PainSection from "./components/PainSection";
 import SolutionSection from "./components/SolutionSection";
@@ -14,13 +18,17 @@ import FAQSection from "./components/FAQSection";
 import FinalCTASection from "./components/FinalCTASection";
 
 export default function JessicaReedFunnel() {
-  const { language } = useLanguage();
   const [signupOpen, setSignupOpen] = useState(false);
-  const checkoutReturnPath = language === "de" ? "/de/pricing" : "/pricing";
+  const { currency, setCurrency } = usePricingCurrency();
+  const checkoutReturnPath = "/start";
+  const proMonthlyPrice = formatLocalizedPrice(
+    getLocalizedPlanAmount("draft", "monthly", currency),
+    currency,
+  );
   const proCheckoutHref = buildStripeCheckoutPath({
     plan: "draft",
     interval: "monthly",
-    currency: "EUR",
+    currency,
     returnPath: checkoutReturnPath,
   });
 
@@ -48,6 +56,9 @@ export default function JessicaReedFunnel() {
         <SolutionSection />
         <HowItWorksSection />
         <PricingSection
+          currency={currency}
+          onCurrencyChange={setCurrency}
+          proMonthlyPrice={proMonthlyPrice}
           proCheckoutHref={proCheckoutHref}
           onFreeAction={() =>
             openFreeSignup(
@@ -58,7 +69,7 @@ export default function JessicaReedFunnel() {
           onProAction={() =>
             trackPaidPricingClick(
               "funnel_pricing_pro",
-              "Upgrade to Pro - €14.99/month",
+              `Upgrade to Pro - ${proMonthlyPrice}/month`,
             )
           }
         />

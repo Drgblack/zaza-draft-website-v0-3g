@@ -1,15 +1,23 @@
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckIcon } from "lucide-react";
+import { type PricingCurrency } from "@/config/pricing";
+import { formatLocalizedPrice } from "@/lib/pricing-currency";
+import { CurrencyToggle } from "@/components/pricing/currency-toggle";
 
 type PricingSectionProps = {
+  currency: PricingCurrency;
+  onCurrencyChange: (currency: PricingCurrency) => void;
+  proMonthlyPrice: string;
   proCheckoutHref: string;
   onFreeAction: () => void;
   onProAction: () => void;
 };
 
 const PricingSection = ({
+  currency,
+  onCurrencyChange,
+  proMonthlyPrice,
   proCheckoutHref,
   onFreeAction,
   onProAction,
@@ -19,13 +27,19 @@ const PricingSection = ({
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">
           <h2 className="mb-6 text-3xl font-bold text-calm-800 md:text-4xl">
-            Try it first -
-            <span className="text-gradient"> no credit card needed</span>
+            Start free now.
+            <span className="text-gradient">
+              {" "}
+              Upgrade only when you need more.
+            </span>
           </h2>
           <p className="mx-auto max-w-3xl text-xl text-calm-600">
-            Start free with 5 drafts a month, then upgrade to Pro when you want
-            unlimited writing support.
+            Get 5 drafts a month for free, then move to Zaza Draft Pro for
+            unlimited writing support at {proMonthlyPrice}/month.
           </p>
+          <div className="mt-6 flex justify-center">
+            <CurrencyToggle currency={currency} onChange={onCurrencyChange} />
+          </div>
         </div>
 
         <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
@@ -35,8 +49,12 @@ const PricingSection = ({
                 <h3 className="mb-2 text-2xl font-bold text-calm-800">
                   Free Forever
                 </h3>
-                <div className="mb-2 text-4xl font-bold text-calm-800">$0</div>
-                <p className="text-calm-600">Perfect for trying it out</p>
+                <div className="mb-2 text-4xl font-bold text-calm-800">
+                  {formatLocalizedPrice(0, currency)}
+                </div>
+                <p className="text-calm-600">
+                  5 drafts every month. No card required.
+                </p>
               </div>
 
               <ul className="mb-8 space-y-4">
@@ -58,7 +76,7 @@ const PricingSection = ({
                 onClick={onFreeAction}
                 className="btn-secondary h-auto w-full rounded-2xl px-6 py-4 text-base font-semibold"
               >
-                Start Free - 5 Drafts a Month
+                Start Free - 5 Drafts/Month
               </Button>
               <p className="mt-3 text-center text-xs text-calm-500">
                 Opens the free signup form. No credit card required.
@@ -74,7 +92,7 @@ const PricingSection = ({
               <div className="mb-8 text-center">
                 <h3 className="mb-2 text-2xl font-bold text-calm-800">Pro</h3>
                 <div className="mb-2 text-4xl font-bold text-calm-800">
-                  €14.99
+                  {proMonthlyPrice}
                   <span className="text-lg font-normal text-calm-600">
                     /month
                   </span>
@@ -86,7 +104,7 @@ const PricingSection = ({
 
               <ul className="mb-8 space-y-4">
                 {[
-                  "Unlimited comments",
+                  "Unlimited drafts",
                   "Priority support",
                   "Advanced personalization",
                   "Parent communication templates",
@@ -100,15 +118,18 @@ const PricingSection = ({
               </ul>
 
               <Button
-                asChild
+                type="button"
+                onClick={() => {
+                  onProAction();
+                  window.location.assign(proCheckoutHref);
+                }}
                 className="btn-primary h-auto w-full rounded-2xl px-6 py-4 text-base font-semibold"
               >
-                <Link href={proCheckoutHref} onClick={onProAction}>
-                  Upgrade to Pro - €14.99/month
-                </Link>
+                Upgrade to Pro - {proMonthlyPrice}/month
               </Button>
               <p className="mt-3 text-center text-xs text-calm-500">
-                Secure checkout via Stripe. Monthly plan. Cancel anytime.
+                Takes you to secure Stripe checkout for Zaza Draft Pro. Billed
+                monthly. Cancel anytime.
               </p>
             </CardContent>
           </Card>

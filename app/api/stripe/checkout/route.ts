@@ -8,7 +8,12 @@ import {
 } from "@/config/pricing";
 
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
-type StripeCheckoutCurrency = "eur" | "usd" | "gbp";
+type StripeCheckoutCurrency = "eur" | "usd";
+const SAFE_CHECKOUT_RETURN_PATHS = new Set([
+  "/pricing",
+  "/de/pricing",
+  "/start",
+]);
 
 function buildReturnUrl(
   request: NextRequest,
@@ -16,7 +21,7 @@ function buildReturnUrl(
   checkoutState: "success" | "cancelled",
 ) {
   const safePath =
-    returnPath === "/de/pricing" || returnPath === "/pricing"
+    returnPath && SAFE_CHECKOUT_RETURN_PATHS.has(returnPath)
       ? returnPath
       : "/pricing";
   const url = new URL(safePath, request.nextUrl.origin);
@@ -57,7 +62,7 @@ export async function GET(request: NextRequest) {
 
   try {
     const stripe = new Stripe(stripeSecretKey);
-    const priceId = getStripePriceId(plan, interval);
+    const priceId = getStripePriceId(plan, interval, currency);
     const session = await stripe.checkout.sessions.create({
       mode: "subscription",
       line_items: [{ price: priceId, quantity: 1 }],

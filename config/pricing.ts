@@ -1,4 +1,5 @@
-export const SUPPORTED_CURRENCIES = ["EUR", "USD", "GBP"] as const;
+export const SUPPORTED_CURRENCIES = ["EUR", "USD"] as const;
+export const DEFAULT_PRICING_CURRENCY = "EUR" as const;
 export const SELF_SERVE_INTERVALS = ["monthly", "annual"] as const;
 export const SELF_SERVE_PLANS = ["draft", "bundle"] as const;
 
@@ -6,47 +7,59 @@ export type PricingCurrency = (typeof SUPPORTED_CURRENCIES)[number];
 export type SelfServeInterval = (typeof SELF_SERVE_INTERVALS)[number];
 export type SelfServePlan = (typeof SELF_SERVE_PLANS)[number];
 
-type PriceDisplayMap = Record<PricingCurrency, string>;
+type PriceDisplayMap = Record<PricingCurrency, number>;
+type StripePriceIdMap = Record<PricingCurrency, string>;
 
 type SelfServePlanConfig = {
-  stripePriceIds: Record<SelfServeInterval, string>;
+  stripePriceIds: Record<SelfServeInterval, StripePriceIdMap>;
   displayAmounts: Record<SelfServeInterval, PriceDisplayMap>;
 };
 
+// The existing production price IDs are the only verified Stripe prices in-repo.
+// The mapping is currency-aware so dedicated USD price IDs can be dropped in
+// without changing CTA or checkout code paths.
 export const pricingConfig: Record<SelfServePlan, SelfServePlanConfig> = {
   draft: {
     stripePriceIds: {
-      monthly: "price_1TA6ouHXkbT25qrKoapecaPz",
-      annual: "price_1TA6ouHXkbT25qrKUW5KmHXr",
+      monthly: {
+        EUR: "price_1TA6ouHXkbT25qrKoapecaPz",
+        USD: "price_1TA6ouHXkbT25qrKoapecaPz",
+      },
+      annual: {
+        EUR: "price_1TA6ouHXkbT25qrKUW5KmHXr",
+        USD: "price_1TA6ouHXkbT25qrKUW5KmHXr",
+      },
     },
     displayAmounts: {
       monthly: {
-        EUR: "14.99",
-        USD: "16.00",
-        GBP: "13.00",
+        EUR: 14.99,
+        USD: 16.99,
       },
       annual: {
-        EUR: "149.00",
-        USD: "160.00",
-        GBP: "130.00",
+        EUR: 149,
+        USD: 169.99,
       },
     },
   },
   bundle: {
     stripePriceIds: {
-      monthly: "price_1TA6mFHXkbT25qrK40mdltez",
-      annual: "price_1TA6mFHXkbT25qrKzZq3qTtE",
+      monthly: {
+        EUR: "price_1TA6mFHXkbT25qrK40mdltez",
+        USD: "price_1TA6mFHXkbT25qrK40mdltez",
+      },
+      annual: {
+        EUR: "price_1TA6mFHXkbT25qrKzZq3qTtE",
+        USD: "price_1TA6mFHXkbT25qrKzZq3qTtE",
+      },
     },
     displayAmounts: {
       monthly: {
-        EUR: "24.99",
-        USD: "27.00",
-        GBP: "22.00",
+        EUR: 24.99,
+        USD: 27,
       },
       annual: {
-        EUR: "249.00",
-        USD: "270.00",
-        GBP: "220.00",
+        EUR: 249,
+        USD: 270,
       },
     },
   },
@@ -54,14 +67,13 @@ export const pricingConfig: Record<SelfServePlan, SelfServePlanConfig> = {
 
 export const departmentDisplayAmounts = {
   monthly: {
-    EUR: "8",
-    USD: "9",
-    GBP: "7",
+    EUR: 8,
+    USD: 9,
   },
 } as const satisfies Record<"monthly", PriceDisplayMap>;
 
 export function isPricingCurrency(
-  value: string | null,
+  value: string | null | undefined,
 ): value is PricingCurrency {
   return Boolean(
     value && SUPPORTED_CURRENCIES.includes(value as PricingCurrency),
@@ -83,8 +95,21 @@ export function isSelfServePlan(value: string | null): value is SelfServePlan {
 export function getStripePriceId(
   plan: SelfServePlan,
   interval: SelfServeInterval,
+  currency: PricingCurrency,
 ) {
-  return pricingConfig[plan].stripePriceIds[interval];
+  return pricingConfig[plan].stripePriceIds[interval][currency];
+}
+
+export function getLocalizedPlanAmount(
+  plan: SelfServePlan,
+  interval: SelfServeInterval,
+  currency: PricingCurrency,
+) {
+  return pricingConfig[plan].displayAmounts[interval][currency];
+}
+
+export function getLocalizedDepartmentAmount(currency: PricingCurrency) {
+  return departmentDisplayAmounts.monthly[currency];
 }
 
 export function buildStripeCheckoutPath(params: {

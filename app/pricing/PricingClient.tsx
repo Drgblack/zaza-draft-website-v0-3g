@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { Check, ChevronDown, Star, ShieldCheck, Globe } from "lucide-react";
+import { Check, ChevronDown, Star, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { SignupModal } from "@/components/signup-modal";
@@ -11,19 +11,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { track, trackCtaClick } from "@/lib/analytics";
 import {
   buildStripeCheckoutPath,
-  departmentDisplayAmounts,
+  getLocalizedDepartmentAmount,
+  getLocalizedPlanAmount,
   pricingConfig,
-  type PricingCurrency,
   type SelfServeInterval,
-  SUPPORTED_CURRENCIES,
 } from "@/config/pricing";
 import { getDraftSchoolSalesHref } from "@/lib/draft-cta";
-
-const currencySymbols = {
-  EUR: "€",
-  USD: "$",
-  GBP: "£",
-};
+import { CurrencyToggle } from "@/components/pricing/currency-toggle";
+import { usePricingCurrency } from "@/hooks/use-pricing-currency";
+import { formatLocalizedPrice } from "@/lib/pricing-currency";
 
 const pricingTestimonialHeadshots = [
   "/testimonials/pricing-teacher-1.jpg",
@@ -67,11 +63,10 @@ export default function PricingClient() {
   const pathname = usePathname();
   const [billingPeriod, setBillingPeriod] =
     useState<SelfServeInterval>("monthly");
-  const [currency, setCurrency] = useState<PricingCurrency>("EUR");
+  const { currency, setCurrency } = usePricingCurrency();
   const [signupOpen, setSignupOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const symbol = currencySymbols[currency];
   const pricingPath = pathname === "/de/pricing" ? "/de/pricing" : "/pricing";
   const teacherCheckoutHref = buildStripeCheckoutPath({
     plan: "draft",
@@ -151,7 +146,8 @@ export default function PricingClient() {
     destination: string,
     plan: "draft" | "bundle",
   ) => {
-    const stripePriceId = pricingConfig[plan].stripePriceIds[billingPeriod];
+    const stripePriceId =
+      pricingConfig[plan].stripePriceIds[billingPeriod][currency];
 
     trackPricingCTA(
       t("pricing.checkout.buyNow"),
@@ -248,22 +244,7 @@ export default function PricingClient() {
             {/* Currency & Billing Toggle */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
               {/* Currency Selector */}
-              <div className="flex items-center gap-2 bg-[#1E293B] rounded-lg p-1">
-                <Globe className="w-4 h-4 text-[#94A3B8] ml-2" />
-                {SUPPORTED_CURRENCIES.map((curr) => (
-                  <button
-                    key={curr}
-                    onClick={() => setCurrency(curr)}
-                    className={`px-4 py-2 rounded-md text-sm font-semibold transition-all ${
-                      currency === curr
-                        ? "bg-[#8B5CF6] text-white"
-                        : "text-[#94A3B8] hover:text-white"
-                    }`}
-                  >
-                    {curr}
-                  </button>
-                ))}
-              </div>
+              <CurrencyToggle currency={currency} onChange={setCurrency} />
 
               {/* Billing Period Toggle */}
               <div className="flex items-center gap-2 bg-[#1E293B] rounded-lg p-1">
@@ -329,7 +310,9 @@ export default function PricingClient() {
               </p>
 
               <div className="mb-6">
-                <span className="text-5xl font-bold text-white">{symbol}0</span>
+                <span className="text-5xl font-bold text-white">
+                  {formatLocalizedPrice(0, currency)}
+                </span>
               </div>
 
               <Button
@@ -395,12 +378,10 @@ export default function PricingClient() {
                   className="mb-2"
                 >
                   <span className="text-5xl font-bold text-white">
-                    {symbol}
-                    {
-                      pricingConfig.draft.displayAmounts[billingPeriod][
-                        currency
-                      ]
-                    }
+                    {formatLocalizedPrice(
+                      getLocalizedPlanAmount("draft", billingPeriod, currency),
+                      currency,
+                    )}
                   </span>
                   <span className="text-[#94A3B8]">
                     /{billingPeriod === "monthly" ? "mo" : "yr"}
@@ -475,8 +456,10 @@ export default function PricingClient() {
 
               <div className="mb-2">
                 <span className="text-5xl font-bold text-white">
-                  {symbol}
-                  {departmentDisplayAmounts.monthly[currency]}
+                  {formatLocalizedPrice(
+                    getLocalizedDepartmentAmount(currency),
+                    currency,
+                  )}
                 </span>
                 <span className="text-[#94A3B8]">
                   {t("pricing.department.perTeacher")}
@@ -598,12 +581,10 @@ export default function PricingClient() {
                 </p>
                 <div className="flex items-baseline gap-3 mb-6">
                   <span className="text-6xl font-bold text-white">
-                    {symbol}
-                    {
-                      pricingConfig.bundle.displayAmounts[billingPeriod][
-                        currency
-                      ]
-                    }
+                    {formatLocalizedPrice(
+                      getLocalizedPlanAmount("bundle", billingPeriod, currency),
+                      currency,
+                    )}
                   </span>
                   <span className="text-white/80 text-xl">
                     {billingPeriod === "monthly"
