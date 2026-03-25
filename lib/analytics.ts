@@ -1,3 +1,5 @@
+import { readStoredAnalyticsConsent } from "@/lib/analytics-consent";
+
 type PlausibleProps = Record<string, string | number | boolean>;
 type TrackProps = Record<string, string | number | boolean | undefined>;
 
@@ -28,8 +30,13 @@ function toTrackProps(props?: TrackProps): TrackProps | undefined {
   return entries.length ? Object.fromEntries(entries) : undefined;
 }
 
+function hasAnalyticsConsent() {
+  return readStoredAnalyticsConsent() === "accepted";
+}
+
 const baseTrack = (event: string, props?: TrackProps) => {
   if (typeof window === "undefined") return;
+  if (!hasAnalyticsConsent()) return;
   const cleanProps = toTrackProps(props);
   try {
     window.plausible?.(event, cleanProps as PlausibleProps);
@@ -74,6 +81,35 @@ export const track = (event: string, props?: Record<string, any>) =>
   baseTrack(event, props);
 export const trackEvent = (event: string, props?: Record<string, any>) =>
   baseTrack(event, props);
+
+export const trackCtaClick = ({
+  ctaText,
+  ctaLocation,
+}: {
+  ctaText: string;
+  ctaLocation: string;
+}) =>
+  baseTrack("cta_click", {
+    cta_text: ctaText.trim(),
+    cta_location: ctaLocation,
+  });
+
+export const trackGenerateLead = ({
+  formLocation,
+  method,
+}: {
+  formLocation: string;
+  method: string;
+}) =>
+  baseTrack("generate_lead", {
+    form_location: formLocation,
+    method,
+  });
+
+export const trackScrollDepth = (percentScrolled: 50 | 90) =>
+  baseTrack("scroll_depth", {
+    percent_scrolled: percentScrolled,
+  });
 
 type DiagnosisEventProps = {
   issue?: string;

@@ -1,55 +1,65 @@
-﻿"use client"
+﻿"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Download, CheckCircle } from "lucide-react"
-import { useLanguage } from "@/lib/i18n/language-context"
-import { describeBrevoError, submitBrevoContact } from "@/lib/brevo-client"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Download, CheckCircle } from "lucide-react";
+import { trackGenerateLead } from "@/lib/analytics";
+import { useLanguage } from "@/lib/i18n/language-context";
+import { describeBrevoError, submitBrevoContact } from "@/lib/brevo-client";
 
 interface LeadMagnetProps {
-  title: string
-  description: string
-  resourceName: string
-  onSubmit?: (email: string) => void | Promise<void>
+  title: string;
+  description: string;
+  resourceName: string;
+  onSubmit?: (email: string) => void | Promise<void>;
 }
 
-export function LeadMagnet({ title, description, resourceName, onSubmit }: LeadMagnetProps) {
-  const { t, language } = useLanguage()
-  const [email, setEmail] = useState("")
-  const [submitted, setSubmitted] = useState(false)
-  const [error, setError] = useState("")
-  const [loading, setLoading] = useState(false)
+export function LeadMagnet({
+  title,
+  description,
+  resourceName,
+  onSubmit,
+}: LeadMagnetProps) {
+  const { t, language } = useLanguage();
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    e.preventDefault();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
-      setError("Please enter a valid email address.")
-      return
+      setError("Please enter a valid email address.");
+      return;
     }
-    setError("")
-    setLoading(true)
+    setError("");
+    setLoading(true);
 
     try {
       if (onSubmit) {
-        await onSubmit(email)
+        await onSubmit(email);
       }
       await submitBrevoContact({
         email,
-        attributes: { RESOURCE: resourceName, LANGUAGE: language.toUpperCase() },
+        attributes: {
+          RESOURCE: resourceName,
+          LANGUAGE: language.toUpperCase(),
+        },
         source: "lead_magnet",
-      })
-      setSubmitted(true)
+      });
+      trackGenerateLead({ formLocation: "lead_magnet", method: "email" });
+      setSubmitted(true);
     } catch (err) {
-      console.error("[LeadMagnet] submission failed", err)
-      setError(describeBrevoError(err, t("form.error")))
+      console.error("[LeadMagnet] submission failed", err);
+      setError(describeBrevoError(err, t("form.error")));
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   if (submitted) {
     return (
@@ -57,13 +67,17 @@ export function LeadMagnet({ title, description, resourceName, onSubmit }: LeadM
         <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
           <CheckCircle className="w-8 h-8 text-green-400" />
         </div>
-        <h3 className="text-2xl font-bold text-white mb-2">{t("form.success")}</h3>
-        <p className="text-gray-300">{t("form.successNote") || "Thanks - check your inbox."}</p>
+        <h3 className="text-2xl font-bold text-white mb-2">
+          {t("form.success")}
+        </h3>
+        <p className="text-gray-300">
+          {t("form.successNote") || "Thanks - check your inbox."}
+        </p>
         <p className="text-sm text-gray-400 mt-3">
           {resourceName} · {email}
         </p>
       </div>
-    )
+    );
   }
 
   return (
@@ -96,8 +110,10 @@ export function LeadMagnet({ title, description, resourceName, onSubmit }: LeadM
       </form>
       {error && <p className="text-sm text-red-400 mt-2">{error}</p>}
       <p className="text-xs text-gray-400 mt-3">
-        {language === "de" ? "Kein Spam. Jederzeit abmelden." : "No spam. Unsubscribe anytime."}
+        {language === "de"
+          ? "Kein Spam. Jederzeit abmelden."
+          : "No spam. Unsubscribe anytime."}
       </p>
     </div>
-  )
+  );
 }

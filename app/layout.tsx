@@ -4,6 +4,7 @@ import Script from "next/script";
 import React from "react";
 import { CookieConsentBanner } from "@/components/analytics/cookie-consent-banner";
 import { PlausibleAnalytics } from "@/components/analytics/plausible-analytics";
+import { ScrollDepthTracker } from "@/components/analytics/scroll-depth-tracker";
 import { UtmCapture } from "@/components/analytics/utm-capture";
 import { buildGoogleConsentBootstrap } from "@/lib/analytics-consent";
 import { LanguageProvider } from "@/lib/i18n/language-context";
@@ -85,6 +86,7 @@ export default function RootLayout({
       </head>
       <body className="bg-slate-950 text-slate-100">
         {shouldLoadGa ? <PlausibleAnalytics /> : null}
+        {shouldLoadGa ? <ScrollDepthTracker /> : null}
         {shouldLoadGa ? <UtmCapture /> : null}
         <JsonLdCollection
           entries={[

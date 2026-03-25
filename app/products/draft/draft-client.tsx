@@ -8,7 +8,7 @@ import { useLanguage } from "@/lib/i18n/language-context";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { DemoModal } from "@/components/demo-modal";
 import { useState } from "react";
-import { track } from "@/lib/analytics";
+import { track, trackCtaClick } from "@/lib/analytics";
 import { DraftDemo } from "@/components/draft-demo";
 import { getDraftPricingHref } from "@/lib/draft-cta";
 
@@ -214,12 +214,16 @@ export default function DraftClient() {
                       asChild
                       size="lg"
                       className="gradient-primary text-white font-medium rounded-xl"
-                      onClick={() =>
+                      onClick={() => {
+                        trackCtaClick({
+                          ctaText: t("products.draft.hero.cta.primary"),
+                          ctaLocation: "draft_hero",
+                        });
                         track("cta_click_draft_start_free", {
                           language,
                           source: "hero",
-                        })
-                      }
+                        });
+                      }}
                     >
                       <Link href={pricingHref}>
                         {t("products.draft.hero.cta.primary")}

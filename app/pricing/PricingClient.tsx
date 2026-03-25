@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { SignupModal } from "@/components/signup-modal";
 import { motion, AnimatePresence } from "framer-motion";
-import { track } from "@/lib/analytics";
+import { track, trackCtaClick } from "@/lib/analytics";
 import {
   buildStripeCheckoutPath,
   departmentDisplayAmounts,
@@ -132,11 +132,11 @@ export default function PricingClient() {
       zaza: t("pricing.compare.rows.cost.zaza"),
     },
   ];
-  const trackPricingCTA = (id: string) =>
-    track("cta_click", { location: "pricing", id });
+  const trackPricingCTA = (ctaText: string, ctaLocation: string) =>
+    trackCtaClick({ ctaText, ctaLocation });
 
   const handlePlanClick = (planId: string) => {
-    trackPricingCTA(`plan_${planId}`);
+    trackPricingCTA(t("pricing.free.cta"), "pricing_free_card");
     track("cta_click_pricing_select_plan", {
       planId,
       billingCycle: billingPeriod,
@@ -153,7 +153,10 @@ export default function PricingClient() {
   ) => {
     const stripePriceId = pricingConfig[plan].stripePriceIds[billingPeriod];
 
-    trackPricingCTA(ctaId);
+    trackPricingCTA(
+      t("pricing.checkout.buyNow"),
+      plan === "draft" ? "pricing_teacher_card" : "pricing_bundle_section",
+    );
     track(`cta_click_pricing_${ctaId}`, {
       billingCycle: billingPeriod,
       currency,
@@ -486,7 +489,10 @@ export default function PricingClient() {
               <Button
                 asChild
                 onClick={() => {
-                  trackPricingCTA("checkout_department");
+                  trackPricingCTA(
+                    t("pricing.department.cta"),
+                    "pricing_department_card",
+                  );
                   track("cta_click_pricing_checkout_department", {
                     currency,
                     language,
@@ -539,7 +545,10 @@ export default function PricingClient() {
               <Button
                 asChild
                 onClick={() => {
-                  trackPricingCTA("checkout_enterprise");
+                  trackPricingCTA(
+                    t("pricing.enterprise.cta"),
+                    "pricing_enterprise_card",
+                  );
                   track("cta_click_pricing_checkout_enterprise", {
                     currency,
                     language,
@@ -793,7 +802,10 @@ export default function PricingClient() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   onClick={() => {
-                    trackPricingCTA("cta_primary");
+                    trackPricingCTA(
+                      t("pricing.cta.primary"),
+                      "pricing_bottom_primary",
+                    );
                     track("cta_click_pricing_cta_primary", { language });
                     setSignupOpen(true);
                   }}
@@ -805,7 +817,17 @@ export default function PricingClient() {
                   asChild
                   className="bg-transparent border-2 border-white text-white hover:bg-white/10 py-6 px-8 text-lg font-semibold rounded-lg"
                 >
-                  <a href={generalSalesHref}>{t("pricing.cta.secondary")}</a>
+                  <a
+                    href={generalSalesHref}
+                    onClick={() =>
+                      trackPricingCTA(
+                        t("pricing.cta.secondary"),
+                        "pricing_bottom_secondary",
+                      )
+                    }
+                  >
+                    {t("pricing.cta.secondary")}
+                  </a>
                 </Button>
               </div>
             </div>

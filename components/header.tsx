@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
-import { track } from "@/lib/analytics";
+import { trackCtaClick } from "@/lib/analytics";
 import { getDraftPricingHref } from "@/lib/draft-cta";
 
 export function Header() {
@@ -43,7 +43,10 @@ export function Header() {
     setMobileAccordion((prev) => ({ ...prev, [id]: !prev[id] }));
   const handleHeaderNavClick = (href: string) => {
     if (href === "/pricing") {
-      track("cta_click", { location: "header", id: "pricing" });
+      trackCtaClick({
+        ctaText: t("nav.pricing"),
+        ctaLocation: "header_nav",
+      });
     }
   };
 
@@ -346,9 +349,9 @@ export function Header() {
               <Link
                 href={headerCtaHref}
                 onClick={() =>
-                  track("cta_click", {
-                    location: "header",
-                    id: "start_now",
+                  trackCtaClick({
+                    ctaText: headerCtaLabel,
+                    ctaLocation: "header_primary",
                   })
                 }
               >
@@ -470,9 +473,9 @@ export function Header() {
                     <Link
                       href={headerCtaHref}
                       onClick={() => {
-                        track("cta_click", {
-                          location: "header",
-                          id: "mobile_start_now",
+                        trackCtaClick({
+                          ctaText: headerCtaLabel,
+                          ctaLocation: "header_mobile",
                         });
                         setMobileMenuOpen(false);
                       }}

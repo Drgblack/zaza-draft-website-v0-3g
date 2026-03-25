@@ -5,7 +5,7 @@ import { useLanguage } from "@/lib/i18n/language-context";
 import { SignupModal } from "@/components/signup-modal";
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { track } from "@/lib/analytics";
+import { track, trackCtaClick } from "@/lib/analytics";
 import { DraftDemo } from "@/components/draft-demo";
 import { CaseStudyCarousel } from "@/components/case-study-carousel";
 import { SocialProofBadges } from "@/components/social-proof-badges";
@@ -455,9 +455,13 @@ export function HomePageClient() {
                 >
                   <Link
                     href={pricingHref}
-                    onClick={() =>
-                      track("cta_click_home_get_started", { language })
-                    }
+                    onClick={() => {
+                      trackCtaClick({
+                        ctaText: t("hero.ctaPrimary"),
+                        ctaLocation: "hero",
+                      });
+                      track("cta_click_home_get_started", { language });
+                    }}
                   >
                     {t("hero.ctaPrimary")}
                   </Link>
@@ -1114,6 +1118,10 @@ export function HomePageClient() {
         <DraftDemo
           language={language}
           onTryItYourself={() => {
+            trackCtaClick({
+              ctaText: language === "de" ? "Jetzt starten" : "Get started",
+              ctaLocation: "demo",
+            });
             track("cta_click_home_try_demo", { language, location: "home" });
             setSignupOpen(true);
           }}
@@ -1431,7 +1439,13 @@ export function HomePageClient() {
             >
               <Link
                 href={pricingHref}
-                onClick={() => track("cta_click_home_final", { language })}
+                onClick={() => {
+                  trackCtaClick({
+                    ctaText: t("finalCTA.button"),
+                    ctaLocation: "final_cta",
+                  });
+                  track("cta_click_home_final", { language });
+                }}
               >
                 {t("finalCTA.button")}
               </Link>

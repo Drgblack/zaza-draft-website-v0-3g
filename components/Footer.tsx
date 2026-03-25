@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { trackCtaClick } from "@/lib/analytics";
 import { getDraftPricingHref } from "@/lib/draft-cta";
 import { getFooterContent } from "@/lib/footer-content";
 
@@ -23,13 +24,19 @@ export default function Footer() {
   const locale = isDE ? "de" : "en";
   const localPath = (path: string) => (isDE ? `/de${path}` : path);
   const footerContent = getFooterContent(locale);
+  const startNowLabel = isDE ? "Jetzt starten" : "Start now";
 
   const productLinks = [
     { label: "Draft", href: localPath("/products/draft") },
     { label: isDE ? "Preise" : "Pricing", href: localPath("/pricing") },
     {
-      label: isDE ? "Jetzt starten" : "Start now",
+      label: startNowLabel,
       href: getDraftPricingHref(locale),
+      onClick: () =>
+        trackCtaClick({
+          ctaText: startNowLabel,
+          ctaLocation: "footer",
+        }),
     },
     {
       label: isDE ? "Gründerstory" : "Founder story",
@@ -79,7 +86,11 @@ export default function Footer() {
             <ul className="mt-3 space-y-2 text-sm">
               {productLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="hover:text-white">
+                  <Link
+                    href={link.href}
+                    className="hover:text-white"
+                    onClick={link.onClick}
+                  >
                     {link.label}
                   </Link>
                 </li>

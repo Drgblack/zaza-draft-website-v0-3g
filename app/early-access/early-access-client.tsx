@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
-import { track } from "@/lib/analytics";
+import { track, trackGenerateLead } from "@/lib/analytics";
 import { describeBrevoError, submitBrevoContact } from "@/lib/brevo-client";
 
 const CheckIcon = ({ className }: { className?: string }) => (
@@ -178,6 +178,7 @@ export default function EarlyAccessClient() {
         },
       });
       setSuccess(true);
+      trackGenerateLead({ formLocation: "waitlist_page", method: "email" });
       track("form_submit", { form: "waitlist_page", language });
     } catch (submissionError) {
       console.error("[waitlist] Brevo submission failed", submissionError);

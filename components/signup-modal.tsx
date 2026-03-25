@@ -1,37 +1,37 @@
-﻿"use client"
+﻿"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { X } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useLanguage } from "@/lib/i18n/language-context"
-import { track } from "@/lib/analytics"
-import { describeBrevoError, submitBrevoContact } from "@/lib/brevo-client"
+import { useState } from "react";
+import { X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/lib/i18n/language-context";
+import { track, trackGenerateLead } from "@/lib/analytics";
+import { describeBrevoError, submitBrevoContact } from "@/lib/brevo-client";
 
 interface SignupModalProps {
-  open: boolean
-  onOpenChange: (open: boolean) => void
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
 }
 
 export function SignupModal({ open, onOpenChange }: SignupModalProps) {
-  const { t, language } = useLanguage()
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [consent, setConsent] = useState(false)
-  const [loading, setLoading] = useState(false)
-  const [success, setSuccess] = useState(false)
-  const [error, setError] = useState("")
+  const { t, language } = useLanguage();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [consent, setConsent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     if (!consent) {
-      setError(t("form.consentRequired"))
-      return
+      setError(t("form.consentRequired"));
+      return;
     }
 
-    setLoading(true)
-    setError("")
+    setLoading(true);
+    setError("");
 
     try {
       await submitBrevoContact({
@@ -39,29 +39,30 @@ export function SignupModal({ open, onOpenChange }: SignupModalProps) {
         email,
         source: "homepage_modal",
         attributes: { LANGUAGE: language.toUpperCase() },
-      })
-      setSuccess(true)
-      track("form_submit", { form: "signup_modal", language })
+      });
+      setSuccess(true);
+      trackGenerateLead({ formLocation: "signup_modal", method: "email" });
+      track("form_submit", { form: "signup_modal", language });
     } catch (err) {
-      console.error("[v0] Signup error:", err)
-      setError(describeBrevoError(err, t("form.error")))
+      console.error("[v0] Signup error:", err);
+      setError(describeBrevoError(err, t("form.error")));
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   const handleClose = () => {
-    onOpenChange(false)
+    onOpenChange(false);
     setTimeout(() => {
-      setSuccess(false)
-      setName("")
-      setEmail("")
-      setConsent(false)
-      setError("")
-    }, 300)
-  }
+      setSuccess(false);
+      setName("");
+      setEmail("");
+      setConsent(false);
+      setError("");
+    }, 300);
+  };
 
-  if (!open) return null
+  if (!open) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
@@ -77,24 +78,44 @@ export function SignupModal({ open, onOpenChange }: SignupModalProps) {
         {success ? (
           <div className="text-center py-8">
             <div className="mx-auto w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center mb-4">
-              <svg className="w-6 h-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              <svg
+                className="w-6 h-6 text-green-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 13l4 4L19 7"
+                />
               </svg>
             </div>
-            <h3 className="text-xl font-bold text-[#F9FAFB] mb-2">{t("form.success")}</h3>
+            <h3 className="text-xl font-bold text-[#F9FAFB] mb-2">
+              {t("form.success")}
+            </h3>
             <p className="text-[#9CA3AF]">{t("form.successNote")}</p>
-            <Button onClick={handleClose} className="mt-6 gradient-primary text-white">
+            <Button
+              onClick={handleClose}
+              className="mt-6 gradient-primary text-white"
+            >
               {t("form.close")}
             </Button>
           </div>
         ) : (
           <>
-            <h2 className="text-2xl font-bold text-[#F9FAFB] mb-2">{t("nav.getStarted")}</h2>
+            <h2 className="text-2xl font-bold text-[#F9FAFB] mb-2">
+              {t("nav.getStarted")}
+            </h2>
             <p className="text-[#9CA3AF] mb-6">{t("form.trialCopy")}</p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-[#D1D5DB] mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-[#D1D5DB] mb-2"
+                >
                   {t("form.name")}
                 </label>
                 <input
@@ -109,7 +130,10 @@ export function SignupModal({ open, onOpenChange }: SignupModalProps) {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-[#D1D5DB] mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-[#D1D5DB] mb-2"
+                >
                   {t("form.email")}
                 </label>
                 <input
@@ -156,5 +180,5 @@ export function SignupModal({ open, onOpenChange }: SignupModalProps) {
         )}
       </div>
     </div>
-  )
+  );
 }

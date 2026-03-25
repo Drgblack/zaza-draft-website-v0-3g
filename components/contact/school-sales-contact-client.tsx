@@ -13,7 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/lib/i18n/language-context";
-import { track } from "@/lib/analytics";
+import { track, trackGenerateLead } from "@/lib/analytics";
 import { describeBrevoError, submitBrevoContact } from "@/lib/brevo-client";
 import {
   parseSchoolSalesPlan,
@@ -257,6 +257,10 @@ export function SchoolSalesContactClient({
         plan,
         source,
         school_size: formData.schoolSize,
+      });
+      trackGenerateLead({
+        formLocation: "school_sales_contact_form",
+        method: "email",
       });
 
       setSuccess(true);
