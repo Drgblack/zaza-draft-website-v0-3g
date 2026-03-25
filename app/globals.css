@@ -1002,3 +1002,189 @@ img[src*="vusercontent.net"] {
   display: none;
 }
 
+.funnel-theme {
+  --funnel-surface: rgba(255, 255, 255, 0.72);
+  --funnel-surface-strong: rgba(255, 255, 255, 0.86);
+  --funnel-border: rgba(236, 72, 153, 0.14);
+  --funnel-text: #40244a;
+  --funnel-text-strong: #2f1738;
+  --funnel-text-muted: #725d7a;
+  --funnel-accent: #ec4899;
+  --funnel-accent-strong: #c026d3;
+  --funnel-accent-soft: #c084fc;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(251, 113, 133, 0.24),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(192, 132, 252, 0.24),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 72%,
+      rgba(244, 114, 182, 0.18),
+      transparent 24%
+    ),
+    linear-gradient(180deg, #fff9fc 0%, #fff4fb 44%, #f7f0ff 100%);
+  color: var(--funnel-text);
+}
+
+.funnel-main {
+  min-height: 100vh;
+  background: transparent;
+  color: var(--funnel-text);
+}
+
+.funnel-theme .text-calm-800 {
+  color: var(--funnel-text-strong);
+}
+
+.funnel-theme .text-calm-700 {
+  color: #593863;
+}
+
+.funnel-theme .text-calm-600 {
+  color: var(--funnel-text-muted);
+}
+
+.funnel-theme .text-calm-500 {
+  color: #8a7491;
+}
+
+.funnel-theme .glass,
+.funnel-theme .glass-strong {
+  border: 1px solid var(--funnel-border);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  box-shadow:
+    0 18px 48px rgba(190, 24, 93, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.42);
+}
+
+.funnel-theme .glass {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.72) 0%,
+    rgba(255, 250, 254, 0.6) 100%
+  );
+}
+
+.funnel-theme .glass-strong {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 248, 253, 0.8) 100%
+  );
+}
+
+.funnel-theme .text-gradient,
+.funnel-theme .text-gradient-warm,
+.funnel-theme .gradient-text-lovable {
+  background: linear-gradient(135deg, #ec4899 0%, #c026d3 52%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.funnel-theme .btn-primary {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: linear-gradient(135deg, #f052a2 0%, #d946ef 55%, #a855f7 100%);
+  color: #fff;
+  box-shadow:
+    0 18px 42px rgba(217, 70, 239, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.26);
+}
+
+.funnel-theme .btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 22px 52px rgba(217, 70, 239, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.26);
+}
+
+.funnel-theme .btn-secondary {
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--funnel-text-strong);
+  box-shadow:
+    0 14px 34px rgba(190, 24, 93, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.42);
+}
+
+.funnel-theme .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(236, 72, 153, 0.34);
+}
+
+.funnel-theme .testimonial-bubble {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  max-width: 22rem;
+  padding: 0.9rem 1rem;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.funnel-theme .step-badge {
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background:
+    radial-gradient(
+      circle at 30% 25%,
+      rgba(255, 255, 255, 0.34),
+      transparent 32%
+    ),
+    linear-gradient(135deg, #f472b6 0%, #d946ef 52%, #8b5cf6 100%);
+  color: #fff;
+  box-shadow:
+    0 18px 38px rgba(217, 70, 239, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.funnel-theme .blinking-cursor::after {
+  content: "";
+  display: inline-block;
+  width: 0.12em;
+  height: 1em;
+  margin-left: 0.12em;
+  background: currentColor;
+  vertical-align: -0.08em;
+  animation: funnel-cursor 1s steps(2, start) infinite;
+}
+
+@keyframes funnel-cursor {
+  0%,
+  48% {
+    opacity: 1;
+  }
+  49%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.funnel-theme .funnel-section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(236, 72, 153, 0.2),
+    transparent
+  );
+}
+
+.funnel-theme .funnel-mobile-cta {
+  background: rgba(255, 252, 255, 0.92);
+  border-top: 1px solid rgba(236, 72, 153, 0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
