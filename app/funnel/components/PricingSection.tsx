@@ -4,13 +4,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckIcon } from "lucide-react";
 
 type PricingSectionProps = {
-  pricingHref: string;
+  proCheckoutHref: string;
   onFreeAction: () => void;
   onProAction: () => void;
 };
 
 const PricingSection = ({
-  pricingHref,
+  proCheckoutHref,
   onFreeAction,
   onProAction,
 }: PricingSectionProps) => {
@@ -23,8 +23,8 @@ const PricingSection = ({
             <span className="text-gradient"> no credit card needed</span>
           </h2>
           <p className="mx-auto max-w-3xl text-xl text-calm-600">
-            Start free, upgrade when you're ready. Less than $1 per hour you'll
-            save.
+            Start free with 5 drafts a month, then upgrade to Pro when you want
+            unlimited writing support.
           </p>
         </div>
 
@@ -58,8 +58,11 @@ const PricingSection = ({
                 onClick={onFreeAction}
                 className="btn-secondary h-auto w-full rounded-2xl px-6 py-4 text-base font-semibold"
               >
-                Start Free Today
+                Start Free - 5 Drafts a Month
               </Button>
+              <p className="mt-3 text-center text-xs text-calm-500">
+                Opens the free signup form. No credit card required.
+              </p>
             </CardContent>
           </Card>
 
@@ -71,12 +74,14 @@ const PricingSection = ({
               <div className="mb-8 text-center">
                 <h3 className="mb-2 text-2xl font-bold text-calm-800">Pro</h3>
                 <div className="mb-2 text-4xl font-bold text-calm-800">
-                  $14.99
+                  €14.99
                   <span className="text-lg font-normal text-calm-600">
                     /month
                   </span>
                 </div>
-                <p className="text-calm-600">For unlimited access</p>
+                <p className="text-calm-600">
+                  Unlimited drafts for individual teachers
+                </p>
               </div>
 
               <ul className="mb-8 space-y-4">
@@ -98,12 +103,12 @@ const PricingSection = ({
                 asChild
                 className="btn-primary h-auto w-full rounded-2xl px-6 py-4 text-base font-semibold"
               >
-                <Link href={pricingHref} onClick={onProAction}>
-                  Start Pro Trial
+                <Link href={proCheckoutHref} onClick={onProAction}>
+                  Upgrade to Pro - €14.99/month
                 </Link>
               </Button>
               <p className="mt-3 text-center text-xs text-calm-500">
-                Continue to secure pricing and checkout. Cancel anytime.
+                Secure checkout via Stripe. Monthly plan. Cancel anytime.
               </p>
             </CardContent>
           </Card>
