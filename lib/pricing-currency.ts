@@ -1,6 +1,7 @@
 import {
   DEFAULT_PRICING_CURRENCY,
   type PricingCurrency,
+  type SelfServeInterval,
   isPricingCurrency,
 } from "@/config/pricing";
 
@@ -119,4 +120,24 @@ export function formatLocalizedPrice(
     maximumFractionDigits: fractionDigits,
     ...options,
   }).format(amount);
+}
+
+export function getBillingIntervalLabel(
+  interval: SelfServeInterval,
+  format: "short" | "long" = "short",
+) {
+  if (format === "long") {
+    return interval === "monthly" ? "month" : "year";
+  }
+
+  return interval === "monthly" ? "mo" : "yr";
+}
+
+export function formatPriceWithInterval(
+  amount: number,
+  currency: PricingCurrency,
+  interval: SelfServeInterval,
+  format: "short" | "long" = "short",
+) {
+  return `${formatLocalizedPrice(amount, currency)}/${getBillingIntervalLabel(interval, format)}`;
 }

@@ -8,26 +8,34 @@ export type SelfServeInterval = (typeof SELF_SERVE_INTERVALS)[number];
 export type SelfServePlan = (typeof SELF_SERVE_PLANS)[number];
 
 type PriceDisplayMap = Record<PricingCurrency, number>;
-type StripePriceIdMap = Record<PricingCurrency, string>;
+type StripePriceId = string | null;
+type StripePriceIdMap = Record<PricingCurrency, StripePriceId>;
 
 type SelfServePlanConfig = {
   stripePriceIds: Record<SelfServeInterval, StripePriceIdMap>;
   displayAmounts: Record<SelfServeInterval, PriceDisplayMap>;
 };
 
-// The existing production price IDs are the only verified Stripe prices in-repo.
-// The mapping is currency-aware so dedicated USD price IDs can be dropped in
-// without changing CTA or checkout code paths.
+export type SelfServeCheckoutState = {
+  href: string;
+  priceId: StripePriceId;
+  isAvailable: boolean;
+  displayAmount: number;
+};
+
+// The existing EUR production price IDs are the only verified live self-serve
+// Stripe prices in-repo. USD display pricing is live in the marketing layer,
+// but checkout must stay fail-closed until dedicated USD price IDs are added.
 export const pricingConfig: Record<SelfServePlan, SelfServePlanConfig> = {
   draft: {
     stripePriceIds: {
       monthly: {
         EUR: "price_1TA6ouHXkbT25qrKoapecaPz",
-        USD: "price_1TA6ouHXkbT25qrKoapecaPz",
+        USD: null,
       },
       annual: {
         EUR: "price_1TA6ouHXkbT25qrKUW5KmHXr",
-        USD: "price_1TA6ouHXkbT25qrKUW5KmHXr",
+        USD: null,
       },
     },
     displayAmounts: {
@@ -45,11 +53,11 @@ export const pricingConfig: Record<SelfServePlan, SelfServePlanConfig> = {
     stripePriceIds: {
       monthly: {
         EUR: "price_1TA6mFHXkbT25qrK40mdltez",
-        USD: "price_1TA6mFHXkbT25qrK40mdltez",
+        USD: null,
       },
       annual: {
         EUR: "price_1TA6mFHXkbT25qrKzZq3qTtE",
-        USD: "price_1TA6mFHXkbT25qrKzZq3qTtE",
+        USD: null,
       },
     },
     displayAmounts: {
@@ -100,6 +108,14 @@ export function getStripePriceId(
   return pricingConfig[plan].stripePriceIds[interval][currency];
 }
 
+export function hasStripePriceId(
+  plan: SelfServePlan,
+  interval: SelfServeInterval,
+  currency: PricingCurrency,
+) {
+  return Boolean(getStripePriceId(plan, interval, currency));
+}
+
 export function getLocalizedPlanAmount(
   plan: SelfServePlan,
   interval: SelfServeInterval,
@@ -126,4 +142,28 @@ export function buildStripeCheckoutPath(params: {
   });
 
   return `/api/stripe/checkout?${searchParams.toString()}`;
+}
+
+export function resolveSelfServeCheckout(params: {
+  plan: SelfServePlan;
+  interval: SelfServeInterval;
+  currency: PricingCurrency;
+  returnPath: string;
+}): SelfServeCheckoutState {
+  const priceId = getStripePriceId(
+    params.plan,
+    params.interval,
+    params.currency,
+  );
+
+  return {
+    href: buildStripeCheckoutPath(params),
+    priceId,
+    isAvailable: Boolean(priceId),
+    displayAmount: getLocalizedPlanAmount(
+      params.plan,
+      params.interval,
+      params.currency,
+    ),
+  };
 }

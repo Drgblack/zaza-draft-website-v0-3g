@@ -10,6 +10,7 @@ type PricingSectionProps = {
   onCurrencyChange: (currency: PricingCurrency) => void;
   proMonthlyPrice: string;
   proCheckoutHref: string;
+  proCheckoutAvailable: boolean;
   onFreeAction: () => void;
   onProAction: () => void;
 };
@@ -19,6 +20,7 @@ const PricingSection = ({
   onCurrencyChange,
   proMonthlyPrice,
   proCheckoutHref,
+  proCheckoutAvailable,
   onFreeAction,
   onProAction,
 }: PricingSectionProps) => {
@@ -35,11 +37,18 @@ const PricingSection = ({
           </h2>
           <p className="mx-auto max-w-3xl text-xl text-calm-600">
             Get 5 drafts a month for free, then move to Zaza Draft Pro for
-            unlimited writing support at {proMonthlyPrice}/month.
+            unlimited writing support at {proMonthlyPrice}.
           </p>
-          <div className="mt-6 flex justify-center">
+          <div className="mt-6 flex flex-col items-center gap-2">
+            <span className="text-xs font-semibold uppercase tracking-[0.22em] text-calm-500">
+              Currency
+            </span>
             <CurrencyToggle currency={currency} onChange={onCurrencyChange} />
           </div>
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-calm-500">
+            Prices are currently shown in {currency}. Taxes may be calculated at
+            checkout. Free starts with no credit card.
+          </p>
         </div>
 
         <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
@@ -119,17 +128,25 @@ const PricingSection = ({
 
               <Button
                 type="button"
+                disabled={!proCheckoutAvailable}
                 onClick={() => {
+                  if (!proCheckoutAvailable) {
+                    return;
+                  }
+
                   onProAction();
                   window.location.assign(proCheckoutHref);
                 }}
                 className="btn-primary h-auto w-full rounded-2xl px-6 py-4 text-base font-semibold"
               >
-                Upgrade to Pro - {proMonthlyPrice}/month
+                {proCheckoutAvailable
+                  ? `Upgrade to Pro - ${proMonthlyPrice}`
+                  : "USD checkout is not live yet"}
               </Button>
               <p className="mt-3 text-center text-xs text-calm-500">
-                Takes you to secure Stripe checkout for Zaza Draft Pro. Billed
-                monthly. Cancel anytime.
+                {proCheckoutAvailable
+                  ? `Secure Stripe checkout. ${proMonthlyPrice}. Cancel anytime. Taxes may be calculated at checkout.`
+                  : "USD prices are shown while USD checkout is being finalized. Switch to EUR to subscribe today."}
               </p>
             </CardContent>
           </Card>

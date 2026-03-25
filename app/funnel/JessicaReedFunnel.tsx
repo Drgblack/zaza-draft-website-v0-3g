@@ -3,11 +3,8 @@
 import { useState } from "react";
 import { SignupModal } from "@/components/signup-modal";
 import { trackCtaClick } from "@/lib/analytics";
-import {
-  buildStripeCheckoutPath,
-  getLocalizedPlanAmount,
-} from "@/config/pricing";
-import { formatLocalizedPrice } from "@/lib/pricing-currency";
+import { resolveSelfServeCheckout } from "@/config/pricing";
+import { formatPriceWithInterval } from "@/lib/pricing-currency";
 import { usePricingCurrency } from "@/hooks/use-pricing-currency";
 import HeroSection from "./components/HeroSection";
 import PainSection from "./components/PainSection";
@@ -21,16 +18,18 @@ export default function JessicaReedFunnel() {
   const [signupOpen, setSignupOpen] = useState(false);
   const { currency, setCurrency } = usePricingCurrency();
   const checkoutReturnPath = "/start";
-  const proMonthlyPrice = formatLocalizedPrice(
-    getLocalizedPlanAmount("draft", "monthly", currency),
-    currency,
-  );
-  const proCheckoutHref = buildStripeCheckoutPath({
+  const proCheckout = resolveSelfServeCheckout({
     plan: "draft",
     interval: "monthly",
     currency,
     returnPath: checkoutReturnPath,
   });
+  const proMonthlyPrice = formatPriceWithInterval(
+    proCheckout.displayAmount,
+    currency,
+    "monthly",
+    "long",
+  );
 
   const openFreeSignup = (ctaLocation: string, ctaText: string) => {
     trackCtaClick({ ctaText, ctaLocation });
@@ -59,7 +58,8 @@ export default function JessicaReedFunnel() {
           currency={currency}
           onCurrencyChange={setCurrency}
           proMonthlyPrice={proMonthlyPrice}
-          proCheckoutHref={proCheckoutHref}
+          proCheckoutHref={proCheckout.href}
+          proCheckoutAvailable={proCheckout.isAvailable}
           onFreeAction={() =>
             openFreeSignup(
               "funnel_pricing_free",

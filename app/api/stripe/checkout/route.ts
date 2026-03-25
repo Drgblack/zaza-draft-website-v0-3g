@@ -52,6 +52,15 @@ export async function GET(request: NextRequest) {
     );
   }
 
+  const priceId = getStripePriceId(plan, interval, currency);
+
+  if (!priceId) {
+    return NextResponse.json(
+      { error: "Checkout is not available for the selected currency." },
+      { status: 400 },
+    );
+  }
+
   if (!stripeSecretKey) {
     console.error("[stripe-checkout] Missing STRIPE_SECRET_KEY");
     return NextResponse.json(
@@ -62,7 +71,6 @@ export async function GET(request: NextRequest) {
 
   try {
     const stripe = new Stripe(stripeSecretKey);
-    const priceId = getStripePriceId(plan, interval, currency);
     const session = await stripe.checkout.sessions.create({
       mode: "subscription",
       line_items: [{ price: priceId, quantity: 1 }],
