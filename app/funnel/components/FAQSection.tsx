@@ -2,41 +2,13 @@
 
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import type { FunnelCopy } from "../content";
 
-const faqs = [
-  {
-    question: "What is Zaza Draft?",
-    answer:
-      "Zaza Draft is a teacher-first AI writing assistant designed to help with high-stakes school communication like parent emails, sensitive replies, and report comments.",
-  },
-  {
-    question: "Who is this for?",
-    answer:
-      "It is built for teachers who are under pressure and want support writing clear, calm, professional messages they will not regret sending later.",
-  },
-  {
-    question: "Does it replace my judgement?",
-    answer:
-      "No. Zaza Draft is designed as a co-writer, not a replacement. It helps you reduce risk, improve tone, and communicate more safely.",
-  },
-  {
-    question: "Will it sound like AI?",
-    answer:
-      "Zaza Draft is designed to write in a teacher-appropriate tone that you can edit before sending. You stay in control of the final wording.",
-  },
-  {
-    question: "Can I use it for parent communication?",
-    answer:
-      "Yes. That is one of its main use cases. It is especially helpful when emotions are high, stakes are high, or wording needs to be careful.",
-  },
-  {
-    question: "Is this only for burnt-out teachers?",
-    answer:
-      "No. But it is especially relevant for teachers who feel stretched, tired, or anxious about getting the wording wrong in difficult situations.",
-  },
-];
+type FAQSectionProps = {
+  copy: FunnelCopy["faq"];
+};
 
-export default function FAQSection() {
+export default function FAQSection({ copy }: FAQSectionProps) {
   const [openItems, setOpenItems] = useState<number[]>([0]);
 
   const toggleItem = (index: number) => {
@@ -52,16 +24,13 @@ export default function FAQSection() {
       <div className="mx-auto max-w-4xl">
         <div className="mb-10 text-center">
           <h2 className="text-3xl font-bold tracking-tight text-calm-800">
-            Frequently asked questions
+            {copy.title}
           </h2>
-          <p className="mt-4 text-lg text-calm-600">
-            Clear answers for teachers who want the calmest way to write under
-            pressure.
-          </p>
+          <p className="mt-4 text-lg text-calm-600">{copy.subtitle}</p>
         </div>
 
         <div className="space-y-4">
-          {faqs.map((faq, index) => {
+          {copy.items.map((faq, index) => {
             const isOpen = openItems.includes(index);
 
             return (

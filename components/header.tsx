@@ -10,7 +10,7 @@ import { usePricingCurrency } from "@/hooks/use-pricing-currency";
 import { trackCtaClick } from "@/lib/analytics";
 import { getDraftPricingHref } from "@/lib/draft-cta";
 import { useLanguage } from "@/lib/i18n/language-context";
-import { formatPriceWithInterval } from "@/lib/pricing-currency";
+import { formatLocalizedPrice } from "@/lib/pricing-currency";
 import { Button } from "@/components/ui/button";
 
 export function Header() {
@@ -31,29 +31,37 @@ export function Header() {
   });
   const pathname = usePathname();
   const { language, setLanguage, t } = useLanguage();
-  const { currency } = usePricingCurrency();
-  const isStartFunnel = pathname === "/start";
+  const isGermanFunnel = pathname === "/de/start";
+  const isStartFunnel = pathname === "/start" || isGermanFunnel;
+  const { currency } = usePricingCurrency({
+    locales: isGermanFunnel ? ["de-DE"] : undefined,
+  });
   const L = (de: string, en: string) => (language === "de" ? de : en);
   const headerCtaHref = getDraftPricingHref(language);
   const headerCtaLabel = t("nav.getStarted");
+  const funnelReturnPath = isGermanFunnel ? "/de/start" : "/start";
   const funnelCheckout = resolveSelfServeCheckout({
     plan: "draft",
     interval: "monthly",
     currency,
-    returnPath: "/start",
+    returnPath: funnelReturnPath,
   });
-  const funnelPriceLabel = formatPriceWithInterval(
+  const funnelPriceLabel = `${formatLocalizedPrice(
     funnelCheckout.displayAmount,
     currency,
-    "monthly",
-    "long",
-  );
+  )}/${isGermanFunnel ? "Monat" : "month"}`;
   const funnelHeaderCtaHref =
     funnelCtaReady && funnelCheckout.isAvailable
       ? funnelCheckout.href
-      : "/start#pricing";
+      : `${funnelReturnPath}#pricing`;
   const funnelHeaderCtaLabel =
-    funnelCtaReady && funnelCheckout.isAvailable ? "Start Pro" : "See plans";
+    funnelCtaReady && funnelCheckout.isAvailable
+      ? isGermanFunnel
+        ? "Pro starten"
+        : "Start Pro"
+      : isGermanFunnel
+        ? "Preise ansehen"
+        : "See plans";
 
   useEffect(() => {
     if (!mobileMenuOpen) return;
@@ -253,8 +261,8 @@ export function Header() {
                     trackCtaClick({
                       ctaText:
                         funnelCtaReady && funnelCheckout.isAvailable
-                          ? `Start Pro – ${funnelPriceLabel}`
-                          : "See plans",
+                          ? `${funnelHeaderCtaLabel} – ${funnelPriceLabel}`
+                          : funnelHeaderCtaLabel,
                       ctaLocation: "header_funnel",
                     })
                   }

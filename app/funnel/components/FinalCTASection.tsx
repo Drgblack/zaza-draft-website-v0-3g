@@ -1,13 +1,16 @@
 import { Button } from "@/components/ui/button";
+import type { FunnelCopy } from "../content";
 
 type FinalCTASectionProps = {
   onPrimaryAction: () => void;
   primaryCtaLabel: string;
+  copy: FunnelCopy["finalCta"];
 };
 
 const FinalCTASection = ({
   onPrimaryAction,
   primaryCtaLabel,
+  copy,
 }: FinalCTASectionProps) => {
   return (
     <>
@@ -19,16 +22,13 @@ const FinalCTASection = ({
 
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           <h2 className="mb-6 text-3xl font-bold leading-tight text-calm-800 md:text-5xl">
-            It's 10:47 PM on a Sunday.
+            {copy.headingLines[0]}
             <br />
-            <span className="text-gradient-warm">
-              What if you were already done?
-            </span>
+            <span className="text-gradient-warm">{copy.headingLines[1]}</span>
           </h2>
 
           <p className="mx-auto mb-8 max-w-2xl text-xl text-calm-600">
-            No more staring at blank screens. No more copy-paste comments. Just
-            thoughtful writing that sounds like you, delivered in seconds.
+            {copy.subheading}
           </p>
 
           <div className="mb-12 flex flex-col items-center justify-center gap-4">
@@ -39,25 +39,21 @@ const FinalCTASection = ({
             >
               {primaryCtaLabel}
             </Button>
-            <p className="text-sm text-calm-500">
-              No credit card. No lock-in. Fully editable.
-            </p>
+            <p className="text-sm text-calm-500">{copy.reassurance}</p>
           </div>
 
           <div className="glass-strong mx-auto max-w-3xl rounded-[1.75rem] p-8">
             <p className="text-lg font-medium text-calm-700 md:text-xl">
-              Built with teachers and refined for the real pressure of school
-              communication.
+              {copy.quote}
             </p>
           </div>
 
           <div className="mt-16 pt-8">
             <div className="funnel-section-divider mx-auto mb-8 max-w-2xl" />
             <div className="flex flex-col items-center justify-center gap-4 text-sm text-calm-500 sm:flex-row sm:gap-6">
-              <div>Built with teachers, for teachers</div>
-              <div>FERPA-ready workflows</div>
-              <div>Cancel anytime</div>
-              <div>Support: help@zazatechnologies.com</div>
+              {copy.footerItems.map((item) => (
+                <div key={item}>{item}</div>
+              ))}
             </div>
           </div>
         </div>

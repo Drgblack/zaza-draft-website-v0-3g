@@ -64,7 +64,8 @@ async function main() {
   assert.equal(getLocalizedPlanAmount("draft", "monthly", "USD"), 16.99);
   assert.equal(getLocalizedDepartmentAmount("USD"), 9);
   assert.equal(hasStripePriceId("draft", "monthly", "EUR"), true);
-  assert.equal(hasStripePriceId("draft", "monthly", "USD"), false);
+  assert.equal(hasStripePriceId("draft", "monthly", "USD"), true);
+  assert.equal(hasStripePriceId("draft", "annual", "USD"), false);
   assert.equal(hasStripePriceId("bundle", "annual", "USD"), false);
 
   assert.equal(
@@ -81,7 +82,10 @@ async function main() {
     getStripePriceId("draft", "monthly", "EUR"),
     "price_1TA6ouHXkbT25qrKoapecaPz",
   );
-  assert.equal(getStripePriceId("draft", "monthly", "USD"), null);
+  assert.equal(
+    getStripePriceId("draft", "monthly", "USD"),
+    "price_1TF10HHXkbT25qrKnyPPQPPu",
+  );
   assert.deepEqual(
     resolveSelfServeCheckout({
       plan: "draft",
@@ -91,8 +95,8 @@ async function main() {
     }),
     {
       href: "/api/stripe/checkout?plan=draft&interval=monthly&currency=USD&returnPath=%2Fpricing",
-      priceId: null,
-      isAvailable: false,
+      priceId: "price_1TF10HHXkbT25qrKnyPPQPPu",
+      isAvailable: true,
       displayAmount: 16.99,
     },
   );
@@ -113,7 +117,7 @@ async function main() {
 
   const unavailableUsdResponse = await startStripeCheckout(
     new NextRequest(
-      "http://localhost:3000/api/stripe/checkout?plan=draft&interval=monthly&currency=USD&returnPath=%2Fpricing",
+      "http://localhost:3000/api/stripe/checkout?plan=draft&interval=annual&currency=USD&returnPath=%2Fpricing",
     ),
   );
   assert.equal(unavailableUsdResponse.status, 400);

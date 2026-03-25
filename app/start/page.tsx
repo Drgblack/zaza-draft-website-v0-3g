@@ -1,5 +1,5 @@
 import JessicaReedFunnel from "../funnel/JessicaReedFunnel";
 
 export default function StartPage() {
-  return <JessicaReedFunnel />;
+  return <JessicaReedFunnel locale="en" />;
 }

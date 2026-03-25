@@ -23,15 +23,15 @@ export type SelfServeCheckoutState = {
   displayAmount: number;
 };
 
-// The existing EUR production price IDs are the only verified live self-serve
-// Stripe prices in-repo. USD display pricing is live in the marketing layer,
-// but checkout must stay fail-closed until dedicated USD price IDs are added.
+// Verified live self-serve Stripe prices. Any plan/currency pair without a
+// dedicated live price ID must stay fail-closed instead of reusing another
+// currency's checkout target.
 export const pricingConfig: Record<SelfServePlan, SelfServePlanConfig> = {
   draft: {
     stripePriceIds: {
       monthly: {
         EUR: "price_1TA6ouHXkbT25qrKoapecaPz",
-        USD: null,
+        USD: "price_1TF10HHXkbT25qrKnyPPQPPu",
       },
       annual: {
         EUR: "price_1TA6ouHXkbT25qrKUW5KmHXr",

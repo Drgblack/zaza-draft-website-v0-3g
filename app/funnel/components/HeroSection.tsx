@@ -1,15 +1,18 @@
 import { Button } from "@/components/ui/button";
+import type { FunnelCopy } from "../content";
 
 const teacherHero = "/lovable-funnel/teacher-hero.jpg";
 
 type HeroSectionProps = {
   onPrimaryAction: () => void;
   primaryCtaLabel: string;
+  copy: FunnelCopy["hero"];
 };
 
 const HeroSection = ({
   onPrimaryAction,
   primaryCtaLabel,
+  copy,
 }: HeroSectionProps) => {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden px-4 py-16 lg:py-24">
@@ -30,27 +33,26 @@ const HeroSection = ({
           </div>
 
           <p className="mb-5 text-center text-sm font-semibold uppercase tracking-[0.32em] text-[#c026d3] lg:text-left">
-            Teacher-first relief for report writing
+            {copy.preheadline}
           </p>
 
           <h1 className="animate-fade-in text-center text-4xl font-bold leading-tight text-calm-800 md:text-5xl lg:text-left lg:text-6xl">
-            You've got 23 comments left.
+            {copy.headingLines[0]}
             <br />
-            It's{" "}
-            <span className="text-gradient-warm blinking-cursor">10:41 PM</span>
+            <span className="text-gradient-warm blinking-cursor">
+              {copy.headingLines[1]}
+            </span>
             <br />
-            You're exhausted.
+            {copy.headingLines[2]}
           </h1>
 
           <div
             className="animate-fade-in mb-8 mt-8 text-center text-2xl font-semibold lg:text-left md:text-3xl"
             style={{ animationDelay: "0.18s" }}
           >
-            <span className="text-gradient-warm">Zaza writes them for you</span>
+            <span className="text-gradient-warm">{copy.subheadingTop}</span>
             <br />
-            <span className="text-calm-600">
-              in your own voice, in seconds.
-            </span>
+            <span className="text-calm-600">{copy.subheadingBottom}</span>
           </div>
 
           <div
@@ -65,7 +67,7 @@ const HeroSection = ({
               {primaryCtaLabel}
             </Button>
             <p className="text-center text-sm text-calm-500 lg:text-left">
-              No credit card. No lock-in. Fully editable.
+              {copy.reassurance}
             </p>
           </div>
 
@@ -73,9 +75,7 @@ const HeroSection = ({
             className="animate-fade-in text-center lg:text-left"
             style={{ animationDelay: "0.48s" }}
           >
-            <p className="text-lg font-medium text-calm-700">
-              Built for teachers who write under pressure.
-            </p>
+            <p className="text-lg font-medium text-calm-700">{copy.footer}</p>
           </div>
         </div>
 
@@ -83,14 +83,12 @@ const HeroSection = ({
           <div className="relative overflow-hidden rounded-[2rem] border border-white/40 shadow-[0_32px_90px_rgba(128,90,213,0.18)]">
             <img
               src={teacherHero}
-              alt="Teacher working late at desk with papers and laptop, looking tired but hopeful"
+              alt={copy.imageAlt}
               className="w-full object-cover"
             />
 
             <div className="testimonial-bubble">
-              <p className="text-sm font-medium text-calm-700">
-                Built with teachers and refined for real school workflows.
-              </p>
+              <p className="text-sm font-medium text-calm-700">{copy.bubble}</p>
             </div>
           </div>
         </div>

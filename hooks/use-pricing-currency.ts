@@ -10,14 +10,20 @@ import {
   persistPreferredCurrency,
 } from "@/lib/pricing-currency";
 
-export function usePricingCurrency() {
+type UsePricingCurrencyOptions = {
+  locales?: readonly string[] | null;
+};
+
+export function usePricingCurrency(options?: UsePricingCurrencyOptions) {
   const [currency, setCurrencyState] = useState<PricingCurrency>(
     DEFAULT_PRICING_CURRENCY,
   );
+  const resolvedLocales = options?.locales;
+  const localeKey = options?.locales?.join(",") ?? "";
 
   useEffect(() => {
-    setCurrencyState(getPreferredCurrency());
-  }, []);
+    setCurrencyState(getPreferredCurrency({ locales: resolvedLocales }));
+  }, [localeKey]);
 
   const setCurrency = (nextCurrency: PricingCurrency) => {
     persistPreferredCurrency(nextCurrency);

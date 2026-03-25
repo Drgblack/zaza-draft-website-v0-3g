@@ -1,40 +1,24 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckIcon } from "lucide-react";
+import type { FunnelCopy } from "../content";
 
 const teacherHappy = "/lovable-funnel/teacher-happy.jpg";
 
-const solutionPoints = [
-  {
-    title: "Emotionally Intelligent",
-    body: "Recognizes each student's unique strengths and growth areas with warmth and specificity.",
-  },
-  {
-    title: "Your Voice, Amplified",
-    body: "Learns your teaching style and tone, so comments sound authentically like you wrote them.",
-  },
-  {
-    title: "Always Editable",
-    body: "Every comment is your starting point. Tweak, personalize, and make it perfect in seconds.",
-  },
-  {
-    title: "No Prompt Engineering",
-    body: "Just choose your student, and Zaza handles the rest. No complex prompts or tech headaches.",
-  },
-];
+type SolutionSectionProps = {
+  copy: FunnelCopy["solution"];
+};
 
-const SolutionSection = () => {
+const SolutionSection = ({ copy }: SolutionSectionProps) => {
   return (
     <section className="bg-gradient-to-br from-white/55 to-zaza-50/40 px-4 py-20">
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">
           <h2 className="mb-6 text-3xl font-bold text-calm-800 md:text-4xl">
-            What if writing comments felt...{" "}
-            <span className="text-gradient">easy?</span>
+            {copy.heading}{" "}
+            <span className="text-gradient">{copy.headingAccent}</span>
           </h2>
           <p className="mx-auto max-w-3xl text-xl text-calm-600">
-            Zaza Draft writes emotionally aware, personalized comments that
-            sound like you. No prompt engineering, no generic responses, no
-            stress.
+            {copy.subheading}
           </p>
         </div>
 
@@ -44,28 +28,20 @@ const SolutionSection = () => {
               <CardContent className="pt-0">
                 <div className="mb-6">
                   <h4 className="mb-2 font-semibold text-calm-800">
-                    Generated comment for Emma:
+                    {copy.generatedHeading}
                   </h4>
                   <div className="rounded-[1.5rem] border border-zaza-200/40 bg-white/85 p-6">
                     <p className="leading-relaxed text-calm-700">
-                      "Emma has shown remarkable growth in her reading
-                      comprehension this quarter. I've noticed how she takes her
-                      time to really think about character motivations,
-                      especially during our discussions about Charlotte's Web.
-                      Her thoughtful questions show she's connecting deeply with
-                      the stories we read. Moving forward, I'd love to see her
-                      share those insights more confidently during group
-                      discussions. Her classmates would benefit from her
-                      perspective."
+                      {copy.generatedBody}
                     </p>
                   </div>
                 </div>
                 <div className="mb-4 text-xs text-calm-500">
-                  Generated in 3 seconds. Fully editable.
+                  {copy.generatedMeta}
                 </div>
                 <div className="flex items-center text-sm text-zaza-600">
                   <CheckIcon className="mr-2 h-4 w-4" />
-                  Sounds like your voice, not a robot
+                  {copy.generatedVoiceNote}
                 </div>
               </CardContent>
             </Card>
@@ -73,7 +49,7 @@ const SolutionSection = () => {
 
           <div className="order-1 lg:order-2">
             <div className="space-y-6">
-              {solutionPoints.map((point) => (
+              {copy.points.map((point) => (
                 <div key={point.title} className="flex items-start space-x-4">
                   <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-zaza-500 to-zaza-600 text-white shadow-lg shadow-fuchsia-200/50">
                     <CheckIcon className="h-4 w-4" />
@@ -95,7 +71,7 @@ const SolutionSection = () => {
             <div className="overflow-hidden rounded-[2rem] border border-white/35 shadow-[0_28px_74px_rgba(217,70,239,0.14)]">
               <img
                 src={teacherHappy}
-                alt="Happy teacher working efficiently on laptop in organized classroom"
+                alt={copy.imageAlt}
                 className="w-full object-cover"
               />
             </div>
@@ -104,13 +80,9 @@ const SolutionSection = () => {
             <Card className="glass-strong rounded-[2rem] p-12">
               <CardContent className="pt-0">
                 <p className="mb-6 text-xl font-medium text-calm-700 md:text-2xl">
-                  Built with teachers, then refined through real classroom
-                  feedback.
+                  {copy.quote}
                 </p>
-                <p className="font-medium text-calm-500">
-                  The goal is simple: help teachers write faster without losing
-                  care, nuance, or control.
-                </p>
+                <p className="font-medium text-calm-500">{copy.note}</p>
               </CardContent>
             </Card>
           </div>
