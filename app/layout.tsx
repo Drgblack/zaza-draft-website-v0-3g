@@ -1,5 +1,4 @@
 import "./globals.css";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import React from "react";
@@ -17,14 +16,11 @@ import {
 import { buildCanonicalAlternates } from "@/lib/seo-canonical";
 import { siteConfig } from "@/lib/seo/site-config";
 
-const GA4_MEASUREMENT_ID =
-  process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID ??
-  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const GA4_MEASUREMENT_ID = "G-GFCNQYCHFK";
 const shouldLoadGa =
   process.env.NODE_ENV === "production" &&
   process.env.VERCEL_ENV !== "preview" &&
-  process.env.VERCEL_ENV !== "development" &&
-  Boolean(GA4_MEASUREMENT_ID);
+  process.env.VERCEL_ENV !== "development";
 
 export function generateMetadata(): Metadata {
   return {
@@ -66,6 +62,26 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {shouldLoadGa ? (
+          <>
+            <Script
+              id="google-gtag-src"
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`}
+              strategy="beforeInteractive"
+            />
+            <Script
+              id="google-gtag-init"
+              strategy="beforeInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', '${GA4_MEASUREMENT_ID}');`,
+              }}
+            />
+          </>
+        ) : null}
         <link rel="icon" href="/z-logo.png" sizes="any" />
       </head>
       <body className="bg-slate-950 text-slate-100">
@@ -74,9 +90,6 @@ export default function RootLayout({
           data-domain="zazadraft.com"
           strategy="afterInteractive"
         />
-        {shouldLoadGa && GA4_MEASUREMENT_ID ? (
-          <GoogleAnalytics gaId={GA4_MEASUREMENT_ID} />
-        ) : null}
         <UtmCapture />
         <JsonLdCollection
           entries={[
