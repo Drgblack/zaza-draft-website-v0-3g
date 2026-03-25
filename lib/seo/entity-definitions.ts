@@ -1,3 +1,5 @@
+// SEO/schema descriptions only. Do not reuse these long-form strings in UI
+// components such as the footer or marketing CTAs.
 export const zazaDraftEntityDefinition =
   "Zaza Draft is a UK-based, teacher-built, hallucination-safe AI co-writer for parent communication and report comments. Founded by Dr Greg Blackburn, PhD Education, it is designed for GDPR-ready school workflows, does not invent student facts, and keeps teachers in full control of every word.";
 

@@ -1,6 +1,16 @@
 import { NextResponse } from "next/server";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const DEFAULT_LIST_ID =
+  process.env.BREVO_LIST_ID ??
+  process.env.BREVO_DRAFT_LIST_ID ??
+  process.env.BREVO_LIST_ID_DRAFT_SIGNUPS;
+const WAITLIST_LIST_ID =
+  process.env.BREVO_WAITLIST_LIST_ID ??
+  process.env.BREVO_LIST_ID_WAITLIST ??
+  DEFAULT_LIST_ID;
+const SALES_LIST_ID =
+  process.env.BREVO_SALES_LIST_ID ?? process.env.BREVO_LIST_ID_SALES;
 
 const truncate = (value: string, limit = 256) => {
   if (!value) return "";
@@ -18,17 +28,36 @@ export async function POST(request: Request) {
         : {};
     const source = typeof body.source === "string" ? body.source.trim() : "";
     const isWaitlistSource = source.startsWith("waitlist_page");
-    const configuredListId = isWaitlistSource
-      ? (process.env.BREVO_WAITLIST_LIST_ID ??
-        process.env.BREVO_LIST_ID_WAITLIST ??
-        process.env.BREVO_DRAFT_LIST_ID ??
-        process.env.BREVO_LIST_ID_DRAFT_SIGNUPS)
-      : (process.env.BREVO_DRAFT_LIST_ID ??
-        process.env.BREVO_LIST_ID_DRAFT_SIGNUPS);
-    const listIdInput = body.listId ?? configuredListId;
+    const isSalesSource =
+      source.startsWith("pricing_sales_") ||
+      source.startsWith("contact_sales_") ||
+      source.startsWith("school_sales_");
+    let listIdInput: unknown;
+
+    if (isSalesSource) {
+      const resolvedSalesListId = SALES_LIST_ID ?? DEFAULT_LIST_ID;
+
+      if (!SALES_LIST_ID) {
+        console.warn(
+          "[brevo] BREVO_SALES_LIST_ID not set. Falling back to default list.",
+        );
+      }
+
+      listIdInput = resolvedSalesListId;
+    } else {
+      const configuredListId = isWaitlistSource
+        ? WAITLIST_LIST_ID
+        : DEFAULT_LIST_ID;
+      listIdInput = body.listId ?? configuredListId;
+    }
 
     console.info("[brevo] /api/brevo/subscribe hit", {
       hasListId: Boolean(listIdInput),
+      sourceType: isWaitlistSource
+        ? "waitlist"
+        : isSalesSource
+          ? "sales"
+          : "default",
     });
 
     if (!emailRegex.test(email)) {

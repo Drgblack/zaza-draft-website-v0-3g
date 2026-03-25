@@ -2,11 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  zazaDraftEntityDefinition,
-  zazaDraftEntityDefinitionDe,
-} from "@/lib/seo/entity-definitions";
 import { getDraftPricingHref } from "@/lib/draft-cta";
+import { getFooterContent } from "@/lib/footer-content";
 
 export default function Footer() {
   const pathname = usePathname() || "";
@@ -25,13 +22,7 @@ export default function Footer() {
   const isDraftLanding = /^\/(de\/)?products\/draft\/?$/i.test(pathname);
   const locale = isDE ? "de" : "en";
   const localPath = (path: string) => (isDE ? `/de${path}` : path);
-
-  const tagline = isDE
-    ? "Ruhige, professionelle Schreibunterstützung für Lehrkräfte."
-    : "Calm, professional writing support for teachers.";
-  const entityDefinition = isDE
-    ? zazaDraftEntityDefinitionDe
-    : zazaDraftEntityDefinition;
+  const footerContent = getFooterContent(locale);
 
   const productLinks = [
     { label: "Draft", href: localPath("/products/draft") },
@@ -60,12 +51,6 @@ export default function Footer() {
     },
   ];
 
-  const moreToolsLine = isDE
-    ? "Weitere Zaza Tools sind in Entwicklung."
-    : "More Zaza tools are in development.";
-
-  const moreToolsLabel = "zazatechnologies.com ->";
-
   return (
     <footer className="border-t border-white/10 bg-slate-950 text-slate-300">
       <div className="mx-auto max-w-7xl px-6 py-12">
@@ -79,9 +64,11 @@ export default function Footer() {
               </div>
               <span className="text-slate-50 font-semibold">Zaza Draft</span>
             </div>
-            <p className="mt-3 text-sm leading-6 text-slate-400">{tagline}</p>
+            <p className="mt-3 text-sm leading-6 text-slate-400">
+              {footerContent.tagline}
+            </p>
             <p className="mt-3 max-w-md text-xs leading-6 text-slate-500">
-              {entityDefinition}
+              {footerContent.supportLine}
             </p>
           </div>
 
@@ -118,14 +105,14 @@ export default function Footer() {
 
         <div className="mt-8 border-t border-white/10 pt-5 text-xs text-slate-400 space-y-2">
           <p>
-            {moreToolsLine}{" "}
+            {footerContent.moreToolsLine}{" "}
             <a
               href="https://www.zazatechnologies.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-200 hover:text-white"
             >
-              {moreToolsLabel}
+              {footerContent.moreToolsLabel}
             </a>
           </p>
           <p>© 2026 Zaza Technologies. All rights reserved.</p>

@@ -17,7 +17,7 @@ import {
   type SelfServeInterval,
   SUPPORTED_CURRENCIES,
 } from "@/config/pricing";
-import { getDraftContactHref } from "@/lib/draft-cta";
+import { getDraftSchoolSalesHref } from "@/lib/draft-cta";
 
 const currencySymbols = {
   EUR: "€",
@@ -85,7 +85,21 @@ export default function PricingClient() {
     currency,
     returnPath: pricingPath,
   });
-  const salesHref = getDraftContactHref(language);
+  const departmentSalesHref = getDraftSchoolSalesHref(
+    language,
+    "department",
+    "pricing_page",
+  );
+  const enterpriseSalesHref = getDraftSchoolSalesHref(
+    language,
+    "enterprise",
+    "pricing_page",
+  );
+  const generalSalesHref = getDraftSchoolSalesHref(
+    language,
+    "general",
+    "pricing_page",
+  );
   const comparisonRows = [
     {
       feature: t("pricing.compare.rows.purpose.feature"),
@@ -476,12 +490,12 @@ export default function PricingClient() {
                   track("cta_click_pricing_checkout_department", {
                     currency,
                     language,
-                    destination: salesHref,
+                    destination: departmentSalesHref,
                   });
                 }}
                 className="w-full bg-transparent border-2 border-[#FB923C] text-[#FB923C] hover:bg-[#FB923C]/10 py-5 text-base font-semibold rounded-lg mb-6"
               >
-                <a href={salesHref}>{t("pricing.department.cta")}</a>
+                <a href={departmentSalesHref}>{t("pricing.department.cta")}</a>
               </Button>
 
               <div className="space-y-3 mb-4">
@@ -529,12 +543,12 @@ export default function PricingClient() {
                   track("cta_click_pricing_checkout_enterprise", {
                     currency,
                     language,
-                    destination: salesHref,
+                    destination: enterpriseSalesHref,
                   });
                 }}
                 className="w-full bg-transparent border-2 border-[#FB923C] text-[#FB923C] hover:bg-[#FB923C]/10 py-5 text-base font-semibold rounded-lg mb-6"
               >
-                <a href={salesHref}>{t("pricing.enterprise.cta")}</a>
+                <a href={enterpriseSalesHref}>{t("pricing.enterprise.cta")}</a>
               </Button>
 
               <div className="space-y-3">
@@ -791,7 +805,7 @@ export default function PricingClient() {
                   asChild
                   className="bg-transparent border-2 border-white text-white hover:bg-white/10 py-6 px-8 text-lg font-semibold rounded-lg"
                 >
-                  <a href={salesHref}>{t("pricing.cta.secondary")}</a>
+                  <a href={generalSalesHref}>{t("pricing.cta.secondary")}</a>
                 </Button>
               </div>
             </div>
