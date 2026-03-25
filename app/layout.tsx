@@ -2,7 +2,10 @@ import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import React from "react";
+import { CookieConsentBanner } from "@/components/analytics/cookie-consent-banner";
+import { PlausibleAnalytics } from "@/components/analytics/plausible-analytics";
 import { UtmCapture } from "@/components/analytics/utm-capture";
+import { buildGoogleConsentBootstrap } from "@/lib/analytics-consent";
 import { LanguageProvider } from "@/lib/i18n/language-context";
 import { Header } from "@/components/header";
 import Footer from "@/components/Footer";
@@ -73,11 +76,7 @@ export default function RootLayout({
               id="google-gtag-init"
               strategy="beforeInteractive"
               dangerouslySetInnerHTML={{
-                __html: `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', '${GA4_MEASUREMENT_ID}');`,
+                __html: buildGoogleConsentBootstrap(GA4_MEASUREMENT_ID),
               }}
             />
           </>
@@ -85,12 +84,8 @@ gtag('config', '${GA4_MEASUREMENT_ID}');`,
         <link rel="icon" href="/z-logo.png" sizes="any" />
       </head>
       <body className="bg-slate-950 text-slate-100">
-        <Script
-          src="https://plausible.io/js/script.js"
-          data-domain="zazadraft.com"
-          strategy="afterInteractive"
-        />
-        <UtmCapture />
+        {shouldLoadGa ? <PlausibleAnalytics /> : null}
+        {shouldLoadGa ? <UtmCapture /> : null}
         <JsonLdCollection
           entries={[
             {
@@ -110,6 +105,7 @@ gtag('config', '${GA4_MEASUREMENT_ID}');`,
         <LanguageProvider>
           <Header />
           <TranslationHelperNotice />
+          {shouldLoadGa ? <CookieConsentBanner /> : null}
           <main className="pt-[92px] bg-slate-950">{children}</main>
           <Footer />
         </LanguageProvider>

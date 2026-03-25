@@ -57,6 +57,23 @@ export function readStoredFirstTouchUtm(
   }
 }
 
+export function clearStoredFirstTouchUtm(
+  storage: Storage | null | undefined = undefined,
+) {
+  const resolvedStorage =
+    storage ?? (typeof window !== "undefined" ? window.localStorage : null);
+
+  if (!resolvedStorage) {
+    return;
+  }
+
+  try {
+    resolvedStorage.removeItem(FIRST_TOUCH_UTM_STORAGE_KEY);
+  } catch {
+    // no-op
+  }
+}
+
 function createFirstTouchUtm(search: string, pathname: string) {
   const params = new URLSearchParams(search);
   const source = cleanUtmValue(params.get("utm_source"));
