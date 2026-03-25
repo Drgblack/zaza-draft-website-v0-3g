@@ -9,6 +9,7 @@ import { track } from "@/lib/analytics";
 import { DraftDemo } from "@/components/draft-demo";
 import { CaseStudyCarousel } from "@/components/case-study-carousel";
 import { SocialProofBadges } from "@/components/social-proof-badges";
+import { getDraftPricingHref } from "@/lib/draft-cta";
 
 const Check = ({ className }: { className?: string }) => (
   <svg
@@ -145,8 +146,7 @@ export function HomePageClient() {
   const [showHallucinationTooltip, setShowHallucinationTooltip] =
     useState(false);
   const prefersReducedMotion = useReducedMotion();
-  const earlyAccessHref =
-    language === "de" ? "/de/early-access" : "/early-access";
+  const pricingHref = getDraftPricingHref(language);
   const founderStoryHref =
     language === "de" ? "/de/about/founder" : "/about/founder";
   const heroEyebrow = language === "de" ? "FUER LEHRKRAEFTE" : "FOR TEACHERS";
@@ -293,14 +293,13 @@ export function HomePageClient() {
         ];
   const betaFeedbackHeading =
     language === "de"
-      ? "Rueckmeldungen zu echter Schulkommunikation kommen jetzt rein"
-      : "Teacher feedback from real school communication is starting to come in";
+      ? "Draft ist jetzt live fuer sensible Schulkommunikation"
+      : "Draft is now live for high-stakes school communication";
   const betaFeedbackBody =
     language === "de"
-      ? "Sobald freigegebene Rueckmeldungen vorliegen, veroeffentlichen wir hier, wie Draft Lehrkraeften bei Elternmails, Zeugnisbemerkungen und sensiblen Nachrichten hilft."
-      : "As approved feedback comes in, we'll publish how Draft is helping teachers with parent emails, report comments, and other high-stakes messages.";
-  const betaFeedbackCta =
-    language === "de" ? "Zur Warteliste" : "Join the waitlist";
+      ? "Sieh dir die aktuellen Plaene an und waehle den passenden Einstieg fuer Eltern-E-Mails, Zeugnisbemerkungen und andere sensible Nachrichten."
+      : "See the live plans and choose the right way to start using Draft for parent emails, report comments, and other sensitive messages.";
+  const betaFeedbackCta = language === "de" ? "Preise ansehen" : "See pricing";
   const trustPanelHeading =
     language === "de"
       ? "Lehrkraft-zentrierte Unterstuetzung fuer sensible Schulkommunikation"
@@ -455,7 +454,7 @@ export function HomePageClient() {
                   className="w-full sm:w-auto inline-flex items-center justify-center bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-transform transition-shadow duration-200 hover:scale-[1.03] hover:shadow-xl hover:shadow-purple-500/30 active:scale-[0.98]"
                 >
                   <Link
-                    href={earlyAccessHref}
+                    href={pricingHref}
                     onClick={() =>
                       track("cta_click_home_get_started", { language })
                     }
@@ -1391,7 +1390,7 @@ export function HomePageClient() {
             </h3>
             <p className="text-[#CBD5E1] mb-6">{betaFeedbackBody}</p>
             <Button asChild className="gradient-primary text-white rounded-xl">
-              <Link href={earlyAccessHref}>{betaFeedbackCta}</Link>
+              <Link href={pricingHref}>{betaFeedbackCta}</Link>
             </Button>
           </motion.div>
         </div>
@@ -1425,15 +1424,17 @@ export function HomePageClient() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Button
-              onClick={() => {
-                track("cta_click_home_final", { language });
-                setSignupOpen(true);
-              }}
+              asChild
               size="lg"
               className="bg-white text-[#8B5CF6] hover:bg-gray-50 font-semibold px-12 py-5 text-xl rounded-lg shadow-[0_8px_20px_rgba(0,0,0,0.2)] transition-all duration-300 hover:scale-105"
               style={{ minHeight: "44px" }}
             >
-              {t("finalCTA.button")}
+              <Link
+                href={pricingHref}
+                onClick={() => track("cta_click_home_final", { language })}
+              >
+                {t("finalCTA.button")}
+              </Link>
             </Button>
           </motion.div>
         </div>

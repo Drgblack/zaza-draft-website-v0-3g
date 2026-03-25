@@ -6,6 +6,7 @@ import {
   zazaDraftEntityDefinition,
   zazaDraftEntityDefinitionDe,
 } from "@/lib/seo/entity-definitions";
+import { getDraftPricingHref } from "@/lib/draft-cta";
 
 export default function Footer() {
   const pathname = usePathname() || "";
@@ -22,6 +23,7 @@ export default function Footer() {
     /^\/de(\/|$)/i.test(pathname) ||
     (htmlLang || "").toLowerCase().startsWith("de");
   const isDraftLanding = /^\/(de\/)?products\/draft\/?$/i.test(pathname);
+  const locale = isDE ? "de" : "en";
   const localPath = (path: string) => (isDE ? `/de${path}` : path);
 
   const tagline = isDE
@@ -35,8 +37,8 @@ export default function Footer() {
     { label: "Draft", href: localPath("/products/draft") },
     { label: isDE ? "Preise" : "Pricing", href: localPath("/pricing") },
     {
-      label: isDE ? "Warteliste" : "Join the waitlist",
-      href: localPath("/early-access"),
+      label: isDE ? "Jetzt starten" : "Start now",
+      href: getDraftPricingHref(locale),
     },
     {
       label: isDE ? "Gründerstory" : "Founder story",

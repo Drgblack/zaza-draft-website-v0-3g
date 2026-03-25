@@ -10,12 +10,12 @@ import { DemoModal } from "@/components/demo-modal";
 import { useState } from "react";
 import { track } from "@/lib/analytics";
 import { DraftDemo } from "@/components/draft-demo";
+import { getDraftPricingHref } from "@/lib/draft-cta";
 
 export default function DraftClient() {
   const { t, language } = useLanguage();
   const [demoOpen, setDemoOpen] = useState(false);
-  const earlyAccessHref =
-    language === "de" ? "/de/early-access" : "/early-access";
+  const pricingHref = getDraftPricingHref(language);
   const aboutFounderHref =
     language === "de" ? "/de/about/founder-story" : "/about/founder-story";
   const heroSubheadline =
@@ -66,38 +66,37 @@ export default function DraftClient() {
     language === "de" ? "Wie geht es weiter" : "What happens next";
   const commitmentLine =
     language === "de"
-      ? "Der kostenlose Tarif enthaelt 10 Nachrichten pro Monat, sobald der Zugang oeffnet. Keine Karte erforderlich."
-      : "The free plan includes 10 messages each month when access opens. No card required.";
+      ? "Starter enthaelt 10 Nachrichten pro Monat. Upgrade jederzeit, wenn du mehr Entwuerfe und Ueberarbeitungen brauchst."
+      : "Starter includes 10 messages each month. Upgrade any time when you need more drafts and revisions.";
   const inviteLine =
     language === "de"
-      ? "Wir senden Ihnen eine E-Mail, sobald der Zugang fuer Lehrkraefte oeffnet."
-      : "We'll email you as soon as teacher access opens.";
+      ? "Teacher schaltet unbegrenzte Entwuerfe, Tone Tutor und erweiterte Unterstuetzung fuer sensible Kommunikation frei."
+      : "Teacher unlocks unlimited drafts, Tone Tutor, and deeper support for sensitive communication.";
   const urgencyLine =
     language === "de"
-      ? "Trag dich in die Warteliste ein und wir sagen dir Bescheid, sobald Lehrkraft-Zugaenge offen sind."
-      : "Join the waitlist and we'll let you know as soon as teacher access opens.";
+      ? "Waehl auf der Preisseite den Plan, der zu deinem Arbeitsalltag passt."
+      : "Use the pricing page to choose the plan that fits your workload.";
   const nextSteps =
     language === "de"
       ? [
-          "Zur Warteliste (30 Sekunden)",
-          "Wir schreiben dir, sobald der Zugang fuer Lehrkraefte offen ist",
-          "Ersten Entwurf kostenlos testen - keine Karte erforderlich",
+          "Plan waehlen",
+          "Mit Starter beginnen oder auf Teacher upgraden",
+          "Nachrichten direkt in Draft schreiben und ueberarbeiten",
         ]
       : [
-          "Join the waitlist (30 seconds)",
-          "We email you when teacher access opens",
-          "Try your first draft free - no card required",
+          "Choose your plan",
+          "Start with Starter or upgrade to Teacher",
+          "Write and revise messages in Draft right away",
         ];
   const betaFeedbackHeading =
     language === "de"
-      ? "Feedback von Lehrkraeften folgt"
-      : "Teacher feedback is coming";
+      ? "Draft ist bereit fuer deinen Arbeitsalltag"
+      : "Draft is ready for your workflow";
   const betaFeedbackBody =
     language === "de"
-      ? "Wir sammeln gerade die ersten Rueckmeldungen. Echte Zitate erscheinen hier, sobald wir sie gesammelt haben. Trag dich in die Warteliste ein, wenn du zum Launch benachrichtigt werden moechtest."
-      : "We are collecting our first round of teacher feedback now. Real quotes will appear here as soon as they are collected. Join the waitlist if you want to be notified at launch.";
-  const betaFeedbackCta =
-    language === "de" ? "Zur Warteliste" : "Join the waitlist";
+      ? "Sieh dir die aktuellen Plaene an und starte mit Draft fuer Eltern-E-Mails, Zeugnisbemerkungen und andere sensible Nachrichten."
+      : "See the live plans and start using Draft for parent emails, report comments, and other sensitive messages.";
+  const betaFeedbackCta = language === "de" ? "Preise ansehen" : "See pricing";
   const restoreHeading =
     language === "de"
       ? "So stellt Draft Klarheit wieder her"
@@ -222,7 +221,7 @@ export default function DraftClient() {
                         })
                       }
                     >
-                      <Link href={earlyAccessHref}>
+                      <Link href={pricingHref}>
                         {t("products.draft.hero.cta.primary")}
                       </Link>
                     </Button>
@@ -511,7 +510,7 @@ export default function DraftClient() {
                 asChild
                 className="gradient-primary text-white rounded-xl"
               >
-                <Link href={earlyAccessHref}>{betaFeedbackCta}</Link>
+                <Link href={pricingHref}>{betaFeedbackCta}</Link>
               </Button>
               <p className="text-xs text-[#9CA3AF] mt-3">{commitmentLine}</p>
               <p className="text-xs text-[#9CA3AF] mt-1">{inviteLine}</p>
@@ -535,7 +534,7 @@ export default function DraftClient() {
                 size="lg"
                 className="bg-white text-[#7C3AED] hover:bg-gray-100 font-medium rounded-xl"
               >
-                <Link href={earlyAccessHref}>
+                <Link href={pricingHref}>
                   {t("products.draft.cta.primary")}
                 </Link>
               </Button>

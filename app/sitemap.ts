@@ -769,12 +769,6 @@ export async function getSitemapSourceGroups(): Promise<SitemapSourceGroup[]> {
       lastModified: now,
     },
     {
-      path: "/de/early-access",
-      priority: 0.7,
-      changeFrequency: "weekly",
-      lastModified: now,
-    },
-    {
       path: "/de/reduce-stress-parent-messages",
       priority: 0.9,
       changeFrequency: "daily",
@@ -954,12 +948,6 @@ export async function getSitemapSourceGroups(): Promise<SitemapSourceGroup[]> {
     {
       path: "/ai-for-student-reports",
       priority: 0.85,
-      changeFrequency: "weekly",
-      lastModified: now,
-    },
-    {
-      path: "/early-access",
-      priority: 0.7,
       changeFrequency: "weekly",
       lastModified: now,
     },

@@ -26,6 +26,36 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/early-access',
+        destination: '/pricing',
+        permanent: true,
+      },
+      {
+        source: '/de/early-access',
+        destination: '/de/pricing',
+        permanent: true,
+      },
+      {
+        source: '/waitlist',
+        destination: '/pricing',
+        permanent: true,
+      },
+      {
+        source: '/de/waitlist',
+        destination: '/de/pricing',
+        permanent: true,
+      },
+      {
+        source: '/join-the-waitlist',
+        destination: '/pricing',
+        permanent: true,
+      },
+      {
+        source: '/de/join-the-waitlist',
+        destination: '/de/pricing',
+        permanent: true,
+      },
+      {
         source: '/report-comments/:studentType/all-subjects/:phase',
         destination: '/report-comment-builder',
         permanent: true,
