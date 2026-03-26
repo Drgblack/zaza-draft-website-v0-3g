@@ -11,6 +11,7 @@ type PricingSectionProps = {
   onCurrencyChange: (currency: PricingCurrency) => void;
   billingPeriod: SelfServeInterval;
   onBillingPeriodChange: (interval: SelfServeInterval) => void;
+  freePriceLabel: string;
   proPriceLabel: string;
   proCtaLabel: string;
   annualSavingsLabel: string;
@@ -26,6 +27,7 @@ const PricingSection = ({
   onCurrencyChange,
   billingPeriod,
   onBillingPeriodChange,
+  freePriceLabel,
   proPriceLabel,
   proCtaLabel,
   annualSavingsLabel,
@@ -60,14 +62,14 @@ const PricingSection = ({
               <span className="text-xs font-semibold uppercase tracking-[0.22em] text-calm-500">
                 {copy.billingLabel}
               </span>
-              <div className="flex items-center gap-2 rounded-lg bg-white/70 p-1 shadow-sm">
+              <div className="flex items-center gap-2 rounded-xl border border-white/70 bg-white/80 p-1.5 shadow-sm backdrop-blur">
                 <button
                   type="button"
                   onClick={() => onBillingPeriodChange("monthly")}
-                  className={`rounded-md px-5 py-2 text-sm font-semibold transition-all ${
+                  className={`rounded-lg px-5 py-2 text-sm font-semibold transition-all ${
                     billingPeriod === "monthly"
-                      ? "bg-[#8B5CF6] text-white"
-                      : "text-calm-500 hover:text-calm-700"
+                      ? "bg-calm-800 text-white shadow-sm"
+                      : "bg-transparent text-calm-500 hover:text-calm-700"
                   }`}
                 >
                   {copy.monthlyLabel}
@@ -75,13 +77,22 @@ const PricingSection = ({
                 <button
                   type="button"
                   onClick={() => onBillingPeriodChange("annual")}
-                  className={`relative rounded-md px-5 py-2 text-sm font-semibold transition-all ${
+                  className={`relative rounded-lg border px-5 py-2 text-sm font-semibold transition-all ${
                     billingPeriod === "annual"
-                      ? "bg-[#8B5CF6] text-white"
-                      : "text-calm-500 hover:text-calm-700"
+                      ? "border-zaza-500 bg-gradient-to-r from-[#8B5CF6] to-[#A855F7] text-white shadow-lg shadow-fuchsia-200/70"
+                      : "border-zaza-200 bg-zaza-50 text-zaza-700 hover:border-zaza-300 hover:text-zaza-800"
                   }`}
                 >
                   {copy.annualLabel}
+                  <span
+                    className={`absolute -top-3 left-1/2 -translate-x-1/2 rounded-full border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] ${
+                      billingPeriod === "annual"
+                        ? "border-white/40 bg-white/20 text-white"
+                        : "border-zaza-200 bg-white text-zaza-600"
+                    }`}
+                  >
+                    {copy.annualRecommendedLabel}
+                  </span>
                 </button>
               </div>
             </div>
@@ -104,7 +115,7 @@ const PricingSection = ({
                   {copy.freeTitle}
                 </h3>
                 <div className="mb-2 text-4xl font-bold text-calm-800">
-                  {formatLocalizedPrice(0, currency)}
+                  {freePriceLabel}
                 </div>
                 <p className="text-calm-600">{copy.freeDescription}</p>
               </div>
@@ -131,7 +142,13 @@ const PricingSection = ({
             </CardContent>
           </Card>
 
-          <Card className="glass-strong relative rounded-[1.75rem] border-2 border-zaza-300/45 p-8 shadow-xl">
+          <Card
+            className={`glass-strong relative rounded-[1.75rem] border-2 p-8 shadow-xl transition-all ${
+              billingPeriod === "annual"
+                ? "border-zaza-400/60 shadow-[0_24px_60px_rgba(168,85,247,0.18)]"
+                : "border-zaza-300/45"
+            }`}
+          >
             <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/40 bg-gradient-to-r from-pink-500 to-fuchsia-500 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white shadow-lg">
               {copy.mostPopularBadge}
             </div>
@@ -143,6 +160,11 @@ const PricingSection = ({
                 <div className="mb-2 text-4xl font-bold text-calm-800">
                   {proPriceLabel}
                 </div>
+                {billingPeriod === "annual" ? (
+                  <p className="mb-3 text-sm font-medium text-calm-600">
+                    {copy.annualAnchor}
+                  </p>
+                ) : null}
                 <p className="text-calm-600">{copy.proDescription}</p>
               </div>
 

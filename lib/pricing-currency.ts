@@ -16,6 +16,9 @@ const CURRENCY_LOCALE_MAP: Record<PricingCurrency, string> = {
 
 type StorageLike = Pick<Storage, "getItem" | "setItem" | "removeItem">;
 type NavigatorLike = Pick<Navigator, "language" | "languages">;
+type LocalizedPriceOptions = Intl.NumberFormatOptions & {
+  locale?: string;
+};
 
 function extractRegion(locale: string) {
   const normalized = locale.replace(/_/g, "-").trim();
@@ -109,16 +112,17 @@ export function clearPreferredCurrency(storage?: StorageLike | null) {
 export function formatLocalizedPrice(
   amount: number,
   currency: PricingCurrency,
-  options?: Intl.NumberFormatOptions,
+  options?: LocalizedPriceOptions,
 ) {
   const fractionDigits = Number.isInteger(amount) ? 0 : 2;
+  const { locale, ...numberFormatOptions } = options ?? {};
 
-  return new Intl.NumberFormat(CURRENCY_LOCALE_MAP[currency], {
+  return new Intl.NumberFormat(locale ?? CURRENCY_LOCALE_MAP[currency], {
     style: "currency",
     currency,
     minimumFractionDigits: fractionDigits,
     maximumFractionDigits: fractionDigits,
-    ...options,
+    ...numberFormatOptions,
   }).format(amount);
 }
 

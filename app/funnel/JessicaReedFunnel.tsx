@@ -36,27 +36,34 @@ export default function JessicaReedFunnel({
   const checkoutReturnPath = locale === "de" ? "/de/start" : "/start";
   const signupSource = locale === "de" ? "funnel_start_de" : "funnel_start_en";
   const freeCtaLabel = copy.freeCtaLabel;
+  const displayLocale = locale === "de" ? "de-DE" : undefined;
   const proCheckout = resolveSelfServeCheckout({
     plan: "draft",
     interval: billingPeriod,
     currency,
     returnPath: checkoutReturnPath,
   });
-  const proPriceLabel = `${formatLocalizedPrice(proCheckout.displayAmount, currency)}/${
-    billingPeriod === "annual"
-      ? locale === "de"
-        ? "Jahr"
-        : "year"
-      : locale === "de"
-        ? "Monat"
-        : "month"
-  }`;
+  const formattedDisplayAmount = formatLocalizedPrice(
+    proCheckout.displayAmount,
+    currency,
+    displayLocale ? { locale: displayLocale } : undefined,
+  );
+  const proPriceLabel =
+    locale === "de"
+      ? `${formattedDisplayAmount}/${billingPeriod === "annual" ? "Jahr" : "Monat"}`
+      : `${formattedDisplayAmount}/${billingPeriod === "annual" ? "year" : "month"}`;
   const proCtaLabel = copy.proCtaLabel(proPriceLabel);
   const annualSavingsLabel = copy.pricing.annualSavings(
     formatLocalizedPrice(getAnnualSavingsAmount("draft", currency), currency, {
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
+      ...(displayLocale ? { locale: displayLocale } : {}),
     }),
+  );
+  const freePriceLabel = formatLocalizedPrice(
+    0,
+    currency,
+    displayLocale ? { locale: displayLocale } : undefined,
   );
 
   const openFreeSignup = (ctaLocation: string, ctaText: string) => {
@@ -84,6 +91,7 @@ export default function JessicaReedFunnel({
           onCurrencyChange={setCurrency}
           billingPeriod={billingPeriod}
           onBillingPeriodChange={setBillingPeriod}
+          freePriceLabel={freePriceLabel}
           proPriceLabel={proPriceLabel}
           proCtaLabel={proCtaLabel}
           annualSavingsLabel={annualSavingsLabel}

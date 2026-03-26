@@ -69,7 +69,9 @@ export type FunnelCopy = {
     billingLabel: string;
     monthlyLabel: string;
     annualLabel: string;
+    annualRecommendedLabel: string;
     annualSavings: (amount: string) => string;
+    annualAnchor: string;
     supportLine: (currency: string) => string;
     mostPopularBadge: string;
     freeCtaLabel: string;
@@ -112,7 +114,7 @@ export type FunnelCopy = {
 export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
   en: {
     freeCtaLabel: "Get Started Free",
-    proCtaLabel: (price) => `Start Pro – ${price}`,
+    proCtaLabel: (price) => `Start Pro - ${price}`,
     hero: {
       preheadline: "Teacher-first relief for report writing",
       headingLines: [
@@ -233,7 +235,9 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       billingLabel: "Billing",
       monthlyLabel: "Monthly",
       annualLabel: "Annual",
+      annualRecommendedLabel: "Recommended",
       annualSavings: (amount) => `Save ${amount}/year vs monthly`,
+      annualAnchor: "About the cost of one coffee a week",
       supportLine: (currency) =>
         `Prices are currently shown in ${currency}. Taxes may be calculated at checkout. Free starts with no credit card.`,
       mostPopularBadge: "Most popular",
@@ -328,7 +332,7 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
   },
   de: {
     freeCtaLabel: "Kostenlos starten",
-    proCtaLabel: (price) => `Starte Pro – ${price}`,
+    proCtaLabel: (price) => `Pro starten - ${price}`,
     hero: {
       preheadline: "Lehrerfreundliche Entlastung fuer Zeugnistexte",
       headingLines: [
@@ -454,8 +458,10 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       billingLabel: "Abrechnung",
       monthlyLabel: "Monatlich",
       annualLabel: "Jaehrlich",
+      annualRecommendedLabel: "Empfohlen",
       annualSavings: (amount) =>
         `${amount} pro Jahr gegenueber monatlich sparen`,
+      annualAnchor: "Etwa so viel wie ein Kaffee pro Woche",
       supportLine: (currency) =>
         `Preise werden aktuell in ${currency} angezeigt. Steuern koennen im Checkout berechnet werden. Kostenlos starten ohne Kreditkarte.`,
       mostPopularBadge: "Am beliebtesten",
