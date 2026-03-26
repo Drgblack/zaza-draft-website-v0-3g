@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckIcon } from "lucide-react";
-import { type PricingCurrency } from "@/config/pricing";
+import { type PricingCurrency, type SelfServeInterval } from "@/config/pricing";
 import { formatLocalizedPrice } from "@/lib/pricing-currency";
 import { CurrencyToggle } from "@/components/pricing/currency-toggle";
 import type { FunnelCopy } from "../content";
@@ -9,8 +9,11 @@ import type { FunnelCopy } from "../content";
 type PricingSectionProps = {
   currency: PricingCurrency;
   onCurrencyChange: (currency: PricingCurrency) => void;
-  proMonthlyPrice: string;
+  billingPeriod: SelfServeInterval;
+  onBillingPeriodChange: (interval: SelfServeInterval) => void;
+  proPriceLabel: string;
   proCtaLabel: string;
+  annualSavingsLabel: string;
   proCheckoutHref: string;
   proCheckoutAvailable: boolean;
   onFreeAction: () => void;
@@ -21,8 +24,11 @@ type PricingSectionProps = {
 const PricingSection = ({
   currency,
   onCurrencyChange,
-  proMonthlyPrice,
+  billingPeriod,
+  onBillingPeriodChange,
+  proPriceLabel,
   proCtaLabel,
+  annualSavingsLabel,
   proCheckoutHref,
   proCheckoutAvailable,
   onFreeAction,
@@ -41,17 +47,53 @@ const PricingSection = ({
             <span className="text-gradient"> {copy.headingAccent}</span>
           </h2>
           <p className="mx-auto max-w-3xl text-xl text-calm-600">
-            {copy.subheading(proMonthlyPrice)}
+            {copy.subheading(proPriceLabel)}
           </p>
-          <div className="mt-6 flex flex-col items-center gap-2">
-            <span className="text-xs font-semibold uppercase tracking-[0.22em] text-calm-500">
-              {copy.currencyLabel}
-            </span>
-            <CurrencyToggle currency={currency} onChange={onCurrencyChange} />
+          <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row sm:items-end">
+            <div className="flex flex-col items-center gap-2">
+              <span className="text-xs font-semibold uppercase tracking-[0.22em] text-calm-500">
+                {copy.currencyLabel}
+              </span>
+              <CurrencyToggle currency={currency} onChange={onCurrencyChange} />
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <span className="text-xs font-semibold uppercase tracking-[0.22em] text-calm-500">
+                {copy.billingLabel}
+              </span>
+              <div className="flex items-center gap-2 rounded-lg bg-white/70 p-1 shadow-sm">
+                <button
+                  type="button"
+                  onClick={() => onBillingPeriodChange("monthly")}
+                  className={`rounded-md px-5 py-2 text-sm font-semibold transition-all ${
+                    billingPeriod === "monthly"
+                      ? "bg-[#8B5CF6] text-white"
+                      : "text-calm-500 hover:text-calm-700"
+                  }`}
+                >
+                  {copy.monthlyLabel}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => onBillingPeriodChange("annual")}
+                  className={`relative rounded-md px-5 py-2 text-sm font-semibold transition-all ${
+                    billingPeriod === "annual"
+                      ? "bg-[#8B5CF6] text-white"
+                      : "text-calm-500 hover:text-calm-700"
+                  }`}
+                >
+                  {copy.annualLabel}
+                </button>
+              </div>
+            </div>
           </div>
           <p className="mx-auto mt-3 max-w-2xl text-sm text-calm-500">
             {copy.supportLine(currency)}
           </p>
+          {billingPeriod === "annual" ? (
+            <p className="mx-auto mt-2 max-w-2xl text-sm font-semibold text-zaza-600">
+              {annualSavingsLabel}
+            </p>
+          ) : null}
         </div>
 
         <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
@@ -99,7 +141,7 @@ const PricingSection = ({
                   {copy.proTitle}
                 </h3>
                 <div className="mb-2 text-4xl font-bold text-calm-800">
-                  {proMonthlyPrice}
+                  {proPriceLabel}
                 </div>
                 <p className="text-calm-600">{copy.proDescription}</p>
               </div>
@@ -131,6 +173,11 @@ const PricingSection = ({
               <p className="mt-3 text-center text-xs text-calm-500">
                 {proCheckoutAvailable ? copy.proNote : copy.unavailableNote}
               </p>
+              {billingPeriod === "annual" ? (
+                <p className="mt-2 text-center text-xs font-semibold text-zaza-600">
+                  {annualSavingsLabel}
+                </p>
+              ) : null}
             </CardContent>
           </Card>
         </div>

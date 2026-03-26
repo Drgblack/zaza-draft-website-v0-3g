@@ -35,7 +35,7 @@ export const pricingConfig: Record<SelfServePlan, SelfServePlanConfig> = {
       },
       annual: {
         EUR: "price_1TA6ouHXkbT25qrKUW5KmHXr",
-        USD: null,
+        USD: "price_1TF1SgHXkbT25qrKIhDmrJLo",
       },
     },
     displayAmounts: {
@@ -122,6 +122,16 @@ export function getLocalizedPlanAmount(
   currency: PricingCurrency,
 ) {
   return pricingConfig[plan].displayAmounts[interval][currency];
+}
+
+export function getAnnualSavingsAmount(
+  plan: SelfServePlan,
+  currency: PricingCurrency,
+) {
+  const monthlyTotal = getLocalizedPlanAmount(plan, "monthly", currency) * 12;
+  const annualTotal = getLocalizedPlanAmount(plan, "annual", currency);
+
+  return monthlyTotal - annualTotal;
 }
 
 export function getLocalizedDepartmentAmount(currency: PricingCurrency) {

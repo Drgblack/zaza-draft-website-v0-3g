@@ -66,6 +66,10 @@ export type FunnelCopy = {
     headingAccent: string;
     subheading: (price: string) => string;
     currencyLabel: string;
+    billingLabel: string;
+    monthlyLabel: string;
+    annualLabel: string;
+    annualSavings: (amount: string) => string;
     supportLine: (currency: string) => string;
     mostPopularBadge: string;
     freeCtaLabel: string;
@@ -226,6 +230,10 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       subheading: (price) =>
         `Get 5 drafts a month for free, then move to Zaza Draft Pro for unlimited writing support at ${price}.`,
       currencyLabel: "Currency",
+      billingLabel: "Billing",
+      monthlyLabel: "Monthly",
+      annualLabel: "Annual",
+      annualSavings: (amount) => `Save ${amount}/year vs monthly`,
       supportLine: (currency) =>
         `Prices are currently shown in ${currency}. Taxes may be calculated at checkout. Free starts with no credit card.`,
       mostPopularBadge: "Most popular",
@@ -443,6 +451,11 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       subheading: (price) =>
         `Du bekommst 5 Entwuerfe pro Monat kostenlos. Danach wechselst du zu Zaza Draft Pro mit unbegrenzter Schreibhilfe fuer ${price}.`,
       currencyLabel: "Waehrung",
+      billingLabel: "Abrechnung",
+      monthlyLabel: "Monatlich",
+      annualLabel: "Jaehrlich",
+      annualSavings: (amount) =>
+        `${amount} pro Jahr gegenueber monatlich sparen`,
       supportLine: (currency) =>
         `Preise werden aktuell in ${currency} angezeigt. Steuern koennen im Checkout berechnet werden. Kostenlos starten ohne Kreditkarte.`,
       mostPopularBadge: "Am beliebtesten",

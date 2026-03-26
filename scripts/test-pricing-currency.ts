@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { NextRequest } from "next/server";
 import {
   buildStripeCheckoutPath,
+  getAnnualSavingsAmount,
   getLocalizedDepartmentAmount,
   getLocalizedPlanAmount,
   getStripePriceId,
@@ -62,10 +63,13 @@ async function main() {
   assert.equal(formatPriceWithInterval(169.99, "USD", "annual"), "$169.99/yr");
   assert.equal(getLocalizedPlanAmount("draft", "monthly", "EUR"), 14.99);
   assert.equal(getLocalizedPlanAmount("draft", "monthly", "USD"), 16.99);
+  assert.equal(getLocalizedPlanAmount("draft", "annual", "USD"), 169.99);
   assert.equal(getLocalizedDepartmentAmount("USD"), 9);
+  assert.ok(Math.abs(getAnnualSavingsAmount("draft", "EUR") - 30.88) < 0.001);
+  assert.ok(Math.abs(getAnnualSavingsAmount("draft", "USD") - 33.89) < 0.001);
   assert.equal(hasStripePriceId("draft", "monthly", "EUR"), true);
   assert.equal(hasStripePriceId("draft", "monthly", "USD"), true);
-  assert.equal(hasStripePriceId("draft", "annual", "USD"), false);
+  assert.equal(hasStripePriceId("draft", "annual", "USD"), true);
   assert.equal(hasStripePriceId("bundle", "annual", "USD"), false);
 
   assert.equal(
@@ -86,18 +90,22 @@ async function main() {
     getStripePriceId("draft", "monthly", "USD"),
     "price_1TF10HHXkbT25qrKnyPPQPPu",
   );
+  assert.equal(
+    getStripePriceId("draft", "annual", "USD"),
+    "price_1TF1SgHXkbT25qrKIhDmrJLo",
+  );
   assert.deepEqual(
     resolveSelfServeCheckout({
       plan: "draft",
-      interval: "monthly",
+      interval: "annual",
       currency: "USD",
       returnPath: "/pricing",
     }),
     {
-      href: "/api/stripe/checkout?plan=draft&interval=monthly&currency=USD&returnPath=%2Fpricing",
-      priceId: "price_1TF10HHXkbT25qrKnyPPQPPu",
+      href: "/api/stripe/checkout?plan=draft&interval=annual&currency=USD&returnPath=%2Fpricing",
+      priceId: "price_1TF1SgHXkbT25qrKIhDmrJLo",
       isAvailable: true,
-      displayAmount: 16.99,
+      displayAmount: 169.99,
     },
   );
 
@@ -117,7 +125,7 @@ async function main() {
 
   const unavailableUsdResponse = await startStripeCheckout(
     new NextRequest(
-      "http://localhost:3000/api/stripe/checkout?plan=draft&interval=annual&currency=USD&returnPath=%2Fpricing",
+      "http://localhost:3000/api/stripe/checkout?plan=bundle&interval=annual&currency=USD&returnPath=%2Fpricing",
     ),
   );
   assert.equal(unavailableUsdResponse.status, 400);

@@ -42,14 +42,14 @@ export function Header() {
   const funnelReturnPath = isGermanFunnel ? "/de/start" : "/start";
   const funnelCheckout = resolveSelfServeCheckout({
     plan: "draft",
-    interval: "monthly",
+    interval: "annual",
     currency,
     returnPath: funnelReturnPath,
   });
   const funnelPriceLabel = `${formatLocalizedPrice(
     funnelCheckout.displayAmount,
     currency,
-  )}/${isGermanFunnel ? "Monat" : "month"}`;
+  )}/${isGermanFunnel ? "Jahr" : "year"}`;
   const funnelHeaderCtaHref =
     funnelCtaReady && funnelCheckout.isAvailable
       ? funnelCheckout.href

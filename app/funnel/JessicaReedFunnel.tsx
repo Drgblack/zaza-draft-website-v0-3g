@@ -3,7 +3,11 @@
 import { useState } from "react";
 import { SignupModal } from "@/components/signup-modal";
 import { trackCtaClick } from "@/lib/analytics";
-import { resolveSelfServeCheckout } from "@/config/pricing";
+import {
+  getAnnualSavingsAmount,
+  resolveSelfServeCheckout,
+  type SelfServeInterval,
+} from "@/config/pricing";
 import { formatLocalizedPrice } from "@/lib/pricing-currency";
 import { usePricingCurrency } from "@/hooks/use-pricing-currency";
 import { funnelCopy, type FunnelLocale } from "./content";
@@ -23,6 +27,8 @@ export default function JessicaReedFunnel({
   locale = "en",
 }: JessicaReedFunnelProps) {
   const [signupOpen, setSignupOpen] = useState(false);
+  const [billingPeriod, setBillingPeriod] =
+    useState<SelfServeInterval>("annual");
   const copy = funnelCopy[locale];
   const { currency, setCurrency } = usePricingCurrency({
     locales: locale === "de" ? ["de-DE"] : undefined,
@@ -31,14 +37,26 @@ export default function JessicaReedFunnel({
   const freeCtaLabel = copy.freeCtaLabel;
   const proCheckout = resolveSelfServeCheckout({
     plan: "draft",
-    interval: "monthly",
+    interval: billingPeriod,
     currency,
     returnPath: checkoutReturnPath,
   });
-  const proMonthlyPrice = `${formatLocalizedPrice(proCheckout.displayAmount, currency)}/${
-    locale === "de" ? "Monat" : "month"
+  const proPriceLabel = `${formatLocalizedPrice(proCheckout.displayAmount, currency)}/${
+    billingPeriod === "annual"
+      ? locale === "de"
+        ? "Jahr"
+        : "year"
+      : locale === "de"
+        ? "Monat"
+        : "month"
   }`;
-  const proCtaLabel = copy.proCtaLabel(proMonthlyPrice);
+  const proCtaLabel = copy.proCtaLabel(proPriceLabel);
+  const annualSavingsLabel = copy.pricing.annualSavings(
+    formatLocalizedPrice(getAnnualSavingsAmount("draft", currency), currency, {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    }),
+  );
 
   const openFreeSignup = (ctaLocation: string, ctaText: string) => {
     trackCtaClick({ ctaText, ctaLocation });
@@ -63,8 +81,11 @@ export default function JessicaReedFunnel({
         <PricingSection
           currency={currency}
           onCurrencyChange={setCurrency}
-          proMonthlyPrice={proMonthlyPrice}
+          billingPeriod={billingPeriod}
+          onBillingPeriodChange={setBillingPeriod}
+          proPriceLabel={proPriceLabel}
           proCtaLabel={proCtaLabel}
+          annualSavingsLabel={annualSavingsLabel}
           proCheckoutHref={proCheckout.href}
           proCheckoutAvailable={proCheckout.isAvailable}
           onFreeAction={() =>
