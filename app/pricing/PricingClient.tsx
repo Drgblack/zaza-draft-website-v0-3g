@@ -850,7 +850,11 @@ export default function PricingClient() {
         </section>
       </div>
 
-      <SignupModal open={signupOpen} onOpenChange={setSignupOpen} />
+      <SignupModal
+        open={signupOpen}
+        onOpenChange={setSignupOpen}
+        source="pricing_free"
+      />
     </>
   );
 }

@@ -1455,7 +1455,11 @@ export function HomePageClient() {
       </section>
 
       {/* Signup Modal */}
-      <SignupModal open={signupOpen} onOpenChange={setSignupOpen} />
+      <SignupModal
+        open={signupOpen}
+        onOpenChange={setSignupOpen}
+        source="homepage_modal"
+      />
     </>
   );
 }

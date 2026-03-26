@@ -12,9 +12,14 @@ import { describeBrevoError, submitBrevoContact } from "@/lib/brevo-client";
 interface SignupModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
+  source?: string;
 }
 
-export function SignupModal({ open, onOpenChange }: SignupModalProps) {
+export function SignupModal({
+  open,
+  onOpenChange,
+  source = "homepage_modal",
+}: SignupModalProps) {
   const { t, language } = useLanguage();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -37,7 +42,7 @@ export function SignupModal({ open, onOpenChange }: SignupModalProps) {
       await submitBrevoContact({
         name,
         email,
-        source: "homepage_modal",
+        source,
         attributes: { LANGUAGE: language.toUpperCase() },
       });
       setSuccess(true);

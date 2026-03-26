@@ -34,6 +34,7 @@ export default function JessicaReedFunnel({
     locales: locale === "de" ? ["de-DE"] : undefined,
   });
   const checkoutReturnPath = locale === "de" ? "/de/start" : "/start";
+  const signupSource = locale === "de" ? "funnel_start_de" : "funnel_start_en";
   const freeCtaLabel = copy.freeCtaLabel;
   const proCheckout = resolveSelfServeCheckout({
     plan: "draft",
@@ -105,7 +106,11 @@ export default function JessicaReedFunnel({
           copy={copy.finalCta}
         />
       </main>
-      <SignupModal open={signupOpen} onOpenChange={setSignupOpen} />
+      <SignupModal
+        open={signupOpen}
+        onOpenChange={setSignupOpen}
+        source={signupSource}
+      />
     </div>
   );
 }
