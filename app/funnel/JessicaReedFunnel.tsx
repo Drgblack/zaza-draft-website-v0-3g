@@ -48,11 +48,25 @@ export default function JessicaReedFunnel({
     currency,
     displayLocale ? { locale: displayLocale } : undefined,
   );
-  const proPriceLabel =
+  const schoolYearDisplayAmount =
+    currency === "USD"
+      ? locale === "de"
+        ? "160 $"
+        : "$160"
+      : formattedDisplayAmount;
+  const proDisplayPriceLabel =
+    billingPeriod === "annual"
+      ? locale === "de"
+        ? `${schoolYearDisplayAmount} pro Schuljahr`
+        : `${schoolYearDisplayAmount} per school year`
+      : locale === "de"
+        ? `${formattedDisplayAmount}/Monat`
+        : `${formattedDisplayAmount}/month`;
+  const proCtaPriceLabel =
     locale === "de"
       ? `${formattedDisplayAmount}/${billingPeriod === "annual" ? "Jahr" : "Monat"}`
       : `${formattedDisplayAmount}/${billingPeriod === "annual" ? "year" : "month"}`;
-  const proCtaLabel = copy.proCtaLabel(proPriceLabel);
+  const proCtaLabel = copy.proCtaLabel(proCtaPriceLabel);
   const annualSavingsLabel = copy.pricing.annualSavings(
     formatLocalizedPrice(getAnnualSavingsAmount("draft", currency), currency, {
       minimumFractionDigits: 0,
@@ -92,7 +106,7 @@ export default function JessicaReedFunnel({
           billingPeriod={billingPeriod}
           onBillingPeriodChange={setBillingPeriod}
           freePriceLabel={freePriceLabel}
-          proPriceLabel={proPriceLabel}
+          proPriceLabel={proDisplayPriceLabel}
           proCtaLabel={proCtaLabel}
           annualSavingsLabel={annualSavingsLabel}
           proCheckoutHref={proCheckout.href}

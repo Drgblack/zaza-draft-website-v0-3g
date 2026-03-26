@@ -72,6 +72,7 @@ export type FunnelCopy = {
     annualRecommendedLabel: string;
     annualSavings: (amount: string) => string;
     annualAnchor: string;
+    annualAnchorSupport: string;
     supportLine: (currency: string) => string;
     mostPopularBadge: string;
     freeCtaLabel: string;
@@ -82,6 +83,7 @@ export type FunnelCopy = {
     proTitle: string;
     proDescription: string;
     proFeatures: string[];
+    annualRiskReversal: string;
     proNote: string;
     whyTitle: string;
     whyItems: Array<{
@@ -113,7 +115,7 @@ export type FunnelCopy = {
 
 export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
   en: {
-    freeCtaLabel: "Get Started Free",
+    freeCtaLabel: "Start free",
     proCtaLabel: (price) => `Start Pro - ${price}`,
     hero: {
       preheadline: "Teacher-first relief for report writing",
@@ -235,13 +237,14 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       billingLabel: "Billing",
       monthlyLabel: "Monthly",
       annualLabel: "Annual",
-      annualRecommendedLabel: "Recommended",
+      annualRecommendedLabel: "Best value for the school year",
       annualSavings: (amount) => `Save ${amount}/year vs monthly`,
       annualAnchor: "About the cost of one coffee a week",
+      annualAnchorSupport: "to get your evenings back",
       supportLine: (currency) =>
         `Prices are currently shown in ${currency}. Taxes may be calculated at checkout. Free starts with no credit card.`,
       mostPopularBadge: "Most popular",
-      freeCtaLabel: "Get Started Free",
+      freeCtaLabel: "Start free",
       freeTitle: "Free Forever",
       freeDescription: "5 drafts every month. No card required.",
       freeFeatures: [
@@ -260,6 +263,7 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
         "Parent communication templates",
         "IEP and 504 adaptations",
       ],
+      annualRiskReversal: "Try it risk-free. Cancel anytime.",
       proNote:
         "Secure Stripe checkout. Cancel anytime. Taxes may be calculated at checkout.",
       whyTitle: "Why teachers choose Zaza Draft:",
@@ -316,8 +320,7 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       subheading:
         "No more staring at blank screens. No more copy-paste comments. Just thoughtful writing that sounds like you, delivered in seconds.",
       reassurance: "No credit card. No lock-in. Fully editable.",
-      quote:
-        "Built with teachers and refined for the real pressure of school communication.",
+      quote: "No more Sunday night anxiety.",
       footerItems: [
         "Built with teachers, for teachers",
         "FERPA-ready workflows",
@@ -458,10 +461,11 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       billingLabel: "Abrechnung",
       monthlyLabel: "Monatlich",
       annualLabel: "Jaehrlich",
-      annualRecommendedLabel: "Empfohlen",
+      annualRecommendedLabel: "Beste Wahl fuers Schuljahr",
       annualSavings: (amount) =>
         `${amount} pro Jahr gegenueber monatlich sparen`,
       annualAnchor: "Etwa so viel wie ein Kaffee pro Woche",
+      annualAnchorSupport: "fuer deine Abende zurueck",
       supportLine: (currency) =>
         `Preise werden aktuell in ${currency} angezeigt. Steuern koennen im Checkout berechnet werden. Kostenlos starten ohne Kreditkarte.`,
       mostPopularBadge: "Am beliebtesten",
@@ -485,6 +489,7 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
         "Vorlagen fuer Elternkommunikation",
         "Anpassungen fuer IEP und 504",
       ],
+      annualRiskReversal: "Risikofrei testen. Jederzeit kuendbar.",
       proNote:
         "Sicherer Stripe-Checkout. Jederzeit kuendbar. Steuern koennen im Checkout berechnet werden.",
       whyTitle: "Warum Lehrkraefte Zaza Draft waehlen:",
@@ -541,8 +546,7 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       subheading:
         "Kein Starren mehr auf leere Seiten. Kein Copy-Paste mehr. Nur durchdachte Texte, die nach dir klingen und in Sekunden bereit sind.",
       reassurance: "Keine Kreditkarte. Keine Bindung. Voll bearbeitbar.",
-      quote:
-        "Mit Lehrkraeften entwickelt und fuer den echten Druck in der Schulkommunikation verfeinert.",
+      quote: "Kein Sonntagabend-Stress mehr.",
       footerItems: [
         "Mit Lehrkraeften fuer Lehrkraefte gebaut",
         "FERPA-orientierte Workflows",

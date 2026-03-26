@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckIcon } from "lucide-react";
 import { type PricingCurrency, type SelfServeInterval } from "@/config/pricing";
-import { formatLocalizedPrice } from "@/lib/pricing-currency";
 import { CurrencyToggle } from "@/components/pricing/currency-toggle";
 import type { FunnelCopy } from "../content";
 
@@ -85,7 +84,7 @@ const PricingSection = ({
                 >
                   {copy.annualLabel}
                   <span
-                    className={`absolute -top-3 left-1/2 -translate-x-1/2 rounded-full border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] ${
+                    className={`absolute -top-8 left-1/2 min-w-[10rem] -translate-x-1/2 rounded-full border px-3 py-1 text-center text-[10px] font-semibold leading-tight ${
                       billingPeriod === "annual"
                         ? "border-white/40 bg-white/20 text-white"
                         : "border-zaza-200 bg-white text-zaza-600"
@@ -132,7 +131,7 @@ const PricingSection = ({
               <Button
                 type="button"
                 onClick={onFreeAction}
-                className="btn-secondary h-auto w-full rounded-2xl px-6 py-4 text-base font-semibold"
+                className="h-auto w-full rounded-2xl border border-zaza-200 bg-white px-6 py-4 text-base font-semibold text-calm-700 shadow-sm transition-colors hover:border-zaza-300 hover:bg-zaza-50"
               >
                 {copy.freeCtaLabel}
               </Button>
@@ -161,9 +160,14 @@ const PricingSection = ({
                   {proPriceLabel}
                 </div>
                 {billingPeriod === "annual" ? (
-                  <p className="mb-3 text-sm font-medium text-calm-600">
-                    {copy.annualAnchor}
-                  </p>
+                  <div className="mb-4 space-y-1">
+                    <p className="text-sm font-semibold text-calm-700">
+                      {copy.annualAnchor}
+                    </p>
+                    <p className="text-sm text-calm-500">
+                      {copy.annualAnchorSupport}
+                    </p>
+                  </div>
                 ) : null}
                 <p className="text-calm-600">{copy.proDescription}</p>
               </div>
@@ -192,7 +196,12 @@ const PricingSection = ({
               >
                 {proCtaLabel}
               </Button>
-              <p className="mt-3 text-center text-xs text-calm-500">
+              {billingPeriod === "annual" && proCheckoutAvailable ? (
+                <p className="mt-3 text-center text-xs font-semibold text-calm-700">
+                  {copy.annualRiskReversal}
+                </p>
+              ) : null}
+              <p className="mt-2 text-center text-xs text-calm-500">
                 {proCheckoutAvailable ? copy.proNote : copy.unavailableNote}
               </p>
               {billingPeriod === "annual" ? (
