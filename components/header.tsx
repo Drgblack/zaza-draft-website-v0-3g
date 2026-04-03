@@ -42,6 +42,10 @@ export function Header() {
   const L = (de: string, en: string) => (language === "de" ? de : en);
   const headerCtaHref = getDraftPricingHref(language);
   const headerCtaLabel = t("nav.getStarted");
+  const foundingToggleLinks = {
+    en: "/founding",
+    de: "/de/founding",
+  } as const;
   const funnelReturnPath = isGermanFunnel ? "/de/start" : "/start";
   const funnelCheckout = resolveSelfServeCheckout({
     plan: "draft",
@@ -230,6 +234,47 @@ export function Header() {
     </div>
   );
 
+  const foundingLanguageToggle = (
+    <div
+      className="flex items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1"
+      role="group"
+      aria-label={
+        isGermanFoundingFunnel
+          ? "Sprache für Gründungsseite auswählen"
+          : "Select founding page language"
+      }
+    >
+      <Link
+        href={foundingToggleLinks.en}
+        lang="en"
+        hrefLang="en"
+        aria-label="Switch founding page to English"
+        aria-current={!isGermanFoundingFunnel ? "page" : undefined}
+        className={`rounded-full px-2.5 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] transition-all sm:px-3 ${
+          !isGermanFoundingFunnel
+            ? "bg-[#8B5CF6] text-white shadow-sm"
+            : "text-gray-300 hover:bg-white/5 hover:text-white"
+        }`}
+      >
+        EN
+      </Link>
+      <Link
+        href={foundingToggleLinks.de}
+        lang="de"
+        hrefLang="de"
+        aria-label="Gründungsseite auf Deutsch anzeigen"
+        aria-current={isGermanFoundingFunnel ? "page" : undefined}
+        className={`rounded-full px-2.5 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] transition-all sm:px-3 ${
+          isGermanFoundingFunnel
+            ? "bg-[#8B5CF6] text-white shadow-sm"
+            : "text-gray-300 hover:bg-white/5 hover:text-white"
+        }`}
+      >
+        DE
+      </Link>
+    </div>
+  );
+
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 bg-[#0B1220]/80 backdrop-blur-md shadow-lg shadow-black/5">
@@ -247,15 +292,18 @@ export function Header() {
                 className="h-12 w-12 transition-transform group-hover:scale-105"
                 priority
               />
-              <span className="text-xl font-bold text-white">Zaza Draft</span>
+              <span className="hidden text-xl font-bold text-white min-[380px]:inline">
+                Zaza Draft
+              </span>
             </Link>
           </div>
 
           {isFoundingFunnel ? (
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
+              {foundingLanguageToggle}
               <Button
                 asChild
-                className="rounded-full bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-purple-500/25 hover:from-purple-700 hover:to-blue-700"
+                className="rounded-full bg-gradient-to-r from-purple-600 to-blue-600 px-3 py-2 text-xs font-semibold text-white shadow-lg shadow-purple-500/25 hover:from-purple-700 hover:to-blue-700 sm:px-4 sm:text-sm"
               >
                 <a
                   href="#founding-offer"
@@ -268,9 +316,14 @@ export function Header() {
                     })
                   }
                 >
-                  {isGermanFoundingFunnel
-                    ? "Als Gründungslehrkraft beitreten"
-                    : "Join as a founding teacher"}
+                  <span className="hidden sm:inline">
+                    {isGermanFoundingFunnel
+                      ? "Als Gründungslehrkraft beitreten"
+                      : "Join as a founding teacher"}
+                  </span>
+                  <span className="sm:hidden">
+                    {isGermanFoundingFunnel ? "Beitreten" : "Join"}
+                  </span>
                 </a>
               </Button>
             </div>

@@ -142,7 +142,7 @@ const FoundingOfferSection = ({
 
         <div className="mx-auto mt-10 max-w-4xl text-center">
           {copy.pricingReassurance ? (
-            <p className="mb-3 text-sm font-medium text-calm-700">
+            <p className="mb-4 inline-flex rounded-full border border-zaza-200/60 bg-white/70 px-4 py-2 text-sm font-semibold text-calm-800 shadow-sm">
               {copy.pricingReassurance}
             </p>
           ) : null}

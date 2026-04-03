@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SetLanguage } from "@/components/set-language";
 import { buildCanonicalAlternates } from "@/lib/seo-canonical";
 import { siteConfig } from "@/lib/seo/site-config";
 import FoundingTeachersFunnel from "./FoundingTeachersFunnel";
@@ -18,5 +19,10 @@ export const metadata: Metadata = {
 };
 
 export default function FoundingPage() {
-  return <FoundingTeachersFunnel copy={foundingFunnelCopy} />;
+  return (
+    <>
+      <SetLanguage lang="en" />
+      <FoundingTeachersFunnel copy={foundingFunnelCopy} />
+    </>
+  );
 }

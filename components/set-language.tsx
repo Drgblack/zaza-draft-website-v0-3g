@@ -1,18 +1,21 @@
-"use client"
+"use client";
 
-import { useEffect } from "react"
-import { useLanguage } from "@/lib/i18n/language-context"
+import { useEffect } from "react";
+import { useLanguage } from "@/lib/i18n/language-context";
 
 interface SetLanguageProps {
-  lang: "en" | "de"
+  lang: "en" | "de";
 }
 
 export function SetLanguage({ lang }: SetLanguageProps) {
-  const { setLanguage } = useLanguage()
+  const { setLanguage } = useLanguage();
 
   useEffect(() => {
-    setLanguage(lang)
-  }, [lang, setLanguage])
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = lang;
+    }
+    setLanguage(lang);
+  }, [lang, setLanguage]);
 
-  return null
+  return null;
 }
