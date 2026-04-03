@@ -6,10 +6,16 @@ import type { FunnelCopy } from "../content";
 
 type FAQSectionProps = {
   copy: FunnelCopy["faq"];
+  defaultOpenAll?: boolean;
 };
 
-export default function FAQSection({ copy }: FAQSectionProps) {
-  const [openItems, setOpenItems] = useState<number[]>([0]);
+export default function FAQSection({
+  copy,
+  defaultOpenAll = false,
+}: FAQSectionProps) {
+  const [openItems, setOpenItems] = useState<number[]>(
+    defaultOpenAll ? copy.items.map((_, index) => index) : [0],
+  );
 
   const toggleItem = (index: number) => {
     setOpenItems((prev) =>

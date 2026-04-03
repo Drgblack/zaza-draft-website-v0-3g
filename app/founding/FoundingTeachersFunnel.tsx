@@ -4,6 +4,7 @@ import {
   resolveSelfServeCheckout,
   type SelfServeInterval,
 } from "@/config/pricing";
+import { Button } from "@/components/ui/button";
 import { track, trackCtaClick } from "@/lib/analytics";
 import { formatLocalizedPrice } from "@/lib/pricing-currency";
 import FAQSection from "../funnel/components/FAQSection";
@@ -13,6 +14,7 @@ import PainSection from "../funnel/components/PainSection";
 import SolutionSection from "../funnel/components/SolutionSection";
 import { foundingFunnelCopy } from "./content";
 import FoundingOfferSection from "./FoundingOfferSection";
+import TikTokSocialProofSection from "./TikTokSocialProofSection";
 
 const foundingReturnPath = "/founding";
 const annualCheckout = resolveSelfServeCheckout({
@@ -44,10 +46,10 @@ const monthlyPriceLabel = `${formatLocalizedPrice(
 )}/month`;
 
 export default function FoundingTeachersFunnel() {
-  const scrollToOffer = () => {
+  const scrollToOffer = (ctaText: string, ctaLocation: string) => {
     trackCtaClick({
-      ctaText: foundingFunnelCopy.heroCtaLabel,
-      ctaLocation: "founding_hero",
+      ctaText,
+      ctaLocation,
     });
 
     document
@@ -86,14 +88,41 @@ export default function FoundingTeachersFunnel() {
     <div className="funnel-theme">
       <main className="funnel-main">
         <HeroSection
-          onPrimaryAction={scrollToOffer}
+          onPrimaryAction={() =>
+            scrollToOffer(foundingFunnelCopy.heroCtaLabel, "founding_hero")
+          }
           primaryCtaLabel={foundingFunnelCopy.heroCtaLabel}
           copy={foundingFunnelCopy.hero}
         />
         <PainSection copy={foundingFunnelCopy.pain} />
+        <TikTokSocialProofSection copy={foundingFunnelCopy.socialProof} />
         <SolutionSection copy={foundingFunnelCopy.solution} />
         <HowItWorksSection copy={foundingFunnelCopy.howItWorks} />
-        <FAQSection copy={foundingFunnelCopy.faq} />
+        <section className="px-4 pb-8">
+          <div className="mx-auto max-w-3xl">
+            <div className="glass-strong rounded-[2rem] px-8 py-10 text-center">
+              <h2 className="mb-4 text-2xl font-bold text-calm-800 md:text-3xl">
+                {foundingFunnelCopy.midpageCta.heading}
+              </h2>
+              <p className="mx-auto mb-6 max-w-2xl text-lg text-calm-600">
+                {foundingFunnelCopy.midpageCta.body}
+              </p>
+              <Button
+                type="button"
+                onClick={() =>
+                  scrollToOffer(
+                    foundingFunnelCopy.midpageCta.buttonLabel,
+                    "founding_midpage",
+                  )
+                }
+                className="btn-primary h-auto rounded-2xl px-8 py-4 text-base font-semibold"
+              >
+                {foundingFunnelCopy.midpageCta.buttonLabel}
+              </Button>
+            </div>
+          </div>
+        </section>
+        <FAQSection copy={foundingFunnelCopy.faq} defaultOpenAll />
         <FoundingOfferSection
           annualPriceLabel={annualPriceLabel}
           monthlyPriceLabel={monthlyPriceLabel}
