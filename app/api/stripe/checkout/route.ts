@@ -13,6 +13,7 @@ const SAFE_CHECKOUT_RETURN_PATHS = new Set([
   "/pricing",
   "/de/pricing",
   "/start",
+  "/founding",
 ]);
 
 function buildReturnUrl(
