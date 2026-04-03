@@ -21,6 +21,7 @@ export type FoundingFunnelCopy = SharedFunnelSections & {
     heading: string;
     subheading: string;
     lockedPricingNote: string;
+    pricingReassurance?: string;
     cards: [FoundingOfferCard, FoundingOfferCard];
     reassurance: string;
     supportItems: [string, string, string, string];
@@ -37,8 +38,9 @@ export const foundingFunnelCopy: FoundingFunnelCopy = {
       "This parent email could",
       "go very differently.",
     ],
-    subheadingTop: "Zaza Draft helps turn the risky version",
-    subheadingBottom: "into the calmer one you can safely send.",
+    subheadingTop:
+      "The version in your head and the version you can safely send are often very different.",
+    subheadingBottom: "Zaza Draft helps close that gap before you press send.",
     reassurance:
       "Founding pricing stays with you while your subscription remains active.",
     footer:
@@ -106,6 +108,8 @@ export const foundingFunnelCopy: FoundingFunnelCopy = {
     quote:
       "The point is not to replace the teacher. It is to help the teacher respond with more calm, more clarity, and less risk.",
     note: "Zaza Draft is being shaped around the moments where communication carries emotional weight and professional risk.",
+    proofLine:
+      "Built for parent emails, sensitive updates, and the replies teachers most often rewrite three times.",
   },
   howItWorks: {
     heading: "A calmer system for",
@@ -140,6 +144,8 @@ export const foundingFunnelCopy: FoundingFunnelCopy = {
     afterValue: "Clear, calm",
     proofBody:
       "Zaza Draft helps bridge the gap between the reply you feel like sending and the one you can stand behind tomorrow.",
+    proofMicrocopy:
+      "Read the draft, adjust the tone, send only what still feels like you.",
     proofBullets: [
       "Safer before send",
       "Your voice still present",
@@ -189,16 +195,17 @@ export const foundingFunnelCopy: FoundingFunnelCopy = {
     eyebrow: "Founding Teachers",
     heading: "Join the first group shaping Zaza Draft",
     subheading:
-      "We are opening Zaza Draft to a small early group of teachers who want a safer way to handle the 9:47pm email - and want to help shape what comes next.",
+      "Join early, lock in founding pricing, and help shape the product while it is still being built around real teacher pressure.",
     lockedPricingNote:
       "Founding pricing stays with you while your subscription remains active.",
+    pricingReassurance: "You are joining early, not buying blind.",
     cards: [
       {
         interval: "annual",
         title: "Founding Annual",
         badge: "Best value",
         description:
-          "Best value for teachers who want this support close by throughout the school year.",
+          "Best for teachers who already know this is the kind of support they want close by all year.",
         features: [
           "Locked founding pricing",
           "Early access from the start",

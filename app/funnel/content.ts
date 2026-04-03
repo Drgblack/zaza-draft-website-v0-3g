@@ -40,6 +40,7 @@ export type FunnelCopy = {
     imageAlt: string;
     quote: string;
     note: string;
+    proofLine?: string;
   };
   howItWorks: {
     heading: string;
@@ -58,6 +59,7 @@ export type FunnelCopy = {
     afterLabel: string;
     afterValue: string;
     proofBody: string;
+    proofMicrocopy?: string;
     proofBullets: [string, string, string];
     imageAlt: string;
   };

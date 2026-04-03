@@ -43,6 +43,11 @@ const SolutionSection = ({ copy }: SolutionSectionProps) => {
                   <CheckIcon className="mr-2 h-4 w-4" />
                   {copy.generatedVoiceNote}
                 </div>
+                {copy.proofLine ? (
+                  <p className="mt-4 text-sm font-medium text-calm-600">
+                    {copy.proofLine}
+                  </p>
+                ) : null}
               </CardContent>
             </Card>
           </div>

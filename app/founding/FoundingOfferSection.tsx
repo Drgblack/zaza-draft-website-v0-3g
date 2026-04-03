@@ -141,6 +141,11 @@ const FoundingOfferSection = ({
         </div>
 
         <div className="mx-auto mt-10 max-w-4xl text-center">
+          {copy.pricingReassurance ? (
+            <p className="mb-3 text-sm font-medium text-calm-700">
+              {copy.pricingReassurance}
+            </p>
+          ) : null}
           <p className="text-base text-calm-600">{copy.reassurance}</p>
           {hasUnavailableCheckout ? (
             <p className="mt-3 text-sm font-medium text-calm-500">
