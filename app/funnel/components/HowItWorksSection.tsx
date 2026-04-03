@@ -73,6 +73,11 @@ const HowItWorksSection = ({ copy }: HowItWorksSectionProps) => {
                   </div>
                 </div>
                 <p className="mb-6 text-lg text-calm-600">{copy.proofBody}</p>
+                {copy.proofMicrocopy ? (
+                  <p className="mb-6 text-sm font-medium text-calm-700">
+                    {copy.proofMicrocopy}
+                  </p>
+                ) : null}
                 <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-calm-500">
                   {copy.proofBullets.map((bullet) => (
                     <div key={bullet}>{bullet}</div>
