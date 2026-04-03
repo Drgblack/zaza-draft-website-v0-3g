@@ -9,6 +9,8 @@ type SolutionSectionProps = {
 };
 
 const SolutionSection = ({ copy }: SolutionSectionProps) => {
+  const imageSrc = copy.imageSrc ?? teacherHappy;
+
   return (
     <section className="bg-gradient-to-br from-white/55 to-zaza-50/40 px-4 py-20">
       <div className="mx-auto max-w-6xl">
@@ -75,7 +77,7 @@ const SolutionSection = ({ copy }: SolutionSectionProps) => {
           <div className="order-2 lg:order-1">
             <div className="overflow-hidden rounded-[2rem] border border-white/35 shadow-[0_28px_74px_rgba(217,70,239,0.14)]">
               <img
-                src={teacherHappy}
+                src={imageSrc}
                 alt={copy.imageAlt}
                 className="w-full object-cover"
               />

@@ -48,6 +48,7 @@ export const foundingFunnelCopy: FoundingFunnelCopy = {
   heroCtaLabel: "Join as a founding teacher",
   hero: {
     preheadline: "Founding Teachers",
+    showLogo: false,
     headingLines: [
       "It is 9:47pm.",
       "This parent email could",
@@ -60,6 +61,7 @@ export const foundingFunnelCopy: FoundingFunnelCopy = {
       "Founding pricing stays with you while your subscription remains active.",
     footer:
       "Early access for teachers who want the message they won't regret tomorrow.",
+    imageSrc: "/lovable-funnel/teacher-hero.jpg",
     imageAlt:
       "Teacher reviewing a difficult email late in the evening and finding a calmer way to respond",
     bubble: "A supportive co-writer for the version you actually send.",
@@ -86,6 +88,7 @@ export const foundingFunnelCopy: FoundingFunnelCopy = {
     quote:
       "Sometimes the hardest part is not knowing the facts. It is finding words that are clear, calm, and safe enough to send.",
     note: "Zaza Draft is built for that moment between raw reaction and professional reply.",
+    imageSrc: "/teacher-writing-parent-email-on-laptop.jpg",
     imageAlt:
       "Teacher at a desk late at night, carefully reviewing a message before sending",
   },
@@ -105,18 +108,18 @@ export const foundingFunnelCopy: FoundingFunnelCopy = {
         body: "The moment when your evening changes and you know the wording now matters.",
       },
       {
+        title: "The version in your head... and the version you send",
+        stats: "Hook repeatedly resonating",
+        body: "Teachers respond to the gap between the sharper reply in your head and the steadier version you can actually send.",
+      },
+      {
         title:
           "Teachers don't struggle to write emails. They struggle to send them",
         stats: "345 views",
         body: "The real tension is not typing the reply. It is knowing whether it is safe enough to send.",
       },
-      {
-        title: "This could have gone very differently",
-        stats: "Hook repeatedly resonating",
-        body: "Teachers respond to the risk of escalation, tone drift, and saying too much when tired.",
-      },
     ],
-    note: "This is exactly the pain Zaza Draft solves.",
+    note: "This is exactly the late-night parent email stress Zaza Draft was built to solve.",
   },
   solution: {
     heading: "Zaza Draft helps move a message",
@@ -147,6 +150,7 @@ export const foundingFunnelCopy: FoundingFunnelCopy = {
         body: "Made for parent communication, sensitive follow-ups, and the moments where tone and professionalism matter most.",
       },
     ],
+    imageSrc: "/teacher-working-at-desk-with-laptop.jpg",
     imageAlt:
       "Teacher working with more confidence on a laptop in a calm classroom setting",
     quote:
@@ -202,7 +206,7 @@ export const foundingFunnelCopy: FoundingFunnelCopy = {
     heading:
       "If this is the kind of reply that stays with you all evening, join as a founding teacher.",
     body: "Get early access to a calmer way to draft difficult messages and help shape what comes next.",
-    buttonLabel: "Join as a founding teacher",
+    buttonLabel: "Join as a founding teacher - lock in founding pricing",
   },
   faq: {
     title: "Questions teachers may still have",

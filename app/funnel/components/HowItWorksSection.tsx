@@ -8,6 +8,8 @@ type HowItWorksSectionProps = {
 };
 
 const HowItWorksSection = ({ copy }: HowItWorksSectionProps) => {
+  const imageSrc = copy.imageSrc ?? teacherWorkflow;
+
   return (
     <section className="px-4 py-20">
       <div className="mx-auto max-w-6xl">
@@ -89,7 +91,7 @@ const HowItWorksSection = ({ copy }: HowItWorksSectionProps) => {
           <div className="order-1 lg:order-2">
             <div className="overflow-hidden rounded-[2rem] border border-white/35 shadow-[0_28px_74px_rgba(110,68,163,0.16)]">
               <img
-                src={teacherWorkflow}
+                src={imageSrc}
                 alt={copy.imageAlt}
                 className="w-full object-cover"
               />

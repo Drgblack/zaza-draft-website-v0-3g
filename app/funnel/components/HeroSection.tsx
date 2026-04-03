@@ -14,6 +14,8 @@ const HeroSection = ({
   primaryCtaLabel,
   copy,
 }: HeroSectionProps) => {
+  const heroImageSrc = copy.imageSrc ?? teacherHero;
+
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden px-4 py-16 lg:py-24">
       <div className="absolute inset-0 overflow-hidden">
@@ -24,13 +26,15 @@ const HeroSection = ({
 
       <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
         <div className="order-2 lg:order-1">
-          <div className="mb-8 flex justify-center lg:justify-start">
-            <img
-              src="/lovable-uploads/8554ae0a-a321-424b-8396-2e8334d8db0d.png"
-              alt="Zaza Draft Logo"
-              className="h-16 w-16 object-contain"
-            />
-          </div>
+          {copy.showLogo !== false ? (
+            <div className="mb-8 flex justify-center lg:justify-start">
+              <img
+                src="/lovable-uploads/8554ae0a-a321-424b-8396-2e8334d8db0d.png"
+                alt="Zaza Draft Logo"
+                className="h-16 w-16 object-contain"
+              />
+            </div>
+          ) : null}
 
           <p className="mb-5 text-center text-sm font-semibold uppercase tracking-[0.32em] text-[#c026d3] lg:text-left">
             {copy.preheadline}
@@ -82,7 +86,7 @@ const HeroSection = ({
         <div className="order-1 lg:order-2">
           <div className="relative overflow-hidden rounded-[2rem] border border-white/40 shadow-[0_32px_90px_rgba(128,90,213,0.18)]">
             <img
-              src={teacherHero}
+              src={heroImageSrc}
               alt={copy.imageAlt}
               className="w-full object-cover"
             />

@@ -16,6 +16,8 @@ type PainSectionProps = {
 };
 
 const PainSection = ({ copy }: PainSectionProps) => {
+  const imageSrc = copy.imageSrc ?? teacherStressed;
+
   return (
     <section className="px-4 py-20">
       <div className="mx-auto max-w-6xl">
@@ -68,7 +70,7 @@ const PainSection = ({ copy }: PainSectionProps) => {
           <div className="order-1 lg:order-2">
             <div className="overflow-hidden rounded-[2rem] border border-white/35 shadow-[0_28px_74px_rgba(110,68,163,0.16)]">
               <img
-                src={teacherStressed}
+                src={imageSrc}
                 alt={copy.imageAlt}
                 className="w-full object-cover"
               />

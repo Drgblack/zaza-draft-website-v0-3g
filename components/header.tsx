@@ -33,6 +33,9 @@ export function Header() {
   const { language, setLanguage, t } = useLanguage();
   const isGermanFunnel = pathname === "/de/start";
   const isStartFunnel = pathname === "/start" || isGermanFunnel;
+  const isGermanFoundingFunnel = pathname === "/de/founding";
+  const isFoundingFunnel = pathname === "/founding" || isGermanFoundingFunnel;
+  const isAnyFunnel = isStartFunnel || isFoundingFunnel;
   const { currency } = usePricingCurrency({
     locales: isGermanFunnel ? ["de-DE"] : undefined,
   });
@@ -77,10 +80,10 @@ export function Header() {
   }, []);
 
   useEffect(() => {
-    if (isStartFunnel && mobileMenuOpen) {
+    if (isAnyFunnel && mobileMenuOpen) {
       setMobileMenuOpen(false);
     }
-  }, [isStartFunnel, mobileMenuOpen]);
+  }, [isAnyFunnel, mobileMenuOpen]);
 
   const navigation = [{ name: t("nav.pricing"), href: "/pricing" }];
   const toggleMobileAccordion = (id: string) =>
@@ -248,7 +251,30 @@ export function Header() {
             </Link>
           </div>
 
-          {isStartFunnel ? (
+          {isFoundingFunnel ? (
+            <div className="flex items-center gap-3">
+              <Button
+                asChild
+                className="rounded-full bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-purple-500/25 hover:from-purple-700 hover:to-blue-700"
+              >
+                <a
+                  href="#founding-offer"
+                  onClick={() =>
+                    trackCtaClick({
+                      ctaText: isGermanFoundingFunnel
+                        ? "Als Gründungslehrkraft beitreten"
+                        : "Join as a founding teacher",
+                      ctaLocation: "header_founding",
+                    })
+                  }
+                >
+                  {isGermanFoundingFunnel
+                    ? "Als Gründungslehrkraft beitreten"
+                    : "Join as a founding teacher"}
+                </a>
+              </Button>
+            </div>
+          ) : isStartFunnel ? (
             <div className="flex items-center gap-3">
               {languageToggle}
               <Button
@@ -432,7 +458,7 @@ export function Header() {
           )}
         </nav>
 
-        {!isStartFunnel && mobileMenuOpen && (
+        {!isAnyFunnel && mobileMenuOpen && (
           <div className="fixed inset-0 z-[60] flex lg:hidden">
             <div
               className="absolute inset-0 bg-black/60"

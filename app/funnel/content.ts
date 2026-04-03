@@ -10,6 +10,8 @@ export type FunnelCopy = {
     subheadingBottom: string;
     reassurance: string;
     footer: string;
+    showLogo?: boolean;
+    imageSrc?: string;
     imageAlt: string;
     bubble: string;
   };
@@ -23,6 +25,7 @@ export type FunnelCopy = {
     }>;
     quote: string;
     note: string;
+    imageSrc?: string;
     imageAlt: string;
   };
   solution: {
@@ -38,6 +41,7 @@ export type FunnelCopy = {
       body: string;
     }>;
     imageAlt: string;
+    imageSrc?: string;
     quote: string;
     note: string;
     proofLine?: string;
@@ -61,6 +65,7 @@ export type FunnelCopy = {
     proofBody: string;
     proofMicrocopy?: string;
     proofBullets: [string, string, string];
+    imageSrc?: string;
     imageAlt: string;
   };
   pricing: {
