@@ -1,7 +1,7 @@
 export const SUPPORTED_CURRENCIES = ["EUR", "USD"] as const;
 export const DEFAULT_PRICING_CURRENCY = "EUR" as const;
 export const SELF_SERVE_INTERVALS = ["monthly", "annual"] as const;
-export const SELF_SERVE_PLANS = ["draft", "bundle"] as const;
+export const SELF_SERVE_PLANS = ["draft", "bundle", "founding"] as const;
 
 export type PricingCurrency = (typeof SUPPORTED_CURRENCIES)[number];
 export type SelfServeInterval = (typeof SELF_SERVE_INTERVALS)[number];
@@ -68,6 +68,29 @@ export const pricingConfig: Record<SelfServePlan, SelfServePlanConfig> = {
       annual: {
         EUR: 249,
         USD: 270,
+      },
+    },
+  },
+  // Stripe product: Zaza Draft - Founding Teachers (prod_UGnV88gxtqnpoA)
+  founding: {
+    stripePriceIds: {
+      monthly: {
+        EUR: "price_1TIFu7HXkbT25qrKJomDNUYg",
+        USD: null,
+      },
+      annual: {
+        EUR: "price_1TIFu7HXkbT25qrKLHywTxhs",
+        USD: null,
+      },
+    },
+    displayAmounts: {
+      monthly: {
+        EUR: 9.99,
+        USD: 9.99,
+      },
+      annual: {
+        EUR: 99,
+        USD: 99,
       },
     },
   },
