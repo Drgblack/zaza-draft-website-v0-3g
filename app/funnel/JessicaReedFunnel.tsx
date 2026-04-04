@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { SignupModal } from "@/components/signup-modal";
-import { trackCtaClick } from "@/lib/analytics";
+import { track, trackCtaClick } from "@/lib/analytics";
 import {
   getAnnualSavingsAmount,
   resolveSelfServeCheckout,
@@ -94,6 +94,18 @@ export default function JessicaReedFunnel({
       <main className="funnel-main">
         <HeroSection
           onPrimaryAction={() => openFreeSignup("funnel_hero", freeCtaLabel)}
+          onSecondaryLinkClick={() => {
+            trackCtaClick({
+              ctaText:
+                copy.hero.secondaryLinkSupport ??
+                "Try the free Parent Email Risk Checker",
+              ctaLocation: "funnel_hero_checker",
+            });
+            track("checker_link_clicked", {
+              source: "funnel_hero",
+              locale,
+            });
+          }}
           primaryCtaLabel={freeCtaLabel}
           copy={copy.hero}
         />

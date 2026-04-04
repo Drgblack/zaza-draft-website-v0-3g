@@ -1,8 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { JsonLdCollection } from "@/components/seo/json-ld";
+import { track, trackCtaClick } from "@/lib/analytics";
 import {
   createArticleJsonLd,
   createBreadcrumbJsonLd,
@@ -17,6 +20,17 @@ import {
 type ParentEmailSeoTemplateProps = {
   page: ParentEmailSeoPage;
 };
+
+function trackCheckerClick(slug: string, location: string, ctaText: string) {
+  trackCtaClick({
+    ctaText,
+    ctaLocation: location,
+  });
+  track("checker_link_clicked", {
+    source: location,
+    page_slug: slug,
+  });
+}
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
@@ -55,7 +69,7 @@ function ExampleCard({
   );
 }
 
-function CheckerCtaBlock() {
+function CheckerCtaBlock({ slug }: { slug: string }) {
   return (
     <section className="rounded-[2rem] border border-fuchsia-200 bg-gradient-to-br from-fuchsia-50 via-white to-violet-50 px-6 py-8 shadow-[0_24px_90px_-55px_rgba(15,23,42,0.24)] md:px-8">
       <SectionLabel>Parent Email Risk Checker</SectionLabel>
@@ -72,7 +86,16 @@ function CheckerCtaBlock() {
           asChild
           className="btn-primary h-auto rounded-2xl px-6 py-4 text-base font-semibold"
         >
-          <Link href="/parent-email-risk-checker">
+          <Link
+            href="/parent-email-risk-checker"
+            onClick={() =>
+              trackCheckerClick(
+                slug,
+                "seo_checker_block",
+                "Go to Parent Email Risk Checker",
+              )
+            }
+          >
             Go to Parent Email Risk Checker
           </Link>
         </Button>
@@ -185,7 +208,16 @@ export function ParentEmailSeoTemplate({ page }: ParentEmailSeoTemplateProps) {
                   asChild
                   className="btn-primary h-auto rounded-2xl px-6 py-4 text-base font-semibold"
                 >
-                  <Link href="/parent-email-risk-checker">
+                  <Link
+                    href="/parent-email-risk-checker"
+                    onClick={() =>
+                      trackCheckerClick(
+                        page.slug,
+                        "seo_hero_checker",
+                        "Check your parent email",
+                      )
+                    }
+                  >
                     Check your parent email
                   </Link>
                 </Button>
@@ -246,7 +278,7 @@ export function ParentEmailSeoTemplate({ page }: ParentEmailSeoTemplateProps) {
             />
           </section>
 
-          <CheckerCtaBlock />
+          <CheckerCtaBlock slug={page.slug} />
 
           <section className="rounded-[2rem] border border-white/70 bg-white/88 px-6 py-8 shadow-[0_24px_90px_-55px_rgba(15,23,42,0.25)] md:px-8">
             <SectionLabel>Key takeaway</SectionLabel>

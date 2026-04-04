@@ -25,9 +25,21 @@ export default function Footer() {
   const localPath = (path: string) => (isDE ? `/de${path}` : path);
   const footerContent = getFooterContent(locale);
   const startNowLabel = isDE ? "Jetzt starten" : "Start now";
+  const riskCheckerLabel = isDE
+    ? "Kostenloser Risiko-Check fuer Elternmails"
+    : "Free Parent Email Risk Checker";
 
   const productLinks = [
     { label: "Draft", href: localPath("/products/draft") },
+    {
+      label: riskCheckerLabel,
+      href: "/parent-email-risk-checker",
+      onClick: () =>
+        trackCtaClick({
+          ctaText: riskCheckerLabel,
+          ctaLocation: "footer_checker",
+        }),
+    },
     { label: isDE ? "Preise" : "Pricing", href: localPath("/pricing") },
     {
       label: startNowLabel,

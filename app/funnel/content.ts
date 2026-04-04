@@ -9,6 +9,8 @@ export type FunnelCopy = {
     subheadingTop: string;
     subheadingBottom: string;
     reassurance: string;
+    secondaryLinkLabel?: string;
+    secondaryLinkSupport?: string;
     footer: string;
     showLogo?: boolean;
     imageSrc?: string;
@@ -134,6 +136,8 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       subheadingTop: "Zaza writes them for you",
       subheadingBottom: "in your own voice, in seconds.",
       reassurance: "No credit card. No lock-in. Fully editable.",
+      secondaryLinkLabel: "Need to test one email first?",
+      secondaryLinkSupport: "Try the free Parent Email Risk Checker.",
       footer: "Built for teachers who write under pressure.",
       imageAlt:
         "Teacher working late at desk with papers and laptop, looking tired but hopeful",
@@ -353,6 +357,9 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       subheadingTop: "Zaza schreibt sie fuer dich",
       subheadingBottom: "in deinem Ton, in Sekunden.",
       reassurance: "Keine Kreditkarte. Keine Bindung. Voll bearbeitbar.",
+      secondaryLinkLabel: "Du willst erst eine E-Mail pruefen?",
+      secondaryLinkSupport:
+        "Teste den kostenlosen Risiko-Check fuer Elternmails.",
       footer: "Entwickelt fuer Lehrkraefte, die unter Druck schreiben.",
       imageAlt:
         "Lehrkraft sitzt spaet am Schreibtisch mit Unterlagen und Laptop und wirkt erschoepft, aber hoffnungsvoll",

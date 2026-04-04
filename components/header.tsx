@@ -40,6 +40,7 @@ export function Header() {
     locales: isGermanFunnel ? ["de-DE"] : undefined,
   });
   const L = (de: string, en: string) => (language === "de" ? de : en);
+  const riskCheckerLabel = L("Free Risk Checker", "Free Risk Checker");
   const headerCtaHref = getDraftPricingHref(language);
   const headerCtaLabel = t("nav.getStarted");
   const foundingToggleLinks = {
@@ -89,10 +90,19 @@ export function Header() {
     }
   }, [isAnyFunnel, mobileMenuOpen]);
 
-  const navigation = [{ name: t("nav.pricing"), href: "/pricing" }];
+  const navigation = [
+    { name: riskCheckerLabel, href: "/parent-email-risk-checker" },
+    { name: t("nav.pricing"), href: "/pricing" },
+  ];
   const toggleMobileAccordion = (id: string) =>
     setMobileAccordion((prev) => ({ ...prev, [id]: !prev[id] }));
   const handleHeaderNavClick = (href: string) => {
+    if (href === "/parent-email-risk-checker") {
+      trackCtaClick({
+        ctaText: riskCheckerLabel,
+        ctaLocation: "header_nav_checker",
+      });
+    }
     if (href === "/pricing") {
       trackCtaClick({
         ctaText: t("nav.pricing"),
@@ -194,6 +204,11 @@ export function Header() {
   ];
 
   const mobileSections = [
+    {
+      id: "checker",
+      title: riskCheckerLabel,
+      href: "/parent-email-risk-checker",
+    },
     { id: "pricing", title: t("nav.pricing"), href: "/pricing" },
     { id: "products", title: t("nav.products"), children: productsMenuItems },
     {
@@ -607,7 +622,15 @@ export function Header() {
                       <Link
                         key={section.id}
                         href={section.href || "#"}
-                        onClick={() => setMobileMenuOpen(false)}
+                        onClick={() => {
+                          if (section.href === "/parent-email-risk-checker") {
+                            trackCtaClick({
+                              ctaText: riskCheckerLabel,
+                              ctaLocation: "header_mobile_checker",
+                            });
+                          }
+                          setMobileMenuOpen(false);
+                        }}
                         className="block rounded-xl px-4 py-3 text-base font-medium text-gray-300 transition-colors hover:bg-white/10 hover:text-white"
                       >
                         {section.title}

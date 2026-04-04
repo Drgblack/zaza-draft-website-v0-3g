@@ -275,6 +275,14 @@ export function HomePageClient() {
     language === "de"
       ? "Schreibe jeden Monat bis zu 10 Nachrichten kostenlos. Keine Kreditkarte erforderlich."
       : "Write up to 10 messages free each month. No credit card required.";
+  const heroCheckerLabel =
+    language === "de"
+      ? "Kostenlosen Risiko-Check fuer Elternmails testen"
+      : "Try the free Parent Email Risk Checker";
+  const heroCheckerSupport =
+    language === "de"
+      ? "Pruefe, ob eine Elternmail zu direkt, defensiv oder eskalationsanfaellig wirken koennte, und erhalte vor dem Senden eine ruhigere Version."
+      : "Check whether a parent email may sound too blunt, defensive, or likely to escalate, and get a safer version before you send it.";
   const heroTeacherUsageLine =
     language === "de"
       ? "Entwickelt fuer Lehrkraefte, die E-Mails an Eltern, Zeugnisformulierungen und andere sensible Schulkommunikation schreiben."
@@ -475,6 +483,34 @@ export function HomePageClient() {
                   {t("hero.ctaSecondary")}
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
+              </motion.div>
+              <motion.div
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.42, ease: "easeOut" }}
+                className="max-w-[680px] mx-auto lg:mx-0"
+              >
+                <Link
+                  href="/parent-email-risk-checker"
+                  onClick={() => {
+                    trackCtaClick({
+                      ctaText: heroCheckerLabel,
+                      ctaLocation: "home_hero_checker",
+                    });
+                    track("checker_link_clicked", {
+                      source: "home_hero",
+                      language,
+                    });
+                  }}
+                  className="block rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-left transition-colors hover:bg-white/[0.07]"
+                >
+                  <p className="text-base font-semibold text-white">
+                    {heroCheckerLabel}
+                  </p>
+                  <p className="mt-1 text-sm leading-6 text-[#CBD5E1]">
+                    {heroCheckerSupport}
+                  </p>
+                </Link>
               </motion.div>
               <motion.p
                 initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}

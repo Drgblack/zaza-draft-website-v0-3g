@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import type { FunnelCopy } from "../content";
 
@@ -5,12 +6,14 @@ const teacherHero = "/lovable-funnel/teacher-hero.jpg";
 
 type HeroSectionProps = {
   onPrimaryAction: () => void;
+  onSecondaryLinkClick?: () => void;
   primaryCtaLabel: string;
   copy: FunnelCopy["hero"];
 };
 
 const HeroSection = ({
   onPrimaryAction,
+  onSecondaryLinkClick,
   primaryCtaLabel,
   copy,
 }: HeroSectionProps) => {
@@ -73,6 +76,16 @@ const HeroSection = ({
             <p className="text-center text-sm text-calm-500 lg:text-left">
               {copy.reassurance}
             </p>
+            {copy.secondaryLinkLabel && copy.secondaryLinkSupport ? (
+              <Link
+                href="/parent-email-risk-checker"
+                onClick={onSecondaryLinkClick}
+                className="inline-flex flex-wrap items-center gap-1 text-sm font-medium text-calm-600 underline-offset-4 hover:text-calm-800 hover:underline"
+              >
+                <span>{copy.secondaryLinkLabel}</span>
+                <span>{copy.secondaryLinkSupport}</span>
+              </Link>
+            ) : null}
           </div>
 
           <div
