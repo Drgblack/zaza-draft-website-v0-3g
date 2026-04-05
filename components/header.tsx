@@ -44,7 +44,7 @@ export function Header() {
     locales: isGermanFunnel ? ["de-DE"] : undefined,
   });
   const L = (de: string, en: string) => (language === "de" ? de : en);
-  const riskCheckerLabel = L("Free Risk Checker", "Free Risk Checker");
+  const riskCheckerLabel = L("Kostenloser Risiko-Check", "Free Risk Checker");
   const headerCtaHref = getDraftPricingHref(language);
   const headerCtaLabel = t("nav.getStarted");
   const foundingToggleLinks = {
@@ -214,7 +214,7 @@ export function Header() {
     {
       id: "checker",
       title: riskCheckerLabel,
-      href: "/parent-email-risk-checker",
+      href: riskCheckerHref,
     },
     { id: "pricing", title: t("nav.pricing"), href: "/pricing" },
     { id: "products", title: t("nav.products"), children: productsMenuItems },

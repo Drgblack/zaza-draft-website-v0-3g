@@ -17,32 +17,14 @@ import type {
   ParentEmailRiskIssue,
   ParentEmailRiskResult,
 } from "@/lib/parent-email-risk/analyze";
+import {
+  CHECKER_COPY,
+  type CheckerCopy,
+  type CheckerLocale,
+  type DisplayRiskLevel,
+} from "@/app/parent-email-risk-checker/copy";
 
 const MIN_WORDS = 10;
-const TEXTAREA_PLACEHOLDER = "Paste your parent email draft here…";
-const CHECKER_EMPTY_STATE = "Paste a message to check before sending";
-const SHORT_INPUT_GUARD =
-  "Add a bit more detail so we can assess the tone properly";
-const LOADING_COPY = "Checking your message…";
-const SHARE_TITLE = "Check a parent email before you send it";
-const SHARE_TEXT =
-  "This free tool checks whether a parent email may sound too blunt, defensive, or likely to escalate.";
-const REWRITE_TRUST_LINE =
-  "Designed to reduce defensiveness while keeping your message clear.";
-const PAUSE_LINE =
-  "This is the kind of message that often gets rewritten 3 or 4 times before sending.";
-
-const DEMO_DRAFT = `Hi Mrs Khan,
-
-I need to be direct. This is the third time this week that your daughter has ignored instructions and it is becoming difficult for the class.
-
-You need to speak to her tonight because if this carries on we will have to take this further.
-
-Regards,
-Ms Reed`;
-
-type DisplayRiskLevel = "low" | "medium" | "high";
-type CheckerLocale = "en" | "de";
 
 type RiskToneConfig = {
   label: string;
@@ -73,102 +55,71 @@ function buildStartHref(
   return `${locale === "de" ? "/de/start" : "/start"}?${params.toString()}`;
 }
 
-function getRiskToneConfig(level: DisplayRiskLevel | null): RiskToneConfig {
+function getRiskToneConfig(
+  level: DisplayRiskLevel | null,
+  copy: CheckerCopy,
+): RiskToneConfig {
   if (level === "high") {
     return {
-      label: "High risk",
+      label: copy.riskLabels.high,
       badgeClasses: "border-rose-200 bg-rose-50 text-rose-700",
       surfaceClasses:
         "border-rose-200 bg-gradient-to-br from-rose-50 via-white to-rose-50/70",
       scoreClasses: "text-rose-800",
       progressClasses: "from-rose-500 to-rose-400",
-      indicatorLabel: "Red risk status",
+      indicatorLabel: copy.indicatorLabels.high,
     };
   }
 
   if (level === "medium") {
     return {
-      label: "Medium risk",
+      label: copy.riskLabels.medium,
       badgeClasses: "border-amber-200 bg-amber-50 text-amber-700",
       surfaceClasses:
         "border-amber-200 bg-gradient-to-br from-amber-50 via-white to-amber-50/70",
       scoreClasses: "text-amber-800",
       progressClasses: "from-amber-500 to-amber-400",
-      indicatorLabel: "Amber risk status",
+      indicatorLabel: copy.indicatorLabels.medium,
     };
   }
 
   if (level === "low") {
     return {
-      label: "Low risk",
+      label: copy.riskLabels.low,
       badgeClasses: "border-emerald-200 bg-emerald-50 text-emerald-700",
       surfaceClasses:
         "border-emerald-200 bg-gradient-to-br from-emerald-50 via-white to-emerald-50/70",
       scoreClasses: "text-emerald-800",
       progressClasses: "from-emerald-500 to-emerald-400",
-      indicatorLabel: "Green risk status",
+      indicatorLabel: copy.indicatorLabels.low,
     };
   }
 
   return {
-    label: "Risk check",
+    label: copy.riskLevelLabel,
     badgeClasses: "border-slate-200 bg-slate-50 text-slate-700",
     surfaceClasses:
       "border-slate-200 bg-gradient-to-br from-slate-50 via-white to-slate-100/70",
     scoreClasses: "text-slate-800",
     progressClasses: "from-slate-400 to-slate-300",
-    indicatorLabel: "Risk status",
+    indicatorLabel: copy.riskLevelLabel,
   };
 }
 
-function getReinforcementCopy(level: DisplayRiskLevel) {
-  if (level === "high") {
-    return "This is likely to trigger defensiveness or escalate the situation.";
-  }
-
-  if (level === "medium") {
-    return "This could easily be misread depending on the parent.";
-  }
-
-  return "This looks clear and professional. Minor tweaks only.";
+function getReinforcementCopy(level: DisplayRiskLevel, copy: CheckerCopy) {
+  return copy.reinforcement[level];
 }
 
-function getRiskHelperText() {
-  return "This score reflects tone risk, escalation risk, and how the wording may land with a parent.";
+function getRiskHelperText(copy: CheckerCopy) {
+  return copy.riskHelperText;
 }
 
-function mapIssueToWarning(issue: ParentEmailRiskIssue) {
-  if (
-    issue.category === "accusation" ||
-    issue.category === "negative_generalisation"
-  ) {
-    return "May sound accusatory";
-  }
-
-  if (issue.category === "frustration") {
-    return "Could be read as defensive";
-  }
-
-  if (
-    issue.category === "escalation" ||
-    issue.category === "professional_risk"
-  ) {
-    return "May escalate tension";
-  }
-
-  if (issue.category === "emotional_coldness") {
-    return "May feel harsher than intended";
-  }
-
-  if (issue.category === "prescriptive_demand") {
-    return "Leaves little room for collaboration";
-  }
-
-  return issue.label;
+function mapIssueToWarning(issue: ParentEmailRiskIssue, copy: CheckerCopy) {
+  return copy.issueWarnings[issue.category] ?? issue.label;
 }
 
-function buildIssueWarnings(issues: ParentEmailRiskIssue[]) {
-  const warnings = issues.map(mapIssueToWarning);
+function buildIssueWarnings(issues: ParentEmailRiskIssue[], copy: CheckerCopy) {
+  const warnings = issues.map((issue) => mapIssueToWarning(issue, copy));
   const uniqueWarnings = [...new Set(warnings)];
 
   return uniqueWarnings.slice(0, 4);
@@ -179,7 +130,8 @@ export default function ParentEmailRiskCheckerClient({
 }: {
   locale?: CheckerLocale;
 }) {
-  const [draft, setDraft] = useState(DEMO_DRAFT);
+  const copy = CHECKER_COPY[locale];
+  const [draft, setDraft] = useState(copy.demoDraft);
   const [result, setResult] = useState<ParentEmailRiskResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -194,8 +146,9 @@ export default function ParentEmailRiskCheckerClient({
   useEffect(() => {
     track("parent_email_risk_checker_viewed", {
       page: "parent_email_risk_checker",
+      locale,
     });
-  }, []);
+  }, [locale]);
 
   useEffect(() => {
     if (!result) {
@@ -206,8 +159,9 @@ export default function ParentEmailRiskCheckerClient({
       risk_score: result.riskScore,
       risk_level: result.riskLevel,
       issues_count: result.issuesDetected.length,
+      locale,
     });
-  }, [result]);
+  }, [locale, result]);
 
   useEffect(() => {
     return () => {
@@ -221,8 +175,10 @@ export default function ParentEmailRiskCheckerClient({
     () => buildStartHref(result, locale),
     [locale, result],
   );
-  const issueWarnings = result ? buildIssueWarnings(result.issuesDetected) : [];
-  const riskTone = getRiskToneConfig(result?.riskLevel ?? null);
+  const issueWarnings = result
+    ? buildIssueWarnings(result.issuesDetected, copy)
+    : [];
+  const riskTone = getRiskToneConfig(result?.riskLevel ?? null, copy);
   const shareUrl = useMemo(() => {
     if (typeof window === "undefined") {
       return locale === "de"
@@ -265,13 +221,13 @@ export default function ParentEmailRiskCheckerClient({
     const normalizedDraft = draft.trim();
     if (!normalizedDraft) {
       setResult(null);
-      setError(CHECKER_EMPTY_STATE);
+      setError(copy.emptyState);
       return;
     }
 
     if (countWords(normalizedDraft) < MIN_WORDS) {
       setResult(null);
-      setError(SHORT_INPUT_GUARD);
+      setError(copy.shortInputGuard);
       return;
     }
 
@@ -281,6 +237,7 @@ export default function ParentEmailRiskCheckerClient({
     track("parent_email_risk_checker_submitted", {
       characters: normalizedDraft.length,
       words: countWords(normalizedDraft),
+      locale,
     });
 
     try {
@@ -298,17 +255,14 @@ export default function ParentEmailRiskCheckerClient({
 
       if (!response.ok || !("riskScore" in payload)) {
         setResult(null);
-        setError(
-          (payload as { error?: string }).error ||
-            "The checker could not process that draft just now.",
-        );
+        setError((payload as { error?: string }).error || copy.processingError);
         return;
       }
 
       setResult(payload);
     } catch {
       setResult(null);
-      setError("The checker could not process that draft just now.");
+      setError(copy.processingError);
     } finally {
       setLoading(false);
     }
@@ -318,8 +272,8 @@ export default function ParentEmailRiskCheckerClient({
     trackCtaClick({
       ctaText:
         location === "parent_email_risk_checker_bottom"
-          ? "Start using Zaza Draft"
-          : "Rewrite this safely in Zaza Draft",
+          ? copy.bottomCtaButton
+          : copy.resultCtaButton,
       ctaLocation: location,
     });
     track("parent_email_risk_checker_cta_clicked", {
@@ -333,6 +287,7 @@ export default function ParentEmailRiskCheckerClient({
       risk_level: result?.riskLevel,
       issues_count: result?.issuesDetected.length,
       location,
+      locale,
     });
   };
 
@@ -344,13 +299,14 @@ export default function ParentEmailRiskCheckerClient({
     track("parent_email_risk_checker_copy_safer_version_clicked", {
       risk_score: result.riskScore,
       risk_level: result.riskLevel,
+      locale,
     });
 
     try {
       await navigator.clipboard.writeText(result.saferVersion);
-      flashFeedback("rewrite", "Safer version copied.");
+      flashFeedback("rewrite", copy.copiedRewriteMessage);
     } catch {
-      setLiveMessage("The safer version could not be copied just now.");
+      setLiveMessage(copy.copiedRewriteError);
     }
   };
 
@@ -366,15 +322,16 @@ export default function ParentEmailRiskCheckerClient({
       method: "web_share",
       risk_score: result?.riskScore,
       risk_level: result?.riskLevel,
+      locale,
     });
 
     try {
       await navigator.share({
-        title: SHARE_TITLE,
-        text: SHARE_TEXT,
+        title: copy.shareTitle,
+        text: copy.shareText,
         url: shareUrl,
       });
-      flashFeedback("shared", "Checker shared.");
+      flashFeedback("shared", copy.sharedMessage);
     } catch {
       // User cancellation is a valid no-op here.
     }
@@ -384,13 +341,14 @@ export default function ParentEmailRiskCheckerClient({
     track("parent_email_risk_checker_copy_link_clicked", {
       risk_score: result?.riskScore,
       risk_level: result?.riskLevel,
+      locale,
     });
 
     try {
       await navigator.clipboard.writeText(shareUrl);
-      flashFeedback("link", "Checker link copied.");
+      flashFeedback("link", copy.copiedLinkMessage);
     } catch {
-      setLiveMessage("The checker link could not be copied just now.");
+      setLiveMessage(copy.copiedLinkError);
     }
   };
 
@@ -398,6 +356,7 @@ export default function ParentEmailRiskCheckerClient({
     track("parent_email_risk_checker_try_another_clicked", {
       risk_score: result?.riskScore,
       risk_level: result?.riskLevel,
+      locale,
     });
     setDraft("");
     setResult(null);
@@ -414,13 +373,12 @@ export default function ParentEmailRiskCheckerClient({
         <div className="mx-auto max-w-6xl">
           <div className="max-w-4xl">
             <h1 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl lg:text-6xl">
-              Check a parent email before you send it
+              {copy.pageTitle}
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700 md:text-xl">
-              Paste your draft and see if it could sound too blunt, defensive,
-              or likely to escalate.
+              {copy.introTop}
               <br />
-              Get a safer version in seconds - one that still sounds like you.
+              {copy.introBottom}
             </p>
           </div>
         </div>
@@ -431,25 +389,23 @@ export default function ParentEmailRiskCheckerClient({
           <Card className="rounded-[2rem] border-white/70 bg-white/92 shadow-[0_24px_90px_-50px_rgba(15,23,42,0.35)]">
             <CardHeader className="space-y-4">
               <CardTitle className="text-2xl text-slate-950">
-                Most parent email problems aren’t about what you say - but how
-                it’s read.
+                {copy.hookTitle}
               </CardTitle>
               <CardDescription className="text-base leading-7 text-slate-600">
-                Check the draft that feels a bit too sharp, too exposed, or too
-                easy to misunderstand.
+                {copy.hookBody}
               </CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-5">
                 <label className="block">
-                  <span className="sr-only">Parent email draft</span>
+                  <span className="sr-only">{copy.textareaAriaLabel}</span>
                   <Textarea
                     ref={textareaRef}
                     value={draft}
                     onChange={(event) => setDraft(event.target.value)}
-                    placeholder={TEXTAREA_PLACEHOLDER}
+                    placeholder={copy.textareaPlaceholder}
                     className="min-h-[320px] rounded-[1.5rem] border-slate-200 bg-[#fcfbf8] px-5 py-4 text-base leading-7 text-slate-900 placeholder:text-slate-400"
-                    aria-label="Parent email draft"
+                    aria-label={copy.textareaAriaLabel}
                   />
                 </label>
 
@@ -459,11 +415,10 @@ export default function ParentEmailRiskCheckerClient({
                     disabled={loading}
                     className="btn-primary h-auto w-full rounded-2xl px-6 py-4 text-base font-semibold sm:w-auto"
                   >
-                    {loading ? LOADING_COPY : "Check this email"}
+                    {loading ? copy.loadingCopy : copy.submitButton}
                   </Button>
                   <p className="text-sm leading-6 text-slate-500">
-                    Built for real teacher-parent communication - not generic AI
-                    writing.
+                    {copy.trustLine}
                   </p>
                 </div>
 
@@ -482,14 +437,14 @@ export default function ParentEmailRiskCheckerClient({
           <Card className="rounded-[2rem] border-white/70 bg-white/92 shadow-[0_24px_90px_-50px_rgba(15,23,42,0.35)]">
             <CardHeader className="space-y-4">
               <CardTitle className="text-2xl text-slate-950">
-                {result ? "Your result" : "Your result will appear here"}
+                {result ? copy.resultTitle : copy.resultPlaceholderTitle}
               </CardTitle>
               <CardDescription className="text-base leading-7 text-slate-600">
                 {result
-                  ? getReinforcementCopy(result.riskLevel)
+                  ? getReinforcementCopy(result.riskLevel, copy)
                   : hasSubmitted && !loading && !error
-                    ? CHECKER_EMPTY_STATE
-                    : "Paste a message to check before sending"}
+                    ? copy.emptyState
+                    : copy.emptyState}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -508,7 +463,7 @@ export default function ParentEmailRiskCheckerClient({
                             {riskTone.label}
                           </span>
                           <span className="text-sm font-medium text-slate-500">
-                            Risk level
+                            {copy.riskLevelLabel}
                           </span>
                         </div>
                         <p
@@ -517,13 +472,13 @@ export default function ParentEmailRiskCheckerClient({
                           {riskTone.label}
                         </p>
                         <p className="max-w-2xl text-sm leading-6 text-slate-700">
-                          {getRiskHelperText()}
+                          {getRiskHelperText(copy)}
                         </p>
                       </div>
 
                       <div className="rounded-[1.25rem] border border-white/80 bg-white/80 px-4 py-4 text-left shadow-sm md:min-w-[160px] md:text-right">
                         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
-                          Score
+                          {copy.scoreLabel}
                         </p>
                         <p className="mt-2 text-2xl font-bold text-slate-950">
                           {result.riskScore} / 100
@@ -533,8 +488,8 @@ export default function ParentEmailRiskCheckerClient({
 
                     <div className="mt-5">
                       <div className="flex items-center justify-between text-xs font-medium uppercase tracking-[0.18em] text-slate-500">
-                        <span>Lower risk</span>
-                        <span>Higher risk</span>
+                        <span>{copy.lowerRisk}</span>
+                        <span>{copy.higherRisk}</span>
                       </div>
                       <div
                         className="mt-2 h-3 overflow-hidden rounded-full bg-white/80"
@@ -554,7 +509,7 @@ export default function ParentEmailRiskCheckerClient({
 
                   <div>
                     <h2 className="text-lg font-semibold text-slate-950">
-                      What could go wrong
+                      {copy.issuesTitle}
                     </h2>
                     <ul className="mt-4 space-y-3">
                       {issueWarnings.length > 0 ? (
@@ -568,7 +523,7 @@ export default function ParentEmailRiskCheckerClient({
                         ))
                       ) : (
                         <li className="rounded-[1.25rem] border border-emerald-200 bg-emerald-50 px-4 py-4 text-sm leading-6 text-emerald-800">
-                          No major language risks detected.
+                          {copy.noMajorRisks}
                         </li>
                       )}
                     </ul>
@@ -576,10 +531,10 @@ export default function ParentEmailRiskCheckerClient({
 
                   <div>
                     <h2 className="text-lg font-semibold text-slate-950">
-                      A calmer, safer version
+                      {copy.saferVersionTitle}
                     </h2>
                     <p className="mt-3 text-sm leading-6 text-slate-600">
-                      Same message - but less likely to escalate.
+                      {copy.saferVersionIntro}
                     </p>
                     <div className="mt-4 rounded-[1.6rem] border border-fuchsia-100 bg-gradient-to-br from-fuchsia-50 via-white to-violet-50 px-5 py-5">
                       <p className="whitespace-pre-wrap text-base leading-7 text-slate-800">
@@ -588,7 +543,7 @@ export default function ParentEmailRiskCheckerClient({
                     </div>
                     <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                       <p className="text-sm leading-6 text-slate-500">
-                        {REWRITE_TRUST_LINE}
+                        {copy.rewriteTrustLine}
                       </p>
                       <Button
                         type="button"
@@ -599,12 +554,12 @@ export default function ParentEmailRiskCheckerClient({
                         {copiedRewrite ? (
                           <>
                             <Check className="mr-2 h-4 w-4" />
-                            Copied
+                            {copy.copied}
                           </>
                         ) : (
                           <>
                             <Copy className="mr-2 h-4 w-4" />
-                            Copy safer version
+                            {copy.copySaferVersion}
                           </>
                         )}
                       </Button>
@@ -613,14 +568,13 @@ export default function ParentEmailRiskCheckerClient({
 
                   <div className="rounded-[1.8rem] border border-slate-200 bg-slate-950 px-6 py-6 text-white shadow-[0_24px_90px_-50px_rgba(15,23,42,0.45)]">
                     <p className="text-sm leading-6 text-slate-300">
-                      {PAUSE_LINE}
+                      {copy.pauseLine}
                     </p>
                     <h2 className="mt-3 text-2xl font-semibold">
-                      This is what Zaza Draft does - every time you write
+                      {copy.resultCtaTitle}
                     </h2>
                     <p className="mt-3 max-w-2xl text-base leading-7 text-slate-300">
-                      Turn difficult parent messages into something clear, calm,
-                      and professional - without losing your voice.
+                      {copy.resultCtaBody}
                     </p>
                     <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                       <Button
@@ -633,7 +587,7 @@ export default function ParentEmailRiskCheckerClient({
                             handleStartClick("parent_email_risk_checker_result")
                           }
                         >
-                          Rewrite this safely in Zaza Draft
+                          {copy.resultCtaButton}
                         </Link>
                       </Button>
                       <Button
@@ -642,13 +596,13 @@ export default function ParentEmailRiskCheckerClient({
                         onClick={handleReset}
                         className="h-auto justify-start rounded-2xl px-4 py-4 text-base font-medium text-slate-200 hover:bg-white/10 hover:text-white"
                       >
-                        Try another email
+                        {copy.tryAnother}
                       </Button>
                     </div>
 
                     <div className="mt-6 border-t border-white/10 pt-5">
                       <p className="text-sm leading-6 text-slate-300">
-                        Useful? Share the checker with another teacher.
+                        {copy.shareHeading}
                       </p>
                       <div className="mt-3 flex flex-wrap gap-3">
                         {typeof navigator !== "undefined" &&
@@ -662,12 +616,12 @@ export default function ParentEmailRiskCheckerClient({
                             {shared ? (
                               <>
                                 <Check className="mr-2 h-4 w-4" />
-                                Shared
+                                {copy.sharedButton}
                               </>
                             ) : (
                               <>
                                 <Share2 className="mr-2 h-4 w-4" />
-                                Share
+                                {copy.shareButton}
                               </>
                             )}
                           </Button>
@@ -681,12 +635,12 @@ export default function ParentEmailRiskCheckerClient({
                           {copiedLink ? (
                             <>
                               <Check className="mr-2 h-4 w-4" />
-                              Link copied
+                              {copy.linkCopied}
                             </>
                           ) : (
                             <>
                               <Link2 className="mr-2 h-4 w-4" />
-                              Copy link
+                              {copy.copyLink}
                             </>
                           )}
                         </Button>
@@ -704,22 +658,20 @@ export default function ParentEmailRiskCheckerClient({
                       />
                       <div className="space-y-2">
                         <p className="text-base font-medium leading-7 text-slate-700">
-                          {LOADING_COPY}
+                          {copy.loadingCopy}
                         </p>
                         <p className="text-sm leading-6 text-slate-500">
-                          Looking for tone risk, escalation triggers, and how
-                          the message may land.
+                          {copy.loadingBody}
                         </p>
                       </div>
                     </div>
                   ) : (
                     <div className="space-y-2">
                       <p className="text-base font-medium leading-7 text-slate-700">
-                        {hasSubmitted && error ? error : CHECKER_EMPTY_STATE}
+                        {hasSubmitted && error ? error : copy.emptyState}
                       </p>
                       <p className="text-sm leading-6 text-slate-500">
-                        Your score, risk level, issues, and safer version will
-                        appear here.
+                        {copy.resultPlaceholderBody}
                       </p>
                     </div>
                   )}
@@ -733,17 +685,13 @@ export default function ParentEmailRiskCheckerClient({
       <section className="px-4 pb-12">
         <div className="mx-auto max-w-5xl rounded-[2rem] border border-white/70 bg-white/80 px-6 py-8 shadow-[0_24px_90px_-55px_rgba(15,23,42,0.28)] md:px-8 md:py-10">
           <h2 className="text-2xl font-semibold text-slate-950 md:text-3xl">
-            If you’ve ever rewritten a parent email 3 times before sending…
+            {copy.relatabilityTitle}
           </h2>
           <p className="mt-4 text-lg font-medium text-slate-800">
-            You’re not alone.
+            {copy.relatabilityIntro}
           </p>
           <div className="mt-6 grid gap-3 md:grid-cols-3">
-            {[
-              "late-night emails that need a reply by morning",
-              "messages that could easily be misunderstood",
-              "pressure to stay professional, even when frustrated",
-            ].map((line) => (
+            {copy.relatabilityBullets.map((line) => (
               <div
                 key={line}
                 className="rounded-[1.4rem] border border-slate-200 bg-slate-50 px-4 py-4 text-sm leading-6 text-slate-700"
@@ -753,8 +701,7 @@ export default function ParentEmailRiskCheckerClient({
             ))}
           </div>
           <p className="mt-6 text-base leading-7 text-slate-700">
-            Zaza Draft helps you pause, reframe, and send something you won’t
-            regret tomorrow.
+            {copy.relatabilityClosing}
           </p>
         </div>
       </section>
@@ -762,23 +709,24 @@ export default function ParentEmailRiskCheckerClient({
       <section className="px-4 pb-12">
         <div className="mx-auto max-w-5xl rounded-[2rem] border border-white/70 bg-white/84 px-6 py-8 shadow-[0_24px_90px_-55px_rgba(15,23,42,0.28)] md:px-8 md:py-10">
           <h2 className="text-2xl font-semibold text-slate-950 md:text-3xl">
-            How this works
+            {copy.howItWorksTitle}
           </h2>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {[
-              "Paste your draft",
-              "We check for tone, risk signals, and escalation triggers",
-              "You get a safer version you can actually send",
-            ].map((step, index) => (
+            {copy.howItWorksSteps.map((step, index) => (
               <div
-                key={step}
+                key={step.title}
                 className="rounded-[1.4rem] border border-slate-200 bg-slate-50 px-4 py-5"
               >
                 <p className="text-sm font-semibold uppercase tracking-[0.24em] text-fuchsia-700">
-                  Step {index + 1}
+                  {locale === "de"
+                    ? `Schritt ${index + 1}`
+                    : `Step ${index + 1}`}
                 </p>
-                <p className="mt-3 text-base leading-7 text-slate-800">
-                  {step}
+                <p className="mt-3 text-base font-semibold leading-7 text-slate-800">
+                  {step.title}
+                </p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  {step.body}
                 </p>
               </div>
             ))}
@@ -789,16 +737,12 @@ export default function ParentEmailRiskCheckerClient({
       <section className="px-4 pb-12">
         <div className="mx-auto max-w-5xl rounded-[2rem] border border-white/70 bg-white/84 px-6 py-8 shadow-[0_24px_90px_-55px_rgba(15,23,42,0.28)] md:px-8 md:py-10">
           <h2 className="text-2xl font-semibold text-slate-950 md:text-3xl">
-            Not a writing tool. A safety layer.
+            {copy.positioningTitle}
           </h2>
           <div className="mt-5 space-y-4 text-base leading-7 text-slate-700">
-            <p>Zaza Draft isn’t here to replace your voice.</p>
+            <p>{copy.positioningIntro}</p>
             <div className="grid gap-3 md:grid-cols-3">
-              {[
-                "avoid misunderstandings",
-                "reduce escalation",
-                "communicate clearly under pressure",
-              ].map((line) => (
+              {copy.positioningBullets.map((line) => (
                 <div
                   key={line}
                   className="rounded-[1.4rem] border border-slate-200 bg-slate-50 px-4 py-4 text-sm leading-6 text-slate-700"
@@ -807,7 +751,7 @@ export default function ParentEmailRiskCheckerClient({
                 </div>
               ))}
             </div>
-            <p>Especially in the messages that matter most.</p>
+            <p>{copy.positioningClosing}</p>
           </div>
         </div>
       </section>
@@ -815,7 +759,7 @@ export default function ParentEmailRiskCheckerClient({
       <section className="px-4 pb-20">
         <div className="mx-auto max-w-5xl rounded-[2rem] bg-slate-950 px-6 py-10 text-white shadow-[0_28px_90px_-50px_rgba(15,23,42,0.6)] md:px-8">
           <h2 className="text-3xl font-semibold md:text-4xl">
-            Write the message you won’t regret tomorrow
+            {copy.bottomCtaTitle}
           </h2>
           <div className="mt-6">
             <Button
@@ -830,7 +774,7 @@ export default function ParentEmailRiskCheckerClient({
                   handleStartClick("parent_email_risk_checker_bottom")
                 }
               >
-                Start using Zaza Draft
+                {copy.bottomCtaButton}
               </Link>
             </Button>
           </div>

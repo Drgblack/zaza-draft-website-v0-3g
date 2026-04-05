@@ -26,7 +26,7 @@ export default function Footer() {
   const footerContent = getFooterContent(locale);
   const startNowLabel = isDE ? "Jetzt starten" : "Start now";
   const riskCheckerLabel = isDE
-    ? "Kostenloser Risiko-Check fuer Elternmails"
+    ? "Kostenloser Risiko-Check für Elternmails"
     : "Free Parent Email Risk Checker";
 
   const productLinks = [

@@ -4,9 +4,9 @@ import ParentEmailRiskCheckerClient from "@/app/parent-email-risk-checker/parent
 import { siteConfig } from "@/lib/seo/site-config";
 
 export const metadata: Metadata = {
-  title: "Elternmail-Risiko-Check fuer Lehrkraefte | Zaza Draft",
+  title: "Elternmail-Risiko-Check für Lehrkräfte | Zaza Draft",
   description:
-    "Fuege den Entwurf einer Elternmail ein und pruefe das Tonrisiko, bevor du sie sendest. Du bekommst einen Risiko-Score, erkannte Probleme und eine ruhigere Version fuer Lehrkraefte.",
+    "Füge den Entwurf einer Elternmail ein und prüfe das Tonrisiko, bevor du sie sendest. Du bekommst einen Risiko-Score, erkannte Probleme und eine ruhigere Version für Lehrkräfte.",
   alternates: {
     canonical: `${siteConfig.url}/de/parent-email-risk-checker`,
     languages: {
