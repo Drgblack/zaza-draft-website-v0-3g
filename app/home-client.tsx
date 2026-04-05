@@ -491,7 +491,11 @@ export function HomePageClient() {
                 className="max-w-[680px] mx-auto lg:mx-0"
               >
                 <Link
-                  href="/parent-email-risk-checker"
+                  href={
+                    language === "de"
+                      ? "/de/parent-email-risk-checker"
+                      : "/parent-email-risk-checker"
+                  }
                   onClick={() => {
                     trackCtaClick({
                       ctaText: heroCheckerLabel,

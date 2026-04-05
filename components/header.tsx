@@ -31,6 +31,10 @@ export function Header() {
   });
   const pathname = usePathname();
   const { language, setLanguage, t } = useLanguage();
+  const riskCheckerHref =
+    pathname?.startsWith("/de") || language === "de"
+      ? "/de/parent-email-risk-checker"
+      : "/parent-email-risk-checker";
   const isGermanFunnel = pathname === "/de/start";
   const isStartFunnel = pathname === "/start" || isGermanFunnel;
   const isGermanFoundingFunnel = pathname === "/de/founding";
@@ -91,13 +95,16 @@ export function Header() {
   }, [isAnyFunnel, mobileMenuOpen]);
 
   const navigation = [
-    { name: riskCheckerLabel, href: "/parent-email-risk-checker" },
+    { name: riskCheckerLabel, href: riskCheckerHref },
     { name: t("nav.pricing"), href: "/pricing" },
   ];
   const toggleMobileAccordion = (id: string) =>
     setMobileAccordion((prev) => ({ ...prev, [id]: !prev[id] }));
   const handleHeaderNavClick = (href: string) => {
-    if (href === "/parent-email-risk-checker") {
+    if (
+      href === "/parent-email-risk-checker" ||
+      href === "/de/parent-email-risk-checker"
+    ) {
       trackCtaClick({
         ctaText: riskCheckerLabel,
         ctaLocation: "header_nav_checker",

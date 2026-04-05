@@ -9,6 +9,7 @@ type HeroSectionProps = {
   onSecondaryLinkClick?: () => void;
   primaryCtaLabel: string;
   copy: FunnelCopy["hero"];
+  locale?: "en" | "de";
 };
 
 const HeroSection = ({
@@ -16,6 +17,7 @@ const HeroSection = ({
   onSecondaryLinkClick,
   primaryCtaLabel,
   copy,
+  locale = "en",
 }: HeroSectionProps) => {
   const heroImageSrc = copy.imageSrc ?? teacherHero;
 
@@ -78,7 +80,11 @@ const HeroSection = ({
             </p>
             {copy.secondaryLinkLabel && copy.secondaryLinkSupport ? (
               <Link
-                href="/parent-email-risk-checker"
+                href={
+                  locale === "de"
+                    ? "/de/parent-email-risk-checker"
+                    : "/parent-email-risk-checker"
+                }
                 onClick={onSecondaryLinkClick}
                 className="inline-flex flex-wrap items-center gap-1 text-sm font-medium text-calm-600 underline-offset-4 hover:text-calm-800 hover:underline"
               >

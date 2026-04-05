@@ -42,6 +42,7 @@ Regards,
 Ms Reed`;
 
 type DisplayRiskLevel = "low" | "medium" | "high";
+type CheckerLocale = "en" | "de";
 
 type RiskToneConfig = {
   label: string;
@@ -56,7 +57,10 @@ function countWords(value: string) {
   return value.trim().split(/\s+/).filter(Boolean).length;
 }
 
-function buildStartHref(result: ParentEmailRiskResult | null) {
+function buildStartHref(
+  result: ParentEmailRiskResult | null,
+  locale: CheckerLocale,
+) {
   const params = new URLSearchParams({
     src: "risk-checker",
   });
@@ -66,7 +70,7 @@ function buildStartHref(result: ParentEmailRiskResult | null) {
     params.set("score", String(result.riskScore));
   }
 
-  return `/start?${params.toString()}`;
+  return `${locale === "de" ? "/de/start" : "/start"}?${params.toString()}`;
 }
 
 function getRiskToneConfig(level: DisplayRiskLevel | null): RiskToneConfig {
@@ -170,7 +174,11 @@ function buildIssueWarnings(issues: ParentEmailRiskIssue[]) {
   return uniqueWarnings.slice(0, 4);
 }
 
-export default function ParentEmailRiskCheckerClient() {
+export default function ParentEmailRiskCheckerClient({
+  locale = "en",
+}: {
+  locale?: CheckerLocale;
+}) {
   const [draft, setDraft] = useState(DEMO_DRAFT);
   const [result, setResult] = useState<ParentEmailRiskResult | null>(null);
   const [loading, setLoading] = useState(false);
@@ -209,16 +217,25 @@ export default function ParentEmailRiskCheckerClient() {
     };
   }, []);
 
-  const startHref = useMemo(() => buildStartHref(result), [result]);
+  const startHref = useMemo(
+    () => buildStartHref(result, locale),
+    [locale, result],
+  );
   const issueWarnings = result ? buildIssueWarnings(result.issuesDetected) : [];
   const riskTone = getRiskToneConfig(result?.riskLevel ?? null);
   const shareUrl = useMemo(() => {
     if (typeof window === "undefined") {
-      return "/parent-email-risk-checker";
+      return locale === "de"
+        ? "/de/parent-email-risk-checker"
+        : "/parent-email-risk-checker";
     }
 
-    return `${window.location.origin}/parent-email-risk-checker`;
-  }, []);
+    return `${window.location.origin}${
+      locale === "de"
+        ? "/de/parent-email-risk-checker"
+        : "/parent-email-risk-checker"
+    }`;
+  }, [locale]);
 
   const flashFeedback = (
     kind: "rewrite" | "link" | "shared",
@@ -308,7 +325,9 @@ export default function ParentEmailRiskCheckerClient() {
     track("parent_email_risk_checker_cta_clicked", {
       destination:
         location === "parent_email_risk_checker_bottom"
-          ? "/start?src=risk-checker-bottom"
+          ? locale === "de"
+            ? "/de/start?src=risk-checker-bottom"
+            : "/start?src=risk-checker-bottom"
           : startHref,
       risk_score: result?.riskScore,
       risk_level: result?.riskLevel,
@@ -804,7 +823,9 @@ export default function ParentEmailRiskCheckerClient() {
               className="btn-primary h-auto rounded-2xl px-6 py-4 text-base font-semibold"
             >
               <Link
-                href="/start?src=risk-checker-bottom"
+                href={`${
+                  locale === "de" ? "/de/start" : "/start"
+                }?src=risk-checker-bottom`}
                 onClick={() =>
                   handleStartClick("parent_email_risk_checker_bottom")
                 }

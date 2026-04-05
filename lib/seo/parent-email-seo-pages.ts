@@ -13,25 +13,45 @@ export type ParentEmailSeoPage = {
   saferVersion: string;
   keyTakeaway: string[];
   relatedSlugs: string[];
+  sectionLabels?: {
+    whyRisk?: string;
+    riskyReply?: string;
+    saferVersion?: string;
+    keyTakeaway?: string;
+  };
+  calmerStructure?: {
+    heading: string;
+    paragraphs: string[];
+    bullets?: string[];
+  };
+  documentationSection?: {
+    heading: string;
+    paragraphs: string[];
+  };
+  checkerCtaHeading?: string;
+  checkerCtaBody?: string;
+  finalCtaHeading?: string;
+  finalCtaBody?: string;
+  finalCtaLabel?: string;
 };
 
 export const parentEmailSeoPages: ParentEmailSeoPage[] = [
   {
     slug: "how-to-respond-to-an-angry-parent-email",
     seoTitle:
-      "How to Respond to an Angry Parent Email as a Teacher | Zaza Draft",
+      "How to Respond to an Angry Parent Email Calmly and Professionally | Zaza Draft",
     seoDescription:
-      "A teacher-first guide to responding to an angry parent email without sounding defensive or making the exchange worse. Includes a risky example, safer rewrite, and checker CTA.",
-    h1: "How to respond to an angry parent email as a teacher",
+      "A teacher-first guide to replying to an angry parent email without sounding defensive, dismissive, or escalatory. Includes examples and a safer reply structure.",
+    h1: "How to respond to an angry parent email without making it worse",
     opening: [
       "You read the email.",
-      "It is blunt. Frustrated. Possibly unfair.",
+      "It is angry, unfair, or both.",
       "And now you have to reply in a way that protects the relationship, your professionalism, and tomorrow morning.",
     ],
     whyRisk: [
-      "Angry parent emails create pressure fast. The instinct is usually to explain yourself, correct the record, or push back where the message feels unfair.",
-      "That is exactly where tone goes wrong. A reply can be technically accurate and still sound cold, defensive, or sharper than you meant. Once it is in writing, it can also be forwarded, revisited, or shown to senior staff with none of the context in your head when you wrote it.",
-      "Teachers are often trying to do two things at once here: stay calm and protect themselves. That tension can easily leak into the wording.",
+      "These emails feel high-stakes because you are rarely just answering a question. You are replying to frustration, blame, and a message that could be screenshotted, forwarded, or shown to senior staff later.",
+      "The instinct is usually to explain yourself, correct the record, or push back where the email feels unfair. That is exactly where tone starts to slide. A reply can be factually true and still sound cold, defensive, or sharper than you intended.",
+      "Teachers are often trying to stay calm while also protecting themselves professionally. That pressure can easily leak into the wording, especially late in the day or when the parent has already escalated the emotional tone.",
     ],
     riskyReply: `Hi,
 
@@ -41,23 +61,23 @@ If you would like to complain further, that is your choice, but the facts are cl
 
 Ms Reed`,
     backfirePoints: [
-      "It sounds defensive from the first line.",
-      "It frames the parent as the problem rather than the issue itself.",
-      "It hardens the exchange instead of lowering the temperature.",
-      "It leaves very little room for collaboration or a constructive next step.",
+      "It starts by challenging the parent rather than lowering the temperature.",
+      "It sounds defensive, even if parts of it are true.",
+      "It frames the exchange as a dispute to win rather than a situation to stabilise.",
+      "It leaves almost no room for collaboration or a calm next step.",
     ],
     saferVersion: `Hi,
 
-Thank you for getting in touch. I can see that this situation has been frustrating, and I wanted to reply clearly.
+Thank you for getting in touch. I can see that this situation has felt frustrating, and I wanted to reply clearly.
 
-From our side, the concern in school was about what happened during the lesson today and how it affected the class. I appreciate that you may have questions about how it was handled, so I am happy to clarify that.
+From school’s side, the concern was about what happened during the lesson today and how it affected learning in the room. I appreciate that you may have questions about how it was handled, so I am happy to clarify that.
 
-If it would help, we can arrange a short follow-up conversation so we can make sure the next step is calm and constructive for everyone involved.
+If it would help, we can arrange a short follow-up conversation so we can make sure the next step is calm, clear, and constructive for everyone involved.
 
 Kind regards,
 Ms Reed`,
     keyTakeaway: [
-      "With angry parent emails, the biggest risk is not usually the factual point you make. It is the emotional impression your reply leaves behind.",
+      "With angry parent emails, the biggest risk is rarely the factual point you make. It is the emotional impression your reply leaves behind.",
       "Most parent email problems aren’t about what you say - but how it’s read.",
     ],
     relatedSlugs: [
@@ -65,6 +85,39 @@ Ms Reed`,
       "how-to-respond-to-late-night-parent-emails",
       "professional-teacher-email-tone-examples-for-parents",
     ],
+    sectionLabels: {
+      whyRisk: "Why these emails feel so high-stakes",
+      riskyReply: "What teachers should avoid in a first reply",
+      saferVersion: "Example reply",
+      keyTakeaway: "Key takeaway",
+    },
+    calmerStructure: {
+      heading:
+        "A calmer structure that acknowledges, clarifies, and sets next steps",
+      paragraphs: [
+        "A safer first reply usually does three things in order. It acknowledges the concern without arguing with the emotion, clarifies the key facts without over-explaining, and sets one proportionate next step.",
+        "That structure matters because angry emails often tempt teachers into doing the opposite: rebutting every point, sounding wounded, or adding extra detail in the hope that more explanation will settle everything. Usually it does not.",
+      ],
+      bullets: [
+        "Acknowledge the concern briefly so the parent feels heard.",
+        "Clarify only the facts that are necessary for this stage.",
+        "Set the next step clearly so the conversation has somewhere safer to go.",
+      ],
+    },
+    documentationSection: {
+      heading: "When to document instead of over-explaining",
+      paragraphs: [
+        "If the parent is angry, copied others in, or is making broad accusations, it is often better to keep the email measured and documented rather than trying to resolve every point in one long reply.",
+        "A short, calm response that records the concern, clarifies the key context, and proposes the next step is usually safer than a long defence written while you still feel the heat of the message.",
+      ],
+    },
+    checkerCtaHeading: "Check your own parent email before sending",
+    checkerCtaBody:
+      "Paste your draft into the Parent Email Risk Checker and see if it may sound too blunt, defensive, or likely to escalate. You’ll get a safer version in seconds.",
+    finalCtaHeading: "Try Zaza Draft for safer school communication",
+    finalCtaBody:
+      "Zaza Draft helps teachers turn difficult parent messages into something clear, calm, and professional - before they send them.",
+    finalCtaLabel: "Try Zaza Draft",
   },
   {
     slug: "how-to-reply-to-a-complaining-parent-professionally",
@@ -116,6 +169,314 @@ Ms Reed`,
       "what-not-to-say-in-a-parent-email",
       "professional-teacher-email-tone-examples-for-parents",
     ],
+  },
+  {
+    slug: "teacher-response-to-a-parent-complaint",
+    seoTitle:
+      "How Teachers Can Respond to a Parent Complaint Professionally | Zaza Draft",
+    seoDescription:
+      "A calm, teacher-first guide to responding to a parent complaint clearly, professionally, and without escalating the situation.",
+    h1: "How to respond to a parent complaint professionally",
+    opening: [
+      "You open the message and can feel the complaint immediately.",
+      "Maybe it is formal. Maybe it is sharp. Maybe it is polite but loaded.",
+      "Either way, you now need to reply in writing without sounding defensive, distant, or like you are arguing your own case.",
+    ],
+    whyRisk: [
+      "Complaint replies are easy to get wrong because teachers are often trying to do two things at once: explain what happened and protect themselves professionally.",
+      "That can lead to replies that are too long, too legalistic, or too emotionally corrective. Even when the facts are sound, the tone can still feel cold, irritated, or quietly combative.",
+      "Once the message exists in writing, it may be forwarded, revisited, or read by other staff with none of the context you had in your head when you wrote it.",
+    ],
+    riskyReply: `Dear Parent,
+
+I do not agree with the way this has been presented. Appropriate steps were taken at the time and I feel your complaint does not reflect the full context.
+
+I have already spent a considerable amount of time dealing with this issue and I do not think a further breakdown by email is necessary.
+
+Ms Reed`,
+    backfirePoints: [
+      "It sounds defensive from the first sentence.",
+      "It shifts quickly into self-protection instead of resolution.",
+      "It can make the parent feel dismissed rather than answered.",
+      "It increases the chance that the exchange becomes more formal and more tense.",
+    ],
+    saferVersion: `Dear Parent,
+
+Thank you for your email. I wanted to respond clearly because I can see that this issue has caused concern.
+
+From my side, the decision at the time was based on what was happening in school and the information available then. I appreciate that you may want a fuller explanation, so I am happy to clarify the relevant context and the next step from here.
+
+My aim is to keep the communication clear, professional, and focused on resolving the issue constructively.
+
+Kind regards,
+Ms Reed`,
+    keyTakeaway: [
+      "A professional complaint reply is not one that says everything. It is one that says the necessary things clearly, calmly, and in a way that will still hold up later.",
+      "Most parent email problems aren’t about what you say - but how it’s read.",
+    ],
+    relatedSlugs: [
+      "how-to-reply-to-a-complaining-parent-professionally",
+      "how-to-de-escalate-a-parent-complaint-email",
+      "parent-email-threatening-complaint-teacher-response",
+    ],
+    sectionLabels: {
+      whyRisk: "Why complaint replies are easy to get wrong",
+      riskyReply: "What not to send when you are tired or frustrated",
+      saferVersion: "Example wording",
+      keyTakeaway: "Key takeaway",
+    },
+    calmerStructure: {
+      heading: "A safer reply framework",
+      paragraphs: [
+        "A safer complaint reply usually does three things well. It acknowledges the concern without sounding defeated, gives only the clearest facts, and sets one proportionate next step.",
+        "That structure matters because complaint emails often tempt teachers to over-explain. The more frustrated or tired you feel, the easier it is to add lines that protect your position but worsen the tone.",
+      ],
+      bullets: [
+        "Acknowledge the concern without mirroring the emotion.",
+        "State the key facts without writing a long defence.",
+        "Set one calm next step so the exchange can move forward.",
+      ],
+    },
+    documentationSection: {
+      heading: "How to keep the message factual and defensible",
+      paragraphs: [
+        "Stick to what you directly know, what happened in school, and what the next step will be. Avoid guessing at motives, overstating certainty, or trying to answer every criticism in one go.",
+        "If the issue is likely to be reviewed later, a shorter factual email is often safer than a long emotional explanation. You can document the concern, clarify the school context, and still leave space for a follow-up conversation if needed.",
+      ],
+    },
+    finalCtaHeading: "Try Zaza Draft for safer school communication",
+    finalCtaBody:
+      "Zaza Draft helps teachers turn difficult parent complaints into something clearer, calmer, and more professionally defensible before they send it.",
+    finalCtaLabel: "Try Zaza Draft",
+  },
+  {
+    slug: "how-to-write-a-behaviour-incident-email-to-a-parent",
+    seoTitle:
+      "How to Write a Behaviour Incident Email to a Parent | Zaza Draft",
+    seoDescription:
+      "Write a behaviour incident email that stays clear, factual, calm, and professionally appropriate for school communication.",
+    h1: "How to write a calm behaviour incident email to a parent",
+    opening: [
+      "You need to send the behaviour email.",
+      "Something happened in class, the parent needs to know, and the wording matters.",
+      "If it sounds too emotional, too sharp, or too vague, the message can create more tension than the incident itself.",
+    ],
+    whyRisk: [
+      "A behaviour incident email has to do several jobs at once. It needs to explain what happened, show that the issue was taken seriously, and keep the tone steady enough that the parent can hear the message without immediately becoming defensive.",
+      "That is where teachers often get stuck. When you are tired, frustrated, or still carrying the feeling of the incident, it is easy to write something that sounds more irritated than factual.",
+      "Because these emails may be revisited later, the safest version is usually the one that stays clear, proportionate, and professionally calm from start to finish.",
+    ],
+    riskyReply: `Dear Parent,
+
+I am writing because your son was again disruptive in class today and his behaviour was not acceptable. He ignored repeated instructions, interrupted the lesson, and wasted learning time for everyone else.
+
+This is becoming a pattern and it is extremely frustrating. Please speak to him tonight because this cannot keep happening.
+
+Ms Reed`,
+    backfirePoints: [
+      "It leads with judgement rather than a clear account of what happened.",
+      'Words like "again" and "extremely frustrating" add heat to the message.',
+      "It can make the parent feel blamed before any partnership is possible.",
+      "The facts are there, but the tone risks overshadowing them.",
+    ],
+    saferVersion: `Dear Parent,
+
+I wanted to let you know about an incident in class today involving Oliver.
+
+During the lesson, he found it difficult to follow instructions and interrupted the activity several times, despite reminders. This affected the flow of learning and meant I needed to pause to reset expectations.
+
+I am sharing this so that we can support him consistently and help him make a stronger start next lesson. If helpful, I am happy to outline the approach we are using in school so we can stay aligned.
+
+Kind regards,
+Ms Reed`,
+    keyTakeaway: [
+      "A calm behaviour email is not one that hides the problem. It is one that states the facts clearly, removes unnecessary heat, and leaves room for partnership.",
+      "Most parent email problems aren’t about what you say - but how it’s read.",
+    ],
+    relatedSlugs: [
+      "how-to-write-a-behaviour-email-to-parents-without-conflict",
+      "parent-denying-their-childs-behaviour-how-to-respond",
+      "how-to-respond-when-a-parent-blames-you-for-their-childs-behaviour",
+    ],
+    sectionLabels: {
+      whyRisk: "What behaviour emails need to do",
+      riskyReply: "Common tone mistakes",
+      saferVersion: "Example email",
+      keyTakeaway: "Key takeaway",
+    },
+    calmerStructure: {
+      heading: "Factual vs emotional wording",
+      paragraphs: [
+        "The difference is usually not whether you mention the behaviour. It is how much interpretation, frustration, or implied blame gets wrapped around the facts.",
+        "Factual wording describes what happened, what the impact was, and what support or next step follows. Emotional wording often adds judgement, certainty about motives, or language that sounds like a verdict rather than an update.",
+      ],
+      bullets: [
+        "Name the behaviour, not the child's character.",
+        "Describe the classroom impact without exaggerating it.",
+        "Keep the message proportionate to the incident you are reporting.",
+      ],
+    },
+    documentationSection: {
+      heading: "How to keep the door open for partnership",
+      paragraphs: [
+        "Even when the behaviour needs to be addressed clearly, the email is usually stronger if it leaves some space for the parent to work with you rather than react against you.",
+        "That does not mean softening the facts. It means writing in a way that signals shared support, clear expectations, and one practical next step instead of frustration alone.",
+      ],
+    },
+    finalCtaHeading: "Try Zaza Draft",
+    finalCtaBody:
+      "Zaza Draft helps teachers write behaviour emails that stay clear, factual, calm, and professionally appropriate before they send them.",
+    finalCtaLabel: "Try Zaza Draft",
+  },
+  {
+    slug: "how-to-word-a-sensitive-school-concern-email",
+    seoTitle:
+      "How to Word a Sensitive School Concern Email Carefully | Zaza Draft",
+    seoDescription:
+      "A teacher-first guide to wording sensitive school concerns carefully, clearly, and professionally without overstatement or unnecessary escalation.",
+    h1: "How to word a sensitive school concern email carefully",
+    opening: [
+      "Some school emails need more care than speed.",
+      "The concern is real, but the facts may still be developing and the wording may be read more than once.",
+      "That is when a message can become risky - not because the issue should be hidden, but because the wrong phrasing can sound bigger, harsher, or more certain than the situation allows.",
+    ],
+    whyRisk: [
+      "Sensitive school communication often sits in an awkward middle ground. You need to alert a parent to a concern, but you may not yet have the full picture, the final outcome, or language that feels settled enough to use loosely.",
+      "When facts are still emerging, teachers can easily slip into wording that sounds too absolute, too emotional, or too interpretive. Even if the intention is to be transparent, the message can create unnecessary alarm or make later clarification harder.",
+      "Careful wording protects everyone involved. It keeps the message professionally appropriate, proportionate to what is actually known, and easier to stand behind later if the situation develops.",
+    ],
+    riskyReply: `Dear Parent,
+
+I need to let you know that there has been a serious concern today involving your child and the situation is very troubling. At this stage it is clear that poor choices were made and there may be wider implications, so I wanted to make sure you were aware immediately.
+
+I will update you once we know more.
+
+Ms Reed`,
+    backfirePoints: [
+      "It sounds more certain than the facts may justify.",
+      'Phrases like "serious concern" and "wider implications" can raise alarm without enough clarity.',
+      "It risks sounding interpretive instead of factual.",
+      "If details change later, the original wording may look overstated.",
+    ],
+    saferVersion: `Dear Parent,
+
+I wanted to make you aware of a concern that arose in school today involving your child.
+
+We are currently reviewing what happened so that we can understand the situation clearly and respond appropriately. At this stage, I wanted to let you know that the matter is being looked into and that we will follow up with a fuller update once the relevant information has been confirmed.
+
+In the meantime, please know that we are approaching this carefully and will keep the communication clear as the situation develops.
+
+Kind regards,
+Ms Reed`,
+    keyTakeaway: [
+      "Sensitive school emails are strongest when they stay close to what is known, avoid unnecessary interpretation, and leave room for later clarification.",
+      "Most school communication problems aren’t about what you say - but how it is read when the stakes already feel high.",
+    ],
+    relatedSlugs: [
+      "parent-email-about-bullying-how-to-respond-carefully",
+      "teacher-response-to-a-parent-complaint",
+      "how-to-respond-to-a-parent-who-says-this-is-unacceptable",
+    ],
+    sectionLabels: {
+      whyRisk: "Why wording matters in sensitive school communication",
+      riskyReply: "What to avoid when facts are still emerging",
+      saferVersion: "Example wording",
+      keyTakeaway: "Key takeaway",
+    },
+    calmerStructure: {
+      heading: "How to keep wording factual, calm, and appropriate",
+      paragraphs: [
+        "A safer message usually does three things: it states the concern without overstating it, explains only what is currently confirmed, and makes it clear that further clarification will follow if needed.",
+        "That approach matters because sensitive emails often get reread later. The calmer and more factual the original wording is, the easier it is to defend professionally if the picture changes or more detail emerges.",
+      ],
+      bullets: [
+        "State what is known without adding assumptions.",
+        "Avoid labels or conclusions that the evidence does not yet support.",
+        "Signal that the matter is being handled carefully and that further updates will follow.",
+      ],
+    },
+    documentationSection: {
+      heading: "When to move into documentation mode",
+      paragraphs: [
+        "If the concern may lead to follow-up from senior staff, safeguarding leads, or a later meeting, it is often safer to write in documentation mode rather than explanation mode. That means shorter sentences, clearer facts, and less interpretive language.",
+        "Documentation mode does not mean sounding cold. It means keeping the email grounded in what is known now, recording the next step clearly, and avoiding wording you may need to walk back later.",
+      ],
+    },
+    finalCtaHeading: "Use Zaza Draft as a second pair of eyes",
+    finalCtaBody:
+      "Zaza Draft helps teachers check the tone and wording of sensitive school emails before they send them, so the message stays calm, factual, and professionally appropriate.",
+    finalCtaLabel: "Try Zaza Draft",
+  },
+  {
+    slug: "how-to-reply-to-an-upset-parent",
+    seoTitle: "How to Reply to an Upset Parent Calmly | Zaza Draft",
+    seoDescription:
+      "Reply to an upset parent with clear, professional wording that reduces tone risk and keeps the conversation constructive.",
+    h1: "How to reply to an upset parent calmly and clearly",
+    opening: [
+      "The email is not openly aggressive, but you can feel the emotion in it.",
+      "The parent is upset, the tone is strained, and your reply needs to settle the conversation rather than sharpen it.",
+      "That is exactly the kind of moment when a teacher can write something factually sound that still lands badly.",
+    ],
+    whyRisk: [
+      "Upset parent emails create a particular kind of pressure because they pull you towards explanation, correction, and reassurance all at once. When you try to do all three too quickly, the wording often becomes muddled or defensive.",
+      "Teachers also tend to absorb the emotional tone of the message they have just read. That can make the first draft slightly sharper, colder, or more self-protective than it seems in the moment.",
+      "A calmer reply works best when it lowers the temperature first, then makes the key point clearly, and only then sets a constructive next step.",
+    ],
+    riskyReply: `Dear Parent,
+
+I think there has been some misunderstanding here. From my perspective, the situation was handled appropriately and I do not feel the response from school was unreasonable.
+
+I have already put a lot of time into this matter and I am not sure what more you are expecting at this stage.
+
+Ms Reed`,
+    backfirePoints: [
+      "It starts by protecting your position rather than acknowledging the parent's concern.",
+      "It can sound dismissive even if that was not the intention.",
+      "The phrase about not knowing what more is expected is likely to worsen the tone.",
+      "It closes the door instead of guiding the conversation somewhere calmer.",
+    ],
+    saferVersion: `Dear Parent,
+
+Thank you for your email. I can see that this situation has felt upsetting, and I wanted to respond clearly.
+
+From school’s side, the response at the time was based on what was happening and the information available then. I appreciate that you may still have concerns, so I am happy to clarify the key points and make sure the next step feels clear.
+
+My aim is to keep the communication calm, constructive, and focused on what will help from here.
+
+Kind regards,
+Ms Reed`,
+    keyTakeaway: [
+      "When a parent is upset, the safest reply is usually not the most detailed one. It is the one that acknowledges the concern, steadies the tone, and gives the conversation a calmer place to go next.",
+      "Most parent email problems aren’t about what you say - but how it’s read.",
+    ],
+    relatedSlugs: [
+      "how-to-respond-to-an-angry-parent-email",
+      "responding-to-a-parent-who-is-clearly-frustrated-or-emotional",
+      "how-to-de-escalate-a-parent-complaint-email",
+    ],
+    sectionLabels: {
+      whyRisk: "The emotional trap teachers fall into",
+      riskyReply: "What a calmer reply needs to do",
+      saferVersion: "Example response",
+      keyTakeaway: "Key takeaway",
+    },
+    calmerStructure: {
+      heading: "How to avoid sounding dismissive or defensive",
+      paragraphs: [
+        "A reply can sound dismissive when it corrects the parent too early, minimises the feeling behind the message, or leans too heavily on phrases that defend your position. Even mild wording can feel sharper when the parent is already upset.",
+        "A calmer structure usually works better: acknowledge the concern briefly, clarify only what matters most, and end with one constructive next step. That keeps the message professional without sounding cold or combative.",
+      ],
+      bullets: [
+        "Acknowledge the concern before you explain your side.",
+        "Avoid phrases that sound like you are closing the conversation down.",
+        "Keep the tone steady, even if the parent's message was not.",
+      ],
+    },
+    finalCtaHeading: "Try Zaza Draft",
+    finalCtaBody:
+      "Zaza Draft helps teachers turn emotionally difficult parent emails into something clear, calm, and professional before they send them.",
+    finalCtaLabel: "Try Zaza Draft",
   },
   {
     slug: "what-to-say-to-a-rude-parent-email",

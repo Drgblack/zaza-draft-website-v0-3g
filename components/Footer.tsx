@@ -33,7 +33,7 @@ export default function Footer() {
     { label: "Draft", href: localPath("/products/draft") },
     {
       label: riskCheckerLabel,
-      href: "/parent-email-risk-checker",
+      href: localPath("/parent-email-risk-checker"),
       onClick: () =>
         trackCtaClick({
           ctaText: riskCheckerLabel,

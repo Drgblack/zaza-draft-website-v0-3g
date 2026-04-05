@@ -108,6 +108,7 @@ export default function JessicaReedFunnel({
           }}
           primaryCtaLabel={freeCtaLabel}
           copy={copy.hero}
+          locale={locale}
         />
         <PainSection copy={copy.pain} />
         <SolutionSection copy={copy.solution} />

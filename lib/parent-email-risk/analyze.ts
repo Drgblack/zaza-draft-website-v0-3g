@@ -162,6 +162,18 @@ const CATEGORY_REWRITE_ACTIONS: Record<
 const ANTHROPIC_API_URL = "https://api.anthropic.com/v1/messages";
 const DEFAULT_ANTHROPIC_MODEL = "claude-sonnet-4-20250514";
 const MAX_REWRITE_PASSES = 2;
+const DANGEROUS_REWRITE_PATTERNS = [
+  /\bbrat\b/i,
+  /\bidiot\b/i,
+  /\bstupid\b/i,
+  /\blazy\b/i,
+  /\bthrow (him|her|them) out\b/i,
+  /\bthrow .* out of (my )?class\b/i,
+  /\bwill not hesitate\b/i,
+  /\bI expect better\b/i,
+  /\bmega disruptive\b/i,
+  /\byour kid\b/i,
+];
 
 function countWords(rawMessage: string) {
   return rawMessage.trim().split(/\s+/).filter(Boolean).length;
@@ -961,51 +973,261 @@ function normalizeRewrite(rawText: string) {
     .trim();
 }
 
+function sentenceLooksUnsafe(sentence: string) {
+  return DANGEROUS_REWRITE_PATTERNS.some((pattern) => pattern.test(sentence));
+}
+
+function splitLines(rawText: string) {
+  return rawText
+    .replace(/\r\n/g, "\n")
+    .split("\n")
+    .map((line) => line.trim());
+}
+
+function parseEmailParts(originalDraft: string) {
+  const lines = splitLines(originalDraft).filter(Boolean);
+
+  let greeting = "Hi,";
+  let signoff = "Regards,";
+  let sender = "";
+
+  if (
+    lines.length > 0 &&
+    /^(dear|hello|hi|good morning|good afternoon)\b/i.test(lines[0])
+  ) {
+    greeting = lines[0];
+    lines.shift();
+  }
+
+  const signoffIndex = lines.findIndex((line) =>
+    /^(regards|kind regards|best|many thanks|thank you|sincerely)[,]?$/i.test(
+      line,
+    ),
+  );
+
+  if (signoffIndex >= 0) {
+    signoff = lines[signoffIndex];
+    sender = lines
+      .slice(signoffIndex + 1)
+      .join(" ")
+      .trim();
+    lines.splice(signoffIndex);
+  }
+
+  return {
+    greeting,
+    signoff,
+    sender,
+    body: lines.join(" ").trim(),
+  };
+}
+
+function inferChildReference(rawText: string) {
+  const lower = rawText.toLowerCase();
+
+  if (lower.includes("your daughter")) {
+    return {
+      childLabel: "your daughter",
+      subjectPronoun: "she",
+      objectPronoun: "her",
+    };
+  }
+
+  if (lower.includes("your son")) {
+    return {
+      childLabel: "your son",
+      subjectPronoun: "he",
+      objectPronoun: "him",
+    };
+  }
+
+  return {
+    childLabel: "your child",
+    subjectPronoun: "they",
+    objectPronoun: "them",
+  };
+}
+
+function cleanObservationSentence(sentence: string) {
+  if (!sentence || sentenceLooksUnsafe(sentence)) {
+    return null;
+  }
+
+  let cleaned = sentence
+    .replace(/\bHonestly,?\s*/gi, "")
+    .replace(/\bFrankly,?\s*/gi, "")
+    .replace(/\bto be blunt,?\s*/gi, "")
+    .replace(/\bI need to be direct\.?\s*/gi, "")
+    .replace(/\bIn fact,?\s*/gi, "")
+    .replace(
+      /\byour child has ignored instructions\b/gi,
+      "your child has found it difficult to follow instructions",
+    )
+    .replace(
+      /\byour daughter has ignored instructions\b/gi,
+      "your daughter has found it difficult to follow instructions",
+    )
+    .replace(
+      /\byour son has ignored instructions\b/gi,
+      "your son has found it difficult to follow instructions",
+    )
+    .replace(
+      /\bhe has ignored instructions\b/gi,
+      "he has found it difficult to follow instructions",
+    )
+    .replace(
+      /\bshe has ignored instructions\b/gi,
+      "she has found it difficult to follow instructions",
+    )
+    .replace(
+      /\bthey have ignored instructions\b/gi,
+      "they have found it difficult to follow instructions",
+    )
+    .replace(
+      /\bit is becoming difficult for the class\b/gi,
+      "this has been affecting the class",
+    )
+    .replace(/\bdisruptive\b/gi, "finding it difficult to stay settled")
+    .trim();
+
+  cleaned = cleaned.replace(/\s+/g, " ").trim();
+
+  if (!cleaned || sentenceLooksUnsafe(cleaned)) {
+    return null;
+  }
+
+  if (!/[.!?]$/.test(cleaned)) {
+    cleaned = `${cleaned}.`;
+  }
+
+  return cleaned;
+}
+
+function buildObservationParagraph(body: string, childLabel: string) {
+  const sentences = splitSentences(body);
+
+  for (const sentence of sentences) {
+    const cleaned = cleanObservationSentence(sentence);
+    if (cleaned) {
+      return cleaned;
+    }
+  }
+
+  return `There have been a few moments recently where ${childLabel} has found it difficult to follow instructions in class, and I wanted to make you aware of it.`;
+}
+
+function buildSupportParagraph(
+  body: string,
+  childLabel: string,
+  objectPronoun: string,
+) {
+  const timePhrase = /\b(tonight|this evening|today)\b/i.test(body)
+    ? " this evening"
+    : "";
+
+  if (/speak to (him|her|them|your child|your daughter|your son)/i.test(body)) {
+    return `I would appreciate your support in speaking with ${objectPronoun}${timePhrase} so we can reinforce the expectations together.`;
+  }
+
+  if (/support|work together|help/i.test(body)) {
+    return `I would appreciate your support so we can help ${childLabel} reset and move forward positively.`;
+  }
+
+  return `I wanted to share this with you so we can support ${childLabel} together and keep things moving in a positive direction.`;
+}
+
+function buildNextStepParagraph(body: string) {
+  if (
+    /if this carries on|if this continues|take this further|formal|principal|head teacher|complaint/i.test(
+      body,
+    )
+  ) {
+    return "If this pattern continues, we may need to discuss the next steps together, but I hope we can address it early.";
+  }
+
+  return "If it would be helpful, I am happy to discuss the best next step together.";
+}
+
 function buildFallbackRewrite(
   originalDraft: string,
   analysis: InternalAnalysis,
 ) {
-  let rewritten = originalDraft.trim();
+  const { greeting, signoff, sender, body } = parseEmailParts(originalDraft);
+  const { childLabel, objectPronoun } = inferChildReference(originalDraft);
 
-  rewritten = rewritten
-    .replace(/\bHonestly,?\s*/gi, "")
-    .replace(/\bFrankly,?\s*/gi, "")
-    .replace(/\bto be blunt,?\s*/gi, "")
-    .replace(/\byou need to\b/gi, "it would help if you could")
-    .replace(/\byou must\b/gi, "please")
-    .replace(/\byou should\b/gi, "it may help to")
-    .replace(/\byour child always\b/gi, "there have been times when your child")
-    .replace(
-      /\byour child never\b/gi,
-      "it has been difficult for your child to",
-    )
-    .replace(/\bhe is\b/gi, "he has been")
-    .replace(/\bshe is\b/gi, "she has been");
+  const observation = buildObservationParagraph(body, childLabel)
+    .replace(/\bdeliberately\b/gi, "")
+    .replace(/\bintentionally\b/gi, "")
+    .trim();
 
-  if (!/^(dear|hello|hi|good morning|good afternoon)\b/i.test(rewritten)) {
-    rewritten = `Hi,\n\n${rewritten}`;
-  }
+  const support = buildSupportParagraph(body, childLabel, objectPronoun);
+  const nextStep = buildNextStepParagraph(body);
 
-  if (
-    !/(work together|could we|would you be|happy to discuss|your input|your support)/i.test(
-      rewritten,
-    )
-  ) {
-    rewritten = `${rewritten}\n\nI wanted to share this so we can work together on the next step.`;
-  }
-
-  if (analysis.professionalRiskFlags.length > 0) {
-    rewritten = rewritten
-      .replace(
-        /\bI think (he|she|they) (has|have|might have|could have)\b/gi,
-        "I have noticed",
-      )
-      .replace(/\bseems? to have\b/gi, "has shown signs of")
-      .replace(/\bdeliberately\b/gi, "")
-      .replace(/\bintentionally\b/gi, "");
-  }
+  const rewritten = [
+    greeting,
+    "",
+    "I wanted to share a concern about what I have observed in class recently.",
+    "",
+    observation,
+    "",
+    support,
+    "",
+    nextStep,
+    "",
+    signoff,
+    sender,
+  ]
+    .filter(Boolean)
+    .join("\n");
 
   return normalizeRewrite(rewritten);
+}
+
+function candidatePenalty(analysis: InternalAnalysis, draft: string) {
+  const levelPenalty =
+    analysis.riskLevel === "high"
+      ? 200
+      : analysis.riskLevel === "medium"
+        ? 80
+        : 0;
+
+  return (
+    analysis.riskScore +
+    levelPenalty +
+    analysis.professionalRiskFlags.length * 120 +
+    analysis.firedSignals.filter((signal) => signal.category !== "mitigating")
+      .length *
+      12 +
+    (DANGEROUS_REWRITE_PATTERNS.some((pattern) => pattern.test(draft))
+      ? 500
+      : 0)
+  );
+}
+
+async function chooseBestRewriteCandidate(candidates: string[]) {
+  const uniqueCandidates = Array.from(
+    new Set(
+      candidates
+        .map((candidate) => normalizeRewrite(candidate))
+        .filter(Boolean),
+    ),
+  );
+
+  const evaluated = await Promise.all(
+    uniqueCandidates.map(async (draft) => ({
+      draft,
+      analysis: await runInternalAnalysis(draft, { skipToneApi: true }),
+    })),
+  );
+
+  evaluated.sort((left, right) => {
+    return (
+      candidatePenalty(left.analysis, left.draft) -
+      candidatePenalty(right.analysis, right.draft)
+    );
+  });
+
+  return evaluated[0] ?? null;
 }
 
 async function rewriteWithAnthropic(
@@ -1065,35 +1287,55 @@ async function buildSaferVersion(
   originalDraft: string,
   firstAnalysis: InternalAnalysis,
 ) {
-  let saferDraft =
-    (await rewriteWithAnthropic(originalDraft, firstAnalysis, 1)) ??
-    buildFallbackRewrite(originalDraft, firstAnalysis);
+  const fallbackDraft = buildFallbackRewrite(originalDraft, firstAnalysis);
+  const firstAiDraft = await rewriteWithAnthropic(
+    originalDraft,
+    firstAnalysis,
+    1,
+  );
+
+  let bestCandidate = await chooseBestRewriteCandidate(
+    [fallbackDraft, firstAiDraft].filter((draft): draft is string =>
+      Boolean(draft),
+    ),
+  );
+
+  if (!bestCandidate) {
+    return fallbackDraft;
+  }
 
   for (let pass = 2; pass <= MAX_REWRITE_PASSES; pass += 1) {
-    const nextAnalysis = await runInternalAnalysis(saferDraft, {
-      skipToneApi: true,
-    });
-
     if (
-      nextAnalysis.riskLevel !== "high" &&
-      nextAnalysis.professionalRiskFlags.length === 0
+      bestCandidate.analysis.riskLevel === "low" &&
+      bestCandidate.analysis.professionalRiskFlags.length === 0
     ) {
       break;
     }
 
     const refinedDraft = await rewriteWithAnthropic(
-      saferDraft,
-      nextAnalysis,
+      bestCandidate.draft,
+      bestCandidate.analysis,
       pass,
     );
+
     if (!refinedDraft) {
       break;
     }
 
-    saferDraft = refinedDraft;
+    const nextBestCandidate = await chooseBestRewriteCandidate([
+      bestCandidate.draft,
+      fallbackDraft,
+      refinedDraft,
+    ]);
+
+    if (!nextBestCandidate) {
+      break;
+    }
+
+    bestCandidate = nextBestCandidate;
   }
 
-  return saferDraft;
+  return bestCandidate.draft;
 }
 
 function normalizeInput(rawDraft: string) {

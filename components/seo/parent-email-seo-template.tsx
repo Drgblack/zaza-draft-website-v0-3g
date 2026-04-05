@@ -69,17 +69,23 @@ function ExampleCard({
   );
 }
 
-function CheckerCtaBlock({ slug }: { slug: string }) {
+function CheckerCtaBlock({
+  slug,
+  heading = "Check your own parent email before sending",
+  body = "Paste your draft into the Parent Email Risk Checker and see if it may sound too blunt, defensive, or likely to escalate. You’ll get a safer version in seconds.",
+}: {
+  slug: string;
+  heading?: string;
+  body?: string;
+}) {
   return (
     <section className="rounded-[2rem] border border-fuchsia-200 bg-gradient-to-br from-fuchsia-50 via-white to-violet-50 px-6 py-8 shadow-[0_24px_90px_-55px_rgba(15,23,42,0.24)] md:px-8">
       <SectionLabel>Parent Email Risk Checker</SectionLabel>
       <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950">
-        Check your own parent email before sending
+        {heading}
       </h2>
       <p className="mt-4 max-w-3xl text-base leading-8 text-slate-700">
-        Paste your draft into the Parent Email Risk Checker and see if it may
-        sound too blunt, defensive, or likely to escalate. You’ll get a safer
-        version in seconds.
+        {body}
       </p>
       <div className="mt-6 flex flex-wrap gap-3">
         <Button
@@ -111,22 +117,29 @@ function CheckerCtaBlock({ slug }: { slug: string }) {
   );
 }
 
-function FinalCtaBlock() {
+function FinalCtaBlock({
+  heading = "Write the message you won’t regret tomorrow",
+  body = "Zaza Draft helps teachers turn difficult messages into something clear, calm, and professional - without losing their voice.",
+  ctaLabel = "Try Zaza Draft",
+}: {
+  heading?: string;
+  body?: string;
+  ctaLabel?: string;
+}) {
   return (
     <section className="rounded-[2rem] bg-slate-950 px-6 py-10 text-white shadow-[0_28px_90px_-50px_rgba(15,23,42,0.65)] md:px-8">
       <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-        Write the message you won’t regret tomorrow
+        {heading}
       </h2>
       <p className="mt-4 max-w-3xl text-base leading-8 text-slate-300">
-        Zaza Draft helps teachers turn difficult messages into something clear,
-        calm, and professional - without losing their voice.
+        {body}
       </p>
       <div className="mt-6">
         <Button
           asChild
           className="btn-primary h-auto rounded-2xl px-6 py-4 text-base font-semibold"
         >
-          <Link href="/start">Try Zaza Draft</Link>
+          <Link href="/start">{ctaLabel}</Link>
         </Button>
       </div>
     </section>
@@ -235,7 +248,9 @@ export function ParentEmailSeoTemplate({ page }: ParentEmailSeoTemplateProps) {
 
         <main className="mx-auto max-w-5xl space-y-12 px-4 py-12 md:py-16">
           <section className="rounded-[2rem] border border-white/70 bg-white/88 px-6 py-8 shadow-[0_24px_90px_-55px_rgba(15,23,42,0.25)] md:px-8">
-            <SectionLabel>Why this is risky</SectionLabel>
+            <SectionLabel>
+              {page.sectionLabels?.whyRisk ?? "Why this is risky"}
+            </SectionLabel>
             <div className="mt-5 space-y-4 text-base leading-8 text-slate-700">
               {page.whyRisk.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
@@ -244,7 +259,9 @@ export function ParentEmailSeoTemplate({ page }: ParentEmailSeoTemplateProps) {
           </section>
 
           <section className="space-y-6">
-            <SectionLabel>What not to send</SectionLabel>
+            <SectionLabel>
+              {page.sectionLabels?.riskyReply ?? "What not to send"}
+            </SectionLabel>
             <ExampleCard
               title="Risky reply example"
               copy={page.riskyReply}
@@ -269,8 +286,33 @@ export function ParentEmailSeoTemplate({ page }: ParentEmailSeoTemplateProps) {
             </div>
           </section>
 
+          {page.calmerStructure ? (
+            <section className="rounded-[2rem] border border-white/70 bg-white/88 px-6 py-8 shadow-[0_24px_90px_-55px_rgba(15,23,42,0.25)] md:px-8">
+              <SectionLabel>{page.calmerStructure.heading}</SectionLabel>
+              <div className="mt-5 space-y-4 text-base leading-8 text-slate-700">
+                {page.calmerStructure.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+              {page.calmerStructure.bullets?.length ? (
+                <div className="mt-6 grid gap-4 md:grid-cols-3">
+                  {page.calmerStructure.bullets.map((bullet) => (
+                    <div
+                      key={bullet}
+                      className="rounded-[1.4rem] border border-slate-200 bg-slate-50 px-4 py-4 text-sm leading-7 text-slate-700"
+                    >
+                      {bullet}
+                    </div>
+                  ))}
+                </div>
+              ) : null}
+            </section>
+          ) : null}
+
           <section className="space-y-6">
-            <SectionLabel>A safer version</SectionLabel>
+            <SectionLabel>
+              {page.sectionLabels?.saferVersion ?? "A safer version"}
+            </SectionLabel>
             <ExampleCard
               title="A calmer rewrite"
               copy={page.saferVersion}
@@ -278,10 +320,27 @@ export function ParentEmailSeoTemplate({ page }: ParentEmailSeoTemplateProps) {
             />
           </section>
 
-          <CheckerCtaBlock slug={page.slug} />
+          {page.documentationSection ? (
+            <section className="rounded-[2rem] border border-white/70 bg-white/88 px-6 py-8 shadow-[0_24px_90px_-55px_rgba(15,23,42,0.25)] md:px-8">
+              <SectionLabel>{page.documentationSection.heading}</SectionLabel>
+              <div className="mt-5 space-y-4 text-base leading-8 text-slate-700">
+                {page.documentationSection.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            </section>
+          ) : null}
+
+          <CheckerCtaBlock
+            slug={page.slug}
+            heading={page.checkerCtaHeading}
+            body={page.checkerCtaBody}
+          />
 
           <section className="rounded-[2rem] border border-white/70 bg-white/88 px-6 py-8 shadow-[0_24px_90px_-55px_rgba(15,23,42,0.25)] md:px-8">
-            <SectionLabel>Key takeaway</SectionLabel>
+            <SectionLabel>
+              {page.sectionLabels?.keyTakeaway ?? "Key takeaway"}
+            </SectionLabel>
             <div className="mt-5 space-y-4 text-base leading-8 text-slate-700">
               {page.keyTakeaway.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
@@ -316,7 +375,11 @@ export function ParentEmailSeoTemplate({ page }: ParentEmailSeoTemplateProps) {
             </section>
           ) : null}
 
-          <FinalCtaBlock />
+          <FinalCtaBlock
+            heading={page.finalCtaHeading}
+            body={page.finalCtaBody}
+            ctaLabel={page.finalCtaLabel}
+          />
         </main>
       </div>
     </>

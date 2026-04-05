@@ -127,123 +127,129 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
     freeCtaLabel: "Start free",
     proCtaLabel: (price) => `Start Pro - ${price}`,
     hero: {
-      preheadline: "Teacher-first relief for report writing",
+      preheadline: "Teacher-first protection for high-stakes communication",
       headingLines: [
-        "You've got 23 comments left.",
-        "10:41 PM",
-        "You're exhausted.",
+        "You've written the draft.",
+        "Now make sure",
+        "it won't escalate.",
       ],
-      subheadingTop: "Zaza writes them for you",
-      subheadingBottom: "in your own voice, in seconds.",
-      reassurance: "No credit card. No lock-in. Fully editable.",
+      subheadingTop: "Zaza helps teachers turn emotionally risky parent emails",
+      subheadingBottom:
+        "and school messages into calm, clear, professional drafts before they're sent.",
+      reassurance: "No credit card. No lock-in. You review every word.",
       secondaryLinkLabel: "Need to test one email first?",
       secondaryLinkSupport: "Try the free Parent Email Risk Checker.",
-      footer: "Built for teachers who write under pressure.",
+      footer:
+        "Built for parent emails, difficult follow-ups, behaviour notes, safeguarding-adjacent wording, and other high-stakes school communication.",
       imageAlt:
-        "Teacher working late at desk with papers and laptop, looking tired but hopeful",
+        "Teacher reviewing a sensitive school message on a laptop late in the evening",
       bubble: "Built with teachers and refined for real school workflows.",
     },
     pain: {
-      heading: "It's Sunday night.",
-      headingAccent: "Again.",
+      heading: "It's 9:47 PM.",
+      headingAccent: "A parent email just landed.",
       subheading:
-        "Report cards are due tomorrow, and you're drowning in comments that all sound the same.",
+        "You know you need to reply. You also know the wrong wording can make tomorrow harder.",
       cards: [
         {
-          title: "Sunday Night Dread",
-          body: "\"It's 9 PM and I still have 25 more comments to write. My family's asleep and I'm staring at a blank screen.\"",
+          title: "Too easy to sound defensive",
+          body: "You're trying to be clear, but after a long day, one blunt sentence can land badly.",
         },
         {
-          title: "Repetitive and Robotic",
-          body: "\"I keep writing the same things over and over. 'Great job' and 'Keep up the good work' - but my students deserve better.\"",
+          title: "Everything feels higher-stakes than it should",
+          body: "Parent complaints, behaviour updates, meeting follow-ups, and sensitive messages can all be screenshotted, forwarded, or revisited later.",
         },
         {
-          title: "Time Thief",
-          body: '"Report cards steal my entire weekend. That\'s time I could spend with my own kids, or just breathing."',
+          title: "Second-guessing steals your evening",
+          body: "You rewrite the same message three times because you're not just writing - you're trying to avoid escalation.",
         },
       ],
       quote:
-        "Every teacher knows this feeling. The blank screen. The pressure. The guilt that your comments are not good enough.",
-      note: "Designed to reduce the risk in every message you send.",
+        "The hard part is rarely having something to say. The hard part is wording it clearly enough to stay professional without making the situation worse.",
+      note: "Zaza is built to lower tone risk before a difficult message leaves your outbox.",
       imageAlt:
-        "Teacher working late at desk looking stressed while writing student comments",
+        "Teacher reading a difficult parent email and weighing the safest reply",
     },
     solution: {
-      heading: "What if writing comments felt...",
-      headingAccent: "easy?",
+      heading: "What if difficult messages felt...",
+      headingAccent: "safer to send?",
       subheading:
-        "Zaza Draft writes emotionally aware, personalized comments that sound like you. No prompt engineering, no generic responses, no stress.",
-      generatedHeading: "Generated comment for Emma:",
+        "Zaza Draft helps teachers write calm, professional parent emails and school messages that keep the meaning, lower the heat, and still sound like you.",
+      generatedHeading: "Safer draft for a parent email:",
       generatedBody:
-        "\"Emma has shown remarkable growth in her reading comprehension this quarter. I've noticed how she takes her time to really think about character motivations, especially during our discussions about Charlotte's Web. Her thoughtful questions show she's connecting deeply with the stories we read. Moving forward, I'd love to see her share those insights more confidently during group discussions. Her classmates would benefit from her perspective.\"",
-      generatedMeta: "Generated in 3 seconds. Fully editable.",
-      generatedVoiceNote: "Sounds like your voice, not a robot",
+        "\"I wanted to share a quick update about Oliver's day. He found it harder than usual to stay focused during independent work, and I needed to give several reminders. We're continuing to support him with clear expectations and short check-ins. If helpful, I'd be glad to share the strategies that are working in class so we can stay consistent together.\"",
+      generatedMeta: "Drafted in seconds. Fully editable before sending.",
+      generatedVoiceNote: "Clear, calm, and still recognisably yours",
       points: [
         {
-          title: "Emotionally Intelligent",
-          body: "Recognizes each student's unique strengths and growth areas with warmth and specificity.",
+          title: "De-escalation aware",
+          body: "Built to lower heat without stripping out the point you need to make.",
         },
         {
-          title: "Your Voice, Amplified",
-          body: "Learns your teaching style and tone, so comments sound authentically like you wrote them.",
+          title: "Your voice, still recognisable",
+          body: "Drafts stay professional without flattening the way you naturally write.",
         },
         {
-          title: "Always Editable",
-          body: "Every comment is your starting point. Tweak, personalize, and make it perfect in seconds.",
+          title: "Always editable before sending",
+          body: "You review every word, make changes, and decide what actually goes out.",
         },
         {
-          title: "No Prompt Engineering",
-          body: "Just choose your student, and Zaza handles the rest. No complex prompts or tech headaches.",
+          title: "Built for school communication, not generic AI prompting",
+          body: "Parent emails come first, with report comments and other school writing supported too.",
         },
       ],
       imageAlt:
-        "Happy teacher working efficiently on laptop in organized classroom",
+        "Teacher calmly refining a parent email draft on a laptop at a desk",
       quote:
-        "Built with teachers, then refined through real classroom feedback.",
-      note: "The goal is simple: help teachers write faster without losing care, nuance, or control.",
+        "Built with teachers, then refined around the messages that can spiral if the tone is even slightly off.",
+      note: "The goal is simple: protect the meaning, reduce the heat, and keep the teacher in control.",
+      proofLine:
+        "Built for parent emails, sensitive updates, and the replies teachers most often rewrite three times.",
     },
     howItWorks: {
       heading: "Three steps to",
-      headingAccent: "reclaim your evenings",
+      headingAccent: "safer replies",
       subheading:
-        "Works on any device. Your Chromebook, phone, tablet. Wherever you are, whenever you need it.",
+        "Works on any device. Start from a rough draft, a few notes, or the message you almost sent.",
       steps: [
         {
           number: "1",
-          title: "Choose Student",
-          body: "Select your student and subject. Zaza remembers their progress and your teaching style.",
-          preview: '"Emma - Reading Comprehension"',
+          title: "Paste the draft or describe what happened",
+          body: "Start from rough notes, bullet points, or the message you almost sent.",
+          preview: '"Parent follow-up after a difficult behaviour update"',
         },
         {
           number: "2",
-          title: "Generate",
-          body: "Click generate and watch as Zaza creates a thoughtful, specific comment in your voice.",
-          preview: "Generating thoughtful comment...",
+          title: "Choose the tone you need",
+          body: "Supportive, formal, concise, neutral - with wording shaped for school context.",
+          preview: "Supportive - calm - school-appropriate",
         },
         {
           number: "3",
-          title: "Tweak and Done",
-          body: "Perfect as-is, or add your personal touch. Copy, paste, and you're done.",
-          preview: "Ready to copy",
+          title: "Review before it goes anywhere",
+          body: "You stay in control of every word before anything is sent.",
+          preview: "Ready to review and send",
         },
       ],
-      badge: "Real time saved",
-      proofHeading: "From 3 hours to 30 minutes",
+      badge: "Why it helps",
+      proofHeading: "Less second-guessing. Clearer wording. Faster replies.",
       beforeLabel: "Before",
-      beforeValue: "3 hours",
+      beforeValue: "Spiral of rewriting",
       afterLabel: "After",
-      afterValue: "30 minutes",
+      afterValue: "Calm next draft",
       proofBody:
-        "What used to take your entire Sunday evening now fits into a coffee break.",
-      proofBullets: ["Seconds per comment", "Any device", "Always editable"],
+        "Draft helps teachers move from stressed first draft to calm professional message without the usual spiral of rewriting.",
+      proofMicrocopy:
+        "Especially useful when the message matters enough that one sentence could change the temperature of the whole exchange.",
+      proofBullets: ["Tone-aware drafts", "Any device", "Always editable"],
       imageAlt:
-        "Close-up of teacher's hands typing efficient student comments on laptop",
+        "Teacher checking a sensitive message draft on a laptop before sending",
     },
     pricing: {
       heading: "Start free now.",
       headingAccent: "Upgrade only when you need more.",
       subheading: (price) =>
-        `Get 5 drafts a month for free, then move to Zaza Draft Pro for unlimited writing support at ${price}.`,
+        `Start free with 5 drafts each month, then upgrade for unlimited support when Zaza becomes part of your weekly communication workflow.`,
       currencyLabel: "Currency",
       billingLabel: "Billing",
       monthlyLabel: "Monthly",
@@ -251,36 +257,40 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       annualRecommendedLabel: "Best value for the school year",
       annualSavings: (amount) => `Save ${amount}/year vs monthly`,
       annualAnchor: "About the cost of one coffee a week",
-      annualAnchorSupport: "to get your evenings back",
+      annualAnchorSupport: "for calmer school communication all year",
       supportLine: (currency) =>
-        `Prices are currently shown in ${currency}. Taxes may be calculated at checkout. Free starts with no credit card.`,
+        "Best for teachers who regularly write parent emails, behaviour updates, reports, and other sensitive school messages.",
       mostPopularBadge: "Most popular",
       freeCtaLabel: "Start free",
       freeTitle: "Free Forever",
       freeDescription: "5 drafts every month. No card required.",
       freeFeatures: [
         "5 drafts per month",
-        "All subjects supported",
-        "Fully editable comments",
+        "Parent emails and school messages",
+        "Fully editable drafts",
         "Works on any device",
       ],
       freeNote: "Opens the free signup form. No credit card required.",
       proTitle: "Pro",
-      proDescription: "Unlimited drafts for individual teachers",
+      proDescription:
+        "Unlimited support for teachers writing high-stakes school communication",
       proFeatures: [
         "Unlimited drafts",
-        "Priority support",
-        "Advanced personalization",
-        "Parent communication templates",
-        "IEP and 504 adaptations",
+        "Parent email support",
+        "Behaviour and follow-up drafts",
+        "Report comments when you need them",
+        "Always editable before sending",
       ],
       annualRiskReversal: "Try it risk-free. Cancel anytime.",
       proNote:
         "Secure Stripe checkout. Cancel anytime. Taxes may be calculated at checkout.",
       whyTitle: "Why teachers choose Zaza Draft:",
       whyItems: [
-        { title: "Seconds", body: "Per comment generated" },
-        { title: "Your voice", body: "Not a robot's" },
+        {
+          title: "Tone-aware",
+          body: "Built for difficult parent communication",
+        },
+        { title: "Your voice", body: "Still recognisably yours" },
         { title: "Always editable", body: "You stay in control" },
       ],
       unavailableNote:
@@ -294,7 +304,7 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
         {
           question: "What is Zaza Draft?",
           answer:
-            "Zaza Draft is a teacher-first AI writing assistant designed to help with high-stakes school communication like parent emails, sensitive replies, and report comments.",
+            "Zaza Draft is a teacher-first communication safety layer for parent emails, sensitive replies, report comments, and other high-stakes school writing. It helps teachers reduce tone risk, stay professional, and keep control of every word before sending.",
         },
         {
           question: "Who is this for?",
@@ -325,13 +335,13 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
     },
     finalCta: {
       headingLines: [
-        "It's 10:47 PM on a Sunday.",
-        "What if you were already done?",
+        "It's late. The email still needs sending.",
+        "What if you felt calm pressing send?",
       ],
       subheading:
-        "No more staring at blank screens. No more copy-paste comments. Just thoughtful writing that sounds like you, delivered in seconds.",
-      reassurance: "No credit card. No lock-in. Fully editable.",
-      quote: "No more Sunday night anxiety.",
+        "No more second-guessing whether the wording is too sharp, too vague, or easy to misread. Just a calmer draft you can review, trust, and send.",
+      reassurance: "No credit card. No lock-in. You review every word.",
+      quote: "The message you won't regret tomorrow.",
       footerItems: [
         "Built with teachers, for teachers",
         "FERPA-ready workflows",
