@@ -350,8 +350,8 @@ export function ParentEmailSeoTemplate({ page }: ParentEmailSeoTemplateProps) {
 
           {relatedPages.length > 0 ? (
             <section className="space-y-6">
-              <SectionLabel>Related teacher guides</SectionLabel>
-              <div className="grid gap-4 md:grid-cols-3">
+              <SectionLabel>Related guides</SectionLabel>
+              <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
                 {relatedPages.map((relatedPage) => (
                   <Card
                     key={relatedPage.slug}
@@ -371,6 +371,21 @@ export function ParentEmailSeoTemplate({ page }: ParentEmailSeoTemplateProps) {
                     </CardContent>
                   </Card>
                 ))}
+                <Card className="rounded-[1.6rem] border-white/70 bg-white/88 py-0 shadow-[0_24px_90px_-60px_rgba(15,23,42,0.22)]">
+                  <CardContent className="space-y-3 px-5 py-5">
+                    <Link
+                      href="/start"
+                      className="inline-flex items-start gap-2 text-lg font-semibold leading-7 text-slate-950 transition hover:text-fuchsia-700"
+                    >
+                      <span>Try Zaza Draft</span>
+                      <ArrowRight className="mt-1 h-4 w-4 shrink-0" />
+                    </Link>
+                    <p className="text-sm leading-7 text-slate-600">
+                      Use Zaza Draft as a second pair of eyes before sending a
+                      parent email or other high-stakes school message.
+                    </p>
+                  </CardContent>
+                </Card>
               </div>
             </section>
           ) : null}

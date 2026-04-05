@@ -9,9 +9,9 @@ import { HomePageClient } from "./home-client";
 
 export const metadata: Metadata = buildPageMetadata({
   title:
-    "Calm AI Parent Email and Report Writing Help for Teachers | Zaza Draft",
+    "Teacher-First Support for Parent Emails and High-Stakes School Communication | Zaza Draft",
   description:
-    "Teacher-first AI writing help for parent communication, report comments, and professional school messages. Zaza Draft is a calm co-writer that keeps teachers in control of every word.",
+    "Zaza Draft helps teachers turn emotionally risky parent emails and school messages into calm, clear, professional drafts before they are sent. Teacher-first, review-led, and built for high-stakes school communication.",
   path: "/",
   alternates: {
     en: "https://zazadraft.com",
@@ -19,10 +19,11 @@ export const metadata: Metadata = buildPageMetadata({
   },
   keywords: [
     "AI parent email help for teachers",
-    "AI report writing for teachers",
-    "teacher writing assistant",
+    "high-stakes school communication",
+    "teacher communication safety",
     "parent communication AI",
     "teacher co-writer",
+    "defensible school wording",
   ],
 });
 
@@ -35,7 +36,7 @@ export default function HomePage() {
             id: "home-software-schema",
             data: createSoftwareApplicationJsonLd({
               description:
-                "Zaza Draft is a teacher-first AI co-writer for parent communication, report comments, and school writing. It is built to help teachers sound calm, professional, and appropriate while keeping full editorial control.",
+                "Zaza Draft is a teacher-first communication safety layer for parent emails, complaint replies, behaviour updates, documentation, and other high-stakes school communication. Teachers review and approve every word before sending.",
             }),
           },
           {

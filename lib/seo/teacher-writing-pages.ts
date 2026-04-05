@@ -7625,6 +7625,662 @@ export const teacherWritingPages = {
       secondaryHref: "/products/draft",
     },
   },
+  "chatgpt-vs-zaza-draft-for-parent-emails": {
+    slug: "chatgpt-vs-zaza-draft-for-parent-emails",
+    shortTitle: "ChatGPT vs Zaza Draft",
+    keyword: "chatgpt vs zaza draft for parent emails",
+    intent: "Alternative/comparison intent",
+    title: "ChatGPT vs Zaza Draft for Parent Emails | Zaza Draft",
+    metaDescription:
+      "Compare ChatGPT and Zaza Draft for teacher parent emails. See why teacher-first, risk-aware communication support is different from generic AI writing.",
+    h1: "ChatGPT vs Zaza Draft for parent emails",
+    description:
+      "A calm, teacher-first comparison for teachers deciding whether a general AI tool is enough for higher-stakes parent communication.",
+    ogImage: "/teacher-working-at-desk-with-laptop.jpg",
+    heroEyebrow: "Alternative/comparison intent",
+    heroDescription: [
+      "Generic AI can absolutely help with drafting. It can help you brainstorm, get unstuck, or produce a rough first pass. But parent emails are often not ordinary drafting tasks. They are the kind of messages that can be forwarded, screenshotted, re-read later, or quietly change a parent relationship depending on one sentence.",
+      "That is where fit matters. Zaza Draft is built for teachers writing parent emails and other sensitive school communication where tone risk, professional clarity, and teacher control matter more than broad general-purpose flexibility.",
+    ],
+    heroBullets: [
+      "A fair comparison between broad AI drafting and teacher-specific support",
+      "Focused on parent emails where wording can easily escalate things",
+      "Teachers stay in control of every final line before sending",
+    ],
+    featuredSnippet:
+      "ChatGPT can help with rough drafting, brainstorming, and clarity edits. Zaza Draft is better suited when a parent email needs calmer tone, clearer school-ready wording, and more defensible phrasing before it is sent.",
+    sections: [
+      {
+        id: "where-chatgpt-can-help",
+        title: "Where ChatGPT can help",
+        body: [
+          "It is fair to say that ChatGPT can be useful for teachers. If you are staring at a blank page, it can help you get moving. It can also be useful for rephrasing a sentence, exploring possible wording, or getting a rough draft onto the screen more quickly.",
+          "For low-stakes drafting, that may be enough. If the message is straightforward and the emotional temperature is low, a broad tool can be perfectly workable.",
+        ],
+        bullets: [
+          "Brainstorming possible replies",
+          "Rough drafting when you feel stuck",
+          "Rewriting for clarity",
+          "Generating a starting point quickly",
+        ],
+      },
+      {
+        id: "where-generic-ai-falls-short",
+        title: "Where generic AI can fall short in parent communication",
+        body: [
+          "Parent emails are often more context-sensitive than generic AI tools are designed for. A message can sound polished while still being too broad, too confident, too formal, or slightly off in tone for the actual school situation.",
+          "That is the mismatch many teachers feel. The output may look fine at first glance, but still need heavy judgement and cleanup before it feels safe enough to send.",
+        ],
+        bullets: [
+          "It lacks teacher-specific context unless you add that context yourself",
+          "It can sound too generic or oddly polished for real school communication",
+          "It may not handle tone risk carefully enough when a parent is already upset",
+          "It can produce wording that still needs significant professional judgement",
+        ],
+      },
+      {
+        id: "what-zaza-is-built-for",
+        title: "What Zaza Draft is built for instead",
+        body: [
+          "Zaza Draft is narrower by design. It is built for teachers working through parent emails, sensitive replies, documentation, and other school communication where the wording needs to stay calm, clear, and professionally defensible.",
+          "The goal is not to remove teacher judgement. It is to support it with a calmer workflow and wording that is easier to stand behind later.",
+        ],
+        bullets: [
+          "High-stakes school communication rather than generic drafting",
+          "Parent email tone-risk reduction",
+          "Defensible wording for sensitive situations",
+          "Teacher-first workflow with review before sending",
+        ],
+      },
+      {
+        id: "example-scenario",
+        title: "Example scenario: parent complains about grading",
+        body: [
+          "Imagine a parent emails to say the grading was unfair and asks why their child was marked down. A generic AI tool may optimise for fluency, balance, and a complete-looking answer. That can help, but it does not automatically mean the tone is right for a teacher-parent relationship that already feels tense.",
+          "A Zaza-style response prioritises something slightly different. It aims for calm acknowledgement first, then factual clarification, then a next step. The emphasis is on lowering defensiveness, keeping the wording professional, and making sure the reply still feels safe if revisited later.",
+        ],
+        exampleLabel: "Example wording emphasis",
+        exampleBody:
+          "Generic AI may optimise for a polished full reply.\n\nZaza-style wording prioritises:\n- calm acknowledgement of the concern\n- brief factual clarification\n- a clear next step or offer to discuss further\n- language that is less likely to escalate the exchange",
+      },
+      {
+        id: "which-should-teachers-use",
+        title: "Which should teachers use?",
+        body: [
+          "Generic AI may be completely fine for low-stakes tasks, rough ideation, or first-pass drafting. If the message is simple and unlikely to be revisited, the broader flexibility can be useful.",
+          "Zaza Draft is better suited when the message could escalate, be forwarded, or need to stand up professionally later. That is the gap it is built to fill.",
+        ],
+      },
+      {
+        id: "how-zaza-helps",
+        title: "How Zaza Draft helps",
+        body: [
+          "Zaza Draft is teacher-first by design. It is not trying to be a generic assistant for everything. It is designed for parent emails, sensitive replies, documentation, and school communication where emotional tone and professional clarity matter most.",
+          "It works best as a calm second pair of eyes before you send. The teacher still reviews and approves every final word.",
+        ],
+      },
+    ],
+    comparisonBlock: {
+      title: "Side-by-side comparison",
+      intro:
+        "This comparison aims to stay balanced. Generic AI can be genuinely useful. The difference is that parent emails often need more than broad drafting help.",
+      alternativeLabel: "ChatGPT",
+      rows: [
+        {
+          label: "Audience and context",
+          zaza: "Built around teacher parent emails and school communication",
+          alternative: "Designed for broad general-purpose use",
+        },
+        {
+          label: "Tone safety",
+          zaza: "Optimised for calmer, lower-risk school-ready wording",
+          alternative:
+            "Can help, but tone still needs careful teacher judgement",
+        },
+        {
+          label: "Teacher-specific use cases",
+          zaza: "Parent emails, sensitive replies, documentation, reports",
+          alternative: "Flexible across many unrelated tasks",
+        },
+        {
+          label: "Defensibility",
+          zaza: "More focused on wording you can stand behind later",
+          alternative: "May produce fluent wording that still needs reshaping",
+        },
+        {
+          label: "Ease with real school communication",
+          zaza: "Purpose-built for the messages teachers worry about most",
+          alternative: "Requires more prompting and manual context-setting",
+        },
+        {
+          label: "Final teacher control",
+          zaza: "Teacher review remains central",
+          alternative: "Teacher review remains essential",
+        },
+      ],
+      note: "The question is not whether ChatGPT can draft. It can. The question is whether generic drafting is enough when a parent email could change tomorrow's conversation.",
+    },
+    trustBlock: {
+      title: "Why a purpose-built tool can feel safer in parent communication",
+      items: [
+        {
+          title: "Teacher-first context",
+          body: "Designed for parent emails, sensitive replies, documentation, and school wording rather than every possible AI task.",
+        },
+        {
+          title: "Calmer communication support",
+          body: "Useful when the issue is not blank-page drafting but getting to wording that feels steady and professionally safe.",
+        },
+        {
+          title: "Teacher judgement preserved",
+          body: "Zaza Draft supports the wording. It does not remove your review, judgement, or final decision about what gets sent.",
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "Is this saying ChatGPT is bad for teachers?",
+        answer:
+          "No. ChatGPT can be useful for brainstorming, drafting, and getting unstuck. This page is about fit for parent emails, where wording risk and professional defensibility matter more than broad flexibility.",
+      },
+      {
+        question: "When is generic AI probably enough?",
+        answer:
+          "It can be enough for lower-stakes tasks, rough first drafts, or simple messages that do not carry much emotional or professional risk.",
+      },
+      {
+        question: "Why does defensibility matter in parent emails?",
+        answer:
+          "Because school communication can be revisited later. A message may be forwarded, screenshotted, or referred back to in a meeting. Wording that feels calm and proportionate is easier to stand behind.",
+      },
+      {
+        question: "Does Zaza Draft send anything automatically?",
+        answer:
+          "No. The teacher remains in control and reviews every final message before it is sent.",
+      },
+      ...xComparisonFaqAdditions,
+    ],
+    internalLinks: [
+      {
+        href: "/grammarly-vs-zaza-draft-for-school-communication",
+        label: "Compare Grammarly and Zaza Draft",
+        description:
+          "Use the Grammarly comparison if you want to contrast grammar help with teacher-first communication-risk support.",
+      },
+      {
+        href: "/how-to-respond-to-an-angry-parent-email",
+        label: "How to Respond to an Angry Parent Email",
+        description:
+          "Use the anger-specific page if your real question is how to phrase a first reply without escalating it.",
+      },
+      {
+        href: "/how-to-write-a-professional-parent-email-as-a-teacher",
+        label: "How to Write a Professional Parent Email as a Teacher",
+        description:
+          "Read the practical guide if you want calmer wording principles for everyday teacher-parent communication.",
+      },
+    ],
+    relatedSlugs: [
+      "grammarly-vs-zaza-draft-for-school-communication",
+      "alternative-to-chatgpt-for-teachers",
+      "teacher-email-writer",
+      "ai-parent-email-generator-for-teachers",
+      "teacher-parent-communication-hub",
+      "report-comment-generator-for-teachers",
+    ],
+    structuredDataTypes: [
+      "WebPage",
+      "BreadcrumbList",
+      "Article",
+      "FAQPage",
+      "SoftwareApplication",
+    ],
+    testimonials: [
+      {
+        quotePrompt:
+          "Placeholder testimonial about preferring Zaza Draft for parent emails that felt too risky for a generic AI workflow.",
+        attributionPrompt:
+          "Replace with a verified quote from a classroom teacher or pastoral lead.",
+      },
+      {
+        quotePrompt:
+          "Placeholder testimonial about using ChatGPT for low-stakes drafting but Zaza Draft for emotionally difficult parent replies.",
+        attributionPrompt:
+          "Replace with a verified quote from a head of year or senior teacher.",
+      },
+    ],
+    cta: {
+      title: "Need more than generic AI for parent emails?",
+      body: "Try Zaza Draft for calmer, clearer school communication support before you send.",
+      primaryLabel: "Try Zaza Draft",
+      primaryHref: "/start",
+      secondaryLabel: "Read the angry parent guide",
+      secondaryHref: "/how-to-respond-to-an-angry-parent-email",
+    },
+  },
+  "grammarly-vs-zaza-draft-for-school-communication": {
+    slug: "grammarly-vs-zaza-draft-for-school-communication",
+    shortTitle: "Grammarly vs Zaza Draft",
+    keyword: "grammarly vs zaza draft for school communication",
+    intent: "Alternative/comparison intent",
+    title: "Grammarly vs Zaza Draft for School Communication | Zaza Draft",
+    metaDescription:
+      "Compare Grammarly and Zaza Draft for school communication. Learn the difference between grammar help and teacher-first support for high-stakes wording.",
+    h1: "Grammarly vs Zaza Draft for school communication",
+    description:
+      "A fair comparison for teachers deciding whether grammar correction is enough when a school message also needs calmer tone and stronger professional footing.",
+    ogImage: "/teacher-working-at-desk-with-laptop.jpg",
+    heroEyebrow: "Alternative/comparison intent",
+    heroDescription: [
+      "Grammarly is useful for grammar, spelling, and clarity. That matters. But school communication often needs more than correctness. A parent email can be grammatically clean and still sound too sharp, too formal, too defensive, or too exposed if the situation is already tense.",
+      "Zaza Draft is built around that gap. It is designed for teachers writing parent emails, difficult follow-ups, and other school communication where tone risk and professional defensibility matter as much as tidy sentences.",
+    ],
+    heroBullets: [
+      "A fair comparison between grammar support and communication-risk support",
+      "Focused on high-stakes school wording, not just surface correctness",
+      "Teachers stay in control of every final word before sending",
+    ],
+    featuredSnippet:
+      "Grammarly is strong for grammar, spelling, and polishing. Zaza Draft is stronger when the real issue is not correctness but whether the message will land calmly, professionally, and safely in a school context.",
+    sections: [
+      {
+        id: "what-grammarly-does-well",
+        title: "What Grammarly does well",
+        body: [
+          "Grammarly is genuinely useful for broad writing support. If you want help catching errors, tightening phrasing, or improving clarity, it can be a solid part of your workflow.",
+          "For general proofreading or sentence-level improvement, that may be exactly what you need.",
+        ],
+        bullets: [
+          "Grammar correction",
+          "Sentence clarity",
+          "Proofreading support",
+          "Broad writing help across many contexts",
+        ],
+      },
+      {
+        id: "what-grammarly-is-not-designed-for",
+        title: "What Grammarly is not designed for",
+        body: [
+          "School communication pressure is not only about whether a sentence is correct. It is also about whether the wording could escalate a parent exchange, sound colder than intended, or leave you with a message that feels professionally uncomfortable later.",
+          "That is not really a grammar problem. It is a context, tone, and defensibility problem.",
+        ],
+        bullets: [
+          "Parent-email escalation risk",
+          "High-stakes school messaging",
+          "Teacher-specific communication pressure",
+          "School-specific tone and defensibility concerns",
+        ],
+      },
+      {
+        id: "what-zaza-is-designed-to-do",
+        title: "What Zaza Draft is designed to do",
+        body: [
+          "Zaza Draft is built for teachers writing messages that need to stay calm, clear, and professionally steady under pressure. That includes parent emails, difficult replies, documentation, report comments, and other school communication where one sentence can change the tone of what happens next.",
+          "It acts more like a second pair of eyes for school-risk wording than a general grammar layer.",
+        ],
+        bullets: [
+          "Support parent emails and difficult replies",
+          "Reduce tone risk before sending",
+          "Help wording stay calm and professional",
+          "Support teachers writing under pressure",
+        ],
+      },
+      {
+        id: "example-use-case",
+        title: "Example use case: writing a behaviour email to a parent",
+        body: [
+          "Grammarly can help polish wording in a behaviour email. It can make the writing cleaner and more readable, which is useful.",
+          "Zaza Draft is built for a slightly different job. It helps reshape the communication so the message lands more calmly and professionally in the first place. That means reducing loaded phrasing, lowering defensiveness, and making the email easier to stand behind later if it is revisited.",
+        ],
+        exampleLabel: "Different emphasis",
+        exampleBody:
+          "Grammarly helps polish the sentence.\n\nZaza Draft helps pressure-test whether the message itself feels calm, proportionate, and school-ready before it is sent.",
+      },
+      {
+        id: "which-tool-is-better",
+        title: "Which tool is better for teachers?",
+        body: [
+          "Grammarly is strong for general correction and editing. If the message is low-stakes and the main issue is surface quality, it may be enough.",
+          "Zaza Draft is stronger when the message is emotionally sensitive, likely to escalate, or important enough that tone and defensibility matter as much as grammar. That is the context it is built for.",
+        ],
+      },
+      {
+        id: "how-zaza-helps",
+        title: "How Zaza Draft helps",
+        body: [
+          "Zaza Draft is teacher-first and communication-specific. It is built for parent emails, report comments, sensitive replies, and school writing that needs more than proofreading.",
+          "It works as a second pair of eyes before you send, while keeping the teacher fully in control of the final wording.",
+        ],
+      },
+    ],
+    comparisonBlock: {
+      title: "Comparison table",
+      intro:
+        "This is a use-case comparison, not an attack page. Grammarly and Zaza Draft do different jobs well.",
+      alternativeLabel: "Grammarly",
+      rows: [
+        {
+          label: "Grammar support",
+          zaza: "Not the main focus",
+          alternative: "Core strength",
+        },
+        {
+          label: "Tone-risk support",
+          zaza: "Built around calmer, lower-risk school wording",
+          alternative:
+            "Can improve clarity, but not purpose-built for tone risk",
+        },
+        {
+          label: "Teacher-specific communication context",
+          zaza: "Designed for teacher and school communication",
+          alternative: "Broad writing support across many contexts",
+        },
+        {
+          label: "Parent emails",
+          zaza: "Core use case",
+          alternative: "Can assist at sentence level",
+        },
+        {
+          label: "Difficult follow-ups",
+          zaza: "Designed for emotionally sensitive replies",
+          alternative: "Not specifically built for this pressure",
+        },
+        {
+          label: "Defensibility for school communication",
+          zaza: "Aims for wording that is easier to stand behind later",
+          alternative:
+            "Proofreads wording but does not specialise in this risk",
+        },
+        {
+          label: "Teacher review before sending",
+          zaza: "Always remains central",
+          alternative: "Still essential",
+        },
+      ],
+      note: "If the issue is spelling or grammar, Grammarly may be enough. If the issue is whether a parent email will land badly, the fit is different.",
+    },
+    trustBlock: {
+      title: "Why teachers often need more than proofreading",
+      items: [
+        {
+          title: "Communication-specific support",
+          body: "Designed for parent emails, difficult follow-ups, report comments, and other school writing where the risk is not just an error but the wrong tone.",
+        },
+        {
+          title: "Calmer under pressure",
+          body: "Useful when you already know what you want to say, but need help making it clearer, steadier, and less likely to escalate.",
+        },
+        {
+          title: "Teacher control preserved",
+          body: "Zaza Draft supports the drafting process. The teacher still reviews and approves every final message.",
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "Is Zaza Draft trying to replace Grammarly?",
+        answer:
+          "Not really. Grammarly is useful for proofreading and sentence-level improvements. Zaza Draft is designed for a different problem: helping teachers shape calmer, more defensible school communication.",
+      },
+      {
+        question: "Can teachers use both?",
+        answer:
+          "Yes. A teacher could use Grammarly for corrections and Zaza Draft for tone-sensitive parent emails or other high-stakes messages where wording risk matters more.",
+      },
+      {
+        question: "Why is defensibility part of school communication?",
+        answer:
+          "Because some messages are revisited later. A parent email may be forwarded, screenshotted, or referred back to in a meeting. Calm, proportionate wording is easier to stand behind professionally.",
+      },
+      {
+        question: "Does Zaza Draft send anything automatically?",
+        answer:
+          "No. The teacher remains in control and reviews every final line before sending anything.",
+      },
+      ...xComparisonFaqAdditions,
+    ],
+    internalLinks: [
+      {
+        href: "/chatgpt-vs-zaza-draft-for-parent-emails",
+        label: "ChatGPT vs Zaza Draft for Parent Emails",
+        description:
+          "Compare Zaza Draft with a broader general AI tool if your question is really about generic drafting versus school-risk communication support.",
+      },
+      {
+        href: "/how-to-write-a-calm-email-about-student-behaviour",
+        label: "How to Write a Calm Email About Student Behaviour",
+        description:
+          "Read the behaviour-email guide if your question is about calm school wording under pressure rather than tool choice.",
+      },
+      {
+        href: "/how-to-write-report-comments-that-sound-professional-and-human",
+        label: "How to Write Report Comments That Sound Professional and Human",
+        description:
+          "Use the report-comments page for the adjacent use case where professional tone matters without the same escalation risk.",
+      },
+    ],
+    relatedSlugs: [
+      "chatgpt-vs-zaza-draft-for-parent-emails",
+      "alternative-to-chatgpt-for-teachers",
+      "report-comment-generator-for-teachers",
+      "ai-parent-email-generator-for-teachers",
+      "teacher-email-writer",
+      "teacher-parent-communication-hub",
+    ],
+    structuredDataTypes: [
+      "WebPage",
+      "BreadcrumbList",
+      "Article",
+      "FAQPage",
+      "SoftwareApplication",
+    ],
+    testimonials: [
+      {
+        quotePrompt:
+          "Placeholder testimonial about using Grammarly for correction but preferring Zaza Draft for difficult parent emails.",
+        attributionPrompt:
+          "Replace with a verified quote from a classroom teacher or pastoral lead.",
+      },
+      {
+        quotePrompt:
+          "Placeholder testimonial about needing more than grammar help when writing high-stakes school messages.",
+        attributionPrompt:
+          "Replace with a verified quote from a head of year or senior teacher.",
+      },
+    ],
+    cta: {
+      title: "Grammar is helpful. Tone risk is something else.",
+      body: "Use Zaza Draft when a school message needs to be calm, clear, and easier to stand behind.",
+      primaryLabel: "Try Zaza Draft",
+      primaryHref: "/start",
+      secondaryLabel: "Compare ChatGPT and Zaza Draft",
+      secondaryHref: "/chatgpt-vs-zaza-draft-for-parent-emails",
+    },
+  },
+  "how-to-write-report-comments-that-sound-professional-and-human": {
+    slug: "how-to-write-report-comments-that-sound-professional-and-human",
+    shortTitle: "Professional and Human Report Comments",
+    keyword: "how to write report comments that sound professional and human",
+    intent: "How-to/problem intent",
+    title:
+      "How to Write Report Comments That Sound Professional and Human | Zaza Draft",
+    metaDescription:
+      "A teacher-first guide to writing report comments that stay professional, specific, and human without sounding robotic, repetitive, or overly generic.",
+    h1: "How to write report comments that sound professional and human",
+    description:
+      "A calm guide for teachers who want report comments to sound more specific, more human, and less like safe but empty repetition.",
+    ogImage: "/report-card-grades.jpg",
+    heroEyebrow: "How-to/problem intent",
+    heroDescription: [
+      "Report comments often start flattening out when you are tired, under time pressure, and trying to stay measured across dozens of pupils. Professional can start sounding robotic. Human can start sounding vague. That is usually not a writing-ability issue. It is repetition fatigue under workload pressure.",
+      "Zaza Draft can help as a second use case alongside parent communication and other high-stakes school messaging. It supports calmer, clearer report wording while keeping the teacher fully in control of every final line.",
+    ],
+    heroBullets: [
+      "Keep comments professional without sounding stiff",
+      "Make the wording more human without losing clarity",
+      "Stay in control of every final comment before it goes out",
+    ],
+    featuredSnippet:
+      "Strong report comments usually combine one specific strength, one meaningful observation, and one realistic next step in wording that sounds like a real teacher rather than a template.",
+    sections: [
+      {
+        id: "why-comments-sound-flat",
+        title: "Why report comments often start sounding flat",
+        body: [
+          "After enough repetition, even careful teachers start leaning on familiar phrases. That is not laziness. It is what happens when you are trying to stay safe, balanced, and efficient across a large set of comments.",
+          "The result is often language that is technically fine but not very alive. It sounds generic because the teacher is trying to avoid being either too harsh or too casual while working quickly.",
+        ],
+        bullets: [
+          "Repetition fatigue",
+          "Time pressure",
+          "Overuse of generic praise",
+          "Trying to stay safe while still saying something meaningful",
+        ],
+      },
+      {
+        id: "what-strong-comments-include",
+        title: "What strong report comments usually include",
+        body: [
+          "The strongest comments do not try to say everything. They usually do a few things well. They identify something real, give a grounded observation, and point clearly to what comes next where appropriate.",
+          "That is what helps a comment feel both professional and human.",
+        ],
+        bullets: [
+          "One specific strength",
+          "One meaningful observation",
+          "One development area where appropriate",
+          "Calm, balanced wording",
+          "A professional tone that still sounds like a real teacher",
+        ],
+      },
+      {
+        id: "what-to-avoid",
+        title: "What to avoid",
+        body: [
+          "When comments feel weak, the issue is usually not grammar. It is that the wording has become too broad, too stiff, or too familiar to feel genuinely useful.",
+        ],
+        bullets: [
+          "Empty praise",
+          "Repeated phrases across multiple students",
+          "Comments that sound copied and pasted",
+          "Wording that feels too stiff or too blunt",
+          "Vague statements with no real observation",
+        ],
+      },
+      {
+        id: "example-before-and-after",
+        title: "Example before and after",
+        body: [
+          "A more professional and human report comment usually becomes stronger by adding specificity, toning down clichés, and giving a clearer next step.",
+        ],
+        exampleLabel: "Before and after",
+        exampleBody:
+          "Before:\nEmma is a lovely student who works hard and should keep it up.\n\nAfter:\nEmma has shown steady progress this term, particularly in her written responses. She approaches tasks thoughtfully and is beginning to explain her reasoning more clearly. The next step is to continue building confidence when contributing verbally in class.",
+      },
+      {
+        id: "simple-structure",
+        title: "A simple structure for better report comments",
+        body: [
+          "If you are stuck, a simple structure often helps more than trying to sound polished from the first sentence. Start with a real strength, support it with an observation, then add a realistic next step where useful.",
+        ],
+        bullets: ["Strength", "Evidence or observation", "Next step"],
+      },
+      {
+        id: "professional-and-human",
+        title: "How to keep comments professional and human at the same time",
+        body: [
+          "Professional does not mean cold. Human does not mean loose. The aim is balanced wording that feels specific enough to be worth reading and measured enough to belong in a formal school report.",
+        ],
+        bullets: [
+          "Use real observations",
+          "Avoid clichés",
+          "Keep the tone balanced",
+          "Write as if a family will read it closely",
+        ],
+      },
+      {
+        id: "how-zaza-helps",
+        title: "How Zaza Draft helps",
+        body: [
+          "Zaza Draft helps teachers move beyond repetitive phrasing while keeping comments editable and teacher-approved. It supports professional tone with less rewriting, especially when you know what you want to say but the wording keeps coming out flat.",
+          "Report comments are a secondary use case alongside parent communication and other sensitive school messaging, but they still benefit from the same calmer, clearer drafting support.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "How do I make report comments sound less robotic?",
+        answer:
+          "Use one real observation, one specific strength, and where appropriate one next step. The issue is often not that the comment is too formal, but that it is too generic.",
+      },
+      {
+        question: "Should every report comment include a target?",
+        answer:
+          "Not necessarily. A next step can be helpful, but it should feel proportionate and meaningful rather than forced into every comment.",
+      },
+      {
+        question:
+          "Can Zaza Draft replace my professional judgement on report comments?",
+        answer:
+          "No. It is a drafting support tool. Teachers still review, edit, and approve every final comment.",
+      },
+      {
+        question: "Is Zaza Draft mainly for report comments?",
+        answer:
+          "No. Its strongest wedge is parent emails and high-stakes school communication. Report comments are a secondary but still useful part of the workflow.",
+      },
+    ],
+    internalLinks: [
+      {
+        href: "/how-to-write-a-professional-parent-email-as-a-teacher",
+        label: "How to Write a Professional Parent Email as a Teacher",
+        description:
+          "Use the parent-email guide if your main concern is professional tone in messages to families rather than report wording.",
+      },
+      {
+        href: "/grammarly-vs-zaza-draft-for-school-communication",
+        label: "Compare Grammarly and Zaza Draft",
+        description:
+          "See the comparison page if you want the difference between grammar help and higher-stakes school communication support.",
+      },
+      {
+        href: "/chatgpt-vs-zaza-draft-for-parent-emails",
+        label: "Compare ChatGPT and Zaza Draft",
+        description:
+          "Read the parent-email comparison if you want to compare generic AI drafting with a teacher-first communication workflow.",
+      },
+    ],
+    relatedSlugs: [
+      "report-comment-generator-for-teachers",
+      "grammarly-vs-zaza-draft-for-school-communication",
+      "chatgpt-vs-zaza-draft-for-parent-emails",
+      "sen-report-comments-examples",
+      "teacher-email-writer",
+      "alternative-to-chatgpt-for-teachers",
+    ],
+    structuredDataTypes: ["WebPage", "BreadcrumbList", "Article", "FAQPage"],
+    testimonials: [
+      {
+        quotePrompt:
+          "Placeholder testimonial about turning repetitive report wording into comments that felt more specific and more human.",
+        attributionPrompt:
+          "Replace with a verified quote from a primary or secondary teacher.",
+      },
+      {
+        quotePrompt:
+          "Placeholder testimonial about keeping report comments professional without sounding copied and pasted.",
+        attributionPrompt:
+          "Replace with a verified quote from a classroom teacher or head of year.",
+      },
+    ],
+    cta: {
+      title: "Need report comments that sound more like you?",
+      body: "Use Zaza Draft to turn repetitive drafts into clearer, more human report comments you can still edit and approve.",
+      primaryLabel: "Try Zaza Draft",
+      primaryHref: "/start",
+      secondaryLabel: "View pricing",
+      secondaryHref: "/pricing",
+    },
+  },
   "sen-report-comments-examples": {
     slug: "sen-report-comments-examples",
     shortTitle: "SEN Report Comments",

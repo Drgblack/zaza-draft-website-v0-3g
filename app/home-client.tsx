@@ -9,7 +9,6 @@ import { track, trackCtaClick } from "@/lib/analytics";
 import { DraftDemo } from "@/components/draft-demo";
 import { CaseStudyCarousel } from "@/components/case-study-carousel";
 import { SocialProofBadges } from "@/components/social-proof-badges";
-import { getDraftPricingHref } from "@/lib/draft-cta";
 
 const Check = ({ className }: { className?: string }) => (
   <svg
@@ -146,7 +145,8 @@ export function HomePageClient() {
   const [showHallucinationTooltip, setShowHallucinationTooltip] =
     useState(false);
   const prefersReducedMotion = useReducedMotion();
-  const pricingHref = getDraftPricingHref(language);
+  const startHref = language === "de" ? "/de/start" : "/start";
+  const angryParentGuideHref = "/how-to-respond-to-an-angry-parent-email";
   const founderStoryHref =
     language === "de" ? "/de/about/founder" : "/about/founder";
   const heroEyebrow = language === "de" ? "FUER LEHRKRAEFTE" : "FOR TEACHERS";
@@ -156,20 +156,20 @@ export function HomePageClient() {
       : "High-stakes school messages with a built-in safety layer";
   const heroHeadline =
     language === "de"
-      ? "Schreibe Eltern-E-Mails und Zeugnisbemerkungen"
-      : "Write parent emails and report comments";
+      ? "Schreibe Eltern-E-Mails und Schulnachrichten"
+      : "Write parent emails and school messages";
   const heroHeadlineAccent =
     language === "de"
       ? "ohne Sorge, dass sie falsch aufgefasst werden."
       : "without worrying they will be taken the wrong way.";
   const heroSubheading =
     language === "de"
-      ? "Draft hilft Lehrkraeften, klare, professionelle Eltern-E-Mails und Zeugnisbemerkungen zu schreiben - mit integrierter Anleitung, um Tonrisiken zu senken, Missverstaendnisse zu vermeiden und Eskalationen vor dem Senden zu reduzieren."
-      : "Draft helps teachers write clear, professional parent emails and report comments with built-in guidance to reduce tone risk, avoid misinterpretation, and prevent unnecessary escalation before sending.";
+      ? "Zaza Draft hilft Lehrkraeften, emotional riskante Entwuerfe in ruhige, klare und professionelle Nachrichten zu verwandeln, bevor sie gesendet werden. Entwickelt fuer Eltern-E-Mails, Beschwerdeantworten, Verhaltens-Updates, Dokumentation und andere sensible Schulkommunikation."
+      : "Zaza Draft helps teachers turn emotionally risky drafts into calm, clear, professional messages before they’re sent. Built for parent emails, complaint replies, behaviour updates, documentation, and other high-stakes school communication.";
   const heroEntityLine =
     language === "de"
-      ? "Zaza Draft ist kein generischer KI-Schreiber. Es ist eine lehrkraft-zentrierte Sicherheitsebene fuer sensible Schulkommunikation. Du pruefst, bearbeitest und gibst jede Formulierung selbst frei."
-      : "Zaza Draft is not a generic AI writer. It is a teacher-first safety layer for high-stakes school communication. You review, edit, and approve every word before it is used.";
+      ? "Zaza Draft ist keine generische Schreibhilfe. Es ist eine lehrkraft-zentrierte Sicherheitsebene fuer sensible Schulkommunikation. Du pruefst, bearbeitest und gibst jede Formulierung selbst frei."
+      : "Zaza Draft is not generic AI writing help. It is a teacher-first communication safety layer for high-stakes school communication. You review, edit, and approve every word before it is used.";
   const heroOutcomeLabel =
     language === "de" ? "Vorher und nachher" : "Before and after";
   const heroProofHeading =
@@ -269,12 +269,12 @@ export function HomePageClient() {
       : "Built for teachers who need communication to stay calm, clear, and defensible.";
   const heroTrustBarDifferentiator =
     language === "de"
-      ? "Draft fuegt Eltern-E-Mails, Zeugnisbemerkungen und anderen sensiblen Schulnachrichten eine Schutzebene hinzu, bevor sie rausgehen."
-      : "Draft adds a protective layer before parent emails, report comments, and other sensitive school messages go out.";
+      ? "Draft fuegt Eltern-E-Mails, Beschwerdeantworten, Verhaltens-Updates und anderen sensiblen Schulnachrichten eine Schutzebene hinzu, bevor sie rausgehen."
+      : "Draft adds a protective layer before parent emails, complaint replies, behaviour updates, documentation, and other sensitive school messages go out.";
   const heroCtaMicrocopy =
     language === "de"
-      ? "Schreibe jeden Monat bis zu 10 Nachrichten kostenlos. Keine Kreditkarte erforderlich."
-      : "Write up to 10 messages free each month. No credit card required.";
+      ? "Keine Kreditkarte. Keine Bindung. Du pruefst jede Nachricht vor dem Senden."
+      : "No credit card. No lock-in. You review every message before sending.";
   const heroCheckerLabel =
     language === "de"
       ? "Kostenlosen Risiko-Check fuer Elternmails testen"
@@ -283,10 +283,12 @@ export function HomePageClient() {
     language === "de"
       ? "Pruefe, ob eine Elternmail zu direkt, defensiv oder eskalationsanfaellig wirken koennte, und erhalte vor dem Senden eine ruhigere Version."
       : "Check whether a parent email may sound too blunt, defensive, or likely to escalate, and get a safer version before you send it.";
+  const primaryStartLabel =
+    language === "de" ? "Zaza Draft testen" : "Try Zaza Draft";
   const heroTeacherUsageLine =
     language === "de"
-      ? "Entwickelt fuer Lehrkraefte, die E-Mails an Eltern, Zeugnisformulierungen und andere sensible Schulkommunikation schreiben."
-      : "Built for teachers writing parent emails, report comments, and other high-stakes school communication.";
+      ? "Entwickelt fuer Eltern-E-Mails, schwierige Follow-ups, Verhaltens-Notizen, safeguarding-nahe Formulierungen und andere sensible Schulkommunikation."
+      : "Built for parent emails, difficult follow-ups, behaviour notes, safeguarding-adjacent wording, and other high-stakes school communication.";
   const heroTrustBarPoints =
     language === "de"
       ? [
@@ -301,13 +303,14 @@ export function HomePageClient() {
         ];
   const betaFeedbackHeading =
     language === "de"
-      ? "Draft ist jetzt live fuer sensible Schulkommunikation"
-      : "Draft is now live for high-stakes school communication";
+      ? "Zaza Draft ist live fuer sensible Schulkommunikation"
+      : "Zaza Draft is live for high-stakes school communication";
   const betaFeedbackBody =
     language === "de"
-      ? "Sieh dir die aktuellen Plaene an und waehle den passenden Einstieg fuer Eltern-E-Mails, Zeugnisbemerkungen und andere sensible Nachrichten."
-      : "See the live plans and choose the right way to start using Draft for parent emails, report comments, and other sensitive messages.";
-  const betaFeedbackCta = language === "de" ? "Preise ansehen" : "See pricing";
+      ? "Starte mit Zaza Draft, wenn du Eltern-E-Mails, schwierige Antworten, Dokumentation und andere sensible Schulnachrichten ruhiger formulieren willst."
+      : "Start with Zaza Draft if you want calmer support for parent emails, difficult replies, documentation, and other sensitive school messages.";
+  const betaFeedbackCta =
+    language === "de" ? "Zaza Draft testen" : "Try Zaza Draft";
   const trustPanelHeading =
     language === "de"
       ? "Lehrkraft-zentrierte Unterstuetzung fuer sensible Schulkommunikation"
@@ -348,7 +351,7 @@ export function HomePageClient() {
           },
           {
             title: "Built for teachers",
-            body: "Built for parent emails, report comments, and documentation that may be forwarded, challenged, or reviewed later.",
+            body: "Built for parent emails, complaint replies, documentation, and school messages that may be forwarded, challenged, or reviewed later.",
             icon: DocumentIcon,
           },
           {
@@ -364,30 +367,127 @@ export function HomePageClient() {
         ];
   const situationsHeading =
     language === "de"
-      ? "Situationen, die Lehrkraefte nur ungern formulieren"
-      : "Situations teachers worry about writing";
+      ? "Wenn die Formulierung mehr Gewicht hat als sonst"
+      : "When the wording matters more than usual";
+  const situationsBody =
+    language === "de"
+      ? "Zaza Draft ist fuer die Nachrichten gebaut, bei denen Lehrkraefte zoegern - fuer Formulierungen, die eskalieren, weitergeleitet oder spaeter erneut gelesen werden koennen."
+      : "Zaza Draft is built for the messages teachers hesitate over: the ones that can escalate, be forwarded, or be revisited later.";
   const situationsItems =
     language === "de"
       ? [
-          "Verhaltensvorfaelle",
-          "Beschwerden von Eltern",
-          "Sensible Zeugnisformulierungen",
+          "Veraergerte Eltern-E-Mails",
+          "Beschwerdeantworten",
+          "Verhaltens-Updates",
           "Schwierige Follow-up-E-Mails",
-          "Eskalationen an Familien",
-          "Emotional aufgeladene Nachrichten",
+          "Dokumentation nach einem Gespraech",
+          "Zeugnisbemerkungen",
         ]
       : [
-          "Behaviour incidents",
-          "Parent complaints",
-          "Sensitive report comments",
+          "Angry parent emails",
+          "Complaint responses",
+          "Behaviour updates",
           "Difficult follow-up emails",
-          "Escalation to families",
-          "Emotionally charged messages",
+          "Documentation after a meeting",
+          "Report comments",
         ];
+  const guidesHeading =
+    language === "de"
+      ? "Praktische Leitfaeden fuer schwierige Schulkommunikation"
+      : "Practical guides for difficult school communication";
+  const guidesIntro =
+    language === "de"
+      ? "Wenn du noch kein Tool ausprobieren willst, starte mit einem dieser lehrkraft-zentrierten Leitfaeden."
+      : "If you are not ready to try a tool yet, start with one of these teacher-first guides.";
+  const guideLinks = [
+    {
+      href: "/how-to-respond-to-an-angry-parent-email",
+      title:
+        language === "de"
+          ? "Wie man auf eine veraergerte Eltern-E-Mail antwortet"
+          : "How to respond to an angry parent email",
+      description:
+        language === "de"
+          ? "Eine ruhigere erste Antwort, wenn eine Elternmail bereits angespannt ist."
+          : "A calmer first reply when a parent email already feels tense.",
+    },
+    {
+      href: "/teacher-response-to-a-parent-complaint",
+      title:
+        language === "de"
+          ? "Professionell auf eine Beschwerde von Eltern reagieren"
+          : "Responding to a parent complaint professionally",
+      description:
+        language === "de"
+          ? "Klarere Formulierungen fuer Beschwerdeantworten ohne Eskalation."
+          : "Clearer complaint replies without sounding defensive or distant.",
+    },
+    {
+      href: "/how-to-document-a-parent-communication-professionally",
+      title:
+        language === "de"
+          ? "Elternkommunikation professionell dokumentieren"
+          : "Document a parent communication professionally",
+      description:
+        language === "de"
+          ? "Sachliche Notizen, die spaeter noch standhalten."
+          : "Factual, calmer records you can stand behind later.",
+    },
+    {
+      href: "/how-to-avoid-sounding-defensive-in-a-parent-email",
+      title:
+        language === "de"
+          ? "Nicht defensiv in einer Eltern-E-Mail klingen"
+          : "How to avoid sounding defensive in a parent email",
+      description:
+        language === "de"
+          ? "Praktische Hilfe fuer ruhigere, professionellere Formulierungen."
+          : "Practical help for calmer wording when tone could be misread.",
+    },
+  ];
+  const finalGuideLabel =
+    language === "de"
+      ? "Leitfaden fuer schwierige Eltern-E-Mails lesen"
+      : "Read a guide for difficult parent emails";
+  const finalHeading =
+    language === "de"
+      ? "Die Nachricht, die du morgen nicht bereust"
+      : "The message you won’t regret tomorrow";
+  const finalSubheading =
+    language === "de"
+      ? "Keine Zweifel mehr, ob die Formulierung zu scharf, zu vage oder leicht missverstaendlich ist. Nur ein ruhigerer Entwurf, den du pruefen, vertreten und senden kannst."
+      : "No more second-guessing whether the wording is too sharp, too vague, or easy to misread. Just a calmer draft you can review, trust, and send.";
+  const useCasesHeading =
+    language === "de"
+      ? "Wofuer Lehrkraefte Zaza Draft am ehesten brauchen"
+      : "Where teachers most need wording support";
+  const useCasesIntro =
+    language === "de"
+      ? "Elternkommunikation steht im Vordergrund. Zeugnisbemerkungen und andere Schreibaufgaben bleiben wichtig, aber sie sind nicht der schaerfste Einsatzfall."
+      : "Parent communication sits at the centre. Report comments and other writing support still matter, but they are secondary to the messages that can escalate.";
+  const comparisonHeading =
+    language === "de"
+      ? "Mehr als generische Schreibhilfe"
+      : "More than generic writing help";
+  const comparisonSubheading =
+    language === "de"
+      ? "Generische Tools helfen beim Schreiben. Zaza Draft hilft bei Schulkommunikation, die ruhig, klar und professionell belastbar bleiben muss."
+      : "Generic tools help with writing. Zaza Draft helps with school communication that needs to stay calm, clear, and professionally defensible.";
+  const comparisonClarifier =
+    language === "de"
+      ? "Die Frage ist nicht nur, ob der Satz korrekt ist. Die Frage ist, ob die Nachricht in einer echten Schulsituation sicher genug klingt."
+      : "The question is not only whether the sentence is correct. It is whether the message will hold its tone in a real school situation.";
 
-  const scrollToDemo = () => {
-    track("cta_click_home_see_examples", { language });
-    document.getElementById("demo")?.scrollIntoView({ behavior: "smooth" });
+  const goToGuide = (href: string, location: string, label: string) => {
+    trackCtaClick({
+      ctaText: label,
+      ctaLocation: location,
+    });
+    track("seo_guide_link_clicked", {
+      source: location,
+      language,
+      href,
+    });
   };
 
   return (
@@ -462,26 +562,37 @@ export function HomePageClient() {
                   className="w-full sm:w-auto inline-flex items-center justify-center bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-transform transition-shadow duration-200 hover:scale-[1.03] hover:shadow-xl hover:shadow-purple-500/30 active:scale-[0.98]"
                 >
                   <Link
-                    href={pricingHref}
+                    href={startHref}
                     onClick={() => {
                       trackCtaClick({
-                        ctaText: t("hero.ctaPrimary"),
+                        ctaText: primaryStartLabel,
                         ctaLocation: "hero",
                       });
                       track("cta_click_home_get_started", { language });
                     }}
                   >
-                    {t("hero.ctaPrimary")}
+                    {primaryStartLabel}
                   </Link>
                 </Button>
                 <Button
-                  onClick={scrollToDemo}
+                  asChild
                   size="lg"
                   variant="outline"
                   className="w-full sm:w-auto inline-flex items-center justify-center bg-white/5 border border-white/10 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 backdrop-blur-sm transition-transform transition-shadow duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/10 group active:scale-[0.98]"
                 >
-                  {t("hero.ctaSecondary")}
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <Link
+                    href={angryParentGuideHref}
+                    onClick={() =>
+                      goToGuide(
+                        angryParentGuideHref,
+                        "home_hero_secondary",
+                        finalGuideLabel,
+                      )
+                    }
+                  >
+                    {finalGuideLabel}
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </Button>
               </motion.div>
               <motion.div
@@ -811,8 +922,11 @@ export function HomePageClient() {
                       <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-[#C4B5FD]">
                         {situationsHeading}
                       </h3>
+                      <p className="mt-3 text-sm leading-6 text-[#CBD5E1]">
+                        {situationsBody}
+                      </p>
                       <div className="mt-4 flex flex-wrap gap-2">
-                        {situationsItems.slice(0, 4).map((item) => (
+                        {situationsItems.map((item) => (
                           <span
                             key={item}
                             className="rounded-full border border-white/8 bg-[#111827]/70 px-3 py-2 text-xs text-[#E2E8F0]"
@@ -1033,6 +1147,51 @@ export function HomePageClient() {
         </div>
       </section>
 
+      <section className="bg-[#111827] py-20">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <motion.div
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
+              {guidesHeading}
+            </h2>
+            <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-[#CBD5E1]">
+              {guidesIntro}
+            </p>
+          </motion.div>
+          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+            {guideLinks.map((guide, index) => (
+              <motion.div
+                key={guide.href}
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.08 }}
+                className="rounded-2xl border border-[#334155] bg-[#0F172A] p-6"
+              >
+                <Link
+                  href={guide.href}
+                  onClick={() =>
+                    goToGuide(guide.href, "home_guides_block", guide.title)
+                  }
+                  className="inline-flex items-start gap-2 text-xl font-semibold text-white hover:text-[#C4B5FD]"
+                >
+                  <span>{guide.title}</span>
+                  <ArrowRight className="mt-1 h-5 w-5 flex-shrink-0" />
+                </Link>
+                <p className="mt-3 text-base leading-7 text-[#94A3B8]">
+                  {guide.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.h2
@@ -1178,8 +1337,11 @@ export function HomePageClient() {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-16"
           >
-            {t("useCases.heading")}
+            {useCasesHeading}
           </motion.h2>
+          <p className="mx-auto mb-12 max-w-3xl text-center text-lg leading-8 text-[#CBD5E1]">
+            {useCasesIntro}
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -1256,13 +1418,11 @@ export function HomePageClient() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-              {t("comparison.heading")}
+              {comparisonHeading}
             </h2>
-            <p className="text-lg text-[#CBD5E1]">
-              {t("comparison.subheading")}
-            </p>
+            <p className="text-lg text-[#CBD5E1]">{comparisonSubheading}</p>
             <p className="text-sm text-[#94A3B8] mt-3 max-w-3xl mx-auto">
-              {t("comparison.clarifier")}
+              {comparisonClarifier}
             </p>
           </motion.div>
 
@@ -1438,7 +1598,7 @@ export function HomePageClient() {
             </h3>
             <p className="text-[#CBD5E1] mb-6">{betaFeedbackBody}</p>
             <Button asChild className="gradient-primary text-white rounded-xl">
-              <Link href={pricingHref}>{betaFeedbackCta}</Link>
+              <Link href={startHref}>{betaFeedbackCta}</Link>
             </Button>
           </motion.div>
         </div>
@@ -1454,7 +1614,7 @@ export function HomePageClient() {
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
           >
-            {t("finalCTA.heading")}
+            {finalHeading}
           </motion.h2>
           <motion.p
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
@@ -1463,8 +1623,34 @@ export function HomePageClient() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-xl text-white/95 mb-10 max-w-2xl mx-auto"
           >
-            {t("finalCTA.subheading")}
+            {finalSubheading}
           </motion.p>
+          <motion.div
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="mb-6"
+          >
+            <Button
+              asChild
+              variant="outline"
+              className="border-white/30 bg-white/10 text-white hover:bg-white/15"
+            >
+              <Link
+                href={angryParentGuideHref}
+                onClick={() =>
+                  goToGuide(
+                    angryParentGuideHref,
+                    "home_final_secondary",
+                    finalGuideLabel,
+                  )
+                }
+              >
+                {finalGuideLabel}
+              </Link>
+            </Button>
+          </motion.div>
           <motion.div
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1478,16 +1664,16 @@ export function HomePageClient() {
               style={{ minHeight: "44px" }}
             >
               <Link
-                href={pricingHref}
+                href={startHref}
                 onClick={() => {
                   trackCtaClick({
-                    ctaText: t("finalCTA.button"),
+                    ctaText: primaryStartLabel,
                     ctaLocation: "final_cta",
                   });
                   track("cta_click_home_final", { language });
                 }}
               >
-                {t("finalCTA.button")}
+                {primaryStartLabel}
               </Link>
             </Button>
           </motion.div>

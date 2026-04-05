@@ -223,13 +223,13 @@ function RelatedPagesBlock({ page }: { page: TeacherWritingPage }) {
     <section className="space-y-6">
       <div className="space-y-3">
         <p className="text-sm uppercase tracking-[0.2em] text-slate-400">
-          Related pages
+          Related guides
         </p>
         <h2 className="text-2xl font-semibold text-white md:text-3xl">
           Keep exploring teacher writing help
         </h2>
       </div>
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         {relatedPages.map((relatedPage) => (
           <Card
             key={relatedPage.slug}
@@ -251,6 +251,23 @@ function RelatedPagesBlock({ page }: { page: TeacherWritingPage }) {
             </CardContent>
           </Card>
         ))}
+        <Card className="border-white/10 bg-white/5 py-0 shadow-none">
+          <CardContent className="space-y-3 px-6 py-6">
+            <p className="text-xs uppercase tracking-[0.2em] text-slate-400">
+              Primary CTA
+            </p>
+            <Link
+              href="/start"
+              className="text-lg font-semibold text-white transition hover:text-teal-100"
+            >
+              Try Zaza Draft
+            </Link>
+            <p className="text-sm leading-7 text-slate-300">
+              Use Zaza Draft before sending if the message needs calmer,
+              clearer, more defensible wording.
+            </p>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );
