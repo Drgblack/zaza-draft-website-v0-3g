@@ -3,7 +3,6 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import React from "react";
 import { CookieConsentBanner } from "@/components/analytics/cookie-consent-banner";
-import { PlausibleAnalytics } from "@/components/analytics/plausible-analytics";
 import { ScrollDepthTracker } from "@/components/analytics/scroll-depth-tracker";
 import { UtmCapture } from "@/components/analytics/utm-capture";
 import { buildGoogleConsentBootstrap } from "@/lib/analytics-consent";
@@ -80,12 +79,24 @@ export default function RootLayout({
                 __html: buildGoogleConsentBootstrap(GA4_MEASUREMENT_ID),
               }}
             />
+            <Script
+              id="plausible-src"
+              src="https://plausible.io/js/pa-dnGqRpNXAcgJTLSSgN-cS.js"
+              strategy="beforeInteractive"
+            />
+            <Script
+              id="plausible-init"
+              strategy="beforeInteractive"
+              dangerouslySetInnerHTML={{
+                __html:
+                  "window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()",
+              }}
+            />
           </>
         ) : null}
         <link rel="icon" href="/z-logo.png" sizes="any" />
       </head>
       <body className="bg-slate-950 text-slate-100">
-        {shouldLoadGa ? <PlausibleAnalytics /> : null}
         {shouldLoadGa ? <ScrollDepthTracker /> : null}
         {shouldLoadGa ? <UtmCapture /> : null}
         <JsonLdCollection
