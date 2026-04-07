@@ -5,11 +5,9 @@ export type CheckerCopy = {
   demoDraft: string;
   pageTitle: string;
   introTop: string;
-  introBottom: string;
-  hookTitle: string;
-  hookBody: string;
   textareaPlaceholder: string;
   textareaAriaLabel: string;
+  inputLabel: string;
   submitButton: string;
   trustLine: string;
   emptyState: string;
@@ -29,13 +27,16 @@ export type CheckerCopy = {
   saferVersionTitle: string;
   saferVersionIntro: string;
   rewriteTrustLine: string;
+  whyThisWorksTitle: string;
+  whyThisWorksBullets: [string, string, string];
   copySaferVersion: string;
   copied: string;
-  pauseLine: string;
   resultCtaTitle: string;
   resultCtaBody: string;
   resultCtaButton: string;
   tryAnother: string;
+  detailToggleLabel: string;
+  originalDraftLabel: string;
   shareTitle: string;
   shareText: string;
   shareHeading: string;
@@ -77,27 +78,23 @@ You need to speak to her tonight because if this carries on we will have to take
 
 Regards,
 Ms Reed`,
-    pageTitle: "Check a parent email before you send it",
+    pageTitle: "Parent Email Risk Checker",
     introTop:
-      "Paste your draft and see if it could sound too blunt, defensive, or likely to escalate.",
-    introBottom:
-      "Get a safer version in seconds - one that still sounds like you.",
-    hookTitle:
-      "Most parent email problems aren’t about what you say - but how it’s read.",
-    hookBody:
-      "Check the draft that feels a bit too sharp, too exposed, or too easy to misunderstand.",
-    textareaPlaceholder: "Paste your parent email draft here…",
+      "Paste your draft and get a calmer, clearer, more professional version to work from.",
+    textareaPlaceholder:
+      "Paste the parent email or draft message you are worried about here.",
     textareaAriaLabel: "Parent email draft",
-    submitButton: "Check this email",
+    inputLabel: "Paste your draft",
+    submitButton: "Make this safer",
     trustLine:
-      "Built for real teacher-parent communication - not generic AI writing.",
+      "Get a safer version first - one that keeps your point clear while reducing the chance of escalation.",
     emptyState: "Paste a message to check before sending",
     shortInputGuard: "Add a bit more detail so we can assess the tone properly",
     loadingCopy: "Checking your message…",
     loadingBody:
       "Looking for tone risk, escalation triggers, and how the message may land.",
     processingError: "The checker could not process that draft just now.",
-    resultTitle: "Your result",
+    resultTitle: "Safer version",
     resultPlaceholderTitle: "Your result will appear here",
     resultPlaceholderBody:
       "Your score, risk level, issues, and safer version will appear here.",
@@ -107,19 +104,26 @@ Ms Reed`,
     higherRisk: "Higher risk",
     issuesTitle: "What could go wrong",
     noMajorRisks: "No major language risks detected.",
-    saferVersionTitle: "A calmer, safer version",
-    saferVersionIntro: "Same message - but less likely to escalate.",
+    saferVersionTitle: "Safer version",
+    saferVersionIntro:
+      "This keeps the message clear and professional while lowering the chance of escalation.",
     rewriteTrustLine:
       "Designed to reduce defensiveness while keeping your message clear.",
+    whyThisWorksTitle: "Why this works better",
+    whyThisWorksBullets: [
+      "keeps your point clear",
+      "removes reactive phrasing",
+      "sounds more professional in a parent-facing context",
+    ],
     copySaferVersion: "Copy safer version",
     copied: "Copied",
-    pauseLine:
-      "This is the kind of message that often gets rewritten 3 or 4 times before sending.",
-    resultCtaTitle: "This is what Zaza Draft does - every time you write",
+    resultCtaTitle: "Continue with Zaza Draft",
     resultCtaBody:
-      "Turn difficult parent messages into something clear, calm, and professional - without losing your voice.",
-    resultCtaButton: "Rewrite this safely in Zaza Draft",
-    tryAnother: "Try another email",
+      "If this feels closer to something you could actually send, Zaza Draft is built for the rest of those messages too.",
+    resultCtaButton: "Continue with Zaza Draft",
+    tryAnother: "Try another draft",
+    detailToggleLabel: "See original draft and detailed notes",
+    originalDraftLabel: "Original draft",
     shareTitle: "Check a parent email before you send it",
     shareText:
       "This free tool checks whether a parent email may sound too blunt, defensive, or likely to escalate.",
@@ -199,15 +203,10 @@ Viele Gruesse
 Frau Reed`,
     pageTitle: "Prüfe eine Elternmail, bevor du sie sendest",
     introTop:
-      "Füge deinen Entwurf ein und prüfe, ob er zu scharf, defensiv oder eskalierend wirken könnte.",
-    introBottom:
-      "Du bekommst in Sekunden eine ruhigere Version - die trotzdem nach dir klingt.",
-    hookTitle:
-      "Die meisten Probleme mit Elternmails entstehen nicht durch den Inhalt - sondern dadurch, wie er gelesen wird.",
-    hookBody:
-      "Prüfe den Entwurf, der sich etwas zu scharf, zu heikel oder zu leicht missverständlich anfühlt.",
+      "Füge deinen Entwurf ein und erhalte eine ruhigere, klarere und professionellere Version als Ausgangspunkt.",
     textareaPlaceholder: "Füge hier deinen Entwurf der Elternmail ein…",
     textareaAriaLabel: "Entwurf der Elternmail",
+    inputLabel: "Entwurf einfügen",
     submitButton: "Diese E-Mail prüfen",
     trustLine:
       "Entwickelt für echte Lehrer-Eltern-Kommunikation - nicht für generisches KI-Schreiben.",
@@ -234,15 +233,21 @@ Frau Reed`,
       "Die gleiche Aussage - aber weniger eskalationsanfällig.",
     rewriteTrustLine:
       "Formuliert, um Abwehr zu reduzieren und deine Aussage klar zu halten.",
+    whyThisWorksTitle: "Warum das besser funktioniert",
+    whyThisWorksBullets: [
+      "haelt deine Aussage klar",
+      "nimmt reaktive Formulierungen heraus",
+      "wirkt professioneller im Kontakt mit Eltern",
+    ],
     copySaferVersion: "Sicherere Version kopieren",
     copied: "Kopiert",
-    pauseLine:
-      "Genau solche Nachrichten werden oft drei- oder viermal umgeschrieben, bevor sie rausgehen.",
     resultCtaTitle: "Genau das macht Zaza Draft - jedes Mal, wenn du schreibst",
     resultCtaBody:
       "Mach aus schwierigen Elternmails etwas Klares, Ruhiges und Professionelles - ohne deine Stimme zu verlieren.",
     resultCtaButton: "In Zaza Draft sicherer umformulieren",
-    tryAnother: "Eine andere E-Mail prüfen",
+    tryAnother: "Einen anderen Entwurf pruefen",
+    detailToggleLabel: "Originalentwurf und Details anzeigen",
+    originalDraftLabel: "Originalentwurf",
     shareTitle: "Prüfe eine Elternmail, bevor du sie sendest",
     shareText:
       "Dieses kostenlose Tool prüft, ob eine Elternmail zu scharf, defensiv oder eskalierend wirken könnte.",

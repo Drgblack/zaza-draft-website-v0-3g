@@ -13,6 +13,41 @@ interface TeacherWritingLandingPageProps {
   jsonLd?: Record<string, unknown>[];
 }
 
+const GUIDE_SLUG = "teacher-guide-to-sensitive-parent-emails";
+const GUIDE_CONTENT_ID = "guide-content";
+
+function getGuideOverrides(page: TeacherWritingPage) {
+  if (page.slug !== GUIDE_SLUG) {
+    return null;
+  }
+
+  return {
+    heroTitle: "7 Parent Emails Teachers Should Never Send As-Is",
+    heroDescription: [
+      "Free examples for teachers who want calmer, clearer, more professional parent communication - plus a way to check a real message before sending it.",
+    ],
+    heroPrimaryLabel: "Check a parent email",
+    heroPrimaryHref: "/parent-email-risk-checker",
+    heroSecondaryLabel: "Get the free guide",
+    heroSecondaryHref: `#${GUIDE_CONTENT_ID}`,
+    heroSupportLine:
+      "If you already have a draft you are worried about, start with that.",
+    midCtaBody:
+      'If you are reading this and thinking, "I have one like this sitting in drafts right now," do not stop at examples.\n\nPaste your message into the Parent Email Risk Checker and get a safer, more professional version to work from first.',
+    midPrimaryLabel: "Get the safer version",
+    midPrimaryHref: "/parent-email-risk-checker",
+    midSecondaryLabel: "Continue reading the guide",
+    midSecondaryHref: `#${GUIDE_CONTENT_ID}`,
+    closingTitle: "Start with the version you already have",
+    closingBody:
+      "If you recognised yourself in these examples, the problem is usually not that you do not know what to say.\n\nIt is that the first version gets written under pressure.\n\nThe Parent Email Risk Checker helps you turn that first version into something calmer, clearer, and easier to stand behind professionally.",
+    closingPrimaryLabel: "Check your draft",
+    closingPrimaryHref: "/parent-email-risk-checker",
+    closingSecondaryLabel: "Try Zaza Draft",
+    closingSecondaryHref: "/start",
+  };
+}
+
 function SectionCard({
   title,
   body,
@@ -274,6 +309,8 @@ function RelatedPagesBlock({ page }: { page: TeacherWritingPage }) {
 }
 
 function CTASection({ page }: { page: TeacherWritingPage }) {
+  const guideOverrides = getGuideOverrides(page);
+
   return (
     <section className="rounded-[32px] border border-teal-200/20 bg-gradient-to-br from-teal-300/10 via-white/5 to-amber-200/10 p-8 md:p-10">
       <div className="space-y-4">
@@ -281,10 +318,10 @@ function CTASection({ page }: { page: TeacherWritingPage }) {
           CTA
         </p>
         <h2 className="max-w-3xl text-3xl font-semibold tracking-tight text-white md:text-4xl">
-          {page.cta.title}
+          {guideOverrides?.closingTitle ?? page.cta.title}
         </h2>
-        <p className="max-w-2xl text-base leading-8 text-slate-200">
-          {page.cta.body}
+        <p className="max-w-2xl whitespace-pre-line text-base leading-8 text-slate-200">
+          {guideOverrides?.closingBody ?? page.cta.body}
         </p>
       </div>
       <div className="mt-6 flex flex-wrap gap-3">
@@ -292,14 +329,24 @@ function CTASection({ page }: { page: TeacherWritingPage }) {
           asChild
           className="bg-teal-200 text-slate-950 hover:bg-teal-100"
         >
-          <Link href={page.cta.primaryHref}>{page.cta.primaryLabel}</Link>
+          <Link
+            href={guideOverrides?.closingPrimaryHref ?? page.cta.primaryHref}
+          >
+            {guideOverrides?.closingPrimaryLabel ?? page.cta.primaryLabel}
+          </Link>
         </Button>
         <Button
           asChild
           variant="outline"
           className="border-white/20 bg-transparent text-white hover:bg-white/10"
         >
-          <Link href={page.cta.secondaryHref}>{page.cta.secondaryLabel}</Link>
+          <Link
+            href={
+              guideOverrides?.closingSecondaryHref ?? page.cta.secondaryHref
+            }
+          >
+            {guideOverrides?.closingSecondaryLabel ?? page.cta.secondaryLabel}
+          </Link>
         </Button>
       </div>
     </section>
@@ -311,6 +358,7 @@ export function TeacherWritingLandingPage({
   jsonLd: providedJsonLd,
 }: TeacherWritingLandingPageProps) {
   const jsonLd = providedJsonLd ?? buildTeacherWritingJsonLd(page);
+  const guideOverrides = getGuideOverrides(page);
 
   return (
     <>
@@ -330,13 +378,20 @@ export function TeacherWritingLandingPage({
                 {page.heroEyebrow}
               </div>
               <h1 className="max-w-4xl text-balance text-4xl font-semibold tracking-tight text-white md:text-6xl">
-                {page.h1}
+                {guideOverrides?.heroTitle ?? page.h1}
               </h1>
               <div className="space-y-4 text-lg leading-8 text-slate-300">
-                {page.heroDescription.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
+                {(guideOverrides?.heroDescription ?? page.heroDescription).map(
+                  (paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ),
+                )}
               </div>
+              {guideOverrides?.heroSupportLine ? (
+                <p className="text-base font-medium text-teal-100">
+                  {guideOverrides.heroSupportLine}
+                </p>
+              ) : null}
               <div className="grid gap-3 pt-2 md:grid-cols-3">
                 {page.heroBullets.map((bullet) => (
                   <div
@@ -352,8 +407,12 @@ export function TeacherWritingLandingPage({
                   asChild
                   className="bg-teal-200 text-slate-950 hover:bg-teal-100"
                 >
-                  <Link href={page.cta.primaryHref}>
-                    {page.cta.primaryLabel}
+                  <Link
+                    href={
+                      guideOverrides?.heroPrimaryHref ?? page.cta.primaryHref
+                    }
+                  >
+                    {guideOverrides?.heroPrimaryLabel ?? page.cta.primaryLabel}
                   </Link>
                 </Button>
                 <Button
@@ -361,8 +420,14 @@ export function TeacherWritingLandingPage({
                   variant="outline"
                   className="border-white/20 bg-transparent text-white hover:bg-white/10"
                 >
-                  <Link href={page.cta.secondaryHref}>
-                    {page.cta.secondaryLabel}
+                  <Link
+                    href={
+                      guideOverrides?.heroSecondaryHref ??
+                      page.cta.secondaryHref
+                    }
+                  >
+                    {guideOverrides?.heroSecondaryLabel ??
+                      page.cta.secondaryLabel}
                   </Link>
                 </Button>
               </div>
@@ -370,7 +435,10 @@ export function TeacherWritingLandingPage({
           </div>
         </section>
 
-        <main className="mx-auto max-w-6xl space-y-14 px-6 py-14 lg:px-8 lg:py-20">
+        <main
+          id={guideOverrides ? GUIDE_CONTENT_ID : undefined}
+          className="mx-auto max-w-6xl space-y-14 px-6 py-14 lg:px-8 lg:py-20"
+        >
           {page.featuredSnippet ? (
             <section className="rounded-[28px] border border-teal-200/20 bg-teal-200/10 p-6 md:p-8">
               <p className="text-sm uppercase tracking-[0.2em] text-teal-50/80">
@@ -385,8 +453,36 @@ export function TeacherWritingLandingPage({
           <TrustBlock page={page} />
 
           <div className="space-y-6">
-            {page.sections.map((section) => (
-              <SectionCard key={section.id} {...section} />
+            {page.sections.map((section, index) => (
+              <div key={section.id} className="space-y-6">
+                <SectionCard {...section} />
+                {guideOverrides && index === 0 ? (
+                  <section className="rounded-[32px] border border-teal-200/20 bg-gradient-to-br from-teal-300/10 via-white/5 to-amber-200/10 p-8 md:p-10">
+                    <p className="max-w-3xl whitespace-pre-line text-base leading-8 text-slate-200">
+                      {guideOverrides.midCtaBody}
+                    </p>
+                    <div className="mt-6 flex flex-wrap gap-3">
+                      <Button
+                        asChild
+                        className="bg-teal-200 text-slate-950 hover:bg-teal-100"
+                      >
+                        <Link href={guideOverrides.midPrimaryHref}>
+                          {guideOverrides.midPrimaryLabel}
+                        </Link>
+                      </Button>
+                      <Button
+                        asChild
+                        variant="outline"
+                        className="border-white/20 bg-transparent text-white hover:bg-white/10"
+                      >
+                        <Link href={guideOverrides.midSecondaryHref}>
+                          {guideOverrides.midSecondaryLabel}
+                        </Link>
+                      </Button>
+                    </div>
+                  </section>
+                ) : null}
+              </div>
             ))}
           </div>
 

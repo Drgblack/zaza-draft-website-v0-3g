@@ -1,14 +1,22 @@
+import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import type { FunnelCopy } from "../content";
 
 const teacherHappy = "/lovable-funnel/teacher-happy.jpg";
 
 type SolutionSectionProps = {
   copy: FunnelCopy["solution"];
+  onPrimaryAction?: () => void;
+  onSecondaryAction?: () => void;
 };
 
-const SolutionSection = ({ copy }: SolutionSectionProps) => {
+const SolutionSection = ({
+  copy,
+  onPrimaryAction,
+  onSecondaryAction,
+}: SolutionSectionProps) => {
   const imageSrc = copy.imageSrc ?? teacherHappy;
 
   return (
@@ -94,6 +102,34 @@ const SolutionSection = ({ copy }: SolutionSectionProps) => {
             </Card>
           </div>
         </div>
+
+        {copy.ctaBlock ? (
+          <div className="mt-12 rounded-[2rem] border border-fuchsia-200/40 bg-white/80 p-8 shadow-[0_24px_70px_rgba(217,70,239,0.08)]">
+            <p className="whitespace-pre-line text-base leading-8 text-calm-700">
+              {copy.ctaBlock.body}
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Button
+                asChild
+                className="btn-primary h-auto rounded-2xl px-6 py-4 text-base font-semibold"
+              >
+                <Link
+                  href={copy.ctaBlock.primaryHref}
+                  onClick={onPrimaryAction}
+                >
+                  {copy.ctaBlock.primaryLabel}
+                </Link>
+              </Button>
+              <Link
+                href={copy.ctaBlock.secondaryHref}
+                onClick={onSecondaryAction}
+                className="inline-flex items-center rounded-2xl px-2 py-4 text-sm font-medium text-calm-700 underline-offset-4 hover:text-calm-900 hover:underline"
+              >
+                {copy.ctaBlock.secondaryLabel}
+              </Link>
+            </div>
+          </div>
+        ) : null}
       </div>
     </section>
   );

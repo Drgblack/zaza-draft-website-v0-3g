@@ -8,6 +8,8 @@ type HeroSectionProps = {
   onPrimaryAction: () => void;
   onSecondaryLinkClick?: () => void;
   primaryCtaLabel: string;
+  primaryHref?: string;
+  secondaryHref?: string;
   copy: FunnelCopy["hero"];
   locale?: "en" | "de";
 };
@@ -16,6 +18,8 @@ const HeroSection = ({
   onPrimaryAction,
   onSecondaryLinkClick,
   primaryCtaLabel,
+  primaryHref,
+  secondaryHref,
   copy,
   locale = "en",
 }: HeroSectionProps) => {
@@ -69,27 +73,37 @@ const HeroSection = ({
             style={{ animationDelay: "0.32s" }}
           >
             <Button
-              type="button"
-              onClick={onPrimaryAction}
+              asChild={Boolean(primaryHref)}
+              type={primaryHref ? undefined : "button"}
+              onClick={primaryHref ? undefined : onPrimaryAction}
               className="btn-primary h-auto w-full rounded-2xl px-10 py-6 text-lg font-semibold lg:w-auto"
             >
-              {primaryCtaLabel}
+              {primaryHref ? (
+                <Link href={primaryHref} onClick={onPrimaryAction}>
+                  {primaryCtaLabel}
+                </Link>
+              ) : (
+                primaryCtaLabel
+              )}
             </Button>
             <p className="text-center text-sm text-calm-500 lg:text-left">
-              {copy.reassurance}
+              {copy.supportLine ?? copy.reassurance}
             </p>
-            {copy.secondaryLinkLabel && copy.secondaryLinkSupport ? (
+            {copy.secondaryLinkLabel ? (
               <Link
                 href={
-                  locale === "de"
+                  secondaryHref ??
+                  (locale === "de"
                     ? "/de/parent-email-risk-checker"
-                    : "/parent-email-risk-checker"
+                    : "/parent-email-risk-checker")
                 }
                 onClick={onSecondaryLinkClick}
                 className="inline-flex flex-wrap items-center gap-1 text-sm font-medium text-calm-600 underline-offset-4 hover:text-calm-800 hover:underline"
               >
                 <span>{copy.secondaryLinkLabel}</span>
-                <span>{copy.secondaryLinkSupport}</span>
+                {copy.secondaryLinkSupport ? (
+                  <span>{copy.secondaryLinkSupport}</span>
+                ) : null}
               </Link>
             ) : null}
           </div>

@@ -9,8 +9,12 @@ export type FunnelCopy = {
     subheadingTop: string;
     subheadingBottom: string;
     reassurance: string;
+    primaryCtaLabel?: string;
+    primaryCtaHref?: string;
+    supportLine?: string;
     secondaryLinkLabel?: string;
     secondaryLinkSupport?: string;
+    secondaryLinkHref?: string;
     footer: string;
     showLogo?: boolean;
     imageSrc?: string;
@@ -47,6 +51,13 @@ export type FunnelCopy = {
     quote: string;
     note: string;
     proofLine?: string;
+    ctaBlock?: {
+      body: string;
+      primaryLabel: string;
+      primaryHref: string;
+      secondaryLabel: string;
+      secondaryHref: string;
+    };
   };
   howItWorks: {
     heading: string;
@@ -114,6 +125,10 @@ export type FunnelCopy = {
     subheading: string;
     reassurance: string;
     quote: string;
+    primaryCtaLabel?: string;
+    primaryCtaHref?: string;
+    secondaryCtaLabel?: string;
+    secondaryCtaHref?: string;
     footerItems: [string, string, string, string];
   };
   header: {
@@ -129,16 +144,21 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
     hero: {
       preheadline: "Teacher-first protection for high-stakes communication",
       headingLines: [
-        "You've written the draft.",
-        "Now make sure",
-        "it won't escalate.",
+        "For the parent email you know",
+        "you should not send",
+        "as-is",
       ],
-      subheadingTop: "Zaza helps teachers turn emotionally risky parent emails",
-      subheadingBottom:
-        "and school messages into calm, clear, professional drafts before they're sent.",
-      reassurance: "No credit card. No lock-in. You review every word.",
-      secondaryLinkLabel: "Need to test one email first?",
-      secondaryLinkSupport: "Try the free Parent Email Risk Checker.",
+      subheadingTop:
+        "Paste your draft into the Parent Email Risk Checker and get a calmer,",
+      subheadingBottom: "more professional version to work from in seconds.",
+      reassurance:
+        "Get a safer version first. Then continue with Zaza Draft if you want to keep going.",
+      primaryCtaLabel: "Check a parent email",
+      primaryCtaHref: "/parent-email-risk-checker",
+      supportLine:
+        "Get a safer version first. Then continue with Zaza Draft if you want to keep going.",
+      secondaryLinkLabel: "Get the free guide",
+      secondaryLinkHref: "/teacher-guide-to-sensitive-parent-emails",
       footer:
         "Built for parent emails, difficult follow-ups, behaviour notes, safeguarding-adjacent wording, and other high-stakes school communication.",
       imageAlt:
@@ -205,6 +225,13 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       note: "The goal is simple: protect the meaning, reduce the heat, and keep the teacher in control.",
       proofLine:
         "Built for parent emails, sensitive updates, and the replies teachers most often rewrite three times.",
+      ctaBlock: {
+        body: "If you already have a draft sitting in your notes, inbox, or head, start there.\n\nThe Parent Email Risk Checker gives you a calmer, clearer, more professional version to work from - without weakening the message.",
+        primaryLabel: "Make this safer",
+        primaryHref: "/parent-email-risk-checker",
+        secondaryLabel: "See 7 parent emails teachers should never send as-is",
+        secondaryHref: "/teacher-guide-to-sensitive-parent-emails",
+      },
     },
     howItWorks: {
       heading: "Three steps to",
@@ -335,13 +362,19 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
     },
     finalCta: {
       headingLines: [
-        "It's late. The email still needs sending.",
-        "What if you felt calm pressing send?",
+        "Start with the message you are worried about",
+        "Check a real parent email first",
       ],
       subheading:
-        "No more second-guessing whether the wording is too sharp, too vague, or easy to misread. Just a calmer draft you can review, trust, and send.",
-      reassurance: "No credit card. No lock-in. You review every word.",
-      quote: "The message you won't regret tomorrow.",
+        "The fastest way to understand Zaza Draft is to check a real parent email.\n\nYou will see a safer version immediately - one that keeps your point clear while reducing the chance of escalation.",
+      reassurance:
+        "Get a safer version first. Then continue with Zaza Draft if you want to keep going.",
+      quote:
+        "Start with the version you are worried about, then decide whether you want the full drafting workflow.",
+      primaryCtaLabel: "Check your draft",
+      primaryCtaHref: "/parent-email-risk-checker",
+      secondaryCtaLabel: "Read the free guide",
+      secondaryCtaHref: "/teacher-guide-to-sensitive-parent-emails",
       footerItems: [
         "Built with teachers, for teachers",
         "FERPA-ready workflows",

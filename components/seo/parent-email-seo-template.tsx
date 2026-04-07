@@ -71,8 +71,8 @@ function ExampleCard({
 
 function CheckerCtaBlock({
   slug,
-  heading = "Check your own parent email before sending",
-  body = "Paste your draft into the Parent Email Risk Checker and see if it may sound too blunt, defensive, or likely to escalate. You’ll get a safer version in seconds.",
+  heading = "Already have a draft?",
+  body = "Paste it into the Parent Email Risk Checker and get a calmer, more professional version to work from in seconds.",
 }: {
   slug: string;
   heading?: string;
@@ -95,32 +95,27 @@ function CheckerCtaBlock({
           <Link
             href="/parent-email-risk-checker"
             onClick={() =>
-              trackCheckerClick(
-                slug,
-                "seo_checker_block",
-                "Go to Parent Email Risk Checker",
-              )
+              trackCheckerClick(slug, "seo_checker_block", "Make this safer")
             }
           >
-            Go to Parent Email Risk Checker
+            Make this safer
           </Link>
         </Button>
-        <Button
-          asChild
-          variant="outline"
-          className="h-auto rounded-2xl border-slate-300 bg-white px-6 py-4 text-base font-semibold text-slate-900 hover:bg-slate-50"
+        <Link
+          href="/teacher-guide-to-sensitive-parent-emails"
+          className="inline-flex items-center rounded-2xl px-2 py-4 text-sm font-medium text-slate-700 underline-offset-4 hover:text-slate-950 hover:underline"
         >
-          <Link href="/start">Try Zaza Draft</Link>
-        </Button>
+          See 7 parent emails teachers should never send as-is
+        </Link>
       </div>
     </section>
   );
 }
 
 function FinalCtaBlock({
-  heading = "Write the message you won’t regret tomorrow",
-  body = "Zaza Draft helps teachers turn difficult messages into something clear, calm, and professional - without losing their voice.",
-  ctaLabel = "Try Zaza Draft",
+  heading = "Start with the version you already have",
+  body = "The quickest way to move this message forward is to get a safer version first.\n\nZaza's Parent Email Risk Checker gives you a calmer, clearer version that still holds up professionally.",
+  ctaLabel = "Check a parent email",
 }: {
   heading?: string;
   body?: string;
@@ -131,16 +126,22 @@ function FinalCtaBlock({
       <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
         {heading}
       </h2>
-      <p className="mt-4 max-w-3xl text-base leading-8 text-slate-300">
+      <p className="mt-4 max-w-3xl whitespace-pre-line text-base leading-8 text-slate-300">
         {body}
       </p>
-      <div className="mt-6">
+      <div className="mt-6 flex flex-wrap items-center gap-4">
         <Button
           asChild
           className="btn-primary h-auto rounded-2xl px-6 py-4 text-base font-semibold"
         >
-          <Link href="/start">{ctaLabel}</Link>
+          <Link href="/parent-email-risk-checker">{ctaLabel}</Link>
         </Button>
+        <Link
+          href="/teacher-guide-to-sensitive-parent-emails"
+          className="text-sm font-medium text-slate-200 underline-offset-4 hover:text-white hover:underline"
+        >
+          Get the free guide
+        </Link>
       </div>
     </section>
   );
@@ -227,20 +228,19 @@ export function ParentEmailSeoTemplate({ page }: ParentEmailSeoTemplateProps) {
                       trackCheckerClick(
                         page.slug,
                         "seo_hero_checker",
-                        "Check your parent email",
+                        "Make this safer",
                       )
                     }
                   >
-                    Check your parent email
+                    Make this safer
                   </Link>
                 </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  className="h-auto rounded-2xl border-slate-300 bg-white px-6 py-4 text-base font-semibold text-slate-900 hover:bg-slate-50"
+                <Link
+                  href="/teacher-guide-to-sensitive-parent-emails"
+                  className="inline-flex items-center rounded-2xl px-2 py-4 text-sm font-medium text-slate-700 underline-offset-4 hover:text-slate-950 hover:underline"
                 >
-                  <Link href="/start">Try Zaza Draft</Link>
-                </Button>
+                  See 7 parent emails teachers should never send as-is
+                </Link>
               </div>
             </div>
           </div>
@@ -267,6 +267,28 @@ export function ParentEmailSeoTemplate({ page }: ParentEmailSeoTemplateProps) {
               copy={page.riskyReply}
               tone="risky"
             />
+          </section>
+
+          <section className="rounded-[2rem] border border-fuchsia-200 bg-gradient-to-br from-fuchsia-50 via-white to-violet-50 px-6 py-8 shadow-[0_24px_90px_-55px_rgba(15,23,42,0.24)] md:px-8">
+            <h2 className="text-3xl font-semibold tracking-tight text-slate-950">
+              Already have a draft?
+            </h2>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-slate-700">
+              If you already wrote a version of this message, do not guess
+              whether the tone is slightly off.
+            </p>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-slate-700">
+              Use the Parent Email Risk Checker to get a version that keeps your
+              point clear while reducing the chance of escalation.
+            </p>
+            <div className="mt-6">
+              <Button
+                asChild
+                className="btn-primary h-auto rounded-2xl px-6 py-4 text-base font-semibold"
+              >
+                <Link href="/parent-email-risk-checker">Check your draft</Link>
+              </Button>
+            </div>
           </section>
 
           <section className="rounded-[2rem] border border-white/70 bg-white/88 px-6 py-8 shadow-[0_24px_90px_-55px_rgba(15,23,42,0.25)] md:px-8">
@@ -331,11 +353,7 @@ export function ParentEmailSeoTemplate({ page }: ParentEmailSeoTemplateProps) {
             </section>
           ) : null}
 
-          <CheckerCtaBlock
-            slug={page.slug}
-            heading={page.checkerCtaHeading}
-            body={page.checkerCtaBody}
-          />
+          <CheckerCtaBlock slug={page.slug} />
 
           <section className="rounded-[2rem] border border-white/70 bg-white/88 px-6 py-8 shadow-[0_24px_90px_-55px_rgba(15,23,42,0.25)] md:px-8">
             <SectionLabel>
@@ -390,11 +408,7 @@ export function ParentEmailSeoTemplate({ page }: ParentEmailSeoTemplateProps) {
             </section>
           ) : null}
 
-          <FinalCtaBlock
-            heading={page.finalCtaHeading}
-            body={page.finalCtaBody}
-            ctaLabel={page.finalCtaLabel}
-          />
+          <FinalCtaBlock />
         </main>
       </div>
     </>

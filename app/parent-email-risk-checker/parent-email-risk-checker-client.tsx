@@ -106,10 +106,6 @@ function getRiskToneConfig(
   };
 }
 
-function getReinforcementCopy(level: DisplayRiskLevel, copy: CheckerCopy) {
-  return copy.reinforcement[level];
-}
-
 function getRiskHelperText(copy: CheckerCopy) {
   return copy.riskHelperText;
 }
@@ -377,8 +373,6 @@ export default function ParentEmailRiskCheckerClient({
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700 md:text-xl">
               {copy.introTop}
-              <br />
-              {copy.introBottom}
             </p>
           </div>
         </div>
@@ -387,18 +381,12 @@ export default function ParentEmailRiskCheckerClient({
       <section className="px-4 pb-20">
         <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[0.95fr,1.05fr]">
           <Card className="rounded-[2rem] border-white/70 bg-white/92 shadow-[0_24px_90px_-50px_rgba(15,23,42,0.35)]">
-            <CardHeader className="space-y-4">
-              <CardTitle className="text-2xl text-slate-950">
-                {copy.hookTitle}
-              </CardTitle>
-              <CardDescription className="text-base leading-7 text-slate-600">
-                {copy.hookBody}
-              </CardDescription>
-            </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-5">
                 <label className="block">
-                  <span className="sr-only">{copy.textareaAriaLabel}</span>
+                  <span className="mb-3 block text-base font-semibold text-slate-950">
+                    {copy.inputLabel}
+                  </span>
                   <Textarea
                     ref={textareaRef}
                     value={draft}
@@ -440,103 +428,14 @@ export default function ParentEmailRiskCheckerClient({
                 {result ? copy.resultTitle : copy.resultPlaceholderTitle}
               </CardTitle>
               <CardDescription className="text-base leading-7 text-slate-600">
-                {result
-                  ? getReinforcementCopy(result.riskLevel, copy)
-                  : hasSubmitted && !loading && !error
-                    ? copy.emptyState
-                    : copy.emptyState}
+                {result ? copy.saferVersionIntro : copy.emptyState}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               {result ? (
                 <>
-                  <div
-                    className={`rounded-[1.5rem] border px-5 py-5 ${riskTone.surfaceClasses}`}
-                  >
-                    <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
-                      <div className="space-y-3">
-                        <div className="flex flex-wrap items-center gap-3">
-                          <span
-                            className={`rounded-full border px-3 py-1 text-sm font-semibold ${riskTone.badgeClasses}`}
-                            aria-label={riskTone.indicatorLabel}
-                          >
-                            {riskTone.label}
-                          </span>
-                          <span className="text-sm font-medium text-slate-500">
-                            {copy.riskLevelLabel}
-                          </span>
-                        </div>
-                        <p
-                          className={`text-3xl font-bold md:text-4xl ${riskTone.scoreClasses}`}
-                        >
-                          {riskTone.label}
-                        </p>
-                        <p className="max-w-2xl text-sm leading-6 text-slate-700">
-                          {getRiskHelperText(copy)}
-                        </p>
-                      </div>
-
-                      <div className="rounded-[1.25rem] border border-white/80 bg-white/80 px-4 py-4 text-left shadow-sm md:min-w-[160px] md:text-right">
-                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
-                          {copy.scoreLabel}
-                        </p>
-                        <p className="mt-2 text-2xl font-bold text-slate-950">
-                          {result.riskScore} / 100
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="mt-5">
-                      <div className="flex items-center justify-between text-xs font-medium uppercase tracking-[0.18em] text-slate-500">
-                        <span>{copy.lowerRisk}</span>
-                        <span>{copy.higherRisk}</span>
-                      </div>
-                      <div
-                        className="mt-2 h-3 overflow-hidden rounded-full bg-white/80"
-                        role="progressbar"
-                        aria-label={`${riskTone.label} score`}
-                        aria-valuemin={0}
-                        aria-valuemax={100}
-                        aria-valuenow={result.riskScore}
-                      >
-                        <div
-                          className={`h-full rounded-full bg-gradient-to-r ${riskTone.progressClasses}`}
-                          style={{ width: `${result.riskScore}%` }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-
                   <div>
-                    <h2 className="text-lg font-semibold text-slate-950">
-                      {copy.issuesTitle}
-                    </h2>
-                    <ul className="mt-4 space-y-3">
-                      {issueWarnings.length > 0 ? (
-                        issueWarnings.map((warning) => (
-                          <li
-                            key={warning}
-                            className="rounded-[1.25rem] border border-slate-200 bg-white px-4 py-4 text-sm leading-6 text-slate-700 shadow-sm"
-                          >
-                            {warning}
-                          </li>
-                        ))
-                      ) : (
-                        <li className="rounded-[1.25rem] border border-emerald-200 bg-emerald-50 px-4 py-4 text-sm leading-6 text-emerald-800">
-                          {copy.noMajorRisks}
-                        </li>
-                      )}
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h2 className="text-lg font-semibold text-slate-950">
-                      {copy.saferVersionTitle}
-                    </h2>
-                    <p className="mt-3 text-sm leading-6 text-slate-600">
-                      {copy.saferVersionIntro}
-                    </p>
-                    <div className="mt-4 rounded-[1.6rem] border border-fuchsia-100 bg-gradient-to-br from-fuchsia-50 via-white to-violet-50 px-5 py-5">
+                    <div className="rounded-[1.6rem] border border-fuchsia-100 bg-gradient-to-br from-fuchsia-50 via-white to-violet-50 px-5 py-5">
                       <p className="whitespace-pre-wrap text-base leading-7 text-slate-800">
                         {result.saferVersion}
                       </p>
@@ -566,11 +465,24 @@ export default function ParentEmailRiskCheckerClient({
                     </div>
                   </div>
 
+                  <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 px-5 py-5">
+                    <h2 className="text-lg font-semibold text-slate-950">
+                      {copy.whyThisWorksTitle}
+                    </h2>
+                    <ul className="mt-4 space-y-3">
+                      {copy.whyThisWorksBullets.map((bullet) => (
+                        <li
+                          key={bullet}
+                          className="rounded-[1.25rem] border border-slate-200 bg-white px-4 py-4 text-sm leading-6 text-slate-700 shadow-sm"
+                        >
+                          {bullet}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
                   <div className="rounded-[1.8rem] border border-slate-200 bg-slate-950 px-6 py-6 text-white shadow-[0_24px_90px_-50px_rgba(15,23,42,0.45)]">
-                    <p className="text-sm leading-6 text-slate-300">
-                      {copy.pauseLine}
-                    </p>
-                    <h2 className="mt-3 text-2xl font-semibold">
+                    <h2 className="text-2xl font-semibold">
                       {copy.resultCtaTitle}
                     </h2>
                     <p className="mt-3 max-w-2xl text-base leading-7 text-slate-300">
@@ -594,59 +506,154 @@ export default function ParentEmailRiskCheckerClient({
                         type="button"
                         variant="ghost"
                         onClick={handleReset}
-                        className="h-auto justify-start rounded-2xl px-4 py-4 text-base font-medium text-slate-200 hover:bg-white/10 hover:text-white"
+                        className="h-auto justify-start rounded-2xl px-0 py-2 text-base font-medium text-slate-200 hover:bg-transparent hover:text-white"
                       >
                         {copy.tryAnother}
                       </Button>
                     </div>
+                  </div>
 
-                    <div className="mt-6 border-t border-white/10 pt-5">
-                      <p className="text-sm leading-6 text-slate-300">
-                        {copy.shareHeading}
-                      </p>
-                      <div className="mt-3 flex flex-wrap gap-3">
-                        {typeof navigator !== "undefined" &&
-                        typeof navigator.share === "function" ? (
+                  <details className="rounded-[1.5rem] border border-slate-200 bg-slate-50 px-5 py-5">
+                    <summary className="cursor-pointer list-none text-sm font-semibold text-slate-700">
+                      {copy.detailToggleLabel}
+                    </summary>
+                    <div className="mt-5 space-y-6">
+                      <div className="rounded-[1.25rem] border border-slate-200 bg-white px-4 py-4">
+                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+                          {copy.originalDraftLabel}
+                        </p>
+                        <p className="mt-3 whitespace-pre-wrap text-sm leading-6 text-slate-700">
+                          {draft.trim()}
+                        </p>
+                      </div>
+
+                      <div
+                        className={`rounded-[1.5rem] border px-5 py-5 ${riskTone.surfaceClasses}`}
+                      >
+                        <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
+                          <div className="space-y-3">
+                            <div className="flex flex-wrap items-center gap-3">
+                              <span
+                                className={`rounded-full border px-3 py-1 text-sm font-semibold ${riskTone.badgeClasses}`}
+                                aria-label={riskTone.indicatorLabel}
+                              >
+                                {riskTone.label}
+                              </span>
+                              <span className="text-sm font-medium text-slate-500">
+                                {copy.riskLevelLabel}
+                              </span>
+                            </div>
+                            <p
+                              className={`text-3xl font-bold md:text-4xl ${riskTone.scoreClasses}`}
+                            >
+                              {riskTone.label}
+                            </p>
+                            <p className="max-w-2xl text-sm leading-6 text-slate-700">
+                              {getRiskHelperText(copy)}
+                            </p>
+                          </div>
+
+                          <div className="rounded-[1.25rem] border border-white/80 bg-white/80 px-4 py-4 text-left shadow-sm md:min-w-[160px] md:text-right">
+                            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+                              {copy.scoreLabel}
+                            </p>
+                            <p className="mt-2 text-2xl font-bold text-slate-950">
+                              {result.riskScore} / 100
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="mt-5">
+                          <div className="flex items-center justify-between text-xs font-medium uppercase tracking-[0.18em] text-slate-500">
+                            <span>{copy.lowerRisk}</span>
+                            <span>{copy.higherRisk}</span>
+                          </div>
+                          <div
+                            className="mt-2 h-3 overflow-hidden rounded-full bg-white/80"
+                            role="progressbar"
+                            aria-label={`${riskTone.label} score`}
+                            aria-valuemin={0}
+                            aria-valuemax={100}
+                            aria-valuenow={result.riskScore}
+                          >
+                            <div
+                              className={`h-full rounded-full bg-gradient-to-r ${riskTone.progressClasses}`}
+                              style={{ width: `${result.riskScore}%` }}
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <h2 className="text-lg font-semibold text-slate-950">
+                          {copy.issuesTitle}
+                        </h2>
+                        <ul className="mt-4 space-y-3">
+                          {issueWarnings.length > 0 ? (
+                            issueWarnings.map((warning) => (
+                              <li
+                                key={warning}
+                                className="rounded-[1.25rem] border border-slate-200 bg-white px-4 py-4 text-sm leading-6 text-slate-700 shadow-sm"
+                              >
+                                {warning}
+                              </li>
+                            ))
+                          ) : (
+                            <li className="rounded-[1.25rem] border border-emerald-200 bg-emerald-50 px-4 py-4 text-sm leading-6 text-emerald-800">
+                              {copy.noMajorRisks}
+                            </li>
+                          )}
+                        </ul>
+                      </div>
+
+                      <div className="border-t border-slate-200 pt-5">
+                        <p className="text-sm leading-6 text-slate-600">
+                          {copy.shareHeading}
+                        </p>
+                        <div className="mt-3 flex flex-wrap gap-3">
+                          {typeof navigator !== "undefined" &&
+                          typeof navigator.share === "function" ? (
+                            <Button
+                              type="button"
+                              variant="outline"
+                              onClick={handleShare}
+                              className="h-auto rounded-2xl border-slate-300 bg-white px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50"
+                            >
+                              {shared ? (
+                                <>
+                                  <Check className="mr-2 h-4 w-4" />
+                                  {copy.sharedButton}
+                                </>
+                              ) : (
+                                <>
+                                  <Share2 className="mr-2 h-4 w-4" />
+                                  {copy.shareButton}
+                                </>
+                              )}
+                            </Button>
+                          ) : null}
                           <Button
                             type="button"
                             variant="outline"
-                            onClick={handleShare}
-                            className="h-auto rounded-2xl border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold text-white hover:bg-white/10"
+                            onClick={handleCopyLink}
+                            className="h-auto rounded-2xl border-slate-300 bg-white px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50"
                           >
-                            {shared ? (
+                            {copiedLink ? (
                               <>
                                 <Check className="mr-2 h-4 w-4" />
-                                {copy.sharedButton}
+                                {copy.linkCopied}
                               </>
                             ) : (
                               <>
-                                <Share2 className="mr-2 h-4 w-4" />
-                                {copy.shareButton}
+                                <Link2 className="mr-2 h-4 w-4" />
+                                {copy.copyLink}
                               </>
                             )}
                           </Button>
-                        ) : null}
-                        <Button
-                          type="button"
-                          variant="outline"
-                          onClick={handleCopyLink}
-                          className="h-auto rounded-2xl border-white/15 bg-white/5 px-4 py-3 text-sm font-semibold text-white hover:bg-white/10"
-                        >
-                          {copiedLink ? (
-                            <>
-                              <Check className="mr-2 h-4 w-4" />
-                              {copy.linkCopied}
-                            </>
-                          ) : (
-                            <>
-                              <Link2 className="mr-2 h-4 w-4" />
-                              {copy.copyLink}
-                            </>
-                          )}
-                        </Button>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </details>
                 </>
               ) : (
                 <div className="rounded-[1.6rem] border border-dashed border-slate-300 bg-slate-50 px-6 py-10 text-center">

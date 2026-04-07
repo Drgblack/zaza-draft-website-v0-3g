@@ -19,6 +19,9 @@ import PricingSection from "./components/PricingSection";
 import FAQSection from "./components/FAQSection";
 import FinalCTASection from "./components/FinalCTASection";
 
+const GUIDE_HREF = "/teacher-guide-to-sensitive-parent-emails";
+const CHECKER_HREF = "/parent-email-risk-checker";
+
 type JessicaReedFunnelProps = {
   locale?: FunnelLocale;
 };
@@ -79,6 +82,14 @@ export default function JessicaReedFunnel({
     currency,
     displayLocale ? { locale: displayLocale } : undefined,
   );
+  const heroPrimaryHref = copy.hero.primaryCtaHref ?? CHECKER_HREF;
+  const heroPrimaryLabel = copy.hero.primaryCtaLabel ?? freeCtaLabel;
+  const heroSecondaryHref =
+    copy.hero.secondaryLinkHref ??
+    (locale === "de" ? "/de/parent-email-risk-checker" : CHECKER_HREF);
+  const finalPrimaryHref = copy.finalCta.primaryCtaHref ?? CHECKER_HREF;
+  const finalPrimaryLabel = copy.finalCta.primaryCtaLabel ?? freeCtaLabel;
+  const finalSecondaryHref = copy.finalCta.secondaryCtaHref ?? GUIDE_HREF;
 
   const openFreeSignup = (ctaLocation: string, ctaText: string) => {
     trackCtaClick({ ctaText, ctaLocation });
@@ -93,12 +104,10 @@ export default function JessicaReedFunnel({
     <div className="funnel-theme">
       <main className="funnel-main">
         <HeroSection
-          onPrimaryAction={() => openFreeSignup("funnel_hero", freeCtaLabel)}
-          onSecondaryLinkClick={() => {
+          primaryHref={heroPrimaryHref}
+          onPrimaryAction={() => {
             trackCtaClick({
-              ctaText:
-                copy.hero.secondaryLinkSupport ??
-                "Try the free Parent Email Risk Checker",
+              ctaText: heroPrimaryLabel,
               ctaLocation: "funnel_hero_checker",
             });
             track("checker_link_clicked", {
@@ -106,12 +115,50 @@ export default function JessicaReedFunnel({
               locale,
             });
           }}
-          primaryCtaLabel={freeCtaLabel}
+          onSecondaryLinkClick={() => {
+            trackCtaClick({
+              ctaText: copy.hero.secondaryLinkLabel ?? "Get the free guide",
+              ctaLocation: "funnel_hero_guide",
+            });
+            track("seo_guide_link_clicked", {
+              destination: heroSecondaryHref,
+              source: "funnel_hero",
+              locale,
+            });
+          }}
+          primaryCtaLabel={heroPrimaryLabel}
+          secondaryHref={heroSecondaryHref}
           copy={copy.hero}
           locale={locale}
         />
         <PainSection copy={copy.pain} />
-        <SolutionSection copy={copy.solution} />
+        <SolutionSection
+          copy={copy.solution}
+          onPrimaryAction={() => {
+            trackCtaClick({
+              ctaText:
+                copy.solution.ctaBlock?.primaryLabel ?? "Make this safer",
+              ctaLocation: "funnel_mid_checker",
+            });
+            track("checker_link_clicked", {
+              source: "funnel_mid_page",
+              locale,
+            });
+          }}
+          onSecondaryAction={() => {
+            trackCtaClick({
+              ctaText:
+                copy.solution.ctaBlock?.secondaryLabel ??
+                "See 7 parent emails teachers should never send as-is",
+              ctaLocation: "funnel_mid_guide",
+            });
+            track("seo_guide_link_clicked", {
+              destination: copy.solution.ctaBlock?.secondaryHref ?? GUIDE_HREF,
+              source: "funnel_mid_page",
+              locale,
+            });
+          }}
+        />
         <HowItWorksSection copy={copy.howItWorks} />
         <PricingSection
           currency={currency}
@@ -134,10 +181,30 @@ export default function JessicaReedFunnel({
         />
         <FAQSection copy={copy.faq} />
         <FinalCTASection
-          onPrimaryAction={() =>
-            openFreeSignup("funnel_final_cta", freeCtaLabel)
-          }
-          primaryCtaLabel={freeCtaLabel}
+          primaryHref={finalPrimaryHref}
+          secondaryHref={finalSecondaryHref}
+          onPrimaryAction={() => {
+            trackCtaClick({
+              ctaText: finalPrimaryLabel,
+              ctaLocation: "funnel_final_checker",
+            });
+            track("checker_link_clicked", {
+              source: "funnel_final_cta",
+              locale,
+            });
+          }}
+          onSecondaryAction={() => {
+            trackCtaClick({
+              ctaText: copy.finalCta.secondaryCtaLabel ?? "Read the free guide",
+              ctaLocation: "funnel_final_guide",
+            });
+            track("seo_guide_link_clicked", {
+              destination: finalSecondaryHref,
+              source: "funnel_final_cta",
+              locale,
+            });
+          }}
+          primaryCtaLabel={finalPrimaryLabel}
           copy={copy.finalCta}
         />
       </main>
