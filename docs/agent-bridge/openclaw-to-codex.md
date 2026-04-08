@@ -10,7 +10,7 @@
 ---
 
 ## Queue status
-- No active tasks yet.
+- Active task.
 - Next task ID: TASK-001
 
 
