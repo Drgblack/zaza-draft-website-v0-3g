@@ -17,7 +17,7 @@
 ---
 
 ## TASK-001
-Status: QUEUED
+Status: ACTIVE
 Type: messaging alignment
 Priority: HIGH
 
