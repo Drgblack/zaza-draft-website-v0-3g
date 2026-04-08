@@ -589,3 +589,71 @@ Ensure the existing lead-magnet push posts point to `/7-parent-emails` with `utm
 - The PDF asset exists in the repo’s deployable static/public path
 - Scheduled post links can point to `/7-parent-emails` using `utm_campaign=lead-magnet`
 - No redesign or product-logic changes are introduced
+
+
+---
+
+## TASK-004
+Status: QUEUED
+Type: design polish + asset creation
+Priority: HIGH
+Date: 2026-04-08
+Requested by: Greg
+
+### Title
+Polish 7 Parent Emails lead magnet (PDF design + hero images + badge)
+
+### Objective
+Make the newly deployed lead magnet look significantly more professional and on-brand while keeping all existing copy and structure exactly the same.
+
+### Scope
+- Update the PDF at `public/guides/7-parent-emails-teachers-should-never-send-as-is.pdf`
+- Replace the hero image on the landing page `/7-parent-emails`
+- Add a small badge to the first example’s AFTER section
+
+### Implementation instructions
+
+#### PDF redesign
+Redesign the existing 4-page PDF to look like a modern, professional pamphlet.
+
+Requirements:
+- add the official Zaza Draft logo in the header and/or footer
+- use Zaza brand colors (purple `#7C3AED` and teal accents)
+- improve typography, spacing, and readability
+- use callout boxes or styled sections for “What changed”
+- add subtle icons or checkmarks for bullets
+- include page numbers and subtle footer branding
+- keep every single word of the 7 examples exactly as they are now
+
+#### New hero images
+Create two new distinct hero images that are different from the current one used on `/founding` and `/products/draft`.
+
+Style requirements:
+- realistic
+- warm
+- modern female teacher at a desk with laptop
+- calm/confident expression
+
+Implementation:
+- create two distinct images
+- replace the current hero image on `/7-parent-emails` with one of the new images
+
+#### Badge on first example
+On the `The late-night parent email` AFTER section, add a small, tasteful badge that says either:
+- `Safe version`
+- or `2-second safer reply`
+
+#### Landing page
+Update only the hero image. Do not change any copy.
+
+### Constraints
+- do not change any of the 7 example texts or structure
+- do not redesign the overall layout of the landing page
+- keep the same URLs for the page and PDF
+
+### Acceptance criteria
+- PDF looks modern and professional with logo and brand colors
+- two new hero images are created and one is used on the live page
+- a badge is added to the first example’s AFTER section
+- page and PDF remain at the same live URLs
+- no content or structural changes are made to the 7 examples
