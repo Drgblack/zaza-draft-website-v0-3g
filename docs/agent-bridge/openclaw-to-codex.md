@@ -753,3 +753,41 @@ Fix remaining visual issues and improve scannability of the live lead magnet pag
 - Each example is visually separated
 - Favicon and secondary CTA are added on the page
 - New hero image is deployed on the two pages that had duplicates
+
+
+---
+
+## TASK-007
+Status: QUEUED
+Type: design polish
+Priority: HIGH
+Date: 2026-04-08
+Requested by: Greg
+
+### Title
+Final micro-polish on 7-parent-emails lead magnet (PDF alignment + footer + benefit section)
+
+### Objective
+Fix remaining visual and conversion issues on the live lead magnet.
+
+### Implementation instructions
+
+#### PDF fixes
+- Push the `What changed` bullet points approximately 1 cm further into each tile so they sit cleanly inside the box
+- Add the URL `https://www.zazadraft.com/7-parent-emails` in the footer on every page
+- Add the footer line `Share this guide with colleagues` on every page
+- Add a short `Why this matters` section near the end, before the final CTA, speaking directly to teacher fears: escalation to admin, complaints, emotional drain, and the `that could have been me` moment
+
+#### Landing page
+- Add a prominent button: `Share this guide with your teacher friends`
+- Add a clear secondary CTA at the bottom: `Try Zaza Draft free – stop rewriting emails at 10pm` linking to `/start`
+
+### Constraints
+- Do not change any of the 7 example texts
+- Keep the same URLs
+
+### Acceptance criteria
+- Bullet alignment is fixed
+- URL and sharing line appear in the PDF footer
+- `Why this matters` section is added with emotional resonance from teacher fears
+- New sharing button and secondary CTA are present on the page
