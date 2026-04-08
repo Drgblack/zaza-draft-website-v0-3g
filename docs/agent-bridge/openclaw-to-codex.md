@@ -138,3 +138,120 @@ Do not change CTA structure in this task. This is a trust-calibration copy pass 
 - Schools page includes the escalation-prevention line
 - FAQ covers control, judgement, surveillance, and rollout
 - No new features, dashboards, or redesign work introduced
+
+
+---
+
+## TASK-002
+Status: QUEUED
+Type: messaging alignment
+Priority: HIGH
+
+### Title
+Homepage and schools page trust-calibration optimisation
+
+### Objective
+Tighten homepage and schools-page copy using the exact approved messaging changes below.
+
+### Scope
+Homepage:
+- hero headline line break
+- hero support line
+- recognition line under hero
+- calm writing support section support line
+- before/after section hook line
+
+Schools page:
+- keep existing hero unchanged
+- add one reassurance line in package/rollout section
+- add one escalation-prevention line in a visible supporting section
+- ensure FAQ includes four required points
+
+### Exact copy
+
+#### Homepage hero headline
+Use exactly:
+
+Write parent emails and school messages
+without second-guessing how they’ll be interpreted
+
+#### Homepage hero support line
+Replace the current support paragraph with exactly:
+
+Zaza helps teachers write clear, calm messages in moments that feel uncertain - before wording, tone, or timing turn a situation into something bigger.
+
+#### Homepage recognition line under hero
+Add directly under the hero section:
+
+The message that takes the longest is usually the one that matters most.
+
+#### Homepage calm writing support section
+Keep the section heading:
+
+Calm writing support for high-stakes school communication
+
+Add directly underneath it:
+
+Especially when you are not sure how a message will land.
+
+#### Homepage before/after section
+Add directly above the before/after example block:
+
+This is the kind of message teachers hesitate over.
+
+#### Schools page hero
+Keep this line unchanged:
+
+A safer way for schools to handle high-stakes parent communication
+
+#### Schools page package or rollout section
+Add exactly:
+
+Schools gain a clearer, more consistent communication approach across staff, without adding oversight pressure.
+
+#### Schools page supporting line
+Add exactly:
+
+Most escalation starts with a message that could have been phrased differently.
+
+#### Schools page FAQ requirements
+Ensure the FAQ clearly includes all of the following points:
+- teachers stay in control
+- Zaza does not replace judgement
+- it is not surveillance
+- how rollout works
+
+### CTA hierarchy
+Do not change CTA structure in this task.
+
+### Layout/order instructions
+- Keep the homepage layout unchanged except for the copy edits listed above
+- Apply the new line break in the homepage hero headline exactly as written
+- Place the new recognition line directly below the homepage hero support area
+- Place the new calm-writing support line directly under the existing section heading
+- Place the before/after hook directly above the example block
+- Keep the schools page hero unchanged
+- Add the oversight-pressure reassurance line within the existing package or rollout section
+- Add the escalation-prevention line in an existing visible schools-page support section
+- Use the existing FAQ section; add or adjust only the missing FAQ entries if needed
+
+### Constraints
+- Do not redesign the homepage
+- Do not redesign the schools page
+- Do not add dashboards
+- Do not add analytics features
+- Do not add product features
+- Do not change routes, auth, billing, pricing, analytics architecture, or product logic
+- Do not weaken the existing schools hero
+
+### Acceptance criteria
+- Homepage hero headline uses the exact new two-line phrasing with they’ll
+- Homepage hero support line is replaced with the exact approved sentence
+- Homepage includes the recognition line directly under the hero
+- Calm writing support section includes the new support line
+- Before/after section includes the new hook line above the example
+- Schools hero remains unchanged
+- Schools page includes the oversight-pressure reassurance line
+- Schools page includes the escalation-prevention line
+- FAQ clearly covers teacher control, judgement, non-surveillance, and rollout
+- No redesign or feature expansion is introduced
