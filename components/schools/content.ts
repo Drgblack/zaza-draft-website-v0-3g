@@ -165,7 +165,7 @@ export const schoolsEnContent: SchoolsContent = {
   locale: "en",
   path: "/schools",
   demoHref: "/contact/schools?plan=enterprise&source=schools_page",
-  heroImage: "/teacher-writing-parent-email-on-laptop.jpg",
+  heroImage: "/shared-teacher-desk-hero.jpg",
   rolloutImage: "/school-district-meeting-teachers.jpg",
   heroImageAlt:
     "Teacher reviewing a difficult parent email on a laptop in a calm school office",
@@ -426,7 +426,7 @@ export const schoolsDeContent: SchoolsContent = {
   locale: "de",
   path: "/de/schools",
   demoHref: "/de/contact/schools?plan=enterprise&source=schools_page_de",
-  heroImage: "/teacher-writing-parent-email-on-laptop.jpg",
+  heroImage: "/shared-teacher-desk-hero.jpg",
   rolloutImage: "/school-district-meeting-teachers.jpg",
   heroImageAlt:
     "Lehrkraft prüft eine schwierige Elternmail an einem Laptop in einem ruhigen Schulbüro",

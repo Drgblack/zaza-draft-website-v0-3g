@@ -270,8 +270,8 @@ export default function DraftClient() {
 
               <div className="relative aspect-[16/9] rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/teacher-writing-parent-email-on-laptop.jpg"
-                  alt="Teacher writing parent messages"
+                  src="/shared-teacher-desk-hero.jpg"
+                  alt="Teacher working at a desk with a laptop in a warm classroom setting"
                   fill
                   className="object-cover"
                   priority

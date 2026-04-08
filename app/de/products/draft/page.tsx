@@ -1,9 +1,9 @@
-import type { Metadata } from "next"
-import DraftClient from "@/app/products/draft/draft-client"
-import { SetLanguage } from "@/components/set-language"
+import type { Metadata } from "next";
+import DraftClient from "@/app/products/draft/draft-client";
+import { SetLanguage } from "@/components/set-language";
 
-const ogImage = "/teacher-writing-parent-email-on-laptop.jpg"
-const canonicalUrl = "https://zazadraft.com/de/products/draft"
+const ogImage = "/shared-teacher-desk-hero.jpg";
+const canonicalUrl = "https://zazadraft.com/de/products/draft";
 
 export const metadata: Metadata = {
   title: "Zaza Draft | KI für Elternkommunikation, die Lehrkräften Zeit spart",
@@ -17,21 +17,29 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Zaza Draft | KI für Elternkommunikation, die Lehrkräften Zeit spart",
-    description: "Ruhige, klare Elternmails mit Ton-Guardrails und Sicherheitschecks. Schneller schreiben, Stimme behalten.",
+    title:
+      "Zaza Draft | KI für Elternkommunikation, die Lehrkräften Zeit spart",
+    description:
+      "Ruhige, klare Elternmails mit Ton-Guardrails und Sicherheitschecks. Schneller schreiben, Stimme behalten.",
     url: canonicalUrl,
     type: "website",
     locale: "de_DE",
     siteName: "Zaza Draft",
-    images: [{ url: ogImage, alt: "Lehrkraft verfasst eine Elternmail mit Zaza Draft" }],
+    images: [
+      {
+        url: ogImage,
+        alt: "Lehrkraft verfasst eine Elternmail mit Zaza Draft",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Zaza Draft | Elternkommunikation mit KI-Unterstützung",
-    description: "Schreibe Elternmails schneller und sicherer - mit Guardrails, die deinen Ton schützen.",
+    description:
+      "Schreibe Elternmails schneller und sicherer - mit Guardrails, die deinen Ton schützen.",
     images: [ogImage],
   },
-}
+};
 
 export default function DraftDePage() {
   return (
@@ -39,5 +47,5 @@ export default function DraftDePage() {
       <SetLanguage lang="de" />
       <DraftClient />
     </>
-  )
+  );
 }

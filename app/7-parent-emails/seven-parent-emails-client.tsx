@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { track, trackCtaClick } from "@/lib/analytics";
 
 const CHECKER_HREF = "/parent-email-risk-checker";
+const START_HREF = "/start";
 const GUIDE_PDF_HREF =
   "/guides/7-parent-emails-teachers-should-never-send-as-is.pdf";
 
@@ -46,6 +47,17 @@ function trackGuideClick(location: string) {
   });
   track("seo_guide_link_clicked", {
     destination: GUIDE_PDF_HREF,
+    source: location,
+    page_slug: "7-parent-emails",
+  });
+}
+
+function trackStartClick(location: string) {
+  trackCtaClick({
+    ctaText: "Try Zaza Draft free",
+    ctaLocation: location,
+  });
+  track("start_link_clicked", {
     source: location,
     page_slug: "7-parent-emails",
   });
@@ -112,15 +124,17 @@ function ExampleCard({
 
   return (
     <Card className={`py-0 shadow-none ${styles}`}>
-      <CardContent className="relative space-y-4 px-6 py-6 md:px-8 md:py-8">
-        {badge ? (
-          <div className="absolute right-6 top-6 inline-flex rounded-full border border-emerald-200/30 bg-emerald-200/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-emerald-50 md:right-8 md:top-8">
-            {badge}
-          </div>
-        ) : null}
-        <p className="pr-28 text-sm font-semibold uppercase tracking-[0.24em]">
-          {title}
-        </p>
+      <CardContent className="space-y-4 px-6 py-6 md:px-8 md:py-8">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <p className="text-sm font-semibold uppercase tracking-[0.24em]">
+            {title}
+          </p>
+          {badge ? (
+            <div className="inline-flex rounded-full border border-emerald-200/30 bg-emerald-200/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-emerald-50">
+              {badge}
+            </div>
+          ) : null}
+        </div>
         <div className="whitespace-pre-wrap text-base leading-8">{body}</div>
       </CardContent>
     </Card>
@@ -421,6 +435,25 @@ export default function SevenParentEmailsClient() {
                 Get the free guide
               </a>
             </Button>
+          </div>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Button
+              asChild
+              className="bg-teal-200 text-slate-950 hover:bg-teal-100"
+            >
+              <Link
+                href={START_HREF}
+                onClick={() =>
+                  trackStartClick("seven_parent_emails_bottom_start")
+                }
+              >
+                Try Zaza Draft free
+              </Link>
+            </Button>
+            <p className="text-sm leading-7 text-slate-400">
+              Continue into the full Draft flow if you want calmer help beyond
+              this guide.
+            </p>
           </div>
         </section>
       </main>
