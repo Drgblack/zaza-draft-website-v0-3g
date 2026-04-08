@@ -224,7 +224,7 @@ def build_example_tile(
     changes_box = Table(
         [
             [Paragraph("What changed", changes_heading_style)],
-            [ListFlowable(change_items, bulletType="bullet", leftIndent=14)],
+            [ListFlowable(change_items, bulletType="bullet", leftIndent=42)],
         ],
         colWidths=[doc.width - 28],
         style=TableStyle(
@@ -380,6 +380,22 @@ def build_pdf(source: Path, output: Path, logo_path: Path) -> None:
         textColor=SLATE,
         fontSize=10.4,
     )
+    why_matter_heading_style = ParagraphStyle(
+        "WhyMatterHeading",
+        parent=styles["Heading3"],
+        fontName="Helvetica-Bold",
+        fontSize=12,
+        leading=15,
+        textColor=SLATE,
+        spaceAfter=8,
+    )
+    why_matter_body_style = ParagraphStyle(
+        "WhyMatterBody",
+        parent=body_style,
+        fontSize=10,
+        leading=15.5,
+        spaceAfter=0,
+    )
 
     doc = SimpleDocTemplate(
         str(output),
@@ -459,6 +475,44 @@ def build_pdf(source: Path, output: Path, logo_path: Path) -> None:
     story.append(
         Table(
             [
+                [Paragraph("Why this matters", why_matter_heading_style)],
+                [
+                    Paragraph(
+                        "These are the messages that can end up forwarded to senior leadership, turned into a complaint, or replayed in your head long after the school day ends.",
+                        why_matter_body_style,
+                    )
+                ],
+                [
+                    Paragraph(
+                        "The emotional drain is not only in writing them. It is in wondering whether one phrase will be misread and whether tomorrow morning will begin with fallout that could have been avoided.",
+                        why_matter_body_style,
+                    )
+                ],
+                [
+                    Paragraph(
+                        "That is why so many teachers look at an example like this and think, that could have been me. Zaza Draft is built for that exact moment before send.",
+                        why_matter_body_style,
+                    )
+                ],
+            ],
+            colWidths=[doc.width],
+            style=TableStyle(
+                [
+                    ("BACKGROUND", (0, 0), (-1, -1), colors.HexColor("#FFF7ED")),
+                    ("BOX", (0, 0), (-1, -1), 0.8, colors.HexColor("#FDBA74")),
+                    ("ROUNDEDCORNERS", [14, 14, 14, 14]),
+                    ("LEFTPADDING", (0, 0), (-1, -1), 16),
+                    ("RIGHTPADDING", (0, 0), (-1, -1), 16),
+                    ("TOPPADDING", (0, 0), (-1, -1), 14),
+                    ("BOTTOMPADDING", (0, 0), (-1, -1), 14),
+                ]
+            ),
+        )
+    )
+    story.append(Spacer(1, 14))
+    story.append(
+        Table(
+            [
                 [Paragraph("Start with the draft that is already open", cta_heading_style)],
                 [Paragraph(lines_to_html(content.cta), cta_body_style)],
             ],
@@ -494,6 +548,17 @@ def build_pdf(source: Path, output: Path, logo_path: Path) -> None:
         canvas.setFont("Helvetica", 8.5)
         canvas.setFillColor(SLATE_MID)
         canvas.drawString(_doc.leftMargin + 24 * mm, 10.8 * mm, "7 Parent Emails Teachers Should Never Send As-Is")
+        canvas.setFont("Helvetica", 7.6)
+        canvas.drawString(
+            _doc.leftMargin + 24 * mm,
+            7.2 * mm,
+            "https://www.zazadraft.com/7-parent-emails",
+        )
+        canvas.drawRightString(
+            A4[0] - _doc.rightMargin,
+            7.2 * mm,
+            "Share this guide with colleagues",
+        )
         canvas.drawRightString(
             A4[0] - _doc.rightMargin,
             10.8 * mm,

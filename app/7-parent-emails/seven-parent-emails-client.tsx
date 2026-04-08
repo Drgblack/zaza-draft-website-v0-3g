@@ -9,6 +9,7 @@ import { track, trackCtaClick } from "@/lib/analytics";
 
 const CHECKER_HREF = "/parent-email-risk-checker";
 const START_HREF = "/start";
+const PAGE_HREF = "https://www.zazadraft.com/7-parent-emails";
 const GUIDE_PDF_HREF =
   "/guides/7-parent-emails-teachers-should-never-send-as-is.pdf";
 
@@ -58,6 +59,17 @@ function trackStartClick(location: string) {
     ctaLocation: location,
   });
   track("start_link_clicked", {
+    source: location,
+    page_slug: "7-parent-emails",
+  });
+}
+
+function trackShareClick(location: string) {
+  trackCtaClick({
+    ctaText: "Share this guide with your teacher friends",
+    ctaLocation: location,
+  });
+  track("guide_share_clicked", {
     source: location,
     page_slug: "7-parent-emails",
   });
@@ -142,6 +154,43 @@ function ExampleCard({
 }
 
 export default function SevenParentEmailsClient() {
+  const shareGuide = async () => {
+    trackShareClick("seven_parent_emails_share_button");
+
+    if (typeof navigator !== "undefined" && navigator.share) {
+      try {
+        await navigator.share({
+          title: "7 Parent Emails Teachers Should Never Send As-Is",
+          text: "A practical guide for teachers handling difficult parent emails.",
+          url: PAGE_HREF,
+        });
+        return;
+      } catch {
+        // Fall through to clipboard copy if the share sheet is dismissed or unavailable.
+      }
+    }
+
+    if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
+      try {
+        await navigator.clipboard.writeText(PAGE_HREF);
+        return;
+      } catch {
+        // Fall through to window open.
+      }
+    }
+
+    if (typeof window !== "undefined") {
+      window.open(
+        `mailto:?subject=${encodeURIComponent(
+          "7 Parent Emails Teachers Should Never Send As-Is",
+        )}&body=${encodeURIComponent(
+          `Thought this might be useful: ${PAGE_HREF}`,
+        )}`,
+        "_self",
+      );
+    }
+  };
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <section className="border-b border-white/10 bg-[radial-gradient(circle_at_top,_rgba(45,212,191,0.12),_transparent_32%),radial-gradient(circle_at_right,_rgba(251,191,36,0.08),_transparent_24%)]">
@@ -438,6 +487,13 @@ export default function SevenParentEmailsClient() {
           </div>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button
+              type="button"
+              onClick={shareGuide}
+              className="bg-white text-slate-950 hover:bg-slate-100"
+            >
+              Share this guide with your teacher friends
+            </Button>
+            <Button
               asChild
               className="bg-teal-200 text-slate-950 hover:bg-teal-100"
             >
@@ -447,12 +503,12 @@ export default function SevenParentEmailsClient() {
                   trackStartClick("seven_parent_emails_bottom_start")
                 }
               >
-                Try Zaza Draft free
+                Try Zaza Draft free - stop rewriting emails at 10pm
               </Link>
             </Button>
-            <p className="text-sm leading-7 text-slate-400">
-              Continue into the full Draft flow if you want calmer help beyond
-              this guide.
+            <p className="max-w-2xl text-sm leading-7 text-slate-400">
+              Share the guide with a colleague first, then move into the full
+              Draft flow if you want calmer help beyond one difficult email.
             </p>
           </div>
         </section>
