@@ -11,7 +11,7 @@
 
 ## Queue status
 - Active task.
-- Next task ID: TASK-005
+- Next task ID: TASK-006
 
 
 ---
@@ -662,7 +662,7 @@ Update only the hero image. Do not change any copy.
 ---
 
 ## TASK-005
-Status: ACTIVE
+Status: COMPLETED
 Type: design polish
 Priority: HIGH
 Date: 2026-04-08
@@ -713,7 +713,7 @@ Link destination:
 ---
 
 ## TASK-006
-Status: QUEUED
+Status: ACTIVE
 Type: design polish
 Priority: HIGH
 Date: 2026-04-08
