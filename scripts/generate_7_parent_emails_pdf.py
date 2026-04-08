@@ -143,6 +143,7 @@ def para_text(lines: Iterable[str]) -> str:
 def build_pdf(source: Path, output: Path, logo_path: Path) -> None:
     content = parse_markdown(source)
     styles = getSampleStyleSheet()
+    pdf_title = "Zaza Draft | 7 Parent Emails Teachers Should Never Send As-Is"
 
     title_style = ParagraphStyle(
         "Title",
@@ -229,8 +230,9 @@ def build_pdf(source: Path, output: Path, logo_path: Path) -> None:
         rightMargin=17 * mm,
         topMargin=16 * mm,
         bottomMargin=18 * mm,
-        title=content.title,
+        title=pdf_title,
         author="Zaza Draft",
+        subject="A practical guide for teachers handling difficult parent emails.",
     )
 
     story.append(Spacer(1, 6))
@@ -376,6 +378,11 @@ def build_pdf(source: Path, output: Path, logo_path: Path) -> None:
 
     def draw_page(canvas, doc):
         canvas.saveState()
+        canvas.setTitle(pdf_title)
+        canvas.setAuthor("Zaza Draft")
+        canvas.setSubject(
+            "A practical guide for teachers handling difficult parent emails."
+        )
         canvas.setFillColor(colors.HexColor("#F8FAFC"))
         canvas.rect(0, 0, A4[0], A4[1], fill=1, stroke=0)
         canvas.setFillColor(PURPLE)
@@ -411,5 +418,5 @@ if __name__ == "__main__":
     build_pdf(
         source=repo / "docs" / "guides" / "7-parent-emails-teachers-should-never-send-as-is.md",
         output=repo / "public" / "guides" / "7-parent-emails-teachers-should-never-send-as-is.pdf",
-        logo_path=repo / "public" / "zaza-logo.png",
+        logo_path=repo / "public" / "z-logo.png",
     )

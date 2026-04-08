@@ -83,6 +83,8 @@ function CtaRow({
       >
         <a
           href={GUIDE_PDF_HREF}
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={() => trackGuideClick(secondaryLocation)}
         >
           Get the free guide
@@ -110,13 +112,13 @@ function ExampleCard({
 
   return (
     <Card className={`py-0 shadow-none ${styles}`}>
-      <CardContent className="space-y-4 px-6 py-6 md:px-8 md:py-8">
+      <CardContent className="relative space-y-4 px-6 py-6 md:px-8 md:py-8">
         {badge ? (
-          <div className="inline-flex rounded-full border border-emerald-200/30 bg-emerald-200/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-50">
+          <div className="absolute right-6 top-6 inline-flex rounded-full border border-emerald-200/30 bg-emerald-200/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-emerald-50 md:right-8 md:top-8">
             {badge}
           </div>
         ) : null}
-        <p className="text-sm font-semibold uppercase tracking-[0.24em]">
+        <p className="pr-28 text-sm font-semibold uppercase tracking-[0.24em]">
           {title}
         </p>
         <div className="whitespace-pre-wrap text-base leading-8">{body}</div>
@@ -338,6 +340,8 @@ export default function SevenParentEmailsClient() {
             >
               <a
                 href={GUIDE_PDF_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => trackGuideClick("seven_parent_emails_mid_guide")}
               >
                 Get the free guide
@@ -381,6 +385,8 @@ export default function SevenParentEmailsClient() {
             >
               <a
                 href={GUIDE_PDF_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() =>
                   trackGuideClick("seven_parent_emails_final_guide")
                 }
@@ -407,6 +413,8 @@ export default function SevenParentEmailsClient() {
             >
               <a
                 href={GUIDE_PDF_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => trackGuideClick("seven_parent_emails_pdf_band")}
               >
                 <Download className="mr-2 h-4 w-4" />
