@@ -11,7 +11,7 @@
 
 ## Queue status
 - Active task.
-- Next task ID: TASK-003
+- Next task ID: TASK-004
 
 
 ---
@@ -291,7 +291,7 @@ TEST_WRITE_SUCCESS
 ---
 
 ## TASK-003
-Status: ACTIVE
+Status: COMPLETE
 Type: new page
 Priority: HIGH
 Date: 2026-04-08
@@ -594,7 +594,7 @@ Ensure the existing lead-magnet push posts point to `/7-parent-emails` with `utm
 ---
 
 ## TASK-004
-Status: QUEUED
+Status: ACTIVE
 Type: design polish + asset creation
 Priority: HIGH
 Date: 2026-04-08
