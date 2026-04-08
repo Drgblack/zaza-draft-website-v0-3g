@@ -131,3 +131,156 @@ Do not change CTA structure or CTA order in this task.
 - Schools page includes the escalation-prevention line in a visible supporting section
 - Schools FAQ clearly covers teacher control, judgement, non-surveillance, and rollout
 - No redesign, dashboard, feature expansion, or logic changes are introduced
+
+
+---
+
+## TASK-002
+Status: QUEUED
+Type: conversion optimisation
+Priority: HIGH
+Date: 2026-04-08
+Requested by: Greg
+
+### Title
+Homepage and schools page conversion optimisation pass
+
+### Objective
+Apply the approved homepage and schools-page copy refinements to improve trust and conversion while preserving the current layout, routes, analytics, and product scope.
+
+### Scope
+Target repository: homepage and schools page in the existing website app.
+
+Implement copy updates in the existing components/sections that render:
+- homepage hero headline
+- homepage hero support line
+- homepage recognition line under hero
+- homepage calm writing support section
+- homepage before/after section
+- schools page hero
+- schools page package or rollout section
+- schools page visible support section
+- schools page FAQ
+
+Use the existing files/components that currently power those sections. Do not create new routes or new page-level architectures.
+
+### Implementation instructions
+Apply the following changes exactly.
+
+#### 1. Homepage hero headline
+Replace the current hero headline with this exact two-line copy:
+
+Write parent emails and school messages
+without second-guessing how they’ll be interpreted
+
+Requirements:
+- keep the two-line break exactly as written above
+- use the contraction “they’ll”
+- do not add extra punctuation
+
+#### 2. Homepage hero support line
+Replace the current hero support paragraph with exactly:
+
+Zaza helps teachers write clear, calm messages in moments that feel uncertain - before wording, tone, or timing turn a situation into something bigger.
+
+Requirements:
+- replace the existing paragraph, do not append to it
+- keep the dash style exactly as shown
+
+#### 3. Homepage recognition line under hero
+Add this exact line directly under the homepage hero support area:
+
+The message that takes the longest is usually the one that matters most.
+
+Requirements:
+- place it immediately below the hero support line
+- style it as supporting copy within the existing hero area, not as a new banner or callout card
+
+#### 4. Homepage calm writing support section
+Find the section with the heading:
+
+Calm writing support for high-stakes school communication
+
+Add this exact line directly below that heading:
+
+Especially when you are not sure how a message will land.
+
+Requirements:
+- do not change the existing section heading
+- insert this as a single supporting line directly below the heading
+
+#### 5. Homepage before/after section
+Add this exact hook line directly above the before/after example block:
+
+This is the kind of message teachers hesitate over.
+
+Requirements:
+- place it above the example itself, not below
+- keep it as plain supporting copy, not a badge or label
+
+#### 6. Schools page hero
+Keep the existing schools hero unchanged:
+
+A safer way for schools to handle high-stakes parent communication
+
+Requirements:
+- do not rewrite, shorten, or restyle this hero line
+
+#### 7. Schools page package or rollout section
+Within the existing package or rollout section, add this exact sentence:
+
+Schools gain a clearer, more consistent communication approach across staff, without adding oversight pressure.
+
+Requirements:
+- place this inside the existing package/rollout content
+- do not create a new feature block or separate module for it
+
+#### 8. Schools page support section
+Add this exact sentence in an existing visible supporting section on the schools page:
+
+Most escalation starts with a message that could have been phrased differently.
+
+Requirements:
+- place this in an existing support section where it will be clearly visible
+- do not create a new standalone section just for this line unless absolutely required by the current component structure
+
+#### 9. Schools page FAQ
+Check the existing FAQ and ensure it clearly covers all four points below:
+- teachers stay in control
+- Zaza does not replace judgement
+- it is not surveillance
+- how rollout works
+
+Requirements:
+- if all four are already present, leave the FAQ unchanged
+- if any are missing, add concise FAQ entries only for the missing points
+- do not expand the FAQ unnecessarily
+
+### Constraints
+- preserve existing analytics instrumentation
+- no redesign
+- no new routes
+- no new pages
+- no dashboard or analytics feature additions
+- no new product features
+- no auth, billing, pricing, or product-logic changes
+- preserve existing CTA structure and CTA order for this task
+- preserve the existing schools hero exactly
+- use existing sections/components wherever possible
+
+### Acceptance criteria
+Pass only if all of the following are true:
+
+- homepage hero headline matches exactly:
+  - Write parent emails and school messages
+  - without second-guessing how they’ll be interpreted
+- homepage hero support line matches exactly:
+  - Zaza helps teachers write clear, calm messages in moments that feel uncertain - before wording, tone, or timing turn a situation into something bigger.
+- homepage includes the line “The message that takes the longest is usually the one that matters most.” directly under the hero support area
+- calm writing support section includes the exact line “Especially when you are not sure how a message will land.” directly below its heading
+- before/after section includes the exact line “This is the kind of message teachers hesitate over.” directly above the example block
+- schools page hero remains exactly “A safer way for schools to handle high-stakes parent communication”
+- schools page includes the exact sentence “Schools gain a clearer, more consistent communication approach across staff, without adding oversight pressure.” inside the package or rollout section
+- schools page includes the exact sentence “Most escalation starts with a message that could have been phrased differently.” in a visible support section
+- schools FAQ clearly covers control, judgement, non-surveillance, and rollout
+- no redesign, no new routes, and no analytics or product-logic changes were introduced
