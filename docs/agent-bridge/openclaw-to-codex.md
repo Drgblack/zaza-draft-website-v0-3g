@@ -11,13 +11,13 @@
 
 ## Queue status
 - Active task.
-- Next task ID: TASK-001
+- Next task ID: TASK-003
 
 
 ---
 
 ## TASK-001
-Status: ACTIVE
+Status: COMPLETED
 Type: messaging alignment
 Priority: HIGH
 
@@ -291,7 +291,7 @@ TEST_WRITE_SUCCESS
 ---
 
 ## TASK-003
-Status: QUEUED
+Status: ACTIVE
 Type: new page
 Priority: HIGH
 Date: 2026-04-08
