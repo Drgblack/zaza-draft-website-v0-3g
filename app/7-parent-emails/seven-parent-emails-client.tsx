@@ -96,10 +96,12 @@ function ExampleCard({
   title,
   body,
   tone,
+  badge,
 }: {
   title: string;
   body: string;
   tone: "before" | "after";
+  badge?: string;
 }) {
   const styles =
     tone === "before"
@@ -109,6 +111,11 @@ function ExampleCard({
   return (
     <Card className={`py-0 shadow-none ${styles}`}>
       <CardContent className="space-y-4 px-6 py-6 md:px-8 md:py-8">
+        {badge ? (
+          <div className="inline-flex rounded-full border border-emerald-200/30 bg-emerald-200/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-50">
+            {badge}
+          </div>
+        ) : null}
         <p className="text-sm font-semibold uppercase tracking-[0.24em]">
           {title}
         </p>
@@ -147,7 +154,7 @@ export default function SevenParentEmailsClient() {
 
           <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-[0_30px_120px_-60px_rgba(15,23,42,0.8)]">
             <Image
-              src="/teacher-writing-parent-email-on-laptop.jpg"
+              src="/7-parent-emails-hero-primary.jpg"
               alt="Teacher reviewing a difficult parent email on a laptop in a calm classroom setting."
               width={1200}
               height={1500}
@@ -247,6 +254,7 @@ export default function SevenParentEmailsClient() {
             <ExampleCard
               title="After"
               tone="after"
+              badge="Safe version"
               body={
                 "I wanted to follow up about today's lesson. There were several points where your child struggled to follow instructions and this affected their focus and the learning environment around them.\n\nI have spoken with them in class and will continue to support them, but I wanted to make you aware so we can work together on this.\n\nPlease do speak with them about the importance of following instructions and staying focused in lesson time. If helpful, I'm happy to discuss ways we can support them consistently."
               }

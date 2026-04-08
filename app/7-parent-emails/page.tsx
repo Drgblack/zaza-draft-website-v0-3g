@@ -8,7 +8,7 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     "Free realistic examples for teachers who want calmer, more professional parent communication, plus a quick checker for risky drafts before sending.",
   path: "/7-parent-emails",
-  image: "/teacher-writing-parent-email-on-laptop.jpg",
+  image: "/7-parent-emails-hero-primary.jpg",
   keywords: [
     "7 parent emails teachers should never send as is",
     "parent email guide for teachers",

@@ -3,7 +3,7 @@
 ## Latest update
 
 Date: 2026-04-08
-Task title: 7 Parent Emails lead magnet page and PDF deployment
+Task title: Polish 7 Parent Emails lead magnet (PDF design + hero images + badge)
 
 ### Outcome
 
@@ -11,20 +11,23 @@ Task title: 7 Parent Emails lead magnet page and PDF deployment
 
 ### What changed
 
-- added a new `/7-parent-emails` landing page with the locked-in hero, problem, guide preview, proof insert, mid-page CTA, and closing CTA copy
-- added the guide markdown source and generated the deployable PDF at `/guides/7-parent-emails-teachers-should-never-send-as-is.pdf`
-- wired primary CTAs to the existing Parent Email Risk Checker flow and secondary CTAs to the public PDF asset
+- created two new lead-magnet hero assets and switched `/7-parent-emails` to the new primary image
+- added a small `Safe version` badge to the first example's AFTER card without changing the example copy
+- regenerated the PDF with Zaza branding, logo placement, brand colors, styled callout boxes, page numbers, and footer branding while preserving the existing guide wording
 
 ### Files changed
 
 - `app/7-parent-emails/page.tsx`
 - `app/7-parent-emails/seven-parent-emails-client.tsx`
-- `docs/guides/7-parent-emails-teachers-should-never-send-as-is.md`
+- `docs/agent-bridge/codex-status.md`
+- `public/7-parent-emails-hero-primary.jpg`
+- `public/7-parent-emails-hero-alt.jpg`
 - `public/guides/7-parent-emails-teachers-should-never-send-as-is.pdf`
+- `scripts/generate_7_parent_emails_pdf.py`
 
 ### Not implemented
 
-- no scheduled-post source files were found in the repo to update with `/7-parent-emails` UTM links
+- no additional landing-page copy or layout changes were made beyond the image swap and badge requested by the task
 
 ### Blockers
 
@@ -32,9 +35,10 @@ Task title: 7 Parent Emails lead magnet page and PDF deployment
 
 ### Notes for Greg
 
-- the PDF was generated from the committed markdown source so the public asset can be regenerated from repo content
-- the guide includes seven examples to match the lead magnet title while preserving the source examples from the active brief
+- the new primary hero asset is `public/7-parent-emails-hero-primary.jpg`
+- the alternate hero asset is `public/7-parent-emails-hero-alt.jpg`
+- the PDF can now be regenerated from the existing markdown source using `scripts/generate_7_parent_emails_pdf.py`
 
 ### Suggested next step
 
-- review the deployed page and PDF, then either update the bridge file punctuation or exempt it from the em dash guard
+- review the refreshed live page and PDF, then decide whether the alternate hero asset should replace the current primary
