@@ -28,13 +28,13 @@ export default function Footer() {
   const riskCheckerLabel = isDE
     ? "Kostenloser Risiko-Check für Elternmails"
     : "Free Parent Email Risk Checker";
-  const schoolsLabel = "For Schools";
+  const schoolsLabel = isDE ? "Für Schulen" : "For Schools";
 
   const productLinks = [
     { label: "Draft", href: localPath("/products/draft") },
     {
       label: schoolsLabel,
-      href: "/schools",
+      href: localPath("/schools"),
       onClick: () =>
         trackCtaClick({
           ctaText: schoolsLabel,

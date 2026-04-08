@@ -160,16 +160,16 @@ export function HomePageClient() {
       : "Write parent emails and school messages";
   const heroHeadlineAccent =
     language === "de"
-      ? "ohne Sorge, dass sie falsch aufgefasst werden."
-      : "without worrying they will be taken the wrong way.";
+      ? "ohne staendig zu fragen, wie sie aufgefasst werden."
+      : "without second-guessing how they will be interpreted.";
   const heroSubheading =
     language === "de"
-      ? "Zaza Draft hilft Lehrkraeften, emotional riskante Entwuerfe in ruhige, klare und professionelle Nachrichten zu verwandeln, bevor sie gesendet werden. Entwickelt fuer Eltern-E-Mails, Beschwerdeantworten, Verhaltens-Updates, Dokumentation und andere sensible Schulkommunikation."
-      : "Zaza Draft helps teachers turn emotionally risky drafts into calm, clear, professional messages before they’re sent. Built for parent emails, complaint replies, behaviour updates, documentation, and other high-stakes school communication.";
+      ? "Zaza hilft Lehrkraeften, klare und ruhige Nachrichten fuer Momente zu formulieren, die sich unsicher anfuehlen - bevor Ton, Wortwahl oder Timing eine Situation groesser werden lassen."
+      : "Zaza helps teachers draft clear, calm messages in moments that feel uncertain - before tone, wording, or timing turn a situation into something bigger.";
   const heroEntityLine =
     language === "de"
-      ? "Zaza Draft ist keine generische Schreibhilfe. Es ist eine lehrkraft-zentrierte Sicherheitsebene fuer sensible Schulkommunikation. Du pruefst, bearbeitest und gibst jede Formulierung selbst frei."
-      : "Zaza Draft is not generic AI writing help. It is a teacher-first communication safety layer for high-stakes school communication. You review, edit, and approve every word before it is used.";
+      ? "Zaza Draft ist keine generische Schreibhilfe. Es ist eine lehrkraft-zentrierte Sicherheitsebene fuer sensible Schulkommunikation, gerade wenn Interpretation mehr zaehlt als reine Formulierung. Du pruefst, bearbeitest und gibst jede Formulierung selbst frei."
+      : "Zaza Draft is not generic AI writing help. It is a teacher-first communication safety layer for the moments where interpretation matters as much as wording. You review, edit, and approve every word before it is used.";
   const heroOutcomeLabel =
     language === "de" ? "Vorher und nachher" : "Before and after";
   const heroProofHeading =
@@ -178,12 +178,12 @@ export function HomePageClient() {
       : "From risky to professional in seconds";
   const heroProofLabel =
     language === "de"
-      ? "Sensible Schulkommunikation, vor und nach Zaza Draft"
-      : "Sensitive school communication, before and after Zaza Draft";
+      ? "Das ist die Art von Nachricht, bei der Lehrkraefte zoegern."
+      : "This is the kind of message teachers hesitate over.";
   const heroProofIntro =
     language === "de"
-      ? "Sieh, wie Draft Formulierungen vor dem Senden ruhiger, klarer und professioneller macht."
-      : "See how Draft helps refine wording before you send.";
+      ? "Sieh, wie Draft eine Nachricht vor dem Senden formt, bevor Ton, Timing oder Wortwahl sie schwerer machen."
+      : "See how Draft helps shape a message before tone, wording, or timing make it harder to send.";
   const heroProofFrameLine =
     language === "de"
       ? "Wie sensible Nachrichten ruhiger und verteidigbarer werden."
@@ -259,8 +259,8 @@ export function HomePageClient() {
       : "A clearer tone shift without losing the core message.";
   const heroMentalLoadLine =
     language === "de"
-      ? "Weniger Zweifeln, bevor du auf Senden drueckst."
-      : "Less second-guessing before you press send.";
+      ? "Weniger Zweifeln in dem Moment vor dem Senden."
+      : "Less second-guessing in the moment before send.";
   const heroPrevLabel = language === "de" ? "Zurueck" : "Previous";
   const heroNextLabel = language === "de" ? "Weiter" : "Next";
   const heroTrustBarIntro =
@@ -269,20 +269,20 @@ export function HomePageClient() {
       : "Built for teachers who need communication to stay calm, clear, and defensible.";
   const heroTrustBarDifferentiator =
     language === "de"
-      ? "Draft fuegt Eltern-E-Mails, Beschwerdeantworten, Verhaltens-Updates und anderen sensiblen Schulnachrichten eine Schutzebene hinzu, bevor sie rausgehen."
-      : "Draft adds a protective layer before parent emails, complaint replies, behaviour updates, documentation, and other sensitive school messages go out.";
+      ? "Besonders dann, wenn du nicht sicher bist, wie eine Nachricht aufgenommen wird."
+      : "Especially when you are not sure how a message will land.";
   const heroCtaMicrocopy =
     language === "de"
-      ? "Keine Kreditkarte. Keine Bindung. Du pruefst jede Nachricht vor dem Senden."
-      : "No credit card. No lock-in. You review every message before sending.";
+      ? "Die Nachricht, die am laengsten dauert, ist meistens die, die am meisten Gewicht hat."
+      : "The message that takes the longest is usually the one that matters most.";
   const heroCheckerLabel =
     language === "de"
       ? "Kostenlosen Risiko-Check fuer Elternmails testen"
       : "Try the free Parent Email Risk Checker";
   const heroCheckerSupport =
     language === "de"
-      ? "Pruefe, ob eine Elternmail zu direkt, defensiv oder eskalationsanfaellig wirken koennte, und erhalte vor dem Senden eine ruhigere Version."
-      : "Check whether a parent email may sound too blunt, defensive, or likely to escalate, and get a safer version before you send it.";
+      ? "Pruefe, ob eine Elternmail zu direkt, defensiv oder leicht missverstaendlich wirken koennte, und erhalte vor dem Senden eine ruhigere Version."
+      : "Check whether a parent email may sound too blunt, defensive, or easy to misread, and get a safer version before you send it.";
   const primaryStartLabel =
     language === "de" ? "Zaza Draft testen" : "Try Zaza Draft";
   const heroTeacherUsageLine =
@@ -307,8 +307,8 @@ export function HomePageClient() {
       : "Zaza Draft is live for high-stakes school communication";
   const betaFeedbackBody =
     language === "de"
-      ? "Starte mit Zaza Draft, wenn du Eltern-E-Mails, schwierige Antworten, Dokumentation und andere sensible Schulnachrichten ruhiger formulieren willst."
-      : "Start with Zaza Draft if you want calmer support for parent emails, difficult replies, documentation, and other sensitive school messages.";
+      ? "Starte mit Zaza Draft, wenn du Eltern-E-Mails, schwierige Antworten, Dokumentation und andere sensible Schulnachrichten ruhiger formulieren willst - besonders die, die du vor dem Senden mehrfach pruefst."
+      : "Start with Zaza Draft if you want calmer support for parent emails, difficult replies, documentation, and other sensitive school messages - especially the ones you almost rewrite one more time.";
   const betaFeedbackCta =
     language === "de" ? "Zaza Draft testen" : "Try Zaza Draft";
   const trustPanelHeading =
@@ -317,8 +317,8 @@ export function HomePageClient() {
       : "Teacher-first support for high-stakes school communication";
   const trustPanelSubtext =
     language === "de"
-      ? "Draft ist als zweite Instanz vor dem Senden gedacht - fuer die Momente, in denen Ton, Klarheit und Professionalitaet besonders viel Gewicht tragen."
-      : "Draft is designed as a second pair of eyes before sending, for the moments when tone, clarity, and professionalism carry the most weight.";
+      ? "Wenn eine Nachricht schwer zu senden ist, braucht es oft mehr als bessere Formulierungen. Draft ist als zweite Instanz vor dem Senden gedacht - fuer Momente, in denen Ton, Klarheit und Professionalitaet besonders viel Gewicht tragen."
+      : "When a message feels difficult to send, it usually needs more than better wording. Draft is designed as a second pair of eyes before sending, for the moments when tone, clarity, and professionalism carry the most weight.";
   const trustPanelCards =
     language === "de"
       ? [
@@ -371,8 +371,8 @@ export function HomePageClient() {
       : "When the wording matters more than usual";
   const situationsBody =
     language === "de"
-      ? "Zaza Draft ist fuer die Nachrichten gebaut, bei denen Lehrkraefte zoegern - fuer Formulierungen, die eskalieren, weitergeleitet oder spaeter erneut gelesen werden koennen."
-      : "Zaza Draft is built for the messages teachers hesitate over: the ones that can escalate, be forwarded, or be revisited later.";
+      ? "Zaza Draft ist fuer die Nachrichten gebaut, bei denen Lehrkraefte zoegern - fuer Formulierungen, die falsch gelesen, weitergeleitet oder groesser werden koennen, wenn der Ton nicht sauber sitzt."
+      : "Zaza Draft is built for the messages teachers hesitate over - the ones that can be misread, forwarded, or turn into something bigger if the tone lands badly.";
   const situationsItems =
     language === "de"
       ? [
@@ -455,8 +455,8 @@ export function HomePageClient() {
       : "The message you won’t regret tomorrow";
   const finalSubheading =
     language === "de"
-      ? "Keine Zweifel mehr, ob die Formulierung zu scharf, zu vage oder leicht missverstaendlich ist. Nur ein ruhigerer Entwurf, den du pruefen, vertreten und senden kannst."
-      : "No more second-guessing whether the wording is too sharp, too vague, or easy to misread. Just a calmer draft you can review, trust, and send.";
+      ? "Gerade die Nachricht, die du fast anders geschickt haettest. Nur ein ruhigerer Entwurf, den du pruefen, vertreten und senden kannst."
+      : "Especially the one you almost sent differently. Just a calmer draft you can review, trust, and send.";
   const useCasesHeading =
     language === "de"
       ? "Wofuer Lehrkraefte Zaza Draft am ehesten brauchen"
@@ -471,12 +471,12 @@ export function HomePageClient() {
       : "More than generic writing help";
   const comparisonSubheading =
     language === "de"
-      ? "Generische Tools helfen beim Schreiben. Zaza Draft hilft bei Schulkommunikation, die ruhig, klar und professionell belastbar bleiben muss."
-      : "Generic tools help with writing. Zaza Draft helps with school communication that needs to stay calm, clear, and professionally defensible.";
+      ? "Generische KI kann Text erzeugen. Zaza hilft dabei, Schulnachrichten zu formen, bei denen Ton, Vertrauen und Interpretation entscheidend sind."
+      : "Generic AI can generate text. Zaza helps shape messages where tone, trust, and interpretation matter.";
   const comparisonClarifier =
     language === "de"
-      ? "Die Frage ist nicht nur, ob der Satz korrekt ist. Die Frage ist, ob die Nachricht in einer echten Schulsituation sicher genug klingt."
-      : "The question is not only whether the sentence is correct. It is whether the message will hold its tone in a real school situation.";
+      ? "Manchmal ist das eigentliche Problem nicht, was du sagen willst. Sondern wie die Nachricht in einer echten Schulsituation aufgenommen wird."
+      : "Sometimes the real problem is not what to say. It is how the message will be received in a real school situation.";
 
   const goToGuide = (href: string, location: string, label: string) => {
     trackCtaClick({

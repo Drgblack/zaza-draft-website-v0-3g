@@ -11,7 +11,7 @@ export const metadata: Metadata = buildPageMetadata({
   title:
     "Teacher-First Support for Parent Emails and High-Stakes School Communication | Zaza Draft",
   description:
-    "Zaza Draft helps teachers turn emotionally risky parent emails and school messages into calm, clear, professional drafts before they are sent. Teacher-first, review-led, and built for high-stakes school communication.",
+    "Zaza Draft helps teachers draft clear, calm parent emails and school messages in moments that feel uncertain - before tone, wording, or timing turn a situation into something bigger.",
   path: "/",
   alternates: {
     en: "https://zazadraft.com",
@@ -36,7 +36,7 @@ export default function HomePage() {
             id: "home-software-schema",
             data: createSoftwareApplicationJsonLd({
               description:
-                "Zaza Draft is a teacher-first communication safety layer for parent emails, complaint replies, behaviour updates, documentation, and other high-stakes school communication. Teachers review and approve every word before sending.",
+                "Zaza Draft is a teacher-first communication safety layer for parent emails, complaint replies, behaviour updates, documentation, and other high-stakes school communication. It helps teachers shape messages where tone, trust, and interpretation matter before anything is sent.",
             }),
           },
           {

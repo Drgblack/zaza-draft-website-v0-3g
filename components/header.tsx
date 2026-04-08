@@ -45,8 +45,11 @@ export function Header() {
   });
   const L = (de: string, en: string) => (language === "de" ? de : en);
   const riskCheckerLabel = L("Kostenloser Risiko-Check", "Free Risk Checker");
-  const schoolsLabel = "For Schools";
-  const schoolsHref = "/schools";
+  const schoolsLabel = L("Für Schulen", "For Schools");
+  const schoolsHref =
+    pathname?.startsWith("/de") || language === "de"
+      ? "/de/schools"
+      : "/schools";
   const headerCtaHref = getDraftPricingHref(language);
   const headerCtaLabel = t("nav.getStarted");
   const foundingToggleLinks = {
