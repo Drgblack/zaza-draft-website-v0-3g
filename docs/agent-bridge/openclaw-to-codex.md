@@ -284,3 +284,5 @@ Pass only if all of the following are true:
 - schools page includes the exact sentence “Most escalation starts with a message that could have been phrased differently.” in a visible support section
 - schools FAQ clearly covers control, judgement, non-surveillance, and rollout
 - no redesign, no new routes, and no analytics or product-logic changes were introduced
+
+TEST_WRITE_SUCCESS
