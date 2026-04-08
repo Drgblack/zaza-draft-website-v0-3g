@@ -28,9 +28,19 @@ export default function Footer() {
   const riskCheckerLabel = isDE
     ? "Kostenloser Risiko-Check für Elternmails"
     : "Free Parent Email Risk Checker";
+  const schoolsLabel = "For Schools";
 
   const productLinks = [
     { label: "Draft", href: localPath("/products/draft") },
+    {
+      label: schoolsLabel,
+      href: "/schools",
+      onClick: () =>
+        trackCtaClick({
+          ctaText: schoolsLabel,
+          ctaLocation: "footer_schools",
+        }),
+    },
     {
       label: riskCheckerLabel,
       href: localPath("/parent-email-risk-checker"),

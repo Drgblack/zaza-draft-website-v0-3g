@@ -45,6 +45,8 @@ export function Header() {
   });
   const L = (de: string, en: string) => (language === "de" ? de : en);
   const riskCheckerLabel = L("Kostenloser Risiko-Check", "Free Risk Checker");
+  const schoolsLabel = "For Schools";
+  const schoolsHref = "/schools";
   const headerCtaHref = getDraftPricingHref(language);
   const headerCtaLabel = t("nav.getStarted");
   const foundingToggleLinks = {
@@ -114,6 +116,12 @@ export function Header() {
       trackCtaClick({
         ctaText: t("nav.pricing"),
         ctaLocation: "header_nav",
+      });
+    }
+    if (href === schoolsHref) {
+      trackCtaClick({
+        ctaText: schoolsLabel,
+        ctaLocation: "header_nav_schools",
       });
     }
   };
@@ -217,6 +225,7 @@ export function Header() {
       href: riskCheckerHref,
     },
     { id: "pricing", title: t("nav.pricing"), href: "/pricing" },
+    { id: "schools", title: schoolsLabel, href: schoolsHref },
     { id: "products", title: t("nav.products"), children: productsMenuItems },
     {
       id: "learning",
@@ -511,6 +520,13 @@ export function Header() {
               </div>
 
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:gap-x-6">
+                <Link
+                  href={schoolsHref}
+                  className="text-[15px] font-medium text-gray-300 transition-colors duration-200 hover:text-white"
+                  onClick={() => handleHeaderNavClick(schoolsHref)}
+                >
+                  {schoolsLabel}
+                </Link>
                 {languageToggle}
                 <Button
                   asChild
@@ -630,10 +646,19 @@ export function Header() {
                         key={section.id}
                         href={section.href || "#"}
                         onClick={() => {
-                          if (section.href === "/parent-email-risk-checker") {
+                          if (
+                            section.href === "/parent-email-risk-checker" ||
+                            section.href === "/de/parent-email-risk-checker"
+                          ) {
                             trackCtaClick({
                               ctaText: riskCheckerLabel,
                               ctaLocation: "header_mobile_checker",
+                            });
+                          }
+                          if (section.href === schoolsHref) {
+                            trackCtaClick({
+                              ctaText: schoolsLabel,
+                              ctaLocation: "header_mobile_schools",
                             });
                           }
                           setMobileMenuOpen(false);
