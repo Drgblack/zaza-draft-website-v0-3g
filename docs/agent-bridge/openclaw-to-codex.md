@@ -708,3 +708,48 @@ Link destination:
 - `Get the free guide` opens in a new tab
 - Badge alignment is fixed
 - Page and PDF remain at the same URLs
+
+
+---
+
+## TASK-006
+Status: QUEUED
+Type: design polish
+Priority: HIGH
+Date: 2026-04-08
+Requested by: Greg
+
+### Title
+Final visual polish pass on 7-parent-emails lead magnet (PDF + page)
+
+### Objective
+Fix remaining visual issues and improve scannability of the live lead magnet page and PDF.
+
+### Implementation instructions
+
+#### PDF fixes
+- Use the current official Zaza Draft header logo at the correct size and without stretching
+- Remove all raw markdown headings (`##`, `###`)
+- Improve layout so each of the 7 examples sits in its own clearly separated tile or box with subtle background color
+- Add page numbers and `Zaza Draft` footer branding on every page
+- Improve overall typography and spacing
+
+#### Landing page fixes
+- Replace favicon with the correct Z logo
+- Add a prominent secondary CTA at the bottom: `Try Zaza Draft free` linking to `/start`
+- Fix `Safe version` badge placement so it does not break alignment
+
+#### Hero image
+- Replace the duplicate hero image on `/schools` and `/products/draft` with one new photo-realistic image
+- Style: warm, modern teacher at desk with laptop
+
+### Constraints
+- Do not change any of the 7 example texts
+- Keep the same URLs for the page and PDF
+
+### Acceptance criteria
+- PDF logo is correct size and positioned well
+- No raw markdown remains in the PDF
+- Each example is visually separated
+- Favicon and secondary CTA are added on the page
+- New hero image is deployed on the two pages that had duplicates
