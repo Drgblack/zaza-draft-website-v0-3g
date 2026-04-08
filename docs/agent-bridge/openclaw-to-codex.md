@@ -286,3 +286,306 @@ Pass only if all of the following are true:
 - no redesign, no new routes, and no analytics or product-logic changes were introduced
 
 TEST_WRITE_SUCCESS
+
+
+---
+
+## TASK-003
+Status: QUEUED
+Type: new page
+Priority: HIGH
+Date: 2026-04-08
+Requested by: Greg
+
+### Title
+7 Parent Emails lead magnet page and PDF deployment
+
+### Objective
+Implement the 7 Parent Emails lead magnet in the Vercel/GitHub website repo so the landing page and PDF are deployable through the normal site pipeline.
+
+### Scope
+Implement all content and asset wiring needed for:
+- landing page route: `/7-parent-emails`
+- public PDF asset: `/guides/7-parent-emails-teachers-should-never-send-as-is.pdf`
+- CTA wiring from the page to the existing checker/start flow
+- static/public linking suitable for the existing Vercel deployment model
+
+Use the existing Next.js/router structure already present in the repo. If the app uses `app/`, place the page in the equivalent `app/7-parent-emails/page.*` location. If it uses `pages/`, place it in the equivalent `pages/7-parent-emails.*` location. For the PDF asset, place the final file in the repo’s public/static asset path so it deploys to `/guides/7-parent-emails-teachers-should-never-send-as-is.pdf`.
+
+### Implementation instructions
+
+#### 1. Add the landing page route
+Create the `/7-parent-emails` page in the existing routing system used by the repo. Reuse existing page layout/styles/components where possible. Do not redesign the site.
+
+Use this exact page copy:
+
+##### Hero
+Headline:
+7 Parent Emails Teachers Should Never Send As-Is
+
+Subheadline:
+Free realistic examples for teachers who are tired, frustrated, or emotionally flooded — plus a quick checker to turn risky drafts into calm, professional messages.
+
+Primary CTA button:
+Check my draft now
+
+Secondary CTA:
+Get the free guide
+
+Support line:
+Have a draft in your inbox or notes right now? Paste it in — it's free and takes seconds.
+
+##### Problem section
+Some of the hardest messages teachers write are the ones written when they are already tired, frustrated, or emotionally flooded.
+
+It is 10pm.
+A parent email lands.
+You start writing the version that proves you are right.
+Then you realise you cannot send this tonight.
+
+That is the moment this page is for.
+
+##### What’s inside
+This free guide includes realistic examples of parent-facing messages teachers often write under pressure, plus safer rewrites that keep the meaning but reduce the risk.
+
+You will see:
+- the risky first draft
+- a calmer professional version
+- a short explanation of what changed
+
+##### Proof insert after first example
+If you are reading this and thinking, “I have one like this sitting in drafts right now,” do not stop at examples.
+
+Paste your message into the Parent Email Risk Checker and get a safer, more professional version to work from first.
+
+Button:
+Check my draft now
+
+##### Mid-page CTA block
+If you already have a draft sitting in your notes, inbox, or head, start there.
+
+The Parent Email Risk Checker gives you a calmer, clearer, more professional version to work from without weakening the message.
+
+Primary button:
+Check my draft now
+
+Secondary link:
+Get the free guide
+
+##### Closing block
+If you recognised yourself in these examples, the problem is usually not that you do not know what to say.
+
+It is that the first version gets written under pressure.
+
+The Parent Email Risk Checker helps you turn that first version into something calmer, clearer, and easier to stand behind professionally.
+
+Primary button:
+Check my draft now
+
+Secondary link:
+Get the free guide
+
+#### 2. CTA destinations
+Use the existing checker/start destination already used on the live site for trying Zaza.
+- Primary CTA destination: existing checker/start flow
+- Secondary CTA destination: `/guides/7-parent-emails-teachers-should-never-send-as-is.pdf`
+
+Do not invent a new signup flow.
+
+#### 3. Add the PDF asset to the repo
+Create or commit the final PDF asset so it deploys publicly at:
+- `https://zazadraft.com/guides/7-parent-emails-teachers-should-never-send-as-is.pdf`
+
+If the repo prefers source-controlled markdown before generating PDF, add both:
+- a markdown source file under a sensible content/docs path
+- the generated PDF in the public/static asset path
+
+Use this full guide content as the source of truth:
+
+Title:
+7 Parent Emails Teachers Should Never Send As-Is
+
+Subtitle:
+A free practical guide for teachers who need to turn emotionally loaded drafts into calm, clear, professional messages.
+
+Cover support line:
+For the parent email you know you should not send as-is.
+
+Intro:
+Some of the hardest messages teachers write are the ones written when they are already tired, frustrated, or emotionally flooded.
+
+A difficult parent email arrives late at night.
+It is already 10pm and the message is about to ruin your whole night.
+You type out the version that proves you are right.
+Then you realise you cannot send this tonight.
+
+This guide is built for those moments.
+
+Each example below shows:
+- the kind of message a teacher might write in the heat of the moment
+- a safer, calmer version that protects tone without losing honesty
+- what changed and why
+
+The goal is not to sound robotic.
+The goal is to send the message you will not regret tomorrow.
+
+Section 1 title:
+The late-night parent email
+
+Section 1 BEFORE:
+I’m honestly frustrated at this point. Your child has now ignored instructions repeatedly, disrupted other pupils’ learning, and shown very little respect for the expectations in class. I have already addressed this several times and it feels like nothing changes. I need you to speak to them properly because this cannot keep happening.
+
+Section 1 AFTER:
+I wanted to follow up about today’s lesson. There were several points where your child struggled to follow instructions and this affected their focus and the learning environment around them.
+
+I have spoken with them in class and will continue to support them, but I wanted to make you aware so we can work together on this.
+
+Please do speak with them about the importance of following instructions and staying focused in lesson time. If helpful, I’m happy to discuss ways we can support them consistently.
+
+Section 1 What changed:
+- removed blame and frustration language
+- focused on observable behaviour
+- kept the parent on the same side as the teacher
+- added a collaborative next step
+
+Section 2 title:
+The aggressive parent email
+
+Section 2 BEFORE:
+I don’t appreciate the tone of your email. The situation has not happened the way you are describing it, and I think it would be more helpful if you actually checked the facts before accusing staff.
+
+Section 2 AFTER:
+Thank you for getting in touch. I can see this situation has caused concern, and I want to make sure the facts are clear.
+
+From the school’s side, the situation was handled as follows: [brief factual summary].
+
+If it would be helpful, we can continue the conversation with the relevant member of staff so that any next steps are clear.
+
+Section 2 What changed:
+- acknowledged concern without accepting unfair accusations
+- removed defensiveness
+- moved the message back to facts and process
+- kept authority without escalation
+
+Section 3 title:
+The behaviour note written when you are fed up
+
+Section 3 BEFORE:
+X was impossible again today. Constant talking, constant disruption, and clearly not bothered about the warnings they were given. They wasted everyone’s time and then acted like they had done nothing wrong.
+
+Section 3 AFTER:
+X needed repeated reminders today about classroom expectations, particularly around talking while others were working.
+
+Despite several warnings, the disruption continued and this affected the concentration of other pupils.
+
+This has been logged so we can monitor patterns and put consistent support in place.
+
+Section 3 What changed:
+- removed judgmental wording
+- described behaviour instead of character
+- protected professionalism in case the note is shared later
+- made the purpose of the note clear
+
+Section 4 title:
+The holding reply you need when you cannot send this tonight
+
+Section 4 BEFORE:
+I’m replying now because I don’t want this hanging over me, but to be honest I’m not happy with how this has been handled and I think expectations at home need to be clearer because this keeps landing back in school.
+
+Section 4 AFTER:
+I wanted to acknowledge your email and let you know I will follow up properly once I have reviewed the situation in full.
+
+In the meantime, thank you for your patience.
+
+Section 4 What changed:
+- turned an unsafe immediate response into a holding reply
+- created space for a calmer follow-up
+- prevented a late-night escalation
+- helped the teacher avoid replying while emotionally flooded
+
+Section 5 title:
+The version that proves you are right
+
+Section 5 BEFORE:
+I could argue every point in your email, but that is not going to help if we keep having the same problem.
+
+Section 5 AFTER:
+From my notes, here is what happened: [2-3 straight facts]. I am keen to keep this productive and focus on the next step that best supports [student name].
+
+Section 5 What changed:
+- removed the urge to win the exchange
+- prioritised factual clarity over emotional release
+- reduced escalation risk without weakening authority
+
+Section 6 title:
+The heated exchange that needs boundaries
+
+Section 6 BEFORE:
+Your email feels unfair, and I am not going back and forth on every point when the facts are already clear.
+
+Section 6 AFTER:
+I want to keep this calm and focused on the facts. If helpful, I am happy to arrange a short call with the relevant staff member included.
+
+Section 6 What changed:
+- avoided point-scoring
+- kept the message calm and professional
+- added one clear next step
+
+Closing section:
+If you recognised yourself in these examples, that does not mean you are bad at communication.
+It usually means you are writing in hard moments, under pressure, when the emotional cost is already high.
+
+That is exactly where Zaza Draft is designed to help.
+
+CTA:
+If you already have a draft sitting open, start there.
+Paste it into the Parent Email Risk Checker and get a calmer, more professional version to work from.
+
+#### 4. File structure guidance
+Use the repo’s existing structure, but the final deployed outputs must map to:
+- landing page route: `/7-parent-emails`
+- PDF asset route: `/guides/7-parent-emails-teachers-should-never-send-as-is.pdf`
+
+If using Next.js app router, likely structure is similar to:
+- `app/7-parent-emails/page.tsx`
+- `public/guides/7-parent-emails-teachers-should-never-send-as-is.pdf`
+
+If using pages router, likely structure is similar to:
+- `pages/7-parent-emails.tsx` or equivalent
+- `public/guides/7-parent-emails-teachers-should-never-send-as-is.pdf`
+
+Prefer the project’s existing conventions over inventing a new structure.
+
+#### 5. UTM and scheduled-post linking
+All scheduled posts should drive to the landing page, not directly to the PDF.
+
+Use:
+- `utm_source=[platform]`
+- `utm_medium=organic`
+- `utm_campaign=lead-magnet`
+- `utm_content=[descriptor]`
+
+Example UTM link:
+- `https://zazadraft.com/7-parent-emails?utm_source=x&utm_medium=organic&utm_campaign=lead-magnet&utm_content=10pm-email`
+
+Ensure the existing lead-magnet push posts point to `/7-parent-emails` with `utm_campaign=lead-magnet`.
+
+### Constraints
+- Do not mark this task ACTIVE
+- Do not redesign the page
+- Do not add new routes beyond the required `/7-parent-emails` page and static/public PDF asset
+- Do not change auth, billing, pricing, analytics architecture, or product logic
+- Preserve existing analytics instrumentation where CTAs are wired
+- Reuse existing components/layout primitives where possible
+- Keep the checker/start CTA path aligned with the existing live site
+
+### Acceptance criteria
+- Landing page is deployable at `https://zazadraft.com/7-parent-emails`
+- PDF is deployable at `https://zazadraft.com/guides/7-parent-emails-teachers-should-never-send-as-is.pdf`
+- The page uses the locked-in hero, subheadline, support line, and `Check my draft now` CTA copy
+- The page includes the problem section, what’s-inside section, proof insert, mid-page CTA block, and closing block described above
+- Primary CTAs point to the existing checker/start flow
+- Secondary CTAs point to the public PDF
+- The PDF asset exists in the repo’s deployable static/public path
+- Scheduled post links can point to `/7-parent-emails` using `utm_campaign=lead-magnet`
+- No redesign or product-logic changes are introduced
