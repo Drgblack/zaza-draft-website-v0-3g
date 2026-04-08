@@ -11,7 +11,7 @@
 
 ## Queue status
 - Active task.
-- Next task ID: TASK-004
+- Next task ID: TASK-005
 
 
 ---
@@ -594,7 +594,7 @@ Ensure the existing lead-magnet push posts point to `/7-parent-emails` with `utm
 ---
 
 ## TASK-004
-Status: ACTIVE
+Status: COMPLETED
 Type: design polish + asset creation
 Priority: HIGH
 Date: 2026-04-08
@@ -662,7 +662,7 @@ Update only the hero image. Do not change any copy.
 ---
 
 ## TASK-005
-Status: QUEUED
+Status: ACTIVE
 Type: design polish
 Priority: HIGH
 Date: 2026-04-08
