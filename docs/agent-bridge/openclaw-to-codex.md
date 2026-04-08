@@ -11,7 +11,7 @@
 
 ## Queue status
 - Active task.
-- Next task ID: TASK-006
+- Next task ID: TASK-007
 
 
 ---
@@ -713,7 +713,7 @@ Link destination:
 ---
 
 ## TASK-006
-Status: ACTIVE
+Status: COMPLETED
 Type: design polish
 Priority: HIGH
 Date: 2026-04-08
@@ -758,7 +758,7 @@ Fix remaining visual issues and improve scannability of the live lead magnet pag
 ---
 
 ## TASK-007
-Status: QUEUED
+Status: ACTIVE
 Type: design polish
 Priority: HIGH
 Date: 2026-04-08
