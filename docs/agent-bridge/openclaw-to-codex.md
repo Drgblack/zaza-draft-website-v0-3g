@@ -657,3 +657,54 @@ Update only the hero image. Do not change any copy.
 - a badge is added to the first example’s AFTER section
 - page and PDF remain at the same live URLs
 - no content or structural changes are made to the 7 examples
+
+
+---
+
+## TASK-005
+Status: QUEUED
+Type: design polish
+Priority: HIGH
+Date: 2026-04-08
+Requested by: Greg
+
+### Title
+Final polish pass on 7-parent-emails lead magnet (logo, PDF metadata, link behavior, badge alignment)
+
+### Objective
+Fix the remaining visual and UX issues on the live lead magnet page and PDF.
+
+### Implementation instructions
+
+#### Logo
+Use the current official Zaza Draft header logo, the same one used on the main site header. Replace the old logo in the PDF.
+
+#### PDF metadata and tab title
+Update the PDF so that when opened in a browser tab it shows exactly:
+
+Zaza Draft | 7 Parent Emails Teachers Should Never Send As-Is
+
+#### Link behavior
+Make the `Get the free guide` button open the PDF in a new tab using new-tab link behavior.
+
+#### Safe version badge
+Reposition the `Safe version` badge so it does not break alignment. Preferred placement:
+- under the AFTER text block
+- or as a small floating badge in the top-right of the AFTER box
+
+#### Optional soft CTA
+If space allows, add a very light secondary CTA at the bottom:
+- `Try Zaza Draft free`
+Link destination:
+- `/start` or the checker
+
+### Constraints
+- Do not change any of the 7 example texts
+- Keep the overall design and layout of the page and PDF
+
+### Acceptance criteria
+- Correct current Zaza logo is used in the PDF
+- PDF tab title is branded exactly as specified
+- `Get the free guide` opens in a new tab
+- Badge alignment is fixed
+- Page and PDF remain at the same URLs
