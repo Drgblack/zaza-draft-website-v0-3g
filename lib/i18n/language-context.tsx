@@ -777,37 +777,47 @@ const translationsEn: Record<string, string> = {
   "comparison.tableHeaders.feature": "Feature",
   "comparison.tableHeaders.genericAI": "Generic AI Tools (ChatGPT, etc.)",
   "comparison.tableHeaders.zazaDraft": "Zaza Draft",
-  "comparison.rows.training.feature": "Training",
-  "comparison.rows.training.generic": "General knowledge, business-focused",
+  "comparison.rows.training.feature": "Teacher-specific communication support",
+  "comparison.rows.training.generic":
+    "General-purpose output that still needs school context added by you",
   "comparison.rows.training.zaza":
-    "Built with teacher design partners around real school communication workflows",
-  "comparison.rows.safety.feature": "Safety",
-  "comparison.rows.safety.generic": "May invent student details or scenarios",
+    "Built around the kinds of parent and school communication teachers actually send",
+  "comparison.rows.safety.feature": "Parent email / behaviour note awareness",
+  "comparison.rows.safety.generic":
+    "Understands text broadly, but not the specific pressure points of school communication",
   "comparison.rows.safety.zaza":
-    "Does not invent student-specific claims - rewrites only what you provide",
-  "comparison.rows.toneControl.feature": "Tone Control",
-  "comparison.rows.toneControl.generic": "Limited or inconsistent",
+    "Designed for parent emails, behaviour notes, follow-ups, and sensitive documentation",
+  "comparison.rows.toneControl.feature": "De-escalation-aware wording",
+  "comparison.rows.toneControl.generic":
+    "Can sound fluent, but may still miss tone risk without careful prompting",
   "comparison.rows.toneControl.zaza":
-    "Education-specific tone guidance for calm, appropriate wording",
-  "comparison.rows.compliance.feature": "Compliance",
-  "comparison.rows.compliance.generic": "Not FERPA-designed",
-  "comparison.rows.compliance.zaza": "FERPA-ready by design",
-  "comparison.rows.useCases.feature": "Use Cases",
-  "comparison.rows.useCases.generic": "Generic writing tasks",
+    "Built to move messages toward calmer, clearer, more professional wording",
+  "comparison.rows.compliance.feature": "Final teacher control before sending",
+  "comparison.rows.compliance.generic":
+    "You still need to decide whether the output is safe enough to send",
+  "comparison.rows.compliance.zaza":
+    "Built as a review-and-edit workflow so the teacher stays in control of every final word",
+  "comparison.rows.useCases.feature": "No prompt-engineering required",
+  "comparison.rows.useCases.generic":
+    "Often depends on how well you frame the prompt and refine it",
   "comparison.rows.useCases.zaza":
-    "Parent emails, report comments, and documentation for school context",
-  "comparison.rows.outputQuality.feature": "Output Quality",
-  "comparison.rows.outputQuality.generic": "Requires heavy editing",
+    "Made for teachers who want support without having to invent the right prompt from scratch",
+  "comparison.rows.outputQuality.feature": "Teacher voice still recognisable",
+  "comparison.rows.outputQuality.generic":
+    "Can feel generic or over-smoothed without extra rewriting",
   "comparison.rows.outputQuality.zaza":
-    "Clearer, more defensible wording with less rewriting",
-  "comparison.rows.learningCurve.feature": "Learning Curve",
-  "comparison.rows.learningCurve.generic": "Complex prompting needed",
+    "Helps keep the message human, school-appropriate, and recognisably yours",
+  "comparison.rows.learningCurve.feature":
+    "Decision speed in difficult moments",
+  "comparison.rows.learningCurve.generic":
+    "More back-and-forth when you are already tired or unsure",
   "comparison.rows.learningCurve.zaza":
-    "Paste context, review tone, send when ready",
-  "comparison.rows.community.feature": "Community",
-  "comparison.rows.community.generic": "No teacher support",
+    "Helps you get to a calmer sendable version faster when timing and interpretation matter",
+  "comparison.rows.community.feature": "Built with teacher feedback",
+  "comparison.rows.community.generic":
+    "Not specifically shaped around school workflows",
   "comparison.rows.community.zaza":
-    "Shaped by teacher feedback from real school communication",
+    "Refined around real teacher communication pain points and review habits",
   "caseStudies.eyebrow": "Before / After",
   "caseStudies.heading": "Before / After from real teachers",
   "caseStudies.subheading":
@@ -2358,38 +2368,50 @@ const translationsDe: Record<string, string> = {
   "comparison.tableHeaders.feature": "Funktion",
   "comparison.tableHeaders.genericAI": "Generische KI-Tools (ChatGPT, usw.)",
   "comparison.tableHeaders.zazaDraft": "Zaza Draft",
-  "comparison.rows.training.feature": "Training",
-  "comparison.rows.training.generic": "Allgemeinwissen, geschäftsorientiert",
+  "comparison.rows.training.feature":
+    "Unterstuetzung fuer Lehrkraft-Kommunikation",
+  "comparison.rows.training.generic":
+    "Allgemeine Ausgabe, bei der du den Schulkontext selbst mitdenken musst",
   "comparison.rows.training.zaza":
-    "Mit Lehrkräfte-Designpartnern für echte schulische Kommunikationsabläufe entwickelt",
-  "comparison.rows.safety.feature": "Sicherheit",
+    "Auf die Arten von Eltern- und Schulkommunikation ausgerichtet, die Lehrkraefte wirklich senden",
+  "comparison.rows.safety.feature":
+    "Verstaendnis fuer Eltern-E-Mails und Verhaltensnotizen",
   "comparison.rows.safety.generic":
-    "Kann Schülerdetails oder Szenarien erfinden",
+    "Versteht Text allgemein, aber nicht die konkreten Druckpunkte von Schulkommunikation",
   "comparison.rows.safety.zaza":
-    "Erfindet keine schülerbezogenen Aussagen - überarbeitet nur das, was du vorgibst",
-  "comparison.rows.toneControl.feature": "Tonkontrolle",
-  "comparison.rows.toneControl.generic": "Begrenzt oder inkonsistent",
+    "Gedacht fuer Eltern-E-Mails, Verhaltensnotizen, Follow-ups und sensible Dokumentation",
+  "comparison.rows.toneControl.feature": "Eskalationsbewusste Formulierung",
+  "comparison.rows.toneControl.generic":
+    "Kann fluessig klingen, verfehlt aber ohne sauberen Prompt schnell den Ton",
   "comparison.rows.toneControl.zaza":
-    "Bildungsspezifische Tonführung für ruhige, angemessene Formulierungen",
-  "comparison.rows.compliance.feature": "Compliance",
-  "comparison.rows.compliance.generic": "Nicht FERPA-konzipiert",
-  "comparison.rows.compliance.zaza": "FERPA-ready von Grund auf",
-  "comparison.rows.useCases.feature": "Anwendungsfälle",
-  "comparison.rows.useCases.generic": "Generische Schreibaufgaben",
+    "Hilft, Nachrichten in ruhigere, klarere und professionellere Formulierungen zu verschieben",
+  "comparison.rows.compliance.feature":
+    "Endgueltige Kontrolle durch die Lehrkraft",
+  "comparison.rows.compliance.generic":
+    "Du musst trotzdem selbst entscheiden, ob der Text sicher genug zum Senden ist",
+  "comparison.rows.compliance.zaza":
+    "Als Pruef-und-Bearbeitungsablauf gedacht, damit die Lehrkraft jedes letzte Wort kontrolliert",
+  "comparison.rows.useCases.feature": "Kein Prompt-Basteln noetig",
+  "comparison.rows.useCases.generic":
+    "Haengt oft davon ab, wie gut du den Prompt formulierst und nachschaerfst",
   "comparison.rows.useCases.zaza":
-    "Elternmails, Zeugnisbemerkungen und Dokumentation im Schulkontext",
-  "comparison.rows.outputQuality.feature": "Ausgabequalität",
-  "comparison.rows.outputQuality.generic": "Erfordert starke Bearbeitung",
+    "Fuer Lehrkraefte gemacht, die Unterstuetzung wollen, ohne erst den richtigen Prompt erfinden zu muessen",
+  "comparison.rows.outputQuality.feature": "Lehrkraft-Stimme bleibt erkennbar",
+  "comparison.rows.outputQuality.generic":
+    "Kann ohne zusaetzliches Umschreiben generisch oder zu glatt wirken",
   "comparison.rows.outputQuality.zaza":
-    "Klarere, belastbarere Formulierungen mit weniger Nachbearbeitung",
-  "comparison.rows.learningCurve.feature": "Lernkurve",
-  "comparison.rows.learningCurve.generic": "Komplexe Prompts erforderlich",
+    "Hilft dabei, die Nachricht menschlich, schulgeeignet und erkennbar nach dir klingen zu lassen",
+  "comparison.rows.learningCurve.feature":
+    "Entscheidungsgeschwindigkeit in schwierigen Momenten",
+  "comparison.rows.learningCurve.generic":
+    "Mehr Hin und Her, wenn du ohnehin muede oder unsicher bist",
   "comparison.rows.learningCurve.zaza":
-    "Kontext einfügen, Ton prüfen, senden wenn bereit",
-  "comparison.rows.community.feature": "Community",
-  "comparison.rows.community.generic": "Kein Lehrkräfte-Support",
+    "Hilft schneller zu einer ruhigeren sendbaren Version, wenn Timing und Interpretation zaehlen",
+  "comparison.rows.community.feature": "Mit Lehrkraft-Feedback entwickelt",
+  "comparison.rows.community.generic":
+    "Nicht gezielt um Schulablaeufe herum entwickelt",
   "comparison.rows.community.zaza":
-    "Geprägt durch Lehrkräfte-Feedback aus echter Schulkommunikation",
+    "An echten Schmerzpunkten und Review-Gewohnheiten von Lehrkraeften verfeinert",
   "caseStudies.eyebrow": "Vorher / Nachher",
   "caseStudies.heading": "Vorher / Nachher aus echten Klassenzimmern",
   "caseStudies.subheading":

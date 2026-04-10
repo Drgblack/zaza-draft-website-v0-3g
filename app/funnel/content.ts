@@ -81,6 +81,14 @@ export type FunnelCopy = {
     imageSrc?: string;
     imageAlt: string;
   };
+  comparison: {
+    heading: string;
+    subheading: string;
+    items: Array<{
+      title: string;
+      body: string;
+    }>;
+  };
   pricing: {
     heading: string;
     headingAccent: string;
@@ -124,6 +132,7 @@ export type FunnelCopy = {
     headingLines: [string, string];
     subheading: string;
     reassurance: string;
+    bridgeLine?: string;
     quote: string;
     primaryCtaLabel?: string;
     primaryCtaHref?: string;
@@ -272,6 +281,31 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       imageAlt:
         "Teacher checking a sensitive message draft on a laptop before sending",
     },
+    comparison: {
+      heading: "Why teachers use Zaza Draft instead of ChatGPT",
+      subheading:
+        "Generic AI can produce text. Zaza Draft is built to help teachers send calmer, safer school communication without having to invent the right prompt from scratch.",
+      items: [
+        {
+          title: "Built for teacher communication, not general use",
+          body: "It starts from the kinds of messages teachers actually hesitate over, not a blank chat box.",
+        },
+        {
+          title:
+            "Understands parent emails, behaviour notes, and sensitive school follow-ups",
+          body: "The wording is shaped for school context where a message may be forwarded, screenshotted, or revisited later.",
+        },
+        {
+          title:
+            "Designed to reduce tone risk and escalation, not just generate text",
+          body: "It helps you get to calmer, more professional wording faster when the temperature of the exchange matters.",
+        },
+        {
+          title: "Keeps the teacher in control of every final word",
+          body: "You review, edit, and decide what gets sent. Zaza supports judgement rather than replacing it.",
+        },
+      ],
+    },
     pricing: {
       heading: "Start free now.",
       headingAccent: "Upgrade only when you need more.",
@@ -369,6 +403,8 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
         "The fastest way to understand Zaza Draft is to check a real parent email.\n\nYou will see a safer version immediately - one that keeps your point clear while reducing the chance of escalation.",
       reassurance:
         "Get a safer version first. Then continue with Zaza Draft if you want to keep going.",
+      bridgeLine:
+        "If ChatGPT gives you text, Zaza Draft is the tool that helps you send the version you will not regret tomorrow.",
       quote:
         "Start with the version you are worried about, then decide whether you want the full drafting workflow.",
       primaryCtaLabel: "Check your draft",
@@ -509,6 +545,32 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       imageAlt:
         "Nahaufnahme von Haenden einer Lehrkraft, die effizient Schuelerkommentare am Laptop tippt",
     },
+    comparison: {
+      heading: "Warum Lehrkraefte Zaza Draft statt ChatGPT nutzen",
+      subheading:
+        "Generische KI kann Text erzeugen. Zaza Draft ist dafuer gebaut, Lehrkraeften zu helfen, ruhigere und sicherere Schulkommunikation zu senden, ohne erst den richtigen Prompt erfinden zu muessen.",
+      items: [
+        {
+          title:
+            "Fuer Lehrkraft-Kommunikation gebaut, nicht fuer allgemeine Nutzung",
+          body: "Es startet bei den Nachrichten, bei denen Lehrkraefte wirklich zoegern, nicht bei einem leeren Chatfenster.",
+        },
+        {
+          title:
+            "Versteht Eltern-E-Mails, Verhaltensnotizen und sensible Follow-ups",
+          body: "Die Formulierungen sind fuer Schulkontexte gedacht, in denen Nachrichten weitergeleitet, gescreenshottet oder spaeter noch einmal gelesen werden koennen.",
+        },
+        {
+          title:
+            "Darauf ausgelegt, Tonrisiko und Eskalation zu senken, nicht nur Text zu erzeugen",
+          body: "Es hilft dir schneller zu ruhigeren und professionelleren Formulierungen zu kommen, wenn die Temperatur eines Austauschs zaehlt.",
+        },
+        {
+          title: "Die Lehrkraft behaelt jedes letzte Wort in der Hand",
+          body: "Du pruefst, bearbeitest und entscheidest, was gesendet wird. Zaza unterstuetzt Urteilsvermoegen, statt es zu ersetzen.",
+        },
+      ],
+    },
     pricing: {
       heading: "Starte kostenlos.",
       headingAccent: "Upgrade erst, wenn du mehr brauchst.",
@@ -603,6 +665,8 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       subheading:
         "Kein Starren mehr auf leere Seiten. Kein Copy-Paste mehr. Nur durchdachte Texte, die nach dir klingen und in Sekunden bereit sind.",
       reassurance: "Keine Kreditkarte. Keine Bindung. Voll bearbeitbar.",
+      bridgeLine:
+        "Wenn ChatGPT dir Text gibt, hilft Zaza Draft dir dabei, die Version zu senden, die du morgen nicht bereust.",
       quote: "Kein Sonntagabend-Stress mehr.",
       footerItems: [
         "Mit Lehrkraeften fuer Lehrkraefte gebaut",

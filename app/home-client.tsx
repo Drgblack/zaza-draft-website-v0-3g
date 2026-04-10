@@ -467,16 +467,28 @@ export function HomePageClient() {
       : "Parent communication sits at the centre. Report comments and other writing support still matter, but they are secondary to the messages that can escalate.";
   const comparisonHeading =
     language === "de"
-      ? "Mehr als generische Schreibhilfe"
-      : "More than generic writing help";
+      ? "Warum Lehrkraefte Zaza Draft statt ChatGPT nutzen"
+      : "Why teachers use Zaza Draft instead of ChatGPT";
   const comparisonSubheading =
     language === "de"
-      ? "Generische KI kann Text erzeugen. Zaza hilft dabei, Schulnachrichten zu formen, bei denen Ton, Vertrauen und Interpretation entscheidend sind."
-      : "Generic AI can generate text. Zaza helps shape messages where tone, trust, and interpretation matter.";
+      ? "Generische KI kann Text erzeugen. Zaza Draft ist dafuer gebaut, Lehrkraeften zu helfen, ruhigere und sicherere Schulkommunikation zu senden, ohne erst den richtigen Prompt erfinden zu muessen."
+      : "Generic AI can produce text. Zaza Draft is built to help teachers send calmer, safer school communication without having to invent the right prompt from scratch.";
   const comparisonClarifier =
     language === "de"
-      ? "Manchmal ist das eigentliche Problem nicht, was du sagen willst. Sondern wie die Nachricht in einer echten Schulsituation aufgenommen wird."
-      : "Sometimes the real problem is not what to say. It is how the message will be received in a real school situation.";
+      ? "Wenn eine Nachricht weitergeleitet, gescreenshottet oder spaeter noch einmal gelesen werden koennte, braucht es mehr als fluechtigen Text."
+      : "When a message might be forwarded, screenshotted, or read again later, teachers usually need more than fluent text.";
+  const skepticalBlockHeading =
+    language === "de"
+      ? "Warum nicht einfach ChatGPT?"
+      : "Why not just use ChatGPT?";
+  const skepticalBlockBody =
+    language === "de"
+      ? "Du kannst generische KI nutzen, um Text zu entwerfen. Aber Lehrkraefte brauchen oft mehr als ein leeres Chatfenster. Zaza Draft ist auf die Nachrichten ausgerichtet, die eskalieren koennen: Eltern-E-Mails, Verhaltensfragen, Follow-ups und Formulierungen, die spaeter weitergeleitet, gescreenshottet oder erneut gelesen werden. Es hilft dir dabei, schneller zu ruhigeren und professionelleren Formulierungen zu kommen, ohne dein eigenes Urteilsvermoegen zu verlieren."
+      : "You can use generic AI to draft text. But teachers often need more than a blank chat box. Zaza Draft is built around the kinds of messages that can escalate: parent emails, behaviour concerns, follow-ups, and wording that may be forwarded, screenshotted, or revisited later. It is designed to help teachers get to calmer, more professional wording faster, without losing their own judgement.";
+  const finalCtaBridgeLine =
+    language === "de"
+      ? "Wenn ChatGPT dir Text gibt, hilft Zaza Draft dir dabei, die Version zu senden, die du morgen nicht bereust."
+      : "If ChatGPT gives you text, Zaza Draft is the tool that helps you send the version you will not regret tomorrow.";
 
   const goToGuide = (href: string, location: string, label: string) => {
     trackCtaClick({
@@ -990,6 +1002,25 @@ export function HomePageClient() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-[#0F172A] px-6 py-16 lg:px-8">
+        <div className="mx-auto max-w-5xl">
+          <motion.div
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            className="rounded-2xl border border-[#334155] bg-[#111827] p-8 md:p-10"
+          >
+            <h2 className="mb-3 text-2xl font-semibold text-white md:text-3xl">
+              {skepticalBlockHeading}
+            </h2>
+            <p className="max-w-4xl text-base leading-8 text-[#CBD5E1]">
+              {skepticalBlockBody}
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -1625,11 +1656,20 @@ export function HomePageClient() {
           >
             {finalSubheading}
           </motion.p>
-          <motion.div
+          <motion.p
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
+            className="mx-auto mb-6 max-w-3xl text-sm font-medium text-white/90"
+          >
+            {finalCtaBridgeLine}
+          </motion.p>
+          <motion.div
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="mb-6"
           >
             <Button
@@ -1655,7 +1695,7 @@ export function HomePageClient() {
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
           >
             <Button
               asChild

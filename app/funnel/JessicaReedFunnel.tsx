@@ -15,6 +15,7 @@ import HeroSection from "./components/HeroSection";
 import PainSection from "./components/PainSection";
 import SolutionSection from "./components/SolutionSection";
 import HowItWorksSection from "./components/HowItWorksSection";
+import ComparisonSection from "./components/ComparisonSection";
 import PricingSection from "./components/PricingSection";
 import FAQSection from "./components/FAQSection";
 import FinalCTASection from "./components/FinalCTASection";
@@ -160,6 +161,7 @@ export default function JessicaReedFunnel({
           }}
         />
         <HowItWorksSection copy={copy.howItWorks} />
+        <ComparisonSection copy={copy.comparison} />
         <PricingSection
           currency={currency}
           onCurrencyChange={setCurrency}

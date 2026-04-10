@@ -62,6 +62,11 @@ const FinalCTASection = ({
                 {copy.secondaryCtaLabel}
               </Link>
             ) : null}
+            {copy.bridgeLine ? (
+              <p className="max-w-2xl text-sm font-medium text-calm-700">
+                {copy.bridgeLine}
+              </p>
+            ) : null}
             <p className="text-sm text-calm-500">{copy.reassurance}</p>
           </div>
 
