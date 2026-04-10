@@ -791,3 +791,88 @@ Fix remaining visual and conversion issues on the live lead magnet.
 - URL and sharing line appear in the PDF footer
 - `Why this matters` section is added with emotional resonance from teacher fears
 - New sharing button and secondary CTA are present on the page
+
+
+---
+
+## TASK-008
+Status: QUEUED
+Type: conversion messaging
+Priority: HIGH
+Date: 2026-04-10
+Requested by: Greg
+
+### Title
+Make the “Why not just use ChatGPT?” answer more prominent and clearer across the live Zaza Draft site
+
+### Objective
+Strengthen the live website so a skeptical visitor immediately understands why a teacher would pay for Zaza Draft instead of using generic AI tools like ChatGPT. The current site contains the answer in fragments, but it is not prominent or explicit enough for a first-pass skeptical reader.
+
+### Problem observed on live site
+The site does communicate parts of the differentiation, including:
+- teacher-first / built for school communication
+- tone risk / de-escalation awareness
+- your voice still recognisable
+- always editable
+- built for parent emails, not generic prompting
+
+However, the specific skeptical question “Why not just use ChatGPT?” is not answered prominently, directly, or early enough. On the homepage, the differentiation table appears weak/incomplete in the readable extraction, and on `/start` the distinction is described but not made explicit in buyer-language. A visitor can still leave without a crisp answer.
+
+### Implementation instructions
+
+#### 1. Add one explicit comparison section high on `/start`
+Place a new section above pricing and below the core value explanation.
+
+Suggested section headline:
+`Why teachers use Zaza Draft instead of ChatGPT`
+
+Suggested supporting line:
+`Generic AI can produce text. Zaza Draft is built to help teachers send calmer, safer school communication without having to invent the right prompt from scratch.`
+
+Use 4 short comparison bullets or cards:
+- `Built for teacher communication, not general use`
+- `Understands parent emails, behaviour notes, and sensitive school follow-ups`
+- `Designed to reduce tone risk and escalation, not just generate text`
+- `Keeps the teacher in control of every final word`
+
+#### 2. Add a direct skeptical-reader block on the homepage
+Add a concise FAQ-style or objection-handling block that explicitly names the comparison.
+
+Suggested headline:
+`Why not just use ChatGPT?`
+
+Suggested body copy direction:
+`You can use generic AI to draft text. But teachers often need more than a blank chat box. Zaza Draft is built around the kinds of messages that can escalate: parent emails, behaviour concerns, follow-ups, and wording that may be forwarded, screenshotted, or revisited later. It is designed to help teachers get to calmer, more professional wording faster, without losing their own judgement.`
+
+Keep the answer short, concrete, and easy to scan.
+
+#### 3. Strengthen the existing comparison table / feature comparison
+If a comparison table already exists on the homepage, make sure it clearly includes specific rows such as:
+- Teacher-specific communication support
+- Parent email / behaviour note awareness
+- De-escalation-aware wording
+- No prompt-engineering required
+- Teacher voice still recognisable
+- Final teacher control before sending
+
+The table must render clearly and read as a real decision aid, not a decorative section.
+
+#### 4. Add one short bridging sentence near CTA zones
+Near at least one CTA on `/start` or homepage, add one sentence like:
+`If ChatGPT gives you text, Zaza Draft is the tool that helps you send the version you will not regret tomorrow.`
+
+#### 5. Preserve current positioning
+Do not make the site anti-ChatGPT or snarky. The goal is calm differentiation, not attack language. Keep the tone teacher-first, practical, and credible.
+
+### Constraints
+- Do not change pricing
+- Do not change core URLs
+- Do not use hypey or aggressive anti-AI language
+- Keep brand tone calm, trustworthy, and teacher-respecting
+
+### Acceptance criteria
+- A skeptical visitor can answer “why not just use ChatGPT?” within one quick scroll
+- `/start` includes a direct, explicit comparison section
+- Homepage includes a direct objection-handling block
+- Feature comparison clearly communicates teacher-specific advantage
+- CTA areas reinforce the distinction in one concise line
