@@ -84,7 +84,7 @@ export default function Footer() {
     <footer className="border-t border-white/10 bg-slate-950 text-slate-300">
       <div className="mx-auto max-w-7xl px-6 py-12">
         <div
-          className={`grid gap-8 ${isDraftLanding ? "md:grid-cols-3" : "md:grid-cols-3"} md:items-start`}
+          className={`grid gap-8 ${isDraftLanding ? "md:grid-cols-4" : "md:grid-cols-4"} md:items-start`}
         >
           <div>
             <div className="flex items-center gap-2">
@@ -117,6 +117,24 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-wide mb-2 text-slate-200">
+              {isDE ? "Auch von Zaza" : "Also from Zaza"}
+            </p>
+            <ul className="space-y-1 text-sm">
+              <li>
+                <a
+                  href="https://zeropaste.io"
+                  title="ZeroPaste - Invoice data extraction tool"
+                  rel="noopener"
+                  className="hover:text-white"
+                >
+                  ZeroPaste - Invoice Extraction
+                </a>
+              </li>
             </ul>
           </div>
 
