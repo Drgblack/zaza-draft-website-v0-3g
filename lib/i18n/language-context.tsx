@@ -1594,21 +1594,22 @@ const translationsDe: Record<string, string> = {
   // Pricing Page (DE) - Boutique Version
   "pricing.hero.preheadline": "TRANSPARENTE PREISE",
   "pricing.hero.headline":
-    "Preise, die die Zeit und das Wohlbefinden von Lehrkräften respektieren",
+    "Preise fuer mehr Sicherheit in Elternkommunikation und Berichten",
   "pricing.hero.subheadline":
-    "Sparen Sie jede Woche Stunden, reduzieren Sie Stress nach Feierabend und schreiben Sie mit Zuversicht - mit Preisen, die einfach und fair sind.",
+    "Du zahlst nicht fuer mehr Text. Du zahlst fuer ruhigere Elternmails, klarere Rueckmeldungen und weniger Gruebeln, bevor etwas gesendet oder eingereicht wird.",
   "pricing.trust.teachers": "Lehrkraft-zentriert",
   "pricing.trust.ferpa": "FERPA-orientiert",
   "pricing.trust.cancel": "Jederzeit kündbar",
 
   // Identity Strip
-  "pricing.identity.title": "Dies ist für Lehrkräfte, die...",
+  "pricing.identity.title":
+    "Fuer Lehrkraefte, die mehr Sicherheit in ihrer Formulierung wollen",
   "pricing.identity.point1":
-    "weniger Zeit mit Schreiben und mehr Zeit mit Unterrichten verbringen möchten",
+    "professionell schreiben wollen, ohne kuel zu klingen",
   "pricing.identity.point2":
-    "vertrauenswürdige Sprachunterstützung benötigen, ohne ihre Stimme zu verlieren",
+    "heikle Elternkommunikation ruhiger und klarer formulieren muessen",
   "pricing.identity.point3":
-    "sich um Grenzen, Zuversicht und Ruhe in ihrer Woche kümmern",
+    "in Zeugnisbemerkungen etwas Sinnvolles sagen wollen - nicht nur das Offensichtliche",
 
   // Currency & Billing Toggle
   "pricing.toggle.monthly": "Monatlich",
@@ -1617,13 +1618,13 @@ const translationsDe: Record<string, string> = {
 
   // Outcome Proof
   "pricing.outcome.text":
-    "Viele Lehrkräfte verlieren jede Woche Stunden an Elternmails, Vorfallsdokumentation und Berichtskommentare. Draft hilft dir, schneller zu formulieren - mit abgesicherten Formulierungen und weniger Hin-und-her.",
+    "Viele Lehrkraefte verlieren jede Woche Stunden an Elternmails, Vorfallsdokumentation und Zeugnisbemerkungen. Draft hilft dir, mit weniger Umschreiben zu einer Version zu kommen, die ruhiger, klarer und professioneller ist.",
 
   // Free Plan
   "pricing.free.badge": "KOSTENLOS",
   "pricing.free.title": "Starter",
   "pricing.free.description":
-    "Alles, was Sie brauchen, um Draft auszuprobieren und Ihre ersten Stunden zu sparen.",
+    "Genug, um Draft mit echten Elternmails, Rueckmeldungen und Kommentaren auszuprobieren.",
   "pricing.free.cta": "Kostenlos loslegen",
   "pricing.free.feature1": "5 Entwürfe pro Monat",
   "pricing.free.feature2": "Basisvorlagen",
@@ -1634,38 +1635,40 @@ const translationsDe: Record<string, string> = {
   "pricing.teacher.badge": "AM BELIEBTESTEN",
   "pricing.teacher.title": "Teacher",
   "pricing.teacher.description":
-    "Unbegrenzte Schreibunterstuetzung ohne erfundene Schuelerinformationen und ohne Lock-ins.",
+    "Unbegrenzte Unterstuetzung fuer professionelle Elternkommunikation, klarere Dokumentation und aussagekraeftigere Zeugnisbemerkungen.",
   "pricing.teacher.period": "Jederzeit kündbar",
   "pricing.teacher.savingsAnnual": "2 Monate kostenlos sparen",
   "pricing.teacher.cta": "7-Tage-Testversion starten",
   "pricing.teacher.trial": "Sicherer Checkout via Stripe",
   "pricing.teacher.guarantee": "30-Tage-Geld-zurück-Garantie",
-  "pricing.teacher.feature1": "Unbegrenzte Entwürfe & Ãœberarbeitungen",
-  "pricing.teacher.feature2": "Ton-Tutor, Ãœbersetzungen, Kontext-Gedächtnis",
+  "pricing.teacher.feature1": "Unbegrenzte Entwuerfe und Ueberarbeitungen",
+  "pricing.teacher.feature2":
+    "Ton-Tutor, Uebersetzungen und Kontext-Gedaechtnis",
   "pricing.teacher.feature3": "Eigene Vorlagen & Kommentarbanken",
   "pricing.teacher.feature4": "Gespeicherter Verlauf & Export",
-  "pricing.teacher.feature5": "Zaras sanfte Wohlbefinden-Hinweise",
+  "pricing.teacher.feature5": "Zaras sanfte Hinweise fuer weniger Gruebeln",
   "pricing.teacher.feature6": "Priorisierter E-Mail-Support",
-  "pricing.teacher.timeSaved": "Typischerweise gespart: 4-7 Stunden pro Woche",
+  "pricing.teacher.timeSaved": "Typische Zeitersparnis: 4-7 Stunden pro Woche",
 
   // Department Plan
   "pricing.department.badge": "TEAMS",
   "pricing.department.title": "Department",
   "pricing.department.description":
-    "Kollaboratives Schreiben mit gemeinsamer Qualität und Konsistenz.",
+    "Fuer Fachbereiche und Teams, die bei sensibler Kommunikation konsistent bleiben wollen.",
   "pricing.department.perTeacher": " pro Lehrkraft",
-  "pricing.department.billing": "Jährliche Abrechnung â€¢ 5-50 Plätze",
+  "pricing.department.billing": "Jaehrliche Abrechnung - 5-50 Plaetze",
   "pricing.department.cta": "Mit Vertrieb sprechen",
   "pricing.department.includes": "Alles in Teacher, plus:",
   "pricing.department.feature1": "Team-Bibliotheken, gemeinsame Vorlagen",
   "pricing.department.feature2": "Rollenbasierter Zugriff",
-  "pricing.department.feature3": "Ãœberprüfung & Freigabe",
-  "pricing.department.feature4": "Priorisiertes Onboarding & Erfolg",
+  "pricing.department.feature3": "Pruefen und Freigeben",
+  "pricing.department.feature4": "Priorisiertes Onboarding und Begleitung",
 
   // Schools & Districts
   "pricing.enterprise.badge": "ENTERPRISE",
   "pricing.enterprise.title": "Schulen & Bezirke",
-  "pricing.enterprise.description": "Alles für groÃŸflächige Bereitstellungen.",
+  "pricing.enterprise.description":
+    "Fuer groessere Einfuehrungen mit zentraler Steuerung und Datenschutzanforderungen.",
   "pricing.enterprise.price": "Individuell",
   "pricing.enterprise.cta": "Vertrieb kontaktieren",
   "pricing.enterprise.includes": "Alles in Department, plus:",
@@ -1677,7 +1680,7 @@ const translationsDe: Record<string, string> = {
   "pricing.bundle.badge": "BUNDLE & SPAREN",
   "pricing.bundle.title": "Draft + Teach",
   "pricing.bundle.description":
-    "Ein Ort zum Planen, Schreiben und Kommunizieren - mit lehrerorientierten Wohlbefinden im Mittelpunkt.",
+    "Ein Ort zum Planen, Schreiben und Kommunizieren - mit ruhiger, lehrkraft-zentrierter Unterstuetzung vom Unterricht bis zur Elternkommunikation.",
   "pricing.bundle.perMonth": "/Monat",
   "pricing.bundle.perYear": "/Jahr",
   "pricing.bundle.savings": "Sparen Sie gegenüber dem separaten Kauf",
@@ -1700,7 +1703,7 @@ const translationsDe: Record<string, string> = {
 
   // Wellbeing Metric
   "pricing.metric.text":
-    "Lehrkraefte nutzen Draft bereits fuer ruhigere Eltern-E-Mails, klarere Zeugnisbemerkungen und belastbarere Schulkommunikation, ohne die Kontrolle ueber die finale Formulierung abzugeben.",
+    "Lehrkraefte nutzen Draft fuer ruhigere Elternmails, klarere Dokumentation und aussagekraeftigere Kommentare - mit voller Kontrolle ueber die Endfassung.",
 
   "pricing.checkout.buyNow": "Jetzt abonnieren",
   "pricing.compare.title": "Vergleich: Zaza vs. ChatGPT",
@@ -1714,12 +1717,12 @@ const translationsDe: Record<string, string> = {
   "pricing.compare.rows.purpose.generic":
     "Allgemeiner Chatbot, nicht für Schulen entwickelt.",
   "pricing.compare.rows.purpose.zaza":
-    "Speziell für Lehrkräftenkommunikation und Zeugnis-Kommentare gebaut.",
+    "Speziell fuer Elternkommunikation, Zeugnisbemerkungen und sensible Schultexte gebaut.",
   "pricing.compare.rows.tone.feature": "Ton & Leitplanken",
   "pricing.compare.rows.tone.generic":
-    "Keine eingebauten Schul-Tonleitplanken - du musst viel prompten.",
+    "Keine eingebauten Leitplanken fuer Schulkommunikation - du musst viel nachsteuern.",
   "pricing.compare.rows.tone.zaza":
-    "Ton-Presets für Eltern, Zeugnisse, Feedback - mit Sicherungsrails.",
+    "Hilft, professionell zu klingen, ohne kalt oder unnoetig hart zu wirken.",
   "pricing.compare.rows.privacy.feature": "Schüler:innenschutz",
   "pricing.compare.rows.privacy.generic":
     "Risiko, identifizierende Daten in generische Systeme einzugeben.",
@@ -1732,46 +1735,47 @@ const translationsDe: Record<string, string> = {
     "Vorlagen für Verhalten, Lob, Hausaufgaben, Anwesenheit, Berichte u. mehr.",
   "pricing.compare.rows.workload.feature": "Arbeitslast",
   "pricing.compare.rows.workload.generic":
-    "Hilfreich, aber inkonsistent - viel Umschreiben nötig.",
+    "Hilfreich, aber oft mit viel Umschreiben verbunden.",
   "pricing.compare.rows.workload.zaza":
-    "Optimiert für schnelle, versandfertige Entwürfe, die du nur noch feinjustierst.",
-  "pricing.compare.rows.cost.feature": "Kosten für Lehrkräften",
+    "Optimiert fuer sendbare Entwuerfe, die du mit weniger Gruebeln freigeben kannst.",
+  "pricing.compare.rows.cost.feature": "Kosten fuer Lehrkraefte",
   "pricing.compare.rows.cost.generic":
-    "Generische Preise - nicht auf Lehrkräftenbudgets ausgelegt.",
+    "Generische Preise - nicht auf Lehrkraeftebudgets zugeschnitten.",
   "pricing.compare.rows.cost.zaza":
-    "Transparente Pläne, Gratisstufe plus bezahlbare Monatsoptionen.",
+    "Transparente Plaene mit Gratisstufe und bezahlbaren Optionen fuer den Schulalltag.",
   // FAQs
   "pricing.faq.title": "Preis- und Abrechnungs-FAQs",
   "pricing.faq.q1": "Gibt es einen kostenlosen Plan?",
   "pricing.faq.a1":
-    "Ja - beginnen Sie mit 5 Entwürfen pro Monat, um den Unterschied zu spüren. Keine Kreditkarte erforderlich.",
-  "pricing.faq.q2": "Was passiert mit meiner Stimme?",
+    "Ja - starte mit 5 Entwuerfen pro Monat und pruefe Draft mit echten Texten. Keine Kreditkarte erforderlich.",
+  "pricing.faq.q2": "Was passiert mit meinem Ton?",
   "pricing.faq.a2":
-    "Draft bewahrt Ihren Ton und Ihre Sprache; Sie haben immer die Kontrolle. Unser Ton-Tutor lernt Ihren Stil.",
+    "Draft soll deinen Ton staerken, nicht ersetzen. Du pruefst jeden Entwurf selbst und entscheidest, was am Ende rausgeht.",
   "pricing.faq.q3": "Sind meine Nachrichten privat?",
   "pricing.faq.a3":
-    "Ja. Wir verwenden Ihre Inhalte nicht, um öffentliche Modelle zu trainieren. Weitere Details finden Sie auf unserer Datenschutzseite.",
+    "Ja. Wir verwenden deine Inhalte nicht, um oeffentliche Modelle zu trainieren. Weitere Details findest du auf unserer Datenschutzseite.",
   "pricing.faq.q4": "Kann ich jederzeit kündigen?",
   "pricing.faq.a4":
-    "Absolut - keine Lock-ins. Kündigen Sie mit einem Klick in Ihren Kontoeinstellungen.",
-  "pricing.faq.q5": "Unterstützen Sie Schulen?",
+    "Ja. Es gibt keine Lock-ins. Du kannst in deinen Kontoeinstellungen jederzeit kuendigen.",
+  "pricing.faq.q5": "Gibt es Plaene fuer Schulen?",
   "pricing.faq.a5":
-    "Ja - Mengenpreise, SSO, DPA/SCCs und SLAs für Bezirke. Kontakt: sales@zazadraft.com",
-  "pricing.faq.q6": "Bieten Sie Rückerstattungen an?",
+    "Ja - mit Mengenpreisen, SSO, DPA/SCCs und SLA-Optionen fuer Schulen und Traeger. Kontakt: sales@zazadraft.com",
+  "pricing.faq.q6": "Gibt es Rueckerstattungen?",
   "pricing.faq.a6":
-    "Ja - 30-Tage-Geld-zurück-Garantie auf alle kostenpflichtigen Pläne. Keine Fragen gestellt.",
+    "Ja - fuer kostenpflichtige Plaene gilt eine 30-Tage-Geld-zurueck-Garantie.",
 
   // CTA Section
-  "pricing.cta.title": "Bereit, jede Woche Stunden zu sparen?",
+  "pricing.cta.title":
+    "Bereit fuer weniger Gruebeln und mehr Sicherheit vor dem Senden?",
   "pricing.cta.subtitle":
-    "Heute kostenlos starten â€¢ Keine Kreditkarte erforderlich â€¢ Jederzeit kündbar",
+    "Heute kostenlos starten - keine Kreditkarte - jederzeit kuendbar",
   "pricing.cta.primary": "Kostenlos loslegen",
   "pricing.cta.secondary": "Mit Vertrieb sprechen",
 
   // Pricing - Decision Tool section
-  "pricing.decision.title": "Nicht sicher, welchen Plan Sie wählen sollen?",
+  "pricing.decision.title": "Nicht sicher, welcher Plan passt?",
   "pricing.decision.subtitle":
-    "Machen Sie unser kurzes Quiz, um eine personalisierte Empfehlung zu erhalten",
+    "Wir helfen dir dabei, den passenden Einstieg fuer deinen Schulalltag zu finden",
 
   // Navigation
   "nav.home": "Startseite",
@@ -2227,10 +2231,9 @@ const translationsDe: Record<string, string> = {
   // Problem Section
   "philosophy.topParagraph":
     "Zaza hilft Lehrkräften, erfolgreich zu bleiben. Draft ist professionelle Schreibunterstützung, die kognitive Last reduziert, Ton schützt und den unsichtbaren Stress schulischer Kommunikation senkt.",
-  "problem.heading":
-    "Mehr Fokus auf Unterricht, weniger Nachtarbeit beim Schreiben",
+  "problem.heading": "Nicht nur schneller schreiben - sicherer formulieren",
   "problem.body":
-    "Elternmails, Feedback und Berichte brauchen weiterhin Sorgfalt und Präzision. Draft hilft dir, sie mit weniger mentaler Belastung zu erledigen, damit mehr Energie für Schülerinnen und Schüler bleibt.",
+    "Elternmails, Rueckmeldungen und Zeugnisbemerkungen geraten oft dann ins Stocken, wenn Ton, Klarheit und Aussagekraft stimmen muessen. Draft hilft dir, unter Druck professionell zu formulieren, ohne kuel oder generisch zu wirken.",
   "problem.stats.parentEmails.value": "Wöchentlich",
   "problem.stats.parentEmails.label": "Eltern-E-Mails",
   "problem.stats.parentEmails.note":
@@ -2246,11 +2249,11 @@ const translationsDe: Record<string, string> = {
 
   // Solution/Mission Section
   "solution.heading":
-    "Ruhige Schreibunterstützung für professionelle Schulkommunikation",
+    "Ruhige Schreibunterstuetzung fuer die Momente, in denen Formulierungen tragen muessen",
   "solution.bodyPrimary":
-    "Draft macht aus Rohnotizen klare, versandfertige Kommunikation für Nachrichten, Feedback und Berichte. Entwickelt, um kognitive Last zu senken und professionelle Sicherheit zu stärken, nicht um pädagogisches Urteil zu ersetzen.",
+    "Draft macht aus Rohnotizen klare, versandfertige Kommunikation fuer Nachrichten, Rueckmeldungen und Berichte. Es ist dafuer gebaut, die kognitive Last zu senken und professionelle Sicherheit zu staerken - nicht, um paedagogisches Urteil zu ersetzen.",
   "solution.bodySecondary":
-    "Ton-Leitplanken und Deeskalations-Hilfe unterstützen dich dabei, in schwierigen Situationen ruhig, klar und konsistent zu bleiben. Du prüfst jeden Entwurf, behältst deine Stimme und sendest mit Sicherheit.",
+    "Ton-Leitplanken und Deeskalations-Hilfe unterstuetzen dich dabei, in schwierigen Situationen ruhig, klar und konsistent zu bleiben. Du pruefst jeden Entwurf, behaeltst deine Stimme und sendest mit mehr Sicherheit.",
 
   // Stats Section
   "stats.documentsRefined.number": "Abgesichert by Design",
@@ -2319,11 +2322,11 @@ const translationsDe: Record<string, string> = {
   "demo.report.before":
     "Guter Schüler, bemüht sich sehr, muss sich mehr beteiligen.",
   "demo.report.after":
-    "Sam zeigt durchweg groÃŸe Anstrengung und eine positive Einstellung zum Lernen. Er zeigt ein starkes Verständnis für Kernkonzepte und bearbeitet Aufgaben sorgfältig. Um seine Fähigkeiten weiterzuentwickeln, ermutige ich Sam, seine Ideen häufiger in Klassendiskussionen zu teilen, da seine Einsichten unserer Lerngemeinschaft sehr zugute kommen würden.",
+    "Sam zeigt durchweg grosse Anstrengung und eine positive Einstellung zum Lernen. Er zeigt ein starkes Verstaendnis fuer Kernkonzepte und bearbeitet Aufgaben sorgfaeltig. Um seine Faehigkeiten weiterzuentwickeln, ermutige ich Sam, seine Ideen haeufiger in Klassendiskussionen zu teilen, da seine Einsichten unserer Lerngemeinschaft sehr zugute kommen wuerden.",
   "demo.grading.before":
     "Aufsatz ist in Ordnung, braucht aber Arbeit an der These und den Beweisen.",
   "demo.grading.after":
-    "Ihr Aufsatz zeigt ein gutes Verständnis für das Thema und enthält relevante Beispiele. Um Ihr Argument zu stärken, sollten Sie in Ihrer Einleitung eine spezifischere These entwickeln. Versuchen Sie auÃŸerdem, direkte Zitate aus dem Text einzubauen, um Ihre Analyse zu untermauern. Ich würde gerne sehen, wie Sie Ihre Ideen im dritten Absatz erweitern. GroÃŸartiger Anfang!",
+    "Ihr Aufsatz zeigt ein gutes Verstaendnis fuer das Thema und enthaelt relevante Beispiele. Um Ihr Argument zu staerken, sollten Sie in Ihrer Einleitung eine spezifischere These entwickeln. Versuchen Sie ausserdem, direkte Zitate aus dem Text einzubauen, um Ihre Analyse zu untermauern. Ich wuerde gerne sehen, wie Sie Ihre Ideen im dritten Absatz erweitern. Ein starker Anfang!",
 
   // Use Cases Section
   "useCases.heading":
@@ -2423,23 +2426,22 @@ const translationsDe: Record<string, string> = {
   "caseStudies.next": "Weiter",
 
   // Why Choose Section
-  "whyChoose.heading": "Warum Lehrkräfte Draft als zweite Instanz nutzen",
+  "whyChoose.heading":
+    "Warum Lehrkraefte Draft als zweite Instanz vor dem Senden nutzen",
   "whyChoose.benefits.beatWritersBlock.title":
-    "Vom Vorfall ausgehen, nicht von einer leeren Seite",
+    "Von der heiklen Stelle ausgehen, nicht von einer leeren Seite",
   "whyChoose.benefits.beatWritersBlock.description":
-    "Aus Rohnotizen werden klare Entwürfe, ohne professionelles Urteil zu verlieren",
-  "whyChoose.benefits.writeWithConfidence.title":
-    "Tonrisiko vor dem Senden reduzieren",
+    "Starte mit dem Satz, bei dem du zoegerst, und arbeite von dort aus weiter - ohne professionelles Urteil zu verlieren.",
+  "whyChoose.benefits.writeWithConfidence.title": "Tonrisiko frueh erkennen",
   "whyChoose.benefits.writeWithConfidence.description":
-    "Formulierungen erkennen, die zu harsch, zu vage oder leicht missverständlich wirken könnten",
-  "whyChoose.benefits.saveTime.title":
-    "Weniger Zeit mit Umschreiben verbringen",
+    "Formulierungen erkennen, die zu scharf, zu vage oder leicht missverstaendlich wirken koennten, bevor sie bei Eltern landen.",
+  "whyChoose.benefits.saveTime.title": "Weniger umformulieren",
   "whyChoose.benefits.saveTime.description":
-    "Weniger Grübeln bei Elternmails, Zeugnisbemerkungen und Follow-up-Nachrichten",
+    "Weniger Gruebeln bei Elternmails, Zeugnisbemerkungen und Follow-up-Nachrichten.",
   "whyChoose.benefits.breakBarriers.title":
-    "Ruhig bleiben, wenn ein Verlauf unter Druck steht",
+    "Mehr Aussagekraft statt Fuellsaetzen",
   "whyChoose.benefits.breakBarriers.description":
-    "Formulierungen klar, angemessen und weniger eskalationsanfällig halten",
+    "Gerade bei Zeugnisbemerkungen hilft Draft, ueber das Offensichtliche hinauszugehen und Eltern etwas wirklich Hilfreiches mitzugeben.",
 
   // Testimonials Section
   "testimonials.heading": "Was Lehrkräfte sagen",
@@ -2556,13 +2558,15 @@ const translationsDe: Record<string, string> = {
   "products.teach.cta.secondary": "Demo planen",
 
   // Products - Draft
-  "products.draft.hero.eyebrow": "KI-SCHREIBASSISTENT FÃœR LEHRKRÃ„FTE",
-  "products.draft.hero.title": "Elternmails, die du sicher senden kannst",
+  "products.draft.hero.eyebrow": "SCHREIBUNTERSTUETZUNG FUER LEHRKRAEFTE",
+  "products.draft.hero.title":
+    "Ruhige Elternmails. Klarere Kommentare. Mehr Sicherheit vor dem Senden.",
   "products.draft.hero.subtitle":
-    "Draft macht aus Stichpunkten ruhige, professionelle Elternnachrichten, Berichtskommentare und Bewertungsfeedback - so formuliert, als könnten sie weitergeleitet, gescreenshotet oder später geprüft werden. Entwickelt für sensible Schulkommunikation, nicht für generische KI-Texte.",
+    "Draft macht aus Stichpunkten ruhige, professionelle Elternnachrichten, aussagekraeftigere Zeugnisbemerkungen und klares Feedback - so formuliert, als koennten Texte weitergeleitet, gescreenshotet oder spaeter noch einmal gelesen werden. Entwickelt fuer sensible Schulkommunikation, nicht fuer generische KI-Texte.",
   "products.draft.hero.assumption":
-    "Draft geht davon aus, dass Nachrichten aus dem Kontext gelesen werden können - von Eltern, Schulleitung oder Verwaltung - und unterstützt dich genau dafür.",
-  "products.draft.hero.supporting": "Weniger Sonntagsdruck, mehr Kopf frei.",
+    "Draft geht davon aus, dass Nachrichten aus dem Kontext gelesen werden koennen - von Eltern, Schulleitung oder Verwaltung - und unterstuetzt dich genau dafuer.",
+  "products.draft.hero.supporting":
+    "Nicht nur schneller formulieren - sicherer formulieren.",
   "products.draft.hero.cta.primary": "Preise ansehen",
   "products.draft.hero.cta.secondary": "Beispiele ansehen",
   "products.draft.hero.privacyLine":
@@ -2578,13 +2582,13 @@ const translationsDe: Record<string, string> = {
   "products.draft.features.title": "Für die schwierigen Gespräche gebaut",
   "products.draft.features.toneGuardrails.title": "Ton-Leitplanken",
   "products.draft.features.toneGuardrails.desc":
-    "Hält Nachrichten ruhig, wertschätzend und deeskalierend, wenn es brennt",
-  "products.draft.features.translationChecks.title": "Ãœbersetzungsprüfungen",
+    "Halten Nachrichten ruhig, wertschaetzend und deeskalierend, wenn ein Austausch kippen koennte",
+  "products.draft.features.translationChecks.title": "Sprach-Checks",
   "products.draft.features.translationChecks.desc":
-    "Sicherstellen, dass Ton und Absicht in jeder Sprache respektvoll bleiben",
-  "products.draft.features.reviewSteps.title": "Ãœberprüfungsschritte",
+    "Helfen dabei, dass Ton und Absicht auch ueber Sprachgrenzen hinweg respektvoll und klar bleiben",
+  "products.draft.features.reviewSteps.title": "Pruef-Schritte",
   "products.draft.features.reviewSteps.desc":
-    "Du behältst die Kontrolle: prüfen, anpassen, freigeben",
+    "Du behaeltst die Kontrolle: pruefen, anpassen, freigeben",
 
   "products.draft.howItWorks.title": "So reduziert Draft Kommunikationsrisiken",
   "products.draft.howItWorks.step1.title": "Notizen reinkopieren",
@@ -2592,16 +2596,16 @@ const translationsDe: Record<string, string> = {
     "Starte mit Stichpunkten oder einem groben Entwurf - kein Feinschliff nötig",
   "products.draft.howItWorks.step2.title": "Ton wählen (abgesichert)",
   "products.draft.howItWorks.step2.desc":
-    "Unterstützend, formell, prägnant - mit abgesicherten Leitplanken als Standard",
+    "Unterstuetzend, formell, praegnant - mit abgesicherten Leitplanken als Standard",
   "products.draft.howItWorks.step3.title": "Prüfen (klar, sachlich) & senden",
   "products.draft.howItWorks.step3.desc":
     "Kurz bearbeiten, kopieren und senden, wenn es klar und professionell klingt",
   "products.draft.insights.heading": "Insights & Fortschritt",
   "products.draft.insights.body":
-    "Draft zeichnet Zeitersparnis, erstellte Entwuerfe, Streaks und eine Qualitaetsbewertung auf, damit du den Fortschritt in deinem Schreibworkflow sehen kannst.",
+    "Draft macht sichtbar, wo du Zeit sparst und schneller zu Formulierungen kommst, die du mit gutem Gefuehl freigeben kannst.",
   "products.draft.interface.heading": "Geführte Entwurfsoberfläche",
   "products.draft.interface.body":
-    "Tonleitplanken, kanalbezogene Modi und Spracheinstellungen vereinen sich in einem intuitiven Workspace, damit jeder Entwurf ruhig und professionell klingt.",
+    "Tonleitplanken, kanalbezogene Modi und Spracheinstellungen greifen in einem klaren Workspace ineinander, damit jeder Entwurf ruhiger, klarer und professioneller wird.",
   "products.draft.insights.imageAlt":
     "Produkt-Screenshot des Draft-Insights-Dashboards",
   "products.draft.interface.imageAlt":
@@ -2609,11 +2613,11 @@ const translationsDe: Record<string, string> = {
 
   "products.draft.whoItsFor.title": "Perfekt für",
   "products.draft.whoItsFor.item1":
-    "Lehrkräfte der Sekundarstufe bei Notenkonflikten nach Unterrichtsschluss",
+    "Lehrkraefte der Sekundarstufe bei Notenkonflikten nach Unterrichtsschluss",
   "products.draft.whoItsFor.item2":
-    "Lehrkräfte der Primarstufe bei Eskalationen zu Verhalten und Elternbeschwerden",
+    "Lehrkraefte der Primarstufe bei Verhaltensthemen und sensiblen Elternrueckmeldungen",
   "products.draft.whoItsFor.item3":
-    "Schulleitungen und Koordinatoren, die schnell belastbare Formulierungen brauchen",
+    "Schulleitungen und Koordinatoren, die schnell belastbare Formulierungen fuer Dokumentation und Follow-ups brauchen",
   // TODO: add citation/source URL
   "products.draft.situations.statLine":
     "43% der Lehrkräfte berichten von erheblichem wöchentlichem Aufwand für Elternkommunikation.",
@@ -2622,12 +2626,12 @@ const translationsDe: Record<string, string> = {
 
   "products.draft.change.title": "Was sich mit Draft ändert",
   "products.draft.change.step1":
-    "Zwei-Stunden-Mail-Marathons werden 5-Minuten-Reviews",
+    "Aus langem Umschreiben werden kurze, gezielte Ueberarbeitungen",
   "products.draft.change.step2":
     "Elternkommunikation bleibt ruhig, klar und professionell",
-  "products.draft.change.step3": "Zuversicht in stressigen Gesprächen",
+  "products.draft.change.step3": "Mehr Sicherheit in heiklen Rueckmeldungen",
   "products.draft.change.step4":
-    "Mehr Zeit zum Unterrichten, weniger Zeit fürs Umschreiben",
+    "Mehr Zeit fuer Unterricht, weniger Zeit fuers Neuformulieren",
 
   "products.draft.techNote.title": "Keine erfundenen Schuelerinformationen:",
   "products.draft.techNote.body":
@@ -2643,7 +2647,7 @@ const translationsDe: Record<string, string> = {
 
   "products.draft.cta.title": "Hol dir deine Zeit zurück",
   "products.draft.cta.subtitle":
-    "Waehle den Live-Plan, der zu deinem Arbeitsalltag passt, und starte noch heute mit Draft.",
+    "Waehle den Plan, der zu deinem Arbeitsalltag passt, und starte mit ruhigerer Elternkommunikation und aussagekraeftigeren Kommentaren.",
   "products.draft.cta.primary": "Preise ansehen",
   "products.draft.cta.secondary": "Beispiele ansehen",
 

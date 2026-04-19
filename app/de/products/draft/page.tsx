@@ -6,9 +6,10 @@ const ogImage = "/shared-teacher-desk-hero.jpg";
 const canonicalUrl = "https://zazadraft.com/de/products/draft";
 
 export const metadata: Metadata = {
-  title: "Zaza Draft | KI für Elternkommunikation, die Lehrkräften Zeit spart",
+  title:
+    "Zaza Draft | Ruhigere Elternmails und aussagekraeftigere Zeugnisbemerkungen",
   description:
-    "Schreibe ruhigere Elternmails in Minuten. Zaza Draft hält deinen Ton, setzt Sicherheitschecks und spart dir jede Woche Stunden.",
+    "Zaza Draft hilft Lehrkraeften, ruhige Elternmails, klarere Schulnachrichten und aussagekraeftigere Zeugnisbemerkungen mit mehr Sicherheit zu formulieren - nicht nur schneller.",
   alternates: {
     canonical: canonicalUrl,
     languages: {
@@ -18,9 +19,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Zaza Draft | KI für Elternkommunikation, die Lehrkräften Zeit spart",
+      "Zaza Draft | Ruhigere Elternmails und aussagekraeftigere Zeugnisbemerkungen",
     description:
-      "Ruhige, klare Elternmails mit Ton-Guardrails und Sicherheitschecks. Schneller schreiben, Stimme behalten.",
+      "Professionell muss nicht kuehl klingen. Zaza Draft hilft Lehrkraeften bei Ton, Klarheit und Aussagekraft in sensibler Schulkommunikation.",
     url: canonicalUrl,
     type: "website",
     locale: "de_DE",
@@ -34,9 +35,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zaza Draft | Elternkommunikation mit KI-Unterstützung",
+    title:
+      "Zaza Draft | Ruhigere Elternmails und aussagekraeftigere Zeugnisbemerkungen",
     description:
-      "Schreibe Elternmails schneller und sicherer - mit Guardrails, die deinen Ton schützen.",
+      "Nicht nur schneller formulieren - sicherer formulieren. Fuer Elternkommunikation, Zeugnisbemerkungen und andere sensible Schultexte.",
     images: [ogImage],
   },
 };

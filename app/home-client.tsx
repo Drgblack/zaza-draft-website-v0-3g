@@ -146,7 +146,10 @@ export function HomePageClient() {
     useState(false);
   const prefersReducedMotion = useReducedMotion();
   const startHref = language === "de" ? "/de/start" : "/start";
-  const angryParentGuideHref = "/how-to-respond-to-an-angry-parent-email";
+  const angryParentGuideHref =
+    language === "de"
+      ? "/de/parent-email-risk-checker"
+      : "/how-to-respond-to-an-angry-parent-email";
   const founderStoryHref =
     language === "de" ? "/de/about/founder" : "/about/founder";
   const heroEyebrow = language === "de" ? "FUER LEHRKRAEFTE" : "FOR TEACHERS";
@@ -401,53 +404,62 @@ export function HomePageClient() {
       : "If you are not ready to try a tool yet, start with one of these teacher-first guides on tone, professionalism, and more meaningful comments.";
   const guideLinks = [
     {
-      href: "/professional-parent-emails-for-teachers",
+      href:
+        language === "de"
+          ? "/de/parent-email-risk-checker"
+          : "/professional-parent-emails-for-teachers",
       title:
         language === "de"
-          ? "Professionelle Eltern-E-Mails fuer Lehrkraefte"
+          ? "Risiko-Check fuer Elternmails"
           : "Professional Parent Emails for Teachers",
       description:
         language === "de"
-          ? "Wie man kurz, klar und professionell schreibt, ohne kalt oder abweisend zu klingen."
+          ? "Pruefe eine schwierige Elternmail darauf, ob sie zu direkt, zu scharf oder leicht missverstaendlich wirkt."
           : "How to write concise, professional parent emails without sounding cold or abrupt.",
     },
     {
-      href: "/teacher-email-tone-guide",
+      href: language === "de" ? "/de/features" : "/teacher-email-tone-guide",
       title:
         language === "de"
-          ? "Leitfaden zum E-Mail-Ton mit Eltern"
+          ? "Wie Draft bei Ton und Formulierung hilft"
           : "A Teacher's Guide to Email Tone with Parents",
       description:
         language === "de"
-          ? "Woran man erkennt, wenn eine Mail defensiv, zu direkt oder leicht missverstaendlich wirkt."
+          ? "Sieh dir an, wie Draft bei professioneller Elternkommunikation, klaren Formulierungen und aussagekraeftigeren Kommentaren unterstuetzt."
           : "Spot the lines that may read as defensive, blunt, vague, or riskier than you intended.",
     },
     {
-      href: "/how-to-write-better-report-comments",
+      href:
+        language === "de"
+          ? "/de/products/draft"
+          : "/how-to-write-better-report-comments",
       title:
         language === "de"
-          ? "Wie man bessere Zeugnisbemerkungen schreibt"
+          ? "Zaza Draft im Detail ansehen"
           : "How to Write Better Report Comments",
       description:
         language === "de"
-          ? "Mehr Tiefe, mehr Aussagekraft, weniger Standardformulierungen in Berichten."
+          ? "Mehr dazu, wie Draft bei Elternmails, Dokumentation und aussagekraeftigeren Zeugnisbemerkungen hilft."
           : "Write comments that go beyond obvious observations and tell parents something useful.",
     },
     {
-      href: "/what-parents-already-know-report-comments",
+      href:
+        language === "de"
+          ? "/de/pricing"
+          : "/what-parents-already-know-report-comments",
       title:
         language === "de"
-          ? "Keine Zeugnisbemerkungen mehr schreiben, die Eltern schon kennen"
+          ? "Preise und Plaene ansehen"
           : "Stop Writing Report Comments Parents Already Know",
       description:
         language === "de"
-          ? "Ein klarer Blick darauf, wie man von offensichtlichen zu wirklich hilfreichen Kommentaren kommt."
+          ? "Sieh dir an, wie Draft bei mehr Sicherheit im Ton, weniger Grübeln und professionellerer Kommunikation unterstuetzt."
           : "A practical guide to moving from generic wording to comments with real parent value.",
     },
   ];
   const finalGuideLabel =
     language === "de"
-      ? "Leitfaden fuer schwierige Eltern-E-Mails lesen"
+      ? "Risiko-Check fuer Elternmails ansehen"
       : "Read a guide for difficult parent emails";
   const finalHeading =
     language === "de"
@@ -508,8 +520,8 @@ export function HomePageClient() {
             strongerLabel: "Klingt professionell",
             stronger:
               "Danke fuer Ihre Nachricht. Ich wollte kurz teilen, was heute passiert ist und wie wir Oliver dabei unterstuetzen, positive Verhaltensmuster aufzubauen.",
-            href: "/teacher-email-tone-guide",
-            linkLabel: "Mehr zum E-Mail-Ton mit Eltern",
+            href: "/de/features",
+            linkLabel: "Mehr zu Ton und Formulierung mit Draft",
           },
           {
             title:
@@ -519,7 +531,7 @@ export function HomePageClient() {
             strongerLabel: "Hilfreicher",
             stronger:
               "Amelia arbeitet ruhig und zuverlaessig. Besonders stark ist ihre Faehigkeit, schwierige Aufgaben geduldig durchzudenken und Feedback schnell umzusetzen.",
-            href: "/what-parents-already-know-report-comments",
+            href: "/de/products/draft",
             linkLabel: "Mehr zu aussagekraeftigeren Berichtskommentaren",
           },
           {
@@ -529,8 +541,8 @@ export function HomePageClient() {
             strongerLabel: "Klarer und ruhiger",
             stronger:
               "Ich wollte Ihnen kurz zwei Momente aus dieser Woche schildern, in denen Noah waehrend der Gruppenarbeit Erinnerungen brauchte, damit Sie ein klares Bild davon haben, woran wir in der Schule gerade arbeiten.",
-            href: "/professional-parent-emails-for-teachers",
-            linkLabel: "Mehr zu professionellen Eltern-E-Mails",
+            href: "/de/start",
+            linkLabel: "Mehr zu professioneller Elternkommunikation",
           },
         ]
       : [

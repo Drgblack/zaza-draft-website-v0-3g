@@ -21,10 +21,10 @@ export default function FeaturesPage() {
   const isGerman = language === "de";
 
   const heroTitle = isGerman
-    ? t("features.title")
+    ? "Funktionen fuer mehr Sicherheit im Ton und mehr Wert im Text"
     : "Features built for judgement, tone, and professional school writing";
   const heroSubtitle = isGerman
-    ? t("features.subtitle")
+    ? "Zaza Draft hilft Lehrkraeften, professionelle Elternmails zu formulieren, Tonrisiken vor dem Senden zu erkennen und Zeugnisbemerkungen so zu verbessern, dass sie Eltern wirklich weiterhelfen."
     : "Zaza Draft is designed to help teachers write professional parent emails, spot tone risk before sending, and improve report comments so they say something genuinely useful.";
   const examplesHeading = isGerman
     ? "Wie die Funktionen in der Praxis helfen"
@@ -79,19 +79,19 @@ export default function FeaturesPage() {
   const resourceLinks = isGerman
     ? [
         {
-          href: "/teacher-email-tone-guide",
-          label: "Leitfaden zum E-Mail-Ton mit Eltern",
+          href: "/de/parent-email-risk-checker",
+          label: "Risiko-Check fuer Elternmails",
         },
         {
-          href: "/how-to-write-better-report-comments",
-          label: "Wie man bessere Zeugnisbemerkungen schreibt",
+          href: "/de/start",
+          label: "Mit Zaza Draft starten",
         },
         {
-          href: "/pricing",
+          href: "/de/pricing",
           label: "Preise ansehen",
         },
         {
-          href: "/products/draft",
+          href: "/de/products/draft",
           label: "Zaza Draft im Detail ansehen",
         },
       ]
@@ -114,38 +114,81 @@ export default function FeaturesPage() {
         },
       ];
 
-  const features = [
-    {
-      icon: Sparkles,
-      title: t("features.toneTutor.title"),
-      description: t("features.toneTutor.desc"),
-      color: "from-purple-500 to-pink-500",
-    },
-    {
-      icon: Shield,
-      title: t("features.safer.title"),
-      description: t("features.safer.desc"),
-      color: "from-blue-500 to-cyan-500",
-    },
-    {
-      icon: Languages,
-      title: t("features.translation.title"),
-      description: t("features.translation.desc"),
-      color: "from-green-500 to-emerald-500",
-    },
-    {
-      icon: Download,
-      title: t("features.export.title"),
-      description: t("features.export.desc"),
-      color: "from-orange-500 to-red-500",
-    },
-    {
-      icon: Check,
-      title: t("features.variants.title"),
-      description: t("features.variants.desc"),
-      color: "from-indigo-500 to-purple-500",
-    },
-  ];
+  const features = isGerman
+    ? [
+        {
+          icon: Sparkles,
+          title: "Tonhilfe fuer heikle Formulierungen",
+          description:
+            "Erkennt Stellen, die schnell zu schroff, kuhl oder missverstaendlich wirken koennen, und hilft bei ruhigeren Alternativen.",
+          color: "from-purple-500 to-pink-500",
+        },
+        {
+          icon: Shield,
+          title: "Sicherere Schulkommunikation",
+          description:
+            "Unterstuetzt bei Elternmails, Verhaltensupdates und Dokumentation, wenn Professionalitaet und Vorsicht zusammenkommen muessen.",
+          color: "from-blue-500 to-cyan-500",
+        },
+        {
+          icon: Languages,
+          title: "Klarer Ton auch ueber Sprachgrenzen",
+          description:
+            "Hilft dabei, dass Botschaft und Haltung auch in mehrsprachiger Elternkommunikation respektvoll und nachvollziehbar bleiben.",
+          color: "from-green-500 to-emerald-500",
+        },
+        {
+          icon: Download,
+          title: "Entwuerfe, die du weiterverwenden kannst",
+          description:
+            "Speichere, ueberarbeite und exportiere Formulierungen, die sich fuer deinen Schulalltag bewaehrt haben.",
+          color: "from-orange-500 to-red-500",
+        },
+        {
+          icon: Check,
+          title: "Mehrere Fassungen fuer bessere Entscheidungen",
+          description:
+            "Vergleiche ruhiger, klarer oder aussagekraeftiger formulierte Varianten, statt dich mit der ersten Version zufriedenzugeben.",
+          color: "from-indigo-500 to-purple-500",
+        },
+      ]
+    : [
+        {
+          icon: Sparkles,
+          title: "Tone support for difficult wording",
+          description:
+            "Spots lines that may read as too blunt, cold, or easy to misread and helps you move toward calmer alternatives.",
+          color: "from-purple-500 to-pink-500",
+        },
+        {
+          icon: Shield,
+          title: "Safer school communication",
+          description:
+            "Supports parent emails, behaviour updates, and documentation where professionalism and caution both matter.",
+          color: "from-blue-500 to-cyan-500",
+        },
+        {
+          icon: Languages,
+          title: "Clear tone across languages",
+          description:
+            "Helps keep meaning and tone respectful in multilingual parent communication.",
+          color: "from-green-500 to-emerald-500",
+        },
+        {
+          icon: Download,
+          title: "Drafts you can reuse",
+          description:
+            "Save, revise, and export wording patterns that work well in real school situations.",
+          color: "from-orange-500 to-red-500",
+        },
+        {
+          icon: Check,
+          title: "Multiple versions for better judgement",
+          description:
+            "Compare calmer, clearer, or more informative variants instead of settling for the first output.",
+          color: "from-indigo-500 to-purple-500",
+        },
+      ];
 
   return (
     <>

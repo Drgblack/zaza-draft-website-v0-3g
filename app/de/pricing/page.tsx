@@ -1,14 +1,15 @@
-import type { Metadata } from "next"
-import PricingClient from "@/app/pricing/PricingClient"
-import { SetLanguage } from "@/components/set-language"
+import type { Metadata } from "next";
+import PricingClient from "@/app/pricing/PricingClient";
+import { SetLanguage } from "@/components/set-language";
 
-const ogImage = "/professional-female-teacher-in-modern-classroom.jpg"
-const pageUrl = "https://zazadraft.com/de/pricing"
+const ogImage = "/professional-female-teacher-in-modern-classroom.jpg";
+const pageUrl = "https://zazadraft.com/de/pricing";
 
 export const metadata: Metadata = {
-  title: "Preise | Zaza Draft Tarife für Lehrkräfte",
+  title:
+    "Preise fuer professionelle Elternkommunikation und bessere Kommentare | Zaza Draft",
   description:
-    "Transparente Preise für Zaza Draft und die Zaza Suite. Starte kostenlos und wechsle, wenn du bereit bist.",
+    "Zaza Draft hilft Lehrkraeften, ruhige Elternmails, klarere Schulnachrichten und aussagekraeftigere Zeugnisbemerkungen mit mehr Sicherheit zu formulieren. Starte kostenlos.",
   alternates: {
     canonical: pageUrl,
     languages: {
@@ -17,21 +18,27 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Preise | Zaza Draft Tarife für Lehrkräfte",
-    description: "Starte kostenlos. Schalte schnellere Elternbriefe, ruhigere Antworten und sichere Guardrails frei.",
+    title:
+      "Preise fuer professionelle Elternkommunikation und bessere Kommentare | Zaza Draft",
+    description:
+      "Nicht nur schneller formulieren - sicherer formulieren. Vergleiche die Zaza-Draft-Plaene fuer ruhigere Elternkommunikation und aussagekraeftigere Kommentare.",
     url: pageUrl,
     type: "website",
     locale: "de_DE",
     siteName: "Zaza Draft",
-    images: [{ url: ogImage, alt: "Lehrkraft prüft die Preise von Zaza Draft" }],
+    images: [
+      { url: ogImage, alt: "Lehrkraft prüft die Preise von Zaza Draft" },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Preise | Zaza Draft Tarife für Lehrkräfte",
-    description: "Transparente Tarife für lehrerzentrierte KI-Schreibhilfe. Starte kostenlos, upgrade jederzeit.",
+    title:
+      "Preise fuer professionelle Elternkommunikation und bessere Kommentare | Zaza Draft",
+    description:
+      "Transparente Tarife für lehrerzentrierte KI-Schreibhilfe. Starte kostenlos, upgrade jederzeit.",
     images: [ogImage],
   },
-}
+};
 
 export default function PricingDePage() {
   return (
@@ -39,5 +46,5 @@ export default function PricingDePage() {
       <SetLanguage lang="de" />
       <PricingClient />
     </>
-  )
+  );
 }

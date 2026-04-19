@@ -16,21 +16,27 @@ export default function DraftClient() {
   const { t, language } = useLanguage();
   const [demoOpen, setDemoOpen] = useState(false);
   const pricingHref = getDraftPricingHref(language);
+  const homeHref = language === "de" ? "/de" : "/";
+  const suiteHref = language === "de" ? "/de/suite" : "/suite";
+  const riskCheckerHref =
+    language === "de"
+      ? "/de/parent-email-risk-checker"
+      : "/parent-email-risk-checker";
   const aboutFounderHref =
     language === "de" ? "/de/about/founder-story" : "/about/founder-story";
   const heroSubheadline =
     language === "de"
-      ? "Hoeren Sie auf, jedes Wort zu zerdenken. Draft hilft Ihnen, ruhige, professionelle Eltern-E-Mails, wertvollere Zeugnisbemerkungen und belastbare Schulnachrichten zu schreiben, die Sie mit Sicherheit senden oder einreichen koennen."
+      ? "Hoer auf, jedes Wort zu zerdenken. Draft hilft dir, ruhige, professionelle Elternmails, aussagekraeftigere Zeugnisbemerkungen und belastbare Schulnachrichten zu formulieren, die du mit mehr Sicherheit senden oder einreichen kannst."
       : "Stop agonising over every word. Draft helps you write calm, professional parent emails, more meaningful report comments, and defensible school messages you can send with confidence.";
   const heroContextLine =
     language === "de"
       ? "Du siehst Zaza Draft - den ruhigen, sicheren Co-Writer fuer Lehrkraefte."
       : "You're viewing Zaza Draft - the calm, safe co-writer for teachers.";
   const heroExamplesLabel =
-    language === "de" ? "Beispiele ansehen" : "See examples";
+    language === "de" ? "Risiko-Check ansehen" : "See examples";
   const situationsHeading =
     language === "de"
-      ? "Situationen, die Sie kennen"
+      ? "Situationen, die du kennen wirst"
       : "Situations you'll recognise";
   const situationsProofLine = t("products.draft.situations.proofLine");
   const situationsStatLine = t("products.draft.situations.statLine");
@@ -38,10 +44,10 @@ export default function DraftClient() {
     language === "de"
       ? [
           "Ein Elternteil stellt eine Note infrage und setzt die Schulleitung in CC.",
-          "Ein Verhaltenshinweis könnte ausserhalb des ursprünglichen Gesprächs weitergeleitet werden.",
-          "Der Ton in der Mail eskaliert und Sie müssen trotzdem ruhig bleiben.",
+          "Ein Verhaltenshinweis koennte ausserhalb des urspruenglichen Gespraechs weitergeleitet werden.",
+          "Der Ton in der Mail eskaliert und du musst trotzdem ruhig bleiben.",
           "Eine Zeugnisbemerkung klingt noch zu offensichtlich und sagt Eltern nichts Neues.",
-          "Sie brauchen Formulierungen, die Beziehungen und Ihre Professionalität schützen.",
+          "Du brauchst Formulierungen, die Beziehungen und deine Professionalitaet schuetzen.",
         ]
       : [
           "A parent disputes a grade and copies in senior leadership.",
@@ -51,12 +57,12 @@ export default function DraftClient() {
           "You need wording that protects relationships and your professional judgement.",
         ];
   const protectionHeading =
-    language === "de" ? "Wie Draft Sie schützt" : "How Draft protects you";
+    language === "de" ? "Wie Draft dich schuetzt" : "How Draft protects you";
   const protectionBullets =
     language === "de"
       ? [
-          "Keine erfundenen Details - Draft erfindet keine Informationen zu Schülern oder Elternkontakten.",
-          "Sie behalten die Kontrolle - Sie prüfen und bearbeiten jede Nachricht vor dem Senden.",
+          "Keine erfundenen Details - Draft erfindet keine Informationen zu Schuelern oder Elternkontakten.",
+          "Du behaeltst die Kontrolle - du pruefst und bearbeitest jede Nachricht vor dem Senden.",
           "Schultauglich als Standard - Leitplanken halten Ton und Sprache professionell und passend.",
         ]
       : [
@@ -106,9 +112,9 @@ export default function DraftClient() {
   const restoreSteps =
     language === "de"
       ? [
-          "Sie fügen einen angespannten Entwurf ein - zum Beispiel bei einer Notenbeschwerde mit Schulleitung in CC.",
-          "Draft entfernt vorwurfsvolle Formulierungen, ordnet die Fakten und hält den Ton professionell.",
-          "Sie senden eine Nachricht, die Sie, den Schüler und die Beziehung zur Familie schützt.",
+          "Du fuegst einen angespannten Entwurf ein - zum Beispiel bei einer Notenbeschwerde mit Schulleitung in CC.",
+          "Draft entfernt vorwurfsvolle Formulierungen, ordnet die Fakten und haelt den Ton professionell.",
+          "Du sendest eine Nachricht, die dich, den Schueler und die Beziehung zur Familie schuetzt.",
         ]
       : [
           "You paste a tense draft - for example, a grade dispute email with senior leadership CC'd.",
@@ -121,7 +127,7 @@ export default function DraftClient() {
       : "Built by Dr Greg Blackburn (PhD, Professional Education) in Germany.";
   const founderTopBody =
     language === "de"
-      ? "Draft wurde entwickelt, um Sunday-night E-Mail-Stress zu reduzieren und Lehrkräften zu helfen, Nachrichten zu schreiben, die auch ausserhalb des Kontexts standhalten."
+      ? "Draft wurde entwickelt, um abendliches E-Mail-Gruebeln zu reduzieren und Lehrkraeften zu helfen, Nachrichten zu schreiben, die auch ausserhalb des Kontexts standhalten."
       : "Draft exists to reduce Sunday-night email stress and help teachers write messages that hold up out of context.";
   const insightLinksHeading =
     language === "de"
@@ -129,31 +135,30 @@ export default function DraftClient() {
       : "More help for better emails and more meaningful reports";
   const insightLinksBody =
     language === "de"
-      ? "Professional ist nicht gleich kalt. Gute Zeugnisbemerkungen sagen Eltern etwas, das sie noch nicht wissen. Diese Guides vertiefen genau diese beiden Punkte."
+      ? "Professionell muss nicht kuehl klingen. Gute Zeugnisbemerkungen sagen Eltern etwas, das ueber das Offensichtliche hinausgeht. Diese Einstiege greifen genau diese beiden Punkte auf."
       : "Professional is not the same as cold. Good report comments tell parents something they do not already know. These guides go deeper on both ideas.";
   const insightLinks =
     language === "de"
       ? [
           {
-            href: "/professional-parent-emails-for-teachers",
-            title: "Professionelle Eltern-E-Mails fuer Lehrkraefte",
-            body: "Praktische Hilfe fuer klare, kurze und professionell klingende Elternkommunikation.",
+            href: "/de/parent-email-risk-checker",
+            title: "Risiko-Check fuer Elternmails",
+            body: "Pruefe, ob eine Nachricht zu hart, zu vage oder leicht missverstaendlich wirkt, bevor sie rausgeht.",
           },
           {
-            href: "/teacher-email-tone-guide",
-            title: "Leitfaden zum E-Mail-Ton mit Eltern",
-            body: "Woran man erkennt, wenn eine Mail defensiv, zu direkt oder leicht missverstaendlich klingt.",
+            href: "/de/features",
+            title: "Wie Draft bei Ton und Formulierung hilft",
+            body: "Sieh, wie Zaza Lehrkraefte bei professionellen Elternmails, sensiblen Rueckmeldungen und klarer Dokumentation unterstuetzt.",
           },
           {
-            href: "/how-to-write-better-report-comments",
-            title: "Wie man bessere Zeugnisbemerkungen schreibt",
-            body: "Mehr Tiefe, mehr Aussagekraft, weniger generische Formulierungen in Berichten.",
+            href: "/de/start",
+            title: "Mit Zaza Draft starten",
+            body: "Der beste Einstieg, wenn du weniger gruebeln und mehr Sicherheit vor dem Senden willst.",
           },
           {
-            href: "/what-parents-already-know-report-comments",
-            title:
-              "Keine Zeugnisbemerkungen mehr schreiben, die Eltern schon kennen",
-            body: "Ein klarer Blick darauf, wie Kommentare mehr professionellen Mehrwert fuer Eltern liefern koennen.",
+            href: "/de/pricing",
+            title: "Preise und Plaene ansehen",
+            body: "Vergleiche die Plaene fuer Lehrkraefte und Teams, wenn du mehr als nur schnellere Textentwuerfe suchst.",
           },
         ]
       : [
@@ -182,9 +187,9 @@ export default function DraftClient() {
     language === "de" ? "Gründerstory lesen" : "Read the founder story";
   const gdprLine =
     language === "de"
-      ? "Ihre Texte bleiben Ihre Texte. Draft trainiert nicht auf Ihren Nachrichten. Sie entscheiden, was Sie einfügen und senden."
+      ? "Deine Texte bleiben deine Texte. Draft trainiert nicht auf deinen Nachrichten. Du entscheidest, was du einfuegst und sendest."
       : "Your text stays yours. Draft does not train on your messages. You control what you paste and what you send.";
-  const privacyLinkLabel = language === "de" ? "Privacy" : "Privacy";
+  const privacyLinkLabel = language === "de" ? "Datenschutz" : "Privacy";
   const screenshotCaption =
     language === "de"
       ? "Produktvorschau - Draft Arbeitsbereich"
@@ -271,9 +276,15 @@ export default function DraftClient() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8 py-4">
             <Breadcrumbs
               items={[
-                { label: t("nav.home"), href: "/" },
-                { label: t("nav.products"), href: "/suite" },
-                { label: "Draft", href: "/products/draft" },
+                { label: t("nav.home"), href: homeHref },
+                { label: t("nav.products"), href: suiteHref },
+                {
+                  label: "Draft",
+                  href:
+                    language === "de"
+                      ? "/de/products/draft"
+                      : "/products/draft",
+                },
               ]}
             />
           </div>
@@ -345,7 +356,7 @@ export default function DraftClient() {
                     className="border-[#374151] bg-transparent text-[#F9FAFB] hover:bg-[#1F2937] rounded-xl"
                   >
                     <Link
-                      href="#examples"
+                      href={riskCheckerHref}
                       className="inline-flex items-center gap-2"
                       onClick={() =>
                         track("cta_click_draft_see_examples", {
@@ -355,7 +366,9 @@ export default function DraftClient() {
                       }
                     >
                       {heroExamplesLabel}
-                      <span aria-hidden="true">↓</span>
+                      <span aria-hidden="true">
+                        {language === "de" ? "→" : "↓"}
+                      </span>
                     </Link>
                   </Button>
                 </div>
@@ -474,7 +487,9 @@ export default function DraftClient() {
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="rounded-3xl border border-[#374151] bg-[#111827] p-6 md:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#A78BFA]">
-                Better judgement in writing
+                {language === "de"
+                  ? "Mehr Sicherheit in der Formulierung"
+                  : "Better judgement in writing"}
               </p>
               <h2 className="mt-3 text-2xl md:text-3xl font-bold text-[#F9FAFB]">
                 {insightLinksHeading}

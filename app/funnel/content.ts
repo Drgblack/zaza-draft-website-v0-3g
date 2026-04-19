@@ -433,123 +433,147 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
     freeCtaLabel: "Kostenlos starten",
     proCtaLabel: (price) => `Pro starten - ${price}`,
     hero: {
-      preheadline: "Lehrerfreundliche Entlastung fuer Zeugnistexte",
+      preheadline:
+        "Ruhigere Formulierungen fuer die Texte, bei denen du zoegerst",
       headingLines: [
-        "Dir fehlen noch 23 Kommentare.",
-        "22:41 Uhr",
-        "Und du bist erledigt.",
+        "Fuer den Entwurf, der",
+        "auch nach dem dritten",
+        "Umschreiben noch nicht stimmt",
       ],
-      subheadingTop: "Zaza schreibt sie fuer dich",
-      subheadingBottom: "in deinem Ton, in Sekunden.",
-      reassurance: "Keine Kreditkarte. Keine Bindung. Voll bearbeitbar.",
-      secondaryLinkLabel: "Du willst erst eine E-Mail pruefen?",
+      subheadingTop:
+        "Fuege eine Elternmail, eine Zeugnisbemerkung, eine Verhaltensrueckmeldung oder ein paar Stichpunkte in Zaza ein",
+      subheadingBottom:
+        "und erhalte in Sekunden eine ruhigere, professionellere und aussagekraeftigere Fassung, mit der du weiterarbeiten kannst.",
+      reassurance:
+        "Professionell muss nicht kuehl klingen. Starte mit der Formulierung, bei der du dir am wenigsten sicher bist.",
+      primaryCtaLabel: "Echten Entwurf pruefen",
+      primaryCtaHref: "/de/parent-email-risk-checker",
+      supportLine:
+        "Beginne mit dem Satz, der zu hart, zu vage oder zu offensichtlich klingt. Zaza hilft dir, ihn vor dem Senden oder Einreichen zu schaerfen.",
+      secondaryLinkLabel: "Funktionen ansehen",
       secondaryLinkSupport:
-        "Teste den kostenlosen Risiko-Check fuer Elternmails.",
-      footer: "Entwickelt fuer Lehrkraefte, die unter Druck schreiben.",
+        "Sieh, wie Draft bei Ton, Klarheit und Aussagekraft hilft.",
+      secondaryLinkHref: "/de/features",
+      footer:
+        "Entwickelt fuer Elternmails, schwierige Rueckmeldungen, Zeugnisbemerkungen und Schuldokumentation, bei der Urteilsvermoegen zaehlt.",
       imageAlt:
-        "Lehrkraft sitzt spaet am Schreibtisch mit Unterlagen und Laptop und wirkt erschoepft, aber hoffnungsvoll",
+        "Lehrkraft prueft am Abend eine sensible Schulnachricht auf dem Laptop",
       bubble:
-        "Mit Lehrkraeften entwickelt und fuer echte Schulablaeufe verfeinert.",
+        "Mit Lehrkraeften entwickelt und an echten Schulablaeufen verfeinert.",
     },
     pain: {
-      heading: "Es ist wieder Sonntagabend.",
-      headingAccent: "",
+      heading: "Es ist 21:47 Uhr.",
+      headingAccent: "Der Text fuehlt sich immer noch nicht sendbar an.",
       subheading:
-        "Die Zeugnisse muessen morgen raus, und du versinkst in Kommentaren, die alle gleich klingen.",
+        "Du weisst, was du sagen musst. Schwierig ist, dass es professionell, menschlich und wirklich hilfreich klingt - bevor der naechste Tag noch komplizierter wird.",
       cards: [
         {
-          title: "Sonntagabend-Gefuehl",
-          body: '"Es ist 21 Uhr und ich habe immer noch 25 Kommentare vor mir. Meine Familie schlaeft, und ich starre auf einen leeren Bildschirm."',
+          title: "Du bist nicht sicher, ob die Mail zu hart klingt",
+          body: "Du willst klar sein, aber nach einem langen Tag kann ein einziger Satz schnell schroff, defensiv oder kuelter wirken, als du es meinst.",
         },
         {
-          title: "Immer gleich, immer flach",
-          body: "\"Ich schreibe dauernd dieselben Formulierungen. 'Tolle Arbeit' und 'Weiter so' - aber meine Schueler verdienen etwas Besseres.\"",
+          title: "Du willst professionell klingen, aber nicht steif",
+          body: "Professionell ist nicht dasselbe wie distanziert. Gerade in Elternmails oder Verhaltensrueckmeldungen ist diese Balance schwer, wenn Druck drauf ist.",
         },
         {
-          title: "Wochenend-Dieb",
-          body: '"Zeugnisse fressen mein ganzes Wochenende. Zeit, die ich lieber mit meinen eigenen Kindern oder einfach zum Durchatmen haette."',
+          title: "Die Zeugnisbemerkung sagt noch nichts wirklich Neues",
+          body: "Eltern kennen das Offensichtliche meist schon. Die eigentliche Aufgabe ist, etwas Konkretes und Sinnvolles ueber Staerken, Lernverhalten oder naechste Schritte zu formulieren.",
         },
       ],
       quote:
-        "Jede Lehrkraft kennt dieses Gefuehl. Der leere Bildschirm. Der Druck. Das schlechte Gewissen, dass die Kommentare nicht gut genug sind.",
-      note: "Entwickelt, um das Risiko in jeder Nachricht zu senken.",
+        "Das Schwierige ist selten, gar nichts sagen zu koennen. Das Schwierige ist, Ton, Klarheit und Aussagekraft so gut zu treffen, dass du hinter dem Text stehen kannst.",
+      note: "Zaza ist fuer genau die Momente gebaut, in denen kleine Formulierungen grossen Einfluss darauf haben, wie eine Nachricht ankommt.",
       imageAlt:
-        "Lehrkraft arbeitet spaet am Schreibtisch und wirkt gestresst beim Schreiben von Schuelerkommentaren",
+        "Lehrkraft liest eine heikle Elternmail und waegt die sicherste Formulierung ab",
     },
     solution: {
-      heading: "Was waere, wenn sich Kommentare schreiben...",
-      headingAccent: "leicht anfuehlen wuerde?",
+      heading: "Was waere, wenn schwierige Texte",
+      headingAccent: "leichter tragbar wuerden?",
       subheading:
-        "Zaza Draft schreibt einfuelsame, persoenliche Kommentare, die klingen wie von dir. Kein Prompt-Gebastel, keine generischen Antworten, kein Zusatzstress.",
-      generatedHeading: "Generierter Kommentar fuer Emma:",
+        "Zaza Draft hilft Lehrkraeften, ruhige, professionelle Elternmails, aussagekraeftigere Zeugnisbemerkungen und klare Schuldokumentation zu formulieren - ohne kuel, generisch oder reaktiv zu wirken.",
+      generatedHeading: "Ruhigere Fassung fuer eine Elternmail:",
       generatedBody:
-        '"Emma hat in diesem Quartal grosse Fortschritte im Leseverstehen gezeigt. Mir faellt auf, wie gruendlich sie ueber Motive und Figuren nachdenkt, besonders in unseren Gespraechen ueber Charlotte\'s Web. Ihre Fragen zeigen, dass sie sich wirklich tief mit den Geschichten auseinandersetzt. Als naechsten Schritt wuensche ich mir, dass sie diese Gedanken noch selbstbewusster in Gruppengespraechen einbringt. Ihre Perspektive waere fuer die Klasse sehr wertvoll."',
-      generatedMeta: "In 3 Sekunden erstellt. Voll bearbeitbar.",
-      generatedVoiceNote: "Klingt nach dir, nicht nach einem Roboter",
+        '"Ich wollte Ihnen kurz eine Rueckmeldung zu Olivers Tag geben. Es fiel ihm heute in der Einzelarbeitsphase schwerer als sonst, konzentriert zu bleiben, und ich musste ihn mehrfach erinnern. Wir begleiten ihn weiter mit klaren Erwartungen und kurzen Check-ins. Wenn es hilfreich ist, teile ich gern, welche Strategien im Unterricht gerade gut funktionieren, damit wir gemeinsam konsistent bleiben koennen."',
+      generatedMeta:
+        "In Sekunden ueberarbeitet. Vor dem Senden voll bearbeitbar.",
+      generatedVoiceNote: "Klar, ruhig und immer noch erkennbar dein Ton",
       points: [
         {
-          title: "Emotional stimmig",
-          body: "Erkennt Staerken und Entwicklungsfelder jedes Kindes mit Waerme, Klarheit und Substanz.",
+          title: "Professionell, ohne steif zu klingen",
+          body: "Draft hilft dir, einen ruhigen, menschlichen und schulgeeigneten Ton zu halten, ohne dass der Text nach Vorlage oder Floskel klingt.",
         },
         {
-          title: "Dein Ton, verstaerkt",
-          body: "Lernt deinen Stil und deine Sprache, damit Kommentare wirklich nach dir klingen.",
+          title: "Zeugnisbemerkungen mit mehr Aussagekraft",
+          body: "Kommentare gehen ueber das Offensichtliche hinaus und sagen Eltern etwas Sinnvolles ueber Staerken, Gewohnheiten oder naechste Schritte.",
         },
         {
-          title: "Immer bearbeitbar",
-          body: "Jeder Entwurf ist dein Ausgangspunkt. Anpassen, personalisieren, fertig - in Sekunden.",
+          title: "Unterstuetzung bei Tonrisiko vor dem Senden",
+          body: "Draft faengt Formulierungen auf, die zu scharf, zu vage, defensiv oder leicht missverstaendlich wirken koennten.",
         },
         {
-          title: "Kein Prompt Engineering",
-          body: "Waehle einfach dein Kind aus, und Zaza uebernimmt den Rest. Keine komplizierten Eingaben, keine Technik-Kopfschmerzen.",
+          title:
+            "Fuer Schulkommunikation gebaut, nicht fuer generische Prompts",
+          body: "Elternmails, Zeugnisbemerkungen, Verhaltensupdates und Dokumentation stehen im Mittelpunkt - mit Lehrkraft-Urteil in jeder Runde.",
         },
       ],
       imageAlt:
-        "Zufriedene Lehrkraft arbeitet effizient am Laptop in einem aufgeraeumten Klassenraum",
+        "Lehrkraft ueberarbeitet ruhig eine sensible Elternmail am Laptop",
       quote:
-        "Mit Lehrkraeften entwickelt und durch echtes Feedback aus dem Schulalltag weitergeschaerft.",
-      note: "Das Ziel ist einfach: schneller schreiben, ohne Sorgfalt, Nuance oder Kontrolle zu verlieren.",
+        "Mit Lehrkraeften entwickelt und rund um genau die Entwuerfe verfeinert, die kippen koennen, wenn Ton oder Aussagekraft nicht stimmen.",
+      note: "Das Ziel ist einfach: Bedeutung schuetzen, Mehrwert erhoehen und die Lehrkraft in Kontrolle lassen.",
+      proofLine:
+        "Gebaut fuer Elternmails, sensible Rueckmeldungen, Zeugnisbemerkungen und genau die Texte, die Lehrkraefte sonst noch einmal umschreiben.",
+      ctaBlock: {
+        body: "Wenn ein Entwurf schon in deinen Notizen, im Postfach oder im Kopf festhaengt, fang genau dort an.\n\nZaza gibt dir eine ruhigere, klarere und professionellere Fassung, ohne die eigentliche Botschaft zu verwaessern.",
+        primaryLabel: "Diesen Entwurf pruefen",
+        primaryHref: "/de/parent-email-risk-checker",
+        secondaryLabel: "Mehr zu Ton und Formulierung",
+        secondaryHref: "/de/features",
+      },
     },
     howItWorks: {
-      heading: "Drei Schritte, um",
-      headingAccent: "deine Abende zurueckzubekommen",
+      heading: "Drei Schritte zu",
+      headingAccent: "klareren, sichereren Texten",
       subheading:
-        "Funktioniert auf jedem Geraet. Chromebook, Handy, Tablet. Wo auch immer du bist, wenn du es brauchst.",
+        "Funktioniert auf jedem Geraet. Starte mit einer rohen Mail, einer halbfertigen Bemerkung, ein paar Notizen oder dem Text, den du fast schon gesendet haettest.",
       steps: [
         {
           number: "1",
-          title: "Schueler auswaehlen",
-          body: "Waehle Schueler und Fach. Zaza merkt sich Fortschritte und deinen Unterrichtsstil.",
-          preview: '"Emma - Leseverstehen"',
+          title: "Entwurf oder Stichpunkte einfuegen",
+          body: "Starte mit einer Elternmail, einer Verhaltensrueckmeldung, einer Zeugnisbemerkung oder mit Notizen, die noch keine Form haben.",
+          preview: '"Elternnachricht nach einer schwierigen Rueckmeldung"',
         },
         {
           number: "2",
-          title: "Generieren",
-          body: "Ein Klick, und Zaza erstellt einen durchdachten, konkreten Kommentar in deinem Ton.",
-          preview: "Durchdachter Kommentar wird erstellt...",
+          title: "Ton und Ziel waehlen",
+          body: "Professionell, wertschaetzend, knapp oder differenzierter - mit Formulierungen, die auf Schulkontext und Elternperspektive abgestimmt sind.",
+          preview: "Professionell - ruhig - schulgeeignet",
         },
         {
           number: "3",
-          title: "Anpassen und fertig",
-          body: "So uebernehmen oder kurz verfeinern. Kopieren, einfuegen, erledigt.",
-          preview: "Bereit zum Kopieren",
+          title: "Vor dem Senden oder Einreichen pruefen",
+          body: "Du behaeltst jedes Wort unter Kontrolle, bevor etwas rausgeht oder in ein Zeugnis uebernommen wird.",
+          preview: "Bereit zum Pruefen, Senden oder Einreichen",
         },
       ],
-      badge: "Spuerbar Zeit gespart",
-      proofHeading: "Von 3 Stunden auf 30 Minuten",
+      badge: "Warum das hilft",
+      proofHeading:
+        "Weniger Gruebeln. Klarere Formulierungen. Mehr Wert im fertigen Text.",
       beforeLabel: "Vorher",
-      beforeValue: "3 Stunden",
+      beforeValue: "Endloses Umschreiben",
       afterLabel: "Nachher",
-      afterValue: "30 Minuten",
+      afterValue: "Ruhigere naechste Fassung",
       proofBody:
-        "Was frueher deinen ganzen Sonntagabend gekostet hat, passt jetzt in eine Kaffeepause.",
+        "Draft hilft Lehrkraeften dabei, von einer angespannten ersten Fassung zu einer ruhigeren, professionelleren Version zu kommen - ohne die uebliche Schleife aus neu formulieren, loeschen und nochmal anfangen.",
+      proofMicrocopy:
+        "Besonders hilfreich, wenn ein einziger Satz die Temperatur eines ganzen Austauschs oder die Qualitaet eines Kommentars veraendern kann.",
       proofBullets: [
-        "Sekunden pro Kommentar",
-        "Jedes Geraet",
+        "Tonbewusste Entwuerfe",
+        "Mehr Aussagekraft in Kommentaren",
         "Immer bearbeitbar",
       ],
       imageAlt:
-        "Nahaufnahme von Haenden einer Lehrkraft, die effizient Schuelerkommentare am Laptop tippt",
+        "Lehrkraft prueft einen sensiblen Nachrichtenentwurf am Laptop vor dem Senden",
     },
     comparison: {
       heading: "Warum Lehrkraefte Zaza Draft statt ChatGPT nutzen",
@@ -581,7 +605,7 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       heading: "Starte kostenlos.",
       headingAccent: "Upgrade erst, wenn du mehr brauchst.",
       subheading: (price) =>
-        `Du bekommst 5 Entwuerfe pro Monat kostenlos. Danach wechselst du zu Zaza Draft Pro mit unbegrenzter Schreibhilfe fuer ${price}.`,
+        `Starte kostenlos mit 5 Entwuerfen pro Monat. Wenn professionelle Elternkommunikation, ruhigere Rueckmeldungen und bessere Zeugnisbemerkungen zu deinem Alltag gehoeren, wechselst du zu unbegrenzter Unterstuetzung fuer ${price}.`,
       currencyLabel: "Waehrung",
       billingLabel: "Abrechnung",
       monthlyLabel: "Monatlich",
@@ -589,38 +613,44 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       annualRecommendedLabel: "Beste Wahl fuers Schuljahr",
       annualSavings: (amount) =>
         `${amount} pro Jahr gegenueber monatlich sparen`,
-      annualAnchor: "Etwa so viel wie ein Kaffee pro Woche",
-      annualAnchorSupport: "fuer deine Abende zurueck",
+      annualAnchor: "Etwa ein Kaffee pro Woche",
+      annualAnchorSupport:
+        "fuer ruhigere Schulkommunikation durchs ganze Schuljahr",
       supportLine: (currency) =>
-        `Preise werden aktuell in ${currency} angezeigt. Steuern koennen im Checkout berechnet werden. Kostenlos starten ohne Kreditkarte.`,
+        "Besonders passend fuer Lehrkraefte, die regelmaessig Elternmails, Verhaltensupdates, Zeugnisbemerkungen und andere sensible Schultexte schreiben.",
       mostPopularBadge: "Am beliebtesten",
       freeCtaLabel: "Kostenlos starten",
       freeTitle: "Dauerhaft kostenlos",
-      freeDescription: "5 Entwuerfe pro Monat. Keine Karte noetig.",
+      freeDescription:
+        "5 Entwuerfe pro Monat. Keine Karte noetig. Ideal fuer den Einstieg mit echten Texten aus deinem Alltag.",
       freeFeatures: [
         "5 Entwuerfe pro Monat",
-        "Alle Faecher unterstuetzt",
-        "Voll bearbeitbare Kommentare",
+        "Elternmails und Schulnachrichten",
+        "Voll bearbeitbare Entwuerfe",
         "Funktioniert auf jedem Geraet",
       ],
       freeNote:
         "Oeffnet das kostenlose Anmeldeformular. Keine Kreditkarte erforderlich.",
       proTitle: "Pro",
-      proDescription: "Unbegrenzte Entwuerfe fuer einzelne Lehrkraefte",
+      proDescription:
+        "Unbegrenzte Unterstuetzung fuer Lehrkraefte, die mit mehr Sicherheit senden und einreichen wollen",
       proFeatures: [
         "Unbegrenzte Entwuerfe",
-        "Priorisierter Support",
-        "Staerkere Personalisierung",
-        "Vorlagen fuer Elternkommunikation",
-        "Anpassungen fuer IEP und 504",
+        "Unterstuetzung fuer Elternmails",
+        "Verhaltens- und Follow-up-Entwuerfe",
+        "Aussagekraeftigere Zeugnisbemerkungen",
+        "Vor dem Senden immer bearbeitbar",
       ],
       annualRiskReversal: "Risikofrei testen. Jederzeit kuendbar.",
       proNote:
         "Sicherer Stripe-Checkout. Jederzeit kuendbar. Steuern koennen im Checkout berechnet werden.",
       whyTitle: "Warum Lehrkraefte Zaza Draft waehlen:",
       whyItems: [
-        { title: "Sekunden", body: "Pro erzeugtem Kommentar" },
-        { title: "Dein Ton", body: "Nicht der eines Roboters" },
+        {
+          title: "Mehr Sicherheit",
+          body: "Unterstuetzung bei heikler Elternkommunikation",
+        },
+        { title: "Mehr Aussagekraft", body: "Nicht nur mehr Text" },
         { title: "Immer bearbeitbar", body: "Du behaeltst die Kontrolle" },
       ],
       unavailableNote:
@@ -634,12 +664,12 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
         {
           question: "Was ist Zaza Draft?",
           answer:
-            "Zaza Draft ist ein KI-Schreibassistent fuer Lehrkraefte. Er hilft bei heikler Schulkommunikation wie Elternmails, sensiblen Antworten und Zeugnistexten.",
+            "Zaza Draft ist ein ruhiger, lehrkraft-zentrierter Co-Writer fuer Elternmails, sensible Rueckmeldungen, Zeugnisbemerkungen und andere Schultexte mit hohem Gewicht. Es hilft, Tonrisiko zu senken, professionell zu bleiben und jedes Wort vor dem Senden oder Einreichen selbst zu pruefen.",
         },
         {
           question: "Fuer wen ist das gedacht?",
           answer:
-            "Fuer Lehrkraefte, die unter Druck stehen und Unterstuetzung fuer klare, ruhige und professionelle Formulierungen wollen, die sie spaeter nicht bereuen.",
+            "Fuer Lehrkraefte, die unter Druck formulieren muessen und Unterstuetzung fuer ruhige, klare und professionelle Texte wollen, die sie spaeter nicht bereuen.",
         },
         {
           question: "Ersetzt es mein Urteilsvermoegen?",
@@ -654,29 +684,35 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
         {
           question: "Kann ich es fuer Elternkommunikation nutzen?",
           answer:
-            "Ja. Das ist einer der wichtigsten Einsatzbereiche. Besonders dann, wenn Emotionen hochgehen, viel auf dem Spiel steht oder Formulierungen sensibel sein muessen.",
+            "Ja. Das ist einer der wichtigsten Einsatzbereiche. Besonders dann, wenn Emotionen hochgehen, viel auf dem Spiel steht oder eine Formulierung leicht anders gelesen werden kann, als sie gemeint ist.",
         },
         {
-          question: "Ist das nur fuer ausgebrannte Lehrkraefte?",
+          question: "Hilft es auch bei Zeugnisbemerkungen?",
           answer:
-            "Nein. Aber es ist besonders hilfreich fuer Lehrkraefte, die sich gestreckt, muede oder unsicher fuehlen, die falschen Worte zu waehlen.",
+            "Ja. Zaza hilft dir, ueber Kommentare hinauszukommen, die Eltern ohnehin schon kennen, damit der fertige Text etwas Konkretes und hilfreiches ueber das Kind sagt.",
         },
       ],
     },
     finalCta: {
       headingLines: [
-        "Es ist Sonntag, 22:47 Uhr.",
-        "Was waere, wenn du schon fertig waerst?",
+        "Starte mit dem Text, bei dem du dir nicht sicher bist",
+        "Pruefe zuerst einen echten Entwurf",
       ],
       subheading:
-        "Kein Starren mehr auf leere Seiten. Kein Copy-Paste mehr. Nur durchdachte Texte, die nach dir klingen und in Sekunden bereit sind.",
-      reassurance: "Keine Kreditkarte. Keine Bindung. Voll bearbeitbar.",
+        "Der schnellste Weg, Zaza Draft zu verstehen, ist ein echter Entwurf.\n\nDu siehst sofort eine ruhigere, professionellere und klarere Fassung - eine Version, die deine Botschaft traegt, ohne Eskalationsrisiko oder leere Formulierungen unnoetig zu verstaerken.",
+      reassurance:
+        "Starte mit dem Satz, bei dem du am meisten zoegerst, und entscheide danach, ob du den ganzen Schreibworkflow in Zaza weiter nutzen willst.",
       bridgeLine:
-        "Wenn ChatGPT dir Text gibt, hilft Zaza Draft dir dabei, die Version zu senden, die du morgen nicht bereust.",
-      quote: "Kein Sonntagabend-Stress mehr.",
+        "Wenn ChatGPT dir Text gibt, hilft Zaza Draft dir dabei, die Version zu senden oder einzureichen, die du morgen nicht bereust.",
+      quote:
+        "Beginne mit der Stelle, die sich gerade am heikelsten anfuehlt. Alles andere wird danach leichter.",
+      primaryCtaLabel: "Entwurf pruefen",
+      primaryCtaHref: "/de/parent-email-risk-checker",
+      secondaryCtaLabel: "Mehr zu Draft ansehen",
+      secondaryCtaHref: "/de/products/draft",
       footerItems: [
         "Mit Lehrkraeften fuer Lehrkraefte gebaut",
-        "FERPA-orientierte Workflows",
+        "DSGVO-orientierte Workflows",
         "Jederzeit kuendbar",
         "Support: help@zazatechnologies.com",
       ],

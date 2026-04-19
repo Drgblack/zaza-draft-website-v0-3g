@@ -235,20 +235,20 @@ export default function PricingClient() {
   const resourceLinks = isGerman
     ? [
         {
-          href: "/teacher-email-tone-guide",
-          title: "Leitfaden zum E-Mail-Ton mit Eltern",
+          href: "/de/parent-email-risk-checker",
+          title: "Risiko-Check fuer Elternmails",
         },
         {
-          href: "/professional-parent-emails-for-teachers",
-          title: "Professionelle Eltern-E-Mails fuer Lehrkraefte",
+          href: "/de/features",
+          title: "Funktionen fuer ruhigere Formulierungen",
         },
         {
-          href: "/how-to-write-better-report-comments",
-          title: "Wie man bessere Zeugnisbemerkungen schreibt",
-        },
-        {
-          href: "/products/draft",
+          href: "/de/products/draft",
           title: "Zaza Draft im Detail ansehen",
+        },
+        {
+          href: "/de/start",
+          title: "Mit Zaza Draft starten",
         },
       ]
     : [
