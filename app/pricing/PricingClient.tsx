@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Check, ChevronDown, Star, ShieldCheck } from "lucide-react";
@@ -155,6 +156,119 @@ export default function PricingClient() {
     : isGerman
       ? "USD-Preise werden angezeigt, waehrend der USD-Checkout finalisiert wird. Fuer ein Abo bitte auf EUR umschalten."
       : "USD prices are shown while USD checkout is being finalized. Switch to EUR to subscribe today.";
+  const heroPreheadline = isGerman
+    ? t("pricing.hero.preheadline")
+    : "CALM, PROFESSIONAL WRITING SUPPORT";
+  const heroHeadline = isGerman
+    ? t("pricing.hero.headline")
+    : "Pricing for better judgement, not just faster drafting";
+  const heroSubheadline = isGerman
+    ? t("pricing.hero.subheadline")
+    : "Teachers are not paying for extra words. They are paying for calmer parent emails, clearer report comments, and less second-guessing before something is sent or submitted.";
+  const identityTitle = isGerman
+    ? t("pricing.identity.title")
+    : "This is for teachers who want more confidence in what leaves their desk";
+  const identityPoints = isGerman
+    ? [
+        t("pricing.identity.point1"),
+        t("pricing.identity.point2"),
+        t("pricing.identity.point3"),
+      ]
+    : [
+        "want professional parent emails that do not sound cold",
+        "need support spotting tone risk before a thread gets harder",
+        "care about report comments that tell parents something useful",
+      ];
+  const outcomeText = isGerman
+    ? t("pricing.outcome.text")
+    : "Draft helps teachers spend less time rewriting and more time approving wording they can stand behind, whether that is a parent email, a behaviour update, or a report comment.";
+  const teacherDescription = isGerman
+    ? t("pricing.teacher.description")
+    : "Unlimited support for calmer parent emails, clearer documentation, and report comments with more value.";
+  const bundleDescription = isGerman
+    ? t("pricing.bundle.description")
+    : "One place to plan, write, and communicate, with teacher-first judgement support across parent communication and school writing.";
+  const valueSectionEyebrow = isGerman
+    ? "Wofuer Lehrkraefte wirklich zahlen"
+    : "What teachers are really paying for";
+  const valueSectionHeading = isGerman
+    ? "Nicht nur Geschwindigkeit. Mehr Sicherheit im fertigen Text."
+    : "Not just speed. More confidence in the finished wording.";
+  const valueSectionIntro = isGerman
+    ? "Der eigentliche Wert liegt nicht darin, mehr Text zu erzeugen. Er liegt darin, ruhigere, klarere und wertvollere Kommunikation schneller freigeben zu koennen."
+    : "The real value is not generating more text. It is approving calmer, clearer, more useful communication with less mental drag.";
+  const valueCards = isGerman
+    ? [
+        {
+          title: "Weniger Tonrisiko",
+          body: "Hilft zu erkennen, wenn eine Mail zu direkt, defensiv oder missverstaendlich klingt, bevor sie gesendet wird.",
+        },
+        {
+          title: "Mehr Aussagekraft in Berichten",
+          body: "Hilft, Beobachtungen in Kommentare zu verwandeln, die Eltern wirklich etwas ueber Staerken, Gewohnheiten oder naechste Schritte sagen.",
+        },
+        {
+          title: "Weniger Zweifeln",
+          body: "Weniger Zeit fuer das dritte Umschreiben. Mehr Sicherheit darin, dass professionell nicht kalt bedeuten muss.",
+        },
+      ]
+    : [
+        {
+          title: "Lower tone risk",
+          body: "Spot phrasing that may sound too blunt, defensive, or easy to misread before it lands with a parent.",
+        },
+        {
+          title: "More meaningful report comments",
+          body: "Move beyond comments parents already know and say something genuinely useful about strengths, habits, or next steps.",
+        },
+        {
+          title: "Less second-guessing",
+          body: "Spend less time on the third rewrite and more time approving wording that feels professional without feeling cold.",
+        },
+      ];
+  const resourceSectionHeading = isGerman
+    ? "Praktische Leitfaeden, bevor Sie kaufen"
+    : "Useful guides before you buy";
+  const resourceSectionBody = isGerman
+    ? "Wenn Sie erst sehen moechten, wie Zaza ueber Ton und Aussagekraft denkt, starten Sie mit diesen kurzen Leitfaeden."
+    : "If you want to see how Zaza thinks about tone and value before you subscribe, start with these short guides.";
+  const resourceLinks = isGerman
+    ? [
+        {
+          href: "/teacher-email-tone-guide",
+          title: "Leitfaden zum E-Mail-Ton mit Eltern",
+        },
+        {
+          href: "/professional-parent-emails-for-teachers",
+          title: "Professionelle Eltern-E-Mails fuer Lehrkraefte",
+        },
+        {
+          href: "/how-to-write-better-report-comments",
+          title: "Wie man bessere Zeugnisbemerkungen schreibt",
+        },
+        {
+          href: "/products/draft",
+          title: "Zaza Draft im Detail ansehen",
+        },
+      ]
+    : [
+        {
+          href: "/teacher-email-tone-guide",
+          title: "A Teacher's Guide to Email Tone with Parents",
+        },
+        {
+          href: "/professional-parent-emails-for-teachers",
+          title: "Professional Parent Emails for Teachers",
+        },
+        {
+          href: "/how-to-write-better-report-comments",
+          title: "How to Write Better Report Comments",
+        },
+        {
+          href: "/products/draft",
+          title: "Explore Zaza Draft in more detail",
+        },
+      ];
 
   const handlePlanClick = (planId: string) => {
     trackPricingCTA(t("pricing.free.cta"), "pricing_free_card");
@@ -204,7 +318,7 @@ export default function PricingClient() {
               animate={{ opacity: 1, y: 0 }}
               className="text-[#8B5CF6] uppercase tracking-wider text-sm font-semibold mb-4"
             >
-              {t("pricing.hero.preheadline")}
+              {heroPreheadline}
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -212,7 +326,7 @@ export default function PricingClient() {
               transition={{ delay: 0.1 }}
               className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
             >
-              {t("pricing.hero.headline")}
+              {heroHeadline}
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -220,7 +334,7 @@ export default function PricingClient() {
               transition={{ delay: 0.2 }}
               className="text-xl text-[#94A3B8] mb-8 max-w-3xl mx-auto"
             >
-              {t("pricing.hero.subheadline")}
+              {heroSubheadline}
             </motion.p>
 
             {/* Trust Bar */}
@@ -252,21 +366,15 @@ export default function PricingClient() {
               className="bg-[#1E293B] rounded-xl p-6 mb-12 max-w-2xl mx-auto"
             >
               <h3 className="text-lg font-semibold text-white mb-3">
-                {t("pricing.identity.title")}
+                {identityTitle}
               </h3>
               <div className="space-y-2 text-left text-[#94A3B8]">
-                <div className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" />
-                  <span>{t("pricing.identity.point1")}</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" />
-                  <span>{t("pricing.identity.point2")}</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" />
-                  <span>{t("pricing.identity.point3")}</span>
-                </div>
+                {identityPoints.map((point) => (
+                  <div key={point} className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" />
+                    <span>{point}</span>
+                  </div>
+                ))}
               </div>
             </motion.div>
 
@@ -319,9 +427,7 @@ export default function PricingClient() {
         <section className="pb-12 px-6">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-[#1E293B] rounded-xl p-8 border border-[#8B5CF6]/30">
-              <p className="text-lg text-[#E2E8F0]">
-                {t("pricing.outcome.text")}
-              </p>
+              <p className="text-lg text-[#E2E8F0]">{outcomeText}</p>
             </div>
           </div>
         </section>
@@ -402,9 +508,7 @@ export default function PricingClient() {
               <h3 className="text-3xl font-bold text-white mb-2 mt-4">
                 {t("pricing.teacher.title")}
               </h3>
-              <p className="text-[#E2E8F0] mb-6">
-                {t("pricing.teacher.description")}
-              </p>
+              <p className="text-[#E2E8F0] mb-6">{teacherDescription}</p>
 
               <AnimatePresence mode="wait">
                 <motion.div
@@ -611,7 +715,7 @@ export default function PricingClient() {
                   {t("pricing.bundle.title")}
                 </h3>
                 <p className="text-white/90 mb-6 text-lg">
-                  {t("pricing.bundle.description")}
+                  {bundleDescription}
                 </p>
                 <div className="flex items-baseline gap-3 mb-6">
                   <span className="text-6xl font-bold text-white">
@@ -646,6 +750,37 @@ export default function PricingClient() {
                 </p>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        <section className="pb-20 px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="rounded-3xl border border-white/10 bg-[#111827] p-8 md:p-10">
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#C4B5FD]">
+                {valueSectionEyebrow}
+              </p>
+              <h2 className="mt-4 text-3xl font-bold text-white">
+                {valueSectionHeading}
+              </h2>
+              <p className="mt-4 max-w-3xl text-lg leading-8 text-[#CBD5E1]">
+                {valueSectionIntro}
+              </p>
+              <div className="mt-8 grid gap-5 md:grid-cols-3">
+                {valueCards.map((card) => (
+                  <div
+                    key={card.title}
+                    className="rounded-2xl border border-white/10 bg-[#0B1220] p-6"
+                  >
+                    <h3 className="text-xl font-semibold text-white">
+                      {card.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-7 text-[#94A3B8]">
+                      {card.body}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
@@ -727,6 +862,28 @@ export default function PricingClient() {
             <p className="mt-6 text-center text-sm text-[#94A3B8]">
               {t("pricing.compare.footer")}
             </p>
+          </div>
+        </section>
+
+        <section className="pb-20 px-6">
+          <div className="max-w-5xl mx-auto rounded-3xl border border-white/10 bg-[#111827] p-8 md:p-10">
+            <h2 className="text-3xl font-bold text-white">
+              {resourceSectionHeading}
+            </h2>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[#CBD5E1]">
+              {resourceSectionBody}
+            </p>
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              {resourceLinks.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-2xl border border-white/10 bg-[#0B1220] px-5 py-4 text-sm font-medium text-[#E2E8F0] transition hover:border-[#8B5CF6]/40 hover:text-white"
+                >
+                  {item.title}
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 

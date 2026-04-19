@@ -5,9 +5,10 @@ import PricingClient from "./PricingClient";
 const ogImage = "/professional-female-teacher-in-modern-classroom.jpg";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Teacher AI Writing Pricing - Parent Emails and Reports | Zaza Draft",
+  title:
+    "Teacher Writing Pricing for Parent Emails, Tone Support, and Reports | Zaza Draft",
   description:
-    "See Zaza Draft pricing for teacher-first AI writing support. Start free, then upgrade for calmer parent emails, report comments, and professional school communication.",
+    "See Zaza Draft pricing for teacher-first writing support. Start free, then upgrade for calmer parent emails, better tone judgement, and more meaningful report comments.",
   path: "/pricing",
   image: ogImage,
   alternates: {

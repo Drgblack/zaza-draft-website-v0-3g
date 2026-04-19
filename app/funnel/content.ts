@@ -151,59 +151,60 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
     freeCtaLabel: "Start free",
     proCtaLabel: (price) => `Start Pro - ${price}`,
     hero: {
-      preheadline: "Teacher-first protection for high-stakes communication",
+      preheadline: "Teacher-first support for the writing you hesitate over",
       headingLines: [
-        "For the parent email you know",
-        "you should not send",
-        "as-is",
+        "For the draft that still",
+        "does not sound right",
+        "after the third rewrite",
       ],
       subheadingTop:
-        "Paste your draft into the Parent Email Risk Checker and get a calmer,",
-      subheadingBottom: "more professional version to work from in seconds.",
+        "Paste an email, report comment, behaviour update, or rough notes into Zaza",
+      subheadingBottom:
+        "and get a calmer, more professional, more useful version to work from in seconds.",
       reassurance:
-        "Get a safer version first. Then continue with Zaza Draft if you want to keep going.",
-      primaryCtaLabel: "Check a parent email",
+        "Professional does not have to mean stiff. Start with the wording you are least sure about.",
+      primaryCtaLabel: "Check a real draft",
       primaryCtaHref: "/parent-email-risk-checker",
       supportLine:
-        "Get a safer version first. Then continue with Zaza Draft if you want to keep going.",
-      secondaryLinkLabel: "Get the free guide",
-      secondaryLinkHref: "/teacher-guide-to-sensitive-parent-emails",
+        "Start with the line that feels too harsh, too vague, or too obvious. Zaza helps you shape it before you send or submit it.",
+      secondaryLinkLabel: "Read the tone guide",
+      secondaryLinkHref: "/teacher-email-tone-guide",
       footer:
-        "Built for parent emails, difficult follow-ups, behaviour notes, safeguarding-adjacent wording, and other high-stakes school communication.",
+        "Built for parent emails, difficult follow-ups, behaviour notes, report comments, and school documentation where judgement matters.",
       imageAlt:
         "Teacher reviewing a sensitive school message on a laptop late in the evening",
       bubble: "Built with teachers and refined for real school workflows.",
     },
     pain: {
-      heading: "It's 9:47 PM.",
-      headingAccent: "A parent email just landed.",
+      heading: "It is 9:47 PM.",
+      headingAccent: "The writing still does not feel safe.",
       subheading:
-        "You know you need to reply. You also know the wrong wording can make tomorrow harder.",
+        "You know what you need to say. The problem is making it sound professional, human, and useful before tomorrow gets harder.",
       cards: [
         {
-          title: "Too easy to sound defensive",
-          body: "You're trying to be clear, but after a long day, one blunt sentence can land badly.",
+          title: "You are not sure if the email sounds too harsh",
+          body: "You are trying to be clear, but after a long day one blunt line can read as defensive, abrupt, or colder than you meant.",
         },
         {
-          title: "Everything feels higher-stakes than it should",
-          body: "Parent complaints, behaviour updates, meeting follow-ups, and sensitive messages can all be screenshotted, forwarded, or revisited later.",
+          title: "You want it to be professional but still human",
+          body: "Professional is not the same as cold, but it can be hard to find that balance when a parent email or behaviour update feels high-stakes.",
         },
         {
-          title: "Second-guessing steals your evening",
-          body: "You rewrite the same message three times because you're not just writing - you're trying to avoid escalation.",
+          title: "The report comment still says nothing useful",
+          body: "Parents usually already know the obvious. The pressure is writing something that actually informs, not just fills the box.",
         },
       ],
       quote:
-        "The hard part is rarely having something to say. The hard part is wording it clearly enough to stay professional without making the situation worse.",
-      note: "Zaza is built to lower tone risk before a difficult message leaves your outbox.",
+        "The hard part is rarely having something to say. The hard part is judging tone, clarity, and value well enough to stand behind what you send.",
+      note: "Zaza is built for the moments where small wording choices change how a message is received.",
       imageAlt:
         "Teacher reading a difficult parent email and weighing the safest reply",
     },
     solution: {
-      heading: "What if difficult messages felt...",
-      headingAccent: "safer to send?",
+      heading: "What if difficult writing felt",
+      headingAccent: "easier to stand behind?",
       subheading:
-        "Zaza Draft helps teachers write calm, professional parent emails and school messages that keep the meaning, lower the heat, and still sound like you.",
+        "Zaza Draft helps teachers write calm, professional parent emails, more meaningful report comments, and school documentation that keeps the point clear without sounding cold, generic, or reactive.",
       generatedHeading: "Safer draft for a parent email:",
       generatedBody:
         "\"I wanted to share a quick update about Oliver's day. He found it harder than usual to stay focused during independent work, and I needed to give several reminders. We're continuing to support him with clear expectations and short check-ins. If helpful, I'd be glad to share the strategies that are working in class so we can stay consistent together.\"",
@@ -211,73 +212,78 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       generatedVoiceNote: "Clear, calm, and still recognisably yours",
       points: [
         {
-          title: "De-escalation aware",
-          body: "Built to lower heat without stripping out the point you need to make.",
+          title: "Professional without sounding stiff",
+          body: "Draft helps you keep the tone calm, human, and school-appropriate without flattening the message into template language.",
         },
         {
-          title: "Your voice, still recognisable",
-          body: "Drafts stay professional without flattening the way you naturally write.",
+          title: "Report comments with more value",
+          body: "It helps move comments beyond obvious observations so parents learn something useful about strengths, habits, or next steps.",
         },
         {
-          title: "Always editable before sending",
-          body: "You review every word, make changes, and decide what actually goes out.",
+          title: "Tone-risk support before send",
+          body: "It catches wording that may read as too sharp, vague, defensive, or easy to misread when emotions are already high.",
         },
         {
           title: "Built for school communication, not generic AI prompting",
-          body: "Parent emails come first, with report comments and other school writing supported too.",
+          body: "Parent emails, report comments, behaviour updates, and documentation come first, with teacher judgement kept in the loop at every step.",
         },
       ],
       imageAlt:
         "Teacher calmly refining a parent email draft on a laptop at a desk",
       quote:
-        "Built with teachers, then refined around the messages that can spiral if the tone is even slightly off.",
-      note: "The goal is simple: protect the meaning, reduce the heat, and keep the teacher in control.",
+        "Built with teachers, then refined around the drafts that can unravel if the tone is even slightly off or the comment says nothing new.",
+      note: "The goal is simple: protect the meaning, improve the value, and keep the teacher in control.",
       proofLine:
-        "Built for parent emails, sensitive updates, and the replies teachers most often rewrite three times.",
+        "Built for parent emails, sensitive updates, report comments, and the drafts teachers most often rewrite three times.",
       ctaBlock: {
-        body: "If you already have a draft sitting in your notes, inbox, or head, start there.\n\nThe Parent Email Risk Checker gives you a calmer, clearer, more professional version to work from - without weakening the message.",
+        body: "If you already have a draft sitting in your notes, inbox, or head, start there.\n\nZaza gives you a calmer, clearer, more professional version to work from - without weakening the message or draining the judgement out of it.",
         primaryLabel: "Make this safer",
         primaryHref: "/parent-email-risk-checker",
-        secondaryLabel: "See 7 parent emails teachers should never send as-is",
-        secondaryHref: "/teacher-guide-to-sensitive-parent-emails",
+        secondaryLabel: "See how to write better report comments",
+        secondaryHref: "/how-to-write-better-report-comments",
       },
     },
     howItWorks: {
       heading: "Three steps to",
-      headingAccent: "safer replies",
+      headingAccent: "clearer, safer writing",
       subheading:
-        "Works on any device. Start from a rough draft, a few notes, or the message you almost sent.",
+        "Works on any device. Start from a rough email, a half-written comment, a few notes, or the message you almost sent.",
       steps: [
         {
           number: "1",
-          title: "Paste the draft or describe what happened",
-          body: "Start from rough notes, bullet points, or the message you almost sent.",
+          title: "Paste the draft or rough notes",
+          body: "Start from a parent email, a behaviour update, a report comment, or bullet points you have not shaped yet.",
           preview: '"Parent follow-up after a difficult behaviour update"',
         },
         {
           number: "2",
-          title: "Choose the tone you need",
-          body: "Supportive, formal, concise, neutral - with wording shaped for school context.",
-          preview: "Supportive - calm - school-appropriate",
+          title: "Choose the tone or outcome you need",
+          body: "Professional, supportive, concise, or more insightful - with wording shaped for school context and parent interpretation.",
+          preview: "Professional - calm - school-appropriate",
         },
         {
           number: "3",
           title: "Review before it goes anywhere",
-          body: "You stay in control of every word before anything is sent.",
-          preview: "Ready to review and send",
+          body: "You stay in control of every word before anything is sent or submitted.",
+          preview: "Ready to review, send, or submit",
         },
       ],
       badge: "Why it helps",
-      proofHeading: "Less second-guessing. Clearer wording. Faster replies.",
+      proofHeading:
+        "Less second-guessing. Clearer wording. Better value in what you write.",
       beforeLabel: "Before",
       beforeValue: "Spiral of rewriting",
       afterLabel: "After",
       afterValue: "Calm next draft",
       proofBody:
-        "Draft helps teachers move from stressed first draft to calm professional message without the usual spiral of rewriting.",
+        "Draft helps teachers move from stressed first draft to calmer, more professional wording without the usual spiral of rewriting.",
       proofMicrocopy:
-        "Especially useful when the message matters enough that one sentence could change the temperature of the whole exchange.",
-      proofBullets: ["Tone-aware drafts", "Any device", "Always editable"],
+        "Especially useful when one sentence could change the temperature of the whole exchange or the quality of the final comment.",
+      proofBullets: [
+        "Tone-aware drafts",
+        "Useful comment support",
+        "Always editable",
+      ],
       imageAlt:
         "Teacher checking a sensitive message draft on a laptop before sending",
     },
@@ -310,7 +316,7 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       heading: "Start free now.",
       headingAccent: "Upgrade only when you need more.",
       subheading: (price) =>
-        `Start free with 5 drafts each month, then upgrade for unlimited support when Zaza becomes part of your weekly communication workflow.`,
+        `Start free with 5 drafts each month, then upgrade for unlimited support when calmer parent communication and better report comments become part of your weekly workflow.`,
       currencyLabel: "Currency",
       billingLabel: "Billing",
       monthlyLabel: "Monthly",
@@ -334,12 +340,12 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       freeNote: "Opens the free signup form. No credit card required.",
       proTitle: "Pro",
       proDescription:
-        "Unlimited support for teachers writing high-stakes school communication",
+        "Unlimited support for teachers who want more confidence in the writing they send and submit",
       proFeatures: [
         "Unlimited drafts",
         "Parent email support",
         "Behaviour and follow-up drafts",
-        "Report comments when you need them",
+        "More meaningful report comments",
         "Always editable before sending",
       ],
       annualRiskReversal: "Try it risk-free. Cancel anytime.",
@@ -348,10 +354,10 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
       whyTitle: "Why teachers choose Zaza Draft:",
       whyItems: [
         {
-          title: "Tone-aware",
-          body: "Built for difficult parent communication",
+          title: "Peace of mind",
+          body: "Better judgement support for difficult parent communication",
         },
-        { title: "Your voice", body: "Still recognisably yours" },
+        { title: "More useful writing", body: "Not just more words" },
         { title: "Always editable", body: "You stay in control" },
       ],
       unavailableNote:
@@ -365,12 +371,12 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
         {
           question: "What is Zaza Draft?",
           answer:
-            "Zaza Draft is a teacher-first communication safety layer for parent emails, sensitive replies, report comments, and other high-stakes school writing. It helps teachers reduce tone risk, stay professional, and keep control of every word before sending.",
+            "Zaza Draft is a teacher-first communication safety layer for parent emails, sensitive replies, report comments, and other high-stakes school writing. It helps teachers reduce tone risk, stay professional, and keep control of every word before sending or submitting.",
         },
         {
           question: "Who is this for?",
           answer:
-            "It is built for teachers who are under pressure and want support writing clear, calm, professional messages they will not regret sending later.",
+            "It is built for teachers who are under pressure and want support writing clear, calm, professional messages and more meaningful comments they will not regret sending later.",
         },
         {
           question: "Does it replace my judgement?",
@@ -385,32 +391,32 @@ export const funnelCopy: Record<FunnelLocale, FunnelCopy> = {
         {
           question: "Can I use it for parent communication?",
           answer:
-            "Yes. That is one of its main use cases. It is especially helpful when emotions are high, stakes are high, or wording needs to be careful.",
+            "Yes. That is one of its main use cases. It is especially helpful when emotions are high, stakes are high, or wording needs to be careful and professionally defensible.",
         },
         {
-          question: "Is this only for burnt-out teachers?",
+          question: "Can I use it for report comments as well?",
           answer:
-            "No. But it is especially relevant for teachers who feel stretched, tired, or anxious about getting the wording wrong in difficult situations.",
+            "Yes. Zaza can help you move beyond comments parents already know, so the final wording says something more specific and genuinely useful about the pupil.",
         },
       ],
     },
     finalCta: {
       headingLines: [
-        "Start with the message you are worried about",
-        "Check a real parent email first",
+        "Start with the piece of writing you are unsure about",
+        "Check a real draft first",
       ],
       subheading:
-        "The fastest way to understand Zaza Draft is to check a real parent email.\n\nYou will see a safer version immediately - one that keeps your point clear while reducing the chance of escalation.",
+        "The fastest way to understand Zaza Draft is to check a real draft.\n\nYou will see a calmer, more professional version immediately - one that keeps your point clear while reducing the chance of escalation or empty wording.",
       reassurance:
-        "Get a safer version first. Then continue with Zaza Draft if you want to keep going.",
+        "Start with the line you are least sure about, then carry on in Zaza Draft if you want the full workflow.",
       bridgeLine:
-        "If ChatGPT gives you text, Zaza Draft is the tool that helps you send the version you will not regret tomorrow.",
+        "If ChatGPT gives you text, Zaza Draft is the tool that helps you send or submit the version you will not regret tomorrow.",
       quote:
         "Start with the version you are worried about, then decide whether you want the full drafting workflow.",
       primaryCtaLabel: "Check your draft",
       primaryCtaHref: "/parent-email-risk-checker",
-      secondaryCtaLabel: "Read the free guide",
-      secondaryCtaHref: "/teacher-guide-to-sensitive-parent-emails",
+      secondaryCtaLabel: "Read the report comment guide",
+      secondaryCtaHref: "/how-to-write-better-report-comments",
       footerItems: [
         "Built with teachers, for teachers",
         "FERPA-ready workflows",

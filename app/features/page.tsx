@@ -9,9 +9,9 @@ import FeaturesClient from "./FeaturesClient";
 
 export const metadata: Metadata = buildPageMetadata({
   title:
-    "Teacher Writing Features for Parent Emails and Report Comments | Zaza Draft",
+    "Teacher Writing Features for Parent Emails, Tone, and Report Comments | Zaza Draft",
   description:
-    "Explore teacher-first AI features for parent communication, report comments, safeguarding-sensitive messages, and professional school writing where tone matters.",
+    "Explore teacher-first features for professional parent emails, meaningful report comments, safeguarding-sensitive messages, and school writing where tone and judgement matter.",
   path: "/features",
   alternates: {
     en: "https://zazadraft.com/features",

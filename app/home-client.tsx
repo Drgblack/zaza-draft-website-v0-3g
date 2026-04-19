@@ -164,12 +164,12 @@ export function HomePageClient() {
       : "without second-guessing how they will be interpreted.";
   const heroSubheading =
     language === "de"
-      ? "Zaza hilft Lehrkraeften, klare und ruhige Nachrichten fuer Momente zu formulieren, die sich unsicher anfuehlen - bevor Ton, Wortwahl oder Timing eine Situation groesser werden lassen."
-      : "Zaza helps teachers draft clear, calm messages in moments that feel uncertain - before tone, wording, or timing turn a situation into something bigger.";
+      ? "Zaza hilft Lehrkraeften, ruhige Eltern-E-Mails, klarere Schulnachrichten und aussagekraeftigere Zeugnisformulierungen fuer Momente zu verfassen, die sich unsicher anfuehlen - bevor Ton, Wortwahl oder Timing eine Situation groesser werden lassen."
+      : "Zaza helps teachers draft calm parent emails, clearer school messages, and more meaningful report comments before tone, wording, or timing turn a situation into something bigger.";
   const heroEntityLine =
     language === "de"
-      ? "Zaza Draft ist keine generische Schreibhilfe. Es ist eine lehrkraft-zentrierte Sicherheitsebene fuer sensible Schulkommunikation, gerade wenn Interpretation mehr zaehlt als reine Formulierung. Du pruefst, bearbeitest und gibst jede Formulierung selbst frei."
-      : "Zaza Draft is not generic AI writing help. It is a teacher-first communication safety layer for the moments where interpretation matters as much as wording. You review, edit, and approve every word before it is used.";
+      ? "Zaza Draft ist keine generische Schreibhilfe. Es ist ein lehrkraft-zentrierter Co-Writer fuer professionelle Elternkommunikation und wertvolle Schuldokumentation - gerade dann, wenn Interpretation ebenso viel zaehlt wie Formulierung. Du pruefst, bearbeitest und gibst jede Formulierung selbst frei."
+      : "Zaza Draft is not generic AI writing help. It is a teacher-first co-writer for professional parent communication and meaningful school documentation, built for the moments where interpretation matters as much as wording. You review, edit, and approve every word before it is used.";
   const heroOutcomeLabel =
     language === "de" ? "Vorher und nachher" : "Before and after";
   const heroProofHeading =
@@ -287,8 +287,8 @@ export function HomePageClient() {
     language === "de" ? "Zaza Draft testen" : "Try Zaza Draft";
   const heroTeacherUsageLine =
     language === "de"
-      ? "Entwickelt fuer Eltern-E-Mails, schwierige Follow-ups, Verhaltens-Notizen, safeguarding-nahe Formulierungen und andere sensible Schulkommunikation."
-      : "Built for parent emails, difficult follow-ups, behaviour notes, safeguarding-adjacent wording, and other high-stakes school communication.";
+      ? "Entwickelt fuer professionelle Eltern-E-Mails, schwierige Follow-ups, Verhaltens-Notizen, aussagekraeftigere Zeugnisbemerkungen und andere sensible Schulkommunikation."
+      : "Built for professional parent emails, difficult follow-ups, behaviour notes, more meaningful report comments, and other high-stakes school communication.";
   const heroTrustBarPoints =
     language === "de"
       ? [
@@ -307,8 +307,8 @@ export function HomePageClient() {
       : "Zaza Draft is live for high-stakes school communication";
   const betaFeedbackBody =
     language === "de"
-      ? "Starte mit Zaza Draft, wenn du Eltern-E-Mails, schwierige Antworten, Dokumentation und andere sensible Schulnachrichten ruhiger formulieren willst - besonders die, die du vor dem Senden mehrfach pruefst."
-      : "Start with Zaza Draft if you want calmer support for parent emails, difficult replies, documentation, and other sensitive school messages - especially the ones you almost rewrite one more time.";
+      ? "Starte mit Zaza Draft, wenn du Eltern-E-Mails, schwierige Antworten, Zeugnisbemerkungen und Dokumentation mit mehr Sicherheit formulieren willst - besonders die Texte, die du sonst dreimal umschreibst."
+      : "Start with Zaza Draft if you want calmer parent emails, more useful report comments, and clearer documentation - especially the pieces of writing you almost rewrite one more time.";
   const betaFeedbackCta =
     language === "de" ? "Zaza Draft testen" : "Try Zaza Draft";
   const trustPanelHeading =
@@ -317,8 +317,8 @@ export function HomePageClient() {
       : "Teacher-first support for high-stakes school communication";
   const trustPanelSubtext =
     language === "de"
-      ? "Wenn eine Nachricht schwer zu senden ist, braucht es oft mehr als bessere Formulierungen. Draft ist als zweite Instanz vor dem Senden gedacht - fuer Momente, in denen Ton, Klarheit und Professionalitaet besonders viel Gewicht tragen."
-      : "When a message feels difficult to send, it usually needs more than better wording. Draft is designed as a second pair of eyes before sending, for the moments when tone, clarity, and professionalism carry the most weight.";
+      ? "Wenn eine Nachricht schwer zu senden ist oder eine Zeugnisbemerkung noch zu oberflaechlich klingt, braucht es oft mehr als bessere Formulierungen. Draft ist als zweite Instanz vor dem Senden oder Einreichen gedacht - fuer Momente, in denen Ton, Klarheit, Professionalitaet und Aussagekraft besonders viel Gewicht tragen."
+      : "When a message feels difficult to send or a report comment still feels too obvious to submit, it usually needs more than better wording. Draft is designed as a second pair of eyes before sending or submitting, for the moments when tone, clarity, professionalism, and value carry the most weight.";
   const trustPanelCards =
     language === "de"
       ? [
@@ -397,52 +397,52 @@ export function HomePageClient() {
       : "Practical guides for difficult school communication";
   const guidesIntro =
     language === "de"
-      ? "Wenn du noch kein Tool ausprobieren willst, starte mit einem dieser lehrkraft-zentrierten Leitfaeden."
-      : "If you are not ready to try a tool yet, start with one of these teacher-first guides.";
+      ? "Wenn du noch kein Tool ausprobieren willst, starte mit einem dieser lehrkraft-zentrierten Leitfaeden zu Ton, Professionalitaet und aussagekraeftigeren Kommentaren."
+      : "If you are not ready to try a tool yet, start with one of these teacher-first guides on tone, professionalism, and more meaningful comments.";
   const guideLinks = [
     {
-      href: "/how-to-respond-to-an-angry-parent-email",
+      href: "/professional-parent-emails-for-teachers",
       title:
         language === "de"
-          ? "Wie man auf eine veraergerte Eltern-E-Mail antwortet"
-          : "How to respond to an angry parent email",
+          ? "Professionelle Eltern-E-Mails fuer Lehrkraefte"
+          : "Professional Parent Emails for Teachers",
       description:
         language === "de"
-          ? "Eine ruhigere erste Antwort, wenn eine Elternmail bereits angespannt ist."
-          : "A calmer first reply when a parent email already feels tense.",
+          ? "Wie man kurz, klar und professionell schreibt, ohne kalt oder abweisend zu klingen."
+          : "How to write concise, professional parent emails without sounding cold or abrupt.",
     },
     {
-      href: "/teacher-response-to-a-parent-complaint",
+      href: "/teacher-email-tone-guide",
       title:
         language === "de"
-          ? "Professionell auf eine Beschwerde von Eltern reagieren"
-          : "Responding to a parent complaint professionally",
+          ? "Leitfaden zum E-Mail-Ton mit Eltern"
+          : "A Teacher's Guide to Email Tone with Parents",
       description:
         language === "de"
-          ? "Klarere Formulierungen fuer Beschwerdeantworten ohne Eskalation."
-          : "Clearer complaint replies without sounding defensive or distant.",
+          ? "Woran man erkennt, wenn eine Mail defensiv, zu direkt oder leicht missverstaendlich wirkt."
+          : "Spot the lines that may read as defensive, blunt, vague, or riskier than you intended.",
     },
     {
-      href: "/how-to-document-a-parent-communication-professionally",
+      href: "/how-to-write-better-report-comments",
       title:
         language === "de"
-          ? "Elternkommunikation professionell dokumentieren"
-          : "Document a parent communication professionally",
+          ? "Wie man bessere Zeugnisbemerkungen schreibt"
+          : "How to Write Better Report Comments",
       description:
         language === "de"
-          ? "Sachliche Notizen, die spaeter noch standhalten."
-          : "Factual, calmer records you can stand behind later.",
+          ? "Mehr Tiefe, mehr Aussagekraft, weniger Standardformulierungen in Berichten."
+          : "Write comments that go beyond obvious observations and tell parents something useful.",
     },
     {
-      href: "/how-to-avoid-sounding-defensive-in-a-parent-email",
+      href: "/what-parents-already-know-report-comments",
       title:
         language === "de"
-          ? "Nicht defensiv in einer Eltern-E-Mail klingen"
-          : "How to avoid sounding defensive in a parent email",
+          ? "Keine Zeugnisbemerkungen mehr schreiben, die Eltern schon kennen"
+          : "Stop Writing Report Comments Parents Already Know",
       description:
         language === "de"
-          ? "Praktische Hilfe fuer ruhigere, professionellere Formulierungen."
-          : "Practical help for calmer wording when tone could be misread.",
+          ? "Ein klarer Blick darauf, wie man von offensichtlichen zu wirklich hilfreichen Kommentaren kommt."
+          : "A practical guide to moving from generic wording to comments with real parent value.",
     },
   ];
   const finalGuideLabel =
@@ -463,8 +463,8 @@ export function HomePageClient() {
       : "Where teachers most need wording support";
   const useCasesIntro =
     language === "de"
-      ? "Elternkommunikation steht im Vordergrund. Zeugnisbemerkungen und andere Schreibaufgaben bleiben wichtig, aber sie sind nicht der schaerfste Einsatzfall."
-      : "Parent communication sits at the centre. Report comments and other writing support still matter, but they are secondary to the messages that can escalate.";
+      ? "Lehrkraefte brauchen nicht nur Hilfe beim schnelleren Schreiben. Sie brauchen besseres Urteilsvermoegen fuer Elternkommunikation, Zeugnisbemerkungen und Dokumentation, die spaeter genau gelesen werden koennte."
+      : "Teachers do not just need faster writing. They need better judgement for parent communication, report comments, and documentation that may be read closely later.";
   const comparisonHeading =
     language === "de"
       ? "Warum Lehrkraefte Zaza Draft statt ChatGPT nutzen"
@@ -483,8 +483,89 @@ export function HomePageClient() {
       : "Why not just use ChatGPT?";
   const skepticalBlockBody =
     language === "de"
-      ? "Du kannst generische KI nutzen, um Text zu entwerfen. Aber Lehrkraefte brauchen oft mehr als ein leeres Chatfenster. Zaza Draft ist auf die Nachrichten ausgerichtet, die eskalieren koennen: Eltern-E-Mails, Verhaltensfragen, Follow-ups und Formulierungen, die spaeter weitergeleitet, gescreenshottet oder erneut gelesen werden. Es hilft dir dabei, schneller zu ruhigeren und professionelleren Formulierungen zu kommen, ohne dein eigenes Urteilsvermoegen zu verlieren."
-      : "You can use generic AI to draft text. But teachers often need more than a blank chat box. Zaza Draft is built around the kinds of messages that can escalate: parent emails, behaviour concerns, follow-ups, and wording that may be forwarded, screenshotted, or revisited later. It is designed to help teachers get to calmer, more professional wording faster, without losing their own judgement.";
+      ? "Du kannst generische KI nutzen, um Text zu entwerfen. Aber Lehrkraefte brauchen oft mehr als ein leeres Chatfenster. Zaza Draft ist auf die Texte ausgerichtet, bei denen kleine Formulierungsentscheidungen grosse Wirkung haben: Eltern-E-Mails, Verhaltensfragen, Follow-ups, Zeugnisbemerkungen und Dokumentation, die spaeter weitergeleitet, gescreenshottet oder erneut gelesen werden koennte. Es hilft dir dabei, schneller zu ruhigeren, professionelleren und wertvolleren Formulierungen zu kommen, ohne dein eigenes Urteilsvermoegen zu verlieren."
+      : "You can use generic AI to draft text. But teachers often need more than a blank chat box. Zaza Draft is built around the pieces of writing where small wording choices can have outsized consequences: parent emails, behaviour concerns, follow-ups, report comments, and documentation that may be forwarded, screenshotted, or revisited later. It is designed to help teachers get to calmer, more professional, more useful wording without losing their own judgement.";
+  const communicationCalloutEyebrow =
+    language === "de"
+      ? "Wie gute Kommunikation gelesen wird"
+      : "How good communication is received";
+  const communicationCalloutHeading =
+    language === "de"
+      ? "Gute Kommunikation haengt nicht nur davon ab, was du sagst. Sondern auch davon, was Eltern daraus hoeren."
+      : "Good communication is not just about what you say. It is also about what parents hear.";
+  const communicationCalloutIntro =
+    language === "de"
+      ? "Lehrkraefte brauchen nicht einfach mehr Text. Sie brauchen mehr Sicherheit darin, dass Ton, Klarheit und Aussagekraft wirklich zusammenpassen."
+      : "Teachers do not just need more text. They need more confidence that tone, clarity, and value are working together.";
+  const communicationCalloutCards =
+    language === "de"
+      ? [
+          {
+            title: "Professionell ist nicht gleich kalt",
+            weakerLabel: "Klingt kalt",
+            weaker:
+              "Ich habe Ihre Nachricht erhalten. Oliver muss sein Verhalten verbessern.",
+            strongerLabel: "Klingt professionell",
+            stronger:
+              "Danke fuer Ihre Nachricht. Ich wollte kurz teilen, was heute passiert ist und wie wir Oliver dabei unterstuetzen, positive Verhaltensmuster aufzubauen.",
+            href: "/teacher-email-tone-guide",
+            linkLabel: "Mehr zum E-Mail-Ton mit Eltern",
+          },
+          {
+            title:
+              "Gute Zeugnisbemerkungen gehen ueber das Offensichtliche hinaus",
+            weakerLabel: "Zu offensichtlich",
+            weaker: "Amelia ist freundlich und arbeitet hart.",
+            strongerLabel: "Hilfreicher",
+            stronger:
+              "Amelia arbeitet ruhig und zuverlaessig. Besonders stark ist ihre Faehigkeit, schwierige Aufgaben geduldig durchzudenken und Feedback schnell umzusetzen.",
+            href: "/what-parents-already-know-report-comments",
+            linkLabel: "Mehr zu aussagekraeftigeren Berichtskommentaren",
+          },
+          {
+            title: "Kleine Formulierungsentscheidungen veraendern die Wirkung",
+            weakerLabel: "Vage oder riskant",
+            weaker: "Es gab in letzter Zeit ein paar Probleme.",
+            strongerLabel: "Klarer und ruhiger",
+            stronger:
+              "Ich wollte Ihnen kurz zwei Momente aus dieser Woche schildern, in denen Noah waehrend der Gruppenarbeit Erinnerungen brauchte, damit Sie ein klares Bild davon haben, woran wir in der Schule gerade arbeiten.",
+            href: "/professional-parent-emails-for-teachers",
+            linkLabel: "Mehr zu professionellen Eltern-E-Mails",
+          },
+        ]
+      : [
+          {
+            title: "Professional is not the same as cold",
+            weakerLabel: "Reads colder",
+            weaker:
+              "I have received your email. Oliver needs to improve his behaviour.",
+            strongerLabel: "Reads more professional",
+            stronger:
+              "Thank you for your email. I wanted to briefly share what happened today and how we are supporting Oliver to build more positive classroom habits.",
+            href: "/teacher-email-tone-guide",
+            linkLabel: "Learn more about teacher email tone",
+          },
+          {
+            title: "Good report comments go beyond the obvious",
+            weakerLabel: "Too obvious",
+            weaker: "Amelia is kind and works hard.",
+            strongerLabel: "More informative",
+            stronger:
+              "Amelia approaches her work with quiet consistency. She is especially strong at thinking carefully through difficult tasks and responding thoughtfully to feedback.",
+            href: "/what-parents-already-know-report-comments",
+            linkLabel: "Learn more about meaningful report comments",
+          },
+          {
+            title: "Small wording choices change the impact",
+            weakerLabel: "Vague or riskier",
+            weaker: "There have been a few issues lately.",
+            strongerLabel: "Clearer and calmer",
+            stronger:
+              "I wanted to share a brief update about two moments this week where Noah needed reminders during group work, so you have a clear picture of what we are addressing in school.",
+            href: "/professional-parent-emails-for-teachers",
+            linkLabel: "Learn more about professional parent emails",
+          },
+        ];
   const finalCtaBridgeLine =
     language === "de"
       ? "Wenn ChatGPT dir Text gibt, hilft Zaza Draft dir dabei, die Version zu senden, die du morgen nicht bereust."
@@ -1020,6 +1101,72 @@ export function HomePageClient() {
             <p className="max-w-4xl text-base leading-8 text-[#CBD5E1]">
               {skepticalBlockBody}
             </p>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="bg-[#111827] py-16">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <motion.div
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="rounded-[28px] border border-[#374151] bg-[linear-gradient(180deg,rgba(15,23,42,0.95),rgba(17,24,39,0.98))] p-8 md:p-10"
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#C4B5FD]">
+              {communicationCalloutEyebrow}
+            </p>
+            <h2 className="mt-4 max-w-4xl text-3xl font-semibold tracking-tight text-white md:text-4xl">
+              {communicationCalloutHeading}
+            </h2>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[#CBD5E1]">
+              {communicationCalloutIntro}
+            </p>
+            <div className="mt-8 grid gap-5 lg:grid-cols-3">
+              {communicationCalloutCards.map((card) => (
+                <article
+                  key={card.title}
+                  className="rounded-2xl border border-[#374151] bg-[#0B1220] p-6"
+                >
+                  <h3 className="text-xl font-semibold text-white">
+                    {card.title}
+                  </h3>
+                  <div className="mt-5 space-y-4">
+                    <div className="rounded-2xl border border-rose-400/15 bg-rose-400/5 p-4">
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rose-200">
+                        {card.weakerLabel}
+                      </p>
+                      <p className="mt-2 text-sm leading-7 text-[#F3F4F6]">
+                        {card.weaker}
+                      </p>
+                    </div>
+                    <div className="rounded-2xl border border-emerald-400/15 bg-emerald-400/5 p-4">
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">
+                        {card.strongerLabel}
+                      </p>
+                      <p className="mt-2 text-sm leading-7 text-white">
+                        {card.stronger}
+                      </p>
+                    </div>
+                  </div>
+                  <Link
+                    href={card.href}
+                    onClick={() =>
+                      goToGuide(
+                        card.href,
+                        "home_message_judgement_block",
+                        card.linkLabel,
+                      )
+                    }
+                    className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#C4B5FD] hover:text-[#DDD6FE]"
+                  >
+                    <span>{card.linkLabel}</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </article>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>

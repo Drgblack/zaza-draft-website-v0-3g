@@ -20,12 +20,12 @@ export default function DraftClient() {
     language === "de" ? "/de/about/founder-story" : "/about/founder-story";
   const heroSubheadline =
     language === "de"
-      ? "Hören Sie auf, jedes Wort zu zerdenken. Draft hilft Ihnen, ruhige, belastbare Nachrichten zu schreiben, die Sie mit Sicherheit senden können."
-      : "Stop agonising over every word. Draft helps you write calm, defensible messages you can send with confidence.";
+      ? "Hoeren Sie auf, jedes Wort zu zerdenken. Draft hilft Ihnen, ruhige, professionelle Eltern-E-Mails, wertvollere Zeugnisbemerkungen und belastbare Schulnachrichten zu schreiben, die Sie mit Sicherheit senden oder einreichen koennen."
+      : "Stop agonising over every word. Draft helps you write calm, professional parent emails, more meaningful report comments, and defensible school messages you can send with confidence.";
   const heroContextLine =
     language === "de"
-      ? "Du siehst Zaza Draft - den ruhigen, sicheren E-Mail-Co-Writer für Lehrkräfte."
-      : "You're viewing Zaza Draft - the calm, safe email co-writer for teachers.";
+      ? "Du siehst Zaza Draft - den ruhigen, sicheren Co-Writer fuer Lehrkraefte."
+      : "You're viewing Zaza Draft - the calm, safe co-writer for teachers.";
   const heroExamplesLabel =
     language === "de" ? "Beispiele ansehen" : "See examples";
   const situationsHeading =
@@ -40,12 +40,14 @@ export default function DraftClient() {
           "Ein Elternteil stellt eine Note infrage und setzt die Schulleitung in CC.",
           "Ein Verhaltenshinweis könnte ausserhalb des ursprünglichen Gesprächs weitergeleitet werden.",
           "Der Ton in der Mail eskaliert und Sie müssen trotzdem ruhig bleiben.",
+          "Eine Zeugnisbemerkung klingt noch zu offensichtlich und sagt Eltern nichts Neues.",
           "Sie brauchen Formulierungen, die Beziehungen und Ihre Professionalität schützen.",
         ]
       : [
           "A parent disputes a grade and copies in senior leadership.",
           "A behaviour update could be forwarded beyond the original thread.",
           "The email tone is escalating and you still need to stay calm.",
+          "A report comment still sounds obvious and does not tell parents anything useful.",
           "You need wording that protects relationships and your professional judgement.",
         ];
   const protectionHeading =
@@ -121,6 +123,61 @@ export default function DraftClient() {
     language === "de"
       ? "Draft wurde entwickelt, um Sunday-night E-Mail-Stress zu reduzieren und Lehrkräften zu helfen, Nachrichten zu schreiben, die auch ausserhalb des Kontexts standhalten."
       : "Draft exists to reduce Sunday-night email stress and help teachers write messages that hold up out of context.";
+  const insightLinksHeading =
+    language === "de"
+      ? "Mehr Hilfe fuer bessere E-Mails und aussagekraeftigere Berichte"
+      : "More help for better emails and more meaningful reports";
+  const insightLinksBody =
+    language === "de"
+      ? "Professional ist nicht gleich kalt. Gute Zeugnisbemerkungen sagen Eltern etwas, das sie noch nicht wissen. Diese Guides vertiefen genau diese beiden Punkte."
+      : "Professional is not the same as cold. Good report comments tell parents something they do not already know. These guides go deeper on both ideas.";
+  const insightLinks =
+    language === "de"
+      ? [
+          {
+            href: "/professional-parent-emails-for-teachers",
+            title: "Professionelle Eltern-E-Mails fuer Lehrkraefte",
+            body: "Praktische Hilfe fuer klare, kurze und professionell klingende Elternkommunikation.",
+          },
+          {
+            href: "/teacher-email-tone-guide",
+            title: "Leitfaden zum E-Mail-Ton mit Eltern",
+            body: "Woran man erkennt, wenn eine Mail defensiv, zu direkt oder leicht missverstaendlich klingt.",
+          },
+          {
+            href: "/how-to-write-better-report-comments",
+            title: "Wie man bessere Zeugnisbemerkungen schreibt",
+            body: "Mehr Tiefe, mehr Aussagekraft, weniger generische Formulierungen in Berichten.",
+          },
+          {
+            href: "/what-parents-already-know-report-comments",
+            title:
+              "Keine Zeugnisbemerkungen mehr schreiben, die Eltern schon kennen",
+            body: "Ein klarer Blick darauf, wie Kommentare mehr professionellen Mehrwert fuer Eltern liefern koennen.",
+          },
+        ]
+      : [
+          {
+            href: "/professional-parent-emails-for-teachers",
+            title: "Professional Parent Emails for Teachers",
+            body: "Practical guidance on writing clear, concise parent emails that still sound warm and professional.",
+          },
+          {
+            href: "/teacher-email-tone-guide",
+            title: "A Teacher's Guide to Email Tone with Parents",
+            body: "Spot the lines that may read as defensive, too blunt, or easy to misread before you send them.",
+          },
+          {
+            href: "/how-to-write-better-report-comments",
+            title: "How to Write Better Report Comments",
+            body: "Write comments that say something more useful than broad praise and familiar observations.",
+          },
+          {
+            href: "/what-parents-already-know-report-comments",
+            title: "Stop Writing Report Comments Parents Already Know",
+            body: "See how to move from obvious wording to comments that add real parent value.",
+          },
+        ];
   const founderTopLink =
     language === "de" ? "Gründerstory lesen" : "Read the founder story";
   const gdprLine =
@@ -136,6 +193,54 @@ export default function DraftClient() {
     language === "de"
       ? "Die gezeigte Produktvorschau entwickelt sich weiter, waehrend der Zugang schrittweise oeffnet."
       : "The product preview is evolving as access opens in stages.";
+  const comparisonExamplesHeading =
+    language === "de"
+      ? "Was besseres Formulieren in Draft praktisch bedeutet"
+      : "What better wording looks like inside Draft";
+  const comparisonExamplesIntro =
+    language === "de"
+      ? "Draft ist nicht nur dazu da, schneller Text auszugeben. Es hilft dabei, professioneller, klarer und wertvoller zu formulieren."
+      : "Draft is not there to generate text faster for the sake of it. It helps teachers make the final wording more professional, clearer, and more useful.";
+  const comparisonExamples =
+    language === "de"
+      ? [
+          {
+            title: "Kalt vs professionell",
+            weakerLabel: "Klingt kuehl",
+            weaker:
+              "Ich habe Ihre Nachricht erhalten. Oliver muss sein Verhalten verbessern.",
+            strongerLabel: "Klingt professionell",
+            stronger:
+              "Danke fuer Ihre Nachricht. Ich wollte kurz schildern, was heute passiert ist und wie wir Oliver weiter dabei unterstuetzen, positive Verhaltensmuster aufzubauen.",
+          },
+          {
+            title: "Offensichtlich vs aussagekraeftig",
+            weakerLabel: "Zu offensichtlich",
+            weaker: "Ava ist freundlich und arbeitet hart.",
+            strongerLabel: "Sagt mehr",
+            stronger:
+              "Ava arbeitet zuverlaessig und aufmerksam. Besonders stark ist ihre Faehigkeit, Feedback ruhig aufzunehmen und ihre Arbeit danach durchdacht zu verbessern.",
+          },
+        ]
+      : [
+          {
+            title: "Cold vs professional",
+            weakerLabel: "Reads colder",
+            weaker:
+              "I have received your email. Oliver needs to improve his behaviour.",
+            strongerLabel: "Reads more professional",
+            stronger:
+              "Thank you for your email. I wanted to briefly share what happened today and how we are continuing to support Oliver in building more positive classroom habits.",
+          },
+          {
+            title: "Obvious vs meaningful",
+            weakerLabel: "Too obvious",
+            weaker: "Ava is kind and works hard.",
+            strongerLabel: "Adds more value",
+            stronger:
+              "Ava works with steady concentration and responds thoughtfully to feedback. She is particularly strong at refining her work once she has reflected on the next step.",
+          },
+        ];
 
   const features = [
     {
@@ -313,6 +418,86 @@ export default function DraftClient() {
               <p className="text-sm text-[#9CA3AF] mt-1">
                 {situationsProofLine}
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 bg-[#0F172A]">
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <div className="rounded-3xl border border-[#374151] bg-[#111827] p-6 md:p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#A78BFA]">
+                {language === "de"
+                  ? "Vergleiche aus dem echten Schulalltag"
+                  : "Real writing comparisons"}
+              </p>
+              <h2 className="mt-3 text-2xl md:text-3xl font-bold text-[#F9FAFB]">
+                {comparisonExamplesHeading}
+              </h2>
+              <p className="mt-4 max-w-3xl text-base leading-7 text-[#CBD5E1]">
+                {comparisonExamplesIntro}
+              </p>
+              <div className="mt-6 grid gap-4 md:grid-cols-2">
+                {comparisonExamples.map((example) => (
+                  <div
+                    key={example.title}
+                    className="rounded-2xl border border-[#374151] bg-[#0B1220] p-5"
+                  >
+                    <h3 className="text-lg font-semibold text-[#F9FAFB]">
+                      {example.title}
+                    </h3>
+                    <div className="mt-4 space-y-4">
+                      <div className="rounded-2xl border border-rose-400/15 bg-rose-400/5 p-4">
+                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rose-200">
+                          {example.weakerLabel}
+                        </p>
+                        <p className="mt-2 text-sm leading-7 text-[#E5E7EB]">
+                          {example.weaker}
+                        </p>
+                      </div>
+                      <div className="rounded-2xl border border-emerald-400/15 bg-emerald-400/5 p-4">
+                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">
+                          {example.strongerLabel}
+                        </p>
+                        <p className="mt-2 text-sm leading-7 text-white">
+                          {example.stronger}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 bg-[#0F172A]">
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <div className="rounded-3xl border border-[#374151] bg-[#111827] p-6 md:p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#A78BFA]">
+                Better judgement in writing
+              </p>
+              <h2 className="mt-3 text-2xl md:text-3xl font-bold text-[#F9FAFB]">
+                {insightLinksHeading}
+              </h2>
+              <p className="mt-4 max-w-3xl text-base leading-7 text-[#CBD5E1]">
+                {insightLinksBody}
+              </p>
+              <div className="mt-6 grid gap-4 md:grid-cols-2">
+                {insightLinks.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="rounded-2xl border border-[#374151] bg-[#0B1220] p-5 transition hover:border-[#A78BFA] hover:bg-[#111827]"
+                  >
+                    <p className="text-lg font-semibold text-[#F9FAFB]">
+                      {item.title}
+                    </p>
+                    <p className="mt-2 text-sm leading-7 text-[#94A3B8]">
+                      {item.body}
+                    </p>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </section>

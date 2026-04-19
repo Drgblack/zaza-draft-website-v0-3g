@@ -11,9 +11,9 @@ const ogImage = "/images/draft-interface.png";
 
 export const metadata: Metadata = buildPageMetadata({
   title:
-    "Teacher-First AI Co-Writer for Parent Emails and Reports | Zaza Draft",
+    "Teacher-First Co-Writer for Parent Emails, Tone, and Reports | Zaza Draft",
   description:
-    "Explore Zaza Draft, the teacher-first AI co-writer for parent communication, report comments, and school messages where tone, trust, and teacher control matter.",
+    "Explore Zaza Draft, the teacher-first co-writer for professional parent communication, more meaningful report comments, and school messages where tone, trust, and teacher control matter.",
   path: "/products/draft",
   image: ogImage,
   alternates: {

@@ -8436,6 +8436,889 @@ export const teacherWritingPages = {
       secondaryHref: "/ai-for-student-reports",
     },
   },
+  "professional-parent-emails-for-teachers": {
+    slug: "professional-parent-emails-for-teachers",
+    shortTitle: "Professional Parent Emails for Teachers",
+    keyword: "professional parent emails for teachers",
+    intent: "How-to/problem intent",
+    title:
+      "Professional Parent Emails for Teachers | Clear, Calm School Communication | Zaza Draft",
+    metaDescription:
+      "Professional parent emails for teachers with practical UK guidance on tone, clarity, and concise wording. Write messages that sound warm, clear, and school-appropriate with help from Zaza Draft.",
+    h1: "Professional Parent Emails for Teachers",
+    description:
+      "Practical guidance for teachers who want parent emails to sound clear, calm, and properly professional without slipping into stiff or defensive wording.",
+    ogImage: "/teacher-writing-parent-email-on-laptop.jpg",
+    heroEyebrow: "How-to/problem intent",
+    heroDescription: [
+      "Teachers are often told to keep emails professional, but that advice is rarely specific enough to help at 7.40am or 10.15pm. In school communication, professional does not mean distant. It means clear, proportionate, courteous, and unlikely to create avoidable friction.",
+      "This page is for teachers who want parent emails that sound thoughtful and school-ready without becoming cold, vague, or painfully over-edited. Zaza Draft supports that process as a co-writer, but the guidance here should still be useful even if you never use the product.",
+    ],
+    heroBullets: [
+      "Write clearly without sounding abrupt",
+      "Keep messages concise without making them feel cold",
+      "Use wording that is easier to stand behind later",
+    ],
+    featuredSnippet:
+      "A professional parent email for teachers is clear, courteous, and proportionate. It states the purpose early, sticks to observable facts, avoids reactive phrasing, and ends with a practical next step. Professional is not the same as cold. The strongest emails still sound human, but they remove blame, vagueness, and unnecessary heat.",
+    sections: [
+      {
+        id: "real-problem",
+        title: "The real problem with professional parent emails",
+        body: [
+          "Most teachers do not struggle because they lack care. They struggle because one email has to do several jobs at once. It has to communicate the point, protect the relationship, and still sound reasonable if it is forwarded to a line manager, SENCO, or head of year.",
+          "That is why even a short email can take twenty minutes. The question is rarely what happened. The question is how to say it in a way that feels measured, human, and professionally safe.",
+        ],
+      },
+      {
+        id: "professional-not-cold",
+        title: "Professional is not the same as cold",
+        body: [
+          "Cold emails often sound efficient on the surface, but they can land as irritated, dismissive, or defensive. Parents do not only read the facts. They read the temperature around the facts.",
+          "A professional email usually sounds calmer than a rushed one because it gives enough context, avoids accusation, and leaves the parent knowing what happens next.",
+        ],
+        bullets: [
+          "Be brief, but not clipped",
+          "Be clear, but not overly hard-edged",
+          "Be direct about the next step, not dramatic about the problem",
+        ],
+        exampleLabel: "Rushed phrasing vs professional phrasing",
+        exampleBody:
+          "Weaker: Oliver has continued to be disruptive and this needs sorting.\n\nStronger: I wanted to make you aware that Oliver found it difficult to stay focused in today's lesson despite several reminders. We are continuing to support him in class, and I would appreciate your help in reinforcing expectations at home.\n\nWeaker: Please make sure this does not happen again.\n\nStronger: We will keep supporting Oliver with this in school and will update you if further follow-up is needed.",
+      },
+      {
+        id: "what-makes-an-email-professional",
+        title: "What actually makes a parent email professional",
+        body: [
+          "Professional emails tend to share the same qualities. They state the purpose early, describe what happened without speculation, keep the tone proportionate, and make the next step easy to understand.",
+          "They also sound like they were written by someone who respects the parent while still holding professional boundaries. That balance matters more than sounding polished for its own sake.",
+        ],
+        bullets: [
+          "Purpose in the first two lines",
+          "Observable detail rather than assumptions",
+          "A clear next step or invitation to discuss further",
+        ],
+      },
+      {
+        id: "common-mistakes",
+        title: "Common mistakes that make teacher emails harder to receive",
+        body: [
+          "One common mistake is trying to sound efficient and ending up sounding irritated. Another is over-explaining, which can make the email feel defensive or hard to follow. Teachers also sometimes soften the message so much that the parent is left unsure what the concern actually is.",
+          "Professional writing is usually clearer when it avoids all three traps. The aim is not maximum detail. It is useful, dependable clarity.",
+        ],
+        exampleLabel: "Vague phrasing vs clear phrasing",
+        exampleBody:
+          "Vague: There have been some issues lately.\n\nClearer: Over the last two weeks, Amelia has missed three homework deadlines and has needed repeated reminders to begin independent tasks.\n\nVague: I just wanted to flag this.\n\nClearer: I wanted to make you aware now so we can support Amelia before the pattern becomes harder to shift.",
+      },
+      {
+        id: "succinct-without-cold",
+        title: "How to keep an email succinct without making it feel abrupt",
+        body: [
+          "Succinct emails are easier for parents to read, but short emails can still feel blunt if they jump straight into criticism or skip the reason for writing. A useful rule is to include one line of purpose, one short factual paragraph, and one practical next step.",
+          "If the email is getting longer, ask whether each sentence helps the parent understand the issue or the next step. If it does not, it probably belongs in your notes rather than in the email.",
+        ],
+      },
+      {
+        id: "how-zaza-helps",
+        title:
+          "How Zaza Draft helps teachers review tone and clarity before sending",
+        body: [
+          "Zaza Draft is useful when the message is mostly there but you do not trust the wording yet. It can help you strip out blame language, tighten the structure, and make the tone steadier without flattening the message into generic office-speak.",
+          "That matters because school emails are not just about writing faster. They are about making better judgements under pressure. Teachers still stay in control of every final line.",
+        ],
+      },
+    ],
+    comparisonBlock: {
+      title:
+        "Comparison block: teacher-first email judgement vs generic writing help",
+      intro:
+        "Generic writing tools can produce fluent text. The harder task is producing school-appropriate parent emails that feel proportionate, clear, and easy to defend later.",
+      alternativeLabel: "Generic AI writer",
+      rows: [
+        {
+          label: "Primary focus",
+          zaza: "Teacher-safe wording for parent communication",
+          alternative: "General writing help across many use cases",
+        },
+        {
+          label: "Tone judgement",
+          zaza: "Built around calm, professional school communication",
+          alternative: "More prompt-dependent and variable",
+        },
+        {
+          label: "Concise without cold",
+          zaza: "Aims for clarity with relationship awareness",
+          alternative: "Can swing between over-long and overly clipped",
+        },
+        {
+          label: "Teacher control",
+          zaza: "Review-led co-writer workflow",
+          alternative: "Teacher has to rescue weaker drafts manually",
+        },
+      ],
+      note: "The point is not to sound polished for the sake of it. The point is to send wording that is calmer, clearer, and more professionally useful.",
+    },
+    trustBlock: {
+      title:
+        "Built for teachers who need school-appropriate wording, not generic business email advice",
+      items: [
+        {
+          title: "Teacher-first email support",
+          body: "Focused on the kinds of parent messages that can be misread, escalated, or revisited later in school workflows.",
+        },
+        {
+          title: "Professional but human",
+          body: "Useful when you want the message to sound respectful and clear without turning into stiff corporate language.",
+        },
+        {
+          title: "Judgement stays with the teacher",
+          body: "Zaza Draft supports the drafting process, but the teacher still decides what is fair, proportionate, and right to send.",
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "What makes a parent email sound professional?",
+        answer:
+          "Professional emails are usually clear, proportionate, courteous, and practical. They explain the purpose early, stick to what has been observed, and make the next step easy to understand.",
+      },
+      {
+        question: "How do I sound professional without sounding cold?",
+        answer:
+          "Keep the message concise, but include enough context to show care and clarity. Short factual wording with a calm next step usually lands better than clipped phrasing.",
+      },
+      {
+        question: "Should teacher emails to parents always be formal?",
+        answer:
+          "Not always. They should be school-appropriate and respectful. In many cases, warm and measured is better than overly formal or distant.",
+      },
+      {
+        question: "How can I make a long email to parents more concise?",
+        answer:
+          "Check whether each sentence helps the parent understand the issue or the next step. If it does not, cut it. Most emails improve when they lead with purpose, then keep the factual detail tight.",
+      },
+      {
+        question:
+          "Can Zaza Draft help me review a parent email before I send it?",
+        answer:
+          "Yes. Zaza Draft is designed to help teachers review tone, clarity, and wording in high-stakes messages while leaving the final judgement with the teacher.",
+      },
+    ],
+    internalLinks: [
+      {
+        href: "/teacher-email-tone-guide",
+        label: "A Teacher's Guide to Email Tone with Parents",
+        description:
+          "Read this next if the real problem is not structure but the risk of sounding abrupt, vague, or defensive.",
+      },
+      {
+        href: "/parent-email-template-for-teachers",
+        label: "Parent Email Template for Teachers",
+        description:
+          "Use the template page if you want a reusable structure for updates, concerns, and follow-ups.",
+      },
+      {
+        href: "/teacher-guide-to-sensitive-parent-emails",
+        label: "Teacher Guide to Sensitive Parent Emails",
+        description:
+          "Go here for broader guidance on emails that feel emotionally difficult or especially high-stakes.",
+      },
+      {
+        href: "/parent-email-risk-checker",
+        label: "Check a parent email before sending",
+        description:
+          "Paste a draft into the Parent Email Risk Checker if you already have wording that feels slightly off.",
+      },
+      sharedFooterLinks.product,
+    ],
+    relatedSlugs: [
+      "teacher-email-tone-guide",
+      "teacher-guide-to-sensitive-parent-emails",
+      "parent-email-template-for-teachers",
+      "how-to-communicate-concerns-to-parents-professionally",
+    ],
+    structuredDataTypes: ["WebPage", "BreadcrumbList", "Article", "FAQPage"],
+    testimonials: [
+      {
+        quotePrompt:
+          "Placeholder testimonial about finally finding email wording that felt professional without sounding clipped or cold.",
+        attributionPrompt:
+          "Replace with a verified quote from a classroom teacher or head of year.",
+      },
+      {
+        quotePrompt:
+          "Placeholder testimonial about using Zaza Draft as a second pair of eyes before sending a difficult parent update.",
+        attributionPrompt:
+          "Replace with a verified quote from a primary or secondary teacher.",
+      },
+    ],
+    cta: {
+      title: "Start from calmer wording when the email matters more than usual",
+      body: "Try Zaza Draft if you want help reviewing tone, clarity, and professionalism before a parent email is sent. The goal is not faster words at any cost. It is better judgement under pressure.",
+      primaryLabel: "Try Zaza Draft",
+      primaryHref: "/start",
+      secondaryLabel: "See pricing",
+      secondaryHref: "/pricing",
+    },
+  },
+  "how-to-write-better-report-comments": {
+    slug: "how-to-write-better-report-comments",
+    shortTitle: "How to Write Better Report Comments",
+    keyword: "how to write better report comments",
+    intent: "How-to/problem intent",
+    title:
+      "How to Write Better Report Comments | More Meaningful School Reports for Teachers | Zaza Draft",
+    metaDescription:
+      "How to write better report comments with practical UK guidance for teachers. Make comments more specific, insightful, and useful for parents with support from Zaza Draft.",
+    h1: "How to Write Better Report Comments",
+    description:
+      "A practical guide for teachers who want report comments to sound more thoughtful, more specific, and more useful to families.",
+    ogImage: "/progress-report.jpg",
+    heroEyebrow: "How-to/problem intent",
+    heroDescription: [
+      "Teachers often know far more about a pupil than the final report comment shows. The hard part is turning that professional knowledge into one short paragraph that says something useful, balanced, and worth reading at home.",
+      "Better report comments do not just sound nicer. They help parents understand how a child learns, where progress is showing, and what support or next steps actually matter. Zaza Draft can support that process, but the principles on this page come first.",
+    ],
+    heroBullets: [
+      "Move beyond generic report language",
+      "Write comments that add real value for parents",
+      "Balance encouragement, accuracy, and professional insight",
+    ],
+    featuredSnippet:
+      "To write better report comments, move past obvious statements and focus on meaningful patterns in how the pupil learns, responds, and progresses. Strong comments are specific, professionally balanced, and useful to parents. They do not just say what a parent already knows. They add insight, context, and a credible next step.",
+    sections: [
+      {
+        id: "real-problem",
+        title:
+          "Why so many report comments end up sounding weaker than the teacher's actual insight",
+        body: [
+          "The usual problem is not lack of knowledge. It is compression. Teachers have rich observations about effort, self-correction, confidence, resilience, independence, collaboration, and response to feedback, but report season forces all of that into a few lines under time pressure.",
+          "When time is tight, comments drift towards safe but shallow wording. They become technically acceptable, but not especially useful to the parent reading them.",
+        ],
+      },
+      {
+        id: "what-parents-already-know",
+        title:
+          "What parents already know, and what they still need from a report",
+        body: [
+          "Parents usually already know whether their child enjoys school, finds homework easy, talks a lot, or gets frustrated. What they often do not know is how the child is learning in class, what specific strengths are emerging, or which habits are helping or limiting progress.",
+          "That is where a good report comment earns its place. It tells the parent something professionally useful, not just something familiar.",
+        ],
+      },
+      {
+        id: "surface-vs-insight",
+        title: "Obvious comment vs more insightful comment",
+        body: [
+          "A weaker comment often names a broad impression. A better comment names a pattern that helps a parent understand the pupil more clearly.",
+        ],
+        exampleLabel: "Surface observation vs more meaningful insight",
+        exampleBody:
+          "Obvious: Maya is polite and works hard.\n\nMore insightful: Maya approaches tasks conscientiously and is especially strong when she has time to plan her thinking before writing. Her next step is to become more confident in sharing first ideas before they are fully polished.\n\nObvious: Theo finds maths difficult.\n\nMore insightful: Theo is developing a more secure understanding of number concepts, but still loses confidence when questions require several steps. He responds well to worked examples and is beginning to use these more independently.",
+      },
+      {
+        id: "deeper-attributes",
+        title:
+          "Student attributes and capabilities worth noticing in report comments",
+        body: [
+          "When teachers want comments to be more meaningful, it helps to look beyond attainment labels and generic effort statements. Consider what the pupil shows in the way they approach learning, recover from mistakes, collaborate, organise themselves, or respond to challenge.",
+          "These details often make comments more professional because they are grounded in observed habits and capabilities rather than stock phrases.",
+        ],
+        bullets: [
+          "Response to feedback and coaching",
+          "Independence, organisation, and follow-through",
+          "Confidence, resilience, and willingness to revise",
+          "Contribution to discussion and collaborative learning",
+          "Curiosity, persistence, and readiness to improve",
+        ],
+      },
+      {
+        id: "how-to-make-comments-better",
+        title: "A simple way to make report comments better",
+        body: [
+          "Start with one specific strength, pattern, or capability. Then name the most important area for development in a way that is accurate but not overblown. Finish with a next step that sounds realistic rather than formulaic.",
+          "That structure usually produces comments that are more useful than praise-heavy comments on one side or blunt deficit comments on the other.",
+        ],
+        exampleLabel: "Weaker phrasing vs stronger phrasing",
+        exampleBody:
+          "Weaker: Ava is doing well in English and should keep trying her best.\n\nStronger: Ava reads with growing confidence and is beginning to justify her ideas more clearly in discussion. Her next step is to carry that same precision into longer written responses.\n\nWeaker: Lewis needs to focus more in lessons.\n\nStronger: Lewis contributes well when tasks are clearly structured, but he still needs support to sustain concentration during independent work. Developing greater independence in these moments would strengthen his progress further.",
+      },
+      {
+        id: "how-zaza-helps",
+        title:
+          "How Zaza Draft helps refine comment quality, not just output speed",
+        body: [
+          "Zaza Draft is useful when you have the pupil knowledge but need help shaping it into tighter, more insightful wording. It can help you move from rough notes to a more balanced, parent-useful comment without relying on empty praise or generic report-bank phrasing.",
+          "That is an important distinction. The point is not simply to generate text quickly. It is to help teachers communicate with more judgement, more value, and less last-minute rewriting.",
+        ],
+      },
+    ],
+    comparisonBlock: {
+      title:
+        "Comparison block: meaningful report comments vs generic report banks",
+      intro:
+        "Generic report banks can speed up the first step, but they rarely add much insight. Better comments come from thoughtful teacher observations shaped into clearer wording.",
+      alternativeLabel: "Generic comment bank",
+      rows: [
+        {
+          label: "Parent value",
+          zaza: "Helps surface more meaningful observations and next steps",
+          alternative: "Often repeats broad phrases parents have seen before",
+        },
+        {
+          label: "Specificity",
+          zaza: "Supports more pupil-specific, insight-led wording",
+          alternative: "Leans towards safe but generic comments",
+        },
+        {
+          label: "Professional judgement",
+          zaza: "Designed to work from your notes and judgement",
+          alternative: "Offers phrases without much reflective support",
+        },
+        {
+          label: "Teacher control",
+          zaza: "You review and refine every final line",
+          alternative:
+            "Teachers have to work harder to make stock text feel real",
+        },
+      ],
+    },
+    trustBlock: {
+      title:
+        "Built for teachers who want report comments to say something worth reading",
+      items: [
+        {
+          title: "More thoughtful wording",
+          body: "Helpful when you want comments to sound professionally insightful rather than broadly positive and forgettable.",
+        },
+        {
+          title: "Teacher-first report support",
+          body: "Built around report comments, school documentation, and wording where judgement matters more than volume.",
+        },
+        {
+          title: "Parents get more useful insight",
+          body: "The aim is to help comments say something families did not already know, while keeping the wording balanced and school-appropriate.",
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "What makes a report comment better rather than just longer?",
+        answer:
+          "A better comment adds specific insight. It tells the parent something meaningful about how the pupil learns, progresses, or responds, rather than repeating broad impressions.",
+      },
+      {
+        question: "How do I stop report comments sounding generic?",
+        answer:
+          "Start from a real observed strength, pattern, or challenge. Then write the next step in a way that sounds specific and proportionate rather than formulaic.",
+      },
+      {
+        question: "What should parents learn from a strong report comment?",
+        answer:
+          "Ideally, something useful about the pupil's learning habits, capabilities, or progress that goes beyond what the parent would already assume from day-to-day life at home.",
+      },
+      {
+        question:
+          "Can Zaza Draft help me improve comment quality as well as speed?",
+        answer:
+          "Yes. Zaza Draft is designed to help teachers shape more balanced, meaningful report comments from their own notes while keeping full control of the final wording.",
+      },
+      {
+        question:
+          "Should report comments mention student attributes and capabilities?",
+        answer:
+          "Where they are relevant and genuinely observed, yes. Those details often make report comments more useful than comments that focus only on broad attainment or effort labels.",
+      },
+    ],
+    internalLinks: [
+      {
+        href: "/what-parents-already-know-report-comments",
+        label: "Stop Writing Report Comments Parents Already Know",
+        description:
+          "Read this next for a sharper look at why generic comments feel low-value and how to move towards insight.",
+      },
+      {
+        href: "/report-comment-generator-for-teachers",
+        label: "Report Comment Generator for Teachers",
+        description:
+          "Go here if you want a tool-led page for turning report notes into cleaner first drafts.",
+      },
+      {
+        href: "/ai-for-student-reports",
+        label: "AI for Student Reports",
+        description:
+          "See the broader report-writing workflow and product positioning behind Zaza's report support.",
+      },
+      {
+        href: "/positive-but-honest-report-card-comments-for-struggling-students",
+        label:
+          "Positive but Honest Report Card Comments for Struggling Students",
+        description:
+          "Use this page when the challenge is finding balanced language for pupils where the concern needs especially careful wording.",
+      },
+      sharedFooterLinks.product,
+    ],
+    relatedSlugs: [
+      "what-parents-already-know-report-comments",
+      "report-comment-generator-for-teachers",
+      "positive-but-honest-report-card-comments-for-struggling-students",
+      "report-comments-for-struggling-students",
+    ],
+    structuredDataTypes: ["WebPage", "BreadcrumbList", "Article", "FAQPage"],
+    testimonials: [
+      {
+        quotePrompt:
+          "Placeholder testimonial about writing report comments that finally felt more insightful and less generic.",
+        attributionPrompt:
+          "Replace with a verified quote from a class teacher, form tutor, or head of department.",
+      },
+      {
+        quotePrompt:
+          "Placeholder testimonial about using Zaza Draft to turn report notes into comments that parents actually found useful.",
+        attributionPrompt:
+          "Replace with a verified quote from a primary or secondary teacher.",
+      },
+    ],
+    cta: {
+      title: "Write report comments that are more useful, not just faster",
+      body: "Try Zaza Draft if you want support refining report comments into wording that sounds more specific, more insightful, and easier to stand behind professionally.",
+      primaryLabel: "Try Zaza Draft",
+      primaryHref: "/start",
+      secondaryLabel: "See pricing",
+      secondaryHref: "/pricing",
+    },
+  },
+  "what-parents-already-know-report-comments": {
+    slug: "what-parents-already-know-report-comments",
+    shortTitle: "What Parents Already Know in Report Comments",
+    keyword: "what parents already know report comments",
+    intent: "How-to/problem intent",
+    title:
+      "Stop Writing Report Comments Parents Already Know | A Better Way to Write School Reports | Zaza Draft",
+    metaDescription:
+      "Stop writing report comments parents already know. Practical UK guidance for teachers on moving from generic comments to more meaningful, insightful report wording.",
+    h1: "Stop Writing Report Comments Parents Already Know",
+    description:
+      "An insight-led guide for teachers who want school reports to offer more value than obvious statements and safe generic praise.",
+    ogImage: "/progress-report.jpg",
+    heroEyebrow: "How-to/problem intent",
+    heroDescription: [
+      "Parents usually do not need a report to tell them that their child is friendly, chatty, or capable when focused. They already live with the child. What they need from a report is the teacher's professional insight into how that child learns, progresses, responds, and grows in school.",
+      "That is why generic report comments can feel thin even when the tone is pleasant. A better comment adds perspective. It tells the parent something useful they would not necessarily know already.",
+    ],
+    heroBullets: [
+      "Move beyond obvious report statements",
+      "Write comments that add real parent value",
+      "Use more reflective, professionally useful wording",
+    ],
+    featuredSnippet:
+      "Report comments become more valuable when they move from surface description to professional insight. Instead of repeating what parents already know, strong comments explain how a pupil learns, what patterns are emerging, and which next steps matter most. The aim is not to sound clever. It is to give families something more useful than a generic summary.",
+    sections: [
+      {
+        id: "why-generic-comments-fall-flat",
+        title: "Why generic report comments reduce the value of school reports",
+        body: [
+          "Generic comments often sound safe, but they can leave the parent with very little to hold onto. If a report mostly repeats broad impressions, it does not make much use of the teacher's unique perspective from months of classroom observation.",
+          "That is frustrating because teachers usually know far more than the final wording suggests. The issue is not insight. It is translating insight into concise language under pressure.",
+        ],
+      },
+      {
+        id: "obvious-vs-insightful",
+        title: "Obvious comment vs more insightful comment",
+        body: [
+          "The difference is usually not about length. It is about specificity and perspective. An insightful comment helps parents understand how the pupil operates in a learning context.",
+        ],
+        exampleLabel: "Obvious vs insightful report wording",
+        exampleBody:
+          "Obvious: Ella enjoys science and works well with others.\n\nMore insightful: Ella is especially strong in science when she can test ideas aloud with a partner before recording them independently. Her confidence in practical discussion is now starting to carry over into written explanation.\n\nObvious: Noah can be distracted in class.\n\nMore insightful: Noah often loses focus once a task becomes less structured, but he responds positively to short checkpoints and is beginning to refocus more independently when prompted.",
+      },
+      {
+        id: "where-insight-comes-from",
+        title: "Where more insightful report comments usually come from",
+        body: [
+          "Insightful comments often come from patterns teachers have noticed over time rather than single incidents. Look for things like how a pupil responds to feedback, what conditions help them thrive, how they approach challenge, and what still gets in the way.",
+          "These are the details families rarely see in the same way at home, which is why they can make the report more valuable.",
+        ],
+        bullets: [
+          "What support helps the pupil make progress",
+          "How the pupil responds when work becomes challenging",
+          "Which habits strengthen or limit independence",
+          "Where confidence, resilience, or collaboration are genuinely growing",
+        ],
+      },
+      {
+        id: "how-to-shift-the-comment",
+        title: "How to shift a comment from surface-level to meaningful",
+        body: [
+          "Ask yourself one simple question: what do I know about this pupil as a learner that a parent might not? Start there. Then shape the wording so it stays balanced, professional, and useful rather than overly detailed.",
+          "This often means replacing broad labels with specific patterns. Instead of saying a pupil is capable, explain what that capability looks like in real classroom terms.",
+        ],
+        exampleLabel: "Surface-level phrasing vs more meaningful phrasing",
+        exampleBody:
+          "Surface-level: Ben is capable but needs to focus more.\n\nMore meaningful: Ben often shows strong understanding in class discussion, but his written work is less consistent when he rushes the planning stage. Taking more time to organise ideas before writing would help his final work reflect his thinking more accurately.\n\nSurface-level: Poppy is a lovely member of the class.\n\nMore meaningful: Poppy contributes positively to the classroom climate and often helps others settle quickly into pair and group tasks. She is now ready to bring the same confidence to contributing her own ideas more readily in whole-class discussion.",
+      },
+      {
+        id: "how-zaza-helps",
+        title:
+          "How Zaza Draft acts as reflective support rather than a generic text generator",
+        body: [
+          "Zaza Draft is useful when you need help turning real teacher insight into sharper wording. It can help you notice when a comment is still sitting at the level of broad praise or broad concern, and push the draft towards something more specific and parent-useful.",
+          "That is an important distinction. Zaza is not trying to replace your judgement. It is there to help you communicate what matters, not just write faster.",
+        ],
+      },
+    ],
+    comparisonBlock: {
+      title:
+        "Comparison block: obvious report language vs more meaningful report language",
+      intro:
+        "The strongest comments do not try to say everything. They focus on the most useful thing the teacher can tell the parent.",
+      alternativeLabel: "Obvious or generic wording",
+      rows: [
+        {
+          label: "What the parent gains",
+          zaza: "A clearer picture of how the pupil learns and progresses",
+          alternative: "A familiar summary with limited added value",
+        },
+        {
+          label: "Specificity",
+          zaza: "Grounded in observed habits, responses, and next steps",
+          alternative: "Broad statements about effort or personality",
+        },
+        {
+          label: "Professional usefulness",
+          zaza: "Easier to stand behind in later meetings or follow-up",
+          alternative: "Often too thin to support deeper conversation",
+        },
+        {
+          label: "Teacher voice",
+          zaza: "Reflects the teacher's actual classroom knowledge",
+          alternative: "Sounds like a safe stock phrase",
+        },
+      ],
+    },
+    trustBlock: {
+      title:
+        "Built for teachers who want reports to reflect real professional judgement",
+      items: [
+        {
+          title: "Insight over filler",
+          body: "Useful when you want report comments to say something meaningful rather than repeating safe, low-value language.",
+        },
+        {
+          title: "Teacher-first reflection support",
+          body: "Designed around the nuance of school reporting, where the best comments come from professional observation and careful wording.",
+        },
+        {
+          title: "Parents get better information",
+          body: "The aim is to help teachers surface a stronger learning insight, not just generate a longer sentence.",
+        },
+      ],
+    },
+    faq: [
+      {
+        question:
+          "What do parents already know that should not dominate a report comment?",
+        answer:
+          "Parents often already know broad things such as whether their child is chatty, friendly, or finds homework frustrating. The teacher's added value is usually the classroom insight behind progress, habits, and next steps.",
+      },
+      {
+        question: "How do I make report comments more meaningful?",
+        answer:
+          "Focus on a real pattern in how the pupil learns, responds, or progresses. Then explain that pattern in balanced, concise wording that gives the parent something useful to act on or understand.",
+      },
+      {
+        question: "Do insightful report comments have to be longer?",
+        answer:
+          "No. They usually need to be more specific, not more wordy. A concise comment can still be very useful if it contains a genuine insight rather than a broad statement.",
+      },
+      {
+        question:
+          "Can Zaza Draft help me move away from generic report wording?",
+        answer:
+          "Yes. Zaza Draft can help teachers reshape rough notes into comments that sound more specific and more professionally insightful while keeping the teacher fully in control.",
+      },
+      {
+        question: "Why does this matter for parents' understanding?",
+        answer:
+          "Because the strongest reports help parents see how their child is doing in school in ways that are not always visible at home. That makes the report more useful and more worth the parent's attention.",
+      },
+    ],
+    internalLinks: [
+      {
+        href: "/how-to-write-better-report-comments",
+        label: "How to Write Better Report Comments",
+        description:
+          "Use this page for the broader practical framework on improving report-comment quality.",
+      },
+      {
+        href: "/report-comment-generator-for-teachers",
+        label: "Report Comment Generator for Teachers",
+        description:
+          "Go here if you want help turning rough notes into more polished first drafts during report season.",
+      },
+      {
+        href: "/ai-for-student-reports",
+        label: "AI for Student Reports",
+        description:
+          "See the wider report-writing workflow and product context behind Zaza's report support.",
+      },
+      {
+        href: "/report-comments-for-struggling-students",
+        label: "Report Comments for Struggling Students",
+        description:
+          "Read this next if the challenge is not just generic language, but writing carefully about real difficulty or uneven progress.",
+      },
+      sharedFooterLinks.product,
+    ],
+    relatedSlugs: [
+      "how-to-write-better-report-comments",
+      "report-comment-generator-for-teachers",
+      "report-comments-for-struggling-students",
+      "positive-but-honest-report-card-comments-for-struggling-students",
+    ],
+    structuredDataTypes: ["WebPage", "BreadcrumbList", "Article", "FAQPage"],
+    testimonials: [
+      {
+        quotePrompt:
+          "Placeholder testimonial about finally writing reports that sounded more insightful and less like stock phrases.",
+        attributionPrompt:
+          "Replace with a verified quote from a class teacher, phase leader, or tutor.",
+      },
+      {
+        quotePrompt:
+          "Placeholder testimonial about using Zaza Draft to turn obvious report notes into comments that added more value for families.",
+        attributionPrompt:
+          "Replace with a verified quote from a primary or secondary teacher.",
+      },
+    ],
+    cta: {
+      title:
+        "Turn report comments into something more useful than broad praise",
+      body: "Try Zaza Draft if you want support moving from obvious wording to comments that sound more reflective, more specific, and more useful to parents.",
+      primaryLabel: "Try Zaza Draft",
+      primaryHref: "/start",
+      secondaryLabel: "See pricing",
+      secondaryHref: "/pricing",
+    },
+  },
+  "teacher-email-tone-guide": {
+    slug: "teacher-email-tone-guide",
+    shortTitle: "Teacher Email Tone Guide",
+    keyword: "teacher email tone guide",
+    intent: "How-to/problem intent",
+    title:
+      "A Teacher's Guide to Email Tone with Parents | Safer Wording for School Communication | Zaza Draft",
+    metaDescription:
+      "A teacher's guide to email tone with parents. Practical UK advice on sounding clear, professional, and less escalation-prone in parent emails.",
+    h1: "A Teacher's Guide to Email Tone with Parents",
+    description:
+      "Practical support for teachers who want parent emails to sound clear and professional, especially when the same message could easily land as abrupt, vague, or defensive.",
+    ogImage: "/teacher-writing-parent-email-on-laptop.jpg",
+    heroEyebrow: "How-to/problem intent",
+    heroDescription: [
+      "Tone is one of the hardest parts of teacher-parent email writing because intention and impact are not the same thing. A message can feel perfectly reasonable to the person writing it and still land as sharp, cold, or slightly defensive to the person reading it at home.",
+      "This guide is for teachers who want a more practical way to judge email tone before pressing send. Zaza Draft can support that review, but the aim here is to make the principle clear first: good tone is usually calm, specific, and proportionate, not overly polished.",
+    ],
+    heroBullets: [
+      "Spot tone risks before sending",
+      "Reduce the chance of sounding abrupt or defensive",
+      "Keep your wording clear, professional, and human",
+    ],
+    featuredSnippet:
+      "Good teacher email tone is clear, proportionate, and calm. It avoids blame, over-explanation, and vague signalling. A strong parent email tells the reader what matters, why you are writing, and what the next step is without sounding sharp, defensive, or emotionally loaded.",
+    sections: [
+      {
+        id: "intention-vs-impact",
+        title: "Why intention and impact are often different in parent emails",
+        body: [
+          "Teachers usually know what they mean. The problem is that email strips out facial expression, timing, and spoken warmth. A sentence that feels efficient to you can feel clipped to the parent. A sentence that feels careful to you can feel defensive to the parent.",
+          "That is why tone review matters. It helps you judge not just the literal meaning, but the likely reading experience for someone who may already be worried, annoyed, or tired.",
+        ],
+      },
+      {
+        id: "fine-but-risky",
+        title:
+          "Why a 'fine' email can still feel defensive, abrupt, vague, or risky",
+        body: [
+          "Many risky emails are not extreme. They are simply slightly off in ways that add friction. A vague update can make the parent feel excluded. A blunt sentence can make the issue feel larger than it is. Too much explanation can make the teacher sound as though they are justifying themselves.",
+          "Most tone problems live in that middle ground. They are not dramatic enough to be obvious, but they are still enough to trigger unhelpful back-and-forth.",
+        ],
+        exampleLabel: "Tone risk in realistic teacher phrasing",
+        exampleBody:
+          "Abrupt: I need you to speak to Sam about this.\n\nClearer: I would appreciate your support in speaking with Sam about this so we can approach it consistently.\n\nDefensive: As I have already explained several times, this decision was made in line with school policy.\n\nClearer: This decision was made in line with school policy, and I am happy to clarify the reasoning if that would be helpful.\n\nVague: There have been a few concerns recently.\n\nClearer: Over the last fortnight, Sam has missed two homework deadlines and has needed repeated reminders to begin independent tasks.",
+      },
+      {
+        id: "tone-checks",
+        title: "A practical tone check before you send",
+        body: [
+          "Before sending, ask whether the email states the purpose clearly, stays close to observable facts, and makes the next step obvious. Then check for any line that sounds more irritated, sharper, or more defensive than you would use face-to-face.",
+          "If the parent misread the message slightly, which sentence would be most likely to cause the problem? That is often the sentence to rewrite first.",
+        ],
+        bullets: [
+          "Would this line sound fair if read out loud in a meeting?",
+          "Have I described what happened rather than what I assume?",
+          "Is the next step clear without sounding like an ultimatum?",
+        ],
+      },
+      {
+        id: "rushed-vs-professional",
+        title: "Rushed email vs professional email",
+        body: [
+          "Professional tone rarely means elaborate wording. It usually means the email has been trimmed to the point, but not stripped of context or courtesy.",
+        ],
+        exampleLabel: "Rushed phrasing vs stronger professional phrasing",
+        exampleBody:
+          "Rushed: Jamie refused to follow instructions again and his attitude was poor.\n\nProfessional: Jamie found it difficult to follow instructions during today's lesson and needed repeated reminders to rejoin the task. We are continuing to support him with this in class.\n\nRushed: Please ensure this stops.\n\nProfessional: I would value your support in reinforcing these expectations at home so we can help Jamie move forward consistently.",
+      },
+      {
+        id: "tone-and-judgement",
+        title: "Why tone review is really about judgement, not just wording",
+        body: [
+          "A calmer tone protects more than the relationship. It also protects the teacher. Emails that are proportionate, factual, and professionally measured are easier to stand behind later if they are revisited in a meeting, a complaint thread, or a follow-up conversation.",
+          "That is part of Zaza Draft's value. It is not there simply to generate text quickly. It is there to help teachers apply better judgement in moments where wording carries professional weight.",
+        ],
+      },
+      {
+        id: "how-zaza-helps",
+        title: "How Zaza Draft supports risk-aware tone review",
+        body: [
+          "Zaza Draft helps teachers check whether a parent email is drifting towards wording that could sound too sharp, too vague, or too defensive. It can help reshape the draft into something calmer and clearer without stripping out the real message.",
+          "That makes it a useful second pair of eyes when the email is technically fine, but you still do not quite trust how it will land.",
+        ],
+      },
+    ],
+    comparisonBlock: {
+      title: "Comparison block: teacher-safe tone review vs generic drafting",
+      intro:
+        "The real value in a tone-aware workflow is not just smoother wording. It is better judgement around messages that could easily be misread.",
+      alternativeLabel: "Generic drafting help",
+      rows: [
+        {
+          label: "Primary goal",
+          zaza: "Reduce tone and escalation risk in school communication",
+          alternative: "Produce a fluent draft quickly",
+        },
+        {
+          label: "Parent-email tone awareness",
+          zaza: "Built around difficult, high-stakes teacher messages",
+          alternative: "Broader and less school-specific",
+        },
+        {
+          label: "Professional defensibility",
+          zaza: "Encourages wording that is easier to stand behind later",
+          alternative: "Teacher must judge that more manually",
+        },
+        {
+          label: "Teacher control",
+          zaza: "Review-led co-writer workflow",
+          alternative: "Fast output, but more second-guessing afterwards",
+        },
+      ],
+    },
+    trustBlock: {
+      title:
+        "Built for teachers who want tone support without losing their own voice",
+      items: [
+        {
+          title: "Tone-aware by design",
+          body: "Useful when the email feels potentially misread, not just when the topic is obviously severe.",
+        },
+        {
+          title: "Professional, not robotic",
+          body: "The aim is clearer, calmer wording that still sounds human and school-appropriate.",
+        },
+        {
+          title: "Teacher judgement remains central",
+          body: "You decide the final tone. Zaza Draft simply helps you notice where the email may still carry unnecessary risk.",
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "How can I tell if my email tone is too harsh?",
+        answer:
+          "Read it back as if you were a worried parent receiving it out of context. If a sentence feels clipped, accusatory, or heavier than the facts require, it probably needs softening or clarifying.",
+      },
+      {
+        question:
+          "What is the difference between professional and cold in a parent email?",
+        answer:
+          "Professional emails are clear, proportionate, and respectful. Cold emails are often too clipped, too bare, or too detached to feel relationally safe.",
+      },
+      {
+        question:
+          "Why do teachers sometimes sound defensive in emails without meaning to?",
+        answer:
+          "Usually because the teacher is trying to justify a decision, protect context, or avoid being misunderstood. In email, that can easily read as defensive rather than clarifying.",
+      },
+      {
+        question: "Should difficult parent emails always be shorter?",
+        answer:
+          "Often yes, but they still need enough context to make the purpose and next step clear. The goal is concise, not abrupt.",
+      },
+      {
+        question: "Can Zaza Draft help me check email tone before sending?",
+        answer:
+          "Yes. Zaza Draft is built to help teachers review tone, clarity, and risk in parent emails while keeping the teacher fully in charge of the final wording.",
+      },
+    ],
+    internalLinks: [
+      {
+        href: "/professional-parent-emails-for-teachers",
+        label: "Professional Parent Emails for Teachers",
+        description:
+          "Go here for the broader guide on what professional school-parent communication should sound like in practice.",
+      },
+      {
+        href: "/teacher-guide-to-sensitive-parent-emails",
+        label: "Teacher Guide to Sensitive Parent Emails",
+        description:
+          "Read this next if the issue is not only tone, but the wider challenge of writing a high-stakes parent email at all.",
+      },
+      {
+        href: "/parent-email-risk-checker",
+        label: "Check your tone before sending",
+        description:
+          "Paste a real draft into the Parent Email Risk Checker if you want a safer, calmer version to review.",
+      },
+      {
+        href: "/pricing",
+        label: "See pricing",
+        description:
+          "Review the live plans if you want ongoing teacher-first support for tone-sensitive parent communication.",
+      },
+      sharedFooterLinks.product,
+    ],
+    relatedSlugs: [
+      "professional-parent-emails-for-teachers",
+      "teacher-guide-to-sensitive-parent-emails",
+      "how-to-communicate-concerns-to-parents-professionally",
+      "how-to-reply-to-a-difficult-parent-email",
+    ],
+    structuredDataTypes: ["WebPage", "BreadcrumbList", "Article", "FAQPage"],
+    testimonials: [
+      {
+        quotePrompt:
+          "Placeholder testimonial about catching tone problems before a parent email went out.",
+        attributionPrompt:
+          "Replace with a verified quote from a classroom teacher or pastoral lead.",
+      },
+      {
+        quotePrompt:
+          "Placeholder testimonial about finally understanding why a 'fine' email could still land badly.",
+        attributionPrompt:
+          "Replace with a verified quote from a form tutor, head of year, or senior leader.",
+      },
+    ],
+    cta: {
+      title:
+        "Use calmer judgement when the tone still does not feel quite right",
+      body: "Try Zaza Draft if you want a second pair of eyes on teacher-parent emails where the wording is close, but not yet fully safe to send.",
+      primaryLabel: "Try Zaza Draft",
+      primaryHref: "/start",
+      secondaryLabel: "See pricing",
+      secondaryHref: "/pricing",
+    },
+  },
 } satisfies Record<string, TeacherWritingPage>;
 
 export type TeacherWritingSlug = keyof typeof teacherWritingPages;
