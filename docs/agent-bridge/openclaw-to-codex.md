@@ -1,6 +1,7 @@
 # OpenClaw -> Codex Queue
 
 ## Rules
+
 - Only one task can be `ACTIVE`
 - All new tasks are added as `QUEUED`
 - Tasks must not be overwritten
@@ -10,25 +11,30 @@
 ---
 
 ## Queue status
+
 - Active task.
 - Next task ID: TASK-008
-
 
 ---
 
 ## TASK-001
+
 Status: COMPLETED
 Type: messaging alignment
 Priority: HIGH
 
 ### Title
+
 Homepage and schools page trust-calibration optimisation
 
 ### Objective
+
 Apply the approved homepage and schools-page copy refinements to improve clarity, trust, and conversion without redesigning layouts or changing product scope.
 
 ### Scope
+
 Homepage:
+
 - hero headline line break
 - hero support line
 - recognition line directly under hero
@@ -36,6 +42,7 @@ Homepage:
 - before/after section hook line
 
 Schools page:
+
 - keep existing hero unchanged
 - add one reassurance line in the package or rollout section
 - add one escalation-prevention line in an existing visible support section
@@ -44,22 +51,26 @@ Schools page:
 ### Exact copy
 
 #### Homepage hero headline
+
 Use exactly this two-line phrasing:
 
 Write parent emails and school messages
 without second-guessing how they’ll be interpreted
 
 #### Homepage hero support line
+
 Replace the current hero support paragraph with exactly:
 
 Zaza helps teachers write clear, calm messages in moments that feel uncertain - before wording, tone, or timing turn a situation into something bigger.
 
 #### Homepage recognition line under hero
+
 Add exactly this line directly under the hero:
 
 The message that takes the longest is usually the one that matters most.
 
 #### Homepage calm writing support section
+
 Keep the existing section heading:
 
 Calm writing support for high-stakes school communication
@@ -69,27 +80,33 @@ Add exactly this line directly under that heading:
 Especially when you are not sure how a message will land.
 
 #### Homepage before/after section
+
 Add exactly this line directly above the before/after example block:
 
 This is the kind of message teachers hesitate over.
 
 #### Schools page hero
+
 Keep this hero line unchanged:
 
 A safer way for schools to handle high-stakes parent communication
 
 #### Schools page package or rollout section
+
 Add exactly this line within the package or rollout section:
 
 Schools gain a clearer, more consistent communication approach across staff, without adding oversight pressure.
 
 #### Schools page visible support section
+
 Add exactly this line in an existing visible supporting section:
 
 Most escalation starts with a message that could have been phrased differently.
 
 #### Schools page FAQ
+
 Ensure the FAQ clearly includes all of the following points:
+
 - teachers stay in control
 - Zaza does not replace judgement
 - it is not surveillance
@@ -98,9 +115,11 @@ Ensure the FAQ clearly includes all of the following points:
 If any one of these is missing, add concise FAQ entries only for the missing point or points.
 
 ### CTA hierarchy
+
 Do not change CTA structure or CTA order in this task.
 
 ### Layout/order instructions
+
 - Keep the homepage layout unchanged except for the copy edits listed above
 - Apply the new two-line hero headline exactly as written
 - Place the new recognition line directly below the homepage hero area
@@ -112,6 +131,7 @@ Do not change CTA structure or CTA order in this task.
 - Use the existing FAQ section and only add missing FAQ entries if needed
 
 ### Constraints
+
 - No redesign
 - No dashboard or analytics feature additions
 - No new product features
@@ -121,6 +141,7 @@ Do not change CTA structure or CTA order in this task.
 - Keep this task limited to copy and messaging alignment
 
 ### Acceptance criteria
+
 - Homepage hero uses the exact new two-line phrasing with they’ll
 - Homepage hero support line is replaced with the exact approved sentence
 - Homepage includes the new recognition line directly under the hero
@@ -132,10 +153,10 @@ Do not change CTA structure or CTA order in this task.
 - Schools FAQ clearly covers teacher control, judgement, non-surveillance, and rollout
 - No redesign, dashboard, feature expansion, or logic changes are introduced
 
-
 ---
 
 ## TASK-002
+
 Status: QUEUED
 Type: conversion optimisation
 Priority: HIGH
@@ -143,15 +164,19 @@ Date: 2026-04-08
 Requested by: Greg
 
 ### Title
+
 Homepage and schools page conversion optimisation pass
 
 ### Objective
+
 Apply the approved homepage and schools-page copy refinements to improve trust and conversion while preserving the current layout, routes, analytics, and product scope.
 
 ### Scope
+
 Target repository: homepage and schools page in the existing website app.
 
 Implement copy updates in the existing components/sections that render:
+
 - homepage hero headline
 - homepage hero support line
 - homepage recognition line under hero
@@ -165,38 +190,46 @@ Implement copy updates in the existing components/sections that render:
 Use the existing files/components that currently power those sections. Do not create new routes or new page-level architectures.
 
 ### Implementation instructions
+
 Apply the following changes exactly.
 
 #### 1. Homepage hero headline
+
 Replace the current hero headline with this exact two-line copy:
 
 Write parent emails and school messages
 without second-guessing how they’ll be interpreted
 
 Requirements:
+
 - keep the two-line break exactly as written above
 - use the contraction “they’ll”
 - do not add extra punctuation
 
 #### 2. Homepage hero support line
+
 Replace the current hero support paragraph with exactly:
 
 Zaza helps teachers write clear, calm messages in moments that feel uncertain - before wording, tone, or timing turn a situation into something bigger.
 
 Requirements:
+
 - replace the existing paragraph, do not append to it
 - keep the dash style exactly as shown
 
 #### 3. Homepage recognition line under hero
+
 Add this exact line directly under the homepage hero support area:
 
 The message that takes the longest is usually the one that matters most.
 
 Requirements:
+
 - place it immediately below the hero support line
 - style it as supporting copy within the existing hero area, not as a new banner or callout card
 
 #### 4. Homepage calm writing support section
+
 Find the section with the heading:
 
 Calm writing support for high-stakes school communication
@@ -206,57 +239,70 @@ Add this exact line directly below that heading:
 Especially when you are not sure how a message will land.
 
 Requirements:
+
 - do not change the existing section heading
 - insert this as a single supporting line directly below the heading
 
 #### 5. Homepage before/after section
+
 Add this exact hook line directly above the before/after example block:
 
 This is the kind of message teachers hesitate over.
 
 Requirements:
+
 - place it above the example itself, not below
 - keep it as plain supporting copy, not a badge or label
 
 #### 6. Schools page hero
+
 Keep the existing schools hero unchanged:
 
 A safer way for schools to handle high-stakes parent communication
 
 Requirements:
+
 - do not rewrite, shorten, or restyle this hero line
 
 #### 7. Schools page package or rollout section
+
 Within the existing package or rollout section, add this exact sentence:
 
 Schools gain a clearer, more consistent communication approach across staff, without adding oversight pressure.
 
 Requirements:
+
 - place this inside the existing package/rollout content
 - do not create a new feature block or separate module for it
 
 #### 8. Schools page support section
+
 Add this exact sentence in an existing visible supporting section on the schools page:
 
 Most escalation starts with a message that could have been phrased differently.
 
 Requirements:
+
 - place this in an existing support section where it will be clearly visible
 - do not create a new standalone section just for this line unless absolutely required by the current component structure
 
 #### 9. Schools page FAQ
+
 Check the existing FAQ and ensure it clearly covers all four points below:
+
 - teachers stay in control
 - Zaza does not replace judgement
 - it is not surveillance
 - how rollout works
 
 Requirements:
+
 - if all four are already present, leave the FAQ unchanged
 - if any are missing, add concise FAQ entries only for the missing points
 - do not expand the FAQ unnecessarily
 
 ### Constraints
+
 - preserve existing analytics instrumentation
 - no redesign
 - no new routes
@@ -269,6 +315,7 @@ Requirements:
 - use existing sections/components wherever possible
 
 ### Acceptance criteria
+
 Pass only if all of the following are true:
 
 - homepage hero headline matches exactly:
@@ -287,10 +334,10 @@ Pass only if all of the following are true:
 
 TEST_WRITE_SUCCESS
 
-
 ---
 
 ## TASK-003
+
 Status: COMPLETE
 Type: new page
 Priority: HIGH
@@ -298,13 +345,17 @@ Date: 2026-04-08
 Requested by: Greg
 
 ### Title
+
 7 Parent Emails lead magnet page and PDF deployment
 
 ### Objective
+
 Implement the 7 Parent Emails lead magnet in the Vercel/GitHub website repo so the landing page and PDF are deployable through the normal site pipeline.
 
 ### Scope
+
 Implement all content and asset wiring needed for:
+
 - landing page route: `/7-parent-emails`
 - public PDF asset: `/guides/7-parent-emails-teachers-should-never-send-as-is.pdf`
 - CTA wiring from the page to the existing checker/start flow
@@ -315,16 +366,18 @@ Use the existing Next.js/router structure already present in the repo. If the ap
 ### Implementation instructions
 
 #### 1. Add the landing page route
+
 Create the `/7-parent-emails` page in the existing routing system used by the repo. Reuse existing page layout/styles/components where possible. Do not redesign the site.
 
 Use this exact page copy:
 
 ##### Hero
+
 Headline:
 7 Parent Emails Teachers Should Never Send As-Is
 
 Subheadline:
-Free realistic examples for teachers who are tired, frustrated, or emotionally flooded — plus a quick checker to turn risky drafts into calm, professional messages.
+Free realistic examples for teachers who are tired, frustrated, or emotionally flooded - plus a quick checker to turn risky drafts into calm, professional messages.
 
 Primary CTA button:
 Check my draft now
@@ -333,9 +386,10 @@ Secondary CTA:
 Get the free guide
 
 Support line:
-Have a draft in your inbox or notes right now? Paste it in — it's free and takes seconds.
+Have a draft in your inbox or notes right now? Paste it in - it's free and takes seconds.
 
 ##### Problem section
+
 Some of the hardest messages teachers write are the ones written when they are already tired, frustrated, or emotionally flooded.
 
 It is 10pm.
@@ -346,14 +400,17 @@ Then you realise you cannot send this tonight.
 That is the moment this page is for.
 
 ##### What’s inside
+
 This free guide includes realistic examples of parent-facing messages teachers often write under pressure, plus safer rewrites that keep the meaning but reduce the risk.
 
 You will see:
+
 - the risky first draft
 - a calmer professional version
 - a short explanation of what changed
 
 ##### Proof insert after first example
+
 If you are reading this and thinking, “I have one like this sitting in drafts right now,” do not stop at examples.
 
 Paste your message into the Parent Email Risk Checker and get a safer, more professional version to work from first.
@@ -362,6 +419,7 @@ Button:
 Check my draft now
 
 ##### Mid-page CTA block
+
 If you already have a draft sitting in your notes, inbox, or head, start there.
 
 The Parent Email Risk Checker gives you a calmer, clearer, more professional version to work from without weakening the message.
@@ -373,6 +431,7 @@ Secondary link:
 Get the free guide
 
 ##### Closing block
+
 If you recognised yourself in these examples, the problem is usually not that you do not know what to say.
 
 It is that the first version gets written under pressure.
@@ -386,17 +445,22 @@ Secondary link:
 Get the free guide
 
 #### 2. CTA destinations
+
 Use the existing checker/start destination already used on the live site for trying Zaza.
+
 - Primary CTA destination: existing checker/start flow
 - Secondary CTA destination: `/guides/7-parent-emails-teachers-should-never-send-as-is.pdf`
 
 Do not invent a new signup flow.
 
 #### 3. Add the PDF asset to the repo
+
 Create or commit the final PDF asset so it deploys publicly at:
+
 - `https://zazadraft.com/guides/7-parent-emails-teachers-should-never-send-as-is.pdf`
 
 If the repo prefers source-controlled markdown before generating PDF, add both:
+
 - a markdown source file under a sensible content/docs path
 - the generated PDF in the public/static asset path
 
@@ -422,6 +486,7 @@ Then you realise you cannot send this tonight.
 This guide is built for those moments.
 
 Each example below shows:
+
 - the kind of message a teacher might write in the heat of the moment
 - a safer, calmer version that protects tone without losing honesty
 - what changed and why
@@ -443,6 +508,7 @@ I have spoken with them in class and will continue to support them, but I wanted
 Please do speak with them about the importance of following instructions and staying focused in lesson time. If helpful, I’m happy to discuss ways we can support them consistently.
 
 Section 1 What changed:
+
 - removed blame and frustration language
 - focused on observable behaviour
 - kept the parent on the same side as the teacher
@@ -462,6 +528,7 @@ From the school’s side, the situation was handled as follows: [brief factual s
 If it would be helpful, we can continue the conversation with the relevant member of staff so that any next steps are clear.
 
 Section 2 What changed:
+
 - acknowledged concern without accepting unfair accusations
 - removed defensiveness
 - moved the message back to facts and process
@@ -481,6 +548,7 @@ Despite several warnings, the disruption continued and this affected the concent
 This has been logged so we can monitor patterns and put consistent support in place.
 
 Section 3 What changed:
+
 - removed judgmental wording
 - described behaviour instead of character
 - protected professionalism in case the note is shared later
@@ -498,6 +566,7 @@ I wanted to acknowledge your email and let you know I will follow up properly on
 In the meantime, thank you for your patience.
 
 Section 4 What changed:
+
 - turned an unsafe immediate response into a holding reply
 - created space for a calmer follow-up
 - prevented a late-night escalation
@@ -513,6 +582,7 @@ Section 5 AFTER:
 From my notes, here is what happened: [2-3 straight facts]. I am keen to keep this productive and focus on the next step that best supports [student name].
 
 Section 5 What changed:
+
 - removed the urge to win the exchange
 - prioritised factual clarity over emotional release
 - reduced escalation risk without weakening authority
@@ -527,6 +597,7 @@ Section 6 AFTER:
 I want to keep this calm and focused on the facts. If helpful, I am happy to arrange a short call with the relevant staff member included.
 
 Section 6 What changed:
+
 - avoided point-scoring
 - kept the message calm and professional
 - added one clear next step
@@ -542,35 +613,43 @@ If you already have a draft sitting open, start there.
 Paste it into the Parent Email Risk Checker and get a calmer, more professional version to work from.
 
 #### 4. File structure guidance
+
 Use the repo’s existing structure, but the final deployed outputs must map to:
+
 - landing page route: `/7-parent-emails`
 - PDF asset route: `/guides/7-parent-emails-teachers-should-never-send-as-is.pdf`
 
 If using Next.js app router, likely structure is similar to:
+
 - `app/7-parent-emails/page.tsx`
 - `public/guides/7-parent-emails-teachers-should-never-send-as-is.pdf`
 
 If using pages router, likely structure is similar to:
+
 - `pages/7-parent-emails.tsx` or equivalent
 - `public/guides/7-parent-emails-teachers-should-never-send-as-is.pdf`
 
 Prefer the project’s existing conventions over inventing a new structure.
 
 #### 5. UTM and scheduled-post linking
+
 All scheduled posts should drive to the landing page, not directly to the PDF.
 
 Use:
+
 - `utm_source=[platform]`
 - `utm_medium=organic`
 - `utm_campaign=lead-magnet`
 - `utm_content=[descriptor]`
 
 Example UTM link:
+
 - `https://zazadraft.com/7-parent-emails?utm_source=x&utm_medium=organic&utm_campaign=lead-magnet&utm_content=10pm-email`
 
 Ensure the existing lead-magnet push posts point to `/7-parent-emails` with `utm_campaign=lead-magnet`.
 
 ### Constraints
+
 - Do not mark this task ACTIVE
 - Do not redesign the page
 - Do not add new routes beyond the required `/7-parent-emails` page and static/public PDF asset
@@ -580,6 +659,7 @@ Ensure the existing lead-magnet push posts point to `/7-parent-emails` with `utm
 - Keep the checker/start CTA path aligned with the existing live site
 
 ### Acceptance criteria
+
 - Landing page is deployable at `https://zazadraft.com/7-parent-emails`
 - PDF is deployable at `https://zazadraft.com/guides/7-parent-emails-teachers-should-never-send-as-is.pdf`
 - The page uses the locked-in hero, subheadline, support line, and `Check my draft now` CTA copy
@@ -590,10 +670,10 @@ Ensure the existing lead-magnet push posts point to `/7-parent-emails` with `utm
 - Scheduled post links can point to `/7-parent-emails` using `utm_campaign=lead-magnet`
 - No redesign or product-logic changes are introduced
 
-
 ---
 
 ## TASK-004
+
 Status: COMPLETED
 Type: design polish + asset creation
 Priority: HIGH
@@ -601,12 +681,15 @@ Date: 2026-04-08
 Requested by: Greg
 
 ### Title
+
 Polish 7 Parent Emails lead magnet (PDF design + hero images + badge)
 
 ### Objective
+
 Make the newly deployed lead magnet look significantly more professional and on-brand while keeping all existing copy and structure exactly the same.
 
 ### Scope
+
 - Update the PDF at `public/guides/7-parent-emails-teachers-should-never-send-as-is.pdf`
 - Replace the hero image on the landing page `/7-parent-emails`
 - Add a small badge to the first example’s AFTER section
@@ -614,9 +697,11 @@ Make the newly deployed lead magnet look significantly more professional and on-
 ### Implementation instructions
 
 #### PDF redesign
+
 Redesign the existing 4-page PDF to look like a modern, professional pamphlet.
 
 Requirements:
+
 - add the official Zaza Draft logo in the header and/or footer
 - use Zaza brand colors (purple `#7C3AED` and teal accents)
 - improve typography, spacing, and readability
@@ -626,42 +711,50 @@ Requirements:
 - keep every single word of the 7 examples exactly as they are now
 
 #### New hero images
+
 Create two new distinct hero images that are different from the current one used on `/founding` and `/products/draft`.
 
 Style requirements:
+
 - realistic
 - warm
 - modern female teacher at a desk with laptop
 - calm/confident expression
 
 Implementation:
+
 - create two distinct images
 - replace the current hero image on `/7-parent-emails` with one of the new images
 
 #### Badge on first example
+
 On the `The late-night parent email` AFTER section, add a small, tasteful badge that says either:
+
 - `Safe version`
 - or `2-second safer reply`
 
 #### Landing page
+
 Update only the hero image. Do not change any copy.
 
 ### Constraints
+
 - do not change any of the 7 example texts or structure
 - do not redesign the overall layout of the landing page
 - keep the same URLs for the page and PDF
 
 ### Acceptance criteria
+
 - PDF looks modern and professional with logo and brand colors
 - two new hero images are created and one is used on the live page
 - a badge is added to the first example’s AFTER section
 - page and PDF remain at the same live URLs
 - no content or structural changes are made to the 7 examples
 
-
 ---
 
 ## TASK-005
+
 Status: COMPLETED
 Type: design polish
 Priority: HIGH
@@ -669,50 +762,61 @@ Date: 2026-04-08
 Requested by: Greg
 
 ### Title
+
 Final polish pass on 7-parent-emails lead magnet (logo, PDF metadata, link behavior, badge alignment)
 
 ### Objective
+
 Fix the remaining visual and UX issues on the live lead magnet page and PDF.
 
 ### Implementation instructions
 
 #### Logo
+
 Use the current official Zaza Draft header logo, the same one used on the main site header. Replace the old logo in the PDF.
 
 #### PDF metadata and tab title
+
 Update the PDF so that when opened in a browser tab it shows exactly:
 
 Zaza Draft | 7 Parent Emails Teachers Should Never Send As-Is
 
 #### Link behavior
+
 Make the `Get the free guide` button open the PDF in a new tab using new-tab link behavior.
 
 #### Safe version badge
+
 Reposition the `Safe version` badge so it does not break alignment. Preferred placement:
+
 - under the AFTER text block
 - or as a small floating badge in the top-right of the AFTER box
 
 #### Optional soft CTA
+
 If space allows, add a very light secondary CTA at the bottom:
+
 - `Try Zaza Draft free`
-Link destination:
+  Link destination:
 - `/start` or the checker
 
 ### Constraints
+
 - Do not change any of the 7 example texts
 - Keep the overall design and layout of the page and PDF
 
 ### Acceptance criteria
+
 - Correct current Zaza logo is used in the PDF
 - PDF tab title is branded exactly as specified
 - `Get the free guide` opens in a new tab
 - Badge alignment is fixed
 - Page and PDF remain at the same URLs
 
-
 ---
 
 ## TASK-006
+
 Status: COMPLETED
 Type: design polish
 Priority: HIGH
@@ -720,14 +824,17 @@ Date: 2026-04-08
 Requested by: Greg
 
 ### Title
+
 Final visual polish pass on 7-parent-emails lead magnet (PDF + page)
 
 ### Objective
+
 Fix remaining visual issues and improve scannability of the live lead magnet page and PDF.
 
 ### Implementation instructions
 
 #### PDF fixes
+
 - Use the current official Zaza Draft header logo at the correct size and without stretching
 - Remove all raw markdown headings (`##`, `###`)
 - Improve layout so each of the 7 examples sits in its own clearly separated tile or box with subtle background color
@@ -735,29 +842,33 @@ Fix remaining visual issues and improve scannability of the live lead magnet pag
 - Improve overall typography and spacing
 
 #### Landing page fixes
+
 - Replace favicon with the correct Z logo
 - Add a prominent secondary CTA at the bottom: `Try Zaza Draft free` linking to `/start`
 - Fix `Safe version` badge placement so it does not break alignment
 
 #### Hero image
+
 - Replace the duplicate hero image on `/schools` and `/products/draft` with one new photo-realistic image
 - Style: warm, modern teacher at desk with laptop
 
 ### Constraints
+
 - Do not change any of the 7 example texts
 - Keep the same URLs for the page and PDF
 
 ### Acceptance criteria
+
 - PDF logo is correct size and positioned well
 - No raw markdown remains in the PDF
 - Each example is visually separated
 - Favicon and secondary CTA are added on the page
 - New hero image is deployed on the two pages that had duplicates
 
-
 ---
 
 ## TASK-007
+
 Status: COMPLETED
 Type: design polish
 Priority: HIGH
@@ -765,37 +876,43 @@ Date: 2026-04-08
 Requested by: Greg
 
 ### Title
+
 Final micro-polish on 7-parent-emails lead magnet (PDF alignment + footer + benefit section)
 
 ### Objective
+
 Fix remaining visual and conversion issues on the live lead magnet.
 
 ### Implementation instructions
 
 #### PDF fixes
+
 - Push the `What changed` bullet points approximately 1 cm further into each tile so they sit cleanly inside the box
 - Add the URL `https://www.zazadraft.com/7-parent-emails` in the footer on every page
 - Add the footer line `Share this guide with colleagues` on every page
 - Add a short `Why this matters` section near the end, before the final CTA, speaking directly to teacher fears: escalation to admin, complaints, emotional drain, and the `that could have been me` moment
 
 #### Landing page
+
 - Add a prominent button: `Share this guide with your teacher friends`
 - Add a clear secondary CTA at the bottom: `Try Zaza Draft free – stop rewriting emails at 10pm` linking to `/start`
 
 ### Constraints
+
 - Do not change any of the 7 example texts
 - Keep the same URLs
 
 ### Acceptance criteria
+
 - Bullet alignment is fixed
 - URL and sharing line appear in the PDF footer
 - `Why this matters` section is added with emotional resonance from teacher fears
 - New sharing button and secondary CTA are present on the page
 
-
 ---
 
 ## TASK-008
+
 Status: ACTIVE
 Type: conversion messaging
 Priority: HIGH
@@ -803,13 +920,17 @@ Date: 2026-04-10
 Requested by: Greg
 
 ### Title
+
 Make the “Why not just use ChatGPT?” answer more prominent and clearer across the live Zaza Draft site
 
 ### Objective
+
 Strengthen the live website so a skeptical visitor immediately understands why a teacher would pay for Zaza Draft instead of using generic AI tools like ChatGPT. The current site contains the answer in fragments, but it is not prominent or explicit enough for a first-pass skeptical reader.
 
 ### Problem observed on live site
+
 The site does communicate parts of the differentiation, including:
+
 - teacher-first / built for school communication
 - tone risk / de-escalation awareness
 - your voice still recognisable
@@ -821,6 +942,7 @@ However, the specific skeptical question “Why not just use ChatGPT?” is not 
 ### Implementation instructions
 
 #### 1. Add one explicit comparison section high on `/start`
+
 Place a new section above pricing and below the core value explanation.
 
 Suggested section headline:
@@ -830,12 +952,14 @@ Suggested supporting line:
 `Generic AI can produce text. Zaza Draft is built to help teachers send calmer, safer school communication without having to invent the right prompt from scratch.`
 
 Use 4 short comparison bullets or cards:
+
 - `Built for teacher communication, not general use`
 - `Understands parent emails, behaviour notes, and sensitive school follow-ups`
 - `Designed to reduce tone risk and escalation, not just generate text`
 - `Keeps the teacher in control of every final word`
 
 #### 2. Add a direct skeptical-reader block on the homepage
+
 Add a concise FAQ-style or objection-handling block that explicitly names the comparison.
 
 Suggested headline:
@@ -847,7 +971,9 @@ Suggested body copy direction:
 Keep the answer short, concrete, and easy to scan.
 
 #### 3. Strengthen the existing comparison table / feature comparison
+
 If a comparison table already exists on the homepage, make sure it clearly includes specific rows such as:
+
 - Teacher-specific communication support
 - Parent email / behaviour note awareness
 - De-escalation-aware wording
@@ -858,19 +984,23 @@ If a comparison table already exists on the homepage, make sure it clearly inclu
 The table must render clearly and read as a real decision aid, not a decorative section.
 
 #### 4. Add one short bridging sentence near CTA zones
+
 Near at least one CTA on `/start` or homepage, add one sentence like:
 `If ChatGPT gives you text, Zaza Draft is the tool that helps you send the version you will not regret tomorrow.`
 
 #### 5. Preserve current positioning
+
 Do not make the site anti-ChatGPT or snarky. The goal is calm differentiation, not attack language. Keep the tone teacher-first, practical, and credible.
 
 ### Constraints
+
 - Do not change pricing
 - Do not change core URLs
 - Do not use hypey or aggressive anti-AI language
 - Keep brand tone calm, trustworthy, and teacher-respecting
 
 ### Acceptance criteria
+
 - A skeptical visitor can answer “why not just use ChatGPT?” within one quick scroll
 - `/start` includes a direct, explicit comparison section
 - Homepage includes a direct objection-handling block
