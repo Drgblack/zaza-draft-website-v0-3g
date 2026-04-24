@@ -14,6 +14,10 @@ export function ScenarioPageTemplate({ page }: ScenarioPageTemplateProps) {
     pageType: "scenario" as const,
     slug: page.slug,
   };
+  const checkerHref = appendDistributionParams(
+    "/parent-email-risk-checker",
+    distributionMeta,
+  );
 
   return (
     <>
@@ -84,10 +88,10 @@ export function ScenarioPageTemplate({ page }: ScenarioPageTemplateProps) {
                     Start with Zaza Draft
                   </Link>
                   <Link
-                    href="/parent-email-risk-checker"
+                    href={checkerHref}
                     className="inline-flex items-center rounded-full border border-[#d7ccbd] bg-white/90 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-white"
                   >
-                    Try the free checker
+                    Check my message
                   </Link>
                 </div>
               </div>
@@ -106,9 +110,10 @@ export function ScenarioPageTemplate({ page }: ScenarioPageTemplateProps) {
                     Fast next step
                   </h2>
                   <p className="mt-3 text-sm leading-7 text-slate-700">
-                    If you already have a draft, check it in the free parent
-                    email risk checker first. If you are starting from scratch,
-                    use Zaza Draft to write the calmer version sooner.
+                    If you already have a draft, paste it into the free parent
+                    email risk checker before you send it. If you are starting
+                    from scratch, use Zaza Draft to write the calmer version
+                    sooner.
                   </p>
                 </div>
               </aside>
@@ -214,17 +219,17 @@ export function ScenarioPageTemplate({ page }: ScenarioPageTemplateProps) {
 
             <article className="rounded-[32px] border border-[#ddd1c0] bg-white/92 p-6 md:p-8">
               <h2 className="text-2xl font-semibold tracking-tight text-slate-950">
-                Already rewritten it three times?
+                Not sure how your message will land?
               </h2>
               <p className="mt-4 text-base leading-8 text-slate-700">
-                Paste your real draft into the free checker and see whether it
-                may sound ruder, colder, or more escalatory than you intended.
+                Paste it into the free parent email risk checker before you send
+                it.
               </p>
               <Link
-                href="/parent-email-risk-checker"
+                href={checkerHref}
                 className="mt-6 inline-flex items-center rounded-full border border-[#164e3f] px-5 py-3 text-sm font-semibold text-[#164e3f] transition hover:bg-[#164e3f] hover:text-white"
               >
-                Open the free checker
+                Check my message
               </Link>
             </article>
           </section>
@@ -232,7 +237,7 @@ export function ScenarioPageTemplate({ page }: ScenarioPageTemplateProps) {
           <SeoInternalLinkingBlocks
             relatedTitle="Keep going with related parent email scenarios"
             relatedLinks={page.internalLinks}
-            checkerHref="/parent-email-risk-checker"
+            checkerHref={checkerHref}
             startHref={appendDistributionParams("/start", distributionMeta)}
             includeReportCommentLinks={
               page.slug ===
