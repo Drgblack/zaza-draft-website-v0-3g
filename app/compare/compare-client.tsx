@@ -23,14 +23,23 @@ const content = {
       {
         slug: "zaza-draft-vs-chatgpt",
         title: "Zaza Draft vs ChatGPT",
-        description: "Teacher-specific AI vs general-purpose assistant",
+        description:
+          "Teacher-specific drafting vs a general-purpose AI assistant",
         category: "AI Assistants",
       },
       {
         slug: "zaza-draft-vs-grammarly",
         title: "Zaza Draft vs Grammarly",
-        description: "Content generation vs writing improvement",
+        description:
+          "Teacher-first drafting support vs post-draft writing improvement",
         category: "Writing Tools",
+      },
+      {
+        slug: "best-ai-parent-email-tool-for-teachers",
+        title: "Best AI Parent Email Tool for Teachers",
+        description:
+          "Compare Zaza Draft, ChatGPT, and Grammarly for high-stakes parent emails",
+        category: "Buying Guide",
       },
     ],
     missing_tool: {
@@ -142,4 +151,3 @@ export function CompareClient() {
     </div>
   );
 }
-

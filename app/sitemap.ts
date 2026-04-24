@@ -4,6 +4,7 @@ import { join } from "path";
 import { getGeneratedPageSitemapEntries } from "@/lib/generated-pages";
 import { getIndexControlDecision } from "@/lib/index-control";
 import { getReportPruneDecision } from "@/lib/report-prune";
+import { scenarioPageSlugs } from "@/lib/seo/scenario-pages";
 import { teacherWritingPageSlugs } from "@/lib/seo/teacher-writing-pages";
 import { clusterSpokes } from "@/lib/seo/teacher-safe-ai-cluster";
 import { getRegionalTeacherWritingSlugs } from "@/lib/seo/regional-writing-pages";
@@ -32,9 +33,22 @@ type HowToKeywordEntry = {
 };
 
 const COMPARE_DETAIL_SLUGS = [
-  "zaza-draft-vs-magicschool",
-  "zaza-draft-vs-chatgpt",
-  "zaza-draft-vs-grammarly",
+  {
+    slug: "zaza-draft-vs-magicschool",
+    locales: ["en", "de"] as const,
+  },
+  {
+    slug: "zaza-draft-vs-chatgpt",
+    locales: ["en", "de"] as const,
+  },
+  {
+    slug: "zaza-draft-vs-grammarly",
+    locales: ["en", "de"] as const,
+  },
+  {
+    slug: "best-ai-parent-email-tool-for-teachers",
+    locales: ["en"] as const,
+  },
 ] as const;
 
 const SUCCESS_STORY_SLUGS = [
@@ -46,6 +60,12 @@ const SUCCESS_STORY_SLUGS = [
 ] as const;
 
 const STATE_OF_AI_REPORT_YEARS = ["2022", "2023", "2024"] as const;
+const TOOL_LANDING_SLUGS = [
+  "email-tone-checker-for-teachers",
+  "check-if-parent-email-sounds-rude",
+  "rewrite-parent-email-calmly",
+  "parent-email-risk-checker",
+] as const;
 
 export type SitemapSourceGroup = {
   source: string;
@@ -981,6 +1001,12 @@ export async function getSitemapSourceGroups(): Promise<SitemapSourceGroup[]> {
       changeFrequency: "monthly",
       lastModified: now,
     },
+    ...TOOL_LANDING_SLUGS.map((slug) => ({
+      path: `/tools/${slug}`,
+      priority: 0.84,
+      changeFrequency: "weekly" as const,
+      lastModified: now,
+    })),
   ];
 
   const programmaticHubEntries: SitemapEntryConfig[] = [
@@ -1091,13 +1117,15 @@ export async function getSitemapSourceGroups(): Promise<SitemapSourceGroup[]> {
     },
   ];
 
-  const teacherWritingEntries: SitemapEntryConfig[] =
-    teacherWritingPageSlugs.map((slug) => ({
-      path: `/${slug}`,
-      priority: 0.9,
-      changeFrequency: "daily",
-      lastModified: now,
-    }));
+  const teacherWritingEntries: SitemapEntryConfig[] = [
+    ...scenarioPageSlugs,
+    ...teacherWritingPageSlugs,
+  ].map((slug) => ({
+    path: `/${slug}`,
+    priority: 0.9,
+    changeFrequency: "daily",
+    lastModified: now,
+  }));
 
   const topicalClusterEntries: SitemapEntryConfig[] = clusterSpokes.map(
     (page) => ({
@@ -1127,20 +1155,14 @@ export async function getSitemapSourceGroups(): Promise<SitemapSourceGroup[]> {
   }));
 
   const compareDetailEntries: SitemapEntryConfig[] =
-    COMPARE_DETAIL_SLUGS.flatMap((slug) => [
-      {
-        path: `/compare/${slug}`,
+    COMPARE_DETAIL_SLUGS.flatMap(({ slug, locales }) =>
+      locales.map((locale) => ({
+        path: locale === "de" ? `/de/compare/${slug}` : `/compare/${slug}`,
         priority: 0.74,
-        changeFrequency: "monthly",
+        changeFrequency: "monthly" as const,
         lastModified: now,
-      },
-      {
-        path: `/de/compare/${slug}`,
-        priority: 0.74,
-        changeFrequency: "monthly",
-        lastModified: now,
-      },
-    ]);
+      })),
+    );
 
   const successStoryDetailEntries: SitemapEntryConfig[] =
     SUCCESS_STORY_SLUGS.map((slug) => ({

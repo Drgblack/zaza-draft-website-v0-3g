@@ -2,11 +2,17 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { GeneratedMarkdownPage } from "@/components/GeneratedMarkdownPage";
 import { ProgrammaticPage } from "@/components/ProgrammaticPage";
+import { ScenarioPageTemplate } from "@/components/seo/scenario-page-template";
 import {
   getGeneratedPageBySlug,
   getGeneratedPageMetadata,
   getGeneratedPageSlugs,
 } from "@/lib/generated-pages";
+import {
+  buildScenarioPageMetadata,
+  getScenarioPage,
+  scenarioPageSlugs,
+} from "@/lib/seo/scenario-pages";
 import { TeacherWritingLandingPage } from "@/components/seo/teacher-writing-landing-page";
 import {
   getTeacherWritingPage,
@@ -25,6 +31,7 @@ export const revalidate = 604800;
 export function generateStaticParams() {
   return Array.from(
     new Set([
+      ...scenarioPageSlugs,
       ...teacherWritingPageSlugs,
       ...programmaticSingleSlugSlugs,
       ...getGeneratedPageSlugs(),
@@ -37,6 +44,12 @@ export function generateMetadata({
 }: {
   params: { slug: string };
 }): Metadata {
+  const scenarioPage = getScenarioPage(params.slug);
+
+  if (scenarioPage) {
+    return buildScenarioPageMetadata(scenarioPage);
+  }
+
   const page = getTeacherWritingPage(params.slug);
 
   if (page) {
@@ -65,6 +78,12 @@ export default function TeacherWritingPageRoute({
 }: {
   params: { slug: string };
 }) {
+  const scenarioPage = getScenarioPage(params.slug);
+
+  if (scenarioPage) {
+    return <ScenarioPageTemplate page={scenarioPage} />;
+  }
+
   const page = getTeacherWritingPage(params.slug);
 
   if (page) {
