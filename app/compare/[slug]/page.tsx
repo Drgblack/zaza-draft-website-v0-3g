@@ -23,10 +23,13 @@ const legacyComparisons = {
 } as const;
 
 type ComparePageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
+
+export const dynamicParams = false;
+export const revalidate = 604800;
 
 export async function generateStaticParams() {
   return Array.from(
@@ -36,8 +39,11 @@ export async function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: ComparePageProps): Metadata {
-  const page = getCompareDetailPage(params.slug);
+export async function generateMetadata({
+  params,
+}: ComparePageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const page = getCompareDetailPage(slug);
 
   if (page) {
     return buildPageMetadata({
@@ -51,7 +57,7 @@ export function generateMetadata({ params }: ComparePageProps): Metadata {
   }
 
   const legacyComparison =
-    legacyComparisons[params.slug as keyof typeof legacyComparisons];
+    legacyComparisons[slug as keyof typeof legacyComparisons];
 
   if (!legacyComparison) {
     return {
@@ -62,11 +68,11 @@ export function generateMetadata({ params }: ComparePageProps): Metadata {
   return buildPageMetadata({
     title: legacyComparison.metaTitle,
     description: legacyComparison.metaDescription,
-    path: `/compare/${params.slug}`,
+    path: `/compare/${slug}`,
     type: "article",
     alternates: {
-      en: `https://zazadraft.com/compare/${params.slug}`,
-      de: `https://zazadraft.com/de/compare/${params.slug}`,
+      en: `https://zazadraft.com/compare/${slug}`,
+      de: `https://zazadraft.com/de/compare/${slug}`,
     },
     keywords: [
       "teacher ai comparison",
@@ -76,8 +82,9 @@ export function generateMetadata({ params }: ComparePageProps): Metadata {
   });
 }
 
-export default function CompareDetailPage({ params }: ComparePageProps) {
-  const page = getCompareDetailPage(params.slug);
+export default async function CompareDetailPage({ params }: ComparePageProps) {
+  const { slug } = await params;
+  const page = getCompareDetailPage(slug);
 
   if (page) {
     return (
@@ -89,7 +96,7 @@ export default function CompareDetailPage({ params }: ComparePageProps) {
   }
 
   const legacyComparison =
-    legacyComparisons[params.slug as keyof typeof legacyComparisons];
+    legacyComparisons[slug as keyof typeof legacyComparisons];
 
   if (!legacyComparison) {
     notFound();
@@ -107,7 +114,7 @@ export default function CompareDetailPage({ params }: ComparePageProps) {
             ]}
           />
 
-          <ComparisonClient comparison={legacyComparison} slug={params.slug} />
+          <ComparisonClient comparison={legacyComparison} slug={slug} />
         </div>
       </div>
     </>

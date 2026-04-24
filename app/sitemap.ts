@@ -950,12 +950,30 @@ export async function getSitemapSourceGroups(): Promise<SitemapSourceGroup[]> {
       changeFrequency: "weekly",
       lastModified: now,
     },
+    {
+      path: "/tools",
+      priority: 0.76,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
   ];
 
   const campaignAndToolEntries: SitemapEntryConfig[] = [
     {
       path: "/best-ai-tool-parent-emails",
       priority: 0.85,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/parent-email-risk-checker",
+      priority: 0.86,
+      changeFrequency: "weekly",
+      lastModified: now,
+    },
+    {
+      path: "/de/parent-email-risk-checker",
+      priority: 0.72,
       changeFrequency: "weekly",
       lastModified: now,
     },

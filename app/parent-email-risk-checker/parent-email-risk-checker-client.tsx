@@ -12,7 +12,15 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
-import { track, trackCtaClick } from "@/lib/analytics";
+import {
+  track,
+  trackCtaClick,
+  trackFreeToolPageView,
+  trackShareClicked,
+  trackToolCompleted,
+  trackToolStarted,
+} from "@/lib/analytics";
+import { appendDistributionParams } from "@/lib/distribution-analytics";
 import type {
   ParentEmailRiskIssue,
   ParentEmailRiskResult,
@@ -25,6 +33,11 @@ import {
 } from "@/app/parent-email-risk-checker/copy";
 
 const MIN_WORDS = 10;
+const CHECKER_DISTRIBUTION_META = {
+  product: "zaza_draft" as const,
+  pageType: "free_tool" as const,
+  slug: "parent-email-risk-checker",
+};
 
 type RiskToneConfig = {
   label: string;
@@ -140,6 +153,7 @@ export default function ParentEmailRiskCheckerClient({
   const feedbackTimeoutRef = useRef<number | null>(null);
 
   useEffect(() => {
+    trackFreeToolPageView(CHECKER_DISTRIBUTION_META);
     track("parent_email_risk_checker_viewed", {
       page: "parent_email_risk_checker",
       locale,
@@ -150,6 +164,13 @@ export default function ParentEmailRiskCheckerClient({
     if (!result) {
       return;
     }
+
+    trackToolCompleted(CHECKER_DISTRIBUTION_META, {
+      locale,
+      risk_score: result.riskScore,
+      risk_level: result.riskLevel,
+      issues_count: result.issuesDetected.length,
+    });
 
     track("parent_email_risk_checker_result_shown", {
       risk_score: result.riskScore,
@@ -168,7 +189,11 @@ export default function ParentEmailRiskCheckerClient({
   }, []);
 
   const startHref = useMemo(
-    () => buildStartHref(result, locale),
+    () =>
+      appendDistributionParams(
+        buildStartHref(result, locale),
+        CHECKER_DISTRIBUTION_META,
+      ),
     [locale, result],
   );
   const issueWarnings = result
@@ -231,6 +256,11 @@ export default function ParentEmailRiskCheckerClient({
     setError(null);
 
     track("parent_email_risk_checker_submitted", {
+      characters: normalizedDraft.length,
+      words: countWords(normalizedDraft),
+      locale,
+    });
+    trackToolStarted(CHECKER_DISTRIBUTION_META, {
       characters: normalizedDraft.length,
       words: countWords(normalizedDraft),
       locale,
@@ -320,6 +350,12 @@ export default function ParentEmailRiskCheckerClient({
       risk_level: result?.riskLevel,
       locale,
     });
+    trackShareClicked(CHECKER_DISTRIBUTION_META, {
+      method: "web_share",
+      locale,
+      risk_score: result?.riskScore,
+      risk_level: result?.riskLevel,
+    });
 
     try {
       await navigator.share({
@@ -338,6 +374,12 @@ export default function ParentEmailRiskCheckerClient({
       risk_score: result?.riskScore,
       risk_level: result?.riskLevel,
       locale,
+    });
+    trackShareClicked(CHECKER_DISTRIBUTION_META, {
+      method: "copy_link",
+      locale,
+      risk_score: result?.riskScore,
+      risk_level: result?.riskLevel,
     });
 
     try {
@@ -774,9 +816,12 @@ export default function ParentEmailRiskCheckerClient({
               className="btn-primary h-auto rounded-2xl px-6 py-4 text-base font-semibold"
             >
               <Link
-                href={`${
-                  locale === "de" ? "/de/start" : "/start"
-                }?src=risk-checker-bottom`}
+                href={appendDistributionParams(
+                  `${
+                    locale === "de" ? "/de/start" : "/start"
+                  }?src=risk-checker-bottom`,
+                  CHECKER_DISTRIBUTION_META,
+                )}
                 onClick={() =>
                   handleStartClick("parent_email_risk_checker_bottom")
                 }

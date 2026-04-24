@@ -1,5 +1,8 @@
 import Link from "next/link";
+import { DistributionPageViewTracker } from "@/components/analytics/distribution-page-view-tracker";
 import { StructuredData } from "@/components/StructuredData";
+import { SeoInternalLinkingBlocks } from "@/components/seo/internal-linking-blocks";
+import { appendDistributionParams } from "@/lib/distribution-analytics";
 import type { CompareDetailPage } from "@/lib/compare-detail-pages";
 
 type BottomFunnelComparePageProps = {
@@ -13,9 +16,15 @@ export function BottomFunnelComparePage({
     "/compare": "Compare",
     [page.path]: page.h1,
   };
+  const distributionMeta = {
+    product: "zaza_draft" as const,
+    pageType: "comparison" as const,
+    slug: page.slug,
+  };
 
   return (
     <>
+      <DistributionPageViewTracker meta={distributionMeta} />
       <StructuredData
         type="Article"
         data={{
@@ -79,7 +88,10 @@ export function BottomFunnelComparePage({
                 </div>
                 <div className="flex flex-wrap gap-3">
                   <Link
-                    href="/start?src=compare-hero"
+                    href={appendDistributionParams(
+                      "/start?src=compare-hero",
+                      distributionMeta,
+                    )}
                     className="inline-flex items-center rounded-full bg-[#164e3f] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#123f34]"
                   >
                     Start with Zaza Draft
@@ -250,35 +262,16 @@ export function BottomFunnelComparePage({
             </article>
           </section>
 
-          <section className="space-y-6">
-            <div className="max-w-3xl">
-              <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
-                Internal links
-              </p>
-              <h2 className="mt-2 text-3xl font-semibold tracking-tight text-slate-950">
-                {page.internalLinksTitle}
-              </h2>
-            </div>
-            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-              {page.internalLinks.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="rounded-[32px] border border-[#ddd1c0] bg-white/92 p-6 transition hover:bg-white"
-                >
-                  <p className="text-sm uppercase tracking-[0.2em] text-slate-500">
-                    Teacher scenario
-                  </p>
-                  <h3 className="mt-3 text-xl font-semibold text-slate-950">
-                    {item.label}
-                  </h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-700">
-                    {item.description}
-                  </p>
-                </Link>
-              ))}
-            </div>
-          </section>
+          <SeoInternalLinkingBlocks
+            relatedTitle={page.internalLinksTitle}
+            relatedLinks={page.internalLinks}
+            checkerHref="/parent-email-risk-checker?src=compare-links"
+            startHref={appendDistributionParams(
+              "/start?src=compare-links",
+              distributionMeta,
+            )}
+            includeReportCommentLinks
+          />
 
           <section className="space-y-6">
             <div className="max-w-3xl">
@@ -316,7 +309,10 @@ export function BottomFunnelComparePage({
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <Link
-                  href="/start?src=compare-bottom"
+                  href={appendDistributionParams(
+                    "/start?src=compare-bottom",
+                    distributionMeta,
+                  )}
                   className="inline-flex items-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#123f34] transition hover:bg-[#f3efe7]"
                 >
                   Go to /start

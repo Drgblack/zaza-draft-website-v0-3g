@@ -1,5 +1,8 @@
 import Link from "next/link";
+import { DistributionPageViewTracker } from "@/components/analytics/distribution-page-view-tracker";
 import { StructuredData } from "@/components/StructuredData";
+import { SeoInternalLinkingBlocks } from "@/components/seo/internal-linking-blocks";
+import { appendDistributionParams } from "@/lib/distribution-analytics";
 import type { ToolLandingPage } from "@/lib/tool-landing-pages";
 
 type ToolLandingPageProps = {
@@ -11,9 +14,15 @@ export function ToolLandingPageTemplate({ page }: ToolLandingPageProps) {
     "/tools": "Tools",
     [page.path]: page.h1,
   };
+  const distributionMeta = {
+    product: "zaza_draft" as const,
+    pageType: "free_tool" as const,
+    slug: page.slug,
+  };
 
   return (
     <>
+      <DistributionPageViewTracker meta={distributionMeta} />
       <StructuredData
         type="Article"
         data={{
@@ -55,7 +64,9 @@ export function ToolLandingPageTemplate({ page }: ToolLandingPageProps) {
                 Home
               </Link>
               <span>/</span>
-              <span className="text-slate-900">Tools</span>
+              <Link href="/tools" className="transition hover:text-slate-900">
+                Tools
+              </Link>
               <span>/</span>
               <span className="text-slate-900">{page.title}</span>
             </nav>
@@ -87,7 +98,10 @@ export function ToolLandingPageTemplate({ page }: ToolLandingPageProps) {
                     {page.checkerCta}
                   </Link>
                   <Link
-                    href={page.startHref}
+                    href={appendDistributionParams(
+                      page.startHref,
+                      distributionMeta,
+                    )}
                     className="inline-flex items-center rounded-full border border-[#d7ccbd] bg-white/90 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-white"
                   >
                     {page.startCta}
@@ -124,7 +138,10 @@ export function ToolLandingPageTemplate({ page }: ToolLandingPageProps) {
                     {page.checkerCta}
                   </Link>
                   <Link
-                    href={page.startHref}
+                    href={appendDistributionParams(
+                      page.startHref,
+                      distributionMeta,
+                    )}
                     className="inline-flex items-center justify-center rounded-full border border-[#d7ccbd] px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-[#fbf8f2]"
                   >
                     {page.startCta}
@@ -239,35 +256,16 @@ export function ToolLandingPageTemplate({ page }: ToolLandingPageProps) {
             </div>
           </section>
 
-          <section className="space-y-6">
-            <div className="max-w-3xl">
-              <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
-                Internal links
-              </p>
-              <h2 className="mt-2 text-3xl font-semibold tracking-tight text-slate-950">
-                {page.relatedLinksTitle}
-              </h2>
-            </div>
-            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-              {page.relatedLinks.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="rounded-[32px] border border-[#ddd1c0] bg-white/92 p-6 transition hover:bg-white"
-                >
-                  <p className="text-sm uppercase tracking-[0.2em] text-slate-500">
-                    Teacher page
-                  </p>
-                  <h3 className="mt-3 text-xl font-semibold text-slate-950">
-                    {item.label}
-                  </h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-700">
-                    {item.description}
-                  </p>
-                </Link>
-              ))}
-            </div>
-          </section>
+          <SeoInternalLinkingBlocks
+            relatedTitle={page.relatedLinksTitle}
+            relatedLinks={page.relatedLinks}
+            checkerHref={page.checkerHref}
+            startHref={appendDistributionParams(
+              page.startHref,
+              distributionMeta,
+            )}
+            includeReportCommentLinks
+          />
 
           <section className="space-y-6">
             <div className="max-w-3xl">
@@ -311,7 +309,10 @@ export function ToolLandingPageTemplate({ page }: ToolLandingPageProps) {
                   {page.checkerCta}
                 </Link>
                 <Link
-                  href={page.startHref}
+                  href={appendDistributionParams(
+                    page.startHref,
+                    distributionMeta,
+                  )}
                   className="inline-flex items-center rounded-full border border-white/20 bg-transparent px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
                 >
                   {page.startCta}
@@ -329,7 +330,10 @@ export function ToolLandingPageTemplate({ page }: ToolLandingPageProps) {
                 messages where the wording still has to feel safe tomorrow.
               </p>
               <Link
-                href={page.startHref}
+                href={appendDistributionParams(
+                  page.startHref,
+                  distributionMeta,
+                )}
                 className="mt-6 inline-flex items-center rounded-full border border-[#164e3f] px-5 py-3 text-sm font-semibold text-[#164e3f] transition hover:bg-[#164e3f] hover:text-white"
               >
                 {page.startCta}

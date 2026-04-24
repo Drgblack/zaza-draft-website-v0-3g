@@ -9,10 +9,13 @@ import {
 } from "@/lib/tool-landing-pages";
 
 type ToolLandingRouteProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
+
+export const dynamicParams = false;
+export const revalidate = 604800;
 
 export function generateStaticParams() {
   return getToolLandingSlugs().map((slug) => ({
@@ -20,8 +23,11 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: ToolLandingRouteProps): Metadata {
-  const page = getToolLandingPage(params.slug);
+export async function generateMetadata({
+  params,
+}: ToolLandingRouteProps): Promise<Metadata> {
+  const { slug } = await params;
+  const page = getToolLandingPage(slug);
 
   if (!page) {
     return {
@@ -41,8 +47,11 @@ export function generateMetadata({ params }: ToolLandingRouteProps): Metadata {
   });
 }
 
-export default function ToolLandingRoute({ params }: ToolLandingRouteProps) {
-  const page = getToolLandingPage(params.slug);
+export default async function ToolLandingRoute({
+  params,
+}: ToolLandingRouteProps) {
+  const { slug } = await params;
+  const page = getToolLandingPage(slug);
 
   if (!page) {
     notFound();

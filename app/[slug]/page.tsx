@@ -39,33 +39,34 @@ export function generateStaticParams() {
   ).map((slug) => ({ slug }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
-}): Metadata {
-  const scenarioPage = getScenarioPage(params.slug);
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const scenarioPage = getScenarioPage(slug);
 
   if (scenarioPage) {
     return buildScenarioPageMetadata(scenarioPage);
   }
 
-  const page = getTeacherWritingPage(params.slug);
+  const page = getTeacherWritingPage(slug);
 
   if (page) {
     return buildTeacherWritingMetadata(page);
   }
 
-  const generatedPage = getGeneratedPageBySlug(params.slug);
+  const generatedPage = getGeneratedPageBySlug(slug);
 
   if (generatedPage) {
-    return getGeneratedPageMetadata(params.slug);
+    return getGeneratedPageMetadata(slug);
   }
 
-  const programmaticPage = slugToProps(params.slug);
+  const programmaticPage = slugToProps(slug);
 
   if (programmaticPage) {
-    return buildProgrammaticMetadata(params.slug);
+    return buildProgrammaticMetadata(slug);
   }
 
   return {
@@ -73,30 +74,31 @@ export function generateMetadata({
   };
 }
 
-export default function TeacherWritingPageRoute({
+export default async function TeacherWritingPageRoute({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const scenarioPage = getScenarioPage(params.slug);
+  const { slug } = await params;
+  const scenarioPage = getScenarioPage(slug);
 
   if (scenarioPage) {
     return <ScenarioPageTemplate page={scenarioPage} />;
   }
 
-  const page = getTeacherWritingPage(params.slug);
+  const page = getTeacherWritingPage(slug);
 
   if (page) {
     return <TeacherWritingLandingPage page={page} />;
   }
 
-  const generatedPage = getGeneratedPageBySlug(params.slug);
+  const generatedPage = getGeneratedPageBySlug(slug);
 
   if (generatedPage) {
     return <GeneratedMarkdownPage page={generatedPage} />;
   }
 
-  const programmaticPage = slugToProps(params.slug);
+  const programmaticPage = slugToProps(slug);
 
   if (programmaticPage) {
     return <ProgrammaticPage page={programmaticPage} />;

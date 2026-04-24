@@ -29,6 +29,7 @@ export default function Footer() {
     ? "Kostenloser Risiko-Check für Elternmails"
     : "Free Parent Email Risk Checker";
   const schoolsLabel = isDE ? "Für Schulen" : "For Schools";
+  const toolsLabel = isDE ? "Lehrkräfte-Tools" : "Teacher Tools";
 
   const productLinks = [
     { label: "Draft", href: localPath("/products/draft") },
@@ -49,6 +50,10 @@ export default function Footer() {
           ctaText: riskCheckerLabel,
           ctaLocation: "footer_checker",
         }),
+    },
+    {
+      label: toolsLabel,
+      href: "/tools",
     },
     { label: isDE ? "Preise" : "Pricing", href: localPath("/pricing") },
     {

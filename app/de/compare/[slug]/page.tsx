@@ -42,9 +42,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const comparison = comparisons[params.slug as keyof typeof comparisons];
+  const { slug } = await params;
+  const comparison = comparisons[slug as keyof typeof comparisons];
 
   if (!comparison) {
     return {
@@ -52,8 +53,8 @@ export async function generateMetadata({
     };
   }
 
-  const canonical = `https://zazadraft.com/de/compare/${params.slug}`;
-  const en = `https://zazadraft.com/compare/${params.slug}`;
+  const canonical = `https://zazadraft.com/de/compare/${slug}`;
+  const en = `https://zazadraft.com/compare/${slug}`;
 
   return {
     title: comparison.metaTitle,
@@ -75,12 +76,13 @@ export async function generateMetadata({
   };
 }
 
-export default function DeComparisonSlugPage({
+export default async function DeComparisonSlugPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const comparison = comparisons[params.slug as keyof typeof comparisons];
+  const { slug } = await params;
+  const comparison = comparisons[slug as keyof typeof comparisons];
 
   if (!comparison) {
     notFound();
@@ -96,7 +98,7 @@ export default function DeComparisonSlugPage({
             { label: comparison.title },
           ]}
         />
-        <ComparisonClient comparison={comparison} slug={params.slug} />
+        <ComparisonClient comparison={comparison} slug={slug} />
       </div>
     </div>
   );

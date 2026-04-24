@@ -1,13 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { SignupModal } from "@/components/signup-modal";
-import { track, trackCtaClick } from "@/lib/analytics";
+import {
+  track,
+  trackCtaClick,
+  trackPricingClicked,
+  trackSignupClicked,
+} from "@/lib/analytics";
 import {
   getAnnualSavingsAmount,
   resolveSelfServeCheckout,
   type SelfServeInterval,
 } from "@/config/pricing";
+import { sanitizeLeadSource } from "@/lib/draft-cta";
+import { readDistributionMetaFromParams } from "@/lib/distribution-analytics";
 import { formatLocalizedPrice } from "@/lib/pricing-currency";
 import { usePricingCurrency } from "@/hooks/use-pricing-currency";
 import { funnelCopy, type FunnelLocale } from "./content";
@@ -30,15 +38,27 @@ type JessicaReedFunnelProps = {
 export default function JessicaReedFunnel({
   locale = "en",
 }: JessicaReedFunnelProps) {
+  const searchParams = useSearchParams();
   const [signupOpen, setSignupOpen] = useState(false);
   const [billingPeriod, setBillingPeriod] =
     useState<SelfServeInterval>("annual");
   const copy = funnelCopy[locale];
+  const distributionMeta = useMemo(
+    () => readDistributionMetaFromParams(searchParams),
+    [searchParams],
+  );
   const { currency, setCurrency } = usePricingCurrency({
     locales: locale === "de" ? ["de-DE"] : undefined,
   });
   const checkoutReturnPath = locale === "de" ? "/de/start" : "/start";
-  const signupSource = locale === "de" ? "funnel_start_de" : "funnel_start_en";
+  const defaultSignupSource =
+    locale === "de" ? "funnel_start_de" : "funnel_start_en";
+  const signupSource = distributionMeta
+    ? sanitizeLeadSource(
+        `dist_${distributionMeta.pageType}_${distributionMeta.slug}`,
+        defaultSignupSource,
+      )
+    : defaultSignupSource;
   const freeCtaLabel = copy.freeCtaLabel;
   const displayLocale = locale === "de" ? "de-DE" : undefined;
   const proCheckout = resolveSelfServeCheckout({
@@ -94,11 +114,27 @@ export default function JessicaReedFunnel({
 
   const openFreeSignup = (ctaLocation: string, ctaText: string) => {
     trackCtaClick({ ctaText, ctaLocation });
+    if (distributionMeta) {
+      trackSignupClicked(distributionMeta, {
+        cta_location: ctaLocation,
+        cta_text: ctaText,
+        language: locale,
+      });
+    }
     setSignupOpen(true);
   };
 
   const trackPaidPricingClick = (ctaLocation: string, ctaText: string) => {
     trackCtaClick({ ctaText, ctaLocation });
+    if (distributionMeta) {
+      trackPricingClicked(distributionMeta, {
+        cta_location: ctaLocation,
+        cta_text: ctaText,
+        billing_period: billingPeriod,
+        currency,
+        language: locale,
+      });
+    }
   };
 
   return (
@@ -214,6 +250,7 @@ export default function JessicaReedFunnel({
         open={signupOpen}
         onOpenChange={setSignupOpen}
         source={signupSource}
+        distributionMeta={distributionMeta}
       />
     </div>
   );

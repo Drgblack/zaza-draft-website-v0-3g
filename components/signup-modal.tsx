@@ -6,19 +6,26 @@ import { useState } from "react";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
-import { track, trackGenerateLead } from "@/lib/analytics";
+import {
+  track,
+  trackAccountCreatedFromTool,
+  trackGenerateLead,
+} from "@/lib/analytics";
+import type { DistributionAnalyticsMeta } from "@/lib/distribution-analytics";
 import { describeBrevoError, submitBrevoContact } from "@/lib/brevo-client";
 
 interface SignupModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   source?: string;
+  distributionMeta?: DistributionAnalyticsMeta | null;
 }
 
 export function SignupModal({
   open,
   onOpenChange,
   source = "homepage_modal",
+  distributionMeta = null,
 }: SignupModalProps) {
   const { t, language } = useLanguage();
   const [name, setName] = useState("");
@@ -48,6 +55,13 @@ export function SignupModal({
       setSuccess(true);
       trackGenerateLead({ formLocation: "signup_modal", method: "email" });
       track("form_submit", { form: "signup_modal", language });
+      if (distributionMeta?.pageType === "free_tool") {
+        trackAccountCreatedFromTool(distributionMeta, {
+          form: "signup_modal",
+          language,
+          source,
+        });
+      }
     } catch (err) {
       console.error("[v0] Signup error:", err);
       setError(describeBrevoError(err, t("form.error")));

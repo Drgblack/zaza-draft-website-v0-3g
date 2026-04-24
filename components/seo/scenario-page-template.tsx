@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { SeoInternalLinkingBlocks } from "@/components/seo/internal-linking-blocks";
+import { appendDistributionParams } from "@/lib/distribution-analytics";
 import { StructuredData } from "@/components/StructuredData";
 import type { ScenarioPage } from "@/lib/seo/scenario-pages";
 
@@ -7,6 +9,12 @@ type ScenarioPageTemplateProps = {
 };
 
 export function ScenarioPageTemplate({ page }: ScenarioPageTemplateProps) {
+  const distributionMeta = {
+    product: "zaza_draft" as const,
+    pageType: "scenario" as const,
+    slug: page.slug,
+  };
+
   return (
     <>
       <StructuredData
@@ -44,6 +52,17 @@ export function ScenarioPageTemplate({ page }: ScenarioPageTemplateProps) {
       <div className="min-h-screen bg-[#f7f2e8] text-slate-900">
         <section className="border-b border-[#ddd1c0] bg-[radial-gradient(circle_at_top_left,_rgba(20,83,45,0.12),_transparent_34%),radial-gradient(circle_at_top_right,_rgba(148,163,184,0.18),_transparent_36%),linear-gradient(180deg,_#fcfaf6_0%,_#f7f2e8_100%)]">
           <div className="mx-auto max-w-6xl px-6 pb-14 pt-14 lg:px-8 lg:pb-20 lg:pt-20">
+            <nav
+              aria-label="Breadcrumb"
+              className="mb-8 flex flex-wrap items-center gap-2 text-sm text-slate-600"
+            >
+              <Link href="/" className="transition hover:text-slate-900">
+                Home
+              </Link>
+              <span>/</span>
+              <span className="text-slate-900">{page.shortTitle}</span>
+            </nav>
+
             <div className="grid gap-8 xl:grid-cols-[1.1fr,0.9fr]">
               <div className="space-y-6">
                 <p className="inline-flex rounded-full border border-[#cfd8cd] bg-white/90 px-4 py-2 text-xs uppercase tracking-[0.2em] text-slate-700">
@@ -59,7 +78,7 @@ export function ScenarioPageTemplate({ page }: ScenarioPageTemplateProps) {
                 </div>
                 <div className="flex flex-wrap gap-3">
                   <Link
-                    href="/start"
+                    href={appendDistributionParams("/start", distributionMeta)}
                     className="inline-flex items-center rounded-full bg-[#164e3f] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#123f34]"
                   >
                     Start with Zaza Draft
@@ -185,7 +204,7 @@ export function ScenarioPageTemplate({ page }: ScenarioPageTemplateProps) {
                   See how Zaza Draft works
                 </Link>
                 <Link
-                  href="/start"
+                  href={appendDistributionParams("/start", distributionMeta)}
                   className="inline-flex items-center rounded-full border border-white/20 bg-transparent px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
                 >
                   Go to /start
@@ -210,35 +229,16 @@ export function ScenarioPageTemplate({ page }: ScenarioPageTemplateProps) {
             </article>
           </section>
 
-          <section className="space-y-6">
-            <div className="max-w-3xl">
-              <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
-                Related pages
-              </p>
-              <h2 className="mt-2 text-3xl font-semibold tracking-tight text-slate-950">
-                Keep going with related scenarios
-              </h2>
-            </div>
-            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-              {page.internalLinks.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="rounded-[32px] border border-[#ddd1c0] bg-white/92 p-6 transition hover:bg-white"
-                >
-                  <p className="text-sm uppercase tracking-[0.2em] text-slate-500">
-                    Internal link
-                  </p>
-                  <h3 className="mt-3 text-xl font-semibold text-slate-950">
-                    {item.label}
-                  </h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-700">
-                    {item.description}
-                  </p>
-                </Link>
-              ))}
-            </div>
-          </section>
+          <SeoInternalLinkingBlocks
+            relatedTitle="Keep going with related parent email scenarios"
+            relatedLinks={page.internalLinks}
+            checkerHref="/parent-email-risk-checker"
+            startHref={appendDistributionParams("/start", distributionMeta)}
+            includeReportCommentLinks={
+              page.slug ===
+              "how-to-write-a-report-comment-without-sounding-harsh"
+            }
+          />
 
           <section className="space-y-6">
             <div className="max-w-3xl">

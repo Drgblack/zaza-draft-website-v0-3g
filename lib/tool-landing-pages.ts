@@ -514,6 +514,12 @@ export function getToolLandingSlugs(): ToolLandingSlug[] {
   return Object.keys(toolLandingPages) as ToolLandingSlug[];
 }
 
+export function getToolLandingPages(): ToolLandingPage[] {
+  return getToolLandingSlugs().map(
+    (slug) => toolLandingPages[slug as ToolLandingSlug],
+  );
+}
+
 export function getToolLandingPage(slug: string): ToolLandingPage | null {
   if (!(slug in toolLandingPages)) {
     return null;

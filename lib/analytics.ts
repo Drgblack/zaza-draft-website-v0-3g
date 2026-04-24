@@ -1,4 +1,5 @@
 import { readStoredAnalyticsConsent } from "@/lib/analytics-consent";
+import type { DistributionAnalyticsMeta } from "@/lib/distribution-analytics";
 
 type PlausibleProps = Record<string, string | number | boolean>;
 type TrackProps = Record<string, string | number | boolean | undefined>;
@@ -32,6 +33,18 @@ function toTrackProps(props?: TrackProps): TrackProps | undefined {
 
 function hasAnalyticsConsent() {
   return readStoredAnalyticsConsent() === "accepted";
+}
+
+function toDistributionProps(
+  meta: DistributionAnalyticsMeta,
+  props: TrackProps = {},
+): TrackProps {
+  return {
+    product: meta.product,
+    page_type: meta.pageType,
+    slug: meta.slug,
+    ...props,
+  };
 }
 
 const baseTrack = (event: string, props?: TrackProps) => {
@@ -230,6 +243,42 @@ export const trackAiReferralSession = ({
     referrer_host: referrerHost,
     landing_path: landingPath,
   });
+
+export const trackComparisonPageView = (meta: DistributionAnalyticsMeta) =>
+  baseTrack("comparison_page_view", toDistributionProps(meta));
+
+export const trackFreeToolPageView = (meta: DistributionAnalyticsMeta) =>
+  baseTrack("free_tool_page_view", toDistributionProps(meta));
+
+export const trackToolStarted = (
+  meta: DistributionAnalyticsMeta,
+  props: TrackProps = {},
+) => baseTrack("tool_started", toDistributionProps(meta, props));
+
+export const trackToolCompleted = (
+  meta: DistributionAnalyticsMeta,
+  props: TrackProps = {},
+) => baseTrack("tool_completed", toDistributionProps(meta, props));
+
+export const trackSignupClicked = (
+  meta: DistributionAnalyticsMeta,
+  props: TrackProps = {},
+) => baseTrack("signup_clicked", toDistributionProps(meta, props));
+
+export const trackPricingClicked = (
+  meta: DistributionAnalyticsMeta,
+  props: TrackProps = {},
+) => baseTrack("pricing_clicked", toDistributionProps(meta, props));
+
+export const trackShareClicked = (
+  meta: DistributionAnalyticsMeta,
+  props: TrackProps = {},
+) => baseTrack("share_clicked", toDistributionProps(meta, props));
+
+export const trackAccountCreatedFromTool = (
+  meta: DistributionAnalyticsMeta,
+  props: TrackProps = {},
+) => baseTrack("account_created_from_tool", toDistributionProps(meta, props));
 
 declare global {
   interface Window {
