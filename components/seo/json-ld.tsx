@@ -1,20 +1,16 @@
+import {
+  serializeJsonLd,
+  type JsonLdEntry,
+  type JsonLdValue,
+} from "@/lib/seo/schema";
+
 interface JsonLdScriptProps {
   id: string;
-  data: Record<string, unknown>;
+  data: JsonLdValue;
 }
 
 interface JsonLdCollectionProps {
-  entries: Array<{
-    id: string;
-    data: Record<string, unknown>;
-  }>;
-}
-
-function serialiseJsonLd(data: Record<string, unknown>) {
-  return JSON.stringify(data)
-    .replace(/</g, "\\u003c")
-    .replace(/>/g, "\\u003e")
-    .replace(/&/g, "\\u0026");
+  entries: JsonLdEntry[];
 }
 
 export function JsonLdScript({ id, data }: JsonLdScriptProps) {
@@ -22,7 +18,7 @@ export function JsonLdScript({ id, data }: JsonLdScriptProps) {
     <script
       id={id}
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: serialiseJsonLd(data) }}
+      dangerouslySetInnerHTML={{ __html: serializeJsonLd(data) }}
     />
   );
 }

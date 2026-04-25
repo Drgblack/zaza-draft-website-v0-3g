@@ -1,7 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { AgentReadableSummary } from "@/components/seo/AgentReadableSummary";
+import { LastUpdated } from "@/components/seo/LastUpdated";
 import { SignupModal } from "@/components/signup-modal";
 import {
   track,
@@ -17,6 +20,7 @@ import {
 import { sanitizeLeadSource } from "@/lib/draft-cta";
 import { readDistributionMetaFromParams } from "@/lib/distribution-analytics";
 import { formatLocalizedPrice } from "@/lib/pricing-currency";
+import { CONTENT_FRESHNESS } from "@/lib/seo/content-freshness";
 import { usePricingCurrency } from "@/hooks/use-pricing-currency";
 import { funnelCopy, type FunnelLocale } from "./content";
 import HeroSection from "./components/HeroSection";
@@ -111,6 +115,18 @@ export default function JessicaReedFunnel({
   const finalPrimaryHref = copy.finalCta.primaryCtaHref ?? CHECKER_HREF;
   const finalPrimaryLabel = copy.finalCta.primaryCtaLabel ?? freeCtaLabel;
   const finalSecondaryHref = copy.finalCta.secondaryCtaHref ?? GUIDE_HREF;
+  const guidesHubHref = "/guides";
+  const guidesHubLabel =
+    locale === "de" ? "Alle Leitfaeden ansehen" : "Browse all guides";
+  const pricingHref = locale === "de" ? "/de/pricing" : "/pricing";
+  const summaryTitle =
+    locale === "de"
+      ? "Worum es auf dieser Seite eigentlich geht"
+      : "What this page is really showing you";
+  const summaryIntro =
+    locale === "de"
+      ? "Wenn du nach unten gescrollt hast und die kurze Version willst, ist hier die Zusammenfassung fuer Lehrkraefte."
+      : "If you have scrolled the whole page and want the simple version, this is the summary teachers usually need.";
 
   const openFreeSignup = (ctaLocation: string, ctaText: string) => {
     trackCtaClick({ ctaText, ctaLocation });
@@ -140,6 +156,15 @@ export default function JessicaReedFunnel({
   return (
     <div className="funnel-theme">
       <main className="funnel-main">
+        <section className="px-6 pt-6 lg:px-8 lg:pt-8">
+          <div className="mx-auto max-w-6xl">
+            <LastUpdated
+              isoDate={CONTENT_FRESHNESS.start.isoDate}
+              precision={CONTENT_FRESHNESS.start.precision}
+              locale={locale}
+            />
+          </div>
+        </section>
         <HeroSection
           primaryHref={heroPrimaryHref}
           onPrimaryAction={() => {
@@ -218,6 +243,198 @@ export default function JessicaReedFunnel({
           copy={copy.pricing}
         />
         <FAQSection copy={copy.faq} />
+        <section className="px-6 pb-10 lg:px-8">
+          <div className="mx-auto max-w-6xl">
+            <AgentReadableSummary
+              locale={locale}
+              theme="dark"
+              title={summaryTitle}
+              intro={summaryIntro}
+              answers={{
+                whatIsIt:
+                  locale === "de" ? (
+                    <>
+                      Zaza Draft ist eine risikobewusste Schreibhilfe fuer
+                      Lehrkraefte. Es hilft bei Elternmails, Zeugnisbemerkungen
+                      und anderen Schultexten, die schnell falsch gelesen werden
+                      koennen.
+                    </>
+                  ) : (
+                    <>
+                      Zaza Draft is a risk-aware writing support tool for
+                      teachers. It helps with parent emails, report comments,
+                      and other school writing that can easily be misread.
+                    </>
+                  ),
+                whoIsItFor:
+                  locale === "de" ? (
+                    <>
+                      Fuer Lehrkraefte, die professionell schreiben wollen, ohne
+                      kalt zu klingen, und bei heiklen Nachrichten weniger
+                      zweifeln moechten.
+                    </>
+                  ) : (
+                    <>
+                      It is for teachers who want to sound professional without
+                      sounding cold, and who want less second-guessing around
+                      difficult messages.
+                    </>
+                  ),
+                problemItSolves:
+                  locale === "de" ? (
+                    <>
+                      Es loest das Problem, dass ein Text inhaltlich klar ist,
+                      aber im Ton noch zu hart, zu vage oder zu defensiv wirkt.
+                    </>
+                  ) : (
+                    <>
+                      It solves the problem of having the facts clear but the
+                      tone still feeling too blunt, too vague, or too defensive.
+                    </>
+                  ),
+                howItWorks:
+                  locale === "de" ? (
+                    <>
+                      Du fuegst einen Entwurf oder Stichpunkte ein, waehlst Ton
+                      und Ziel, und pruefst die vorgeschlagene Fassung, bevor du
+                      irgendetwas sendest oder einreichst.
+                    </>
+                  ) : (
+                    <>
+                      You paste a draft or notes, choose the tone and outcome
+                      you need, then review the suggested wording before you
+                      send or submit anything.
+                    </>
+                  ),
+                whatItCosts:
+                  locale === "de" ? (
+                    <>
+                      Der Einstieg ist kostenlos. Pro ist auf dieser Seite mit{" "}
+                      <span className="font-semibold">
+                        {proDisplayPriceLabel}
+                      </span>{" "}
+                      sichtbar, wenn du unbegrenzte Unterstuetzung brauchst.{" "}
+                      <Link
+                        href={pricingHref}
+                        className="font-semibold underline"
+                      >
+                        Alle Plandetails stehen auf der Pricing-Seite.
+                      </Link>
+                    </>
+                  ) : (
+                    <>
+                      You can start free. Pro is shown on this page at{" "}
+                      <span className="font-semibold">
+                        {proDisplayPriceLabel}
+                      </span>{" "}
+                      when you need unlimited support.{" "}
+                      <Link
+                        href={pricingHref}
+                        className="font-semibold underline"
+                      >
+                        Full plan details live on the pricing page.
+                      </Link>
+                    </>
+                  ),
+                nextStep:
+                  locale === "de" ? (
+                    <>
+                      Pruefe einen echten Entwurf im{" "}
+                      <Link
+                        href={finalPrimaryHref}
+                        className="font-semibold underline"
+                      >
+                        Risiko-Check fuer Elternmails
+                      </Link>{" "}
+                      oder lies danach den{" "}
+                      <Link
+                        href={finalSecondaryHref}
+                        className="font-semibold underline"
+                      >
+                        naechsten Leitfaden
+                      </Link>
+                      .
+                    </>
+                  ) : (
+                    <>
+                      Check a real draft in the{" "}
+                      <Link
+                        href={finalPrimaryHref}
+                        className="font-semibold underline"
+                      >
+                        Parent Email Risk Checker
+                      </Link>{" "}
+                      or move to the{" "}
+                      <Link
+                        href={finalSecondaryHref}
+                        className="font-semibold underline"
+                      >
+                        next guide
+                      </Link>
+                      .
+                    </>
+                  ),
+              }}
+            />
+          </div>
+        </section>
+        <section className="px-6 pb-12 lg:px-8">
+          <div className="mx-auto max-w-6xl rounded-[32px] border border-white/10 bg-[#111827] p-8 shadow-[0_30px_80px_-50px_rgba(15,23,42,0.6)]">
+            <p className="text-xs uppercase tracking-[0.2em] text-[#94A3B8]">
+              {locale === "de" ? "Praktische Leitfaeden" : "Practical guides"}
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white">
+              {locale === "de"
+                ? "Lieber zuerst Beispiele sehen?"
+                : "Want examples before you start?"}
+            </h2>
+            <p className="mt-4 max-w-3xl text-base leading-8 text-[#CBD5E1]">
+              {locale === "de"
+                ? "Die Guide-Uebersicht zeigt lehrkraft-zentrierte Beispiele zu veraergerten Eltern, Deeskalation und professionelleren Formulierungen, bevor du deinen eigenen Entwurf in Zaza Draft bearbeitest."
+                : "The guide hub gives you teacher-first examples on angry parent replies, de-escalation, and more professional wording before you reshape your own draft in Zaza Draft."}
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link
+                href={guidesHubHref}
+                onClick={() => {
+                  trackCtaClick({
+                    ctaText: guidesHubLabel,
+                    ctaLocation: "funnel_guides_hub",
+                  });
+                  track("seo_guide_link_clicked", {
+                    destination: guidesHubHref,
+                    source: "funnel_guides_hub",
+                    locale,
+                  });
+                }}
+                className="inline-flex items-center rounded-full border border-[#8B5CF6]/40 bg-[#8B5CF6]/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#8B5CF6]/20"
+              >
+                {guidesHubLabel}
+              </Link>
+              <Link
+                href={finalPrimaryHref}
+                onClick={() => {
+                  trackCtaClick({
+                    ctaText:
+                      locale === "de"
+                        ? "Risiko-Check fuer Elternmails"
+                        : "Parent Email Risk Checker",
+                    ctaLocation: "funnel_guides_support_checker",
+                  });
+                  track("checker_link_clicked", {
+                    source: "funnel_guides_support",
+                    locale,
+                  });
+                }}
+                className="inline-flex items-center rounded-full border border-white/10 bg-[#0B1220] px-5 py-3 text-sm font-semibold text-white transition hover:border-white/20"
+              >
+                {locale === "de"
+                  ? "Kostenlosen Risiko-Check testen"
+                  : "Try the free risk checker"}
+              </Link>
+            </div>
+          </div>
+        </section>
         <FinalCTASection
           primaryHref={finalPrimaryHref}
           secondaryHref={finalSecondaryHref}

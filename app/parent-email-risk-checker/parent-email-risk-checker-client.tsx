@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Check, Copy, Link2, LoaderCircle, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AgentReadableSummary } from "@/components/seo/AgentReadableSummary";
+import { LastUpdated } from "@/components/seo/LastUpdated";
 import {
   Card,
   CardContent,
@@ -31,6 +33,7 @@ import {
   type CheckerLocale,
   type DisplayRiskLevel,
 } from "@/app/parent-email-risk-checker/copy";
+import { CONTENT_FRESHNESS } from "@/lib/seo/content-freshness";
 
 const MIN_WORDS = 10;
 const CHECKER_DISTRIBUTION_META = {
@@ -200,6 +203,15 @@ export default function ParentEmailRiskCheckerClient({
     ? buildIssueWarnings(result.issuesDetected, copy)
     : [];
   const riskTone = getRiskToneConfig(result?.riskLevel ?? null, copy);
+  const pricingHref = locale === "de" ? "/de/pricing" : "/pricing";
+  const summaryTitle =
+    locale === "de"
+      ? "Der Checker in einem Satz"
+      : "What this checker is doing for you";
+  const summaryIntro =
+    locale === "de"
+      ? "Wenn du wissen willst, wie dieses Tool in Zaza Draft einzuordnen ist, steht hier die kurze Version."
+      : "If you want the fast explanation before you move on, this is how the checker fits into Zaza Draft.";
   const shareUrl = useMemo(() => {
     if (typeof window === "undefined") {
       return locale === "de"
@@ -413,6 +425,13 @@ export default function ParentEmailRiskCheckerClient({
             <h1 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl lg:text-6xl">
               {copy.pageTitle}
             </h1>
+            <div className="mt-5">
+              <LastUpdated
+                isoDate={CONTENT_FRESHNESS.parentEmailRiskChecker.isoDate}
+                precision={CONTENT_FRESHNESS.parentEmailRiskChecker.precision}
+                locale={locale}
+              />
+            </div>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700 md:text-xl">
               {copy.introTop}
             </p>
@@ -802,6 +821,121 @@ export default function ParentEmailRiskCheckerClient({
             </div>
             <p>{copy.positioningClosing}</p>
           </div>
+        </div>
+      </section>
+
+      <section className="px-4 pb-12">
+        <div className="mx-auto max-w-5xl">
+          <AgentReadableSummary
+            locale={locale}
+            title={summaryTitle}
+            intro={summaryIntro}
+            answers={{
+              whatIsIt:
+                locale === "de" ? (
+                  <>
+                    Dieses Tool ist ein kostenloser Teil von Zaza Draft. Es
+                    prueft eine Elternmail auf Tonrisiko, Eskalationssignale und
+                    Formulierungen, die leicht falsch verstanden werden koennen.
+                  </>
+                ) : (
+                  <>
+                    This tool is a free part of Zaza Draft. It checks a parent
+                    email for tone risk, escalation signals, and wording that
+                    may be easy to misread.
+                  </>
+                ),
+              whoIsItFor:
+                locale === "de" ? (
+                  <>
+                    Fuer Lehrkraefte, die vor dem Senden wissen wollen, ob eine
+                    Mail zu direkt, zu defensiv oder zu hart wirken koennte.
+                  </>
+                ) : (
+                  <>
+                    It is for teachers who want to know before sending whether
+                    an email may sound too blunt, too defensive, or harsher than
+                    intended.
+                  </>
+                ),
+              problemItSolves:
+                locale === "de" ? (
+                  <>
+                    Es loest das Problem, dass man den eigenen Ton nach einem
+                    langen Tag oft schlechter einschaetzt als die eigentlichen
+                    Fakten der Nachricht.
+                  </>
+                ) : (
+                  <>
+                    It solves the problem of being able to judge the facts of a
+                    message more easily than the way the tone may land after a
+                    long day.
+                  </>
+                ),
+              howItWorks:
+                locale === "de" ? (
+                  <>
+                    Du fuegst den Entwurf ein, der Checker bewertet Risiko und
+                    kritische Stellen, und du bekommst eine ruhigere Version,
+                    mit der du weiterarbeiten kannst.
+                  </>
+                ) : (
+                  <>
+                    You paste the draft, the checker scores the risk and flags
+                    likely trouble spots, then gives you a calmer version to
+                    work from.
+                  </>
+                ),
+              whatItCosts:
+                locale === "de" ? (
+                  <>
+                    Der Checker auf dieser Seite ist kostenlos. Wenn du danach
+                    den groesseren Schreibworkflow nutzen willst, kannst du mit
+                    Zaza Draft starten und spaeter die{" "}
+                    <Link
+                      href={pricingHref}
+                      className="font-semibold underline"
+                    >
+                      Preise
+                    </Link>{" "}
+                    ansehen.
+                  </>
+                ) : (
+                  <>
+                    The checker on this page is free. If you want the wider
+                    drafting workflow afterward, you can continue into Zaza
+                    Draft and review the{" "}
+                    <Link
+                      href={pricingHref}
+                      className="font-semibold underline"
+                    >
+                      pricing
+                    </Link>{" "}
+                    later.
+                  </>
+                ),
+              nextStep:
+                locale === "de" ? (
+                  <>
+                    Teste zuerst eine echte Mail. Wenn die ruhigere Version
+                    passt, gehe weiter zu{" "}
+                    <Link href={startHref} className="font-semibold underline">
+                      Zaza Draft
+                    </Link>
+                    .
+                  </>
+                ) : (
+                  <>
+                    Test a real email first. If the safer version feels right,
+                    continue into{" "}
+                    <Link href={startHref} className="font-semibold underline">
+                      Zaza Draft
+                    </Link>
+                    .
+                  </>
+                ),
+            }}
+          />
         </div>
       </section>
 

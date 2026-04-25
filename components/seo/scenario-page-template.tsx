@@ -1,19 +1,27 @@
 import Link from "next/link";
 import { SeoInternalLinkingBlocks } from "@/components/seo/internal-linking-blocks";
+import { AgentReadableSummary } from "@/components/seo/AgentReadableSummary";
+import { LastUpdated } from "@/components/seo/LastUpdated";
 import { appendDistributionParams } from "@/lib/distribution-analytics";
 import { StructuredData } from "@/components/StructuredData";
-import type { ScenarioPage } from "@/lib/seo/scenario-pages";
+import {
+  getScenarioPageLastReviewed,
+  type ScenarioPage,
+} from "@/lib/seo/scenario-pages";
+import { CONTENT_FRESHNESS } from "@/lib/seo/content-freshness";
 
 type ScenarioPageTemplateProps = {
   page: ScenarioPage;
 };
 
 export function ScenarioPageTemplate({ page }: ScenarioPageTemplateProps) {
+  const lastReviewed = getScenarioPageLastReviewed(page);
   const distributionMeta = {
     product: "zaza_draft" as const,
     pageType: "scenario" as const,
     slug: page.slug,
   };
+  const startHref = appendDistributionParams("/start", distributionMeta);
   const checkerHref = appendDistributionParams(
     "/parent-email-risk-checker",
     distributionMeta,
@@ -21,6 +29,27 @@ export function ScenarioPageTemplate({ page }: ScenarioPageTemplateProps) {
 
   return (
     <>
+      <StructuredData
+        type="WebPage"
+        data={{
+          id: `${page.slug}-webpage-jsonld`,
+          path: `/${page.slug}`,
+          title: page.h1,
+          description: page.metaDescription,
+          potentialActionName: "Start with Zaza Draft",
+          modifiedTime: `${lastReviewed}T00:00:00.000Z`,
+        }}
+      />
+      <StructuredData
+        type="SoftwareApplication"
+        data={{
+          id: `${page.slug}-software-jsonld`,
+          path: `/${page.slug}`,
+          title: "Zaza Draft",
+          description:
+            "Zaza Draft helps teachers rewrite difficult parent emails and school messages into calmer wording they can review before sending.",
+        }}
+      />
       <StructuredData
         type="Article"
         data={{
@@ -75,6 +104,10 @@ export function ScenarioPageTemplate({ page }: ScenarioPageTemplateProps) {
                 <h1 className="max-w-4xl text-balance text-4xl font-semibold tracking-tight text-slate-950 md:text-6xl">
                   {page.h1}
                 </h1>
+                <LastUpdated
+                  isoDate={lastReviewed}
+                  precision={CONTENT_FRESHNESS.scenarioPages.precision}
+                />
                 <div className="max-w-3xl space-y-4 text-lg leading-8 text-slate-700">
                   {page.problemFraming.map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>
@@ -82,7 +115,7 @@ export function ScenarioPageTemplate({ page }: ScenarioPageTemplateProps) {
                 </div>
                 <div className="flex flex-wrap gap-3">
                   <Link
-                    href={appendDistributionParams("/start", distributionMeta)}
+                    href={startHref}
                     className="inline-flex items-center rounded-full bg-[#164e3f] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#123f34]"
                   >
                     Start with Zaza Draft
@@ -191,6 +224,62 @@ export function ScenarioPageTemplate({ page }: ScenarioPageTemplateProps) {
             </div>
           </section>
 
+          <AgentReadableSummary
+            title="The short version for this parent-email scenario"
+            intro="If you want the fast explanation before you decide what to do next, this block answers the core questions clearly."
+            answers={{
+              whatIsIt: (
+                <>
+                  Zaza Draft is a teacher-first writing support tool for parent
+                  emails and other school messages where tone, clarity, and
+                  defensibility matter.
+                </>
+              ),
+              whoIsItFor: (
+                <>
+                  It is for teachers who want help writing difficult messages
+                  without sounding harsher, colder, or more reactive than they
+                  intend.
+                </>
+              ),
+              problemItSolves: (
+                <>
+                  It solves the problem of knowing what needs to be said, but
+                  not yet trusting how the wording will land with a parent.
+                </>
+              ),
+              howItWorks: (
+                <>
+                  You start with a real draft or situation, Zaza helps shape a
+                  calmer version, and you still review the final message before
+                  using it.
+                </>
+              ),
+              whatItCosts: (
+                <>
+                  You can start free, then move to a paid plan if you want
+                  regular support.{" "}
+                  <Link href="/pricing" className="font-semibold underline">
+                    Current plan details are on the pricing page.
+                  </Link>
+                </>
+              ),
+              nextStep: (
+                <>
+                  If you already have a draft,{" "}
+                  <Link href={checkerHref} className="font-semibold underline">
+                    check the message
+                  </Link>
+                  . If you want to write from scratch,{" "}
+                  <Link href={startHref} className="font-semibold underline">
+                    start with Zaza Draft
+                  </Link>
+                  .
+                </>
+              ),
+            }}
+          />
+
           <section className="grid gap-6 lg:grid-cols-[1.1fr,0.9fr]">
             <article className="rounded-[32px] border border-[#d4c6b4] bg-[linear-gradient(135deg,_#123f34_0%,_#1a5c4a_100%)] p-8 text-white md:p-10">
               <h2 className="max-w-3xl text-3xl font-semibold tracking-tight md:text-4xl">
@@ -209,7 +298,7 @@ export function ScenarioPageTemplate({ page }: ScenarioPageTemplateProps) {
                   See how Zaza Draft works
                 </Link>
                 <Link
-                  href={appendDistributionParams("/start", distributionMeta)}
+                  href={startHref}
                   className="inline-flex items-center rounded-full border border-white/20 bg-transparent px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
                 >
                   Go to /start
@@ -238,7 +327,7 @@ export function ScenarioPageTemplate({ page }: ScenarioPageTemplateProps) {
             relatedTitle="Keep going with related parent email scenarios"
             relatedLinks={page.internalLinks}
             checkerHref={checkerHref}
-            startHref={appendDistributionParams("/start", distributionMeta)}
+            startHref={startHref}
             includeReportCommentLinks={
               page.slug ===
               "how-to-write-a-report-comment-without-sounding-harsh"

@@ -2,15 +2,19 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { usePathname } from "next/navigation";
-import { Check, ChevronDown, Star, ShieldCheck } from "lucide-react";
+import { Check, ChevronDown, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AgentReadableSummary } from "@/components/seo/AgentReadableSummary";
+import { JsonLdCollection } from "@/components/seo/json-ld";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { SignupModal } from "@/components/signup-modal";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { track, trackCtaClick } from "@/lib/analytics";
 import {
+  getAnnualSavingsAmount,
+  getLocalizedPlanAmount,
   getLocalizedDepartmentAmount,
   resolveSelfServeCheckout,
   type SelfServeInterval,
@@ -19,6 +23,13 @@ import { getDraftSchoolSalesHref } from "@/lib/draft-cta";
 import { CurrencyToggle } from "@/components/pricing/currency-toggle";
 import { usePricingCurrency } from "@/hooks/use-pricing-currency";
 import { formatLocalizedPrice } from "@/lib/pricing-currency";
+import {
+  buildVisibleSelfServeOfferJsonLd,
+  createFAQPageJsonLd,
+  createSoftwareApplicationJsonLd,
+  createWebPageJsonLd,
+} from "@/lib/seo/json-ld";
+import type { JsonLdObject } from "@/lib/seo/schema";
 
 const pricingTestimonialHeadshots = [
   "/testimonials/pricing-teacher-1.jpg",
@@ -57,6 +68,141 @@ function PricingTestimonialAvatar({ src, alt }: { src: string; alt: string }) {
     </div>
   );
 }
+
+type PricingPlanFact = {
+  label: string;
+  value: ReactNode;
+  highlight?: ReactNode;
+  emphasized?: boolean;
+};
+
+type PricingPlanCardData = {
+  key: string;
+  badge?: string;
+  badgeTone: "violet" | "amber" | "white";
+  title: string;
+  description: string;
+  facts: PricingPlanFact[];
+  features: string[];
+  terms: string[];
+  cta: ReactNode;
+  ctaNote?: ReactNode;
+  featured?: boolean;
+};
+
+function PricingPlanCard({
+  plan,
+  includesLabel,
+  termsLabel,
+}: {
+  plan: PricingPlanCardData;
+  includesLabel: string;
+  termsLabel: string;
+}) {
+  const badgeStyles =
+    plan.badgeTone === "amber"
+      ? "bg-[#FB923C]/20 text-[#FDBA74]"
+      : plan.badgeTone === "white"
+        ? "bg-white/15 text-white"
+        : "bg-[#8B5CF6]/20 text-[#C4B5FD]";
+  const articleStyles = plan.featured
+    ? "border-[#8B5CF6] shadow-[0_24px_70px_rgba(139,92,246,0.22)] lg:-translate-y-1"
+    : plan.badgeTone === "amber"
+      ? "border-white/10 hover:border-[#FB923C]/45"
+      : "border-white/10 hover:border-[#8B5CF6]/40";
+  const emphasizedRowStyles =
+    plan.badgeTone === "amber"
+      ? "border-[#FB923C]/25 bg-[#FB923C]/10"
+      : "border-[#8B5CF6]/25 bg-[#8B5CF6]/10";
+
+  return (
+    <article
+      aria-labelledby={`pricing-plan-${plan.key}`}
+      className={`rounded-3xl border bg-[#111827] p-8 transition-all ${articleStyles}`}
+    >
+      <header>
+        {plan.badge ? (
+          <span
+            className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] ${badgeStyles}`}
+          >
+            {plan.badge}
+          </span>
+        ) : null}
+        <h3
+          id={`pricing-plan-${plan.key}`}
+          className="mt-4 text-3xl font-bold text-white"
+        >
+          {plan.title}
+        </h3>
+        <p className="mt-3 text-sm leading-7 text-[#CBD5E1]">
+          {plan.description}
+        </p>
+      </header>
+
+      <dl className="mt-8 space-y-4">
+        {plan.facts.map((fact) => (
+          <div
+            key={`${plan.key}-${fact.label}`}
+            className={`rounded-2xl border p-4 ${
+              fact.emphasized
+                ? emphasizedRowStyles
+                : "border-white/10 bg-[#0B1220]"
+            }`}
+          >
+            <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-[#94A3B8]">
+              {fact.label}
+            </dt>
+            <dd className="mt-2 text-sm leading-7 text-[#F8FAFC]">
+              <div className="text-base font-semibold text-white">
+                {fact.value}
+              </div>
+              {fact.highlight ? (
+                <p className="mt-1 text-xs font-medium text-[#C4B5FD]">
+                  {fact.highlight}
+                </p>
+              ) : null}
+            </dd>
+          </div>
+        ))}
+      </dl>
+
+      <section className="mt-8">
+        <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-[#E2E8F0]">
+          {includesLabel}
+        </h4>
+        <ul className="mt-4 space-y-3">
+          {plan.features.map((feature) => (
+            <li key={feature} className="flex items-start gap-3">
+              <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#8B5CF6]" />
+              <span className="text-sm leading-7 text-[#CBD5E1]">
+                {feature}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mt-8">
+        <h4 className="text-sm font-semibold uppercase tracking-[0.18em] text-[#E2E8F0]">
+          {termsLabel}
+        </h4>
+        <ul className="mt-4 space-y-2">
+          {plan.terms.map((term) => (
+            <li key={term} className="text-sm leading-7 text-[#94A3B8]">
+              {term}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <div className="mt-8">{plan.cta}</div>
+      {plan.ctaNote ? (
+        <p className="mt-4 text-sm leading-7 text-[#94A3B8]">{plan.ctaNote}</p>
+      ) : null}
+    </article>
+  );
+}
+
 export default function PricingClient() {
   const { t, language } = useLanguage();
   const pathname = usePathname();
@@ -129,6 +275,49 @@ export default function PricingClient() {
   ];
   const trackPricingCTA = (ctaText: string, ctaLocation: string) =>
     trackCtaClick({ ctaText, ctaLocation });
+  const perMonthLabel = t("pricing.details.perMonth");
+  const perYearLabel = t("pricing.details.perYear");
+  const pricingSectionTitle = t("pricing.plans.title");
+  const pricingSectionSubtitle = t("pricing.plans.subtitle");
+  const pricingToggleHelper = t("pricing.toggle.helper");
+  const pricingIncludesLabel = t("pricing.details.includes");
+  const pricingTermsLabel = t("pricing.details.terms");
+  const teacherMonthlyAmount = getLocalizedPlanAmount(
+    "draft",
+    "monthly",
+    currency,
+  );
+  const teacherAnnualAmount = getLocalizedPlanAmount(
+    "draft",
+    "annual",
+    currency,
+  );
+  const teacherMonthlyPrice = `${formatLocalizedPrice(teacherMonthlyAmount, currency)}${perMonthLabel}`;
+  const teacherAnnualPrice = `${formatLocalizedPrice(teacherAnnualAmount, currency)}${perYearLabel}`;
+  const teacherAnnualSavings = formatLocalizedPrice(
+    getAnnualSavingsAmount("draft", currency),
+    currency,
+  );
+  const bundleMonthlyAmount = getLocalizedPlanAmount(
+    "bundle",
+    "monthly",
+    currency,
+  );
+  const bundleAnnualAmount = getLocalizedPlanAmount(
+    "bundle",
+    "annual",
+    currency,
+  );
+  const bundleMonthlyPrice = `${formatLocalizedPrice(bundleMonthlyAmount, currency)}${perMonthLabel}`;
+  const bundleAnnualPrice = `${formatLocalizedPrice(bundleAnnualAmount, currency)}${perYearLabel}`;
+  const bundleAnnualSavings = formatLocalizedPrice(
+    getAnnualSavingsAmount("bundle", currency),
+    currency,
+  );
+  const departmentMonthlyPrice = `${formatLocalizedPrice(
+    getLocalizedDepartmentAmount(currency),
+    currency,
+  )}${t("pricing.department.perTeacher")}`;
   const formatPlanSummary = (amount: number) =>
     isGerman
       ? `${formatLocalizedPrice(amount, currency)} pro ${
@@ -235,6 +424,10 @@ export default function PricingClient() {
   const resourceLinks = isGerman
     ? [
         {
+          href: "/guides",
+          title: "Alle Kommunikationsleitfaeden ansehen",
+        },
+        {
           href: "/de/parent-email-risk-checker",
           title: "Risiko-Check fuer Elternmails",
         },
@@ -253,6 +446,10 @@ export default function PricingClient() {
       ]
     : [
         {
+          href: "/guides",
+          title: "Browse all teacher communication guides",
+        },
+        {
           href: "/teacher-email-tone-guide",
           title: "A Teacher's Guide to Email Tone with Parents",
         },
@@ -269,6 +466,262 @@ export default function PricingClient() {
           title: "Explore Zaza Draft in more detail",
         },
       ];
+  const pricingFaqItems = [1, 2, 3, 4, 5, 6].map((index) => ({
+    question: t(`pricing.faq.q${index}`),
+    answer: t(`pricing.faq.a${index}`),
+  }));
+  const summaryTitle = isGerman
+    ? "Preise und Einordnung auf einen Blick"
+    : "Pricing and fit at a glance";
+  const summaryIntro = isGerman
+    ? "Wenn Sie nur die kurze Version brauchen, beantwortet dieser Abschnitt die wichtigsten Fragen zu Zaza Draft und den Preisen."
+    : "If you only want the short version, this section answers the main questions about Zaza Draft and what the plans cost.";
+  const monthlySchemaLabel = isGerman ? "monatlich" : "monthly";
+  const annualSchemaLabel = isGerman ? "jaehrlich" : "annual";
+  const pricingPlans: PricingPlanCardData[] = [
+    {
+      key: "free",
+      badge: t("pricing.free.badge"),
+      badgeTone: "violet",
+      title: t("pricing.free.title"),
+      description: t("pricing.free.description"),
+      facts: [
+        {
+          label: t("pricing.details.bestFor"),
+          value: t("pricing.free.bestFor"),
+        },
+        {
+          label: t("pricing.details.monthlyPrice"),
+          value: `${formatLocalizedPrice(0, currency)}${perMonthLabel}`,
+        },
+      ],
+      features: [1, 2, 3, 4].map((index) => t(`pricing.free.feature${index}`)),
+      terms: [t("pricing.free.term1"), t("pricing.free.term2")],
+      cta: (
+        <Button
+          onClick={() => handlePlanClick("free")}
+          className="w-full bg-transparent border-2 border-[#8B5CF6] text-[#8B5CF6] hover:bg-[#8B5CF6]/10 py-5 text-base font-semibold rounded-lg"
+        >
+          {t("pricing.free.cta")}
+        </Button>
+      ),
+    },
+    {
+      key: "teacher",
+      badge: t("pricing.teacher.badge"),
+      badgeTone: "violet",
+      title: t("pricing.teacher.title"),
+      description: teacherDescription,
+      featured: true,
+      facts: [
+        {
+          label: t("pricing.details.bestFor"),
+          value: t("pricing.teacher.bestFor"),
+        },
+        {
+          label: t("pricing.details.monthlyPrice"),
+          value: teacherMonthlyPrice,
+        },
+        {
+          label: t("pricing.details.yearlyPrice"),
+          value: teacherAnnualPrice,
+          highlight: `${t("pricing.details.bestValue")} · ${t("pricing.teacher.savingsAnnual")} · ${teacherAnnualSavings}`,
+          emphasized: true,
+        },
+      ],
+      features: [1, 2, 3, 4, 5, 6].map((index) =>
+        t(`pricing.teacher.feature${index}`),
+      ),
+      terms: [
+        t("pricing.teacher.period"),
+        t("pricing.teacher.guarantee"),
+        t("pricing.teacher.trial"),
+      ],
+      cta: (
+        <Button
+          type="button"
+          disabled={!teacherCheckout.isAvailable}
+          onClick={() =>
+            launchCheckout("checkout_teacher", teacherCheckout, "draft")
+          }
+          className="w-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white hover:scale-[1.01] py-6 text-lg font-semibold rounded-lg shadow-lg shadow-[#8B5CF6]/30 transition-transform"
+        >
+          {t("pricing.checkout.buyNow")}
+        </Button>
+      ),
+      ctaNote: teacherCheckoutNote,
+    },
+    {
+      key: "department",
+      badge: t("pricing.department.badge"),
+      badgeTone: "amber",
+      title: t("pricing.department.title"),
+      description: t("pricing.department.description"),
+      facts: [
+        {
+          label: t("pricing.details.bestFor"),
+          value: t("pricing.department.bestFor"),
+        },
+        {
+          label: t("pricing.details.monthlyPrice"),
+          value: departmentMonthlyPrice,
+        },
+        {
+          label: t("pricing.details.billing"),
+          value: t("pricing.department.billing"),
+        },
+      ],
+      features: [1, 2, 3, 4].map((index) =>
+        t(`pricing.department.feature${index}`),
+      ),
+      terms: [t("pricing.department.term1"), t("pricing.department.term2")],
+      cta: (
+        <Button
+          asChild
+          onClick={() => {
+            trackPricingCTA(
+              t("pricing.department.cta"),
+              "pricing_department_card",
+            );
+            track("cta_click_pricing_checkout_department", {
+              currency,
+              language,
+              destination: departmentSalesHref,
+            });
+          }}
+          className="w-full bg-transparent border-2 border-[#FB923C] text-[#FDBA74] hover:bg-[#FB923C]/10 py-5 text-base font-semibold rounded-lg"
+        >
+          <a href={departmentSalesHref}>{t("pricing.department.cta")}</a>
+        </Button>
+      ),
+    },
+    {
+      key: "enterprise",
+      badge: t("pricing.enterprise.badge"),
+      badgeTone: "amber",
+      title: t("pricing.enterprise.title"),
+      description: t("pricing.enterprise.description"),
+      facts: [
+        {
+          label: t("pricing.details.bestFor"),
+          value: t("pricing.enterprise.bestFor"),
+        },
+        {
+          label: t("pricing.details.pricing"),
+          value: t("pricing.enterprise.price"),
+        },
+      ],
+      features: [1, 2, 3].map((index) =>
+        t(`pricing.enterprise.feature${index}`),
+      ),
+      terms: [t("pricing.enterprise.term1"), t("pricing.enterprise.term2")],
+      cta: (
+        <Button
+          asChild
+          onClick={() => {
+            trackPricingCTA(
+              t("pricing.enterprise.cta"),
+              "pricing_enterprise_card",
+            );
+            track("cta_click_pricing_checkout_enterprise", {
+              currency,
+              language,
+              destination: enterpriseSalesHref,
+            });
+          }}
+          className="w-full bg-transparent border-2 border-[#FB923C] text-[#FDBA74] hover:bg-[#FB923C]/10 py-5 text-base font-semibold rounded-lg"
+        >
+          <a href={enterpriseSalesHref}>{t("pricing.enterprise.cta")}</a>
+        </Button>
+      ),
+    },
+    {
+      key: "bundle",
+      badge: t("pricing.bundle.badge"),
+      badgeTone: "white",
+      title: t("pricing.bundle.title"),
+      description: bundleDescription,
+      facts: [
+        {
+          label: t("pricing.details.bestFor"),
+          value: t("pricing.bundle.bestFor"),
+        },
+        {
+          label: t("pricing.details.monthlyPrice"),
+          value: bundleMonthlyPrice,
+        },
+        {
+          label: t("pricing.details.yearlyPrice"),
+          value: bundleAnnualPrice,
+          highlight: `${t("pricing.details.bestValue")} · ${t("pricing.bundle.savings")} · ${bundleAnnualSavings}`,
+          emphasized: true,
+        },
+      ],
+      features: [
+        t("pricing.bundle.feature1"),
+        t("pricing.bundle.feature2"),
+        t("pricing.bundle.feature3"),
+      ],
+      terms: [t("pricing.bundle.term1"), t("pricing.bundle.term2")],
+      cta: (
+        <Button
+          type="button"
+          disabled={!bundleCheckout.isAvailable}
+          onClick={() =>
+            launchCheckout("checkout_bundle", bundleCheckout, "bundle")
+          }
+          className="w-full bg-white text-[#7C3AED] hover:bg-white/90 py-5 text-base font-semibold rounded-lg shadow-lg"
+        >
+          {t("pricing.checkout.buyNow")}
+        </Button>
+      ),
+      ctaNote: bundleCheckoutNote,
+    },
+  ];
+  const pricingOfferEntries = [
+    buildVisibleSelfServeOfferJsonLd("draft", "monthly", "EUR", {
+      name: `${t("pricing.teacher.title")} ${monthlySchemaLabel}`,
+      url: pricingPath,
+      description: isGerman
+        ? "Monatlicher Zaza-Draft-Lehrkraft-Plan fuer ruhigere Elternmails und aussagekraeftigere Zeugnisbemerkungen."
+        : "Monthly Zaza Draft Teacher plan for calmer parent emails and more meaningful report comments.",
+    }),
+    buildVisibleSelfServeOfferJsonLd("draft", "annual", "EUR", {
+      name: `${t("pricing.teacher.title")} ${annualSchemaLabel}`,
+      url: pricingPath,
+      description: isGerman
+        ? "Jaehrlicher Zaza-Draft-Lehrkraft-Plan fuer ruhigere Elternmails und aussagekraeftigere Zeugnisbemerkungen."
+        : "Annual Zaza Draft Teacher plan for calmer parent emails and more meaningful report comments.",
+    }),
+    buildVisibleSelfServeOfferJsonLd("draft", "monthly", "USD", {
+      name: `${t("pricing.teacher.title")} ${monthlySchemaLabel} USD`,
+      url: pricingPath,
+      description: isGerman
+        ? "Monatlicher Zaza-Draft-Lehrkraft-Plan fuer ruhigere Elternmails und aussagekraeftigere Zeugnisbemerkungen."
+        : "Monthly Zaza Draft Teacher plan for calmer parent emails and more meaningful report comments.",
+    }),
+    buildVisibleSelfServeOfferJsonLd("draft", "annual", "USD", {
+      name: `${t("pricing.teacher.title")} ${annualSchemaLabel} USD`,
+      url: pricingPath,
+      description: isGerman
+        ? "Jaehrlicher Zaza-Draft-Lehrkraft-Plan fuer ruhigere Elternmails und aussagekraeftigere Zeugnisbemerkungen."
+        : "Annual Zaza Draft Teacher plan for calmer parent emails and more meaningful report comments.",
+    }),
+    buildVisibleSelfServeOfferJsonLd("bundle", "monthly", "EUR", {
+      name: `${t("pricing.bundle.title")} ${monthlySchemaLabel}`,
+      url: pricingPath,
+      description: isGerman
+        ? "Monatlicher Zaza-Draft-Bundle-Plan fuer Planung, Schreiben und Kommunikationsunterstuetzung."
+        : "Monthly Zaza Draft bundle plan for planning, writing, and communication support.",
+    }),
+    buildVisibleSelfServeOfferJsonLd("bundle", "annual", "EUR", {
+      name: `${t("pricing.bundle.title")} ${annualSchemaLabel}`,
+      url: pricingPath,
+      description: isGerman
+        ? "Jaehrlicher Zaza-Draft-Bundle-Plan fuer Planung, Schreiben und Kommunikationsunterstuetzung."
+        : "Annual Zaza Draft bundle plan for planning, writing, and communication support.",
+    }),
+  ].filter((entry): entry is JsonLdObject => Boolean(entry));
 
   const handlePlanClick = (planId: string) => {
     trackPricingCTA(t("pricing.free.cta"), "pricing_free_card");
@@ -309,6 +762,43 @@ export default function PricingClient() {
 
   return (
     <>
+      <JsonLdCollection
+        entries={[
+          {
+            id: `pricing-webpage-${isGerman ? "de" : "en"}`,
+            data: createWebPageJsonLd({
+              name: isGerman ? "Zaza Draft Preise" : "Zaza Draft Pricing",
+              description: heroSubheadline,
+              path: pricingPath,
+              inLanguage: isGerman ? "de-DE" : "en-GB",
+              keywords: [
+                isGerman ? "Zaza Draft Preise" : "Zaza Draft pricing",
+                "teacher pricing",
+                "parent email support for teachers",
+                "report comments",
+              ],
+            }),
+          },
+          {
+            id: `pricing-faq-${isGerman ? "de" : "en"}`,
+            data: createFAQPageJsonLd(pricingFaqItems),
+          },
+          {
+            id: `pricing-software-${isGerman ? "de" : "en"}`,
+            data: createSoftwareApplicationJsonLd({
+              description: isGerman
+                ? "Zaza Draft hilft Lehrkraeften, ruhigere Elternmails und aussagekraeftigere Zeugnisbemerkungen mit Formulierungen zu schreiben, die sie morgen nicht bereuen."
+                : "Zaza Draft helps teachers write calmer parent emails and more meaningful report comments with wording they will not regret tomorrow.",
+              offers: pricingOfferEntries,
+              inLanguage: isGerman ? "de-DE" : "en-GB",
+            }),
+          },
+          ...pricingOfferEntries.map((entry, index) => ({
+            id: `pricing-offer-${isGerman ? "de" : "en"}-${index + 1}`,
+            data: entry,
+          })),
+        ]}
+      />
       <div className="bg-[#0F172A] min-h-screen">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-6">
@@ -432,324 +922,30 @@ export default function PricingClient() {
           </div>
         </section>
 
-        {/* Pricing Cards */}
         <section className="pb-20 px-6">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
-            {/* Free Plan */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="bg-[#1E293B] rounded-2xl p-8 border-2 border-transparent hover:border-[#8B5CF6] transition-all"
-            >
-              <div className="inline-block bg-[#8B5CF6]/20 text-[#A78BFA] px-3 py-1.5 rounded-lg text-sm font-semibold mb-4">
-                {t("pricing.free.badge")}
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">
-                {t("pricing.free.title")}
-              </h3>
-              <p className="text-[#94A3B8] mb-6 text-sm">
-                {t("pricing.free.description")}
+          <div className="mx-auto max-w-7xl">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="text-3xl font-bold text-white md:text-4xl">
+                {pricingSectionTitle}
+              </h2>
+              <p className="mt-4 text-base leading-8 text-[#CBD5E1] md:text-lg">
+                {pricingSectionSubtitle}
               </p>
-
-              <div className="mb-6">
-                <span className="text-5xl font-bold text-white">
-                  {formatLocalizedPrice(0, currency)}
-                </span>
-              </div>
-
-              <Button
-                onClick={() => handlePlanClick("free")}
-                className="w-full bg-transparent border-2 border-[#8B5CF6] text-[#8B5CF6] hover:bg-[#8B5CF6]/10 py-5 text-base font-semibold rounded-lg mb-6"
-              >
-                {t("pricing.free.cta")}
-              </Button>
-
-              <div className="space-y-3">
-                <div className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" />
-                  <span className="text-[#94A3B8] text-sm">
-                    {t("pricing.free.feature1")}
-                  </span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" />
-                  <span className="text-[#94A3B8] text-sm">
-                    {t("pricing.free.feature2")}
-                  </span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" />
-                  <span className="text-[#94A3B8] text-sm">
-                    {t("pricing.free.feature3")}
-                  </span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" />
-                  <span className="text-[#94A3B8] text-sm">
-                    {t("pricing.free.feature4")}
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Teacher (Premium) Plan - Featured */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="bg-[#1E293B] rounded-2xl p-8 border-2 border-[#8B5CF6] relative lg:scale-105 shadow-2xl shadow-[#8B5CF6]/30"
-            >
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white px-6 py-2 rounded-full font-semibold text-sm shadow-lg flex items-center gap-2">
-                <Star className="w-4 h-4 fill-current" />
-                {t("pricing.teacher.badge")}
-              </div>
-
-              <h3 className="text-3xl font-bold text-white mb-2 mt-4">
-                {t("pricing.teacher.title")}
-              </h3>
-              <p className="text-[#E2E8F0] mb-6">{teacherDescription}</p>
-
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={`${billingPeriod}-${currency}`}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  className="mb-2"
-                >
-                  <span className="text-5xl font-bold text-white">
-                    {formatLocalizedPrice(
-                      teacherCheckout.displayAmount,
-                      currency,
-                    )}
-                  </span>
-                  <span className="text-[#94A3B8]">
-                    /{billingPeriod === "monthly" ? "mo" : "yr"}
-                  </span>
-                </motion.div>
-              </AnimatePresence>
-
-              {billingPeriod === "annual" && (
-                <p className="text-sm text-green-500 font-semibold mb-4">
-                  {t("pricing.teacher.savingsAnnual")}
-                </p>
-              )}
-
-              <Button
-                type="button"
-                disabled={!teacherCheckout.isAvailable}
-                onClick={() =>
-                  launchCheckout("checkout_teacher", teacherCheckout, "draft")
-                }
-                className="w-full bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white hover:scale-105 py-6 text-lg font-semibold rounded-lg mb-3 shadow-lg shadow-[#8B5CF6]/40 transition-transform"
-              >
-                {t("pricing.checkout.buyNow")}
-              </Button>
-              <p className="text-center text-sm text-[#94A3B8] mb-4">
-                {teacherCheckoutNote}
+              <p className="mt-4 text-sm font-medium text-[#C4B5FD]">
+                {pricingToggleHelper}
               </p>
+            </div>
 
-              <div className="flex items-center justify-center gap-2 bg-[rgba(16,185,129,0.1)] border border-[rgba(16,185,129,0.3)] rounded-lg px-4 py-2 mb-6">
-                <ShieldCheck className="w-4 h-4 text-[#10B981]" />
-                <span className="text-sm text-[#10B981] font-semibold">
-                  {t("pricing.teacher.guarantee")}
-                </span>
-              </div>
-
-              <div className="space-y-3 mb-6">
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <Star className="w-5 h-5 text-[#8B5CF6] flex-shrink-0 mt-0.5" />
-                    <span className="text-white text-sm font-medium">
-                      {t(`pricing.teacher.feature${i}`)}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="p-4 bg-[#8B5CF6]/15 rounded-xl">
-                <p className="text-[#E2E8F0] text-sm">
-                  {t("pricing.teacher.timeSaved")}
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Department Plan */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="bg-[#1E293B] rounded-2xl p-8 border-2 border-transparent hover:border-[#FB923C] transition-all"
-            >
-              <div className="inline-block bg-[#FB923C]/20 text-[#FB923C] px-3 py-1.5 rounded-lg text-sm font-semibold mb-4">
-                {t("pricing.department.badge")}
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">
-                {t("pricing.department.title")}
-              </h3>
-              <p className="text-[#94A3B8] mb-6 text-sm">
-                {t("pricing.department.description")}
-              </p>
-
-              <div className="mb-2">
-                <span className="text-5xl font-bold text-white">
-                  {formatLocalizedPrice(
-                    getLocalizedDepartmentAmount(currency),
-                    currency,
-                  )}
-                </span>
-                <span className="text-[#94A3B8]">
-                  {t("pricing.department.perTeacher")}
-                </span>
-              </div>
-              <p className="text-sm text-[#94A3B8] mb-6">
-                {t("pricing.department.billing")}
-              </p>
-
-              <Button
-                asChild
-                onClick={() => {
-                  trackPricingCTA(
-                    t("pricing.department.cta"),
-                    "pricing_department_card",
-                  );
-                  track("cta_click_pricing_checkout_department", {
-                    currency,
-                    language,
-                    destination: departmentSalesHref,
-                  });
-                }}
-                className="w-full bg-transparent border-2 border-[#FB923C] text-[#FB923C] hover:bg-[#FB923C]/10 py-5 text-base font-semibold rounded-lg mb-6"
-              >
-                <a href={departmentSalesHref}>{t("pricing.department.cta")}</a>
-              </Button>
-
-              <div className="space-y-3 mb-4">
-                <p className="text-sm font-semibold text-white">
-                  {t("pricing.department.includes")}
-                </p>
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-[#FB923C] flex-shrink-0 mt-0.5" />
-                    <span className="text-[#94A3B8] text-sm">
-                      {t(`pricing.department.feature${i}`)}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Schools & Districts */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="bg-[#1E293B] rounded-2xl p-8 border-2 border-transparent hover:border-[#FB923C] transition-all"
-            >
-              <div className="inline-block bg-[#FB923C]/20 text-[#FB923C] px-3 py-1.5 rounded-lg text-sm font-semibold mb-4">
-                {t("pricing.enterprise.badge")}
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">
-                {t("pricing.enterprise.title")}
-              </h3>
-              <p className="text-[#94A3B8] mb-6 text-sm">
-                {t("pricing.enterprise.description")}
-              </p>
-
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-white">
-                  {t("pricing.enterprise.price")}
-                </span>
-              </div>
-
-              <Button
-                asChild
-                onClick={() => {
-                  trackPricingCTA(
-                    t("pricing.enterprise.cta"),
-                    "pricing_enterprise_card",
-                  );
-                  track("cta_click_pricing_checkout_enterprise", {
-                    currency,
-                    language,
-                    destination: enterpriseSalesHref,
-                  });
-                }}
-                className="w-full bg-transparent border-2 border-[#FB923C] text-[#FB923C] hover:bg-[#FB923C]/10 py-5 text-base font-semibold rounded-lg mb-6"
-              >
-                <a href={enterpriseSalesHref}>{t("pricing.enterprise.cta")}</a>
-              </Button>
-
-              <div className="space-y-3">
-                <p className="text-sm font-semibold text-white">
-                  {t("pricing.enterprise.includes")}
-                </p>
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-[#FB923C] flex-shrink-0 mt-0.5" />
-                    <span className="text-[#94A3B8] text-sm">
-                      {t(`pricing.enterprise.feature${i}`)}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Bundle Highlight */}
-        <section className="pb-20 px-6">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="bg-gradient-to-br from-[#8B5CF6] to-[#A78BFA] rounded-2xl p-10 relative overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-32 translate-x-32" />
-              <div className="relative z-10">
-                <div className="inline-block bg-white/20 text-white px-4 py-1.5 rounded-lg text-sm font-semibold mb-4">
-                  {t("pricing.bundle.badge")}
-                </div>
-                <h3 className="text-4xl font-bold text-white mb-3">
-                  {t("pricing.bundle.title")}
-                </h3>
-                <p className="text-white/90 mb-6 text-lg">
-                  {bundleDescription}
-                </p>
-                <div className="flex items-baseline gap-3 mb-6">
-                  <span className="text-6xl font-bold text-white">
-                    {formatLocalizedPrice(
-                      bundleCheckout.displayAmount,
-                      currency,
-                    )}
-                  </span>
-                  <span className="text-white/80 text-xl">
-                    {billingPeriod === "monthly"
-                      ? t("pricing.bundle.perMonth")
-                      : t("pricing.bundle.perYear")}
-                  </span>
-                </div>
-                {billingPeriod === "annual" && (
-                  <p className="text-white/90 mb-6">
-                    {t("pricing.bundle.savings")}
-                  </p>
-                )}
-                <Button
-                  type="button"
-                  disabled={!bundleCheckout.isAvailable}
-                  onClick={() =>
-                    launchCheckout("checkout_bundle", bundleCheckout, "bundle")
-                  }
-                  className="bg-white text-[#8B5CF6] hover:bg-white/90 py-6 px-8 text-lg font-semibold rounded-lg shadow-lg"
-                >
-                  {t("pricing.checkout.buyNow")}
-                </Button>
-                <p className="mt-4 text-sm text-white/80">
-                  {bundleCheckoutNote}
-                </p>
-              </div>
-            </motion.div>
+            <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3">
+              {pricingPlans.map((plan) => (
+                <PricingPlanCard
+                  key={plan.key}
+                  plan={plan}
+                  includesLabel={pricingIncludesLabel}
+                  termsLabel={pricingTermsLabel}
+                />
+              ))}
+            </div>
           </div>
         </section>
 
@@ -958,6 +1154,107 @@ export default function PricingClient() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="pb-20 px-6">
+          <div className="max-w-6xl mx-auto">
+            <AgentReadableSummary
+              locale={isGerman ? "de" : "en"}
+              theme="dark"
+              title={summaryTitle}
+              intro={summaryIntro}
+              answers={{
+                whatIsIt: isGerman ? (
+                  <>
+                    Zaza Draft ist eine risikobewusste Schreibhilfe fuer
+                    Lehrkraefte. Sie unterstuetzt bei Elternmails,
+                    Zeugnisbemerkungen und anderen Schultexten, die ruhig, klar
+                    und professionell bleiben muessen.
+                  </>
+                ) : (
+                  <>
+                    Zaza Draft is a risk-aware writing support tool for
+                    teachers. It helps with parent emails, report comments, and
+                    other school writing that needs to stay calm, clear, and
+                    professional.
+                  </>
+                ),
+                whoIsItFor: isGerman ? (
+                  <>
+                    Fuer Lehrkraefte, Abteilungen und Schulen, die sensible
+                    Kommunikation nicht nur schneller, sondern auch sicherer und
+                    aussagekraeftiger schreiben wollen.
+                  </>
+                ) : (
+                  <>
+                    It is for teachers, departments, and schools that want
+                    sensitive communication to be not only faster, but safer and
+                    more useful.
+                  </>
+                ),
+                problemItSolves: isGerman ? (
+                  <>
+                    Es hilft, wenn Schreiben nicht am Inhalt scheitert, sondern
+                    an Tonrisiko, endlosen Ueberarbeitungen oder Kommentaren,
+                    die am Ende zu allgemein bleiben.
+                  </>
+                ) : (
+                  <>
+                    It helps when the problem is not having something to say,
+                    but managing tone risk, repeated rewrites, and comments that
+                    still end up too generic.
+                  </>
+                ),
+                howItWorks: isGerman ? (
+                  <>
+                    Lehrkraefte bringen den Entwurf oder die Notizen ein, Zaza
+                    unterstuetzt bei Ton und Klarheit, und die endgueltige
+                    Fassung wird immer von der Lehrkraft selbst geprueft.
+                  </>
+                ) : (
+                  <>
+                    Teachers bring the draft or notes, Zaza helps with tone and
+                    clarity, and the final version is still reviewed and
+                    approved by the teacher.
+                  </>
+                ),
+                whatItCosts: isGerman ? (
+                  <>
+                    Der Einstieg ist kostenlos. Aktuell liegen die sichtbaren
+                    Self-Serve-Preise bei{" "}
+                    <span className="font-semibold">{teacherPriceSummary}</span>{" "}
+                    fuer Draft und{" "}
+                    <span className="font-semibold">{bundlePriceSummary}</span>{" "}
+                    fuer das Bundle. Abteilungs- und Schulpreise sind separat
+                    verfuegbar.
+                  </>
+                ) : (
+                  <>
+                    You can start free. The visible self-serve plans are
+                    currently{" "}
+                    <span className="font-semibold">{teacherPriceSummary}</span>{" "}
+                    for Draft and{" "}
+                    <span className="font-semibold">{bundlePriceSummary}</span>{" "}
+                    for the bundle. Department and school pricing are available
+                    separately.
+                  </>
+                ),
+                nextStep: isGerman ? (
+                  <>
+                    Waehlen Sie den passenden Plan auf dieser Seite oder starten
+                    Sie direkt mit dem kostenlosen Einstieg, wenn Sie einen
+                    echten Text pruefen moechten.
+                  </>
+                ) : (
+                  <>
+                    Pick the plan that fits on this page, or start with the free
+                    option if you want to test Zaza on a real piece of writing
+                    first.
+                  </>
+                ),
+              }}
+            />
           </div>
         </section>
 

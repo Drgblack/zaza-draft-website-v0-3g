@@ -13,7 +13,6 @@ import { TranslationHelperNotice } from "@/components/translation-helper-notice"
 import { JsonLdCollection } from "@/components/seo/json-ld";
 import {
   createOrganizationJsonLd,
-  createSoftwareApplicationJsonLd,
   createWebsiteJsonLd,
 } from "@/lib/seo/json-ld";
 import { buildCanonicalAlternates } from "@/lib/seo-canonical";
@@ -108,10 +107,6 @@ export default function RootLayout({
             {
               id: "site-website-schema",
               data: createWebsiteJsonLd(),
-            },
-            {
-              id: "site-software-schema",
-              data: createSoftwareApplicationJsonLd(),
             },
           ]}
         />

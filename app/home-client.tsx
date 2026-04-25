@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { SignupModal } from "@/components/signup-modal";
+import { AgentReadableSummary } from "@/components/seo/AgentReadableSummary";
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { track, trackCtaClick } from "@/lib/analytics";
@@ -292,6 +293,7 @@ export function HomePageClient() {
     language === "de"
       ? "Entwickelt fuer professionelle Eltern-E-Mails, schwierige Follow-ups, Verhaltens-Notizen, aussagekraeftigere Zeugnisbemerkungen und andere sensible Schulkommunikation."
       : "Built for professional parent emails, difficult follow-ups, behaviour notes, more meaningful report comments, and other high-stakes school communication.";
+  const pricingHref = language === "de" ? "/de/pricing" : "/pricing";
   const heroTrustBarPoints =
     language === "de"
       ? [
@@ -314,6 +316,14 @@ export function HomePageClient() {
       : "Start with Zaza Draft if you want calmer parent emails, more useful report comments, and clearer documentation - especially the pieces of writing you almost rewrite one more time.";
   const betaFeedbackCta =
     language === "de" ? "Zaza Draft testen" : "Try Zaza Draft";
+  const summaryTitle =
+    language === "de"
+      ? "Die kurze Antwort fuer Lehrkraefte"
+      : "The short answer for teachers";
+  const summaryIntro =
+    language === "de"
+      ? "Wenn du schnell einordnen willst, was Zaza Draft macht und ob es fuer deinen Alltag passt, steht hier die knappe Version."
+      : "If you want the fast version before you click again, this is what Zaza Draft does, who it is for, and what to do next.";
   const trustPanelHeading =
     language === "de"
       ? "Lehrkraft-zentrierte Unterstuetzung fuer sensible Schulkommunikation"
@@ -402,6 +412,13 @@ export function HomePageClient() {
     language === "de"
       ? "Wenn du noch kein Tool ausprobieren willst, starte mit einem dieser lehrkraft-zentrierten Leitfaeden zu Ton, Professionalitaet und aussagekraeftigeren Kommentaren."
       : "If you are not ready to try a tool yet, start with one of these teacher-first guides on tone, professionalism, and more meaningful comments.";
+  const guidesHubHref = "/guides";
+  const guidesHubLabel =
+    language === "de" ? "Alle Leitfaeden ansehen" : "Browse all guides";
+  const guidesHubSupport =
+    language === "de"
+      ? "Gehe zur Guide-Uebersicht fuer alle Leitfaeden zu Elternkommunikation, Deeskalation und professionelleren Bemerkungen."
+      : "Go to the guide hub for the full set of teacher communication guides on parent emails, de-escalation, and report comments.";
   const guideLinks = [
     {
       href:
@@ -1352,6 +1369,20 @@ export function HomePageClient() {
             <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-[#CBD5E1]">
               {guidesIntro}
             </p>
+            <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-[#94A3B8]">
+              {guidesHubSupport}
+            </p>
+            <div className="mt-6">
+              <Link
+                href={guidesHubHref}
+                onClick={() =>
+                  goToGuide(guidesHubHref, "home_guides_hub", guidesHubLabel)
+                }
+                className="inline-flex items-center rounded-full border border-[#8B5CF6]/40 bg-[#8B5CF6]/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#8B5CF6]/20"
+              >
+                {guidesHubLabel}
+              </Link>
+            </div>
           </motion.div>
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
             {guideLinks.map((guide, index) => (
@@ -1791,6 +1822,132 @@ export function HomePageClient() {
               <Link href={startHref}>{betaFeedbackCta}</Link>
             </Button>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="bg-[#0F172A] pb-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <AgentReadableSummary
+            locale={language === "de" ? "de" : "en"}
+            theme="dark"
+            title={summaryTitle}
+            intro={summaryIntro}
+            answers={{
+              whatIsIt:
+                language === "de" ? (
+                  <>
+                    Zaza Draft ist eine risikobewusste Schreibhilfe fuer
+                    Lehrkraefte. Sie hilft bei Elternmails, Zeugnisbemerkungen
+                    und anderen Schulnachrichten, bei denen Ton und Wirkung
+                    genauso wichtig sind wie der Inhalt.
+                  </>
+                ) : (
+                  <>
+                    Zaza Draft is a risk-aware writing support tool for
+                    teachers. It helps with parent emails, report comments, and
+                    other school messages where tone and interpretation matter
+                    as much as the facts.
+                  </>
+                ),
+              whoIsItFor:
+                language === "de" ? (
+                  <>
+                    Fuer Lehrkraefte, Schulen und Teams, die Elternkommunikation
+                    und sensible Schultexte ruhig, klar und professionell halten
+                    wollen.
+                  </>
+                ) : (
+                  <>
+                    It is for teachers, schools, and educator teams who want
+                    parent communication and other sensitive school writing to
+                    stay calm, clear, and professional.
+                  </>
+                ),
+              problemItSolves:
+                language === "de" ? (
+                  <>
+                    Es hilft dann, wenn die Fakten klar sind, der Text aber noch
+                    zu hart, zu vage, zu defensiv oder zu offensichtlich klingt.
+                  </>
+                ) : (
+                  <>
+                    It helps when the facts are clear but the wording still
+                    feels too blunt, too vague, too reactive, or not useful
+                    enough to send.
+                  </>
+                ),
+              howItWorks:
+                language === "de" ? (
+                  <>
+                    Du fuegst einen Entwurf oder Notizen ein, waehlst den
+                    gewuenschten Ton und pruefst danach die Formulierung, bevor
+                    irgendetwas gesendet oder eingereicht wird.
+                  </>
+                ) : (
+                  <>
+                    You paste a draft or notes, choose the tone or outcome you
+                    need, then review the wording before anything is sent or
+                    submitted.
+                  </>
+                ),
+              whatItCosts:
+                language === "de" ? (
+                  <>
+                    Du kannst kostenlos starten und spaeter auf einen bezahlten
+                    Plan wechseln, wenn du regelmaessig Unterstuetzung brauchst.{" "}
+                    <Link
+                      href={pricingHref}
+                      className="font-semibold underline"
+                    >
+                      Die aktuellen Preise stehen auf der Pricing-Seite.
+                    </Link>
+                  </>
+                ) : (
+                  <>
+                    You can start free, then move to a paid plan if you need
+                    regular support.{" "}
+                    <Link
+                      href={pricingHref}
+                      className="font-semibold underline"
+                    >
+                      The current plans live on the pricing page.
+                    </Link>
+                  </>
+                ),
+              nextStep:
+                language === "de" ? (
+                  <>
+                    Pruefe zuerst eine echte Nachricht im{" "}
+                    <Link
+                      href={angryParentGuideHref}
+                      className="font-semibold underline"
+                    >
+                      kostenlosen Risiko-Check fuer Elternmails
+                    </Link>{" "}
+                    oder gehe direkt zu{" "}
+                    <Link href={startHref} className="font-semibold underline">
+                      Zaza Draft
+                    </Link>
+                    .
+                  </>
+                ) : (
+                  <>
+                    Start with a real message in the{" "}
+                    <Link
+                      href={angryParentGuideHref}
+                      className="font-semibold underline"
+                    >
+                      free Parent Email Risk Checker
+                    </Link>{" "}
+                    or go straight to{" "}
+                    <Link href={startHref} className="font-semibold underline">
+                      Zaza Draft
+                    </Link>
+                    .
+                  </>
+                ),
+            }}
+          />
         </div>
       </section>
 

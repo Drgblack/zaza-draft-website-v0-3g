@@ -1,3 +1,7 @@
+import {
+  CONTENT_FRESHNESS,
+  parseFreshnessDate,
+} from "@/lib/seo/content-freshness";
 import type { MetadataRoute } from "next";
 
 export const competitors = [
@@ -60,6 +64,7 @@ export type ComparisonPageData = {
   ctaTitle: string;
   ctaBody: string;
   breadcrumbs: Record<string, string>;
+  lastReviewed: string;
 };
 
 type CompetitorDefinition = {
@@ -516,18 +521,31 @@ export function buildComparisonPageData(
       [`/alternatives/${competitor}`]: competitorData.label,
       [path]: formatUseCaseLabel(useCase),
     },
+    lastReviewed: CONTENT_FRESHNESS.comparisonPages.isoDate,
   };
 }
 
 export function getComparisonSitemapEntries(
-  lastModified = new Date(),
+  fallbackLastModified = new Date(),
 ): MetadataRoute.Sitemap {
-  return getComparisonParams().map(({ competitor, usecase }) => ({
-    url: `https://zazadraft.com${buildPath(competitor, usecase)}`,
-    lastModified,
-    changeFrequency: "weekly" as const,
-    priority: 0.79,
-  }));
+  return getComparisonParams().flatMap(({ competitor, usecase }) => {
+    const page = buildComparisonPageData(competitor, usecase);
+
+    if (!page) {
+      return [];
+    }
+
+    return [
+      {
+        url: `https://zazadraft.com${page.path}`,
+        lastModified: page.lastReviewed
+          ? parseFreshnessDate(page.lastReviewed)
+          : fallbackLastModified,
+        changeFrequency: "weekly" as const,
+        priority: 0.79,
+      },
+    ];
+  });
 }
 
 export const first20ComparisonPages = getComparisonParams()

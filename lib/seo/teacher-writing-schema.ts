@@ -4,10 +4,12 @@ import type {
   StructuredDataType,
   TeacherWritingPage,
 } from "@/lib/seo/teacher-writing-pages";
+import { getTeacherWritingLastReviewed } from "@/lib/seo/teacher-writing-pages";
 import {
   buildCanonicalAlternates,
   resolveCanonicalUrl,
 } from "@/lib/seo-canonical";
+import { toSchemaDate } from "@/lib/seo/content-freshness";
 import {
   drGregBlackburnBio,
   zazaDraftEntityDefinition,
@@ -67,6 +69,8 @@ function buildBreadcrumbSchema(page: TeacherWritingPage) {
 }
 
 function buildWebPageSchema(page: TeacherWritingPage) {
+  const modifiedTime = toSchemaDate(getTeacherWritingLastReviewed(page));
+
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -76,6 +80,7 @@ function buildWebPageSchema(page: TeacherWritingPage) {
     inLanguage: "en-GB",
     about: buildAboutEntities(page),
     keywords: [page.keyword, ...zazaDraftEntityKeywords],
+    dateModified: modifiedTime,
     isPartOf: {
       "@type": "WebSite",
       name: brandName,
@@ -112,6 +117,8 @@ function buildSoftwareApplicationSchema(page: TeacherWritingPage) {
 }
 
 function buildArticleSchema(page: TeacherWritingPage) {
+  const modifiedTime = toSchemaDate(getTeacherWritingLastReviewed(page));
+
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -129,7 +136,7 @@ function buildArticleSchema(page: TeacherWritingPage) {
     },
     image: `${baseUrl}${page.ogImage}`,
     datePublished: "2026-03-08",
-    dateModified: "2026-03-08",
+    dateModified: modifiedTime,
     inLanguage: "en-GB",
     about: buildAboutEntities(page),
     keywords: [page.keyword, ...zazaDraftEntityKeywords],

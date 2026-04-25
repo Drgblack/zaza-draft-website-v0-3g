@@ -4,8 +4,16 @@ import { join } from "path";
 import { getGeneratedPageSitemapEntries } from "@/lib/generated-pages";
 import { getIndexControlDecision } from "@/lib/index-control";
 import { getReportPruneDecision } from "@/lib/report-prune";
-import { scenarioPageSlugs } from "@/lib/seo/scenario-pages";
-import { teacherWritingPageSlugs } from "@/lib/seo/teacher-writing-pages";
+import {
+  getScenarioPage,
+  getScenarioPageLastReviewed,
+  scenarioPageSlugs,
+} from "@/lib/seo/scenario-pages";
+import {
+  getTeacherWritingLastReviewed,
+  getTeacherWritingPage,
+  teacherWritingPageSlugs,
+} from "@/lib/seo/teacher-writing-pages";
 import { clusterSpokes } from "@/lib/seo/teacher-safe-ai-cluster";
 import { getRegionalTeacherWritingSlugs } from "@/lib/seo/regional-writing-pages";
 import { getProgrammaticSitemapEntries } from "@/lib/programmatic";
@@ -13,6 +21,12 @@ import { getMatrixSitemapEntries } from "@/lib/matrix";
 import { getComparisonSitemapEntries } from "@/lib/comparison-matrix";
 import { getUkClusterSitemapEntries } from "@/lib/uk-matrix";
 import { getExpandedPageSitemapEntries } from "@/lib/expanded-pages";
+import { getAiSearchSitemapEntries } from "@/lib/ai-search-pages";
+import { getGuideSitemapEntries } from "@/lib/guides";
+import {
+  CONTENT_FRESHNESS,
+  parseFreshnessDate,
+} from "@/lib/seo/content-freshness";
 import howToKeywords from "@/data/how-to-keywords.json";
 
 const BASE_URL = "https://zazadraft.com";
@@ -164,6 +178,9 @@ const MAIN_SOURCE_GROUPS = new Set([
   "product_entries",
   "content_hub_entries",
   "campaign_and_tool_entries",
+  "guides_entries",
+  "guides_detail_entries",
+  "ai_search_entries",
   "programmatic_hub_entries",
   "pain_entries",
   "teacher_writing_entries",
@@ -440,7 +457,7 @@ function applyTierFreshness(
     ...entry,
     lastModified:
       tier === "main" || confidence === "high"
-        ? highConfidenceLastModified
+        ? (entry.lastModified ?? highConfidenceLastModified)
         : LONGTAIL_STATIC_LASTMOD,
   };
 }
@@ -520,6 +537,15 @@ function getGermanBlogEntries(): MetadataRoute.Sitemap {
 
 export async function getSitemapSourceGroups(): Promise<SitemapSourceGroup[]> {
   const now = new Date();
+  const teacherWritingFamilyLastModified = parseFreshnessDate(
+    CONTENT_FRESHNESS.teacherWritingPages.isoDate,
+  );
+  const regionalTeacherWritingLastModified = parseFreshnessDate(
+    CONTENT_FRESHNESS.regionalTeacherWritingPages.isoDate,
+  );
+  const parentEmailRiskCheckerLastModified = parseFreshnessDate(
+    CONTENT_FRESHNESS.parentEmailRiskChecker.isoDate,
+  );
   const howToEntries = howToKeywords as HowToKeywordEntry[];
 
   const primaryEntries: SitemapEntryConfig[] = [
@@ -969,13 +995,13 @@ export async function getSitemapSourceGroups(): Promise<SitemapSourceGroup[]> {
       path: "/parent-email-risk-checker",
       priority: 0.86,
       changeFrequency: "weekly",
-      lastModified: now,
+      lastModified: parentEmailRiskCheckerLastModified,
     },
     {
       path: "/de/parent-email-risk-checker",
       priority: 0.72,
       changeFrequency: "weekly",
-      lastModified: now,
+      lastModified: parentEmailRiskCheckerLastModified,
     },
     {
       path: "/best-ai-writing-tools-for-teachers-2025",
@@ -1025,6 +1051,15 @@ export async function getSitemapSourceGroups(): Promise<SitemapSourceGroup[]> {
       changeFrequency: "weekly" as const,
       lastModified: now,
     })),
+  ];
+
+  const guidesEntries: SitemapEntryConfig[] = [
+    {
+      path: "/guides",
+      priority: 0.82,
+      changeFrequency: "weekly",
+      lastModified: parseFreshnessDate(CONTENT_FRESHNESS.guidesPages.isoDate),
+    },
   ];
 
   const programmaticHubEntries: SitemapEntryConfig[] = [
@@ -1136,14 +1171,31 @@ export async function getSitemapSourceGroups(): Promise<SitemapSourceGroup[]> {
   ];
 
   const teacherWritingEntries: SitemapEntryConfig[] = [
-    ...scenarioPageSlugs,
-    ...teacherWritingPageSlugs,
-  ].map((slug) => ({
-    path: `/${slug}`,
-    priority: 0.9,
-    changeFrequency: "daily",
-    lastModified: now,
-  }));
+    ...scenarioPageSlugs.map((slug) => {
+      const page = getScenarioPage(slug);
+
+      return {
+        path: `/${slug}`,
+        priority: 0.9,
+        changeFrequency: "daily" as const,
+        lastModified: page
+          ? parseFreshnessDate(getScenarioPageLastReviewed(page))
+          : teacherWritingFamilyLastModified,
+      };
+    }),
+    ...teacherWritingPageSlugs.map((slug) => {
+      const page = getTeacherWritingPage(slug);
+
+      return {
+        path: `/${slug}`,
+        priority: 0.9,
+        changeFrequency: "daily" as const,
+        lastModified: page
+          ? parseFreshnessDate(getTeacherWritingLastReviewed(page))
+          : teacherWritingFamilyLastModified,
+      };
+    }),
+  ];
 
   const topicalClusterEntries: SitemapEntryConfig[] = clusterSpokes.map(
     (page) => ({
@@ -1160,7 +1212,7 @@ export async function getSitemapSourceGroups(): Promise<SitemapSourceGroup[]> {
     path: `/uk/${slug}`,
     priority: 0.9,
     changeFrequency: "daily",
-    lastModified: now,
+    lastModified: regionalTeacherWritingLastModified,
   }));
 
   const englandEntries: SitemapEntryConfig[] = getRegionalTeacherWritingSlugs(
@@ -1169,7 +1221,7 @@ export async function getSitemapSourceGroups(): Promise<SitemapSourceGroup[]> {
     path: `/england/${slug}`,
     priority: 0.9,
     changeFrequency: "daily",
-    lastModified: now,
+    lastModified: regionalTeacherWritingLastModified,
   }));
 
   const compareDetailEntries: SitemapEntryConfig[] =
@@ -1222,6 +1274,18 @@ export async function getSitemapSourceGroups(): Promise<SitemapSourceGroup[]> {
     {
       source: "campaign_and_tool_entries",
       entries: campaignAndToolEntries.map(toSitemapEntry),
+    },
+    {
+      source: "guides_entries",
+      entries: guidesEntries.map(toSitemapEntry),
+    },
+    {
+      source: "ai_search_entries",
+      entries: getAiSearchSitemapEntries(now),
+    },
+    {
+      source: "guides_detail_entries",
+      entries: getGuideSitemapEntries(now),
     },
     {
       source: "programmatic_hub_entries",

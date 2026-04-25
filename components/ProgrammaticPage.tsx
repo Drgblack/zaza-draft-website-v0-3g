@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { StructuredData } from "@/components/StructuredData";
+import { AgentReadableSummary } from "@/components/seo/AgentReadableSummary";
+import { LastUpdated } from "@/components/seo/LastUpdated";
+import { CONTENT_FRESHNESS } from "@/lib/seo/content-freshness";
 import type { ProgrammaticPageData } from "@/lib/programmatic-seo";
 
 type ProgrammaticPageProps = {
@@ -54,6 +57,27 @@ export function ProgrammaticPage({ page }: ProgrammaticPageProps) {
 
   return (
     <>
+      <StructuredData
+        type="WebPage"
+        data={{
+          id: `${page.path}-webpage-jsonld`,
+          path: page.path,
+          title: page.h1,
+          description: page.metaDescription,
+          potentialActionName: "Try this in Zaza Draft",
+          modifiedTime: `${page.lastReviewed}T00:00:00.000Z`,
+        }}
+      />
+      <StructuredData
+        type="SoftwareApplication"
+        data={{
+          id: `${page.path}-software-jsonld`,
+          path: page.path,
+          title: "Zaza Draft",
+          description:
+            "Zaza Draft helps teachers write calmer parent emails, clearer school messages, and more meaningful report comments before anything is sent or submitted.",
+        }}
+      />
       <StructuredData
         type="Article"
         data={{
@@ -129,6 +153,10 @@ export function ProgrammaticPage({ page }: ProgrammaticPageProps) {
                 <h1 className="text-balance text-4xl font-semibold tracking-tight text-slate-950 md:text-6xl">
                   {page.h1}
                 </h1>
+                <LastUpdated
+                  isoDate={page.lastReviewed}
+                  precision={CONTENT_FRESHNESS.programmaticPages.precision}
+                />
                 {page.heroDescription.map((paragraph) => (
                   <p
                     key={paragraph}
@@ -517,6 +545,62 @@ export function ProgrammaticPage({ page }: ProgrammaticPageProps) {
               ))}
             </div>
           </section>
+
+          <AgentReadableSummary
+            title="What this page is helping you do"
+            intro="If you want the short version before you click into the app, this summary explains what Zaza Draft is, who it helps, and what to do next."
+            answers={{
+              whatIsIt: (
+                <>
+                  Zaza Draft is a teacher-first writing support tool for parent
+                  emails, report comments, and other school communication where
+                  the wording needs to stay calm and defensible.
+                </>
+              ),
+              whoIsItFor: (
+                <>
+                  It is for teachers and school teams who already know the
+                  facts, but want help shaping the wording into something safer
+                  to send or submit.
+                </>
+              ),
+              problemItSolves: (
+                <>
+                  It solves the problem of knowing what happened but not yet
+                  trusting the tone, structure, or usefulness of the draft in
+                  front of you.
+                </>
+              ),
+              howItWorks: (
+                <>
+                  You start with a rough version or a few notes, use Zaza Draft
+                  to shape the next version, then review and approve the final
+                  wording yourself.
+                </>
+              ),
+              whatItCosts: (
+                <>
+                  You can start free, then move to a paid plan if you want
+                  ongoing support.{" "}
+                  <Link href="/pricing" className="font-semibold underline">
+                    The pricing page has the current plan details.
+                  </Link>
+                </>
+              ),
+              nextStep: (
+                <>
+                  If this page matches the situation you are handling,{" "}
+                  <Link
+                    href={page.cta.primaryHref}
+                    className="font-semibold underline"
+                  >
+                    try it in Zaza Draft
+                  </Link>{" "}
+                  or open the next guide linked on this page.
+                </>
+              ),
+            }}
+          />
 
           <section className="rounded-[32px] border border-[#d8cdbf] bg-[linear-gradient(135deg,_#123f34_0%,_#1f5b4a_100%)] p-8 text-white md:p-10">
             <h2 className="max-w-3xl text-3xl font-semibold tracking-tight md:text-4xl">

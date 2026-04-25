@@ -1,3 +1,7 @@
+import {
+  CONTENT_FRESHNESS,
+  parseFreshnessDate,
+} from "@/lib/seo/content-freshness";
 import type { MetadataRoute } from "next";
 
 export const phases = [
@@ -114,6 +118,7 @@ export type MatrixPageData = {
   ctaBody: string;
   estimatedWordCount: number;
   breadcrumbs: Record<string, string>;
+  lastReviewed: string;
 };
 
 export type ScenarioCombination = {
@@ -1233,6 +1238,7 @@ export function buildScenarioPageData(
       [`/scenario/${phase}/${issue}`]: titleCase(issue),
       [path]: `${titleCase(issue)} for ${yearLabel}`,
     },
+    lastReviewed: CONTENT_FRESHNESS.matrixPages.isoDate,
   };
 }
 
@@ -1277,25 +1283,54 @@ export function buildReportPageData(
       [`/report-comments/${studentType}/${subject}`]: titleCase(subject),
       [path]: formatPhaseLabel(phase),
     },
+    lastReviewed: CONTENT_FRESHNESS.matrixPages.isoDate,
   };
 }
 
 export function getMatrixSitemapEntries(
-  lastModified = new Date(),
+  fallbackLastModified = new Date(),
 ): MetadataRoute.Sitemap {
-  const scenarioEntries = getScenarioCombinations().map((item) => ({
-    url: `https://zazadraft.com${item.path}`,
-    lastModified,
-    changeFrequency: "weekly" as const,
-    priority: 0.78,
-  }));
+  const scenarioEntries = getScenarioCombinations().flatMap((item) => {
+    const page = buildScenarioPageData(item.phase, item.issue, item.yearGroup);
 
-  const reportEntries = getReportCombinations().map((item) => ({
-    url: `https://zazadraft.com${item.path}`,
-    lastModified,
-    changeFrequency: "weekly" as const,
-    priority: 0.8,
-  }));
+    if (!page) {
+      return [];
+    }
+
+    return [
+      {
+        url: `https://zazadraft.com${item.path}`,
+        lastModified: page.lastReviewed
+          ? parseFreshnessDate(page.lastReviewed)
+          : fallbackLastModified,
+        changeFrequency: "weekly" as const,
+        priority: 0.78,
+      },
+    ];
+  });
+
+  const reportEntries = getReportCombinations().flatMap((item) => {
+    const page = buildReportPageData(
+      item.studentType,
+      item.subject,
+      item.phase,
+    );
+
+    if (!page) {
+      return [];
+    }
+
+    return [
+      {
+        url: `https://zazadraft.com${item.path}`,
+        lastModified: page.lastReviewed
+          ? parseFreshnessDate(page.lastReviewed)
+          : fallbackLastModified,
+        changeFrequency: "weekly" as const,
+        priority: 0.8,
+      },
+    ];
+  });
 
   return [...scenarioEntries, ...reportEntries];
 }

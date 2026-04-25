@@ -1,3 +1,5 @@
+import { CONTENT_FRESHNESS } from "@/lib/seo/content-freshness";
+
 export type SearchIntent =
   | "Tool intent"
   | "Alternative/comparison intent"
@@ -74,6 +76,7 @@ export interface TeacherWritingPage {
   h1: string;
   description: string;
   ogImage: string;
+  lastReviewed?: string;
   heroEyebrow: string;
   heroDescription: string[];
   heroBullets: string[];
@@ -9329,6 +9332,10 @@ export const teacherWritingPageSlugs = Object.keys(
 
 export function getTeacherWritingPage(slug: string) {
   return teacherWritingPages[slug as TeacherWritingSlug];
+}
+
+export function getTeacherWritingLastReviewed(page: TeacherWritingPage) {
+  return page.lastReviewed ?? CONTENT_FRESHNESS.teacherWritingPages.isoDate;
 }
 
 export function getTeacherWritingPageOrThrow(slug: string) {

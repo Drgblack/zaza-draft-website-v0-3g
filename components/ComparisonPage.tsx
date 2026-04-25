@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { StructuredData } from "@/components/StructuredData";
+import { AgentReadableSummary } from "@/components/seo/AgentReadableSummary";
+import { LastUpdated } from "@/components/seo/LastUpdated";
+import { CONTENT_FRESHNESS } from "@/lib/seo/content-freshness";
 import type { ComparisonPageData } from "@/lib/comparison-matrix";
 
 type ComparisonPageProps = {
@@ -9,6 +12,27 @@ type ComparisonPageProps = {
 export function ComparisonPage({ page }: ComparisonPageProps) {
   return (
     <>
+      <StructuredData
+        type="WebPage"
+        data={{
+          id: `${page.path}-webpage-jsonld`,
+          path: page.path,
+          title: page.h1,
+          description: page.metaDescription,
+          potentialActionName: "Explore Zaza Draft",
+          modifiedTime: `${page.lastReviewed}T00:00:00.000Z`,
+        }}
+      />
+      <StructuredData
+        type="SoftwareApplication"
+        data={{
+          id: `${page.path}-software-jsonld`,
+          path: page.path,
+          title: "Zaza Draft",
+          description:
+            "Zaza Draft gives teachers calmer, more focused support for parent emails, report comments, and other school writing where tone matters.",
+        }}
+      />
       <StructuredData
         type="Article"
         data={{
@@ -28,16 +52,6 @@ export function ComparisonPage({ page }: ComparisonPageProps) {
           faqs: page.faq,
         }}
       />
-      <StructuredData
-        type="BreadcrumbList"
-        data={{
-          id: `${page.path}-breadcrumb-jsonld`,
-          path: page.path,
-          title: page.h1,
-          description: page.metaDescription,
-          breadcrumbs: page.breadcrumbs,
-        }}
-      />
 
       <div className="min-h-screen bg-[#f6f1e8] text-slate-900">
         <section className="border-b border-[#ddd2c3] bg-[radial-gradient(circle_at_top_left,_rgba(29,78,68,0.12),_transparent_30%),radial-gradient(circle_at_top_right,_rgba(148,163,184,0.16),_transparent_32%),linear-gradient(180deg,_#fcfaf6_0%,_#f6f1e8_100%)]">
@@ -50,6 +64,10 @@ export function ComparisonPage({ page }: ComparisonPageProps) {
                 <h1 className="text-balance text-4xl font-semibold tracking-tight text-slate-950 md:text-6xl">
                   {page.h1}
                 </h1>
+                <LastUpdated
+                  isoDate={page.lastReviewed}
+                  precision={CONTENT_FRESHNESS.comparisonPages.precision}
+                />
                 {page.hero.map((paragraph) => (
                   <p
                     key={paragraph}
@@ -226,6 +244,66 @@ export function ComparisonPage({ page }: ComparisonPageProps) {
               ))}
             </div>
           </section>
+
+          <AgentReadableSummary
+            title="The short version before you switch tools"
+            intro="If you are comparing options quickly, this summary explains where Zaza Draft fits and what to do next."
+            answers={{
+              whatIsIt: (
+                <>
+                  Zaza Draft is a teacher-first writing support tool focused on
+                  parent emails, report comments, and school communication where
+                  tone and judgement matter.
+                </>
+              ),
+              whoIsItFor: (
+                <>
+                  It is for teachers and school teams who want calmer wording
+                  and more relevant support than a generic AI writing tool
+                  usually gives.
+                </>
+              ),
+              problemItSolves: (
+                <>
+                  It solves the problem of getting text quickly but still not
+                  trusting whether that text is safe, specific, and
+                  school-appropriate enough to use.
+                </>
+              ),
+              howItWorks: (
+                <>
+                  You bring the draft or prompt, Zaza Draft helps shape the next
+                  version for a teacher context, and you still review and
+                  approve the final wording.
+                </>
+              ),
+              whatItCosts: (
+                <>
+                  You can start free, then move to a paid plan if you want
+                  regular support.{" "}
+                  <Link href="/pricing" className="font-semibold underline">
+                    The pricing page shows the current plan options.
+                  </Link>
+                </>
+              ),
+              nextStep: (
+                <>
+                  If the tradeoffs here match what you need,{" "}
+                  <Link href="/pricing" className="font-semibold underline">
+                    start free
+                  </Link>{" "}
+                  or{" "}
+                  <Link
+                    href="/products/draft"
+                    className="font-semibold underline"
+                  >
+                    explore Zaza Draft
+                  </Link>{" "}
+                  in more detail.
+                </>
+              ),
+            }}
+          />
 
           <section className="rounded-[32px] border border-[#d8cdbf] bg-[linear-gradient(135deg,_#123f34_0%,_#1f5b4a_100%)] p-8 text-white md:p-10">
             <h2 className="max-w-3xl text-3xl font-semibold tracking-tight md:text-4xl">

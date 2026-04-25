@@ -60,6 +60,10 @@ const translationsEn: Record<string, string> = {
   "pricing.free.feature2": "Basic templates",
   "pricing.free.feature3": "Save & copy",
   "pricing.free.feature4": "Community support",
+  "pricing.free.bestFor":
+    "Teachers who want to test Zaza Draft on real writing before paying.",
+  "pricing.free.term1": "No credit card required to get started.",
+  "pricing.free.term2": "Free access includes 5 drafts each month.",
 
   // Teacher (Premium) Plan
   "pricing.teacher.badge": "MOST POPULAR",
@@ -78,6 +82,8 @@ const translationsEn: Record<string, string> = {
   "pricing.teacher.feature5": "Zara's gentle wellbeing nudges",
   "pricing.teacher.feature6": "Priority email support",
   "pricing.teacher.timeSaved": "Typical time saved: 4-7 hours/week",
+  "pricing.teacher.bestFor":
+    "Individual teachers who want calmer parent emails, clearer documentation, and better report comments.",
 
   // Department Plan
   "pricing.department.badge": "TEAMS",
@@ -92,6 +98,10 @@ const translationsEn: Record<string, string> = {
   "pricing.department.feature2": "Role-based access",
   "pricing.department.feature3": "Review & approval",
   "pricing.department.feature4": "Priority onboarding & success",
+  "pricing.department.bestFor":
+    "Departments and small teams that want shared quality, templates, and oversight.",
+  "pricing.department.term1": "Annual billing applies to department plans.",
+  "pricing.department.term2": "Department pricing is designed for 5-50 seats.",
 
   // Schools & Districts
   "pricing.enterprise.badge": "ENTERPRISE",
@@ -103,6 +113,12 @@ const translationsEn: Record<string, string> = {
   "pricing.enterprise.feature1": "SSO/SAML, DPA/SCCs",
   "pricing.enterprise.feature2": "SLA & dedicated success",
   "pricing.enterprise.feature3": "Centralized billing & provisioning",
+  "pricing.enterprise.bestFor":
+    "Schools, districts, and larger rollouts with procurement, security, and deployment needs.",
+  "pricing.enterprise.term1":
+    "Pricing is scoped with sales based on rollout and support needs.",
+  "pricing.enterprise.term2":
+    "Use the sales path for procurement, privacy, and implementation planning.",
 
   // Bundle
   "pricing.bundle.badge": "BUNDLE & SAVE",
@@ -113,6 +129,18 @@ const translationsEn: Record<string, string> = {
   "pricing.bundle.perYear": "/year",
   "pricing.bundle.savings": "Save vs buying separately",
   "pricing.bundle.cta": "Get the Bundle",
+  "pricing.bundle.bestFor":
+    "Teachers who want planning and writing support together in one subscription.",
+  "pricing.bundle.feature1":
+    "Everything in Draft for parent emails and reports",
+  "pricing.bundle.feature2":
+    "Additional planning support in the Teach workflow",
+  "pricing.bundle.feature3":
+    "Lower combined cost than buying the tools separately",
+  "pricing.bundle.term1":
+    "Annual billing is the better-value route for the bundle.",
+  "pricing.bundle.term2":
+    "Paid self-serve plans are covered by the 30-day money-back guarantee.",
 
   // Testimonials
   "pricing.testimonials.title": "What teachers say about pricing",
@@ -133,6 +161,21 @@ const translationsEn: Record<string, string> = {
   "pricing.metric.text":
     "Teachers use Draft to write calmer parent emails, clearer report comments, and more defensible school messages without losing control of the final wording.",
   "pricing.checkout.buyNow": "Upgrade now",
+  "pricing.plans.title": "Choose the plan that matches your workload",
+  "pricing.plans.subtitle":
+    "Every plan below states who it is for, what it includes, the visible monthly and yearly price where available, and the next step to take.",
+  "pricing.details.bestFor": "Who it is for",
+  "pricing.details.monthlyPrice": "Monthly price",
+  "pricing.details.yearlyPrice": "Yearly price",
+  "pricing.details.pricing": "Pricing",
+  "pricing.details.billing": "Billing",
+  "pricing.details.includes": "What is included",
+  "pricing.details.terms": "Terms",
+  "pricing.details.perMonth": "/month",
+  "pricing.details.perYear": "/year",
+  "pricing.details.bestValue": "Best value",
+  "pricing.toggle.helper":
+    "Annual pricing is the preferred value path. Self-serve checkout follows the billing option selected above.",
   "pricing.compare.title": "Compare: Zaza vs ChatGPT",
   "pricing.compare.caption":
     "ChatGPT is brilliant - but it wasn't built for your classroom. Zaza Draft is.",
@@ -1630,6 +1673,11 @@ const translationsDe: Record<string, string> = {
   "pricing.free.feature2": "Basisvorlagen",
   "pricing.free.feature3": "Speichern & Kopieren",
   "pricing.free.feature4": "Community-Support",
+  "pricing.free.bestFor":
+    "Lehrkraefte, die Zaza Draft zuerst mit echten Texten pruefen moechten.",
+  "pricing.free.term1": "Zum Einstieg ist keine Kreditkarte erforderlich.",
+  "pricing.free.term2":
+    "Der kostenlose Einstieg umfasst 5 Entwuerfe pro Monat.",
 
   // Teacher (Premium) Plan
   "pricing.teacher.badge": "AM BELIEBTESTEN",
@@ -1649,6 +1697,8 @@ const translationsDe: Record<string, string> = {
   "pricing.teacher.feature5": "Zaras sanfte Hinweise fuer weniger Gruebeln",
   "pricing.teacher.feature6": "Priorisierter E-Mail-Support",
   "pricing.teacher.timeSaved": "Typische Zeitersparnis: 4-7 Stunden pro Woche",
+  "pricing.teacher.bestFor":
+    "Einzelne Lehrkraefte, die ruhigere Elternmails, klarere Dokumentation und bessere Zeugnisbemerkungen wollen.",
 
   // Department Plan
   "pricing.department.badge": "TEAMS",
@@ -1663,6 +1713,10 @@ const translationsDe: Record<string, string> = {
   "pricing.department.feature2": "Rollenbasierter Zugriff",
   "pricing.department.feature3": "Pruefen und Freigeben",
   "pricing.department.feature4": "Priorisiertes Onboarding und Begleitung",
+  "pricing.department.bestFor":
+    "Fachbereiche und kleinere Teams, die bei sensibler Kommunikation konsistent arbeiten wollen.",
+  "pricing.department.term1": "Department-Plaene werden jaehrlich abgerechnet.",
+  "pricing.department.term2": "Department-Preise gelten fuer 5 bis 50 Plaetze.",
 
   // Schools & Districts
   "pricing.enterprise.badge": "ENTERPRISE",
@@ -1675,6 +1729,12 @@ const translationsDe: Record<string, string> = {
   "pricing.enterprise.feature1": "SSO/SAML, DPA/SCCs",
   "pricing.enterprise.feature2": "SLA & dedizierter Erfolg",
   "pricing.enterprise.feature3": "Zentrale Abrechnung & Bereitstellung",
+  "pricing.enterprise.bestFor":
+    "Schulen, Bezirke und groessere Einfuehrungen mit Beschaffung, Sicherheit und Rollout-Bedarf.",
+  "pricing.enterprise.term1":
+    "Preis und Rollout werden gemeinsam mit dem Vertrieb festgelegt.",
+  "pricing.enterprise.term2":
+    "Der Sales-Weg ist fuer Beschaffung, Datenschutz und Einfuehrungsplanung gedacht.",
 
   // Bundle
   "pricing.bundle.badge": "BUNDLE & SPAREN",
@@ -1685,6 +1745,18 @@ const translationsDe: Record<string, string> = {
   "pricing.bundle.perYear": "/Jahr",
   "pricing.bundle.savings": "Sparen Sie gegenüber dem separaten Kauf",
   "pricing.bundle.cta": "Bundle holen",
+  "pricing.bundle.bestFor":
+    "Lehrkraefte, die Unterrichtsplanung und Schreibunterstuetzung in einem Paket wollen.",
+  "pricing.bundle.feature1":
+    "Alles aus Draft fuer Elternkommunikation und Zeugnisbemerkungen",
+  "pricing.bundle.feature2":
+    "Zusaetzliche Planungsunterstuetzung im Teach-Workflow",
+  "pricing.bundle.feature3":
+    "Guenstiger als der getrennte Kauf beider Werkzeuge",
+  "pricing.bundle.term1":
+    "Die jaehrliche Abrechnung ist der bessere Gegenwert fuer das Bundle.",
+  "pricing.bundle.term2":
+    "Kostenpflichtige Self-Serve-Plaene fallen unter die 30-Tage-Geld-zurueck-Garantie.",
 
   // Testimonials
   "pricing.testimonials.title": "Was Lehrkräfte über Preise sagen",
@@ -1706,6 +1778,21 @@ const translationsDe: Record<string, string> = {
     "Lehrkraefte nutzen Draft fuer ruhigere Elternmails, klarere Dokumentation und aussagekraeftigere Kommentare - mit voller Kontrolle ueber die Endfassung.",
 
   "pricing.checkout.buyNow": "Jetzt abonnieren",
+  "pricing.plans.title": "Waehlen Sie den Plan, der zu Ihrem Schulalltag passt",
+  "pricing.plans.subtitle":
+    "Jeder Plan zeigt klar, fuer wen er gedacht ist, was enthalten ist, welche sichtbaren Monats- und Jahrespreise gelten und was der naechste Schritt ist.",
+  "pricing.details.bestFor": "Geeignet fuer",
+  "pricing.details.monthlyPrice": "Monatspreis",
+  "pricing.details.yearlyPrice": "Jahrespreis",
+  "pricing.details.pricing": "Preis",
+  "pricing.details.billing": "Abrechnung",
+  "pricing.details.includes": "Was enthalten ist",
+  "pricing.details.terms": "Konditionen",
+  "pricing.details.perMonth": "/Monat",
+  "pricing.details.perYear": "/Jahr",
+  "pricing.details.bestValue": "Bester Gegenwert",
+  "pricing.toggle.helper":
+    "Die Jahresabrechnung ist der bevorzugte Gegenwert. Self-Serve-Checkouts folgen der oben gewaehlten Laufzeit.",
   "pricing.compare.title": "Vergleich: Zaza vs. ChatGPT",
   "pricing.compare.caption":
     "ChatGPT ist stark - aber nicht für dein Klassenzimmer gebaut. Zaza Draft schon.",

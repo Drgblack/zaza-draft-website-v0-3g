@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { StructuredData } from "@/components/StructuredData";
+import { AgentReadableSummary } from "@/components/seo/AgentReadableSummary";
+import { LastUpdated } from "@/components/seo/LastUpdated";
+import { CONTENT_FRESHNESS } from "@/lib/seo/content-freshness";
 import {
   buildReportPageData,
   buildScenarioPageData,
@@ -46,6 +49,27 @@ export function ScenarioPage(props: ScenarioPageProps) {
   return (
     <>
       <StructuredData
+        type="WebPage"
+        data={{
+          id: `${page.path}-webpage-jsonld`,
+          path: page.path,
+          title: page.h1,
+          description: page.metaDescription,
+          potentialActionName: "Start free trial",
+          modifiedTime: `${page.lastReviewed}T00:00:00.000Z`,
+        }}
+      />
+      <StructuredData
+        type="SoftwareApplication"
+        data={{
+          id: `${page.path}-software-jsonld`,
+          path: page.path,
+          title: "Zaza Draft",
+          description:
+            "Zaza Draft helps teachers turn difficult school communication into calmer parent emails, clearer updates, and more meaningful report comments.",
+        }}
+      />
+      <StructuredData
         type="Article"
         data={{
           id: `${page.path}-article-jsonld`,
@@ -74,16 +98,6 @@ export function ScenarioPage(props: ScenarioPageProps) {
           faqs: page.faq,
         }}
       />
-      <StructuredData
-        type="BreadcrumbList"
-        data={{
-          id: `${page.path}-breadcrumb-jsonld`,
-          path: page.path,
-          title: page.h1,
-          description: page.metaDescription,
-          breadcrumbs: page.breadcrumbs,
-        }}
-      />
 
       <div className="min-h-screen bg-[#f6f1e8] text-slate-900">
         <section className="border-b border-[#ddd2c3] bg-[radial-gradient(circle_at_top_left,_rgba(29,78,68,0.12),_transparent_30%),radial-gradient(circle_at_top_right,_rgba(148,163,184,0.16),_transparent_32%),linear-gradient(180deg,_#fcfaf6_0%,_#f6f1e8_100%)]">
@@ -96,6 +110,10 @@ export function ScenarioPage(props: ScenarioPageProps) {
                 <h1 className="text-balance text-4xl font-semibold tracking-tight text-slate-950 md:text-6xl">
                   {page.h1}
                 </h1>
+                <LastUpdated
+                  isoDate={page.lastReviewed}
+                  precision={CONTENT_FRESHNESS.matrixPages.precision}
+                />
                 {page.heroDescription.map((paragraph) => (
                   <p
                     key={paragraph}
@@ -370,6 +388,63 @@ export function ScenarioPage(props: ScenarioPageProps) {
               ))}
             </div>
           </section>
+
+          <AgentReadableSummary
+            title="The quick summary for this situation"
+            intro="If this scenario feels close to the message on your screen, this is the shortest explanation of what Zaza Draft is doing here."
+            answers={{
+              whatIsIt: (
+                <>
+                  Zaza Draft is a teacher-first writing support tool for parent
+                  emails, behaviour updates, report comments, and other school
+                  messages where tone matters.
+                </>
+              ),
+              whoIsItFor: (
+                <>
+                  It is for teachers who want clearer wording before a message
+                  gets sent, forwarded, challenged, or stored as part of school
+                  documentation.
+                </>
+              ),
+              problemItSolves: (
+                <>
+                  It solves the problem of having the facts ready but not yet
+                  trusting whether the wording sounds calm, fair, and
+                  professionally defensible.
+                </>
+              ),
+              howItWorks: (
+                <>
+                  You start with the draft, notes, or situation, use Zaza Draft
+                  to shape a calmer version, then review the final wording
+                  yourself before using it.
+                </>
+              ),
+              whatItCosts: (
+                <>
+                  You can start free, then move to a paid plan if you want
+                  ongoing support.{" "}
+                  <Link href="/pricing" className="font-semibold underline">
+                    Current plan details are on the pricing page.
+                  </Link>
+                </>
+              ),
+              nextStep: (
+                <>
+                  If this matches your situation,{" "}
+                  <Link href="/pricing" className="font-semibold underline">
+                    start free
+                  </Link>{" "}
+                  or{" "}
+                  <Link href="/diagnosis" className="font-semibold underline">
+                    diagnose the issue
+                  </Link>{" "}
+                  before you write the final message.
+                </>
+              ),
+            }}
+          />
 
           <section className="rounded-[32px] border border-[#d8cdbf] bg-[linear-gradient(135deg,_#123f34_0%,_#1f5b4a_100%)] p-8 text-white md:p-10">
             <h2 className="max-w-3xl text-3xl font-semibold tracking-tight md:text-4xl">

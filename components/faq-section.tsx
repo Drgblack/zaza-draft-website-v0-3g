@@ -1,7 +1,8 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { buildFAQPageJsonLd, serializeJsonLd } from "@/lib/seo/schema";
 
 export interface FAQItem {
   question: string;
@@ -23,25 +24,11 @@ export function FAQSection({
   pageSlug,
   id,
   title,
-  schemaContext,
 }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const faqItems = items || faqs || [];
-
-  // Generate FAQ JSON-LD schema
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqItems.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  };
+  const faqSchema = buildFAQPageJsonLd(faqItems);
 
   return (
     <section id={id} className="scroll-mt-20">
@@ -56,7 +43,6 @@ export function FAQSection({
             <button
               onClick={() => {
                 setOpenIndex(openIndex === index ? null : index);
-                // Track FAQ expansion
                 if (
                   typeof window !== "undefined" &&
                   (window as any).analytics &&
@@ -93,16 +79,14 @@ export function FAQSection({
         ))}
       </div>
 
-      {/* FAQ Schema */}
       {faqItems.length > 0 && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(faqSchema),
+            __html: serializeJsonLd(faqSchema),
           }}
         />
       )}
     </section>
   );
 }
-

@@ -1,3 +1,7 @@
+import {
+  CONTENT_FRESHNESS,
+  parseFreshnessDate,
+} from "@/lib/seo/content-freshness";
 import type { Metadata, MetadataRoute } from "next";
 import { defaultMetadata } from "@/lib/metadata";
 
@@ -130,6 +134,7 @@ export type ProgrammaticPageData = {
   comparisonMatrix?: ComparisonMatrix;
   breadcrumbOverrides?: Record<string, string>;
   estimatedWordCount: number;
+  lastReviewed: string;
 };
 
 type HubDefinition = {
@@ -1328,7 +1333,9 @@ function countWords(value: string) {
 }
 
 function withWordCount(
-  page: Omit<ProgrammaticPageData, "estimatedWordCount">,
+  page: Omit<ProgrammaticPageData, "estimatedWordCount" | "lastReviewed"> & {
+    lastReviewed?: string;
+  },
 ): ProgrammaticPageData {
   const wordCount = [
     page.h1,
@@ -1373,7 +1380,12 @@ function withWordCount(
       : []),
   ].reduce((total, item) => total + countWords(item), 0);
 
-  return { ...page, estimatedWordCount: wordCount };
+  return {
+    ...page,
+    estimatedWordCount: wordCount,
+    lastReviewed:
+      page.lastReviewed ?? CONTENT_FRESHNESS.programmaticPages.isoDate,
+  };
 }
 
 function buildFaqBlock(theme: string, detail: string): FAQItem[] {
@@ -2832,13 +2844,16 @@ export function generateMetadata(input: string | string[]): Metadata {
 }
 
 export function getProgrammaticSitemapEntries(
-  lastModified = new Date(),
+  fallbackLastModified = new Date(),
 ): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
   const push = (path: string, priority: number) => {
+    const page = slugToProps(path);
     entries.push({
       url: `https://zazadraft.com${path}`,
-      lastModified,
+      lastModified: page?.lastReviewed
+        ? parseFreshnessDate(page.lastReviewed)
+        : fallbackLastModified,
       changeFrequency: "monthly",
       priority,
     });

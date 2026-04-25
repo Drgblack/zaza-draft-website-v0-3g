@@ -2,8 +2,11 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { LastUpdated } from "@/components/seo/LastUpdated";
+import { CONTENT_FRESHNESS } from "@/lib/seo/content-freshness";
 import { buildTeacherWritingJsonLd } from "@/lib/seo/teacher-writing-schema";
 import {
+  getTeacherWritingLastReviewed,
   getTeacherWritingPageOrThrow,
   type TeacherWritingPage,
 } from "@/lib/seo/teacher-writing-pages";
@@ -359,6 +362,7 @@ export function TeacherWritingLandingPage({
 }: TeacherWritingLandingPageProps) {
   const jsonLd = providedJsonLd ?? buildTeacherWritingJsonLd(page);
   const guideOverrides = getGuideOverrides(page);
+  const lastReviewed = getTeacherWritingLastReviewed(page);
 
   return (
     <>
@@ -380,6 +384,11 @@ export function TeacherWritingLandingPage({
               <h1 className="max-w-4xl text-balance text-4xl font-semibold tracking-tight text-white md:text-6xl">
                 {guideOverrides?.heroTitle ?? page.h1}
               </h1>
+              <LastUpdated
+                isoDate={lastReviewed}
+                precision={CONTENT_FRESHNESS.teacherWritingPages.precision}
+                theme="dark"
+              />
               <div className="space-y-4 text-lg leading-8 text-slate-300">
                 {(guideOverrides?.heroDescription ?? page.heroDescription).map(
                   (paragraph) => (

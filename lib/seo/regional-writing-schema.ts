@@ -5,6 +5,8 @@ import type {
   TeacherWritingPage,
 } from "@/lib/seo/teacher-writing-pages";
 import type { RegionalTeacherWritingRegion } from "@/lib/seo/regional-writing-pages";
+import { getTeacherWritingLastReviewed } from "@/lib/seo/teacher-writing-pages";
+import { toSchemaDate } from "@/lib/seo/content-freshness";
 import {
   drGregBlackburnBio,
   zazaDraftEntityDefinition,
@@ -92,6 +94,8 @@ function buildWebPageSchema(
   region: RegionalTeacherWritingRegion,
   page: TeacherWritingPage,
 ) {
+  const modifiedTime = toSchemaDate(getTeacherWritingLastReviewed(page));
+
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -121,6 +125,7 @@ function buildWebPageSchema(
     },
     areaServed: buildRegionPlace(region),
     contentLocation: buildRegionPlace(region),
+    dateModified: modifiedTime,
     isPartOf: {
       "@type": "WebSite",
       name: brandName,
@@ -169,6 +174,8 @@ function buildArticleSchema(
   region: RegionalTeacherWritingRegion,
   page: TeacherWritingPage,
 ) {
+  const modifiedTime = toSchemaDate(getTeacherWritingLastReviewed(page));
+
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -186,7 +193,7 @@ function buildArticleSchema(
     },
     image: `${baseUrl}${page.ogImage}`,
     datePublished: "2026-03-09",
-    dateModified: "2026-03-09",
+    dateModified: modifiedTime,
     inLanguage: "en-GB",
     audience: {
       "@type": "EducationalAudience",

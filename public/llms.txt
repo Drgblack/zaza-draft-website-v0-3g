@@ -1,0 +1,38 @@
+Site: Zaza Draft
+URL: https://zazadraft.com
+App: https://app.zazadraft.com
+
+Description:
+Zaza Draft is a risk-aware AI writing and communication support tool for teachers. It helps educators write calmer parent emails, safer difficult replies, clearer school messages, and more meaningful report comments without losing professional judgement. The product is designed for teacher communication support, especially where tone, interpretation, and defensibility matter before a message is sent or submitted.
+
+Primary audience:
+- Teachers
+- Schools
+- Educators
+
+Core use cases:
+- Parent emails
+- Difficult parent replies
+- Behaviour updates
+- Report comments
+- Sensitive school communication
+
+Important URLs:
+- Home: https://zazadraft.com/
+- Start: https://zazadraft.com/start
+- German start: https://zazadraft.com/de/start
+- Pricing: https://zazadraft.com/pricing
+- Product overview: https://zazadraft.com/products/draft
+- Free tool: https://zazadraft.com/parent-email-risk-checker
+- Public product info API: https://zazadraft.com/api/public/product-info
+- Public site capabilities API: https://zazadraft.com/api/public/site-capabilities
+- Contact/support: https://zazadraft.com/contact
+- Teacher email tone guide: https://zazadraft.com/teacher-email-tone-guide
+- Report comment guide: https://zazadraft.com/how-to-write-better-report-comments
+- Full LLM guide: https://zazadraft.com/llms-full.txt
+
+Pricing note:
+Zaza Draft offers a free starting tier and paid plans. Exact current pricing, billing options, and school/team plans are listed on https://zazadraft.com/pricing.
+
+Scope note:
+Zaza Draft supports teacher communication and drafting workflows. It is not legal advice, not emergency support, and not a substitute for school safeguarding procedures or urgent professional escalation.

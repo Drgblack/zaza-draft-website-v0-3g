@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CONTENT_FRESHNESS } from "@/lib/seo/content-freshness";
 import { buildPageMetadata } from "@/lib/seo/site-metadata";
 
 export type ScenarioFaqItem = {
@@ -18,6 +19,7 @@ export type ScenarioPage = {
   title: string;
   metaDescription: string;
   h1: string;
+  lastReviewed?: string;
   problemFraming: string[];
   commonMistake: {
     title: string;
@@ -801,6 +803,10 @@ export const scenarioPageSlugs = Object.keys(
 
 export function getScenarioPage(slug: string) {
   return scenarioPages[slug as ScenarioPageSlug];
+}
+
+export function getScenarioPageLastReviewed(page: ScenarioPage) {
+  return page.lastReviewed ?? CONTENT_FRESHNESS.scenarioPages.isoDate;
 }
 
 export function getScenarioPageOrThrow(slug: string) {
