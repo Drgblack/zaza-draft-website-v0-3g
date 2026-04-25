@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { buildPageMetadata } from "@/lib/seo/site-metadata";
 import JessicaReedFunnel from "../../funnel/JessicaReedFunnel";
 
@@ -15,5 +16,9 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 export default function GermanStartPage() {
-  return <JessicaReedFunnel locale="de" />;
+  return (
+    <Suspense fallback={null}>
+      <JessicaReedFunnel locale="de" />
+    </Suspense>
+  );
 }
