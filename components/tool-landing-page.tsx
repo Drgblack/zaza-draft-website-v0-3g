@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { DistributionPageViewTracker } from "@/components/analytics/distribution-page-view-tracker";
 import { StructuredData } from "@/components/StructuredData";
+import { GuideLinksBlock } from "@/components/seo/GuideLinksBlock";
 import { SeoInternalLinkingBlocks } from "@/components/seo/internal-linking-blocks";
 import { appendDistributionParams } from "@/lib/distribution-analytics";
+import { getContextualGuideLinks } from "@/lib/guides";
 import type { ToolLandingPage } from "@/lib/tool-landing-pages";
 
 type ToolLandingPageProps = {
@@ -19,6 +21,10 @@ export function ToolLandingPageTemplate({ page }: ToolLandingPageProps) {
     pageType: "free_tool" as const,
     slug: page.slug,
   };
+  const guideLinks = getContextualGuideLinks(
+    `${page.h1} ${page.heroBody} ${page.painIntro}`,
+    { limit: 4 },
+  );
 
   return (
     <>
@@ -255,6 +261,15 @@ export function ToolLandingPageTemplate({ page }: ToolLandingPageProps) {
               ))}
             </div>
           </section>
+
+          <GuideLinksBlock
+            eyebrow="Teacher communication guides"
+            title="Learn how to handle this properly"
+            intro="If the checker matches a real situation on your screen, these guides give you calmer examples before you send the final version."
+            links={guideLinks}
+            hubHref="/guides"
+            hubLabel="Browse all guides"
+          />
 
           <SeoInternalLinkingBlocks
             relatedTitle={page.relatedLinksTitle}

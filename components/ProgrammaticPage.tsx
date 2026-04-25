@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { StructuredData } from "@/components/StructuredData";
 import { AgentReadableSummary } from "@/components/seo/AgentReadableSummary";
+import { GuideLinksBlock } from "@/components/seo/GuideLinksBlock";
 import { LastUpdated } from "@/components/seo/LastUpdated";
 import { CONTENT_FRESHNESS } from "@/lib/seo/content-freshness";
+import { getContextualGuideLinks } from "@/lib/guides";
 import type { ProgrammaticPageData } from "@/lib/programmatic-seo";
 
 type ProgrammaticPageProps = {
@@ -54,6 +56,10 @@ export function ProgrammaticPage({ page }: ProgrammaticPageProps) {
   const breadcrumbTrail = buildBreadcrumbTrail(page);
   const coWriterNotes = buildCoWriterNotes(page);
   const draftPreview = getDraftPreview(page);
+  const guideLinks = getContextualGuideLinks(
+    `${page.h1} ${page.metaDescription} ${page.featuredSnippet}`,
+    { limit: 4 },
+  );
 
   return (
     <>
@@ -445,6 +451,15 @@ export function ProgrammaticPage({ page }: ProgrammaticPageProps) {
               ))}
             </div>
           </section>
+
+          <GuideLinksBlock
+            eyebrow="Teacher communication guides"
+            title="Learn how to handle this properly"
+            intro="If this page is close to your situation, these guides give you calmer examples and safer phrasing patterns before you write the final version."
+            links={guideLinks}
+            hubHref="/guides"
+            hubLabel="Browse all guides"
+          />
 
           <section className="grid gap-6 lg:grid-cols-[1.1fr,0.9fr]">
             <div className="rounded-[32px] border border-[#ddd2c3] bg-white/90 p-6 md:p-8">

@@ -45,6 +45,7 @@ export function Header() {
   });
   const L = (de: string, en: string) => (language === "de" ? de : en);
   const riskCheckerLabel = L("Kostenloser Risiko-Check", "Free Risk Checker");
+  const guidesLabel = L("Leitfaeden", "Guides");
   const schoolsLabel = L("Für Schulen", "For Schools");
   const schoolsHref =
     pathname?.startsWith("/de") || language === "de"
@@ -101,6 +102,7 @@ export function Header() {
 
   const navigation = [
     { name: riskCheckerLabel, href: riskCheckerHref },
+    { name: guidesLabel, href: "/guides" },
     { name: t("nav.pricing"), href: "/pricing" },
   ];
   const toggleMobileAccordion = (id: string) =>
@@ -119,6 +121,12 @@ export function Header() {
       trackCtaClick({
         ctaText: t("nav.pricing"),
         ctaLocation: "header_nav",
+      });
+    }
+    if (href === "/guides") {
+      trackCtaClick({
+        ctaText: guidesLabel,
+        ctaLocation: "header_nav_guides",
       });
     }
     if (href === schoolsHref) {
@@ -194,6 +202,7 @@ export function Header() {
   ];
 
   const resourcesMenuItems = [
+    { name: guidesLabel, href: "/guides" },
     { name: "Blog", href: "/blog" },
     { name: L("Tools vergleichen", "Compare Tools"), href: "/compare" },
     { name: L("Integrationen", "Integrations"), href: "/integrations" },
@@ -227,6 +236,7 @@ export function Header() {
       title: riskCheckerLabel,
       href: riskCheckerHref,
     },
+    { id: "guides", title: guidesLabel, href: "/guides" },
     { id: "pricing", title: t("nav.pricing"), href: "/pricing" },
     { id: "schools", title: schoolsLabel, href: schoolsHref },
     { id: "products", title: t("nav.products"), children: productsMenuItems },

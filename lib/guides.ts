@@ -66,6 +66,11 @@ export type GuidePageData = {
   lastReviewed: string;
 };
 
+type GuideKeywordRule = {
+  slug: GuidePageData["slug"];
+  keywords: string[];
+};
+
 const START_LINK: GuideLink = {
   href: "/start",
   label: "Start with Zaza Draft",
@@ -558,6 +563,63 @@ const guides: GuidePageData[] = [
   },
 ];
 
+const guideKeywordRules: GuideKeywordRule[] = [
+  {
+    slug: "responding-to-angry-parents",
+    keywords: [
+      "angry",
+      "upset",
+      "rude",
+      "parent",
+      "complaint",
+      "reply",
+      "respond",
+      "behaviour",
+      "email",
+    ],
+  },
+  {
+    slug: "what-teachers-should-not-say-to-parents",
+    keywords: [
+      "say",
+      "phrasing",
+      "wording",
+      "tone",
+      "defensive",
+      "blunt",
+      "cold",
+      "parent",
+      "email",
+    ],
+  },
+  {
+    slug: "how-to-de-escalate-parent-conflict",
+    keywords: [
+      "de-escalate",
+      "escalate",
+      "conflict",
+      "complaint",
+      "angry",
+      "frustrated",
+      "meeting",
+      "parent",
+      "thread",
+    ],
+  },
+  {
+    slug: "writing-report-comments-professionally",
+    keywords: [
+      "report",
+      "comment",
+      "comments",
+      "student reports",
+      "grading",
+      "assessment",
+      "written report",
+    ],
+  },
+];
+
 export const guideSlugs = guides.map((guide) => guide.slug);
 
 export function getAllGuides() {
@@ -566,6 +628,68 @@ export function getAllGuides() {
 
 export function getGuide(slug: string) {
   return guides.find((guide) => guide.slug === slug);
+}
+
+export function getPopularGuideLinks() {
+  return guides.map((guide) => ({
+    href: guide.path,
+    label: guide.title,
+    description: guide.cardDescription,
+  }));
+}
+
+export function getContextualGuideLinks(
+  input: string,
+  options?: {
+    excludeSlug?: GuidePageData["slug"];
+    limit?: number;
+  },
+) {
+  const normalizedInput = input.toLowerCase();
+  const limit = options?.limit ?? 3;
+
+  const scored = guides
+    .filter((guide) => guide.slug !== options?.excludeSlug)
+    .map((guide) => {
+      const keywordScore =
+        guideKeywordRules
+          .find((rule) => rule.slug === guide.slug)
+          ?.keywords.reduce(
+            (score, keyword) =>
+              normalizedInput.includes(keyword.toLowerCase())
+                ? score + 1
+                : score,
+            0,
+          ) ?? 0;
+
+      return {
+        href: guide.path,
+        label: guide.title,
+        description: guide.cardDescription,
+        score: keywordScore,
+      };
+    })
+    .sort((a, b) => b.score - a.score || a.label.localeCompare(b.label));
+
+  const positiveMatches = scored
+    .filter((item) => item.score > 0)
+    .slice(0, limit);
+
+  if (positiveMatches.length === limit) {
+    return positiveMatches.map(({ score: _score, ...item }) => item);
+  }
+
+  const fallback = scored
+    .filter(
+      (item) =>
+        item.score === 0 &&
+        !positiveMatches.some((match) => match.href === item.href),
+    )
+    .slice(0, limit - positiveMatches.length);
+
+  return [...positiveMatches, ...fallback].map(
+    ({ score: _score, ...item }) => item,
+  );
 }
 
 export function getRelatedGuideLinks(currentSlug: GuidePageData["slug"]) {

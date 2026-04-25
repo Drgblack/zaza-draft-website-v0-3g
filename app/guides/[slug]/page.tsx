@@ -4,6 +4,7 @@ import { GuidePage } from "@/components/guides/GuidePage";
 import { JsonLdCollection } from "@/components/seo/json-ld";
 import { getGuide, guideSlugs } from "@/lib/guides";
 import {
+  createBreadcrumbJsonLd,
   createFAQPageJsonLd,
   createHowToJsonLd,
   createWebPageJsonLd,
@@ -67,6 +68,14 @@ export default function GuideDetailPage({
               potentialActionName: "Read teacher communication guide",
               modifiedTime: toSchemaDate(guide.lastReviewed),
             }),
+          },
+          {
+            id: `${guide.slug}-breadcrumb-schema`,
+            data: createBreadcrumbJsonLd([
+              { name: "Home", path: "/" },
+              { name: "Guides", path: "/guides" },
+              { name: guide.title, path: guide.path },
+            ]),
           },
           ...(guide.steps.length && guide.emitHowToSchema !== false
             ? [

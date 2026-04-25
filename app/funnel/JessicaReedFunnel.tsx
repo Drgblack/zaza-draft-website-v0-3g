@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { AgentReadableSummary } from "@/components/seo/AgentReadableSummary";
+import { GuideLinksBlock } from "@/components/seo/GuideLinksBlock";
 import { LastUpdated } from "@/components/seo/LastUpdated";
 import { SignupModal } from "@/components/signup-modal";
 import {
@@ -21,6 +22,7 @@ import { sanitizeLeadSource } from "@/lib/draft-cta";
 import { readDistributionMetaFromParams } from "@/lib/distribution-analytics";
 import { formatLocalizedPrice } from "@/lib/pricing-currency";
 import { CONTENT_FRESHNESS } from "@/lib/seo/content-freshness";
+import { getPopularGuideLinks } from "@/lib/guides";
 import { usePricingCurrency } from "@/hooks/use-pricing-currency";
 import { funnelCopy, type FunnelLocale } from "./content";
 import HeroSection from "./components/HeroSection";
@@ -118,6 +120,7 @@ export default function JessicaReedFunnel({
   const guidesHubHref = "/guides";
   const guidesHubLabel =
     locale === "de" ? "Alle Leitfaeden ansehen" : "Browse all guides";
+  const guideLinks = getPopularGuideLinks().slice(0, 4);
   const pricingHref = locale === "de" ? "/de/pricing" : "/pricing";
   const summaryTitle =
     locale === "de"
@@ -379,38 +382,29 @@ export default function JessicaReedFunnel({
           </div>
         </section>
         <section className="px-6 pb-12 lg:px-8">
-          <div className="mx-auto max-w-6xl rounded-[32px] border border-white/10 bg-[#111827] p-8 shadow-[0_30px_80px_-50px_rgba(15,23,42,0.6)]">
-            <p className="text-xs uppercase tracking-[0.2em] text-[#94A3B8]">
-              {locale === "de" ? "Praktische Leitfaeden" : "Practical guides"}
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white">
-              {locale === "de"
-                ? "Lieber zuerst Beispiele sehen?"
-                : "Want examples before you start?"}
-            </h2>
-            <p className="mt-4 max-w-3xl text-base leading-8 text-[#CBD5E1]">
-              {locale === "de"
-                ? "Die Guide-Uebersicht zeigt lehrkraft-zentrierte Beispiele zu veraergerten Eltern, Deeskalation und professionelleren Formulierungen, bevor du deinen eigenen Entwurf in Zaza Draft bearbeitest."
-                : "The guide hub gives you teacher-first examples on angry parent replies, de-escalation, and more professional wording before you reshape your own draft in Zaza Draft."}
-            </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                href={guidesHubHref}
-                onClick={() => {
-                  trackCtaClick({
-                    ctaText: guidesHubLabel,
-                    ctaLocation: "funnel_guides_hub",
-                  });
-                  track("seo_guide_link_clicked", {
-                    destination: guidesHubHref,
-                    source: "funnel_guides_hub",
-                    locale,
-                  });
-                }}
-                className="inline-flex items-center rounded-full border border-[#8B5CF6]/40 bg-[#8B5CF6]/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#8B5CF6]/20"
-              >
-                {guidesHubLabel}
-              </Link>
+          <div className="mx-auto max-w-6xl">
+            <GuideLinksBlock
+              theme="dark"
+              eyebrow={
+                locale === "de"
+                  ? "Leitfaeden fuer Lehrkraefte"
+                  : "Teacher communication guides"
+              }
+              title={
+                locale === "de"
+                  ? "Lieber zuerst Beispiele sehen?"
+                  : "Want examples before you start?"
+              }
+              intro={
+                locale === "de"
+                  ? "Bevor du deinen eigenen Entwurf bearbeitest, lies diese klaren Beispiele zu veraergerten Eltern, Deeskalation und professionelleren Formulierungen."
+                  : "Before you reshape your own draft, read these teacher-first examples on angry parent replies, de-escalation, and more professional report wording."
+              }
+              links={guideLinks}
+              hubHref={guidesHubHref}
+              hubLabel={guidesHubLabel}
+            />
+            <div className="mt-4 flex flex-wrap gap-3">
               <Link
                 href={finalPrimaryHref}
                 onClick={() => {

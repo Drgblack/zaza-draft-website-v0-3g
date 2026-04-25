@@ -5,6 +5,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Check, Copy, Link2, LoaderCircle, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AgentReadableSummary } from "@/components/seo/AgentReadableSummary";
+import { GuideLinksBlock } from "@/components/seo/GuideLinksBlock";
 import { LastUpdated } from "@/components/seo/LastUpdated";
 import {
   Card,
@@ -34,6 +35,7 @@ import {
   type DisplayRiskLevel,
 } from "@/app/parent-email-risk-checker/copy";
 import { CONTENT_FRESHNESS } from "@/lib/seo/content-freshness";
+import { getContextualGuideLinks } from "@/lib/guides";
 
 const MIN_WORDS = 10;
 const CHECKER_DISTRIBUTION_META = {
@@ -204,6 +206,12 @@ export default function ParentEmailRiskCheckerClient({
     : [];
   const riskTone = getRiskToneConfig(result?.riskLevel ?? null, copy);
   const pricingHref = locale === "de" ? "/de/pricing" : "/pricing";
+  const guideLinks = getContextualGuideLinks(
+    "angry parent email de-escalation parent communication report comments",
+    {
+      limit: 4,
+    },
+  );
   const summaryTitle =
     locale === "de"
       ? "Der Checker in einem Satz"
@@ -821,6 +829,33 @@ export default function ParentEmailRiskCheckerClient({
             </div>
             <p>{copy.positioningClosing}</p>
           </div>
+        </div>
+      </section>
+
+      <section className="px-4 pb-12">
+        <div className="mx-auto max-w-5xl">
+          <GuideLinksBlock
+            eyebrow={
+              locale === "de"
+                ? "Leitfaeden fuer Lehrkraefte"
+                : "Teacher communication guides"
+            }
+            title={
+              locale === "de"
+                ? "Bevor du sendest - lies die passenden Beispiele"
+                : "Before you send, read the right examples"
+            }
+            intro={
+              locale === "de"
+                ? "Wenn das Ergebnis zeigt, dass deine Mail leicht falsch verstanden werden koennte, helfen diese Leitfaeden mit ruhigeren Antworten, Deeskalation und professionelleren Formulierungen."
+                : "If the result suggests your email may be easy to misread, these guides give you calmer reply patterns, de-escalation examples, and more professional wording."
+            }
+            links={guideLinks}
+            hubHref="/guides"
+            hubLabel={
+              locale === "de" ? "Alle Leitfaeden ansehen" : "Browse all guides"
+            }
+          />
         </div>
       </section>
 

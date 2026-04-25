@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { StructuredData } from "@/components/StructuredData";
 import { AgentReadableSummary } from "@/components/seo/AgentReadableSummary";
+import { GuideLinksBlock } from "@/components/seo/GuideLinksBlock";
 import { LastUpdated } from "@/components/seo/LastUpdated";
 import { CONTENT_FRESHNESS } from "@/lib/seo/content-freshness";
+import { getContextualGuideLinks } from "@/lib/guides";
 import type { ComparisonPageData } from "@/lib/comparison-matrix";
 
 type ComparisonPageProps = {
@@ -10,6 +12,11 @@ type ComparisonPageProps = {
 };
 
 export function ComparisonPage({ page }: ComparisonPageProps) {
+  const guideLinks = getContextualGuideLinks(
+    `${page.h1} ${page.metaDescription} ${page.quickAnswer}`,
+    { limit: 4 },
+  );
+
   return (
     <>
       <StructuredData
@@ -214,6 +221,15 @@ export function ComparisonPage({ page }: ComparisonPageProps) {
               ))}
             </div>
           </section>
+
+          <GuideLinksBlock
+            eyebrow="Teacher communication guides"
+            title="Learn more before you choose a tool"
+            intro="If you are comparing platforms because parent communication or report comments still feel risky, these guides explain the teacher problems behind the tool choice."
+            links={guideLinks}
+            hubHref="/guides"
+            hubLabel="Browse all guides"
+          />
 
           <section className="space-y-6">
             <div>

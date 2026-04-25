@@ -10,6 +10,7 @@ import { track, trackCtaClick } from "@/lib/analytics";
 import { DraftDemo } from "@/components/draft-demo";
 import { CaseStudyCarousel } from "@/components/case-study-carousel";
 import { SocialProofBadges } from "@/components/social-proof-badges";
+import { getPopularGuideLinks } from "@/lib/guides";
 
 const Check = ({ className }: { className?: string }) => (
   <svg
@@ -419,61 +420,13 @@ export function HomePageClient() {
     language === "de"
       ? "Gehe zur Guide-Uebersicht fuer alle Leitfaeden zu Elternkommunikation, Deeskalation und professionelleren Bemerkungen."
       : "Go to the guide hub for the full set of teacher communication guides on parent emails, de-escalation, and report comments.";
-  const guideLinks = [
-    {
-      href:
-        language === "de"
-          ? "/de/parent-email-risk-checker"
-          : "/professional-parent-emails-for-teachers",
-      title:
-        language === "de"
-          ? "Risiko-Check fuer Elternmails"
-          : "Professional Parent Emails for Teachers",
-      description:
-        language === "de"
-          ? "Pruefe eine schwierige Elternmail darauf, ob sie zu direkt, zu scharf oder leicht missverstaendlich wirkt."
-          : "How to write concise, professional parent emails without sounding cold or abrupt.",
-    },
-    {
-      href: language === "de" ? "/de/features" : "/teacher-email-tone-guide",
-      title:
-        language === "de"
-          ? "Wie Draft bei Ton und Formulierung hilft"
-          : "A Teacher's Guide to Email Tone with Parents",
-      description:
-        language === "de"
-          ? "Sieh dir an, wie Draft bei professioneller Elternkommunikation, klaren Formulierungen und aussagekraeftigeren Kommentaren unterstuetzt."
-          : "Spot the lines that may read as defensive, blunt, vague, or riskier than you intended.",
-    },
-    {
-      href:
-        language === "de"
-          ? "/de/products/draft"
-          : "/how-to-write-better-report-comments",
-      title:
-        language === "de"
-          ? "Zaza Draft im Detail ansehen"
-          : "How to Write Better Report Comments",
-      description:
-        language === "de"
-          ? "Mehr dazu, wie Draft bei Elternmails, Dokumentation und aussagekraeftigeren Zeugnisbemerkungen hilft."
-          : "Write comments that go beyond obvious observations and tell parents something useful.",
-    },
-    {
-      href:
-        language === "de"
-          ? "/de/pricing"
-          : "/what-parents-already-know-report-comments",
-      title:
-        language === "de"
-          ? "Preise und Plaene ansehen"
-          : "Stop Writing Report Comments Parents Already Know",
-      description:
-        language === "de"
-          ? "Sieh dir an, wie Draft bei mehr Sicherheit im Ton, weniger Grübeln und professionellerer Kommunikation unterstuetzt."
-          : "A practical guide to moving from generic wording to comments with real parent value.",
-    },
-  ];
+  const guideLinks = getPopularGuideLinks()
+    .slice(0, 4)
+    .map((guide) => ({
+      href: guide.href,
+      title: guide.label,
+      description: guide.description,
+    }));
   const finalGuideLabel =
     language === "de"
       ? "Risiko-Check fuer Elternmails ansehen"

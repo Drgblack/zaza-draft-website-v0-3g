@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { StructuredData } from "@/components/StructuredData";
 import { AgentReadableSummary } from "@/components/seo/AgentReadableSummary";
+import { GuideLinksBlock } from "@/components/seo/GuideLinksBlock";
 import { LastUpdated } from "@/components/seo/LastUpdated";
 import { CONTENT_FRESHNESS } from "@/lib/seo/content-freshness";
+import { getContextualGuideLinks } from "@/lib/guides";
 import {
   buildReportPageData,
   buildScenarioPageData,
@@ -45,6 +47,11 @@ export function ScenarioPage(props: ScenarioPageProps) {
   if (!page) {
     return null;
   }
+
+  const guideLinks = getContextualGuideLinks(
+    `${page.h1} ${page.metaDescription} ${page.featuredSnippet}`,
+    { limit: 4 },
+  );
 
   return (
     <>
@@ -358,6 +365,15 @@ export function ScenarioPage(props: ScenarioPageProps) {
               ))}
             </div>
           </section>
+
+          <GuideLinksBlock
+            eyebrow="Teacher communication guides"
+            title="Before you send, read this"
+            intro="If this scenario feels familiar, these practical guides show how teachers lower tone risk, de-escalate parent conflict, and keep messages professional."
+            links={guideLinks}
+            hubHref="/guides"
+            hubLabel="Browse all guides"
+          />
 
           <section className="space-y-6">
             <div>

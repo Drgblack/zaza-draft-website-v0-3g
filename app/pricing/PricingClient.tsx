@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { Check, ChevronDown, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AgentReadableSummary } from "@/components/seo/AgentReadableSummary";
+import { GuideLinksBlock } from "@/components/seo/GuideLinksBlock";
 import { JsonLdCollection } from "@/components/seo/json-ld";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { SignupModal } from "@/components/signup-modal";
@@ -29,6 +30,7 @@ import {
   createSoftwareApplicationJsonLd,
   createWebPageJsonLd,
 } from "@/lib/seo/json-ld";
+import { getPopularGuideLinks } from "@/lib/guides";
 import type { JsonLdObject } from "@/lib/seo/schema";
 
 const pricingTestimonialHeadshots = [
@@ -421,51 +423,7 @@ export default function PricingClient() {
   const resourceSectionBody = isGerman
     ? "Wenn Sie erst sehen moechten, wie Zaza ueber Ton und Aussagekraft denkt, starten Sie mit diesen kurzen Leitfaeden."
     : "If you want to see how Zaza thinks about tone and value before you subscribe, start with these short guides.";
-  const resourceLinks = isGerman
-    ? [
-        {
-          href: "/guides",
-          title: "Alle Kommunikationsleitfaeden ansehen",
-        },
-        {
-          href: "/de/parent-email-risk-checker",
-          title: "Risiko-Check fuer Elternmails",
-        },
-        {
-          href: "/de/features",
-          title: "Funktionen fuer ruhigere Formulierungen",
-        },
-        {
-          href: "/de/products/draft",
-          title: "Zaza Draft im Detail ansehen",
-        },
-        {
-          href: "/de/start",
-          title: "Mit Zaza Draft starten",
-        },
-      ]
-    : [
-        {
-          href: "/guides",
-          title: "Browse all teacher communication guides",
-        },
-        {
-          href: "/teacher-email-tone-guide",
-          title: "A Teacher's Guide to Email Tone with Parents",
-        },
-        {
-          href: "/professional-parent-emails-for-teachers",
-          title: "Professional Parent Emails for Teachers",
-        },
-        {
-          href: "/how-to-write-better-report-comments",
-          title: "How to Write Better Report Comments",
-        },
-        {
-          href: "/products/draft",
-          title: "Explore Zaza Draft in more detail",
-        },
-      ];
+  const resourceLinks = getPopularGuideLinks().slice(0, 4);
   const pricingFaqItems = [1, 2, 3, 4, 5, 6].map((index) => ({
     question: t(`pricing.faq.q${index}`),
     answer: t(`pricing.faq.a${index}`),
@@ -1062,24 +1020,22 @@ export default function PricingClient() {
         </section>
 
         <section className="pb-20 px-6">
-          <div className="max-w-5xl mx-auto rounded-3xl border border-white/10 bg-[#111827] p-8 md:p-10">
-            <h2 className="text-3xl font-bold text-white">
-              {resourceSectionHeading}
-            </h2>
-            <p className="mt-4 max-w-3xl text-base leading-8 text-[#CBD5E1]">
-              {resourceSectionBody}
-            </p>
-            <div className="mt-6 grid gap-4 md:grid-cols-2">
-              {resourceLinks.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="rounded-2xl border border-white/10 bg-[#0B1220] px-5 py-4 text-sm font-medium text-[#E2E8F0] transition hover:border-[#8B5CF6]/40 hover:text-white"
-                >
-                  {item.title}
-                </Link>
-              ))}
-            </div>
+          <div className="max-w-5xl mx-auto">
+            <GuideLinksBlock
+              theme="dark"
+              eyebrow={
+                isGerman
+                  ? "Kommunikationsleitfaeden"
+                  : "Teacher communication guides"
+              }
+              title={resourceSectionHeading}
+              intro={resourceSectionBody}
+              links={resourceLinks}
+              hubHref="/guides"
+              hubLabel={
+                isGerman ? "Alle Leitfaeden ansehen" : "Browse all guides"
+              }
+            />
           </div>
         </section>
 

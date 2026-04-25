@@ -2,12 +2,16 @@ import Link from "next/link";
 import { AgentReadableSummary } from "@/components/seo/AgentReadableSummary";
 import { LastUpdated } from "@/components/seo/LastUpdated";
 import { ZazaFramework } from "@/components/seo/ZazaFramework";
-import { getRelatedGuideLinks } from "@/lib/guides";
+import { getContextualGuideLinks, getRelatedGuideLinks } from "@/lib/guides";
 import { CONTENT_FRESHNESS } from "@/lib/seo/content-freshness";
 import type { GuidePageData } from "@/lib/guides";
 
 export function GuidePage({ guide }: { guide: GuidePageData }) {
   const relatedGuides = getRelatedGuideLinks(guide.slug);
+  const contextualGuideLinks = getContextualGuideLinks(guide.title, {
+    excludeSlug: guide.slug,
+    limit: 2,
+  });
 
   return (
     <div className="min-h-screen bg-[#f6f1e8] text-slate-900">
@@ -152,6 +156,40 @@ export function GuidePage({ guide }: { guide: GuidePageData }) {
               ) : null}
             </article>
           ))}
+        </section>
+
+        <section className="rounded-[32px] border border-[#ddd2c3] bg-[#fcfaf6] p-6 md:p-8">
+          <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
+            Before you send
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950">
+            Use the guide, then test the real wording
+          </h2>
+          <p className="mt-4 max-w-4xl text-base leading-8 text-slate-700">
+            If you already have a draft, use the{" "}
+            <Link
+              href="/parent-email-risk-checker"
+              className="font-semibold underline"
+            >
+              Parent Email Risk Checker
+            </Link>{" "}
+            before you send it. If you want help reshaping the whole message, go
+            to{" "}
+            <Link href="/start" className="font-semibold underline">
+              /start
+            </Link>
+            . If this page is close but not quite the right scenario, continue
+            with{" "}
+            {contextualGuideLinks.map((link, index) => (
+              <span key={link.href}>
+                <Link href={link.href} className="font-semibold underline">
+                  {link.label}
+                </Link>
+                {index === 0 && contextualGuideLinks.length > 1 ? " or " : ""}
+              </span>
+            ))}
+            .
+          </p>
         </section>
 
         {guide.riskyPhrases?.length ? (
