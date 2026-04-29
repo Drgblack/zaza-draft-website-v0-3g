@@ -78,7 +78,7 @@ async function resolveStripePromotionCodeId(
   code: string,
 ): Promise<string | null> {
   const COUPON_MAP: Record<string, string> = {
-    // COACH25: 'promo_1XXXXXXXXXXXXX',
+    COACH25: "promo_1TReraHXkbT25qrKzjrhlc3s",
     // EMILY25: 'promo_1XXXXXXXXXXXXX',
     // GAL25: 'promo_1XXXXXXXXXXXXX',
   };

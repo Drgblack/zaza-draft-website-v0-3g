@@ -13,11 +13,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import {
-  getActiveHandles,
-  getCreator,
-  SEGMENT_DEFAULTS,
-} from "@/lib/creators";
+import { getActiveHandles, getCreator, SEGMENT_DEFAULTS } from "@/lib/creators";
 import { AttributionSetter } from "./AttributionSetter";
 
 type PageProps = {
@@ -99,8 +95,8 @@ export default async function CreatorLandingPage({ params }: PageProps) {
             )}
           </p>
           {creator.discountPercent && (
-            <span className="hidden items-center rounded-full bg-amber-900 px-2 py-1 text-xs font-medium text-amber-50 sm:inline-flex">
-              {creator.discountPercent}% off applied
+            <span className="hidden sm:inline-flex items-center px-2 py-1 rounded-full bg-amber-900 text-amber-50 text-xs font-medium">
+              {creator.discountPercent}% off first month
             </span>
           )}
         </div>
@@ -132,9 +128,9 @@ export default async function CreatorLandingPage({ params }: PageProps) {
                 </span>
               </a>
               {creator.couponCode && (
-                <span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-sm font-medium text-emerald-800">
-                  <span className="mr-2 h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
-                  {creator.discountPercent}% discount applied (
+                <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-medium">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-2"></span>
+                  {creator.discountPercent}% off your first month (
                   <code className="font-mono">{creator.couponCode}</code>)
                 </span>
               )}
@@ -232,7 +228,7 @@ export default async function CreatorLandingPage({ params }: PageProps) {
           <p className="mt-3 text-slate-300">
             14 days free. No credit card to start.
             {creator.discountPercent &&
-              ` ${creator.discountPercent}% off applied automatically.`}
+              ` ${creator.discountPercent}% off your first month applied automatically.`}
           </p>
           <a
             href={startHref}
