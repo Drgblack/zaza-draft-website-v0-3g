@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import React from "react";
+import { headers } from "next/headers";
 import { CookieConsentBanner } from "@/components/analytics/cookie-consent-banner";
 import { ScrollDepthTracker } from "@/components/analytics/scroll-depth-tracker";
 import { UtmCapture } from "@/components/analytics/utm-capture";
@@ -56,11 +57,22 @@ export const viewport: Viewport = {
   themeColor: "#0f172a",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // Detect whether we're rendering a creator landing page (/c/[handle]).
+  // These are conversion funnels — they get their own minimal chrome
+  // defined in app/c/[handle]/layout.tsx, with no global header/footer.
+  const headersList = await headers();
+  const pathname =
+    headersList.get("x-pathname") ||
+    headersList.get("x-invoke-path") ||
+    headersList.get("next-url") ||
+    "";
+  const isCreatorFunnelPage = pathname.startsWith("/c/");
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -95,7 +107,13 @@ export default function RootLayout({
         ) : null}
         <link rel="icon" href="/z-logo.png" sizes="any" />
       </head>
-      <body className="bg-slate-950 text-slate-100">
+      <body
+        className={
+          isCreatorFunnelPage
+            ? "bg-white text-slate-900"
+            : "bg-slate-950 text-slate-100"
+        }
+      >
         {shouldLoadGa ? <ScrollDepthTracker /> : null}
         {shouldLoadGa ? <UtmCapture /> : null}
         <JsonLdCollection
@@ -111,11 +129,17 @@ export default function RootLayout({
           ]}
         />
         <LanguageProvider>
-          <Header />
-          <TranslationHelperNotice />
+          {!isCreatorFunnelPage && <Header />}
+          {!isCreatorFunnelPage && <TranslationHelperNotice />}
           {shouldLoadGa ? <CookieConsentBanner /> : null}
-          <main className="pt-[92px] bg-slate-950">{children}</main>
-          <Footer />
+          <main
+            className={
+              isCreatorFunnelPage ? "bg-white" : "pt-[92px] bg-slate-950"
+            }
+          >
+            {children}
+          </main>
+          {!isCreatorFunnelPage && <Footer />}
         </LanguageProvider>
       </body>
     </html>

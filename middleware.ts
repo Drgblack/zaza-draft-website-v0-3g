@@ -17,7 +17,7 @@ export function middleware(req: NextRequest) {
     const lang = m[1] as "en" | "de";
     const requestHeaders = new Headers(req.headers);
     requestHeaders.set("x-lang", lang);
-
+    requestHeaders.set("x-pathname", pathname);
     const res = NextResponse.next({ request: { headers: requestHeaders } });
     res.cookies.set("lang", lang, { path: "/", maxAge: 60 * 60 * 24 * 365 });
     return res;
@@ -26,6 +26,7 @@ export function middleware(req: NextRequest) {
   // Default to English when no locale prefix
   const requestHeaders = new Headers(req.headers);
   requestHeaders.set("x-lang", "en");
+  requestHeaders.set("x-pathname", pathname);
   const res = NextResponse.next({ request: { headers: requestHeaders } });
   res.cookies.set("lang", "en", { path: "/", maxAge: 60 * 60 * 24 * 365 });
   return res;
@@ -34,4 +35,3 @@ export function middleware(req: NextRequest) {
 export const config = {
   matcher: ["/((?!_next|.*\\..*|api).*)"],
 };
-

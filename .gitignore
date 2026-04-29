@@ -49,3 +49,6 @@ _draft*.html
 .tmp.eslint.json
 tmp-*.md
 
+
+# Agent runtime logs
+.tmp-agent-api-server*.log
