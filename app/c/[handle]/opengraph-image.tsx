@@ -1,13 +1,9 @@
 /**
  * Dynamic Open Graph image for /c/[handle]
  *
- * When a creator (or anyone) shares zazadraft.com/c/coach on social media,
- * this image is what appears in the link preview. It includes the creator's
- * name so the preview stays branded — meaningful for trust transfer when
- * the link gets reshared.
- *
- * Generated on-demand using Next.js native ImageResponse — no external
- * service, no extra dependency.
+ * When a creator shares zazadraft.com/c/coach on social media, this image is
+ * used in the link preview. It includes the creator name so the preview stays
+ * branded when the link is reshared.
  */
 
 import { ImageResponse } from "next/og";
@@ -21,9 +17,10 @@ export const contentType = "image/png";
 export default async function OpenGraphImage({
   params,
 }: {
-  params: { handle: string };
+  params: Promise<{ handle: string }>;
 }) {
-  const creator = getCreator(params.handle);
+  const { handle } = await params;
+  const creator = getCreator(handle);
 
   if (!creator) {
     return new ImageResponse(
@@ -33,12 +30,12 @@ export default async function OpenGraphImage({
             display: "flex",
             width: "100%",
             height: "100%",
-            background: "#0F172A",
-            color: "white",
             alignItems: "center",
             justifyContent: "center",
-            fontSize: 64,
+            background: "#0F172A",
+            color: "white",
             fontFamily: "sans-serif",
+            fontSize: 64,
             fontWeight: 600,
           }}
         >
@@ -57,62 +54,59 @@ export default async function OpenGraphImage({
           flexDirection: "column",
           width: "100%",
           height: "100%",
-          background: "linear-gradient(135deg, #FEF3C7 0%, #FFFFFF 100%)",
           padding: 80,
+          background: "linear-gradient(135deg, #FEF3C7 0%, #FFFFFF 100%)",
           fontFamily: "sans-serif",
         }}
       >
-        {/* Top — Zaza Draft branding */}
         <div
           style={{
             display: "flex",
             alignItems: "center",
+            marginBottom: 40,
             color: "#475569",
             fontSize: 28,
             fontWeight: 500,
-            marginBottom: 40,
           }}
         >
           Zaza Draft
         </div>
 
-        {/* Middle — creator + product */}
-        <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
+        <div style={{ display: "flex", flex: 1, flexDirection: "column" }}>
           <div
             style={{
               display: "flex",
-              fontSize: 32,
-              color: "#92400E",
               marginBottom: 16,
+              color: "#92400E",
+              fontSize: 32,
             }}
           >
-            {creator.displayName} �- Zaza Draft
+            {creator.displayName} - Zaza Draft
           </div>
 
           <div
             style={{
               display: "flex",
+              color: "#0F172A",
               fontSize: 64,
               fontWeight: 600,
-              color: "#0F172A",
-              lineHeight: 1.15,
               letterSpacing: "-0.02em",
+              lineHeight: 1.15,
             }}
           >
             {creator.headline ?? "The message you won't regret tomorrow."}
           </div>
         </div>
 
-        {/* Bottom — CTA + URL */}
         <div
           style={{
             display: "flex",
-            justifyContent: "space-between",
             alignItems: "center",
-            color: "#475569",
-            fontSize: 24,
+            justifyContent: "space-between",
             paddingTop: 40,
             borderTop: "2px solid #E2E8F0",
+            color: "#475569",
+            fontSize: 24,
           }}
         >
           <div style={{ display: "flex" }}>
@@ -122,11 +116,11 @@ export default async function OpenGraphImage({
             <div
               style={{
                 display: "flex",
+                borderRadius: 8,
                 background: "#0F172A",
                 color: "white",
-                padding: "12px 24px",
-                borderRadius: 8,
                 fontWeight: 600,
+                padding: "12px 24px",
               }}
             >
               {creator.discountPercent}% off
