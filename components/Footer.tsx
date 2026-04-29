@@ -30,6 +30,7 @@ export default function Footer() {
     : "Free Parent Email Risk Checker";
   const schoolsLabel = isDE ? "Für Schulen" : "For Schools";
   const toolsLabel = isDE ? "Lehrkräfte-Tools" : "Teacher Tools";
+  const getLinkKey = (label: string, href: string) => `${label}:${href}`;
 
   const productLinks = [
     { label: "Draft", href: localPath("/products/draft") },
@@ -112,7 +113,7 @@ export default function Footer() {
             </h3>
             <ul className="mt-3 space-y-2 text-sm">
               {productLinks.map((link) => (
-                <li key={link.href}>
+                <li key={getLinkKey(link.label, link.href)}>
                   <Link
                     href={link.href}
                     className="hover:text-white"
@@ -149,7 +150,7 @@ export default function Footer() {
             </h3>
             <ul className="mt-3 space-y-2 text-sm">
               {legalSupportLinks.map((link) => (
-                <li key={link.href}>
+                <li key={getLinkKey(link.label, link.href)}>
                   <Link href={link.href} className="hover:text-white">
                     {link.label}
                   </Link>
