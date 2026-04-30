@@ -83,7 +83,7 @@ export default function FounderPage() {
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#A78BFA] blur-2xl opacity-60 animate-pulse-slow" />
               <div className="relative rounded-full overflow-hidden w-48 h-48 md:w-64 md:h-64 ring-4 ring-[#8B5CF6] shadow-2xl shadow-[#8B5CF6]/50">
                 <Image
-                  src="/founder-headshot.jpg"
+                  src="/authors/Greg.jpg"
                   alt="Dr. Greg Blackburn, Founder of Zaza Draft"
                   width={256}
                   height={256}

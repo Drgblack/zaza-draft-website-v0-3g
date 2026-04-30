@@ -86,6 +86,24 @@ export default function Footer() {
     },
   ];
 
+  const sisterProducts = [
+    {
+      label: "ZeroPaste - Invoice Extraction",
+      href: "https://zeropaste.io",
+      title: "ZeroPaste - Invoice data extraction tool",
+    },
+    {
+      label: "Plainfigures - Specialised Calculators",
+      href: "https://www.plainfigures.org/",
+      title: "Plainfigures - Specialised Calculators",
+    },
+    {
+      label: "Plain.Tools - Privacy-First Utility Tools",
+      href: "https://www.plain.tools/",
+      title: "Plain.Tools - Privacy-First Utility Tools",
+    },
+  ];
+
   return (
     <footer className="border-t border-white/10 bg-slate-950 text-slate-300">
       <div className="mx-auto max-w-7xl px-6 py-12">
@@ -131,16 +149,19 @@ export default function Footer() {
               {isDE ? "Auch von Zaza" : "Also from Zaza"}
             </p>
             <ul className="space-y-1 text-sm">
-              <li>
-                <a
-                  href="https://zeropaste.io"
-                  title="ZeroPaste - Invoice data extraction tool"
-                  rel="noopener"
-                  className="hover:text-white"
-                >
-                  ZeroPaste - Invoice Extraction
-                </a>
-              </li>
+              {sisterProducts.map((product) => (
+                <li key={product.href}>
+                  <a
+                    href={product.href}
+                    title={product.title}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white"
+                  >
+                    {product.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 

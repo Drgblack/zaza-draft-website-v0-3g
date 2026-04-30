@@ -18,14 +18,11 @@ export function Header() {
   const [funnelCtaReady, setFunnelCtaReady] = useState(false);
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
-  const [learningCentreDropdownOpen, setLearningCentreDropdownOpen] =
-    useState(false);
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
   const [mobileAccordion, setMobileAccordion] = useState<
     Record<string, boolean>
   >({
     products: true,
-    learning: true,
     resources: true,
     about: true,
   });
@@ -51,6 +48,10 @@ export function Header() {
     pathname?.startsWith("/de") || language === "de"
       ? "/de/schools"
       : "/schools";
+  const learningCentreHref =
+    pathname?.startsWith("/de") || language === "de"
+      ? "/de/learning-centre"
+      : "/learning-centre";
   const headerCtaHref = getDraftPricingHref(language);
   const headerCtaLabel = t("nav.getStarted");
   const foundingToggleLinks = {
@@ -100,11 +101,7 @@ export function Header() {
     }
   }, [isAnyFunnel, mobileMenuOpen]);
 
-  const navigation = [
-    { name: riskCheckerLabel, href: riskCheckerHref },
-    { name: guidesLabel, href: "/guides" },
-    { name: t("nav.pricing"), href: "/pricing" },
-  ];
+  const navigation = [{ name: t("nav.pricing"), href: "/pricing" }];
   const toggleMobileAccordion = (id: string) =>
     setMobileAccordion((prev) => ({ ...prev, [id]: !prev[id] }));
   const handleHeaderNavClick = (href: string) => {
@@ -157,63 +154,10 @@ export function Header() {
     },
   ];
 
-  const learningCentreMenuItems = [
-    {
-      name: L("AI-Literacy-Ressourcencenter", "AI Literacy Resource Center"),
-      href: "/ai-literacy",
-    },
-    {
-      name: L("Glossar", "Glossary"),
-      href: "/glossary",
-    },
-    {
-      name: L("Webinare", "Webinars"),
-      href: "/webinars",
-    },
-    {
-      name: L("Video-Tutorials", "Video Tutorials"),
-      href: "/videos",
-    },
-    {
-      name: L(
-        "Bestes KI-Tool für Eltern-E-Mails",
-        "Best AI Tool for Parent Emails",
-      ),
-      href: "/best-ai-tool-parent-emails",
-    },
-    {
-      name: L(
-        "Weniger Stress beim Schreiben an Eltern",
-        "Reduce Stress Writing Parent Messages",
-      ),
-      href: "/reduce-stress-parent-messages",
-    },
-    {
-      name: L(
-        "Beste KI-Schreibtools für Lehrkräfte 2025",
-        "Best AI Writing Tools for Teachers 2025",
-      ),
-      href: "/best-ai-writing-tools-for-teachers-2025",
-    },
-    {
-      name: L("KI für Zeugnis-/Schülerberichte", "AI for Student Reports"),
-      href: "/ai-for-student-reports",
-    },
-  ];
-
   const resourcesMenuItems = [
+    { name: riskCheckerLabel, href: riskCheckerHref },
     { name: guidesLabel, href: "/guides" },
-    { name: "Blog", href: "/blog" },
-    { name: L("Tools vergleichen", "Compare Tools"), href: "/compare" },
-    { name: L("Integrationen", "Integrations"), href: "/integrations" },
-    { name: L("Community", "Community"), href: "/community" },
-    {
-      name: L("Erfolgsgeschichten", "Success Stories"),
-      href: "/success-stories",
-    },
-    { name: L("ROI-Rechner", "ROI Calculator"), href: "/roi-calculator" },
-    { name: t("nav.faq"), href: "/faq" },
-    { name: t("nav.resources"), href: "/resources" },
+    { name: t("nav.learningCentre"), href: learningCentreHref },
   ];
 
   const aboutMenuItems = [
@@ -231,26 +175,15 @@ export function Header() {
   ];
 
   const mobileSections = [
-    {
-      id: "checker",
-      title: riskCheckerLabel,
-      href: riskCheckerHref,
-    },
-    { id: "guides", title: guidesLabel, href: "/guides" },
     { id: "pricing", title: t("nav.pricing"), href: "/pricing" },
-    { id: "schools", title: schoolsLabel, href: schoolsHref },
     { id: "products", title: t("nav.products"), children: productsMenuItems },
-    {
-      id: "learning",
-      title: t("nav.learningCentre"),
-      children: learningCentreMenuItems,
-    },
     {
       id: "resources",
       title: t("nav.resources"),
       children: resourcesMenuItems,
     },
     { id: "about", title: t("nav.about"), children: aboutMenuItems },
+    { id: "schools", title: schoolsLabel, href: schoolsHref },
   ];
 
   const languageToggle = (
@@ -452,33 +385,6 @@ export function Header() {
 
                 <div
                   className="relative"
-                  onMouseEnter={() => setLearningCentreDropdownOpen(true)}
-                  onMouseLeave={() => setLearningCentreDropdownOpen(false)}
-                >
-                  <button className="flex items-center gap-1 text-[15px] font-medium text-gray-300 transition-colors duration-200 hover:text-white">
-                    {t("nav.learningCentre")}
-                    <ChevronDown className="h-4 w-4" />
-                  </button>
-
-                  {learningCentreDropdownOpen && (
-                    <div className="absolute top-full left-0 pt-2 pb-2">
-                      <div className="w-72 rounded-xl border border-white/10 bg-[#111827] py-2 shadow-xl shadow-black/20">
-                        {learningCentreMenuItems.map((item) => (
-                          <Link
-                            key={item.name}
-                            href={item.href}
-                            className="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/5 hover:text-white"
-                          >
-                            {item.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-
-                <div
-                  className="relative"
                   onMouseEnter={() => setResourcesDropdownOpen(true)}
                   onMouseLeave={() => setResourcesDropdownOpen(false)}
                 >
@@ -495,6 +401,7 @@ export function Header() {
                             key={item.name}
                             href={item.href}
                             className="block px-4 py-2.5 text-sm text-gray-300 transition-colors hover:bg-white/5 hover:text-white"
+                            onClick={() => handleHeaderNavClick(item.href)}
                           >
                             {item.name}
                           </Link>
@@ -642,7 +549,10 @@ export function Header() {
                                 <Link
                                   key={item.name}
                                   href={item.href}
-                                  onClick={() => setMobileMenuOpen(false)}
+                                  onClick={() => {
+                                    handleHeaderNavClick(item.href);
+                                    setMobileMenuOpen(false);
+                                  }}
                                   className="block rounded-xl px-3 py-2 text-sm font-medium text-gray-300 transition-colors hover:bg-white/10 hover:text-white"
                                 >
                                   {item.name}

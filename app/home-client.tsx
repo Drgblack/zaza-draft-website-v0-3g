@@ -1,4 +1,5 @@
 ﻿"use client";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/lib/i18n/language-context";
@@ -569,806 +570,447 @@ export function HomePageClient() {
     <>
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-[#0F172A] pt-32 lg:pt-40 pb-20 md:pb-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-8 lg:gap-12 items-center">
-            <div className="text-center lg:text-left space-y-8">
-              <motion.div
-                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                className="text-xs uppercase tracking-[2px] text-[#A855F7] font-semibold mb-4"
-              >
-                {heroEyebrow}
-              </motion.div>
+        <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
+          <motion.div
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="mx-auto flex max-w-3xl flex-col items-center space-y-8"
+          >
+            <h1 className="text-4xl font-bold leading-[1.05] text-white sm:text-5xl md:text-6xl lg:text-7xl">
+              {language === "de" ? (
+                heroHeadline
+              ) : (
+                <>
+                  Built for the moment{" "}
+                  <span className="bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
+                    before send.
+                  </span>
+                </>
+              )}
+            </h1>
 
-              <motion.div
-                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-                className="inline-flex items-center gap-2 rounded-full bg-[#8B5CF6]/10 px-4 py-2 text-sm font-medium text-[#A78BFA] border border-[#8B5CF6]/30 backdrop-blur-sm"
-              >
-                <span className="text-xl" aria-hidden="true">
-                  ✦
-                </span>
-                <span>{heroBadge}</span>
-              </motion.div>
+            <motion.p
+              initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+              className="text-xl text-[#CBD5E1] md:text-2xl"
+            >
+              {heroSubheading}
+            </motion.p>
 
-              <motion.div
-                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-                className="space-y-4"
-              >
-                <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1]">
-                  <span className="text-white">{heroHeadline}</span>
-                  {heroHeadlineAccent ? (
-                    <>
-                      <br />
-                      <span className="bg-gradient-to-r from-purple-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                        {heroHeadlineAccent}
-                      </span>
-                    </>
-                  ) : null}
-                </h1>
-              </motion.div>
-
-              <motion.p
-                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
-                className="text-lg lg:text-xl text-[#CBD5E1] leading-relaxed max-w-[600px] mx-auto lg:mx-0"
-              >
-                {heroSubheading}
-              </motion.p>
-              <motion.p
-                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.34, ease: "easeOut" }}
-                className="text-base text-[#94A3B8] leading-relaxed max-w-[600px] mx-auto lg:mx-0"
-              >
-                {heroEntityLine}
-              </motion.p>
-
-              <motion.div
-                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-                className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
-              >
-                <Button
-                  asChild
-                  size="lg"
-                  className="w-full sm:w-auto inline-flex items-center justify-center bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-transform transition-shadow duration-200 hover:scale-[1.03] hover:shadow-xl hover:shadow-purple-500/30 active:scale-[0.98]"
-                >
-                  <Link
-                    href={startHref}
-                    onClick={() => {
-                      trackCtaClick({
-                        ctaText: primaryStartLabel,
-                        ctaLocation: "hero",
-                      });
-                      track("cta_click_home_get_started", { language });
-                    }}
-                  >
-                    {primaryStartLabel}
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="w-full sm:w-auto inline-flex items-center justify-center bg-white/5 border border-white/10 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 backdrop-blur-sm transition-transform transition-shadow duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/10 group active:scale-[0.98]"
-                >
-                  <Link
-                    href={angryParentGuideHref}
-                    onClick={() =>
-                      goToGuide(
-                        angryParentGuideHref,
-                        "home_hero_secondary",
-                        finalGuideLabel,
-                      )
-                    }
-                  >
-                    {finalGuideLabel}
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </Button>
-              </motion.div>
-              <motion.div
-                initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.42, ease: "easeOut" }}
-                className="max-w-[680px] mx-auto lg:mx-0"
-              >
-                <Link
-                  href={
-                    language === "de"
-                      ? "/de/parent-email-risk-checker"
-                      : "/parent-email-risk-checker"
-                  }
-                  onClick={() => {
-                    trackCtaClick({
-                      ctaText: heroCheckerLabel,
-                      ctaLocation: "home_hero_checker",
-                    });
-                    track("checker_link_clicked", {
-                      source: "home_hero",
-                      language,
-                    });
-                  }}
-                  className="block rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-left transition-colors hover:bg-white/[0.07]"
-                >
-                  <p className="text-base font-semibold text-white">
-                    {heroCheckerLabel}
-                  </p>
-                  <p className="mt-1 text-sm leading-6 text-[#CBD5E1]">
-                    {heroCheckerSupport}
-                  </p>
-                </Link>
-              </motion.div>
-              <motion.p
-                initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.44, ease: "easeOut" }}
-                className="text-sm text-[#CBD5E1] leading-relaxed max-w-[600px] mx-auto lg:mx-0"
-              >
-                {heroCtaMicrocopy}
-              </motion.p>
-              <motion.p
-                initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.46, ease: "easeOut" }}
-                className="inline-flex max-w-[680px] items-start gap-3 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm leading-6 text-[#CBD5E1] mx-auto lg:mx-0"
-              >
-                <span className="mt-1 inline-flex h-2 w-2 flex-shrink-0 rounded-full bg-emerald-300" />
-                <span>{heroTeacherUsageLine}</span>
-              </motion.p>
-              <motion.p
-                initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.48, ease: "easeOut" }}
-                className="text-sm text-[#94A3B8] leading-relaxed max-w-[600px] mx-auto lg:mx-0"
-              >
-                {t("hero.earlyAccessLine")}
-              </motion.p>
-
-              <motion.div
-                initial={prefersReducedMotion ? {} : { opacity: 0, y: 14 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-                className="max-w-[720px] rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 backdrop-blur-sm"
-              >
-                <p className="text-sm leading-6 text-[#CBD5E1]">
-                  {heroTrustBarIntro}
-                </p>
-                <p className="mt-2 text-sm leading-6 text-[#A78BFA]">
-                  {heroTrustBarDifferentiator}
-                </p>
-                <ul className="mt-3 grid grid-cols-1 gap-3 text-sm text-[#94A3B8] sm:grid-cols-3">
-                  {heroTrustBarPoints.map((point) => (
-                    <li
-                      key={point}
-                      className="flex items-start gap-3 rounded-xl border border-white/8 bg-white/[0.02] px-3 py-3"
-                    >
-                      <span className="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-emerald-400/10 text-emerald-300">
-                        <Check className="h-3.5 w-3.5" />
-                      </span>
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-
-              <motion.p
-                initial={prefersReducedMotion ? {} : { opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.52, ease: "easeOut" }}
-                className="text-sm text-[#94A3B8] leading-relaxed max-w-[600px] mx-auto lg:mx-0"
-              >
-                {t("hero.privacyLine")}
-              </motion.p>
-
-              <motion.div
-                initial={prefersReducedMotion ? {} : { opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-                className="flex flex-wrap items-center gap-6 text-sm text-gray-400 justify-center lg:justify-start pt-4"
-              >
-                <div className="relative flex items-center gap-2">
-                  <Check className="w-4 h-4 text-green-400" />
-                  <span>{t("hero.trustIndicators.hallucinationSafe")}</span>
-                  <button
-                    onClick={() =>
-                      setShowHallucinationTooltip(!showHallucinationTooltip)
-                    }
-                    className="inline-flex items-center justify-center w-4 h-4 text-purple-400 hover:text-purple-300 transition-colors"
-                    aria-label={t("hallucinationSafe.tooltip.heading")}
-                  >
-                    <InfoIcon className="w-4 h-4" />
-                  </button>
-                  {showHallucinationTooltip && (
-                    <div className="absolute left-0 top-8 z-50 w-80 bg-white rounded-lg shadow-2xl p-5 border border-gray-200">
-                      <button
-                        onClick={() => setShowHallucinationTooltip(false)}
-                        className="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
-                        aria-label="Close"
-                      >
-                        <XIcon className="w-4 h-4" />
-                      </button>
-                      <h3 className="text-base font-semibold text-gray-900 mb-2">
-                        {t("hallucinationSafe.tooltip.heading")}
-                      </h3>
-                      <p className="text-sm text-gray-700 leading-relaxed">
-                        {t("hallucinationSafe.tooltip.body")}
-                      </p>
-                      <div className="absolute -top-2 left-4 w-4 h-4 bg-white border-l border-t border-gray-200 transform rotate-45"></div>
-                    </div>
-                  )}
-                </div>
-                <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-green-400" />
-                  {t("hero.trustIndicators.ferpaCompliant")}
-                </div>
-                <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-green-400" />
-                  {t("hero.trustIndicators.teachers")}
-                </div>
-              </motion.div>
-              <motion.p
-                initial={prefersReducedMotion ? {} : { opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.45, ease: "easeOut" }}
-                className="text-xs text-gray-400 leading-relaxed max-w-[640px] mx-auto lg:mx-0"
-              >
-                {t("hero.trustClarifier")}
-              </motion.p>
-              <motion.p
-                initial={prefersReducedMotion ? {} : { opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.48, ease: "easeOut" }}
-                className="text-xs text-gray-400 leading-relaxed max-w-[640px] mx-auto lg:mx-0"
-              >
-                {t("hero.founderLine")}{" "}
-                <Link
-                  href={founderStoryHref}
-                  className="text-[#A78BFA] hover:text-[#C4B5FD]"
-                >
-                  {t("hero.founderLink")}
-                </Link>
-              </motion.p>
-            </div>
+            <motion.p
+              initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.18, ease: "easeOut" }}
+              className="max-w-3xl text-base leading-8 text-[#94A3B8] md:text-lg"
+            >
+              {heroEntityLine}
+            </motion.p>
 
             <motion.div
-              className="w-full lg:h-[600px]"
-              initial={prefersReducedMotion ? {} : { opacity: 0, x: 30 }}
-              animate={
-                prefersReducedMotion
-                  ? { opacity: 1 }
-                  : {
-                      opacity: 1,
-                      x: 0,
-                      y: [0, -6, 0],
-                    }
-              }
-              transition={
-                prefersReducedMotion
-                  ? { duration: 0.8, delay: 0.3 }
-                  : {
-                      opacity: { duration: 0.8, delay: 0.3, ease: "easeOut" },
-                      x: { duration: 0.8, delay: 0.3, ease: "easeOut" },
-                      y: {
-                        duration: 6,
-                        repeat: Number.POSITIVE_INFINITY,
-                        ease: "easeInOut",
-                        delay: 1,
-                      },
-                    }
-              }
+              initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.26, ease: "easeOut" }}
             >
-              <div className="relative mx-auto flex h-full max-w-[540px] items-center">
-                <div className="absolute inset-x-8 inset-y-10 rounded-[32px] bg-gradient-to-br from-[#A855F7]/35 via-[#1E1B4B]/20 to-[#EC4899]/30 blur-3xl" />
-                <div className="relative w-full overflow-hidden rounded-[30px] border border-white/10 bg-white/[0.045] p-4 shadow-[0_35px_120px_-45px_rgba(168,85,247,0.65)] backdrop-blur-xl sm:p-5">
-                  <div className="rounded-[24px] border border-white/10 bg-[#0B1120]/95 p-4 sm:p-5">
-                    <div className="flex flex-wrap items-center justify-between gap-3">
-                      <div>
-                        <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#A78BFA]">
-                          {heroOutcomeLabel}
-                        </p>
-                        <h2 className="mt-2 text-lg font-semibold text-white sm:text-xl">
-                          {heroProofHeading}
-                        </h2>
-                        <p className="mt-2 text-xs uppercase tracking-[0.22em] text-[#C4B5FD]">
-                          {heroProofLabel}
-                        </p>
-                        <p className="mt-2 text-xs uppercase tracking-[0.22em] text-[#A78BFA]">
-                          {heroProofFrameLine}
-                        </p>
-                        <p className="mt-2 max-w-[440px] text-sm leading-6 text-[#94A3B8]">
-                          {heroProofIntro}
-                        </p>
-                      </div>
-                      <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-[#CBD5E1]">
-                        <CheckCircleIcon className="h-4 w-4 text-emerald-400" />
-                        <span>{heroAfterMeta}</span>
-                      </div>
-                    </div>
-
-                    <div className="mt-5 rounded-[22px] border border-white/10 bg-[#0F172A]/80 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
-                      <div className="flex flex-wrap items-center justify-between gap-3">
-                        <div>
-                          <h3 className="text-sm font-semibold text-white sm:text-base">
-                            {activeHeroProof.title}
-                          </h3>
-                          <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[#64748B]">
-                            {activeHeroProof.context}
-                          </p>
-                        </div>
-                        <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-[#CBD5E1]">
-                          <CheckCircleIcon className="h-4 w-4 text-emerald-400" />
-                          <span>{heroAfterMeta}</span>
-                        </div>
-                      </div>
-
-                      <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                        <article className="rounded-[20px] border border-white/10 bg-[#111827] p-4">
-                          <div className="flex items-center justify-between gap-3">
-                            <div className="inline-flex items-center gap-2 rounded-full border border-rose-500/20 bg-rose-500/10 px-3 py-1 text-xs font-medium text-rose-200">
-                              <span>{heroBeforeLabel}</span>
-                            </div>
-                            <span className="text-xs text-[#94A3B8]">
-                              {heroBeforeMeta}
-                            </span>
-                          </div>
-                          <p className="mt-4 text-sm leading-7 text-[#CBD5E1] sm:text-[15px]">
-                            {activeHeroProof.before}
-                          </p>
-                        </article>
-
-                        <article className="rounded-[20px] border border-emerald-400/20 bg-[linear-gradient(180deg,rgba(17,24,39,0.98),rgba(15,23,42,0.94))] p-4 shadow-[0_24px_70px_-36px_rgba(16,185,129,0.35)] ring-1 ring-white/5">
-                          <div className="flex items-center justify-between gap-3">
-                            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-200">
-                              <span>{heroAfterLabel}</span>
-                            </div>
-                            <span className="text-xs text-[#C4B5FD]">
-                              {heroAfterMeta}
-                            </span>
-                          </div>
-                          <p className="mt-4 text-sm leading-7 text-white sm:text-[15px]">
-                            {activeHeroProof.after}
-                          </p>
-                        </article>
-                      </div>
-
-                      <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
-                        <div className="flex items-center gap-2">
-                          {heroProofSections.map((section, index) => {
-                            const isActive = index === heroProofIndex;
-                            return (
-                              <button
-                                key={section.title}
-                                type="button"
-                                onClick={() => setHeroProofIndex(index)}
-                                aria-label={`${section.title} ${section.context}`}
-                                className={`h-2.5 rounded-full transition-all duration-150 ${
-                                  isActive
-                                    ? "w-8 bg-[#8B5CF6]"
-                                    : "w-2.5 bg-[#334155] hover:bg-[#64748B]"
-                                }`}
-                              />
-                            );
-                          })}
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Button
-                            type="button"
-                            size="sm"
-                            variant="outline"
-                            onClick={() =>
-                              setHeroProofIndex(
-                                (heroProofIndex -
-                                  1 +
-                                  heroProofSections.length) %
-                                  heroProofSections.length,
-                              )
-                            }
-                            className="border-white/10 bg-white/5 text-white hover:bg-white/10"
-                          >
-                            {heroPrevLabel}
-                          </Button>
-                          <Button
-                            type="button"
-                            size="sm"
-                            onClick={() =>
-                              setHeroProofIndex(
-                                (heroProofIndex + 1) % heroProofSections.length,
-                              )
-                            }
-                            className="bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] text-white hover:opacity-95"
-                          >
-                            {heroNextLabel}
-                          </Button>
-                        </div>
-                      </div>
-                    </div>
-
-                    <p className="mt-4 text-sm text-[#94A3B8]">
-                      {heroProofCaption}
-                    </p>
-                    <p className="mt-2 text-sm text-[#CBD5E1]">
-                      {heroMentalLoadLine}
-                    </p>
-                    <div className="mt-5 rounded-[22px] border border-white/10 bg-white/[0.03] p-4">
-                      <h3 className="text-sm font-semibold uppercase tracking-[0.22em] text-[#C4B5FD]">
-                        {situationsHeading}
-                      </h3>
-                      <p className="mt-3 text-sm leading-6 text-[#CBD5E1]">
-                        {situationsBody}
-                      </p>
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        {situationsItems.map((item) => (
-                          <span
-                            key={item}
-                            className="rounded-full border border-white/8 bg-[#111827]/70 px-3 py-2 text-xs text-[#E2E8F0]"
-                          >
-                            {item}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <Button
+                asChild
+                size="lg"
+                className="inline-flex min-h-[44px] items-center justify-center rounded-lg bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] px-8 py-4 text-lg font-semibold text-white transition-transform transition-shadow duration-200 hover:scale-[1.03] hover:shadow-xl hover:shadow-purple-500/30 active:scale-[0.98]"
+              >
+                <Link
+                  href={startHref}
+                  onClick={() => {
+                    trackCtaClick({
+                      ctaText: primaryStartLabel,
+                      ctaLocation: "hero",
+                    });
+                    track("cta_click_home_get_started", { language });
+                  }}
+                >
+                  {primaryStartLabel}
+                </Link>
+              </Button>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
 
         <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-purple-500/5 rounded-full blur-3xl -z-10"></div>
         <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-purple-600/5 rounded-full blur-3xl -z-10"></div>
       </section>
 
-      <section className="relative overflow-hidden border-t border-white/5 bg-[#0F172A] py-16 md:py-20">
-        <div className="absolute inset-x-0 top-0 h-32 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.12),transparent_60%)]" />
+      <section className="border-t border-white/5 bg-[#111827] py-6">
         <div className="mx-auto max-w-5xl px-6 lg:px-8">
-          <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(30,41,59,0.92),rgba(15,23,42,0.98))] p-8 shadow-[0_30px_80px_-48px_rgba(15,23,42,0.95)] ring-1 ring-white/5 md:p-10">
-            <div className="absolute -right-16 top-0 h-40 w-40 rounded-full bg-purple-500/10 blur-3xl" />
-            <div className="absolute -left-10 bottom-0 h-32 w-32 rounded-full bg-emerald-400/8 blur-3xl" />
-            <div className="relative">
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-medium uppercase tracking-[0.24em] text-[#C4B5FD]">
-                <span className="h-2 w-2 rounded-full bg-emerald-300" />
-                <span>
-                  {language === "de" ? "Vertrauensrahmen" : "Trust framework"}
-                </span>
+          <div className="grid grid-cols-1 gap-3 text-center md:grid-cols-3">
+            {[
+              "Built by Dr Greg Blackburn, PhD",
+              "PhD-level pedagogy",
+              "GDPR & privacy-first",
+            ].map((signal) => (
+              <div
+                key={signal}
+                className="rounded-full border border-white/8 bg-white/[0.03] px-4 py-3 text-sm text-[#CBD5E1]"
+              >
+                {signal}
               </div>
-              <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white md:text-4xl">
-                {trustPanelHeading}
-              </h2>
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-[#CBD5E1]">
-                {trustPanelSubtext}
-              </p>
-              <div className="mt-8 grid gap-4 md:grid-cols-2">
-                {trustPanelCards.map((card) => {
-                  const Icon = card.icon;
-
-                  return (
-                    <article
-                      key={card.title}
-                      className="rounded-2xl border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] px-5 py-5 shadow-[0_18px_50px_-40px_rgba(168,85,247,0.45)]"
-                    >
-                      <div className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.05] text-[#C4B5FD]">
-                        <Icon className="h-5 w-5" />
-                      </div>
-                      <h3 className="mt-4 text-lg font-semibold text-white">
-                        {card.title}
-                      </h3>
-                      <p className="mt-2 text-sm leading-6 text-[#CBD5E1]">
-                        {card.body}
-                      </p>
-                    </article>
-                  );
-                })}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-[#0F172A] px-6 py-16 lg:px-8">
-        <div className="mx-auto max-w-5xl">
-          <motion.div
-            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5 }}
-            className="rounded-2xl border border-[#334155] bg-[#111827] p-8 md:p-10"
-          >
-            <h2 className="mb-3 text-2xl font-semibold text-white md:text-3xl">
-              {skepticalBlockHeading}
-            </h2>
-            <p className="max-w-4xl text-base leading-8 text-[#CBD5E1]">
-              {skepticalBlockBody}
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="bg-[#111827] py-16">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
-          <motion.div
-            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="rounded-[28px] border border-[#374151] bg-[linear-gradient(180deg,rgba(15,23,42,0.95),rgba(17,24,39,0.98))] p-8 md:p-10"
-          >
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#C4B5FD]">
-              {communicationCalloutEyebrow}
-            </p>
-            <h2 className="mt-4 max-w-4xl text-3xl font-semibold tracking-tight text-white md:text-4xl">
-              {communicationCalloutHeading}
-            </h2>
-            <p className="mt-4 max-w-3xl text-base leading-8 text-[#CBD5E1]">
-              {communicationCalloutIntro}
-            </p>
-            <div className="mt-8 grid gap-5 lg:grid-cols-3">
-              {communicationCalloutCards.map((card) => (
-                <article
-                  key={card.title}
-                  className="rounded-2xl border border-[#374151] bg-[#0B1220] p-6"
-                >
-                  <h3 className="text-xl font-semibold text-white">
-                    {card.title}
-                  </h3>
-                  <div className="mt-5 space-y-4">
-                    <div className="rounded-2xl border border-rose-400/15 bg-rose-400/5 p-4">
-                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rose-200">
-                        {card.weakerLabel}
-                      </p>
-                      <p className="mt-2 text-sm leading-7 text-[#F3F4F6]">
-                        {card.weaker}
-                      </p>
-                    </div>
-                    <div className="rounded-2xl border border-emerald-400/15 bg-emerald-400/5 p-4">
-                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">
-                        {card.strongerLabel}
-                      </p>
-                      <p className="mt-2 text-sm leading-7 text-white">
-                        {card.stronger}
-                      </p>
-                    </div>
+      {false ? (
+        <>
+          <section className="relative overflow-hidden border-t border-white/5 bg-[#0F172A] py-16 md:py-20">
+            <div className="absolute inset-x-0 top-0 h-32 bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.12),transparent_60%)]" />
+            <div className="mx-auto max-w-5xl px-6 lg:px-8">
+              <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(30,41,59,0.92),rgba(15,23,42,0.98))] p-8 shadow-[0_30px_80px_-48px_rgba(15,23,42,0.95)] ring-1 ring-white/5 md:p-10">
+                <div className="absolute -right-16 top-0 h-40 w-40 rounded-full bg-purple-500/10 blur-3xl" />
+                <div className="absolute -left-10 bottom-0 h-32 w-32 rounded-full bg-emerald-400/8 blur-3xl" />
+                <div className="relative">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs font-medium uppercase tracking-[0.24em] text-[#C4B5FD]">
+                    <span className="h-2 w-2 rounded-full bg-emerald-300" />
+                    <span>
+                      {language === "de"
+                        ? "Vertrauensrahmen"
+                        : "Trust framework"}
+                    </span>
                   </div>
-                  <Link
-                    href={card.href}
-                    onClick={() =>
-                      goToGuide(
-                        card.href,
-                        "home_message_judgement_block",
-                        card.linkLabel,
-                      )
-                    }
-                    className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#C4B5FD] hover:text-[#DDD6FE]"
-                  >
-                    <span>{card.linkLabel}</span>
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </article>
-              ))}
+                  <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white md:text-4xl">
+                    {trustPanelHeading}
+                  </h2>
+                  <p className="mt-6 max-w-3xl text-lg leading-8 text-[#CBD5E1]">
+                    {trustPanelSubtext}
+                  </p>
+                  <div className="mt-8 grid gap-4 md:grid-cols-2">
+                    {trustPanelCards.map((card) => {
+                      const Icon = card.icon;
+
+                      return (
+                        <article
+                          key={card.title}
+                          className="rounded-2xl border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] px-5 py-5 shadow-[0_18px_50px_-40px_rgba(168,85,247,0.45)]"
+                        >
+                          <div className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.05] text-[#C4B5FD]">
+                            <Icon className="h-5 w-5" />
+                          </div>
+                          <h3 className="mt-4 text-lg font-semibold text-white">
+                            {card.title}
+                          </h3>
+                          <p className="mt-2 text-sm leading-6 text-[#CBD5E1]">
+                            {card.body}
+                          </p>
+                        </article>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
             </div>
-          </motion.div>
-        </div>
-      </section>
+          </section>
 
-      <section className="relative overflow-hidden bg-[#1E293B] py-20 md:py-28">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
-          <motion.p
-            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-base md:text-lg text-[#CBD5E1] leading-relaxed text-pretty max-w-[780px] mx-auto mb-8"
-          >
-            {t("philosophy.topParagraph")}
-          </motion.p>
-          <motion.h2
-            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 text-balance"
-          >
-            {t("problem.heading")}
-          </motion.h2>
-          <motion.p
-            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-lg md:text-xl text-gray-300 leading-relaxed text-pretty max-w-[700px] mx-auto"
-          >
-            {t("problem.body")}
-          </motion.p>
-
-          {/* Optional Supporting Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            {[
-              {
-                value: t("problem.stats.parentEmails.value"),
-                label: t("problem.stats.parentEmails.label"),
-                note: t("problem.stats.parentEmails.note"),
-              },
-              {
-                value: t("problem.stats.reportCards.value"),
-                label: t("problem.stats.reportCards.label"),
-                note: t("problem.stats.reportCards.note"),
-              },
-              {
-                value: t("problem.stats.gradingFeedback.value"),
-                label: t("problem.stats.gradingFeedback.label"),
-                note: t("problem.stats.gradingFeedback.note"),
-              },
-            ].map((stat, index) => (
+          <section className="bg-[#0F172A] px-6 py-16 lg:px-8">
+            <div className="mx-auto max-w-5xl">
               <motion.div
-                key={index}
                 initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-                className="text-center"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.5 }}
+                className="rounded-2xl border border-[#334155] bg-[#111827] p-8 md:p-10"
               >
-                <div className="text-4xl font-bold text-[#A855F7] mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-gray-400">{stat.label}</div>
-                <div className="text-xs text-gray-500 mt-2 leading-relaxed">
-                  {stat.note}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-        <div className="absolute top-0 left-1/4 w-1/3 h-1/2 bg-purple-500/5 rounded-full blur-3xl -z-10"></div>
-      </section>
-
-      {/* Solution/Mission Statement Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E1B4B] to-[#0F172A] py-20 md:py-28">
-        <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
-          <motion.h2
-            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 text-balance"
-          >
-            {t("solution.heading")}
-          </motion.h2>
-          <motion.p
-            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-lg md:text-xl text-gray-300 leading-relaxed text-pretty max-w-[900px] mx-auto mb-6"
-          >
-            {t("solution.bodyPrimary")}
-          </motion.p>
-          <motion.p
-            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-base md:text-lg text-[#94A3B8] leading-relaxed text-pretty max-w-[800px] mx-auto"
-          >
-            {t("solution.bodySecondary")}
-          </motion.p>
-        </div>
-        <div className="absolute top-0 left-1/4 w-1/3 h-1/2 bg-purple-500/5 rounded-full blur-3xl -z-10"></div>
-        <div className="absolute bottom-0 right-1/4 w-1/3 h-1/2 bg-purple-600/5 rounded-full blur-3xl -z-10"></div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="bg-[#0F172A] py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-            {[
-              {
-                value: t("stats.documentsRefined.number"),
-                label: t("stats.documentsRefined.label"),
-              },
-              {
-                value: t("stats.teachers.number"),
-                label: t("stats.teachers.label"),
-              },
-              {
-                value: t("stats.timeSaved.number"),
-                label: t("stats.timeSaved.label"),
-              },
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.8 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#A855F7] to-[#EC4899] bg-clip-text text-transparent mb-3">
-                  {stat.value}
-                </div>
-                <div className="text-lg text-white font-medium">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          <motion.p
-            initial={prefersReducedMotion ? {} : { opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-center text-lg text-[#94A3B8] mt-16"
-          >
-            {t("stats.subtitle")}
-          </motion.p>
-          <SocialProofBadges />
-        </div>
-      </section>
-
-      <section className="bg-[#111827] py-20">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
-          <motion.div
-            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
-              {guidesHeading}
-            </h2>
-            <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-[#CBD5E1]">
-              {guidesIntro}
-            </p>
-            <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-[#94A3B8]">
-              {guidesHubSupport}
-            </p>
-            <div className="mt-6">
-              <Link
-                href={guidesHubHref}
-                onClick={() =>
-                  goToGuide(guidesHubHref, "home_guides_hub", guidesHubLabel)
-                }
-                className="inline-flex items-center rounded-full border border-[#8B5CF6]/40 bg-[#8B5CF6]/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#8B5CF6]/20"
-              >
-                {guidesHubLabel}
-              </Link>
-            </div>
-          </motion.div>
-          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
-            {guideLinks.map((guide, index) => (
-              <motion.div
-                key={guide.href}
-                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.08 }}
-                className="rounded-2xl border border-[#334155] bg-[#0F172A] p-6"
-              >
-                <Link
-                  href={guide.href}
-                  onClick={() =>
-                    goToGuide(guide.href, "home_guides_block", guide.title)
-                  }
-                  className="inline-flex items-start gap-2 text-xl font-semibold text-white hover:text-[#C4B5FD]"
-                >
-                  <span>{guide.title}</span>
-                  <ArrowRight className="mt-1 h-5 w-5 flex-shrink-0" />
-                </Link>
-                <p className="mt-3 text-base leading-7 text-[#94A3B8]">
-                  {guide.description}
+                <h2 className="mb-3 text-2xl font-semibold text-white md:text-3xl">
+                  {skepticalBlockHeading}
+                </h2>
+                <p className="max-w-4xl text-base leading-8 text-[#CBD5E1]">
+                  {skepticalBlockBody}
                 </p>
               </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
+
+          <section className="bg-[#111827] py-16">
+            <div className="mx-auto max-w-6xl px-6 lg:px-8">
+              <motion.div
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="rounded-[28px] border border-[#374151] bg-[linear-gradient(180deg,rgba(15,23,42,0.95),rgba(17,24,39,0.98))] p-8 md:p-10"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#C4B5FD]">
+                  {communicationCalloutEyebrow}
+                </p>
+                <h2 className="mt-4 max-w-4xl text-3xl font-semibold tracking-tight text-white md:text-4xl">
+                  {communicationCalloutHeading}
+                </h2>
+                <p className="mt-4 max-w-3xl text-base leading-8 text-[#CBD5E1]">
+                  {communicationCalloutIntro}
+                </p>
+                <div className="mt-8 grid gap-5 lg:grid-cols-3">
+                  {communicationCalloutCards.map((card) => (
+                    <article
+                      key={card.title}
+                      className="rounded-2xl border border-[#374151] bg-[#0B1220] p-6"
+                    >
+                      <h3 className="text-xl font-semibold text-white">
+                        {card.title}
+                      </h3>
+                      <div className="mt-5 space-y-4">
+                        <div className="rounded-2xl border border-rose-400/15 bg-rose-400/5 p-4">
+                          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-rose-200">
+                            {card.weakerLabel}
+                          </p>
+                          <p className="mt-2 text-sm leading-7 text-[#F3F4F6]">
+                            {card.weaker}
+                          </p>
+                        </div>
+                        <div className="rounded-2xl border border-emerald-400/15 bg-emerald-400/5 p-4">
+                          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200">
+                            {card.strongerLabel}
+                          </p>
+                          <p className="mt-2 text-sm leading-7 text-white">
+                            {card.stronger}
+                          </p>
+                        </div>
+                      </div>
+                      <Link
+                        href={card.href}
+                        onClick={() =>
+                          goToGuide(
+                            card.href,
+                            "home_message_judgement_block",
+                            card.linkLabel,
+                          )
+                        }
+                        className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#C4B5FD] hover:text-[#DDD6FE]"
+                      >
+                        <span>{card.linkLabel}</span>
+                        <ArrowRight className="h-4 w-4" />
+                      </Link>
+                    </article>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </section>
+
+          <section className="relative overflow-hidden bg-[#1E293B] py-20 md:py-28">
+            <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
+              <motion.p
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="text-base md:text-lg text-[#CBD5E1] leading-relaxed text-pretty max-w-[780px] mx-auto mb-8"
+              >
+                {t("philosophy.topParagraph")}
+              </motion.p>
+              <motion.h2
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 text-balance"
+              >
+                {t("problem.heading")}
+              </motion.h2>
+              <motion.p
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="text-lg md:text-xl text-gray-300 leading-relaxed text-pretty max-w-[700px] mx-auto"
+              >
+                {t("problem.body")}
+              </motion.p>
+
+              {/* Optional Supporting Stats */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                {[
+                  {
+                    value: t("problem.stats.parentEmails.value"),
+                    label: t("problem.stats.parentEmails.label"),
+                    note: t("problem.stats.parentEmails.note"),
+                  },
+                  {
+                    value: t("problem.stats.reportCards.value"),
+                    label: t("problem.stats.reportCards.label"),
+                    note: t("problem.stats.reportCards.note"),
+                  },
+                  {
+                    value: t("problem.stats.gradingFeedback.value"),
+                    label: t("problem.stats.gradingFeedback.label"),
+                    note: t("problem.stats.gradingFeedback.note"),
+                  },
+                ].map((stat, index) => (
+                  <motion.div
+                    key={index}
+                    initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                    className="text-center"
+                  >
+                    <div className="text-4xl font-bold text-[#A855F7] mb-2">
+                      {stat.value}
+                    </div>
+                    <div className="text-sm text-gray-400">{stat.label}</div>
+                    <div className="text-xs text-gray-500 mt-2 leading-relaxed">
+                      {stat.note}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+            <div className="absolute top-0 left-1/4 w-1/3 h-1/2 bg-purple-500/5 rounded-full blur-3xl -z-10"></div>
+          </section>
+
+          {/* Solution/Mission Statement Section */}
+          <section className="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E1B4B] to-[#0F172A] py-20 md:py-28">
+            <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
+              <motion.h2
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 text-balance"
+              >
+                {t("solution.heading")}
+              </motion.h2>
+              <motion.p
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="text-lg md:text-xl text-gray-300 leading-relaxed text-pretty max-w-[900px] mx-auto mb-6"
+              >
+                {t("solution.bodyPrimary")}
+              </motion.p>
+              <motion.p
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-base md:text-lg text-[#94A3B8] leading-relaxed text-pretty max-w-[800px] mx-auto"
+              >
+                {t("solution.bodySecondary")}
+              </motion.p>
+            </div>
+            <div className="absolute top-0 left-1/4 w-1/3 h-1/2 bg-purple-500/5 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute bottom-0 right-1/4 w-1/3 h-1/2 bg-purple-600/5 rounded-full blur-3xl -z-10"></div>
+          </section>
+
+          {/* Stats Section */}
+          <section className="bg-[#0F172A] py-20">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+                {[
+                  {
+                    value: t("stats.documentsRefined.number"),
+                    label: t("stats.documentsRefined.label"),
+                  },
+                  {
+                    value: t("stats.teachers.number"),
+                    label: t("stats.teachers.label"),
+                  },
+                  {
+                    value: t("stats.timeSaved.number"),
+                    label: t("stats.timeSaved.label"),
+                  },
+                ].map((stat, index) => (
+                  <motion.div
+                    key={index}
+                    initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.8 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="text-center"
+                  >
+                    <div className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#A855F7] to-[#EC4899] bg-clip-text text-transparent mb-3">
+                      {stat.value}
+                    </div>
+                    <div className="text-lg text-white font-medium">
+                      {stat.label}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+              <motion.p
+                initial={prefersReducedMotion ? {} : { opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="text-center text-lg text-[#94A3B8] mt-16"
+              >
+                {t("stats.subtitle")}
+              </motion.p>
+              <SocialProofBadges />
+            </div>
+          </section>
+
+          <section className="bg-[#111827] py-20">
+            <div className="mx-auto max-w-6xl px-6 lg:px-8">
+              <motion.div
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="text-center"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-white">
+                  {guidesHeading}
+                </h2>
+                <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-[#CBD5E1]">
+                  {guidesIntro}
+                </p>
+                <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-[#94A3B8]">
+                  {guidesHubSupport}
+                </p>
+                <div className="mt-6">
+                  <Link
+                    href={guidesHubHref}
+                    onClick={() =>
+                      goToGuide(
+                        guidesHubHref,
+                        "home_guides_hub",
+                        guidesHubLabel,
+                      )
+                    }
+                    className="inline-flex items-center rounded-full border border-[#8B5CF6]/40 bg-[#8B5CF6]/10 px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#8B5CF6]/20"
+                  >
+                    {guidesHubLabel}
+                  </Link>
+                </div>
+              </motion.div>
+              <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+                {guideLinks.map((guide, index) => (
+                  <motion.div
+                    key={guide.href}
+                    initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.08 }}
+                    className="rounded-2xl border border-[#334155] bg-[#0F172A] p-6"
+                  >
+                    <Link
+                      href={guide.href}
+                      onClick={() =>
+                        goToGuide(guide.href, "home_guides_block", guide.title)
+                      }
+                      className="inline-flex items-start gap-2 text-xl font-semibold text-white hover:text-[#C4B5FD]"
+                    >
+                      <span>{guide.title}</span>
+                      <ArrowRight className="mt-1 h-5 w-5 flex-shrink-0" />
+                    </Link>
+                    <p className="mt-3 text-base leading-7 text-[#94A3B8]">
+                      {guide.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </>
+      ) : null}
 
       <section className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -1441,292 +1083,348 @@ export function HomePageClient() {
               ))}
             </div>
           </div>
-
-          {/* 3-Step Process */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              {
-                num: t("howItWorks.steps.step1.number"),
-                title: t("howItWorks.steps.step1.title"),
-                desc: t("howItWorks.steps.step1.description"),
-              },
-              {
-                num: t("howItWorks.steps.step2.number"),
-                title: t("howItWorks.steps.step2.title"),
-                desc: t("howItWorks.steps.step2.description"),
-              },
-              {
-                num: t("howItWorks.steps.step3.number"),
-                title: t("howItWorks.steps.step3.title"),
-                desc: t("howItWorks.steps.step3.description"),
-              },
-            ].map((step, index) => (
-              <motion.div
-                key={index}
-                initial={prefersReducedMotion ? {} : { opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="text-center"
-              >
-                <motion.div
-                  initial={prefersReducedMotion ? {} : { scale: 0.8 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.2 }}
-                  className="w-20 h-20 rounded-full bg-gradient-to-r from-[#A855F7] to-[#EC4899] flex items-center justify-center text-white font-bold text-3xl mx-auto mb-6"
-                >
-                  {step.num}
-                </motion.div>
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  {step.title}
-                </h3>
-                <p className="text-base text-[#94A3B8] leading-relaxed">
-                  {step.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
       {/* Demo Section */}
-      <section id="demo">
-        <DraftDemo
-          language={language}
-          onTryItYourself={() => {
-            trackCtaClick({
-              ctaText: language === "de" ? "Jetzt starten" : "Get started",
-              ctaLocation: "demo",
-            });
-            track("cta_click_home_try_demo", { language, location: "home" });
-            setSignupOpen(true);
-          }}
-        />
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.h2
-            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-16"
-          >
-            {useCasesHeading}
-          </motion.h2>
-          <p className="mx-auto mb-12 max-w-3xl text-center text-lg leading-8 text-[#CBD5E1]">
-            {useCasesIntro}
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: "📩",
-                title: t("useCases.cards.parentMessages.title"),
-                desc: t("useCases.cards.parentMessages.description"),
-                examples: t("useCases.cards.parentMessages.examples"),
-              },
-              {
-                icon: "📋",
-                title: t("useCases.cards.reportCards.title"),
-                desc: t("useCases.cards.reportCards.description"),
-                examples: t("useCases.cards.reportCards.examples"),
-              },
-              {
-                icon: "📝",
-                title: t("useCases.cards.gradingComments.title"),
-                desc: t("useCases.cards.gradingComments.description"),
-                examples: t("useCases.cards.gradingComments.examples"),
-              },
-              {
-                icon: "📣",
-                title: t("useCases.cards.schoolCommunications.title"),
-                desc: t("useCases.cards.schoolCommunications.description"),
-                examples: t("useCases.cards.schoolCommunications.examples"),
-              },
-              {
-                icon: "🏅",
-                title: t("useCases.cards.referenceLetters.title"),
-                desc: t("useCases.cards.referenceLetters.description"),
-                examples: t("useCases.cards.referenceLetters.examples"),
-              },
-              {
-                icon: "📘",
-                title: t("useCases.cards.documentation.title"),
-                desc: t("useCases.cards.documentation.description"),
-                examples: t("useCases.cards.documentation.examples"),
-              },
-            ].map((card, index) => (
-              <motion.div
-                key={index}
-                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={prefersReducedMotion ? {} : { y: -3 }}
-                className="bg-[#1E293B] border border-[#334155] rounded-xl p-8 transition-transform transition-shadow duration-200 hover:border-[#8B5CF6] hover:shadow-[0_12px_30px_rgba(139,92,246,0.2)] hover:-translate-y-1 transform-gpu"
-              >
-                <div className="text-4xl mb-4">{card.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {card.title}
-                </h3>
-                <p className="text-base text-[#CBD5E1] mb-4 leading-relaxed">
-                  {card.desc}
-                </p>
-                <p className="text-sm text-[#94A3B8] italic">{card.examples}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <CaseStudyCarousel />
-
-      {/* Comparison Section */}
-      <section className="bg-[#0F172A] py-24">
+      <section id="demo" className="bg-[#111827] py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-center mb-16"
+            className="text-center"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-              {comparisonHeading}
+            <h2 className="text-3xl font-bold text-white md:text-4xl">
+              {language === "de"
+                ? "Draft in der Praxis"
+                : "See Draft in Action"}
             </h2>
-            <p className="text-lg text-[#CBD5E1]">{comparisonSubheading}</p>
-            <p className="text-sm text-[#94A3B8] mt-3 max-w-3xl mx-auto">
-              {comparisonClarifier}
+            <p className="mx-auto mt-3 max-w-3xl text-[#CBD5E1]">
+              {language === "de"
+                ? "Vier Beispiele dafuer, wie Draft riskante Formulierungen in ruhigere, professionellere Nachrichten verwandelt."
+                : "From parent emails to report comments and difficult conversations - four moments where wording matters."}
             </p>
           </motion.div>
 
-          <div className="max-w-5xl mx-auto">
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="border-b border-[#334155]">
-                    <th className="text-left py-4 px-6 text-white font-semibold text-sm uppercase tracking-wider">
-                      {t("comparison.tableHeaders.feature")}
-                    </th>
-                    <th className="text-center py-4 px-6 text-[#94A3B8] font-medium text-sm uppercase tracking-wider">
-                      {t("comparison.tableHeaders.genericAI")}
-                    </th>
-                    <th className="text-center py-4 px-6 bg-[#8B5CF6]/10 text-[#A78BFA] font-semibold text-sm uppercase tracking-wider rounded-t-lg">
-                      {t("comparison.tableHeaders.zazaDraft")}
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    {
-                      feature: t("comparison.rows.training.feature"),
-                      generic: t("comparison.rows.training.generic"),
-                      zaza: t("comparison.rows.training.zaza"),
-                    },
-                    {
-                      feature: t("comparison.rows.safety.feature"),
-                      generic: t("comparison.rows.safety.generic"),
-                      zaza: t("comparison.rows.safety.zaza"),
-                    },
-                    {
-                      feature: t("comparison.rows.toneControl.feature"),
-                      generic: t("comparison.rows.toneControl.generic"),
-                      zaza: t("comparison.rows.toneControl.zaza"),
-                    },
-                    {
-                      feature: t("comparison.rows.compliance.feature"),
-                      generic: t("comparison.rows.compliance.generic"),
-                      zaza: t("comparison.rows.compliance.zaza"),
-                    },
-                    {
-                      feature: t("comparison.rows.useCases.feature"),
-                      generic: t("comparison.rows.useCases.generic"),
-                      zaza: t("comparison.rows.useCases.zaza"),
-                    },
-                    {
-                      feature: t("comparison.rows.outputQuality.feature"),
-                      generic: t("comparison.rows.outputQuality.generic"),
-                      zaza: t("comparison.rows.outputQuality.zaza"),
-                    },
-                    {
-                      feature: t("comparison.rows.learningCurve.feature"),
-                      generic: t("comparison.rows.learningCurve.generic"),
-                      zaza: t("comparison.rows.learningCurve.zaza"),
-                    },
-                    {
-                      feature: t("comparison.rows.community.feature"),
-                      generic: t("comparison.rows.community.generic"),
-                      zaza: t("comparison.rows.community.zaza"),
-                    },
-                  ].map((row, index) => (
-                    <motion.tr
-                      key={index}
-                      initial={
-                        prefersReducedMotion ? {} : { opacity: 0, y: 10 }
-                      }
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: index * 0.05 }}
-                      className="border-b border-[#334155] hover:bg-white/5 transition-colors"
-                    >
-                      <td className="py-5 px-6 text-white font-medium text-base">
-                        {row.feature}
-                      </td>
-                      <td className="py-5 px-6 text-center">
-                        <div className="flex items-center justify-center gap-2 text-[#94A3B8] text-sm">
-                          <XIcon className="w-4 h-4 text-gray-500 flex-shrink-0" />
-                          <span>{row.generic}</span>
-                        </div>
-                      </td>
-                      <td className="py-5 px-6 text-center bg-[#8B5CF6]/5">
-                        <div className="flex items-center justify-center gap-2 text-[#A78BFA] text-sm font-medium">
-                          <Check className="w-4 h-4 text-[#8B5CF6] flex-shrink-0" />
-                          <span>{row.zaza}</span>
-                        </div>
-                      </td>
-                    </motion.tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+          <div className="mt-12 space-y-8">
+            {[
+              {
+                title:
+                  language === "de"
+                    ? "Die Verhaltensnotiz"
+                    : "The behaviour note",
+                annotation:
+                  language === "de"
+                    ? "Was ich am Sonntag um 22 Uhr fast geschrieben haette."
+                    : "What I almost wrote at 10 pm on a Sunday.",
+                before:
+                  "Oliver was very disruptive again today and ignored multiple instructions. This behaviour is becoming unacceptable and needs to improve.",
+                after:
+                  "I wanted to let you know that Oliver found it challenging to stay focused during today's lesson despite several reminders. We are continuing to support him in developing positive classroom habits and would really appreciate your partnership in reinforcing these expectations at home.",
+              },
+              {
+                title:
+                  language === "de"
+                    ? "Diese veraergerte Antwort an Eltern"
+                    : "That angry parent reply",
+                annotation:
+                  language === "de"
+                    ? "Ganz ehrlich? Das ist es, was ich senden wollte."
+                    : "Honestly? This is what I wanted to send.",
+                before:
+                  "I have read your email and I think you are misunderstanding the situation. Mia was not singled out and the consequence was the same one every other student received. I have been teaching for nine years and I do not appreciate being accused of being unfair when I have done nothing wrong. If you have concerns please book a meeting through the office.",
+                after:
+                  "Thank you for taking the time to write to me. I can hear how concerned you are about Mia, and I want you to know I take that seriously. I'd welcome the chance to talk this through properly so I can share what happened from my perspective and hear more about Mia's experience. Would a phone call this week work, or would you prefer to come in? Either way, I'd like us to find a way forward together.",
+              },
+              {
+                title:
+                  language === "de"
+                    ? "Der Zeugniskommentar"
+                    : "The report comment",
+                annotation:
+                  language === "de"
+                    ? "Der Satz, den ich viermal geschrieben und wieder geloescht hatte."
+                    : "The line I'd written and rewritten four times.",
+                before:
+                  "Lukas is significantly behind grade level in reading and shows little motivation to improve. He is easily distracted in lessons and rarely completes homework on time. Without major intervention at home, I am concerned he will continue to fall behind.",
+                after:
+                  "Lukas is currently working below the expected level in reading and would benefit from additional support to build confidence. In class, he engages most strongly when given shorter, structured tasks with clear next steps. I'd like to discuss a small set of strategies we could try together, both in school and at home, to help him develop a more consistent reading routine.",
+              },
+              {
+                title:
+                  language === "de"
+                    ? "Nein sagen, ohne die Bruecke zu verbrennen"
+                    : "Saying no without burning the bridge",
+                annotation:
+                  language === "de"
+                    ? "Was man schreibt, wenn man wirklich am Ende ist."
+                    : "What you write when you're at the end of your tether.",
+                before:
+                  "I am sorry but I cannot meet that deadline. I have over 60 reports to write and three other parents asking for additional information this week. I will get to it when I can but please understand I am not able to drop everything for one student.",
+                after:
+                  "Thank you for reaching out, and for being clear about what would be most useful for you. I want to give your request the proper attention it deserves rather than a rushed reply. I'll be able to get back to you with a thorough response by next Friday. If anything is time-sensitive in the meantime, please let me know and I'll do my best to prioritize it.",
+              },
+            ].map((pair, index) => (
+              <motion.div
+                key={pair.title}
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                className="rounded-3xl border border-white/10 bg-[#0F172A] p-6 md:p-8"
+              >
+                <p className="text-sm italic text-white/65">
+                  {pair.annotation}
+                </p>
+                <h3 className="text-xl font-semibold text-white">
+                  {pair.title}
+                </h3>
+                <div className="mt-5 grid grid-cols-1 gap-6 md:grid-cols-2">
+                  <article className="rounded-2xl border border-rose-400/30 bg-rose-500/10 p-5">
+                    <div className="inline-flex items-center rounded-full border border-rose-300/20 bg-rose-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-rose-100">
+                      {language === "de" ? "Vorher" : "Before"}
+                    </div>
+                    <p className="mt-4 text-sm leading-7 text-rose-50 sm:text-[15px]">
+                      {pair.before}
+                    </p>
+                  </article>
+                  <article className="rounded-2xl border border-emerald-400/25 bg-emerald-500/10 p-5 shadow-lg shadow-emerald-500/10">
+                    <div className="inline-flex items-center rounded-full border border-emerald-300/20 bg-emerald-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-100">
+                      {language === "de" ? "Nachher" : "After"}
+                    </div>
+                    <p className="mt-4 text-sm leading-7 text-emerald-50 sm:text-[15px]">
+                      {pair.after}
+                    </p>
+                  </article>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
+      {false ? (
+        <>
+          {/* Use Cases Section */}
+          <section className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] py-24">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+              <motion.h2
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-16"
+              >
+                {useCasesHeading}
+              </motion.h2>
+              <p className="mx-auto mb-12 max-w-3xl text-center text-lg leading-8 text-[#CBD5E1]">
+                {useCasesIntro}
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {[
+                  {
+                    icon: "📩",
+                    title: t("useCases.cards.parentMessages.title"),
+                    desc: t("useCases.cards.parentMessages.description"),
+                    examples: t("useCases.cards.parentMessages.examples"),
+                  },
+                  {
+                    icon: "📋",
+                    title: t("useCases.cards.reportCards.title"),
+                    desc: t("useCases.cards.reportCards.description"),
+                    examples: t("useCases.cards.reportCards.examples"),
+                  },
+                  {
+                    icon: "📝",
+                    title: t("useCases.cards.gradingComments.title"),
+                    desc: t("useCases.cards.gradingComments.description"),
+                    examples: t("useCases.cards.gradingComments.examples"),
+                  },
+                  {
+                    icon: "📣",
+                    title: t("useCases.cards.schoolCommunications.title"),
+                    desc: t("useCases.cards.schoolCommunications.description"),
+                    examples: t("useCases.cards.schoolCommunications.examples"),
+                  },
+                  {
+                    icon: "🏅",
+                    title: t("useCases.cards.referenceLetters.title"),
+                    desc: t("useCases.cards.referenceLetters.description"),
+                    examples: t("useCases.cards.referenceLetters.examples"),
+                  },
+                  {
+                    icon: "📘",
+                    title: t("useCases.cards.documentation.title"),
+                    desc: t("useCases.cards.documentation.description"),
+                    examples: t("useCases.cards.documentation.examples"),
+                  },
+                ].map((card, index) => (
+                  <motion.div
+                    key={index}
+                    initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    whileHover={prefersReducedMotion ? {} : { y: -3 }}
+                    className="bg-[#1E293B] border border-[#334155] rounded-xl p-8 transition-transform transition-shadow duration-200 hover:border-[#8B5CF6] hover:shadow-[0_12px_30px_rgba(139,92,246,0.2)] hover:-translate-y-1 transform-gpu"
+                  >
+                    <div className="text-4xl mb-4">{card.icon}</div>
+                    <h3 className="text-xl font-semibold text-white mb-3">
+                      {card.title}
+                    </h3>
+                    <p className="text-base text-[#CBD5E1] mb-4 leading-relaxed">
+                      {card.desc}
+                    </p>
+                    <p className="text-sm text-[#94A3B8] italic">
+                      {card.examples}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <CaseStudyCarousel />
+
+          {/* Comparison Section */}
+          <section className="bg-[#0F172A] py-24">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+              <motion.div
+                initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="text-center mb-16"
+              >
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                  {comparisonHeading}
+                </h2>
+                <p className="text-lg text-[#CBD5E1]">{comparisonSubheading}</p>
+                <p className="text-sm text-[#94A3B8] mt-3 max-w-3xl mx-auto">
+                  {comparisonClarifier}
+                </p>
+              </motion.div>
+
+              <div className="max-w-5xl mx-auto">
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse">
+                    <thead>
+                      <tr className="border-b border-[#334155]">
+                        <th className="text-left py-4 px-6 text-white font-semibold text-sm uppercase tracking-wider">
+                          {t("comparison.tableHeaders.feature")}
+                        </th>
+                        <th className="text-center py-4 px-6 text-[#94A3B8] font-medium text-sm uppercase tracking-wider">
+                          {t("comparison.tableHeaders.genericAI")}
+                        </th>
+                        <th className="text-center py-4 px-6 bg-[#8B5CF6]/10 text-[#A78BFA] font-semibold text-sm uppercase tracking-wider rounded-t-lg">
+                          {t("comparison.tableHeaders.zazaDraft")}
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {[
+                        {
+                          feature: t("comparison.rows.training.feature"),
+                          generic: t("comparison.rows.training.generic"),
+                          zaza: t("comparison.rows.training.zaza"),
+                        },
+                        {
+                          feature: t("comparison.rows.safety.feature"),
+                          generic: t("comparison.rows.safety.generic"),
+                          zaza: t("comparison.rows.safety.zaza"),
+                        },
+                        {
+                          feature: t("comparison.rows.toneControl.feature"),
+                          generic: t("comparison.rows.toneControl.generic"),
+                          zaza: t("comparison.rows.toneControl.zaza"),
+                        },
+                        {
+                          feature: t("comparison.rows.compliance.feature"),
+                          generic: t("comparison.rows.compliance.generic"),
+                          zaza: t("comparison.rows.compliance.zaza"),
+                        },
+                        {
+                          feature: t("comparison.rows.useCases.feature"),
+                          generic: t("comparison.rows.useCases.generic"),
+                          zaza: t("comparison.rows.useCases.zaza"),
+                        },
+                        {
+                          feature: t("comparison.rows.outputQuality.feature"),
+                          generic: t("comparison.rows.outputQuality.generic"),
+                          zaza: t("comparison.rows.outputQuality.zaza"),
+                        },
+                        {
+                          feature: t("comparison.rows.learningCurve.feature"),
+                          generic: t("comparison.rows.learningCurve.generic"),
+                          zaza: t("comparison.rows.learningCurve.zaza"),
+                        },
+                        {
+                          feature: t("comparison.rows.community.feature"),
+                          generic: t("comparison.rows.community.generic"),
+                          zaza: t("comparison.rows.community.zaza"),
+                        },
+                      ].map((row, index) => (
+                        <motion.tr
+                          key={index}
+                          initial={
+                            prefersReducedMotion ? {} : { opacity: 0, y: 10 }
+                          }
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.3, delay: index * 0.05 }}
+                          className="border-b border-[#334155] hover:bg-white/5 transition-colors"
+                        >
+                          <td className="py-5 px-6 text-white font-medium text-base">
+                            {row.feature}
+                          </td>
+                          <td className="py-5 px-6 text-center">
+                            <div className="flex items-center justify-center gap-2 text-[#94A3B8] text-sm">
+                              <XIcon className="w-4 h-4 text-gray-500 flex-shrink-0" />
+                              <span>{row.generic}</span>
+                            </div>
+                          </td>
+                          <td className="py-5 px-6 text-center bg-[#8B5CF6]/5">
+                            <div className="flex items-center justify-center gap-2 text-[#A78BFA] text-sm font-medium">
+                              <Check className="w-4 h-4 text-[#8B5CF6] flex-shrink-0" />
+                              <span>{row.zaza}</span>
+                            </div>
+                          </td>
+                        </motion.tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+        </>
+      ) : null}
+
       {/* Why Choose Zaza Section */}
       <section className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <motion.h2
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-16"
+            className="mb-16 text-center text-3xl font-bold text-white md:text-4xl"
           >
-            {t("whyChoose.heading")}
+            Why Zaza Draft
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 md:grid-cols-2">
             {[
               {
-                title: t("whyChoose.benefits.beatWritersBlock.title"),
-                desc: t("whyChoose.benefits.beatWritersBlock.description"),
+                title: "Teacher-first",
+                desc: "Understands parent emails, behaviour notes, report comments, and the emotional register of schools.",
               },
               {
-                title: t("whyChoose.benefits.writeWithConfidence.title"),
-                desc: t("whyChoose.benefits.writeWithConfidence.description"),
-              },
-              {
-                title: t("whyChoose.benefits.saveTime.title"),
-                desc: t("whyChoose.benefits.saveTime.description"),
-              },
-              {
-                title: t("whyChoose.benefits.breakBarriers.title"),
-                desc: t("whyChoose.benefits.breakBarriers.description"),
+                title: "You stay in control",
+                desc: "It's a second pair of eyes, not an auto-sender. You review every word before it leaves your inbox.",
               },
             ].map((benefit, index) => (
               <motion.div
@@ -1752,165 +1450,210 @@ export function HomePageClient() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
       <section className="bg-[#0F172A] py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.h2
+        <div className="mx-auto max-w-2xl px-6 lg:px-8">
+          <motion.div
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-16"
+            className="rounded-3xl border border-white/10 bg-white/5 px-8 py-10 text-center md:px-10"
           >
-            {t("testimonials.heading")}
-          </motion.h2>
-          <motion.div
-            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.5 }}
-            className="mx-auto max-w-3xl rounded-xl border border-[#334155] bg-[#1E293B] p-8 text-center"
-          >
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              {betaFeedbackHeading}
-            </h3>
-            <p className="text-[#CBD5E1] mb-6">{betaFeedbackBody}</p>
-            <Button asChild className="gradient-primary text-white rounded-xl">
-              <Link href={startHref}>{betaFeedbackCta}</Link>
-            </Button>
+            <h2 className="text-3xl font-semibold text-white">
+              A note from the founder
+            </h2>
+            <div className="mt-6 flex justify-center">
+              <div className="h-[100px] w-[100px] overflow-hidden rounded-full ring-2 ring-purple-500/30 md:h-[120px] md:w-[120px]">
+                <Image
+                  src="/authors/Greg.jpg"
+                  alt="Dr Greg Blackburn, founder of Zaza Technologies"
+                  width={120}
+                  height={120}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+            <div className="mt-6 space-y-5 text-center text-base leading-8 text-[#CBD5E1]">
+              <p>
+                I built Zaza Draft because I kept hearing the same thing from
+                teachers in my circle:{" "}
+                <span className="italic">
+                  &quot;I'm not worried about writing the email. I'm worried
+                  about how it'll be read.&quot;
+                </span>
+              </p>
+              <p>
+                Zaza Draft is the second pair of eyes I wished they'd had. Built
+                quietly, by someone who's spent twenty years watching brilliant
+                educators burn out over wording.
+              </p>
+            </div>
+            <p className="mt-8 text-sm italic leading-7 text-[#A78BFA]">
+              Dr Greg Blackburn, PhD Professional Education
+            </p>
+            <div className="mt-6">
+              <Link
+                href={founderStoryHref}
+                className="text-sm font-semibold text-white underline underline-offset-4 hover:text-[#C4B5FD]"
+              >
+                Read the full story
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      <section className="bg-[#0F172A] pb-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <AgentReadableSummary
-            locale={language === "de" ? "de" : "en"}
-            theme="dark"
-            title={summaryTitle}
-            intro={summaryIntro}
-            answers={{
-              whatIsIt:
-                language === "de" ? (
-                  <>
-                    Zaza Draft ist eine risikobewusste Schreibhilfe fuer
-                    Lehrkraefte. Sie hilft bei Elternmails, Zeugnisbemerkungen
-                    und anderen Schulnachrichten, bei denen Ton und Wirkung
-                    genauso wichtig sind wie der Inhalt.
-                  </>
-                ) : (
-                  <>
-                    Zaza Draft is a risk-aware writing support tool for
-                    teachers. It helps with parent emails, report comments, and
-                    other school messages where tone and interpretation matter
-                    as much as the facts.
-                  </>
-                ),
-              whoIsItFor:
-                language === "de" ? (
-                  <>
-                    Fuer Lehrkraefte, Schulen und Teams, die Elternkommunikation
-                    und sensible Schultexte ruhig, klar und professionell halten
-                    wollen.
-                  </>
-                ) : (
-                  <>
-                    It is for teachers, schools, and educator teams who want
-                    parent communication and other sensitive school writing to
-                    stay calm, clear, and professional.
-                  </>
-                ),
-              problemItSolves:
-                language === "de" ? (
-                  <>
-                    Es hilft dann, wenn die Fakten klar sind, der Text aber noch
-                    zu hart, zu vage, zu defensiv oder zu offensichtlich klingt.
-                  </>
-                ) : (
-                  <>
-                    It helps when the facts are clear but the wording still
-                    feels too blunt, too vague, too reactive, or not useful
-                    enough to send.
-                  </>
-                ),
-              howItWorks:
-                language === "de" ? (
-                  <>
-                    Du fuegst einen Entwurf oder Notizen ein, waehlst den
-                    gewuenschten Ton und pruefst danach die Formulierung, bevor
-                    irgendetwas gesendet oder eingereicht wird.
-                  </>
-                ) : (
-                  <>
-                    You paste a draft or notes, choose the tone or outcome you
-                    need, then review the wording before anything is sent or
-                    submitted.
-                  </>
-                ),
-              whatItCosts:
-                language === "de" ? (
-                  <>
-                    Du kannst kostenlos starten und spaeter auf einen bezahlten
-                    Plan wechseln, wenn du regelmaessig Unterstuetzung brauchst.{" "}
-                    <Link
-                      href={pricingHref}
-                      className="font-semibold underline"
-                    >
-                      Die aktuellen Preise stehen auf der Pricing-Seite.
-                    </Link>
-                  </>
-                ) : (
-                  <>
-                    You can start free, then move to a paid plan if you need
-                    regular support.{" "}
-                    <Link
-                      href={pricingHref}
-                      className="font-semibold underline"
-                    >
-                      The current plans live on the pricing page.
-                    </Link>
-                  </>
-                ),
-              nextStep:
-                language === "de" ? (
-                  <>
-                    Pruefe zuerst eine echte Nachricht im{" "}
-                    <Link
-                      href={angryParentGuideHref}
-                      className="font-semibold underline"
-                    >
-                      kostenlosen Risiko-Check fuer Elternmails
-                    </Link>{" "}
-                    oder gehe direkt zu{" "}
-                    <Link href={startHref} className="font-semibold underline">
-                      Zaza Draft
-                    </Link>
-                    .
-                  </>
-                ) : (
-                  <>
-                    Start with a real message in the{" "}
-                    <Link
-                      href={angryParentGuideHref}
-                      className="font-semibold underline"
-                    >
-                      free Parent Email Risk Checker
-                    </Link>{" "}
-                    or go straight to{" "}
-                    <Link href={startHref} className="font-semibold underline">
-                      Zaza Draft
-                    </Link>
-                    .
-                  </>
-                ),
-            }}
-          />
-        </div>
-      </section>
+      {false ? (
+        <>
+          <section className="bg-[#0F172A] pb-24">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+              <AgentReadableSummary
+                locale={language === "de" ? "de" : "en"}
+                theme="dark"
+                title={summaryTitle}
+                intro={summaryIntro}
+                answers={{
+                  whatIsIt:
+                    language === "de" ? (
+                      <>
+                        Zaza Draft ist eine risikobewusste Schreibhilfe fuer
+                        Lehrkraefte. Sie hilft bei Elternmails,
+                        Zeugnisbemerkungen und anderen Schulnachrichten, bei
+                        denen Ton und Wirkung genauso wichtig sind wie der
+                        Inhalt.
+                      </>
+                    ) : (
+                      <>
+                        Zaza Draft is a risk-aware writing support tool for
+                        teachers. It helps with parent emails, report comments,
+                        and other school messages where tone and interpretation
+                        matter as much as the facts.
+                      </>
+                    ),
+                  whoIsItFor:
+                    language === "de" ? (
+                      <>
+                        Fuer Lehrkraefte, Schulen und Teams, die
+                        Elternkommunikation und sensible Schultexte ruhig, klar
+                        und professionell halten wollen.
+                      </>
+                    ) : (
+                      <>
+                        It is for teachers, schools, and educator teams who want
+                        parent communication and other sensitive school writing
+                        to stay calm, clear, and professional.
+                      </>
+                    ),
+                  problemItSolves:
+                    language === "de" ? (
+                      <>
+                        Es hilft dann, wenn die Fakten klar sind, der Text aber
+                        noch zu hart, zu vage, zu defensiv oder zu
+                        offensichtlich klingt.
+                      </>
+                    ) : (
+                      <>
+                        It helps when the facts are clear but the wording still
+                        feels too blunt, too vague, too reactive, or not useful
+                        enough to send.
+                      </>
+                    ),
+                  howItWorks:
+                    language === "de" ? (
+                      <>
+                        Du fuegst einen Entwurf oder Notizen ein, waehlst den
+                        gewuenschten Ton und pruefst danach die Formulierung,
+                        bevor irgendetwas gesendet oder eingereicht wird.
+                      </>
+                    ) : (
+                      <>
+                        You paste a draft or notes, choose the tone or outcome
+                        you need, then review the wording before anything is
+                        sent or submitted.
+                      </>
+                    ),
+                  whatItCosts:
+                    language === "de" ? (
+                      <>
+                        Du kannst kostenlos starten und spaeter auf einen
+                        bezahlten Plan wechseln, wenn du regelmaessig
+                        Unterstuetzung brauchst.{" "}
+                        <Link
+                          href={pricingHref}
+                          className="font-semibold underline"
+                        >
+                          Die aktuellen Preise stehen auf der Pricing-Seite.
+                        </Link>
+                      </>
+                    ) : (
+                      <>
+                        You can start free, then move to a paid plan if you need
+                        regular support.{" "}
+                        <Link
+                          href={pricingHref}
+                          className="font-semibold underline"
+                        >
+                          The current plans live on the pricing page.
+                        </Link>
+                      </>
+                    ),
+                  nextStep:
+                    language === "de" ? (
+                      <>
+                        Pruefe zuerst eine echte Nachricht im{" "}
+                        <Link
+                          href={angryParentGuideHref}
+                          className="font-semibold underline"
+                        >
+                          kostenlosen Risiko-Check fuer Elternmails
+                        </Link>{" "}
+                        oder gehe direkt zu{" "}
+                        <Link
+                          href={startHref}
+                          className="font-semibold underline"
+                        >
+                          Zaza Draft
+                        </Link>
+                        .
+                      </>
+                    ) : (
+                      <>
+                        Start with a real message in the{" "}
+                        <Link
+                          href={angryParentGuideHref}
+                          className="font-semibold underline"
+                        >
+                          free Parent Email Risk Checker
+                        </Link>{" "}
+                        or go straight to{" "}
+                        <Link
+                          href={startHref}
+                          className="font-semibold underline"
+                        >
+                          Zaza Draft
+                        </Link>
+                        .
+                      </>
+                    ),
+                }}
+              />
+            </div>
+          </section>
+        </>
+      ) : null}
 
       {/* Final CTA Section */}
       <section className="bg-gradient-to-r from-[#8B5CF6] to-[#EC4899] py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
+          <motion.p
+            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-4 text-sm italic text-white/70"
+          >
+            For the messages that matter more than they should.
+          </motion.p>
           <motion.h2
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1943,32 +1686,6 @@ export function HomePageClient() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mb-6"
-          >
-            <Button
-              asChild
-              variant="outline"
-              className="border-white/30 bg-white/10 text-white hover:bg-white/15"
-            >
-              <Link
-                href={angryParentGuideHref}
-                onClick={() =>
-                  goToGuide(
-                    angryParentGuideHref,
-                    "home_final_secondary",
-                    finalGuideLabel,
-                  )
-                }
-              >
-                {finalGuideLabel}
-              </Link>
-            </Button>
-          </motion.div>
-          <motion.div
-            initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.25 }}
           >
             <Button
               asChild
