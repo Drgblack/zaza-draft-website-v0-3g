@@ -175,7 +175,7 @@ export function HomePageClient() {
   const heroEntityLine =
     language === "de"
       ? "Zaza Draft ist keine generische Schreibhilfe. Es ist ein lehrkraft-zentrierter Co-Writer fuer professionelle Elternkommunikation und wertvolle Schuldokumentation - gerade dann, wenn Interpretation ebenso viel zaehlt wie Formulierung. Du pruefst, bearbeitest und gibst jede Formulierung selbst frei."
-      : "Zaza Draft is the second pair of eyes that catches what you'd catch yourself, if you weren't this tired. For teachers, that means preventing the mistakes you only spot at 9:47 pm on a Sunday.";
+      : "Zaza Draft is the second pair of eyes that catches what you'd catch yourself, if you weren't this tired. For teachers, that means preventing the mistakes you only make at 9:47 pm on a Sunday.";
   const heroOutcomeLabel =
     language === "de" ? "Vorher und nachher" : "Before and after";
   const heroProofHeading =
