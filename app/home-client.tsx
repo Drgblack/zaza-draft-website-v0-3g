@@ -162,19 +162,19 @@ export function HomePageClient() {
   const heroHeadline =
     language === "de"
       ? "Schreibe Eltern-E-Mails und Schulnachrichten"
-      : "Write parent emails and school messages";
+      : "Built for the moment before send.";
   const heroHeadlineAccent =
     language === "de"
       ? "ohne staendig zu fragen, wie sie aufgefasst werden."
-      : "without second-guessing how they will be interpreted.";
+      : "";
   const heroSubheading =
     language === "de"
       ? "Zaza hilft Lehrkraeften, ruhige Eltern-E-Mails, klarere Schulnachrichten und aussagekraeftigere Zeugnisformulierungen fuer Momente zu verfassen, die sich unsicher anfuehlen - bevor Ton, Wortwahl oder Timing eine Situation groesser werden lassen."
-      : "Zaza helps teachers draft calm parent emails, clearer school messages, and more meaningful report comments before tone, wording, or timing turn a situation into something bigger.";
+      : "The email you're not quite sure about.";
   const heroEntityLine =
     language === "de"
       ? "Zaza Draft ist keine generische Schreibhilfe. Es ist ein lehrkraft-zentrierter Co-Writer fuer professionelle Elternkommunikation und wertvolle Schuldokumentation - gerade dann, wenn Interpretation ebenso viel zaehlt wie Formulierung. Du pruefst, bearbeitest und gibst jede Formulierung selbst frei."
-      : "Zaza Draft is not generic AI writing help. It is a teacher-first co-writer for professional parent communication and meaningful school documentation, built for the moments where interpretation matters as much as wording. You review, edit, and approve every word before it is used.";
+      : "Zaza Draft is the second pair of eyes that catches what you'd catch yourself, if you weren't this tired. For teachers, that means preventing the mistakes you only spot at 9:47 pm on a Sunday.";
   const heroOutcomeLabel =
     language === "de" ? "Vorher und nachher" : "Before and after";
   const heroProofHeading =
@@ -601,10 +601,14 @@ export function HomePageClient() {
               >
                 <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1]">
                   <span className="text-white">{heroHeadline}</span>
-                  <br />
-                  <span className="bg-gradient-to-r from-purple-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                    {heroHeadlineAccent}
-                  </span>
+                  {heroHeadlineAccent ? (
+                    <>
+                      <br />
+                      <span className="bg-gradient-to-r from-purple-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                        {heroHeadlineAccent}
+                      </span>
+                    </>
+                  ) : null}
                 </h1>
               </motion.div>
 
