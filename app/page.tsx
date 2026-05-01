@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { JsonLdCollection } from "@/components/seo/json-ld";
 import {
+  createFAQPageJsonLd,
   createHowToJsonLd,
+  createOfferJsonLd,
   createSoftwareApplicationJsonLd,
   createWebPageJsonLd,
 } from "@/lib/seo/json-ld";
@@ -9,10 +11,9 @@ import { buildPageMetadata } from "@/lib/seo/site-metadata";
 import { HomePageClient } from "./home-client";
 
 export const metadata: Metadata = buildPageMetadata({
-  title:
-    "Teacher-First Support for Parent Emails, Tone, and Meaningful Reports | Zaza Draft",
+  title: "Parent Email Risk Checker for Teachers | Zaza Draft",
   description:
-    "Zaza Draft helps teachers draft calm parent emails, more meaningful report comments, and clear school messages before tone, wording, or timing turn a situation into something bigger.",
+    "Late-night parent email doubts? Use Zaza Draft's free Parent Email Risk Checker to calm tone, reduce risk, and send clearer replies with confidence.",
   path: "/",
   alternates: {
     en: "https://zazadraft.com",
@@ -45,6 +46,33 @@ const homeHowToSteps = [
   },
 ] as const;
 
+const homeFaqItems = [
+  {
+    question: "What is the Parent Email Risk Checker?",
+    answer:
+      "It is a free tool that checks a parent email draft for tone risk, escalation signals, and wording that could be misread, then suggests a calmer and more professional version.",
+  },
+  {
+    question: "Is Zaza Draft just another ChatGPT wrapper?",
+    answer:
+      "No. It is a teacher-first AI shield built specifically for school communication, including parent emails, behaviour notes, report comments, and difficult conversations.",
+  },
+  {
+    question: "Do I have to pay to use the Risk Checker?",
+    answer: "No. The basic Parent Email Risk Checker is free to use.",
+  },
+  {
+    question: "Is my data private?",
+    answer:
+      "Yes. Zaza Draft is privacy-first and GDPR-aware, and it does not train on your emails.",
+  },
+  {
+    question: "Can schools or departments buy this?",
+    answer:
+      "Yes. Schools and teams can use Zaza Draft through the schools offering, with bulk licensing and admin features.",
+  },
+] as const;
+
 export default function HomePage() {
   return (
     <>
@@ -65,9 +93,28 @@ export default function HomePage() {
             id: "home-software-schema",
             data: createSoftwareApplicationJsonLd({
               description:
-                "Zaza Draft is a teacher-first communication safety layer for parent emails, complaint replies, behaviour updates, documentation, and report comments. It helps teachers shape messages where tone, trust, value, and interpretation matter before anything is sent.",
+                "Zaza Draft is a parent email risk checker and AI shield for teachers. It helps with parent emails, behaviour notes, report comments, and other school messages where tone and interpretation matter before anything is sent.",
+              featureList: [
+                "Free Parent Email Risk Checker",
+                "AI shield for parent emails",
+                "Teacher-first communication support",
+                "Support for behaviour notes and report comments",
+                "Review before sending",
+              ],
+              offers: createOfferJsonLd({
+                name: "Free Parent Email Risk Checker",
+                price: 0,
+                priceCurrency: "EUR",
+                url: "/parent-email-risk-checker",
+                description:
+                  "Free access to the Parent Email Risk Checker for teachers.",
+              }),
               inLanguage: "en-GB",
             }),
+          },
+          {
+            id: "home-faq-schema",
+            data: createFAQPageJsonLd([...homeFaqItems]),
           },
           {
             id: "home-howto-schema",
