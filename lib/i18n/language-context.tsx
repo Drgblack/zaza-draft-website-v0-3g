@@ -1521,7 +1521,7 @@ const translationsEn: Record<string, string> = {
   "founder.journey.quote":
     "I built Zaza because I was tired of watching teachers drown in administrative work when technology should be setting them free.",
   "founder.journey.p1":
-    "My working life began in Hobart, Tasmania, holding a paintbrush as an apprentice painter and decorator while my father co-owned a small paint factory. After a pre-vocational course at TAFE and a four year apprenticeship at the Cascade Brewery, I realised I wanted more from both my work and my education.",
+    "My working life began in Hobart, Tasmania, holding a paintbrush as an apprentice painter and decorator while my father co-owned a small paint factory (Tas Paints). After a pre-vocational course at TAFE and a four year apprenticeship at the Cascade Brewery, I realised I wanted more from both my work and my education.",
   "founder.journey.p2":
     "Travel opened my eyes to how big the world really is and how far education can take you. I lived abroad, studied German, and eventually returned to Tasmania to study Administration, Information Systems and German at the University of Tasmania. Graduating with First Class Honours proved I could succeed academically despite early doubts and family tensions.",
   "founder.journey.p3":
