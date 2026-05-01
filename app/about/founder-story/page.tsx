@@ -77,11 +77,11 @@ export default function FounderStoryPage() {
                 Paint, TAFE &amp; Cascade Brewery
               </h3>
               <p className="text-sm text-[rgba(226,232,240,0.9)]">
-                Before that, I attended Clarence High School in Hobart until
-                1982. Apprenticeship as a painter and decorator in Hobart, a
-                pre-vocational TAFE course, and a four year apprenticeship at
-                Cascade Brewery. Learned the value of hard work - and that I
-                wanted more from education and career.
+                I attended Clarence High School until 1982. Apprenticeship as a
+                painter and decorator in Hobart, a pre-vocational TAFE course,
+                and a four year apprenticeship at Cascade Brewery. Learned the
+                value of hard work - and that I wanted more from education and
+                career.
               </p>
             </Card>
 
