@@ -69,7 +69,7 @@ export default function FounderStoryPage() {
             A quick timeline
           </h2>
           <div className="grid gap-4 md:grid-cols-2">
-            <Card className="bg-[rgba(15,23,42,0.95)] border border-[rgba(148,163,184,0.5)] rounded-xl p-6 shadow-lg shadow-black/30 hover:border-[#8B5CF6] hover:shadow-[#8B5CF6]/30 transition-all duration-200">
+            <Card className="h-full bg-[rgba(15,23,42,0.95)] border border-[rgba(148,163,184,0.5)] rounded-xl p-6 shadow-lg shadow-black/30 hover:border-[#8B5CF6] hover:shadow-[#8B5CF6]/30 transition-all duration-200">
               <p className="text-xs uppercase tracking-wide text-[#A78BFA] mb-1">
                 Early years
               </p>
@@ -77,14 +77,15 @@ export default function FounderStoryPage() {
                 Paint, TAFE &amp; Cascade Brewery
               </h3>
               <p className="text-sm text-[rgba(226,232,240,0.9)]">
-                Apprenticeship as a painter and decorator in Hobart, a
+                Before that, I attended Clarence High School in Hobart until
+                1982. Apprenticeship as a painter and decorator in Hobart, a
                 pre-vocational TAFE course, and a four year apprenticeship at
                 Cascade Brewery. Learned the value of hard work - and that I
                 wanted more from education and career.
               </p>
             </Card>
 
-            <Card className="bg-[rgba(15,23,42,0.9)] border border-[rgba(148,163,184,0.3)] rounded-xl p-6">
+            <Card className="h-full bg-[rgba(15,23,42,0.9)] border border-[rgba(148,163,184,0.3)] rounded-xl p-6">
               <p className="text-xs uppercase tracking-wide text-[#A78BFA] mb-1">
                 University &amp; language
               </p>
@@ -98,7 +99,7 @@ export default function FounderStoryPage() {
               </p>
             </Card>
 
-            <Card className="bg-[rgba(15,23,42,0.9)] border border-[rgba(148,163,184,0.3)] rounded-xl p-6">
+            <Card className="h-full bg-[rgba(15,23,42,0.9)] border border-[rgba(148,163,184,0.3)] rounded-xl p-6">
               <p className="text-xs uppercase tracking-wide text-[#A78BFA] mb-1">
                 Corporate &amp; leadership
               </p>
@@ -113,7 +114,7 @@ export default function FounderStoryPage() {
               </p>
             </Card>
 
-            <Card className="bg-[rgba(15,23,42,0.9)] border border-[rgba(148,163,184,0.3)] rounded-xl p-6">
+            <Card className="h-full bg-[rgba(15,23,42,0.9)] border border-[rgba(148,163,184,0.3)] rounded-xl p-6">
               <p className="text-xs uppercase tracking-wide text-[#A78BFA] mb-1">
                 Research &amp; EdTech
               </p>
@@ -129,7 +130,7 @@ export default function FounderStoryPage() {
               </p>
             </Card>
 
-            <Card className="bg-[rgba(15,23,42,0.9)] border border-[rgba(148,163,184,0.3)] rounded-xl p-6 md:col-span-2">
+            <Card className="h-full bg-[rgba(15,23,42,0.9)] border border-[rgba(148,163,184,0.3)] rounded-xl p-6 md:col-span-2">
               <p className="text-xs uppercase tracking-wide text-[#A78BFA] mb-1">
                 Zaza Technologies
               </p>
