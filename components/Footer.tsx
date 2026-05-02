@@ -84,16 +84,6 @@ export default function Footer() {
       label: isDE ? "Support / Kontakt" : "Support / Contact",
       href: localPath("/contact"),
     },
-    {
-      label: "Data Processing Agreement (EN)",
-      href: "/legal/zaza-draft-dpa-en.pdf",
-      download: true,
-    },
-    {
-      label: "Auftragsverarbeitungsvertrag (DE)",
-      href: "/legal/zaza-draft-dpa-de.pdf",
-      download: true,
-    },
   ];
 
   const sisterProducts = [
@@ -182,15 +172,9 @@ export default function Footer() {
             <ul className="mt-3 space-y-2 text-sm">
               {legalSupportLinks.map((link) => (
                 <li key={getLinkKey(link.label, link.href)}>
-                  {link.download ? (
-                    <a href={link.href} download className="hover:text-white">
-                      {link.label}
-                    </a>
-                  ) : (
-                    <Link href={link.href} className="hover:text-white">
-                      {link.label}
-                    </Link>
-                  )}
+                  <Link href={link.href} className="hover:text-white">
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
