@@ -13,8 +13,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: pageUrl,
     languages: {
-      en: "https://zazadraft.com/pricing",
-      de: pageUrl,
+      "en-GB": "https://zazadraft.com/pricing",
+      "de-DE": pageUrl,
+      "x-default": "https://zazadraft.com/pricing",
     },
   },
   openGraph: {

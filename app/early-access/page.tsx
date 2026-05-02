@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: "Join the Zaza Draft Waitlist | Teacher-first AI writing",
   description:
     "Join the Zaza Draft waitlist to hear when teacher access opens. Get launch updates, product news, and early access for calmer school writing support.",
+  robots: {
+    index: false,
+    follow: false,
+  },
   openGraph: {
     title: "Join the Zaza Draft Waitlist",
     description:
@@ -36,8 +40,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: canonicalUrl,
     languages: {
-      en: canonicalUrl,
-      de: "https://zazadraft.com/de/early-access",
+      "en-GB": canonicalUrl,
+      "de-DE": "https://zazadraft.com/de/early-access",
+      "x-default": canonicalUrl,
     },
   },
 };

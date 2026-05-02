@@ -9,11 +9,16 @@ export const metadata: Metadata = {
   title: "Founding Teachers | Zaza Draft",
   description:
     "Join the first teachers shaping Zaza Draft. Early access for calmer, safer school communication with founding pricing locked for life while your subscription stays active.",
+  robots: {
+    index: false,
+    follow: false,
+  },
   alternates: {
     ...buildCanonicalAlternates("/founding"),
     languages: {
-      en: `${siteConfig.url}/founding`,
-      de: `${siteConfig.url}/de/founding`,
+      "en-GB": `${siteConfig.url}/founding`,
+      "de-DE": `${siteConfig.url}/de/founding`,
+      "x-default": `${siteConfig.url}/founding`,
     },
   },
 };

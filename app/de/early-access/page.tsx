@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: "Zaza Draft Warteliste | Lehrerzentrierte KI-Schreibhilfe",
   description:
     "Trag dich in die Zaza Draft Warteliste ein und erfahre, sobald der Zugang fuer Lehrkraefte geoeffnet wird. Erhalte Produktupdates und Launch-News.",
+  robots: {
+    index: false,
+    follow: false,
+  },
   openGraph: {
     title: "Zaza Draft Warteliste",
     description:
@@ -36,8 +40,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: canonicalUrl,
     languages: {
-      de: canonicalUrl,
-      en: "https://zazadraft.com/early-access",
+      "en-GB": "https://zazadraft.com/early-access",
+      "de-DE": canonicalUrl,
+      "x-default": "https://zazadraft.com/early-access",
     },
   },
 };

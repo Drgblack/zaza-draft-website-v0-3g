@@ -9,8 +9,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://zazadraft.com/de/videos",
     languages: {
-      en: "/videos",
-      de: "/de/videos",
+      "en-GB": "/videos",
+      "de-DE": "/de/videos",
+      "x-default": "/videos",
     },
   },
 };
@@ -18,4 +19,3 @@ export const metadata: Metadata = {
 export default function DeVideosPage() {
   return <VideoHubClient />;
 }
-

@@ -1,8 +1,8 @@
-import type { Metadata } from "next"
-import FounderPageClient from "./founder-client"
+import type { Metadata } from "next";
+import FounderPageClient from "./founder-client";
 
-const ogImage = "/greg-blackburn-headshot.jpg"
-const canonicalUrl = "https://zazadraft.com/about/founder"
+const ogImage = "/greg-blackburn-headshot.jpg";
+const canonicalUrl = "https://zazadraft.com/about/founder";
 
 export const metadata: Metadata = {
   title: "Founder | Zaza Draft",
@@ -11,8 +11,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: canonicalUrl,
     languages: {
-      en: canonicalUrl,
-      de: "https://zazadraft.com/de/about/founder",
+      "en-GB": canonicalUrl,
+      "de-DE": "https://zazadraft.com/de/about/founder",
+      "x-default": canonicalUrl,
     },
   },
   openGraph: {
@@ -23,16 +24,19 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Zaza Draft",
     locale: "en_GB",
-    images: [{ url: ogImage, alt: "Dr. Greg Blackburn, Founder of Zaza Draft" }],
+    images: [
+      { url: ogImage, alt: "Dr. Greg Blackburn, Founder of Zaza Draft" },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Founder | Zaza Draft",
-    description: "Learning scientist building teacher-first AI writing support.",
+    description:
+      "Learning scientist building teacher-first AI writing support.",
     images: [ogImage],
   },
-}
+};
 
 export default function FounderPage() {
-  return <FounderPageClient />
+  return <FounderPageClient />;
 }

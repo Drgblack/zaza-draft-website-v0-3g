@@ -1,6 +1,6 @@
-import type { Metadata } from "next"
+import type { Metadata } from "next";
 
-const pageUrl = "https://zazadraft.com/de/faq"
+const pageUrl = "https://zazadraft.com/de/faq";
 
 export const metadata: Metadata = {
   title: "FAQ | Zaza Draft",
@@ -9,8 +9,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: pageUrl,
     languages: {
-      en: "https://zazadraft.com/faq",
-      de: pageUrl,
+      "en-GB": "https://zazadraft.com/faq",
+      "de-DE": pageUrl,
+      "x-default": "https://zazadraft.com/faq",
     },
   },
   openGraph: {
@@ -28,4 +29,4 @@ export const metadata: Metadata = {
     description:
       "Antworten auf häufig gestellte Fragen zu Zaza Draft, KI-Sicherheit, Datenschutz, Preisen und dem Unterrichtseinsatz.",
   },
-}
+};

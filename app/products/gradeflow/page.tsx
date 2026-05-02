@@ -1,8 +1,8 @@
-import type { Metadata } from "next"
-import GradeFlowClient from "./gradeflow-client"
+import type { Metadata } from "next";
+import GradeFlowClient from "./gradeflow-client";
 
-const ogImage = "/assessment-rubrics-feedback.jpg"
-const canonicalUrl = "https://zazadraft.com/products/gradeflow"
+const ogImage = "/assessment-rubrics-feedback.jpg";
+const canonicalUrl = "https://zazadraft.com/products/gradeflow";
 
 export const metadata: Metadata = {
   title: "GradeFlow | AI grading that saves hours, keeps fairness",
@@ -14,22 +14,29 @@ export const metadata: Metadata = {
       "Rubric-aware grading assistance with feedback you can trust and audit trails for peace of mind.",
     url: canonicalUrl,
     type: "website",
-    images: [{ url: ogImage, alt: "Teacher reviewing rubric-aligned feedback with GradeFlow" }],
+    images: [
+      {
+        url: ogImage,
+        alt: "Teacher reviewing rubric-aligned feedback with GradeFlow",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "GradeFlow | Faster, fairer grading",
-    description: "Generate rubric-aligned feedback quickly while keeping transparency and control.",
+    description:
+      "Generate rubric-aligned feedback quickly while keeping transparency and control.",
     images: [ogImage],
   },
   alternates: {
     canonical: canonicalUrl,
     languages: {
-      en: canonicalUrl,
-      de: "https://zazadraft.com/de/products/gradeflow",
+      "en-GB": canonicalUrl,
+      "de-DE": "https://zazadraft.com/de/products/gradeflow",
+      "x-default": canonicalUrl,
     },
   },
-}
+};
 
 export default function GradeFlowPage() {
   return (
@@ -67,5 +74,5 @@ export default function GradeFlowPage() {
         }}
       />
     </>
-  )
+  );
 }

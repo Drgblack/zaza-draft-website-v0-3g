@@ -23,6 +23,7 @@ import { getUkClusterSitemapEntries } from "@/lib/uk-matrix";
 import { getExpandedPageSitemapEntries } from "@/lib/expanded-pages";
 import { getAiSearchSitemapEntries } from "@/lib/ai-search-pages";
 import { getGuideSitemapEntries } from "@/lib/guides";
+import { addLocalePrefix } from "@/lib/seo-canonical";
 import {
   CONTENT_FRESHNESS,
   parseFreshnessDate,
@@ -228,6 +229,39 @@ function dedupeEntries(entries: MetadataRoute.Sitemap): MetadataRoute.Sitemap {
   return Array.from(
     new Map(entries.map((entry) => [entry.url, entry])).values(),
   );
+}
+
+function addLanguageAlternates(
+  entries: MetadataRoute.Sitemap,
+): MetadataRoute.Sitemap {
+  const indexedPaths = new Set(entries.map((entry) => getPathFromEntry(entry)));
+
+  return entries.map((entry) => {
+    const path = getPathFromEntry(entry);
+    const englishPath = addLocalePrefix(path, "en");
+    const germanPath = addLocalePrefix(path, "de");
+    const languages: Record<string, string> = {};
+
+    if (indexedPaths.has(englishPath)) {
+      languages["en-GB"] = `${BASE_URL}${englishPath}`;
+      languages["x-default"] = `${BASE_URL}${englishPath}`;
+    }
+
+    if (indexedPaths.has(germanPath)) {
+      languages["de-DE"] = `${BASE_URL}${germanPath}`;
+    }
+
+    if (Object.keys(languages).length === 0) {
+      return entry;
+    }
+
+    return {
+      ...entry,
+      alternates: {
+        languages,
+      },
+    };
+  });
 }
 
 function getPathFromEntry(entry: MetadataRoute.Sitemap[number]) {
@@ -1402,7 +1436,7 @@ export async function getTieredSitemap(
     logLongtailExclusions(longtailExclusions);
   }
 
-  return sitemapEntries;
+  return addLanguageAlternates(sitemapEntries);
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

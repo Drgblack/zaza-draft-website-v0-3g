@@ -12,8 +12,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: canonicalUrl,
     languages: {
-      en: canonicalUrl,
-      de: "https://zazadraft.com/de/about/founder-story",
+      "en-GB": canonicalUrl,
+      "de-DE": "https://zazadraft.com/de/about/founder-story",
+      "x-default": canonicalUrl,
     },
   },
   openGraph: {

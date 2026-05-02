@@ -1,8 +1,8 @@
-import type { Metadata } from "next"
-import { ContactClient } from "./contact-client"
+import type { Metadata } from "next";
+import { ContactClient } from "./contact-client";
 
-const pageUrl = "https://zazadraft.com/contact"
-const ogImage = "/hero/teacher.jpg"
+const pageUrl = "https://zazadraft.com/contact";
+const ogImage = "/hero/teacher.jpg";
 
 export const metadata: Metadata = {
   title: "Contact Us | Zaza Draft Support",
@@ -11,8 +11,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: pageUrl,
     languages: {
-      en: pageUrl,
-      de: "https://zazadraft.com/de/contact",
+      "en-GB": pageUrl,
+      "de-DE": "https://zazadraft.com/de/contact",
+      "x-default": pageUrl,
     },
   },
   openGraph: {
@@ -32,8 +33,8 @@ export const metadata: Metadata = {
       "Connect with the Zaza Draft team to get help with onboarding, feedback, or product questions.",
     images: [ogImage],
   },
-}
+};
 
 export default function ContactPage() {
-  return <ContactClient />
+  return <ContactClient />;
 }

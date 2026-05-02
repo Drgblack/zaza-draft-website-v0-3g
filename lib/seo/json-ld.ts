@@ -5,6 +5,7 @@ import {
   buildHowToJsonLd,
   buildOfferJsonLd,
   buildOrganizationJsonLd,
+  buildPersonJsonLd,
   buildSoftwareApplicationJsonLd,
   buildWebPageJsonLd,
   buildWebsiteJsonLd,
@@ -25,8 +26,20 @@ export function createOrganizationJsonLd() {
   return buildOrganizationJsonLd();
 }
 
-export function createWebsiteJsonLd() {
-  return buildWebsiteJsonLd();
+export function createPersonJsonLd({
+  inLanguage,
+}: {
+  inLanguage?: string;
+} = {}) {
+  return buildPersonJsonLd({ inLanguage });
+}
+
+export function createWebsiteJsonLd({
+  inLanguage,
+}: {
+  inLanguage?: string;
+} = {}) {
+  return buildWebsiteJsonLd({ inLanguage });
 }
 
 export function createSoftwareApplicationJsonLd(

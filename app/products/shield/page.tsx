@@ -1,8 +1,8 @@
-import type { Metadata } from "next"
-import ShieldClient from "./shield-client"
+import type { Metadata } from "next";
+import ShieldClient from "./shield-client";
 
-const ogImage = "/school-safety-shield-icon.jpg"
-const canonicalUrl = "https://zazadraft.com/products/shield"
+const ogImage = "/school-safety-shield-icon.jpg";
+const canonicalUrl = "https://zazadraft.com/products/shield";
 
 export const metadata: Metadata = {
   title: "Zaza Shield | AI safety and compliance guardrails for schools",
@@ -19,17 +19,19 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Zaza Shield | AI safety for education",
-    description: "Privacy-first AI guardrails that keep teachers supported and student data protected.",
+    description:
+      "Privacy-first AI guardrails that keep teachers supported and student data protected.",
     images: [ogImage],
   },
   alternates: {
     canonical: canonicalUrl,
     languages: {
-      en: canonicalUrl,
-      de: "https://zazadraft.com/de/products/shield",
+      "en-GB": canonicalUrl,
+      "de-DE": "https://zazadraft.com/de/products/shield",
+      "x-default": canonicalUrl,
     },
   },
-}
+};
 
 export default function ShieldPage() {
   return (
@@ -63,5 +65,5 @@ export default function ShieldPage() {
         }}
       />
     </>
-  )
+  );
 }

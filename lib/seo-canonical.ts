@@ -1,6 +1,8 @@
 import { absoluteUrl } from "@/lib/seo/site-config";
 import { getIndexControlDecision } from "@/lib/index-control";
 
+export type LanguageAlternateInput = Record<string, string>;
+
 type CanonicalRule = {
   pattern: RegExp;
   canonical: string | ((pathname: string) => string);
@@ -173,6 +175,56 @@ export function resolveCanonicalPath(input = "/") {
 
 export function resolveCanonicalUrl(input = "/") {
   return absoluteUrl(resolveCanonicalPath(input));
+}
+
+export function getPathLocale(input = "/") {
+  const path = normaliseCanonicalPath(input);
+  return path === "/de" || path.startsWith("/de/") ? "de" : "en";
+}
+
+export function stripLocalePrefix(input = "/") {
+  const path = normaliseCanonicalPath(input);
+
+  if (path === "/de") {
+    return "/";
+  }
+
+  return path.replace(/^\/de(?=\/|$)/, "") || "/";
+}
+
+export function addLocalePrefix(input = "/", locale: "en" | "de" = "en") {
+  const path = stripLocalePrefix(input);
+
+  if (locale === "en") {
+    return path;
+  }
+
+  return path === "/" ? "/de" : `/de${path}`;
+}
+
+export function normaliseLanguageAlternates(
+  input?: LanguageAlternateInput,
+): LanguageAlternateInput | undefined {
+  if (!input) {
+    return undefined;
+  }
+
+  const english =
+    input["en-GB"] ?? input.en ?? input["x-default"] ?? input["en-US"];
+  const german = input["de-DE"] ?? input.de ?? input["de-AT"];
+
+  const languages: LanguageAlternateInput = {};
+
+  if (english) {
+    languages["en-GB"] = english;
+    languages["x-default"] = english;
+  }
+
+  if (german) {
+    languages["de-DE"] = german;
+  }
+
+  return Object.keys(languages).length > 0 ? languages : undefined;
 }
 
 export function buildCanonicalAlternates(input = "/") {

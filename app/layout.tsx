@@ -13,11 +13,17 @@ import Footer from "@/components/Footer";
 import { TranslationHelperNotice } from "@/components/translation-helper-notice";
 import { JsonLdCollection } from "@/components/seo/json-ld";
 import {
+  createBreadcrumbJsonLd,
   createOrganizationJsonLd,
+  createPersonJsonLd,
   createWebsiteJsonLd,
 } from "@/lib/seo/json-ld";
-import { buildCanonicalAlternates } from "@/lib/seo-canonical";
+import { buildCanonicalAlternates, getPathLocale } from "@/lib/seo-canonical";
 import { siteConfig } from "@/lib/seo/site-config";
+import {
+  buildAutomaticBreadcrumbItems,
+  shouldRenderAutomaticBreadcrumb,
+} from "@/lib/seo/breadcrumbs";
 
 const GA4_MEASUREMENT_ID = "G-GFCNQYCHFK";
 const shouldLoadGa =
@@ -25,7 +31,19 @@ const shouldLoadGa =
   process.env.VERCEL_ENV !== "preview" &&
   process.env.VERCEL_ENV !== "development";
 
-export function generateMetadata(): Metadata {
+function getRequestPathname(headersList: Awaited<ReturnType<typeof headers>>) {
+  return (
+    headersList.get("x-pathname") ||
+    headersList.get("x-invoke-path") ||
+    headersList.get("next-url") ||
+    "/"
+  );
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const headersList = await headers();
+  const pathname = getRequestPathname(headersList);
+
   return {
     title:
       "Teacher-First AI Writing Help for Parent Emails and Reports | Zaza Draft",
@@ -37,10 +55,17 @@ export function generateMetadata(): Metadata {
     publisher: siteConfig.legalName,
     authors: [{ name: siteConfig.founder.name }],
     category: "Education",
-    alternates: buildCanonicalAlternates("/"),
+    alternates: buildCanonicalAlternates(pathname),
     robots: {
       index: true,
       follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
     },
     icons: {
       icon: "/z-logo.png",
@@ -66,15 +91,15 @@ export default async function RootLayout({
   // These are conversion funnels — they get their own minimal chrome
   // defined in app/c/[handle]/layout.tsx, with no global header/footer.
   const headersList = await headers();
-  const pathname =
-    headersList.get("x-pathname") ||
-    headersList.get("x-invoke-path") ||
-    headersList.get("next-url") ||
-    "";
+  const pathname = getRequestPathname(headersList);
+  const locale = getPathLocale(pathname);
+  const schemaLanguage = locale === "de" ? "de-DE" : "en-GB";
   const isCreatorFunnelPage = pathname.startsWith("/c/");
+  const shouldRenderAutoBreadcrumb =
+    !isCreatorFunnelPage && shouldRenderAutomaticBreadcrumb(pathname);
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         {shouldLoadGa ? (
           <>
@@ -106,6 +131,12 @@ export default async function RootLayout({
           </>
         ) : null}
         <link rel="icon" href="/z-logo.png" sizes="any" />
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        <link
+          rel="alternate"
+          type="application/xml"
+          href="/sitemap-longtail.xml"
+        />
       </head>
       <body
         className={
@@ -124,8 +155,22 @@ export default async function RootLayout({
             },
             {
               id: "site-website-schema",
-              data: createWebsiteJsonLd(),
+              data: createWebsiteJsonLd({ inLanguage: schemaLanguage }),
             },
+            {
+              id: "site-person-schema",
+              data: createPersonJsonLd({ inLanguage: schemaLanguage }),
+            },
+            ...(shouldRenderAutoBreadcrumb
+              ? [
+                  {
+                    id: "auto-breadcrumb-schema",
+                    data: createBreadcrumbJsonLd(
+                      buildAutomaticBreadcrumbItems(pathname),
+                    ),
+                  },
+                ]
+              : []),
           ]}
         />
         <LanguageProvider>

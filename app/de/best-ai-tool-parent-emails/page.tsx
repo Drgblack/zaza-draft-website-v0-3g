@@ -9,8 +9,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://zazadraft.com/de/best-ai-tool-parent-emails",
     languages: {
-      en: "/best-ai-tool-parent-emails",
-      de: "/de/best-ai-tool-parent-emails",
+      "en-GB": "/best-ai-tool-parent-emails",
+      "de-DE": "/de/best-ai-tool-parent-emails",
+      "x-default": "/best-ai-tool-parent-emails",
     },
   },
 };
@@ -18,4 +19,3 @@ export const metadata: Metadata = {
 export default function DeBestAIToolPage() {
   return <BestAIToolParentEmailsClient />;
 }
-

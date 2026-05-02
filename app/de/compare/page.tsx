@@ -9,8 +9,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://zazadraft.com/de/compare",
     languages: {
-      en: "/compare",
-      de: "/de/compare",
+      "en-GB": "/compare",
+      "de-DE": "/de/compare",
+      "x-default": "/compare",
     },
   },
 };
@@ -18,4 +19,3 @@ export const metadata: Metadata = {
 export default function DeComparePage() {
   return <CompareClient />;
 }
-

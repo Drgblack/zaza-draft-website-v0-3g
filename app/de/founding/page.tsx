@@ -8,11 +8,16 @@ export const metadata: Metadata = {
   title: "Gründungslehrkräfte | Zaza Draft",
   description:
     "Werde Teil der ersten Lehrkräfte, die Zaza Draft mitgestalten. Früher Zugang für ruhigere, professionellere Schulkommunikation mit gesichertem Gründungspreis, solange dein Abo aktiv bleibt.",
+  robots: {
+    index: false,
+    follow: false,
+  },
   alternates: {
     canonical: `${siteConfig.url}/de/founding`,
     languages: {
-      en: `${siteConfig.url}/founding`,
-      de: `${siteConfig.url}/de/founding`,
+      "en-GB": `${siteConfig.url}/founding`,
+      "de-DE": `${siteConfig.url}/de/founding`,
+      "x-default": `${siteConfig.url}/founding`,
     },
   },
 };

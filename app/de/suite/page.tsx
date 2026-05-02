@@ -1,11 +1,11 @@
-import type { Metadata } from "next"
-import SuiteClient from "@/app/suite/SuiteClient"
-import { SetLanguage } from "@/components/set-language"
+import type { Metadata } from "next";
+import SuiteClient from "@/app/suite/SuiteClient";
+import { SetLanguage } from "@/components/set-language";
 
-const pageTitle = "Zaza Suite | Sichere, lehrerzentrierte KI-Apps"
+const pageTitle = "Zaza Suite | Sichere, lehrerzentrierte KI-Apps";
 const pageDescription =
-  "Eine Familie sicherer KI-Apps, die Routinearbeit reduziert und deine Stimme schützt. Gefördert durch Zaza KnowledgeCore."
-const pageUrl = "https://zazadraft.com/de/suite"
+  "Eine Familie sicherer KI-Apps, die Routinearbeit reduziert und deine Stimme schützt. Gefördert durch Zaza KnowledgeCore.";
+const pageUrl = "https://zazadraft.com/de/suite";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -13,8 +13,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: pageUrl,
     languages: {
-      en: "https://zazadraft.com/suite",
-      de: pageUrl,
+      "en-GB": "https://zazadraft.com/suite",
+      "de-DE": pageUrl,
+      "x-default": "https://zazadraft.com/suite",
     },
   },
   openGraph: {
@@ -24,7 +25,12 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Zaza Draft",
     locale: "de_DE",
-    images: [{ url: "/hero-teacher-classroom.jpg", alt: "Lehrkraft nutzt die Zaza Suite" }],
+    images: [
+      {
+        url: "/hero-teacher-classroom.jpg",
+        alt: "Lehrkraft nutzt die Zaza Suite",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -32,7 +38,7 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: ["/hero-teacher-classroom.jpg"],
   },
-}
+};
 
 export default function SuiteDePage() {
   return (
@@ -40,5 +46,5 @@ export default function SuiteDePage() {
       <SetLanguage lang="de" />
       <SuiteClient />
     </>
-  )
+  );
 }

@@ -1,7 +1,7 @@
-import type { Metadata } from "next"
+import type { Metadata } from "next";
 
-const ogImage = "/greg-blackburn-headshot.jpg"
-const canonicalUrl = "https://zazadraft.com/de/about/founder"
+const ogImage = "/greg-blackburn-headshot.jpg";
+const canonicalUrl = "https://zazadraft.com/de/about/founder";
 
 export const metadata: Metadata = {
   title: "Gründer | Zaza Draft",
@@ -10,8 +10,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: canonicalUrl,
     languages: {
-      en: "https://zazadraft.com/about/founder",
-      de: canonicalUrl,
+      "en-GB": "https://zazadraft.com/about/founder",
+      "de-DE": canonicalUrl,
+      "x-default": "https://zazadraft.com/about/founder",
     },
   },
   openGraph: {
@@ -22,12 +23,15 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Zaza Draft",
     locale: "de_DE",
-    images: [{ url: ogImage, alt: "Dr. Greg Blackburn, Gründer von Zaza Draft" }],
+    images: [
+      { url: ogImage, alt: "Dr. Greg Blackburn, Gründer von Zaza Draft" },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Gründer | Zaza Draft",
-    description: "Learning Scientist, der lehrerzentrierte KI-Schreibhilfe baut.",
+    description:
+      "Learning Scientist, der lehrerzentrierte KI-Schreibhilfe baut.",
     images: [ogImage],
   },
-}
+};

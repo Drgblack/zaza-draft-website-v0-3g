@@ -58,8 +58,9 @@ export async function generateMetadata({
     alternates: {
       canonical: `https://zazadraft.com${urlPath}`,
       languages: {
-        en: `https://zazadraft.com/blog/${post.slug}`,
-        de: `https://zazadraft.com${urlPath}`,
+        "en-GB": `https://zazadraft.com/blog/${post.slug}`,
+        "de-DE": `https://zazadraft.com${urlPath}`,
+        "x-default": `https://zazadraft.com/blog/${post.slug}`,
       },
     },
   };

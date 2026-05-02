@@ -1,7 +1,7 @@
-import type { Metadata } from "next"
-import ReduceStressClient from "@/app/reduce-stress-parent-messages/reduce-stress-client"
+import type { Metadata } from "next";
+import ReduceStressClient from "@/app/reduce-stress-parent-messages/reduce-stress-client";
 
-const pageUrl = "https://zazadraft.com/de/reduce-stress-parent-messages"
+const pageUrl = "https://zazadraft.com/de/reduce-stress-parent-messages";
 
 export const metadata: Metadata = {
   title: "Weniger Stress mit Elternnachrichten | Zaza Draft",
@@ -10,8 +10,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: pageUrl,
     languages: {
-      en: "https://zazadraft.com/reduce-stress-parent-messages",
-      de: pageUrl,
+      "en-GB": "https://zazadraft.com/reduce-stress-parent-messages",
+      "de-DE": pageUrl,
+      "x-default": "https://zazadraft.com/reduce-stress-parent-messages",
     },
   },
   openGraph: {
@@ -38,8 +39,8 @@ export const metadata: Metadata = {
       "Entdecken Sie, wie Zaza Draft Lehrkräften hilft, Elternnachrichten schneller, klarer und stressärmer zu schreiben.",
     images: ["https://zazadraft.com/og-reduce-stress.jpg"],
   },
-}
+};
 
 export default function ReduceStressPage() {
-  return <ReduceStressClient />
+  return <ReduceStressClient />;
 }

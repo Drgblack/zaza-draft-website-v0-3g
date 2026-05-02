@@ -1,6 +1,6 @@
-import type { Metadata } from "next"
+import type { Metadata } from "next";
 
-const pageUrl = "https://zazadraft.com/de/about/company"
+const pageUrl = "https://zazadraft.com/de/about/company";
 
 export const metadata: Metadata = {
   title: "Unternehmen | Zaza Draft",
@@ -9,8 +9,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: pageUrl,
     languages: {
-      en: "https://zazadraft.com/about/company",
-      de: pageUrl,
+      "en-GB": "https://zazadraft.com/about/company",
+      "de-DE": pageUrl,
+      "x-default": "https://zazadraft.com/about/company",
     },
   },
   openGraph: {
@@ -28,4 +29,4 @@ export const metadata: Metadata = {
     description:
       "Erfahren Sie, wie Zaza Technologies lehrerzentrierte KI mit einer Boutique-Philosophie und datenbasierten Erkenntnissen entwickelt.",
   },
-}
+};

@@ -9,8 +9,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: canonicalUrl,
     languages: {
-      en: "https://zazadraft.com/manifesto",
-      de: canonicalUrl,
+      "en-GB": "https://zazadraft.com/manifesto",
+      "de-DE": canonicalUrl,
+      "x-default": "https://zazadraft.com/manifesto",
     },
   },
   openGraph: {

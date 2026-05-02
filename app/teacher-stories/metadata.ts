@@ -1,6 +1,6 @@
-import type { Metadata } from "next"
+import type { Metadata } from "next";
 
-const pageUrl = "https://zazadraft.com/teacher-stories"
+const pageUrl = "https://zazadraft.com/teacher-stories";
 
 export const metadata: Metadata = {
   title: "Teacher Stories | Zaza Draft",
@@ -9,7 +9,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: pageUrl,
     languages: {
-      en: pageUrl,
+      "en-GB": pageUrl,
+      "x-default": pageUrl,
     },
   },
   openGraph: {
@@ -27,4 +28,4 @@ export const metadata: Metadata = {
     description:
       "Teacher stories sharing how Zaza Draft keeps communications calm and makes report season more manageable.",
   },
-}
+};

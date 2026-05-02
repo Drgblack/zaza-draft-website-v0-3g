@@ -1,8 +1,8 @@
-import type { Metadata } from "next"
-import AILiteracyClient from "@/app/ai-literacy/ai-literacy-client"
-import { CourseSchema, BreadcrumbSchema } from "@/lib/seo/schema"
+import type { Metadata } from "next";
+import AILiteracyClient from "@/app/ai-literacy/ai-literacy-client";
+import { CourseSchema, BreadcrumbSchema } from "@/lib/seo/schema";
 
-const siteUrl = "https://zazadraft.com/de/ai-literacy"
+const siteUrl = "https://zazadraft.com/de/ai-literacy";
 
 export const metadata: Metadata = {
   title: "AI Literacy for Teachers | Free Courses & Certification | Zaza Draft",
@@ -13,13 +13,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteUrl,
     languages: {
-      en: "https://zazadraft.com/ai-literacy",
-      de: siteUrl,
+      "en-GB": "https://zazadraft.com/ai-literacy",
+      "de-DE": siteUrl,
+      "x-default": "https://zazadraft.com/ai-literacy",
     },
   },
   openGraph: {
     title: "AI Literacy Resource Center for Teachers",
-    description: "Free courses, certification, and resources to help teachers confidently use AI in the classroom",
+    description:
+      "Free courses, certification, and resources to help teachers confidently use AI in the classroom",
     type: "website",
     url: siteUrl,
     siteName: "Zaza Draft",
@@ -28,9 +30,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AI Literacy Resource Center for Teachers",
-    description: "Free courses, certification, and resources to help teachers confidently use AI in the classroom",
+    description:
+      "Free courses, certification, and resources to help teachers confidently use AI in the classroom",
   },
-}
+};
 
 export default function AILiteracyPage() {
   return (
@@ -49,5 +52,5 @@ export default function AILiteracyPage() {
       />
       <AILiteracyClient />
     </>
-  )
+  );
 }

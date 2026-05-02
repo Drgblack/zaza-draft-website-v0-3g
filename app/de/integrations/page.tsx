@@ -16,8 +16,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://zazadraft.com/de/integrations",
     languages: {
-      en: "/integrations",
-      de: "/de/integrations",
+      "en-GB": "/integrations",
+      "de-DE": "/de/integrations",
+      "x-default": "/integrations",
     },
   },
 };
@@ -68,4 +69,3 @@ export default function DeIntegrationsPage() {
     </>
   );
 }
-

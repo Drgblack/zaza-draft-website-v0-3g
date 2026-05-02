@@ -1,8 +1,8 @@
-import type { Metadata } from "next"
-import TeachClient from "./teach-client"
+import type { Metadata } from "next";
+import TeachClient from "./teach-client";
 
-const ogImage = "/fast-lesson-planning-workflow.jpg"
-const canonicalUrl = "https://zazadraft.com/products/teach"
+const ogImage = "/fast-lesson-planning-workflow.jpg";
+const canonicalUrl = "https://zazadraft.com/products/teach";
 
 export const metadata: Metadata = {
   title: "Zaza Teach | AI lesson planning that respects your craft",
@@ -19,17 +19,19 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Zaza Teach | Faster, safer lesson planning",
-    description: "Curriculum-aware AI that helps you plan lessons quickly without losing your teaching voice.",
+    description:
+      "Curriculum-aware AI that helps you plan lessons quickly without losing your teaching voice.",
     images: [ogImage],
   },
   alternates: {
     canonical: canonicalUrl,
     languages: {
-      en: canonicalUrl,
-      de: "https://zazadraft.com/de/products/teach",
+      "en-GB": canonicalUrl,
+      "de-DE": "https://zazadraft.com/de/products/teach",
+      "x-default": canonicalUrl,
     },
   },
-}
+};
 
 export default function TeachPage() {
   return (
@@ -67,5 +69,5 @@ export default function TeachPage() {
         }}
       />
     </>
-  )
+  );
 }

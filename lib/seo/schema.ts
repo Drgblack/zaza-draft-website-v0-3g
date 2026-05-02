@@ -112,6 +112,7 @@ export type EventSchemaInput = {
 export const zazaSchemaIds = {
   organization: `${siteConfig.url}/#organization`,
   website: `${siteConfig.url}/#website`,
+  person: `${siteConfig.url}/about/founder#person`,
   software: `${absoluteUrl("/products/draft")}#software`,
 } as const;
 
@@ -169,11 +170,7 @@ export function buildOrganizationJsonLd(): JsonLdObject {
     description: zazaDraftEntityDefinition,
     email: siteConfig.supportEmail,
     founder: {
-      "@type": "Person",
-      name: siteConfig.founder.name,
-      honorificSuffix: siteConfig.founder.honorificSuffix,
-      jobTitle: siteConfig.founder.jobTitle,
-      description: drGregBlackburnBio,
+      "@id": zazaSchemaIds.person,
     },
     audience: [
       {
@@ -194,6 +191,32 @@ export function buildOrganizationJsonLd(): JsonLdObject {
   };
 }
 
+export function buildPersonJsonLd({
+  inLanguage = "en-GB",
+}: {
+  inLanguage?: string;
+} = {}): JsonLdObject {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": zazaSchemaIds.person,
+    name: siteConfig.founder.name,
+    honorificSuffix: siteConfig.founder.honorificSuffix,
+    jobTitle: siteConfig.founder.jobTitle,
+    description: drGregBlackburnBio,
+    image: absoluteUrl("/authors/Greg.jpg"),
+    url: absoluteUrl("/about/founder"),
+    worksFor: {
+      "@id": zazaSchemaIds.organization,
+    },
+    sameAs: [
+      absoluteUrl("/about/founder"),
+      absoluteUrl("/about/founder-story"),
+    ],
+    inLanguage,
+  };
+}
+
 export function buildWebsiteJsonLd({
   inLanguage = "en-GB",
 }: {
@@ -211,6 +234,9 @@ export function buildWebsiteJsonLd({
     },
     about: {
       "@id": zazaSchemaIds.organization,
+    },
+    author: {
+      "@id": zazaSchemaIds.person,
     },
     inLanguage,
     keywords: zazaDraftEntityKeywords,
@@ -270,6 +296,9 @@ export function buildSoftwareApplicationJsonLd({
     description,
     creator: {
       "@id": zazaSchemaIds.organization,
+    },
+    author: {
+      "@id": zazaSchemaIds.person,
     },
     publisher: {
       "@id": zazaSchemaIds.organization,
@@ -406,10 +435,7 @@ export function buildArticleJsonLd({
     image: [absoluteUrl(image)],
     inLanguage,
     author: {
-      "@type": "Person",
-      name: siteConfig.founder.name,
-      honorificSuffix: siteConfig.founder.honorificSuffix,
-      description: drGregBlackburnBio,
+      "@id": zazaSchemaIds.person,
     },
     publisher: {
       "@id": zazaSchemaIds.organization,

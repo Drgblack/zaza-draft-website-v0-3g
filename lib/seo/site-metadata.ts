@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { defaultMetadata } from "@/lib/metadata";
+import { normaliseLanguageAlternates } from "@/lib/seo-canonical";
 
 interface BuildPageMetadataInput {
   title: string;
@@ -36,7 +37,7 @@ export function buildPageMetadata({
     ...metadata,
     alternates: {
       ...metadata.alternates,
-      languages: alternates,
+      languages: normaliseLanguageAlternates(alternates),
     },
   };
 }

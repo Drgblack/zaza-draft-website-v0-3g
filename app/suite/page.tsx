@@ -13,8 +13,9 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical: "https://zazadraft.com/suite",
       languages: {
-        en: "https://zazadraft.com/suite",
-        de: "https://zazadraft.com/de/suite",
+        "en-GB": "https://zazadraft.com/suite",
+        "de-DE": "https://zazadraft.com/de/suite",
+        "x-default": "https://zazadraft.com/suite",
       },
     },
     openGraph: {

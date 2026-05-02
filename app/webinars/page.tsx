@@ -14,8 +14,9 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical: "https://zazadraft.com/webinars",
       languages: {
-        en: "https://zazadraft.com/webinars",
-        de: "https://zazadraft.com/de/webinars",
+        "en-GB": "https://zazadraft.com/webinars",
+        "de-DE": "https://zazadraft.com/de/webinars",
+        "x-default": "https://zazadraft.com/webinars",
       },
     },
     openGraph: {

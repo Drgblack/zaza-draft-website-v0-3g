@@ -11,6 +11,7 @@
     "validate-posts": "tsx src/data/validate-posts.ts",
     "validate-content": "tsx scripts/validate-content.ts",
     "test:locale-routing": "tsx scripts/test-locale-routing.ts",
+    "audit:seo": "tsx scripts/seo-audit.ts",
     "guard:de-blog-english": "tsx scripts/check-de-blog-english.ts",
     "start": "next start",
     "guard:default-exports": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/verify-default-exports.ps1",

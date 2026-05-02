@@ -263,7 +263,7 @@ export function Header() {
             >
               <Image
                 src="/z-logo.png"
-                alt="Zaza"
+                alt="Zaza Draft"
                 width={48}
                 height={48}
                 className="h-12 w-12 transition-transform group-hover:scale-105"

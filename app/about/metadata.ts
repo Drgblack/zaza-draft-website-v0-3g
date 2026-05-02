@@ -1,6 +1,6 @@
-import type { Metadata } from "next"
+import type { Metadata } from "next";
 
-const pageUrl = "https://zazadraft.com/about"
+const pageUrl = "https://zazadraft.com/about";
 
 export const metadata: Metadata = {
   title: "About Zaza Draft | Teacher-first AI for education",
@@ -9,8 +9,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: pageUrl,
     languages: {
-      en: pageUrl,
-      de: "https://zazadraft.com/de/about",
+      "en-GB": pageUrl,
+      "de-DE": "https://zazadraft.com/de/about",
+      "x-default": pageUrl,
     },
   },
   openGraph: {
@@ -30,4 +31,4 @@ export const metadata: Metadata = {
       "Meet the Zaza Draft team and see how we build teacher-first AI with safety guardrails, transparency, and professional integrity.",
     images: ["/hero/teacher.jpg"],
   },
-}
+};
