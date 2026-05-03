@@ -19,6 +19,7 @@ import {
   track,
   trackCtaClick,
   trackFreeToolPageView,
+  trackRiskCheckerSubmitted,
   trackShareClicked,
   trackToolCompleted,
   trackToolStarted,
@@ -137,6 +138,35 @@ function buildIssueWarnings(issues: ParentEmailRiskIssue[], copy: CheckerCopy) {
   const uniqueWarnings = [...new Set(warnings)];
 
   return uniqueWarnings.slice(0, 4);
+}
+
+function isParentEmailRiskResult(
+  payload: unknown,
+): payload is ParentEmailRiskResult {
+  const candidate = payload as Partial<ParentEmailRiskResult> | null;
+
+  if (
+    typeof candidate !== "object" ||
+    candidate === null ||
+    typeof candidate.riskScore !== "number" ||
+    typeof candidate.saferVersion !== "string" ||
+    !["low", "medium", "high"].includes(candidate.riskLevel ?? "") ||
+    !Array.isArray(candidate.issuesDetected)
+  ) {
+    return false;
+  }
+
+  return candidate.issuesDetected.every((issue) => {
+    return (
+      typeof issue === "object" &&
+      issue !== null &&
+      typeof issue.id === "string" &&
+      typeof issue.label === "string" &&
+      typeof issue.category === "string" &&
+      (issue.matchedPhrase === undefined ||
+        typeof issue.matchedPhrase === "string")
+    );
+  });
 }
 
 export default function ParentEmailRiskCheckerClient({
@@ -299,12 +329,13 @@ export default function ParentEmailRiskCheckerClient({
         | ParentEmailRiskResult
         | { error?: string };
 
-      if (!response.ok || !("riskScore" in payload)) {
+      if (!response.ok || !isParentEmailRiskResult(payload)) {
         setResult(null);
         setError((payload as { error?: string }).error || copy.processingError);
         return;
       }
 
+      trackRiskCheckerSubmitted(locale);
       setResult(payload);
     } catch {
       setResult(null);
