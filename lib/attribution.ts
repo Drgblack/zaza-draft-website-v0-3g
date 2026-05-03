@@ -1,7 +1,7 @@
 /**
- * Zaza Draft — Creator Attribution (constants and types)
+ * Zaza Draft - Creator Attribution (constants and types)
  *
- * Safe to import from anywhere — App Router, Pages Router, client, server.
+ * Safe to import from anywhere - App Router, Pages Router, client, server.
  * The server-only logic that uses next/headers lives in attribution.server.ts
  * and must only be imported from App Router server components or route handlers.
  */

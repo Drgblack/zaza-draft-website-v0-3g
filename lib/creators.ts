@@ -1,5 +1,5 @@
 /**
- * Zaza Draft — Creator Partner Registry
+ * Zaza Draft - Creator Partner Registry
  *
  * To add a new creator, append an entry to the CREATORS object below.
  * The handle is the URL slug (zazadraft.com/c/[handle]) and must be lowercase,
@@ -12,7 +12,7 @@
  *   https://zazadraft.com/c/[handle]
  *
  * The build will validate config at compile time. Missing required fields
- * will fail the build, which is by design — better to fail loudly than ship
+ * will fail the build, which is by design - better to fail loudly than ship
  * a half-built creator page.
  */
 
@@ -24,7 +24,7 @@ export type CreatorSegment =
   | "general"; // Fallback for creators not matching above archetypes
 
 export type Creator = {
-  /** URL slug — lowercase, no spaces. e.g. 'coach', 'emily-karst' */
+  /** URL slug - lowercase, no spaces. e.g. 'coach', 'emily-karst' */
   handle: string;
 
   /** Full display name. e.g. 'Coach Anthony' */
@@ -48,7 +48,7 @@ export type Creator = {
   /** Custom CTA button text. e.g. "Try Coach's setup free for 14 days" */
   ctaLabel?: string;
 
-  /** Path to creator headshot (in /public). Optional — page works without. */
+  /** Path to creator headshot (in /public). Optional - page works without. */
   photoUrl?: string;
 
   /** Stripe promotion code. Auto-applied at checkout. e.g. 'COACH25' */
@@ -72,7 +72,7 @@ export type Creator = {
  */
 export const CREATORS: Record<string, Creator> = {
   // ============================================================
-  // EXAMPLE — Coach (parent emails, comedy/relatability)
+  // EXAMPLE - Coach (parent emails, comedy/relatability)
   // ============================================================
   coach: {
     handle: "coach",
@@ -84,7 +84,7 @@ export const CREATORS: Record<string, Creator> = {
     headline: "Stop letting parent emails ruin your Sunday.",
     useCase:
       "When the parent email lands, you write the honest version in your head. Zaza Draft turns that into the version you can actually send.",
-    ctaLabel: "Try the tool Coach uses — free",
+    ctaLabel: "Try the tool Coach uses, free",
     photoUrl: "/creators/coach.jpg",
     couponCode: "COACH25",
     discountPercent: 25,
@@ -93,7 +93,7 @@ export const CREATORS: Record<string, Creator> = {
   },
 
   // ============================================================
-  // EXAMPLE — Emily Karst / Joyful Noise Teaching (AI tools)
+  // EXAMPLE - Emily Karst / Joyful Noise Teaching (AI tools)
   // ============================================================
   "emily-karst": {
     handle: "emily-karst",
@@ -105,7 +105,7 @@ export const CREATORS: Record<string, Creator> = {
     headline:
       "The AI workflow Emily uses for high-stakes teacher communication.",
     useCase:
-      "Same idea as the AI tools Emily reviews — but built specifically for the moments where the stakes are emotional, not just productivity.",
+      "Same idea as the AI tools Emily reviews, but built specifically for the moments where the stakes are emotional, not just productivity.",
     ctaLabel: "Start with Emily's discount",
     photoUrl: "/creators/emily-karst.jpg",
     couponCode: "EMILY25",
@@ -115,7 +115,7 @@ export const CREATORS: Record<string, Creator> = {
   },
 
   // ============================================================
-  // EXAMPLE — Emily Espinosa / That One Teacher Gal (first-year)
+  // EXAMPLE - Emily Espinosa / That One Teacher Gal (first-year)
   // ============================================================
   "emily-espinosa": {
     handle: "emily-espinosa",
@@ -128,7 +128,7 @@ export const CREATORS: Record<string, Creator> = {
       "The parent-email tool every first-year teacher needs in their first week.",
     useCase:
       "Your toolkit teaches the framework. Zaza Draft applies it to the specific email staring at you right now at 9pm.",
-    ctaLabel: "Get Emily's recommendation — free",
+    ctaLabel: "Get Emily's recommendation, free",
     photoUrl: "/creators/emily-espinosa.jpg",
     couponCode: "GAL25",
     discountPercent: 25,
@@ -160,7 +160,7 @@ export function getActiveHandles(): string[] {
 /**
  * Segment-level fallback copy. Used when a creator has no custom headline
  * or useCase. This means even a barebones creator entry produces a coherent
- * page — you can flesh out the personalisation later.
+ * page - you can flesh out the personalisation later.
  */
 export const SEGMENT_DEFAULTS: Record<
   CreatorSegment,

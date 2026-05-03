@@ -1,11 +1,11 @@
 /**
- * Zaza Draft — Creator Attribution (server-only)
+ * Zaza Draft - Creator Attribution (server-only)
  *
  * This file uses next/headers, which is App Router server-only.
  * Only import this from:
- *   - App Router server components (app/**\/page.tsx, layout.tsx, etc.)
- *   - App Router route handlers (app/api/**\/route.ts)
- *   - Server Actions
+ *  - App Router server components (app/**\/page.tsx, layout.tsx, etc.)
+ *  - App Router route handlers (app/api/**\/route.ts)
+ *  - Server Actions
  *
  * Do NOT import from Pages Router files (pages/**\/*.tsx).
  * Do NOT import from client components ('use client').

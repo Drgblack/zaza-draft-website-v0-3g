@@ -11,7 +11,7 @@ import {
  * Writes the attribution cookies on first visit.
  *
  * Why client-side?
- * Next.js 15 server components in page.tsx cannot write cookies — only
+ * Next.js 15 server components in page.tsx cannot write cookies - only
  * Server Actions and Route Handlers can. This tiny client component runs
  * once on mount, sets the cookies, and renders nothing.
  *

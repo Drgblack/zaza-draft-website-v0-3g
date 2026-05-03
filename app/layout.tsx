@@ -88,7 +88,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   // Detect whether we're rendering a creator landing page (/c/[handle]).
-  // These are conversion funnels — they get their own minimal chrome
+  // These are conversion funnels - they get their own minimal chrome
   // defined in app/c/[handle]/layout.tsx, with no global header/footer.
   const headersList = await headers();
   const pathname = getRequestPathname(headersList);
