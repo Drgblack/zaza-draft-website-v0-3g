@@ -95,6 +95,22 @@ export const track = (event: string, props?: Record<string, any>) =>
 export const trackEvent = (event: string, props?: Record<string, any>) =>
   baseTrack(event, props);
 
+export const trackRiskCheckerSubmitted = (locale: "en" | "de") => {
+  if (typeof window === "undefined" || typeof window.gtag !== "function") {
+    return;
+  }
+
+  window.gtag("event", "risk_checker_submitted", {
+    event_category: "engagement",
+    event_label: "parent_email_risk_checker",
+    locale,
+    page_path:
+      locale === "de"
+        ? "/de/parent-email-risk-checker"
+        : "/parent-email-risk-checker",
+  });
+};
+
 export const trackCtaClick = ({
   ctaText,
   ctaLocation,
