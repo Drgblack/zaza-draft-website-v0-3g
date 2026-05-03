@@ -317,7 +317,7 @@ export function Header() {
                     trackCtaClick({
                       ctaText:
                         funnelCtaReady && funnelCheckout.isAvailable
-                          ? `${funnelHeaderCtaLabel} – ${funnelPriceLabel}`
+                          ? `${funnelHeaderCtaLabel} - ${funnelPriceLabel}`
                           : funnelHeaderCtaLabel,
                       ctaLocation: "header_funnel",
                     })

@@ -15,7 +15,7 @@ Write a complete SEO article in UK English. Structure it exactly as follows:
 
 Tone: Professional, calm, warm, and supportive toward teachers. Never condescending.
 Do not use em dashes. Use short paragraphs. UK English throughout.
-Length: 900–1100 words.
+Length: 900-1100 words.
 
 At the end, on a new line, write exactly: INTERNAL_LINKS: /report-comments, /scenario-builder`;
 

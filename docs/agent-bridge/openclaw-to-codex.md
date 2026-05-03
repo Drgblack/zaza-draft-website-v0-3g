@@ -895,7 +895,7 @@ Fix remaining visual and conversion issues on the live lead magnet.
 #### Landing page
 
 - Add a prominent button: `Share this guide with your teacher friends`
-- Add a clear secondary CTA at the bottom: `Try Zaza Draft free – stop rewriting emails at 10pm` linking to `/start`
+- Add a clear secondary CTA at the bottom: `Try Zaza Draft free - stop rewriting emails at 10pm` linking to `/start`
 
 ### Constraints
 
