@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { VideoHubClient } from "./video-hub-client";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -10,11 +10,11 @@ export async function generateMetadata(): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical: "https://zazadraft.com/videos",
+      canonical: "https://www.zazadraft.com/videos",
       languages: {
-        "en-GB": "https://zazadraft.com/videos",
-        "de-DE": "https://zazadraft.com/de/videos",
-        "x-default": "https://zazadraft.com/videos",
+        "en-GB": "https://www.zazadraft.com/videos",
+        "de-DE": "https://www.zazadraft.com/de/videos",
+        "x-default": "https://www.zazadraft.com/videos",
       },
     },
     openGraph: {

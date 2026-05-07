@@ -10,8 +10,8 @@ export const metadata: Metadata = buildPageMetadata({
     "Join the teacher community for practical AI discussion, classroom workflows, and safe school communication ideas.",
   path: "/community",
   alternates: {
-    en: "https://zazadraft.com/community",
-    de: "https://zazadraft.com/de/community",
+    en: "https://www.zazadraft.com/community",
+    de: "https://www.zazadraft.com/de/community",
   },
   keywords: [
     "teacher community",

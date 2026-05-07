@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ContactClient } from "../../contact/contact-client";
 
-const pageUrl = "https://zazadraft.com/de/contact";
+const pageUrl = "https://www.zazadraft.com/de/contact";
 const ogImage = "/hero/teacher.jpg";
 
 export const metadata: Metadata = {
@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: pageUrl,
     languages: {
-      "en-GB": "https://zazadraft.com/contact",
+      "en-GB": "https://www.zazadraft.com/contact",
       "de-DE": pageUrl,
-      "x-default": "https://zazadraft.com/contact",
+      "x-default": "https://www.zazadraft.com/contact",
     },
   },
   openGraph: {

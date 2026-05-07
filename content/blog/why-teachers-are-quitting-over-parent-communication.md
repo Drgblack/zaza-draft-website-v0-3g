@@ -195,7 +195,7 @@ And right now, avoidable weight matters.
 
 ## CTA
 
-If parent communication is taking too much of your energy outside the classroom, try [Zaza Draft](https://zazadraft.com). It is a calm, teacher-first co-writer for the emails, report comments, and school messages that are hardest to phrase when you are exhausted.
+If parent communication is taking too much of your energy outside the classroom, try [Zaza Draft](https://www.zazadraft.com). It is a calm, teacher-first co-writer for the emails, report comments, and school messages that are hardest to phrase when you are exhausted.
 
 ## FAQ
 

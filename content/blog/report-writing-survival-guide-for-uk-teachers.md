@@ -184,7 +184,7 @@ That is enough.
 
 ## CTA
 
-If report writing is swallowing your evenings, try [Zaza Draft](https://zazadraft.com). It helps teachers draft report comments faster, keep tone balanced, and still stay in full control of every final word.
+If report writing is swallowing your evenings, try [Zaza Draft](https://www.zazadraft.com). It helps teachers draft report comments faster, keep tone balanced, and still stay in full control of every final word.
 
 ## FAQ
 

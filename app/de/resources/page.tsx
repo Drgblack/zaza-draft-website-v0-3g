@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Ressourcen | Zaza Draft",
     description:
       "Guides, Vorlagen und KI-Sicherheitstipps speziell für Lehrkräfte.",
-    url: "https://zazadraft.com/de/resources",
+    url: "https://www.zazadraft.com/de/resources",
     type: "website",
     locale: "de_DE",
     images: [{ url: ogImage, alt: "Zaza Draft Ressourcenübersicht" }],
@@ -25,11 +25,11 @@ export const metadata: Metadata = {
     images: [ogImage],
   },
   alternates: {
-    canonical: "https://zazadraft.com/de/resources",
+    canonical: "https://www.zazadraft.com/de/resources",
     languages: {
-      "en-GB": "https://zazadraft.com/resources",
-      "de-DE": "https://zazadraft.com/de/resources",
-      "x-default": "https://zazadraft.com/resources",
+      "en-GB": "https://www.zazadraft.com/resources",
+      "de-DE": "https://www.zazadraft.com/de/resources",
+      "x-default": "https://www.zazadraft.com/resources",
     },
   },
 };

@@ -10,8 +10,8 @@ export const metadata: Metadata = buildPageMetadata({
   type: "article",
   image: "/hero/teacher.jpg",
   alternates: {
-    en: "https://zazadraft.com/reduce-stress-parent-messages",
-    de: "https://zazadraft.com/de/reduce-stress-parent-messages",
+    en: "https://www.zazadraft.com/reduce-stress-parent-messages",
+    de: "https://www.zazadraft.com/de/reduce-stress-parent-messages",
   },
   keywords: [
     "reduce stress from parent messages",

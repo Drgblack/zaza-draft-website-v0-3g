@@ -1,4 +1,4 @@
-﻿import { Metadata } from "next";
+import { Metadata } from "next";
 // Corrected to explicit relative path (../../) to resolve module not found error on Vercel build
 import BestAIToolParentEmailsClient from "../../best-ai-tool-parent-emails/best-ai-tool-parent-emails-client";
 
@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Finden Sie den KI-Assistenten, der speziell für die Lehrer-Eltern-Kommunikation, Tonfallkontrolle und DSGVO-Konformität entwickelt wurde.",
   alternates: {
-    canonical: "https://zazadraft.com/de/best-ai-tool-parent-emails",
+    canonical: "https://www.zazadraft.com/de/best-ai-tool-parent-emails",
     languages: {
       "en-GB": "/best-ai-tool-parent-emails",
       "de-DE": "/de/best-ai-tool-parent-emails",

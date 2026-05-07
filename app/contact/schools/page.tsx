@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SchoolSalesContactClient } from "@/components/contact/school-sales-contact-client";
 import { parseSchoolSalesPlan, sanitizeLeadSource } from "@/lib/draft-cta";
 
-const pageUrl = "https://zazadraft.com/contact/schools";
+const pageUrl = "https://www.zazadraft.com/contact/schools";
 const ogImage = "/hero/teacher.jpg";
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     canonical: pageUrl,
     languages: {
       "en-GB": pageUrl,
-      "de-DE": "https://zazadraft.com/de/contact/schools",
+      "de-DE": "https://www.zazadraft.com/de/contact/schools",
       "x-default": pageUrl,
     },
   },

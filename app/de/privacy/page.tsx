@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description:
       "Erfahren Sie, wie wir Lehrkräfte- und Schülerdaten mit klaren, DSGVO-konformen Schutzmaßnahmen sichern.",
 
-    url: "https://zazadraft.com/de/privacy",
+    url: "https://www.zazadraft.com/de/privacy",
 
     type: "website",
 
@@ -46,12 +46,12 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://zazadraft.com/de/privacy",
+    canonical: "https://www.zazadraft.com/de/privacy",
 
     languages: {
-      "en-GB": "https://zazadraft.com/privacy",
-      "de-DE": "https://zazadraft.com/de/privacy",
-      "x-default": "https://zazadraft.com/privacy",
+      "en-GB": "https://www.zazadraft.com/privacy",
+      "de-DE": "https://www.zazadraft.com/de/privacy",
+      "x-default": "https://www.zazadraft.com/privacy",
     },
   },
 };

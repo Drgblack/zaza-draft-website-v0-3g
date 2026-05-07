@@ -71,8 +71,8 @@ export async function generateMetadata({
     path: `/compare/${slug}`,
     type: "article",
     alternates: {
-      en: `https://zazadraft.com/compare/${slug}`,
-      de: `https://zazadraft.com/de/compare/${slug}`,
+      en: `https://www.zazadraft.com/compare/${slug}`,
+      de: `https://www.zazadraft.com/de/compare/${slug}`,
     },
     keywords: [
       "teacher ai comparison",

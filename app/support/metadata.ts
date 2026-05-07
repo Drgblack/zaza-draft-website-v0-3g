@@ -7,8 +7,8 @@ export const metadata: Metadata = buildPageMetadata({
     "Contact Zaza Draft for help with onboarding, billing, privacy questions, or teacher account support for parent communication and report writing workflows.",
   path: "/support",
   alternates: {
-    en: "https://zazadraft.com/support",
-    de: "https://zazadraft.com/de/support",
+    en: "https://www.zazadraft.com/support",
+    de: "https://www.zazadraft.com/de/support",
   },
   keywords: [
     "teacher AI support",

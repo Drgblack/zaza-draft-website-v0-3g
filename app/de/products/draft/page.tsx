@@ -3,7 +3,7 @@ import DraftClient from "@/app/products/draft/draft-client";
 import { SetLanguage } from "@/components/set-language";
 
 const ogImage = "/shared-teacher-desk-hero.jpg";
-const canonicalUrl = "https://zazadraft.com/de/products/draft";
+const canonicalUrl = "https://www.zazadraft.com/de/products/draft";
 
 export const metadata: Metadata = {
   title:
@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: canonicalUrl,
     languages: {
-      "en-GB": "https://zazadraft.com/products/draft",
+      "en-GB": "https://www.zazadraft.com/products/draft",
       "de-DE": canonicalUrl,
-      "x-default": "https://zazadraft.com/products/draft",
+      "x-default": "https://www.zazadraft.com/products/draft",
     },
   },
   openGraph: {

@@ -5,7 +5,7 @@ import { SetLanguage } from "@/components/set-language";
 const pageTitle = "Zaza Suite | Sichere, lehrerzentrierte KI-Apps";
 const pageDescription =
   "Eine Familie sicherer KI-Apps, die Routinearbeit reduziert und deine Stimme schützt. Gefördert durch Zaza KnowledgeCore.";
-const pageUrl = "https://zazadraft.com/de/suite";
+const pageUrl = "https://www.zazadraft.com/de/suite";
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: pageUrl,
     languages: {
-      "en-GB": "https://zazadraft.com/suite",
+      "en-GB": "https://www.zazadraft.com/suite",
       "de-DE": pageUrl,
-      "x-default": "https://zazadraft.com/suite",
+      "x-default": "https://www.zazadraft.com/suite",
     },
   },
   openGraph: {

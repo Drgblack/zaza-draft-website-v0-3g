@@ -1,4 +1,6 @@
-const baseUrl = "https://zazadraft.com";
+import { absoluteUrl, siteConfig } from "@/lib/seo/site-config";
+
+const baseUrl = siteConfig.url;
 
 const organisationSchema = {
   "@context": "https://schema.org",
@@ -6,7 +8,7 @@ const organisationSchema = {
   "@id": `${baseUrl}/#organization`,
   name: "Zaza Technologies",
   url: baseUrl,
-  logo: `${baseUrl}/z-logo.png`,
+  logo: absoluteUrl("/z-logo.png"),
   contactPoint: [
     {
       "@type": "ContactPoint",

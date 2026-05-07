@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const pageUrl = "https://zazadraft.com/teacher-stories";
+const pageUrl = "https://www.zazadraft.com/teacher-stories";
 
 export const metadata: Metadata = {
   title: "Teacher Stories | Zaza Draft",

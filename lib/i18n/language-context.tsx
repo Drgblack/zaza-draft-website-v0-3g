@@ -143,7 +143,7 @@ const translationsEn: Record<string, string> = {
     "Paid self-serve plans are covered by the 30-day money-back guarantee.",
 
   // Testimonials
-  "pricing.testimonials.title": "What teachers say about pricing",
+  "pricing.testimonials.title": "How teachers can use each plan",
   "pricing.testimonials.1.name": "Sarah L.",
   "pricing.testimonials.1.role": "Middle School Teacher",
   "pricing.testimonials.1.quote":
@@ -478,7 +478,7 @@ const translationsEn: Record<string, string> = {
   "suite.logos.item5": "Greenwood School",
 
   // Suite - Screenshots (EN)
-  "suite.screens.title": "Built for real teachers, in real classrooms",
+  "suite.screens.title": "Built for real school communication",
   "suite.screens.caption":
     "Calm, responsible AI designed around the realities of teaching - not generic software workflows.",
 
@@ -716,7 +716,7 @@ const translationsEn: Record<string, string> = {
   "stats.documentsRefined.label":
     "Written for paper-trail communication and high-stakes contexts.",
   "stats.teachers.number": "Teacher-first",
-  "stats.teachers.label": "Design partners shaping Draft",
+  "stats.teachers.label": "Designed around teacher workflows",
   "stats.timeSaved.number": "Time back",
   "stats.timeSaved.label": "for teaching",
   "stats.subtitle":
@@ -724,7 +724,8 @@ const translationsEn: Record<string, string> = {
   "socialProof.badges.teacherFounded":
     "Teacher-founded, PhD in Professional Education",
   "socialProof.badges.gdprReady": "Built in Germany - GDPR-ready",
-  "socialProof.badges.teacherFeedback": "Designed with real teacher feedback",
+  "socialProof.badges.teacherFeedback":
+    "Designed around teacher communication workflows",
   "socialProof.badges.hallucinationSafe": "No invented student facts",
 
   // How It Works Section
@@ -856,13 +857,14 @@ const translationsEn: Record<string, string> = {
     "More back-and-forth when you are already tired or unsure",
   "comparison.rows.learningCurve.zaza":
     "Helps you get to a calmer sendable version faster when timing and interpretation matter",
-  "comparison.rows.community.feature": "Built with teacher feedback",
+  "comparison.rows.community.feature":
+    "Built around teacher communication workflows",
   "comparison.rows.community.generic":
     "Not specifically shaped around school workflows",
   "comparison.rows.community.zaza":
-    "Refined around real teacher communication pain points and review habits",
+    "Refined around parent emails, report comments, and review-heavy school writing",
   "caseStudies.eyebrow": "Before / After",
-  "caseStudies.heading": "Before / After from real teachers",
+  "caseStudies.heading": "Before / After example workflows",
   "caseStudies.subheading":
     "Quick snapshots of how Draft rewrites tricky messages into calm, specific notes.",
   "caseStudies.beforeLabel": "Before",
@@ -1546,7 +1548,7 @@ const translationsEn: Record<string, string> = {
   "founder.personal.message1":
     "If you are reading this, you are probably a teacher who is curious about AI but understandably cautious. You care deeply about your students and your professionalism, and you do not want a tool that treats teaching as a set of prompts and templates. I share that view. Technology should serve your judgement, not replace it.",
   "founder.personal.message2":
-    "That is why Zaza is built differently. Every feature is shaped with real teachers, tested in real classrooms or real professional contexts, and refined based on honest feedback. I draw on my background in learning and development, critical thinking research and system design, but the goal is always the same: calm, trustworthy support that fits the messy reality of teaching.",
+    "That is why Zaza is built differently. Every feature is shaped around teacher communication workflows and refined through ongoing product learning. I draw on my background in learning and development, critical thinking research and system design, but the goal is always the same: calm, trustworthy support that fits the messy reality of teaching.",
   "founder.personal.message3":
     "I would love to hear from you - whether you have questions, feedback, or simply want to share what is happening in your classroom. My hope is that Zaza helps you reclaim time, reduce stress and feel more confident in your work. Let us build the future of teacher technology together.",
   "founder.personal.name": "Greg",
@@ -2347,7 +2349,7 @@ const translationsDe: Record<string, string> = {
   "stats.documentsRefined.label":
     "Für schriftliche Nachvollziehbarkeit und sensible Situationen.",
   "stats.teachers.number": "Lehrerzentriert",
-  "stats.teachers.label": "Designpartner",
+  "stats.teachers.label": "An Lehrkraft-Workflows ausgerichtet",
   "stats.timeSaved.number": "Zeit zurück",
   "stats.timeSaved.label": "für den Unterricht",
   "stats.subtitle":
@@ -2356,7 +2358,7 @@ const translationsDe: Record<string, string> = {
     "Von Lehrkräften gegründet - mit Doktortitel in Bildungswissenschaft",
   "socialProof.badges.gdprReady": "In Deutschland entwickelt - DSGVO-konform",
   "socialProof.badges.teacherFeedback":
-    "Mit echtem Lehrkräfte-Feedback entwickelt",
+    "An Lehrkraft-Kommunikationsablaeufen ausgerichtet",
   "socialProof.badges.hallucinationSafe":
     "Keine erfundenen Schuelerinformationen",
 
@@ -2497,11 +2499,12 @@ const translationsDe: Record<string, string> = {
     "Mehr Hin und Her, wenn du ohnehin muede oder unsicher bist",
   "comparison.rows.learningCurve.zaza":
     "Hilft schneller zu einer ruhigeren sendbaren Version, wenn Timing und Interpretation zaehlen",
-  "comparison.rows.community.feature": "Mit Lehrkraft-Feedback entwickelt",
+  "comparison.rows.community.feature":
+    "Auf Lehrkraft-Kommunikationsablaeufe ausgerichtet",
   "comparison.rows.community.generic":
     "Nicht gezielt um Schulablaeufe herum entwickelt",
   "comparison.rows.community.zaza":
-    "An echten Schmerzpunkten und Review-Gewohnheiten von Lehrkraeften verfeinert",
+    "Auf Elternmails, Zeugnisbemerkungen und review-intensive Schultexte zugeschnitten",
   "caseStudies.eyebrow": "Vorher / Nachher",
   "caseStudies.heading": "Vorher / Nachher aus echten Klassenzimmern",
   "caseStudies.subheading":

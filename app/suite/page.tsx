@@ -11,18 +11,18 @@ export async function generateMetadata(): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical: "https://zazadraft.com/suite",
+      canonical: "https://www.zazadraft.com/suite",
       languages: {
-        "en-GB": "https://zazadraft.com/suite",
-        "de-DE": "https://zazadraft.com/de/suite",
-        "x-default": "https://zazadraft.com/suite",
+        "en-GB": "https://www.zazadraft.com/suite",
+        "de-DE": "https://www.zazadraft.com/de/suite",
+        "x-default": "https://www.zazadraft.com/suite",
       },
     },
     openGraph: {
       title,
       description,
       type: "website",
-      url: "https://zazadraft.com/suite",
+      url: "https://www.zazadraft.com/suite",
       siteName: "Zaza Draft",
       locale: "en_GB",
       images: [{ url: ogImage, alt: "Teacher using the Zaza Suite apps" }],

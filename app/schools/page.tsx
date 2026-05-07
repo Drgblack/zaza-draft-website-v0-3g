@@ -12,8 +12,8 @@ export const metadata: Metadata = buildPageMetadata({
   path: "/schools",
   image: schoolsEnContent.heroImage,
   alternates: {
-    en: "https://zazadraft.com/schools",
-    de: "https://zazadraft.com/de/schools",
+    en: "https://www.zazadraft.com/schools",
+    de: "https://www.zazadraft.com/de/schools",
   },
   keywords: [
     "school communication support",

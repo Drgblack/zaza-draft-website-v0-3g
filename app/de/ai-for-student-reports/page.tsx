@@ -1,4 +1,4 @@
-﻿import { Metadata } from "next";
+import { Metadata } from "next";
 // Corrected to explicit relative path (../../) and using NAMED import to fix module not found error on Vercel build
 import { AiForStudentReportsClient } from "../../ai-for-student-reports/ai-for-student-reports-client";
 
@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Verwandeln Sie Beobachtungen in Sekundenschnelle in professionelle Berichte. Sparen Sie Zeit und verbessern Sie die Qualität Ihrer Zeugnisse.",
   alternates: {
-    canonical: "https://zazadraft.com/de/ai-for-student-reports",
+    canonical: "https://www.zazadraft.com/de/ai-for-student-reports",
     languages: {
       "en-GB": "/ai-for-student-reports",
       "de-DE": "/de/ai-for-student-reports",

@@ -537,7 +537,7 @@ export function getComparisonSitemapEntries(
 
     return [
       {
-        url: `https://zazadraft.com${page.path}`,
+        url: `https://www.zazadraft.com${page.path}`,
         lastModified: page.lastReviewed
           ? parseFreshnessDate(page.lastReviewed)
           : fallbackLastModified,

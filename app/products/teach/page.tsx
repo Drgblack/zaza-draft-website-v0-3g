@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import TeachClient from "./teach-client";
 
 const ogImage = "/fast-lesson-planning-workflow.jpg";
-const canonicalUrl = "https://zazadraft.com/products/teach";
+const canonicalUrl = "https://www.zazadraft.com/products/teach";
 
 export const metadata: Metadata = {
   title: "Zaza Teach | AI lesson planning that respects your craft",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     canonical: canonicalUrl,
     languages: {
       "en-GB": canonicalUrl,
-      "de-DE": "https://zazadraft.com/de/products/teach",
+      "de-DE": "https://www.zazadraft.com/de/products/teach",
       "x-default": canonicalUrl,
     },
   },

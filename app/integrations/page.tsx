@@ -10,8 +10,8 @@ export const metadata: Metadata = buildPageMetadata({
     "Explore Zaza Draft integration guides for education tools including Google Classroom, Canvas, Schoology, and PowerSchool.",
   path: "/integrations",
   alternates: {
-    en: "https://zazadraft.com/integrations",
-    de: "https://zazadraft.com/de/integrations",
+    en: "https://www.zazadraft.com/integrations",
+    de: "https://www.zazadraft.com/de/integrations",
   },
   keywords: [
     "teacher AI integrations",
@@ -31,7 +31,7 @@ export default function IntegrationsPage() {
           name: "Zaza Draft Integrations",
           description:
             "Education tool integrations and setup guides for Zaza Draft",
-          url: "https://zazadraft.com/integrations",
+          url: "https://www.zazadraft.com/integrations",
           numberOfItems: 52,
           itemListElement: [
             {
@@ -57,8 +57,11 @@ export default function IntegrationsPage() {
       </Script>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://zazadraft.com" },
-          { name: "Integrations", url: "https://zazadraft.com/integrations" },
+          { name: "Home", url: "https://www.zazadraft.com" },
+          {
+            name: "Integrations",
+            url: "https://www.zazadraft.com/integrations",
+          },
         ]}
       />
       <IntegrationsClient />

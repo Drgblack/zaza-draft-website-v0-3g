@@ -8,7 +8,7 @@ import { ArrowLeft } from "lucide-react";
 
 const ogImage = "/greg-blackburn-headshot.jpg";
 
-const canonicalUrl = "https://zazadraft.com/de/about/founder-story";
+const canonicalUrl = "https://www.zazadraft.com/de/about/founder-story";
 
 export const metadata: Metadata = {
   title: "Gründerstory | Zaza Draft",
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
     canonical: canonicalUrl,
 
     languages: {
-      "en-GB": "https://zazadraft.com/about/founder-story",
+      "en-GB": "https://www.zazadraft.com/about/founder-story",
       "de-DE": canonicalUrl,
-      "x-default": "https://zazadraft.com/about/founder-story",
+      "x-default": "https://www.zazadraft.com/about/founder-story",
     },
   },
 

@@ -53,8 +53,8 @@ export async function generateMetadata({
     };
   }
 
-  const canonical = `https://zazadraft.com/de/compare/${slug}`;
-  const en = `https://zazadraft.com/compare/${slug}`;
+  const canonical = `https://www.zazadraft.com/de/compare/${slug}`;
+  const en = `https://www.zazadraft.com/compare/${slug}`;
 
   return {
     title: comparison.metaTitle,

@@ -16,7 +16,7 @@ import {
   zazaDraftEntityKeywords,
 } from "@/lib/seo/entity-definitions";
 
-const baseUrl = "https://zazadraft.com";
+const baseUrl = "https://www.zazadraft.com";
 const brandName = "Zaza Draft";
 const organizationId = `${baseUrl}/#organization`;
 const softwareId = `${baseUrl}/products/draft#software`;

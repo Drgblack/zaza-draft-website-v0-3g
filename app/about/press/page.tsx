@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Press Kit | Zaza Draft media resources",
     description:
       "Download logos, screenshots, brand guidelines, and founder bio. Ready-to-use media assets for journalists and partners.",
-    url: "https://zazadraft.com/about/press",
+    url: "https://www.zazadraft.com/about/press",
     type: "website",
     siteName: "Zaza Draft",
     locale: "en_GB",
@@ -32,11 +32,11 @@ export const metadata: Metadata = {
     images: [ogImage],
   },
   alternates: {
-    canonical: "https://zazadraft.com/about/press",
+    canonical: "https://www.zazadraft.com/about/press",
     languages: {
-      "en-GB": "https://zazadraft.com/about/press",
-      "de-DE": "https://zazadraft.com/de/about/press",
-      "x-default": "https://zazadraft.com/about/press",
+      "en-GB": "https://www.zazadraft.com/about/press",
+      "de-DE": "https://www.zazadraft.com/de/about/press",
+      "x-default": "https://www.zazadraft.com/about/press",
     },
   },
 };

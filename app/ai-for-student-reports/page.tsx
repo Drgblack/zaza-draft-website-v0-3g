@@ -10,8 +10,8 @@ export const metadata: Metadata = buildPageMetadata({
     "Turn classroom observations into clear, professional student reports with teacher-first AI drafting support.",
   path: "/ai-for-student-reports",
   alternates: {
-    en: "https://zazadraft.com/ai-for-student-reports",
-    de: "https://zazadraft.com/de/ai-for-student-reports",
+    en: "https://www.zazadraft.com/ai-for-student-reports",
+    de: "https://www.zazadraft.com/de/ai-for-student-reports",
   },
   keywords: [
     "AI for student reports",

@@ -197,7 +197,7 @@ That is what honest but kind usually means in practice.
 
 ## CTA
 
-If difficult report comments are taking the longest and draining the most energy, try [Zaza Draft](https://zazadraft.com). It helps teachers draft balanced report wording faster while keeping every final decision with the teacher.
+If difficult report comments are taking the longest and draining the most energy, try [Zaza Draft](https://www.zazadraft.com). It helps teachers draft balanced report wording faster while keeping every final decision with the teacher.
 
 ## FAQ
 

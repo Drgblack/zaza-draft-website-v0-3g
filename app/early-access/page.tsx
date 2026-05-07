@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import EarlyAccessClient from "./early-access-client";
 
-const canonicalUrl = "https://zazadraft.com/early-access";
+const canonicalUrl = "https://www.zazadraft.com/early-access";
 
 export const metadata: Metadata = {
   title: "Join the Zaza Draft Waitlist | Teacher-first AI writing",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     canonical: canonicalUrl,
     languages: {
       "en-GB": canonicalUrl,
-      "de-DE": "https://zazadraft.com/de/early-access",
+      "de-DE": "https://www.zazadraft.com/de/early-access",
       "x-default": canonicalUrl,
     },
   },

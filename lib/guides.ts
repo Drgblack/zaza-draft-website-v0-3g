@@ -704,7 +704,7 @@ export function getRelatedGuideLinks(currentSlug: GuidePageData["slug"]) {
 
 export function getGuideSitemapEntries(fallbackLastModified = new Date()) {
   return guides.map((guide) => ({
-    url: `https://zazadraft.com${guide.path}`,
+    url: `https://www.zazadraft.com${guide.path}`,
     lastModified: guide.lastReviewed
       ? new Date(`${guide.lastReviewed}T00:00:00.000Z`)
       : fallbackLastModified,

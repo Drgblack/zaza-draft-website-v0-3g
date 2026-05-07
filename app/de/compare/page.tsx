@@ -1,4 +1,4 @@
-﻿import { Metadata } from "next";
+import { Metadata } from "next";
 // Import the client component from the relative path
 import { CompareClient } from "../../compare/compare-client";
 
@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Vergleichen Sie Zaza Draft mit anderen KI-Tools für Lehrer. Detaillierte Vergleiche helfen Ihnen, das beste Tool für Ihre Bedürfnisse zu finden.",
   alternates: {
-    canonical: "https://zazadraft.com/de/compare",
+    canonical: "https://www.zazadraft.com/de/compare",
     languages: {
       "en-GB": "/compare",
       "de-DE": "/de/compare",

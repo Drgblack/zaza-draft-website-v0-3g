@@ -9,8 +9,8 @@ export const metadata: Metadata = buildPageMetadata({
     "Master AI tools for education with free courses, certification programs, and downloadable resources. Learn prompt engineering, ethical AI use, and practical classroom applications.",
   path: "/ai-literacy",
   alternates: {
-    en: "https://zazadraft.com/ai-literacy",
-    de: "https://zazadraft.com/de/ai-literacy",
+    en: "https://www.zazadraft.com/ai-literacy",
+    de: "https://www.zazadraft.com/de/ai-literacy",
   },
   keywords: [
     "AI literacy for teachers",
@@ -28,12 +28,12 @@ export default function AILiteracyPage() {
         name="AI Literacy for Teachers"
         description="Comprehensive AI education program with free courses, certification, and resources for teachers"
         provider="Zaza Draft"
-        url="https://zazadraft.com/ai-literacy"
+        url="https://www.zazadraft.com/ai-literacy"
       />
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://zazadraft.com" },
-          { name: "AI Literacy", url: "https://zazadraft.com/ai-literacy" },
+          { name: "Home", url: "https://www.zazadraft.com" },
+          { name: "AI Literacy", url: "https://www.zazadraft.com/ai-literacy" },
         ]}
       />
       <AILiteracyClient />

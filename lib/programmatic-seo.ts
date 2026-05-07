@@ -2850,7 +2850,7 @@ export function getProgrammaticSitemapEntries(
   const push = (path: string, priority: number) => {
     const page = slugToProps(path);
     entries.push({
-      url: `https://zazadraft.com${path}`,
+      url: `https://www.zazadraft.com${path}`,
       lastModified: page?.lastReviewed
         ? parseFreshnessDate(page.lastReviewed)
         : fallbackLastModified,

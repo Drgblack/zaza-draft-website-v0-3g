@@ -19,8 +19,8 @@ export const metadata: Metadata = buildPageMetadata({
     "Start with the draft that still does not sound right. Zaza Draft helps teachers improve tone, professionalism, and report-comment quality before sending or submitting.",
   path: "/start",
   alternates: {
-    en: "https://zazadraft.com/start",
-    de: "https://zazadraft.com/de/start",
+    en: "https://www.zazadraft.com/start",
+    de: "https://www.zazadraft.com/de/start",
   },
   keywords: [
     "teacher email tone support",

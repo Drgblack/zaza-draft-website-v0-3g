@@ -1,860 +1,277 @@
 "use client";
 
-import type React from "react";
-
-import { useState } from "react";
-import { useLanguage } from "@/lib/i18n/language-context";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Card } from "@/components/ui/card";
-import {
-  Download,
-  Users,
-  TrendingUp,
-  Award,
-  BookOpen,
-  BarChart3,
-  FileText,
-  CheckCircle2,
-  ArrowRight,
-  Share2,
-} from "lucide-react";
 import Link from "next/link";
+import {
+  ArrowRight,
+  BookOpen,
+  FileText,
+  ShieldCheck,
+  Users,
+} from "lucide-react";
+
+import { AgentReadableSummary } from "@/components/seo/AgentReadableSummary";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/lib/i18n/language-context";
 
 export default function StateOfAIClient() {
   const { language } = useLanguage();
-  const [email, setEmail] = useState("");
-  const [role, setRole] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [error, setError] = useState("");
+  const isGerman = language === "de";
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-      setError(
-        language === "de"
-          ? "Bitte geben Sie eine gÃ¼ltige E-Mail-Adresse ein."
-          : "Please enter a valid email address.",
-      );
-      return;
-    }
-    setError("");
-    setIsSubmitting(true);
-
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      console.log("TODO: connect to Brevo", {
-        email,
-        role,
-        report: "State of AI 2025",
-      });
-      setIsSubmitted(true);
-    } catch (err) {
-      console.error("[v0] Report download failed", err);
-      setError(
-        language === "de"
-          ? "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
-          : "Something went wrong. Please try again.",
-      );
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const keyFindings = [
-    {
-      stat: "87%",
-      label:
-        language === "de"
-          ? "der LehrkrÃ¤fte nutzen KI wÃ¶chentlich"
-          : "of teachers use AI weekly",
-      description:
-        language === "de"
-          ? "Anstieg von 34% im Jahr 2024, zeigt schnelle Akzeptanz Ã¼ber alle Klassenstufen"
-          : "Up from 34% in 2024, showing rapid adoption across all grade levels",
-      icon: TrendingUp,
-    },
-    {
-      stat: "6.2 Std",
-      label:
-        language === "de"
-          ? "gespart pro Woche pro Lehrkraft"
-          : "saved per week per teacher",
-      description:
-        language === "de"
-          ? "Durchschnittliche Zeitersparnis von regelmÃ¤ÃŸigen KI-Nutzern fÃ¼r administrative Aufgaben"
-          : "Average time savings reported by regular AI users for administrative tasks",
-      icon: Users,
-    },
-    {
-      stat: "92%",
-      label:
-        language === "de"
-          ? "berichten verbesserte Kommunikation"
-          : "report improved communication",
-      description:
-        language === "de"
-          ? "LehrkrÃ¤fte, die KI fÃ¼r Eltern-E-Mails nutzen, berichten von besserem Engagement und Klarheit"
-          : "Teachers using AI for parent emails report better engagement and clarity",
-      icon: Award,
-    },
-    {
-      stat: "68%",
-      label:
-        language === "de"
-          ? "wÃ¼nschen mehr KI-Schulung"
-          : "want more AI training",
-      description:
-        language === "de"
-          ? "Mehrheit der PÃ¤dagogen sucht berufliche Weiterbildung in KI-Kompetenz"
-          : "Majority of educators seek professional development in AI literacy",
-      icon: BookOpen,
-    },
-  ];
-
-  const reportSections = [
-    {
-      title: language === "de" ? "Zusammenfassung" : "Executive Summary",
-      description:
-        language === "de"
-          ? "Ãœbergeordnete Erkenntnisse und wichtige Erkenntnisse fÃ¼r Administratoren und EntscheidungstrÃ¤ger"
-          : "High-level insights and key takeaways for administrators and policymakers",
-      icon: FileText,
-    },
-    {
-      title: language === "de" ? "Akzeptanztrends" : "Adoption Trends",
-      description:
-        language === "de"
-          ? "Wie sich die KI-Nutzung Ã¼ber Klassenstufen, FÃ¤cher und Schultypen entwickelt hat"
-          : "How AI usage has evolved across grade levels, subjects, and school types",
-      icon: TrendingUp,
-    },
-    {
-      title:
-        language === "de"
-          ? "AnwendungsfÃ¤lle & Auswirkungen"
-          : "Use Cases & Impact",
-      description:
-        language === "de"
-          ? "Reale Anwendungen und gemessene Ergebnisse von 15.000+ LehrkrÃ¤ften"
-          : "Real-world applications and measured outcomes from 15,000+ teachers",
-      icon: BarChart3,
-    },
-    {
-      title:
-        language === "de"
-          ? "Herausforderungen & Bedenken"
-          : "Challenges & Concerns",
-      description:
-        language === "de"
-          ? "Datenschutz, Chancengleichheit, SchulungslÃ¼cken und ethische Ãœberlegungen"
-          : "Privacy, equity, training gaps, and ethical considerations",
-      icon: Award,
-    },
-    {
-      title: language === "de" ? "Zukunftsausblick" : "Future Outlook",
-      description:
-        language === "de"
-          ? "Prognosen und Empfehlungen fÃ¼r die nÃ¤chsten 3-5 Jahre"
-          : "Predictions and recommendations for the next 3-5 years",
-      icon: BookOpen,
-    },
-    {
-      title: language === "de" ? "Best Practices" : "Best Practices",
-      description:
-        language === "de"
-          ? "Umsetzbare Rahmenwerke von leistungsstarken Schulen und Bezirken"
-          : "Actionable frameworks from high-performing schools and districts",
-      icon: CheckCircle2,
-    },
-  ];
-
-  const mediaMentions = [
-    {
-      outlet: "EdWeek",
-      quote:
-        language === "de"
-          ? "Die umfassendste Analyse der KI-Akzeptanz in der K-12-Bildung bis heute"
-          : "The most comprehensive analysis of AI adoption in K-12 education to date",
-    },
-    {
-      outlet: "The Chronicle",
-      quote:
-        language === "de"
-          ? "PflichtlektÃ¼re fÃ¼r jeden Schuladministrator und EntscheidungstrÃ¤ger"
-          : "Essential reading for every school administrator and policymaker",
-    },
-    {
-      outlet: "EdSurge",
-      quote:
-        language === "de"
-          ? "DatengestÃ¼tzte Erkenntnisse, die konventionelle Weisheiten Ã¼ber KI in Schulen in Frage stellen"
-          : "Data-driven insights that challenge conventional wisdom about AI in schools",
-    },
-    {
-      outlet: "Education Dive",
-      quote:
-        language === "de"
-          ? "Eine wegweisende Studie, die die Bildungspolitik fÃ¼r Jahre prÃ¤gen wird"
-          : "A landmark study that will shape education policy for years to come",
-    },
-  ];
-
-  const previousReports = [
-    { year: "2024", downloads: "47.000+", url: "#" },
-    { year: "2023", downloads: "32.000+", url: "#" },
-    { year: "2022", downloads: "18.000+", url: "#" },
-  ];
+  const content = isGerman
+    ? {
+        badge: "Ressourcen-Hub",
+        title: "Wie Zaza derzeit ueber KI in der Bildung denkt",
+        subtitle:
+          "Diese Seite ist aktuell kein Marktbericht und kein Datensatz mit grossen Reichweitenangaben. Sie sammelt stattdessen die Fragen, Prinzipien und Themenfelder, die fuer Lehrkraefte und Schulen beim Einsatz von KI in sensibler Kommunikation wirklich zaehlen.",
+        pillars: [
+          {
+            icon: ShieldCheck,
+            title: "Verantwortung vor Geschwindigkeit",
+            body: "Wenn KI in Schulen eingesetzt wird, ist die Qualitaet einer Formulierung oft wichtiger als die reine Geschwindigkeit der Texterstellung.",
+          },
+          {
+            icon: Users,
+            title: "Lehrkraft bleibt in Kontrolle",
+            body: "Zaza ist fuer review-intensive Arbeitsablaeufe gedacht. Die finale Entscheidung ueber jeden Text bleibt bei der Lehrkraft oder der Schule.",
+          },
+          {
+            icon: BookOpen,
+            title: "Praxisnaehe statt Hype",
+            body: "Wir fokussieren auf Elternmails, Zeugnisbemerkungen und sensible Schulnachrichten statt auf breite KI-Slogans.",
+          },
+        ],
+        sections: [
+          {
+            title: "Welche Fragen wir beobachten",
+            body: "Wie kann KI Lehrkraefte bei schwierigen Nachrichten unterstuetzen, ohne Professionalitaet, Datenschutz oder schulische Prozesse zu untergraben?",
+          },
+          {
+            title: "Welche Themen kuenftige Ressourcen abdecken sollen",
+            body: "Leitfaeden zu Tonrisiko, teacher review, sensible Elternkommunikation, verantwortungsvoller Einfuehrung in Schulen und klaren Grenzen generischer KI-Tools.",
+          },
+          {
+            title: "Was diese Seite nicht behauptet",
+            body: "Sie ist kein flaechendeckender Marktbericht, keine grosse Umfrage und kein Nachweis von Marktpenetration. Wenn kuenftige Forschung erscheint, sollte sie klar belegt und nachvollziehbar veroeffentlicht werden.",
+          },
+        ],
+        summaryTitle: "Kurzfassung fuer Schulleitungen und Lehrkraefte",
+        ctaTitle: "Zaza lieber in Produkt und Preise einordnen",
+        ctaBody:
+          "Wenn Sie wissen moechten, wie Zaza Draft konkret fuer Elternkommunikation und sensible Schultexte eingesetzt wird, finden Sie die aktuellsten Informationen auf den Produkt- und Preis-Seiten.",
+        primary: "Produkt ansehen",
+        secondary: "Preise ansehen",
+        topic: "Thema",
+      }
+    : {
+        badge: "Resource hub",
+        title: "How Zaza currently thinks about AI in education",
+        subtitle:
+          "This page is not currently a market report or a large-scale dataset. Instead, it gathers the questions, principles, and topic areas that matter most when teachers and schools use AI in sensitive communication.",
+        pillars: [
+          {
+            icon: ShieldCheck,
+            title: "Responsibility before speed",
+            body: "When AI is used in schools, the quality of a phrase often matters more than how quickly text can be generated.",
+          },
+          {
+            icon: Users,
+            title: "Teacher review stays central",
+            body: "Zaza is designed for review-heavy workflows. Final judgement over any message stays with the teacher or the school.",
+          },
+          {
+            icon: BookOpen,
+            title: "Teacher practice over hype",
+            body: "The focus is parent emails, report comments, and sensitive school messages rather than broad AI slogans.",
+          },
+        ],
+        sections: [
+          {
+            title: "Questions we are tracking",
+            body: "How can AI support teachers with difficult messages without undermining professionalism, privacy, or school processes?",
+          },
+          {
+            title: "What future resources should cover",
+            body: "Guidance on tone risk, teacher review, sensitive parent communication, responsible school rollout, and the limits of generic AI tools.",
+          },
+          {
+            title: "What this page does not claim",
+            body: "It is not a national market report, not a large survey, and not evidence of market penetration. If future research is published, it should be clearly sourced and transparently documented.",
+          },
+        ],
+        summaryTitle: "The short version for school teams",
+        ctaTitle: "Use product and pricing pages as the source of truth",
+        ctaBody:
+          "If you want to understand how Zaza Draft actually supports parent communication and sensitive school writing today, the product and pricing pages are the current source of truth.",
+        primary: "Explore the product",
+        secondary: "See pricing",
+        topic: "Topic",
+      };
 
   return (
-    <div className="min-h-screen bg-[#0F172A]">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#8B5CF6]/10 via-transparent to-[#A78BFA]/5" />
-
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Content */}
-            <div>
-              <div className="inline-block px-4 py-2 bg-[#8B5CF6]/10 border border-[#8B5CF6]/20 rounded-full mb-6">
-                <span className="text-[#A78BFA] text-sm font-medium">
-                  {language === "de"
-                    ? "Jahresbericht 2025"
-                    : "2025 Annual Report"}
-                </span>
-              </div>
-
-              <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                {language === "de"
-                  ? "Stand der KI in der Bildung"
-                  : "State of AI in Education"}
-                <span className="block text-[#A78BFA] mt-2">
-                  {language === "de" ? "Bericht 2025" : "2025 Report"}
-                </span>
-              </h1>
-
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                {language === "de"
-                  ? "Die umfassendste Analyse der KI-Akzeptanz in der K-12-Bildung. 120+ Seiten Erkenntnisse von 15.000+ LehrkrÃ¤ften aus 50 Bundesstaaten."
-                  : "The most comprehensive analysis of AI adoption in K-12 education. 120+ pages of insights from 15,000+ teachers across 50 states."}
-              </p>
-
-              <div className="flex flex-wrap gap-6 mb-8">
-                <div className="flex items-center gap-2 text-gray-300">
-                  <Users className="w-5 h-5 text-[#A78BFA]" />
-                  <span>
-                    {language === "de"
-                      ? "15.000+ befragte LehrkrÃ¤fte"
-                      : "15,000+ Teachers Surveyed"}
-                  </span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300">
-                  <FileText className="w-5 h-5 text-[#A78BFA]" />
-                  <span>
-                    {language === "de" ? "120+ Seiten" : "120+ Pages"}
-                  </span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300">
-                  <BarChart3 className="w-5 h-5 text-[#A78BFA]" />
-                  <span>
-                    {language === "de" ? "50 Bundesstaaten" : "50 States"}
-                  </span>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-4">
-                <Button
-                  size="lg"
-                  className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white"
-                  onClick={() => {
-                    document
-                      .getElementById("download-form")
-                      ?.scrollIntoView({ behavior: "smooth" });
-                  }}
-                >
-                  <Download className="w-5 h-5 mr-2" />
-                  {language === "de"
-                    ? "Kostenlosen Bericht herunterladen"
-                    : "Download Free Report"}
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-[#8B5CF6]/30 text-white hover:bg-[#8B5CF6]/10 bg-transparent"
-                  onClick={() => {
-                    document
-                      .getElementById("key-findings")
-                      ?.scrollIntoView({ behavior: "smooth" });
-                  }}
-                >
-                  {language === "de"
-                    ? "Wichtigste Erkenntnisse ansehen"
-                    : "View Key Findings"}
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </div>
-            </div>
-
-            {/* Right Column - Report Preview */}
-            <div className="relative">
-              <div className="relative bg-gradient-to-br from-[#1E293B] to-[#0F172A] border border-[#8B5CF6]/20 rounded-2xl p-8 shadow-2xl">
-                <div className="aspect-[8.5/11] bg-gradient-to-br from-[#8B5CF6] to-[#A78BFA] rounded-lg flex items-center justify-center">
-                  <div className="text-center text-white p-8">
-                    <FileText className="w-20 h-20 mx-auto mb-4 opacity-90" />
-                    <h3 className="text-2xl font-bold mb-2">
-                      {language === "de"
-                        ? "Stand der KI in der Bildung"
-                        : "State of AI in Education"}
-                    </h3>
-                    <p className="text-lg opacity-90">
-                      {language === "de"
-                        ? "Jahresbericht 2025"
-                        : "2025 Annual Report"}
-                    </p>
-                    <div className="mt-6 pt-6 border-t border-white/20">
-                      <p className="text-sm opacity-75">
-                        {language === "de"
-                          ? "120+ Seiten | 15.000+ LehrkrÃ¤fte"
-                          : "120+ Pages | 15,000+ Teachers"}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Stats */}
-              <div className="absolute -bottom-6 -left-6 bg-[#1E293B] border border-[#8B5CF6]/20 rounded-xl p-4 shadow-xl">
-                <div className="text-3xl font-bold text-[#A78BFA]">87%</div>
-                <div className="text-sm text-gray-400">
-                  {language === "de"
-                    ? "WÃ¶chentliche KI-Nutzung"
-                    : "Weekly AI Usage"}
-                </div>
-              </div>
-
-              <div className="absolute -top-6 -right-6 bg-[#1E293B] border border-[#8B5CF6]/20 rounded-xl p-4 shadow-xl">
-                <div className="text-3xl font-bold text-[#A78BFA]">
-                  6.2{language === "de" ? "Std" : "hrs"}
-                </div>
-                <div className="text-sm text-gray-400">
-                  {language === "de"
-                    ? "Zeitersparnis/Woche"
-                    : "Time Saved/Week"}
-                </div>
-              </div>
-            </div>
+    <div className="min-h-screen bg-[#0F172A] text-white">
+      <section className="border-b border-white/10 bg-[radial-gradient(circle_at_top_left,_rgba(139,92,246,0.18),_transparent_30%),radial-gradient(circle_at_top_right,_rgba(59,130,246,0.14),_transparent_34%),linear-gradient(180deg,_#0F172A_0%,_#111827_100%)] px-6 pb-20 pt-28">
+        <div className="mx-auto max-w-6xl">
+          <div className="inline-flex rounded-full border border-purple-500/20 bg-purple-500/10 px-4 py-2 text-sm font-medium text-purple-300">
+            {content.badge}
           </div>
-        </div>
-      </section>
-
-      {/* Key Findings Section */}
-      <section id="key-findings" className="py-20 px-4 bg-[#1E293B]/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              {language === "de" ? "Wichtigste Erkenntnisse" : "Key Findings"}
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              {language === "de"
-                ? "DatengestÃ¼tzte Erkenntnisse, die zeigen, wie KI die Bildung im Jahr 2025 verÃ¤ndert"
-                : "Data-driven insights that reveal how AI is transforming education in 2025"}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {keyFindings.map((finding, index) => {
-              const Icon = finding.icon;
-              return (
-                <Card
-                  key={index}
-                  className="bg-[#1E293B] border-[#8B5CF6]/20 p-6 hover:border-[#8B5CF6]/40 transition-all"
-                >
-                  <Icon className="w-10 h-10 text-[#A78BFA] mb-4" />
-                  <div className="text-5xl font-bold text-white mb-2">
-                    {finding.stat}
-                  </div>
-                  <div className="text-lg font-semibold text-[#A78BFA] mb-3">
-                    {finding.label}
-                  </div>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    {finding.description}
-                  </p>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* What's Inside Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              {language === "de"
-                ? "Was ist im Bericht enthalten"
-                : "What's Inside the Report"}
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              {language === "de"
-                ? "Sechs umfassende Abschnitte zu jedem Aspekt der KI-Akzeptanz in der Bildung"
-                : "Six comprehensive sections covering every aspect of AI adoption in education"}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {reportSections.map((section, index) => {
-              const Icon = section.icon;
-              return (
-                <Card
-                  key={index}
-                  className="bg-[#1E293B] border-[#8B5CF6]/20 p-6 hover:border-[#8B5CF6]/40 transition-all group"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-[#8B5CF6]/10 rounded-lg group-hover:bg-[#8B5CF6]/20 transition-colors">
-                      <Icon className="w-6 h-6 text-[#A78BFA]" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-white mb-2">
-                        {section.title}
-                      </h3>
-                      <p className="text-gray-400 leading-relaxed">
-                        {section.description}
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Methodology Section */}
-      <section className="py-20 px-4 bg-[#1E293B]/30">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              {language === "de"
-                ? "Forschungsmethodik"
-                : "Research Methodology"}
-            </h2>
-            <p className="text-xl text-gray-300">
-              {language === "de"
-                ? "Rigorose, datengestÃ¼tzte Forschung, der Sie vertrauen kÃ¶nnen"
-                : "Rigorous, data-driven research you can trust"}
-            </p>
-          </div>
-
-          <Card className="bg-[#1E293B] border-[#8B5CF6]/20 p-8">
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {language === "de" ? "Umfragedesign" : "Survey Design"}
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {language === "de"
-                    ? "Unser Forschungsteam fÃ¼hrte eine umfassende Umfrage mit 45 Fragen durch, die zwischen September und November 2024 an K-12-PÃ¤dagogen in allen 50 Bundesstaaten verteilt wurde. Die Umfrage umfasste KI-Akzeptanzraten, AnwendungsfÃ¤lle, Herausforderungen, Schulungsbedarf und Zukunftsausblick."
-                    : "Our research team conducted a comprehensive 45-question survey distributed to K-12 educators across all 50 states between September and November 2024. The survey covered AI adoption rates, use cases, challenges, training needs, and future outlook."}
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {language === "de"
-                    ? "Stichprobendemografie"
-                    : "Sample Demographics"}
-                </h3>
-                <div className="grid md:grid-cols-2 gap-4 text-gray-300">
-                  <div>
-                    <p className="font-medium text-[#A78BFA] mb-2">
-                      {language === "de" ? "Klassenstufen:" : "Grade Levels:"}
-                    </p>
-                    <ul className="space-y-1 text-sm">
-                      <li>
-                        â€¢{" "}
-                        {language === "de"
-                          ? "Grundschule (K-5): 38%"
-                          : "Elementary (K-5): 38%"}
-                      </li>
-                      <li>
-                        â€¢{" "}
-                        {language === "de"
-                          ? "Mittelschule (6-8): 29%"
-                          : "Middle School (6-8): 29%"}
-                      </li>
-                      <li>
-                        â€¢{" "}
-                        {language === "de"
-                          ? "Oberschule (9-12): 33%"
-                          : "High School (9-12): 33%"}
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <p className="font-medium text-[#A78BFA] mb-2">
-                      {language === "de" ? "Schultypen:" : "School Types:"}
-                    </p>
-                    <ul className="space-y-1 text-sm">
-                      <li>
-                        â€¢{" "}
-                        {language === "de" ? "Ã-ffentlich: 76%" : "Public: 76%"}
-                      </li>
-                      <li>
-                        â€¢ {language === "de" ? "Privat: 18%" : "Private: 18%"}
-                      </li>
-                      <li>
-                        â€¢ {language === "de" ? "Charter: 6%" : "Charter: 6%"}
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {language === "de" ? "Datenanalyse" : "Data Analysis"}
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {language === "de"
-                    ? "Die Antworten wurden mit statistischen Methoden analysiert, um Trends, Korrelationen und signifikante Muster zu identifizieren. Alle Daten wurden anonymisiert und aggregiert, um die PrivatsphÃ¤re der Teilnehmer zu schÃ¼tzen. Fehlertoleranz: Ã‚Â±0,8% bei 95% Konfidenzniveau."
-                    : "Responses were analyzed using statistical methods to identify trends, correlations, and significant patterns. All data was anonymized and aggregated to protect participant privacy. Margin of error: Ã‚Â±0.8% at 95% confidence level."}
-                </p>
-              </div>
-            </div>
-          </Card>
-        </div>
-      </section>
-
-      {/* Download Form Section */}
-      <section id="download-form" className="py-20 px-4">
-        <div className="max-w-2xl mx-auto">
-          <Card className="bg-[#1E293B] border-[#8B5CF6]/20 p-8">
-            {!isSubmitted ? (
-              <>
-                <div className="text-center mb-8">
-                  <Download className="w-16 h-16 text-[#A78BFA] mx-auto mb-4" />
-                  <h2 className="text-3xl font-bold text-white mb-3">
-                    {language === "de"
-                      ? "VollstÃ¤ndigen Bericht herunterladen"
-                      : "Download the Full Report"}
-                  </h2>
-                  <p className="text-gray-300">
-                    {language === "de"
-                      ? "Erhalten Sie sofortigen Zugang zu allen 120+ Seiten mit Erkenntnissen, Daten und Empfehlungen"
-                      : "Get instant access to all 120+ pages of insights, data, and recommendations"}
-                  </p>
-                </div>
-
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <Label htmlFor="email" className="text-white mb-2 block">
-                      {language === "de"
-                        ? "E-Mail-Adresse *"
-                        : "Email Address *"}
-                    </Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                      placeholder={
-                        language === "de"
-                          ? "ihre.email@schule.de"
-                          : "your.email@school.edu"
-                      }
-                      className="bg-[#0F172A] border-[#8B5CF6]/30 text-white"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="role" className="text-white mb-2 block">
-                      {language === "de" ? "Ihre Rolle *" : "Your Role *"}
-                    </Label>
-                    <select
-                      id="role"
-                      value={role}
-                      onChange={(e) => setRole(e.target.value)}
-                      required
-                      className="w-full px-3 py-2 bg-[#0F172A] border border-[#8B5CF6]/30 rounded-md text-white"
-                    >
-                      <option value="">
-                        {language === "de"
-                          ? "WÃ¤hlen Sie Ihre Rolle..."
-                          : "Select your role..."}
-                      </option>
-                      <option value="teacher">
-                        {language === "de" ? "Lehrkraft" : "Teacher"}
-                      </option>
-                      <option value="administrator">
-                        {language === "de" ? "Administrator" : "Administrator"}
-                      </option>
-                      <option value="instructional-coach">
-                        {language === "de"
-                          ? "Unterrichtscoach"
-                          : "Instructional Coach"}
-                      </option>
-                      <option value="curriculum-director">
-                        {language === "de"
-                          ? "Lehrplandirektor"
-                          : "Curriculum Director"}
-                      </option>
-                      <option value="technology-coordinator">
-                        {language === "de"
-                          ? "Technologiekoordinator"
-                          : "Technology Coordinator"}
-                      </option>
-                      <option value="other">
-                        {language === "de" ? "Andere" : "Other"}
-                      </option>
-                    </select>
-                  </div>
-
-                  {error && <p className="text-sm text-red-400">{error}</p>}
-
-                  <Button
-                    type="submit"
-                    size="lg"
-                    disabled={isSubmitting}
-                    className="w-full bg-[#8B5CF6] hover:bg-[#7C3AED] text-white"
-                  >
-                    {isSubmitting ? (
-                      language === "de" ? (
-                        "Download-Link wird gesendet..."
-                      ) : (
-                        "Sending Download Link..."
-                      )
-                    ) : (
-                      <>
-                        <Download className="w-5 h-5 mr-2" />
-                        {language === "de"
-                          ? "Kostenlosen Bericht herunterladen"
-                          : "Download Free Report"}
-                      </>
-                    )}
-                  </Button>
-
-                  <p className="text-sm text-gray-400 text-center">
-                    {language === "de"
-                      ? "Wir senden Ihnen einen Download-Link per E-Mail. Kein Spam, niemals. Jederzeit abbestellen."
-                      : "We'll email you a download link. No spam, ever. Unsubscribe anytime."}
-                  </p>
-                </form>
-              </>
-            ) : (
-              <div className="text-center py-8">
-                <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-3">
-                  {language === "de"
-                    ? "Ueberpruefen Sie Ihre E-Mails!"
-                    : "Check Your Email!"}
-                </h3>
-                <p className="text-gray-300 mb-6">
-                  {language === "de"
-                    ? "Danke fuer Ihr Interesse! Dieses Formular ist aktuell eine Vorschau."
-                    : "Thanks for your interest! For now this form is a preview."}
-                </p>
-                <p className="text-gray-300 mb-6">
-                  {language === "de"
-                    ? "Bitte schreiben Sie an hello@zazatechnologies.com, wir melden uns umgehend."
-                    : "Please email hello@zazatechnologies.com and we will get back to you."}
-                </p>
-                <p className="text-sm text-gray-400">
-                  {language === "de"
-                    ? "Ihre Anfrage wurde gespeichert fuer "
-                    : "We logged your request for "}{" "}
-                  <strong className="text-[#A78BFA]">{email}</strong>
-                </p>
-                <p className="text-sm text-gray-400">
-                  {language === "de"
-                    ? "Nicht gefunden? Bitte pruefen Sie Ihren Spam-Ordner oder "
-                    : "Don't see it? Check your spam folder or "}
-                  <button
-                    onClick={() => setIsSubmitted(false)}
-                    className="text-[#A78BFA] hover:underline"
-                  >
-                    {language === "de" ? "erneut versuchen" : "try again"}
-                  </button>
-                </p>
-              </div>
-            )}
-          </Card>
-        </div>
-      </section>
-
-      {/* Media Mentions Section */}
-      <section className="py-20 px-4 bg-[#1E293B]/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              {language === "de"
-                ? "Was die Leute sagen"
-                : "What People Are Saying"}
-            </h2>
-            <p className="text-xl text-gray-300">
-              {language === "de"
-                ? "Berichterstattung von fÃ¼hrenden Bildungspublikationen"
-                : "Coverage from leading education publications"}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {mediaMentions.map((mention, index) => (
-              <Card
-                key={index}
-                className="bg-[#1E293B] border-[#8B5CF6]/20 p-6"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="text-4xl text-[#A78BFA]">"</div>
-                  <div>
-                    <p className="text-gray-300 text-lg mb-4 italic leading-relaxed">
-                      {mention.quote}
-                    </p>
-                    <p className="text-[#A78BFA] font-semibold">
-                      - {mention.outlet}
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Previous Reports Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              {language === "de" ? "FrÃ¼here Berichte" : "Previous Reports"}
-            </h2>
-            <p className="text-xl text-gray-300">
-              {language === "de"
-                ? "Erkunden Sie unser Archiv der jÃ¤hrlichen Berichte zum Stand der KI in der Bildung"
-                : "Explore our archive of annual State of AI in Education reports"}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {previousReports.map((report, index) => (
-              <Card
-                key={index}
-                className="bg-[#1E293B] border-[#8B5CF6]/20 p-6 hover:border-[#8B5CF6]/40 transition-all group"
-              >
-                <FileText className="w-12 h-12 text-[#A78BFA] mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-2">
-                  {language === "de"
-                    ? `Bericht ${report.year}`
-                    : `${report.year} Report`}
-                </h3>
-                <p className="text-gray-400 mb-4">
-                  {report.downloads}{" "}
-                  {language === "de" ? "Downloads" : "downloads"}
-                </p>
-                <Link
-                  href={report.url}
-                  className="text-[#A78BFA] hover:text-[#8B5CF6] font-medium inline-flex items-center gap-2 group-hover:gap-3 transition-all"
-                >
-                  {language === "de"
-                    ? "Bericht herunterladen"
-                    : "Download Report"}
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Share Section */}
-      <section className="py-20 px-4 bg-[#1E293B]/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <Share2 className="w-12 h-12 text-[#A78BFA] mx-auto mb-4" />
-          <h2 className="text-3xl font-bold text-white mb-4">
-            {language === "de" ? "Diesen Bericht teilen" : "Share This Report"}
-          </h2>
-          <p className="text-gray-300 mb-8">
-            {language === "de"
-              ? "Helfen Sie, diese Erkenntnisse mit Ihren Kollegen und Ihrem Netzwerk zu teilen"
-              : "Help spread these insights with your colleagues and network"}
+          <h1 className="mt-6 max-w-4xl text-balance text-5xl font-bold md:text-6xl">
+            {content.title}
+          </h1>
+          <p className="mt-6 max-w-4xl text-xl leading-8 text-slate-300">
+            {content.subtitle}
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button
-              variant="outline"
-              className="border-[#8B5CF6]/30 text-white hover:bg-[#8B5CF6]/10 bg-transparent"
-            >
-              {language === "de" ? "Auf Twitter teilen" : "Share on Twitter"}
-            </Button>
-            <Button
-              variant="outline"
-              className="border-[#8B5CF6]/30 text-white hover:bg-[#8B5CF6]/10 bg-transparent"
-            >
-              {language === "de" ? "Auf LinkedIn teilen" : "Share on LinkedIn"}
-            </Button>
-            <Button
-              variant="outline"
-              className="border-[#8B5CF6]/30 text-white hover:bg-[#8B5CF6]/10 bg-transparent"
-              onClick={() => {
-                navigator.clipboard.writeText(window.location.href);
-                alert(
-                  language === "de"
-                    ? "Link in Zwischenablage kopiert!"
-                    : "Link copied to clipboard!",
-                );
-              }}
-            >
-              {language === "de" ? "Link kopieren" : "Copy Link"}
-            </Button>
-          </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <Card className="bg-gradient-to-br from-[#EC4899] via-[#9333EA] to-[#7C3AED] border-transparent p-12 text-center shadow-2xl shadow-[#9333EA]/40">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              {language === "de"
-                ? "Bereit, Ihren Unterricht mit KI zu transformieren?"
-                : "Ready to Transform Your Teaching with AI?"}
-            </h2>
-            <p className="text-xl text-white mb-8">
-              {language === "de"
-                ? "SchlieÃŸen Sie sich 50.000+ PÃ¤dagogen an, die Zaza Draft nutzen, um Zeit zu sparen und die Kommunikation zu verbessern"
-                : "Join 50,000+ educators using Zaza Draft to save time and improve communication"}
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                size="lg"
-                className="gradient-primary text-white font-medium"
-                onClick={() => {
-                  const event = new CustomEvent("openSignupModal");
-                  window.dispatchEvent(event);
-                }}
+      <section className="px-6 py-20">
+        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
+          {content.pillars.map((pillar) => {
+            const Icon = pillar.icon;
+
+            return (
+              <article
+                key={pillar.title}
+                className="rounded-3xl border border-white/10 bg-white/5 p-6"
               >
-                {language === "de"
-                  ? "Kostenlose Testversion starten"
-                  : "Start Free Trial"}
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white/40 text-white hover:bg-white/10 bg-transparent"
-                asChild
-              >
-                <Link href="/ai-literacy">
-                  {language === "de"
-                    ? "KI-Kompetenzzentrum erkunden"
-                    : "Explore AI Literacy Center"}
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-              </Button>
-            </div>
-          </Card>
+                <Icon className="h-8 w-8 text-purple-300" />
+                <h2 className="mt-5 text-2xl font-semibold">{pillar.title}</h2>
+                <p className="mt-3 text-base leading-8 text-slate-300">
+                  {pillar.body}
+                </p>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="px-6 pb-20">
+        <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-3">
+          {content.sections.map((section) => (
+            <article
+              key={section.title}
+              className="rounded-3xl border border-white/10 bg-[#111827] p-8"
+            >
+              <div className="inline-flex rounded-full border border-blue-400/20 bg-blue-400/10 px-3 py-1 text-xs uppercase tracking-[0.18em] text-blue-200">
+                <FileText className="mr-2 h-3.5 w-3.5" />
+                {content.topic}
+              </div>
+              <h2 className="mt-5 text-2xl font-semibold">{section.title}</h2>
+              <p className="mt-4 text-base leading-8 text-slate-300">
+                {section.body}
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="px-6 pb-20">
+        <div className="mx-auto max-w-6xl">
+          <AgentReadableSummary
+            locale={isGerman ? "de" : "en"}
+            theme="dark"
+            title={content.summaryTitle}
+            intro={
+              isGerman
+                ? "Diese Seite soll die inhaltliche Richtung transparent machen, ohne sich auf unbelegte Marktbehauptungen zu stuetzen."
+                : "This page is meant to make the current direction clear without leaning on unsupported market claims."
+            }
+            answers={{
+              whatIsIt: isGerman ? (
+                <>
+                  Ein offener Ressourcen-Hub zu KI in Bildung und
+                  Schulkommunikation.
+                </>
+              ) : (
+                <>
+                  An open resource hub about AI in education and school
+                  communication.
+                </>
+              ),
+              whoIsItFor: isGerman ? (
+                <>
+                  Fuer Lehrkraefte, Schulen und Schulleitungen, die den Einsatz
+                  von KI verantwortungsvoll einordnen wollen.
+                </>
+              ) : (
+                <>
+                  For teachers, schools, and leaders who want to think about AI
+                  adoption responsibly.
+                </>
+              ),
+              problemItSolves: isGerman ? (
+                <>
+                  Er trennt Produktpositionierung von unbelegten Reichweiten-
+                  oder Forschungsbehauptungen.
+                </>
+              ) : (
+                <>
+                  It separates product positioning from unsupported research or
+                  reach claims.
+                </>
+              ),
+              howItWorks: isGerman ? (
+                <>
+                  Er sammelt die wichtigsten Fragen, Prinzipien und
+                  Themenfelder, die spaetere Ressourcen fundiert ausbauen
+                  koennen.
+                </>
+              ) : (
+                <>
+                  It collects the main questions, principles, and topic areas
+                  that future resources can develop with evidence.
+                </>
+              ),
+              whatItCosts: isGerman ? (
+                <>
+                  Diese Seite ist eine kostenlose Ressource; Preise fuer Zaza
+                  Draft stehen auf der Preisseite.
+                </>
+              ) : (
+                <>
+                  This page is a free resource; pricing for Zaza Draft lives on
+                  the pricing page.
+                </>
+              ),
+              nextStep: isGerman ? (
+                <>
+                  Nutzen Sie die Produkt- und Preis-Seiten fuer das aktuelle
+                  Angebot.
+                </>
+              ) : (
+                <>
+                  Use the product and pricing pages for the current commercial
+                  offer.
+                </>
+              ),
+            }}
+          />
+        </div>
+      </section>
+
+      <section className="px-6 pb-24">
+        <div className="mx-auto max-w-4xl rounded-3xl border border-purple-500/30 bg-gradient-to-r from-purple-600/20 to-blue-600/20 p-12 text-center">
+          <h2 className="text-3xl font-bold md:text-4xl">{content.ctaTitle}</h2>
+          <p className="mt-4 text-xl text-slate-300">{content.ctaBody}</p>
+          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+            <Button
+              asChild
+              size="lg"
+              className="rounded-full bg-white px-8 py-6 text-[#0F172A] hover:bg-slate-100"
+            >
+              <Link href="/products/draft">
+                {content.primary}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="rounded-full border-white/20 bg-transparent px-8 py-6 text-white hover:bg-white/10"
+            >
+              <Link href="/pricing">{content.secondary}</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </div>

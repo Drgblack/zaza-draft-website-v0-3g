@@ -1,6 +1,5 @@
 ﻿"use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState, type ReactNode } from "react";
 import { usePathname } from "next/navigation";
@@ -32,44 +31,6 @@ import {
 } from "@/lib/seo/json-ld";
 import { getPopularGuideLinks } from "@/lib/guides";
 import type { JsonLdObject } from "@/lib/seo/schema";
-
-const pricingTestimonialHeadshots = [
-  "/testimonials/pricing-teacher-1.jpg",
-  "/testimonials/pricing-teacher-2.jpg",
-  "/testimonials/emma-k-generated.png",
-] as const;
-
-function PricingTestimonialAvatar({ src, alt }: { src: string; alt: string }) {
-  const [hasError, setHasError] = useState(false);
-  const initials =
-    alt
-      .replace(/[^A-Za-zÀ-ÖØ-öø-ÿ\s]/g, "")
-      .split(/\s+/)
-      .filter(Boolean)
-      .slice(0, 2)
-      .map((part) => part.charAt(0).toUpperCase())
-      .join(".") + ".";
-
-  return (
-    <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-white/10 bg-[#0F172A] shadow-[0_8px_20px_rgba(15,23,42,0.35)]">
-      {hasError ? (
-        <div className="flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_top,rgba(168,85,247,0.28),rgba(30,41,59,0.98)_62%)] text-[11px] font-semibold tracking-[0.18em] text-[#E9D5FF]">
-          <span aria-hidden="true">{initials}</span>
-          <span className="sr-only">{alt}</span>
-        </div>
-      ) : (
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          sizes="48px"
-          className="object-cover"
-          onError={() => setHasError(true)}
-        />
-      )}
-    </div>
-  );
-}
 
 type PricingPlanFact = {
   label: string;
@@ -1036,47 +997,6 @@ export default function PricingClient() {
                 isGerman ? "Alle Leitfaeden ansehen" : "Browse all guides"
               }
             />
-          </div>
-        </section>
-
-        {/* Transformation Testimonials */}
-        <section className="pb-20 px-6">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              {t("pricing.testimonials.title")}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[1, 2, 3].map((i, index) => (
-                <div key={i} className="bg-[#1E293B] rounded-xl p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <PricingTestimonialAvatar
-                      src={pricingTestimonialHeadshots[index]}
-                      alt={t(`pricing.testimonials.${i}.name`)}
-                    />
-                    <div>
-                      <p className="font-semibold text-white">
-                        {t(`pricing.testimonials.${i}.name`)}
-                      </p>
-                      <p className="text-sm text-[#94A3B8]">
-                        {t(`pricing.testimonials.${i}.role`)}
-                      </p>
-                    </div>
-                  </div>
-                  <p className="text-[#E2E8F0]">
-                    {t(`pricing.testimonials.${i}.quote`)}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            {/* Wellbeing Metric */}
-            <div className="mt-12 text-center">
-              <div className="inline-block bg-[#1E293B] rounded-xl p-6 border border-[#8B5CF6]/30">
-                <p className="text-[#E2E8F0] text-lg">
-                  {t("pricing.metric.text")}
-                </p>
-              </div>
-            </div>
           </div>
         </section>
 

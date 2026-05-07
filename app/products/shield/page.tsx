@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ShieldClient from "./shield-client";
 
 const ogImage = "/school-safety-shield-icon.jpg";
-const canonicalUrl = "https://zazadraft.com/products/shield";
+const canonicalUrl = "https://www.zazadraft.com/products/shield";
 
 export const metadata: Metadata = {
   title: "Zaza Shield | AI safety and compliance guardrails for schools",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     canonical: canonicalUrl,
     languages: {
       "en-GB": canonicalUrl,
-      "de-DE": "https://zazadraft.com/de/products/shield",
+      "de-DE": "https://www.zazadraft.com/de/products/shield",
       "x-default": canonicalUrl,
     },
   },
@@ -48,7 +48,7 @@ export default function ShieldPage() {
             operatingSystem: "Web",
             offers: {
               "@type": "Offer",
-              url: "https://zazadraft.com/contact?topic=shield",
+              url: "https://www.zazadraft.com/contact?topic=shield",
               description: "Contact for pricing information",
             },
             description:

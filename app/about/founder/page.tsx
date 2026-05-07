@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import FounderPageClient from "./founder-client";
 
 const ogImage = "/greg-blackburn-headshot.jpg";
-const canonicalUrl = "https://zazadraft.com/about/founder";
+const canonicalUrl = "https://www.zazadraft.com/about/founder";
 
 export const metadata: Metadata = {
   title: "Founder | Zaza Draft",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     canonical: canonicalUrl,
     languages: {
       "en-GB": canonicalUrl,
-      "de-DE": "https://zazadraft.com/de/about/founder",
+      "de-DE": "https://www.zazadraft.com/de/about/founder",
       "x-default": canonicalUrl,
     },
   },

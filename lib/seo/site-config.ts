@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Zaza Draft",
   legalName: "Zaza Technologies",
   slogan: "Zaza - Just Teach.",
-  url: "https://zazadraft.com",
+  url: "https://www.zazadraft.com",
   supportEmail: "hello@zazatechnologies.com",
   logoPath: "/zaza-logo.png",
   iconPath: "/z-logo.png",
@@ -28,7 +28,13 @@ export function absoluteUrl(path = "/") {
   }
 
   if (path.startsWith("http://") || path.startsWith("https://")) {
-    return path;
+    const url = new URL(path);
+
+    if (url.hostname === "zazadraft.com") {
+      url.hostname = "www.zazadraft.com";
+    }
+
+    return url.toString().replace(/\/$/, url.pathname === "/" ? "/" : "");
   }
 
   return `${siteConfig.url}${path.startsWith("/") ? path : `/${path}`}`;

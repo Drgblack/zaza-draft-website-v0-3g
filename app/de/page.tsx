@@ -10,8 +10,8 @@ export const metadata: Metadata = buildPageMetadata({
     "Zaza Draft hilft Lehrkraeften, ruhigere Elternmails, klarere Schulnachrichten und aussagekraeftigere Berichtskommentare zu formulieren - mit mehr Sicherheit vor dem Senden.",
   path: "/de",
   alternates: {
-    en: "https://zazadraft.com",
-    de: "https://zazadraft.com/de",
+    en: "https://www.zazadraft.com",
+    de: "https://www.zazadraft.com/de",
   },
   keywords: [
     "professionelle Elternkommunikation Schule",

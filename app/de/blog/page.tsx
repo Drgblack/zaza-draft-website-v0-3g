@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Blog | Zaza Draft",
     description:
       "Lehrerzentrierte Artikel zu KI-Schreiben, Elternmails und Unterrichts-Workflows.",
-    url: "https://zazadraft.com/de/blog",
+    url: "https://www.zazadraft.com/de/blog",
     type: "website",
     locale: "de_DE",
     siteName: "Zaza Draft",
@@ -26,11 +26,11 @@ export const metadata: Metadata = {
     images: [ogImage],
   },
   alternates: {
-    canonical: "https://zazadraft.com/de/blog",
+    canonical: "https://www.zazadraft.com/de/blog",
     languages: {
-      "en-GB": "https://zazadraft.com/blog",
-      "de-DE": "https://zazadraft.com/de/blog",
-      "x-default": "https://zazadraft.com/blog",
+      "en-GB": "https://www.zazadraft.com/blog",
+      "de-DE": "https://www.zazadraft.com/de/blog",
+      "x-default": "https://www.zazadraft.com/blog",
     },
   },
 };

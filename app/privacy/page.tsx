@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PrivacyClient } from "./privacy-client";
 
 const ogImage = "/teacher-working-at-desk-with-laptop.jpg";
-const canonicalUrl = "https://zazadraft.com/privacy";
+const canonicalUrl = "https://www.zazadraft.com/privacy";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Zaza Draft",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     canonical: canonicalUrl,
     languages: {
       "en-GB": canonicalUrl,
-      "de-DE": "https://zazadraft.com/de/privacy",
+      "de-DE": "https://www.zazadraft.com/de/privacy",
       "x-default": canonicalUrl,
     },
   },

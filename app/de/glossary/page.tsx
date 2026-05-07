@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import GlossaryClient from "@/app/glossary/glossary-client";
 import { BreadcrumbSchema } from "@/lib/seo/schema";
 import Script from "next/script";
@@ -25,14 +25,14 @@ export default function GlossaryPage() {
           name: "AI Glossary for Teachers",
           description:
             "150+ AI terms explained in teacher-friendly language with practical examples",
-          url: "https://zazadraft.com/glossary",
-          inDefinedTermSet: "https://zazadraft.com/glossary",
+          url: "https://www.zazadraft.com/glossary",
+          inDefinedTermSet: "https://www.zazadraft.com/glossary",
         })}
       </Script>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://zazadraft.com" },
-          { name: "AI Glossary", url: "https://zazadraft.com/glossary" },
+          { name: "Home", url: "https://www.zazadraft.com" },
+          { name: "AI Glossary", url: "https://www.zazadraft.com/glossary" },
         ]}
       />
       <GlossaryClient />
@@ -40,4 +40,3 @@ export default function GlossaryPage() {
   );
 }
 // import type { Metadata } from "next";
-

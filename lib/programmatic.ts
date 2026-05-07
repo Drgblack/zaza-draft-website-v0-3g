@@ -825,7 +825,7 @@ export function getProgrammaticSitemapEntries(lastModified = new Date()) {
   const entries = getLegacyProgrammaticSitemapEntries(lastModified);
   const push = (path: string, priority: number) => {
     entries.push({
-      url: `https://zazadraft.com${path}`,
+      url: `https://www.zazadraft.com${path}`,
       lastModified,
       changeFrequency: "weekly",
       priority,

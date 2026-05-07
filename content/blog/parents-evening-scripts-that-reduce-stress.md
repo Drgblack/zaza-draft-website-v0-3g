@@ -168,7 +168,7 @@ That alone reduces a surprising amount of stress.
 
 ## CTA
 
-If parents' evening follow-ups and difficult conversations are taking over your evenings, try [Zaza Draft](https://zazadraft.com). It helps teachers draft calmer scripts and lower-risk follow-up emails while keeping full control in teacher hands.
+If parents' evening follow-ups and difficult conversations are taking over your evenings, try [Zaza Draft](https://www.zazadraft.com). It helps teachers draft calmer scripts and lower-risk follow-up emails while keeping full control in teacher hands.
 
 ## FAQ
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ReduceStressClient from "@/app/reduce-stress-parent-messages/reduce-stress-client";
 
-const pageUrl = "https://zazadraft.com/de/reduce-stress-parent-messages";
+const pageUrl = "https://www.zazadraft.com/de/reduce-stress-parent-messages";
 
 export const metadata: Metadata = {
   title: "Weniger Stress mit Elternnachrichten | Zaza Draft",
@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: pageUrl,
     languages: {
-      "en-GB": "https://zazadraft.com/reduce-stress-parent-messages",
+      "en-GB": "https://www.zazadraft.com/reduce-stress-parent-messages",
       "de-DE": pageUrl,
-      "x-default": "https://zazadraft.com/reduce-stress-parent-messages",
+      "x-default": "https://www.zazadraft.com/reduce-stress-parent-messages",
     },
   },
   openGraph: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     locale: "de_DE",
     images: [
       {
-        url: "https://zazadraft.com/og-reduce-stress.jpg",
+        url: "https://www.zazadraft.com/og-reduce-stress.jpg",
         width: 1200,
         height: 630,
         alt: "Lehrkraft schreibt eine Nachricht mit Zaza Draft",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Weniger Stress mit Elternnachrichten | Zaza Draft",
     description:
       "Entdecken Sie, wie Zaza Draft Lehrkräften hilft, Elternnachrichten schneller, klarer und stressärmer zu schreiben.",
-    images: ["https://zazadraft.com/og-reduce-stress.jpg"],
+    images: ["https://www.zazadraft.com/og-reduce-stress.jpg"],
   },
 };
 

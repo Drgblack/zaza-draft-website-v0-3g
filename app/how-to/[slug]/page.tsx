@@ -48,12 +48,12 @@ export function generateMetadata({
     title: `${keyword.primaryKeyword} | Zaza Draft`,
     description: metaDescription,
     alternates: {
-      canonical: `https://zazadraft.com/how-to/${keyword.slug}`,
+      canonical: `https://www.zazadraft.com/how-to/${keyword.slug}`,
     },
     openGraph: {
       title: `${keyword.primaryKeyword} | Zaza Draft`,
       description: metaDescription,
-      url: `https://zazadraft.com/how-to/${keyword.slug}`,
+      url: `https://www.zazadraft.com/how-to/${keyword.slug}`,
       type: "article",
     },
     twitter: {

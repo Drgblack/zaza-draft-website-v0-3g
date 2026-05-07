@@ -3,7 +3,7 @@ import PricingClient from "@/app/pricing/PricingClient";
 import { SetLanguage } from "@/components/set-language";
 
 const ogImage = "/professional-female-teacher-in-modern-classroom.jpg";
-const pageUrl = "https://zazadraft.com/de/pricing";
+const pageUrl = "https://www.zazadraft.com/de/pricing";
 
 export const metadata: Metadata = {
   title:
@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: pageUrl,
     languages: {
-      "en-GB": "https://zazadraft.com/pricing",
+      "en-GB": "https://www.zazadraft.com/pricing",
       "de-DE": pageUrl,
-      "x-default": "https://zazadraft.com/pricing",
+      "x-default": "https://www.zazadraft.com/pricing",
     },
   },
   openGraph: {

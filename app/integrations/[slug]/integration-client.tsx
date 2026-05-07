@@ -327,7 +327,7 @@ const integrationsData: Record<string, Record<string, IntegrationData>> = {
       description:
         "Connect your Schoology courses to Zaza Draft for seamless content distribution and grade synchronization.",
       logo: "/schoology-symbol.png",
-      users: "15,000+",
+      users: "School-ready",
       setupTime: "8 minutes",
       guideUrl: "/guides/schoology-integration.docx",
       benefits: [

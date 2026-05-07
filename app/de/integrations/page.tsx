@@ -1,4 +1,4 @@
-﻿import { Metadata } from "next";
+import { Metadata } from "next";
 import IntegrationsClient from "../../integrations/integrations-client";
 import { BreadcrumbSchema } from "@/lib/seo/schema";
 import Script from "next/script";
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   alternates: {
-    canonical: "https://zazadraft.com/de/integrations",
+    canonical: "https://www.zazadraft.com/de/integrations",
     languages: {
       "en-GB": "/integrations",
       "de-DE": "/de/integrations",
@@ -32,7 +32,7 @@ export default function DeIntegrationsPage() {
           "@type": "ItemList",
           name: "Zaza Draft Integrationen",
           description: "50+ Bildungstool-Integrationen für Zaza Draft",
-          url: "https://zazadraft.com/de/integrations",
+          url: "https://www.zazadraft.com/de/integrations",
           numberOfItems: 52,
           itemListElement: [
             {
@@ -58,10 +58,10 @@ export default function DeIntegrationsPage() {
       </Script>
       <BreadcrumbSchema
         items={[
-          { name: "Startseite", url: "https://zazadraft.com/de" },
+          { name: "Startseite", url: "https://www.zazadraft.com/de" },
           {
             name: "Integrationen",
-            url: "https://zazadraft.com/de/integrations",
+            url: "https://www.zazadraft.com/de/integrations",
           },
         ]}
       />

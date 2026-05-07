@@ -2,7 +2,7 @@
 
 Zaza Draft is a teacher-first, risk-aware AI writing and communication support tool for schools and educators. It is built for the messages teachers hesitate over: parent emails, difficult replies, behaviour updates, report comments, and other high-stakes school communication where tone, clarity, and interpretation matter.
 
-Website: https://zazadraft.com  
+Website: https://www.zazadraft.com  
 App: https://app.zazadraft.com
 
 ## Product positioning
@@ -36,17 +36,17 @@ The main idea is simple: help teachers write messages they will not regret tomor
 
 ## Important public URLs
 
-- Home: https://zazadraft.com/
-- Start: https://zazadraft.com/start
-- German start: https://zazadraft.com/de/start
-- Pricing: https://zazadraft.com/pricing
-- Product page: https://zazadraft.com/products/draft
-- Free Parent Email Risk Checker: https://zazadraft.com/parent-email-risk-checker
-- Public product info API: https://zazadraft.com/api/public/product-info
-- Public site capabilities API: https://zazadraft.com/api/public/site-capabilities
-- Contact/support: https://zazadraft.com/contact
-- Teacher email tone guide: https://zazadraft.com/teacher-email-tone-guide
-- How to write better report comments: https://zazadraft.com/how-to-write-better-report-comments
+- Home: https://www.zazadraft.com/
+- Start: https://www.zazadraft.com/start
+- German start: https://www.zazadraft.com/de/start
+- Pricing: https://www.zazadraft.com/pricing
+- Product page: https://www.zazadraft.com/products/draft
+- Free Parent Email Risk Checker: https://www.zazadraft.com/parent-email-risk-checker
+- Public product info API: https://www.zazadraft.com/api/public/product-info
+- Public site capabilities API: https://www.zazadraft.com/api/public/site-capabilities
+- Contact/support: https://www.zazadraft.com/contact
+- Teacher email tone guide: https://www.zazadraft.com/teacher-email-tone-guide
+- How to write better report comments: https://www.zazadraft.com/how-to-write-better-report-comments
 
 ## Pricing summary
 
@@ -56,7 +56,7 @@ Zaza Draft offers:
 - broader options for departments and schools
 
 The public pricing page shows the current live plan structure, billing intervals, and available currencies:
-- https://zazadraft.com/pricing
+- https://www.zazadraft.com/pricing
 
 If an agent needs exact current prices, use the pricing page as the source of truth rather than inferring or caching values here.
 
@@ -76,11 +76,11 @@ Teachers start with a draft, rough notes, or a message situation. Zaza Draft hel
 
 ### What free tool is available?
 The main free tool is the Parent Email Risk Checker:
-- https://zazadraft.com/parent-email-risk-checker
+- https://www.zazadraft.com/parent-email-risk-checker
 
 ### Where should new users start?
 New users should usually start here:
-- https://zazadraft.com/start
+- https://www.zazadraft.com/start
 
 ## Comparison with generic AI writing tools
 
@@ -109,3 +109,4 @@ It is not positioned as:
 ## Scope note
 
 Zaza Draft supports drafting and revising teacher communication. It does not provide legal advice, safeguarding determinations, or emergency support. Urgent welfare, legal, disciplinary, or safeguarding concerns should be handled through proper school processes and qualified professionals.
+

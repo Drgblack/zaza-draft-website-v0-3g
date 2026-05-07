@@ -14,8 +14,8 @@ export const metadata: Metadata = buildPageMetadata({
     "Explore teacher-first features for professional parent emails, meaningful report comments, safeguarding-sensitive messages, and school writing where tone and judgement matter.",
   path: "/features",
   alternates: {
-    en: "https://zazadraft.com/features",
-    de: "https://zazadraft.com/de/features",
+    en: "https://www.zazadraft.com/features",
+    de: "https://www.zazadraft.com/de/features",
   },
   keywords: [
     "teacher writing features",

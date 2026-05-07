@@ -11,8 +11,8 @@ export const metadata: Metadata = buildPageMetadata({
   path: "/resources",
   image: "/advanced-prompts.jpg",
   alternates: {
-    en: "https://zazadraft.com/resources",
-    de: "https://zazadraft.com/de/resources",
+    en: "https://www.zazadraft.com/resources",
+    de: "https://www.zazadraft.com/de/resources",
   },
   keywords: [
     "teacher resources",

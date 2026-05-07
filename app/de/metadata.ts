@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const baseUrl = "https://zazadraft.com/de";
+const baseUrl = "https://www.zazadraft.com/de";
 const pageTitle = "Zaza Draft | Lehrerzentrierte KI-Schreibhilfe";
 const pageDescription =
   "Zaza Draft entlastet Lehrkräfte bei Elternkommunikation, Feedback und Berichten mit sicheren KI-Entwürfen und Tonalitätstransparenz.";
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: baseUrl,
     languages: {
-      "en-GB": "https://zazadraft.com",
+      "en-GB": "https://www.zazadraft.com",
       "de-DE": baseUrl,
-      "x-default": "https://zazadraft.com",
+      "x-default": "https://www.zazadraft.com",
     },
   },
 };

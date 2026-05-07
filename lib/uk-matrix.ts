@@ -1094,25 +1094,25 @@ export function getUkClusterSitemapEntries(
 ): MetadataRoute.Sitemap {
   return [
     ...ukPhases.map((phase) => ({
-      url: `https://zazadraft.com/uk/parents-evening-email-templates/${phase}`,
+      url: `https://www.zazadraft.com/uk/parents-evening-email-templates/${phase}`,
       lastModified,
       changeFrequency: "weekly" as const,
       priority: 0.82,
     })),
     ...ukSubjects.map((subject) => ({
-      url: `https://zazadraft.com/uk/ofsted-friendly-report-comments/${subject}`,
+      url: `https://www.zazadraft.com/uk/ofsted-friendly-report-comments/${subject}`,
       lastModified,
       changeFrequency: "weekly" as const,
       priority: 0.84,
     })),
     ...ukYearGroups.map((yearGroup) => ({
-      url: `https://zazadraft.com/uk/behaviour-letter-home/${yearGroup}`,
+      url: `https://www.zazadraft.com/uk/behaviour-letter-home/${yearGroup}`,
       lastModified,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     })),
     ...ukNeeds.map((need) => ({
-      url: `https://zazadraft.com/uk/sen-report-comments/${need}`,
+      url: `https://www.zazadraft.com/uk/sen-report-comments/${need}`,
       lastModified,
       changeFrequency: "weekly" as const,
       priority: 0.84,

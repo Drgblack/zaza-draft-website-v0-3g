@@ -1,23 +1,31 @@
-﻿"use client"
+"use client";
 
-import { useState } from "react"
-import { Share2, Mail, Twitter, Linkedin, Facebook, Link, Check } from "lucide-react"
+import { useState } from "react";
+import {
+  Share2,
+  Mail,
+  Twitter,
+  Linkedin,
+  Facebook,
+  Link,
+  Check,
+} from "lucide-react";
 
 interface BlogShareButtonsProps {
   post: {
-    slug: string
-    title: string
-    language: string
-  }
+    slug: string;
+    title: string;
+    language: string;
+  };
 }
 
 export function BlogShareButtons({ post }: BlogShareButtonsProps) {
-  const [copied, setCopied] = useState(false)
+  const [copied, setCopied] = useState(false);
 
   const fullUrl =
     typeof window !== "undefined"
       ? `${window.location.origin}/blog/${post.slug}`
-      : `https://zazadraft.com/blog/${post.slug}`
+      : `https://www.zazadraft.com/blog/${post.slug}`;
 
   const shareLinks = {
     whatsapp: `https://wa.me/?text=${encodeURIComponent(post.title + " - " + fullUrl)}`,
@@ -25,23 +33,39 @@ export function BlogShareButtons({ post }: BlogShareButtonsProps) {
     twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(fullUrl)}`,
     linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(fullUrl)}`,
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(fullUrl)}`,
-  }
+  };
 
   const handleCopyLink = async () => {
     try {
-      await navigator.clipboard.writeText(fullUrl)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
+      await navigator.clipboard.writeText(fullUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      console.error("Failed to copy:", err)
+      console.error("Failed to copy:", err);
     }
-  }
+  };
 
-  const heading = post.language === "de" ? "Diesen Beitrag teilen" : "Share this post"
+  const heading =
+    post.language === "de" ? "Diesen Beitrag teilen" : "Share this post";
 
   return (
-    <div style={{ marginTop: "48px", paddingTop: "32px", borderTop: "1px solid rgba(255, 255, 255, 0.1)" }}>
-      <h3 style={{ color: "white", fontSize: "1.2rem", fontWeight: "600", marginBottom: "16px" }}>{heading}</h3>
+    <div
+      style={{
+        marginTop: "48px",
+        paddingTop: "32px",
+        borderTop: "1px solid rgba(255, 255, 255, 0.1)",
+      }}
+    >
+      <h3
+        style={{
+          color: "white",
+          fontSize: "1.2rem",
+          fontWeight: "600",
+          marginBottom: "16px",
+        }}
+      >
+        {heading}
+      </h3>
       <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
         <a
           href={shareLinks.whatsapp}
@@ -63,10 +87,10 @@ export function BlogShareButtons({ post }: BlogShareButtonsProps) {
             cursor: "pointer",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = "rgba(139, 92, 246, 0.2)"
+            e.currentTarget.style.background = "rgba(139, 92, 246, 0.2)";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.background = "rgba(139, 92, 246, 0.1)"
+            e.currentTarget.style.background = "rgba(139, 92, 246, 0.1)";
           }}
         >
           <Share2 size={18} />
@@ -91,10 +115,10 @@ export function BlogShareButtons({ post }: BlogShareButtonsProps) {
             cursor: "pointer",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = "rgba(139, 92, 246, 0.2)"
+            e.currentTarget.style.background = "rgba(139, 92, 246, 0.2)";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.background = "rgba(139, 92, 246, 0.1)"
+            e.currentTarget.style.background = "rgba(139, 92, 246, 0.1)";
           }}
         >
           <Mail size={18} />
@@ -121,10 +145,10 @@ export function BlogShareButtons({ post }: BlogShareButtonsProps) {
             cursor: "pointer",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = "rgba(139, 92, 246, 0.2)"
+            e.currentTarget.style.background = "rgba(139, 92, 246, 0.2)";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.background = "rgba(139, 92, 246, 0.1)"
+            e.currentTarget.style.background = "rgba(139, 92, 246, 0.1)";
           }}
         >
           <Twitter size={18} />
@@ -151,10 +175,10 @@ export function BlogShareButtons({ post }: BlogShareButtonsProps) {
             cursor: "pointer",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = "rgba(139, 92, 246, 0.2)"
+            e.currentTarget.style.background = "rgba(139, 92, 246, 0.2)";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.background = "rgba(139, 92, 246, 0.1)"
+            e.currentTarget.style.background = "rgba(139, 92, 246, 0.1)";
           }}
         >
           <Linkedin size={18} />
@@ -181,10 +205,10 @@ export function BlogShareButtons({ post }: BlogShareButtonsProps) {
             cursor: "pointer",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = "rgba(139, 92, 246, 0.2)"
+            e.currentTarget.style.background = "rgba(139, 92, 246, 0.2)";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.background = "rgba(139, 92, 246, 0.1)"
+            e.currentTarget.style.background = "rgba(139, 92, 246, 0.1)";
           }}
         >
           <Facebook size={18} />
@@ -208,10 +232,10 @@ export function BlogShareButtons({ post }: BlogShareButtonsProps) {
             cursor: "pointer",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = "rgba(139, 92, 246, 0.2)"
+            e.currentTarget.style.background = "rgba(139, 92, 246, 0.2)";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.background = "rgba(139, 92, 246, 0.1)"
+            e.currentTarget.style.background = "rgba(139, 92, 246, 0.1)";
           }}
         >
           {copied ? <Check size={18} /> : <Link size={18} />}
@@ -219,6 +243,5 @@ export function BlogShareButtons({ post }: BlogShareButtonsProps) {
         </button>
       </div>
     </div>
-  )
+  );
 }
-

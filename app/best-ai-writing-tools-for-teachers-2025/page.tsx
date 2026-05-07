@@ -9,7 +9,7 @@ export const metadata: Metadata = buildPageMetadata({
   path: "/best-ai-writing-tools-for-teachers-2025",
   type: "article",
   alternates: {
-    en: "https://zazadraft.com/best-ai-writing-tools-for-teachers-2025",
+    en: "https://www.zazadraft.com/best-ai-writing-tools-for-teachers-2025",
   },
   keywords: [
     "best AI writing tools for teachers",

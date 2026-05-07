@@ -18,7 +18,7 @@ export const metadata: Metadata = buildPageMetadata({
     "professional report comments guide",
   ],
   alternates: {
-    en: "https://zazadraft.com/guides",
+    en: "https://www.zazadraft.com/guides",
   },
 });
 

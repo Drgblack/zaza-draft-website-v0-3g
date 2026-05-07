@@ -47,7 +47,7 @@ export async function generateMetadata({
       title: brandedName,
       description: creator.quote,
       type: "website",
-      url: `https://zazadraft.com/c/${creator.handle}`,
+      url: `https://www.zazadraft.com/c/${creator.handle}`,
     },
     twitter: {
       card: "summary_large_image",

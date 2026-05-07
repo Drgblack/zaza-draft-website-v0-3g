@@ -13,8 +13,8 @@ export const metadata: Metadata = buildPageMetadata({
   path: "/blog",
   image: ogImage,
   alternates: {
-    en: "https://zazadraft.com/blog",
-    de: "https://zazadraft.com/de/blog",
+    en: "https://www.zazadraft.com/blog",
+    de: "https://www.zazadraft.com/de/blog",
   },
   keywords: [
     "teacher writing blog",

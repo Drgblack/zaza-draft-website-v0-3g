@@ -303,7 +303,7 @@ export function getExpandedPageSitemapEntries(
   lastModified = new Date(),
 ): MetadataRoute.Sitemap {
   return getExpandedPages().map((page) => ({
-    url: `https://zazadraft.com${page.path}`,
+    url: `https://www.zazadraft.com${page.path}`,
     lastModified: page.lastModified ?? lastModified,
     changeFrequency: "weekly" as const,
     priority: 0.78,

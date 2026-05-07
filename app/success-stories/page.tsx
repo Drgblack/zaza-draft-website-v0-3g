@@ -5,19 +5,19 @@ import { buildPageMetadata } from "@/lib/seo/site-metadata";
 import { SuccessStoriesClient } from "./success-stories-client";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Teacher Success Stories | Zaza Draft",
+  title: "Teacher Communication Examples | Zaza Draft",
   description:
-    "Read teacher and school case studies about calmer parent communication, clearer school writing, and time saved with Zaza Draft.",
+    "Explore representative classroom and school communication examples showing the kinds of before-and-after wording Zaza Draft is built to support.",
   path: "/success-stories",
   alternates: {
-    en: "https://zazadraft.com/success-stories",
-    de: "https://zazadraft.com/de/success-stories",
+    en: "https://www.zazadraft.com/success-stories",
+    de: "https://www.zazadraft.com/de/success-stories",
   },
   keywords: [
-    "teacher success stories",
-    "school communication case studies",
-    "teacher writing case studies",
+    "teacher communication examples",
+    "school writing examples",
     "parent communication examples",
+    "before and after parent email examples",
   ],
 });
 
@@ -29,11 +29,11 @@ export default function SuccessStoriesPage() {
           {
             id: "success-stories-webpage-schema",
             data: createWebPageJsonLd({
-              name: "Teacher Success Stories",
+              name: "Teacher Communication Examples",
               description:
-                "Teacher and school case studies focused on parent communication, report writing, and calmer school workflows.",
+                "Representative before-and-after examples focused on parent communication, report writing, and calmer school workflows.",
               path: "/success-stories",
-              potentialActionName: "Read teacher case studies",
+              potentialActionName: "Explore communication examples",
             }),
           },
           {

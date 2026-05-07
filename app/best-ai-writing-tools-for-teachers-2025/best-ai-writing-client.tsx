@@ -23,7 +23,7 @@ export default function BestAIWritingClient() {
       meta_updated: "Updated January 2025",
       hero_title: "10 Best AI Writing Tools for Teachers in 2025",
       hero_subtitle:
-        "Just launched in early access - feedback from real teachers is already coming in. Join 7 teachers shaping it right now.",
+        "Zaza Draft is in early access. This guide compares teacher writing tools based on product positioning, workflow fit, privacy posture, and likely classroom use cases.",
       cta_draft_free: "Try Zaza Draft Free",
       cta_compare: "Compare Tools",
 
@@ -37,17 +37,17 @@ export default function BestAIWritingClient() {
       why_p2:
         "But not all AI tools are created equal. Generic tools like ChatGPT lack teacher-specific features. Marketing tools like Jasper are overkill. And many tools raise privacy concerns with student data.",
       why_p3:
-        "This guide compares 10 AI writing tools based on real teacher feedback, focusing on what matters most: ease of use, education-specific features, privacy compliance, and value for money.",
+        "This guide compares 10 AI writing tools based on workflow fit, education-specific features, privacy positioning, and value for money.",
 
       top_tools_title: "Top 10 AI Writing Tools for Teachers",
       feature_comparison_title: "Feature Comparison",
       use_cases_title: "Use Cases by Subject & Grade Level",
       get_started_title: "Getting Started: 5-Minute Setup Guide",
-      testimonials_title: "Teacher Success Stories",
+      testimonials_title: "Representative classroom scenarios",
       faq_title: "Frequently Asked Questions",
       cta_final_title: "Ready to Save 5+ Hours Per Week?",
       cta_final_subtitle:
-        "Just launched in early access - feedback from real teachers is already coming in. Join 7 teachers shaping it right now.",
+        "Zaza Draft is in early access. Start with the product and pricing pages if you want the current offer rather than broad proof claims.",
       cta_start_trial: "Start writing safely",
       cta_email_guide: "See Parent Email Guide",
 

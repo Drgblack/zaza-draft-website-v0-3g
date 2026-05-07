@@ -168,7 +168,7 @@ You do not need to spend another hour trying to make silence respond.
 
 ## CTA
 
-If parent follow-ups and contact logs are taking over your evenings, try [Zaza Draft](https://zazadraft.com). It helps teachers draft calmer emails and cleaner records while keeping every final decision with the teacher.
+If parent follow-ups and contact logs are taking over your evenings, try [Zaza Draft](https://www.zazadraft.com). It helps teachers draft calmer emails and cleaner records while keeping every final decision with the teacher.
 
 ## FAQ
 

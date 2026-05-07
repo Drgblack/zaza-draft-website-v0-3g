@@ -559,7 +559,7 @@ export function getAiSearchPage(key: AiSearchPageKey) {
 
 export function getAiSearchSitemapEntries(fallbackLastModified = new Date()) {
   return (Object.values(pages) as AiSearchPageData[]).map((page) => ({
-    url: `https://zazadraft.com${page.path}`,
+    url: `https://www.zazadraft.com${page.path}`,
     lastModified: page.lastReviewed
       ? new Date(`${page.lastReviewed}T00:00:00.000Z`)
       : fallbackLastModified,

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const canonicalUrl = "https://zazadraft.com/de/manifesto";
+const canonicalUrl = "https://www.zazadraft.com/de/manifesto";
 
 export const metadata: Metadata = {
   title: "The Zaza Manifesto | Zaza Technologies",
@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: canonicalUrl,
     languages: {
-      "en-GB": "https://zazadraft.com/manifesto",
+      "en-GB": "https://www.zazadraft.com/manifesto",
       "de-DE": canonicalUrl,
-      "x-default": "https://zazadraft.com/manifesto",
+      "x-default": "https://www.zazadraft.com/manifesto",
     },
   },
   openGraph: {

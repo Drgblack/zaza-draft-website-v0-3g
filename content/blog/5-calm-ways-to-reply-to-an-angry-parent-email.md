@@ -146,7 +146,7 @@ That is what calmer structure is for.
 
 ## CTA
 
-If you want help drafting difficult parent replies in your own voice, try [Zaza Draft](https://zazadraft.com). It is a teacher-first co-writer for sensitive emails, report comments, and the messages that are hardest to phrase when you are tired.
+If you want help drafting difficult parent replies in your own voice, try [Zaza Draft](https://www.zazadraft.com). It is a teacher-first co-writer for sensitive emails, report comments, and the messages that are hardest to phrase when you are tired.
 
 ## FAQ
 

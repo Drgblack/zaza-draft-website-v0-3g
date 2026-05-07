@@ -38,7 +38,7 @@ export function generateMetadata({
       guide.slug.replace(/-/g, " "),
     ],
     alternates: {
-      en: `https://zazadraft.com${guide.path}`,
+      en: `https://www.zazadraft.com${guide.path}`,
     },
   });
 }

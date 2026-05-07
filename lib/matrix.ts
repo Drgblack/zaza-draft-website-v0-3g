@@ -1299,7 +1299,7 @@ export function getMatrixSitemapEntries(
 
     return [
       {
-        url: `https://zazadraft.com${item.path}`,
+        url: `https://www.zazadraft.com${item.path}`,
         lastModified: page.lastReviewed
           ? parseFreshnessDate(page.lastReviewed)
           : fallbackLastModified,
@@ -1322,7 +1322,7 @@ export function getMatrixSitemapEntries(
 
     return [
       {
-        url: `https://zazadraft.com${item.path}`,
+        url: `https://www.zazadraft.com${item.path}`,
         lastModified: page.lastReviewed
           ? parseFreshnessDate(page.lastReviewed)
           : fallbackLastModified,

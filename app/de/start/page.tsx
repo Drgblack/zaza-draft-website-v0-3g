@@ -19,8 +19,8 @@ export const metadata: Metadata = buildPageMetadata({
     "Starten Sie mit dem Entwurf, der noch nicht richtig klingt. Zaza Draft hilft Lehrkraeften bei Ton, Professionalitaet und aussagekraeftigeren Berichtskommentaren vor dem Senden oder Einreichen.",
   path: "/de/start",
   alternates: {
-    en: "https://zazadraft.com/start",
-    de: "https://zazadraft.com/de/start",
+    en: "https://www.zazadraft.com/start",
+    de: "https://www.zazadraft.com/de/start",
   },
 });
 

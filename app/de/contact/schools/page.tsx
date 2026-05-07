@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SchoolSalesContactClient } from "@/components/contact/school-sales-contact-client";
 import { parseSchoolSalesPlan, sanitizeLeadSource } from "@/lib/draft-cta";
 
-const pageUrl = "https://zazadraft.com/de/contact/schools";
+const pageUrl = "https://www.zazadraft.com/de/contact/schools";
 const ogImage = "/hero/teacher.jpg";
 
 export const metadata: Metadata = {
@@ -12,9 +12,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: pageUrl,
     languages: {
-      "en-GB": "https://zazadraft.com/contact/schools",
+      "en-GB": "https://www.zazadraft.com/contact/schools",
       "de-DE": pageUrl,
-      "x-default": "https://zazadraft.com/contact/schools",
+      "x-default": "https://www.zazadraft.com/contact/schools",
     },
   },
   openGraph: {

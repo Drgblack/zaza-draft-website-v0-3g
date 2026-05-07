@@ -19,7 +19,7 @@ export const metadata = buildPageMetadata({
     "teacher communication tools",
   ],
   alternates: {
-    en: "https://zazadraft.com/tools",
+    en: "https://www.zazadraft.com/tools",
   },
 });
 

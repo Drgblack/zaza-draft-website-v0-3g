@@ -252,7 +252,7 @@ export default function ReduceStressClient() {
 
       cta_final_title: "Ready to Reduce Your Communication Stress?",
       cta_final_subtitle:
-        "Just launched in early access - feedback from real teachers is already coming in. Join 7 teachers shaping it right now.",
+        "Zaza Draft is in early access. Use the product and pricing pages for the current offer and workflow details.",
 
       faqs: [
         {

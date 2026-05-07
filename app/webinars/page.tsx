@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import WebinarsClient from "./webinars-client";
 import { BreadcrumbSchema } from "@/lib/seo/schema";
 import Script from "next/script";
@@ -12,11 +12,11 @@ export async function generateMetadata(): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical: "https://zazadraft.com/webinars",
+      canonical: "https://www.zazadraft.com/webinars",
       languages: {
-        "en-GB": "https://zazadraft.com/webinars",
-        "de-DE": "https://zazadraft.com/de/webinars",
-        "x-default": "https://zazadraft.com/webinars",
+        "en-GB": "https://www.zazadraft.com/webinars",
+        "de-DE": "https://www.zazadraft.com/de/webinars",
+        "x-default": "https://www.zazadraft.com/webinars",
       },
     },
     openGraph: {
@@ -42,7 +42,7 @@ export default async function WebinarsPage() {
           name: "Zaza Draft Webinar Series",
           description:
             "Professional development webinars for teachers on AI in education",
-          url: "https://zazadraft.com/webinars",
+          url: "https://www.zazadraft.com/webinars",
           offers: {
             "@type": "Offer",
             price: "0",
@@ -53,8 +53,8 @@ export default async function WebinarsPage() {
       </Script>
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://zazadraft.com" },
-          { name: "Webinars", url: "https://zazadraft.com/webinars" },
+          { name: "Home", url: "https://www.zazadraft.com" },
+          { name: "Webinars", url: "https://www.zazadraft.com/webinars" },
         ]}
       />
       <WebinarsClient />

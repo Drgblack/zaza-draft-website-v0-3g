@@ -8,7 +8,7 @@ import { Mail, ExternalLink, Sparkles, Quote, Award } from "lucide-react";
 import { SetLanguage } from "@/components/set-language";
 
 const ogImage = "/press-kit/screenshot-hero-preview.jpg";
-const siteUrl = "https://zazadraft.com";
+const siteUrl = "https://www.zazadraft.com";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteUrl}/de/about/press`,
     languages: {
-      "en-GB": "https://zazadraft.com/about/press",
+      "en-GB": "https://www.zazadraft.com/about/press",
       "de-DE": `${siteUrl}/de/about/press`,
-      "x-default": "https://zazadraft.com/about/press",
+      "x-default": "https://www.zazadraft.com/about/press",
     },
   },
 };

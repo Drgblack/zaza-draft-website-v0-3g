@@ -193,7 +193,7 @@ That is what getting out of the 10pm trap really means.
 
 ## CTA
 
-If too much of your weekend is being lost to difficult emails, follow-ups, and report comments, try [Zaza Draft](https://zazadraft.com). It is a calm, teacher-first co-writer built for the messages that are hardest to phrase when the day should already be over.
+If too much of your weekend is being lost to difficult emails, follow-ups, and report comments, try [Zaza Draft](https://www.zazadraft.com). It is a calm, teacher-first co-writer built for the messages that are hardest to phrase when the day should already be over.
 
 ## FAQ
 

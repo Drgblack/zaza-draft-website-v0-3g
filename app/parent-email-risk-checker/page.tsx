@@ -23,8 +23,8 @@ export const metadata: Metadata = buildPageMetadata({
     "check parent email before sending",
   ],
   alternates: {
-    en: "https://zazadraft.com/parent-email-risk-checker",
-    de: "https://zazadraft.com/de/parent-email-risk-checker",
+    en: "https://www.zazadraft.com/parent-email-risk-checker",
+    de: "https://www.zazadraft.com/de/parent-email-risk-checker",
   },
 });
 

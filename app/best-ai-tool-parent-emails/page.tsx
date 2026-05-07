@@ -9,7 +9,7 @@ export const metadata: Metadata = buildPageMetadata({
   path: "/best-ai-tool-parent-emails",
   type: "article",
   alternates: {
-    en: "https://zazadraft.com/best-ai-tool-parent-emails",
+    en: "https://www.zazadraft.com/best-ai-tool-parent-emails",
   },
   keywords: [
     "best AI tool for parent emails",

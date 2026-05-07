@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import Link from "next/link";
 
 const ogImage = "/greg-blackburn-headshot.jpg";
-const canonicalUrl = "https://zazadraft.com/about/founder-story";
+const canonicalUrl = "https://www.zazadraft.com/about/founder-story";
 
 export const metadata: Metadata = {
   title: "Founder Story | Zaza Draft",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     canonical: canonicalUrl,
     languages: {
       "en-GB": canonicalUrl,
-      "de-DE": "https://zazadraft.com/de/about/founder-story",
+      "de-DE": "https://www.zazadraft.com/de/about/founder-story",
       "x-default": canonicalUrl,
     },
   },

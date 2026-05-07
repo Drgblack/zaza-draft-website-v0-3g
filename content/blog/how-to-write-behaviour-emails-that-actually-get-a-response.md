@@ -186,7 +186,7 @@ That is usually what keeps the relationship workable.
 
 ## CTA
 
-If behaviour emails are eating your evenings, try [Zaza Draft](https://zazadraft.com). It helps teachers draft calmer, clearer parent communication in their own voice, with full control over every final word.
+If behaviour emails are eating your evenings, try [Zaza Draft](https://www.zazadraft.com). It helps teachers draft calmer, clearer parent communication in their own voice, with full control over every final word.
 
 ## FAQ
 

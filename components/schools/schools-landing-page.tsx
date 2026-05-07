@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Briefcase, CheckCircle2 } from "lucide-react";
 
+import { AgentReadableSummary } from "@/components/seo/AgentReadableSummary";
 import { JsonLdCollection } from "@/components/seo/json-ld";
 import { Button } from "@/components/ui/button";
 import {
@@ -14,6 +15,7 @@ import {
 import {
   createBreadcrumbJsonLd,
   createFAQPageJsonLd,
+  createSoftwareApplicationJsonLd,
   createWebPageJsonLd,
 } from "@/lib/seo/json-ld";
 
@@ -129,6 +131,28 @@ export function SchoolsLandingPage({ content }: { content: SchoolsContent }) {
                 answer: item.answer,
               })),
             ),
+          },
+          {
+            id: `${content.locale}-schools-software-schema`,
+            data: createSoftwareApplicationJsonLd({
+              description: content.hero.description,
+              featureList: [
+                content.locale === "de"
+                  ? "Unterstuetzung fuer sensible Elternkommunikation"
+                  : "Support for sensitive parent communication",
+                content.locale === "de"
+                  ? "Ruhigere, klarere Formulierungen vor dem Senden"
+                  : "Calmer, clearer wording before send",
+                content.locale === "de"
+                  ? "Lehrkraft- und Leadership-Review bleiben im Mittelpunkt"
+                  : "Teacher and leadership review stay in control",
+                content.locale === "de"
+                  ? "Rollout fuer Teams, Schulen und Trusts"
+                  : "Rollout for teams, schools, and trusts",
+              ],
+              isAccessibleForFree: false,
+              inLanguage: content.locale === "de" ? "de-DE" : "en-GB",
+            }),
           },
         ]}
       />
@@ -581,6 +605,103 @@ export function SchoolsLandingPage({ content }: { content: SchoolsContent }) {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="border-b border-slate-200 bg-slate-50">
+          <div className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12 lg:py-24">
+            <AgentReadableSummary
+              locale={content.locale}
+              title={
+                content.locale === "de"
+                  ? "Zaza fuer Schulen auf einen Blick"
+                  : "Zaza for Schools at a glance"
+              }
+              intro={
+                content.locale === "de"
+                  ? "Diese Zusammenfassung beantwortet die Kernfragen, die Schulleitungen, Trusts und Teams vor einer Demo oder Pilotphase typischerweise klaeren wollen."
+                  : "This summary answers the core questions school leaders, trusts, and teams usually want clarified before a demo or pilot."
+              }
+              answers={{
+                whatIsIt:
+                  content.locale === "de" ? (
+                    <>
+                      Zaza fuer Schulen ist eine Kommunikations-Unterstuetzung
+                      fuer Elternmails und andere sensible Schulnachrichten.
+                    </>
+                  ) : (
+                    <>
+                      Zaza for Schools is a communication support layer for
+                      parent emails and other sensitive school messages.
+                    </>
+                  ),
+                whoIsItFor:
+                  content.locale === "de" ? (
+                    <>
+                      Fuer Schulleitungen, Trusts, Abteilungen und Teams, die
+                      Mitarbeitende in schwierigen Kommunikationsmomenten besser
+                      unterstuetzen wollen.
+                    </>
+                  ) : (
+                    <>
+                      It is for school leaders, trusts, departments, and teams
+                      that want better support for staff in difficult
+                      communication moments.
+                    </>
+                  ),
+                problemItSolves:
+                  content.locale === "de" ? (
+                    <>
+                      Es reduziert Umschreiben unter Druck, Tonrisiko und
+                      vermeidbare Eskalationen in Elternkommunikation.
+                    </>
+                  ) : (
+                    <>
+                      It reduces under-pressure rewrites, tone risk, and
+                      avoidable escalation in parent-facing communication.
+                    </>
+                  ),
+                howItWorks:
+                  content.locale === "de" ? (
+                    <>
+                      Mitarbeitende bringen den Entwurf ein, Zaza formt eine
+                      ruhigere Arbeitsfassung, und die finale Entscheidung
+                      bleibt bei der Schule.
+                    </>
+                  ) : (
+                    <>
+                      Staff bring the draft, Zaza helps shape a calmer working
+                      version, and final judgement stays with the school.
+                    </>
+                  ),
+                whatItCosts:
+                  content.locale === "de" ? (
+                    <>
+                      Die kommerzielle Ausgestaltung wird auf Rollout-Tiefe,
+                      Teamgroesse und Supportbedarf abgestimmt, statt als starre
+                      Self-Serve-Preisliste angeboten.
+                    </>
+                  ) : (
+                    <>
+                      Commercial scope is tailored to rollout depth, team size,
+                      and support needs rather than offered as a rigid
+                      self-serve price list.
+                    </>
+                  ),
+                nextStep:
+                  content.locale === "de" ? (
+                    <>
+                      Vereinbaren Sie eine Demo, um Einsatzszenarien,
+                      Pilotumfang und Rollout-Modell zu klaeren.
+                    </>
+                  ) : (
+                    <>
+                      Book a demo to scope use cases, pilot shape, and the right
+                      rollout model.
+                    </>
+                  ),
+              }}
+            />
           </div>
         </section>
 

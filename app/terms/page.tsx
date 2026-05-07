@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { TermsClient } from "./terms-client";
 
 const ogImage = "/professional-headshot.png";
-const canonicalUrl = "https://zazadraft.com/terms";
+const canonicalUrl = "https://www.zazadraft.com/terms";
 
 export const metadata: Metadata = {
   title: "Terms of Service | Zaza Draft",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     canonical: canonicalUrl,
     languages: {
       "en-GB": canonicalUrl,
-      "de-DE": "https://zazadraft.com/de/terms",
+      "de-DE": "https://www.zazadraft.com/de/terms",
       "x-default": canonicalUrl,
     },
   },

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 const ogImage = "/greg-blackburn-headshot.jpg";
-const canonicalUrl = "https://zazadraft.com/de/about/founder";
+const canonicalUrl = "https://www.zazadraft.com/de/about/founder";
 
 export const metadata: Metadata = {
   title: "Gründer | Zaza Draft",
@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: canonicalUrl,
     languages: {
-      "en-GB": "https://zazadraft.com/about/founder",
+      "en-GB": "https://www.zazadraft.com/about/founder",
       "de-DE": canonicalUrl,
-      "x-default": "https://zazadraft.com/about/founder",
+      "x-default": "https://www.zazadraft.com/about/founder",
     },
   },
   openGraph: {

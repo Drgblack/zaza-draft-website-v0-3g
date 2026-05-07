@@ -1,414 +1,443 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
-import { useLanguage } from "@/lib/i18n/language-context";
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowRight, Clock, MessageSquare, ShieldCheck } from "lucide-react";
+
+import { AgentReadableSummary } from "@/components/seo/AgentReadableSummary";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Clock, Users, TrendingUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/lib/i18n/language-context";
 
-type Category =
-  | "all"
-  | "elementary"
-  | "middle"
-  | "high"
-  | "district"
-  | "special-ed"
-  | "multilingual";
+type ExampleCategory = "all" | "parent-email" | "reports" | "leadership";
 
-interface CaseStudy {
-  slug: string;
+type ExampleCard = {
   title: string;
-  school: string;
-  location: string;
-  students: string;
-  category: Category;
-  metric: string;
-  metricValue: string;
-  quote: string;
+  category: ExampleCategory;
+  situation: string;
+  focus: string;
+  before: string;
+  after: string;
   thumbnail: string;
-}
+};
+
+const cards: Record<"en" | "de", ExampleCard[]> = {
+  en: [
+    {
+      title: "Behaviour update that still sounds calm",
+      category: "parent-email",
+      situation: "A parent email after a difficult lesson",
+      focus: "Lowering tone risk without removing the point",
+      before:
+        "Oliver was disruptive again today and ignored several instructions. This is becoming unacceptable.",
+      after:
+        "I wanted to let you know that Oliver found it difficult to stay focused during today's lesson despite several reminders. We are continuing to support him in class and would appreciate your partnership in reinforcing expectations at home.",
+      thumbnail: "/elementary-school-classroom-teacher.jpg",
+    },
+    {
+      title: "Report comment that says something useful",
+      category: "reports",
+      situation: "A report draft that feels too obvious",
+      focus: "Moving from generic praise to parent value",
+      before: "Ava is kind and works hard.",
+      after:
+        "Ava works with steady concentration and responds thoughtfully to feedback. She is particularly strong at refining her work once she has reflected on the next step.",
+      thumbnail: "/young-teacher-confident-classroom.jpg",
+    },
+    {
+      title: "Leadership follow-up that avoids escalation",
+      category: "leadership",
+      situation: "A tense reply with senior leadership copied in",
+      focus: "Keeping facts clear while protecting professionalism",
+      before:
+        "I think you are misunderstanding the situation and I do not appreciate the accusation.",
+      after:
+        "Thank you for taking the time to write. I can hear how concerned you are, and I would like to clarify what happened from school's perspective and agree the best next step together.",
+      thumbnail: "/school-district-meeting-teachers.jpg",
+    },
+  ],
+  de: [
+    {
+      title: "Verhaltenshinweis, der trotzdem ruhig klingt",
+      category: "parent-email",
+      situation: "Eine Elternmail nach einer schwierigen Stunde",
+      focus: "Tonrisiko senken, ohne den Punkt zu verwischen",
+      before:
+        "Oliver war heute wieder stoerend und hat mehrere Anweisungen ignoriert. Das ist so nicht akzeptabel.",
+      after:
+        "Ich wollte Sie wissen lassen, dass es Oliver heute trotz mehrerer Erinnerungen schwerfiel, waehrend des Unterrichts konzentriert zu bleiben. Wir unterstuetzen ihn weiter in der Schule und wuerden Ihre Partnerschaft zu Hause sehr schaetzen.",
+      thumbnail: "/elementary-school-classroom-teacher.jpg",
+    },
+    {
+      title: "Zeugnisformulierung mit echtem Mehrwert",
+      category: "reports",
+      situation: "Ein Entwurf, der noch zu offensichtlich wirkt",
+      focus: "Von allgemeinem Lob zu hilfreicher Rueckmeldung",
+      before: "Ava ist freundlich und arbeitet hart.",
+      after:
+        "Ava arbeitet konzentriert und nimmt Rueckmeldungen sehr ueberlegt auf. Besonders stark ist ihre Faehigkeit, ihre Arbeit nach einer Reflexion gezielt zu verbessern.",
+      thumbnail: "/young-teacher-confident-classroom.jpg",
+    },
+    {
+      title: "Rueckmeldung mit Schulleitung in CC ohne Eskalation",
+      category: "leadership",
+      situation: "Eine angespannte Antwort mit Fuehrungsebene im Verlauf",
+      focus: "Fakten klar halten und Professionalitaet schuetzen",
+      before:
+        "Ich denke, Sie missverstehen die Situation, und diesen Vorwurf finde ich unangemessen.",
+      after:
+        "Vielen Dank fuer Ihre Nachricht. Ich sehe Ihre Sorge und moechte den Ablauf aus schulischer Sicht klar schildern, damit wir den naechsten Schritt gemeinsam gut abstimmen koennen.",
+      thumbnail: "/school-district-meeting-teachers.jpg",
+    },
+  ],
+};
 
 export function SuccessStoriesClient() {
   const { language } = useLanguage();
-  const [selectedCategory, setSelectedCategory] = useState<Category>("all");
+  const locale = language === "de" ? "de" : "en";
+  const [selectedCategory, setSelectedCategory] =
+    useState<ExampleCategory>("all");
 
-  // Use "de" if language is explicitly German, otherwise default to "en"
-  const lang = language === "de" ? "de" : "en";
-
-  // --- TRANSLATIONS ---
   const content = {
     en: {
-      hero: {
-        badge: "Early Access",
-        title:
-          "See how teachers and schools transform communication with Zaza Draft",
-        subtitle:
-          "Just launched in early access - feedback from real teachers is already coming in. Join 7 teachers shaping it right now.",
-      },
-      metrics: {
-        teachers: "teachers shaping Zaza right now",
-        emails: "current launch stage",
-        savings: "feedback arriving now",
-      },
-      readStory: "Read Full Story",
-      cta: {
-        title: "Join the first teachers shaping Zaza Draft",
-        subtitle: "Start using it and help steer what comes next",
-        primary: "Try Zaza Draft Free",
-        secondary: "Talk to Our Team",
-      },
-      categories: [
-        { id: "all" as Category, label: "All Stories" },
-        { id: "elementary" as Category, label: "Elementary School" },
-        { id: "middle" as Category, label: "Middle School" },
-        { id: "high" as Category, label: "High School" },
-        { id: "district" as Category, label: "District-Wide" },
-        { id: "special-ed" as Category, label: "Special Education" },
-        { id: "multilingual" as Category, label: "Multilingual Schools" },
+      badge: "Representative examples",
+      title: "The kinds of communication Zaza Draft is built to improve",
+      subtitle:
+        "These are representative before-and-after examples, not customer proof claims. They show the kinds of wording problems Zaza Draft is designed to help teachers and schools work through.",
+      filters: [
+        { id: "all" as ExampleCategory, label: "All examples" },
+        { id: "parent-email" as ExampleCategory, label: "Parent emails" },
+        { id: "reports" as ExampleCategory, label: "Report comments" },
+        { id: "leadership" as ExampleCategory, label: "Leadership follow-up" },
       ],
-      caseStudies: [
+      metrics: [
         {
-          slug: "lincoln-elementary-parent-communication",
-          title: "How Lincoln Elementary Cut Parent Communication Time by 75%",
-          school: "Lincoln Elementary",
-          location: "Austin, TX",
-          students: "450 students",
-          category: "elementary",
-          metric: "Time Saved",
-          metricValue: "12 hours/week",
-          quote:
-            "I actually look forward to parent communication now. It's no longer a source of stress.",
-          thumbnail: "/elementary-school-classroom-teacher.jpg",
+          icon: ShieldCheck,
+          title: "Focus",
+          value: "Tone risk",
         },
         {
-          slug: "riverside-unified-district-rollout",
-          title:
-            "District-Wide AI Rollout: How Riverside Unified Trained 200 Teachers",
-          school: "Riverside Unified",
-          location: "California",
-          students: "15,000 students",
-          category: "district",
-          metric: "Teachers Onboarded",
-          metricValue: "200 teachers",
-          quote:
-            "The professional development was seamless. Teachers were confident within days.",
-          thumbnail: "/school-district-meeting-teachers.jpg",
+          icon: MessageSquare,
+          title: "Format",
+          value: "Before / after wording",
         },
         {
-          slug: "washington-middle-language-barriers",
-          title: "Breaking Language Barriers: ESL Success at Washington Middle",
-          school: "Washington Middle",
-          location: "New York, NY",
-          students: "800 students",
-          category: "multilingual",
-          metric: "Languages Supported",
-          metricValue: "15 languages",
-          quote:
-            "For the first time, every family gets messages in their language. The impact is profound.",
-          thumbnail: "/diverse-multilingual-classroom.jpg",
-        },
-        {
-          slug: "oakwood-special-education-reports",
-          title: "Special Education Reports: Compliance Meets Compassion",
-          school: "Oakwood High School",
-          location: "Chicago, IL",
-          students: "1,200 students",
-          category: "special-ed",
-          metric: "IEP Reports",
-          metricValue: "40 reports in 1 day",
-          quote:
-            "I can focus on the kids, not just the paperwork. Zaza Shield ensures compliance.",
-          thumbnail: "/special-education-teacher.jpg",
-        },
-        {
-          slug: "jefferson-new-teacher-confidence",
-          title: "New Teacher Confidence: From Anxious to Assured in 30 Days",
-          school: "Jefferson Elementary",
-          location: "Seattle, WA",
-          students: "600 students",
-          category: "elementary",
-          metric: "First Year Teacher",
-          metricValue: "30 days to confidence",
-          quote:
-            "My mentor teacher was impressed by my communication. Zaza gave me the confidence I needed.",
-          thumbnail: "/young-teacher-confident-classroom.jpg",
+          icon: Clock,
+          title: "Use",
+          value: "High-stakes school messages",
         },
       ],
+      situation: "Situation",
+      focus: "What improves",
+      before: "Before",
+      after: "After with Zaza-style support",
+      summaryTitle: "What this page is for",
+      ctaTitle: "See the product and pricing next",
+      ctaBody:
+        "If these are the kinds of messages your staff hesitate over, the product and pricing pages explain how Zaza Draft supports them in practice.",
+      primary: "See pricing",
+      secondary: "Explore Zaza Draft",
     },
     de: {
-      hero: {
-        badge: "Early Access",
-        title:
-          "Erfahren Sie, wie Lehrkräfte und Schulen die Kommunikation mit Zaza Draft transformieren",
-        subtitle:
-          "Gerade im Early Access gestartet - echtes Feedback von Lehrkräften kommt bereits rein. Machen Sie mit: 7 Lehrkräfte gestalten es gerade mit.",
-      },
-      metrics: {
-        teachers: "Lehrkräfte gestalten Zaza gerade mit",
-        emails: "aktueller Launch-Status",
-        savings: "Feedback kommt gerade rein",
-      },
-      readStory: "Ganze Geschichte lesen",
-      cta: {
-        title:
-          "Werden Sie Teil der ersten Lehrkräfte, die Zaza Draft mitgestalten",
-        subtitle:
-          "Nutzen Sie es jetzt und helfen Sie, die nächsten Schritte zu formen",
-        primary: "Zaza Draft kostenlos testen",
-        secondary: "Kontaktieren Sie uns",
-      },
-      categories: [
-        { id: "all" as Category, label: "Alle Geschichten" },
-        { id: "elementary" as Category, label: "Grundschule" },
-        { id: "middle" as Category, label: "Mittelschule" },
-        { id: "high" as Category, label: "Oberschule / Gymnasium" },
-        { id: "district" as Category, label: "Distriktweit" },
-        { id: "special-ed" as Category, label: "Sonderpädagogik" },
-        { id: "multilingual" as Category, label: "Mehrsprachige Schulen" },
-      ],
-      caseStudies: [
+      badge: "Beispielhafte Szenarien",
+      title: "Die Arten von Kommunikation, fuer die Zaza Draft gebaut ist",
+      subtitle:
+        "Diese Vorher-Nachher-Beispiele sind repräsentative Szenarien und keine Kundennachweise. Sie zeigen, bei welchen Formulierungsproblemen Zaza Draft Lehrkraeften und Schulen helfen soll.",
+      filters: [
+        { id: "all" as ExampleCategory, label: "Alle Beispiele" },
+        { id: "parent-email" as ExampleCategory, label: "Elternmails" },
+        { id: "reports" as ExampleCategory, label: "Zeugnisse" },
         {
-          slug: "lincoln-elementary-parent-communication",
-          title:
-            "Wie die Lincoln Elementary die Zeit für Elternkommunikation um 75% reduzierte",
-          school: "Lincoln Elementary",
-          location: "Austin, TX",
-          students: "450 Schüler",
-          category: "elementary",
-          metric: "Zeitersparnis",
-          metricValue: "12 Std./Woche",
-          quote:
-            "Ich freue mich jetzt tatsächlich auf die Elternkommunikation. Sie ist kein Stressfaktor mehr.",
-          thumbnail: "/elementary-school-classroom-teacher.jpg",
-        },
-        {
-          slug: "riverside-unified-district-rollout",
-          title:
-            "Distriktweite KI-Einführung: Wie Riverside Unified 200 Lehrkräfte schulte",
-          school: "Riverside Unified",
-          location: "Kalifornien",
-          students: "15.000 Schüler",
-          category: "district",
-          metric: "Lehrkräfte geschult",
-          metricValue: "200 Lehrkräfte",
-          quote:
-            "Die Fortbildung war nahtlos. Die Lehrkräfte waren innerhalb weniger Tage sicher im Umgang.",
-          thumbnail: "/school-district-meeting-teachers.jpg",
-        },
-        {
-          slug: "washington-middle-language-barriers",
-          title:
-            "Sprachbarrieren überwinden: ESL-Erfolg an der Washington Middle",
-          school: "Washington Middle",
-          location: "New York, NY",
-          students: "800 Schüler",
-          category: "multilingual",
-          metric: "Unterstützte Sprachen",
-          metricValue: "15 Sprachen",
-          quote:
-            "Zum ersten Mal erhält jede Familie Nachrichten in ihrer Sprache. Die Wirkung ist enorm.",
-          thumbnail: "/diverse-multilingual-classroom.jpg",
-        },
-        {
-          slug: "oakwood-special-education-reports",
-          title: "Sonderpädagogische Berichte: Compliance trifft auf Mitgefühl",
-          school: "Oakwood High School",
-          location: "Chicago, IL",
-          students: "1.200 Schüler",
-          category: "special-ed",
-          metric: "Förderpläne",
-          metricValue: "40 Berichte an 1 Tag",
-          quote:
-            "Ich kann mich auf die Kinder konzentrieren, nicht nur auf den Papierkram. Zaza Shield sichert die Compliance.",
-          thumbnail: "/special-education-teacher.jpg",
-        },
-        {
-          slug: "jefferson-new-teacher-confidence",
-          title:
-            "Selbstvertrauen neuer Lehrkräfte: Von ängstlich zu sicher in 30 Tagen",
-          school: "Jefferson Elementary",
-          location: "Seattle, WA",
-          students: "600 Schüler",
-          category: "elementary",
-          metric: "Berufseinsteiger",
-          metricValue: "30 Tage bis zur Sicherheit",
-          quote:
-            "Mein Mentor war beeindruckt von meiner Kommunikation. Zaza gab mir das nötige Selbstvertrauen.",
-          thumbnail: "/young-teacher-confident-classroom.jpg",
+          id: "leadership" as ExampleCategory,
+          label: "Schulleitung / Follow-up",
         },
       ],
+      metrics: [
+        {
+          icon: ShieldCheck,
+          title: "Fokus",
+          value: "Tonrisiko",
+        },
+        {
+          icon: MessageSquare,
+          title: "Format",
+          value: "Vorher / Nachher",
+        },
+        {
+          icon: Clock,
+          title: "Einsatz",
+          value: "Sensible Schulnachrichten",
+        },
+      ],
+      situation: "Situation",
+      focus: "Was verbessert wird",
+      before: "Vorher",
+      after: "Nachher mit Zaza-artiger Unterstuetzung",
+      summaryTitle: "Wofuer diese Seite gedacht ist",
+      ctaTitle: "Als Nächstes Produkt und Preise ansehen",
+      ctaBody:
+        "Wenn das die Arten von Nachrichten sind, bei denen Ihr Team zoegert, erklaeren Produkt- und Preisseite den konkreten Einsatz von Zaza Draft.",
+      primary: "Preise ansehen",
+      secondary: "Zaza Draft ansehen",
     },
-  };
+  }[locale];
 
-  const text = content[lang];
-  const categories = text.categories;
-  const caseStudies = text.caseStudies as CaseStudy[];
-
-  const filteredStudies =
+  const examples = cards[locale];
+  const filteredExamples =
     selectedCategory === "all"
-      ? caseStudies
-      : caseStudies.filter((study) => study.category === selectedCategory);
+      ? examples
+      : examples.filter((example) => example.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0F172A] via-[#1E293B] to-[#0F172A]">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <Badge className="mb-6 bg-purple-500/10 text-purple-300 border-purple-500/20 px-4 py-1.5">
-            {text.hero.badge}
+      <section className="px-6 pb-16 pt-32">
+        <div className="mx-auto max-w-7xl text-center">
+          <Badge className="mb-6 border-purple-500/20 bg-purple-500/10 px-4 py-1.5 text-purple-300">
+            {content.badge}
           </Badge>
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 text-balance">
-            {text.hero.title}
+          <h1 className="text-balance text-5xl font-bold text-white md:text-6xl">
+            {content.title}
           </h1>
-          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto text-pretty">
-            {text.hero.subtitle}
+          <p className="mx-auto mt-6 max-w-4xl text-xl text-gray-300">
+            {content.subtitle}
           </p>
 
-          {/* Trust Metrics */}
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-              <Users className="w-8 h-8 text-purple-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-white mb-1">7</div>
-              <div className="text-gray-400">{text.metrics.teachers}</div>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-              <TrendingUp className="w-8 h-8 text-blue-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-white mb-1">
-                Early access
-              </div>
-              <div className="text-gray-400">{text.metrics.emails}</div>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-              <Clock className="w-8 h-8 text-green-400 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-white mb-1">
-                Real feedback
-              </div>
-              <div className="text-gray-400">{text.metrics.savings}</div>
-            </div>
+          <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-3">
+            {content.metrics.map((metric) => {
+              const Icon = metric.icon;
+              return (
+                <div
+                  key={metric.title}
+                  className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
+                >
+                  <Icon className="mx-auto mb-3 h-8 w-8 text-purple-400" />
+                  <div className="text-sm uppercase tracking-[0.18em] text-gray-400">
+                    {metric.title}
+                  </div>
+                  <div className="mt-2 text-2xl font-bold text-white">
+                    {metric.value}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Filter Navigation */}
-      <section className="sticky top-20 z-40 bg-[#0F172A]/95 backdrop-blur-xl border-y border-white/10 py-4 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className="sticky top-20 z-40 border-y border-white/10 bg-[#0F172A]/95 px-6 py-4 backdrop-blur-xl">
+        <div className="mx-auto max-w-7xl">
           <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
-            {categories.map((category) => (
+            {content.filters.map((filter) => (
               <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-5 py-2.5 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
-                  selectedCategory === category.id
+                key={filter.id}
+                onClick={() => setSelectedCategory(filter.id)}
+                className={`whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-medium transition-all ${
+                  selectedCategory === filter.id
                     ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg shadow-purple-500/25"
                     : "bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white"
                 }`}
               >
-                {category.label}
+                {filter.label}
               </button>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Case Study Grid */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredStudies.map((study) => (
-              <Link
-                key={study.slug}
-                href={`/success-stories/${study.slug}`}
-                className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-purple-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1"
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={study.thumbnail || "/placeholder.svg"}
-                    alt={study.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <Badge className="absolute top-4 left-4 bg-purple-500/90 text-white border-0">
-                    {categories.find((c) => c.id === study.category)?.label}
-                  </Badge>
+      <section className="px-6 py-20">
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-3">
+          {filteredExamples.map((example) => (
+            <article
+              key={example.title}
+              className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm"
+            >
+              <div className="relative h-52">
+                <Image
+                  src={example.thumbnail}
+                  alt={example.title}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-transparent" />
+              </div>
+              <div className="space-y-5 p-6">
+                <h2 className="text-2xl font-semibold text-white">
+                  {example.title}
+                </h2>
+                <div className="rounded-2xl border border-white/10 bg-[#0B1220] p-4">
+                  <p className="text-xs uppercase tracking-[0.18em] text-purple-300">
+                    {content.situation}
+                  </p>
+                  <p className="mt-2 text-sm leading-7 text-gray-300">
+                    {example.situation}
+                  </p>
                 </div>
-
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors text-balance">
-                    {study.title}
-                  </h3>
-
-                  <div className="text-sm text-gray-400 mb-4">
-                    {study.school} • {study.location} • {study.students}
-                  </div>
-
-                  <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-4 mb-4">
-                    <div className="text-sm text-purple-300 mb-1">
-                      {study.metric}
-                    </div>
-                    <div className="text-2xl font-bold text-white">
-                      {study.metricValue}
-                    </div>
-                  </div>
-
-                  <blockquote className="text-gray-300 italic mb-4 line-clamp-2">
-                    "{study.quote}"
-                  </blockquote>
-
-                  <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors">
-                    {text.readStory}
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </div>
+                <div className="rounded-2xl border border-white/10 bg-[#0B1220] p-4">
+                  <p className="text-xs uppercase tracking-[0.18em] text-blue-300">
+                    {content.focus}
+                  </p>
+                  <p className="mt-2 text-sm leading-7 text-gray-300">
+                    {example.focus}
+                  </p>
                 </div>
-              </Link>
-            ))}
-          </div>
+                <div className="rounded-2xl border border-rose-400/25 bg-rose-500/10 p-4">
+                  <p className="text-xs uppercase tracking-[0.18em] text-rose-200">
+                    {content.before}
+                  </p>
+                  <p className="mt-2 text-sm leading-7 text-rose-50">
+                    {example.before}
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-emerald-400/25 bg-emerald-500/10 p-4">
+                  <p className="text-xs uppercase tracking-[0.18em] text-emerald-200">
+                    {content.after}
+                  </p>
+                  <p className="mt-2 text-sm leading-7 text-emerald-50">
+                    {example.after}
+                  </p>
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30 rounded-3xl p-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            {text.cta.title}
+      <section className="px-6 pb-20">
+        <div className="mx-auto max-w-6xl">
+          <AgentReadableSummary
+            locale={locale}
+            theme="dark"
+            title={content.summaryTitle}
+            intro={
+              locale === "de"
+                ? "Die Beispiele auf dieser Seite sollen den Charakter des Problems und die gewuenschte Verbesserung zeigen, nicht Markttraktion belegen."
+                : "The examples on this page are meant to show the shape of the problem and the kind of improvement Zaza Draft is aiming for, not to claim market traction."
+            }
+            answers={{
+              whatIsIt:
+                locale === "de" ? (
+                  <>Eine Sammlung repräsentativer Kommunikationsbeispiele.</>
+                ) : (
+                  <>A collection of representative communication examples.</>
+                ),
+              whoIsItFor:
+                locale === "de" ? (
+                  <>
+                    Fuer Lehrkraefte und Schulen, die schnell sehen wollen, ob
+                    Zaza zum eigenen Kommunikationsalltag passt.
+                  </>
+                ) : (
+                  <>
+                    For teachers and schools who want a fast sense of whether
+                    Zaza fits their communication workflow.
+                  </>
+                ),
+              problemItSolves:
+                locale === "de" ? (
+                  <>
+                    Sie zeigt, wie zu harte, zu vage oder zu offensichtliche
+                    Formulierungen in ruhigere, klarere Fassungen uebergehen
+                    koennen.
+                  </>
+                ) : (
+                  <>
+                    It shows how wording that is too blunt, too vague, or too
+                    obvious can move toward calmer, clearer drafts.
+                  </>
+                ),
+              howItWorks:
+                locale === "de" ? (
+                  <>
+                    Jedes Beispiel kombiniert einen schwierigen Ausgangstext mit
+                    einer Version, wie Zaza Draft die Nachricht neu ausrichten
+                    soll.
+                  </>
+                ) : (
+                  <>
+                    Each example pairs a difficult starting draft with the kind
+                    of calmer version Zaza Draft is built to help produce.
+                  </>
+                ),
+              whatItCosts:
+                locale === "de" ? (
+                  <>
+                    Die aktuelle Preisstruktur finden Sie auf der{" "}
+                    <Link href="/pricing" className="font-semibold underline">
+                      Preisseite
+                    </Link>
+                    .
+                  </>
+                ) : (
+                  <>
+                    The current pricing structure is on the{" "}
+                    <Link href="/pricing" className="font-semibold underline">
+                      pricing page
+                    </Link>
+                    .
+                  </>
+                ),
+              nextStep:
+                locale === "de" ? (
+                  <>
+                    Gehen Sie als Naechstes zur Produktseite oder zu den
+                    Preisen.
+                  </>
+                ) : (
+                  <>Next, move to the product page or pricing.</>
+                ),
+            }}
+          />
+        </div>
+      </section>
+
+      <section className="px-6 pb-20">
+        <div className="mx-auto max-w-4xl rounded-3xl border border-purple-500/30 bg-gradient-to-r from-purple-600/20 to-blue-600/20 p-12 text-center">
+          <h2 className="text-3xl font-bold text-white md:text-4xl">
+            {content.ctaTitle}
           </h2>
-          <p className="text-xl text-gray-300 mb-8">{text.cta.subtitle}</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <p className="mt-4 text-xl text-gray-300">{content.ctaBody}</p>
+          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Button
               asChild
               size="lg"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-medium px-8 py-6 rounded-full shadow-lg shadow-purple-500/25"
+              className="rounded-full bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-6 font-medium text-white shadow-lg shadow-purple-500/25 hover:from-purple-700 hover:to-blue-700"
             >
-              <Link href="/pricing">{text.cta.primary}</Link>
+              <Link href="/pricing">{content.primary}</Link>
             </Button>
             <Button
               asChild
               size="lg"
               variant="outline"
-              className="border-white/20 text-white hover:bg-white/10 px-8 py-6 rounded-full bg-transparent"
+              className="rounded-full border-white/20 bg-transparent px-8 py-6 text-white hover:bg-white/10"
             >
-              <Link href="/contact?topic=success-stories">
-                {text.cta.secondary}
+              <Link href="/products/draft">
+                {content.secondary}
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            name: "Success Stories",
-            description: "Real stories from educators using Zaza Draft",
-            url: "https://zazadraft.com/success-stories",
+            name:
+              locale === "de"
+                ? "Lehrkraft-Kommunikationsbeispiele"
+                : "Teacher communication examples",
+            description:
+              locale === "de"
+                ? "Repräsentative Vorher-Nachher-Beispiele fuer Elternkommunikation und Schultexte."
+                : "Representative before-and-after examples for parent communication and school writing.",
+            url: "https://www.zazadraft.com/success-stories",
             publisher: {
               "@type": "Organization",
-              name: "Zaza",
+              name: "Zaza Draft",
             },
           }),
         }}

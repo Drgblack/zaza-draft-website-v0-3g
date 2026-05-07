@@ -10,8 +10,8 @@ export const metadata: Metadata = buildPageMetadata({
     "Compare Zaza Draft with other AI tools for teachers. See detailed feature-by-feature comparisons to find the best-fit tool for parent emails, report comments, and teacher writing workflows.",
   path: "/compare",
   alternates: {
-    en: "https://zazadraft.com/compare",
-    de: "https://zazadraft.com/de/compare",
+    en: "https://www.zazadraft.com/compare",
+    de: "https://www.zazadraft.com/de/compare",
   },
   keywords: [
     "compare AI tools for teachers",

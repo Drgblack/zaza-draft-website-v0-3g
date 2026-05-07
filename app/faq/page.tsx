@@ -9,8 +9,8 @@ export const metadata: Metadata = buildPageMetadata({
     "Get clear answers about Zaza Draft, teacher-first AI writing, privacy, GDPR-ready workflows, parent emails, report comments, pricing, and school-safe use.",
   path: "/faq",
   alternates: {
-    en: "https://zazadraft.com/faq",
-    de: "https://zazadraft.com/de/faq",
+    en: "https://www.zazadraft.com/faq",
+    de: "https://www.zazadraft.com/de/faq",
   },
   keywords: [
     "teacher AI FAQ",

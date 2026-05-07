@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import AILiteracyClient from "@/app/ai-literacy/ai-literacy-client";
 import { CourseSchema, BreadcrumbSchema } from "@/lib/seo/schema";
 
-const siteUrl = "https://zazadraft.com/de/ai-literacy";
+const siteUrl = "https://www.zazadraft.com/de/ai-literacy";
 
 export const metadata: Metadata = {
   title: "AI Literacy for Teachers | Free Courses & Certification | Zaza Draft",
@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteUrl,
     languages: {
-      "en-GB": "https://zazadraft.com/ai-literacy",
+      "en-GB": "https://www.zazadraft.com/ai-literacy",
       "de-DE": siteUrl,
-      "x-default": "https://zazadraft.com/ai-literacy",
+      "x-default": "https://www.zazadraft.com/ai-literacy",
     },
   },
   openGraph: {
@@ -42,12 +42,15 @@ export default function AILiteracyPage() {
         name="AI Literacy for Teachers"
         description="Comprehensive AI education program with free courses, certification, and resources for teachers"
         provider="Zaza Draft"
-        url="https://zazadraft.com/de/ai-literacy"
+        url="https://www.zazadraft.com/de/ai-literacy"
       />
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://zazadraft.com/de" },
-          { name: "AI Literacy", url: "https://zazadraft.com/de/ai-literacy" },
+          { name: "Home", url: "https://www.zazadraft.com/de" },
+          {
+            name: "AI Literacy",
+            url: "https://www.zazadraft.com/de/ai-literacy",
+          },
         ]}
       />
       <AILiteracyClient />

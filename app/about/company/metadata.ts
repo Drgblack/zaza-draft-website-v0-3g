@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const pageUrl = "https://zazadraft.com/about/company";
+const pageUrl = "https://www.zazadraft.com/about/company";
 
 export const metadata: Metadata = {
   title: "Company | Zaza Draft",
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     canonical: pageUrl,
     languages: {
       "en-GB": pageUrl,
-      "de-DE": "https://zazadraft.com/de/about/company",
+      "de-DE": "https://www.zazadraft.com/de/about/company",
       "x-default": pageUrl,
     },
   },

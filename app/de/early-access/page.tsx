@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import EarlyAccessClient from "@/app/early-access/early-access-client";
 
-const canonicalUrl = "https://zazadraft.com/de/early-access";
+const canonicalUrl = "https://www.zazadraft.com/de/early-access";
 
 export const metadata: Metadata = {
   title: "Zaza Draft Warteliste | Lehrerzentrierte KI-Schreibhilfe",
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: canonicalUrl,
     languages: {
-      "en-GB": "https://zazadraft.com/early-access",
+      "en-GB": "https://www.zazadraft.com/early-access",
       "de-DE": canonicalUrl,
-      "x-default": "https://zazadraft.com/early-access",
+      "x-default": "https://www.zazadraft.com/early-access",
     },
   },
 };

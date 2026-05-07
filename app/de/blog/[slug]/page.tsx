@@ -45,7 +45,7 @@ export async function generateMetadata({
       title: metadataTitle,
       description: metadataDescription,
       type: "article",
-      url: `https://zazadraft.com${urlPath}`,
+      url: `https://www.zazadraft.com${urlPath}`,
       locale: "de_DE",
       images: image ? [image] : [],
     },
@@ -56,11 +56,11 @@ export async function generateMetadata({
       images: image ? [image] : [],
     },
     alternates: {
-      canonical: `https://zazadraft.com${urlPath}`,
+      canonical: `https://www.zazadraft.com${urlPath}`,
       languages: {
-        "en-GB": `https://zazadraft.com/blog/${post.slug}`,
-        "de-DE": `https://zazadraft.com${urlPath}`,
-        "x-default": `https://zazadraft.com/blog/${post.slug}`,
+        "en-GB": `https://www.zazadraft.com/blog/${post.slug}`,
+        "de-DE": `https://www.zazadraft.com${urlPath}`,
+        "x-default": `https://www.zazadraft.com/blog/${post.slug}`,
       },
     },
   };
@@ -91,7 +91,7 @@ export default async function BlogPostPageDe({
     "@type": "BlogPosting",
     headline: post.title,
     description,
-    image: imageSrc ? [`https://zazadraft.com${imageSrc}`] : [],
+    image: imageSrc ? [`https://www.zazadraft.com${imageSrc}`] : [],
     author: {
       "@type": "Person",
       name: "Zaza Draft",
@@ -100,7 +100,7 @@ export default async function BlogPostPageDe({
     inLanguage: "de-DE",
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://zazadraft.com${urlPath}`,
+      "@id": `https://www.zazadraft.com${urlPath}`,
     },
   };
 

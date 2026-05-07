@@ -30,7 +30,7 @@ import {
 } from "@/lib/seo/content-freshness";
 import howToKeywords from "@/data/how-to-keywords.json";
 
-const BASE_URL = "https://zazadraft.com";
+const BASE_URL = "https://www.zazadraft.com";
 
 type ChangeFrequency = NonNullable<
   MetadataRoute.Sitemap[number]["changeFrequency"]
@@ -66,13 +66,7 @@ const COMPARE_DETAIL_SLUGS = [
   },
 ] as const;
 
-const SUCCESS_STORY_SLUGS = [
-  "lincoln-elementary-parent-communication",
-  "riverside-unified-district-rollout",
-  "washington-middle-language-barriers",
-  "oakwood-special-education-reports",
-  "jefferson-new-teacher-confidence",
-] as const;
+const SUCCESS_STORY_SLUGS = [] as const;
 
 const STATE_OF_AI_REPORT_YEARS = ["2022", "2023", "2024"] as const;
 const TOOL_LANDING_SLUGS = [

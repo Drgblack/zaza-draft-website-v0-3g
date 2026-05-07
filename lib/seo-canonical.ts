@@ -216,12 +216,13 @@ export function normaliseLanguageAlternates(
   const languages: LanguageAlternateInput = {};
 
   if (english) {
-    languages["en-GB"] = english;
-    languages["x-default"] = english;
+    const normalisedEnglish = absoluteUrl(normaliseCanonicalPath(english));
+    languages["en-GB"] = normalisedEnglish;
+    languages["x-default"] = normalisedEnglish;
   }
 
   if (german) {
-    languages["de-DE"] = german;
+    languages["de-DE"] = absoluteUrl(normaliseCanonicalPath(german));
   }
 
   return Object.keys(languages).length > 0 ? languages : undefined;

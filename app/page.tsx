@@ -11,13 +11,14 @@ import { buildPageMetadata } from "@/lib/seo/site-metadata";
 import { HomePageClient } from "./home-client";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Parent Email Risk Checker for Teachers | Zaza Draft",
+  title:
+    "Teacher Communication AI for Parent Emails, Reports, and School Writing | Zaza Draft",
   description:
-    "Late-night parent email doubts? Use Zaza Draft's free Parent Email Risk Checker to calm tone, reduce risk, and send clearer replies with confidence.",
+    "Zaza Draft is risk-aware AI writing support for teachers. Write calmer parent emails, clearer school messages, and more meaningful report comments while keeping full teacher control before send.",
   path: "/",
   alternates: {
-    en: "https://zazadraft.com",
-    de: "https://zazadraft.com/de",
+    en: "https://www.zazadraft.com",
+    de: "https://www.zazadraft.com/de",
   },
   keywords: [
     "AI parent email help for teachers",
@@ -47,6 +48,11 @@ const homeHowToSteps = [
 ] as const;
 
 const homeFaqItems = [
+  {
+    question: "What is Zaza Draft?",
+    answer:
+      "Zaza Draft is a teacher-first AI writing support tool built for parent emails, report comments, and school communication where tone, clarity, and interpretation matter.",
+  },
   {
     question: "What is the Parent Email Risk Checker?",
     answer:
@@ -81,7 +87,7 @@ export default function HomePage() {
           {
             id: "home-webpage-schema",
             data: createWebPageJsonLd({
-              name: "Zaza Draft Home",
+              name: "Zaza Draft for Teacher Communication",
               description:
                 "Zaza Draft helps teachers draft calm parent emails, clearer school messages, and more meaningful report comments before tone, wording, or timing turn a situation into something bigger.",
               path: "/",
@@ -96,9 +102,9 @@ export default function HomePage() {
                 "Zaza Draft is a parent email risk checker and AI shield for teachers. It helps with parent emails, behaviour notes, report comments, and other school messages where tone and interpretation matter before anything is sent.",
               featureList: [
                 "Free Parent Email Risk Checker",
-                "AI shield for parent emails",
-                "Teacher-first communication support",
-                "Support for behaviour notes and report comments",
+                "Teacher communication AI for parent emails",
+                "Risk-aware wording support before send",
+                "Support for behaviour notes, report comments, and school messages",
                 "Review before sending",
               ],
               offers: createOfferJsonLd({

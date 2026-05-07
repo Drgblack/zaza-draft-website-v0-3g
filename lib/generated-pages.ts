@@ -270,7 +270,7 @@ export function getGeneratedPageSitemapEntries(
     .map((slug) => getGeneratedPageBySlug(slug))
     .filter((page): page is GeneratedMarkdownPage => Boolean(page))
     .map((page) => ({
-      url: `https://zazadraft.com/${page.slug}`,
+      url: `https://www.zazadraft.com/${page.slug}`,
       lastModified: page.lastModified ?? lastModified,
       changeFrequency: "weekly" as const,
       priority: 0.8,

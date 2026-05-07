@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const pageUrl = "https://zazadraft.com/de/about/company";
+const pageUrl = "https://www.zazadraft.com/de/about/company";
 
 export const metadata: Metadata = {
   title: "Unternehmen | Zaza Draft",
@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: pageUrl,
     languages: {
-      "en-GB": "https://zazadraft.com/about/company",
+      "en-GB": "https://www.zazadraft.com/about/company",
       "de-DE": pageUrl,
-      "x-default": "https://zazadraft.com/about/company",
+      "x-default": "https://www.zazadraft.com/about/company",
     },
   },
   openGraph: {

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ContactClient } from "./contact-client";
 
-const pageUrl = "https://zazadraft.com/contact";
+const pageUrl = "https://www.zazadraft.com/contact";
 const ogImage = "/hero/teacher.jpg";
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     canonical: pageUrl,
     languages: {
       "en-GB": pageUrl,
-      "de-DE": "https://zazadraft.com/de/contact",
+      "de-DE": "https://www.zazadraft.com/de/contact",
       "x-default": pageUrl,
     },
   },

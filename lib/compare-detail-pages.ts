@@ -249,8 +249,8 @@ const compareDetailPages: Record<CompareDetailSlug, CompareDetailPage> = {
       "parent email tone checker",
     ],
     alternates: {
-      en: "https://zazadraft.com/compare/zaza-draft-vs-chatgpt",
-      de: "https://zazadraft.com/de/compare/zaza-draft-vs-chatgpt",
+      en: "https://www.zazadraft.com/compare/zaza-draft-vs-chatgpt",
+      de: "https://www.zazadraft.com/de/compare/zaza-draft-vs-chatgpt",
     },
   },
   "zaza-draft-vs-grammarly": {
@@ -436,8 +436,8 @@ const compareDetailPages: Record<CompareDetailSlug, CompareDetailPage> = {
       "teacher email tone help",
     ],
     alternates: {
-      en: "https://zazadraft.com/compare/zaza-draft-vs-grammarly",
-      de: "https://zazadraft.com/de/compare/zaza-draft-vs-grammarly",
+      en: "https://www.zazadraft.com/compare/zaza-draft-vs-grammarly",
+      de: "https://www.zazadraft.com/de/compare/zaza-draft-vs-grammarly",
     },
   },
   "best-ai-parent-email-tool-for-teachers": {
@@ -631,7 +631,7 @@ const compareDetailPages: Record<CompareDetailSlug, CompareDetailPage> = {
       "teacher email risk checker",
     ],
     alternates: {
-      en: "https://zazadraft.com/compare/best-ai-parent-email-tool-for-teachers",
+      en: "https://www.zazadraft.com/compare/best-ai-parent-email-tool-for-teachers",
     },
   },
 };

@@ -18,7 +18,7 @@ export const metadata: Metadata = buildPageMetadata({
   description: page.metaDescription,
   path: page.path,
   alternates: {
-    en: `https://zazadraft.com${page.path}`,
+    en: `https://www.zazadraft.com${page.path}`,
   },
   keywords: page.keywords,
 });

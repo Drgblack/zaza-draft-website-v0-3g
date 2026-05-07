@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import GradeFlowClient from "./gradeflow-client";
 
 const ogImage = "/assessment-rubrics-feedback.jpg";
-const canonicalUrl = "https://zazadraft.com/products/gradeflow";
+const canonicalUrl = "https://www.zazadraft.com/products/gradeflow";
 
 export const metadata: Metadata = {
   title: "GradeFlow | AI grading that saves hours, keeps fairness",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     canonical: canonicalUrl,
     languages: {
       "en-GB": canonicalUrl,
-      "de-DE": "https://zazadraft.com/de/products/gradeflow",
+      "de-DE": "https://www.zazadraft.com/de/products/gradeflow",
       "x-default": canonicalUrl,
     },
   },

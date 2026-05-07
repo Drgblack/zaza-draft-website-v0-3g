@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import IntegrationClient from "../../../integrations/[slug]/integration-client";
 
 export async function generateMetadata({
@@ -15,7 +15,7 @@ export async function generateMetadata({
     title: `${integrationName} Integration - Zaza Draft`,
     description: `Verbinden Sie Zaza Draft mit ${integrationName}. Schritt-für-Schritt-Anleitung, Anwendungsfälle und Best Practices für Lehrer.`,
     alternates: {
-      canonical: `https://zazadraft.com/de/integrations/${params.slug}`,
+      canonical: `https://www.zazadraft.com/de/integrations/${params.slug}`,
       languages: {
         "en-GB": `/integrations/${params.slug}`,
         "de-DE": `/de/integrations/${params.slug}`,

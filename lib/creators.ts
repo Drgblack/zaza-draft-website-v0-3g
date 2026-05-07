@@ -9,7 +9,7 @@
  * Optional fields: photoUrl, headline, useCase, couponCode, platforms
  *
  * Once added, the page is automatically generated at:
- *   https://zazadraft.com/c/[handle]
+ *   https://www.zazadraft.com/c/[handle]
  *
  * The build will validate config at compile time. Missing required fields
  * will fail the build, which is by design - better to fail loudly than ship

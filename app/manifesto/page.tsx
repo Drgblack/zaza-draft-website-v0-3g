@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const canonicalUrl = "https://zazadraft.com/manifesto";
+const canonicalUrl = "https://www.zazadraft.com/manifesto";
 
 export const metadata: Metadata = {
   title: "The Zaza Manifesto | Zaza Technologies",
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     canonical: canonicalUrl,
     languages: {
       "en-GB": canonicalUrl,
-      "de-DE": "https://zazadraft.com/de/manifesto",
+      "de-DE": "https://www.zazadraft.com/de/manifesto",
       "x-default": canonicalUrl,
     },
   },

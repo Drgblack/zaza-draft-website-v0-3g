@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description:
       "Bedingungen zu Konten, Abonnements, zulässiger Nutzung und geistigem Eigentum.",
 
-    url: "https://zazadraft.com/de/terms",
+    url: "https://www.zazadraft.com/de/terms",
 
     type: "website",
 
@@ -42,12 +42,12 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://zazadraft.com/de/terms",
+    canonical: "https://www.zazadraft.com/de/terms",
 
     languages: {
-      "en-GB": "https://zazadraft.com/terms",
-      "de-DE": "https://zazadraft.com/de/terms",
-      "x-default": "https://zazadraft.com/terms",
+      "en-GB": "https://www.zazadraft.com/terms",
+      "de-DE": "https://www.zazadraft.com/de/terms",
+      "x-default": "https://www.zazadraft.com/terms",
     },
   },
 };

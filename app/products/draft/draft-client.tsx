@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/lib/i18n/language-context";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { DemoModal } from "@/components/demo-modal";
+import { AgentReadableSummary } from "@/components/seo/AgentReadableSummary";
 import { useState } from "react";
 import { track, trackCtaClick } from "@/lib/analytics";
 import { DraftDemo } from "@/components/draft-demo";
@@ -697,6 +698,124 @@ export default function DraftClient() {
                 {t("products.draft.techNote.body")}
               </p>
             </Card>
+          </div>
+        </section>
+
+        <section className="py-16">
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <AgentReadableSummary
+              locale={language === "de" ? "de" : "en"}
+              theme="dark"
+              title={
+                language === "de"
+                  ? "Zaza Draft in Kurzform"
+                  : "Zaza Draft in one clear summary"
+              }
+              intro={
+                language === "de"
+                  ? "Wenn du schnell verstehen willst, wofuer Draft gedacht ist, wie es sich von generischen Tools unterscheidet und wo du startest, findest du hier die kompakten Antworten."
+                  : "If you want the short version before you try it, this explains what Draft is for, how it differs from generic tools, and where to start."
+              }
+              answers={{
+                whatIsIt:
+                  language === "de" ? (
+                    <>
+                      Zaza Draft ist lehrkraft-zentrierte KI fuer Elternmails,
+                      Zeugnisbemerkungen und sensible Schulkommunikation.
+                    </>
+                  ) : (
+                    <>
+                      Zaza Draft is teacher communication AI for parent emails,
+                      report comments, and sensitive school writing.
+                    </>
+                  ),
+                whoIsItFor:
+                  language === "de" ? (
+                    <>
+                      Fuer Lehrkraefte und Teams, die bei heiklen Nachrichten
+                      mehr als nur schnell generierten Text brauchen.
+                    </>
+                  ) : (
+                    <>
+                      It is for teachers and school teams who need more than
+                      fast text generation when a message feels high-stakes.
+                    </>
+                  ),
+                problemItSolves:
+                  language === "de" ? (
+                    <>
+                      Es hilft, wenn die Fakten klar sind, die Formulierung aber
+                      noch zu hart, zu vage oder nicht sendbar wirkt.
+                    </>
+                  ) : (
+                    <>
+                      It helps when the facts are clear but the wording still
+                      feels too blunt, too vague, or not safe enough to send.
+                    </>
+                  ),
+                howItWorks:
+                  language === "de" ? (
+                    <>
+                      Du bringst den Entwurf oder die Notizen ein, Draft formt
+                      eine ruhigere Version, und du pruefst jede finale
+                      Formulierung selbst.
+                    </>
+                  ) : (
+                    <>
+                      You bring the draft or notes, Draft helps shape a calmer
+                      version, and you still review every final line yourself.
+                    </>
+                  ),
+                whatItCosts:
+                  language === "de" ? (
+                    <>
+                      Es gibt einen kostenlosen Einstieg und kostenpflichtige
+                      Plaene fuer regelmaessige Nutzung.{" "}
+                      <Link
+                        href={pricingHref}
+                        className="font-semibold underline"
+                      >
+                        Die aktuelle Preisstruktur steht auf der Preisseite.
+                      </Link>
+                    </>
+                  ) : (
+                    <>
+                      There is a free starting option and paid plans for regular
+                      use.{" "}
+                      <Link
+                        href={pricingHref}
+                        className="font-semibold underline"
+                      >
+                        The pricing page shows the current plan structure.
+                      </Link>
+                    </>
+                  ),
+                nextStep:
+                  language === "de" ? (
+                    <>
+                      Starte mit den Live-Preisen oder pruefe den{" "}
+                      <Link
+                        href={riskCheckerHref}
+                        className="font-semibold underline"
+                      >
+                        kostenlosen Risiko-Check fuer Elternmails
+                      </Link>
+                      .
+                    </>
+                  ) : (
+                    <>
+                      Start with pricing or try the{" "}
+                      <Link
+                        href={riskCheckerHref}
+                        className="font-semibold underline"
+                      >
+                        free Parent Email Risk Checker
+                      </Link>
+                      .
+                    </>
+                  ),
+              }}
+            />
           </div>
         </section>
 

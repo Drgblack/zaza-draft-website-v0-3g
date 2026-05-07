@@ -42,7 +42,7 @@ export async function generateMetadata({
     type: "article",
     keywords: page.keywords,
     alternates: {
-      en: `https://zazadraft.com${page.path}`,
+      en: `https://www.zazadraft.com${page.path}`,
     },
   });
 }

@@ -1,4 +1,4 @@
-﻿export const footerConfig = {
+export const footerConfig = {
   social: {
     twitter: "https://x.com/zazateachapp",
     linkedin: "https://www.linkedin.com/company/zaza-technologies",
@@ -13,7 +13,7 @@
     ],
     ecosystem: [
       { label: "footer.zazaTeach", href: "https://zazateach.com" },
-      { label: "footer.zazaDraft", href: "https://zazadraft.com" },
+      { label: "footer.zazaDraft", href: "https://www.zazadraft.com" },
       { label: "footer.gradeflow", href: "/products/gradeflow" },
       { label: "footer.zazaShield", href: "/products/shield" },
       { label: "footer.zazaTech", href: "https://zazatechnologies.com" },
