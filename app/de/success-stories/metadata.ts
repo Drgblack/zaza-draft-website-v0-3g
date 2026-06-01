@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: pageUrl,
     languages: {
-      "en-GB": "https://www.zazadraft.com/success-stories",
-      "de-DE": pageUrl,
+      en: "https://www.zazadraft.com/success-stories",
+      de: pageUrl,
       "x-default": "https://www.zazadraft.com/success-stories",
     },
   },

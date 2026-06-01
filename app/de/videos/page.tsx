@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.zazadraft.com/de/videos",
     languages: {
-      "en-GB": "/videos",
-      "de-DE": "/de/videos",
+      en: "/videos",
+      de: "/de/videos",
       "x-default": "/videos",
     },
   },

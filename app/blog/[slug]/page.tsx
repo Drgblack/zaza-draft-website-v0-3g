@@ -39,16 +39,30 @@ export async function generateMetadata({
 
   const image = post.ogImage ?? getPostImage(post.slug);
   const urlPath = `/blog/${post.slug}`;
+  const englishUrl = `https://www.zazadraft.com${urlPath}`;
+  const germanUrl = `https://www.zazadraft.com/de/blog/${post.slug}`;
   const metadataTitle = post.seoTitle ?? `${post.title} | Zaza Draft`;
   const metadataDescription = post.seoDescription ?? post.excerpt ?? "";
 
-  return buildPageMetadata({
+  const metadata = buildPageMetadata({
     title: metadataTitle,
     description: metadataDescription,
     path: urlPath,
     image,
     type: "article",
   });
+
+  return {
+    ...metadata,
+    alternates: {
+      canonical: englishUrl,
+      languages: {
+        en: englishUrl,
+        de: germanUrl,
+        "x-default": englishUrl,
+      },
+    },
+  };
 }
 
 export default async function BlogPostPage({

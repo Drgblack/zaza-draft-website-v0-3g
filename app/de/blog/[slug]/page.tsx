@@ -35,6 +35,8 @@ export async function generateMetadata({
 
   const image = post.ogImage ?? getPostImage(post.slug);
   const urlPath = `/de/blog/${post.slug}`;
+  const englishUrl = `https://www.zazadraft.com/blog/${post.slug}`;
+  const germanUrl = `https://www.zazadraft.com${urlPath}`;
   const metadataTitle = post.seoTitle ?? `${post.title} | Zaza Draft`;
   const metadataDescription = post.seoDescription ?? post.excerpt ?? "";
 
@@ -45,7 +47,7 @@ export async function generateMetadata({
       title: metadataTitle,
       description: metadataDescription,
       type: "article",
-      url: `https://www.zazadraft.com${urlPath}`,
+      url: germanUrl,
       locale: "de_DE",
       images: image ? [image] : [],
     },
@@ -56,11 +58,11 @@ export async function generateMetadata({
       images: image ? [image] : [],
     },
     alternates: {
-      canonical: `https://www.zazadraft.com${urlPath}`,
+      canonical: germanUrl,
       languages: {
-        "en-GB": `https://www.zazadraft.com/blog/${post.slug}`,
-        "de-DE": `https://www.zazadraft.com${urlPath}`,
-        "x-default": `https://www.zazadraft.com/blog/${post.slug}`,
+        en: englishUrl,
+        de: germanUrl,
+        "x-default": englishUrl,
       },
     },
   };

@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   alternates: {
     ...buildCanonicalAlternates("/founding"),
     languages: {
-      "en-GB": `${siteConfig.url}/founding`,
-      "de-DE": `${siteConfig.url}/de/founding`,
+      en: `${siteConfig.url}/founding`,
+      de: `${siteConfig.url}/de/founding`,
       "x-default": `${siteConfig.url}/founding`,
     },
   },

@@ -13,8 +13,8 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical: "https://www.zazadraft.com/suite",
       languages: {
-        "en-GB": "https://www.zazadraft.com/suite",
-        "de-DE": "https://www.zazadraft.com/de/suite",
+        en: "https://www.zazadraft.com/suite",
+        de: "https://www.zazadraft.com/de/suite",
         "x-default": "https://www.zazadraft.com/suite",
       },
     },

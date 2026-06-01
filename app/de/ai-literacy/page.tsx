@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteUrl,
     languages: {
-      "en-GB": "https://www.zazadraft.com/ai-literacy",
-      "de-DE": siteUrl,
+      en: "https://www.zazadraft.com/ai-literacy",
+      de: siteUrl,
       "x-default": "https://www.zazadraft.com/ai-literacy",
     },
   },

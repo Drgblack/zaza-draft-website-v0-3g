@@ -3,7 +3,12 @@ Allow: /
 Allow: /api/public/
 
 Disallow: /admin/
+Disallow: /app/
 Disallow: /api/
+Disallow: /auth/
+Disallow: /dashboard/
+Disallow: /onboarding/
+Disallow: /settings/
 Disallow: /_next/static/
 Disallow: /staging/
 Disallow: /preview/

@@ -12,8 +12,8 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       canonical: "https://www.zazadraft.com/videos",
       languages: {
-        "en-GB": "https://www.zazadraft.com/videos",
-        "de-DE": "https://www.zazadraft.com/de/videos",
+        en: "https://www.zazadraft.com/videos",
+        de: "https://www.zazadraft.com/de/videos",
         "x-default": "https://www.zazadraft.com/videos",
       },
     },

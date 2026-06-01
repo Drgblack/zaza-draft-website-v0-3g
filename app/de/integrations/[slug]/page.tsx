@@ -17,8 +17,8 @@ export async function generateMetadata({
     alternates: {
       canonical: `https://www.zazadraft.com/de/integrations/${params.slug}`,
       languages: {
-        "en-GB": `/integrations/${params.slug}`,
-        "de-DE": `/de/integrations/${params.slug}`,
+        en: `/integrations/${params.slug}`,
+        de: `/de/integrations/${params.slug}`,
         "x-default": `/integrations/${params.slug}`,
       },
     },

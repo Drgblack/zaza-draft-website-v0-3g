@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.zazadraft.com/de/ai-for-student-reports",
     languages: {
-      "en-GB": "/ai-for-student-reports",
-      "de-DE": "/de/ai-for-student-reports",
+      en: "/ai-for-student-reports",
+      de: "/de/ai-for-student-reports",
       "x-default": "/ai-for-student-reports",
     },
   },

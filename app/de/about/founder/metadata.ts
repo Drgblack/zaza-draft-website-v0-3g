@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: canonicalUrl,
     languages: {
-      "en-GB": "https://www.zazadraft.com/about/founder",
-      "de-DE": canonicalUrl,
+      en: "https://www.zazadraft.com/about/founder",
+      de: canonicalUrl,
       "x-default": "https://www.zazadraft.com/about/founder",
     },
   },

@@ -62,8 +62,8 @@ export async function generateMetadata({
     alternates: {
       canonical,
       languages: {
-        "en-GB": en,
-        "de-DE": canonical,
+        en,
+        de: canonical,
         "x-default": en,
       },
     },

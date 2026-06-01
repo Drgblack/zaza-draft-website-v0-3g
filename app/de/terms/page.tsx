@@ -45,8 +45,8 @@ export const metadata: Metadata = {
     canonical: "https://www.zazadraft.com/de/terms",
 
     languages: {
-      "en-GB": "https://www.zazadraft.com/terms",
-      "de-DE": "https://www.zazadraft.com/de/terms",
+      en: "https://www.zazadraft.com/terms",
+      de: "https://www.zazadraft.com/de/terms",
       "x-default": "https://www.zazadraft.com/terms",
     },
   },

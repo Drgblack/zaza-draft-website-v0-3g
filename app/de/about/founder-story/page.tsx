@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     canonical: canonicalUrl,
 
     languages: {
-      "en-GB": "https://www.zazadraft.com/about/founder-story",
-      "de-DE": canonicalUrl,
+      en: "https://www.zazadraft.com/about/founder-story",
+      de: canonicalUrl,
       "x-default": "https://www.zazadraft.com/about/founder-story",
     },
   },

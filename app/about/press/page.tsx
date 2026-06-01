@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.zazadraft.com/about/press",
     languages: {
-      "en-GB": "https://www.zazadraft.com/about/press",
-      "de-DE": "https://www.zazadraft.com/de/about/press",
+      en: "https://www.zazadraft.com/about/press",
+      de: "https://www.zazadraft.com/de/about/press",
       "x-default": "https://www.zazadraft.com/about/press",
     },
   },

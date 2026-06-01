@@ -36,8 +36,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${siteUrl}/de/about/press`,
     languages: {
-      "en-GB": "https://www.zazadraft.com/about/press",
-      "de-DE": `${siteUrl}/de/about/press`,
+      en: "https://www.zazadraft.com/about/press",
+      de: `${siteUrl}/de/about/press`,
       "x-default": "https://www.zazadraft.com/about/press",
     },
   },

@@ -49,8 +49,8 @@ export const metadata: Metadata = {
     canonical: "https://www.zazadraft.com/de/privacy",
 
     languages: {
-      "en-GB": "https://www.zazadraft.com/privacy",
-      "de-DE": "https://www.zazadraft.com/de/privacy",
+      en: "https://www.zazadraft.com/privacy",
+      de: "https://www.zazadraft.com/de/privacy",
       "x-default": "https://www.zazadraft.com/privacy",
     },
   },

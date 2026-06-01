@@ -210,19 +210,19 @@ export function normaliseLanguageAlternates(
   }
 
   const english =
-    input["en-GB"] ?? input.en ?? input["x-default"] ?? input["en-US"];
-  const german = input["de-DE"] ?? input.de ?? input["de-AT"];
+    input.en ?? input["en-GB"] ?? input["x-default"] ?? input["en-US"];
+  const german = input.de ?? input["de-DE"] ?? input["de-AT"];
 
   const languages: LanguageAlternateInput = {};
 
   if (english) {
     const normalisedEnglish = absoluteUrl(normaliseCanonicalPath(english));
-    languages["en-GB"] = normalisedEnglish;
+    languages.en = normalisedEnglish;
     languages["x-default"] = normalisedEnglish;
   }
 
   if (german) {
-    languages["de-DE"] = absoluteUrl(normaliseCanonicalPath(german));
+    languages.de = absoluteUrl(normaliseCanonicalPath(german));
   }
 
   return Object.keys(languages).length > 0 ? languages : undefined;

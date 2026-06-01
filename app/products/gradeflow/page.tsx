@@ -31,8 +31,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: canonicalUrl,
     languages: {
-      "en-GB": canonicalUrl,
-      "de-DE": "https://www.zazadraft.com/de/products/gradeflow",
+      en: canonicalUrl,
+      de: "https://www.zazadraft.com/de/products/gradeflow",
       "x-default": canonicalUrl,
     },
   },

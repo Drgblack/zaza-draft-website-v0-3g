@@ -237,12 +237,12 @@ function addLanguageAlternates(
     const languages: Record<string, string> = {};
 
     if (indexedPaths.has(englishPath)) {
-      languages["en-GB"] = `${BASE_URL}${englishPath}`;
+      languages.en = `${BASE_URL}${englishPath}`;
       languages["x-default"] = `${BASE_URL}${englishPath}`;
     }
 
     if (indexedPaths.has(germanPath)) {
-      languages["de-DE"] = `${BASE_URL}${germanPath}`;
+      languages.de = `${BASE_URL}${germanPath}`;
     }
 
     if (Object.keys(languages).length === 0) {

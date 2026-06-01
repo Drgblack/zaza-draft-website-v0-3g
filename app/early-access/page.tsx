@@ -40,8 +40,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: canonicalUrl,
     languages: {
-      "en-GB": canonicalUrl,
-      "de-DE": "https://www.zazadraft.com/de/early-access",
+      en: canonicalUrl,
+      de: "https://www.zazadraft.com/de/early-access",
       "x-default": canonicalUrl,
     },
   },

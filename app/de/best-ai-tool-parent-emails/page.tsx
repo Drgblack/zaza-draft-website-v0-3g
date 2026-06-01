@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.zazadraft.com/de/best-ai-tool-parent-emails",
     languages: {
-      "en-GB": "/best-ai-tool-parent-emails",
-      "de-DE": "/de/best-ai-tool-parent-emails",
+      en: "/best-ai-tool-parent-emails",
+      de: "/de/best-ai-tool-parent-emails",
       "x-default": "/best-ai-tool-parent-emails",
     },
   },

@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: pageUrl,
     languages: {
-      "en-GB": pageUrl,
-      "de-DE": "https://www.zazadraft.com/de/contact/schools",
+      en: pageUrl,
+      de: "https://www.zazadraft.com/de/contact/schools",
       "x-default": pageUrl,
     },
   },

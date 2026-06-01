@@ -84,10 +84,10 @@ async function main() {
   });
 
   expect(
-    alternates?.["en-GB"] === "https://zazadraft.com/pricing" &&
-      alternates?.["de-DE"] === "https://zazadraft.com/de/pricing" &&
-      alternates?.["x-default"] === "https://zazadraft.com/pricing",
-    "normaliseLanguageAlternates adds en-GB, de-DE, and x-default",
+    alternates?.en === "https://www.zazadraft.com/pricing" &&
+      alternates?.de === "https://www.zazadraft.com/de/pricing" &&
+      alternates?.["x-default"] === "https://www.zazadraft.com/pricing",
+    "normaliseLanguageAlternates adds en, de, and x-default",
   );
 
   const breadcrumbItems = buildAutomaticBreadcrumbItems("/de/about/founder");
@@ -139,29 +139,27 @@ async function main() {
   const deCheckerEntry = byPath.get("/de/parent-email-risk-checker");
 
   expect(
-    homeEntry?.alternates?.languages?.["en-GB"] === "https://zazadraft.com/" &&
-      homeEntry?.alternates?.languages?.["de-DE"] ===
-        "https://zazadraft.com/de" &&
+    homeEntry?.alternates?.languages?.en === "https://www.zazadraft.com/" &&
+      homeEntry?.alternates?.languages?.de === "https://www.zazadraft.com/de" &&
       homeEntry?.alternates?.languages?.["x-default"] ===
-        "https://zazadraft.com/",
+        "https://www.zazadraft.com/",
     "homepage sitemap entry includes bilingual alternates",
   );
 
   expect(
-    deHomeEntry?.alternates?.languages?.["en-GB"] ===
-      "https://zazadraft.com/" &&
-      deHomeEntry?.alternates?.languages?.["de-DE"] ===
-        "https://zazadraft.com/de" &&
+    deHomeEntry?.alternates?.languages?.en === "https://www.zazadraft.com/" &&
+      deHomeEntry?.alternates?.languages?.de ===
+        "https://www.zazadraft.com/de" &&
       deHomeEntry?.alternates?.languages?.["x-default"] ===
-        "https://zazadraft.com/",
+        "https://www.zazadraft.com/",
     "German homepage sitemap entry includes bilingual alternates",
   );
 
   expect(
-    checkerEntry?.alternates?.languages?.["de-DE"] ===
-      "https://zazadraft.com/de/parent-email-risk-checker" &&
-      deCheckerEntry?.alternates?.languages?.["en-GB"] ===
-        "https://zazadraft.com/parent-email-risk-checker",
+    checkerEntry?.alternates?.languages?.de ===
+      "https://www.zazadraft.com/de/parent-email-risk-checker" &&
+      deCheckerEntry?.alternates?.languages?.en ===
+        "https://www.zazadraft.com/parent-email-risk-checker",
     "Parent Email Risk Checker sitemap entries include cross-language alternates",
   );
 

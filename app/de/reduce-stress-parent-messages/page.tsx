@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: pageUrl,
     languages: {
-      "en-GB": "https://www.zazadraft.com/reduce-stress-parent-messages",
-      "de-DE": pageUrl,
+      en: "https://www.zazadraft.com/reduce-stress-parent-messages",
+      de: pageUrl,
       "x-default": "https://www.zazadraft.com/reduce-stress-parent-messages",
     },
   },
