@@ -111,6 +111,23 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/expanded/5-ai-report-writing-hacks",
+        destination: "/blog/5-ai-report-writing-hacks",
+        permanent: true,
+      },
+      {
+        source:
+          "/expanded/honest-but-kind-report-comments-for-struggling-students",
+        destination:
+          "/blog/honest-but-kind-report-comments-for-struggling-students",
+        permanent: true,
+      },
+      {
+        source: "/expanded/:slug",
+        destination: "/blog/:slug",
+        permanent: true,
+      },
+      {
         source: "/uk/parents-evening-email-template-for-teachers",
         destination: "/uk/parents-evening-email-templates",
         permanent: true,
