@@ -19,7 +19,9 @@ export function middleware(req: NextRequest) {
     requestHeaders.set("x-lang", lang);
     requestHeaders.set("x-pathname", pathname);
     const res = NextResponse.next({ request: { headers: requestHeaders } });
-    res.cookies.set("lang", lang, { path: "/", maxAge: 60 * 60 * 24 * 365 });
+    if (!req.cookies.get("lang")) {
+      res.cookies.set("lang", lang, { path: "/", maxAge: 60 * 60 * 24 * 365 });
+    }
     return res;
   }
 
@@ -28,7 +30,9 @@ export function middleware(req: NextRequest) {
   requestHeaders.set("x-lang", "en");
   requestHeaders.set("x-pathname", pathname);
   const res = NextResponse.next({ request: { headers: requestHeaders } });
-  res.cookies.set("lang", "en", { path: "/", maxAge: 60 * 60 * 24 * 365 });
+  if (!req.cookies.get("lang")) {
+    res.cookies.set("lang", "en", { path: "/", maxAge: 60 * 60 * 24 * 365 });
+  }
   return res;
 }
 
